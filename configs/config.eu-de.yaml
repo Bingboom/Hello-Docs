@@ -1,0 +1,9 @@
+extends: config-bases/eu-single-language-base.yaml
+
+build:
+  family_id: eu-de
+  languages: [de]
+  word_title: "|PRODUCT_NAME| Benutzerhandbuch"
+
+paths:
+  page_manifest: docs/manifests/manual_eu-single-de.yaml

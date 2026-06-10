@@ -1,0 +1,45 @@
+.venv/
+.tmp/
+
+# Build outputs
+docs/_build/*
+!docs/_build/*/
+docs/_build/*/*
+!docs/_build/*/*/
+docs/_build/*/*/*
+!docs/_build/*/*/rst/
+!docs/_build/*/*/rst/**
+docs/generated/
+
+# Local Feishu/Lark snapshot data; each mirror repo syncs its own Base.
+data/phase2/
+
+# Python caches
+**/__pycache__/
+*.pyc
+
+# OS junk
+.DS_Store
+
+# OpenClaw integration runtime
+integrations/openclaw/auto-manual-control-layer/node_modules/
+integrations/openclaw/auto-manual-control-layer/runtime/
+integrations/openclaw/feishu-im-webhook-adapter/node_modules/
+integrations/openclaw/feishu-im-webhook-adapter/runtime/
+
+# OpenClaw local-only operator profile and workspace notes
+.openclaw/
+HEARTBEAT.md
+TOOLS.md
+# Root persona stubs: the real persona lives in agent/ and is injected via the
+# bootstrap-extra-files hook; these root files are machine-local placeholders
+# maintained by integrations/openclaw/scripts/ensure_blockclaw_persona_wiring.mjs
+/IDENTITY.md
+/SOUL.md
+/USER.md
+
+# Review preview packaging
+site/review-preview/dist/
+
+# AI assistant local config (each operator owns their own permissions and profile)
+.claude/settings.local.json

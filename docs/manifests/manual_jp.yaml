@@ -1,0 +1,62 @@
+manifest_id: manual_jp
+pages:
+  - type: rst_include
+    lang: ja
+    file: templates/page_jp/cover_jp.rst
+  - type: rst_include
+    lang: ja
+    file: templates/page_jp/safety_ja.rst
+  - type: rst_include
+    lang: ja
+    file: templates/page_jp/01_meaning_of_symbols.rst
+  - type: rst_include
+    lang: ja
+    file: templates/page_jp/02_whats_in_the_box.rst
+  - type: generated_page
+    page: 03_product_overview
+    engine: draft_v1
+    recipe: templates/recipes/jp/03_product_overview.yaml
+    template: templates/page_jp/03_product_overview_placeholder.rst
+    langs: [ja]
+    include_dir: generated/{model}/draft
+  - type: csv_page
+    source: phase2
+    page: lcd_icons
+    langs: [ja]
+    include_dir: generated/{model}
+  - type: generated_page
+    page: 05_operation_guide
+    engine: draft_v1
+    recipe: templates/recipes/jp/05_operation_guide.yaml
+    template: templates/page_jp/05_operation_guide_placeholder.rst
+    langs: [ja]
+    include_dir: generated/{model}/draft
+  - type: rst_include
+    lang: ja
+    file: templates/page_jp/06_ups_mode.rst
+  - type: rst_include
+    lang: ja
+    file: templates/page_jp/charging.rst
+  - type: rst_include
+    lang: ja
+    file: templates/page_jp/08_charging_methods.rst
+  - type: csv_page
+    source: phase2
+    page: troubleshooting
+    langs: [ja]
+    include_dir: generated/{model}
+  - type: csv_page
+    source: phase2
+    page: spec
+    langs: [ja]
+    include_dir: generated/{model}
+  - type: rst_include
+    lang: ja
+    file: templates/page_jp/11_warranty.rst
+  - type: generated_page
+    page: 12_app_setup
+    engine: draft_v1
+    recipe: templates/recipes/jp/12_app_setup.yaml
+    template: templates/page_jp/12_app_setup_placeholder.rst
+    langs: [ja]
+    include_dir: generated/{model}/draft

@@ -1,0 +1,158 @@
+# BlockClaw Auto Manual Control Layer
+
+This package is the OpenClaw-side bridge for BlockClaw, the repository's Auto-Manual document-build operator.
+BlockClaw is the repo-specific identity that helps operators work with content blocks, Feishu queue rows, review bundles, draft packages, and publish artifacts.
+
+It does not execute `build.py` directly.
+It only dispatches the existing `main`-owned GitHub workflows and reports their status back into OpenClaw as BlockClaw.
+
+For local Phase 2 natural-language orchestration, the same package also ships a repo-local CLI:
+
+```bash
+node integrations/openclaw/auto-manual-control-layer/cli.mjs dispatch start-review rec_xxx
+node integrations/openclaw/auto-manual-control-layer/cli.mjs dispatch build-draft rec_xxx
+node integrations/openclaw/auto-manual-control-layer/cli.mjs dispatch publish rec_xxx confirm
+node integrations/openclaw/auto-manual-control-layer/cli.mjs status last
+```
+
+That CLI reuses the same GitHub dispatch/status modules as the plugin.
+Dispatch replies include `accepted_at`, `run_id`, and `run` when GitHub exposes
+the workflow run. `queue-execute` passes that `accepted_at` back into
+`queue-query --fresh-since` so OpenClaw can tell whether the Feishu row writeback
+belongs to the current dispatch or is an older result from a previous run.
+`queue-query --json` also returns `matched_count`, `returned_count`, `limit`, and
+`truncated`, which lets BlockClaw distinguish a complete queue inventory from a
+default-limited preview.
+Dispatch no longer hard-fails just because the local repo checkout has not run
+`npm install` for this package; metadata artifact parsing is treated as an
+optional status enrichment step instead of a dispatch-time requirement.
+
+## Identity
+
+Use **BlockClaw** as the operator-facing name for this repo integration.
+Use **OpenClaw** when referring to the underlying runtime, gateway, or plugin host.
+
+BlockClaw currently handles bounded manual operations: queue lookup, Start Review, Build Draft Package, Publish with confirmation, run-status lookup, failure explanation, and manual wording helpers that support those flows. It should not invent queue state or bypass `build.py`, Feishu phase2 tables, or the `main`-owned GitHub workers.
+
+## Commands
+
+- `/start-review <review_init_record_id>`
+- `/build-draft <document_link_record_id>`
+- `/publish <document_link_record_id> confirm`
+- `/manual-status [run_id|last]`
+
+## Expected GitHub Workflow Inputs
+
+The plugin dispatches:
+
+- `feishu-start-review.yml`
+- `feishu-draft-build-queue.yml`
+- `feishu-build-queue.yml`
+
+Every dispatch uses:
+
+- `ref = main` by default
+- `trigger_source = openclaw`
+- `openclaw_dispatch_nonce = <uuid>`
+
+Every dispatch sends:
+
+- `queue_record_id = rec_xxx`
+
+The control layer treats the selected Feishu `record_id` as the execution identity for `start-review`, `build-draft`, and `publish`. Queue lookup can also use the optional `Task_id` field, conventionally `Document_ID + "_" + Workflow_action`, to disambiguate same-document rows before dispatch.
+For status freshness, the repo-local queue layer records the dispatch acceptance
+time and returns `freshness_status` with the final row fields. If the workflow
+has completed but Feishu still shows a pre-dispatch `FAILED` or `SUCCESS`, the
+reply should surface `stale_result` or `writeback_pending` instead of treating
+the old value as the current run result.
+
+## Observation Failures Are Not Action Failures
+
+A dispatch is committed the moment GitHub accepts the `workflow_dispatch` POST.
+Everything after that — discovering the run id, polling `status`, reading the
+metadata artifact — is best-effort *observation*. A transient blip (`fetch
+failed`, a 5xx, a slow GitHub edge, an interrupted local wait, or a wait-deadline
+timeout) must never be reported as a dispatch failure:
+
+- Dispatch downgrades an unconfirmed run id to `Dispatch accepted` with a
+  "run id not confirmed yet" note; it never throws once the POST has succeeded.
+- Idempotent GitHub reads retry through transient errors; the non-idempotent
+  dispatch POST is never retried, so a workflow can never be double-triggered.
+- `/manual-status` returns the last known run state plus an `observation_error`
+  line instead of erroring out.
+- `queue-execute` treats a `status` read error or a wait timeout as "not
+  confirmed yet" and reconciles against the authoritative Feishu/Base writeback
+  (`freshness_status`). It reports a failure only when GitHub reaches a genuine
+  terminal failure **and** the row is still not fresh.
+
+This is why a Base row showing `SUCCESS` is the source of truth even when the
+local command logged `fetch failed` or an interrupted wait: the remote action
+already ran.
+
+## Accept First, Report Later (Task Lifecycle)
+
+A build/review run takes minutes, so the control layer never blocks a chat turn
+waiting for it. The lifecycle is **accept → process → settle**, surfaced as one
+relayable token so the chat can answer "任务正在处理中" for an in-flight run
+instead of treating an unfinished build as a failure:
+
+- **accepted** — the dispatch fired; the run id is not confirmed locally yet.
+- **processing** — the run is `queued`/`in_progress` (任务正在处理中).
+- **completed** / **failed** — the run reached a terminal conclusion.
+
+`/manual-status` and the dispatch reply emit `state: <token>` plus a
+`note:` that points back to `status last` for the result, so no synchronous wait
+is needed. On the Feishu IM adapter a single-record build replies "已受理（处理中）"
+immediately and dispatches with `--no-wait`; it does **not** poll. The progress is
+delivered **on demand**: when the operator re-asks "这个好了没", the adapter reads
+the authoritative state at that moment and answers 处理中 / 已完成 / 失败 —
+
+- if the Base row already has a fresh writeback, that wins (a fresh result means
+  the deliverable is ready → `已完成`, or `失败` if it wrote back a failure);
+- otherwise it reads the live GitHub run once (the remembered `run_id`): still
+  running → `处理中`; the run failed before any writeback → `失败` (so a
+  GitHub-level failure is not hidden as perpetual processing); run finished but
+  the result has not landed yet → still `处理中`.
+
+This is a single read per question, not polling.
+
+The Feishu IM adapter can sit above this single-record bridge for config-scoped batch Draft asks. For example, `输出JE-1000F的所有欧规说明书文案`, `构建JE-1000F的所有欧规说明书文案`, `基于配置构建JE-1000F的欧规`, or the implicit-all form `构建JE-1000F的欧规说明书文案` resolves the matching triggered `Task_id` rows from the Base queue, then calls the same `build-draft <record_id>` dispatch path once per row. When no market is named, asks such as `构建JE-1000F说明书文案` use the broader `Task_id` prefix `JE-1000F_`, so every triggered Build Draft Package row for that model is eligible across markets. Versioned market-level asks such as `构建 JE-1000F_EU_1.0 的欧规说明书文案` add `Version=1.0` while still matching each configured language row. The GitHub draft workflow also scopes concurrency by `queue_record_id`, so different rows from the same batch are not cancelled as duplicate pending work.
+
+The repo-local `queue-execute` wrapper also treats a `Start Review` row that is already `InReview` with `Git_ref` as completed and returns it without a new dispatch. If an older caller still dispatches one explicit completed record, the GitHub worker exits successfully instead of reporting a false no-pending failure.
+
+## Minimal Plugin Config
+
+```json
+{
+  "plugins": {
+    "entries": {
+      "auto-manual-control-layer": {
+        "enabled": true,
+        "config": {
+          "githubToken": "ghp_xxx",
+          "repoOwner": "your-org",
+          "repoName": "auto-manual",
+          "defaultBranch": "main",
+          "stateFile": "runtime/auto-manual-control-layer-state.json"
+        }
+      }
+    }
+  }
+}
+```
+
+## Install Notes
+
+1. Install the package from this directory in OpenClaw.
+2. Configure the GitHub token with Actions read/write scope for the repository.
+3. Keep the runtime state file outside Git if you override `stateFile`.
+
+## Local Test
+
+```bash
+npm install
+npm test
+```
+
+Installing the package dependencies is still recommended for local development
+and full status-metadata coverage.

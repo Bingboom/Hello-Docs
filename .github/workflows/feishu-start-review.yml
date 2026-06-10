@@ -1,0 +1,136 @@
+name: Feishu Start Review
+run-name: Feishu Start Review / ${{ inputs.queue_record_id != '' && inputs.queue_record_id || 'batch' }} / ${{ inputs.openclaw_dispatch_nonce != '' && inputs.openclaw_dispatch_nonce || github.run_id }}
+
+on:
+  workflow_dispatch:
+    inputs:
+      trigger_source:
+        description: Optional source label for this review-start run
+        required: false
+        type: string
+      queue_record_id:
+        description: Optional review-init record_id that triggered this run
+        required: false
+        type: string
+      openclaw_dispatch_nonce:
+        description: Optional nonce used by OpenClaw to correlate the dispatched run
+        required: false
+        type: string
+
+concurrency:
+  group: feishu-start-review-${{ inputs.queue_record_id != '' && inputs.queue_record_id || 'batch' }}
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  process-review-start:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ github.token }}
+      REVIEW_START_BASE_REF: ${{ github.event.repository.default_branch }}
+      FEISHU_APP_ID: ${{ secrets.FEISHU_APP_ID }}
+      FEISHU_APP_SECRET: ${{ secrets.FEISHU_APP_SECRET }}
+      FEISHU_PHASE2_IDENTITY: bot
+      FEISHU_PHASE2_BASE_TOKEN: ${{ secrets.FEISHU_PHASE2_BASE_TOKEN }}
+      FEISHU_PHASE2_SPEC_ROWS_SOURCE_TABLE_ID: ${{ secrets.FEISHU_PHASE2_SPEC_ROWS_SOURCE_TABLE_ID }}
+      FEISHU_PHASE2_SPEC_ROWS_SOURCE_VIEW_ID: ${{ secrets.FEISHU_PHASE2_SPEC_ROWS_SOURCE_VIEW_ID }}
+      FEISHU_PHASE2_PAGE_PLACEHOLDERS_SOURCE_TABLE_ID: ${{ secrets.FEISHU_PHASE2_PAGE_PLACEHOLDERS_SOURCE_TABLE_ID }}
+      FEISHU_PHASE2_PAGE_PLACEHOLDERS_SOURCE_VIEW_ID: ${{ secrets.FEISHU_PHASE2_PAGE_PLACEHOLDERS_SOURCE_VIEW_ID }}
+      FEISHU_PHASE2_SPEC_FOOTNOTES_TABLE_ID: ${{ secrets.FEISHU_PHASE2_SPEC_FOOTNOTES_TABLE_ID }}
+      FEISHU_PHASE2_SPEC_FOOTNOTES_VIEW_ID: ${{ secrets.FEISHU_PHASE2_SPEC_FOOTNOTES_VIEW_ID }}
+      FEISHU_PHASE2_SPEC_NOTES_TABLE_ID: ${{ secrets.FEISHU_PHASE2_SPEC_NOTES_TABLE_ID }}
+      FEISHU_PHASE2_SPEC_NOTES_VIEW_ID: ${{ secrets.FEISHU_PHASE2_SPEC_NOTES_VIEW_ID }}
+      FEISHU_TRANSLATION_MEMORY_BASE_TOKEN: ${{ secrets.FEISHU_TRANSLATION_MEMORY_BASE_TOKEN }}
+      FEISHU_TRANSLATION_MEMORY_TABLE_ID: ${{ secrets.FEISHU_TRANSLATION_MEMORY_TABLE_ID }}
+      FEISHU_TRANSLATION_MEMORY_VIEW_ID: ${{ secrets.FEISHU_TRANSLATION_MEMORY_VIEW_ID }}
+      FEISHU_PHASE2_SYMBOLS_BLOCKS_TABLE_ID: ${{ secrets.FEISHU_PHASE2_SYMBOLS_BLOCKS_TABLE_ID }}
+      FEISHU_PHASE2_SYMBOLS_BLOCKS_VIEW_ID: ${{ secrets.FEISHU_PHASE2_SYMBOLS_BLOCKS_VIEW_ID }}
+      FEISHU_PHASE2_LCD_ICONS_TABLE_ID: ${{ secrets.FEISHU_PHASE2_LCD_ICONS_TABLE_ID }}
+      FEISHU_PHASE2_LCD_ICONS_VIEW_ID: ${{ secrets.FEISHU_PHASE2_LCD_ICONS_VIEW_ID }}
+      FEISHU_PHASE2_TROUBLESHOOTING_TABLE_ID: ${{ secrets.FEISHU_PHASE2_TROUBLESHOOTING_TABLE_ID }}
+      FEISHU_PHASE2_TROUBLESHOOTING_VIEW_ID: ${{ secrets.FEISHU_PHASE2_TROUBLESHOOTING_VIEW_ID }}
+      FEISHU_PHASE2_VARIABLE_DEFAULTS_TABLE_ID: ${{ secrets.FEISHU_PHASE2_VARIABLE_DEFAULTS_TABLE_ID }}
+      FEISHU_PHASE2_VARIABLE_DEFAULTS_VIEW_ID: ${{ secrets.FEISHU_PHASE2_VARIABLE_DEFAULTS_VIEW_ID }}
+      FEISHU_PHASE2_VARIABLE_LANG_OVERRIDES_TABLE_ID: ${{ secrets.FEISHU_PHASE2_VARIABLE_LANG_OVERRIDES_TABLE_ID }}
+      FEISHU_PHASE2_VARIABLE_LANG_OVERRIDES_VIEW_ID: ${{ secrets.FEISHU_PHASE2_VARIABLE_LANG_OVERRIDES_VIEW_ID }}
+      FEISHU_PHASE2_MANUAL_COPY_SOURCE_TABLE_ID: ${{ secrets.FEISHU_PHASE2_MANUAL_COPY_SOURCE_TABLE_ID }}
+      FEISHU_PHASE2_MANUAL_COPY_SOURCE_VIEW_ID: ${{ secrets.FEISHU_PHASE2_MANUAL_COPY_SOURCE_VIEW_ID }}
+      FEISHU_PHASE2_DOCUMENT_LINK_TABLE_ID: ${{ secrets.FEISHU_PHASE2_DOCUMENT_LINK_TABLE_ID }}
+      FEISHU_PHASE2_DOCUMENT_LINK_VIEW_ID: ${{ secrets.FEISHU_PHASE2_DOCUMENT_LINK_VIEW_ID }}
+      AUTO_MANUAL_FAILURE_SUMMARY_PATH: .tmp/openclaw/feishu-start-review-failure-summary.json
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          fetch-depth: 0
+
+      - name: Validate required secrets
+        shell: bash
+        run: |
+          bash scripts/validate_required_env.sh feishu-start-review
+
+      - name: Print trigger context
+        shell: bash
+        run: |
+          echo "event_name=${GITHUB_EVENT_NAME}"
+          echo "ref=${GITHUB_REF}"
+          echo "default_branch=${{ github.event.repository.default_branch }}"
+          echo "trigger_source=${{ inputs.trigger_source || '' }}"
+          echo "queue_record_id=${{ inputs.queue_record_id || '' }}"
+          echo "openclaw_dispatch_nonce=${{ inputs.openclaw_dispatch_nonce || '' }}"
+
+      - name: Validate dispatch ref
+        shell: bash
+        run: |
+          if [ "${GITHUB_REF}" != "refs/heads/${{ github.event.repository.default_branch }}" ]; then
+            echo "::error::Dispatch feishu-start-review.yml on ${{ github.event.repository.default_branch }} so review-start always uses the latest worker definition."
+            exit 1
+          fi
+
+      - uses: ./.github/actions/feishu-common-setup
+
+      - name: Process review-start queue
+        shell: bash
+        run: |
+          cmd=(python build.py process-review-start-queue --config configs/config.us.yaml --data-root .tmp/review-start/phase2)
+          if [ -n "${{ inputs.queue_record_id || '' }}" ]; then
+            cmd+=(--record-id "${{ inputs.queue_record_id }}")
+          fi
+          "${cmd[@]}"
+
+      - name: Write OpenClaw run metadata
+        if: always()
+        shell: bash
+        run: |
+          python integrations/openclaw/scripts/write_workflow_run_metadata.py \
+            --output .tmp/openclaw/feishu-start-review-run.json \
+            --workflow-name "Feishu Start Review" \
+            --workflow-file ".github/workflows/feishu-start-review.yml" \
+            --queue-record-id "${{ inputs.queue_record_id || '' }}" \
+            --trigger-source "${{ inputs.trigger_source || '' }}" \
+            --openclaw-dispatch-nonce "${{ inputs.openclaw_dispatch_nonce || '' }}" \
+            --failure-summary-path .tmp/openclaw/feishu-start-review-failure-summary.json \
+            --artifact-name feishu-start-review-output \
+            --artifact-name openclaw-run-metadata
+
+      - name: Upload seeded review artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: feishu-start-review-output
+          path: |
+            docs/_review
+            .tmp/review-start/phase2/snapshot_manifest.json
+            .tmp/review-start/phase2/row_key_mapping.csv
+          if-no-files-found: ignore
+
+      - name: Upload OpenClaw run metadata
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: openclaw-run-metadata
+          path: .tmp/openclaw/feishu-start-review-run.json
+          if-no-files-found: error

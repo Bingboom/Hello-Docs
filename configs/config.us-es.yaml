@@ -1,0 +1,11 @@
+extends: config-bases/us-single-language-base.yaml
+
+build:
+  family_id: us-es
+  languages: [es]
+  include_lang_in_output_path: true
+  word_reference_doc: docs/templates/word_template/template.docx
+  word_title: "|PRODUCT_NAME| Manual de usuario"
+
+paths:
+  page_manifest: docs/manifests/manual_us-single-es.yaml

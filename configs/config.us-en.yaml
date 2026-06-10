@@ -1,0 +1,13 @@
+extends: config-bases/us-single-language-base.yaml
+
+build:
+  family_id: us-en
+  languages: [en]
+  include_lang_in_output_path: true
+  word_reference_doc: docs/templates/word_template/reference_en.docx
+  word_title: "|PRODUCT_NAME| User Manual"
+  rst_substitutions:
+    MANUAL_LANGUAGE_SCOPE: English / French / Spanish
+
+paths:
+  page_manifest: docs/manifests/manual_us-single-en.yaml

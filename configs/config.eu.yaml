@@ -1,0 +1,49 @@
+extends: config-bases/phase2-sync-base.yaml
+
+doc_type: manual_bundle
+
+build:
+  family_id: eu-merged
+  languages: [ en, fr, es, de, it, uk ]
+  include_lang_in_output_path: false
+  queue_by_document_key: true
+  default_model: JE-1000F
+  default_region: EU
+  targets:
+    - model: JE-1000F
+      region: EU
+  main_tex: manual_demo.tex
+  output_pdf: manual_{model_slug}_{region_slug}.pdf
+  xelatex_runs: 3
+  open_pdf: true
+  build_word: true
+  word_output: manual_{model_slug}_{region_slug}.docx
+  word_source: bundle
+  word_reference_doc: docs/templates/word_template/reference_en.docx
+  word_title: "|PRODUCT_NAME| User Manual"
+  rst_substitutions:
+    MANUAL_LANGUAGE_SCOPE: English / French / Spanish / German / Italian / Ukrainian
+    WARRANTY_EMAIL: hello.eu@jackery.com
+    LEGAL_COMPANY_NAME: Jackery
+  open_word: false
+  build_html: false
+  open_html: false
+
+paths:
+  docs_dir: docs
+  structured_data_dir: data/phase2
+  layout_params_csv: data/layout_params.csv
+  page_registry_csv: data/phase2/page_registry.csv
+  page_blocks_dir: data/phase2
+  spec_master_csv: data/phase2/Spec_Master.csv
+  spec_footnotes_csv: data/phase2/Spec_Footnotes.csv
+  spec_notes_csv: data/phase2/Spec_Notes.csv
+  spec_titles_csv: data/phase2/spec_titles.csv
+  page_manifest: docs/manifests/manual_eu.yaml
+
+tools:
+  patch_fonts: tools/patch_latex_fonts.py
+
+checks:
+  allowed_foreign_identity_literals:
+    - 占位符

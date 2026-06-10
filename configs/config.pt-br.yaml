@@ -1,0 +1,19 @@
+extends: config-bases/us-single-language-base.yaml
+
+build:
+  family_id: pt-br
+  default_model: JE-1500D
+  default_region: pt-BR
+  targets:
+    - model: JE-1500D
+      region: pt-BR
+  languages: [pt-BR]
+  include_lang_in_output_path: true
+  word_reference_doc: docs/templates/word_template/template.docx
+  word_title: "|PRODUCT_NAME| Manual do usuário"
+  rst_substitutions:
+    MANUAL_LANGUAGE_SCOPE: Português (Brasil)
+    LEGAL_COMPANY_NAME: Jackery
+
+paths:
+  page_manifest: docs/manifests/manual_pt-br.yaml

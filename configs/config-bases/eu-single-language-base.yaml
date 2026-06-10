@@ -1,0 +1,75 @@
+extends: us-single-language-base.yaml
+
+build:
+  default_model: JE-1000F
+  default_region: EU
+  targets:
+    - model: JE-1000F
+      region: EU
+  include_lang_in_output_path: true
+  word_reference_doc: docs/templates/word_template/template.docx
+  rst_substitutions:
+    WARRANTY_EMAIL: hello.eu@jackery.com
+    LEGAL_COMPANY_NAME: Jackery
+
+paths:
+  structured_data_dir: data/phase2
+  page_registry_csv: data/phase2/page_registry.csv
+
+checks:
+  allowed_foreign_identity_literals:
+    - 占位符
+
+# NOTE: sync stays inline here (not extracted to phase2-sync-base.yaml): this
+# file already `extends: us-single-language-base.yaml`, and config_loader
+# supports only a single `extends`. Deduping would require restructuring the
+# US/EU base chain — tracked as follow-up.
+sync:
+  phase2:
+    provider: lark_cli
+    cli_bin: lark-cli
+    export_root: data/phase2
+    manifest_path: data/phase2/snapshot_manifest.json
+    base_token_env: FEISHU_PHASE2_BASE_TOKEN
+    spec_master_sources:
+      spec_rows_source_table_id_env: FEISHU_PHASE2_SPEC_ROWS_SOURCE_TABLE_ID
+      spec_rows_source_view_id_env: FEISHU_PHASE2_SPEC_ROWS_SOURCE_VIEW_ID
+      page_placeholders_source_table_id_env: FEISHU_PHASE2_PAGE_PLACEHOLDERS_SOURCE_TABLE_ID
+      page_placeholders_source_view_id_env: FEISHU_PHASE2_PAGE_PLACEHOLDERS_SOURCE_VIEW_ID
+    tables:
+      spec_master: {}
+      spec_footnotes:
+        table_id_env: FEISHU_PHASE2_SPEC_FOOTNOTES_TABLE_ID
+        view_id_env: FEISHU_PHASE2_SPEC_FOOTNOTES_VIEW_ID
+      spec_notes:
+        table_id_env: FEISHU_PHASE2_SPEC_NOTES_TABLE_ID
+        view_id_env: FEISHU_PHASE2_SPEC_NOTES_VIEW_ID
+      symbols_blocks:
+        table_id_env: FEISHU_PHASE2_SYMBOLS_BLOCKS_TABLE_ID
+        view_id_env: FEISHU_PHASE2_SYMBOLS_BLOCKS_VIEW_ID
+      lcd_icons:
+        table_id_env: FEISHU_PHASE2_LCD_ICONS_TABLE_ID
+        view_id_env: FEISHU_PHASE2_LCD_ICONS_VIEW_ID
+      troubleshooting:
+        table_id_env: FEISHU_PHASE2_TROUBLESHOOTING_TABLE_ID
+        view_id_env: FEISHU_PHASE2_TROUBLESHOOTING_VIEW_ID
+      variable_defaults:
+        table_id_env: FEISHU_PHASE2_VARIABLE_DEFAULTS_TABLE_ID
+        view_id_env: FEISHU_PHASE2_VARIABLE_DEFAULTS_VIEW_ID
+      variable_lang_overrides:
+        table_id_env: FEISHU_PHASE2_VARIABLE_LANG_OVERRIDES_TABLE_ID
+        view_id_env: FEISHU_PHASE2_VARIABLE_LANG_OVERRIDES_VIEW_ID
+      manual_copy_source:
+        table_id_env: FEISHU_PHASE2_MANUAL_COPY_SOURCE_TABLE_ID
+        view_id_env: FEISHU_PHASE2_MANUAL_COPY_SOURCE_VIEW_ID
+      translation_memory:
+        base_token_env: FEISHU_TRANSLATION_MEMORY_BASE_TOKEN
+        table_id_env: FEISHU_TRANSLATION_MEMORY_TABLE_ID
+        view_id_env: FEISHU_TRANSLATION_MEMORY_VIEW_ID
+    document_link:
+      table_id_env: FEISHU_PHASE2_DOCUMENT_LINK_TABLE_ID
+      view_id_env: FEISHU_PHASE2_DOCUMENT_LINK_VIEW_ID
+      wiki_parent_token_env: FEISHU_PHASE2_DOCUMENT_LINK_WIKI_PARENT_TOKEN
+    review_init:
+      table_id_env: FEISHU_PHASE2_DOCUMENT_LINK_TABLE_ID
+      view_id_env: FEISHU_PHASE2_DOCUMENT_LINK_VIEW_ID
