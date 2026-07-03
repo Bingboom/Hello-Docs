@@ -1,0 +1,47 @@
+{
+  "generated_at": "2026-07-03T02:05:55.010032+00:00",
+  "git_sha": "09b55199c6816b818fcd9b40aa2f75494771abab",
+  "model": "JE-2000F",
+  "region": "CN",
+  "lang": null,
+  "runtime_bundle_dir": "docs/_build/JE-2000F/CN/rst",
+  "review_dir": "docs/_review/JE-2000F/CN",
+  "index_path": "docs/_review/JE-2000F/CN/index.rst",
+  "page_files": [
+    "docs/_review/JE-2000F/CN/page/00_preface.rst",
+    "docs/_review/JE-2000F/CN/page/01_meaning_of_symbols.rst",
+    "docs/_review/JE-2000F/CN/page/02_whats_in_the_box.rst",
+    "docs/_review/JE-2000F/CN/page/03_product_overview_placeholder.rst",
+    "docs/_review/JE-2000F/CN/page/05_operation_guide_placeholder.rst",
+    "docs/_review/JE-2000F/CN/page/06_ups_mode.rst",
+    "docs/_review/JE-2000F/CN/page/08_charging_methods.rst",
+    "docs/_review/JE-2000F/CN/page/09_storage_and_maintenance.rst",
+    "docs/_review/JE-2000F/CN/page/12_app_setup_placeholder.rst",
+    "docs/_review/JE-2000F/CN/page/charging.rst",
+    "docs/_review/JE-2000F/CN/page/lcd_icons_zh.rst",
+    "docs/_review/JE-2000F/CN/page/spec_zh.rst",
+    "docs/_review/JE-2000F/CN/page/troubleshooting_zh.rst"
+  ],
+  "generated_files": [
+    "docs/_review/JE-2000F/CN/generated/JE-2000F/draft/03_product_overview_zh.rst",
+    "docs/_review/JE-2000F/CN/generated/JE-2000F/draft/05_operation_guide_zh.rst",
+    "docs/_review/JE-2000F/CN/generated/JE-2000F/draft/12_app_setup_zh.rst",
+    "docs/_review/JE-2000F/CN/generated/JE-2000F/lcd_icons_zh.rst",
+    "docs/_review/JE-2000F/CN/generated/JE-2000F/spec_zh.rst",
+    "docs/_review/JE-2000F/CN/generated/JE-2000F/troubleshooting_zh.rst"
+  ],
+  "override_files": [
+    "docs/_review/JE-2000F/CN/overrides/README.md"
+  ],
+  "page_manifest": "docs/manifests/manual_zh.yaml",
+  "recipe_ids": [
+    "03_product_overview",
+    "05_operation_guide",
+    "12_app_setup"
+  ],
+  "snippet_ids": [],
+  "spec_master": {
+    "path": "/home/runner/work/Hello-Docs/Hello-Docs/.tmp/review-start/phase2/Spec_Master.csv",
+    "sha256": "7fbc8ccbd30d778efc386af569313e3ef678b36ac5c45dde3c4df5cd233ec789"
+  }
+}
