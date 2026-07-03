@@ -1,0 +1,51 @@
+{
+  "generated_at": "2026-07-03T02:19:40.352950+00:00",
+  "git_sha": "09b55199c6816b818fcd9b40aa2f75494771abab",
+  "model": "JE-1000F",
+  "region": "AU",
+  "lang": "en",
+  "runtime_bundle_dir": "docs/_build/JE-1000F/AU/en/rst",
+  "review_dir": "docs/_review/JE-1000F/AU/en",
+  "index_path": "docs/_review/JE-1000F/AU/en/index.rst",
+  "page_files": [
+    "docs/_review/JE-1000F/AU/en/page/00_preface.rst",
+    "docs/_review/JE-1000F/AU/en/page/01_user_maintenance_instructions.rst",
+    "docs/_review/JE-1000F/AU/en/page/02_whats_in_the_box.rst",
+    "docs/_review/JE-1000F/AU/en/page/03_product_overview_placeholder.rst",
+    "docs/_review/JE-1000F/AU/en/page/05_operation_guide_placeholder.rst",
+    "docs/_review/JE-1000F/AU/en/page/06_ups_mode.rst",
+    "docs/_review/JE-1000F/AU/en/page/08_charging_methods.rst",
+    "docs/_review/JE-1000F/AU/en/page/09_storage_and_maintenance.rst",
+    "docs/_review/JE-1000F/AU/en/page/11_warranty.rst",
+    "docs/_review/JE-1000F/AU/en/page/12_app_setup_placeholder.rst",
+    "docs/_review/JE-1000F/AU/en/page/charging.rst",
+    "docs/_review/JE-1000F/AU/en/page/lcd_icons_en.rst",
+    "docs/_review/JE-1000F/AU/en/page/safety_en.rst",
+    "docs/_review/JE-1000F/AU/en/page/spec_en.rst",
+    "docs/_review/JE-1000F/AU/en/page/symbols_en.rst",
+    "docs/_review/JE-1000F/AU/en/page/troubleshooting_en.rst"
+  ],
+  "generated_files": [
+    "docs/_review/JE-1000F/AU/en/generated/JE-1000F/draft/03_product_overview_en.rst",
+    "docs/_review/JE-1000F/AU/en/generated/JE-1000F/draft/05_operation_guide_en.rst",
+    "docs/_review/JE-1000F/AU/en/generated/JE-1000F/draft/12_app_setup_en.rst",
+    "docs/_review/JE-1000F/AU/en/generated/JE-1000F/lcd_icons_en.rst",
+    "docs/_review/JE-1000F/AU/en/generated/JE-1000F/spec_en.rst",
+    "docs/_review/JE-1000F/AU/en/generated/JE-1000F/symbols_en.rst",
+    "docs/_review/JE-1000F/AU/en/generated/JE-1000F/troubleshooting_en.rst"
+  ],
+  "override_files": [
+    "docs/_review/JE-1000F/AU/en/overrides/README.md"
+  ],
+  "page_manifest": "docs/manifests/manual_au-en.yaml",
+  "recipe_ids": [
+    "03_product_overview",
+    "05_operation_guide",
+    "12_app_setup"
+  ],
+  "snippet_ids": [],
+  "spec_master": {
+    "path": "/home/runner/work/Hello-Docs/Hello-Docs/.tmp/review-start/phase2/Spec_Master.csv",
+    "sha256": "7fbc8ccbd30d778efc386af569313e3ef678b36ac5c45dde3c4df5cd233ec789"
+  }
+}
