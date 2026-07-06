@@ -1,0 +1,48 @@
+{
+  "generated_at": "2026-07-06T07:10:59.050377+00:00",
+  "git_sha": "15f6e1c6e55d07ee073824e5ffbc5ceb99e58700",
+  "model": "JE-1800B",
+  "region": "JP",
+  "lang": null,
+  "runtime_bundle_dir": "docs/_build/JE-1800B/JP/rst",
+  "review_dir": "docs/_review/JE-1800B/JP",
+  "index_path": "docs/_review/JE-1800B/JP/index.rst",
+  "page_files": [
+    "docs/_review/JE-1800B/JP/page/01_meaning_of_symbols.rst",
+    "docs/_review/JE-1800B/JP/page/02_whats_in_the_box.rst",
+    "docs/_review/JE-1800B/JP/page/03_product_overview_placeholder.rst",
+    "docs/_review/JE-1800B/JP/page/05_operation_guide_placeholder.rst",
+    "docs/_review/JE-1800B/JP/page/06_ups_mode.rst",
+    "docs/_review/JE-1800B/JP/page/08_charging_methods.rst",
+    "docs/_review/JE-1800B/JP/page/11_warranty.rst",
+    "docs/_review/JE-1800B/JP/page/12_app_setup_placeholder.rst",
+    "docs/_review/JE-1800B/JP/page/charging.rst",
+    "docs/_review/JE-1800B/JP/page/cover_jp.rst",
+    "docs/_review/JE-1800B/JP/page/lcd_icons_ja.rst",
+    "docs/_review/JE-1800B/JP/page/safety_ja.rst",
+    "docs/_review/JE-1800B/JP/page/spec_ja.rst",
+    "docs/_review/JE-1800B/JP/page/troubleshooting_ja.rst"
+  ],
+  "generated_files": [
+    "docs/_review/JE-1800B/JP/generated/JE-1800B/draft/03_product_overview_ja.rst",
+    "docs/_review/JE-1800B/JP/generated/JE-1800B/draft/05_operation_guide_ja.rst",
+    "docs/_review/JE-1800B/JP/generated/JE-1800B/draft/12_app_setup_ja.rst",
+    "docs/_review/JE-1800B/JP/generated/JE-1800B/lcd_icons_ja.rst",
+    "docs/_review/JE-1800B/JP/generated/JE-1800B/spec_ja.rst",
+    "docs/_review/JE-1800B/JP/generated/JE-1800B/troubleshooting_ja.rst"
+  ],
+  "override_files": [
+    "docs/_review/JE-1800B/JP/overrides/README.md"
+  ],
+  "page_manifest": "docs/manifests/manual_jp.yaml",
+  "recipe_ids": [
+    "03_product_overview",
+    "05_operation_guide",
+    "12_app_setup"
+  ],
+  "snippet_ids": [],
+  "spec_master": {
+    "path": "/home/runner/work/Hello-Docs/Hello-Docs/.tmp/review-start/phase2/Spec_Master.csv",
+    "sha256": "f7d971e20a2840ae2971901d49f6309d2d46d3e01f2014c927b8ec9c8af95869"
+  }
+}
