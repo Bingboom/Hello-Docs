@@ -231,7 +231,7 @@ jobs:
         if: always()
         uses: ./.github/actions/queue-sentinel-issue
         with:
-          job-status: ${{ job.status }}
+          job-status: ${{ failure() && 'failure' || 'success' }}
           label: queue-failure-build
           title: "Feishu Build Queue failing: ${{ inputs.queue_record_id || 'batch' }}"
           details: |
