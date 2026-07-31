@@ -9,7 +9,7 @@
 
    Este producto puede soportar hasta 5 paquetes de baterías para satisfacer la necesidad de una gran capacidad de energía. Para detalles sobre su uso, consulte el *manual de usuario del Jackery Battery Pack 2000*.
 
-   .. image:: _assets/templates/word_template/common_assets/in_the_box/main_unit1.png
+   .. image:: asset:in_the_box/main_unit1
       :alt: Diagrama de conexión del paquete de baterías.
       :width: 360px
 
@@ -73,16 +73,16 @@ Cuando la carga en la pared de CA y la carga solar están activadas al mismo tie
    :widths: 12 88
 
    * - **NOTA**
-     - - La temperatura de carga recomendada para el producto es de 14 °F a 113 °F / -10 °C a 45 °C, y la temperatura de descarga es de 14°F a 113°F / -10°C a 45°C.
+     - - La temperatura de carga recomendada para el producto está entre 14 °F y 113 °F (da -10 °C a 45 °C), y la temperatura de descarga está entre 14 °F y 113 °F (da -10 °C a 45 °C).
        - Operar el producto fuera de este rango de temperatura puede limitar sus capacidades de carga y descarga, e incluso impedir la carga o descarga.
-       - La potencia de carga y la capacidad de la batería del producto pueden variar debido a las fluctuaciones de temperatura.
+       - La potencia de carga y la capacidad de la batería del producto pueden variar debido a fluctuaciones de temperatura.
 
 CARGA MEDIANTE UNA TOMA DE CORRIENTE DE PARED ALTERNA
 -----------------------------------------------------
 
 Conecte el cable de carga de CA al puerto de entrada de CA del producto y a una toma de corriente.
 
-.. image:: _assets/templates/word_template/common_assets/charging/ac_wall.png
+.. image:: asset:charging/ac_wall
    :alt: Diagrama de carga por toma de CA.
    :width: 360px
 
@@ -92,10 +92,10 @@ Conecte el cable de carga de CA al puerto de entrada de CA del producto y a una 
    :widths: 12 88
 
    * - **PRECAUCIÓN**
-     - Asegúrese de que el cable de carga de CA esté completamente y firmemente insertado en el puerto de entrada de CA. Una conexión incompleta puede causar corriente inestable, sobrecalentamiento, mal contacto o fallos en el funcionamiento del producto.
+     - Asegúrese de que el cable de carga de CA esté completamente y firmemente insertado en el puerto de entrada de CA. Una conexión incompleta puede provocar corriente inestable, sobrecalentamiento, mal contacto o fallos en el funcionamiento del producto.
 
 
 **Modo de Carga de Emergencia**
 
 Bajo este modo, puedes cargar rápidamente la estación de energía portátil utilizando el método de carga de CA. Esta función de carga de emergencia se puede activar o desactivar a través de la aplicación Jackery. Cuando está en modo de carga de emergencia, la luz circular que indica el estado de carga (SOC) parpadeará más rápido.
-\*Para maximizar la vida útil de la batería, es mejor cargar a la velocidad estándar. La carga de emergencia debe reservarse para situaciones que requieren un aumento rápido de energía y no se recomienda para un uso regular y prolongado.
+\* Para maximizar la vida útil de la batería, es mejor cargar a la velocidad estándar. La carga de emergencia debe reservarse para situaciones que requieren un aumento rápido de energía y no se recomienda para un uso regular y prolongado.

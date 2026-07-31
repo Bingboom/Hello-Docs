@@ -7,8 +7,9 @@
    .. raw:: latex
 
       \section{WHAT'S IN THE BOX}
-      \HBInBoxThree{main_unit1.png}{Jackery Explorer 1000}{ac_charging_cable.png}{AC Charging Cable}{manual_icon1.png}{Documents}
+      \HBInBoxThree{main_unit1.png}{Jackery Explorer 1000}{ac_charging_cable.png}{AC Charging Cable}{manual_icon1.png}{Doucuments}
       \HBTipBlock{TIP}{The car charging cable is not included but is available for purchase separately on our website. For assistance, please contact Jackery customer service.}
+      \HBPageBreak
 
 .. only:: latex and region_eu
 
@@ -28,21 +29,21 @@
       :header-rows: 0
       :widths: 33 33 34
 
-      * - .. image:: _assets/templates/word_template/common_assets/in_the_box/main_unit1.png
+      * - .. image:: asset:in_the_box/main_unit1
              :alt: Power station image placeholder.
              :width: 120px
 
           **Jackery Explorer 1000**
-        - .. image:: _assets/templates/word_template/common_assets/in_the_box/ac_charging_cable.png
+        - .. image:: asset:in_the_box/ac_charging_cable
              :alt: AC charging cable image placeholder.
              :width: 120px
 
           **AC Charging Cable**
-        - .. image:: _assets/templates/word_template/common_assets/in_the_box/manual_icon1.png
+        - .. image:: asset:in_the_box/manual_icon1
              :alt: User manual image placeholder.
              :width: 120px
 
-          Documents
+          Doucuments
 
 .. only:: not latex and region_eu
 
@@ -54,17 +55,17 @@
       :header-rows: 0
       :widths: 33 33 34
 
-      * - .. image:: _assets/templates/word_template/common_assets/in_the_box/main_unit1.png
+      * - .. image:: asset:in_the_box/main_unit1
              :alt: Power station image placeholder.
              :width: 120px
 
           **Jackery Explorer 1000**
-        - .. image:: _assets/templates/word_template/common_assets/in_the_box/ac_charging_cable.png
+        - .. image:: asset:in_the_box/ac_charging_cable
              :alt: AC charging cable image placeholder.
              :width: 120px
 
           **AC Charging Cable**
-        - .. image:: _assets/templates/word_template/common_assets/in_the_box/manual_icon1.png
+        - .. image:: asset:in_the_box/manual_icon1
              :alt: User manual image placeholder.
              :width: 120px
 
