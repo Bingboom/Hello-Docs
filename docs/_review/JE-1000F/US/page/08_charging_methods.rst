@@ -7,13 +7,13 @@ CHARGING VIA SOLAR PANELS (SOLD SEPARATELY)
 
 Jackery Explorer 1000 has two DC8020 input ports and is compatible with the Jackery solar panels.
 
-.. image:: _assets/templates/word_template/common_assets/charging/solar_direct.png
+.. image:: asset:charging/solar_direct
    :alt: Solar charging connection diagram placeholder 1.
    :width: 360px
 
 If one DC8020 input port needs to connect two solar panels simultaneously, please refer to the figure below for charging through the solar panel connector (sold separately, not included as standard).
 
-.. image:: _assets/templates/word_template/common_assets/charging/solar_adapter.png
+.. image:: asset:charging/solar_adapter
    :alt: Solar charging connection diagram placeholder 2.
    :width: 360px
 
@@ -34,14 +34,14 @@ If one DC8020 input port needs to connect two solar panels simultaneously, pleas
        - Use the same model of Jackery solar panels and the same number of panels when connecting solar panels to both DC8020 Input ports.
        - Do not charge the product using both a car charger and a solar panel simultaneously. Doing so may blow the car fuse or result in charging failure.
 
-It is recommended to use the Jackery solar panel to charge the product. Ensure that the open-circuit voltage (V\ :sub:`oc`) of the solar panel is within the DC input range (16V-60V) of Jackery Explorer 1000. Jackery is not responsible for any damage or loss resulting from the use of third-party solar panels.
+It is recommended to use the Jackery solar panel to charge the product. Ensure that the open-circuit voltage (V\ :sub:`oc`) of the solar panel is within the DC input range (16V-60V) of the Jackery Explorer 1000. Jackery is not responsible for any damage or loss resulting from the use of third-party solar panels.
 
 CHARGING VIA A CAR CHARGER (SOLD SEPARATELY)
 --------------------------------------------
 
 This product can be charged using a 12V car charger. Ensure that the car charger and the 12V car power outlet (car cigarette lighter) provide a good connection.
 
-.. image:: _assets/templates/word_template/common_assets/charging/car_charge.png
+.. image:: asset:charging/car_charge
    :alt: Car charging connection diagram placeholder.
    :width: 360px
 

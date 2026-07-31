@@ -2,17 +2,17 @@
 
    \HBApplyLang{fr}
 
-CONFIGURATION DE L'APPLICATION
+CONFIGURATION DE L’APPLICATION
 ==============================
 
 1. Télécharger l'application et se connecter
 --------------------------------------------
 
-.. image:: _assets/templates/word_template/common_assets/app/download.png
+.. image:: asset:app/download
    :alt: Code QR de téléchargement de l'application et emplacement réservé aux boutiques.
    :width: 320px
 
-Recherchez "Jackery" dans Google Play ou dans l'App Store pour installer l'application. Une fois que c'est fait, vous pouvez vous inscrire et vous connecter.
+Recherchez « Jackery » dans Google Play ou dans l’App Store pour installer l’application. Une fois que c’est fait, vous pouvez vous inscrire et vous connecter.
 
 Vous pouvez également scanner le code QR ci-dessous pour télécharger et installer l'application.
 
@@ -21,15 +21,15 @@ Vous pouvez également scanner le code QR ci-dessous pour télécharger et insta
 
 2.1 Cliquez sur le bouton **Ajouter un appareil** pour ajouter un appareil.
 
-2.2 Appuyez sur le bouton d'alimentation de l’appareil pour l’allumer. Les icônes Wi-Fi et Bluetooth clignotent sur l’appareil afin d’indiquer qu’il est entré dans le mode Configuration réseau. Cliquez sur le bouton « Icône qui clignote » et autorisez l’application à se connecter aux appareils alentour, puis ouvrez les autorisations Bluetooth.
+2.2 Appuyez sur le bouton POWER de l’appareil pour l’allumer. Les icônes Wi-Fi et Bluetooth clignotent sur l’appareil afin d’indiquer qu’il est entré dans le mode Configuration réseau. Cliquez sur le bouton «icône qui clignotante» et autorisez l’application à se connecter aux appareils alentour, puis ouvrez les autorisations Bluetooth.
 
-.. image:: _assets/templates/word_template/common_assets/app/add_device.png
+.. image:: asset:app/add_device
    :alt: Emplacement réservé à l'étape d'ajout d'appareil dans l'application.
    :width: 320px
 
-| Bouton d'alimentation
-| Bouton d’alimentation CC / USB
-| Bouton Power CA
+| Bouton POWER
+| Bouton d’alimentation CC/USB
+| Bouton d’alimentation CA
 
 | 2.3 Après avoir appuyé sur l’icône de l’appareil détecté, l’application se connecte automatiquement à l’appareil via Bluetooth.
 
@@ -42,10 +42,10 @@ Vous pouvez également scanner le code QR ci-dessous pour télécharger et insta
      - Si le message «l'appareil a été associé» s'affiche pendant l'appairage, vous pouvez suivre l'une de ces deux étapes pour procéder à la connexion.
 
        - Le propriétaire de l'appareil peut partager ce dernier avec d'autres utilisateurs dans l'application.
-       - Maintenez le bouton d'alimentation et le bouton d’alimentation CC / USB enfoncés pendant 3 secondes pour réinitialiser le Wi-Fi et le Bluetooth de l'appareil et l'associer de nouveau.
+       - Maintenez le bouton d'alimentation principal et le bouton d’alimentation CC/USB enfoncés pendant 3 secondes pour réinitialiser le Wi-Fi et le Bluetooth de l'appareil et l'associer de nouveau.
 
 
-| 2.4 Une fois l’appareil connecté avec succès, saisissez votre mot de passe Wi-Fi, puis appuyez sur le bouton **OK**.
+| 2.4 Une fois l’appairage réalisé avec succès, vous devrez saisir le nom et le mot de passe du Wi-Fi pour que l’appareil se connecte automatiquement au réseau Wi-Fi.
 
 .. list-table::
    :header-rows: 0
@@ -55,9 +55,9 @@ Vous pouvez également scanner le code QR ci-dessous pour télécharger et insta
      -
        - Veuillez choisir un réseau Wi-Fi 2,4 GHz. L'appareil ne prend pas en charge le réseau Wi-Fi 5 GHz.
 
-| Une fois l'appareil ajouté à la page d'accueil, l'icône Wi-Fi de l'appareil restera allumée.
+| 2.5 Une fois l'appareil ajouté à la page d'accueil, l'icône Wi-Fi de l'appareil restera allumée.
 
-.. image:: _assets/templates/word_template/common_assets/app/connect_result.png
+.. image:: asset:app/connect_result
    :alt: Emplacement réservé à l'écran de résultat de connexion dans l'application.
    :width: 360px
 
@@ -84,15 +84,15 @@ Cliquez sur le bouton des paramètres en haut à droite de l'interface principal
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 - Le Wi-Fi et le Bluetooth sont automatiquement activés, une fois l'appareil allumé. Leurs icônes s'allument sur l'écran.
-- Appuyez simultanément sur le bouton d’alimentation CC / USB et le bouton power CA jusqu'à ce que les icônes Wi-Fi et Bluetooth s'allument sur l'écran.
+- Appuyez simultanément sur le bouton d’alimentation CC/USB et le bouton d’alimentation CA jusqu'à ce que les icônes Wi-Fi et Bluetooth s'allument sur l'écran.
 
 4.2 Pour désactiver le Wi-Fi et le Bluetooth
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-| Appuyez simultanément sur le bouton d’alimentation CC / USB et le bouton power CA jusqu’à ce que les icônes Wi-Fi et Bluetooth s’éteignent sur l’écran.
+| Appuyez ssimultanément sur le bouton d’alimentation CC/USB et le bouton d’alimentation CA jusqu’à ce que les icônes Wi-Fi et Bluetooth s’éteignent sur l’écran.
 
 
 4.3 Pour réinitialiser le Wi-Fi et le Bluetooth
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Maintenez le bouton d'alimentation et le bouton d’alimentation CC / USB enfoncés simultanément pendant 3 secondes pour réinitialiser le Wi-Fi et le Bluetooth aux paramètres d’usine. Le compte connecté dans l’application sera dissocié.
+Maintenez le bouton d'alimentation principal et le bouton d’alimentation CC/USB enfoncés simultanément pendant 3 secondes pour réinitialiser le Wi-Fi et le Bluetooth aux paramètres d’usine. Le compte connecté dans l’application sera dissocié.

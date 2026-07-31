@@ -9,6 +9,7 @@ If any of the following fault codes appear, follow the listed corrective actions
 If the fault persists, please contact Jackery Customer Support.
 
 .. list-table::
+   :class: longtable
    :header-rows: 1
    :widths: 14 86
 
@@ -34,7 +35,7 @@ If the fault persists, please contact Jackery Customer Support.
        | 5. Restart the product.
    * - F7
      - | 1. Remove all DC inputs from the product.
-       | 2. Check the open-circuit voltage (V\ :sub:`oc`) of the connected solar panels. The product allows a maximum DC input voltage of 60V.
+       | 2. If you charge the product via a solar panel, check the open-circuit voltage (V\ :sub:`oc`) of the connected solar panel. The product allows a maximum DC input voltage of 60V.
        | 3. Restart the product and keep it idle. Wait until the fault disappears.
    * - F8
      - Contact Jackery Customer Support.
@@ -42,4 +43,3 @@ If the fault persists, please contact Jackery Customer Support.
      - Remove the load connected to the USB ports of the product. Wait until the fault disappears.
    * - FE
      - Contact Jackery Customer Support.
-
