@@ -32,8 +32,6 @@
 
 .. include:: page/11_warranty.rst
 
-.. include:: page/12_app_setup_placeholder.rst
-
 .. include:: page/safety_fr.rst
 
 .. include:: page/p17_01_user_maintenance_instructions.rst
@@ -59,8 +57,6 @@
 .. include:: page/spec_fr.rst
 
 .. include:: page/p28_11_warranty.rst
-
-.. include:: page/p29_12_app_setup_placeholder.rst
 
 .. include:: page/safety_es.rst
 
@@ -88,8 +84,6 @@
 
 .. include:: page/p42_11_warranty.rst
 
-.. include:: page/p43_12_app_setup_placeholder.rst
-
 .. include:: page/safety_de.rst
 
 .. include:: page/p45_01_user_maintenance_instructions.rst
@@ -116,8 +110,6 @@
 
 .. include:: page/p56_11_warranty.rst
 
-.. include:: page/p57_12_app_setup_placeholder.rst
-
 .. include:: page/safety_it.rst
 
 .. include:: page/p59_01_user_maintenance_instructions.rst
@@ -143,6 +135,3 @@
 .. include:: page/spec_it.rst
 
 .. include:: page/p70_11_warranty.rst
-
-.. include:: page/p71_12_app_setup_placeholder.rst
-
