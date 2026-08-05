@@ -2,27 +2,14 @@
 
    \HBApplyLang{en}
 
-CHARGING VIA SOLAR PANELS (SOLD SEPARATELY)
--------------------------------------------
+CHARGING VIA SOLAR PANELS (100W Max)
+------------------------------------
 
-Jackery Explorer 300 has two DC8020 input ports and is compatible with the Jackery solar panels.
+Jackery Explorer 300 has one DC8020 input port and is compatible with the Jackery solar panels.
 
 .. image:: asset:charging/solar_direct
    :alt: Solar charging connection diagram placeholder 1.
    :width: 360px
-
-If one DC8020 input port needs to connect two solar panels simultaneously, please refer to the figure below for charging through the solar panel connector (sold separately, not included as standard).
-
-.. image:: asset:charging/solar_adapter
-   :alt: Solar charging connection diagram placeholder 2.
-   :width: 360px
-
-.. list-table::
-   :header-rows: 0
-   :widths: 12 88
-
-   * - **CAUTION**
-     - One DC8020 input port can be connected to at most two solar panels.
 
 .. list-table::
    :header-rows: 0
