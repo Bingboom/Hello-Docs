@@ -2,27 +2,14 @@
 
    \HBApplyLang{de}
 
-AUFLADEN ÜBER SOLARMODULE (SEPARAT ERHÄLTLICH)
-----------------------------------------------
+AUFLADEN ÜBER SOLARMODULE (100W Max)
+------------------------------------
 
-Jackery Explorer 300 verfügt über zwei DC8020-Eingangsanschlüsse und ist mit den Jackery-Solarmodulen kompatibel.
+Jackery Explorer 300 verfügt über einen DC8020-Eingangsanschluss und ist mit den Jackery-Solarmodulen kompatibel.
 
 .. image:: asset:charging/solar_direct
    :alt: Abbildung der Solarladeverbindung als Platzhalter 1.
    :width: 360px
-
-Wenn ein DC8020-Eingangsanschluss zwei Solarmodule gleichzeitig anschließen muss, beziehen Sie sich bitte auf die folgende Abbildung zum Aufladen über den Solarpanel-Anschluss (separat erhältlich, nicht im Lieferumfang enthalten).
-
-.. image:: asset:charging/solar_adapter
-   :alt: Abbildung der Solarladeverbindung als Platzhalter 2.
-   :width: 360px
-
-.. list-table::
-   :header-rows: 0
-   :widths: 12 88
-
-   * - **VORSICHT**
-     - An einen DC8020-Eingangsanschluss können höchstens zwei Solarmodule angeschlossen werden.
 
 .. list-table::
    :header-rows: 0

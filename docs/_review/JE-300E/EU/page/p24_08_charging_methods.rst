@@ -2,28 +2,14 @@
 
    \HBApplyLang{fr}
 
-CHARGEMENT PAR PANNEAUX SOLAIRES (Vendu séparément)
----------------------------------------------------
+CHARGEMENT PAR PANNEAUX SOLAIRES (100W Max)
+-------------------------------------------
 
-Le Jackery Explorer 300 dispose de deux ports d’entrée DC8020 et est compatible avec les panneaux solaires de Jackery.
+Le Jackery Explorer 300 dispose d’un port d’entrée DC8020 et est compatible avec les panneaux solaires de Jackery.
 
 .. image:: asset:charging/solar_direct
    :alt: Schéma de connexion pour la charge solaire 1.
    :width: 360px
-
-Si un seul port d’entrée DC8020 doit être connecté à deux panneaux solaires simultanément, veuillez vous référer au schéma ci-dessous pour le branchement via le connecteur de panneau solaire (vendu séparément, non inclus en standard).
-
-
-.. image:: asset:charging/solar_adapter
-   :alt: Schéma de connexion pour la charge solaire 2.
-   :width: 360px
-
-.. list-table::
-   :header-rows: 0
-   :widths: 12 88
-
-   * - **ATTENTION**
-     - Un port d’entrée DC8020 peut être connecté à un maximum de deux panneaux solaires.
 
 .. list-table::
    :header-rows: 0

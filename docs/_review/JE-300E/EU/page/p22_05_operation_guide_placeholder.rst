@@ -16,8 +16,6 @@ MARCHE/ARRÊT
 | Arrêt : appuyez et maintenez pendant 3 secondes.
 | **Temps de veille par défaut :** 2 heures.
 | Le produit s'éteindra automatiquement après 2 heures d'inactivité, sans charge ni décharge.
-| \*Le temps de veille peut être réglé dans l'application Jackery.
-| Lorsque le mode d'économie d'énergie est activé, le produit s'éteindra automatiquement après 12 heures si le bouton CA ou le bouton d'alimentation DC / USB est activé mais que le produit ne charge ni ne décharge.
 
 SORTIE CA MARCHE/ARRÊT
 ----------------------
@@ -33,8 +31,8 @@ SORTIE CA MARCHE/ARRÊT
 | **Arrêt** 
 | appuyez une fois
 
-SORTIE CC 12V/USB MARCHE/ARRÊT
-------------------------------
+SORTIE CC 12V MARCHE/ARRÊT
+--------------------------
 
 **Prérequis :** Le produit est allumé.
 
@@ -72,17 +70,15 @@ SORTIE CC 12V/USB MARCHE/ARRÊT
 MODE D'ÉCONOMIE D'ÉNERGIE
 -------------------------
 
-Pour éviter une consommation inutile de la batterie due à l'oubli de désactiver la sortie, le produit active par défaut le mode d'économie d'énergie. Lorsque la sortie CA ou CC/USB est activée, l'icône du mode d'économie d'énergie s'affiche sur l'écran LCD. Dans ce mode, si aucun appareil n'est connecté ou si la consommation de l'appareil connecté est inférieure à un certain seuil (sortie CA de 25 W ou sortie CC/USB de 2 W), la sortie correspondante s'éteint automatiquement après la durée définie. Le réglage par défaut est 12 heures. La durée du mode d'économie d'énergie peut être réglée dans l'application Jackery sur 1H, 2 H, 8 H, 12 H ou 24 H. Si l'option "Never Off" est sélectionnée, le mode d'économie d'énergie sera désactivé.
+Pour éviter une consommation inutile de la batterie due à l'oubli de désactiver la sortie, le mode d'économie d'énergie est activé par défaut. Si aucun appareil n'est connecté ou si la consommation de l'appareil connecté est inférieure à un certain seuil (sortie CA ≤ 25 W, ports USB + CC 12V ≤ 2 W) pendant 6 heures, le produit désactive automatiquement les sorties.
 
-Pour désactiver le mode d'économie d'énergie, appuyez simultanément sur le bouton CA et sur le bouton POWER principal pendant plus de 3 secondes. Une fois le mode d'économie d'énergie désactivé, l'icône ne s'affichera plus sur l'écran LCD et le produit n'éteindra pas automatiquement la sortie CA ou CC/USB.
-
-Lors de l'alimentation d'appareils à faible puissance (CA ≤ 25 W ou CC/USB ≤ 2 W), désactivez le mode d'économie d'énergie afin d'éviter l'arrêt automatique de la sortie pendant le fonctionnement.
+Pour activer ou désactiver le mode d'économie d'énergie, appuyez simultanément sur le bouton CA et sur le bouton d'alimentation principal pendant 3 secondes.
 
 .. image:: asset:operation/energy_saving
    :alt: Fonction du mode d'économie d'énergie.
    :width: 320px
 
-| Maintenez les deux boutons enfoncés pendant plus de 3 secondes.
+| Maintenez enfoncé pendant 3 secondes
 
 .. list-table::
    :header-rows: 0
