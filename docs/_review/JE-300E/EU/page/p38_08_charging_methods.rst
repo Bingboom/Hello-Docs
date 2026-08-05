@@ -19,7 +19,7 @@ Jackery Explorer 300 cuenta con un puerto de entrada DC8020 y es compatible con 
    * - **PRECAUCIÓN**
      -
        - Solo se puede conectar un panel solar al puerto de entrada DC8020.
-       - Jackery no se responsabiliza de los daños o pérdidas derivados del uso de paneles solares de terceros.
+       - Jackery no se hace responsable de pérdidas causadas por el uso de paneles solares de otras marcas.
 
 Se recomienda usar el panel solar Jackery para cargar el Explorer 300. Asegúrese de que el voltaje en circuito abierto (V\ :sub:`oc`) del panel solar esté dentro del rango de voltaje de entrada de CC (16V-28V) del Jackery Explorer 300.
 

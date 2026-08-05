@@ -86,7 +86,7 @@ Para activar o desactivar el modo de ahorro de energía, mantenga pulsados simul
    :alt: Operación del modo de ahorro de energía.
    :width: 320px
 
-| Mantenga pulsado durante 3 segundos
+| Mantenga presionado durante 3 segundos
 
 .. list-table::
    :header-rows: 0

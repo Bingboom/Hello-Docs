@@ -18,7 +18,7 @@ Jackery Explorer 300 dispone di una porta di ingresso DC8020 ed è compatibile c
    * - **ATTENZIONE**
      -
        - Al porto di ingresso DC8020 può essere collegato un solo pannello solare.
-       - Jackery non è responsabile per danni o perdite derivanti dall’uso di pannelli solari di terze parti.
+       - Jackery non è responsabile per eventuali danni o perdite derivanti dall'uso di pannelli solari di terze parti.
 
 Si consiglia di utilizzare il pannello solare Jackery per caricare l’Explorer 300. Assicurarsi che la tensione a circuito aperto (V\ :sub:`oc`) del pannello solare rientri nell’intervallo di tensione di ingresso CC (16V-28V) del Jackery Explorer 300.
 

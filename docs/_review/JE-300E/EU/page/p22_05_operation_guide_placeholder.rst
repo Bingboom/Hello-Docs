@@ -78,7 +78,7 @@ Pour activer ou désactiver le mode d'économie d'énergie, appuyez simultanéme
    :alt: Fonction du mode d'économie d'énergie.
    :width: 320px
 
-| Maintenez enfoncé pendant 3 secondes
+| Appuyez et maintenez pendant 3 secondes
 
 .. list-table::
    :header-rows: 0
