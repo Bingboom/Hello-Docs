@@ -17,8 +17,6 @@ POWER ON/OFF
 
 | **Default standby time:** 2 hours.
 | The product will automatically shut down after 2 hours of inactivity, with no charging or discharging.
-| \*The standby time can be set in the Jackery App.
-| When Energy Saving Mode is enabled, the product will automatically shut down after 12 hours if the AC or DC/USB power button is ON but the product is neither charging nor discharging.
 
 AC OUTPUT ON/OFF
 ----------------
@@ -36,8 +34,8 @@ AC OUTPUT ON/OFF
 | Press once
 
 
-DC 12V/USB OUTPUT ON/OFF
-------------------------
+DC 12V OUTPUT ON/OFF
+--------------------
 
 **Prerequisite**: The product is powered on.
 
@@ -79,18 +77,16 @@ DC 12V/USB OUTPUT ON/OFF
 ENERGY SAVING MODE
 ------------------
 
-To prevent unnecessary battery consumption from forgetting to turn off the output, the product enables Energy Saving Mode by default. When the AC or DC/USB output is turned on, the Energy Saving Mode icon will be displayed on the LCD screen. In this mode, if no device is connected or the connected device's power consumption is below a certain threshold (25 W AC output or 2 W DC/USB output), the corresponding output will automatically turns off after the set time. The default setting is 12 hours. The Energy Saving Mode duration can be set in the Jackery App to 1H, 2 H, 8 H, 12 H or 24 H. If it is set to Never Off, Energy Saving Mode will be disabled.
+To prevent unnecessary battery consumption caused by forgetting to turn off the output, Energy Saving Mode is enabled by default. If no device is connected or the connected device's power consumption is below a certain threshold (AC output ≤ 25W, USB + DC 12V port ≤ 2W ) for 6 hours, the product will automatically turn off the outputs.
 
-To disable the energy saving mode, press and hold both the AC power button and the main POWER button for more than 3 seconds. Once Energy Saving Mode is disabled, the icon will no longer appear on the LCD screen, and the product will not automatically turn off the AC or USB output.
-
-When powering low-power devices (AC ≤ 25 W or DC/USB ≤ 2 W), disable Energy Saving Mode to prevent the output from shutting down automatically during operation.
+To turn Energy Saving Mode on or off, press and hold both the AC power button and the main power button for 3 seconds.
 
 .. image:: asset:operation/energy_saving
    :alt: Energy saving mode key operation placeholder.
    :width: 320px
 
 
-| Press and hold both buttons for more than 3 seconds.
+| Press and hold for 3 seconds
 
 .. list-table::
    :header-rows: 0

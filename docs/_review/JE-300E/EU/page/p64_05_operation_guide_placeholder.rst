@@ -17,8 +17,6 @@ ACCENSIONE/SPEGNIMENTO
 
 | **Tempo di standby predefinito:** 2 ore.
 | Il prodotto si spegnerà automaticamente dopo 2 ore di inattività, senza ricarica o scarica.
-| \*Il tempo di standby può essere impostato nell'App Jackery.
-| Quando la Modalità risparmio energetico è attiva, il prodotto si spegnerà automaticamente dopo 12 ore se l'uscita CA o DC/USB è attiva ma il prodotto non sta caricando o scaricando.
 
 USCITA CA ATTIVA/DISATTIVA
 --------------------------
@@ -36,8 +34,8 @@ USCITA CA ATTIVA/DISATTIVA
 | Premi una volta
 
 
-USCITA CC 12 V/ USB ATTIVA/DISATTIVA
-------------------------------------
+USCITA CC 12 V ATTIVA/DISATTIVA
+-------------------------------
 
 **Prerequisito**: il prodotto è acceso.
 
@@ -78,18 +76,16 @@ USCITA CC 12 V/ USB ATTIVA/DISATTIVA
 MODALITÀ RISPARMIO ENERGETICO
 -----------------------------
 
-Per evitare un consumo inutile della batteria dovuto al mancato spegnimento dell'uscita, il prodotto abilita per impostazione predefinita la Modalità risparmio energetico. Quando l'uscita CA o CC è attiva, l'icona della Modalità risparmio energetico viene visualizzata sullo schermo LCD. In questa modalità, se non è collegato alcun dispositivo oppure il consumo del dispositivo collegato è inferiore a una certa soglia (25 W per l'uscita CA o 2 W per l'uscita DC/USB), l'uscita corrispondente si spegnerà automaticamente dopo il tempo impostato. L'impostazione predefinita e 12 ore. La durata della Modalità risparmio energetico può essere impostata nell'App Jackery su 1 H, 2 H, 8 H, 12 H o 24 H. Se viene impostata su Mai spegnimento, la Modalità risparmio energetico sarà disattivata.
+Per evitare un consumo inutile della batteria dovuto alla dimenticanza di disattivare l'uscita, la Modalità risparmio energetico è attiva per impostazione predefinita. Se per 6 ore non è collegato alcun dispositivo o il consumo del dispositivo collegato è inferiore a una certa soglia (uscita CA ≤ 25 W, porte USB + CC 12V ≤ 2 W), il prodotto disattiva automaticamente le uscite.
 
-Per disattivare la Modalità risparmio energetico, tieni premuti per più di 3 secondi sia il pulsante CA sia il pulsante POWER principale. Una volta disattivata la Modalità risparmio energetico, l'icona non comparirà più sullo schermo LCD e il prodotto non spegnerà automaticamente l'uscita CA o DC/USB.
-
-Quando si alimentano dispositivi a basso consumo (CA <= 25 W oppure DC/USB <= 2 W), disattiva la Modalità risparmio energetico per evitare che l'uscita si spenga automaticamente durante il funzionamento.
+Per attivare o disattivare la Modalità risparmio energetico, tieni premuti contemporaneamente il pulsante CA e il pulsante di accensione principale per 3 secondi.
 
 .. image:: asset:operation/energy_saving
    :alt: Segnaposto operazione tasti modalità risparmio energetico.
    :width: 320px
 
 
-| Tieni premuti entrambi i pulsanti per più di 3 secondi.
+| Tieni premuto per 3 secondi
 
 .. list-table::
    :header-rows: 0

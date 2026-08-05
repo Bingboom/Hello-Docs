@@ -17,8 +17,6 @@ HAUPTSTROMVERSORGUNG EIN/AUS
 
 | **Standard-Standby-Zeit:** 2 Stunden.
 | Das Produkt schaltet sich nach 2 Stunden Inaktivität automatisch aus, wenn weder geladen noch entladen wird.
-| \*Die Standby-Zeit kann in der Jackery-App eingestellt werden.
-| Wenn der Energiesparmodus aktiviert ist, schaltet sich das Produkt automatisch nach 12 Stunden aus, wenn die AC- oder DC/USB-Einschalttaste eingeschaltet ist, das Produkt jedoch weder lädt noch entlädt.
 
 AC-AUSGANG EIN/AUS
 ------------------
@@ -36,8 +34,8 @@ AC-AUSGANG EIN/AUS
 | Einmal drücken
 
 
-DC 12V/USB-AUSGANG EIN/AUS
--------------------------
+DC 12V-AUSGANG EIN/AUS
+----------------------
 
 **Voraussetzung**: Das Produkt ist eingeschaltet.
 
@@ -78,18 +76,16 @@ DC 12V/USB-AUSGANG EIN/AUS
 ENERGIESPARMODUS
 ----------------
 
-Um zu verhindern, dass die Batterie unnötig entladen wird, wenn das Ausschalten des Ausgangs vergessen wird, ist der Energiesparmodus standardmäßig aktiviert. Wenn der AC- oder DC/USB-Ausgang eingeschaltet wird, wird das Energiesparmodus-Symbol auf dem LCD angezeigt. In diesem Modus schaltet sich der entsprechende Ausgang nach der eingestellten Zeit automatisch aus, wenn kein Gerät angeschlossen ist oder die Leistungsaufnahme des angeschlossenen Geräts unter einem bestimmten Schwellenwert liegt (25 W beim AC-Ausgang oder 2 W beim DC/USB-Ausgang). Die Standardeinstellung ist 12 Stunden. Die Dauer des Energiesparmodus kann in der Jackery-App auf 1 H, 2 H, 8 H, 12 H oder 24 H eingestellt werden. Wenn "Nie ausschalten" eingestellt ist, wird der Energiesparmodus deaktiviert.
+Um zu verhindern, dass die Batterie unnötig entladen wird, wenn das Ausschalten des Ausgangs vergessen wird, ist der Energiesparmodus standardmäßig aktiviert. Wenn 6 Stunden lang kein Gerät angeschlossen ist oder die Leistungsaufnahme des angeschlossenen Geräts unter einem bestimmten Schwellenwert liegt (AC-Ausgang ≤ 25 W, USB- + DC-12V-Anschlüsse ≤ 2 W), schaltet das Produkt die Ausgänge automatisch ab.
 
-Um den Energiesparmodus zu deaktivieren, halten Sie sowohl die AC-Einschalttaste als auch die Haupt-POWER-Taste länger als 3 Sekunden gedrückt. Sobald der Energiesparmodus deaktiviert ist, wird das Symbol nicht mehr auf dem LCD angezeigt, und das Produkt schaltet den AC- oder DC/USB-Ausgang nicht mehr automatisch aus.
-
-Wenn Sie Geräte mit geringem Stromverbrauch betreiben (AC <= 25 W oder DC/USB <= 2 W), deaktivieren Sie den Energiesparmodus, damit der Ausgang während des Betriebs nicht automatisch ausgeschaltet wird.
+Um den Energiesparmodus ein- oder auszuschalten, halten Sie die AC-Taste und die Haupt-Einschalttaste 3 Sekunden lang gedrückt.
 
 .. image:: asset:operation/energy_saving
    :alt: Platzhalter für die Tastenbedienung des Energiesparmodus.
    :width: 320px
 
 
-| Halten Sie beide Tasten länger als 3 Sekunden gedrückt.
+| 3 Sekunden gedrückt halten
 
 .. list-table::
    :header-rows: 0

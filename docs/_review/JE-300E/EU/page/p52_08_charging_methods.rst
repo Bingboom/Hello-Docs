@@ -2,27 +2,14 @@
 
    \HBApplyLang{de}
 
-AUFLADEN ÜBER SOLARMODULE (SEPARAT ERHÄLTLICH)
-----------------------------------------------
+AUFLADEN ÜBER SOLARMODULE (100W Max)
+------------------------------------
 
-Jackery Explorer 300 verfügt über zwei DC8020-Eingangsanschlüsse und ist mit den Jackery-Solarmodulen kompatibel.
+Jackery Explorer 300 verfügt über einen DC8020-Eingangsanschluss und ist mit den Jackery-Solarmodulen kompatibel.
 
 .. image:: asset:charging/solar_direct
    :alt: Abbildung der Solarladeverbindung als Platzhalter 1.
    :width: 360px
-
-Wenn ein DC8020-Eingangsanschluss zwei Solarmodule gleichzeitig anschließen muss, beziehen Sie sich bitte auf die folgende Abbildung zum Aufladen über den Solarpanel-Anschluss (separat erhältlich, nicht im Lieferumfang enthalten).
-
-.. image:: asset:charging/solar_adapter
-   :alt: Abbildung der Solarladeverbindung als Platzhalter 2.
-   :width: 360px
-
-.. list-table::
-   :header-rows: 0
-   :widths: 12 88
-
-   * - **VORSICHT**
-     - An einen DC8020-Eingangsanschluss können höchstens zwei Solarmodule angeschlossen werden.
 
 .. list-table::
    :header-rows: 0
@@ -30,12 +17,10 @@ Wenn ein DC8020-Eingangsanschluss zwei Solarmodule gleichzeitig anschließen mus
 
    * - **VORSICHT**
      -
-       - Stellen Sie sicher, dass die Eingangsspannung an beiden DC-Eingangsanschlüssen gleich ist. Andernfalls kann das Produkt beschädigt werden. Zum Beispiel:
+       - An den DC8020-Eingangsanschluss kann nur ein Solarmodul angeschlossen werden.
+       - Jackery übernimmt keine Verantwortung für Schäden oder Verluste, die durch die Verwendung von Solarmodulen anderer Hersteller entstehen.
 
-       - Verwenden Sie beim Anschluss von Solarmodulen an beide DC8020-Eingangsanschlüsse das gleiche Jackery-Solarmodell und die gleiche Anzahl an Modulen.
-       - Laden Sie das Produkt nicht gleichzeitig mit einem Autoladegerät und einem Solarpanel. Andernfalls kann die Fahrzeugsicherung durchbrennen oder der Ladevorgang fehlschlagen.
-
-Es wird empfohlen, das Jackery-Solarpanel zum Laden des Produkts zu verwenden. Stellen Sie sicher, dass die Leerlaufspannung (V\ :sub:`oc`) des Solarpanels innerhalb des DC-Eingangsbereichs (16 V-28 V) von Jackery Explorer 300 liegt. Jackery ist nicht verantwortlich für Schäden oder Verluste, die durch die Verwendung von Solarmodulen Dritter entstehen.
+Es wird empfohlen, das Jackery-Solarpanel zum Laden des Explorer 300 zu verwenden. Stellen Sie sicher, dass die Leerlaufspannung (V\ :sub:`oc`) des Solarmoduls im DC-Eingangsspannungsbereich (16V-28V) des Jackery Explorer 300 liegt.
 
 AUFLADEN ÜBER DAS AUTOLADEGERÄT (SEPARAT ERHÄLTLICH)
 ----------------------------------------------------

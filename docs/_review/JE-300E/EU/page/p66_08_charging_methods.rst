@@ -2,39 +2,25 @@
 
    \HBApplyLang{it}
 
-RICARICA TRAMITE PANNELLI SOLARI (VENDUTI SEPARATAMENTE)
---------------------------------------------------------
+RICARICA TRAMITE PANNELLI SOLARI (100W Max)
+-------------------------------------------
 
-Jackery Explorer 300 dispone di due porte di ingresso DC8020 ed è compatibile con i pannelli solari Jackery.
+Jackery Explorer 300 dispone di una porta di ingresso DC8020 ed è compatibile con i pannelli solari Jackery.
 
 .. image:: asset:charging/solar_direct
    :alt: Segnaposto diagramma di collegamento per la ricarica solare 1.
    :width: 360px
 
-Se una porta di ingresso DC8020 deve collegare contemporaneamente due pannelli solari, fare riferimento alla figura seguente per la ricarica tramite il connettore per pannelli solari (venduto separatamente, non incluso di serie).
-
-.. image:: asset:charging/solar_adapter
-   :alt: Segnaposto diagramma di collegamento per la ricarica solare 2.
-   :width: 360px
-
 .. list-table::
    :header-rows: 0
    :widths: 12 88
 
    * - **ATTENZIONE**
-     - Una porta di ingresso DC8020 può essere collegata al massimo a due pannelli solari.
+     -
+       - Al porto di ingresso DC8020 può essere collegato un solo pannello solare.
+       - Jackery non è responsabile per eventuali danni o perdite derivanti dall'uso di pannelli solari di terze parti.
 
-.. list-table::
-   :header-rows: 0
-   :widths: 12 88
-
-   * - **ATTENZIONE**
-     - Assicurarsi che la tensione di ingresso di entrambe le porte di ingresso CC sia la stessa. In caso contrario, il prodotto potrebbe danneggiarsi. Ad esempio:
-
-       - Utilizzare lo stesso modello di pannelli solari Jackery e lo stesso numero di pannelli quando si collegano pannelli solari a entrambe le porte di ingresso DC8020.
-       - Non caricare il prodotto utilizzando contemporaneamente un caricatore per auto e un pannello solare. In caso contrario, il fusibile dell'auto potrebbe saltare oppure la ricarica potrebbe non riuscire.
-
-Si consiglia di utilizzare il pannello solare Jackery per caricare il prodotto. Assicurarsi che la tensione a circuito aperto (V\ :sub:`oc`) del pannello solare rientri nell'intervallo di ingresso CC (16V-28V) di Jackery Explorer 300. Jackery non è responsabile di eventuali danni o perdite derivanti dall'uso di pannelli solari di terze parti.
+Si consiglia di utilizzare il pannello solare Jackery per caricare l’Explorer 300. Assicurarsi che la tensione a circuito aperto (V\ :sub:`oc`) del pannello solare rientri nell’intervallo di tensione di ingresso CC (16V-28V) del Jackery Explorer 300.
 
 RICARICA TRAMITE CARICATORE PER AUTO (VENDUTI SEPARATAMENTE)
 ------------------------------------------------------------
