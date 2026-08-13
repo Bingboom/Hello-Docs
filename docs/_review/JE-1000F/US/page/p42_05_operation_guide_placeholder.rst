@@ -80,9 +80,9 @@ ENCENDER/APAGAR SALIDA CC 12V/USB
 MODO DE AHORRO DE ENERGÍA
 -------------------------
 
-Para evitar el consumo innecesario de batería por olvidar apagar la salida, el producto activa por defecto el Modo de Ahorro de Energía. Cuando la salida de CA o CC/USB está encendida, el icono del modo de Ahorro de Energía se mostrará en la pantalla LCD. En este modo, si no hay ningún dispositivo conectado o si el consumo del dispositivo conectado está por debajo de un cierto umbral (salida de CA de 25 W o salida de CC/USB de 2 W), la salida correspondiente se apagará automáticamente después del tiempo configurado. La configuración predeterminada es de 12 horas. La duración del Modo de Ahorro de Energía se puede configurar en la aplicación Jackery en 1H, 2 H, 8 H, 12 H o 24 H. Si se establece en “Never Off”, el Modo de Ahorro de Energía se desactivará.
+Para evitar el consumo innecesario de batería por olvidar apagar la salida, el producto activa por defecto el Modo de Ahorro de Energía. Cuando la salida de CA o CC/USB está encendida, el icono del modo de Ahorro de Energía se mostrará en la pantalla LCD. En este modo, si no hay ningún dispositivo conectado o si el consumo del dispositivo conectado está por debajo de un cierto umbral (salida de CA de 25 W o salida de CC/USB de 2 W), la salida correspondiente se apagará automáticamente después del tiempo configurado. La configuración predeterminada es de 12 horas. La duración del Modo de Ahorro de Energía se puede configurar en la aplicación Jackery en 1 H, 2 H, 8 H, 12 H o 24 H. Si se establece en “Never Off”, el Modo de Ahorro de Energía se desactivará.
 
-Para desactivar el modo de ahorro de energía, mantenga presionados simultáneamente el botón de alimentación de CA y el botón POWER principal durante más de 3 segundos. Una vez desactivado el modo de ahorro de energía, el icono dejará de mostrarse en la pantalla LCD y el producto no apagará automáticamente la salida de CA o CC/USB. Al alimentar dispositivos de baja potencia (CA ≤ 25 W o CC/USB ≤ 2 W), desactive el modo de ahorro de energía para evitar que la salida se apague automáticamente durante el funcionamiento.
+Para desactivar el modo de ahorro de energía, mantenga presionados simultáneamente el botón de alimentación de CA y el botón de encendido durante más de 3 segundos. Una vez desactivado el modo de ahorro de energía, el icono dejará de mostrarse en la pantalla LCD y el producto no apagará automáticamente la salida de CA o CC/USB. Al alimentar dispositivos de baja potencia (CA ≤ 25 W o CC/USB ≤ 2 W), desactive el modo de ahorro de energía para evitar que la salida se apague automáticamente durante el funcionamiento.
 
 .. raw:: manual-ir
 
@@ -150,11 +150,11 @@ PANTALLA LCD
           </td>
           <td rowspan="3" style="width:18%; border:1px solid #cfcfcf; padding:8px; vertical-align:top;">En breve</td>
           <td style="width:12%; border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Encender</td>
-          <td style="width:46%; border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Presione el botón de encendido principal o cuando el producto se esté cargando.</td>
+          <td style="width:46%; border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Presione el botón de encendido o cuando el producto se esté cargando.</td>
         </tr>
         <tr>
           <td style="border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Apagar</td>
-          <td style="border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Presione el botón de encendido principal.</td>
+          <td style="border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Presione el botón de encendido.</td>
         </tr>
         <tr>
           <td style="border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Apagado automático</td>
@@ -163,11 +163,11 @@ PANTALLA LCD
         <tr>
           <td rowspan="3" style="border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Estable en (durante el estado de carga o descarga)</td>
           <td style="border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Encender</td>
-          <td style="border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Presione dos veces el botón de encendido principal cuando el producto esté encendido.</td>
+          <td style="border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Presione dos veces el botón de encendido cuando el producto esté encendido.</td>
         </tr>
         <tr>
           <td style="border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Apagar</td>
-          <td style="border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Presione el botón de encendido principal.</td>
+          <td style="border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Presione el botón de encendido.</td>
         </tr>
         <tr>
           <td style="border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Apagado automático</td>
@@ -180,8 +180,8 @@ PANTALLA LCD
    .. raw:: latex
 
       \begin{HBLcdModeTable}{asset:operation/lcd_mode}
-      \HBLcdModeFirstGroup{En breve}{Encender}{Presione el botón de encendido principal o cuando el producto se esté cargando.}{Apagar}{Presione el botón de encendido principal.}{Apagado automático}{La pantalla LCD se apaga automáticamente y entra en modo de suspensión después de 2 minutos de inactividad.}
-      \HBLcdModeSecondGroup{Estable en (durante el estado de carga o descarga)}{Encender}{Presione dos veces el botón de encendido principal cuando el producto esté encendido.}{Apagar}{Presione el botón de encendido principal.}{Apagado automático}{La pantalla LCD se apaga automáticamente después de 2 horas de inactividad.}
+      \HBLcdModeFirstGroup{En breve}{Encender}{Presione el botón de encendido o cuando el producto se esté cargando.}{Apagar}{Presione el botón de encendido.}{Apagado automático}{La pantalla LCD se apaga automáticamente y entra en modo de suspensión después de 2 minutos de inactividad.}
+      \HBLcdModeSecondGroup{Estable en (durante el estado de carga o descarga)}{Encender}{Presione dos veces el botón de encendido cuando el producto esté encendido.}{Apagar}{Presione el botón de encendido.}{Apagado automático}{La pantalla LCD se apaga automáticamente después de 2 horas de inactividad.}
       \end{HBLcdModeTable}
 
 También puedes configurar el modo de visualización de la pantalla en la aplicación Jackery.
@@ -196,15 +196,15 @@ COMBINACIONES DE TECLAS
    * - Botones
      - Operación
      - Función
-   * - Botón de encendido principal + botón de energía de CA
+   * - Botón de encendido + botón de energía de CA
      - Mantenga pulsados ambos botones durante 3 segundos
      - Encender/apagar el modo de ahorro de energía
-   * - Botón de encendido principal + botón de energía CC/USB
+   * - Botón de encendido + botón de energía CC/USB
      - Mantenga pulsados ambos botones durante 3 segundos
      - Restablecer Wi-Fi y Bluetooth
    * - Botón de energía CC/USB + botón de energía de CA
      - Mantenga pulsados ambos botones durante 1 segundo
      - Encender/apagar Wi-Fi y Bluetooth
-   * - Botón de encendido principal + botón de luz LED
+   * - Botón de encendido + botón de luz LED
      - Mantenga pulsados ambos botones durante 1 segundo
      - Activar/desactivar el modo de carga de emergencia
