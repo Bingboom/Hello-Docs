@@ -49,7 +49,7 @@ Tenga en cuenta que no se emitirán notificaciones adicionales en caso de actual
 <li>Do not allow children to play on the product. Close supervision of children is necessary when the product is used near children.</li>
 <li>Avoid placing hands or fingers inside the product.</li>
 <li>Stop using the product immediately if it has been physically damaged or modified. Improper use of the product may cause unpredictable behavior, leading to fire, explosion, or injury.</li>
-<li>If any of the following are observed, including but not limited to overheats, emits unusual odors or smoking, leaks, or burns, stop using the product immediately and contact the dealer or our Customer Support.</li>
+<li>If any of the following are observed, including but not limited to overheating, emits unusual odors or smoking, leaks, or burns, stop using the product immediately and contact the dealer or our Customer Support.</li>
 <li>Never attempt to open, repair, or modify the product. Any tampering, reassembly, or modification of the product can result in electric shock, fire, or battery damage.</li>
 </ul></td>
 <td style="width: 50%; border: none; padding: 0 0 0 8px; vertical-align: top"><ul>
@@ -77,8 +77,8 @@ Tenga en cuenta que no se emitirán notificaciones adicionales en caso de actual
 <li>Stop using the product immediately if it shows signs of damage. Discontinue use and contact customer support for assistance.</li>
 <li>Do not charge the battery in extremely hot or cold environments and strictly adhere to the product's specified operating temperature ranges:
 <ul>
-<li>Charging temperature: 14°F to 113°F (-10°C to 45°C)</li>
-<li>Discharging temperature: 14°F to 113°F (-10°C to 45°C)</li>
+<li>Charging temperature: 32°F to 113°F / 0°C to 45°C</li>
+<li>Discharging temperature: 14°F to 113°F / -10°C to 45°C</li>
 </ul></li>
 <li>To ensure proper air circulation, keep the product vents uncovered. The area where the product is used must have adequate airflow in a cool, dry environment to prevent overheating.
 <ul>
@@ -86,8 +86,8 @@ Tenga en cuenta que no se emitirán notificaciones adicionales en caso de actual
 <li>Water can cause short circuits or damage to the charger, leading to safety risks.</li>
 </ul></li>
 <li>Unplug the power cord from a power outlet during a storm.</li>
-<li>Immediately turn off the product by pressing the power button if it has fallen, been dropped, or exposed to vibrations.</li>
-<li>Ensure the device(s) are powered off before connecting it to the product.</li>
+<li>Immediately turn off the product by pressing the POWER button if it has fallen, been dropped, or exposed to vibrations.</li>
+<li>Ensure the device(s) are powered off before connecting them to the product.</li>
 <li>Do not charge the product using a damaged or broken charging cord or plug.</li>
 </ul></td>
 <td style="width: 50%; border: none; padding: 0 0 0 8px; vertical-align: top"><ul>
@@ -97,7 +97,7 @@ Tenga en cuenta que no se emitirán notificaciones adicionales en caso de actual
 <li>DO NOT place the unit upside down or on its side during use or storage.</li>
 <li>DO NOT place the product on the floor or at a height less than 18 inches (457 mm) above the floor during operation in a workshop or repair facility.</li>
 <li>DO NOT use the product's accessories with other devices or equipment.</li>
-<li>Solar charge time depends on weather conditions, place your solar panel where it will get as much direct sunlight as possible.</li>
+<li>Solar charge time depends on weather conditions. Place your solar panel where it will get as much direct sunlight as possible.</li>
 <li>GROUNDING INSTRUCTION-This product must be grounded. If it should malfunction or breakdown, grounding provides a path of least resistance for electric current to reduce the risk of electric shock. This product is equipped with a cord having an equipment grounding conductor and a grounding plug. The plug must be plugged into an outlet that is properly installed and grounded in accordance with all local codes and ordinances.</li>
 </ul></td>
 </tr>
@@ -113,7 +113,7 @@ Tenga en cuenta que no se emitirán notificaciones adicionales en caso de actual
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>DANGER</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p class="hb-lead">This device is intended for indoor use only (Please place this device in a similar indoor environment when using it outdoors, e.g. Home RVs, tents, cabins, etc.).<br>※ This device is not waterproof or dustproof. Keep away from rain and humid environments during use.</p>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>DANGER</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p class="hb-lead">This device is intended for indoor use only (Please place this device in a similar indoor environment when using it outdoors, e.g., Home, RVs, tents, cabins, etc.).<br>※ This device is not waterproof or dustproof. Keep away from rain and humid environments during use.</p>
 </td></tr></tbody></table>
 
 
@@ -153,17 +153,17 @@ During the lifecycle of energy storage products, a certain degree of capacity an
 
 
 
-<figure aria-label="Symbol / Meaning" class="hb-symbol-pair-composition"><div class="hb-symbol-pair-grid"><div class="hb-symbol-panel hb-symbol-panel-1"><table class="hb-symbol-panel-table"><colgroup><col class="hb-symbol-col-icon"/><col class="hb-symbol-col-meaning"/></colgroup><thead><tr><th class="hb-symbol-icon-heading" scope="col"><p><strong>Symbol</strong></p></th><th class="hb-symbol-meaning-heading" scope="col"><p><strong>Meaning</strong></p></th></tr></thead><tbody><tr><td class="hb-symbol-icon"><img alt="warning_triangle" class="hb-symbol-art" src="assets/1_warning_triangle_IfHObDBCDowRHbxLvCzci3wen7c_6749bd38fdd0.png"/>
-</td><td class="hb-symbol-meaning"><p>Warning and Caution Symbols. Alerts individuals to information that must be read to avoid potential hazards or risks.</p></td></tr><tr><td class="hb-symbol-icon"><img alt="read_manual" class="hb-symbol-art" src="assets/2_read_manual_P0fEbfBNKoRiCoxkAm7cq3ymndh_89dae4b809de.png"/>
-</td><td class="hb-symbol-meaning"><p>Read the user manual before operation.</p></td></tr><tr><td class="hb-symbol-icon"><img alt="electric_shock" class="hb-symbol-art" src="assets/3_electric_shock_Ctr7btZp2oBcCqxDmHbcrFPEnFd_378ec250259d.png"/>
-</td><td class="hb-symbol-meaning"><p>Risk of electric shock.</p></td></tr><tr><td class="hb-symbol-icon"><img alt="battery_charging" class="hb-symbol-art" src="assets/4_battery_charging_N9ppbBQWdoPM5bxEammcGFItnpd_dc89195f3ece.png"/>
-</td><td class="hb-symbol-meaning"><p>Battery charging</p></td></tr><tr><td class="hb-symbol-icon"><img alt="explosive_material" class="hb-symbol-art" src="assets/5_explosive_material_F4J3bCXAeoUk7sxrOg2ch60anHf_cb30b4905185.png"/>
-</td><td class="hb-symbol-meaning"><p>Explosive material</p></td></tr><tr><td class="hb-symbol-icon"><img alt="heavy_object" class="hb-symbol-art" src="assets/6_heavy_object_M31Fbb3XeoQ0ClxmK2Lc9I5snYi_6b991847e3f8.png"/>
-</td><td class="hb-symbol-meaning"><p>Heavy object</p></td></tr></tbody></table></div><div class="hb-symbol-panel hb-symbol-panel-2"><table class="hb-symbol-panel-table"><colgroup><col class="hb-symbol-col-icon"/><col class="hb-symbol-col-meaning"/></colgroup><thead><tr><th class="hb-symbol-icon-heading" scope="col"><p><strong>Symbol</strong></p></th><th class="hb-symbol-meaning-heading" scope="col"><p><strong>Meaning</strong></p></th></tr></thead><tbody><tr><td class="hb-symbol-icon"><img alt="do_not_dismantle" class="hb-symbol-art" src="assets/7_do_not_dismantle_TTrGbm6PdoAFBwx16nXcZOaFnZf_76085a1e7008.png"/>
-</td><td class="hb-symbol-meaning"><p>Do not dismantle the product.</p></td></tr><tr><td class="hb-symbol-icon"><img alt="no_open_flame" class="hb-symbol-art" src="assets/8_no_open_flame_GOQabZgNNoj1goxlyjHcA0w7n7b_a8a846e9767a.png"/>
-</td><td class="hb-symbol-meaning"><p>Keep the product away from fire.</p></td></tr><tr><td class="hb-symbol-icon"><img alt="keep_away_from_children" class="hb-symbol-art" src="assets/9_keep_away_from_children_AjeEb4GIgoPNpdxkXhFcIeaDnTM_114690be6f4d.png"/>
-</td><td class="hb-symbol-meaning"><p>Keep away from children.</p></td></tr><tr><td class="hb-symbol-icon"><img alt="li_ion" class="hb-symbol-art" src="assets/10_li_ion_Nkm5benPWobav4xNt0ecDB2nn6D_2a61fc0919cf.png"/>
-</td><td class="hb-symbol-meaning"><p>This symbol indicates that a lithium-ion (Li-ion) battery is inside the product and should be disposed of or recycled properly.</p></td></tr><tr><td class="hb-symbol-icon"><img alt="weee" class="hb-symbol-art" src="assets/11_weee_Wx7PbvwWCoznaCxrZ9Pc1KsXnSc_7e4de290ea13.png"/>
+<figure aria-label="Symbol / Meaning" class="hb-symbol-pair-composition"><div class="hb-symbol-pair-grid"><div class="hb-symbol-panel hb-symbol-panel-1"><table class="hb-symbol-panel-table"><colgroup><col class="hb-symbol-col-icon"/><col class="hb-symbol-col-meaning"/></colgroup><thead><tr><th class="hb-symbol-icon-heading" scope="col"><p><strong>Symbol</strong></p></th><th class="hb-symbol-meaning-heading" scope="col"><p><strong>Meaning</strong></p></th></tr></thead><tbody><tr><td class="hb-symbol-icon"><img alt="warning_triangle" class="hb-symbol-art" src="assets/1_warning_triangle_HO7FbxcSnonkYBxBvslc8RpdnIe_6749bd38fdd0.png"/>
+</td><td class="hb-symbol-meaning"><p>Warning and Caution Symbols. Alerts individuals to information that must be read to avoid potential hazards or risks.</p></td></tr><tr><td class="hb-symbol-icon"><img alt="read_manual" class="hb-symbol-art" src="assets/2_read_manual_MAQxbZ9MooQjaaxqb6qctq6Sncg_89dae4b809de.png"/>
+</td><td class="hb-symbol-meaning"><p>Read the user manual before operation.</p></td></tr><tr><td class="hb-symbol-icon"><img alt="electric_shock" class="hb-symbol-art" src="assets/3_electric_shock_XYAbbMCnNoNzYix7mKRcMHGhnic_378ec250259d.png"/>
+</td><td class="hb-symbol-meaning"><p>Risk of electric shock.</p></td></tr><tr><td class="hb-symbol-icon"><img alt="battery_charging" class="hb-symbol-art" src="assets/4_battery_charging_WIeDb0QIoo4eSbxUDoDcCV3fn8c_dc89195f3ece.png"/>
+</td><td class="hb-symbol-meaning"><p>Battery charging</p></td></tr><tr><td class="hb-symbol-icon"><img alt="explosive_material" class="hb-symbol-art" src="assets/5_explosive_material_Zkz9b74mDoSXlZx8jJwcbLErnge_cb30b4905185.png"/>
+</td><td class="hb-symbol-meaning"><p>Explosive material</p></td></tr><tr><td class="hb-symbol-icon"><img alt="heavy_object" class="hb-symbol-art" src="assets/6_heavy_object_IGFubhmSFowSsoxFCIdcgW7lnUd_6b991847e3f8.png"/>
+</td><td class="hb-symbol-meaning"><p>Heavy object</p></td></tr></tbody></table></div><div class="hb-symbol-panel hb-symbol-panel-2"><table class="hb-symbol-panel-table"><colgroup><col class="hb-symbol-col-icon"/><col class="hb-symbol-col-meaning"/></colgroup><thead><tr><th class="hb-symbol-icon-heading" scope="col"><p><strong>Symbol</strong></p></th><th class="hb-symbol-meaning-heading" scope="col"><p><strong>Meaning</strong></p></th></tr></thead><tbody><tr><td class="hb-symbol-icon"><img alt="do_not_dismantle" class="hb-symbol-art" src="assets/7_do_not_dismantle_EesAbUpXdo6eJIxkBL5c8yp7nPd_76085a1e7008.png"/>
+</td><td class="hb-symbol-meaning"><p>Do not dismantle the product.</p></td></tr><tr><td class="hb-symbol-icon"><img alt="no_open_flame" class="hb-symbol-art" src="assets/8_no_open_flame_E9gXbvgbaoiigFxd11rcHuY8nab_a8a846e9767a.png"/>
+</td><td class="hb-symbol-meaning"><p>Keep the product away from fire.</p></td></tr><tr><td class="hb-symbol-icon"><img alt="keep_away_from_children" class="hb-symbol-art" src="assets/9_keep_away_from_children_XErWbsrH9o3xllxqHj9cktZAnnh_114690be6f4d.png"/>
+</td><td class="hb-symbol-meaning"><p>Keep away from children.</p></td></tr><tr><td class="hb-symbol-icon"><img alt="li_ion" class="hb-symbol-art" src="assets/10_li_ion_HpN6bpoYHohujqxLgYKcazSin0k_2a61fc0919cf.png"/>
+</td><td class="hb-symbol-meaning"><p>This symbol indicates that a lithium-ion (Li-ion) battery is inside the product and should be disposed of or recycled properly.</p></td></tr><tr><td class="hb-symbol-icon"><img alt="weee" class="hb-symbol-art" src="assets/11_weee_WGswbCb5zoaeDSxlHvyc5rFXn7g_7e4de290ea13.png"/>
 </td><td class="hb-symbol-meaning"><p>This symbol indicates that the product shall not be disposed of as household waste, and should be delivered to a designated collection facility for recycling. Proper disposal and recycling can help protect the environment. For more information about the disposal and recycling of this product, contact your local community, disposal service, or dealer.</p></td></tr></tbody></table></div></div></figure>
 
 
@@ -172,17 +172,7 @@ During the lifecycle of energy storage products, a certain degree of capacity an
 
 
 
-<figure aria-label="FCC" class="hb-fcc-composition"><div class="hb-fcc-grid"><div class="hb-fcc-column hb-fcc-column-left"><div class="hb-fcc-opening"><img alt="FCC" class="hb-fcc-mark" loading="lazy" src="assets/fcc_mark_45f309ed8b3f.png"/><div class="hb-fcc-opening-copy"><div class="line-block">
-<div class="line">This device complies with part 15 of the FCC Rules. Operation is subject to the following two conditions:</div>
-<div class="line">(1) This device may not cause harmful interference, and</div>
-<div class="line">(2) This device must accept any interference received, including interference that may cause undesired operation.</div>
-</div></div></div><p><strong>NOTE:</strong> This equipment has been tested and found to comply with the limits for a Class B digital device,
-pursuant to part 15 of the FCC Rules. These limits are designed to provide reasonable protection against harmful interference in a residential installation. This equipment generates, uses, and can radiate radio frequency energy and, if not installed and used in accordance with the instructions, may cause harmful interference to communications. However, there is no guarantee that radio interference will not occur in a particular installation.</p></div><div class="hb-fcc-column hb-fcc-column-right"><p>If this equipment does cause harmful interference to radio or television reception, which can be determined by turning the equipment off and on, the user is encouraged to try to correct the interference by one or more of the following measures:</p><ul class="simple">
-<li><p>Reorient or relocate the receiving antenna.</p></li>
-<li><p>Increase the separation between the equipment and receiver.</p></li>
-<li><p>Connect the equipment into an outlet on a circuit different from that to which the receiver is connected.</p></li>
-<li><p>Consult the dealer or an experienced radio/TV technician for help.</p></li>
-</ul><p><strong>MODIFICATION:</strong> Any changes or modifications not expressly approved by the grantee of this device could void the user's authority to operate the device.</p></div></div></figure>
+<figure aria-label="FCC" class="hb-fcc-composition" data-component-id="HB-SPECIAL-FCC"><div class="hb-fcc-grid"><div class="hb-fcc-column hb-fcc-column-left"><div class="hb-fcc-opening"><img alt="FCC" class="hb-fcc-mark" loading="lazy" src="assets/fcc_mark_45f309ed8b3f.png"/><div class="hb-fcc-opening-copy"><div class="line-block"><div class="line">This device complies with part 15 of the FCC Rules. Operation is subject to the following two conditions:</div><div class="line">(1) This device may not cause harmful interference, and</div><div class="line">(2) This device must accept any interference received, including interference that may cause undesired operation.</div></div></div></div><p><strong>NOTE:</strong> This equipment has been tested and found to comply with the limits for a Class B digital device, pursuant to part 15 of the FCC Rules. These limits are designed to provide reasonable protection against harmful interference in a residential installation. This equipment generates, uses, and can radiate radio frequency energy and, if not installed and used in accordance with the instructions, may cause harmful interference to communications. However, there is no guarantee that radio interference will not occur in a particular installation.</p></div><div class="hb-fcc-column hb-fcc-column-right"><p>If this equipment does cause harmful interference to radio or television reception, which can be determined by turning the equipment off and on, the user is encouraged to try to correct the interference by one or more of the following measures:</p><ul class="simple"><li><p>Reorient or relocate the receiving antenna.</p></li><li><p>Increase the separation between the equipment and receiver.</p></li><li><p>Connect the equipment into an outlet on a circuit different from that to which the receiver is connected.</p></li><li><p>Consult the dealer or an experienced radio/TV technician for help.</p></li></ul><p><strong>MODIFICATION:</strong> Any changes or modifications not expressly approved by the grantee of this device could void the user's authority to operate the device.</p></div></div></figure>
 
 
 
@@ -190,12 +180,12 @@ pursuant to part 15 of the FCC Rules. These limits are designed to provide reaso
 
 
 
-<figure aria-label="WHAT'S IN THE BOX" class="hb-inbox-composition"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Power station image placeholder." class="hb-inbox-art" src="assets/main_unit1_6c7f1deea2f6.png"/><div class="hb-inbox-label">
+<figure aria-label="WHAT'S IN THE BOX" class="hb-inbox-composition" data-component-id="HB-SPECIAL-INBOX"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Power station image placeholder." class="hb-inbox-art" src="assets/main_unit1_6c7f1deea2f6.png"/><div class="hb-inbox-label">
 <p><strong>Jackery Explorer 1000</strong></p>
 </div></li><li class="hb-inbox-card" data-item-number="2"><img alt="AC charging cable image placeholder." class="hb-inbox-art" src="assets/ac_charging_cable_287650f3a89a.png"/><div class="hb-inbox-label">
 <p><strong>AC Charging Cable</strong></p>
 </div></li><li class="hb-inbox-card" data-item-number="3"><img alt="User manual image placeholder." class="hb-inbox-art" src="assets/manual_icon1_87ac44e52863.png"/><div class="hb-inbox-label">
-<p>Doucuments</p>
+<p>Documents</p>
 </div></li></ol><div class="hb-inbox-tip" role="note"><div class="hb-inbox-tip-label"><p><strong>TIP</strong></p></div><div class="hb-inbox-tip-body"><p>The car charging cable is not included but is available for purchase separately on our website.
 For assistance, please contact Jackery customer service.</p></div></div></figure>
 
@@ -238,7 +228,7 @@ For assistance, please contact Jackery customer service.</p></div></div></figure
 
 <tbody>
 <tr><td class="hb-lcd-number"><p>1</p></td>
-<td class="hb-lcd-icon"><img alt="Wi-Fi" class="hb-lcd-icon-art" src="assets/1_Wi-Fi_WuAbbIls6okb8pxBe5RcObWUnNd_fc4cc02b42ef.png"/>
+<td class="hb-lcd-icon"><img alt="Wi-Fi" class="hb-lcd-icon-art" src="assets/1_Wi-Fi_KCcAbdDk7o4RjKx82micuKJ5nyf_fc4cc02b42ef.png"/>
 </td>
 <td class="hb-lcd-name"><p>Wi-Fi</p></td>
 <td class="hb-lcd-description"><div class="line-block">
@@ -249,7 +239,7 @@ For assistance, please contact Jackery customer service.</p></div></div></figure
 </td>
 </tr>
 <tr><td class="hb-lcd-number"><p>2</p></td>
-<td class="hb-lcd-icon"><img alt="Bluetooth" class="hb-lcd-icon-art" src="assets/2_Bluetooth_EaovbGeSmoIldpxVoWrcVankn5d_7e1392ba6a45.png"/>
+<td class="hb-lcd-icon"><img alt="Bluetooth" class="hb-lcd-icon-art" src="assets/2_Bluetooth_HVgvbJhq5o4EDKxhm7McCF4FnjB_7e1392ba6a45.png"/>
 </td>
 <td class="hb-lcd-name"><p>Bluetooth</p></td>
 <td class="hb-lcd-description"><div class="line-block">
@@ -260,7 +250,7 @@ For assistance, please contact Jackery customer service.</p></div></div></figure
 </td>
 </tr>
 <tr><td class="hb-lcd-number"><p>3</p></td>
-<td class="hb-lcd-icon"><img alt="Quiet Charging Mode" class="hb-lcd-icon-art" src="assets/3_Quiet_Charging_Mode_IRdmbJVhco57yOx8m0pcdgkXnbe_7f743182c050.png"/>
+<td class="hb-lcd-icon"><img alt="Quiet Charging Mode" class="hb-lcd-icon-art" src="assets/3_Quiet_Charging_Mode_WLkMbiHS1oGsOtxUCp7cRhFAn1g_7f743182c050.png"/>
 </td>
 <td class="hb-lcd-name"><p>Quiet Charging Mode</p></td>
 <td class="hb-lcd-description"><div class="line-block">
@@ -271,7 +261,7 @@ For assistance, please contact Jackery customer service.</p></div></div></figure
 </td>
 </tr>
 <tr><td class="hb-lcd-number"><p>4</p></td>
-<td class="hb-lcd-icon"><img alt="Charging Plan" class="hb-lcd-icon-art" src="assets/4_Charging_Plan_PBCtblGMaoHz4fx08tRcoXUJnIf_71017f43bab4.png"/>
+<td class="hb-lcd-icon"><img alt="Charging Plan" class="hb-lcd-icon-art" src="assets/4_Charging_Plan_M96RbyZQxoGjRRxQHsuczeIln1b_71017f43bab4.png"/>
 </td>
 <td class="hb-lcd-name"><p>Charging Plan</p></td>
 <td class="hb-lcd-description"><div class="line-block">
@@ -281,7 +271,7 @@ For assistance, please contact Jackery customer service.</p></div></div></figure
 </td>
 </tr>
 <tr><td class="hb-lcd-number"><p>5</p></td>
-<td class="hb-lcd-icon"><img alt="Self-powered Mode" class="hb-lcd-icon-art" src="assets/5_Self-powered_Mode_VLkXbWOFpoMJYsxWp0xcXkkpn1g_73225cf9faa8.png"/>
+<td class="hb-lcd-icon"><img alt="Self-powered Mode" class="hb-lcd-icon-art" src="assets/5_Self-powered_Mode_FYTnb9vttoexjbxVMchcJaobnCg_73225cf9faa8.png"/>
 </td>
 <td class="hb-lcd-name"><p>Self-powered Mode</p></td>
 <td class="hb-lcd-description"><div class="line-block">
@@ -291,7 +281,7 @@ For assistance, please contact Jackery customer service.</p></div></div></figure
 </td>
 </tr>
 <tr><td class="hb-lcd-number"><p>6</p></td>
-<td class="hb-lcd-icon"><img alt="TOU Mode" class="hb-lcd-icon-art" src="assets/6_TOU_Mode_BLMAblms7oeDxUxsFb9cgzXvnId_f4cdcb551105.png"/>
+<td class="hb-lcd-icon"><img alt="TOU Mode" class="hb-lcd-icon-art" src="assets/6_TOU_Mode_BjEkbz0rFo6Bw4xiwNpcod9qnnc_f4cdcb551105.png"/>
 </td>
 <td class="hb-lcd-name"><p>TOU Mode</p></td>
 <td class="hb-lcd-description"><div class="line-block">
@@ -302,7 +292,7 @@ For assistance, please contact Jackery customer service.</p></div></div></figure
 </td>
 </tr>
 <tr><td class="hb-lcd-number"><p>7</p></td>
-<td class="hb-lcd-icon"><img alt="UPS" class="hb-lcd-icon-art" src="assets/7_UPS_JMnybDJHdoLbjExEMbGcfAkznQh_e422a56922eb.png"/>
+<td class="hb-lcd-icon"><img alt="UPS" class="hb-lcd-icon-art" src="assets/7_UPS_Lgdgb8pvvoGwaLxSf8ec2QeHn3c_e422a56922eb.png"/>
 </td>
 <td class="hb-lcd-name"><p>UPS</p></td>
 <td class="hb-lcd-description"><div class="line-block">
@@ -312,49 +302,49 @@ For assistance, please contact Jackery customer service.</p></div></div></figure
 </td>
 </tr>
 <tr><td class="hb-lcd-number"><p>8</p></td>
-<td class="hb-lcd-icon"><img alt="AC Power Indicator" class="hb-lcd-icon-art" src="assets/8_AC_Power_Indicator_IqesbVEWTo0ANfxDkoDcLP6jnSc_8be87c5a0849.png"/>
+<td class="hb-lcd-icon"><img alt="AC Power Indicator" class="hb-lcd-icon-art" src="assets/8_AC_Power_Indicator_HFPSbvWBgosvCux69jMcuWe6nnh_8be87c5a0849.png"/>
 </td>
 <td class="hb-lcd-name"><p>AC Power Indicator</p></td>
 <td class="hb-lcd-description"><p>The AC output (pure sine wave) is on.</p></td>
 </tr>
 <tr><td class="hb-lcd-number"><p>9</p></td>
-<td class="hb-lcd-icon"><img alt="Output Voltage and Frequency" class="hb-lcd-icon-art" src="assets/9_Output_Voltage_and_Frequency_XtL4bA80pogLmOx7VJ3ca5fEnl8_7623ef10e229.png"/>
+<td class="hb-lcd-icon"><img alt="Output Voltage and Frequency" class="hb-lcd-icon-art" src="assets/9_Output_Voltage_and_Frequency_Jh3JbmBDBoKlmOxaRJDcIMJAn6b_7623ef10e229.png"/>
 </td>
 <td class="hb-lcd-name"><p>Output Voltage and Frequency</p></td>
 <td class="hb-lcd-description"><p>Displays the output voltage and frequency when the AC output is turned on.</p></td>
 </tr>
 <tr><td class="hb-lcd-number"><p>10</p></td>
-<td class="hb-lcd-icon"><img alt="Input Power" class="hb-lcd-icon-art" src="assets/10_Input_Power_BiBvbNteAoNsHqxoMICc11cjnHc_d5100a538e96.png"/>
+<td class="hb-lcd-icon"><img alt="Input Power" class="hb-lcd-icon-art" src="assets/10_Input_Power_LOAZbnxfqoHFwIxx2Myc532jnzb_d5100a538e96.png"/>
 </td>
 <td class="hb-lcd-name"><p>Input Power</p></td>
 <td class="hb-lcd-description"><p>Displays the input power in watts.</p></td>
 </tr>
 <tr><td class="hb-lcd-number"><p>11</p></td>
-<td class="hb-lcd-icon"><img alt="Remaining Charge Time" class="hb-lcd-icon-art" src="assets/11_Remaining_Charge_Time_VeBobGZMDoYpBuxLRcFcti9cnlc_cfb69b1ffc0b.png"/>
+<td class="hb-lcd-icon"><img alt="Remaining Charge Time" class="hb-lcd-icon-art" src="assets/11_Remaining_Charge_Time_KIWHbHFOvotGuBxJsxlcunSDnPf_cfb69b1ffc0b.png"/>
 </td>
 <td class="hb-lcd-name"><p>Remaining Charge Time</p></td>
 <td class="hb-lcd-description"><p>Displays the remaining charging time.</p></td>
 </tr>
 <tr><td class="hb-lcd-number"><p>12</p></td>
-<td class="hb-lcd-icon"><img alt="AC Wall Charging Indicator" class="hb-lcd-icon-art" src="assets/12_AC_Wall_Charging_Indicator_OG9ebaP1HoaLvZxbGEAcIXkPnkb_28f3cad42ae3.png"/>
+<td class="hb-lcd-icon"><img alt="AC Wall Charging Indicator" class="hb-lcd-icon-art" src="assets/12_AC_Wall_Charging_Indicator_ZpOmbCjx8oYUTVxyl4JcvcTanPe_28f3cad42ae3.png"/>
 </td>
 <td class="hb-lcd-name"><p>AC Wall Charging Indicator</p></td>
 <td class="hb-lcd-description"><p>The product is charged via the AC Input using grid power.</p></td>
 </tr>
 <tr><td class="hb-lcd-number"><p>13</p></td>
-<td class="hb-lcd-icon"><img alt="Car Charging Indicator" class="hb-lcd-icon-art" src="assets/13_Car_Charging_Indicator_WgbebOblvoTtesxjb9ec8CkUnyg_eed3299c3f6a.png"/>
+<td class="hb-lcd-icon"><img alt="Car Charging Indicator" class="hb-lcd-icon-art" src="assets/13_Car_Charging_Indicator_DLkibYaP1ot6d5x1S0jcUr1knlb_eed3299c3f6a.png"/>
 </td>
 <td class="hb-lcd-name"><p>Car Charging Indicator</p></td>
 <td class="hb-lcd-description"><p>The product is charged via the DC Input (DC8020) using DC 12V (car charging).</p></td>
 </tr>
 <tr><td class="hb-lcd-number"><p>14</p></td>
-<td class="hb-lcd-icon"><img alt="Solar Charging Indicator" class="hb-lcd-icon-art" src="assets/14_Solar_Charging_Indicator_ZMSkb6bWWoKo8WxhBk0cZN5Lnpg_91cec82eeaa5.png"/>
+<td class="hb-lcd-icon"><img alt="Solar Charging Indicator" class="hb-lcd-icon-art" src="assets/14_Solar_Charging_Indicator_RgAUbPXNWoRxiHxKNgkc2gqDnEb_91cec82eeaa5.png"/>
 </td>
 <td class="hb-lcd-name"><p>Solar Charging Indicator</p></td>
 <td class="hb-lcd-description"><p>The product is charged via the DC Input (DC8020) using solar panel(s).</p></td>
 </tr>
 <tr><td class="hb-lcd-number"><p>15</p></td>
-<td class="hb-lcd-icon"><img alt="Battery Saving Mode" class="hb-lcd-icon-art" src="assets/15_Battery_Saving_Mode_QIQlbf95uoUmsFxyEQuc1zxkn22_e32e6ae96321.png"/>
+<td class="hb-lcd-icon"><img alt="Battery Saving Mode" class="hb-lcd-icon-art" src="assets/15_Battery_Saving_Mode_ClYfbtOGSoK5q2xySXCcgehVn8f_e32e6ae96321.png"/>
 </td>
 <td class="hb-lcd-name"><p>Battery Saving Mode</p></td>
 <td class="hb-lcd-description"><div class="line-block">
@@ -366,7 +356,7 @@ For assistance, please contact Jackery customer service.</p></div></div></figure
 </td>
 </tr>
 <tr><td class="hb-lcd-number"><p>16</p></td>
-<td class="hb-lcd-icon"><img alt="Charging Power Limit" class="hb-lcd-icon-art" src="assets/16_Charging_Power_Limit_YgjLbaQ2YoZwavxUqrHclXNdnuK_21b5f19ca9a6.png"/>
+<td class="hb-lcd-icon"><img alt="Charging Power Limit" class="hb-lcd-icon-art" src="assets/16_Charging_Power_Limit_VLf2bJfrkoCL0CxJoMNcL5ZxnCt_21b5f19ca9a6.png"/>
 </td>
 <td class="hb-lcd-name"><p>Charging Power Limit</p></td>
 <td class="hb-lcd-description"><div class="line-block">
@@ -377,19 +367,19 @@ For assistance, please contact Jackery customer service.</p></div></div></figure
 </td>
 </tr>
 <tr><td class="hb-lcd-number"><p>17</p></td>
-<td class="hb-lcd-icon"><img alt="Battery Power Indicator" class="hb-lcd-icon-art" src="assets/17_Battery_Power_Indicator_WqL2b7JZio7HnGxsWaOctZ7inkh_85921a9ad7fb.png"/>
+<td class="hb-lcd-icon"><img alt="Battery Power Indicator" class="hb-lcd-icon-art" src="assets/17_Battery_Power_Indicator_VLufb9exvoVLfgxz47pcfnRGnaf_85921a9ad7fb.png"/>
 </td>
 <td class="hb-lcd-name"><p>Battery Power Indicator</p></td>
 <td class="hb-lcd-description"><p>When the product is being charged, the orange circle around the battery percentage will light up in sequence. When charging other devices, the orange circle will stay on.</p></td>
 </tr>
 <tr><td class="hb-lcd-number"><p>18</p></td>
-<td class="hb-lcd-icon"><img alt="Remaining Battery Percentage" class="hb-lcd-icon-art" src="assets/18_Remaining_Battery_Percentage_F7gbbsgPKo4mdkx4JqccMfQRngc_747147be99d7.png"/>
+<td class="hb-lcd-icon"><img alt="Remaining Battery Percentage" class="hb-lcd-icon-art" src="assets/18_Remaining_Battery_Percentage_VkJcbUDbUoYC1hxrU6rc168OnJe_747147be99d7.png"/>
 </td>
 <td class="hb-lcd-name"><p>Remaining Battery Percentage</p></td>
 <td class="hb-lcd-description"><p>Displays the remaining battery percentage.</p></td>
 </tr>
 <tr><td class="hb-lcd-number"><p>19</p></td>
-<td class="hb-lcd-icon"><img alt="Low Battery Indicator" class="hb-lcd-icon-art" src="assets/19_Low_Battery_Indicator_TcggbK0LLodgNwx04T6cEqjPn5f_c7862a87e742.png"/>
+<td class="hb-lcd-icon"><img alt="Low Battery Indicator" class="hb-lcd-icon-art" src="assets/19_Low_Battery_Indicator_KDk9bhs8poHUBdx96PLckPganhd_c7862a87e742.png"/>
 </td>
 <td class="hb-lcd-name"><p>Low Battery Indicator</p></td>
 <td class="hb-lcd-description"><div class="line-block">
@@ -400,7 +390,7 @@ For assistance, please contact Jackery customer service.</p></div></div></figure
 </td>
 </tr>
 <tr><td class="hb-lcd-number"><p>20</p></td>
-<td class="hb-lcd-icon"><img alt="Discharge Timer" class="hb-lcd-icon-art" src="assets/20_Discharge_Timer_X2jjb9dwIomvH6xVJLJclRzpnAh_6aab9a14900a.png"/>
+<td class="hb-lcd-icon"><img alt="Discharge Timer" class="hb-lcd-icon-art" src="assets/20_Discharge_Timer_DHPMbkjSWoiuALxJyJ8cWyQOn0e_6aab9a14900a.png"/>
 </td>
 <td class="hb-lcd-name"><p>Discharge Timer</p></td>
 <td class="hb-lcd-description"><div class="line-block">
@@ -411,7 +401,7 @@ For assistance, please contact Jackery customer service.</p></div></div></figure
 </td>
 </tr>
 <tr><td class="hb-lcd-number"><p>22</p></td>
-<td class="hb-lcd-icon"><img alt="Energy Saving Mode" class="hb-lcd-icon-art" src="assets/22_Energy_Saving_Mode_FdBWbTvwwosJ7TxfeVIc2Flinkh_c4b830c769a3.png"/>
+<td class="hb-lcd-icon"><img alt="Energy Saving Mode" class="hb-lcd-icon-art" src="assets/22_Energy_Saving_Mode_O4Jdb5pUQoCBAqx0sfQcm9Nbntd_c4b830c769a3.png"/>
 </td>
 <td class="hb-lcd-name"><p>Energy Saving Mode</p></td>
 <td class="hb-lcd-description"><div class="line-block">
@@ -423,13 +413,13 @@ For assistance, please contact Jackery customer service.</p></div></div></figure
 </td>
 </tr>
 <tr><td class="hb-lcd-number"><p>23</p></td>
-<td class="hb-lcd-icon"><img alt="High Temperature Indicator" class="hb-lcd-icon-art" src="assets/23_High_Temperature_Indicator_HbD7betDOoeilexZaaQcqOknnMd_f548c6504f49.png"/>
+<td class="hb-lcd-icon"><img alt="High Temperature Indicator" class="hb-lcd-icon-art" src="assets/23_High_Temperature_Indicator_UmkEbOgCKoKyxoxDSINcfO6LnQd_f548c6504f49.png"/>
 </td>
 <td class="hb-lcd-name"><p>High Temperature Indicator</p></td>
 <td class="hb-lcd-description"><p>High temperature protection is triggered. The product may stop functioning until its temperature returns to the normal operating range.</p></td>
 </tr>
 <tr><td class="hb-lcd-number"><p>24</p></td>
-<td class="hb-lcd-icon"><img alt="Low Temperature Indicator" class="hb-lcd-icon-art" src="assets/24_Low_Temperature_Indicator_PkYSbqrsooorJhxkTOfcUutJnKu_bdbf602db74a.png"/>
+<td class="hb-lcd-icon"><img alt="Low Temperature Indicator" class="hb-lcd-icon-art" src="assets/24_Low_Temperature_Indicator_JDMEbD96noSbyWxbOnVcgip1nab_bdbf602db74a.png"/>
 </td>
 <td class="hb-lcd-name"><p>Low Temperature Indicator</p></td>
 <td class="hb-lcd-description"><div class="line-block">
@@ -439,19 +429,19 @@ For assistance, please contact Jackery customer service.</p></div></div></figure
 </td>
 </tr>
 <tr><td class="hb-lcd-number"><p>25</p></td>
-<td class="hb-lcd-icon"><img alt="Fault code" class="hb-lcd-icon-art" src="assets/25_Fault_code_LaTmb4IQYo3vwvxMqQNcC2RgnIf_ce913ebfc775.png"/>
+<td class="hb-lcd-icon"><img alt="Fault code" class="hb-lcd-icon-art" src="assets/25_Fault_code_Oz87bX3BGo8H7Zxe0XvcTd7FnJL_ce913ebfc775.png"/>
 </td>
 <td class="hb-lcd-name"><p>Fault code</p></td>
 <td class="hb-lcd-description"><p>A product error has occurred. Please refer to the Troubleshooting section for details.</p></td>
 </tr>
 <tr><td class="hb-lcd-number"><p>26</p></td>
-<td class="hb-lcd-icon"><img alt="Output Power" class="hb-lcd-icon-art" src="assets/26_Output_Power_MRflbp7C7oqGbdxeWO1cl79XnBc_58c1d3604ca7.png"/>
+<td class="hb-lcd-icon"><img alt="Output Power" class="hb-lcd-icon-art" src="assets/26_Output_Power_PviebR618oofvKxcKVRcHLlInqd_58c1d3604ca7.png"/>
 </td>
 <td class="hb-lcd-name"><p>Output Power</p></td>
 <td class="hb-lcd-description"><p>Displays the output power in watts.</p></td>
 </tr>
 <tr><td class="hb-lcd-number"><p>27</p></td>
-<td class="hb-lcd-icon"><img alt="Remaining Discharge Time" class="hb-lcd-icon-art" src="assets/27_Remaining_Discharge_Time_QvCQbFmEhoQR3kxgWt4c6H9zn0b_9b148ea95d3a.png"/>
+<td class="hb-lcd-icon"><img alt="Remaining Discharge Time" class="hb-lcd-icon-art" src="assets/27_Remaining_Discharge_Time_JEpobf59DoBV4dxWlnxcNtIinke_9b148ea95d3a.png"/>
 </td>
 <td class="hb-lcd-name"><p>Remaining Discharge Time</p></td>
 <td class="hb-lcd-description"><p>Displays the remaining discharging time.</p></td>
@@ -481,7 +471,7 @@ When Energy Saving Mode is enabled, the product will automatically shut down aft
 
 
 
-## DC/USB OUTPUT ON/OFF
+## DC 12V/USB OUTPUT ON/OFF
 
 
 
@@ -515,9 +505,9 @@ The product can charge your car battery using the Jackery 12V automobile battery
 
 ## ENERGY SAVING MODE
 
-To prevent unnecessary battery consumption from forgetting to turn off the output, the product enables Energy Saving Mode by default. When the AC or DC/USB output is turned on, the Energy Saving Mode icon will be displayed on the LCD screen. In this mode, if no device is connected or the connected device\'s power consumption is below a certain threshold (25 W AC output or 2 W DC/USB output), the corresponding output will automatically turns off after the set time. The default setting is 12 hours. The Energy Saving Mode duration can be set in the Jackery App to 1H, 2 H, 8 H, 12 H or 24 H. If it is set to Never Off, Energy Saving Mode will be disabled.
+To prevent unnecessary battery consumption from forgetting to turn off the output, the product enables Energy Saving Mode by default. When the AC or DC/USB output is turned on, the Energy Saving Mode icon will be displayed on the LCD screen. In this mode, if no device is connected or the connected device\'s power consumption is below a certain threshold (25 W AC output or 2 W DC/USB output), the corresponding output will automatically turns off after the set time. The default setting is 12 hours. The Energy Saving Mode duration can be set in the Jackery App to 1 H, 2 H, 8 H, 12 H or 24 H. If it is set to Never Off, Energy Saving Mode will be disabled.
 
-To disable the energy saving mode, press and hold both the AC power button and the main POWER button for more than 3 seconds. Once Energy Saving Mode is disabled, the icon will no longer appear on the LCD screen, and the product will not automatically turn off the AC or USB output.
+To disable the energy saving mode, press and hold both the AC power button and the POWER button for more than 3 seconds. Once Energy Saving Mode is disabled, the icon will no longer appear on the LCD screen, and the product will not automatically turn off the AC or USB output.
 
 When powering low-power devices (AC ≤ 25 W or DC/USB ≤ 2 W), disable Energy Saving Mode to prevent the output from shutting down automatically during operation.
 
@@ -537,7 +527,7 @@ When powering low-power devices (AC ≤ 25 W or DC/USB ≤ 2 W), disable Energy 
 
 
 
-<figure class="hb-operation-figure hb-operation-layout-footer-panel hb-has-composite-art" data-operation-id="led-light" data-source-fragment-sha256="83b45c8c8cf5e0989ecf6450466cd3414ef27b317fd4845f306be919170588ba" data-web-replace-key="operation.led-light"><div aria-hidden="true" class="hb-composite-stage"><img alt="" class="hb-composite-art" loading="lazy" src="assets/operation.led-light_en_488d554029be_488d554029be.png"/></div><div class="hb-operation-stage"><img alt="LED light mode operation placeholder." class="hb-operation-art" src="assets/led_light_bf4fce34dd33.png" style="width: 360px;" width="360" height="206" /><div class="hb-operation-prerequisite" data-callout-id="operation.led-light.prerequisite"><p>The LED light has two modes: Light mode and SOS mode. In any mode, press and hold the LED LIGHT button to turn off the light.</p></div><div class="line-block hb-operation-steps" data-callout-id="operation.led-light.steps"><div class="hb-operation-step" data-callout-id="operation.led-light.light" data-step-id="light"><div class="line" data-step-id="light" data-step-part="summary">Press the LED LIGHT button once to turn on the light.</div></div><div class="hb-operation-step" data-callout-id="operation.led-light.sos" data-step-id="sos"><div class="line" data-step-id="sos" data-step-part="summary">Press it again to switch to SOS Mode.</div></div><div class="hb-operation-step" data-callout-id="operation.led-light.off" data-step-id="off"><div class="line" data-step-id="off" data-step-part="summary">Press it a third time to turn off the light.</div></div></div></div></figure>
+<figure class="hb-operation-figure hb-operation-layout-footer-panel" data-operation-id="led-light" data-source-fragment-sha256="67650270634ec2e587ab7a5195585f20c0d92faccd0a2f622af14cd8b713e3d9" data-web-replace-key="operation.led-light"><div class="hb-operation-stage"><img alt="LED light mode operation placeholder." class="hb-operation-art" src="assets/led_light_bf4fce34dd33.png" style="width: 360px;" width="360" height="206" /><div class="hb-operation-prerequisite" data-callout-id="operation.led-light.prerequisite"><p>The LED light has two modes: Light mode and SOS mode. In any mode, press and hold the LED light button to turn off the light.</p></div><div class="line-block hb-operation-steps" data-callout-id="operation.led-light.steps"><div class="hb-operation-step" data-callout-id="operation.led-light.light" data-step-id="light"><div class="line" data-step-id="light" data-step-part="summary">Press the LED Light button once to turn on the light.</div></div><div class="hb-operation-step" data-callout-id="operation.led-light.sos" data-step-id="sos"><div class="line" data-step-id="sos" data-step-part="summary">Press it again to switch to SOS Mode.</div></div><div class="hb-operation-step" data-callout-id="operation.led-light.off" data-step-id="off"><div class="line" data-step-id="off" data-step-part="summary">Press it a third time to turn off the light.</div></div></div></div></figure>
 
 
 
@@ -609,14 +599,14 @@ The AC/DC Output Resume Function is disabled by default. Enable this function in
 
 You can also set the screen display mode in the Jackery App.
 
-## KEY COMBINATIONS
+## KEY COMBINATION
 
 | Buttons | Operation | Function |
 |----|----|----|
-| Power Button + AC Power Button | Press and hold both for 3s | Turn on/off the Energy Saving Mode |
-| Power Button + DC/USB Power Button | Press and hold both for 3s | Reset Wi-Fi and Bluetooth |
+| POWER button + AC Power Button | Press and hold both for 3s | Turn on/off the Energy Saving Mode |
+| POWER button + DC/USB Power Button | Press and hold both for 3s | Reset Wi-Fi and Bluetooth |
 | DC/USB Power Button + AC Power Button | Press and hold both for 1s | Turn on/off Wi-Fi and Bluetooth |
-| Main POWER button + LED Light button | Press and hold both for 1s | Turn on/off Emergency Charging Mode |
+| POWER button + LED Light button | Press and hold both for 1s | Turn on/off Emergency Charging Mode |
 
 # UNINTERRUPTIBLE POWER SUPPLY (UPS)
 
@@ -652,7 +642,7 @@ the actual output power is lower than the rated output power in this mode but re
 
 
 <table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>NOTE</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
-<li><p>The recommended charging temperature for the product ranges from 14°F to 113°F / -10°C to 45°C, and the discharging temperature ranges from 14°F to 113°F / -10°C to 45°C.</p></li>
+<li><p>The recommended charging temperature for the product ranges from 32°F to 113°F / 0°C to 45°C, and the discharging temperature ranges from 14°F to 113°F / -10°C to 45°C.</p></li>
 <li><p>Operating the product beyond this temperature range may restrict its charging and discharging capabilities, or even prevent it from charging or discharging.</p></li>
 <li><p>The charging power and battery capacity of the product may vary due to temperature fluctuations.</p></li>
 </ul>
@@ -674,9 +664,9 @@ Connect the AC charging cable to the AC input port of the product and a wall out
 
 **Emergency Charging Mode**
 
-Under this mode, you can rapidly power up the portable power station using the AC charging method. This emergency charge function can be activated or deactivated through the Jackery app. When in emergency charging mode, the circular light indicating the state of charge (SOC) will blink at an increased pace.
+Under this mode, you can rapidly power up the portable power station using the AC charging method. This emergency charge function can be activated or deactivated through the Jackery App. When in emergency charging mode, the circular light indicating the state of charge (SOC) will blink at an increased pace.
 
-\* To maximize battery lifespan, it is best to charge at normal speed. Use emergency charging mode only when necessary. It\'s not recommended for regular, long-term use.
+\*To maximize battery lifespan, it is best to charge at normal speed. Use emergency charging mode only when necessary. It\'s not recommended for regular, long-term use.
 
 ## CHARGING VIA SOLAR PANELS (SOLD SEPARATELY)
 
@@ -813,7 +803,7 @@ If any of the following fault codes appear, follow the listed corrective actions
 
 
 
-<figure aria-label="GENERAL INFO" class="hb-spec-table-composition"><table class="manual-table manual-spec-table hb-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup><tbody><tr><th class="manual-spec-label hb-spec-label" scope="row">Product Name</th><td class="manual-spec-value hb-spec-value">Jackery Explorer 1000</td></tr><tr><th class="manual-spec-label hb-spec-label" scope="row">Model No.</th><td class="manual-spec-value hb-spec-value">JE-1000F / JE-1000F-SG</td></tr><tr><th class="manual-spec-label hb-spec-label" scope="row">Capacity</th><td class="manual-spec-value hb-spec-value">1024 Wh (20 Ah / 51.2 V DC)</td></tr><tr><th class="manual-spec-label hb-spec-label" scope="row">Cell Chemistry</th><td class="manual-spec-value hb-spec-value">LiFePO₄</td></tr><tr><th class="manual-spec-label hb-spec-label" scope="row">Weight</th><td class="manual-spec-value hb-spec-value">About 23.4 lbs / 10.6 kg</td></tr><tr><th class="manual-spec-label hb-spec-label" scope="row">Dimensions</th><td class="manual-spec-value hb-spec-value">12.4 x 7.9 x 9.2 in / 31.4 x 20.1 x 23.4 cm</td></tr><tr><th class="manual-spec-label hb-spec-label" scope="row">Cycle Life</th><td class="manual-spec-value hb-spec-value">6000 cycles to 70%+ capacity</td></tr></tbody></table></figure>
+<figure aria-label="GENERAL INFO" class="hb-spec-table-composition"><table class="manual-table manual-spec-table hb-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup><tbody><tr><th class="manual-spec-label hb-spec-label" scope="row">Product Name</th><td class="manual-spec-value hb-spec-value">Jackery Explorer 1000</td></tr><tr><th class="manual-spec-label hb-spec-label" scope="row">Model No.</th><td class="manual-spec-value hb-spec-value">JE-1000F / JE-1000F-SG</td></tr><tr><th class="manual-spec-label hb-spec-label" scope="row">Capacity</th><td class="manual-spec-value hb-spec-value">1024 Wh (20 Ah / 51.2 V DC)</td></tr><tr><th class="manual-spec-label hb-spec-label" scope="row">Cell Chemistry</th><td class="manual-spec-value hb-spec-value">LiFePO₄</td></tr><tr><th class="manual-spec-label hb-spec-label" scope="row">Weight</th><td class="manual-spec-value hb-spec-value">About 23.4 lbs / 10.6 kg</td></tr><tr><th class="manual-spec-label hb-spec-label" scope="row">Dimensions</th><td class="manual-spec-value hb-spec-value">12.4 x 7.9 x 9.2 in / 31.4 x 20.1 x 23.4 cm</td></tr><tr><th class="manual-spec-label hb-spec-label" scope="row">Cycle Life</th><td class="manual-spec-value hb-spec-value">4000 cycles to 70%+ capacity</td></tr></tbody></table></figure>
 
 
 
@@ -837,7 +827,7 @@ If any of the following fault codes appear, follow the listed corrective actions
 
 
 
-<figure aria-label="ENVIRONMENTAL OPERATING TEMPERATURE" class="hb-spec-table-composition"><table class="manual-table manual-spec-table hb-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup><tbody><tr><th class="manual-spec-label hb-spec-label" scope="row">Charging Temperature</th><td class="manual-spec-value hb-spec-value">14°F to 113°F / -10°C to 45°C</td></tr><tr><th class="manual-spec-label hb-spec-label" scope="row">Discharging Temperature</th><td class="manual-spec-value hb-spec-value">14°F to 113°F / -10°C to 45°C</td></tr></tbody></table></figure>
+<figure aria-label="ENVIRONMENTAL OPERATING TEMPERATURE" class="hb-spec-table-composition"><table class="manual-table manual-spec-table hb-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup><tbody><tr><th class="manual-spec-label hb-spec-label" scope="row">Charging Temperature</th><td class="manual-spec-value hb-spec-value">32°F to 113°F / 0°C to 45°C</td></tr><tr><th class="manual-spec-label hb-spec-label" scope="row">Discharging Temperature</th><td class="manual-spec-value hb-spec-value">14°F to 113°F / -10°C to 45°C</td></tr></tbody></table></figure>
 
 
 
@@ -904,7 +894,7 @@ The repaired/replaced product assumes the remaining warranty of the original dat
 <li><p>Any product that has been misused, abused, modified, damaged by accident, or used for anything other than normal consumer use as authorized in Jackery's current product literature.</p></li>
 <li><p>Attempted repair by anyone other than an authorized facility.</p></li>
 <li><p>Any product purchased through an online auction house.</p></li>
-<li><p>ackery's warranty does not apply to the battery cell unless the battery cell is fully charged by you within seven days after you purchase the product and at least once every 6 months thereafter.</p></li>
+<li><p>Jackery's warranty does not apply to the battery cell unless the battery cell is fully charged by you within seven days after you purchase the product and at least once every 6 months thereafter.</p></li>
 </ul></figure>
 
 
@@ -913,7 +903,7 @@ The repaired/replaced product assumes the remaining warranty of the original dat
 
 
 
-<figure aria-label="Interpretation Rights" class="hb-warranty-card" data-warranty-card-index="6"><p>Jackery reserves the right to final interpretation of the above after-sales policy.</p></figure>
+<figure aria-label="Interpretation Rights" class="hb-warranty-card" data-warranty-card-index="6"><p>Jackery reserves the right to the final interpretation of the above customer after-sales policy.</p></figure>
 
 
 
@@ -935,7 +925,7 @@ The repaired/replaced product assumes the remaining warranty of the original dat
 
 
 
-<figure class="hb-app-add-device-composition" data-reference-id="app-add-device" data-step-captions="embedded"><div class="hb-app-add-device-phone-stage"><img alt="App add device step placeholder." class="hb-app-add-device-phone-art" src="assets/app_add_device_steps_9b7e0cf44d0f.png"/></div><div class="hb-app-add-device-control-panel"><img alt="" aria-hidden="true" class="hb-app-add-device-control-art" loading="lazy" src="assets/app_control_panel_2b9bc2598d7a.png"/><span class="hb-app-add-device-live-label hb-app-add-device-live-label-main-power">Main Power Button</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-dc-usb">DC/USB Power Button</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-ac-power">AC Power Button</span></div></figure>
+<figure class="hb-app-add-device-composition" data-reference-id="app-add-device" data-step-captions="embedded"><div class="hb-app-add-device-phone-stage"><img alt="App add device step placeholder." class="hb-app-add-device-phone-art" src="assets/app_add_device_steps_9b7e0cf44d0f.png"/></div><div class="hb-app-add-device-control-panel"><img alt="" aria-hidden="true" class="hb-app-add-device-control-art" loading="lazy" src="assets/app_control_panel_2b9bc2598d7a.png"/><span class="hb-app-add-device-live-label hb-app-add-device-live-label-main-power">POWER Button</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-dc-usb">AC Power Button</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-ac-power">DC / USB Power Button</span></div></figure>
 
 
 
@@ -985,7 +975,7 @@ Click the **Settings** icon in the upper right corner of the main interface of t
 
 ## 4. Notes
 
-### 4.1 To turn on Wi-Fi & Bluetooth
+### 4.1 To turn on Wi-Fi and Bluetooth
 
 - Wi-Fi and Bluetooth are automatically turned on after the device is on, and the Wi-Fi and Bluetooth icons on the screen light up.
 
@@ -1048,8 +1038,8 @@ Hold POWER button + DC / USB power button at the same time for 3 seconds to rese
 <li>Cessez immédiatement d’utiliser le produit s’il présente des signes de dommage. Arrêtez l’utilisation et contactez l’assistance clientèle pour obtenir de l’aide.</li>
 <li>Ne rechargez pas la batterie dans un environnement extrêmement chaud ou froid, et respectez strictement les plages de températures d’utilisation spécifiées du produit :
 <ul>
-<li>Température de charge : 14°F à 113°F (-10°C à 45°C)</li>
-<li>Température de décharge : 14°F à 113°F (-10°C à 45°C)</li>
+<li>Température de charge : 32 °F à 113 °F / 0 °C à 45 °C</li>
+<li>Température de décharge : 14°F à 113°F / -10°C à 45°C</li>
 </ul></li>
 <li>Pour garantir une bonne circulation de l’air, gardez les orifices de ventilation du produit dégagés. Utilisez-le dans un endroit bien aéré, frais et sec pour éviter toute surchauffe.
 <ul>
@@ -1084,14 +1074,14 @@ Hold POWER button + DC / USB power button at the same time for 3 seconds to rese
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENTION</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p class="hb-lead">Cet appareil est destiné à un usage intérieur uniquement (veuillez placer cet appareil dans un environnement intérieur similaire lors de son utilisation à l'extérieur, par exemple dans des VR résidentiels, des tentes, des chalets, etc.).<br>※ Cet appareil n'est pas étanche ni résistant à la poussière. Éloignez-le de la pluie et des environnements humides pendant son utilisation.</p>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>DANGER</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p class="hb-lead">Cet appareil est destiné à un usage intérieur uniquement (veuillez placer cet appareil dans un environnement intérieur similaire lors de son utilisation à l'extérieur, par exemple, maison, VR, tentes, cabines, etc.).<br>※ Cet appareil n'est ni étanche ni résistant à la poussière. Gardez-le à l'abri de la pluie et des environnements humides pendant l'utilisation.</p>
 </td></tr></tbody></table>
 
 
 
 ## INSTRUCTIONS D\'ENTRETIEN PAR L\'UTILISATEUR
 
-Au cours du cycle des produits de stockage d\'énergie, une certaine dégradation de la capacité et de l\'énergie se produira. À mesure que le nombre de cycles d\'utilisation augmente et que la durée de stockage s\'allonge, cette dégradation s\'intensifiera progressivement, ce qui est un phénomène normal conforme au modèle de vieillissement naturel des cellules de batterie.
+Pendant le cycle de vie des produits de stockage d\'énergie, une certaine dégradation de la capacité et de l\'énergie est attendue. À mesure que le nombre de cycles de charge et de décharge augmente et que la durée de stockage s\'allonge, cette dégradation s\'intensifie progressivement. Il s\'agit d\'un phénomène normal, conforme au vieillissement naturel des cellules de batterie.
 
 # SIGNIFICATION DES SYMBOLES
 
@@ -1124,17 +1114,17 @@ Au cours du cycle des produits de stockage d\'énergie, une certaine dégradatio
 
 
 
-<figure aria-label="Symbole / Signification" class="hb-symbol-pair-composition"><div class="hb-symbol-pair-grid"><div class="hb-symbol-panel hb-symbol-panel-1"><table class="hb-symbol-panel-table"><colgroup><col class="hb-symbol-col-icon"/><col class="hb-symbol-col-meaning"/></colgroup><thead><tr><th class="hb-symbol-icon-heading" scope="col"><p><strong>Symbole</strong></p></th><th class="hb-symbol-meaning-heading" scope="col"><p><strong>Signification</strong></p></th></tr></thead><tbody><tr><td class="hb-symbol-icon"><img alt="warning_triangle" class="hb-symbol-art" src="assets/1_warning_triangle_IfHObDBCDowRHbxLvCzci3wen7c_6749bd38fdd0.png"/>
-</td><td class="hb-symbol-meaning"><p>Symboles d’avertissement et de mise en garde. Signalent aux personnes des informations qui doivent être lues afin d’éviter les dangers ou risques potentiels.</p></td></tr><tr><td class="hb-symbol-icon"><img alt="read_manual" class="hb-symbol-art" src="assets/2_read_manual_P0fEbfBNKoRiCoxkAm7cq3ymndh_89dae4b809de.png"/>
-</td><td class="hb-symbol-meaning"><p>Lire le manuel de l'opérateur</p></td></tr><tr><td class="hb-symbol-icon"><img alt="electric_shock" class="hb-symbol-art" src="assets/3_electric_shock_Ctr7btZp2oBcCqxDmHbcrFPEnFd_378ec250259d.png"/>
-</td><td class="hb-symbol-meaning"><p>Risque de choc électrique</p></td></tr><tr><td class="hb-symbol-icon"><img alt="battery_charging" class="hb-symbol-art" src="assets/4_battery_charging_N9ppbBQWdoPM5bxEammcGFItnpd_dc89195f3ece.png"/>
-</td><td class="hb-symbol-meaning"><p>Chargement de la batterie</p></td></tr><tr><td class="hb-symbol-icon"><img alt="explosive_material" class="hb-symbol-art" src="assets/5_explosive_material_F4J3bCXAeoUk7sxrOg2ch60anHf_cb30b4905185.png"/>
-</td><td class="hb-symbol-meaning"><p>Matière explosive</p></td></tr><tr><td class="hb-symbol-icon"><img alt="heavy_object" class="hb-symbol-art" src="assets/6_heavy_object_M31Fbb3XeoQ0ClxmK2Lc9I5snYi_6b991847e3f8.png"/>
-</td><td class="hb-symbol-meaning"><p>Objet lourd</p></td></tr></tbody></table></div><div class="hb-symbol-panel hb-symbol-panel-2"><table class="hb-symbol-panel-table"><colgroup><col class="hb-symbol-col-icon"/><col class="hb-symbol-col-meaning"/></colgroup><thead><tr><th class="hb-symbol-icon-heading" scope="col"><p><strong>Symbole</strong></p></th><th class="hb-symbol-meaning-heading" scope="col"><p><strong>Signification</strong></p></th></tr></thead><tbody><tr><td class="hb-symbol-icon"><img alt="do_not_dismantle" class="hb-symbol-art" src="assets/7_do_not_dismantle_TTrGbm6PdoAFBwx16nXcZOaFnZf_76085a1e7008.png"/>
-</td><td class="hb-symbol-meaning"><p>Ne démontez pas le produit.</p></td></tr><tr><td class="hb-symbol-icon"><img alt="no_open_flame" class="hb-symbol-art" src="assets/8_no_open_flame_GOQabZgNNoj1goxlyjHcA0w7n7b_a8a846e9767a.png"/>
-</td><td class="hb-symbol-meaning"><p>Tenir le produit à l’écart du feu.</p></td></tr><tr><td class="hb-symbol-icon"><img alt="keep_away_from_children" class="hb-symbol-art" src="assets/9_keep_away_from_children_AjeEb4GIgoPNpdxkXhFcIeaDnTM_114690be6f4d.png"/>
-</td><td class="hb-symbol-meaning"><p>Les enfants ne sont pas admis</p></td></tr><tr><td class="hb-symbol-icon"><img alt="li_ion" class="hb-symbol-art" src="assets/10_li_ion_Nkm5benPWobav4xNt0ecDB2nn6D_2a61fc0919cf.png"/>
-</td><td class="hb-symbol-meaning"><p>Ce symbole indique que le produit contient une batterie lithium-ion (Li-ion), qui doit être éliminée ou recyclée de manière appropriée.</p></td></tr><tr><td class="hb-symbol-icon"><img alt="weee" class="hb-symbol-art" src="assets/11_weee_Wx7PbvwWCoznaCxrZ9Pc1KsXnSc_7e4de290ea13.png"/>
+<figure aria-label="Symbole / Signification" class="hb-symbol-pair-composition"><div class="hb-symbol-pair-grid"><div class="hb-symbol-panel hb-symbol-panel-1"><table class="hb-symbol-panel-table"><colgroup><col class="hb-symbol-col-icon"/><col class="hb-symbol-col-meaning"/></colgroup><thead><tr><th class="hb-symbol-icon-heading" scope="col"><p><strong>Symbole</strong></p></th><th class="hb-symbol-meaning-heading" scope="col"><p><strong>Signification</strong></p></th></tr></thead><tbody><tr><td class="hb-symbol-icon"><img alt="warning_triangle" class="hb-symbol-art" src="assets/1_warning_triangle_HO7FbxcSnonkYBxBvslc8RpdnIe_6749bd38fdd0.png"/>
+</td><td class="hb-symbol-meaning"><p>Symboles d’avertissement et de mise en garde. Signalent aux personnes des informations qui doivent être lues afin d’éviter les dangers ou risques potentiels.</p></td></tr><tr><td class="hb-symbol-icon"><img alt="read_manual" class="hb-symbol-art" src="assets/2_read_manual_MAQxbZ9MooQjaaxqb6qctq6Sncg_89dae4b809de.png"/>
+</td><td class="hb-symbol-meaning"><p>Lire le manuel de l'opérateur</p></td></tr><tr><td class="hb-symbol-icon"><img alt="electric_shock" class="hb-symbol-art" src="assets/3_electric_shock_XYAbbMCnNoNzYix7mKRcMHGhnic_378ec250259d.png"/>
+</td><td class="hb-symbol-meaning"><p>Risque de choc électrique</p></td></tr><tr><td class="hb-symbol-icon"><img alt="battery_charging" class="hb-symbol-art" src="assets/4_battery_charging_WIeDb0QIoo4eSbxUDoDcCV3fn8c_dc89195f3ece.png"/>
+</td><td class="hb-symbol-meaning"><p>Chargement de la batterie</p></td></tr><tr><td class="hb-symbol-icon"><img alt="explosive_material" class="hb-symbol-art" src="assets/5_explosive_material_Zkz9b74mDoSXlZx8jJwcbLErnge_cb30b4905185.png"/>
+</td><td class="hb-symbol-meaning"><p>Matière explosive</p></td></tr><tr><td class="hb-symbol-icon"><img alt="heavy_object" class="hb-symbol-art" src="assets/6_heavy_object_IGFubhmSFowSsoxFCIdcgW7lnUd_6b991847e3f8.png"/>
+</td><td class="hb-symbol-meaning"><p>Objet lourd</p></td></tr></tbody></table></div><div class="hb-symbol-panel hb-symbol-panel-2"><table class="hb-symbol-panel-table"><colgroup><col class="hb-symbol-col-icon"/><col class="hb-symbol-col-meaning"/></colgroup><thead><tr><th class="hb-symbol-icon-heading" scope="col"><p><strong>Symbole</strong></p></th><th class="hb-symbol-meaning-heading" scope="col"><p><strong>Signification</strong></p></th></tr></thead><tbody><tr><td class="hb-symbol-icon"><img alt="do_not_dismantle" class="hb-symbol-art" src="assets/7_do_not_dismantle_EesAbUpXdo6eJIxkBL5c8yp7nPd_76085a1e7008.png"/>
+</td><td class="hb-symbol-meaning"><p>Ne démontez pas le produit.</p></td></tr><tr><td class="hb-symbol-icon"><img alt="no_open_flame" class="hb-symbol-art" src="assets/8_no_open_flame_E9gXbvgbaoiigFxd11rcHuY8nab_a8a846e9767a.png"/>
+</td><td class="hb-symbol-meaning"><p>Tenir le produit à l’écart du feu.</p></td></tr><tr><td class="hb-symbol-icon"><img alt="keep_away_from_children" class="hb-symbol-art" src="assets/9_keep_away_from_children_XErWbsrH9o3xllxqHj9cktZAnnh_114690be6f4d.png"/>
+</td><td class="hb-symbol-meaning"><p>Les enfants ne sont pas admis</p></td></tr><tr><td class="hb-symbol-icon"><img alt="li_ion" class="hb-symbol-art" src="assets/10_li_ion_HpN6bpoYHohujqxLgYKcazSin0k_2a61fc0919cf.png"/>
+</td><td class="hb-symbol-meaning"><p>Ce symbole indique que le produit contient une batterie lithium-ion (Li-ion), qui doit être éliminée ou recyclée de manière appropriée.</p></td></tr><tr><td class="hb-symbol-icon"><img alt="weee" class="hb-symbol-art" src="assets/11_weee_WGswbCb5zoaeDSxlHvyc5rFXn7g_7e4de290ea13.png"/>
 </td><td class="hb-symbol-meaning"><p>Ce symbole indique que le produit ne doit pas être jeté avec les ordures ménagères. Il doit être apporté à un point de collecte désigné pour un recyclage approprié.
 Une élimination et un recyclage corrects contribuent à la protection de l’environnement. Pour plus d’informations, veuillez contacter votre autorité locale, le service de gestion des déchets ou le revendeur du produit.</p></td></tr></tbody></table></div></div></figure>
 
@@ -1144,16 +1134,7 @@ Une élimination et un recyclage corrects contribuent à la protection de l’en
 
 
 
-<figure aria-label="FCC" class="hb-fcc-composition"><div class="hb-fcc-grid"><div class="hb-fcc-column hb-fcc-column-left"><div class="hb-fcc-opening"><img alt="FCC" class="hb-fcc-mark" loading="lazy" src="assets/fcc_mark_45f309ed8b3f.png"/><div class="hb-fcc-opening-copy"><div class="line-block">
-<div class="line">Cet appareil est conforme à la partie 15 du règlement de la FCC. Le fonctionnement dépend des deux conditions suivantes :</div>
-<div class="line">(1) Cet appareil ne doit pas provoquer d'interférences dangereuses, et</div>
-<div class="line">(2) Cet appareil doit accepter toute interférence reçue, y compris les interférences pouvant provoquer un fonctionnement non désiré.</div>
-</div></div></div><p><strong>REMARQUE :</strong> Cet équipement a été testé et déclaré conforme aux limites concernant les appareils numériques de classe B, conformément à la partie 15 du règlement de la FCC. Ces limites sont conçues pour offrir une protection raisonnable contre les interférences dangereuses dans le cadre d'une installation résidentielle. Cet équipement génère, utilise et émet des ondes radios qui peuvent, si cet équipement n'est pas installé et utilisé conformément aux instructions, perturber les communications radios. Toutefois, il n'y a aucune garantie qu'aucune interférence ne se produise lors d'une installation particulière.</p></div><div class="hb-fcc-column hb-fcc-column-right"><p>Si cet équipement trouble la réception de la radio ou de la télévision, ce qui peut être déterminé en éteignant et en allumant cet équipement, l'utilisateur est encouragé à tenter de corriger ces interférences en essayant une ou plusieurs des mesures suivantes :</p><ul class="simple">
-<li><p>Réorientez ou déplacez l'antenne de réception.</p></li>
-<li><p>Éloignez l'équipement du récepteur.</p></li>
-<li><p>Connectez l'équipement à une prise d'un autre circuit que celui auquel le récepteur est connecté.</p></li>
-<li><p>Consultez le revendeur ou bien demandez de l'aide à un technicien de radio/télévision expérimenté.</p></li>
-</ul><p><strong>MODIFICATION :</strong> Tout changement ou modification non expressément approuvé par le titulaire de cet appareil pourrait annuler l'autorisation de l'utilisateur à utiliser l'appareil.</p></div></div></figure>
+<figure aria-label="FCC" class="hb-fcc-composition" data-component-id="HB-SPECIAL-FCC"><div class="hb-fcc-grid"><div class="hb-fcc-column hb-fcc-column-left"><div class="hb-fcc-opening"><img alt="FCC" class="hb-fcc-mark" loading="lazy" src="assets/fcc_mark_45f309ed8b3f.png"/><div class="hb-fcc-opening-copy"><div class="line-block"><div class="line">Cet appareil est conforme à la partie 15 du règlement de la FCC. Le fonctionnement dépend des deux conditions suivantes :</div><div class="line">(1) Cet appareil ne doit pas provoquer d'interférences dangereuses, et</div><div class="line">(2) Cet appareil doit accepter toute interférence reçue, y compris les interférences pouvant provoquer un fonctionnement non désiré.</div></div></div></div><p><strong>REMARQUE :</strong> Cet équipement a été testé et déclaré conforme aux limites concernant les appareils numériques de classe B, conformément à la partie 15 du règlement de la FCC. Ces limites sont conçues pour offrir une protection raisonnable contre les interférences dangereuses dans le cadre d'une installation résidentielle. Cet équipement génère, utilise et émet des ondes radios qui peuvent, si cet équipement n'est pas installé et utilisé conformément aux instructions, perturber les communications radios. Toutefois, il n'y a aucune garantie qu'aucune interférence ne se produise lors d'une installation particulière.</p></div><div class="hb-fcc-column hb-fcc-column-right"><p>Si cet équipement trouble la réception de la radio ou de la télévision, ce qui peut être déterminé en éteignant et en allumant cet équipement, l'utilisateur est encouragé à tenter de corriger ces interférences en essayant une ou plusieurs des mesures suivantes :</p><ul class="simple"><li><p>Réorientez ou déplacez l'antenne de réception.</p></li><li><p>Éloignez l'équipement du récepteur.</p></li><li><p>Connectez l'équipement à une prise d'un autre circuit que celui auquel le récepteur est connecté.</p></li><li><p>Consultez le revendeur ou bien demandez de l'aide à un technicien de radio/télévision expérimenté.</p></li></ul><p><strong>MODIFICATION :</strong> Tout changement ou modification non expressément approuvé par le titulaire de cet appareil pourrait annuler l'autorisation de l'utilisateur à utiliser l'appareil.</p></div></div></figure>
 
 
 
@@ -1161,14 +1142,14 @@ Une élimination et un recyclage corrects contribuent à la protection de l’en
 
 
 
-<figure aria-label="CONTENU DE LA BOÎTE" class="hb-inbox-composition"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Image de la station d'énergie." class="hb-inbox-art" src="assets/main_unit1_6c7f1deea2f6.png"/><div class="hb-inbox-label">
+<figure aria-label="CONTENU DE LA BOÎTE" class="hb-inbox-composition" data-component-id="HB-SPECIAL-INBOX"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Image de la station d'énergie." class="hb-inbox-art" src="assets/main_unit1_6c7f1deea2f6.png"/><div class="hb-inbox-label">
 <p><strong>Jackery Explorer 1000</strong></p>
 </div></li><li class="hb-inbox-card" data-item-number="2"><img alt="Image du câble de charge CA." class="hb-inbox-art" src="assets/ac_charging_cable_287650f3a89a.png"/><div class="hb-inbox-label">
 <p><strong>Câble de charge CA</strong></p>
 </div></li><li class="hb-inbox-card" data-item-number="3"><img alt="Image des documents." class="hb-inbox-art" src="assets/manual_icon1_87ac44e52863.png"/><div class="hb-inbox-label">
-<p>Doucuments</p>
+<p>Documents</p>
 </div></li></ol><div class="hb-inbox-tip" role="note"><div class="hb-inbox-tip-label"><p><strong>CONSEILS</strong></p></div><div class="hb-inbox-tip-body"><p>Le câble de chargement pour voiture n'est pas inclus, mais peut être acheté séparément sur notre site Web.
-Pour obtenir de l'aide, veuillez contacter le service à la clientèle de Jackery.</p></div></div></figure>
+Pour obtenir de l'aide, veuillez contacter le service client Jackery.</p></div></div></figure>
 
 
 
@@ -1178,7 +1159,7 @@ Pour obtenir de l'aide, veuillez contacter le service à la clientèle de Jacker
 
 
 
-<figure class="hb-annotated-figure hb-has-composite-art" data-figure-id="product-overview-front" data-source-fragment-sha256="dbbeb8f52fe9b1ed34620df9e4fb95a65c21fec3df4fa9ee413de8118c661275" data-web-replace-key="product-overview.front"><div aria-hidden="true" class="hb-composite-stage"><img alt="" class="hb-composite-art" loading="lazy" src="assets/product-overview.front_fr_2e1c9327b308_2e1c9327b308.png"/></div><div class="hb-annotated-stage" style="--hb-aspect-ratio:1.66842"><img alt="Schéma de la vue de face." class="hb-annotated-art" src="assets/front_controls_8cb417c0ade2.png" style="width: 420px;" width="420" height="245" /><svg aria-hidden="true" class="hb-leader-layer" focusable="false" preserveAspectRatio="none" viewBox="0 0 100 100"><polyline class="hb-leader" data-callout-id="overview.front.power" points="1.101,8.518 41.169,8.518 41.169,33.378"></polyline><polyline class="hb-leader" data-callout-id="overview.front.lcd" points="99.005,8.519 51.04,8.519 51.04,33.506"></polyline><polyline class="hb-leader" data-callout-id="overview.front.dc12" points="1.101,25.722 35.787,25.722 35.787,35.193"></polyline><polyline class="hb-leader" data-callout-id="overview.front.led_button" points="99.006,21.853 59.042,21.853 59.042,32.851"></polyline><polyline class="hb-leader" data-callout-id="overview.front.usb_c_30" points="1.101,43.854 29.645,43.854 29.645,49.175 34.437,49.175"></polyline><polyline class="hb-leader" data-callout-id="overview.front.led" points="99.389,36.855 66.946,36.855"></polyline><polyline class="hb-leader" data-callout-id="overview.front.usb_c_100" points="1.486,57.141 33.346,57.141 33.346,53.33 34.353,53.33"></polyline><polyline class="hb-leader" data-callout-id="overview.front.ac_power" points="98.843,47.914 46.994,47.914 46.994,52.076"></polyline><polyline class="hb-leader" data-callout-id="overview.front.usb_a" points="1.124,78.5 35.787,78.5 35.787,61.68"></polyline><polyline class="hb-leader" data-callout-id="overview.front.ac_output" points="99.006,69.051 62.833,69.051 62.833,60.586"></polyline><polyline class="hb-leader" data-callout-id="overview.front.dc_usb" points="1.226,95.303 40.866,95.303 40.866,57.434"></polyline><polyline class="hb-leader" data-callout-id="overview.front.total" points="99.389,94.297 68.813,94.297"></polyline><polyline class="hb-leader-decoration" data-decoration-id="overview.front.decoration-1" points="58.644,60.581 58.644,85.435"></polyline></svg><div class="hb-figure-callout hb-align-left" data-callout-id="overview.front.power" style="--hb-x:1.104%;--hb-y:4.326%;--hb-width:34.069%;--hb-height:7.368%;--hb-align:left"><p><strong>Bouton d'alimentation</strong></p></div><div class="hb-figure-callout hb-align-right" data-callout-id="overview.front.lcd" style="--hb-x:76.341%;--hb-y:4.379%;--hb-width:22.471%;--hb-height:7.368%;--hb-align:right"><p><strong>LCD</strong></p></div><div class="hb-figure-callout hb-align-left" data-callout-id="overview.front.dc12" style="--hb-x:1.104%;--hb-y:16.805%;--hb-width:34.069%;--hb-height:13.684%;--hb-align:left"><p><strong>Port 12 V CC</strong></p>
+<figure class="hb-annotated-figure" data-figure-id="product-overview-front" data-source-fragment-sha256="5bd310134741a62acc11586b59628e6e952002fc2e6d6ba77651361b57f45c77" data-web-replace-key="product-overview.front"><div class="hb-annotated-stage" style="--hb-aspect-ratio:1.66842"><img alt="Schéma de la vue de face." class="hb-annotated-art" src="assets/front_controls_8cb417c0ade2.png" style="width: 420px;" width="420" height="245" /><svg aria-hidden="true" class="hb-leader-layer" focusable="false" preserveAspectRatio="none" viewBox="0 0 100 100"><polyline class="hb-leader" data-callout-id="overview.front.power" points="1.101,8.518 41.169,8.518 41.169,33.378"></polyline><polyline class="hb-leader" data-callout-id="overview.front.lcd" points="99.005,8.519 51.04,8.519 51.04,33.506"></polyline><polyline class="hb-leader" data-callout-id="overview.front.dc12" points="1.101,25.722 35.787,25.722 35.787,35.193"></polyline><polyline class="hb-leader" data-callout-id="overview.front.led_button" points="99.006,21.853 59.042,21.853 59.042,32.851"></polyline><polyline class="hb-leader" data-callout-id="overview.front.usb_c_30" points="1.101,43.854 29.645,43.854 29.645,49.175 34.437,49.175"></polyline><polyline class="hb-leader" data-callout-id="overview.front.led" points="99.389,36.855 66.946,36.855"></polyline><polyline class="hb-leader" data-callout-id="overview.front.usb_c_100" points="1.486,57.141 33.346,57.141 33.346,53.33 34.353,53.33"></polyline><polyline class="hb-leader" data-callout-id="overview.front.ac_power" points="98.843,47.914 46.994,47.914 46.994,52.076"></polyline><polyline class="hb-leader" data-callout-id="overview.front.usb_a" points="1.124,78.5 35.787,78.5 35.787,61.68"></polyline><polyline class="hb-leader" data-callout-id="overview.front.ac_output" points="99.006,69.051 62.833,69.051 62.833,60.586"></polyline><polyline class="hb-leader" data-callout-id="overview.front.dc_usb" points="1.226,95.303 40.866,95.303 40.866,57.434"></polyline><polyline class="hb-leader" data-callout-id="overview.front.total" points="99.389,94.297 68.813,94.297"></polyline><polyline class="hb-leader-decoration" data-decoration-id="overview.front.decoration-1" points="58.644,60.581 58.644,85.435"></polyline></svg><div class="hb-figure-callout hb-align-left" data-callout-id="overview.front.power" style="--hb-x:1.104%;--hb-y:4.326%;--hb-width:34.069%;--hb-height:7.368%;--hb-align:left"><p><strong>Bouton POWER</strong></p></div><div class="hb-figure-callout hb-align-right" data-callout-id="overview.front.lcd" style="--hb-x:76.341%;--hb-y:4.379%;--hb-width:22.471%;--hb-height:7.368%;--hb-align:right"><p><strong>LCD</strong></p></div><div class="hb-figure-callout hb-align-left" data-callout-id="overview.front.dc12" style="--hb-x:1.104%;--hb-y:16.805%;--hb-width:34.069%;--hb-height:13.684%;--hb-align:left"><p><strong>Port 12 V CC</strong></p>
 <p>12 V⎓10 A max.</p></div><div class="hb-figure-callout hb-align-right" data-callout-id="overview.front.led_button" style="--hb-x:75.71%;--hb-y:16.516%;--hb-width:23.115%;--hb-height:8.947%;--hb-align:right"><p><strong>Bouton lumière LED</strong></p></div><div class="hb-figure-callout hb-align-left" data-callout-id="overview.front.usb_c_30" style="--hb-x:1.104%;--hb-y:32.247%;--hb-width:34.069%;--hb-height:12.632%;--hb-align:left"><p><strong>Sortie USB-C 30 W</strong></p>
 <p>30 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓2,5 A, 15 V⎓2 A, 20 V⎓1,5 A</p></div><div class="hb-figure-callout hb-align-right" data-callout-id="overview.front.led" style="--hb-x:78.233%;--hb-y:32.116%;--hb-width:21.068%;--hb-height:7.368%;--hb-align:right"><p><strong>Lumière LED</strong></p></div><div class="hb-figure-callout hb-align-left" data-callout-id="overview.front.usb_c_100" style="--hb-x:1.104%;--hb-y:45.989%;--hb-width:34.069%;--hb-height:20.526%;--hb-align:left"><p><strong>Sortie USB-C 100 W</strong></p>
 <p>100 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓3 A, 15 V⎓3 A, 20 V⎓5 A</p></div><div class="hb-figure-callout hb-align-right" data-callout-id="overview.front.ac_power" style="--hb-x:74.448%;--hb-y:43.389%;--hb-width:24.244%;--hb-height:13.158%;--hb-align:right"><p><strong>Bouton Power CA</strong></p></div><div class="hb-figure-callout hb-align-left" data-callout-id="overview.front.usb_a" style="--hb-x:1.104%;--hb-y:67.9%;--hb-width:34.069%;--hb-height:17.895%;--hb-align:left"><p><strong>Sortie USB-A 18 W</strong></p>
@@ -1209,7 +1190,7 @@ Pour obtenir de l'aide, veuillez contacter le service à la clientèle de Jacker
 
 <tbody>
 <tr><td class="hb-lcd-number"><p>1</p></td>
-<td class="hb-lcd-icon"><img alt="Wi-Fi" class="hb-lcd-icon-art" src="assets/1_Wi-Fi_WuAbbIls6okb8pxBe5RcObWUnNd_fc4cc02b42ef.png"/>
+<td class="hb-lcd-icon"><img alt="Wi-Fi" class="hb-lcd-icon-art" src="assets/1_Wi-Fi_KCcAbdDk7o4RjKx82micuKJ5nyf_fc4cc02b42ef.png"/>
 </td>
 <td class="hb-lcd-name"><p>Wi-Fi</p></td>
 <td class="hb-lcd-description"><div class="line-block">
@@ -1220,7 +1201,7 @@ Pour obtenir de l'aide, veuillez contacter le service à la clientèle de Jacker
 </td>
 </tr>
 <tr><td class="hb-lcd-number"><p>2</p></td>
-<td class="hb-lcd-icon"><img alt="Bluetooth" class="hb-lcd-icon-art" src="assets/2_Bluetooth_EaovbGeSmoIldpxVoWrcVankn5d_7e1392ba6a45.png"/>
+<td class="hb-lcd-icon"><img alt="Bluetooth" class="hb-lcd-icon-art" src="assets/2_Bluetooth_HVgvbJhq5o4EDKxhm7McCF4FnjB_7e1392ba6a45.png"/>
 </td>
 <td class="hb-lcd-name"><p>Bluetooth</p></td>
 <td class="hb-lcd-description"><div class="line-block">
@@ -1231,7 +1212,7 @@ Pour obtenir de l'aide, veuillez contacter le service à la clientèle de Jacker
 </td>
 </tr>
 <tr><td class="hb-lcd-number"><p>3</p></td>
-<td class="hb-lcd-icon"><img alt="Mode de Charge Silencieuse" class="hb-lcd-icon-art" src="assets/3_Quiet_Charging_Mode_IRdmbJVhco57yOx8m0pcdgkXnbe_7f743182c050.png"/>
+<td class="hb-lcd-icon"><img alt="Mode de Charge Silencieuse" class="hb-lcd-icon-art" src="assets/3_Quiet_Charging_Mode_WLkMbiHS1oGsOtxUCp7cRhFAn1g_7f743182c050.png"/>
 </td>
 <td class="hb-lcd-name"><p>Mode de Charge Silencieuse</p></td>
 <td class="hb-lcd-description"><div class="line-block">
@@ -1241,7 +1222,7 @@ Pour obtenir de l'aide, veuillez contacter le service à la clientèle de Jacker
 </td>
 </tr>
 <tr><td class="hb-lcd-number"><p>4</p></td>
-<td class="hb-lcd-icon"><img alt="Plan de Charge" class="hb-lcd-icon-art" src="assets/4_Charging_Plan_PBCtblGMaoHz4fx08tRcoXUJnIf_71017f43bab4.png"/>
+<td class="hb-lcd-icon"><img alt="Plan de Charge" class="hb-lcd-icon-art" src="assets/4_Charging_Plan_M96RbyZQxoGjRRxQHsuczeIln1b_71017f43bab4.png"/>
 </td>
 <td class="hb-lcd-name"><p>Plan de Charge</p></td>
 <td class="hb-lcd-description"><div class="line-block">
@@ -1251,7 +1232,7 @@ Pour obtenir de l'aide, veuillez contacter le service à la clientèle de Jacker
 </td>
 </tr>
 <tr><td class="hb-lcd-number"><p>5</p></td>
-<td class="hb-lcd-icon"><img alt="Mode Autonome" class="hb-lcd-icon-art" src="assets/5_Self-powered_Mode_VLkXbWOFpoMJYsxWp0xcXkkpn1g_73225cf9faa8.png"/>
+<td class="hb-lcd-icon"><img alt="Mode Autonome" class="hb-lcd-icon-art" src="assets/5_Self-powered_Mode_FYTnb9vttoexjbxVMchcJaobnCg_73225cf9faa8.png"/>
 </td>
 <td class="hb-lcd-name"><p>Mode Autonome</p></td>
 <td class="hb-lcd-description"><div class="line-block">
@@ -1261,7 +1242,7 @@ Pour obtenir de l'aide, veuillez contacter le service à la clientèle de Jacker
 </td>
 </tr>
 <tr><td class="hb-lcd-number"><p>6</p></td>
-<td class="hb-lcd-icon"><img alt="Mode TOU" class="hb-lcd-icon-art" src="assets/6_TOU_Mode_BLMAblms7oeDxUxsFb9cgzXvnId_f4cdcb551105.png"/>
+<td class="hb-lcd-icon"><img alt="Mode TOU" class="hb-lcd-icon-art" src="assets/6_TOU_Mode_BjEkbz0rFo6Bw4xiwNpcod9qnnc_f4cdcb551105.png"/>
 </td>
 <td class="hb-lcd-name"><p>Mode TOU</p></td>
 <td class="hb-lcd-description"><div class="line-block">
@@ -1272,7 +1253,7 @@ Pour obtenir de l'aide, veuillez contacter le service à la clientèle de Jacker
 </td>
 </tr>
 <tr><td class="hb-lcd-number"><p>7</p></td>
-<td class="hb-lcd-icon"><img alt="UPS (ASI)" class="hb-lcd-icon-art" src="assets/7_UPS_JMnybDJHdoLbjExEMbGcfAkznQh_e422a56922eb.png"/>
+<td class="hb-lcd-icon"><img alt="UPS (ASI)" class="hb-lcd-icon-art" src="assets/7_UPS_Lgdgb8pvvoGwaLxSf8ec2QeHn3c_e422a56922eb.png"/>
 </td>
 <td class="hb-lcd-name"><p>UPS (ASI)</p></td>
 <td class="hb-lcd-description"><div class="line-block">
@@ -1283,49 +1264,49 @@ Pour obtenir de l'aide, veuillez contacter le service à la clientèle de Jacker
 </td>
 </tr>
 <tr><td class="hb-lcd-number"><p>8</p></td>
-<td class="hb-lcd-icon"><img alt="Indicateur d'alimentation CA" class="hb-lcd-icon-art" src="assets/8_AC_Power_Indicator_IqesbVEWTo0ANfxDkoDcLP6jnSc_8be87c5a0849.png"/>
+<td class="hb-lcd-icon"><img alt="Indicateur d'alimentation CA" class="hb-lcd-icon-art" src="assets/8_AC_Power_Indicator_HFPSbvWBgosvCux69jMcuWe6nnh_8be87c5a0849.png"/>
 </td>
 <td class="hb-lcd-name"><p>Indicateur d'alimentation CA</p></td>
 <td class="hb-lcd-description"><p>La sortie CA (onde sinusoïdale pure) est activée.</p></td>
 </tr>
 <tr><td class="hb-lcd-number"><p>9</p></td>
-<td class="hb-lcd-icon"><img alt="Tension et fréquence de sortie" class="hb-lcd-icon-art" src="assets/9_Output_Voltage_and_Frequency_XtL4bA80pogLmOx7VJ3ca5fEnl8_7623ef10e229.png"/>
+<td class="hb-lcd-icon"><img alt="Tension et fréquence de sortie" class="hb-lcd-icon-art" src="assets/9_Output_Voltage_and_Frequency_Jh3JbmBDBoKlmOxaRJDcIMJAn6b_7623ef10e229.png"/>
 </td>
 <td class="hb-lcd-name"><p>Tension et fréquence de sortie</p></td>
 <td class="hb-lcd-description"><p>Affiche la tension et la fréquence de sortie lorsque la sortie CA est activée.</p></td>
 </tr>
 <tr><td class="hb-lcd-number"><p>10</p></td>
-<td class="hb-lcd-icon"><img alt="Puissance d’Entrée" class="hb-lcd-icon-art" src="assets/10_Input_Power_BiBvbNteAoNsHqxoMICc11cjnHc_d5100a538e96.png"/>
+<td class="hb-lcd-icon"><img alt="Puissance d’Entrée" class="hb-lcd-icon-art" src="assets/10_Input_Power_LOAZbnxfqoHFwIxx2Myc532jnzb_d5100a538e96.png"/>
 </td>
 <td class="hb-lcd-name"><p>Puissance d’Entrée</p></td>
 <td class="hb-lcd-description"><p>Affiche la puissance d'entrée en watts.</p></td>
 </tr>
 <tr><td class="hb-lcd-number"><p>11</p></td>
-<td class="hb-lcd-icon"><img alt="Temps de Charge Restant" class="hb-lcd-icon-art" src="assets/11_Remaining_Charge_Time_VeBobGZMDoYpBuxLRcFcti9cnlc_cfb69b1ffc0b.png"/>
+<td class="hb-lcd-icon"><img alt="Temps de Charge Restant" class="hb-lcd-icon-art" src="assets/11_Remaining_Charge_Time_KIWHbHFOvotGuBxJsxlcunSDnPf_cfb69b1ffc0b.png"/>
 </td>
 <td class="hb-lcd-name"><p>Temps de Charge Restant</p></td>
 <td class="hb-lcd-description"><p>Affiche le temps de charge restant.</p></td>
 </tr>
 <tr><td class="hb-lcd-number"><p>12</p></td>
-<td class="hb-lcd-icon"><img alt="Indicateur de Charge sur Prise Murale CA" class="hb-lcd-icon-art" src="assets/12_AC_Wall_Charging_Indicator_OG9ebaP1HoaLvZxbGEAcIXkPnkb_28f3cad42ae3.png"/>
+<td class="hb-lcd-icon"><img alt="Indicateur de Charge sur Prise Murale CA" class="hb-lcd-icon-art" src="assets/12_AC_Wall_Charging_Indicator_ZpOmbCjx8oYUTVxyl4JcvcTanPe_28f3cad42ae3.png"/>
 </td>
 <td class="hb-lcd-name"><p>Indicateur de Charge sur Prise Murale CA</p></td>
 <td class="hb-lcd-description"><p>Le produit est chargé via l'entrée CA en utilisant l'énergie du réseau.</p></td>
 </tr>
 <tr><td class="hb-lcd-number"><p>13</p></td>
-<td class="hb-lcd-icon"><img alt="Indicateur de Charge Voiture" class="hb-lcd-icon-art" src="assets/13_Car_Charging_Indicator_WgbebOblvoTtesxjb9ec8CkUnyg_eed3299c3f6a.png"/>
+<td class="hb-lcd-icon"><img alt="Indicateur de Charge Voiture" class="hb-lcd-icon-art" src="assets/13_Car_Charging_Indicator_DLkibYaP1ot6d5x1S0jcUr1knlb_eed3299c3f6a.png"/>
 </td>
 <td class="hb-lcd-name"><p>Indicateur de Charge Voiture</p></td>
 <td class="hb-lcd-description"><p>Le produit est chargé via l’entrée CC (DC8020) en utilisant du CC 12V (charge via voiture).</p></td>
 </tr>
 <tr><td class="hb-lcd-number"><p>14</p></td>
-<td class="hb-lcd-icon"><img alt="Indicateur de Charge Solaire" class="hb-lcd-icon-art" src="assets/14_Solar_Charging_Indicator_ZMSkb6bWWoKo8WxhBk0cZN5Lnpg_91cec82eeaa5.png"/>
+<td class="hb-lcd-icon"><img alt="Indicateur de Charge Solaire" class="hb-lcd-icon-art" src="assets/14_Solar_Charging_Indicator_RgAUbPXNWoRxiHxKNgkc2gqDnEb_91cec82eeaa5.png"/>
 </td>
 <td class="hb-lcd-name"><p>Indicateur de Charge Solaire</p></td>
 <td class="hb-lcd-description"><p>Le produit est chargé via l’entrée CC (DC8020) à l’aide de panneaux solaires.</p></td>
 </tr>
 <tr><td class="hb-lcd-number"><p>15</p></td>
-<td class="hb-lcd-icon"><img alt="Mode d’Économie de Batterie" class="hb-lcd-icon-art" src="assets/15_Battery_Saving_Mode_QIQlbf95uoUmsFxyEQuc1zxkn22_e32e6ae96321.png"/>
+<td class="hb-lcd-icon"><img alt="Mode d’Économie de Batterie" class="hb-lcd-icon-art" src="assets/15_Battery_Saving_Mode_ClYfbtOGSoK5q2xySXCcgehVn8f_e32e6ae96321.png"/>
 </td>
 <td class="hb-lcd-name"><p>Mode d’Économie de Batterie</p></td>
 <td class="hb-lcd-description"><div class="line-block">
@@ -1337,7 +1318,7 @@ Pour obtenir de l'aide, veuillez contacter le service à la clientèle de Jacker
 </td>
 </tr>
 <tr><td class="hb-lcd-number"><p>16</p></td>
-<td class="hb-lcd-icon"><img alt="Limite de puissance de charge" class="hb-lcd-icon-art" src="assets/16_Charging_Power_Limit_YgjLbaQ2YoZwavxUqrHclXNdnuK_21b5f19ca9a6.png"/>
+<td class="hb-lcd-icon"><img alt="Limite de puissance de charge" class="hb-lcd-icon-art" src="assets/16_Charging_Power_Limit_VLf2bJfrkoCL0CxJoMNcL5ZxnCt_21b5f19ca9a6.png"/>
 </td>
 <td class="hb-lcd-name"><p>Limite de puissance de charge</p></td>
 <td class="hb-lcd-description"><div class="line-block">
@@ -1348,19 +1329,19 @@ Pour obtenir de l'aide, veuillez contacter le service à la clientèle de Jacker
 </td>
 </tr>
 <tr><td class="hb-lcd-number"><p>17</p></td>
-<td class="hb-lcd-icon"><img alt="Indicateur de Puissance de la Batterie" class="hb-lcd-icon-art" src="assets/17_Battery_Power_Indicator_WqL2b7JZio7HnGxsWaOctZ7inkh_85921a9ad7fb.png"/>
+<td class="hb-lcd-icon"><img alt="Indicateur de Puissance de la Batterie" class="hb-lcd-icon-art" src="assets/17_Battery_Power_Indicator_VLufb9exvoVLfgxz47pcfnRGnaf_85921a9ad7fb.png"/>
 </td>
 <td class="hb-lcd-name"><p>Indicateur de Puissance de la Batterie</p></td>
 <td class="hb-lcd-description"><p>Lorsque le produit est en charge, le cercle orange autour du pourcentage de batterie s’allume en séquence. Lorsqu’il charge d’autres appareils, le cercle orange reste allumé.</p></td>
 </tr>
 <tr><td class="hb-lcd-number"><p>18</p></td>
-<td class="hb-lcd-icon"><img alt="Pourcentage de Batterie Restant" class="hb-lcd-icon-art" src="assets/18_Remaining_Battery_Percentage_F7gbbsgPKo4mdkx4JqccMfQRngc_747147be99d7.png"/>
+<td class="hb-lcd-icon"><img alt="Pourcentage de Batterie Restant" class="hb-lcd-icon-art" src="assets/18_Remaining_Battery_Percentage_VkJcbUDbUoYC1hxrU6rc168OnJe_747147be99d7.png"/>
 </td>
 <td class="hb-lcd-name"><p>Pourcentage de Batterie Restant</p></td>
 <td class="hb-lcd-description"><p>Affiche le pourcentage de batterie restant.</p></td>
 </tr>
 <tr><td class="hb-lcd-number"><p>19</p></td>
-<td class="hb-lcd-icon"><img alt="Indicateur de Batterie Faible" class="hb-lcd-icon-art" src="assets/19_Low_Battery_Indicator_TcggbK0LLodgNwx04T6cEqjPn5f_c7862a87e742.png"/>
+<td class="hb-lcd-icon"><img alt="Indicateur de Batterie Faible" class="hb-lcd-icon-art" src="assets/19_Low_Battery_Indicator_KDk9bhs8poHUBdx96PLckPganhd_c7862a87e742.png"/>
 </td>
 <td class="hb-lcd-name"><p>Indicateur de Batterie Faible</p></td>
 <td class="hb-lcd-description"><div class="line-block">
@@ -1371,7 +1352,7 @@ Pour obtenir de l'aide, veuillez contacter le service à la clientèle de Jacker
 </td>
 </tr>
 <tr><td class="hb-lcd-number"><p>20</p></td>
-<td class="hb-lcd-icon"><img alt="Minuterie de décharge" class="hb-lcd-icon-art" src="assets/20_Discharge_Timer_X2jjb9dwIomvH6xVJLJclRzpnAh_6aab9a14900a.png"/>
+<td class="hb-lcd-icon"><img alt="Minuterie de décharge" class="hb-lcd-icon-art" src="assets/20_Discharge_Timer_DHPMbkjSWoiuALxJyJ8cWyQOn0e_6aab9a14900a.png"/>
 </td>
 <td class="hb-lcd-name"><p>Minuterie de décharge</p></td>
 <td class="hb-lcd-description"><div class="line-block">
@@ -1382,7 +1363,7 @@ Pour obtenir de l'aide, veuillez contacter le service à la clientèle de Jacker
 </td>
 </tr>
 <tr><td class="hb-lcd-number"><p>22</p></td>
-<td class="hb-lcd-icon"><img alt="Mode d’Économie d’Énergie" class="hb-lcd-icon-art" src="assets/22_Energy_Saving_Mode_FdBWbTvwwosJ7TxfeVIc2Flinkh_c4b830c769a3.png"/>
+<td class="hb-lcd-icon"><img alt="Mode d’Économie d’Énergie" class="hb-lcd-icon-art" src="assets/22_Energy_Saving_Mode_O4Jdb5pUQoCBAqx0sfQcm9Nbntd_c4b830c769a3.png"/>
 </td>
 <td class="hb-lcd-name"><p>Mode d’Économie d’Énergie</p></td>
 <td class="hb-lcd-description"><div class="line-block">
@@ -1394,31 +1375,31 @@ Pour obtenir de l'aide, veuillez contacter le service à la clientèle de Jacker
 </td>
 </tr>
 <tr><td class="hb-lcd-number"><p>23</p></td>
-<td class="hb-lcd-icon"><img alt="Indicateur de Température Élevée" class="hb-lcd-icon-art" src="assets/23_High_Temperature_Indicator_HbD7betDOoeilexZaaQcqOknnMd_f548c6504f49.png"/>
+<td class="hb-lcd-icon"><img alt="Indicateur de Température Élevée" class="hb-lcd-icon-art" src="assets/23_High_Temperature_Indicator_UmkEbOgCKoKyxoxDSINcfO6LnQd_f548c6504f49.png"/>
 </td>
 <td class="hb-lcd-name"><p>Indicateur de Température Élevée</p></td>
 <td class="hb-lcd-description"><p>La protection contre les températures élevées est déclenchée. Le produit peut cesser de fonctionner jusqu'à ce que sa température revienne dans la plage de fonctionnement normale.</p></td>
 </tr>
 <tr><td class="hb-lcd-number"><p>24</p></td>
-<td class="hb-lcd-icon"><img alt="Indicateur de Basse Température" class="hb-lcd-icon-art" src="assets/24_Low_Temperature_Indicator_PkYSbqrsooorJhxkTOfcUutJnKu_bdbf602db74a.png"/>
+<td class="hb-lcd-icon"><img alt="Indicateur de Basse Température" class="hb-lcd-icon-art" src="assets/24_Low_Temperature_Indicator_JDMEbD96noSbyWxbOnVcgip1nab_bdbf602db74a.png"/>
 </td>
 <td class="hb-lcd-name"><p>Indicateur de Basse Température</p></td>
 <td class="hb-lcd-description"><p>La protection contre les basses températures est déclenchée. Le produit peut cesser de fonctionner jusqu'à ce que sa température revienne dans la plage de fonctionnement normale.</p></td>
 </tr>
 <tr><td class="hb-lcd-number"><p>25</p></td>
-<td class="hb-lcd-icon"><img alt="Code d’erreur" class="hb-lcd-icon-art" src="assets/25_Fault_code_LaTmb4IQYo3vwvxMqQNcC2RgnIf_ce913ebfc775.png"/>
+<td class="hb-lcd-icon"><img alt="Code d’erreur" class="hb-lcd-icon-art" src="assets/25_Fault_code_Oz87bX3BGo8H7Zxe0XvcTd7FnJL_ce913ebfc775.png"/>
 </td>
 <td class="hb-lcd-name"><p>Code d’erreur</p></td>
 <td class="hb-lcd-description"><p>Une erreur produit s’est produite. Veuillez consulter la section « Dépannage » pour plus de détails.</p></td>
 </tr>
 <tr><td class="hb-lcd-number"><p>26</p></td>
-<td class="hb-lcd-icon"><img alt="Puissance de Sortie" class="hb-lcd-icon-art" src="assets/26_Output_Power_MRflbp7C7oqGbdxeWO1cl79XnBc_58c1d3604ca7.png"/>
+<td class="hb-lcd-icon"><img alt="Puissance de Sortie" class="hb-lcd-icon-art" src="assets/26_Output_Power_PviebR618oofvKxcKVRcHLlInqd_58c1d3604ca7.png"/>
 </td>
 <td class="hb-lcd-name"><p>Puissance de Sortie</p></td>
 <td class="hb-lcd-description"><p>Affiche la puissance de sortie en watts.</p></td>
 </tr>
 <tr><td class="hb-lcd-number"><p>27</p></td>
-<td class="hb-lcd-icon"><img alt="Temps de Décharge Restant" class="hb-lcd-icon-art" src="assets/27_Remaining_Discharge_Time_QvCQbFmEhoQR3kxgWt4c6H9zn0b_9b148ea95d3a.png"/>
+<td class="hb-lcd-icon"><img alt="Temps de Décharge Restant" class="hb-lcd-icon-art" src="assets/27_Remaining_Discharge_Time_JEpobf59DoBV4dxWlnxcNtIinke_9b148ea95d3a.png"/>
 </td>
 <td class="hb-lcd-name"><p>Temps de Décharge Restant</p></td>
 <td class="hb-lcd-description"><p>Affiche le temps de décharge restant.</p></td>
@@ -1434,7 +1415,7 @@ Pour obtenir de l'aide, veuillez contacter le service à la clientèle de Jacker
 
 
 
-<figure class="hb-operation-figure hb-operation-layout-status-right hb-has-composite-art" data-operation-id="main-power" data-source-fragment-sha256="074a5a7623b13483c1cc4e547c29daa3924d20beee7c5c40220583bf7dd25566" data-web-replace-key="operation.main-power"><div aria-hidden="true" class="hb-composite-stage"><img alt="" class="hb-composite-art" loading="lazy" src="assets/operation.main-power_fr_9efaabd93945_9efaabd93945.png"/></div><div class="hb-operation-stage"><img alt="Fonction marche/arrêt." class="hb-operation-art" src="assets/op_main_power_74004806e6c0.png" style="width: 360px;" width="360" height="141" /><div class="line-block hb-operation-steps" data-callout-id="operation.main-power.steps" style="--hb-x:74.5%;--hb-y:18%;--hb-width:19%;--hb-height:31%"><div class="hb-operation-step" data-callout-id="operation.main-power.on" data-step-id="on"><div class="line" data-step-id="on" data-step-part="summary">Marche : Appuyez une fois.</div></div><div class="hb-operation-step" data-callout-id="operation.main-power.off" data-step-id="off"><div class="line" data-step-id="off" data-step-part="summary">Arrêt : appuyez et maintenez pendant 3 secondes.</div></div></div><div class="hb-operation-supporting-copy" data-callout-id="operation.main-power.supporting-copy"><div class="line"><strong>Temps de veille par défaut :</strong> 2 heures.</div><div class="line">Le produit s'éteindra automatiquement après 2 heures d'inactivité, sans charge ni décharge.</div><div class="line">*Le temps de veille peut être réglé dans l'application Jackery.</div></div></div></figure>
+<figure class="hb-operation-figure hb-operation-layout-status-right" data-operation-id="main-power" data-source-fragment-sha256="97b21fb6e6b8d5c660db79fa93c0a87c08b376e45f1a2caed6575e783296c920" data-web-replace-key="operation.main-power"><div class="hb-operation-stage"><img alt="Fonction marche/arrêt." class="hb-operation-art" src="assets/op_main_power_74004806e6c0.png" style="width: 360px;" width="360" height="141" /><div class="line-block hb-operation-steps" data-callout-id="operation.main-power.steps" style="--hb-x:74.5%;--hb-y:18%;--hb-width:19%;--hb-height:31%"><div class="hb-operation-step" data-callout-id="operation.main-power.on" data-step-id="on"><div class="line" data-step-id="on" data-step-part="summary">Marche : appuyez une fois.</div></div><div class="hb-operation-step" data-callout-id="operation.main-power.off" data-step-id="off"><div class="line" data-step-id="off" data-step-part="summary">Arrêt : appuyez et maintenez pendant 3 secondes.</div></div></div><div class="hb-operation-supporting-copy" data-callout-id="operation.main-power.supporting-copy"><div class="line"><strong>Temps de veille par défaut :</strong> 2 heures.</div><div class="line">Le produit s'éteindra automatiquement après 2 heures d'inactivité, sans charge ni décharge.</div><div class="line">*Le temps de veille peut être réglé dans l'application Jackery.</div></div></div></figure>
 
 
 
@@ -1444,7 +1425,7 @@ Lorsque le mode d\'économie d\'énergie est activé, le produit s\'éteindra au
 
 
 
-<figure class="hb-operation-figure hb-operation-layout-status-right hb-has-composite-art" data-operation-id="ac-output" data-source-fragment-sha256="5981a72dc40c2b83b959dafde2314e47f13b24948ef4277075c62930a7af5090" data-web-replace-key="operation.ac-output"><div aria-hidden="true" class="hb-composite-stage"><img alt="" class="hb-composite-art" loading="lazy" src="assets/operation.ac-output_fr_50f979a6ca78_50f979a6ca78.png"/></div><div class="hb-operation-stage"><img alt="Fonction de sortie CA." class="hb-operation-art" src="assets/op_ac_output_43a46a51a987.png" style="width: 360px;" width="360" height="252" /><div class="hb-operation-prerequisite" data-callout-id="operation.ac-output.prerequisite" style="--hb-x:1.5%;--hb-y:1.5%;--hb-width:45%;--hb-height:8.5%"><p><strong>Prérequis :</strong> Le produit est allumé.</p></div><div class="line-block hb-operation-steps" data-callout-id="operation.ac-output.steps" style="--hb-x:78%;--hb-y:21%;--hb-width:19.5%;--hb-height:28%"><div class="hb-operation-step" data-callout-id="operation.ac-output.on" data-step-id="on"><div class="line" data-step-id="on" data-step-part="label"><strong>Marche</strong></div><div class="line" data-step-id="on" data-step-part="instruction">Appuyez une fois</div></div><div class="hb-operation-step" data-callout-id="operation.ac-output.off" data-step-id="off"><div class="line" data-step-id="off" data-step-part="label"><strong>Arrêt</strong></div><div class="line" data-step-id="off" data-step-part="instruction">Appuyez une fois</div></div></div></div></figure>
+<figure class="hb-operation-figure hb-operation-layout-status-right" data-operation-id="ac-output" data-source-fragment-sha256="836c350900ea2dedfbda4a3171bd0dc63c2bd0bd4d2221047c186abd6c938281" data-web-replace-key="operation.ac-output"><div class="hb-operation-stage"><img alt="Fonction de sortie CA." class="hb-operation-art" src="assets/op_ac_output_43a46a51a987.png" style="width: 360px;" width="360" height="252" /><div class="hb-operation-prerequisite" data-callout-id="operation.ac-output.prerequisite" style="--hb-x:1.5%;--hb-y:1.5%;--hb-width:45%;--hb-height:8.5%"><p><strong>Prérequis :</strong> Le produit est allumé.</p></div><div class="line-block hb-operation-steps" data-callout-id="operation.ac-output.steps" style="--hb-x:78%;--hb-y:21%;--hb-width:19.5%;--hb-height:28%"><div class="hb-operation-step" data-callout-id="operation.ac-output.on" data-step-id="on"><div class="line" data-step-id="on" data-step-part="label"><strong>Marche</strong></div><div class="line" data-step-id="on" data-step-part="instruction">appuyez une fois</div></div><div class="hb-operation-step" data-callout-id="operation.ac-output.off" data-step-id="off"><div class="line" data-step-id="off" data-step-part="label"><strong>Arrêt</strong></div><div class="line" data-step-id="off" data-step-part="instruction">appuyez une fois</div></div></div></div></figure>
 
 
 
@@ -1452,14 +1433,14 @@ Lorsque le mode d\'économie d\'énergie est activé, le produit s\'éteindra au
 
 
 
-<figure class="hb-operation-figure hb-operation-layout-status-right hb-has-composite-art" data-operation-id="dc-usb-output" data-source-fragment-sha256="31facb2662ec8928d5816dc831e7e2f6f7f9c02796307ac9ee791ee2c79d2fbf" data-web-replace-key="operation.dc-usb-output"><div aria-hidden="true" class="hb-composite-stage"><img alt="" class="hb-composite-art" loading="lazy" src="assets/operation.dc-usb-output_fr_0fb775148880_0fb775148880.png"/></div><div class="hb-operation-stage"><img alt="Fonction de sortie CC et USB." class="hb-operation-art" src="assets/op_dc_usb_output_c46c92d6ee99.png" style="width: 360px;" width="360" height="208" /><div class="hb-operation-prerequisite" data-callout-id="operation.dc-usb-output.prerequisite" style="--hb-x:1.5%;--hb-y:1.5%;--hb-width:46%;--hb-height:8.5%"><p><strong>Prérequis :</strong> Le produit est allumé.</p></div><div class="line-block hb-operation-steps" data-callout-id="operation.dc-usb-output.steps" style="--hb-x:79%;--hb-y:16%;--hb-width:19%;--hb-height:26%"><div class="hb-operation-step" data-callout-id="operation.dc-usb-output.on" data-step-id="on"><div class="line" data-step-id="on" data-step-part="label"><strong>Marche</strong></div><div class="line" data-step-id="on" data-step-part="instruction">Appuyez une fois</div></div><div class="hb-operation-step" data-callout-id="operation.dc-usb-output.off" data-step-id="off"><div class="line" data-step-id="off" data-step-part="label"><strong>Arrêt</strong></div><div class="line" data-step-id="off" data-step-part="instruction">Appuyez une fois</div></div></div></div></figure>
+<figure class="hb-operation-figure hb-operation-layout-status-right" data-operation-id="dc-usb-output" data-source-fragment-sha256="450dd714aa04f409e32a339b3b9b94bc0f5f360e4e72585450e1ab714d3fe837" data-web-replace-key="operation.dc-usb-output"><div class="hb-operation-stage"><img alt="Fonction de sortie CC et USB." class="hb-operation-art" src="assets/op_dc_usb_output_c46c92d6ee99.png" style="width: 360px;" width="360" height="208" /><div class="hb-operation-prerequisite" data-callout-id="operation.dc-usb-output.prerequisite" style="--hb-x:1.5%;--hb-y:1.5%;--hb-width:46%;--hb-height:8.5%"><p><strong>Prérequis :</strong> Le produit est allumé.</p></div><div class="line-block hb-operation-steps" data-callout-id="operation.dc-usb-output.steps" style="--hb-x:79%;--hb-y:16%;--hb-width:19%;--hb-height:26%"><div class="hb-operation-step" data-callout-id="operation.dc-usb-output.on" data-step-id="on"><div class="line" data-step-id="on" data-step-part="label"><strong>Marche</strong></div><div class="line" data-step-id="on" data-step-part="instruction">appuyez une fois</div></div><div class="hb-operation-step" data-callout-id="operation.dc-usb-output.off" data-step-id="off"><div class="line" data-step-id="off" data-step-part="label"><strong>Arrêt</strong></div><div class="line" data-step-id="off" data-step-part="instruction">appuyez une fois</div></div></div></div></figure>
 
 
 
 
 
 <table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENTION</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
-<li><p><strong>Les ports USB-C de 100W sont des ports de sortie haute puissance de type Source d'alimentation 3 (PS3) selon USB-PD.</strong> Si l'appareil utilisateur ou l'accessoire connecté ne répond pas aux exigences de sécurité, il peut présenter un risque d'incendie. Avant d'utiliser ces ports, assurez-vous que l'appareil ou l'accessoire connecté dispose d'une protection contre les incendies.</p></li>
+<li><p><strong>Les ports USB-C de 100 W sont des ports de sortie haute puissance de type Source d'alimentation 3 (PS3) selon USB-PD.</strong> Si l'appareil utilisateur ou l'accessoire connecté ne répond pas aux exigences de sécurité, il peut présenter un risque d'incendie. Avant d'utiliser ces ports, assurez-vous que l'appareil ou l'accessoire connecté dispose d'une protection contre les incendies.</p></li>
 <li><p>Ne connectez Jackery Explorer 1000 qu'à des appareils ou accessoires conformes aux clauses 6.3, 6.4 et 6.5 de la norme IEC/EN/UL 62368-1 (ou autres normes équivalentes).</p></li>
 <li><p>Pour obtenir la puissance de sortie maximale, utilisez le câble USB-C vers USB-C 5 A (20 V CC/5A, 100 W).</p></li>
 </ul>
@@ -1473,7 +1454,7 @@ Le produit peut charger la batterie de votre voiture à l\'aide du câble de cha
 
 <table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENTION</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>Le port CC 12V est uniquement compatible avec les batteries de voiture 12V et ne convient pas aux systèmes 24V.</p></li>
-<li><p>Ne démarrez pas la voiture pendant que le produit charge la batterie via le port de sortie CC 12V (port allume-cigare), car cela pourrait endommager le produit.</p></li>
+<li><p>Ne démarrez pas la voiture pendant que le produit charge la batterie via le port de sortie CC 12V, car cela pourrait endommager le produit.</p></li>
 <li><p>Cette fonctionnalité est destinée à un usage d'urgence uniquement et ne peut pas charger une batterie de voiture morte ou endommagée.</p></li>
 </ul>
 </td></tr></tbody></table>
@@ -1482,9 +1463,9 @@ Le produit peut charger la batterie de votre voiture à l\'aide du câble de cha
 
 ## MODE D\'ÉCONOMIE D\'ÉNERGIE
 
-Pour éviter une consommation inutile de la batterie due à l\'oubli de désactiver la sortie, le produit active par défaut le mode d\'économie d\'énergie. Lorsque la sortie CA ou CC/USB est activée, l\'icône du mode d\'économie d\'énergie s\'affiche sur l\'écran LCD. Dans ce mode, si aucun appareil n\'est connecté ou si la consommation de l\'appareil connecté est inférieure à un certain seuil (sortie CA de 25 W ou sortie CC/USB de 2 W), la sortie correspondante s\'éteint automatiquement après la durée définie. Le réglage par défaut est 12 heures. La durée du mode d\'économie d\'énergie peut être réglée dans l\'application Jackery sur 1H, 2 H, 8 H, 12 H ou 24 H. Si l\'option \"Never Off\" est sélectionnée, le mode d\'économie d\'énergie sera désactivé.
+Pour éviter une consommation inutile de la batterie due à l\'oubli de désactiver la sortie, le produit active par défaut le mode d\'économie d\'énergie. Lorsque la sortie CA ou CC/USB est activée, l\'icône du mode d\'économie d\'énergie s\'affiche sur l\'écran LCD. Dans ce mode, si aucun appareil n\'est connecté ou si la consommation de l\'appareil connecté est inférieure à un certain seuil (sortie CA de 25 W ou sortie CC/USB de 2 W), la sortie correspondante s\'éteint automatiquement après la durée définie. Le réglage par défaut est 12 heures. La durée du mode d\'économie d\'énergie peut être réglée dans l\'application Jackery sur 1 H, 2 H, 8 H, 12 H ou 24 H. Si l\'option \"Never Off\" est sélectionnée, le mode d\'économie d\'énergie sera désactivé.
 
-Pour désactiver le mode d\'économie d\'énergie, appuyez simultanément sur le bouton d'alimentation CA et sur le bouton POWER principal pendant plus de 3 secondes. Une fois le mode d\'économie d\'énergie désactivé, l\'icône ne s\'affichera plus sur l\'écran LCD et le produit n\'éteindra pas automatiquement la sortie CA ou CC/USB.
+Pour désactiver le mode d\'économie d\'énergie, appuyez simultanément sur le bouton d'alimentation CA et sur le bouton POWER pendant plus de 3 secondes. Une fois le mode d\'économie d\'énergie désactivé, l\'icône ne s\'affichera plus sur l\'écran LCD et le produit n\'éteindra pas automatiquement la sortie CA ou CC/USB.
 
 Lors de l\'alimentation d\'appareils à faible puissance (CA ≤ 25 W ou CC/USB ≤ 2 W), désactivez le mode d\'économie d\'énergie afin d\'éviter l\'arrêt automatique de la sortie pendant le fonctionnement.
 
@@ -1504,13 +1485,13 @@ Lors de l\'alimentation d\'appareils à faible puissance (CA ≤ 25 W ou CC/USB 
 
 
 
-<figure class="hb-operation-figure hb-operation-layout-footer-panel hb-has-composite-art" data-operation-id="led-light" data-source-fragment-sha256="447564090ca0b384c159df1e31fe1daffff3b50dd229a3a19cf1d98474f958e8" data-web-replace-key="operation.led-light"><div aria-hidden="true" class="hb-composite-stage"><img alt="" class="hb-composite-art" loading="lazy" src="assets/operation.led-light_fr_218224f9ded3_218224f9ded3.png"/></div><div class="hb-operation-stage"><img alt="Fonction de la lampe LED." class="hb-operation-art" src="assets/led_light_bf4fce34dd33.png" style="width: 360px;" width="360" height="206" /><div class="hb-operation-prerequisite" data-callout-id="operation.led-light.prerequisite"><p>La lampe LED dispose de deux modes: mode éclairage et mode SOS. Dans n’importe quel mode, appuyez et maintenez sur le bouton pour éteindre la lumière.</p></div><div class="line-block hb-operation-steps" data-callout-id="operation.led-light.steps"><div class="hb-operation-step" data-callout-id="operation.led-light.light" data-step-id="light"><div class="line" data-step-id="light" data-step-part="summary">Appuyez une fois sur le bouton de la lampe LED pour l'allumer.</div></div><div class="hb-operation-step" data-callout-id="operation.led-light.sos" data-step-id="sos"><div class="line" data-step-id="sos" data-step-part="summary">Appuyez de nouveau pour passer en mode SOS.</div></div><div class="hb-operation-step" data-callout-id="operation.led-light.off" data-step-id="off"><div class="line" data-step-id="off" data-step-part="summary">Appuyez une troisième fois pour éteindre la lampe.</div></div></div></div></figure>
+<figure class="hb-operation-figure hb-operation-layout-footer-panel" data-operation-id="led-light" data-source-fragment-sha256="de6fa1f4a42f07a3424a9084c93d931249a9abab95fb55a56e9431567070310d" data-web-replace-key="operation.led-light"><div class="hb-operation-stage"><img alt="Fonction de la lampe LED." class="hb-operation-art" src="assets/led_light_bf4fce34dd33.png" style="width: 360px;" width="360" height="206" /><div class="hb-operation-prerequisite" data-callout-id="operation.led-light.prerequisite"><p>La lampe LED dispose de deux modes : mode éclairage et mode SOS. Dans n'importe quel mode, appuyez et maintenez sur le bouton pour éteindre la lumière.</p></div><div class="line-block hb-operation-steps" data-callout-id="operation.led-light.steps"><div class="hb-operation-step" data-callout-id="operation.led-light.light" data-step-id="light"><div class="line" data-step-id="light" data-step-part="summary">Appuyez une fois sur le bouton de la lampe LED pour l'allumer.</div></div><div class="hb-operation-step" data-callout-id="operation.led-light.sos" data-step-id="sos"><div class="line" data-step-id="sos" data-step-part="summary">Appuyez de nouveau pour passer en mode SOS.</div></div><div class="hb-operation-step" data-callout-id="operation.led-light.off" data-step-id="off"><div class="line" data-step-id="off" data-step-part="summary">Appuyez une troisième fois pour éteindre la lampe.</div></div></div></div></figure>
 
 
 
 ## Fonction de reprise de Sortie CA et CC
 
-La fonction de reprise de la sortie CA/CC est désactivée par défaut. Activez cette fonction dans l'application afin que l'appareil mémorise l'état de sortie CA/CC et reprenne automatiquement les sorties CA et CC dans les conditions définies.
+Cette fonction mémorise l'état de la sortie et reprend automatiquement les sorties CA et CC sous certaines conditions définies.
 
 
 
@@ -1547,11 +1528,11 @@ la limite</p></td>
 
 <td class="hb-lcd-mode-state" rowspan="3">Allumer en discontinu</td>
 <td class="hb-lcd-mode-action">Allumer</td>
-<td class="hb-lcd-mode-copy">Appuyez sur le Bouton POWER ou lorsque le produit est en charge.</td>
+<td class="hb-lcd-mode-copy">Appuyez sur le bouton POWER ou lorsque le produit est en charge.</td>
 </tr>
 <tr>
 <td class="hb-lcd-mode-action">Éteindre</td>
-<td class="hb-lcd-mode-copy">Appuyez sur le Bouton POWER.</td>
+<td class="hb-lcd-mode-copy">Appuyez sur le bouton POWER.</td>
 </tr>
 <tr>
 <td class="hb-lcd-mode-action">Arrêt automatique</td>
@@ -1560,11 +1541,11 @@ la limite</p></td>
 <tr>
 <td class="hb-lcd-mode-state" rowspan="3">Allumer en continu (en cours de charge ou de décharge)</td>
 <td class="hb-lcd-mode-action">Allumer</td>
-<td class="hb-lcd-mode-copy">Appuyez deux fois sur le Bouton POWER lorsque le produit est allumé.</td>
+<td class="hb-lcd-mode-copy">Appuyez deux fois sur le bouton POWER lorsque le produit est allumé.</td>
 </tr>
 <tr>
 <td class="hb-lcd-mode-action">Éteindre</td>
-<td class="hb-lcd-mode-copy">Appuyez sur le Bouton POWER.</td>
+<td class="hb-lcd-mode-copy">Appuyez sur le bouton POWER.</td>
 </tr>
 <tr>
 <td class="hb-lcd-mode-action">Arrêt automatique</td>
@@ -1583,7 +1564,7 @@ Vous pouvez également définir le mode d\'affichage de l\'écran dans l\'applic
 | Bouton POWER + Bouton d\'alimentation CA | Appuyer 3 secondes sur les deux | Activer/désactiver le mode économie d\'énergie |
 | Bouton POWER + Bouton d\'alimentation **CC/USB** | Appuyer 3 secondes sur les deux | Réinitialiser le Wi-Fi et le Bluetooth |
 | Bouton d\'alimentation **CC/USB** + Bouton d\'alimentation CA | Appuyer 1 seconde sur les deux | Activer/désactiver le Wi-Fi et le Bluetooth |
-| Bouton POWER + Bouton lumière LED | Appuyer 1 seconde sur les deux | Activer/désactiver le mode de charge d\'urgence |
+| Bouton POWER + Bouton d\'éclairage LED | Appuyer 1 seconde sur les deux | Activer/désactiver le mode d\'urgence |
 
 # ALIMENTATION SANS INTERRUPTION (ASI)
 
@@ -1600,9 +1581,9 @@ En mode UPS, la puissance de crête de sortie de l\'appareil atteint 12 A avant 
 
 
 <table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENTION</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
-<li><p>Ce produit ne prend pas en charge un basculement instantané (0 ms). Ne le connectez pas à des équipements nécessitant une alimentation vec commutation en 0 ms, tels que des serveurs de données ou des stations de travail.</p></li>
+<li><p>Ce produit ne prend pas en charge un basculement instantané (0 ms). Ne le connectez pas à des équipements nécessitant une alimentation avec commutation en 0 ms, tels que des serveurs de données ou des stations de travail.</p></li>
 <li><p>Avant toute utilisation, testez plusieurs fois la compatibilité avec votre appareil.</p></li>
-<li><p>Ne connectez pas de charges dépassant la puissance de sortie maximale du produit. Sinon, la protection contre les surcharges sera déclenchée.</p></li>
+<li><p>Ne connectez pas de charges dépassant la puissance maximale de sortie du produit. Sinon, la protection contre les surcharges sera déclenchée.</p></li>
 </ul>
 </td></tr></tbody></table>
 
@@ -1619,7 +1600,7 @@ Quand la recharge par prise murale CA et la recharge solaire sont effectuées en
 
 
 <table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>REMARQUE</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
-<li><p>La température de charge recommandée pour le produit est de 14 °F à 113 °F / -10 °C à 45 °C, et la température de décharge est de 14°F à 113°F / -10°C à 45°C.</p></li>
+<li><p>La température de charge recommandée pour le produit est de 32 °F à 113 °F / 0 °C à 45 °C, et la température de décharge est de 14°F à 113°F / -10°C à 45°C.</p></li>
 <li><p>Utiliser le produit en dehors de cette plage de températures peut limiter ses capacités de charge et de décharge, voire empêcher la charge ou la décharge.</p></li>
 <li><p>La puissance de charge et la capacité de la batterie du produit peuvent varier en raison des fluctuations de température.</p></li>
 </ul>
@@ -1639,13 +1620,13 @@ Connectez le câble de charge CA au port d\'entrée CA de l\'appareil et à une 
 
 
 
-**Mode de Charge d\'Urgence**
+**Mode de charge d\'urgence**
 
-Dans ce mode, vous pouvez recharger rapidement la station d\'énergie portable en utilisant la méthode de charge AC. Cette fonction de charge d\'urgence peut être activée ou désactivée via l\'application Jackery. En mode de charge d\'urgence, la lumière circulaire indiquant l\'état de charge (SOC) clignote plus rapidement.
+Dans ce mode, vous pouvez recharger rapidement la station d'énergie portable en utilisant la méthode de charge CA. Cette fonction de charge d\'urgence peut être activée ou désactivée via l\'application Jackery. En mode de charge d\'urgence, la lumière circulaire indiquant l\'état de charge (SOC) clignote plus rapidement.
 
-\* Pour prolonger au maximum la durée de vie de la batterie, il est préférable de charger à la vitesse standard. La charge d\'urgence doit être utilisée uniquement pour des situations nécessitant un boost rapide en énergie et n\'est pas recommandée pour un usage régulier sur le long terme.
+\*Pour prolonger au maximum la durée de vie de la batterie, il est préférable de charger à la vitesse standard. La charge d\'urgence doit être utilisée uniquement pour des situations nécessitant un boost rapide en énergie et n\'est pas recommandée pour un usage régulier sur le long terme.
 
-## CHARGEMENT PAR PANNEAUX SOLAIRES (VENDU SÉPARÉMENT)
+## CHARGEMENT PAR PANNEAUX SOLAIRES (Vendu séparément)
 
 Le Jackery Explorer 1000 dispose de deux ports d'entrée DC8020 et est compatible avec les panneaux solaires de Jackery.
 
@@ -1674,7 +1655,7 @@ Si un seul port d'entrée DC8020 doit être connecté à deux panneaux solaires 
 
 Il est recommandé d'utiliser le panneau solaire Jackery pour charger le Jackery Explorer 1000. Assurez-vous que la tension en circuit ouvert (V<sub>oc</sub>) du panneau solaire se situe dans la plage de tension d'entrée CC de Jackery Explorer 1000 (16V--60V). Jackery décline toute responsabilité pour tout dommage ou toute perte résultant de l'utilisation de panneaux solaires tiers.
 
-## CHARGEMENT PAR PRISE DE VOITURE (VENDU SÉPARÉMENT)
+## CHARGEMENT PAR PRISE DE VOITURE (Vendu séparément)
 
 Ce produit peut être chargé à l\'aide d\'un chargeur de voiture 12 V. Assurez-vous que le chargeur de voiture est correctement connecté à la prise 12 V du véhicule (allume-cigare).
 
@@ -1804,7 +1785,7 @@ Si l\'un des codes d\'erreur suivants apparaît, suivez les actions correctives 
 
 
 
-<figure aria-label="TEMPÉRATURE DE FONCTIONNEMENT" class="hb-spec-table-composition"><table class="manual-table manual-spec-table hb-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup><tbody><tr><th class="manual-spec-label hb-spec-label" scope="row">Température de charge</th><td class="manual-spec-value hb-spec-value">14 °F à 113 °F / -10 °C à 45 °C</td></tr><tr><th class="manual-spec-label hb-spec-label" scope="row">Température de décharge</th><td class="manual-spec-value hb-spec-value">14°F à 113°F / -10°C à 45°C</td></tr></tbody></table></figure>
+<figure aria-label="TEMPÉRATURE DE FONCTIONNEMENT" class="hb-spec-table-composition"><table class="manual-table manual-spec-table hb-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup><tbody><tr><th class="manual-spec-label hb-spec-label" scope="row">Température de charge</th><td class="manual-spec-value hb-spec-value">32 °F à 113 °F / 0 °C à 45 °C</td></tr><tr><th class="manual-spec-label hb-spec-label" scope="row">Température de décharge</th><td class="manual-spec-value hb-spec-value">14°F à 113°F / -10°C à 45°C</td></tr></tbody></table></figure>
 
 
 
@@ -1846,15 +1827,15 @@ Si l\'un des codes d\'erreur suivants apparaît, suivez les actions correctives 
 
 
 
-<figure aria-label="Réparation ou remplacement" class="hb-warranty-card" data-warranty-card-index="3"><p>Jackery réparera ou remplacera (aux frais de Jackery) tout produit Jackery qui cesse de fonctionner pendant la période de garantie applicable en raison d'un défaut de fabrication ou de matériau. Le produit réparé ou remplacé bénéficie de la garantie restante de la date d'achat d'origine.</p></figure>
+<figure aria-label="Réparation ou remplacement" class="hb-warranty-card" data-warranty-card-index="3"><p>Jackery réparera ou remplacera (aux frais de Jackery) tout produit Jackery qui ne fonctionne pas pendant la période de garantie applicable en raison d'un défaut de fabrication ou de matériau. Le produit réparé/remplacé bénéficie de la garantie restante à compter de la date d'achat initiale.</p></figure>
 
 
 
-## Limité à l\'acheteur consommateur d\'origine
+## Limitée à l\'acheteur et consommateur d\'origine
 
 
 
-<figure aria-label="Limité à l'acheteur consommateur d'origine" class="hb-warranty-card" data-warranty-card-index="4"><p>La garantie d'un produit Jackery est limitée à l'acheteur et consommateur d'origine, elle ne peut pas être transférée à un autre propriétaire.</p></figure>
+<figure aria-label="Limitée à l'acheteur et consommateur d'origine" class="hb-warranty-card" data-warranty-card-index="4"><p>La garantie d'un produit Jackery est limitée à l'acheteur et consommateur d'origine, elle ne peut pas être transférée à un autre propriétaire.</p></figure>
 
 
 
@@ -1879,13 +1860,13 @@ Si l\'un des codes d\'erreur suivants apparaît, suivez les actions correctives 
 
 
 
-# CONFIGURATION DE L'APPLICATION
+# CONFIGURATION DE L\'APPLICATION
 
 ## 1. Télécharger l\'application et se connecter
 
 
 
-<figure aria-label="1. Télécharger l'application et se connecter" class="hb-app-download-composition"><div class="hb-app-download-grid"><div class="hb-app-download-column hb-app-download-column-store"><div class="hb-app-download-art-frame"><img alt="" aria-hidden="true" class="hb-app-download-art hb-app-download-art-store" loading="lazy" src="assets/app_store_badges_1c7bfea9e26b.png"/></div><div class="hb-app-download-copy hb-app-download-copy-store"><p>Recherchez « Jackery » dans Google Play ou dans l’App Store pour installer l’application. Une fois que c’est fait, vous pouvez vous inscrire et vous connecter.</p></div></div><div class="hb-app-download-column hb-app-download-column-qr"><div class="hb-app-download-art-frame"><img alt="" aria-hidden="true" class="hb-app-download-art hb-app-download-art-qr" loading="lazy" src="assets/app_download_qr_5f2a58121306.png"/></div><div class="hb-app-download-copy hb-app-download-copy-qr"><p>Vous pouvez également scanner le code QR ci-dessous pour télécharger et installer l'application.</p></div></div></div><div class="hb-app-download-semantic"><img alt="Code QR de téléchargement de l'application et emplacement réservé aux boutiques." class="hb-app-download-semantic-art" src="assets/download_37bf4f4918f3.png" style="width: 320px;" width="320" height="65" /></div></figure>
+<figure aria-label="1. Télécharger l'application et se connecter" class="hb-app-download-composition"><div class="hb-app-download-grid"><div class="hb-app-download-column hb-app-download-column-store"><div class="hb-app-download-art-frame"><img alt="" aria-hidden="true" class="hb-app-download-art hb-app-download-art-store" loading="lazy" src="assets/app_store_badges_1c7bfea9e26b.png"/></div><div class="hb-app-download-copy hb-app-download-copy-store"><p>Recherchez "Jackery" dans Google Play ou dans l'App Store pour installer l'application. Une fois que c'est fait, vous pouvez vous inscrire et vous connecter.</p></div></div><div class="hb-app-download-column hb-app-download-column-qr"><div class="hb-app-download-art-frame"><img alt="" aria-hidden="true" class="hb-app-download-art hb-app-download-art-qr" loading="lazy" src="assets/app_download_qr_5f2a58121306.png"/></div><div class="hb-app-download-copy hb-app-download-copy-qr"><p>Vous pouvez également scanner le code QR ci-dessous pour télécharger et installer l'application.</p></div></div></div><div class="hb-app-download-semantic"><img alt="Code QR de téléchargement de l'application et emplacement réservé aux boutiques." class="hb-app-download-semantic-art" src="assets/download_37bf4f4918f3.png" style="width: 320px;" width="320" height="65" /></div></figure>
 
 
 
@@ -1893,11 +1874,11 @@ Si l\'un des codes d\'erreur suivants apparaît, suivez les actions correctives 
 
 2.1 Cliquez sur le bouton <span aria-label="Ajouter un appareil" class="hb-inline-add-device-icon" role="img">+</span> pour ajouter un appareil.
 
-2.2 Appuyez sur le bouton d\'alimentation de l'appareil pour l'allumer. Les icônes Wi-Fi et Bluetooth clignotent sur l'appareil afin d'indiquer qu'il est entré dans le mode Configuration réseau. Cliquez sur le bouton « Icône qui clignote » et autorisez l'application à se connecter aux appareils alentour, puis ouvrez les autorisations Bluetooth.
+2.2 Appuyez sur le bouton POWER de l'appareil pour l'allumer. Les icônes Wi-Fi et Bluetooth clignotent sur l'appareil afin d'indiquer qu'il est entré dans le mode Configuration réseau. Cliquez sur le bouton « Icône qui clignote » et autorisez l'application à se connecter aux appareils alentour, puis ouvrez les autorisations Bluetooth.
 
 
 
-<figure class="hb-app-add-device-composition" data-reference-id="app-add-device" data-step-captions="embedded"><div class="hb-app-add-device-phone-stage"><img alt="Emplacement réservé à l'étape d'ajout d'appareil dans l'application." class="hb-app-add-device-phone-art" src="assets/app_add_device_steps_9b7e0cf44d0f.png"/></div><div class="hb-app-add-device-control-panel"><img alt="" aria-hidden="true" class="hb-app-add-device-control-art" loading="lazy" src="assets/app_control_panel_2b9bc2598d7a.png"/><span class="hb-app-add-device-live-label hb-app-add-device-live-label-main-power">Bouton POWER</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-dc-usb">Bouton d’alimentation CC/USB</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-ac-power">Bouton d’alimentation CA</span></div></figure>
+<figure class="hb-app-add-device-composition" data-reference-id="app-add-device" data-step-captions="embedded"><div class="hb-app-add-device-phone-stage"><img alt="Emplacement réservé à l'étape d'ajout d'appareil dans l'application." class="hb-app-add-device-phone-art" src="assets/app_add_device_steps_9b7e0cf44d0f.png"/></div><div class="hb-app-add-device-control-panel"><img alt="" aria-hidden="true" class="hb-app-add-device-control-art" loading="lazy" src="assets/app_control_panel_2b9bc2598d7a.png"/><span class="hb-app-add-device-live-label hb-app-add-device-live-label-main-power">Bouton POWER</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-dc-usb">Bouton d’alimentation CC / USB</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-ac-power">Bouton Power CA</span></div></figure>
 
 
 
@@ -1908,13 +1889,13 @@ Si l\'un des codes d\'erreur suivants apparaît, suivez les actions correctives 
 <table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>REMARQUE</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Si le message «l'appareil a été associé» s'affiche pendant l'appairage, vous pouvez suivre l'une de ces deux étapes pour procéder à la connexion.</p>
 <ul class="simple">
 <li><p>Le propriétaire de l'appareil peut partager ce dernier avec d'autres utilisateurs dans l'application.</p></li>
-<li><p>Maintenez le bouton d'alimentation et le bouton d’alimentation CC / USB enfoncés pendant 3 secondes pour réinitialiser le Wi-Fi et le Bluetooth de l'appareil et l'associer de nouveau.</p></li>
+<li><p>Maintenez le bouton POWER et le bouton d’alimentation CC / USB enfoncés pendant 3 secondes pour réinitialiser le Wi-Fi et le Bluetooth de l'appareil et l'associer de nouveau.</p></li>
 </ul>
 </td></tr></tbody></table>
 
 
 
-2.4 Une fois l'appairage réalisé avec succès, vous devrez saisir le nom et le mot de passe du Wi-Fi pour que l'appareil se connecte automatiquement au réseau Wi-Fi.
+2.4 Une fois l'appairage réalisé avec succès, saisissez le nom et le mot de passe du Wi-Fi pour que l'appareil se connecte automatiquement au réseau Wi-Fi.
 
 
 
@@ -1959,7 +1940,7 @@ Appuyez simultanément sur le bouton d'alimentation CC / USB et le bouton power 
 
 ### 4.3 Pour réinitialiser le Wi-Fi et le Bluetooth
 
-Maintenez le bouton d\'alimentation et le bouton d'alimentation CC / USB enfoncés simultanément pendant 3 secondes pour réinitialiser le Wi-Fi et le Bluetooth aux paramètres d'usine. Le compte connecté dans l'application sera dissocié.
+Maintenez le bouton POWER et le bouton d'alimentation CC / USB enfoncés simultanément pendant 3 secondes pour réinitialiser le Wi-Fi et le Bluetooth aux paramètres d'usine. Le compte connecté dans l'application sera dissocié.
 
 # INFORMACIÓN IMPORTANTE DE SEGURIDAD
 
@@ -1979,9 +1960,9 @@ Maintenez le bouton d\'alimentation et le bouton d'alimentation CC / USB enfonc�
 <td style="width: 50%; border: none; padding: 0 8px 0 0; vertical-align: top"><p>Sigue siempre estas precauciones básicas al usar este producto.</p>
 <ul>
 <li>Lee todas las instrucciones antes de usar el producto.</li>
-<li>No permitas que los niños jueguen sobre del producto. Se requiere la supresión cercana de adultos cuando se use cerca de niños.</li>
+<li>No permitas que los niños jueguen sobre del producto. Se requiere la supervisión cercana de adultos cuando se use cerca de niños.</li>
 <li>Evita colocar las manos o los dedos dentro del producto.</li>
-<li>Deja de usar el producto de inmediato si ha sufrido daños físicos o modificados. El uso inadecuado puede causar un comportamiento impredecible, provocando incendio, explosión o lesiones.</li>
+<li>Deja de usar el producto de inmediato si ha sufrido daños físicos o modificaciones. El uso inadecuado puede causar un comportamiento impredecible, provocando incendio, explosión o lesiones.</li>
 <li>Si se observan los siguientes síntomas —(incluyendo sobrecalentamiento, olores extraños o humo, fugas o quemaduras)— deja de usar el producto de inmediato y contacta al distribuidor o a nuestro servicio al cliente.</li>
 <li>Nunca intentes abrir, reparar o modificar el producto. Cualquier manipulación, re ensamblaje o modificación puede resultar en descarga eléctrica, incendio o daños a la batería.</li>
 </ul></td>
@@ -2010,13 +1991,13 @@ Maintenez le bouton d\'alimentation et le bouton d'alimentation CC / USB enfonc�
 <li>Deja de usar el producto de inmediato si muestra signos de daño. Suspende el uso y contacta al servicio al cliente para recibir asistencia.</li>
 <li>No cargues la batería en ambientes extremadamente calientes o fríos y cumple estrictamente con los rangos de temperatura especificados por el producto:
 <ul>
-<li>Temperatura de carga: -4 °F a 113°F (-20°C a 45°C);</li>
-<li>Temperatura de descarga: -4 °F a 113°F (-20°C a 45°C);</li>
+<li>Temperatura de carga: 32 °F a 113 °F / 0 °C a 45 °C</li>
+<li>Temperatura de descarga: 14°F a 113°F / -10°C a 45°C</li>
 </ul></li>
 <li>Para garantizar una circulación de aire adecuada, no cubras las rejillas de ventilación del producto. El área donde se use el producto debe tener un flujo de aire adecuado en un entorno fresco y seco para evitar el sobrecalentamiento.
 <ul>
 <li>Cargar en espacios húmedos o mal ventilados puede representar riesgos para la seguridad.</li>
-<li>El agua puede provocar cortocircuitos o dañar el cargador, generando riesgos de seguridad.</li>
+<li>El agua puede provocar cortocircuitos o dañar el cargador, generando riesgos para la seguridad.</li>
 </ul></li>
 <li>Desconecta el cable de alimentación de la toma de corriente durante tormentas eléctricas.</li>
 <li>Apaga el producto de inmediato presionando el botón de encendido si se ha caído, golpeado o expuesto a vibraciones.</li>
@@ -2046,14 +2027,14 @@ Maintenez le bouton d\'alimentation et le bouton d'alimentation CC / USB enfonc�
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>PELIGRO</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p class="hb-lead">Este dispositivo está diseñado únicamente para uso en interiores (coloque este dispositivo en un ambiente similar a interiores cuando lo use en exteriores, ej. autocaravanas, tiendas de campaña, cabañas, etc.).<br>※ Este dispositivo no es resistente al agua ni al polvo.Manténgalo alejado de la lluvia y ambientes húmedos durante su uso.</p>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>PELIGRO</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p class="hb-lead">Este dispositivo está diseñado únicamente para uso en interiores (coloque este dispositivo en un entorno interior similar cuando lo use en exteriores, por ejemplo, hogar, RV, tiendas de campaña, cabañas, etc.).<br>※ Este dispositivo no es resistente al agua ni al polvo. Manténgalo alejado de la lluvia y de ambientes húmedos durante el uso.</p>
 </td></tr></tbody></table>
 
 
 
 ## INSTRUCCIONES DE MANTENIMIENTO PARA EL USUARIO
 
-Durante el ciclo de los productos de almacenamiento de energía, se producirá cierto grado de degradación de capacidad y energía. A medida que aumenta el número de ciclos de uso y se extiende el tiempo de almacenamiento, esta degradación se intensificará gradualmente, lo cual es un fenómeno normal acorde con el patrón de envejecimiento natural de las celdas de la batería.
+Durante el ciclo de vida de los productos de almacenamiento de energía, se espera cierto grado de degradación de la capacidad y de la energía. A medida que aumenta el número de ciclos de carga y descarga y se prolonga el tiempo de almacenamiento, esta degradación se intensificará gradualmente. Esta es una condición normal coherente con el envejecimiento natural de las celdas de la batería.
 
 # SIGNIFICADO DE LOS SÍMBOLOS
 
@@ -2086,17 +2067,17 @@ Durante el ciclo de los productos de almacenamiento de energía, se producirá c
 
 
 
-<figure aria-label="Símbolo / Significado" class="hb-symbol-pair-composition"><div class="hb-symbol-pair-grid"><div class="hb-symbol-panel hb-symbol-panel-1"><table class="hb-symbol-panel-table"><colgroup><col class="hb-symbol-col-icon"/><col class="hb-symbol-col-meaning"/></colgroup><thead><tr><th class="hb-symbol-icon-heading" scope="col"><p><strong>Símbolo</strong></p></th><th class="hb-symbol-meaning-heading" scope="col"><p><strong>Significado</strong></p></th></tr></thead><tbody><tr><td class="hb-symbol-icon"><img alt="warning_triangle" class="hb-symbol-art" src="assets/1_warning_triangle_IfHObDBCDowRHbxLvCzci3wen7c_6749bd38fdd0.png"/>
-</td><td class="hb-symbol-meaning"><p>Símbolos de advertencia y precaución. Alertan a las personas sobre información que debe leerse para evitar posibles peligros o riesgos.</p></td></tr><tr><td class="hb-symbol-icon"><img alt="read_manual" class="hb-symbol-art" src="assets/2_read_manual_P0fEbfBNKoRiCoxkAm7cq3ymndh_89dae4b809de.png"/>
-</td><td class="hb-symbol-meaning"><p>Lea el manual del operador</p></td></tr><tr><td class="hb-symbol-icon"><img alt="electric_shock" class="hb-symbol-art" src="assets/3_electric_shock_Ctr7btZp2oBcCqxDmHbcrFPEnFd_378ec250259d.png"/>
-</td><td class="hb-symbol-meaning"><p>Riesgo de descarga eléctrica</p></td></tr><tr><td class="hb-symbol-icon"><img alt="battery_charging" class="hb-symbol-art" src="assets/4_battery_charging_N9ppbBQWdoPM5bxEammcGFItnpd_dc89195f3ece.png"/>
-</td><td class="hb-symbol-meaning"><p>Carga de batería</p></td></tr><tr><td class="hb-symbol-icon"><img alt="explosive_material" class="hb-symbol-art" src="assets/5_explosive_material_F4J3bCXAeoUk7sxrOg2ch60anHf_cb30b4905185.png"/>
-</td><td class="hb-symbol-meaning"><p>Material explosivo</p></td></tr><tr><td class="hb-symbol-icon"><img alt="heavy_object" class="hb-symbol-art" src="assets/6_heavy_object_M31Fbb3XeoQ0ClxmK2Lc9I5snYi_6b991847e3f8.png"/>
-</td><td class="hb-symbol-meaning"><p>Objeto pesado</p></td></tr></tbody></table></div><div class="hb-symbol-panel hb-symbol-panel-2"><table class="hb-symbol-panel-table"><colgroup><col class="hb-symbol-col-icon"/><col class="hb-symbol-col-meaning"/></colgroup><thead><tr><th class="hb-symbol-icon-heading" scope="col"><p><strong>Símbolo</strong></p></th><th class="hb-symbol-meaning-heading" scope="col"><p><strong>Significado</strong></p></th></tr></thead><tbody><tr><td class="hb-symbol-icon"><img alt="do_not_dismantle" class="hb-symbol-art" src="assets/7_do_not_dismantle_TTrGbm6PdoAFBwx16nXcZOaFnZf_76085a1e7008.png"/>
-</td><td class="hb-symbol-meaning"><p>No desarme el producto.</p></td></tr><tr><td class="hb-symbol-icon"><img alt="no_open_flame" class="hb-symbol-art" src="assets/8_no_open_flame_GOQabZgNNoj1goxlyjHcA0w7n7b_a8a846e9767a.png"/>
-</td><td class="hb-symbol-meaning"><p>Mantenga el producto alejado del fuego.</p></td></tr><tr><td class="hb-symbol-icon"><img alt="keep_away_from_children" class="hb-symbol-art" src="assets/9_keep_away_from_children_AjeEb4GIgoPNpdxkXhFcIeaDnTM_114690be6f4d.png"/>
-</td><td class="hb-symbol-meaning"><p>No se permiten niños</p></td></tr><tr><td class="hb-symbol-icon"><img alt="li_ion" class="hb-symbol-art" src="assets/10_li_ion_Nkm5benPWobav4xNt0ecDB2nn6D_2a61fc0919cf.png"/>
-</td><td class="hb-symbol-meaning"><p>Este símbolo indica que el producto contiene una batería de iones de litio (Li-ion), la cual debe desecharse o reciclarse de forma adecuada.</p></td></tr><tr><td class="hb-symbol-icon"><img alt="weee" class="hb-symbol-art" src="assets/11_weee_Wx7PbvwWCoznaCxrZ9Pc1KsXnSc_7e4de290ea13.png"/>
+<figure aria-label="Símbolo / Significado" class="hb-symbol-pair-composition"><div class="hb-symbol-pair-grid"><div class="hb-symbol-panel hb-symbol-panel-1"><table class="hb-symbol-panel-table"><colgroup><col class="hb-symbol-col-icon"/><col class="hb-symbol-col-meaning"/></colgroup><thead><tr><th class="hb-symbol-icon-heading" scope="col"><p><strong>Símbolo</strong></p></th><th class="hb-symbol-meaning-heading" scope="col"><p><strong>Significado</strong></p></th></tr></thead><tbody><tr><td class="hb-symbol-icon"><img alt="warning_triangle" class="hb-symbol-art" src="assets/1_warning_triangle_HO7FbxcSnonkYBxBvslc8RpdnIe_6749bd38fdd0.png"/>
+</td><td class="hb-symbol-meaning"><p>Símbolos de advertencia y precaución. Alertan a las personas sobre información que debe leerse para evitar posibles peligros o riesgos.</p></td></tr><tr><td class="hb-symbol-icon"><img alt="read_manual" class="hb-symbol-art" src="assets/2_read_manual_MAQxbZ9MooQjaaxqb6qctq6Sncg_89dae4b809de.png"/>
+</td><td class="hb-symbol-meaning"><p>Lea el manual del operador</p></td></tr><tr><td class="hb-symbol-icon"><img alt="electric_shock" class="hb-symbol-art" src="assets/3_electric_shock_XYAbbMCnNoNzYix7mKRcMHGhnic_378ec250259d.png"/>
+</td><td class="hb-symbol-meaning"><p>Riesgo de descarga eléctrica</p></td></tr><tr><td class="hb-symbol-icon"><img alt="battery_charging" class="hb-symbol-art" src="assets/4_battery_charging_WIeDb0QIoo4eSbxUDoDcCV3fn8c_dc89195f3ece.png"/>
+</td><td class="hb-symbol-meaning"><p>Carga de batería</p></td></tr><tr><td class="hb-symbol-icon"><img alt="explosive_material" class="hb-symbol-art" src="assets/5_explosive_material_Zkz9b74mDoSXlZx8jJwcbLErnge_cb30b4905185.png"/>
+</td><td class="hb-symbol-meaning"><p>Material explosivo</p></td></tr><tr><td class="hb-symbol-icon"><img alt="heavy_object" class="hb-symbol-art" src="assets/6_heavy_object_IGFubhmSFowSsoxFCIdcgW7lnUd_6b991847e3f8.png"/>
+</td><td class="hb-symbol-meaning"><p>Objeto pesado</p></td></tr></tbody></table></div><div class="hb-symbol-panel hb-symbol-panel-2"><table class="hb-symbol-panel-table"><colgroup><col class="hb-symbol-col-icon"/><col class="hb-symbol-col-meaning"/></colgroup><thead><tr><th class="hb-symbol-icon-heading" scope="col"><p><strong>Símbolo</strong></p></th><th class="hb-symbol-meaning-heading" scope="col"><p><strong>Significado</strong></p></th></tr></thead><tbody><tr><td class="hb-symbol-icon"><img alt="do_not_dismantle" class="hb-symbol-art" src="assets/7_do_not_dismantle_EesAbUpXdo6eJIxkBL5c8yp7nPd_76085a1e7008.png"/>
+</td><td class="hb-symbol-meaning"><p>No desarme el producto.</p></td></tr><tr><td class="hb-symbol-icon"><img alt="no_open_flame" class="hb-symbol-art" src="assets/8_no_open_flame_E9gXbvgbaoiigFxd11rcHuY8nab_a8a846e9767a.png"/>
+</td><td class="hb-symbol-meaning"><p>Mantenga el producto alejado del fuego.</p></td></tr><tr><td class="hb-symbol-icon"><img alt="keep_away_from_children" class="hb-symbol-art" src="assets/9_keep_away_from_children_XErWbsrH9o3xllxqHj9cktZAnnh_114690be6f4d.png"/>
+</td><td class="hb-symbol-meaning"><p>No se permiten niños</p></td></tr><tr><td class="hb-symbol-icon"><img alt="li_ion" class="hb-symbol-art" src="assets/10_li_ion_HpN6bpoYHohujqxLgYKcazSin0k_2a61fc0919cf.png"/>
+</td><td class="hb-symbol-meaning"><p>Este símbolo indica que el producto contiene una batería de iones de litio (Li-ion), la cual debe desecharse o reciclarse de forma adecuada.</p></td></tr><tr><td class="hb-symbol-icon"><img alt="weee" class="hb-symbol-art" src="assets/11_weee_WGswbCb5zoaeDSxlHvyc5rFXn7g_7e4de290ea13.png"/>
 </td><td class="hb-symbol-meaning"><p>Este símbolo indica que el producto no debe desecharse con los residuos domésticos. En su lugar, debe llevarse a un punto de recogida designado para su correcto reciclaje.
 El desecho y reciclaje adecuados ayudan a proteger el medioambiente. Para más información, póngase en contacto con su autoridad local, el servicio de gestión de residuos o el distribuidor del producto.</p></td></tr></tbody></table></div></div></figure>
 
@@ -2106,16 +2087,7 @@ El desecho y reciclaje adecuados ayudan a proteger el medioambiente. Para más i
 
 
 
-<figure aria-label="FCC" class="hb-fcc-composition"><div class="hb-fcc-grid"><div class="hb-fcc-column hb-fcc-column-left"><div class="hb-fcc-opening"><img alt="FCC" class="hb-fcc-mark" loading="lazy" src="assets/fcc_mark_45f309ed8b3f.png"/><div class="hb-fcc-opening-copy"><div class="line-block">
-<div class="line">Este dispositivo cumple con la parte 15 de las Reglas de la FCC. El funcionamiento está sujeto a las siguientes dos condiciones:</div>
-<div class="line">(1) Este dispositivo no debe causar interferencias dañinas, y</div>
-<div class="line">(2) Este dispositivo debe aceptar cualquier interferencia recibida, incluidas las interferencias que puedan causar un funcionamiento no deseado.</div>
-</div></div></div><p><strong>NOTA:</strong> Este aparato ha sido probado y cumple con los límites para un dispositivo digital de Clase B, de acuerdo con el Apartado 15 de las Reglas de la FCC. Estos límites están diseñados para proporcionar una protección razonable contra interferencias perjudiciales en una instalación residencial. Este aparato genera, usa y puede irradiar energía de radiofrecuencia y, si no se instala y utiliza de acuerdo con las instrucciones, puede causar interferencias perjudiciales en las comunicaciones por radio. Sin embargo, no hay garantía de que no se produzcan interferencias en una instalación concreta.</p></div><div class="hb-fcc-column hb-fcc-column-right"><p>Si este aparato causa interferencias dañinas en la recepción de radio o televisión, lo cual puede determinarse encendiendo y apagando el equipo, se recomienda al usuario que intente corregir la interferencia mediante una o varias de las siguientes medidas:</p><ul class="simple">
-<li><p>Reorientar o reubicar la antena receptora.</p></li>
-<li><p>Aumentar la separación entre el equipo y el receptor.</p></li>
-<li><p>Conecte el aparato a una toma de corriente en un circuito diferente al que está conectado el receptor.</p></li>
-<li><p>Consulte con el distribuidor o con un técnico de radio o TV experimentado para recibir ayuda.</p></li>
-</ul><p><strong>MODIFICACIÓN:</strong> Cualquier cambio o modificación no aprobado expresamente por el cesionario de este dispositivo podría anular la autoridad del usuario para utilizar el dispositivo.</p></div></div></figure>
+<figure aria-label="FCC" class="hb-fcc-composition" data-component-id="HB-SPECIAL-FCC"><div class="hb-fcc-grid"><div class="hb-fcc-column hb-fcc-column-left"><div class="hb-fcc-opening"><img alt="FCC" class="hb-fcc-mark" loading="lazy" src="assets/fcc_mark_45f309ed8b3f.png"/><div class="hb-fcc-opening-copy"><div class="line-block"><div class="line">Este dispositivo cumple con la parte 15 de las Reglas de la FCC. El funcionamiento está sujeto a las siguientes dos condiciones:</div><div class="line">(1) Este dispositivo no debe causar interferencias dañinas, y</div><div class="line">(2) Este dispositivo debe aceptar cualquier interferencia recibida, incluidas las interferencias que puedan causar un funcionamiento no deseado.</div></div></div></div><p><strong>NOTA:</strong> Este aparato ha sido probado y cumple con los límites para un dispositivo digital de Clase B, de acuerdo con el Apartado 15 de las Reglas de la FCC. Estos límites están diseñados para proporcionar una protección razonable contra interferencias perjudiciales en una instalación residencial. Este aparato genera, usa y puede irradiar energía de radiofrecuencia y, si no se instala y utiliza de acuerdo con las instrucciones, puede causar interferencias perjudiciales en las comunicaciones por radio. Sin embargo, no hay garantía de que no se produzcan interferencias en una instalación concreta.</p></div><div class="hb-fcc-column hb-fcc-column-right"><p>Si este aparato causa interferencias dañinas en la recepción de radio o televisión, lo cual puede determinarse encendiendo y apagando el equipo, se recomienda al usuario que intente corregir la interferencia mediante una o varias de las siguientes medidas:</p><ul class="simple"><li><p>Reorientar o reubicar la antena receptora.</p></li><li><p>Aumentar la separación entre el equipo y el receptor.</p></li><li><p>Conecte el aparato a una toma de corriente en un circuito diferente al que está conectado el receptor.</p></li><li><p>Consulte con el distribuidor o con un técnico de radio o TV experimentado para recibir ayuda.</p></li></ul><p><strong>MODIFICACIÓN:</strong> Cualquier cambio o modificación no aprobado expresamente por el cesionario de este dispositivo podría anular la autoridad del usuario para utilizar el dispositivo.</p></div></div></figure>
 
 
 
@@ -2123,13 +2095,13 @@ El desecho y reciclaje adecuados ayudan a proteger el medioambiente. Para más i
 
 
 
-<figure aria-label="CONTENIDO DE LA CAJA" class="hb-inbox-composition"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Imagen de la estación de energía." class="hb-inbox-art" src="assets/main_unit1_6c7f1deea2f6.png"/><div class="hb-inbox-label">
+<figure aria-label="CONTENIDO DE LA CAJA" class="hb-inbox-composition" data-component-id="HB-SPECIAL-INBOX"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Imagen de la estación de energía." class="hb-inbox-art" src="assets/main_unit1_6c7f1deea2f6.png"/><div class="hb-inbox-label">
 <p><strong>Jackery Explorer 1000</strong></p>
 </div></li><li class="hb-inbox-card" data-item-number="2"><img alt="Imagen del cable de carga de CA." class="hb-inbox-art" src="assets/ac_charging_cable_287650f3a89a.png"/><div class="hb-inbox-label">
 <p><strong>Cable de carga de CA</strong></p>
 </div></li><li class="hb-inbox-card" data-item-number="3"><img alt="Imagen de los documentos." class="hb-inbox-art" src="assets/manual_icon1_87ac44e52863.png"/><div class="hb-inbox-label">
-<p><strong>Doucumentos</strong></p>
-</div></li></ol><div class="hb-inbox-tip" role="note"><div class="hb-inbox-tip-label"><p><strong>CONSEJOS</strong></p></div><div class="hb-inbox-tip-body"><p>El cable de carga para automóvil no está incluido, pero está disponible para su compra por separado en nuestro sitio web.
+<p><strong>Documentos</strong></p>
+</div></li></ol><div class="hb-inbox-tip" role="note"><div class="hb-inbox-tip-label"><p><strong>CONSEJOS</strong></p></div><div class="hb-inbox-tip-body"><p>El cable de carga para vehículo no está incluido, pero está disponible para su compra por separado en nuestro sitio web.
 Para obtener asistencia, comunícate con el servicio al cliente de Jackery.</p></div></div></figure>
 
 
@@ -2140,7 +2112,7 @@ Para obtener asistencia, comunícate con el servicio al cliente de Jackery.</p><
 
 
 
-<figure class="hb-annotated-figure hb-has-composite-art" data-figure-id="product-overview-front" data-source-fragment-sha256="1d598826fcfd5660c2d10104b9b2e11e8c8d152275af1af9fe71d95fa179a2ba" data-web-replace-key="product-overview.front"><div aria-hidden="true" class="hb-composite-stage"><img alt="" class="hb-composite-art" loading="lazy" src="assets/product-overview.front_es_e1db532310ae_e1db532310ae.png"/></div><div class="hb-annotated-stage" style="--hb-aspect-ratio:1.66842"><img alt="Diagrama de vista frontal." class="hb-annotated-art" src="assets/front_controls_8cb417c0ade2.png" style="width: 420px;" width="420" height="245" /><svg aria-hidden="true" class="hb-leader-layer" focusable="false" preserveAspectRatio="none" viewBox="0 0 100 100"><polyline class="hb-leader" data-callout-id="overview.front.power" points="1.101,8.518 41.169,8.518 41.169,33.378"></polyline><polyline class="hb-leader" data-callout-id="overview.front.lcd" points="99.005,8.519 51.04,8.519 51.04,33.506"></polyline><polyline class="hb-leader" data-callout-id="overview.front.dc12" points="1.101,25.722 35.787,25.722 35.787,35.193"></polyline><polyline class="hb-leader" data-callout-id="overview.front.led_button" points="99.006,21.853 59.042,21.853 59.042,32.851"></polyline><polyline class="hb-leader" data-callout-id="overview.front.usb_c_30" points="1.101,43.854 29.645,43.854 29.645,49.175 34.437,49.175"></polyline><polyline class="hb-leader" data-callout-id="overview.front.led" points="99.389,36.855 66.946,36.855"></polyline><polyline class="hb-leader" data-callout-id="overview.front.usb_c_100" points="1.486,57.141 33.346,57.141 33.346,53.33 34.353,53.33"></polyline><polyline class="hb-leader" data-callout-id="overview.front.ac_power" points="98.843,47.914 46.994,47.914 46.994,52.076"></polyline><polyline class="hb-leader" data-callout-id="overview.front.usb_a" points="1.124,78.5 35.787,78.5 35.787,61.68"></polyline><polyline class="hb-leader" data-callout-id="overview.front.ac_output" points="99.006,69.051 62.833,69.051 62.833,60.586"></polyline><polyline class="hb-leader" data-callout-id="overview.front.dc_usb" points="1.226,95.303 40.866,95.303 40.866,57.434"></polyline><polyline class="hb-leader" data-callout-id="overview.front.total" points="99.389,94.297 68.813,94.297"></polyline><polyline class="hb-leader-decoration" data-decoration-id="overview.front.decoration-1" points="58.644,60.581 58.644,85.435"></polyline></svg><div class="hb-figure-callout hb-align-left" data-callout-id="overview.front.power" style="--hb-x:1.104%;--hb-y:4.326%;--hb-width:34.069%;--hb-height:7.368%;--hb-align:left"><p><strong>Botón de encendido</strong></p></div><div class="hb-figure-callout hb-align-right" data-callout-id="overview.front.lcd" style="--hb-x:76.341%;--hb-y:4.379%;--hb-width:22.471%;--hb-height:7.368%;--hb-align:right"><p><strong>LCD</strong></p></div><div class="hb-figure-callout hb-align-left" data-callout-id="overview.front.dc12" style="--hb-x:1.104%;--hb-y:16.805%;--hb-width:34.069%;--hb-height:13.684%;--hb-align:left"><p><strong>Puerto CC 12 V</strong></p>
+<figure class="hb-annotated-figure" data-figure-id="product-overview-front" data-source-fragment-sha256="2045d094981cfe21f7988f8bf24a1092ad568ca43be6ab510d6a79e41dd70238" data-web-replace-key="product-overview.front"><div class="hb-annotated-stage" style="--hb-aspect-ratio:1.66842"><img alt="Diagrama de vista frontal." class="hb-annotated-art" src="assets/front_controls_8cb417c0ade2.png" style="width: 420px;" width="420" height="245" /><svg aria-hidden="true" class="hb-leader-layer" focusable="false" preserveAspectRatio="none" viewBox="0 0 100 100"><polyline class="hb-leader" data-callout-id="overview.front.power" points="1.101,8.518 41.169,8.518 41.169,33.378"></polyline><polyline class="hb-leader" data-callout-id="overview.front.lcd" points="99.005,8.519 51.04,8.519 51.04,33.506"></polyline><polyline class="hb-leader" data-callout-id="overview.front.dc12" points="1.101,25.722 35.787,25.722 35.787,35.193"></polyline><polyline class="hb-leader" data-callout-id="overview.front.led_button" points="99.006,21.853 59.042,21.853 59.042,32.851"></polyline><polyline class="hb-leader" data-callout-id="overview.front.usb_c_30" points="1.101,43.854 29.645,43.854 29.645,49.175 34.437,49.175"></polyline><polyline class="hb-leader" data-callout-id="overview.front.led" points="99.389,36.855 66.946,36.855"></polyline><polyline class="hb-leader" data-callout-id="overview.front.usb_c_100" points="1.486,57.141 33.346,57.141 33.346,53.33 34.353,53.33"></polyline><polyline class="hb-leader" data-callout-id="overview.front.ac_power" points="98.843,47.914 46.994,47.914 46.994,52.076"></polyline><polyline class="hb-leader" data-callout-id="overview.front.usb_a" points="1.124,78.5 35.787,78.5 35.787,61.68"></polyline><polyline class="hb-leader" data-callout-id="overview.front.ac_output" points="99.006,69.051 62.833,69.051 62.833,60.586"></polyline><polyline class="hb-leader" data-callout-id="overview.front.dc_usb" points="1.226,95.303 40.866,95.303 40.866,57.434"></polyline><polyline class="hb-leader" data-callout-id="overview.front.total" points="99.389,94.297 68.813,94.297"></polyline><polyline class="hb-leader-decoration" data-decoration-id="overview.front.decoration-1" points="58.644,60.581 58.644,85.435"></polyline></svg><div class="hb-figure-callout hb-align-left" data-callout-id="overview.front.power" style="--hb-x:1.104%;--hb-y:4.326%;--hb-width:34.069%;--hb-height:7.368%;--hb-align:left"><p><strong>Botón POWER</strong></p></div><div class="hb-figure-callout hb-align-right" data-callout-id="overview.front.lcd" style="--hb-x:76.341%;--hb-y:4.379%;--hb-width:22.471%;--hb-height:7.368%;--hb-align:right"><p><strong>LCD</strong></p></div><div class="hb-figure-callout hb-align-left" data-callout-id="overview.front.dc12" style="--hb-x:1.104%;--hb-y:16.805%;--hb-width:34.069%;--hb-height:13.684%;--hb-align:left"><p><strong>Puerto CC 12 V</strong></p>
 <p>12 V⎓10 A máx.</p></div><div class="hb-figure-callout hb-align-right" data-callout-id="overview.front.led_button" style="--hb-x:75.71%;--hb-y:16.516%;--hb-width:23.115%;--hb-height:8.947%;--hb-align:right"><p><strong>Botón de luz LED</strong></p></div><div class="hb-figure-callout hb-align-left" data-callout-id="overview.front.usb_c_30" style="--hb-x:1.104%;--hb-y:32.247%;--hb-width:34.069%;--hb-height:12.632%;--hb-align:left"><p><strong>Salida USB-C 30 W</strong></p>
 <p>30 W máx.,5 V⎓3 A,9 V⎓3 A,12 V⎓2,5 A,15 V⎓2 A,20 V⎓1,5 A</p></div><div class="hb-figure-callout hb-align-right" data-callout-id="overview.front.led" style="--hb-x:78.233%;--hb-y:32.116%;--hb-width:21.068%;--hb-height:7.368%;--hb-align:right"><p><strong>Luz LED</strong></p></div><div class="hb-figure-callout hb-align-left" data-callout-id="overview.front.usb_c_100" style="--hb-x:1.104%;--hb-y:45.989%;--hb-width:34.069%;--hb-height:20.526%;--hb-align:left"><p><strong>Salida USB-C 100 W</strong></p>
 <p>100 W máx.,5 V⎓3 A,9 V⎓3 A,12 V⎓3 A,15 V⎓3 A,20 V⎓5 A</p></div><div class="hb-figure-callout hb-align-right" data-callout-id="overview.front.ac_power" style="--hb-x:74.448%;--hb-y:43.389%;--hb-width:24.244%;--hb-height:13.158%;--hb-align:right"><p><strong>Botón Power CA</strong></p></div><div class="hb-figure-callout hb-align-left" data-callout-id="overview.front.usb_a" style="--hb-x:1.104%;--hb-y:67.9%;--hb-width:34.069%;--hb-height:17.895%;--hb-align:left"><p><strong>Salida USB-A 18 W</strong></p>
@@ -2171,7 +2143,7 @@ Para obtener asistencia, comunícate con el servicio al cliente de Jackery.</p><
 
 <tbody>
 <tr><td class="hb-lcd-number"><p>1</p></td>
-<td class="hb-lcd-icon"><img alt="Wi-Fi" class="hb-lcd-icon-art" src="assets/1_Wi-Fi_WuAbbIls6okb8pxBe5RcObWUnNd_fc4cc02b42ef.png"/>
+<td class="hb-lcd-icon"><img alt="Wi-Fi" class="hb-lcd-icon-art" src="assets/1_Wi-Fi_KCcAbdDk7o4RjKx82micuKJ5nyf_fc4cc02b42ef.png"/>
 </td>
 <td class="hb-lcd-name"><p>Wi-Fi</p></td>
 <td class="hb-lcd-description"><div class="line-block">
@@ -2182,7 +2154,7 @@ Para obtener asistencia, comunícate con el servicio al cliente de Jackery.</p><
 </td>
 </tr>
 <tr><td class="hb-lcd-number"><p>2</p></td>
-<td class="hb-lcd-icon"><img alt="Bluetooth" class="hb-lcd-icon-art" src="assets/2_Bluetooth_EaovbGeSmoIldpxVoWrcVankn5d_7e1392ba6a45.png"/>
+<td class="hb-lcd-icon"><img alt="Bluetooth" class="hb-lcd-icon-art" src="assets/2_Bluetooth_HVgvbJhq5o4EDKxhm7McCF4FnjB_7e1392ba6a45.png"/>
 </td>
 <td class="hb-lcd-name"><p>Bluetooth</p></td>
 <td class="hb-lcd-description"><div class="line-block">
@@ -2193,7 +2165,7 @@ Para obtener asistencia, comunícate con el servicio al cliente de Jackery.</p><
 </td>
 </tr>
 <tr><td class="hb-lcd-number"><p>3</p></td>
-<td class="hb-lcd-icon"><img alt="Modo de Carga Silenciosa" class="hb-lcd-icon-art" src="assets/3_Quiet_Charging_Mode_IRdmbJVhco57yOx8m0pcdgkXnbe_7f743182c050.png"/>
+<td class="hb-lcd-icon"><img alt="Modo de Carga Silenciosa" class="hb-lcd-icon-art" src="assets/3_Quiet_Charging_Mode_WLkMbiHS1oGsOtxUCp7cRhFAn1g_7f743182c050.png"/>
 </td>
 <td class="hb-lcd-name"><p>Modo de Carga Silenciosa</p></td>
 <td class="hb-lcd-description"><div class="line-block">
@@ -2204,7 +2176,7 @@ Para obtener asistencia, comunícate con el servicio al cliente de Jackery.</p><
 </td>
 </tr>
 <tr><td class="hb-lcd-number"><p>4</p></td>
-<td class="hb-lcd-icon"><img alt="Plan de Carga" class="hb-lcd-icon-art" src="assets/4_Charging_Plan_PBCtblGMaoHz4fx08tRcoXUJnIf_71017f43bab4.png"/>
+<td class="hb-lcd-icon"><img alt="Plan de Carga" class="hb-lcd-icon-art" src="assets/4_Charging_Plan_M96RbyZQxoGjRRxQHsuczeIln1b_71017f43bab4.png"/>
 </td>
 <td class="hb-lcd-name"><p>Plan de Carga</p></td>
 <td class="hb-lcd-description"><div class="line-block">
@@ -2214,7 +2186,7 @@ Para obtener asistencia, comunícate con el servicio al cliente de Jackery.</p><
 </td>
 </tr>
 <tr><td class="hb-lcd-number"><p>5</p></td>
-<td class="hb-lcd-icon"><img alt="Modo Autónomo" class="hb-lcd-icon-art" src="assets/5_Self-powered_Mode_VLkXbWOFpoMJYsxWp0xcXkkpn1g_73225cf9faa8.png"/>
+<td class="hb-lcd-icon"><img alt="Modo Autónomo" class="hb-lcd-icon-art" src="assets/5_Self-powered_Mode_FYTnb9vttoexjbxVMchcJaobnCg_73225cf9faa8.png"/>
 </td>
 <td class="hb-lcd-name"><p>Modo Autónomo</p></td>
 <td class="hb-lcd-description"><div class="line-block">
@@ -2224,7 +2196,7 @@ Para obtener asistencia, comunícate con el servicio al cliente de Jackery.</p><
 </td>
 </tr>
 <tr><td class="hb-lcd-number"><p>6</p></td>
-<td class="hb-lcd-icon"><img alt="Modo TOU" class="hb-lcd-icon-art" src="assets/6_TOU_Mode_BLMAblms7oeDxUxsFb9cgzXvnId_f4cdcb551105.png"/>
+<td class="hb-lcd-icon"><img alt="Modo TOU" class="hb-lcd-icon-art" src="assets/6_TOU_Mode_BjEkbz0rFo6Bw4xiwNpcod9qnnc_f4cdcb551105.png"/>
 </td>
 <td class="hb-lcd-name"><p>Modo TOU</p></td>
 <td class="hb-lcd-description"><div class="line-block">
@@ -2235,7 +2207,7 @@ Para obtener asistencia, comunícate con el servicio al cliente de Jackery.</p><
 </td>
 </tr>
 <tr><td class="hb-lcd-number"><p>7</p></td>
-<td class="hb-lcd-icon"><img alt="UPS" class="hb-lcd-icon-art" src="assets/7_UPS_JMnybDJHdoLbjExEMbGcfAkznQh_e422a56922eb.png"/>
+<td class="hb-lcd-icon"><img alt="UPS" class="hb-lcd-icon-art" src="assets/7_UPS_Lgdgb8pvvoGwaLxSf8ec2QeHn3c_e422a56922eb.png"/>
 </td>
 <td class="hb-lcd-name"><p>UPS</p></td>
 <td class="hb-lcd-description"><div class="line-block">
@@ -2246,49 +2218,49 @@ Para obtener asistencia, comunícate con el servicio al cliente de Jackery.</p><
 </td>
 </tr>
 <tr><td class="hb-lcd-number"><p>8</p></td>
-<td class="hb-lcd-icon"><img alt="Indicador de Energía de CA" class="hb-lcd-icon-art" src="assets/8_AC_Power_Indicator_IqesbVEWTo0ANfxDkoDcLP6jnSc_8be87c5a0849.png"/>
+<td class="hb-lcd-icon"><img alt="Indicador de Energía de CA" class="hb-lcd-icon-art" src="assets/8_AC_Power_Indicator_HFPSbvWBgosvCux69jMcuWe6nnh_8be87c5a0849.png"/>
 </td>
 <td class="hb-lcd-name"><p>Indicador de Energía de CA</p></td>
 <td class="hb-lcd-description"><p>La salida CA (onda sinusoidal pura) está activada.</p></td>
 </tr>
 <tr><td class="hb-lcd-number"><p>9</p></td>
-<td class="hb-lcd-icon"><img alt="Voltaje y frecuencia de salida" class="hb-lcd-icon-art" src="assets/9_Output_Voltage_and_Frequency_XtL4bA80pogLmOx7VJ3ca5fEnl8_7623ef10e229.png"/>
+<td class="hb-lcd-icon"><img alt="Voltaje y frecuencia de salida" class="hb-lcd-icon-art" src="assets/9_Output_Voltage_and_Frequency_Jh3JbmBDBoKlmOxaRJDcIMJAn6b_7623ef10e229.png"/>
 </td>
 <td class="hb-lcd-name"><p>Voltaje y frecuencia de salida</p></td>
 <td class="hb-lcd-description"><p>Muestra el voltaje y la frecuencia de salida cuando la salida de CA está encendida.</p></td>
 </tr>
 <tr><td class="hb-lcd-number"><p>10</p></td>
-<td class="hb-lcd-icon"><img alt="Potencia de Entrada" class="hb-lcd-icon-art" src="assets/10_Input_Power_BiBvbNteAoNsHqxoMICc11cjnHc_d5100a538e96.png"/>
+<td class="hb-lcd-icon"><img alt="Potencia de Entrada" class="hb-lcd-icon-art" src="assets/10_Input_Power_LOAZbnxfqoHFwIxx2Myc532jnzb_d5100a538e96.png"/>
 </td>
 <td class="hb-lcd-name"><p>Potencia de Entrada</p></td>
 <td class="hb-lcd-description"><p>Muestra la potencia de entrada en vatios.</p></td>
 </tr>
 <tr><td class="hb-lcd-number"><p>11</p></td>
-<td class="hb-lcd-icon"><img alt="Tiempo de Carga Restante" class="hb-lcd-icon-art" src="assets/11_Remaining_Charge_Time_VeBobGZMDoYpBuxLRcFcti9cnlc_cfb69b1ffc0b.png"/>
+<td class="hb-lcd-icon"><img alt="Tiempo de Carga Restante" class="hb-lcd-icon-art" src="assets/11_Remaining_Charge_Time_KIWHbHFOvotGuBxJsxlcunSDnPf_cfb69b1ffc0b.png"/>
 </td>
 <td class="hb-lcd-name"><p>Tiempo de Carga Restante</p></td>
 <td class="hb-lcd-description"><p>Muestra el tiempo de carga restante.</p></td>
 </tr>
 <tr><td class="hb-lcd-number"><p>12</p></td>
-<td class="hb-lcd-icon"><img alt="Indicador de Carga desde Toma de Corriente CA" class="hb-lcd-icon-art" src="assets/12_AC_Wall_Charging_Indicator_OG9ebaP1HoaLvZxbGEAcIXkPnkb_28f3cad42ae3.png"/>
+<td class="hb-lcd-icon"><img alt="Indicador de Carga desde Toma de Corriente CA" class="hb-lcd-icon-art" src="assets/12_AC_Wall_Charging_Indicator_ZpOmbCjx8oYUTVxyl4JcvcTanPe_28f3cad42ae3.png"/>
 </td>
 <td class="hb-lcd-name"><p>Indicador de Carga desde Toma de Corriente CA</p></td>
 <td class="hb-lcd-description"><p>El producto se carga a través de la entrada CA utilizando energía de la red eléctrica.</p></td>
 </tr>
 <tr><td class="hb-lcd-number"><p>13</p></td>
-<td class="hb-lcd-icon"><img alt="Indicador de Carga desde Vehículo" class="hb-lcd-icon-art" src="assets/13_Car_Charging_Indicator_WgbebOblvoTtesxjb9ec8CkUnyg_eed3299c3f6a.png"/>
+<td class="hb-lcd-icon"><img alt="Indicador de Carga desde Vehículo" class="hb-lcd-icon-art" src="assets/13_Car_Charging_Indicator_DLkibYaP1ot6d5x1S0jcUr1knlb_eed3299c3f6a.png"/>
 </td>
 <td class="hb-lcd-name"><p>Indicador de Carga desde Vehículo</p></td>
 <td class="hb-lcd-description"><p>El producto se carga a través de la entrada CC (DC8020) utilizando CC 12V (carga desde el vehículo).</p></td>
 </tr>
 <tr><td class="hb-lcd-number"><p>14</p></td>
-<td class="hb-lcd-icon"><img alt="Indicador de Carga Solar" class="hb-lcd-icon-art" src="assets/14_Solar_Charging_Indicator_ZMSkb6bWWoKo8WxhBk0cZN5Lnpg_91cec82eeaa5.png"/>
+<td class="hb-lcd-icon"><img alt="Indicador de Carga Solar" class="hb-lcd-icon-art" src="assets/14_Solar_Charging_Indicator_RgAUbPXNWoRxiHxKNgkc2gqDnEb_91cec82eeaa5.png"/>
 </td>
 <td class="hb-lcd-name"><p>Indicador de Carga Solar</p></td>
 <td class="hb-lcd-description"><p>El producto se carga a través de la entrada CC (DC8020) utilizando paneles solares.</p></td>
 </tr>
 <tr><td class="hb-lcd-number"><p>15</p></td>
-<td class="hb-lcd-icon"><img alt="Modo de Ahorro de Batería" class="hb-lcd-icon-art" src="assets/15_Battery_Saving_Mode_QIQlbf95uoUmsFxyEQuc1zxkn22_e32e6ae96321.png"/>
+<td class="hb-lcd-icon"><img alt="Modo de Ahorro de Batería" class="hb-lcd-icon-art" src="assets/15_Battery_Saving_Mode_ClYfbtOGSoK5q2xySXCcgehVn8f_e32e6ae96321.png"/>
 </td>
 <td class="hb-lcd-name"><p>Modo de Ahorro de Batería</p></td>
 <td class="hb-lcd-description"><div class="line-block">
@@ -2300,7 +2272,7 @@ Para obtener asistencia, comunícate con el servicio al cliente de Jackery.</p><
 </td>
 </tr>
 <tr><td class="hb-lcd-number"><p>16</p></td>
-<td class="hb-lcd-icon"><img alt="Límite de potencia de carga" class="hb-lcd-icon-art" src="assets/16_Charging_Power_Limit_YgjLbaQ2YoZwavxUqrHclXNdnuK_21b5f19ca9a6.png"/>
+<td class="hb-lcd-icon"><img alt="Límite de potencia de carga" class="hb-lcd-icon-art" src="assets/16_Charging_Power_Limit_VLf2bJfrkoCL0CxJoMNcL5ZxnCt_21b5f19ca9a6.png"/>
 </td>
 <td class="hb-lcd-name"><p>Límite de potencia de carga</p></td>
 <td class="hb-lcd-description"><div class="line-block">
@@ -2311,19 +2283,19 @@ Para obtener asistencia, comunícate con el servicio al cliente de Jackery.</p><
 </td>
 </tr>
 <tr><td class="hb-lcd-number"><p>17</p></td>
-<td class="hb-lcd-icon"><img alt="Indicador de Potencia de la Batería" class="hb-lcd-icon-art" src="assets/17_Battery_Power_Indicator_WqL2b7JZio7HnGxsWaOctZ7inkh_85921a9ad7fb.png"/>
+<td class="hb-lcd-icon"><img alt="Indicador de Potencia de la Batería" class="hb-lcd-icon-art" src="assets/17_Battery_Power_Indicator_VLufb9exvoVLfgxz47pcfnRGnaf_85921a9ad7fb.png"/>
 </td>
 <td class="hb-lcd-name"><p>Indicador de Potencia de la Batería</p></td>
 <td class="hb-lcd-description"><p>Cuando el producto se está cargando, el círculo naranja alrededor del porcentaje de batería se ilumina secuencialmente. Cuando está cargando otros dispositivos, el círculo naranja permanece encendido.</p></td>
 </tr>
 <tr><td class="hb-lcd-number"><p>18</p></td>
-<td class="hb-lcd-icon"><img alt="Porcentaje de Batería Restante" class="hb-lcd-icon-art" src="assets/18_Remaining_Battery_Percentage_F7gbbsgPKo4mdkx4JqccMfQRngc_747147be99d7.png"/>
+<td class="hb-lcd-icon"><img alt="Porcentaje de Batería Restante" class="hb-lcd-icon-art" src="assets/18_Remaining_Battery_Percentage_VkJcbUDbUoYC1hxrU6rc168OnJe_747147be99d7.png"/>
 </td>
 <td class="hb-lcd-name"><p>Porcentaje de Batería Restante</p></td>
 <td class="hb-lcd-description"><p>Muestra el porcentaje de batería restante.</p></td>
 </tr>
 <tr><td class="hb-lcd-number"><p>19</p></td>
-<td class="hb-lcd-icon"><img alt="Indicador de Batería Baja" class="hb-lcd-icon-art" src="assets/19_Low_Battery_Indicator_TcggbK0LLodgNwx04T6cEqjPn5f_c7862a87e742.png"/>
+<td class="hb-lcd-icon"><img alt="Indicador de Batería Baja" class="hb-lcd-icon-art" src="assets/19_Low_Battery_Indicator_KDk9bhs8poHUBdx96PLckPganhd_c7862a87e742.png"/>
 </td>
 <td class="hb-lcd-name"><p>Indicador de Batería Baja</p></td>
 <td class="hb-lcd-description"><div class="line-block">
@@ -2334,7 +2306,7 @@ Para obtener asistencia, comunícate con el servicio al cliente de Jackery.</p><
 </td>
 </tr>
 <tr><td class="hb-lcd-number"><p>20</p></td>
-<td class="hb-lcd-icon"><img alt="Temporizador de descarga" class="hb-lcd-icon-art" src="assets/20_Discharge_Timer_X2jjb9dwIomvH6xVJLJclRzpnAh_6aab9a14900a.png"/>
+<td class="hb-lcd-icon"><img alt="Temporizador de descarga" class="hb-lcd-icon-art" src="assets/20_Discharge_Timer_DHPMbkjSWoiuALxJyJ8cWyQOn0e_6aab9a14900a.png"/>
 </td>
 <td class="hb-lcd-name"><p>Temporizador de descarga</p></td>
 <td class="hb-lcd-description"><div class="line-block">
@@ -2345,7 +2317,7 @@ Para obtener asistencia, comunícate con el servicio al cliente de Jackery.</p><
 </td>
 </tr>
 <tr><td class="hb-lcd-number"><p>22</p></td>
-<td class="hb-lcd-icon"><img alt="Modo de Ahorro de Energía" class="hb-lcd-icon-art" src="assets/22_Energy_Saving_Mode_FdBWbTvwwosJ7TxfeVIc2Flinkh_c4b830c769a3.png"/>
+<td class="hb-lcd-icon"><img alt="Modo de Ahorro de Energía" class="hb-lcd-icon-art" src="assets/22_Energy_Saving_Mode_O4Jdb5pUQoCBAqx0sfQcm9Nbntd_c4b830c769a3.png"/>
 </td>
 <td class="hb-lcd-name"><p>Modo de Ahorro de Energía</p></td>
 <td class="hb-lcd-description"><div class="line-block">
@@ -2357,31 +2329,31 @@ Para obtener asistencia, comunícate con el servicio al cliente de Jackery.</p><
 </td>
 </tr>
 <tr><td class="hb-lcd-number"><p>23</p></td>
-<td class="hb-lcd-icon"><img alt="Indicador de Alta Temperatura" class="hb-lcd-icon-art" src="assets/23_High_Temperature_Indicator_HbD7betDOoeilexZaaQcqOknnMd_f548c6504f49.png"/>
+<td class="hb-lcd-icon"><img alt="Indicador de Alta Temperatura" class="hb-lcd-icon-art" src="assets/23_High_Temperature_Indicator_UmkEbOgCKoKyxoxDSINcfO6LnQd_f548c6504f49.png"/>
 </td>
 <td class="hb-lcd-name"><p>Indicador de Alta Temperatura</p></td>
 <td class="hb-lcd-description"><p>Se activó la protección por alta temperatura. El producto puede dejar de funcionar hasta que su temperatura vuelva al rango normal de operación.</p></td>
 </tr>
 <tr><td class="hb-lcd-number"><p>24</p></td>
-<td class="hb-lcd-icon"><img alt="Indicador de Baja Temperatura" class="hb-lcd-icon-art" src="assets/24_Low_Temperature_Indicator_PkYSbqrsooorJhxkTOfcUutJnKu_bdbf602db74a.png"/>
+<td class="hb-lcd-icon"><img alt="Indicador de Baja Temperatura" class="hb-lcd-icon-art" src="assets/24_Low_Temperature_Indicator_JDMEbD96noSbyWxbOnVcgip1nab_bdbf602db74a.png"/>
 </td>
 <td class="hb-lcd-name"><p>Indicador de Baja Temperatura</p></td>
 <td class="hb-lcd-description"><p>Se activó la protección por baja temperatura. El producto puede dejar de funcionar hasta que su temperatura vuelva al rango normal de operación.</p></td>
 </tr>
 <tr><td class="hb-lcd-number"><p>25</p></td>
-<td class="hb-lcd-icon"><img alt="Código de fallo" class="hb-lcd-icon-art" src="assets/25_Fault_code_LaTmb4IQYo3vwvxMqQNcC2RgnIf_ce913ebfc775.png"/>
+<td class="hb-lcd-icon"><img alt="Código de fallo" class="hb-lcd-icon-art" src="assets/25_Fault_code_Oz87bX3BGo8H7Zxe0XvcTd7FnJL_ce913ebfc775.png"/>
 </td>
 <td class="hb-lcd-name"><p>Código de fallo</p></td>
 <td class="hb-lcd-description"><p>Se ha producido un error en el producto. Por favor, consulte la sección de solución de problemas para más detalles.</p></td>
 </tr>
 <tr><td class="hb-lcd-number"><p>26</p></td>
-<td class="hb-lcd-icon"><img alt="Potencia de Salida" class="hb-lcd-icon-art" src="assets/26_Output_Power_MRflbp7C7oqGbdxeWO1cl79XnBc_58c1d3604ca7.png"/>
+<td class="hb-lcd-icon"><img alt="Potencia de Salida" class="hb-lcd-icon-art" src="assets/26_Output_Power_PviebR618oofvKxcKVRcHLlInqd_58c1d3604ca7.png"/>
 </td>
 <td class="hb-lcd-name"><p>Potencia de Salida</p></td>
 <td class="hb-lcd-description"><p>Muestra la potencia de salida en vatios.</p></td>
 </tr>
 <tr><td class="hb-lcd-number"><p>27</p></td>
-<td class="hb-lcd-icon"><img alt="Tiempo de Descarga Restante" class="hb-lcd-icon-art" src="assets/27_Remaining_Discharge_Time_QvCQbFmEhoQR3kxgWt4c6H9zn0b_9b148ea95d3a.png"/>
+<td class="hb-lcd-icon"><img alt="Tiempo de Descarga Restante" class="hb-lcd-icon-art" src="assets/27_Remaining_Discharge_Time_JEpobf59DoBV4dxWlnxcNtIinke_9b148ea95d3a.png"/>
 </td>
 <td class="hb-lcd-name"><p>Tiempo de Descarga Restante</p></td>
 <td class="hb-lcd-description"><p>Muestra el tiempo de descarga restante.</p></td>
@@ -2397,7 +2369,7 @@ Para obtener asistencia, comunícate con el servicio al cliente de Jackery.</p><
 
 
 
-<figure class="hb-operation-figure hb-operation-layout-status-right hb-has-composite-art" data-operation-id="main-power" data-source-fragment-sha256="a0fd30b34ef296a445b7cb3073debee1f568f09eca4a0caf4aa87da2044ddd06" data-web-replace-key="operation.main-power"><div aria-hidden="true" class="hb-composite-stage"><img alt="" class="hb-composite-art" loading="lazy" src="assets/operation.main-power_es_1593f45faaa4_1593f45faaa4.png"/></div><div class="hb-operation-stage"><img alt="Operación de encendido/apagado." class="hb-operation-art" src="assets/op_main_power_74004806e6c0.png" style="width: 360px;" width="360" height="141" /><div class="line-block hb-operation-steps" data-callout-id="operation.main-power.steps" style="--hb-x:74.5%;--hb-y:18%;--hb-width:19%;--hb-height:31%"><div class="hb-operation-step" data-callout-id="operation.main-power.on" data-step-id="on"><div class="line" data-step-id="on" data-step-part="label"><strong>Encendido</strong></div><div class="line" data-step-id="on" data-step-part="instruction">Presione una vez</div></div><div class="hb-operation-step" data-callout-id="operation.main-power.off" data-step-id="off"><div class="line" data-step-id="off" data-step-part="label"><strong>Apagado</strong></div><div class="line" data-step-id="off" data-step-part="instruction">Mantén presionado durante 3 segundos</div></div></div><div class="hb-operation-supporting-copy" data-callout-id="operation.main-power.supporting-copy"><div class="line"><strong>Tiempo de espera predeterminado:</strong> 2 horas.</div><div class="line">El producto se apagará automáticamente después de 2 horas de inactividad, sin carga ni descarga.</div><div class="line">*El tiempo en espera puede configurarse en la App de Jackery.</div></div></div></figure>
+<figure class="hb-operation-figure hb-operation-layout-status-right" data-operation-id="main-power" data-source-fragment-sha256="c29619354cf6c55e4252baefd2c413bdbe203f4cb6e59bf8821956e9d07e37dc" data-web-replace-key="operation.main-power"><div class="hb-operation-stage"><img alt="Operación de encendido/apagado." class="hb-operation-art" src="assets/op_main_power_74004806e6c0.png" style="width: 360px;" width="360" height="141" /><div class="line-block hb-operation-steps" data-callout-id="operation.main-power.steps" style="--hb-x:74.5%;--hb-y:18%;--hb-width:19%;--hb-height:31%"><div class="hb-operation-step" data-callout-id="operation.main-power.on" data-step-id="on"><div class="line" data-step-id="on" data-step-part="label"><strong>Encendido</strong></div><div class="line" data-step-id="on" data-step-part="instruction">Presione una vez</div></div><div class="hb-operation-step" data-callout-id="operation.main-power.off" data-step-id="off"><div class="line" data-step-id="off" data-step-part="label"><strong>Apagado</strong></div><div class="line" data-step-id="off" data-step-part="instruction">Mantenga presionado durante más de 3 segundos</div></div></div><div class="hb-operation-supporting-copy" data-callout-id="operation.main-power.supporting-copy"><div class="line"><strong>Tiempo de espera predeterminado:</strong> 2 horas.</div><div class="line">El producto se apagará automáticamente después de 2 horas de inactividad, sin carga ni descarga.</div><div class="line">*El tiempo de espera puede configurarse en la aplicación Jackery.</div></div></div></figure>
 
 
 
@@ -2430,12 +2402,12 @@ Cuando el modo de ahorro de energía está activado, el producto se apagará aut
 
 
 
-El producto puede cargar la batería de su automóvil utilizando el cable de carga de batería para automóvil Jackery 12V, que se vende por separado y está disponible en nuestro sitio web.
+El producto puede cargar la batería de su automóvil utilizando el cable de carga de batería para automóvil Jackery de 12 V, que se vende por separado y está disponible en nuestro sitio web.
 
 
 
 <table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>PRECAUCIÓN</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
-<li><p>El puerto del mechero para auto solo es compatible con baterías de automóvil de 12V y no es adecuado para sistemas de 24V.</p></li>
+<li><p>El puerto CC de 12 V solo es compatible con baterías de automóvil de 12 V y no es adecuado para sistemas de 24 V.</p></li>
 <li><p>No arranque el automóvil mientras el producto está cargando la batería del automóvil a través del puerto de salida CC de 12V, ya que esto podría dañar el producto.</p></li>
 <li><p>Esta función está diseñada únicamente para uso de emergencia y no puede cargar una batería de automóvil descargada o dañada.</p></li>
 </ul>
@@ -2445,7 +2417,9 @@ El producto puede cargar la batería de su automóvil utilizando el cable de car
 
 ## MODO DE AHORRO DE ENERGÍA
 
-Para evitar un consumo innecesario de batería por olvidar apagar la salida, el producto activa por defecto el Modo de Ahorro de Energía. Cuando la salida de CA o CC/USB está encendida, el icono del modo de ahorro de energía se mostrará en la pantalla LCD. En este modo, si no hay ningún dispositivo conectado o si el consumo del dispositivo conectado está por debajo de cierto umbral (25 W en salida de CA o 2 W en salida de CC/USB), la salida correspondiente se apagará automáticamente después del tiempo configurado. La configuración predeterminada es 12 horas. La duración del Modo de Ahorro de Energía puede configurarse en la aplicación Jackery en 1H, 2 H, 8 H, 12 H o 24 H. Si se establece en \"Never Off\", el Modo de Ahorro de Energía se desactivará.
+Para evitar un consumo innecesario de batería por olvidar apagar la salida, el producto activa por defecto el Modo de Ahorro de Energía. Cuando la salida de CA o CC/USB está encendida, el icono del modo de ahorro de energía se mostrará en la pantalla LCD. En este modo, si no hay ningún dispositivo conectado o si el consumo del dispositivo conectado está por debajo de cierto umbral (25 W en salida de CA o 2 W en salida de CC/USB), la salida correspondiente se apagará automáticamente después del tiempo configurado. La configuración predeterminada es 12 horas. La duración del Modo de Ahorro de Energía puede configurarse en la aplicación Jackery en 1 H, 2 H, 8 H, 12 H o 24 H. Si se establece en \"Never Off\", el Modo de Ahorro de Energía se desactivará.
+
+Para desactivar el modo de ahorro de energía, mantenga pulsados simultáneamente el botón de energía CA y el botón POWER durante más de 3 segundos. Una vez desactivado el modo de ahorro de energía, el icono dejará de mostrarse en la pantalla LCD y el producto no apagará automáticamente la salida de CA o CC/USB.
 
 Cuando alimente dispositivos de baja potencia (CA ≤ 25 W o CC/USB ≤ 2 W), desactive el modo de ahorro de energía para evitar que la salida se apague automáticamente durante el funcionamiento.
 
@@ -2471,7 +2445,7 @@ Cuando alimente dispositivos de baja potencia (CA ≤ 25 W o CC/USB ≤ 2 W), de
 
 ## Función de reanudación de Salida de CA y CC
 
-La función de reanudación de salida de CA/CC está desactivada de forma predeterminada. Active esta función en la aplicación para que el dispositivo memorice el estado de salida de CA/CC y reanude automáticamente las salidas de CA y CC en las condiciones definidas.
+Esta función memoriza el estado de la salida y reanuda automáticamente las salidas de CA y CC bajo condiciones definidas.
 
 
 
@@ -2508,11 +2482,11 @@ el límite</p></td>
 
 <td class="hb-lcd-mode-state" rowspan="3">En breve</td>
 <td class="hb-lcd-mode-action">Encender</td>
-<td class="hb-lcd-mode-copy">Presione el botón de encendido principal o cuando el producto se esté cargando.</td>
+<td class="hb-lcd-mode-copy">Presione el botón POWER o cuando el producto se esté cargando.</td>
 </tr>
 <tr>
 <td class="hb-lcd-mode-action">Apagar</td>
-<td class="hb-lcd-mode-copy">Presione el botón de encendido principal.</td>
+<td class="hb-lcd-mode-copy">Presione el botón POWER.</td>
 </tr>
 <tr>
 <td class="hb-lcd-mode-action">Apagado automático</td>
@@ -2521,11 +2495,11 @@ el límite</p></td>
 <tr>
 <td class="hb-lcd-mode-state" rowspan="3">Estable en (durante el estado de carga o descarga)</td>
 <td class="hb-lcd-mode-action">Encender</td>
-<td class="hb-lcd-mode-copy">Presione dos veces el botón de encendido principal cuando el producto esté encendido.</td>
+<td class="hb-lcd-mode-copy">Presione dos veces el botón POWER cuando el producto esté encendido.</td>
 </tr>
 <tr>
 <td class="hb-lcd-mode-action">Apagar</td>
-<td class="hb-lcd-mode-copy">Presione el botón de encendido principal.</td>
+<td class="hb-lcd-mode-copy">Presione el botón POWER.</td>
 </tr>
 <tr>
 <td class="hb-lcd-mode-action">Apagado automático</td>
@@ -2535,20 +2509,20 @@ el límite</p></td>
 
 
 
-También puedes configurar el modo de visualización de la pantalla en la aplicación Jackery.
+También puede configurar el modo de visualización de la pantalla en la aplicación Jackery.
 
 ## COMBINACIONES DE TECLAS
 
 | Botones | Operación | Función |
 |----|----|----|
-| Botón de encendido principal + botón de energía de CA | Mantenga pulsados ambos botones durante 3 segundos | Encender/apagar el modo de ahorro de energía |
-| Botón de encendido principal + botón de energía CC/USB | Mantenga pulsados ambos botones durante 3 segundos | Restablecer Wi-Fi y Bluetooth |
+| Botón POWER + botón de energía de CA | Mantenga pulsados ambos botones durante 3 segundos | Encender/apagar el modo de ahorro de energía |
+| Botón POWER + botón de energía CC/USB | Mantenga pulsados ambos botones durante 3 segundos | Restablecer Wi-Fi y Bluetooth |
 | Botón de energía CC/USB + botón de energía de CA | Mantenga pulsados ambos botones durante 1 segundo | Encender/apagar Wi-Fi y Bluetooth |
-| Botón de encendido principal + botón de luz LED | Mantenga pulsados ambos botones durante 1 segundo | Activar/desactivar el modo de carga de emergencia |
+| Botón POWER + botón de luz LED | Mantenga pulsados ambos botones durante 1 segundo | Activar/desactivar el modo de carga de emergencia |
 
 # FUENTE DE ALIMENTACIÓN ININTERRUMPIDA (UPS)
 
-Conecte el producto a una toma de corriente con el cable de carga de CA, luego presione botón de encendido de corriente alterna y alimente sus aparatos al mismo tiempo al mismo tiempo.
+Conecte el producto a una toma de corriente con el cable de carga de CA, luego presione el botón de energía CA y alimente sus electrodomésticos al mismo tiempo.
 
 <img src="assets/op_ups_mode_e8803f665abb.png" style="width: 360px;" width="360" height="202" alt="Diagrama de conexión UPS." />
 
@@ -2558,7 +2532,7 @@ En caso de una pérdida repentina de energía de la red, Jackery Explorer 1000 c
 
 En modo UPS, la potencia máxima de salida de la unidad alcanza 12 A antes de los cortes de energía. Como la carga y descarga simultáneas están habilitadas en modo bypass,
 
-la potencia de salida real es menor que la potencia nominal en este modo, pero vuelve a la potencia nominal durante los cortes.
+la potencia de salida real es inferior a la potencia nominal en este modo, pero vuelve a la potencia nominal durante los cortes.
 
 
 
@@ -2582,9 +2556,9 @@ Cuando la carga en la pared de CA y la carga solar están activadas al mismo tie
 
 
 <table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>NOTA</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
-<li><p>La temperatura de carga recomendada para el producto es de 14 °F a 113 °F / -10 °C a 45 °C, y la temperatura de descarga es de 14°F a 113°F / -10°C a 45°C.</p></li>
+<li><p>La temperatura de carga recomendada para el producto es de 32 °F a 113 °F / 0 °C a 45 °C, y la temperatura de descarga es de 14°F a 113°F / -10°C a 45°C.</p></li>
 <li><p>Operar el producto fuera de este rango de temperatura puede limitar sus capacidades de carga y descarga, e incluso impedir la carga o descarga.</p></li>
-<li><p>La potencia de carga y la capacidad de la batería del producto pueden variar debido a fluctuaciones de temperatura.</p></li>
+<li><p>La potencia de carga y la capacidad de la batería del producto pueden variar debido a las fluctuaciones de temperatura.</p></li>
 </ul>
 </td></tr></tbody></table>
 
@@ -2598,15 +2572,15 @@ Conecte el cable de carga de CA al puerto de entrada de CA del producto y a una 
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>PRECAUCIÓN</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Asegúrese de que el cable de carga de CA esté completamente y firmemente insertado en el puerto de entrada de CA. Una conexión incompleta puede provocar corriente inestable, sobrecalentamiento, mal contacto o fallos en el funcionamiento del producto.</p></td></tr></tbody></table>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>PRECAUCIÓN</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Asegúrese de que el cable de carga de CA esté completamente y firmemente insertado en el puerto de entrada de CA. Una conexión incompleta puede causar corriente inestable, sobrecalentamiento, mal contacto o fallos en el funcionamiento del producto.</p></td></tr></tbody></table>
 
 
 
 **Modo de Carga de Emergencia**
 
-Bajo este modo, puedes cargar rápidamente la estación de energía portátil utilizando el método de carga de CA. Esta función de carga de emergencia se puede activar o desactivar a través de la aplicación Jackery. Cuando está en modo de carga de emergencia, la luz circular que indica el estado de carga (SOC) parpadeará más rápido. \* Para maximizar la vida útil de la batería, es mejor cargar a la velocidad estándar. La carga de emergencia debe reservarse para situaciones que requieren un aumento rápido de energía y no se recomienda para un uso regular y prolongado.
+Bajo este modo, puedes cargar rápidamente la estación de energía portátil utilizando el método de carga de CA. Esta función de carga de emergencia se puede activar o desactivar a través de la aplicación Jackery. Cuando está en modo de carga de emergencia, la luz circular que indica el estado de carga (SOC) parpadeará más rápido. \*Para maximizar la vida útil de la batería, es mejor cargar a la velocidad estándar. La carga de emergencia debe reservarse para situaciones que requieren un aumento rápido de energía y no se recomienda para un uso regular y prolongado.
 
-## CARGA MEDIANTE PANELES SOLARES (SE VENDE POR SEPARADO)
+## CARGA MEDIANTE PANELES SOLARES (SE VENDEN POR SEPARADO)
 
 Jackery Explorer 1000 cuenta con dos puertos de entrada DC8020 y es compatible con los paneles solares de Jackery.
 
@@ -2618,32 +2592,32 @@ Si se necesita conectar dos paneles solares a un solo puerto de entrada DC8020 a
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>PRECAUCIÓN</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Un puerto de entrada DC8020 puede conectarse a un máximo de dos paneles solares.</p></td></tr></tbody></table>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>PRECAUCIÓN</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Un puerto de entrada DC8020 puede conectarse como máximo a dos paneles solares.</p></td></tr></tbody></table>
 
 
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>PRECAUCIÓN</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Asegúrese de que el voltaje de entrada para ambos puertos de entrada CC sea el mismo. De lo contrario, podría dañar el producto. Por ejemplo:</p>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>PRECAUCIÓN</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Asegúrese de que el voltaje de entrada para ambos puertos de entrada de CC sea el mismo. De lo contrario, podría dañar el producto. Por ejemplo:</p>
 <ul class="simple">
 <li><p>Utilizar paneles solares Jackery del mismo modelo y la misma cantidad de paneles al conectar paneles solares a ambos puertos de entrada DC8020.</p></li>
-<li><p>No cargue el producto utilizando simultáneamente un cargador de automóvil y un panel solar. Hacerlo podría quemar el fusible del automóvil o resultar en un fallo de carga.</p></li>
+<li><p>No cargue el producto utilizando simultáneamente un cargador de vehículo y un panel solar. Esto puede fundir el fusible del vehículo o provocar un fallo de carga.</p></li>
 </ul>
 </td></tr></tbody></table>
 
 
 
-Se recomienda usar el panel solar Jackery para cargar el Jackery Explorer 1000. Asegúrese de que el voltaje en circuito abierto (V<sub>oc</sub>) del rango de entrada CC (16 V-60 V) del Jackery Explorer 1000. Jackery no se hace responsable de ningún daño o pérdida resultante del uso de paneles solares de terceros.
+Se recomienda usar el panel solar Jackery para cargar el Jackery Explorer 1000. Asegúrese de que el voltaje en circuito abierto (V<sub>oc</sub>) del panel solar se sitúe dentro del rango de entrada de CC de Jackery Explorer 1000 (16V-60V). Jackery no se hace responsable de pérdidas causadas por el uso de paneles solares de otras marcas.
 
-## CARGA CON UN CARGADOR DE EN EL VEHÍCULO (SE VENDE POR SEPARADO)
+## CARGA CON UN CARGADOR PARA VEHÍCULO (SE VENDE POR SEPARADO)
 
-Este producto puede cargarse usando un cargador para auto de 12V. Asegúrese de que el cargador de coche y el encendedor de coche ofrecen una buena conexión.
+Este producto puede cargarse usando un cargador para vehículo de 12 V. Asegúrese de que el cargador de vehículo y el encendedor de vehículo ofrezcan una buena conexión.
 
 
 
-<figure class="hb-reference-figure hb-has-composite-art" data-reference-id="charging-car" data-source-fragment-sha256="c89d24add5f72ebe60ab0d6211d13e0c062d0f7b30c7960ecaf9b813247fcede" data-web-replace-key="reference.charging-car"><div aria-hidden="true" class="hb-composite-stage"><img alt="" class="hb-composite-art" loading="lazy" src="assets/reference.charging-car_es_be3e23850314_be3e23850314.png"/></div><div class="hb-reference-semantic" data-reference-id="charging-car.semantic"><img alt="Diagrama de carga en vehículo." class="hb-reference-art hb-composite-art" src="assets/car_charge_a918de3a4a3b.png" style="width: 360px;" width="360" height="132" /><div class="line-block hb-reference-labels">
+<figure class="hb-reference-figure" data-reference-id="charging-car" data-source-fragment-sha256="d3390e4dfab4156ab727b1b6694fd841a865ee0aecc4c3ff8d6db3327fd2c95a" data-web-replace-key="reference.charging-car"><div class="hb-reference-semantic" data-reference-id="charging-car.semantic"><img alt="Diagrama de carga en vehículo." class="hb-reference-art hb-composite-art" src="assets/car_charge_a918de3a4a3b.png" style="width: 360px;" width="360" height="132" /><div class="line-block hb-reference-labels">
 <div class="line">Vehículo</div>
-<div class="line">※ El cable de carga para auto se vende por separado.</div>
+<div class="line">※El cable de carga para vehículo se vende por separado.</div>
 </div></div></figure>
 
 
@@ -2652,7 +2626,7 @@ Este producto puede cargarse usando un cargador para auto de 12V. Asegúrese de 
 
 <table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>PRECAUCIÓN</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>Por favor, encienda el vehículo antes de cargar su estación de energía.</p></li>
-<li><p>Si el vehículo circula por caminos accidentados, está prohibido usar el cargador de coche para evitar que se queme debido a una mala conexión. La empresa no se responsabiliza por pérdidas causadas por un uso incorrecto.</p></li>
+<li><p>Si el vehículo circula por caminos accidentados, está prohibido usar el cargador de vehículo para evitar un funcionamiento no conforme. La empresa no se responsabilizará por ninguna pérdida causada por un funcionamiento no conforme.</p></li>
 <li><p>La carga en vehículo solo es aplicable a vehículos con 12 V CC, no a 24 V CC. Por favor, no cargue este producto en vehículos de 24 V para evitar lesiones personales y daños materiales.</p></li>
 </ul>
 </td></tr></tbody></table>
@@ -2765,7 +2739,7 @@ Si aparece alguno de los siguientes códigos de fallo, siga las acciones correct
 
 
 
-<figure aria-label="TEMPERATURA DE FUNCIONAMIENTO" class="hb-spec-table-composition"><table class="manual-table manual-spec-table hb-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup><tbody><tr><th class="manual-spec-label hb-spec-label" scope="row">Temperatura de carga</th><td class="manual-spec-value hb-spec-value">14 °F a 113 °F / -10 °C a 45 °C</td></tr><tr><th class="manual-spec-label hb-spec-label" scope="row">Temperatura de descarga</th><td class="manual-spec-value hb-spec-value">14°F a 113°F / -10°C a 45°C</td></tr></tbody></table></figure>
+<figure aria-label="TEMPERATURA DE FUNCIONAMIENTO" class="hb-spec-table-composition"><table class="manual-table manual-spec-table hb-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup><tbody><tr><th class="manual-spec-label hb-spec-label" scope="row">Temperatura de carga</th><td class="manual-spec-value hb-spec-value">32 °F a 113 °F / 0 °C a 45 °C</td></tr><tr><th class="manual-spec-label hb-spec-label" scope="row">Temperatura de descarga</th><td class="manual-spec-value hb-spec-value">14°F a 113°F / -10°C a 45°C</td></tr></tbody></table></figure>
 
 
 
@@ -2779,7 +2753,7 @@ Si aparece alguno de los siguientes códigos de fallo, siga las acciones correct
 
 
 
-<figure aria-label="GARANTÍA" class="hb-warranty-intro-composition"><div class="hb-warranty-intro-panel"><p><strong>Solo ofrecemos nuestra garantía a clientes que compren en el sitio web oficial de Jackery, plataformas de terceros con la marca Jackery o distribuidores autorizados locales.</strong></p></div><div class="hb-warranty-local-note"><p>* El periodo de garantía y los detalles pueden variar según las leyes, regulaciones y distribuidores autorizados locales.</p></div></figure>
+<figure aria-label="GARANTÍA" class="hb-warranty-intro-composition"><div class="hb-warranty-intro-panel"><p><strong>Solo ofrecemos nuestra garantía a clientes que compren en el sitio web oficial de Jackery, plataformas de terceros con la marca Jackery o distribuidores autorizados locales.</strong></p></div><div class="hb-warranty-local-note"><p>*El período de garantía y los detalles pueden variar según las leyes, regulaciones y distribuidores autorizados locales.</p></div></figure>
 
 
 
@@ -2795,7 +2769,7 @@ Si aparece alguno de los siguientes códigos de fallo, siga las acciones correct
 
 
 
-<figure aria-label="Período de garantía" class="hb-warranty-period-card"><div class="hb-warranty-period-grid"><div aria-label="3 AÑOS Garantía Estándar" class="hb-warranty-period-item"><div class="hb-warranty-period-heading"><span class="hb-warranty-year-badge">3</span><div class="hb-warranty-period-title"><strong class="hb-warranty-years-unit">AÑOS</strong><strong class="hb-warranty-period-label">Garantía Estándar</strong></div></div><div class="hb-warranty-period-copy">
+<figure aria-label="Período de garantía" class="hb-warranty-period-card"><div class="hb-warranty-period-grid"><div aria-label="3 AÑOS Garantía estándar" class="hb-warranty-period-item"><div class="hb-warranty-period-heading"><span class="hb-warranty-year-badge">3</span><div class="hb-warranty-period-title"><strong class="hb-warranty-years-unit">AÑOS</strong><strong class="hb-warranty-period-label">Garantía estándar</strong></div></div><div class="hb-warranty-period-copy">
 <p>El período de garantía estándar de Jackery Explorer 1000 es de 36 meses. En cada caso, el período de garantía se mide a partir de la fecha de compra por parte del comprador consumidor original. Para establecer la fecha de inicio del período de garantía, se necesita el recibo de venta de la primera compra del consumidor u otra prueba documental razonable.</p>
 </div></div><div aria-label="2 AÑOS Garantía extendida" class="hb-warranty-period-item"><div class="hb-warranty-period-heading"><span class="hb-warranty-year-badge">2</span><div class="hb-warranty-period-title"><strong class="hb-warranty-years-unit">AÑOS</strong><strong class="hb-warranty-period-label">Garantía extendida</strong></div></div><div class="hb-warranty-period-copy">
 <p>Para activar la ampliación de garantía, debe registrar su producto en línea o ponerse en contacto con nuestro equipo de atención al cliente en <a class="reference external" href="mailto:hello@jackery.com">hello@jackery.com</a> para ampliar el período de garantía estándar.</p>
@@ -2807,7 +2781,7 @@ Si aparece alguno de los siguientes códigos de fallo, siga las acciones correct
 
 
 
-<figure aria-label="Reparación o sustitución" class="hb-warranty-card" data-warranty-card-index="3"><p>Jackery reparará o sustituirá (a cargo de Jackery) cualquier producto Jackery que no funcione durante el periodo de garantía aplicable debido a defectos en la mano de obra o el material. El producto reparado o reemplazado asumirá el periodo restante de la garantía desde la fecha original de compra.</p></figure>
+<figure aria-label="Reparación o sustitución" class="hb-warranty-card" data-warranty-card-index="3"><p>Jackery reparará o sustituirá (a cargo de Jackery) cualquier producto Jackery que no funcione, durante el período de garantía aplicable, debido a defectos de acabado o de material. Un producto de sustitución asume la garantía restante del producto original.</p></figure>
 
 
 
@@ -2854,11 +2828,11 @@ Si aparece alguno de los siguientes códigos de fallo, siga las acciones correct
 
 2.1 Haga clic en el botón <span aria-label="Añadir dispositivo" class="hb-inline-add-device-icon" role="img">+</span>.
 
-2.2 Presione una vez el botón de encendido del dispositivo para encenderlo. Los iconos del wifi y del Bluetooth del dispositivo parpadearán para indicar que el dispositivo ha entrado en el modo de configuración de red. A continuación, pulse el botón \"icono parpadeante\" y permita que la aplicación se conecte a los dispositivos cercanos y abra los permisos de Bluetooth.
+2.2 Presione una vez el botón POWER del dispositivo para encenderlo. Los iconos del wifi y del Bluetooth del dispositivo parpadearán para indicar que el dispositivo ha entrado en el modo de configuración de red. A continuación, pulse el botón \"icono parpadeante\" y permita que la aplicación se conecte a los dispositivos cercanos y abra los permisos de Bluetooth.
 
 
 
-<figure class="hb-app-add-device-composition" data-reference-id="app-add-device" data-step-captions="embedded"><div class="hb-app-add-device-phone-stage"><img alt="Marcador de posición para el paso de añadir dispositivo en la aplicación." class="hb-app-add-device-phone-art" src="assets/app_add_device_steps_9b7e0cf44d0f.png"/></div><div class="hb-app-add-device-control-panel"><img alt="" aria-hidden="true" class="hb-app-add-device-control-art" loading="lazy" src="assets/app_control_panel_2b9bc2598d7a.png"/><span class="hb-app-add-device-live-label hb-app-add-device-live-label-main-power">Botón de encendido</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-dc-usb">Botón de energía CC / USB</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-ac-power">Botón Power CA</span></div></figure>
+<figure class="hb-app-add-device-composition" data-reference-id="app-add-device" data-step-captions="embedded"><div class="hb-app-add-device-phone-stage"><img alt="Marcador de posición para el paso de añadir dispositivo en la aplicación." class="hb-app-add-device-phone-art" src="assets/app_add_device_steps_9b7e0cf44d0f.png"/></div><div class="hb-app-add-device-control-panel"><img alt="" aria-hidden="true" class="hb-app-add-device-control-art" loading="lazy" src="assets/app_control_panel_2b9bc2598d7a.png"/><span class="hb-app-add-device-live-label hb-app-add-device-live-label-main-power">Botón POWER</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-dc-usb">Botón de energía CC / USB</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-ac-power">Botón Power CA</span></div></figure>
 
 
 
@@ -2869,7 +2843,7 @@ Si aparece alguno de los siguientes códigos de fallo, siga las acciones correct
 <table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>NOTA</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Si durante el proceso de vinculación se indica que "el dispositivo ha sido vinculado", se pueden utilizar las dos formas siguientes para la conexión:</p>
 <ul class="simple">
 <li><p>El propietario del dispositivo lo compartirá con otros usuarios a través de la App.</p></li>
-<li><p>Mantenga pulsados el botón de encendido y botón de energía CC / USB durante 3 segundos para reiniciar el Wi‑Fi y el Bluetooth del dispositivo y, a continuación, vuelva a vincularlo.</p></li>
+<li><p>Mantenga pulsados el botón POWER y botón de energía CC / USB durante 3 segundos para reiniciar el Wi‑Fi y el Bluetooth del dispositivo y, a continuación, vuelva a vincularlo.</p></li>
 </ul>
 </td></tr></tbody></table>
 
@@ -2917,4 +2891,4 @@ Mantenga pulsados botón de energía CC / USB y botón Power CA al mismo tiempo 
 
 ### 4.3 Para restablecer Wi-Fi y Bluetooth
 
-Pulsa el botón de encendido y botón de energía CC / USB al mismo tiempo durante 3 segundos para restablecer los ajustes de fábrica de Wi-Fi y Bluetooth. Se desvinculará la cuenta de la aplicación conectada.
+Pulsa el botón POWER y botón de energía CC / USB al mismo tiempo durante 3 segundos para restablecer los ajustes de fábrica de Wi-Fi y Bluetooth. Se desvinculará la cuenta de la aplicación conectada.
