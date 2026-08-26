@@ -48,7 +48,7 @@ LCD 디스플레이
              :alt: 자가 발전 모드
              :width: 42px
         - 자가 발전 모드
-        - | 저장된 태양광 에너지를 우선 사용하여 태양광 에너지 활용을 극대화하고 전력망 의존도를 낮춰 전기 요금을 절감합니다. 파워 스테이션은 태양광 패널과 전력망에 동시에 연결되어야 하며, 부하 전력은 바이패스 전력 한도로 제한됩니다.
+        - | 저장된 태양광 에너지를 우선 사용하여 태양광 에너지 활용을 극대화하고 전력망 의존도를 낮춰 전기 요금을 절감합니다. 제품은 태양광 패널과 전력망에 동시에 연결되어야 하며, 부하 전력은 바이패스 전력 한도로 제한됩니다.
           | 이 기능은 Jackery App에서 설정/해제할 수 있습니다. 장치 전원이 꺼져도 이 설정은 유지됩니다.
       * - 6
         - .. image:: _repo_assets/data/phase2/_attachments/lcd_icons/6_TOU_Mode_BjEkbz0rFo6Bw4xiwNpcod9qnnc.png
@@ -63,8 +63,8 @@ LCD 디스플레이
              :alt: UPS
              :width: 42px
         - UPS
-        - | **켜짐:** 제품이 바이패스 모드로 작동 중입니다. AC 포트에 연결된 부하는 파워 스테이션이 아닌 전력망에서 전력을 소비합니다. 전력망 전원이 갑자기 중단되면 제품은 10ms 이내에 자동으로 배터리 전력으로 전환됩니다.
-          | **꺼짐:** 제품은 바이패스 모드에서 작동하지 않습니다. AC 포트에 연결된 부하는 파워 스테이션의 내부 배터리에서 전원을 공급받습니다.
+        - | **켜짐:** 제품이 바이패스 모드로 작동 중입니다. AC 포트에 연결된 부하는 제품이 아닌 전력망에서 전력을 소비합니다. 전력망 전원이 갑자기 중단되면 제품은 10ms 이내에 자동으로 배터리 전력으로 전환됩니다.
+          | **꺼짐:** 제품은 바이패스 모드에서 작동하지 않습니다. AC 포트에 연결된 부하는 제품의 내부 배터리에서 전원을 공급받습니다.
       * - 8
         - .. image:: _repo_assets/data/phase2/_attachments/lcd_icons/8_AC_Power_Indicator_HFPSbvWBgosvCux69jMcuWe6nnh.png
              :alt: AC 전원 표시기
@@ -157,10 +157,8 @@ LCD 디스플레이
              :alt: 에너지 절약 모드
              :width: 42px
         - 에너지 절약 모드
-        - | AC1/2 또는 DC/USB 전원 버튼을 눌러 AC 또는 DC 출력이 켜질 때:
-          | **켜짐:** 에너지 절약 모드가 활성화되어 있습니다.
+        - | **켜짐:** 에너지 절약 모드가 활성화되어 있습니다.
           | **꺼짐:** 에너지 절약 모드가 비활성화되어 있습니다.
-          | 장치 전원이 꺼져도 이 설정은 유지됩니다.
       * - 23
         - .. image:: _repo_assets/data/phase2/_attachments/lcd_icons/23_High_Temperature_Indicator_UmkEbOgCKoKyxoxDSINcfO6LnQd.png
              :alt: 고온 표시기
@@ -202,9 +200,9 @@ LCD 디스플레이
       \HBLcdIconRow{2}{2_Bluetooth_HVgvbJhq5o4EDKxhm7McCF4FnjB.png}{블루투스}{\textbf{켜짐:} 블루투스가 연결되었습니다. \newline \textbf{점멸:} 블루투스에 연결할 준비가 되었습니다. \newline \textbf{꺼짐:} 블루투스 연결이 해제되었습니다.}
       \HBLcdIconRow{3}{3_Quiet_Charging_Mode_WLkMbiHS1oGsOtxUCp7cRhFAn1g.png}{조용한 충전 모드}{\textbf{켜짐:} 충전 중 소음이 크게 줄어들지만, 충전 전력이 낮아지고 충전 속도가 느려집니다. \newline \textbf{꺼짐:} 조용한 충전 모드가 비활성화됩니다. \newline 이 기능은 Jackery App에서 설정/해제할 수 있습니다. 이 설정은 장치 전원이 꺼져도 유지됩니다.}
       \HBLcdIconRow{4}{4_Charging_Plan_M96RbyZQxoGjRRxQHsuczeIln1b.png}{충전 계획}{Jackery Explorer 3000 휴대용 파워뱅크의 충전 시간을 사용자 지정합니다. 전기 요금이 변동하는 상황에 적합하며, 피크 시간과 오프피크 시간에 따라 충전 계획을 세워 전기 요금을 절약할 수 있습니다. \newline 이 기능은 Jackery App에서 설정/해제할 수 있습니다. 이 설정은 장치 전원이 꺼져도 유지됩니다.}
-      \HBLcdIconRow{5}{5_Self-powered_Mode_FYTnb9vttoexjbxVMchcJaobnCg.png}{자가 발전 모드}{저장된 태양광 에너지를 우선 사용하여 태양광 에너지 활용을 극대화하고 전력망 의존도를 낮춰 전기 요금을 절감합니다. 파워 스테이션은 태양광 패널과 전력망에 동시에 연결되어야 하며, 부하 전력은 바이패스 전력 한도로 제한됩니다. \newline 이 기능은 Jackery App에서 설정/해제할 수 있습니다. 장치 전원이 꺼져도 이 설정은 유지됩니다.}
+      \HBLcdIconRow{5}{5_Self-powered_Mode_FYTnb9vttoexjbxVMchcJaobnCg.png}{자가 발전 모드}{저장된 태양광 에너지를 우선 사용하여 태양광 에너지 활용을 극대화하고 전력망 의존도를 낮춰 전기 요금을 절감합니다. 제품은 태양광 패널과 전력망에 동시에 연결되어야 하며, 부하 전력은 바이패스 전력 한도로 제한됩니다. \newline 이 기능은 Jackery App에서 설정/해제할 수 있습니다. 장치 전원이 꺼져도 이 설정은 유지됩니다.}
       \HBLcdIconRow{6}{6_TOU_Mode_BjEkbz0rFo6Bw4xiwNpcod9qnnc.png}{TOU 모드}{\textbf{켜짐:} TOU 모드가 활성화되었습니다(기본 백업 SOC: 60\%). 피크 시간대에는 저장된 에너지가 백업 SOC를 초과할 경우 배터리 방전을 우선하여 피크 전기 요금을 줄입니다. 비피크 시간대에는 전력망에서 배터리를 충전하여 피크 절감 및 부하 평준화를 달성합니다. \newline \textbf{꺼짐:} TOU 모드가 비활성화되었습니다. 제품은 TOU(시간대별 요금제) 전략을 따르지 않으며, 기본 전원 공급 및 충전 로직에 따라 작동합니다. \newline 이 기능은 Jackery App에서 설정/해제할 수 있습니다. 장치 전원이 꺼져도 이 설정은 유지됩니다.}
-      \HBLcdIconRow{7}{7_UPS_Lgdgb8pvvoGwaLxSf8ec2QeHn3c.png}{UPS}{\textbf{켜짐:} 제품이 바이패스 모드로 작동 중입니다. AC 포트에 연결된 부하는 파워 스테이션이 아닌 전력망에서 전력을 소비합니다. 전력망 전원이 갑자기 중단되면 제품은 10ms 이내에 자동으로 배터리 전력으로 전환됩니다. \newline \textbf{꺼짐:} 제품은 바이패스 모드에서 작동하지 않습니다. AC 포트에 연결된 부하는 파워 스테이션의 내부 배터리에서 전원을 공급받습니다.}
+      \HBLcdIconRow{7}{7_UPS_Lgdgb8pvvoGwaLxSf8ec2QeHn3c.png}{UPS}{\textbf{켜짐:} 제품이 바이패스 모드로 작동 중입니다. AC 포트에 연결된 부하는 제품이 아닌 전력망에서 전력을 소비합니다. 전력망 전원이 갑자기 중단되면 제품은 10ms 이내에 자동으로 배터리 전력으로 전환됩니다. \newline \textbf{꺼짐:} 제품은 바이패스 모드에서 작동하지 않습니다. AC 포트에 연결된 부하는 제품의 내부 배터리에서 전원을 공급받습니다.}
       \end{HBLcdIconTable}
       \clearpage
       \begin{HBLcdIconTable}
@@ -221,7 +219,7 @@ LCD 디스플레이
       \HBLcdIconRow{18}{18_Remaining_Battery_Percentage_VkJcbUDbUoYC1hxrU6rc168OnJe.png}{남은 배터리 백분율}{남은 배터리 백분율을 표시합니다.}
       \HBLcdIconRow{19}{19_Low_Battery_Indicator_KDk9bhs8poHUBdx96PLckPganhd.png}{배터리 부족 표시기}{\textbf{켜짐:} 배터리 잔량이 20\% 미만입니다. \newline \textbf{점멸:} 배터리 잔량이 5\% 미만입니다. \newline \textbf{꺼짐:} 배터리 잔량이 20\% 이상이거나 제품이 충전 중입니다.}
       \HBLcdIconRow{20}{20_Discharge_Timer_DHPMbkjSWoiuALxJyJ8cWyQOn0e.png}{방전 타이머}{\textbf{켜짐:} 방전 타이머가 설정되어 있습니다. \newline \textbf{꺼짐:} 방전 타이머가 설정되어 있지 않습니다. \newline 이 기능은 Jackery App에서 설정/해제할 수 있습니다. 장치 전원이 꺼지면 이 설정은 유지되지 않습니다.}
-      \HBLcdIconRow{22}{22_Energy_Saving_Mode_O4Jdb5pUQoCBAqx0sfQcm9Nbntd.png}{에너지 절약 모드}{AC1/2 또는 DC/USB 전원 버튼을 눌러 AC 또는 DC 출력이 켜질 때: \newline \textbf{켜짐:} 에너지 절약 모드가 활성화되어 있습니다. \newline \textbf{꺼짐:} 에너지 절약 모드가 비활성화되어 있습니다. \newline 장치 전원이 꺼져도 이 설정은 유지됩니다.}
+      \HBLcdIconRow{22}{22_Energy_Saving_Mode_O4Jdb5pUQoCBAqx0sfQcm9Nbntd.png}{에너지 절약 모드}{\textbf{켜짐:} 에너지 절약 모드가 활성화되어 있습니다. \newline \textbf{꺼짐:} 에너지 절약 모드가 비활성화되어 있습니다.}
       \HBLcdIconRow{23}{23_High_Temperature_Indicator_UmkEbOgCKoKyxoxDSINcfO6LnQd.png}{고온 표시기}{고온 보호가 작동됩니다. 온도가 정상 작동 범위로 돌아올 때까지 제품이 작동을 중지할 수 있습니다.}
       \HBLcdIconRow{24}{24_Low_Temperature_Indicator_JDMEbD96noSbyWxbOnVcgip1nab.png}{저온 표시기}{저온 보호가 작동됩니다. \newline 온도가 정상 작동 범위로 돌아올 때까지 제품의 작동이 중지될 수 있습니다.}
       \HBLcdIconRow{25}{25_Fault_code_Oz87bX3BGo8H7Zxe0XvcTd7FnJL.png}{오류 코드}{제품에 오류가 발생했습니다. 자세한 내용은 문제 해결 섹션을 참조하십시오.}
