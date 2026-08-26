@@ -161,8 +161,10 @@ LCD 디스플레이
              :alt: 에너지 절약 모드
              :width: 42px
         - 에너지 절약 모드
-        - | **켜짐:** 에너지 절약 모드가 활성화되어 있습니다.
+        - | AC 또는 DC/USB 전원 버튼을 눌러 AC 또는 DC 출력이 켜질 때:
+          | **켜짐:** 에너지 절약 모드가 활성화되어 있습니다.
           | **꺼짐:** 에너지 절약 모드가 비활성화되어 있습니다.
+          | 장치 전원이 꺼져도 이 설정은 유지됩니다.
       * - 23
         - .. image:: _repo_assets/data/phase2/_attachments/lcd_icons/23_High_Temperature_Indicator_UmkEbOgCKoKyxoxDSINcfO6LnQd.png
              :alt: 고온 표시기
@@ -223,7 +225,7 @@ LCD 디스플레이
       \HBLcdIconRow{18}{18_Remaining_Battery_Percentage_VkJcbUDbUoYC1hxrU6rc168OnJe.png}{남은 배터리 백분율}{남은 배터리 백분율을 표시합니다.}
       \HBLcdIconRow{19}{19_Low_Battery_Indicator_KDk9bhs8poHUBdx96PLckPganhd.png}{배터리 부족 표시기}{\textbf{켜짐:} 배터리 잔량이 20\% 미만입니다. \newline \textbf{점멸:} 배터리 잔량이 5\% 미만입니다. \newline \textbf{꺼짐:} 배터리 잔량이 20\% 이상이거나 제품이 충전 중입니다.}
       \HBLcdIconRow{20}{20_Discharge_Timer_DHPMbkjSWoiuALxJyJ8cWyQOn0e.png}{방전 타이머}{\textbf{켜짐:} 방전 타이머가 설정되어 있습니다. \newline \textbf{꺼짐:} 방전 타이머가 설정되어 있지 않습니다. \newline 이 기능은 Jackery App에서 설정/해제할 수 있습니다. 장치 전원이 꺼지면 이 설정은 유지되지 않습니다.}
-      \HBLcdIconRow{22}{22_Energy_Saving_Mode_O4Jdb5pUQoCBAqx0sfQcm9Nbntd.png}{에너지 절약 모드}{\textbf{켜짐:} 에너지 절약 모드가 활성화되어 있습니다. \newline \textbf{꺼짐:} 에너지 절약 모드가 비활성화되어 있습니다.}
+      \HBLcdIconRow{22}{22_Energy_Saving_Mode_O4Jdb5pUQoCBAqx0sfQcm9Nbntd.png}{에너지 절약 모드}{AC 또는 DC/USB 전원 버튼을 눌러 AC 또는 DC 출력이 켜질 때: \newline \textbf{켜짐:} 에너지 절약 모드가 활성화되어 있습니다. \newline \textbf{꺼짐:} 에너지 절약 모드가 비활성화되어 있습니다. \newline 장치 전원이 꺼져도 이 설정은 유지됩니다.}
       \HBLcdIconRow{23}{23_High_Temperature_Indicator_UmkEbOgCKoKyxoxDSINcfO6LnQd.png}{고온 표시기}{고온 보호가 작동됩니다. 온도가 정상 작동 범위로 돌아올 때까지 제품이 작동을 중지할 수 있습니다.}
       \HBLcdIconRow{24}{24_Low_Temperature_Indicator_JDMEbD96noSbyWxbOnVcgip1nab.png}{저온 표시기}{저온 보호가 작동됩니다. \newline 온도가 정상 작동 범위로 돌아올 때까지 제품의 작동이 중지될 수 있습니다.}
       \HBLcdIconRow{25}{25_Fault_code_Oz87bX3BGo8H7Zxe0XvcTd7FnJL.png}{오류 코드}{제품에 오류가 발생했습니다. 자세한 내용은 문제 해결 섹션을 참조하십시오.}
