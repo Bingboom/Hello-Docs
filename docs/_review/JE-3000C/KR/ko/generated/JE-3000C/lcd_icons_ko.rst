@@ -118,11 +118,11 @@ LCD 디스플레이
           | 이 기능이 활성화되면 제품은 SOC를 보정하기 위해 가끔 완전 충전 및 방전 주기를 수행합니다.
       * - 16
         - .. image:: _repo_assets/data/phase2/_attachments/lcd_icons/16_Charging_Power_Limit_VLf2bJfrkoCL0CxJoMNcL5ZxnCt.png
-             :alt: 충전 전력 제한
+             :alt: 충전 속도 제한
              :width: 42px
-        - 충전 전력 제한
-        - | **켜짐:** Jackery App에서 충전 전력 제한이 활성화되어 있습니다.
-          | **꺼짐:** Jackery App에서 충전 전력 제한이 비활성화되어 있습니다.
+        - 충전 속도 제한
+        - | **켜짐:** Jackery App에서 충전 속도 제한이 활성화되어 있습니다.
+          | **꺼짐:** Jackery App에서 충전 속도 제한이 비활성화되어 있습니다.
           | 장치 전원이 꺼져도 이 설정은 유지됩니다.
       * - 17
         - .. image:: _repo_assets/data/phase2/_attachments/lcd_icons/17_Battery_Power_Indicator_VLufb9exvoVLfgxz47pcfnRGnaf.png
@@ -214,7 +214,7 @@ LCD 디스플레이
       \HBLcdIconRow{13}{13_Car_Charging_Indicator_DLkibYaP1ot6d5x1S0jcUr1knlb.png}{차량 충전 표시기}{제품은 DC 12V(차량 충전) 전원을 사용해 DC 입력(DC8020)으로 충전됩니다.}
       \HBLcdIconRow{14}{14_Solar_Charging_Indicator_RgAUbPXNWoRxiHxKNgkc2gqDnEb.png}{태양광 충전 표시기}{제품은 태양광 패널을 사용해 DC 입력(DC8020)으로 충전됩니다.}
       \HBLcdIconRow{15}{15_Battery_Saving_Mode_ClYfbtOGSoK5q2xySXCcgehVn8f.png}{배터리 절약 모드}{\textbf{켜짐:} 배터리 절약 모드가 활성화되어 있습니다. 배터리 수명 연장을 위해 충전 및 방전 제한이 적용됩니다. \newline \textbf{꺼짐:} 배터리 절약 모드가 비활성화되어 있습니다. \newline 이 기능은 Jackery App에서 설정/해제할 수 있습니다. 장치 전원이 꺼져도 이 설정은 유지됩니다. \newline 이 기능이 활성화되면 제품은 SOC를 보정하기 위해 가끔 완전 충전 및 방전 주기를 수행합니다.}
-      \HBLcdIconRow{16}{16_Charging_Power_Limit_VLf2bJfrkoCL0CxJoMNcL5ZxnCt.png}{충전 전력 제한}{\textbf{켜짐:} Jackery App에서 충전 전력 제한이 활성화되어 있습니다. \newline \textbf{꺼짐:} Jackery App에서 충전 전력 제한이 비활성화되어 있습니다. \newline 장치 전원이 꺼져도 이 설정은 유지됩니다.}
+      \HBLcdIconRow{16}{16_Charging_Power_Limit_VLf2bJfrkoCL0CxJoMNcL5ZxnCt.png}{충전 속도 제한}{\textbf{켜짐:} Jackery App에서 충전 속도 제한이 활성화되어 있습니다. \newline \textbf{꺼짐:} Jackery App에서 충전 속도 제한이 비활성화되어 있습니다. \newline 장치 전원이 꺼져도 이 설정은 유지됩니다.}
       \HBLcdIconRow{17}{17_Battery_Power_Indicator_VLufb9exvoVLfgxz47pcfnRGnaf.png}{배터리 전력 표시기}{제품이 충전 중일 때 배터리 백분율 주위의 주황색 원이 순차적으로 점등됩니다. 다른 기기를 충전할 때는 주황색 원이 계속 켜져 있습니다.}
       \HBLcdIconRow{18}{18_Remaining_Battery_Percentage_VkJcbUDbUoYC1hxrU6rc168OnJe.png}{남은 배터리 백분율}{남은 배터리 백분율을 표시합니다.}
       \HBLcdIconRow{19}{19_Low_Battery_Indicator_KDk9bhs8poHUBdx96PLckPganhd.png}{배터리 부족 표시기}{\textbf{켜짐:} 배터리 잔량이 20\% 미만입니다. \newline \textbf{점멸:} 배터리 잔량이 5\% 미만입니다. \newline \textbf{꺼짐:} 배터리 잔량이 20\% 이상이거나 제품이 충전 중입니다.}

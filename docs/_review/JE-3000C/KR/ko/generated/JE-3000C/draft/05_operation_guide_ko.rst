@@ -130,7 +130,7 @@ LCD 화면
           <td rowspan="6" style="width:24%; border:1px solid #cfcfcf; padding:8px; vertical-align:top; text-align:center;">
             <img src="asset:operation/lcd_mode" alt="LCD display mode placeholder." style="max-width:140px; width:100%; height:auto; display:block; margin:0 auto;">
           </td>
-          <td rowspan="3" style="width:18%; border:1px solid #cfcfcf; padding:8px; vertical-align:top;">잠시 켜기</td>
+          <td rowspan="3" style="width:18%; border:1px solid #cfcfcf; padding:8px; vertical-align:top;">잠시 켜짐</td>
           <td style="width:12%; border:1px solid #cfcfcf; padding:8px; vertical-align:top;">켜기</td>
           <td style="width:46%; border:1px solid #cfcfcf; padding:8px; vertical-align:top;">POWER 버튼을 누르거나 제품이 충전 중일 때 켜집니다.</td>
         </tr>
@@ -153,7 +153,7 @@ LCD 화면
         </tr>
         <tr>
           <td style="border:1px solid #cfcfcf; padding:8px; vertical-align:top;">자동으로 끄기</td>
-          <td style="border:1px solid #cfcfcf; padding:8px; vertical-align:top;">2시간 동안 조작이 없으면 LCD 화면이 자동으로 꺼집니다.</td>
+          <td style="border:1px solid #cfcfcf; padding:8px; vertical-align:top;">LCD는 2시간 동안 아무 조작이 없으면 자동으로 꺼집니다.</td>
         </tr>
       </table>
 
@@ -162,8 +162,8 @@ LCD 화면
    .. raw:: latex
 
       \begin{HBLcdModeTable}{asset:operation/lcd_mode}
-      \HBLcdModeFirstGroup{잠시 켜기}{켜기}{POWER 버튼을 누르거나 제품이 충전 중일 때 켜집니다.}{끄기}{POWER 버튼을 누르십시오.}{자동으로 끄기}{2분 동안 조작이 없으면 LCD 화면이 자동으로 꺼지고 절전 모드로 전환됩니다.}
-      \HBLcdModeSecondGroup{상시 켜짐(충전 또는 방전 상태에서)}{켜기}{제품 전원이 켜진 상태에서 POWER 버튼을 두 번 누르십시오.}{끄기}{POWER 버튼을 누르십시오.}{자동으로 끄기}{2시간 동안 조작이 없으면 LCD 화면이 자동으로 꺼집니다.}
+      \HBLcdModeFirstGroup{잠시 켜짐}{켜기}{POWER 버튼을 누르거나 제품이 충전 중일 때 켜집니다.}{끄기}{POWER 버튼을 누르십시오.}{자동으로 끄기}{2분 동안 조작이 없으면 LCD 화면이 자동으로 꺼지고 절전 모드로 전환됩니다.}
+      \HBLcdModeSecondGroup{상시 켜짐(충전 또는 방전 상태에서)}{켜기}{제품 전원이 켜진 상태에서 POWER 버튼을 두 번 누르십시오.}{끄기}{POWER 버튼을 누르십시오.}{자동으로 끄기}{LCD는 2시간 동안 아무 조작이 없으면 자동으로 꺼집니다.}
       \end{HBLcdModeTable}
 
 Jackery App에서 화면 표시 모드를 설정할 수도 있습니다.
@@ -179,11 +179,11 @@ Jackery App에서 화면 표시 모드를 설정할 수도 있습니다.
      - 조작
      - 기능
    * - POWER 버튼 + AC 전원 버튼
-     - 두 버튼을 3초 동안 길게 누르기
+     - 3초 동안 동시에 길게 누르기
      - 에너지 절약 모드 켜기/끄기
    * - POWER 버튼 + DC/USB 전원 버튼
-     - 두 버튼을 3초 동안 길게 누르기
+     - 3초 동안 동시에 길게 누르기
      - Wi-Fi 및 블루투스 재설정
    * - DC/USB 전원 버튼 + AC 전원 버튼
-     - 두 버튼을 1초 동안 길게 누르기
+     - 1초 동안 동시에 길게 누르기
      - Wi-Fi 및 블루투스 켜기/끄기
