@@ -9,8 +9,8 @@
       \section{제품 개요}
       \HBOverviewPanel{전면 뷰}{front_product.jpg}{%
       \HBOverviewPair{POWER 버튼}{}{LCD}{}
-      \HBOverviewPair{DC 12V 포트}{12V⎓최대 10A}{LED 조명 버튼}{}
-      \HBOverviewPair{DC/USB 전원 버튼}{}{LED 조명}{}
+      \HBOverviewPair{DC 12V 포트}{12V⎓최대 10A}{}{}
+      \HBOverviewPair{DC/USB 전원 버튼}{}{}{}
       \HBOverviewPair{USB-C 100W 출력}{최대 100W, 5V⎓3A, 9V⎓3A, 12V⎓3A, 15V⎓3A, 20V⎓5A}{AC 전원 버튼}{}
       \HBOverviewPair{USB-C 100W 출력}{최대 100W, 5V⎓3A, 9V⎓3A, 12V⎓3A, 15V⎓3A, 20V⎓5A}{}{}
       \HBOverviewPair{USB-A 18W 출력}{최대 18W, 5-6V⎓3A, 6-9V⎓2A, 9-12V⎓1.5A}{AC 출력}{220V~ 60Hz, 최대 16.3A, 정격 3,600W}
@@ -18,7 +18,7 @@
       }
       \HBOverviewPanel{오른쪽 측면도}{right_side_ports.png}{%
       \HBOverviewPair{손잡이}{}{AC 입력}{220V-240V~ 60Hz, 최대 10A}
-      \HBOverviewPair{}{}{DC 입력 (DC8020 포트 2개)}{PV: 16-60V⎓최대 12A, 병렬 시 최대 24A / 최대 1,000W \newline 차량: 12-16V⎓최대 8A, 병렬 시에도 최대 8A}
+      \HBOverviewPair{AC 출력 리셋 버튼}{}{DC 입력 (DC8020 포트 2개)}{PV: 16-60V⎓최대 12A, 병렬 시 최대 24A / 최대 1,000W \newline 차량: 12-16V⎓최대 8A, 병렬 시에도 최대 8A}
       }
 
 .. only:: not latex
@@ -42,9 +42,9 @@
       * - **DC 12V 포트**
 
           12V⎓최대 10A
-        - **LED 조명 버튼**
+        -
       * - **DC/USB 전원 버튼**
-        - **LED 조명**
+        -
       * - **USB-C 100W 출력**
 
           최대 100W, 5V⎓3A, 9V⎓3A, 12V⎓3A, 15V⎓3A, 20V⎓5A
@@ -83,7 +83,7 @@
         - **AC 입력**
 
           220V-240V~ 60Hz, 최대 10A
-      * -
+      * - **AC 출력 리셋 버튼**
         - **DC 입력 (DC8020 포트 2개)**
 
           PV: 16-60V⎓최대 12A, 병렬 시 최대 24A / 최대 1,000W
