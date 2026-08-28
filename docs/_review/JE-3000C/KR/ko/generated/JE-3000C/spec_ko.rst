@@ -8,7 +8,7 @@
 
    \specsectiontitle{일반 정보}
    \begin{spectable}
-   \HBTypeSpecLabel{제품명} & \HBTypeSpecValue{Jackery Explorer 3000 휴대용 파워뱅크} \tabularnewline
+   \HBTypeSpecLabel{제품명} & \HBTypeSpecValue{Jackery Explorer 3000 리튬이차전지시스템} \tabularnewline
    \hline
    \HBTypeSpecLabel{모델 번호} & \HBTypeSpecValue{JE-3000C} \tabularnewline
    \hline
@@ -80,7 +80,7 @@
         <tbody>
           <tr>
             <th scope="row" class="hb-spec-label">제품명</th>
-            <td class="hb-spec-value">Jackery Explorer 3000 휴대용 파워뱅크</td>
+            <td class="hb-spec-value">Jackery Explorer 3000 리튬이차전지시스템</td>
           </tr>
           <tr>
             <th scope="row" class="hb-spec-label">모델 번호</th>
