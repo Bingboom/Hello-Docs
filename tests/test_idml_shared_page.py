@@ -1,0 +1,1522 @@
+from __future__ import annotations
+
+import json
+import tempfile
+import unittest
+import xml.etree.ElementTree as ET
+from pathlib import Path
+from types import SimpleNamespace
+
+from tools.export_idml import IdmlWriter, check_idml, load_layout_params
+from tools.idml.components.inbox_panel import InboxPanelData
+from tools.idml.page_overview import product_overview_frames
+from tools.idml.shared_page import (
+    add_charging_page,
+    add_charging_storage_page,
+    add_connection_tail_troubleshooting_page,
+    add_connections_page,
+    add_fcc_inbox_overview_page,
+    add_inbox_overview_page,
+    add_lcd_operations_page,
+    add_regulatory_compliance_page,
+    add_safety_symbols_page,
+    add_specifications_page,
+    add_storage_specifications_page,
+    add_storage_troubleshooting_page,
+    shares_latex_page,
+)
+
+
+ROOT = Path(__file__).resolve().parents[1]
+
+
+class SharedPageTests(unittest.TestCase):
+    def test_legacy_three_cell_inbox_table_adapts_to_shared_component(self) -> None:
+        data = InboxPanelData.from_blocks(
+            [
+                ("h1", "同梱品"),
+                (
+                    "table",
+                    json.dumps(
+                        [[
+                            ".. image:: asset:in_the_box/jbp2000b/main_unit **本体**",
+                            ".. image:: asset:in_the_box/jbp2000b/expansion_cable **拡張ケーブル**",
+                            ".. image:: asset:in_the_box/manual_icon1 **取扱説明書**",
+                        ]],
+                        ensure_ascii=False,
+                    ),
+                ),
+            ],
+            sid="st_inbox_legacy",
+            language="jp",
+            density="compact",
+        )
+
+        self.assertTrue(data.has_inbox)
+        self.assertEqual(
+            ("本体", "拡張ケーブル", "取扱説明書"),
+            tuple(item["label"] for item in data.items),
+        )
+        self.assertEqual(
+            (
+                "asset:in_the_box/jbp2000b/main_unit",
+                "asset:in_the_box/jbp2000b/expansion_cable",
+                "asset:in_the_box/manual_icon1",
+            ),
+            tuple(item["img"] for item in data.items),
+        )
+
+    def test_overview_variant_keeps_callouts_without_view_headings(self) -> None:
+        params = load_layout_params(
+            ROOT / "data" / "layout_params.csv",
+            (ROOT / "data" / "layout_params.idml-compact.csv",),
+        )
+        writer = IdmlWriter(
+            params,
+            model="JBP-2000B",
+            region="JP",
+            language="jp",
+            native_structure_markers=True,
+        )
+        assets = ROOT / "docs" / "renderers" / "latex" / "assets"
+        blocks = [
+            ("h1", "各部の名称"),
+            ("image", (assets / "jbp2000b_front_controls.pdf").as_posix()),
+            ("table", [["**主電源ボタン**", "**ディスプレイ**"]]),
+            ("image", (assets / "jbp2000b_left_side_ports.pdf").as_posix()),
+            (
+                "table",
+                [
+                    ["**ハンドル**", "**DC拡張ポートA**"],
+                    ["", "**DC拡張ポートB**"],
+                ],
+            ),
+        ]
+
+        frames = product_overview_frames(
+            writer,
+            "st_overview_no_headings",
+            blocks,
+            ROOT,
+            instance_id="jbp2000b-jp-v1",
+            show_view_headings=False,
+        )
+
+        story_ids = {story_id for story_id, _xml in writer.stories}
+        self.assertNotIn("st_overview_no_headings_front_story", story_ids)
+        self.assertNotIn("st_overview_no_headings_right_story", story_ids)
+        self.assertIn("st_overview_no_headings_front_label_1", story_ids)
+        self.assertIn("st_overview_no_headings_right_label_1", story_ids)
+        joined = "".join(frames)
+        self.assertIn("leader_st_overview_no_headings", joined)
+        self.assertNotIn("_front_heading", joined)
+        self.assertNotIn("_right_heading", joined)
+
+    def test_connections_page_reuses_target_declared_order_and_image_role(
+        self,
+    ) -> None:
+        params = load_layout_params(
+            ROOT / "data" / "layout_params.csv",
+            (ROOT / "data" / "layout_params.idml-compact.csv",),
+        )
+        writer = IdmlWriter(
+            params,
+            model="JBP-2000B",
+            region="US",
+            language="fr",
+            native_structure_markers=True,
+        )
+        art = (
+            ROOT / "docs" / "renderers" / "latex" / "assets"
+            / "warning_lockup.png"
+        ).as_posix()
+
+        add_connections_page(
+            writer,
+            sid="st_connections",
+            title="connections",
+            blocks=[
+                ("h1", "CONNEXIONS"),
+                ("body", "Source-authored introduction."),
+                ("image", art),
+                (
+                    "component",
+                    json.dumps({
+                        "kind": "notice",
+                        "label": "Important",
+                        "variant": "caution",
+                        "texts": ["First source-authored notice."],
+                        "list": True,
+                    }),
+                ),
+                (
+                    "component",
+                    json.dumps({
+                        "kind": "notice",
+                        "label": "Remarques",
+                        "variant": "note",
+                        "texts": ["Second source-authored notice."],
+                        "list": True,
+                    }),
+                ),
+            ],
+            bundle_root=ROOT,
+            page_index=6,
+            language="fr",
+            composition_data={
+                "connections": {
+                    "layout_variant": "notice_before_primary_figure",
+                    "image_role": "reference_measure",
+                }
+            },
+        )
+
+        story = dict(writer.stories)["st_connections"]
+        first_notice = story.index("grp_notice_st_connections_cmp")
+        primary_figure = story.index('Self="st_connections_im1"')
+        second_notice = story.index(
+            "grp_notice_st_connections_cmp",
+            first_notice + 1,
+        )
+        self.assertLess(first_notice, primary_figure)
+        self.assertLess(primary_figure, second_notice)
+        image_xml = story[primary_figure:story.index("</Rectangle>", primary_figure)]
+        self.assertIn('Anchor="312.094', image_xml)
+
+    def test_connections_stacking_guide_uses_shared_two_page_panel(self) -> None:
+        params = load_layout_params(
+            ROOT / "data" / "layout_params.csv",
+            (ROOT / "data" / "layout_params.idml-compact.csv",),
+        )
+        writer = IdmlWriter(
+            params,
+            model="JBP-2000B",
+            region="JP",
+            language="jp",
+            native_structure_markers=True,
+        )
+        art = (
+            ROOT / "docs" / "renderers" / "latex" / "assets"
+            / "warning_lockup.png"
+        ).as_posix()
+
+        def notice(text: str) -> tuple[str, str]:
+            return (
+                "component",
+                json.dumps({
+                    "kind": "notice",
+                    "label": "ご注意",
+                    "variant": "caution",
+                    "texts": [text],
+                    "list": True,
+                }, ensure_ascii=False),
+            )
+
+        add_connections_page(
+            writer,
+            sid="st_connections_stack",
+            title="connections",
+            blocks=[
+                ("h1", "ポータブル電源との併用"),
+                ("body", "接続説明。"),
+                notice("第一の注意。"),
+                ("image", art),
+                ("image", art),
+                notice("第二の注意。"),
+                ("image", art),
+                ("body", "**ロック**"),
+                ("image", art),
+                ("body", "**ロック解除**"),
+                ("image", art),
+            ],
+            bundle_root=ROOT,
+            page_index=6,
+            page_count=2,
+            language="jp",
+            composition_data={
+                "connections": {
+                    "layout_variant": "stacking_guide",
+                    "image_role": "reference_measure",
+                }
+            },
+        )
+
+        stories = dict(writer.stories)
+        self.assertEqual(
+            {
+                "st_connections_stack",
+                "st_connections_stack_guidance",
+                "st_connections_stack_controls",
+                "st_connections_stack_result",
+            },
+            {
+                story_id for story_id in stories
+                if story_id.startswith("st_connections_stack")
+            },
+        )
+        first_page = dict(writer.spreads)["sp_6"]
+        second_page = dict(writer.spreads)["sp_7"]
+        self.assertEqual(1, first_page.count("<Page "))
+        self.assertEqual(1, second_page.count("<Page "))
+        self.assertIn('ParentStory="st_connections_stack"', first_page)
+        for story_id in (
+            "st_connections_stack_guidance",
+            "st_connections_stack_controls",
+            "st_connections_stack_result",
+        ):
+            self.assertIn(f'ParentStory="{story_id}"', second_page)
+        self.assertIn(
+            'Self="st_connections_stack_controls_im2"',
+            stories["st_connections_stack_controls"],
+        )
+        self.assertNotIn(
+            "st_connections_stack_result_im2",
+            stories["st_connections_stack_result"],
+        )
+
+    def test_charging_page_uses_target_declared_full_width_and_suffix_pill(
+        self,
+    ) -> None:
+        params = load_layout_params(
+            ROOT / "data" / "layout_params.csv",
+            (ROOT / "data" / "layout_params.idml-compact.csv",),
+        )
+        self.assertEqual(
+            ("36.0", "pt"),
+            params["idml_compact_charging_frame_bottom_extra"],
+        )
+        writer = IdmlWriter(
+            params,
+            model="JBP-2000B",
+            region="US",
+            language="en",
+            native_structure_markers=True,
+        )
+        art = (
+            ROOT / "docs" / "renderers" / "latex" / "assets"
+            / "warning_lockup.png"
+        ).as_posix()
+
+        add_charging_page(
+            writer,
+            sid="st_charging",
+            title="charging",
+            charging_blocks=[
+                ("h1", "CHARGING"),
+                ("h2", "CHARGING VIA AC WALL OUTLET"),
+                ("image", art),
+                (
+                    "h2",
+                    "CHARGING VIA SOLAR PANELS (SOLD SEPARATELY)",
+                ),
+                ("image", art),
+            ],
+            bundle_root=ROOT,
+            page_index=8,
+            language="en",
+            composition_data={
+                "charging": {
+                    "image_role": "reference_measure",
+                    "h2_suffix_pill_indices": [1],
+                }
+            },
+        )
+
+        stories = dict(writer.stories)
+        main_story = stories["st_charging"]
+        self.assertIn("CHARGING VIA SOLAR PANELS", main_story)
+        self.assertNotIn("(SOLD SEPARATELY)", main_story)
+        self.assertIn(
+            'SpaceBefore="2.83" SpaceAfter="0" '
+            'AppliedParagraphStyle="ParagraphStyle/Figure"',
+            main_story,
+        )
+        self.assertIn(
+            'SpaceBefore="0" SpaceAfter="5.67" '
+            'AppliedParagraphStyle="ParagraphStyle/段落样式"',
+            main_story,
+        )
+        pill_stories = "".join(
+            xml for sid, xml in stories.items() if "headingpill" in sid
+        )
+        self.assertIn("SOLD SEPARATELY", pill_stories)
+        image = main_story.split('Self="st_charging_im1"', 1)[1].split(
+            "</Rectangle>", 1
+        )[0]
+        self.assertIn('Anchor="312.09', image)
+        expected_bottom = (
+            writer.page_h / 2 - writer.m_b
+            + float(params["idml_compact_charging_frame_bottom_extra"][0])
+        )
+        spread = dict(writer.spreads)["sp_8"]
+        self.assertIn(f" {expected_bottom:g}\"", spread)
+
+    def test_storage_and_compact_specifications_reuse_one_physical_page(
+        self,
+    ) -> None:
+        params = load_layout_params(
+            ROOT / "data" / "layout_params.csv",
+            (ROOT / "data" / "layout_params.idml-compact.csv",),
+        )
+        writer = IdmlWriter(
+            params,
+            model="JBP-2000B",
+            region="US",
+            language="en",
+            native_structure_markers=True,
+        )
+        spec_data = SimpleNamespace(
+            title="SPECIFICATIONS",
+            annotations=(),
+            sections=(
+                {"title": "GENERAL INFO", "rows": [("Model", "M1")] * 7},
+                {"title": "INPUT PORTS", "rows": [("Input", "36 V")]},
+                {"title": "OUTPUT PORTS", "rows": [("Output", "36 V")]},
+                {"title": "TEMPERATURE", "rows": [("Charge", "45 C")] * 2},
+            ),
+        )
+        composition_data = {
+            "specifications": {
+                "layout_variant": "compact",
+                "section_groups": [
+                    {"source_indices": [0]},
+                    {
+                        "source_indices": [1, 2],
+                        "title": "INPUT / OUTPUT PORTS",
+                    },
+                    {"source_indices": [3]},
+                ],
+            }
+        }
+
+        storage_sid, spec_sid, grouped = add_storage_specifications_page(
+            writer,
+            sid="st_storage_spec",
+            storage_blocks=[
+                ("h1", "STORAGE"),
+                ("body", "Store the product in a dry place."),
+                ("list", "• Recharge every three months."),
+            ],
+            spec_data=spec_data,
+            bundle_root=ROOT,
+            page_index=9,
+            language="en",
+            composition_data=composition_data,
+        )
+
+        self.assertEqual(3, len(grouped))
+        self.assertEqual("INPUT / OUTPUT PORTS", grouped[1]["title"])
+        self.assertEqual(2, len(grouped[1]["rows"]))
+        spread = dict(writer.spreads)["sp_9"]
+        self.assertEqual(1, spread.count("<Page "))
+        self.assertNotIn("bg_st_storage_spec_storage", spread)
+        self.assertIn(f'ParentStory="{storage_sid}"', spread)
+        self.assertIn(f'ParentStory="{spec_sid}"', spread)
+        story_map = dict(writer.stories)
+        storage_story = story_map[storage_sid]
+        self.assertIn("AnchoredObjectSetting", storage_story)
+        h1_story = next(
+            xml for key, xml in story_map.items()
+            if key.startswith("st_anchor_h1pill_")
+        )
+        self.assertIn('LeftIndent="4.74"', h1_story)
+        self.assertIn('BaselineShift="0.5"', h1_story)
+        stories = "".join(story_map.values())
+        self.assertEqual(3, stories.count("specification table"))
+        self.assertIn('SingleRowHeight="11"', stories)
+        self.assertNotIn('SingleRowHeight="15.7"', stories)
+        self.assertNotIn('SingleRowHeight="17.5"', stories)
+        self.assertEqual(11, stories.count('AutoGrow="false"'))
+
+    def test_rounded_storage_variant_owns_gray_body_panel(self) -> None:
+        params = load_layout_params(
+            ROOT / "data" / "layout_params.csv",
+            (ROOT / "data" / "layout_params.idml-compact.csv",),
+        )
+        writer = IdmlWriter(
+            params,
+            model="JBP-2000B",
+            region="EU",
+            language="de",
+            native_structure_markers=True,
+        )
+        spec_data = SimpleNamespace(
+            title="TECHNISCHE DATEN",
+            annotations=(),
+            sections=(
+                {"title": "ALLGEMEINE INFORMATIONEN", "rows": [("Modell", "M1")]},
+            ),
+        )
+
+        storage_sid, spec_sid, _grouped = add_storage_specifications_page(
+            writer,
+            sid="st_storage_rounded",
+            storage_blocks=[
+                ("h1", "LAGERUNG"),
+                ("body", "Bewahren Sie das Produkt trocken auf."),
+            ],
+            spec_data=spec_data,
+            bundle_root=ROOT,
+            page_index=4,
+            language="de",
+            composition_data={
+                "storage": {"layout_variant": "rounded_panel"},
+                "specifications": {"layout_variant": "compact"},
+            },
+        )
+
+        spread = dict(writer.spreads)["sp_4"]
+        self.assertIn("bg_st_storage_rounded_storage_body", spread)
+        self.assertIn('FillColor="Color/HB Bg K05"', spread)
+        self.assertIn(f'ParentStory="{storage_sid}"', spread)
+        self.assertIn(f'ParentStory="{spec_sid}"', spread)
+        self.assertIn("st_storage_rounded_title", dict(writer.stories))
+
+    def test_regulatory_bottom_card_reuses_source_copy_and_target_qr(self) -> None:
+        params = load_layout_params(
+            ROOT / "data" / "layout_params.csv",
+            (ROOT / "data" / "layout_params.idml-compact.csv",),
+        )
+        writer = IdmlWriter(
+            params,
+            model="JBP-2000B",
+            region="EU",
+            language="en",
+            native_structure_markers=True,
+        )
+
+        panel = add_regulatory_compliance_page(
+            writer,
+            sid="st_regulatory",
+            blocks=[
+                ("h1", "EU REGULATIONS"),
+                ("h2", "RED DECLARATION OF CONFORMITY"),
+                ("body", "The product complies with RED 2014/53/EU."),
+                ("body", "https://example.test/declaration"),
+                ("h2", "MANUFACTURER"),
+                ("body", "SHENZHEN HELLO TECH ENERGY CO., LTD."),
+                ("body", "Factory address, Shenzhen, China"),
+                ("body", "+86 400 668 9293\nsales@example.test\nwww.example.test"),
+            ],
+            page_index=9,
+            language="en",
+            root=ROOT,
+            composition_data={
+                "regulatory": {
+                    "layout_variant": "bottom_card",
+                    "qr_asset": (
+                        "docs/renderers/latex/assets/warning_lockup.png"
+                    ),
+                }
+            },
+        )
+
+        self.assertTrue(panel.contract.has_qr)
+        spread = dict(writer.spreads)["sp_9"]
+        self.assertIn("bg_st_regulatory_regulatory_title", spread)
+        self.assertIn("rc_st_regulatory_qr", spread)
+        stories = "".join(dict(writer.stories).values())
+        self.assertIn("RED DECLARATION OF CONFORMITY", stories)
+        self.assertIn("SHENZHEN HELLO TECH ENERGY CO., LTD.", stories)
+        self.assertIn("sales@example.test", stories)
+        for index, (icon, contact) in enumerate(
+            zip(
+                ("☎", "✉", "◉"),
+                (
+                    "+86 400 668 9293",
+                    "sales@example.test",
+                    "www.example.test",
+                ),
+                strict=True,
+            )
+        ):
+            with self.subTest(icon=icon):
+                contact_story = dict(writer.stories)[
+                    f"st_regulatory_contact_{index}"
+                ]
+                self.assertIn(
+                    '<AppliedFont type="string">Noto Sans Symbols2</AppliedFont>',
+                    contact_story,
+                )
+                self.assertIn(f"<Content>{icon}</Content>", contact_story)
+                self.assertIn(f"<Content> {contact}</Content>", contact_story)
+
+    def test_storage_and_troubleshooting_reuse_one_physical_page(self) -> None:
+        """Both KR stories land on one page, stacked instead of overlapping.
+
+        The JE-3000C KR plan folds ``09_storage_and_maintenance`` and
+        ``troubleshooting_ko`` into one composition through
+        ``add_storage_troubleshooting_page``. If either story stops being
+        placed the book silently drops a whole section, and if the split
+        stops separating the two frames Storage overprints Troubleshooting
+        rather than sitting above it.
+        """
+        params = load_layout_params(
+            ROOT / "data" / "layout_params.csv",
+            (ROOT / "data" / "layout_params.idml-je3000c-kr.csv",),
+        )
+        writer = IdmlWriter(
+            params,
+            model="JE-3000C",
+            region="KR",
+            language="ko",
+            native_structure_markers=True,
+        )
+
+        storage_sid, trouble_sid = add_storage_troubleshooting_page(
+            writer,
+            sid="st_storage_trouble",
+            storage_blocks=[
+                ("h1", "보관 및 유지관리"),
+                ("body", "건조한 곳에 보관하십시오."),
+                ("list", "• 3개월마다 충전하십시오."),
+            ],
+            trouble_sid="st_troubleshooting_ko",
+            trouble_title="troubleshooting_ko",
+            trouble_blocks=[
+                ("h1", "문제 해결"),
+                ("body", "아래 조치를 따르십시오."),
+                (
+                    "table",
+                    json.dumps([
+                        ["오류 코드", "조치 방법"],
+                        ["F0", "제품을 재시작하십시오."],
+                    ]),
+                ),
+            ],
+            bundle_root=ROOT,
+            page_index=15,
+            language="ko",
+        )
+
+        self.assertEqual("st_storage_trouble", storage_sid)
+        self.assertEqual("st_troubleshooting_ko", trouble_sid)
+        spread = dict(writer.spreads)["sp_15"]
+        self.assertEqual(1, spread.count("<Page "))
+        self.assertIn(f'ParentStory="{storage_sid}"', spread)
+        self.assertIn(f'ParentStory="{trouble_sid}"', spread)
+
+        def frame_y_range(story_id: str) -> tuple[float, float]:
+            frame = spread.split(f'ParentStory="{story_id}"', 1)[1].split(
+                "</TextFrame>", 1,
+            )[0]
+            anchors = [
+                float(chunk.split('"', 1)[0].split(" ")[1])
+                for chunk in frame.split('Anchor="')[1:]
+            ]
+            return min(anchors), max(anchors)
+
+        storage_top, storage_bottom = frame_y_range(storage_sid)
+        trouble_top, trouble_bottom = frame_y_range(trouble_sid)
+        self.assertLess(storage_top, storage_bottom)
+        self.assertLess(storage_bottom, trouble_top)
+        self.assertLess(trouble_top, trouble_bottom)
+
+        stories = dict(writer.stories)
+
+        def story_text(story_id: str) -> str:
+            root = ET.fromstring(stories[story_id])
+            return "".join(node.text or "" for node in root.iter("Content"))
+
+        self.assertIn("아래 조치를 따르십시오.", story_text(trouble_sid))
+        self.assertIn('Hyphenation="false"', stories[trouble_sid])
+        self.assertIn("AnchoredObjectSetting", stories[storage_sid])
+        self.assertIn("건조한 곳에", story_text(storage_sid))
+        self.assertIn("F0", "".join(stories.values()))
+
+    def test_compact_specifications_group_and_reorder_from_target_data(
+        self,
+    ) -> None:
+        """Target composition_data must reach the standalone spec page.
+
+        The JE-3000C KR plan gives its Specifications page ``layout_variant``
+        "compact" plus a section grouping and an ``annotation_order``. If
+        ``composition_data`` stops reaching ``add_spec_story`` the page still
+        exports, but silently in the taller reference layout with the source
+        section split and the source trailer order — a design regression no
+        schema check catches.
+        """
+        params = load_layout_params(
+            ROOT / "data" / "layout_params.csv",
+            (ROOT / "data" / "layout_params.idml-je3000c-kr.csv",),
+        )
+        writer = IdmlWriter(
+            params,
+            model="JE-3000C",
+            region="KR",
+            language="ko",
+            native_structure_markers=True,
+        )
+        spec_data = SimpleNamespace(
+            title="제품 사양",
+            annotations=(
+                "ANNOTATION ALPHA",
+                "ANNOTATION BRAVO",
+                "ANNOTATION CHARLIE",
+            ),
+            sections=(
+                {"title": "GENERAL INFO", "rows": [("모델", "JE-3000C")] * 5},
+                {"title": "INPUT PORTS", "rows": [("입력", "36 V")]},
+                {"title": "OUTPUT PORTS", "rows": [("출력", "36 V")]},
+                {"title": "TEMPERATURE", "rows": [("충전", "45 C")] * 2},
+            ),
+        )
+
+        spec_sid, sections = add_specifications_page(
+            writer,
+            spec_data=spec_data,
+            page_index=14,
+            language="ko",
+            composition_data={
+                "specifications": {
+                    "layout_variant": "compact",
+                    "annotation_order": [1, 2, 0],
+                    "section_groups": [
+                        {"source_indices": [0]},
+                        {
+                            "source_indices": [1, 2],
+                            "title": "INPUT / OUTPUT PORTS",
+                        },
+                        {"source_indices": [3]},
+                    ],
+                }
+            },
+        )
+
+        self.assertEqual("st_spec_ko", spec_sid)
+        self.assertEqual(3, len(sections))
+        self.assertEqual("INPUT / OUTPUT PORTS", sections[1]["title"])
+        self.assertEqual(2, len(sections[1]["rows"]))
+        story_map = dict(writer.stories)
+        spread = dict(writer.spreads)["sp_14"]
+        self.assertEqual(1, spread.count("<Page "))
+        self.assertIn(f'ParentStory="{spec_sid}"', spread)
+        spec_tables = [
+            story_map[f"st_anchor_spec_ko{index}"] for index in range(3)
+        ]
+        # Three anchored tables with 5 / 2 / 2 rows: the grouped source
+        # sections 1 and 2 render as one two-row table. Compact rows are
+        # 12.2pt; the same fixture renders 10.3pt rows and loses the grouping
+        # when layout_variant / section_groups stop reaching add_spec_story.
+        self.assertEqual(
+            [["12.2"] * 5, ["12.2"] * 2, ["12.2"] * 2],
+            [
+                [
+                    row.attrib["SingleRowHeight"]
+                    for row in ET.fromstring(xml).find(".//Table").findall(
+                        "./Row",
+                    )
+                ]
+                for xml in spec_tables
+            ],
+        )
+        annotations = (
+            "ANNOTATION ALPHA",
+            "ANNOTATION BRAVO",
+            "ANNOTATION CHARLIE",
+        )
+        trailer = story_map[spec_sid]
+        self.assertNotIn(-1, [trailer.find(text) for text in annotations])
+        self.assertEqual(
+            [
+                "ANNOTATION BRAVO",
+                "ANNOTATION CHARLIE",
+                "ANNOTATION ALPHA",
+            ],
+            sorted(annotations, key=trailer.find),
+        )
+
+    def test_inbox_overview_page_composes_cards_and_overview_callouts(
+        self,
+    ) -> None:
+        """The KR page 4 composition must keep its cards and callout bindings.
+
+        ``add_inbox_overview_page`` stacks the three-card Inbox panel over the
+        governed Overview component for the JE-3000C KR plan. The front
+        callouts are bound positionally through the
+        ``left = rows 0,1,3,4,5,2`` source mapping, so a regression there
+        reorders the labels against the artwork leaders without failing any
+        structural check. The two guards keep an unreviewed layout variant or
+        a dropped source tip from reaching the page instead of failing loudly.
+        """
+        params = load_layout_params(
+            ROOT / "data" / "layout_params.csv",
+            (ROOT / "data" / "layout_params.idml-je3000c-kr.csv",),
+        )
+        assets = ROOT / "docs" / "renderers" / "latex" / "assets"
+        card_art = (assets / "je3000c_kr_operation_main_power.pdf").as_posix()
+        inbox_blocks = [
+            ("h1", "구성품"),
+            (
+                "component",
+                json.dumps({
+                    "kind": "inbox",
+                    "items": [
+                        {"img": card_art, "label": f"품목 {index}"}
+                        for index in range(1, 4)
+                    ],
+                }),
+            ),
+            (
+                "component",
+                json.dumps({
+                    "kind": "notice",
+                    "label": "TIP",
+                    "variant": "tips",
+                    "texts": ["포장재를 보관하십시오."],
+                }),
+            ),
+        ]
+        overview_blocks = [
+            ("h1", "제품 개요"),
+            ("h2", "전면"),
+            ("image", (assets / "je3000c_kr_overview_front.pdf").as_posix()),
+            (
+                "table",
+                [
+                    ["**POWER**", "**LCD**"],
+                    ["**DC12V**", "**AC POWER**"],
+                    ["**DC/USB**", "**AC OUTPUT**"],
+                    ["**USB-C**", ""],
+                    ["", ""],
+                    ["**USB-A**", ""],
+                ],
+            ),
+            ("h2", "측면"),
+            ("image", (assets / "je3000c_kr_overview_right.pdf").as_posix()),
+            (
+                "table",
+                [
+                    ["**AC INPUT LABEL**", "**AC INPUT**"],
+                    ["**DC INPUT LABEL**", "**DC INPUT** 12V"],
+                ],
+            ),
+        ]
+
+        def compose(blocks: list, layout_variant: str) -> IdmlWriter:
+            writer = IdmlWriter(
+                params,
+                model="JE-3000C",
+                region="KR",
+                language="ko",
+                native_structure_markers=True,
+            )
+            add_inbox_overview_page(
+                writer,
+                sid="st_inbox_overview",
+                inbox_blocks=blocks,
+                overview_blocks=overview_blocks,
+                bundle_root=ROOT,
+                page_index=4,
+                language="ko",
+                composition_data={
+                    "inbox": {"layout_variant": layout_variant},
+                    "overview": {"instance_id": "je3000c-kr-v1"},
+                },
+            )
+            return writer
+
+        writer = compose(inbox_blocks, "compact_with_tip")
+
+        spread = dict(writer.spreads)["sp_4"]
+        story_map = dict(writer.stories)
+
+        def story_text(story_id: str) -> str:
+            root = ET.fromstring(story_map[story_id])
+            return "".join(
+                node.text or "" for node in root.iter("Content")
+            ).strip()
+
+        self.assertEqual(1, spread.count("<Page "))
+        self.assertIn("art_st_inbox_overview_overview_front", spread)
+        self.assertIn("art_st_inbox_overview_overview_right", spread)
+        self.assertEqual("구성품", story_text("st_inbox_overview_inbox_title"))
+        self.assertEqual("TIP", story_text("st_inbox_overview_tip_label"))
+        self.assertEqual(
+            "포장재를 보관하십시오.",
+            story_text("st_inbox_overview_tip_body"),
+        )
+        self.assertEqual(
+            ["품목 1", "품목 2", "품목 3"],
+            [
+                story_text(f"st_inbox_overview_card_{index}")
+                for index in (1, 2, 3)
+            ],
+        )
+        self.assertEqual(
+            ["1", "2", "3"],
+            [
+                story_text(f"st_inbox_overview_badge_{index}")
+                for index in (1, 2, 3)
+            ],
+        )
+        # je3000c-kr-v1 binds front.left.{0,1,2,4,5} and front.right.{0,1,2}
+        # through the left = rows 0,1,3,4,5,2 mapping, so this order is the
+        # instance contract, not the source table order.
+        self.assertEqual(
+            [
+                "POWER",
+                "DC12V",
+                "USB-C",
+                "USB-A",
+                "DC/USB",
+                "LCD",
+                "AC POWER",
+                "AC OUTPUT",
+            ],
+            [
+                story_text(f"st_inbox_overview_overview_front_label_{index}")
+                for index in range(1, 9)
+            ],
+        )
+        self.assertNotIn(
+            "st_inbox_overview_overview_front_label_9",
+            story_map,
+        )
+        # right.sequence.{1,3}: the second and fourth cell of the right table.
+        self.assertEqual(
+            "AC INPUT",
+            story_text("st_inbox_overview_overview_right_label_1"),
+        )
+        self.assertTrue(
+            story_text("st_inbox_overview_overview_right_label_2").startswith(
+                "DC INPUT"
+            ),
+        )
+
+        with self.assertRaisesRegex(
+            ValueError, "unsupported Inbox layout variant: kr_page_4",
+        ):
+            compose(inbox_blocks, "kr_page_4")
+        with self.assertRaisesRegex(
+            ValueError, "inbox tip is required from source RST",
+        ):
+            compose(inbox_blocks[:2], "compact_with_tip")
+
+    def test_compact_fcc_inbox_page_embeds_shared_semantic_overview(self) -> None:
+        params = load_layout_params(
+            ROOT / "data" / "layout_params.csv",
+            (ROOT / "data" / "layout_params.idml-compact.csv",),
+        )
+        art = (
+            ROOT
+            / "docs"
+            / "renderers"
+            / "latex"
+            / "assets"
+            / "warning_lockup.png"
+        ).as_posix()
+        with tempfile.TemporaryDirectory() as td:
+            writer = IdmlWriter(
+                params,
+                model="JBP-2000B",
+                region="US",
+                language="en",
+            )
+            add_fcc_inbox_overview_page(
+                writer,
+                sid="st_compact",
+                fcc_blocks=[
+                    (
+                        "component",
+                        json.dumps(
+                            {"kind": "fcc", "texts": ["Left.", "Right."]}
+                        ),
+                    )
+                ],
+                inbox_blocks=[
+                    ("h1", "WHAT'S IN THE BOX"),
+                    (
+                        "component",
+                        json.dumps(
+                            {
+                                "kind": "inbox",
+                                "items": [
+                                    {"img": art, "label": f"Item {index}"}
+                                    for index in range(1, 4)
+                                ],
+                            }
+                        ),
+                    ),
+                ],
+                overview_blocks=[
+                    ("h1", "PRODUCT OVERVIEW"),
+                    ("h2", "FRONT VIEW"),
+                    ("image", art),
+                    ("table", [["**POWER button**", "**LCD Display**"]]),
+                    ("h2", "LEFT SIDE VIEW"),
+                    ("image", art),
+                    (
+                        "table",
+                        [
+                            [
+                                "**Handle**",
+                                "**DC Expansion Port A** (Connect to Terminal A)",
+                            ],
+                            [
+                                "",
+                                "**DC Expansion Port B** (Connect to Terminal B)",
+                            ],
+                        ],
+                    ),
+                ],
+                bundle_root=Path(td),
+                page_index=4,
+                language="en",
+            )
+
+            spread = dict(writer.spreads)["sp_4"]
+            story_map = dict(writer.stories)
+            stories = "".join(story_map.values())
+            self.assertEqual(1, spread.count("<Page "))
+            self.assertIn('StrokeColor="Color/HB Border K10"', spread)
+            self.assertIn('Anchor="66 ', story_map["st_compact_card_1"])
+            self.assertIn('Anchor="58 ', story_map["st_compact_card_2"])
+            self.assertIn('Anchor="40 ', story_map["st_compact_card_3"])
+            self.assertIn("art_st_compact_overview_front", spread)
+            self.assertIn("art_st_compact_overview_right", spread)
+            self.assertEqual(10, spread.count("<GraphicLine "))
+            self.assertIn(
+                'PointSize="5.2"',
+                story_map["st_compact_fcc_left"],
+            )
+            self.assertIn(
+                '<Leading type="unit">5.7</Leading>',
+                story_map["st_compact_fcc_right"],
+            )
+            self.assertIn(
+                'HorizontalScale="92"',
+                story_map["st_compact_fcc_left"],
+            )
+            for text in (
+                "POWER button",
+                "LCD Display",
+                "Handle",
+                "DC Expansion Port A",
+                "DC Expansion Port B",
+            ):
+                self.assertIn(text, stories)
+
+    def test_measured_sources_share_only_the_same_latex_page(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            bundle = Path(td)
+            first = bundle / "page" / "safety_info_en.rst"
+            second = bundle / "page" / "symbol_meaning_en.rst"
+            plan = {
+                "pages": [
+                    {"source_path": "page/safety_info_en.rst", "latex_start_page": 4},
+                    {"source_path": "page/symbol_meaning_en.rst", "latex_start_page": 4},
+                ]
+            }
+            self.assertTrue(shares_latex_page(plan, first, second, bundle))
+            plan["pages"][1]["latex_start_page"] = 5
+            self.assertFalse(shares_latex_page(plan, first, second, bundle))
+
+    def test_compact_page_reuses_safety_lists_and_two_column_symbols(self) -> None:
+        params = load_layout_params(
+            ROOT / "data" / "layout_params.csv",
+            (ROOT / "data" / "layout_params.idml-compact.csv",),
+        )
+        language_metrics = {
+            "en": ("HB Safety List", "25.15", "24.7", "24.125", "65"),
+            "fr": ("HB Safety List FR", "23", "24.7", "24.125", "64.5"),
+            "es": ("HB Safety List ES", "23.25", "25.1", "24.5", "65.5"),
+        }
+        for language, (
+            safety_style,
+            signal_row_height,
+            icon_row_height,
+            right_icon_row_height,
+            long_icon_row_height,
+        ) in language_metrics.items():
+            with self.subTest(language=language), tempfile.TemporaryDirectory() as td:
+                writer = IdmlWriter(params)
+                symbol_data = SimpleNamespace(
+                    title="MEANING OF SYMBOLS",
+                    signal_headers=("Symbol", "Meaning"),
+                    icon_headers=("Symbol", "Meaning"),
+                    signals=(
+                        {
+                            "signal_key": "warning",
+                            "label": "WARNING",
+                            "text": "Hazardous practices.",
+                        },
+                        {
+                            "signal_key": "caution",
+                            "label": "CAUTION",
+                            "text": "Personal injury risk.",
+                        },
+                        {
+                            "signal_key": "note",
+                            "label": "NOTE",
+                            "text": "Equipment damage risk.",
+                        },
+                        {
+                            "signal_key": "tips",
+                            "label": "TIP",
+                            "text": "Helpful information.",
+                        },
+                    ),
+                    icons=tuple(
+                        {"figure": "", "text": f"Icon meaning {index}"}
+                        for index in range(1, 12)
+                    ),
+                )
+                safety = [
+                    ("h1", "IMPORTANT SAFETY INFORMATION"),
+                    ("body", "Follow the basic safety precautions."),
+                    *[("list", f"• Safety item {index}") for index in range(1, 11)],
+                ]
+
+                add_safety_symbols_page(
+                    writer,
+                    safety_sid=f"st_safety_{language}",
+                    safety_title=f"safety_{language}",
+                    safety_blocks=safety,
+                    symbol_data=symbol_data,
+                    bundle_root=Path(td),
+                    data_root=Path(td),
+                    page_index=3,
+                    language=language,
+                )
+
+                stories = dict(writer.stories)
+                safety_xml = stories[f"st_safety_{language}"]
+                self.assertEqual(10, safety_xml.count("<Content>•</Content>"))
+                self.assertIn(
+                    f'AppliedParagraphStyle="ParagraphStyle/{safety_style}"',
+                    safety_xml,
+                )
+                self.assertIn(f"st_symbols_shared_{language}_signals", stories)
+                self.assertIn(f"st_symbols_shared_{language}_icons_left", stories)
+                self.assertIn(f"st_symbols_shared_{language}_icons_right", stories)
+                left_xml = stories[f"st_symbols_shared_{language}_icons_left"]
+                right_xml = stories[f"st_symbols_shared_{language}_icons_right"]
+                signal_xml = stories[f"st_symbols_shared_{language}_signals"]
+                self.assertIn('PointSize="5.6"', signal_xml)
+                self.assertIn('TopInset="1.5" BottomInset="1.5"', signal_xml)
+                self.assertIn("sig1icon", signal_xml)
+                self.assertIn("sig2icon", signal_xml)
+                self.assertNotIn("sig3icon", signal_xml)
+                self.assertNotIn("sig4icon", signal_xml)
+                self.assertIn('PointSize="0.1"', left_xml)
+                self.assertIn('PointSize="0.1"', right_xml)
+                def row_heights(xml: str) -> list[float]:
+                    table = ET.fromstring(xml).find(".//Table")
+                    self.assertIsNotNone(table)
+                    return [
+                        float(row.attrib["SingleRowHeight"])
+                        for row in table.findall("./Row")
+                    ]
+
+                signal_heights = row_heights(signal_xml)
+                left_heights = row_heights(left_xml)
+                right_heights = row_heights(right_xml)
+                for height in signal_heights[1:]:
+                    self.assertAlmostEqual(
+                        float(signal_row_height), height, places=2,
+                    )
+                self.assertAlmostEqual(
+                    float(icon_row_height) + 11.5 / 6,
+                    left_heights[1],
+                    places=3,
+                )
+                self.assertAlmostEqual(
+                    float(right_icon_row_height) + 11.5 / 5,
+                    right_heights[1],
+                    places=3,
+                )
+                self.assertAlmostEqual(
+                    float(long_icon_row_height) + 11.5 / 5,
+                    right_heights[-1],
+                    places=3,
+                )
+                for table_xml in (signal_xml, left_xml, right_xml):
+                    self.assertIn('AutoGrow="false"', table_xml)
+                    self.assertNotIn('AutoGrow="true"', table_xml)
+                    self.assertIn('Hyphenation="false"', table_xml)
+                self.assertEqual(
+                    7,
+                    left_xml.count('FillColor="Color/HB Bg K05"'),
+                )
+                self.assertEqual(
+                    6,
+                    right_xml.count('FillColor="Color/HB Bg K05"'),
+                )
+                for index in range(1, 12):
+                    text = f"<Content>Icon meaning {index}</Content>"
+                    self.assertNotEqual(text in left_xml, text in right_xml)
+                spread = dict(writer.spreads)["sp_3"]
+                self.assertIn("_icons_left", spread)
+                self.assertIn("_icons_right", spread)
+                self.assertEqual(1, spread.count("<Page "))
+
+                output = Path(td) / f"shared-{language}.idml"
+                writer.write(output)
+                self.assertEqual([], check_idml(output))
+
+    def test_compact_safety_uses_explicit_tuning_language(self) -> None:
+        params = load_layout_params(
+            ROOT / "data" / "layout_params.csv",
+            (ROOT / "data" / "layout_params.idml-compact.csv",),
+        )
+        writer = IdmlWriter(params)
+
+        writer._safety_section_story(
+            "st_safety_info_de",
+            "safety_info_de",
+            [
+                ("body", "Grundlegende Vorsichtsmaßnahmen."),
+                ("list", "• Sicherheitshinweis."),
+            ],
+            ROOT,
+            compact=True,
+            language="de",
+        )
+
+        xml = dict(writer.stories)["st_safety_info_de"]
+        self.assertIn('PointSize="4.9"', xml)
+        self.assertIn('Leading type="unit">5.3</Leading>', xml)
+        self.assertIn('HorizontalScale="88"', xml)
+
+    def test_german_lcd_rows_receive_native_import_safety(self) -> None:
+        from tools.idml.lcd_style import (
+            label_description_layout,
+            typography_tokens,
+        )
+
+        params = load_layout_params(
+            ROOT / "data" / "layout_params.csv",
+            (ROOT / "data" / "layout_params.idml-compact.csv",),
+        )
+        writer = IdmlWriter(params)
+        rows = [{
+            "name": "Leistungsprozentanzeige/Fehlercode",
+            "desc": "Die Anzeige zeigt den aktuellen Akkustand in Prozent an.",
+        }]
+
+        _, _, german_heights = label_description_layout(
+            writer, rows, 312.495, lang="de", segment_index=0,
+        )
+        label_size, label_leading, _, _ = typography_tokens(
+            writer, "de", rows[0], segment_index=0,
+        )
+
+        self.assertEqual(5.4, label_size)
+        self.assertEqual(6.5, label_leading)
+        self.assertGreaterEqual(german_heights[0], 20.6)
+
+    def test_compact_symbols_absorb_standard_continuation_rows(self) -> None:
+        params = load_layout_params(
+            ROOT / "data" / "layout_params.csv",
+            (ROOT / "data" / "layout_params.idml-compact.csv",),
+        )
+        writer = IdmlWriter(params)
+        symbol_data = SimpleNamespace(
+            title="SIGNIFICATION DES SYMBOLES",
+            signal_headers=("Symbole", "Signification"),
+            icon_headers=("Symbole", "Signification"),
+            signals=(
+                {
+                    "signal_key": "warning",
+                    "label": "AVERTISSEMENT",
+                    "text": "Pratiques dangereuses.",
+                },
+            ),
+            icons=tuple(
+                {
+                    "figure": "",
+                    "text": f"Icône {index}",
+                    "column": "left" if index <= 6 else "right",
+                    "continuation": index in {5, 6, 11},
+                }
+                for index in range(1, 12)
+            ),
+        )
+        safety = [
+            ("h1", "INFORMATIONS DE SÉCURITÉ IMPORTANTES"),
+            *[("list", f"• Consigne {index}") for index in range(1, 11)],
+        ]
+
+        with tempfile.TemporaryDirectory() as td:
+            add_safety_symbols_page(
+                writer,
+                safety_sid="st_safety_fr",
+                safety_title="safety_fr",
+                safety_blocks=safety,
+                symbol_data=symbol_data,
+                bundle_root=Path(td),
+                data_root=Path(td),
+                page_index=11,
+                language="fr",
+            )
+
+        stories = dict(writer.stories)
+        rendered = (
+            stories["st_symbols_shared_fr_icons_left"]
+            + stories["st_symbols_shared_fr_icons_right"]
+        )
+        for index in range(1, 12):
+            self.assertIn(f"<Content>Icône {index}</Content>", rendered)
+
+    def test_compact_page_reuses_lcd_and_operations_stories(self) -> None:
+        params = load_layout_params(ROOT / "data" / "layout_params.csv")
+        params = dict(params)
+        params["idml_operation_overlay_disable_hyphenation"] = ("1", "int")
+        with tempfile.TemporaryDirectory() as td:
+            writer = IdmlWriter(params)
+            lcd_data = SimpleNamespace(
+                title="LCD DISPLAY",
+                rows=(
+                    {
+                        "no": "①",
+                        "figure": "",
+                        "name": "Battery level",
+                        "desc": "Shows the remaining charge.",
+                    },
+                    {
+                        "no": "②",
+                        "figure": "",
+                        "name": "Charging indicator",
+                        "desc": "Shown while charging.",
+                    },
+                ),
+            )
+
+            lcd_sid, operation_sid = add_lcd_operations_page(
+                writer,
+                lcd_data=lcd_data,
+                operation_sid="st_operation_en",
+                operation_title="operation_en",
+                operation_blocks=[
+                    ("h1", "OPERATIONS"),
+                    ("h2", "POWER ON/OFF"),
+                    (
+                        "image",
+                        (
+                            ROOT / "docs" / "renderers" / "latex" / "assets"
+                            / "jbp2000b_power_control.png"
+                        ).as_posix(),
+                    ),
+                (
+                    "body",
+                    "**On**\nPress once\n**Off**\nPress and hold for 3 seconds",
+                ),
+                (
+                    "component",
+                    json.dumps({
+                        "kind": "notice",
+                        "label": "NOTE",
+                        "variant": "note",
+                        "texts": ["Keep the editable note inside the card."],
+                    }),
+                ),
+                ("h2", "LCD DISPLAY ON/OFF"),
+                    (
+                        "image",
+                        (
+                            ROOT / "docs" / "renderers" / "latex" / "assets"
+                            / "jbp2000b_lcd_control.png"
+                        ).as_posix(),
+                    ),
+                    (
+                        "body",
+                        "Press the POWER button to switch the LCD display.",
+                    ),
+                ],
+                bundle_root=Path(td),
+                data_root=Path(td),
+                page_index=5,
+                language="en",
+                hero_path=None,
+                composition_data={
+                    "lcd": {
+                        "table_variant": "label_description",
+                        "hero_horizontal_scale": 1.14,
+                        "operation_panel_variant": "paired_cards",
+                        "hero_callouts": [
+                            {
+                                "row_index": 1,
+                                "text_rect": [28.35, 65.0, 101.0, 16.0],
+                                "align": "RightAlign",
+                                "leader_points": [[130.0, 72.5], [159.0, 72.5]],
+                            },
+                            {
+                                "row_index": 2,
+                                "text_rect": [276.0, 65.0, 64.5, 16.0],
+                                "align": "LeftAlign",
+                                "leader_points": [[228.0, 72.5], [274.0, 72.5]],
+                            },
+                        ],
+                    }
+                },
+            )
+
+            self.assertEqual("st_lcd", lcd_sid)
+            self.assertEqual("st_operation_en", operation_sid)
+            self.assertEqual(1, writer.lcd_segment_counts["en"])
+            lcd_table = dict(writer.stories)["st_anchor_lcd_table_en_0"]
+            self.assertIn('ColumnCount="2"', lcd_table)
+            self.assertNotIn("①", lcd_table)
+            self.assertNotIn("②", lcd_table)
+            self.assertNotIn("Yu Gothic", lcd_table)
+            self.assertIn('TopInset="2.8" BottomInset="2.8"', lcd_table)
+            self.assertIn('SingleColumnWidth="74.9987"', lcd_table)
+            self.assertIn('SingleColumnWidth="237.496"', lcd_table)
+            self.assertNotIn('TopInset="13.322"', lcd_table)
+            lcd_story = dict(writer.stories)["st_lcd"]
+            main_frame_id = "tf_group_st_anchor_lcd_table_en_0"
+            carrier_id = "tf_terminal_carrier_group_st_anchor_lcd_table_en_0"
+            self.assertIn(
+                f'Self="{main_frame_id}" '
+                'ParentStory="st_anchor_lcd_table_en_0" '
+                f'PreviousTextFrame="n" NextTextFrame="{carrier_id}"',
+                lcd_story,
+            )
+            self.assertIn(
+                f'Self="{carrier_id}" '
+                'ParentStory="st_anchor_lcd_table_en_0" '
+                f'PreviousTextFrame="{main_frame_id}" NextTextFrame="n"',
+                lcd_story,
+            )
+            main_frame = lcd_story.split(
+                f'<TextFrame Self="{main_frame_id}"', 1,
+            )[1].split("</TextFrame>", 1)[0]
+            carrier = lcd_story.split(
+                f'<TextFrame Self="{carrier_id}"', 1,
+            )[1].split("</TextFrame>", 1)[0]
+            self.assertIn('Anchor="0 -30"', main_frame)
+            self.assertNotIn('Anchor="0 -31"', main_frame)
+            self.assertIn('Anchor="0 1"', carrier)
+            self.assertIn('FillColor="Swatch/None"', carrier)
+            self.assertIn('StrokeColor="Swatch/None"', carrier)
+            spread = dict(writer.spreads)["sp_5"]
+            self.assertIn('ParentStory="st_lcd"', spread)
+            self.assertIn('ParentStory="st_operation_en"', spread)
+            self.assertIn('ParentStory="st_lcd_callout_en_1"', spread)
+            self.assertIn('ParentStory="st_lcd_callout_en_2"', spread)
+            self.assertEqual(2, spread.count("<GraphicLine "))
+            stories = dict(writer.stories)
+            self.assertIn("Battery level", stories["st_lcd_callout_en_1"])
+            self.assertIn("Charging indicator", stories["st_lcd_callout_en_2"])
+            self.assertTrue(any(
+                "Press the POWER button to switch the LCD display." in xml
+                for sid, xml in stories.items()
+                if "image_caption" in sid
+            ))
+            operation_story = stories[operation_sid]
+            self.assertIn("st_anchor_oppanel_", operation_story)
+            operation_component_stories = "".join(
+                xml for sid, xml in stories.items()
+                if "oppanel" in sid
+            )
+            self.assertIn("grp_oppanel_", operation_component_stories)
+            self.assertIn("image_notice", operation_component_stories)
+            self.assertIn("image_caption", operation_component_stories)
+            self.assertIn('Hyphenation="false"', operation_component_stories)
+            self.assertNotIn("grp_notice_st_operation_en_cmp", operation_story)
+            self.assertEqual(1, spread.count("<Page "))
+
+            output = Path(td) / "shared-lcd-operations.idml"
+            writer.write(output)
+            self.assertEqual([], check_idml(output))
+
+    def test_shared_diagram_compositions_use_one_explicit_physical_page(self) -> None:
+        params = load_layout_params(ROOT / "data" / "layout_params.csv")
+        art = (
+            ROOT / "docs" / "renderers" / "latex" / "assets"
+            / "warning_lockup.png"
+        ).as_posix()
+        with tempfile.TemporaryDirectory() as td:
+            bundle = Path(td)
+            writer = IdmlWriter(params)
+            add_connections_page(
+                writer,
+                sid="st_connections",
+                title="connections",
+                blocks=[("h1", "CONNECTIONS"), ("image", art)],
+                bundle_root=bundle,
+                page_index=6,
+                language="en",
+            )
+            add_connection_tail_troubleshooting_page(
+                writer,
+                connection_sid="st_connection_tail",
+                connection_title="connection_tail",
+                connection_blocks=[("image", art)],
+                trouble_sid="st_trouble_complete",
+                trouble_title="troubleshooting_en",
+                trouble_blocks=[
+                    ("h1", "TROUBLESHOOTING"),
+                    ("body", "Follow the listed corrective actions."),
+                    (
+                        "table",
+                        json.dumps([
+                            ["Error Code", "Corrective Measures"],
+                            ["F0", "Restart the product."],
+                        ]),
+                    ),
+                ],
+                bundle_root=bundle,
+                page_index=7,
+                language="en",
+                composition_data={
+                    "troubleshooting": {
+                        "connection_image_role": "reference_measure",
+                        "heading_space_after": 5.4,
+                        "split": 303.6,
+                    }
+                },
+            )
+            add_charging_storage_page(
+                writer,
+                sid="st_charging_storage",
+                title="charging_storage",
+                charging_blocks=[
+                    ("h1", "CHARGING"),
+                    ("image", art),
+                    ("image", art),
+                ],
+                storage_blocks=[("h1", "STORAGE"), ("body", "Store dry.")],
+                bundle_root=bundle,
+                page_index=8,
+                language="en",
+            )
+
+            for page_index in (6, 7, 8):
+                spread = dict(writer.spreads)[f"sp_{page_index}"]
+                self.assertEqual(1, spread.count("<Page "))
+            self.assertIn(
+                'ParentStory="st_connection_tail"',
+                dict(writer.spreads)["sp_7"],
+            )
+            self.assertIn(
+                'ParentStory="st_trouble_complete"',
+                dict(writer.spreads)["sp_7"],
+            )
+            stories = dict(writer.stories)
+            self.assertIn(
+                "Follow the listed corrective actions.",
+                stories["st_trouble_complete"],
+            )
+            self.assertIn(
+                'Hyphenation="false"',
+                stories["st_trouble_complete"],
+            )
+            self.assertIn(
+                'SpaceAfter="5.4"',
+                stories["st_trouble_complete"],
+            )
+            self.assertIn("Error Code", "".join(stories.values()))
+            self.assertTrue(any(
+                'StoryTitle="troubleshooting table"' in xml
+                for xml in stories.values()
+            ))
+
+            output = bundle / "shared-diagram-compositions.idml"
+            writer.write(output)
+            self.assertEqual([], check_idml(output))
+
+
+if __name__ == "__main__":
+    unittest.main()

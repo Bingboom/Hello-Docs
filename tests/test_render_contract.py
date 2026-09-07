@@ -4,11 +4,14 @@ from copy import deepcopy
 import re
 import unittest
 from pathlib import Path
+from tempfile import TemporaryDirectory
 
 from tools.csv_to_tex_params import fmt_value
 from tools.render_contract import (
     contract_sha256,
     effective_final_mile,
+    layout_tokens_sha256,
+    load_layout_token_layers,
     load_layout_tokens,
     load_render_contract,
     resolve_layout_tokens,
@@ -39,6 +42,8 @@ EXPECTED_STYLE_SEMANTICS = {
     "HB-SPECIAL-FCC",
     "HB-SPECIAL-INBOX",
     "HB-SPECIAL-OVERVIEW",
+    "HB-SPECIAL-OPERATION",
+    "HB-SPECIAL-REFERENCE-FIGURE",
     "HB-TABLE-AUTO-RESUME",
     "HB-TABLE-KEY-COMBINATIONS",
     "HB-TABLE-LCD-ICON",
@@ -100,6 +105,161 @@ class RenderContractTests(unittest.TestCase):
 
     def test_contract_has_no_schema_or_token_errors(self) -> None:
         self.assertEqual([], validate_render_contract(self.contract, self.tokens))
+
+    def test_layout_token_layers_are_additive_and_hash_the_effective_set(self) -> None:
+        with TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            base = root / "base.csv"
+            overlay = root / "overlay.csv"
+            base.write_text(
+                "key,value,unit,comment\npage_paperwidth,100,pt,base\n",
+                encoding="utf-8",
+            )
+            overlay.write_text(
+                "key,value,unit,comment\nidml_compact_gap,4,pt,overlay\n",
+                encoding="utf-8",
+            )
+
+            base_hash = layout_tokens_sha256(load_layout_tokens(base))
+            layered = load_layout_token_layers(base, (overlay,))
+
+        self.assertEqual(["page_paperwidth", "idml_compact_gap"], list(layered))
+        self.assertNotEqual(
+            base_hash,
+            layout_tokens_sha256(layered),
+        )
+
+    def test_layout_token_overlay_overrides_the_baseline_key(self) -> None:
+        """A bound overlay is a layer above the common, so its value wins.
+
+        This used to assert the opposite -- any collision raised. Banning
+        collisions did stop a baseline value being replaced silently, but it
+        also left a category or target no legal way to differ, so 46 keys came
+        to carry a scope infix or a language prefix instead of overriding under
+        their own name. The plane now follows the same inheritance-and-override
+        rule as `tools/config_loader.py`, and non-silence comes from the
+        reported override set plus its ratchet in
+        `tests/test_layout_token_override.py`.
+        """
+        with TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            base = root / "base.csv"
+            overlay = root / "overlay.csv"
+            base.write_text(
+                "key,value,unit,comment\npage_paperwidth,100,pt,base\n",
+                encoding="utf-8",
+            )
+            overlay.write_text(
+                "key,value,unit,comment\npage_paperwidth,101,pt,override\n",
+                encoding="utf-8",
+            )
+
+            tokens = load_layout_token_layers(base, (overlay,))
+            self.assertEqual("101", tokens["page_paperwidth"].value)
+
+    def test_pipeline_spelled_japanese_row_loads(self) -> None:
+        """`lang_jp_` is reachable and must not be rejected as an alias.
+
+        `normalize_lang` deliberately maps canonical `ja` onto `jp`, the
+        historical phase2 suffix, and the IDML page path builds its prefix from
+        that output — so the seven "measured from the JP reference" BP@JP rows
+        are read exactly as spelled. An earlier revision of this gate assumed
+        no path builds a prefix from an alias and would have rejected them.
+        """
+        with TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            base = root / "base.csv"
+            overlay = root / "overlay.csv"
+            base.write_text(
+                "key,value,unit,comment\npage_paperwidth,100,pt,base\n",
+                encoding="utf-8",
+            )
+            overlay.write_text(
+                "key,value,unit,comment\n"
+                "lang_jp_idml_inbox_compact_card_height,145.0,pt,measured\n",
+                encoding="utf-8",
+            )
+
+            tokens = load_layout_token_layers(base, (overlay,))
+
+        self.assertEqual(
+            "145.0", tokens["lang_jp_idml_inbox_compact_card_height"].value,
+        )
+
+    def test_data_column_alias_row_is_rejected_with_the_canonical_code(
+        self,
+    ) -> None:
+        """`ukr` is a data-column alias no lookup path spells that way."""
+        with TemporaryDirectory() as tmp:
+            base = Path(tmp) / "base.csv"
+            base.write_text(
+                "key,value,unit,comment\n"
+                "page_paperwidth,100,pt,base\n"
+                "lang_ukr_idml_gap,4,pt,alias\n",
+                encoding="utf-8",
+            )
+
+            with self.assertRaisesRegex(
+                ValueError,
+                r"unreachable language row .*data-column alias.*'uk'",
+            ):
+                load_layout_token_layers(base)
+
+    def test_unregistered_language_row_is_rejected(self) -> None:
+        with TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            base = root / "base.csv"
+            base.write_text(
+                "key,value,unit,comment\n"
+                "page_paperwidth,100,pt,base\n"
+                "lang_xx_idml_gap,4,pt,typo\n",
+                encoding="utf-8",
+            )
+
+            with self.assertRaisesRegex(
+                ValueError, "not a registered language code",
+            ):
+                load_layout_token_layers(base)
+
+    def test_every_spelling_a_lookup_can_build_is_accepted(self) -> None:
+        """The gate must accept each prefix form the code actually produces.
+
+        That is both the canonical registry spelling and the `normalize_lang`
+        output the IDML page path uses, in their base-subtag and
+        hyphen-swapped forms.
+        """
+        from tools.idml.loaders import normalize_lang
+        from tools.lang_registry import LANGUAGE_REGISTRY
+
+        rows = ["key,value,unit,comment", "page_paperwidth,100,pt,base"]
+        for index, spec in enumerate(LANGUAGE_REGISTRY):
+            variants = set()
+            for spelling in (spec.code.casefold(), normalize_lang(spec.code).casefold()):
+                variants |= {
+                    spelling,
+                    spelling.replace("-", "_"),
+                    spelling.split("-", 1)[0],
+                }
+            for variant in variants:
+                rows.append(f"lang_{variant}_idml_gap_{index},4,pt,ok")
+        with TemporaryDirectory() as tmp:
+            base = Path(tmp) / "base.csv"
+            base.write_text("\n".join(rows) + "\n", encoding="utf-8")
+
+            tokens = load_layout_token_layers(base)
+
+        self.assertGreater(len(tokens), len(LANGUAGE_REGISTRY))
+
+    def test_the_committed_layout_params_pass_the_gate(self) -> None:
+        """Every shipped overlay must load, not just the base CSV."""
+        base = ROOT / "data" / "layout_params.csv"
+        overlays = tuple(
+            path for path in sorted((ROOT / "data").glob("layout_params.*.csv"))
+        )
+        self.assertTrue(overlays, "no overlays found; update this guard")
+        for overlay in overlays:
+            with self.subTest(overlay=overlay.name):
+                self.assertTrue(load_layout_token_layers(base, (overlay,)))
 
     def test_committed_contract_uses_schema_v2(self) -> None:
         self.assertEqual(2, self.contract["schema_version"])

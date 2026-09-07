@@ -25,9 +25,10 @@ _LABELS = {
     "on", "off", "on/off", "marche", "arrêt", "arret", "marche/arrêt",
     "encender", "apagar", "encendido", "apagado",
     "オン", "オフ", "开", "关", "开启", "关闭",
+    "켜기", "끄기", "켜짐", "꺼짐",
 }
 _PREREQ = re.compile(
-    r"^\*{0,2}(prerequisite|prérequis|prerequis|requisito previo|前提)\*{0,2}\s*[::]",
+    r"^\*{0,2}(prerequisite|prérequis|prerequis|requisito previo|前提|사전 조건)\*{0,2}\s*[::]",
     re.I,
 )
 _BOLD = re.compile(r"\*\*([^*]+)\*\*")
@@ -64,7 +65,7 @@ def operation_story_rhythm(
     if kind == "h2_operation_energy":
         return 'SpaceAfter="7.5"', 7.5
     if kind == "body_operation_energy_intro":
-        return 'Leading="8.1" SpaceAfter="7"', 7.0
+        return 'SpaceAfter="7"', 7.0
     if kind != "h2_operation_led":
         return None, None
     extra_intro = max(0, (intro_lines or 0) - 7) * 8.1
@@ -84,9 +85,11 @@ def _image_stem(ref: str) -> str:
 def _duration_label(text: str) -> str:
     """Derive the compact reference label from localized action copy."""
     match = re.search(
-        r"\b(\d+)\s*(?:seconds?|secondes?|segundos?|s)\b", text, re.I,
+        r"(?:\b(\d+)\s*(?:seconds?|secondes?|segundos?|s)\b|(\d+)\s*초)",
+        text,
+        re.I,
     )
-    return f"{match.group(1)}s" if match else ""
+    return f"{match.group(1) or match.group(2)}s" if match else ""
 
 
 def _special_operation_panel(
@@ -106,7 +109,14 @@ def _special_operation_panel(
         return None
     stem = _image_stem(ref)
 
-    if stem in _ENERGY_SAVING_ART:
+    # The copy-key clauses admit targets whose art uses non-governed stems
+    # (the KR line). A governed stem must never enter the OTHER panel's
+    # fuzzy branch: with both semantics registered (the US template order),
+    # the LED image would fail the energy shape check and return None,
+    # demoting the approved led_light component to a raw image.
+    if stem in _ENERGY_SAVING_ART or (
+        "energy_saving" in operation_copy and stem not in _LED_LIGHT_ART
+    ):
         # h2, intro, then one combined or two separate guidance paragraphs,
         # followed by image + action. Spanish review copy combines its
         # disable/low-power guidance in one paragraph while EN/FR keep two.
@@ -155,7 +165,9 @@ def _special_operation_panel(
             ),
         ), 2
 
-    if stem in _LED_LIGHT_ART:
+    if stem in _LED_LIGHT_ART or (
+        "led_light" in operation_copy and stem not in _ENERGY_SAVING_ART
+    ):
         # h2, lead, image, exactly three newline-separated instructions.
         if (
             len(out) < 2
@@ -239,6 +251,145 @@ def parse_rows(text: str) -> list[tuple[str, str]] | None:
     """Parse an On/Off body into [(label, instruction), ...] or None."""
     rows, _tail = _parse_rows_and_tail(text)
     return rows
+
+
+def _paired_notice_items(notice: dict) -> list[str]:
+    """Recover the final list-item boundary collapsed by RST table parsing."""
+
+    texts = [
+        str(text).strip()
+        for text in notice.get("texts", [])
+        if str(text).strip()
+    ]
+    if len(texts) != 1:
+        return texts
+    first, separator, final = texts[0].rpartition(". ")
+    if not separator or not first.strip() or not final.strip():
+        return texts
+    return [first.strip() + ".", final.strip()]
+
+
+def promote_paired_operation_cards(blocks: list[Block]) -> list[Block]:
+    """Promote structurally paired operation content into shared cards.
+
+    The target assembly opts into this semantic variant. Detection uses only
+    the source block boundary, never a localized heading or caption string.
+    """
+
+    promoted: list[Block] = []
+    index = 0
+    while index < len(blocks):
+        kind, payload = blocks[index]
+        if kind == "component" and index + 1 < len(blocks):
+            next_kind, next_payload = blocks[index + 1]
+            try:
+                panel = json.loads(payload)
+                notice = json.loads(next_payload) if next_kind == "component" else {}
+            except (TypeError, json.JSONDecodeError):
+                panel, notice = {}, {}
+            if (
+                isinstance(panel, dict)
+                and panel.get("kind") == "oppanel"
+                and not panel.get("layout")
+                and isinstance(notice, dict)
+                and notice.get("kind") == "notice"
+            ):
+                promoted.append(("component", json.dumps({
+                    **panel,
+                    "layout": "image_notice",
+                    "notice": {
+                        **notice,
+                        "list": True,
+                        "texts": _paired_notice_items(notice),
+                    },
+                }, ensure_ascii=False)))
+                index += 2
+                continue
+        if (
+            kind == "image"
+            and index + 1 < len(blocks)
+            and blocks[index + 1][0] == "body"
+        ):
+            promoted.append(("component", json.dumps({
+                "kind": "oppanel",
+                "layout": "image_caption",
+                "image": payload,
+                "caption": blocks[index + 1][1],
+            }, ensure_ascii=False)))
+            index += 2
+            continue
+        promoted.append((kind, payload))
+        index += 1
+    return promoted
+
+
+def promote_image_caption_panels(blocks: list[Block]) -> list[Block]:
+    """Compatibility wrapper for the former target-assembly helper."""
+    return promote_paired_operation_cards(blocks)
+
+
+def promote_operation_guidance_stack(
+    blocks: list[Block],
+    *,
+    require_match: bool = False,
+) -> list[Block]:
+    """Group one complete operation guidance run into the shared outer card.
+
+    The target assembly selects the variant, while the promotion itself uses
+    only stable block/component kinds.  Visible copy, language, model, page
+    number, and localized headings never participate in routing.
+    """
+
+    promoted: list[Block] = []
+    index = 0
+    matches = 0
+    while index < len(blocks):
+        run = blocks[index:index + 4]
+        if len(run) == 4:
+            panel_kind, panel_payload = run[0]
+            first_kind, first_payload = run[1]
+            body_kind, body_text = run[2]
+            second_kind, second_payload = run[3]
+            try:
+                panel = json.loads(panel_payload) if panel_kind == "component" else {}
+                first_notice = (
+                    json.loads(first_payload) if first_kind == "component" else {}
+                )
+                second_notice = (
+                    json.loads(second_payload) if second_kind == "component" else {}
+                )
+            except (TypeError, json.JSONDecodeError):
+                panel, first_notice, second_notice = {}, {}, {}
+            if (
+                isinstance(panel, dict)
+                and panel.get("kind") == "oppanel"
+                and not str(panel.get("layout") or "").strip()
+                and isinstance(first_notice, dict)
+                and first_notice.get("kind") == "notice"
+                and body_kind in {"body", "body_operation_inter_section"}
+                and str(body_text).strip()
+                and isinstance(second_notice, dict)
+                and second_notice.get("kind") == "notice"
+            ):
+                promoted.append(("component", json.dumps({
+                    **panel,
+                    "layout": "image_guidance_stack",
+                    "guidance": [
+                        {"kind": "notice", "spec": first_notice},
+                        {"kind": "body", "text": str(body_text)},
+                        {"kind": "notice", "spec": second_notice},
+                    ],
+                }, ensure_ascii=False)))
+                matches += 1
+                index += 4
+                continue
+        promoted.append(blocks[index])
+        index += 1
+    if require_match and matches == 0:
+        raise ValueError(
+            "operation guidance_stack requires oppanel + notice + body + notice"
+        )
+    return promoted
 
 
 def _split_panel_tail(text: str) -> tuple[str, str]:

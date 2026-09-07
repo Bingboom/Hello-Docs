@@ -49,6 +49,150 @@ class IdmlSpecialPageTests(unittest.TestCase):
         self.assertIn("Source phone", stories)
         self.assertNotIn(asset.resolve().as_uri(), self.writer.spreads[0][1])
 
+    def test_cover_prefers_writer_model_art_over_legacy_generic_art(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            docs = Path(td)
+            assets = docs / "renderers" / "latex" / "assets"
+            assets.mkdir(parents=True)
+            generic = assets / "cover-en.pdf"
+            jbp = assets / "cover_jbp2000b-en.pdf"
+            generic.write_bytes(b"JE-1000F cover")
+            jbp.write_bytes(b"JBP-2000B cover")
+
+            selected = page_placed.placed_asset_for(
+                "cover-en", "en", docs, model="JBP-2000B",
+            )
+
+        self.assertEqual(jbp, selected)
+
+    def test_cover_resolves_historical_jp_language_to_canonical_ja_asset(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            docs = Path(td)
+            assets = docs / "renderers" / "latex" / "assets"
+            assets.mkdir(parents=True)
+            canonical = assets / "cover_jbp2000b-ja.pdf"
+            english = assets / "cover_jbp2000b-en.pdf"
+            canonical.write_bytes(b"JBP-2000B Japanese cover")
+            english.write_bytes(b"JBP-2000B English cover")
+
+            selected = page_placed.placed_asset_for(
+                "cover", "jp", docs, model="JBP-2000B",
+            )
+
+        self.assertEqual(canonical, selected)
+
+    def test_cover_uses_same_model_english_fallback_not_generic_art(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            docs = Path(td)
+            assets = docs / "renderers" / "latex" / "assets"
+            assets.mkdir(parents=True)
+            generic = assets / "cover-fr.pdf"
+            jbp_en = assets / "cover_jbp2000b-en.pdf"
+            generic.write_bytes(b"JE-1000F French cover")
+            jbp_en.write_bytes(b"JBP-2000B English cover")
+
+            selected = page_placed.placed_asset_for(
+                "cover-fr", "fr", docs, model="JBP-2000B",
+            )
+
+        self.assertEqual(jbp_en, selected)
+
+    def test_cover_does_not_use_legacy_generic_art_for_another_model(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            docs = Path(td)
+            assets = docs / "renderers" / "latex" / "assets"
+            assets.mkdir(parents=True)
+            (assets / "cover-en.pdf").write_bytes(b"JE-1000F cover")
+
+            selected = page_placed.placed_asset_for(
+                "cover-en", "en", docs, model="JBP-2000B",
+            )
+
+        self.assertIsNone(selected)
+
+    def test_cover_keeps_legacy_generic_fallback_for_owning_model(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            docs = Path(td)
+            assets = docs / "renderers" / "latex" / "assets"
+            assets.mkdir(parents=True)
+            generic = assets / "cover-fr.pdf"
+            generic.write_bytes(b"JE-1000F French cover")
+
+            selected = page_placed.placed_asset_for(
+                "cover-fr", "fr", docs, model="JE-1000F",
+            )
+
+        self.assertEqual(generic, selected)
+
+    def test_jbp_back_cover_uses_model_qr_profile_without_reference_plan(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            docs = root / "docs"
+            qr = docs / "renderers" / "latex" / "assets" / "back_cover_qr_jbp2000b.pdf"
+            qr.parent.mkdir(parents=True)
+            qr.write_bytes(b"JBP QR")
+            self.writer.model = "JBP-2000B"
+
+            added = page_placed.add_preferred_back_cover_page(
+                self.writer,
+                "US",
+                "en",
+                docs,
+                27,
+                {
+                    "company": "JACKERY INC.",
+                    "address": "5310 Bunche Dr., Fremont, CA 94538-8301",
+                    "phone": "1-888-502-2236 (US)",
+                    "lines": "hello@jackery.com\nwww.jackery.com",
+                },
+                reference_plan=None,
+            )
+
+        self.assertTrue(added)
+        spread = self.writer.spreads[-1][1]
+        self.assertIn("rc_st_back_cover_qr", spread)
+        self.assertIn(qr.resolve().as_uri(), spread)
+
+    def test_qr_only_back_cover_places_only_target_rect(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            docs = root / "docs"
+            qr = docs / "renderers" / "latex" / "assets" / "kr-qr.pdf"
+            qr.parent.mkdir(parents=True)
+            qr.write_bytes(b"KR QR")
+            profile = {
+                "variant": "qr_only",
+                "qr_asset": "docs/renderers/latex/assets/kr-qr.pdf",
+                "qr_rect": [303.99, 457.81, 33.91, 34.02],
+            }
+
+            added = page_placed.add_back_cover_page(
+                self.writer,
+                "KR",
+                17,
+                {
+                    "company": "JACKERY",
+                    "address": "대한민국 전용",
+                    "phone": "QR 코드를 참조하십시오",
+                },
+                profile=profile,
+                docs_dir=docs,
+            )
+
+        self.assertTrue(added)
+        self.assertEqual([], self.writer.stories)
+        spread = self.writer.spreads[-1][1]
+        self.assertIn('Self="rc_st_back_cover_qr"', spread)
+        self.assertIn(qr.resolve().as_uri(), spread)
+        self.assertNotIn("phone_ring", spread)
+        self.assertNotIn("mail_box", spread)
+        self.assertNotIn("web_ring", spread)
+        x1, y1, x2, y2 = self.writer._page_rect(
+            303.99, 457.81, 33.91, 34.02,
+        )
+        self.assertIn(f'Anchor="{x1:g} {y1:g}"', spread)
+        self.assertIn(f'Anchor="{x2:g} {y2:g}"', spread)
+
     def test_toc_uses_source_titles_ranges_and_folios(self) -> None:
         self.writer.spreads = [(f"sp_{i}", f'<Spread Self="sp_{i}"/>') for i in range(4)]
         source = {
@@ -73,6 +217,60 @@ class IdmlSpecialPageTests(unittest.TestCase):
         self.assertIn("01-18", stories)
         self.assertIn("<Content>OPERATIONS</Content>", stories)
         self.assertIn("<Content>07</Content>", stories)
+
+    def test_toc_single_column_variant_keeps_all_entries_in_one_story(self) -> None:
+        # A source-authored semantic TOC is virtual until finalize(), so the
+        # eleven non-TOC spreads are present before the target's twelfth page
+        # is inserted.
+        self.writer.spreads = [
+            (f"sp_{i}", f'<Spread Self="sp_{i}"/>') for i in range(11)
+        ]
+        source = {
+            "title": "目次",
+            "languages": [{
+                "code": "JP",
+                "label": "日本語",
+                "page_range": "01--10",
+                "entries": [
+                    {"title": f"項目 {index}", "folio": f"{index:02d}"}
+                    for index in range(1, 11)
+                ],
+            }],
+        }
+        page_plan = {
+            "plan_source": "target-assembly",
+            "physical_page_count": 12,
+            "pages": [{
+                "composition_type": "toc",
+                "latex_start_page": 2,
+                "planned_page_count": 1,
+                "composition_data": {
+                    "toc": {"layout_variant": "single_column"},
+                },
+            }],
+        }
+
+        self.assertTrue(page_toc.finalize(
+            self.writer,
+            page_toc.TocCollector(),
+            self.writer._add_story_parts,
+            self.writer._psr,
+            source=source,
+            page_plan=page_plan,
+        ))
+
+        story_ids = {sid for sid, _xml in self.writer.stories}
+        self.assertIn("st_toc_seg0_c0", story_ids)
+        self.assertNotIn("st_toc_seg0_c1", story_ids)
+        toc_story = dict(self.writer.stories)["st_toc_seg0_c0"]
+        self.assertIn(
+            "<AppliedFont type=\"string\">HB Manual Sans JP (OTF)</AppliedFont>",
+            toc_story,
+        )
+        self.assertEqual(12, len(self.writer.spreads))
+        spread = self.writer.spreads[1][1]
+        self.assertNotIn("gl_toc_leader_0_0_", spread)
+        self.assertEqual(10, toc_story.count('<Leader type="string">.</Leader>'))
 
     def test_special_page_macros_form_complete_ir_payloads(self) -> None:
         with tempfile.TemporaryDirectory() as td:

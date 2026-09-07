@@ -56,6 +56,7 @@ class _RecordingWriter:
         self.chain_frames: list[tuple[str, int]] = []
         self.story_frames: list[tuple[str, list[tuple[int, float, float]]]] = []
         self.prose_story_options: list[dict[str, float]] = []
+        self.prose_story_blocks: list[list[tuple[str, str]]] = []
 
     def add_prose_story(
         self,
@@ -66,6 +67,7 @@ class _RecordingWriter:
         **kwargs: float,
     ) -> tuple[str, float]:
         self.prose_story_options.append(kwargs)
+        self.prose_story_blocks.append(list(_blocks))
         return sid, 1.0
 
     def pages_for_height(self, _height: float) -> int:
@@ -113,7 +115,15 @@ class _RecordingToc:
 
 
 class ReferenceStoryEmitterTests(unittest.TestCase):
-    def test_reference_span_overrides_smaller_height_estimate(self) -> None:
+    def test_fallback_span_never_exceeds_the_story_height_estimate(self) -> None:
+        """A measured physical gap is not a request to thread blank frames.
+
+        LaTeX and the IDML writer are different composition engines, so the
+        anchor distance can cover more pages than the writer actually composes
+        the section into, and every surplus frame in the chain is then a blank
+        body page.  This is the exception the preface already carried,
+        generalized to every fallback story (JE-1000F/JP folio 04).
+        """
         writer = _RecordingWriter()
         toc = _RecordingToc()
         plan = {"physical_page_count": 20, "pages": [
@@ -129,14 +139,71 @@ class ReferenceStoryEmitterTests(unittest.TestCase):
             page_cursor=7,
         )
 
+        self.assertEqual(8, next_page)
+        self.assertEqual([("st_operation", 1, 7, 1)], writer.spread_chains)
+        self.assertEqual([("st_operation", 7)], writer.chain_frames)
+        self.assertEqual([1], toc.noted_pages)
+        self.assertEqual([], writer.story_frames)
+
+    def test_explicit_assembly_span_still_overrides_the_estimate(self) -> None:
+        """An approved contract mapped page-by-page by a human still wins."""
+        writer = _RecordingWriter()
+        toc = _RecordingToc()
+        plan = {
+            "plan_source": "target-assembly",
+            "physical_page_count": 20,
+            "pages": [
+                {
+                    "source_path": "page/operation.rst",
+                    "latex_start_page": 10,
+                    "composition_id": "operation-en",
+                    "planned_page_count": 4,
+                },
+                {
+                    "source_path": "page/charging.rst",
+                    "latex_start_page": 14,
+                    "composition_id": "charging-en",
+                    "planned_page_count": 1,
+                },
+            ],
+        }
+        emitter = ReferenceStoryEmitter(writer, toc, ROOT, plan)
+
+        next_page = emitter.emit(
+            "st_operation",
+            "operation",
+            [("h1", "OPERATION")],
+            page_cursor=7,
+        )
+
         self.assertEqual(11, next_page)
         self.assertEqual([("st_operation", 4, 7, 1)], writer.spread_chains)
-        self.assertEqual(
-            [("st_operation", page) for page in (7, 8, 9, 10)],
-            writer.chain_frames,
+
+    def test_authored_page_breaks_keep_a_frame_each(self) -> None:
+        """The height estimate ignores forced breaks; the cap must not."""
+        writer = _RecordingWriter()
+        toc = _RecordingToc()
+        plan = {"physical_page_count": 20, "pages": [
+            {"source_path": "page/operation.rst", "latex_start_page": 10},
+            {"source_path": "page/charging.rst", "latex_start_page": 14},
+        ]}
+        emitter = ReferenceStoryEmitter(writer, toc, ROOT, plan)
+
+        next_page = emitter.emit(
+            "st_operation",
+            "operation",
+            [
+                ("h1", "OPERATION"),
+                ("layout", "page_break"),
+                ("body", "second page"),
+                ("layout", "page_break"),
+                ("body", "third page"),
+            ],
+            page_cursor=7,
         )
-        self.assertEqual([4], toc.noted_pages)
-        self.assertEqual([], writer.story_frames)
+
+        self.assertEqual(10, next_page)
+        self.assertEqual([("st_operation", 3, 7, 1)], writer.spread_chains)
 
     def test_preface_remains_one_page_when_plan_span_is_larger(self) -> None:
         writer = _RecordingWriter()
@@ -284,6 +351,69 @@ class ReferenceStoryEmitterTests(unittest.TestCase):
                     expected_x,
                     writer.spread_chain_options[0]["last_frame_x_offset"],
                 )
+
+    def test_target_warranty_reuses_shared_composition_geometry(self) -> None:
+        writer = _RecordingWriter()
+        writer.params["comp_warranty_page_extra_height"] = ("17.01", "pt")
+        writer.params["lang_en_idml_warranty_frame_x_offset"] = (
+            "-0.32", "pt",
+        )
+        writer.params["lang_en_idml_warranty_page_top_offset"] = (
+            "14.22", "pt",
+        )
+        emitter = ReferenceStoryEmitter(
+            writer,
+            _RecordingToc(),
+            ROOT,
+            {
+                "plan_source": "target-assembly",
+                "pages": [{
+                    "source_path": "page/warranty_en.rst",
+                    "composition_id": "en_warranty",
+                    "composition_type": "warranty",
+                    "language": "en",
+                    "composition_data": {
+                        "warranty": {"layout_variant": "multiline_lead"},
+                    },
+                }],
+            },
+        )
+
+        emitter.emit(
+            "st_warranty_en",
+            "warranty_en",
+            [
+                ("h1", "WARRANTY"),
+                ("component", json.dumps({
+                    "kind": "warrantylead",
+                    "texts": ["Lead."],
+                })),
+            ],
+            page_cursor=10,
+        )
+
+        self.assertEqual(
+            17.01,
+            writer.spread_chain_options[0]["bottom_extra"],
+        )
+        self.assertEqual(
+            -0.32,
+            writer.spread_chain_options[0]["last_frame_x_offset"],
+        )
+        self.assertEqual(
+            {
+                "inline_origin_shift": -0.32,
+                "semantic_page_role": "warranty",
+                "language": "en",
+            },
+            writer.prose_story_options[0],
+        )
+        self.assertEqual(
+            14.22,
+            writer.spread_chain_options[0]["first_top_offset"],
+        )
+        projected_lead = json.loads(writer.prose_story_blocks[0][1][1])
+        self.assertEqual("multiline_lead", projected_lead["layout_variant"])
 
     def test_unapproved_operation_chain_keeps_the_standard_bottom(self) -> None:
         writer = _RecordingWriter()
@@ -458,6 +588,44 @@ class ReferenceStoryEmitterTests(unittest.TestCase):
         )
 
         self.assertEqual(32.0, writer.spread_chain_options[0]["bottom_extra"])
+
+    def test_measured_troubleshooting_chain_reuses_component_allowance(self) -> None:
+        writer = _RecordingWriter()
+        writer.params["comp_trouble_page_extra_height"] = ("32", "pt")
+        emitter = ReferenceStoryEmitter(
+            writer,
+            _RecordingToc(),
+            ROOT,
+            {"schema_version": "latex-page-plan/v1", "pages": []},
+        )
+
+        emitter.emit(
+            "st_flow_troubleshooting_es_charging_es",
+            "troubleshooting_es + charging_es + storage_es",
+            [("h1", "SOLUCIÓN DE PROBLEMAS")],
+            page_cursor=23,
+        )
+
+        self.assertEqual(32.0, writer.spread_chain_options[0]["bottom_extra"])
+
+    def test_measured_overview_chain_gets_tokenized_import_allowance(self) -> None:
+        writer = _RecordingWriter()
+        writer.params["idml_measured_overview_page_extra_height"] = ("48", "pt")
+        emitter = ReferenceStoryEmitter(
+            writer,
+            _RecordingToc(),
+            ROOT,
+            {"schema_version": "latex-page-plan/v1", "pages": []},
+        )
+
+        emitter.emit(
+            "st_flow_fcc_en_box_contents_en",
+            "fcc_en + box_contents_en + product_overview_en",
+            [("h1", "PRODUCT OVERVIEW")],
+            page_cursor=4,
+        )
+
+        self.assertEqual(48.0, writer.spread_chain_options[0]["bottom_extra"])
 
     def test_app_chain_uses_reference_top_offset(self) -> None:
         for language in ("en", "en-US", "en_US"):

@@ -20,7 +20,9 @@ from tools.component_specs.overview_adapters import (
 )
 from tools.component_specs.overview_instance import (
     load_overview_instance_registry,
+    overview_instance_sha256,
     resolve_overview_instance,
+    validate_resolved_overview_instance,
     validate_overview_instance_registry,
 )
 from tools.component_specs.projection import project_manual_ir_components
@@ -99,6 +101,41 @@ class OverviewComponentSpecTests(unittest.TestCase):
 
     def test_target_resolution_is_exact_and_unknown_targets_fail_closed(self) -> None:
         self.assertEqual("je1000f-us-v1", self.instance["instance_id"])
+        battery_pack = resolve_overview_instance(
+            model="JBP-2000B",
+            region="US",
+            registry=self.instance_registry,
+        )
+        self.assertEqual("jbp2000b-us-v1", battery_pack["instance_id"])
+        self.assertEqual(
+            ["power", "lcd", "handle", "port_a", "port_b"],
+            [
+                callout["id"]
+                for view in battery_pack["views"]
+                for callout in view["callouts"]
+            ],
+        )
+        battery_pack_eu = resolve_overview_instance(
+            model="JBP-2000B",
+            region="EU",
+            registry=self.instance_registry,
+        )
+        self.assertEqual("jbp2000b-eu-v1", battery_pack_eu["instance_id"])
+        battery_pack_jp = resolve_overview_instance(
+            model="JBP-2000B",
+            region="JP",
+            registry=self.instance_registry,
+        )
+        self.assertEqual("jbp2000b-jp-v1", battery_pack_jp["instance_id"])
+        us_geometry = deepcopy(battery_pack)
+        eu_geometry = deepcopy(battery_pack_eu)
+        jp_geometry = deepcopy(battery_pack_jp)
+        for instance in (us_geometry, eu_geometry, jp_geometry):
+            instance.pop("instance_id")
+            instance.pop("target")
+            instance.pop("source_patterns")
+        self.assertEqual(us_geometry, eu_geometry)
+        self.assertEqual(us_geometry, jp_geometry)
         self.assertEqual(
             self.instance,
             resolve_overview_instance(
@@ -110,10 +147,40 @@ class OverviewComponentSpecTests(unittest.TestCase):
         )
         with self.assertRaisesRegex(ComponentSpecError, "found 0"):
             resolve_overview_instance(
-                model="JE-1000F",
-                region="EU",
+                model="JBP-2000B",
+                region="CN",
                 registry=self.instance_registry,
             )
+
+    def test_resolved_instance_is_self_contained_and_hashable_for_ir_replay(self) -> None:
+        self.assertEqual([], validate_resolved_overview_instance(self.instance))
+        self.assertEqual(64, len(overview_instance_sha256(self.instance)))
+
+        unresolved = deepcopy(self.instance)
+        unresolved["extends"] = "je1000f-us-v1"
+        self.assertEqual(
+            ["resolved overview instance cannot retain extends"],
+            validate_resolved_overview_instance(unresolved),
+        )
+
+    def test_instance_inheritance_fails_closed_for_missing_base_and_cycles(self) -> None:
+        missing_base = deepcopy(self.instance_registry)
+        missing_base["instances"]["broken"] = {
+            "extends": "missing",
+            "target": {"model": "BROKEN", "region": "XX"},
+        }
+        self.assertRegex(
+            "; ".join(validate_overview_instance_registry(missing_base)),
+            "names unknown instance",
+        )
+
+        cycle = deepcopy(self.instance_registry)
+        cycle["instances"]["cycle-a"] = {"extends": "cycle-b"}
+        cycle["instances"]["cycle-b"] = {"extends": "cycle-a"}
+        self.assertRegex(
+            "; ".join(validate_overview_instance_registry(cycle)),
+            "inheritance cycle",
+        )
         with self.assertRaisesRegex(ComponentSpecError, "unknown overview instance"):
             resolve_overview_instance(
                 model=None,
@@ -121,6 +188,89 @@ class OverviewComponentSpecTests(unittest.TestCase):
                 instance_id="missing-target",
                 registry=self.instance_registry,
             )
+
+    def test_eu_instance_inherits_us_geometry_and_overrides_views_by_id(self) -> None:
+        eu = resolve_overview_instance(
+            model="JE-1000F",
+            region="EU",
+            registry=self.instance_registry,
+        )
+
+        self.assertEqual("je1000f-eu-v1", eu["instance_id"])
+        self.assertEqual(["front", "right"], [view["id"] for view in eu["views"]])
+        self.assertEqual(
+            [view["web"] for view in self.instance["views"]],
+            [view["web"] for view in eu["views"]],
+        )
+        self.assertEqual(
+            [view["idml"] for view in self.instance["views"]],
+            [view["idml"] for view in eu["views"]],
+        )
+        self.assertEqual(
+            [view["callouts"] for view in self.instance["views"]],
+            [view["callouts"] for view in eu["views"]],
+        )
+        self.assertEqual(
+            ["en", "fr", "es", "de", "it"],
+            [mapping["locale"] for mapping in eu["views"][0]["composite_locales"]],
+        )
+        self.assertEqual("overview/front_product", eu["views"][0]["image_key"])
+        self.assertEqual(
+            self.instance["views"][1]["image_key"],
+            eu["views"][1]["image_key"],
+        )
+
+    def test_battery_pack_instance_projects_only_target_difference_slots(self) -> None:
+        instance = resolve_overview_instance(
+            model="JBP-2000B",
+            region="US",
+            registry=self.instance_registry,
+        )
+        blocks = [
+            ("h1", "PRODUCT OVERVIEW"),
+            ("h2", "FRONT VIEW"),
+            ("image", "overview/jbp2000b/front_controls.png"),
+            ("table", [["**POWER button**", "**LCD Display**"]]),
+            ("h2", "LEFT SIDE VIEW"),
+            ("image", "overview/jbp2000b/left_side_ports.png"),
+            (
+                "table",
+                [
+                    [
+                        "**Handle**",
+                        "**DC Expansion Port A** (Connect to Terminal A)",
+                    ],
+                    [
+                        "",
+                        "**DC Expansion Port B** (Connect to Terminal B)",
+                    ],
+                ],
+            ),
+        ]
+        spec = overview_spec_from_blocks(
+            blocks,
+            instance=instance,
+            source_ref="page/product_overview_en.rst",
+            language="en",
+        )
+        projection = idml_overview_projection(spec, instance)
+
+        self.assertEqual("jbp2000b-us-v1", projection["geometry_ref"])
+        self.assertEqual(2, len(projection["views"]))
+        self.assertEqual(
+            [42.0, 365.5, 105.0, 12.0],
+            projection["views"][0]["heading_text_rect"],
+        )
+        self.assertEqual(5, sum(len(view["callouts"]) for view in projection["views"]))
+        self.assertEqual(5, len(projection["leaders"]))
+        self.assertEqual(
+            ["POWER button", "LCD Display", "Handle", "DC Expansion Port A", "DC Expansion Port B"],
+            [
+                callout["label"]
+                for view in projection["views"]
+                for callout in view["callouts"]
+            ],
+        )
 
     def test_two_variants_share_live_semantics_and_asset_roles(self) -> None:
         for variant in (LIVE_VARIANT, COMPOSITE_VARIANT):

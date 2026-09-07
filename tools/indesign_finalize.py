@@ -7,6 +7,8 @@ import json
 import re
 import subprocess
 import tempfile
+import unicodedata
+import zipfile
 from collections import defaultdict
 from pathlib import Path
 
@@ -98,9 +100,23 @@ def write_version_pin(pin_path: Path = VERSION_PIN, actual: str | None | object 
     return actual
 
 
+def _idml_document_language(path: Path) -> str:
+    if not path.is_file():
+        return ""
+    try:
+        with zipfile.ZipFile(path) as package:
+            designmap = package.read("designmap.xml").decode("utf-8")
+    except (KeyError, OSError, UnicodeDecodeError, zipfile.BadZipFile):
+        return ""
+    match = re.search(r'\bLabel="hb:language=([A-Za-z0-9_-]+)"', designmap)
+    return match.group(1) if match else ""
+
+
 def _job(args: argparse.Namespace) -> dict[str, str]:
+    input_idml = Path(args.idml).resolve()
     return {
-        "input_idml": str(Path(args.idml).resolve()),
+        "input_idml": str(input_idml),
+        "document_language": _idml_document_language(input_idml),
         "output_indd": str(Path(args.indd).resolve()),
         "output_pdf": str(Path(args.pdf).resolve()),
         "report_json": str(Path(args.report).resolve()),
@@ -147,6 +163,68 @@ def _pdf_export_compliance(path: Path, job: dict[str, str]) -> dict[str, object]
         expected_output_intent=job["output_intent"],
         expected_output_condition=job["output_condition"],
     )
+
+
+def _pdf_missing_glyphs(path: Path) -> list[dict[str, object]]:
+    """Return visible U+FFFD or .notdef uses from every PDF text trace.
+
+    PyMuPDF's trace walks page text after placed PDF form XObjects have been
+    assembled into the exported document, so this covers both native InDesign
+    text and text retained inside placed graphics.  ``glyph_id == 0`` is the
+    PDF font's .notdef glyph; text extraction alone is insufficient because a
+    ToUnicode map can still return the intended character for that glyph.
+    """
+
+    import fitz
+
+    findings: list[dict[str, object]] = []
+    with fitz.open(path) as document:
+        for page_index, page in enumerate(document, start=1):
+            for span_index, span in enumerate(page.get_texttrace(), start=1):
+                font = str(span.get("font") or "")
+                for char_index, raw_char in enumerate(
+                    span.get("chars", ()), start=1,
+                ):
+                    if len(raw_char) < 2:
+                        raise ValueError(
+                            "PDF text trace character is missing codepoint/glyph id"
+                        )
+                    codepoint = int(raw_char[0])
+                    glyph_id = int(raw_char[1])
+                    try:
+                        character = chr(codepoint)
+                    except ValueError as exc:
+                        raise ValueError(
+                            f"PDF text trace contains invalid codepoint: {codepoint}"
+                        ) from exc
+                    visible = (
+                        not character.isspace()
+                        and not unicodedata.category(character).startswith("C")
+                    )
+                    reasons: list[str] = []
+                    if codepoint == 0xFFFD:
+                        reasons.append("replacement_character")
+                    if glyph_id == 0 and visible:
+                        reasons.append("notdef_glyph")
+                    if not reasons:
+                        continue
+                    bbox = raw_char[3] if len(raw_char) > 3 else None
+                    findings.append({
+                        "page": page_index,
+                        "span": span_index,
+                        "character_index": char_index,
+                        "character": character,
+                        "codepoint": f"U+{codepoint:04X}",
+                        "glyph_id": glyph_id,
+                        "font": font,
+                        "reasons": reasons,
+                        **(
+                            {"bbox": [float(value) for value in bbox]}
+                            if bbox is not None
+                            else {}
+                        ),
+                    })
+    return findings
 
 
 def _clear_outputs(job: dict[str, str]) -> None:
@@ -232,13 +310,57 @@ def _collect_finalize_result(
             "error": f"finalize report not found: {report_path}",
         }
     report = json.loads(report_path.read_text(encoding="utf-8"))
+    post_reopen = report.get("post_reopen") or {}
+    requires_reopen_gate = report.get("schema_version") == "indesign-preflight/v2"
+    reopen_gate_pass = (
+        not requires_reopen_gate
+        or (
+            post_reopen.get("completed") is True
+            and post_reopen.get("page_count") == report.get("page_count")
+            and post_reopen.get("story_count") == report.get("story_count")
+            and not post_reopen.get("overset_stories")
+            and not post_reopen.get("overset_table_cells")
+            and not post_reopen.get("missing_fonts")
+            and not post_reopen.get("bad_links")
+        )
+    )
     output_pdf = Path(job["output_pdf"])
     if output_pdf.is_file():
         compliance = _pdf_export_compliance(output_pdf, job)
         report["pdf_export_validation"] = compliance
-        report["success"] = bool(report.get("success")) and bool(compliance["pass"])
+        try:
+            missing_glyphs = _pdf_missing_glyphs(output_pdf)
+            glyph_validation: dict[str, object] = {
+                "pass": not missing_glyphs,
+                "finding_count": len(missing_glyphs),
+            }
+        except Exception as exc:
+            missing_glyphs = []
+            glyph_validation = {
+                "pass": False,
+                "finding_count": 0,
+                "error": str(exc),
+            }
+        report["missing_glyphs"] = missing_glyphs
+        report["pdf_glyph_validation"] = glyph_validation
+        report["success"] = (
+            bool(report.get("success"))
+            and bool(compliance["pass"])
+            and bool(glyph_validation["pass"])
+            and reopen_gate_pass
+        )
         if not compliance["pass"] and not report.get("error"):
             report["error"] = "exported PDF does not satisfy the PDF/X output contract"
+        if not glyph_validation["pass"] and not report.get("error"):
+            report["error"] = (
+                "exported PDF contains replacement or .notdef glyphs"
+                if missing_glyphs
+                else "exported PDF glyph validation could not be completed"
+            )
+        if not reopen_gate_pass and not report.get("error"):
+            report["error"] = (
+                "saved INDD failed the mandatory close/reopen preflight gate"
+            )
     report["toolchain"] = {
         "indesign_actual": indesign_version(),
         "version_pin_status": pin_status,
@@ -248,12 +370,27 @@ def _collect_finalize_result(
     )
     success = bool(report.get("success"))
     status = "OK" if success else "PREFLIGHT FAIL"
-    overset = len(report.get("overset_stories", []))
-    missing_fonts = len(report.get("missing_fonts", []))
-    bad_links = len(report.get("bad_links", []))
+    overset = (
+        len(report.get("overset_stories", []))
+        + len(report.get("overset_table_cells", []))
+        + len(post_reopen.get("overset_stories", []))
+        + len(post_reopen.get("overset_table_cells", []))
+    )
+    missing_fonts = (
+        len(report.get("missing_fonts", []))
+        + len(post_reopen.get("missing_fonts", []))
+    )
+    missing_glyphs = len(report.get("missing_glyphs", []))
+    bad_links = (
+        len(report.get("bad_links", []))
+        + len(post_reopen.get("bad_links", []))
+    )
+    overset_pages = _overset_pages(report)
     print(
         f"[indesign-finalize] {status}: pages={report.get('page_count')} "
-        f"overset={overset} fonts={missing_fonts} links={bad_links} "
+        f"overset={overset} fonts={missing_fonts} glyphs={missing_glyphs} "
+        f"links={bad_links} "
+        f"overset_pages={','.join(str(page) for page in overset_pages) or '-'} "
         f"report={job['report_json']}"
     )
     if report.get("error"):
@@ -266,9 +403,35 @@ def _collect_finalize_result(
         "page_count": report.get("page_count"),
         "overset_count": overset,
         "missing_fonts_count": missing_fonts,
+        "missing_glyphs_count": missing_glyphs,
         "bad_links_count": bad_links,
+        "overset_pages": overset_pages,
         **({"error": report["error"]} if report.get("error") else {}),
     }
+
+
+def _overset_pages(report: dict[str, object]) -> list[int]:
+    """Return unique physical pages from every structured overset finding."""
+
+    pages: set[int] = set()
+    states = [report, report.get("post_reopen") or {}]
+    for state in states:
+        if not isinstance(state, dict):
+            continue
+        for finding in state.get("overset_table_cells", []) or []:
+            if isinstance(finding, dict):
+                page = finding.get("page")
+                if isinstance(page, int) and page > 0:
+                    pages.add(page)
+        for finding in state.get("overset_stories", []) or []:
+            if not isinstance(finding, dict):
+                continue
+            for container in finding.get("text_containers", []) or []:
+                if isinstance(container, dict):
+                    page = container.get("page")
+                    if isinstance(page, int) and page > 0:
+                        pages.add(page)
+    return sorted(pages)
 
 
 def run_finalize_job(
@@ -404,8 +567,19 @@ def main() -> int:
         print(f"[indesign-finalize] version-pin {pin_status}: {pin_message}")
         return 0 if pin_status == "match" else 2
 
+    if args.idml:
+        # Default the three outputs to sit beside the package. The package lives
+        # under docs/_build/<MODEL>/<REGION>/idml/, so this is what keeps a
+        # finalize report readable in the tree next to the artefact it
+        # describes, instead of wherever the host operator happened to be
+        # standing -- the JP round's ledger asked for exactly that and got a
+        # transcription instead. An explicit flag still wins.
+        package = Path(args.idml)
+        args.indd = args.indd or str(package.with_suffix(".indd"))
+        args.pdf = args.pdf or str(package.with_suffix(".pdf"))
+        args.report = args.report or str(package.parent / "finalize_report.json")
     if not all((args.idml, args.indd, args.pdf, args.report)):
-        parser.error("--idml, --indd, --pdf and --report are required to run finalize")
+        parser.error("--idml is required to run finalize (--indd/--pdf/--report default beside it)")
     if pin_status == "no_indesign":
         print(f"[indesign-finalize] ERROR: {pin_message}")
         return 2

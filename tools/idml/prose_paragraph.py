@@ -4,11 +4,13 @@ from __future__ import annotations
 from pathlib import Path
 
 from .app_inline import prepare_app_body_inline
+from .inline_images import prepare_inline_images
 from .app_text_styles import (
     apply_marker_metrics,
     marked_paragraph_layout,
     tab_list_properties,
 )
+from .components.native_marker import marked_text, marker_replacements
 
 
 def build_text_paragraph(
@@ -58,7 +60,11 @@ def build_text_paragraph(
     if marker_layout is not None:
         text = marker_layout.text
     elif is_h2:
-        text = "\u25cf " + text
+        text = (
+            marked_text(text)
+            if writer.native_structure_markers
+            else "\u25cf " + text
+        )
     text, inline_replacements = prepare_app_body_inline(
         writer,
         semantic_kind=semantic_kind,
@@ -68,6 +74,19 @@ def build_text_paragraph(
         story_id=story_id,
         block_index=block_index,
     )
+    if is_h2 and marker_layout is None and writer.native_structure_markers:
+        inline_replacements = {
+            **(inline_replacements or {}),
+            **marker_replacements(
+                writer,
+                marker_id=f"{story_id}_h2_marker_{block_index}",
+            ),
+        }
+    text, images = prepare_inline_images(
+        text, writer._render_context(bundle_root, language=page_language),
+        tid=f"{story_id}_{block_index}",
+    )
+    inline_replacements = {**(inline_replacements or {}), **images}
     paragraph = writer._psr(
         style,
         text,

@@ -30,18 +30,22 @@ escaped inline subset so their column and row-span semantics stay deterministic.
 from __future__ import annotations
 
 import re
+from pathlib import Path
 from typing import Any
 
+from bs4 import BeautifulSoup
 from docutils import nodes
 from docutils.parsers.rst import directives
 from sphinx.util.docutils import SphinxDirective
+from sphinx.errors import SphinxError
 
-from tools.component_specs.adapters import web_callout_classes
-from tools.component_specs.callout import CALLOUT_VARIANTS, callout_component_spec
-from tools.component_specs.spec_table import (
-    spec_table_component_spec,
-    web_spec_table_projection,
-)
+from tools.component_specs.callout import CALLOUT_VARIANTS
+from tools.manual_ir import build_manual_ir_from_source
+from tools.manual_ir.web_callouts import load_web_callout_source
+from tools.web_callout_ir import render_callout_ir
+from tools.web_spec_component import transform_specification_tables
+from tools.web_troubleshooting_component import transform_troubleshooting_tables
+from tools.web_lcd_component import transform_lcd_icon_tables
 
 SIGNAL_WORDS = ("WARNING", "CAUTION", "NOTE", "TIP", "DANGER", "IMPORTANT", "NOTICE", "ATTENTION")
 _SUP_RE = re.compile(r"\^([^\^\s][^\^]{0,24})\^")
@@ -140,6 +144,43 @@ class _ManualDirective(SphinxDirective):
         return f' aria-label="{_inline_html(self.label)}"' if self.label else ""
 
 
+class _CalloutNode(nodes.container):
+    """Delay IR intake until Sphinx has rendered resolved rich child nodes."""
+
+
+def _visit_callout_html(translator, node):
+    translator.visit_container(node)
+    node["body_start"] = len(translator.body)
+
+
+def _depart_callout_html(translator, node):
+    start = node["body_start"]
+    body_html = "".join(translator.body[start:])
+    html = (
+        '<table class="manual-callout-table"><tbody><tr>'
+        '<td class="manual-callout-label"><p><strong>'
+        + node["label_html"] + '</strong></p></td>'
+        '<td class="manual-callout-body">' + body_html + '</td></tr></tbody></table>'
+    )
+    try:
+        source = load_web_callout_source(
+            html, source_path=Path(node["source_ref"]), declaration=node["declaration"],
+        )
+        rendered = render_callout_ir(build_manual_ir_from_source(source))
+    except ValueError as exc:
+        raise SphinxError(f'{node["source_ref"]}: {exc}') from exc
+    translator.body[start:] = [rendered]
+    translator.depart_container(node)
+
+
+def _visit_callout_plain(translator, node):
+    translator.visit_container(node)
+
+
+def _depart_callout_plain(translator, node):
+    translator.depart_container(node)
+
+
 class CalloutDirective(_ManualDirective):
     """``{callout} LABEL`` — the manual's labelled notice box."""
 
@@ -154,24 +195,15 @@ class CalloutDirective(_ManualDirective):
                 + ", ".join(sorted(CALLOUT_VARIANTS))
             )
         language = str(getattr(self.env.config, "language", None) or "und")
-        spec = callout_component_spec(
-            label=label,
-            body="\n".join(self.content),
+        container = _CalloutNode(
+            label_html=_inline_html(label),
             source_ref=f"{self.env.docname}:{self.lineno}",
-            language=language,
-            variant=declared_variant or None,
+            declaration={"language": language, "variant": declared_variant or None},
         )
-        classes = web_callout_classes(spec)
-        container = nodes.container()
-        container += _raw(
-            f'<table class="{classes["table"]}"><tbody><tr>'
-            f'<td class="{classes["label"]}"><p><strong>{_inline_html(label)}</strong></p></td>'
-            f'<td class="{classes["body"]}">'
-        )
+        self.set_source_info(container)
         body = nodes.container()
         self.state.nested_parse(self.content, self.content_offset, body)
         container += body.children
-        container += _raw("</td></tr></tbody></table>")
         return [container]
 
 
@@ -179,42 +211,29 @@ class SpecTableDirective(_ManualDirective):
     """``{spec-table} SECTION`` — label/value rows, blank label continues the previous."""
 
     def run(self) -> list[nodes.Node]:
-        language = str(getattr(self.env.config, "language", None) or "und")
-        spec = spec_table_component_spec(
-            section_title=self.label,
-            rows=self.rows(),
-            source_ref=f"{self.env.docname}:{self.lineno}",
-            language=language,
+        # Encode this carrier's declared title/rows; the shared IR consumer
+        # owns grouping, rowspans and Web presentation. The title supplies
+        # component semantics, while the directive emits only the figure.
+        body = "".join(
+            "<tr>" + "".join(f"<td>{_inline_html(cell)}</td>" for cell in row) + "</tr>"
+            for row in self.rows()
         )
-        projection = web_spec_table_projection(spec)
-        body: list[str] = []
-        for group in projection["groups"]:
-            label = str(group["label"])
-            values = group["values"]
-            span = int(group["label_rowspan"])
-            rowspan = f' rowspan="{span}"' if span > 1 else ""
-            body.append(
-                f'<tr><th class="{projection["label_classes"]}" scope="row"{rowspan}>'
-                f"{_inline_html(label)}</th>"
-                f'<td class="{projection["value_classes"]}">'
-                f'{_inline_html(str(values[0]["text"]))}</td>'
-                + "</tr>"
+        soup = BeautifulSoup(
+            '<h2 class="hb-spec-section"><span class="hb-spec-section-text">'
+            f'{_inline_html(self.label)}</span></h2>'
+            '<table class="manual-table manual-spec-table hb-spec-table">'
+            f'<tbody>{body}</tbody></table>',
+            "html.parser",
+        )
+        try:
+            transform_specification_tables(
+                soup, source_path=Path(f"{self.env.docname}:{self.lineno}"),
+                language=str(getattr(self.env.config, "language", None) or "und"),
+                error_type=ValueError,
             )
-            for value in values[1:]:
-                body.append(
-                    "<tr>"
-                    f'<td class="{projection["value_classes"]}">'
-                    f'{_inline_html(str(value["text"]))}</td>'
-                    + "</tr>"
-                )
-        return [
-            _raw(
-                f'<figure{self.aria()} class="{projection["composition_class"]}">'
-                f'<table class="{projection["table_classes"]}">'
-                '<colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>'
-                f'<tbody>{"".join(body)}</tbody></table></figure>'
-            )
-        ]
+        except ValueError as exc:
+            raise self.error(str(exc)) from exc
+        return [_raw(str(soup.select_one("figure.hb-spec-table-composition")))]
 
 
 class TroubleshootingDirective(_ManualDirective):
@@ -228,20 +247,27 @@ class TroubleshootingDirective(_ManualDirective):
             "Corrective Measures",
         )
         rows = "".join(
-            f'<tr><td class="hb-troubleshooting-code">{_inline_html(row[0])}</td>'
-            f'<td class="hb-troubleshooting-measures">{_line_block(row[1] if len(row) > 1 else "")}</td></tr>'
+            "<tr>" + "".join(
+                f"<td>{_inline_html(cell) if index == 0 else _line_block(cell)}</td>"
+                for index, cell in enumerate(row)
+            ) + "</tr>"
             for row in self.rows()
         )
         head = "".join(f'<th class="head">{_inline_html(cell)}</th>' for cell in header)
-        return [
-            _raw(
-                f'<figure{self.aria()} class="hb-troubleshooting-composition">'
-                '<table class="manual-table hb-troubleshooting-table">'
-                '<colgroup><col class="hb-troubleshooting-col-code"/>'
-                '<col class="hb-troubleshooting-col-measures"/></colgroup>'
-                f"<thead><tr>{head}</tr></thead><tbody>{rows}</tbody></table></figure>"
+        soup = BeautifulSoup(
+            f'<figure{self.aria()} class="hb-troubleshooting-composition">'
+            '<table class="manual-table hb-troubleshooting-table">'
+            f"<thead><tr>{head}</tr></thead><tbody>{rows}</tbody></table></figure>",
+            "html.parser",
+        )
+        try:
+            transform_troubleshooting_tables(
+                soup, source_path=Path(f"{self.env.docname}:{self.lineno}"),
+                language=self.env.config.language,
             )
-        ]
+        except ValueError as exc:
+            raise self.error(str(exc)) from exc
+        return [_raw(str(soup))]
 
 
 class LcdIconsDirective(_ManualDirective):
@@ -250,23 +276,28 @@ class LcdIconsDirective(_ManualDirective):
     def run(self) -> list[nodes.Node]:
         rows = ""
         for row in self.rows():
-            padded = row + [""] * (4 - len(row))
-            number, icon, name, description = padded[:4]
+            if len(row) != 4:
+                raise self.error("LCD icon row requires four cells")
+            number, icon, name, description = row
             rows += (
-                f'<tr><td class="hb-lcd-number">{_inline_html(number)}</td>'
-                f'<td class="hb-lcd-icon">{_image_html(icon, css_class="hb-lcd-icon-art")}</td>'
-                f'<td class="hb-lcd-name">{_inline_html(name)}</td>'
-                f'<td class="hb-lcd-description">{_line_block(description)}</td></tr>'
+                f'<tr><td>{_inline_html(number)}</td>'
+                f'<td>{_image_html(icon, css_class="")}</td>'
+                f'<td>{_inline_html(name)}</td>'
+                f'<td>{_line_block(description)}</td></tr>'
             )
-        return [
-            _raw(
-                f'<figure{self.aria()} class="hb-lcd-table-composition">'
-                '<table class="manual-table hb-lcd-icon-table">'
-                '<colgroup><col class="hb-lcd-col-number"/><col class="hb-lcd-col-icon"/>'
-                '<col class="hb-lcd-col-name"/><col class="hb-lcd-col-description"/></colgroup>'
-                f"<tbody>{rows}</tbody></table></figure>"
+        soup = BeautifulSoup(
+            f'<figure{self.aria()} class="hb-lcd-table-composition">'
+            '<table class="manual-table hb-lcd-icon-table">'
+            f"<tbody>{rows}</tbody></table></figure>", "html.parser",
+        )
+        try:
+            transform_lcd_icon_tables(
+                soup, source_path=Path(f"{self.env.docname}:{self.lineno}"),
+                language=self.env.config.language,
             )
-        ]
+        except ValueError as exc:
+            raise self.error(str(exc)) from exc
+        return [_raw(str(soup))]
 
 
 class SymbolsDirective(_ManualDirective):
@@ -422,6 +453,11 @@ DIRECTIVES = {
 
 
 def setup(app: Any) -> dict[str, Any]:
+    plain = (_visit_callout_plain, _depart_callout_plain)
+    app.add_node(
+        _CalloutNode, html=(_visit_callout_html, _depart_callout_html),
+        latex=plain, text=plain, man=plain, texinfo=plain,
+    )
     for name, directive in DIRECTIVES.items():
         app.add_directive(name, directive)
-    return {"version": "1.0", "parallel_read_safe": True, "parallel_write_safe": True}
+    return {"version": "1.1", "env_version": 1, "parallel_read_safe": True, "parallel_write_safe": True}

@@ -14,6 +14,136 @@ Read the Docs. Web delivery is intentionally separate from print delivery.
 artifacts. Both actions render reviewed content selected by
 `Document_link.Git_ref` with the current `main` toolchain.
 
+## 1.1 Semantic tables and frozen figures
+
+The Web profile renders explicitly declared specification sections across
+targets. `h2.hb-spec-section` with a source-authored
+`.hb-spec-section-text` title and its adjacent `hb-spec-table` or
+`manual-spec-table` are the declaration. The Web adapter in
+[`web_spec_component.py`](../../tools/web_spec_component.py) projects their
+label/value rows through the existing `HB-TABLE-SPEC` ComponentSpec and public
+`web_spec_table_projection`. It keeps inline markup, row order, label spans,
+references and adjacent footnotes/safety copy. Only the declared decorative
+heading bullet is removed; the Web theme supplies its heading marker.
+
+This semantic path runs before figure routing and does not require an artwork
+grant. A matching filename or an ordinary two-column table is insufficient;
+missing declarations stay unchanged, while malformed declared sections fail
+the build. Section and reference counts come from the source, not a target
+constant. `web_manual.json.specifications` remains readable for serialized
+compatibility but its old `spec_*`, four-section and two-reference selectors
+no longer route or constrain rendering. The `{spec-table}` Markdown directive
+already consumes the same public adapter and requires no new interface.
+
+Troubleshooting follows the same semantic-before-figure boundary. In the
+RST-to-Web bundle path, [`word_bundle_html.py`](../../tools/word_bundle_html.py)
+resolves the current target's `plan_materialized_pages` once and passes a
+declaration for the exact materialized paths of `CsvPage(page="troubleshooting")`.
+The existing planner owns language/capability selection and `slot_id` naming;
+the Web adapter does not infer intent from filenames, translated headers or
+error codes. This also covers unmarked `review-asis` snapshots without editing
+their reviewed RST. Explicit `table.hb-troubleshooting-table` declarations can
+scope individual tables in mixed HTML fragments.
+
+[`web_troubleshooting_component.py`](../../tools/web_troubleshooting_component.py)
+shares validation and DOM projection with `{troubleshooting}`. It consumes the
+existing `HB-TABLE-TROUBLESHOOTING` CSS; that style binding is **not** a registered
+ComponentSpec, and this adapter adds no public schema. The standalone Markdown
+extension pack includes this module and is tested outside the repository's
+import path. Directive headers and its optional label remain source-owned;
+the existing English default headers and ` / ` step syntax remain supported.
+
+A declared CSV page must have exactly one table. Each declared table requires
+two nonempty, unspanned header cells and at least one two-cell data row; missing
+or ambiguous declared content fails with its source reference. An unmarked
+fragment without a page declaration stays unchanged. When an explicitly
+declared table has no `thead` (the current JP template uses `header-rows: 0`),
+its authored first row becomes `thead`/`th scope="col"`. Existing headers,
+ordered body rows, lists, line blocks, links and inline markup are retained.
+The existing figure scroll surface gains `tabindex="0"` for keyboard access;
+its accessible label comes from the directive label or source header cells.
+`web_manual.json.troubleshooting_table` remains readable for serialized
+compatibility, but its source patterns no longer route rendering and there is
+no fixed error-code inventory. CSV readers, templates and review snapshots
+are unchanged.
+
+`figure_targets`, per-figure source patterns, target instances and frozen
+composite approval/hash checks retain their existing scope. Warranty is a
+shared semantic composition and runs independently of that artwork grant: its
+source-owned localized unit and label are retained while the Web adapter supplies
+the common 3-year/2-year badge treatment. LCD, specifications, troubleshooting
+and Inbox likewise follow their own declaration/semantic admission rules. For a
+target outside the frozen figure contract, Web starts at its manifest's first
+included page; it does not invent a preface. The frozen US target retains its
+preface rule. Cover/TOC/back-cover exclusions remain in force.
+
+Figure carrier choice is part of the component contract, not an extraction
+default:
+
+- Product Overview, the five Operation panels, and the four Charging panels use
+  locale-matched `localized-full-page` composites. Their visible callouts,
+  prerequisites, connection labels, and Operation `On` / `Off` instructions are
+  intentionally embedded in the approved crop. Extraction may crop the panel but
+  must not redact that localized text. The section heading remains live HTML.
+- The Operation LCD screen-mode block is deliberately hybrid: only the
+  market-correct product/display artwork is an image, while the six-row state /
+  action / explanation table remains searchable, responsive HTML. A screenshot
+  of the complete LCD table is not a valid replacement.
+- Specifications, troubleshooting, the LCD-icon glossary, Warranty and other
+  semantic tables remain live components unless their own contract explicitly
+  says otherwise.
+
+Target reuse follows inheritance plus narrow overrides. A child Product Overview
+instance may `extend` a validated base instance; lists whose members have stable
+`id` values merge by `id`, so the child can override only target identity,
+market-specific artwork keys and locale declarations while inheriting callout
+order and Web/IDML geometry. Ordinary lists still replace as a unit. Composite
+locale resolution prefers the materialized document language; filename patterns
+remain only a legacy fallback. Coverage provenance identifies an approved
+composite by `asset_key + locale + content_sha256`, including the case where two
+locales intentionally share identical bytes.
+
+`JE-1000F / EU` is admitted to the figure contract and its Overview instance
+extends `je1000f-us-v1`; EN/FR/ES/DE/IT use one shared component definition with
+locale-specific composite bindings. EU does not inherit the US-only preface
+rule. Extracted PDF composites remain quarantine candidates until pixel review
+and normal manifest/registry approval; contract admission alone is not asset
+promotion.
+
+Every newly generated Web `manual.ir.json` contains a
+`metadata.web_figure_coverage` payload with schema
+`web-figure-coverage/v1`. It audits actual rendered Overview, Operation and
+Charging slots through one status vocabulary:
+
+| Status | Meaning |
+| --- | --- |
+| `finished-panel` | A `web-illustrations/v1` entry replaced one or more source images with one approved, hash-pinned panel. |
+| `approved-composite` | A target/locale/source-matched `web-composite-manifest/v1` asset overrides the semantic fallback. |
+| `editable-fallback` | The governed semantic figure remains live/searchable because no approved composite was bound. |
+| `missing` | The rendered source image has neither an approved finished panel nor an admitted semantic fallback. |
+
+The inventory records page, section and stable slot identity; approved rows
+also retain their packaged path and SHA-256 evidence. Its totals are validated
+again before IR replay. It is an audit, not an automatic approval gate: known
+asset debt remains buildable and visible. A missing row is closed only by
+adding an approved manifest/recipe asset; copying another region's panel or
+adding page-specific Python/CSS is not a valid override.
+
+Local verification uses the same Markdown-to-Sphinx path without a queue or
+online source update. For example, with a separate staging directory:
+
+```bash
+AUTO_MANUAL_PRESENTATION_PROFILE=web python build.py md --config configs/config.us.yaml --model JE-1000F --region US --source review-asis --data-root tests/fixtures/phase2 --staging-root .tmp/web-check --no-clean --skip-root-index
+AUTO_MANUAL_PRESENTATION_PROFILE=web python build.py md --config configs/config.ja.yaml --model JE-1000F --region JP --source runtime --data-root tests/fixtures/phase2 --staging-root .tmp/web-check --no-clean --skip-root-index
+python tools/readthedocs_source.py --build-root .tmp/web-check/docs/_build --output-dir .tmp/web-check/docs/_build/rtd
+python -m sphinx -b html .tmp/web-check/docs/_build/rtd .tmp/web-check/html
+```
+
+Inspect both targets at narrow and wide widths, compare all ordered copy and
+asset hashes against the baseline, and compare document-profile outputs
+separately. This is local rendering evidence; it does not grant asset approval,
+change JP D1–D4 or promote production eligibility.
+
 ## 2. Web Publish transaction
 
 1. The business-plane worker claims only rows whose normalized action is

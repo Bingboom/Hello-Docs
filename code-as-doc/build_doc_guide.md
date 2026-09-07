@@ -1,6 +1,6 @@
 # Windows Build Guide
 
-Updated: 2026-07-16
+Updated: 2026-08-17
 
 This file is the maintainer-facing Windows and PowerShell build guide.
 The current cross-platform entrypoint is [`build.py`](../build.py).
@@ -24,6 +24,8 @@ python build.py validate
 python build.py sync-data --config configs/config.us.yaml --data-root data/phase2
 python tools/content_lint.py --data-root data/phase2 --json --write-report
 python tools/source_intake.py run --input <spec.md-or-doc-url> --document-key <MODEL_REGION> --source-lang en --data-root data/phase2 --out reports/source_intake/<run-id>
+python tools/source_intake.py spec-extract --input <spec.pdf> --rules <rules.json> --document-key <MODEL_REGION> --region <REGION> --reference <sibling-spec.json> --out reports/source_intake/<run-id>
+python tools/source_intake.py stage-plan --spec-candidates reports/source_intake/<run-id>/spec_intake_candidates.json --spec-sibling <sibling-spec.json> --placeholder-sibling <sibling-placeholders.json> --overrides <target-differences.json> --document-key <MODEL_REGION> --localized-lang <lang> --out reports/source_intake/<run-id>
 python tools/source_intake.py approve --report reports/source_intake/<run-id>/source_intake_source_table_change_request.json --approve <delta_hash> --out reports/source_intake/<run-id>
 python tools/source_intake.py apply --report reports/source_intake/<run-id>/source_intake_source_table_change_request.json --approval reports/source_intake/<run-id>/source_intake_approval.json --out reports/source_intake/<run-id>
 python tools/source_intake.py verify --candidates reports/source_intake/<run-id>/source_intake_candidates.json --change-request reports/source_intake/<run-id>/source_intake_source_table_change_request.json --approval reports/source_intake/<run-id>/source_intake_approval.json --apply-report reports/source_intake/<run-id>/source_intake_apply.json --check-command "sync-data=python build.py sync-data --config configs/config.us.yaml --data-root data/phase2 --table spec_master" --check-command "build=python build.py check --config configs/config.us-en.yaml --model JE-1000F --region US" --out reports/source_intake/<run-id>
@@ -63,6 +65,31 @@ python build.py clean
 .\scripts\build_us_jp_manuals.ps1 --model JE-1000F --formats html --open-html
 ```
 
+### 1.1 Wukong MCP bridge source and intake contract
+
+The DingTalk Wukong stdio MCP bridge is maintained in Git under
+[`agent/wukong-bridge/`](../agent/wukong-bridge). Its runtime registration must
+point to that checked-in `server.py`; credentials and `lark-cli` auth remain
+external, while jobs/exports go to `~/.local/state/hello-docs-bridge` (or
+`HELLO_DOCS_BRIDGE_STATE_DIR`).
+
+The KR intake path is sibling-structured and source-first. Wukong passes the
+target and an explicit sibling such as `JE-2000E_KR` + `JE-2000E_US`, writes
+English `手册值`/`行标签` with `Source_lang=en`, and keeps Korean only in optional
+`*_ko` fields. `intake_stage` rejects wrong page routing, unregistered keys,
+wrong Slot/Section/Line order, combined input/output facts, and non-canonical
+manual units before writing staging. Partial valid batches may be staged for
+review, but `intake_commit` requires the union of the target and confirmed
+staging rows to cover the sibling structures in both formal source tables.
+Formal writes still require both the Base `确认` checkbox and explicit
+conversational approval. See the bridge README for registration, security
+boundaries, Wukong call order, and validation commands.
+
+`JE-2000E_KR` is registered in the shared [`config.kr.yaml`](../configs/config.kr.yaml)
+KR/ko family. Family-default discovery routes automatic close checks to that
+config; a target-scoped verification uses `python build.py check --config
+configs/config.kr.yaml --model JE-2000E --region KR`.
+
 Local PDF font override:
 
 - for local-only Gilroy preview, set `AUTO_MANUAL_LOCAL_GILROY_DIR=<absolute-font-dir>` before `python build.py pdf ...` or `python build.py publish ...`
@@ -101,6 +128,7 @@ Meaning:
 - its parity configuration also ignores the retired `文档构建表.Document link`, which is replaced by the maintained `基线文档` and `飞书云文档` fields in the business Base
 - `tools/content_lint.py --json --write-report`: local closed-loop QC observation step for the current phase2 snapshot. It writes `reports/content_qc/<run-id>/findings.json` and `report.md`, includes best-effort snapshot `source_ref` values, keeps `record_id` nullable, and does not write Feishu rows or add a `build.py` action yet. The default report covers the registered `ja`/`ko`/`zh` long-tail as `INFO`-only observations while the EU language findings retain the existing blocking `FAIL` behavior.
 - `tools/source_intake.py run`: MVP ingress for structured spec/manual Markdown or Feishu cloud-doc content. It parses pipe-style tables into reviewable candidates for `Spec_Master`, `Page_Placeholders_Source`, `Manual_Copy_Source`, `Spec_Footnotes`, and `Spec_Notes`; with `--data-root`, it compares against the current phase2 snapshot and emits `source-table-change-request/v1` only for existing-row updates that can later be approved and applied through the existing source-table writer. It does not create online rows, edit `data/phase2/*.csv`, or replace cloud-doc backport. Track rollout in [`dev/source_intake_mvp_checklist.md`](./dev/source_intake_mvp_checklist.md).
+- `tools/source_intake.py spec-extract` / `stage-plan`: the repeatable product-spec lane. `spec-extract` matches complete field labels before any unambiguous base-label fallback and abstains on shared-prefix ambiguity. `stage-plan` consumes its candidates plus the actual region sibling exports for both specs and placeholders, applies only target-specific overrides, and emits a complete `source-intake-staging-plan/v1` review plus the current lark-cli `{"create_records":[...]}` payload. It requires exact `Page + Section + Row_key + Slot_key + Line_order` parity, keeps localized values paired with source values, marks unproven sibling inheritance for review, and never performs a live write. Once inputs are ready, this is the 3–5 minute mechanical fast path; human confirmation and formal-table promotion remain separate gates.
 - `tools/source_intake.py approve` / `apply` / `verify`: P4-P7 closure for that intake run. `approve` writes `source_intake_approval.json/.md` from explicit `--approve <delta_hash>` values or a controlled `--approve-all-resolved` review run. `apply` writes `source_intake_apply.json/.md` through the existing approval-gated source-table writer; it is dry-run by default and requires `--write --table-binding TABLE=BASE:TABLE_ID` before touching Feishu. `verify` runs labeled sync/build/review/backport commands, then writes `source_intake_closure.json/.md`; add `--require-write` when the closure must prove live source-table writes.
 - `data/source_table_contracts/phase2_source_tables.json`: repo-maintained phase2 source-table contract for table keys, snapshot files, intake targets, writable fields, and `source_record_index` mapping. Update it with [`architecture/phase2_source_tables_reference.md`](./architecture/phase2_source_tables_reference.md) whenever an online source-table schema change could affect intake, backport, source-table writeback, or sync-data.
 - `data/phase2/source_record_index.json`: optional sync-derived sidecar for exact-or-abstain source-row resolution. Its per-table `abstain_counts` make missing live IDs, missing required keys, and ambiguous primary keys visible without changing any CSV contract.
@@ -130,7 +158,7 @@ Meaning:
 - [`../tools/dingtalk/auth.py`](../tools/dingtalk/auth.py) now exposes the verified App-Only token helper behind `DINGTALK_CLIENT_ID`, `DINGTALK_CLIENT_SECRET`, and `DINGTALK_CORP_ID`, and [`../tools/dingtalk/workspace.py`](../tools/dingtalk/workspace.py) can parse a target node ID from a normal DingTalk docs URL such as `https://alidocs.dingtalk.com/i/nodes/<node_id>`.
 - `rst`: materialize [`docs/_build/<model>/<region>/rst/`](../docs/_build)
 - `review`: seed [`docs/_review/<model>/<region>/`](../docs/_review) from runtime draft
-- `--source review-asis`: render the committed `docs/_review/<model>/<region>/` bundle exactly as-is — only the conf/asset skeleton is materialized and the review overlay supplies every content page, so no page is re-derived from the build data-root. Unlike `--source review` it neither pre-syncs review params from data nor runs the Spec_Master identity guard, so it renders a review target whose model is absent from the active data-root (e.g. the CI `Review Preview Package` fixtures under `tests/fixtures/phase2`). The `Review Preview Package` workflow uses this mode, which is why a newly onboarded model (not yet in the fixtures) previews instead of failing the whole package
+- `--source review-asis`: render the committed `docs/_review/<model>/<region>/` page bytes without re-deriving them from the build data-root — only the conf/asset skeleton is materialized and the review overlay supplies content. The prepared bundle still enforces the current target language scope: an older merged review index may contain standalone pages for a language the model no longer ships, so only index includes whose explicit `\HBApplyLang{...}` declaration remains in scope are projected; the review files themselves stay untouched, and multi-language pages continue through the inline language-block trimmer, including a fully recognized `English / French / ...` scope catalogue. Unlike `--source review` this mode neither pre-syncs review params from data nor runs the Spec_Master identity guard, so it renders a review target whose model is absent from the active data-root (e.g. the CI `Review Preview Package` fixtures under `tests/fixtures/phase2`). The `Review Preview Package` workflow uses this mode, which is why a newly onboarded model (not yet in the fixtures) previews instead of failing the whole package
 - `check`: run validation + prepare bundle + content checks, including stale identity scan, contract validation, and duplicate RST/raw HTML text consistency checks
 - `asset-check`: validate the image-asset registry and resolve approved exports for renderer imports. `--allow-temporary` is only a diagnostic/operator inspection option for this command; bundle assembly never enables it. `--publish` applies the stricter registry-wide status gate. `--refresh` recomputes hashes from materialized export bytes in a dry run; pair it with explicit `--write` only after reviewing the machine-generated CSV diff. Missing or malformed exports fail closed and never produce a partial write. Editable `.ai` masters belong in the dedicated Feishu asset-source table, while `data/asset_sources.csv` records their hash/scope and `data/asset_generation_candidates.csv` controls which candidates may be sent to image generation.
 - `asset-intake`: deterministically package a PDF-compatible Illustrator master through a strict recipe. All four `--asset-source-key`, `--asset-source-file`, `--asset-recipe`, and `--asset-output-root` flags are required; the output root must not exist. The command snapshots and verifies the source, emits archive pages/previews plus approved/quarantined recipe exports, scans raw and decoded PDF objects for Illustrator private markers, verifies declared full hashes, and writes a deterministic ZIP with its manifest/index. It never edits the source, worktree, registry, or Base and exposes no promotion flag through `build.py`.
@@ -141,6 +169,7 @@ Meaning:
 - Shared templates under `docs/templates/` are bulk-migrated: every `common_assets` image directive and raw-HTML `src` uses `asset:<asset_key>` and is therefore registry status/scope/hash gated at bundle prepare. Path-based references remain compatible (recorded as `legacy-path`) but are reserved for sources that have no registry key yet — new template references should use the registry identity. Release manifests do not yet carry this asset lineage; `bundle_manifest.json` is the current bundle-level provenance surface.
 - Target-specific exports do not replace a shared registry key. They use a unique `asset_key` plus `override_for=<shared asset_key>` and a narrow model/region/language scope. A shared template keeps the stable base URI; the frozen registry resolver selects exactly one matching override or falls back to the shared row, and rejects ambiguous override matches.
 - `build.py idml` prepares only RST when the exact model/region/language target is present in the approved reference-layout registry; its production exporter consumes that hash-bound physical plan directly. A matching approved contract on disk without its registry entry is a hard error, not permission to use fuzzy page matching. The historical LaTeX-PDF fallback remains available only when the target has no approved contract.
+- A candidate `target_assembly` plan is frozen against a specific book, so the target's page manifest has to declare every page the plan names — otherwise `build.py idml` prepares a bundle the plan rejects and the target is only buildable with an explicit `--source review`, through a derivative. [`tests/test_assembly_plan_manifest_coverage.py`](../tests/test_assembly_plan_manifest_coverage.py) pins which targets are in that state; `JE-3000C_KR` is the one known case (its cover and back cover exist only under `docs/_review`, and `manual_kr.yaml` is shared with `JE-1000F_KR`/`JE-2000E_KR`, so declaring a per-model cover needs a cover asset for all three or a per-model manifest). A count mismatch names the offending pages in both directions; it is not a code regression.
 - `sync-review`: refresh review files affected by CSV data changes
 - `tools/check_review_branch_sync.py --base <ref> --remote origin --json`: emit
   the read-only shared-source propagation ledger. It resolves targets from each
@@ -150,15 +179,16 @@ Meaning:
   placeholder-line proof succeeds. Missing refs, ambiguous derivatives,
   ordinary prose/layout changes, and authored edits on a replaceable line stay
   visible as `needs_human`; this command has no apply mode.
-- `process-review-start-queue`: Start Review bridge; it consumes `sync.phase2.review_init` rows where `是否进入Review` is checked and `Workflow_action` maps to `Start Review`, resolves the review target from `Document_Key` alone, uses `Build_family` / `Lang` only as optional config-routing hints, groups only the rows whose resolved config enables `build.queue_by_document_key`, syncs the latest phase2 snapshot, always reseeds `docs/_review` from the latest `origin/main` template/data state, force-updates the routed review branch when it already exists, creates or reuses the PR, then writes back the same `Git_ref`, `PR_url`, `Review_status=InReview`, and cleared `是否进入Review` state to every pending row in that group
+- `process-review-start-queue`: Start Review bridge; it consumes `sync.phase2.review_init` rows where `是否进入Review` is checked and `Workflow_action` maps to `Start Review`, resolves the exact model/region target from `Document_Key`, and combines that target with the row's language-range `Build_family` plus optional `Lang`. A target-specific config wins only when it declares that exact target; otherwise the shared regional config remains the fallback. Thus `JBP-2000B_US` with `Build_family=us-merged` selects `config.bp-us.yaml`, while an ordinary US host row with the same language range selects `config.us.yaml`. The worker groups only the rows whose resolved config enables `build.queue_by_document_key`, syncs the latest phase2 snapshot, always reseeds `docs/_review` from the latest `origin/main` template/data state, force-updates the routed review branch when it already exists, creates or reuses the PR, then writes back the same `Git_ref`, `PR_url`, `Review_status=InReview`, and cleared `是否进入Review` state to every pending row in that group
 - Start Review eligibility is the conjunction of `Document_Key` being a non-empty `<MODEL>_<REGION>` value, `是否进入Review` being checked, and `Workflow_action` mapping to `Start Review`
 - when `Document_Key` is a linked Base field, the API can expose only the linked record id, so chat-driven Start Review lookup should use `Task_id` as the stable selector and then verify `是否进入Review` plus `Workflow_action=Start Review`
 - `Start Review` now means "force restart and reseed from the latest template". Existing committed `docs/_review/<model>/<region>/` content on `main` is no longer a duplicate guard, and re-checking `是否进入Review` on an `InReview` row will restart the review seed flow
-- `process-build-queue`: Build Draft Package / Publish bridge; it consumes the historically named `sync.phase2.document_link` binding where `是否触发文档构建 = Y`, acquires and verifies a two-hour row-group lease in `构建结果` before sync/build work, writes `开始构建时间` when that optional field exists, resolves the matching config family from `Build_family` first and `Lang` second, groups only the rows whose resolved config enables `build.queue_by_document_key`, refreshes `data/phase2` only when the row's `是否强制刷新数据 = true`, builds Draft rows as `check + word + md`, and switches Publish rows to `check + diff-report + word + pdf + md + idml`. Delivery writeback is phase-aware: Draft writes the editable `飞书云文档` plus frozen `基线文档`, Publish writes the uploaded designer handoff ZIP to `idml_file`, and Web Publish writes `HTML_link`. The worker also records the local DOCX path in `Document directory`, optional mirror state in `Document link_dd`, status in `构建结果`, refresh state in `data_sync`, clears `是否强制刷新数据`, and flips the trigger to `已构建` on success. The retired `Document link` field is not an upload-success predicate.
+- `process-build-queue`: Build Draft Package / Publish bridge; it consumes the historically named `sync.phase2.document_link` binding where `是否触发文档构建 = Y`, acquires and verifies a two-hour row-group lease in `构建结果` before sync/build work, writes `开始构建时间` when that optional field exists, resolves the config from the exact `Document_Key` target plus the language-range `Build_family` and optional `Lang`, groups only the rows whose resolved config enables `build.queue_by_document_key`, refreshes `data/phase2` only when the row's `是否强制刷新数据 = true`, builds Draft rows as `check + word + md`, and switches Publish rows to `check + diff-report + word + pdf + md + idml`. Delivery writeback is phase-aware: Draft writes the editable `飞书云文档` plus frozen `基线文档`, Publish writes the uploaded designer handoff ZIP to `idml_file`, and Web Publish writes `HTML_link`. The worker also records the local DOCX path in `Document directory`, optional mirror state in `Document link_dd`, status in `构建结果`, refresh state in `data_sync`, clears `是否强制刷新数据`, and flips the trigger to `已构建` on success. The retired `Document link` field is not an upload-success predicate.
 - `tools/manifest_lint.py --json` is a report-only inventory sentinel for config-backed page manifests. It scans every `configs/config*.yaml` reference and every `docs/manifests/*.yaml` file, reporting orphan manifests, invalid/missing sources, and config/manifest language-set drift without blocking a build.
 - Within one `process-build-queue` invocation, a successful forced phase2 sync is memoized per config/data-root pair; later groups reuse that snapshot, while a failed sync is not memoized and remains retryable.
 - `tools/manifest_family.py` is the non-mutating family-manifest pilot. Use `diff --base <base.yaml> --target <target.yaml> --output <diff.json>` to create the deterministic `family-manifest-diff/v1` carrier, then use `roundtrip` with the same base, target, and diff to assert `"byte_identical": true`. This pilot does not rewrite `docs/manifests/`; checked-in generation is a later stage.
-- `python tools/manifest_family.py fold --root . --index docs/manifests/family/index.yaml` checks the Stage 3 fold index: two anchor YAML manifests plus 15 carrier diffs rebuild all 17 current YAML goldens with canonical byte identity. Add `--write` only to refresh the tracked diff carriers; it never edits a YAML manifest.
+- `python tools/manifest_family.py fold --root . --index docs/manifests/family/index.yaml` checks the family index: four anchor YAML manifests plus 16 carrier diffs cover all 20 current YAML goldens with canonical byte identity. The two battery-pack cells own separate anchors (`manual_bp-us.yaml` for `BP@INTL`, target-neutral `manual_bp-jp.yaml` for `BP@JP`). Add `--write` only to refresh the tracked diff carriers; it never edits a YAML manifest.
+- `tools/skeleton_resolve.py` keeps the public `emit` / `verify` / `plan` CLI surface unchanged. Its Python `resolve_plan(..., product_plan=...)` API now accepts target-owned `house_style_version`, `enabled_optional_slots`, and `terminal_slots` selections; when a blueprint declares order profiles, load and pass both carrier maps with `load_slot_template_catalog(...)` so a version cannot silently lose its safety/warranty variant. Blueprints declare the complete slot universe and named order profiles; optional front/body slots are opt-in, back slots have the single `terminal_slots` selector, and calls without a product plan still resolve the required/capability core. BP@INTL continues to use the legacy region-profile terminal selector and remains byte-identical. Do not put a model/title/file/page conditional in the resolver; R3c and later targets supply only plan/config/source/asset data.
 - Family manifests carry capability annotations at the page entry, not in a target-specific side table. All current `06_ups_mode` entries declare `capability: UPS功能`, so JP/KR/EU and the other current families use the same assembly-time keep/drop decision as US. When adding a capability-governed page to another family, add the same annotation there and refresh the fold carriers with `fold --write`.
 - `.github/workflows/manifest-regenerate-diff.yml` runs that fold check on pull requests touching configs, manifests, or carrier code; this is the CI red gate for a manually edited generated manifest. It also runs `manifest_lint` as a report-only inventory.
 - for `build.queue_by_document_key` configs, Draft rows with a non-empty `Lang` are grouped by `Document_Key + normalized Lang`; `br` / `pt-br` normalizes to `pt-BR`, and the selected language is passed to the build/check/validate/bundle path. `configs/config.pt-br.yaml` now follows the single-language US build path, so Brazil Portuguese draft rows should use `Build_family = pt-br` with `Lang=br` or `Lang=pt-BR` instead of adding an English companion row.
@@ -206,10 +236,10 @@ Meaning:
 - `process-review-start-queue` now writes a structured failure summary when the worker fails before Feishu writeback; that summary is packed into `openclaw-run-metadata`, and both `/manual-status` and `queue-execute` prefer the summary message over a generic GitHub failure
 - one explicit Start Review workflow `record_id` that no longer resolves to a pending review-start row is also treated as a structured failure; if that same row is already `InReview`/`ReadyForPublish` with `Git_ref`, the worker treats the duplicate dispatch as an idempotent success — even when `Workflow_action` has already advanced to a later stage such as `Build Draft Package`. Batch queue scans with no pending rows still stay as normal idle runs.
 - the merged US `configs/config.us.yaml` flow now emits one `docs/_build/<model>/US/word/manual_<model>_us.docx` bundle that contains `en`, `fr`, and `es` together; CSV-driven `Source_lang` / `*_source` text is required, while non-source language values may be blank because runtime lookup falls back to source-language text
-- queue routing now uses `Build_family` as the primary selector: `us-merged`, `eu-merged`, `us-en`, `eu-en`, `us-es`, `us-fr`, `pt-br`, `jp-ja`, and `cn-zh`; `Lang` is only a compatibility fallback when `Build_family` is missing
+- `Build_family` is the queue row's language range, not its product or skeleton identity: use values such as `us-merged`, `eu-merged`, `us-en`, `eu-en`, `us-es`, `us-fr`, `pt-br`, `jp-ja`, and `cn-zh`. The config's internal `build.family_id` may remain target-specific; `build.language_family` declares which row language range it accepts. `Document_Key` supplies the model/region target, and `Lang` remains an optional compatibility/narrowing field.
 - queue rows should use `Workflow_action` only: `Start Review` to force restart/reseed review branches, `Build Draft Package` for review-stage rebuilds, `Publish` for print release outputs, and `Web Publish` for the responsive RTD manual; leave `Doc_phase` blank
 - when review-init reuses the shared `Document_link` binding, each worker consumes only its own action: Start Review, Build Draft Package, Publish, or Web Publish
-- merged US/EU review-init and build-queue rows should use `Build_family = us-merged` / `eu-merged` and may leave `Lang` blank; single-language rows should use the matching single-language family such as `us-en` / `eu-en` / `us-fr` / `us-es` / `pt-br`
+- merged US/EU rows for Start Review, Draft, and Publish should use `Build_family = us-merged` / `eu-merged` and may leave `Lang` blank; single-language rows should use the matching language family such as `us-en` / `eu-en` / `us-fr` / `us-es` / `pt-br`. For example, JBP and ordinary host US rows both use `us-merged`; exact target resolution selects the BP or MAIN skeleton config.
 - config policy for `build.queue_by_document_key`: turn it on for merged whole-book families that intentionally build one shared manual across languages, such as today's `us-merged`, `eu-merged`, and future `cn-merged`; leave it off for single-language families such as `us-en`, `eu-en`, `us-fr`, `us-es`, `pt-br`, `jp-ja`, `cn-zh`, or future `eu-de` / `eu-fr`, which should continue to be isolated by `record_id`
 - when the queue row carries `Version`, Build Draft Package DOCX/Markdown names stay version-suffixed such as `manual_je1000f_us_en_0.2.docx|md`, while Publish queue release artifact names become `manual_je1000f_us_en_publish_0.2.docx|pdf|md`; Draft imports the DOCX into `飞书云文档` plus `基线文档`, while Publish uploads the designer handoff ZIP to `idml_file`
 - `Workflow_action = Build Draft Package` rows must carry `Git_ref`; queue builds now seed a temporary worktree from the latest `origin/main`, then overlay only `docs/_review` from that review branch, so the queue keeps the current `main` toolchain while still rendering the selected review content instead of silently falling back to `main`
@@ -325,7 +355,7 @@ GitHub validation note:
 - `Manual Validation` is the repository CI workflow
 - `Manual Validation` uses `tests/fixtures/phase2` for check/doctor/schema-drift smoke coverage so GitHub runners do not require a live `data/phase2` snapshot. The schema-drift gate also validates `data/source_table_contracts/phase2_source_tables.json` against fixture/local snapshot headers, so source-table identity or writable-field drift is caught before a live Feishu run.
 - `python build.py doctor --data-plane --config <config> --model <model> --region <region> [--data-root <snapshot>]` is the read-only new-line data-plane preflight: it checks the complete phase2 manifest/files and required target `Spec_Master` rows before a build. It does not sync Feishu or write source data, and requires one explicit model/region.
-- `Manual Validation` keeps the stable `check-en` and `check-jp` jobs and also runs [`../tools/ci_check_targets.py`](../tools/ci_check_targets.py), which discovers every `configs/config*.yaml`, runs `build.py check` for targets represented in the fixture snapshot, and reports missing `document_key` rows as explicit `SKIP`. Coverage is reported as `PASS/(PASS+SKIP+FAIL)`; the tracked [`../.github/ci_check_targets_skip_baseline.json`](../.github/ci_check_targets_skip_baseline.json) prevents the skip count from increasing. Stage 1 invokes the driver with `--observation`, so existing target FAIL rows are reported without blocking the lane; a SKIP-ratchet increase still fails it.
+- `Manual Validation` keeps the stable `check-en` and `check-jp` jobs and also runs [`../tools/ci_check_targets.py`](../tools/ci_check_targets.py), which discovers every `configs/config*.yaml`, runs `build.py check` for targets represented in the fixture snapshot, and reports missing `document_key` rows as explicit `SKIP`. Coverage is reported as `PASS/(PASS+SKIP+FAIL)`; the tracked [`../.github/ci_check_targets_skip_baseline.json`](../.github/ci_check_targets_skip_baseline.json) carries **two** no-increase ratchets, `skip_count` and `fail_count`. Stage 1 invokes the driver with `--observation`, so the FAIL rows already recorded in `fail_count` are reported without blocking the lane — but one more than that fails it, as does a SKIP-ratchet increase. The FAIL ratchet is what makes the observation lane meaningful: `--observation` alone reported a target sliding from `PASS` to `FAIL` without turning the job red, so only `check-en` and `check-jp` (JE-1000F/US and JE-1000F/JP) were genuinely gated. Both baselines are pinned by `tests/test_ci_check_targets.py`, so removing `fail_count` to silence a regression fails the unit suite instead.
 - [`../.github/workflows/nightly-render.yml`](../.github/workflows/nightly-render.yml) runs daily and on manual dispatch. Its credential-free [`../tools/nightly_render.py`](../tools/nightly_render.py) driver derives one `doctor` run from every registered config, then builds and structurally checks the JE-1000F US English production IDML pilot against `tests/fixtures/phase2`. The JSON report records per-config failures plus the pilot path and SHA-256; no live Feishu snapshot is read.
 - When a new config is added, add its fixture rows through the normal fixture-refresh workflow before lowering the skip ratchet. A config-derived `SKIP` is not counted as coverage.
 - Refresh one target's committed fixture rows with `python tools/data_snapshot.py fixture-refresh --document-key <MODEL_REGION> --source-root data/phase2 --fixture-root tests/fixtures/phase2`; the default is a dry-run, and `--write` applies only that target's rows, copies referenced attachments, and recomputes manifest hashes. Do not replace the entire fixture tree from a live mirror.
@@ -523,6 +553,13 @@ Parallel-language template note:
 - current example: keep the `charging.rst` JE-2000E battery-pack `.. only:: model_je_2000e` block aligned across `page_us-en`, `page_us-es`, `page_us-fr`, and `page_zh`
 - before you touch page templates for a new Markdown intake, fill out [`dev/manual_template_intake_checklist.md`](./dev/manual_template_intake_checklist.md) to decide manifest mapping, placeholder policy, and validation scope first
 
+Carrier tag axes:
+
+- a page can gate a body on four axes: `model_<model>`, `region_<region>`, `lang_<lang>`, and `category_<product line>`
+- the category is `build.skeleton_family` in the config (`BP` for the battery-pack line, `MAIN` when undeclared), resolved by `resolve_category` in [`tools/page_contracts.py`](../tools/page_contracts.py) — the same value the `category:` contract tier selects on, so a page's requirement and its `.. only::` body always agree
+- both renderer planes emit it: Sphinx as `-t category_<value>` and the manual IR as a `category_<value>` base tag. Never add an axis to one plane only — `.. only::` omits an unmatched body silently, so a one-plane tag prints in the PDF and vanishes from IDML with no error
+- prefer a category branch over cloning a page. Two carriers whose structure is identical and whose prose differs by product line belong in one file with two `.. only:: category_*` bodies; the parallel-language note above then applies once instead of twice
+
 `symbols_blocks.csv` note:
 
 - `image_path` stores the RST image reference path for each symbols-table icon
@@ -563,6 +600,9 @@ Parallel-language template note:
 `Spec_Footnotes.csv` note:
 
 - keep one row per reusable footnote definition
+- CSV/PDF and IDML readers share the same reference-ID deduplication and numeric
+  marker formatting. Put reference IDs in the desired order; repeated IDs print
+  once. This shared rule does not alter target/language selection or text fallback.
 - use `Footnote_id` as the stable reference key
 - use `Footnote_order` to control the rendered superscript order
 - keep `Type=Footnote` in the synced Feishu-backed rows so downstream renderers preserve the explicit trailer type
@@ -615,7 +655,8 @@ python build.py all --config configs/config.zh.yaml --model JE-2000E --region CN
 
 PR review-preview note:
 
-- when a PR changes the zh manual family under `docs/templates/page_zh/`, `docs/templates/recipes/zh/`, or `docs/manifests/manual_zh.yaml`, the review-preview workflow switches the default landing target to `configs/config.zh.yaml --model JE-2000E --region CN --source runtime`, but the packaged workspace still includes every existing review model
+- when a PR changes `docs/_review/<model>/<region>/`, the review-preview workflow derives that exact target from the diff and uses the same target-aware language/config matching as the queue. A target-specific declaration wins before the shared regional fallback, so `JBP-2000B / US` resolves to `configs/config.bp-us.yaml` while ordinary US host targets keep the MAIN config.
+- when a PR changes the zh manual family under `docs/templates/page_zh/`, `docs/templates/recipes/zh/`, or `docs/manifests/manual_zh.yaml`, the preview tool still switches the default landing target to the config-derived CN runtime target; the packaged workspace continues to include every existing review model
 
 ### 3.6 Package a Review Preview for Design
 
@@ -627,7 +668,7 @@ python tools/process_docs/build_review_preview.py --config configs/config.us-en.
 
 Config note:
 
-- omit `--config` when `--region` is `US`, `JP`, or `CN` and you want the shared family default config
+- omit `--config` to resolve the config from the explicit `--model` / `--region` target declaration; omitting `--model` and `--region` as well derives the default target from the changed review bundle, then from the existing review tree
 - keep `--config configs/config.us-en.yaml` when you want the packaged workspace to open on the explicit US English single-language target by default
 - the Vercel review-preview fallback scans the registered `configs/config*.yaml` files for those family defaults and uses the first registered target only when neither environment variables nor a review-tree target is available
 
@@ -659,6 +700,101 @@ Packaging rule:
 
 Web Publish / Read the Docs note:
 
+- Web-profile bundle export reads prepared pages once and writes
+  `manual-ir/v2` / `whole-document-components/v1` beside the Markdown. Its ordered
+  flow/rich-text nodes carry neutral headings, prose, lists, tables, links and
+  images; optional `presentation.html.attributes` retains only Web hints needed
+  for output parity. Callout, Spec, FCC, Inbox, Overview, the five governed
+  Operation panels on targets admitted by `figure_targets`,
+  the hybrid LCD Mode table, Warranty Lead/Section/Years, the LCD icon table,
+  Troubleshooting table, signal-word table, two-panel symbol-icon table, App,
+  and governed Reference Figures are embedded as sixteen validated
+  ComponentSpec types at their original flow positions. Their Web adapters
+  dispatch from the IR instead of rediscovering those semantics from DOM;
+  all component/carrier images join the ordered packaged-asset SHA-256 gate.
+  LCD and symbol-icon rows use a registry-declared repeatable `icons` asset role;
+  each row stores an asset index, so packaging and every renderer preserve the
+  authored icon order without inventing numbered asset-role names.
+  `tools.web_document_ir.render_document_fragments` consumes that IR and
+  packaged `assets/` without reopening RST/CSV. Historical `manual-ir/v1` and
+  cut-1 `whole-document-flow/v1` files still replay without being upgraded.
+  LCD Mode keeps its six action/description rows as editable text beside the
+  governed display artwork. LCD Icons, Troubleshooting and both Symbols tables
+  remain native, searchable, editable tables—not screenshots. US `6+5` and KR
+  `5+2` symbol panels share the same variable-row component contract. Operation keeps target geometry in the Web contract;
+  an unlisted skeleton such as JE-3000C/KR keeps its different operation-panel
+  set as neutral flow until a matching overlay is declared, while its shared LCD
+  Mode still enters ComponentSpec. Warranty duration parsing accepts both spaced
+  units such as `3 YEARS` and compact units such as Korean `3년`. App download,
+  inline control, and add-device variants retain localized rich copy plus
+  role-bound shared artwork. Reference Figures keep a renderer-neutral semantic
+  fallback and admit an exact-locale or explicitly shared approved composite
+  only when its packaged content hash and source-fragment hash still match.
+  Missing approved artwork never borrows another locale or target. Word keeps
+  its existing whole-document conversion path. The Web presentation contract is
+  now resolved as `shared base → skeleton profile → target overlay`; mappings
+  merge recursively, stable-`id` lists merge item-by-item, and ordinary lists
+  replace. The resolved target-only contract and layer IDs are frozen in the
+  whole-document IR, so cold replay does not reopen the layer registry. New
+  source-normalized packages also freeze the ComponentSpec registry, manual
+  theme, resolved Overview instance and their SHA-256 digests. Their replay
+  performs ComponentSpec dispatch, asset rebasing and hash checks directly; it
+  does not call the old `transform_web_fragment()` DOM projector. Historical
+  v1/cut-1 packages keep a separate compatibility route. Representative
+  whole-document tests project every embedded instance through the registered
+  Web, LaTeX, IDML and Word adapters; each renderer still owns its geometry.
+  See
+  [the bounded execution record](dev/ir_document_closeout.md),
+  [v2 plan](dev/manual_ir_v2_neutral_flow_plan.md), and
+  [embedded-component record](dev/manual_ir_embedded_components_plan.md),
+  [Operation/Warranty/LCD record](dev/manual_ir_operation_warranty_lcd_plan.md),
+  [LCD/Troubleshooting/Symbols record](dev/manual_ir_lcd_troubleshooting_symbols_plan.md),
+  and [App/Reference Figure record](dev/manual_ir_app_reference_plan.md).
+- `paths.web_illustration_manifest` optionally binds a target/language to finished
+  PDF crops. The manifest freezes source PDF hash, page, bounding box, output
+  hash and exact input image basenames. One illustrated panel can replace several
+  split images; surrounding structured copy is retained. Wrong target, missing
+  images, changed bytes, repeated or unused bindings fail the build. These Web
+  variants preserve embedded text and never overwrite IDML textless assets.
+  Every target carrying a finished-figure coverage policy must declare a
+  non-empty locale set, the complete Overview/Operation/Charging slot set
+  derived from its skeleton, and exactly the two accepted final states:
+  `finished-panel` / `approved-composite`. `JE-1000F/EU` requires all 11 slots
+  in each of EN/FR/ES/DE/IT and resolves 55/55 locale-matched full panels.
+  Any `editable-fallback`, `missing`, duplicate or absent required slot stops
+  IR assembly/replay unless that exact locale/slot/status is already in the
+  separate versioned debt baseline. That baseline currently contains nine US
+  Charging fallbacks and nine KR missing panels; new or worsening debt fails,
+  and a repaired row must be deleted from the baseline in the same change.
+  Its 55 crop/page/content/source-fragment pins are recorded by
+  `data/asset_recipes/manual_je1000f_eu_web_panels.json`; Italian is 11/11
+  approved full panels. Text-free artwork with HTML/SVG labels or leaders is
+  debt for these slots in every locale and never counts as a final carrier.
+  Optional `covered_annotations` entries bind a selector and exact normalized
+  source text already covered by an illustration. Only unique unchanged matches
+  are consumed; changed or ambiguous copy fails. Covered copy stays in image alt
+  and IR provenance. Explanatory tables and warnings stay live.
+- Packaging lists use the existing `HB-SPECIAL-INBOX` component. The explicit
+  `in_the_box.semantic_source_patterns` contract accepts `box_contents_*` outside
+  target-specific figure geometry; three original item images and labels form
+  the shared component, while a source TIP row is retained when present and is
+  not required when the approved manual has none. Finished-illustration
+  bindings do not replace those cards with screenshots.
+- A generated Web MyST directory is self-contained: its generated `conf.py`
+  preserves the packaged `assets/` path when Sphinx builds raw-HTML components.
+  A local Sphinx acceptance build must report zero broken images; opening only
+  the intermediate `manual_bundle.html` is not sufficient Web verification.
+- `JBP-3600A / EU / en` uses the BP skeleton through
+  [`config.bp-eu-en-web.yaml`](../configs/config.bp-eu-en-web.yaml). Its target
+  fixture and approved source-AI illustration hashes support engineering
+  acceptance only until the corresponding live phase2/build/asset rows are
+  created and read back. See the
+  [intake and acceptance record](reviews/jbp3600a_eu_en_web_intake_2026-09.md).
+- For an approved PDF artwork correction, `swap_pdf_regions` exchanges two
+  equal-size, disjoint native regions on white backgrounds, inside the asset
+  crop. Freeze source/output hashes and visually verify the final PNG. JBP-2000B
+  JP uses this to correct reversed on/off titles according to structured source.
+
 - `Review Preview Package` uploads the review-preview workspace as a GitHub artifact only
 - [`.github/workflows/feishu-build-queue.yml`](../.github/workflows/feishu-build-queue.yml) owns print Publish only; it no longer builds a Vercel candidate or writes `HTML_link`
 - [`.github/workflows/feishu-web-publish-queue.yml`](../.github/workflows/feishu-web-publish-queue.yml) runs only on the Hello-Docs business plane, consumes `Workflow_action=Web Publish`, pushes frozen sources to the `Hello-Docs/publish:docs/publish/` candidate, rejects any PR diff outside `docs/publish/**`, opens or updates `publish -> main`, and writes the deterministic root-level RTD alias (for example `https://ht-doc.readthedocs.io/manual_je1000f_us.html`) to `HTML_link`
@@ -675,17 +811,30 @@ Web Publish / Read the Docs note:
   strict build. The eight directives, inline subset, examples, and triage are
   maintained in [`../user-guide/md_site_guide.md`](../user-guide/md_site_guide.md).
 - Fixed PDF-like Web panels are selected through the versioned [`web-composite-manifest/v1`](../tests/fixtures/phase2/web_composite_manifest.json) snapshot. The live Base is only the control/intake plane: `04_资产定义.web_replace_key` identifies the governed HTML component, while one approved `04_资产导出物` row supplies exactly one `export_file`, its `web_locale`, `content_sha256`, and `source_fragment_sha256`. `sync-data` downloads approved bytes to `_attachments/web_composites/`; materialization verifies and copies target-matching bytes to `_assets/web_composites/` and includes the staged manifest in the bundle fingerprint. The Web contract contains semantic keys and locale mappings only, never live Base tokens or static artwork paths.
-- Locale lookup is exact first and permits only `shared` as fallback. No approved match preserves the editable/searchable semantic HTML; multiple matches, a missing/extra attachment, an unapproved buildable row, attachment hash drift, or source-fragment drift stops the build. Section headings remain outside composite images. FCC, What's in the Box, Symbols, LCD, tables, warnings, and App add-device remain editable HTML components and do not enter this replacement manifest.
+- For JE-1000F Web assets, Overview, Operation and Charging composites are localized PDF crops (`text_policy=localized-full-page`) and must keep their visible labels, including Operation `On` / `Off` and prerequisite/action copy. The LCD screen-mode component is hybrid instead: use the UK or continental product/display artwork plus the live six-row HTML table. A new region should extend the versioned Overview instance and override stable IDs/locales rather than copy its geometry; composite resolution uses the materialized language, and coverage provenance is `asset_key + locale + SHA-256`.
+- Locale lookup is exact first and permits only `shared` as fallback. No approved match preserves the editable/searchable semantic HTML so compatibility output remains intelligible, but a governed finished-figure slot records that state as `editable-fallback` debt; it does not satisfy final coverage. Multiple matches, a missing/extra attachment, an unapproved buildable row, attachment hash drift, or source-fragment drift stops the build. Section headings remain outside composite images. FCC, What's in the Box, Symbols, LCD, tables, warnings, and App add-device remain editable HTML components and do not enter this replacement manifest.
 - After a reviewed live-Base change, approve the Web export rows and dispatch Web Publish with the HT-Docs bot. The worker freezes the exact manifest and attachments in Git before RTD can render them. `tests/fixtures/phase2` remains a CI/bootstrap fixture, not the production intake path
 - to add a target to the catalog, prepare its review branch and presentation contract, then Web Publish it. The assembler preserves prior targets and rebuilds the aggregate catalog without another hardcoded `.readthedocs.yaml` command
 - Web Publish sets `AUTO_MANUAL_PRESENTATION_PROFILE=web`; print Publish, local document exports and DOCX retain the default `document` profile
-- the web profile omits `cover*`, `00_toc*`, and `99_back_cover*`, removes print page breaks, and starts the manual at `00_preface`. When the template carrier includes a merged-language inventory line, Web removes it so the first visible block is `IMPORTANT`; a legitimately de-templated/reseeded review carrier may already begin with the governed bold `IMPORTANT` marker and is accepted without deleting that live marker. Any other leading structure fails closed. Catalog links point directly to that generated manual entry instead of an intermediate target index
-- For targets explicitly listed in the web figure contract (currently `JE-1000F / US`), Product Overview is first projected into one `HB-SPECIAL-OVERVIEW` ComponentSpec (two semantic views, two asset roles, 15 ordered callouts), then resolved through the versioned [`overview_component_instances.json`](../docs/renderers/contracts/overview_component_instances.json). Both views use locale-matched approved PDF artwork for English, French, and Spanish at every viewport width, including phones; the complete annotated image remains visible instead of falling back to a separately laid-out callout grid. With no approved manifest match, the same component keeps its complete searchable HTML/SVG fallback. Responsive Web coordinates and fixed-page IDML coordinates are separate fields of the target instance, not renderer-neutral semantics. The crops contain the complete annotated view but exclude the FRONT/RIGHT view headings, so the theme still owns heading text and styling. WHAT'S IN THE BOX turns the same three source cells into the PDF-derived numbered-card grid and converts the source TIP row into the full-width rounded strip; no localized copy is duplicated in CSS or web-only JSON. In App Setup, the store badges and QR are distinct shared images, centered independently in two equal columns; the adjacent localized descriptions remain live HTML below their matching artwork. Step 2.1 replaces the duplicate visible add-device button wording with the small themeable plus while retaining the localized label in `aria-label`. The App add-device panel combines one shared two-phone PDF crop that already contains the approved 2.1/2.2 positions with shared text-free device-control art and the three governed RST button labels as visible responsive HTML. The approved control art remains a full-width grey panel with complete leader geometry; CSS positions only the three localized labels over its reserved blank zones and must not recreate the lines with pseudo-elements. The five operation figures and car-charging connection panel retain locale-matched 2x PDF crops. The App connect-result panel uses one shared three-phone PDF crop with 2.3/2.4/2.5 included in the artwork; the reference note remains live HTML below the figure. Web CSS never synthesizes or independently places these five screenshot captions. Reference artwork never contains the section heading, so theme changes still control headings, typography, colors, and spacing. Ordinary standalone RST artwork ignores the source's small print-width hint in the web profile: every single image fills the same responsive content width, stays centered, and preserves its aspect ratio. Hidden semantic fallbacks remain only for components whose visible reference art still bakes localized labels. An unlisted target keeps ordinary source HTML instead of inheriting another product's presentation.
+- the web profile omits `cover*`, `00_toc*`, and `99_back_cover*`, removes print page breaks, and starts the manual at `00_preface`. A whole-document IR that declares two or more languages automatically receives one top language-jump bar plus one stable `#hb-lang-<code>` boundary per declared language, in IR order; button labels come from the shared language registry's native names, not from target HTML or CSS. The same pass replaces the matching merged-language inventory line. Single-language manuals remain byte-identical, while an unknown/duplicate language, an undeclared page language, or a declared language with no page boundary fails closed. A legitimately de-templated/reseeded review carrier may already begin with the governed bold `IMPORTANT` marker and is accepted without deleting that live marker. Any other leading structure fails closed. Catalog links point directly to that generated manual entry instead of an intermediate target index
+- A short category manual whose real first chapter is not a preface must declare one or more filename patterns in `build.web_entry_source_patterns`. An empty declaration or a first included page outside the declared patterns stops the Web build. This permits a real Safety/Inbox entry without inventing an `IMPORTANT` page or globally disabling the preface guard; omitted declarations keep the existing target behavior.
+- For targets explicitly listed in the Web presentation overlays, Product Overview is first projected into one `HB-SPECIAL-OVERVIEW` ComponentSpec (two semantic views, two asset roles, 15 ordered callouts), then resolved by `(model, region)` through the versioned [`overview_component_instances.json`](../docs/renderers/contracts/overview_component_instances.json). New whole-document IR freezes that resolved instance and its hash; replay never re-resolves a global default. JE-1000F/US and JE-1000F/EU use locale-matched approved PDF artwork at every viewport width, including phones; the complete annotated image remains visible instead of a separately laid-out callout grid. A searchable HTML/SVG semantic fallback still exists for compatibility and registered debt, but it cannot satisfy a finished-figure policy. Responsive Web coordinates and fixed-page IDML coordinates are separate fields of the target instance, not renderer-neutral semantics. The crops contain the complete annotated view but exclude the FRONT/RIGHT view headings, so the theme still owns heading text and styling. WHAT'S IN THE BOX turns the same three source cells into the PDF-derived numbered-card grid and converts the source TIP row into the full-width rounded strip; no localized copy is duplicated in CSS or web-only JSON. In App Setup, the store badges and QR are distinct shared images, centered independently in two equal columns; the adjacent localized descriptions remain live HTML below their matching artwork. Step 2.1 replaces the duplicate visible add-device button wording with the small themeable plus while retaining the localized label in `aria-label`. The App add-device panel combines one shared two-phone PDF crop that already contains the approved 2.1/2.2 positions with shared text-free device-control art and the three governed RST button labels as visible responsive HTML. The approved control art remains a full-width grey panel with complete leader geometry; CSS positions only the three localized labels over its reserved blank zones and must not recreate the lines with pseudo-elements. The five operation figures and car-charging connection panel retain locale-matched 2x PDF crops. The App connect-result panel uses one shared three-phone PDF crop with 2.3/2.4/2.5 included in the artwork; the reference note remains live HTML below the figure. Web CSS never synthesizes or independently places these five screenshot captions. Reference artwork never contains the section heading, so theme changes still control headings, typography, colors, and spacing. Ordinary standalone RST artwork ignores the source's small print-width hint in the web profile: every single image fills the same responsive content width, stays centered, and preserves its aspect ratio. Hidden semantic fallbacks remain only for backward compatibility or explicitly baselined debt; new figure targets must start with complete finished artwork. An unlisted target keeps ordinary source HTML instead of inheriting another product's presentation.
 - FCC stays live/searchable HTML: the localized opening, note, body, four measures, and modification copy are arranged with the FCC mark in the PDF-derived two-column card, use one component-owned vertical rhythm instead of inherited paragraph/list margins, then reflow to one column on narrow screens. Keep its H1 in the document outline and RTD navigation, but visually hide that H1 so no black FCC title bar is rendered. The FCC card, H1 bars, generic table wrappers, and governed table compositions all use the same border-box component-band width contract, so padding and borders cannot make one component wider than another. Each localized MEANING OF SYMBOLS warning-definition table is normalized from its governed four-row source into semantic `hb-symbol-signal-*` HTML: complete dark grid, dark warning badges, and live localized label/meaning text with no inherited inline widths. Its following four-column safety-symbol source matrix is converted, by source pattern and structural contract rather than localized wording, into the PDF's two independent rounded Symbol/Meaning tables: the left six and right five body rows keep independent row tracks, while the two desktop panels stretch to one shared outer height so their top and bottom borders align; phones stack the panels. The artwork and localized text remain searchable HTML, and contract drift fails the build rather than silently applying another table's layout. The LCD icon page is also live HTML; its four-column table is protected from Pandoc so RST `line-block` status rows keep explicit line breaks. The theme supplies the rounded outer frame, full row/column grid, approximately 6%/11%/27%/56% column widths, light fill for number/icon/name, compact number badges centered in the first column, white description cells, and a horizontal-scroll fallback on phones.
+
+LCD semantics now come from the assembly planner's `lcd_icons` CSV page identity
+or an explicit `hb-lcd-icon-table` declaration, rather than a filename or US
+figure grant. Renamed slots and JP targets use the same four-column projection;
+ordinary undeclared tables stay ordinary. RST and standalone `{lcd-icons}` MyST
+share validation: exactly four unspanned cells, one icon (or an explicitly declared `lcd-text-only` empty icon cell), and nonempty number,
+name and description. Malformed rows fail instead of being padded or truncated.
+Status line breaks, inline emphasis, lists, icon sources and row order remain
+authored content. The scrollable table can also receive keyboard focus; artwork
+approval rules remain unchanged.
+
 - The LCD screen-mode panel remains live/searchable HTML and is normalized across EN/FR/ES into the template's rounded two-column composition: centered product illustration on the left, compact three-column operation grid on the right, and stacked art plus internally scrolling table on narrow screens. The AC/DC Auto Resume matrix also stays live HTML, using the same 50/50 template geometry, light left column, white right column, dark cell rules, and a real two-row Battery SOC span.
 - Troubleshooting is normalized across EN/FR/ES as a protected searchable table with the source-verified `F0` through `FE` row order, a 14% light code column, an 86% white measures column, rounded dark outer frame, and complete internal grid. The F6/F7 RST `line-block` nodes stay intact through Pandoc so numbered actions remain separate lines; phones scroll inside the component instead of widening the page. Specifications uses the same protected-table boundary for all four localized groups, with a 31% light label column, 69% white value column, row-span semantics, and PDF-derived dark grid. Remove the authored `hb-spec-bullet` glyph during the web transform and let the shared H2 theme draw the only visible marker; otherwise Pandoc turns the source glyph into heading text and produces a duplicate dot. Convert the two governed circled references in each localized specification page into semantic `sup.hb-spec-reference` nodes so `①` is visibly raised without changing the searchable footnote text.
 - Warranty is normalized across EN/FR/ES from the live RST structure rather than localized title matching. The HTML intake unwraps only the governed `warranty-lead` / `warranty-section` semantic containers used by the shared templates, so a newly seeded review bundle and the older flat review form produce the same six-section outline without discarding nested headings. Its two opening paragraphs become the rounded purchase notice and local-law note; the only section containing a table becomes the PDF-derived 3-year/2-year card; the other five sections become rounded copy cards. Keep all six H2 nodes so the theme and page outline still own the localized headings, but style them as floating dark card labels. The desktop period grid is approximately 61%/39%, uses localized year units and warranty labels from the source, and stacks to one column below 760 px. The transform removes the source 50/50 table and inline widths from final HTML while retaining email links, lists, and searchable copy.
-- [`../docs/renderers/contracts/web_manual.css`](../docs/renderers/contracts/web_manual.css) is the responsive base visual contract for the catalog. FCC rules are isolated in [`../docs/renderers/contracts/web_fcc_components.css`](../docs/renderers/contracts/web_fcc_components.css); What's in the Box rules are isolated in [`../docs/renderers/contracts/web_inbox_components.css`](../docs/renderers/contracts/web_inbox_components.css); Symbols rules stay in [`../docs/renderers/contracts/web_symbols_fcc_components.css`](../docs/renderers/contracts/web_symbols_fcc_components.css); shared App artwork plus live-label rules stay in [`../docs/renderers/contracts/web_app_components.css`](../docs/renderers/contracts/web_app_components.css). The build concatenates the ordered modules into one public `web_manual.css`. Together they mirror the IDML hierarchy with the `#343031` H1 bar, compact level-two/three markers, rounded table and notice groups, shared spacing, and proportional figures. The FCC exception keeps its H1 semantic in navigation but visually renders only the approved editable FCC frame through `HB-SPECIAL-FCC` ComponentSpec. `HB-SPECIAL-INBOX` carries the three ordered card numbers, asset roles, accessible alt/localized labels, and adjacent tip copy; `HB-SPECIAL-OVERVIEW` carries the two views and 15 live callouts while its target instance owns renderer geometry. Web, LaTeX, IDML, and Word retain independent adapters. The font stack requests locally installed Gilroy first but does not redistribute the commercial font; public clients fall back to Avenir/Segoe UI/Helvetica/Arial. Keep this as visual-language parity, not fixed-page parity: mobile remains reflowable and IDML remains the formal pagination authority.
+- [`../docs/renderers/contracts/web_manual.css`](../docs/renderers/contracts/web_manual.css) is the responsive base visual contract for the catalog. Language-jump rules are isolated in [`../docs/renderers/contracts/web_language_navigation.css`](../docs/renderers/contracts/web_language_navigation.css); FCC rules are isolated in [`../docs/renderers/contracts/web_fcc_components.css`](../docs/renderers/contracts/web_fcc_components.css); What's in the Box rules are isolated in [`../docs/renderers/contracts/web_inbox_components.css`](../docs/renderers/contracts/web_inbox_components.css); Symbols rules stay in [`../docs/renderers/contracts/web_symbols_fcc_components.css`](../docs/renderers/contracts/web_symbols_fcc_components.css); shared App artwork plus live-label rules stay in [`../docs/renderers/contracts/web_app_components.css`](../docs/renderers/contracts/web_app_components.css). The build concatenates the ordered modules into one public `web_manual.css`. The language bar uses white pill links on the shared neutral surface, scrolls inside its own strip below 760 px instead of widening the page, and is hidden in print. Together the modules mirror the IDML hierarchy with the `#343031` H1 bar, compact level-two/three markers, rounded table and notice groups, shared spacing, and proportional figures. The FCC exception keeps its H1 semantic in navigation but visually renders only the approved editable FCC frame through `HB-SPECIAL-FCC` ComponentSpec. `HB-SPECIAL-INBOX` carries the three ordered card numbers, asset roles, accessible alt/localized labels, and adjacent tip copy; `HB-SPECIAL-OVERVIEW` carries the two views and 15 live callouts while its target instance owns renderer geometry. Web, LaTeX, IDML, and Word retain independent adapters. The font stack requests locally installed Gilroy first but does not redistribute the commercial font; public clients fall back to Avenir/Segoe UI/Helvetica/Arial. Keep this as visual-language parity, not fixed-page parity: mobile remains reflowable and IDML remains the formal pagination authority.
 - Before the web-profile HTML-to-Markdown Pandoc pass, every `manual-callout-table` is replaced with a checked placeholder and restored byte-for-byte afterward. This keeps WARNING, DANGER, CAUTION, and NOTE on the same `manual-callout-table` / `manual-callout-label` / `manual-callout-body` contract and one shared light rounded treatment regardless of body markup, avoids Pandoc's empty table header and 50/50 `colgroup`, and leaves the responsive theme to render the intended approximately 16%/84% desktop split. The callout table uses fixed layout so localized label length cannot give adjacent boxes different first-column boundaries. Do not reintroduce selectors based on a callout being immediately adjacent to an H1.
 - Semantic `<sub>` and `<sup>` elements are protected and restored through the same checked Pandoc boundary. Scientific notation such as `V<sub>oc</sub>` and specification references such as `<sup>①</sup>` therefore remain real, themeable HTML in EN/FR/ES instead of surfacing Pandoc's inline Markdown notation as literal text.
 - Web Publish runs [`../tools/readthedocs_source.py`](../tools/readthedocs_source.py) indirectly through the publish-branch assembler, producing one link-only root index, collision-checked root alias pages named from each manual stem, and mirrored image assets under `docs/publish/web/_static/manual-assets/`. Each alias forwards relatively to the nested canonical page so the same frozen source works with or without RTD's `/en/latest` prefix.
@@ -779,14 +928,59 @@ to the reviewed, hash-bound
 The design and implementation rationale is recorded in
 [`dev/idml_reference_replica_plan.md`](dev/idml_reference_replica_plan.md), and
 the module boundary remains documented in
-[`dev/idml_module_map.md`](dev/idml_module_map.md).
+[`dev/idml_module_map.md`](dev/idml_module_map.md). When a new model, language,
+page, or density should reuse an existing visual component, follow
+[`dev/style_component_usage_guide.md`](dev/style_component_usage_guide.md) before
+adding page-level geometry or finalizer behavior.
+
+`JBP-2000B / EU / en+fr+es+de+it+uk` is the second target resolved from the
+same `BP@INTL` skeleton. Build it with `configs/config.bp-eu.yaml`; `uk` is
+Ukrainian and this target makes no UK-market claim. Its paired host is named
+`Jackery Explorer 2000 Plus` in EU target data (the US target uses
+`Jackery HomePower 2000 Plus`). The committed physical plan remains a
+candidate, so a successful 54-page native PDF/X-4 pass proves candidate
+assembly health but does not register an approved reference layout. Current
+native evidence is recorded in
+[`reviews/jbp2000b_eu_r2_native_validation_2026-08.md`](reviews/jbp2000b_eu_r2_native_validation_2026-08.md).
+
+`JBP-2000B / JP / ja` is the first target resolved from the separate `BP@JP`
+skeleton. Build it with `configs/config.bp-jp.yaml`; this config is exact-target
+only and declares `family_default: false`, so ordinary MAIN JP continues to
+resolve through `configs/config.ja.yaml`. Its paired host display name is
+`Jackery ポータブル電源 2000 Plus`. The 12-page target plan adds only assembly
+data: split signal/icon compositions, Inbox+Overview, LCD+Operation, a two-page
+Connections stacking guide, Troubleshooting+Specifications, and the shared
+warranty composition. New target behavior must stay in the manifest, Product
+Manual Plan, target assembly JSON, region profile, localized carrier data, and
+assets; do not add `JBP-2000B` or `JP` branches to page renderers. The plan
+remains `candidate` until native InDesign/PDF/X and 12-page visual acceptance
+are recorded and it is promoted separately.
+
+`JS-100I / EU / en` is the first portable-solar target resolved from the
+reusable `Solar@INTL` skeleton. Use `configs/config.solar-eu-en.yaml` with the
+Web presentation profile. Its manifest starts at Safety Tips and deliberately
+contains no cover, TOC, LCD, UPS, troubleshooting, or App slots. The five-item
+Inbox uses the variable-card component; specifications come from the phase2
+`Spec_Master`/notes contract; English-labelled figures are target-bound by a
+`web-illustrations/v1` manifest and source/output hashes. Local bootstrap data
+is in `tests/fixtures/js100i_eu_en_phase2`; formal Web Publish must freeze the
+approved live snapshot through the Hello-Docs publish PR, not publish this
+fixture or write the mirror engineering tree directly. See
+[`dev/js100i_eu_en_web_acceptance.md`](dev/js100i_eu_en_web_acceptance.md).
 
 IDML-localized symbol copy and table-of-contents language headers are language
 packs derived from [`tools/lang_registry.py`](../tools/lang_registry.py),
-not tables maintained by the individual IDML modules. Reference-bound spacing
-and placement overrides use the same registry's `governed_languages()` helper;
-adding a language pack alone does not claim that language has an approved
-physical layout.
+not tables maintained by the individual IDML modules. For reference-bound
+spacing and placement overrides the registry separates three sets:
+`governed_languages()` gates approved-reference flow behavior (fixed approved
+heights, reference offsets, planned composition — en/fr/es);
+`layout_override_languages()` is the set whose `lang_<code>_` override rows the
+shared token cascade reads (the governed languages plus lines in active layout
+tuning, currently adding ko), with tuning languages keeping measured/fallback
+flow behavior until their reference layout is approved; and each component's
+`contract_languages` declares which override rows are contract-required under
+approved-reference builds. Adding a language pack alone does not claim that
+language has an approved physical layout.
 The fixed-layout LaTeX `HBApplyLang` dispatcher also covers the warning label
 for every registered language; its label values are parity-checked against the
 registry's symbol language pack.
@@ -806,6 +1000,12 @@ configs keep that historical default unless `--lang` is supplied explicitly.
 
 The approved v2 contract separates enforced identity from provenance:
 
+The committed engineering-plane review copy is synchronized to
+`Bingboom/Hello-Docs:review/JE-1000F-US@e06def5e49e107e1a9595c1f38bb11b1d5496f94`.
+The 2026-08-29 content reapproval covers the current editable IDML semantic
+projection; its rebind changed zero page bindings and left the 58-page
+composition map unchanged.
+
 | Contract item | Approved value |
 | --- | --- |
 | Target | `JE-1000F / US / en+fr+es` |
@@ -813,11 +1013,11 @@ The approved v2 contract separates enforced identity from provenance:
 | Reference SHA-256 | `e72b1ba01882062e261b17d5ba54a2f7c3099e5ba531a6428be13888641083f2` |
 | Page contract | 58 pages, `368.787 × 524.692 pt`, tolerance `0.02 pt` |
 | Print contract | PDF/X-4, Output Intent `Japan Color 2001 Coated`, Output Condition `JC200103` |
-| Content identity (enforced) | `ced5ae20f48a0dc438d638ad10e0ae37c0574b00409e790ac2df1db1fcd66fc0` |
-| Assembly identity (enforced) | `1217da8e34c3317196ec7f1e288106dd7728d82fe97aa896ea8bcda670ba6a05` |
-| Style-contract identity (enforced) | `885b936fa2569bf018d495e5af0527f9928bbf79e2ae47c9eaaae3bee7f94da7` |
-| Layout-params identity (enforced) | `912db2f5da32326993cb00fffedfbddba1b44abd33098582fc584e51916c2d2d` |
-| Snapshot provenance (not an activation gate) | `2d77eff60a95633f9b828aea62d788d38d514f8825773c1e5be1286dc1512d33` |
+| Content identity (enforced) | `b46905f6953e4c4684623f204890a55ad5826e0fbbc610119738a4c53929590a` |
+| Assembly identity (enforced) | `c5d6d94c5bc6eaf18e767af3113aa9c766fb01c519062751003d310e9684eb57` |
+| Style-contract identity (enforced) | `6db62e7780288ac073bc7502379112ddf10aae8d6c00de29875e9ea1a80d0003` |
+| Layout-params identity (enforced) | `2a7e0ea1b75180acc52ff0f169f42322416bc881de860255f1ca778ce2858d82` |
+| Snapshot provenance (not an activation gate) | `aa4bfb324cd12ff07be2507a51a634e61e2d6043e2dd4fb199bb873afd43f821` |
 
 The 52 plan rows bind every IR source reference, by composition, to this
 physical structure:
@@ -952,6 +1152,13 @@ preference:
 - only approved PNG/JPG/JPEG/SVG/PDF exports that match model, region, and
   language may resolve; `.ai` is an immutable archive/source master and is
   never a renderer fallback;
+- when live-text redaction cannot separate an illustration from outlined
+  labels, a committed asset recipe may use `retain_vector_drawings` to replay
+  only explicitly indexed source groups into a new crop-sized vector PDF.
+  The retained indices must be ascending, the operator must be the sole
+  transform after `crop`, zero-area line groups are overlap-checked safely,
+  and unsupported path items or crop/index drift fail closed. Promote only
+  after a 12x quarantine comparison and pin the resulting output SHA-256;
 - missing, ambiguous, quarantined, stale, or hash-mismatched used assets stop
   assembly;
 - `asset_usage_manifest.json`, `asset_registry_snapshot.csv`, and
@@ -1134,6 +1341,14 @@ python3 tools/indesign_finalize.py \
   --pdfx PDF/X-4
 ```
 
+Keep the generated `Document fonts/` directory beside the output INDD.  The
+finalizer now saves the INDD, closes it, reopens that saved file, recomposes it,
+and repeats the overset/font/link preflight before exporting the PDF.  Reports
+use `indesign-preflight/v2` and record this second pass under `post_reopen`.
+The job fails when the saved document changes page/story count, reopens with a
+`NOT_AVAILABLE`/substituted font, or gains an overset/bad link.  This catches
+document-font failures that are invisible during the first IDML import.
+
 For a design host processing more than one target, use an explicit
 `indesign-finalize-jobs/v1` manifest. Every job must declare its PDF preset,
 output intent, output condition, and PDF/X level; batch mode deliberately has
@@ -1178,6 +1393,15 @@ One document can therefore fail without preventing the remaining documents in
 that application group from running. Different InDesign application names use
 separate dispatches, and single-job mode remains unchanged.
 
+After PDF export, the Python wrapper also scans every retained text trace in
+the final PDF. A visible replacement character (`U+FFFD`) or `.notdef` glyph
+(`glyph_id=0`) fails the job even when InDesign reports every font as
+installed. Because the scan runs on the assembled PDF, it covers native
+InDesign stories and text retained inside placed PDF graphics. Findings are
+recorded in `missing_glyphs` and `pdf_glyph_validation`; rasterized or outlined
+art still requires visual review because it no longer contains inspectable PDF
+glyphs.
+
 Compare that InDesign export to the supplied approved PDF, not to the newly
 built LaTeX PDF. `--latex-pdf` is retained as a legacy CLI flag name; its value
 for this workflow is the approved reference PDF:
@@ -1216,7 +1440,8 @@ the visual hard gate.
 The latest deliverable is acceptable only when all of these are true:
 
 - exactly 58 pages, with every page inside the approved geometry tolerance;
-- zero overset stories, zero missing fonts, and zero bad links;
+- zero overset stories/table cells, zero missing fonts, zero missing glyphs,
+  and zero bad links;
 - PDF/X-4 and the required Output Intent/Condition are present in the exported
   PDF;
 - all 52/52 source identities and the reference PDF match the approved plan;
@@ -1261,18 +1486,56 @@ aliases are resolved only through `tools/lang_registry.py`, while non-content
 page roles `cover` and `toc` are exempt.
 
 Japanese, Korean, and Chinese characters in editable IDML are serialized as
-explicit character runs using `CJK_FONT_FAMILY_TOKEN` (the renderer token
-`idml_font_family_cjk`). The current family is the already-declared Arial
-Unicode MS fallback, so the font resource and handoff manifest do not change
-for Latin-only targets. This token is intentionally outside
-`data/layout_params.csv`: changing it is a font-delivery decision, not a page
-geometry change, and does not by itself require a reference layout rebind.
+explicit script-aware character runs. Korean Hangul uses the committed
+SIL-OFL `NanumGothic` face. Japanese uses the committed static TrueType
+`HBManualSansJP-Regular.ttf` (`HB Manual Sans JP (OTF)` in InDesign,
+OpenTypeTT) in both IDML and LaTeX. It is the Noto Sans JP Regular outline under
+a project-unique family and PostScript identity, so a host-installed
+`Noto Sans JP (OTF)` cannot shadow the document font after close/reopen. The
+IDML token uses InDesign's normalized `(OTF)` family spelling while the TTF
+name table and PostScript identity stay project-unique. The file is
+hash-verified and packaged with the document. Chinese
+continues through `CJK_FONT_FAMILY_TOKEN` (the renderer token
+`idml_font_family_cjk`). Font-family routing intentionally stays outside
+`data/layout_params.csv`: changing font delivery is not page geometry and does
+not by itself require a reference-layout rebind.
+Latin-market editable symbols are governed separately: the U+203B reference
+mark is an inline native IDML vector with deterministic story-local object IDs,
+so it has no font dependency after an INDD save/reopen cycle. Warranty-year
+badges likewise use a native black circle plus an editable white ASCII digit;
+do not replace the approved badge with either `❷` / `❸` or bare `2` / `3`.
+The native badge renderer positions the localized year unit with a fixed tab
+stop and reuses that exact x anchor for the warranty subtitle below it;
+font-space advance must not separate `YEARS` from `Standard Warranty` or
+`Extended Warranty` horizontally.
+`Noto Sans` owns
+ordinals and subscript digits; `Noto Sans Symbols` owns the
+DC glyph and circled labels 1-20; `Noto Sans Symbols2` owns the filled-circle
+fallback. LCD labels 21-27 are normalized to `(21)`-`(27)`, and both final
+assembly modes enable native vector structure markers. Every declared
+redistributable face is hash-verified from
+`docs/templates/word_template/common_assets/fonts/idml_portable/` and copied
+beside the IDML under `Document fonts/`; generated packages therefore do not
+depend on `Segoe UI Symbol`, `Yu Gothic`, or `Noto Sans KR` on the host.
 Line and coarse text-width budgeting is governed by
 `tools/idml/line_metrics.py`: the existing per-component narrow-glyph ratios
 remain stable, East Asian Width `W`/`F` characters consume one em, combining
 marks consume no width, and ambiguous-width characters remain narrow for
 cross-host determinism. The estimator does not load local font files and does
-not replace native InDesign finalize/parity checks.
+not replace native InDesign finalize/parity checks. Heading/suffix-pill sizing
+also reserves a full em for wide/fullwidth glyphs while preserving the approved
+Latin advances. Single-column contents use native tab leaders; multicolumn
+contents retain the reference line geometry. An explicitly empty specification
+group omits its heading and marker. Warranty lists retain their source numbering
+or nested dash once, using the existing hanging-tab layout.
+
+Japanese native finalization preserves each character's face when rebinding the
+portable font, and fails if that requested face is unavailable. The report's
+`portable_font_rebinds[].style_counts` exposes the result. Archive frozen inputs
+and native reports outside the target build directory before another `idml` or
+`check` run: preparation cleans that target. See the
+[JP native acceptance ledger](reviews/bp_jp_r3c_native_validation_2026-09.md)
+for an actual twelve-page run and its retained debt.
 
 On the publish queue path (`Workflow_action = Publish`), the worker runs the
 idml step with `--idml-mode both` and then packages the export into one
@@ -1281,8 +1544,9 @@ designer delivery zip via `tools/idml/delivery.py`:
 production and flow IDML with every `LinkResourceURI` rewritten to
 `file:Links/<name>`, the linked images collected under `Links/`, the flow outputs, the handoff
 reports, `source_trace.json` stamped with the queue row's real version, a
-fonts manifest (plus `Document fonts/` when `AUTO_MANUAL_LOCAL_GILROY_DIR` is
-provisioned on the build machine), and the versioned reference PDF. The zip is
+fonts manifest, the declared SIL-OFL faces under `Document fonts/`, optional
+licensed Gilroy files when `AUTO_MANUAL_LOCAL_GILROY_DIR` is provisioned on the
+build machine, and the versioned reference PDF. The zip is
 the designer-facing package: its checklist points to the versioned root IDML,
 `missing_assets_report.md` reports package-time link portability, and the
 separate `source_asset_resolution_report.md` preserves unresolved semantic
@@ -1392,6 +1656,19 @@ automatically rendered by the shared rounded callout component; HTML and Word
 keep the source table. Tune shared geometry in
 [layout_params.csv](../data/layout_params.csv), then regenerate params.tex
 with python tools/csv_to_tex_params.py.
+
+## 5.1 Terminology Gate
+
+`build.py check` also scans each built bundle for wording the Style Guide has retired:
+
+- `data/terminology_rules.csv` — one row per retired wording: `rule_id`, `lang`, `deprecated_regex`, the `preferred` replacement quoted back in the message, an optional `allow_regex` for contexts where the old form is deliberate (an intentional first-mention gloss, a placeholder token), and a `note` pointing at the Style Guide clause.
+- Pages are matched by language: generated pages take the language from their `_<lang>` filename suffix, authored pages inherit the target's language, so a `ko` rule never fires on a German page.
+
+Findings surface as `TERMINOLOGY_DEPRECATED`, a warning-only code — a rule can be registered the day a wording is retired and its existing hits cleaned up afterwards without blocking builds. Flip it to a blocking code only once the tracked lines are at zero, the way the capability gate tightened.
+
+The rule table is the machine-readable half of the Style Guide (飞书知识库「多语言语言资产规范」); when a clause there changes, update the matching row here in the same change.
+
+The gate only sees built bundles. A retired wording sitting in the library stays invisible until some manual renders it — `python tools/lang_asset_sweep.py --terminology` reads Translation_Memory, Terms and the print source tables directly and reports those rows, including ones already marked `Approved`. Template hits are skipped there because the gate already covers rendered pages.
 
 ## 5.1 Capability Gate
 
@@ -1521,6 +1798,36 @@ Field pairing now prefers stable source back-mapping before falling back to rend
 
 ## 8. Minimal Troubleshooting
 
+For JE-1000F/JP, `build.py md --config configs/config.ja.yaml --model JE-1000F
+--region JP --source runtime` supports the authored text-only inbox table and
+its following notes. The document adapter preserves a nonempty, one-row,
+three-column inventory with no images and no immediately adjacent table.
+Illustrated inbox compositions still require their three images and tip table.
+No placeholder images or synthetic tip copy are added.
+
+The prepared-bundle IR adapter distinguishes complete, multi-row signal-word
+definitions from single notice callouts using the shared label vocabulary.
+Each definition row needs two nonempty cells and a distinct recognized label;
+malformed tables beginning with a known signal word still fail. See the
+[same-source IR contract](dev/latex_indesign_same_source_plan.md) for the boundary.
+
+The JP symbols introduction's plain boxed heading and two following paragraphs
+now enter IR as editable heading/body blocks. The existing dedicated
+`tools/manual_ir_cli.py --strict` check on the prepared runtime bundle reports
+zero skipped blocks. The parser accepts only the complete supported shape;
+unknown TeX content still fails strict extraction. PDF source geometry is
+preserved; native InDesign layout acceptance remains a separate check.
+
+For measured fallback IDML plans, operation subsections now flow naturally
+instead of inheriting an extra final-page break from the legacy four-page
+assumption. Specification shells reserve the emitted cells' widths, insets
+and wrapped line heights. Approved reference, compact and no-plan export
+geometry stays unchanged. The single-character Celsius unit (`℃`) uses the
+existing bundled Noto Sans fallback without rewriting source copy. Native
+save/reopen and exported-PDF glyph checks are both required: zero overset
+alone does not prove a printable PDF. See the
+[JP native repair record](reviews/je1000f_jp_native_overflow_2026-09.md).
+
 `Failed to resolve Product Name from Spec_Master.csv`
 
 - Check [`Spec_Master.csv`](../data/phase2/Spec_Master.csv) for `Row_key=product_name`
@@ -1543,3 +1850,200 @@ Need to release from reviewed text only
 
 - fix the template or review text if the model mention is stale
 - if the foreign literal is intentional, add it to `checks.allowed_foreign_identity_literals`
+
+
+### Prepared RST inline content in IDML
+
+The prepared-RST adapter slices grid tables by display columns, including wide
+CJK characters and partial horizontal borders. Local `replace`/`image`
+substitutions expand after cell boundaries are parsed. Table images and inline
+icons use portable Markdown image references in the existing string payload;
+Manual IR and flow manifests record these asset references. Both IDML writers
+resolve them through the shared render context and fail on missing inline
+assets instead of printing directive syntax. Native icon geometry is owned by
+the renderer; these parser checks do not certify final page composition.
+
+JP IDML uses its manifest-declared Japanese TOC payload with dynamically
+collected headings; the TOC is excluded from non-IDML builders. Its
+`front_matter_roles: ["cover", "toc"]` declaration controls both the TOC slot
+and fallback folios, so the first body page is 01. An explicit renderer page
+plan still owns its physical folios. Front-matter metadata alone does not
+create a reference-layout sidecar. Final story reflow and TOC page accuracy
+must be checked in InDesign screenshots of the identified candidate package.
+
+The six approved JE-1000F/JP illustrations resolve through scoped registry
+overrides. Product engravings and logos remain; added manual annotations are
+removed. Other targets retain their existing asset resolution. Local approved
+files are usable for review while dedicated asset-Base archival remains
+pending write permission; local hash checks do not prove online archival.
+
+Under the measured-LaTeX fallback plan a story's spread chain is the anchor
+distance to the next matched source. An *unmatched* source between them owns
+physical pages of its own and is emitted as its own spread, so charging that
+distance to the preceding story threads it through trailing blank linked
+frames. Such an unanchored gap now falls back to the height estimate instead;
+an explicit assembly contract is unaffected. Warranty and App Setup are also
+treated as dedicated sections that never share one linked chain, and a
+dedicated section under a fallback plan is never allocated below its own
+estimate. `[export-idml] STORY SPANS` reports each story's allocated pages and,
+where they differ, the height estimate, so an over- or under-allocated section
+is named in the build log instead of only in a native screenshot.
+
+A measured fallback span may also be *longer* than the section the IDML writer
+composes, because it measures a different engine: LaTeX spread JE-1000F/JP's
+symbols section over four physical pages where the writer fills three, and the
+surplus linked frame printed as blank folio 04. The exception the preface
+already carried — a physical gap in a fallback plan is not a request to thread
+a story through blank frames — now covers every fallback story: the plan may
+shorten a chain but never lengthen it past what the story needs, counted as its
+height estimate or one frame per authored page break, whichever is larger. An
+approved-reference or target-assembly contract stays authoritative in both
+directions, since a human mapped it page by page.
+Prepared-source integrity: a declared page include that is missing or is not a
+file now stops source discovery with the index and source path. Registered
+prose macros need complete arguments; unsupported content around recognized
+macros increments `skipped_raw` and fails strict Manual IR validation. A valid
+macro no longer hides adjacent unsupported copy. Existing language/tag
+selection and successful payload formats remain unchanged.
+
+IDML handoff validates the source `manual.ir.json` before copying artifacts or
+writing reports. Missing IR is explicitly unavailable; corrupt IR is an error,
+not a zero-skipped report. This IDML integrity path remains on its existing v1
+producer and does not by itself consume the new whole-document v2 flow or
+certify native JP layout. See the
+[shared-source plan](dev/latex_indesign_same_source_plan.md) for remaining consumer and parser boundaries.
+
+
+Web specification IR: declared `h2.hb-spec-section` / governed table pairs now
+pass through the public ManualSource assembler and ManualIR validator before
+Web rendering. Web-profile builds bypass Word specification text extraction,
+preserving authored links, emphasis, line breaks and trailer content. Document
+profile behavior stays with its existing Word reader. All declared sections
+must pass before any section is replaced. The adapter is a scoped prepared-HTML
+projection, not a whole-book IR; other Web components and neutral rich-text
+parsing remain pending in the [shared-source plan](dev/latex_indesign_same_source_plan.md).
+
+
+Web LCD and troubleshooting tables also consume public ManualIR. Both prepared
+Web bundles and standalone `{lcd-icons}` / `{troubleshooting}` directives share
+one source decoder and consumer, retaining the assembly planner's explicit page
+identity or authored table class. Filenames and translated header vocabulary
+never select a table. A later invalid table rejects the complete transformation
+before changing the caller DOM. Rich lists, links, icon alt text, figure captions
+and authored headers survive IR serialization/replay. A governed figure containing
+multiple tables is ambiguous and fails closed rather than duplicating content.
+Standalone staging includes the bounded IR runtime, language registry and existing
+table stylesheet contract; it does not import the source checkout or legacy IDML
+extractor. `web_source` is the shared provenance constructor, including the active
+specification adapter. Remaining whole-manual and HTML-parser boundaries are
+tracked in the [shared-source plan](dev/latex_indesign_same_source_plan.md).
+
+
+Standalone `{spec-table}` now uses the same public specification IR adapter and
+consumer as prepared Web builds. The directive keeps its inline escaping and
+row tokenization, supplies the authored section argument to IR, and emits only
+the figure (no extra heading). Its private grouping/rowspan/final-table renderer
+is retired. Empty, extra-column or orphan-continuation rows fail through the
+shared source contract; corrupt IR fails before raw HTML is returned. Plain
+circled footnote references use the common Web superscript style; explicit
+superscripts are not nested. Staging includes the existing specification adapter
+and consumer modules. Commands, editing surfaces and `manual-ir/v1` are unchanged.
+
+
+Prepared Web warning/note tables now cross the Pandoc boundary as public
+ManualIR. The source adapter validates the declared label/body geometry and
+records ComponentSpec, rich HTML and image references. Restoration validates
+both the public envelope and agreement of semantics/assets with the markup,
+then returns the original HTML bytes without reopening the source file. Actual
+bundle path/model/region are supplied by the build; table language is retained
+or reported as `und`. Corrupt IR or malformed declared callouts fail the build.
+The internal placeholder map no longer accepts raw HTML as a parallel restore
+path. CLI commands and `manual-ir/v1` remain unchanged. Notices inside
+already-protected composite figures remain separate; see the
+[shared-source plan](dev/latex_indesign_same_source_plan.md).
+
+
+Standalone `{callout}` now uses that same public IR adapter and consumer after
+Sphinx renders its parsed child nodes. This preserves resolved cross-references,
+image paths, lists and inline markup. Explicit `:variant:` remains authoritative
+for custom labels; configured language is carried even when source HTML has no
+`lang` attribute. The owned optional declaration is validated and replayed with
+the component semantics. Old prepared-Web projection payloads remain unchanged.
+The staged runtime reuses existing callout modules; an extension environment
+version change invalidates old doctrees. Nested tables or callouts in a callout
+body fail the shared single-table contract with source context; they are not
+silently flattened. Other rich Markdown nodes continue through Sphinx, and
+non-HTML writers retain ordinary body rendering.
+
+
+Prepared Web Inbox now assembles and consumes a scoped public IR before its
+figure enters Pandoc protection. The existing `HB-SPECIAL-INBOX` owns all three
+cards and its TIP label/body; no second callout interpretation is introduced.
+The `web-inbox` projection retains the ComponentSpec, heading/card/tip markup
+and image references, with actual source/model/region/language context. Replay
+validates hashes, semantics and complete unspanned rows before replacing caller
+DOM. The direct ComponentSpec-only Web path and hardcoded `und` facade have
+exited. Existing figure-target admission and EN/FR/ES output stay unchanged;
+other composite figures and the generic figure protection map remain separate.
+
+
+Prepared Web FCC now uses the public source/assembler/consumer path as well.
+The `web-fcc` projection carries its existing `HB-SPECIAL-FCC` ComponentSpec
+(opening lines, ordered paragraphs/measures, column break) plus the resolved
+logical-mark-to-image binding. Rendering uses those semantics directly and
+needs neither original HTML nor FCC marker configuration after serialization.
+The source adapter records actual target context and hashes the active FCC
+config with registry/theme provenance. Invalid IR, source identity or mark
+binding fails before the original page is changed. The old direct Web
+ComponentSpec-only route exits; existing marker/filename language fallback,
+paragraph normalization, three-locale output and target admission remain.
+This is not a new general rich-text parser or a Word/IDML FCC migration.
+
+
+The prepared Web signal-word legend now crosses public IR before its figure is
+protected. The `web-symbol-signals` projection owns localized headers, labels,
+meanings, retained table markup and image references. The existing source gate
+still selects the table; replay verifies public hashes and semantic/markup/asset
+agreement before applying the completed figure. Every row's localized label and
+complete unspanned two-cell geometry are checked before any caller DOM mutation.
+This closes the former partial-change failure on a malformed final label. Rich
+meaning markup and whitespace left by print-column removal are preserved; the
+captured EN/FR/ES outputs are byte-identical. The adjacent symbol-pair table,
+other figure admission, CLI and `manual-ir/v1` stay unchanged.
+
+
+The adjacent icon/meaning matrix now also uses public IR. Its scoped
+`web-symbol-pairs` block retains four localized headers, ordered left/right
+pairs, table markup and image references. The existing left-six/right-five
+contract is unchanged. The source decoder rejects ambiguous candidates,
+empty/spanned/nested rows, missing/multiple icon sources and nonempty content
+in a would-be-discarded right pair before caller mutation. The Web main module's
+direct matrix decoder/render loop has moved to the IR source and a dedicated
+pair consumer. Both symbol-table families share provenance/envelope checks;
+the existing signal IR bytes remain unchanged. Actual EN/FR/ES whole-page
+outputs are byte-identical. Fixed matrix admission and retained-HTML parsing
+remain source debt; other components and JP native layout are separate.
+
+
+App download now follows `ManualSource → public IR → Web consumer` before
+figure protection. The `web-app-download` projection carries its heading label,
+original semantic image, two ordered rich-copy columns, store/QR artwork
+bindings and complete image references. The old direct source/render function
+exits `web_presentation`. Replay needs neither the source file nor source config;
+it checks hashes, column semantics/order and markup/assets before changing the
+caller. Ambiguous image/heading candidates, incomplete copy and empty artwork
+bindings fail atomically. Existing target admission, one-split/two-paragraph
+input forms and EN/FR/ES whole-page output stay unchanged. Paragraph splitting
+and retained inline HTML remain source-adapter debt; App inline controls,
+reference figures and JP native layout are separate.
+
+
+The App add-device inline button also crosses public IR. `web-app-control`
+retains its source paragraph, localized label and image references; the source
+adapter owns prefix/button-vocabulary matching. Replay validates markup/label/
+asset agreement without reopening the source or config, then substitutes the
+same accessible `+` glyph in the same sentence position. Duplicate paragraphs,
+missing/multiple/empty labels or artwork inside the consumed label fail before
+caller mutation. The old direct function exits `web_presentation`. Existing
+EN/FR/ES output, source/target gate and Pandoc inline protection stay unchanged;
+retained HTML, source matching and the raw inline handoff remain adapter debt.

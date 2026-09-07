@@ -18,6 +18,7 @@ delivery-specific behavior lives (and is tested) here.
 from __future__ import annotations
 
 import json
+import os
 import re
 import zipfile
 from dataclasses import dataclass
@@ -27,21 +28,19 @@ from urllib.parse import unquote, urlparse
 from xml.sax.saxutils import escape, unescape
 
 from .check import check_idml
-from .font_family import CJK_FONT_FAMILY_TOKEN, PRIMARY_FONT_FAMILY_TOKEN
+from .font_assets import portable_font_assets_for_idml
+from .font_family import DELIVERY_FONT_FAMILY_TOKENS
 
 _LINK_URI_RE = re.compile(r'LinkResourceURI="([^"]*)"')
 _ATTR_ENTITIES = {'"': "&quot;"}
 _UNESCAPE_ENTITIES = {"&quot;": '"'}
 _FONT_EXTENSIONS = {".otf", ".ttf", ".ttc"}
 
-# The fonts the IDML styles reference (styles.fonts_xml / primitives
-# symbol fallbacks). None are redistributable from this repo: Gilroy is a
-# commercial license, the others are system fonts.
+# The fonts the IDML styles reference (styles.fonts_xml / inline fallbacks).
+# SIL-OFL faces are carried automatically; commercial/system rows remain
+# manifest-only unless an operator explicitly provisions licensed files.
 _FONT_ROWS = (
-    PRIMARY_FONT_FAMILY_TOKEN.delivery_row,
-    CJK_FONT_FAMILY_TOKEN.delivery_row,
-    ("Apple Symbols", "AppleSymbols", "system font (symbol fallback)"),
-    ("Apple SD Gothic Neo", "AppleSDGothicNeo-Regular", "macOS system font (circled-number fallback)"),
+    *(token.delivery_row for token in DELIVERY_FONT_FAMILY_TOKENS),
 )
 
 
@@ -58,7 +57,13 @@ def _uri_to_path(uri: str) -> Path | None:
     parsed = urlparse(uri)
     if parsed.scheme != "file" or not parsed.path:
         return None
-    return Path(unquote(parsed.path))
+    path = unquote(parsed.path)
+    if os.name == "nt":
+        if parsed.netloc:
+            path = f"//{parsed.netloc}{path}"
+        elif len(path) >= 3 and path[0] == "/" and path[2] == ":":
+            path = path[1:]
+    return Path(path)
 
 
 def _collect_link_uris(idml_path: Path) -> list[str]:
@@ -135,7 +140,19 @@ def _fonts_manifest(fonts_included: bool) -> str:
     lines.extend(f"| {family} | {names} | {license_} |" for family, names, license_ in _FONT_ROWS)
     lines.append("")
     if fonts_included:
-        lines.append("Font files are included under `Document fonts/` (provisioned by the build operator; verify the embedding license covers your use).")
+        lines.extend([
+            "Font files ship under `Document fonts/`, but **install them before",
+            "opening the IDML**. Importing an IDML produces an untitled document,",
+            "and InDesign resolves a `Document fonts` folder relative to a saved",
+            "document, so the bundled copies are not picked up on that first open.",
+            "Every bundled face comes up as a missing font and is substituted.",
+            "",
+            "Installing the files in `Document fonts/` is enough; they are the same",
+            "faces the styles reference. Commercially licensed families are listed",
+            "above but not shipped, so those must come from your own licence.",
+            "",
+            "(Verify the embedding licence covers your use before redistributing.)",
+        ])
     else:
         lines.append("No font files are included in this package — install the fonts above (licensed) before opening the IDML, or InDesign will substitute them.")
     return "\n".join(lines) + "\n"
@@ -266,11 +283,29 @@ def build_delivery_package(
 
         notes = list(extra_notes)
         notes.append(f"Collected {len(assigned)} linked asset(s) into Links/.")
-        fonts: list[Path] = []
+        portable_assets = portable_font_assets_for_idml(production_idml)
+        fonts_by_name = {asset.path.name: asset.path for asset in portable_assets}
+        license_paths = sorted({asset.license_path for asset in portable_assets})
+        operator_fonts: list[Path] = []
         if fonts_dir is not None and fonts_dir.is_dir():
-            fonts = sorted(p for p in fonts_dir.iterdir() if p.suffix.lower() in _FONT_EXTENSIONS)
+            operator_fonts = sorted(
+                path
+                for path in fonts_dir.iterdir()
+                if path.suffix.lower() in _FONT_EXTENSIONS
+            )
+        for font in operator_fonts:
+            previous = fonts_by_name.get(font.name)
+            if previous is not None and previous.read_bytes() != font.read_bytes():
+                raise RuntimeError(
+                    f"font filename collision with different bytes: {font.name}"
+                )
+            fonts_by_name[font.name] = font
+        fonts = [fonts_by_name[name] for name in sorted(fonts_by_name)]
         if fonts:
-            notes.append(f"Included {len(fonts)} font file(s) under Document fonts/.")
+            notes.append(
+                f"Included {len(portable_assets)} portable and "
+                f"{len(operator_fonts)} operator font file(s) under Document fonts/."
+            )
         else:
             notes.append("No font files provisioned; see fonts_manifest.md.")
         if missing:
@@ -317,6 +352,11 @@ def build_delivery_package(
                 zf.write(reference_pdf, f"reference/{reference_pdf.name}")
             for font in fonts:
                 zf.write(font, f"Document fonts/{font.name}")
+            for license_path in license_paths:
+                zf.write(
+                    license_path,
+                    f"Document fonts/LICENSES/{license_path.name}",
+                )
             zf.writestr("fonts_manifest.md", _fonts_manifest(bool(fonts)))
             zf.writestr("export_notes.md", _export_notes(notes, missing))
     finally:

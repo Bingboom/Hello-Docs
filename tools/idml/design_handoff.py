@@ -13,7 +13,10 @@ try:
 except ModuleNotFoundError:  # direct tools/export_idml.py execution
     from utils.path_utils import PathSegments  # type: ignore
 
+from tools.manual_ir import read_manual_ir
+
 from .flow_idml import FlowOutputs
+from .font_assets import provision_document_fonts
 
 
 @dataclass(frozen=True)
@@ -33,11 +36,15 @@ def write_handoff_package(*, root: Path, model: str, region: str, lang: str,
                           data_root: Path, bundle_root: Path,
                           production_idml: Path, flow: FlowOutputs,
                           build_command: list[str]) -> HandoffOutputs:
+    # Validate the source sidecar before copying or overwriting handoff files.
+    manual_ir_path = _manual_ir_path(production_idml)
+    skipped_raw_blocks = _skipped_raw_blocks(production_idml)
     handoff_root = flow.markdown.parent.parent
     production_dir = handoff_root / "production"
     production_dir.mkdir(parents=True, exist_ok=True)
     production_copy = production_dir / "manual.production.idml"
     shutil.copyfile(production_idml, production_copy)
+    provision_document_fonts(production_copy)
     production_manifest = production_dir / "asset_manifest.csv"
     if flow.asset_manifest.is_file():
         shutil.copyfile(flow.asset_manifest, production_manifest)
@@ -64,6 +71,7 @@ def write_handoff_package(*, root: Path, model: str, region: str, lang: str,
                 production_idml=production_copy,
                 asset_manifest=production_manifest,
                 build_command=build_command,
+                manual_ir_path=manual_ir_path, skipped_raw_blocks=skipped_raw_blocks,
             ),
             ensure_ascii=False,
             indent=2,
@@ -93,8 +101,8 @@ def write_handoff_package(*, root: Path, model: str, region: str, lang: str,
 
 def _production_trace(*, root: Path, model: str, region: str, lang: str,
                       data_root: Path, bundle_root: Path, production_idml: Path,
-                      asset_manifest: Path, build_command: list[str]) -> dict:
-    manual_ir = _manual_ir_path(production_idml)
+                      asset_manifest: Path, build_command: list[str],
+                      manual_ir_path: Path | None, skipped_raw_blocks: int | None) -> dict:
     return {
         "manual_id": f"{model.replace('-', '')}_{region}_{lang.upper()}",
         "model": model,
@@ -111,8 +119,8 @@ def _production_trace(*, root: Path, model: str, region: str, lang: str,
         "idml_mode": "production",
         "bundle_root": _display_path(root, bundle_root),
         "production_idml": _display_path(root, production_idml),
-        "manual_ir": _display_path(root, manual_ir) if manual_ir else None,
-        "skipped_raw_blocks": _skipped_raw_blocks(production_idml),
+        "manual_ir": _display_path(root, manual_ir_path) if manual_ir_path else None,
+        "skipped_raw_blocks": skipped_raw_blocks,
         "latex_page_plan": _display_path(
             root, production_idml.parent / PathSegments.LATEX_PAGE_PLAN_JSON),
         "reference_layout_plan": _display_path(
@@ -125,14 +133,8 @@ def _skipped_raw_blocks(production_idml: Path) -> int | None:
     candidate = _manual_ir_path(production_idml)
     if candidate is None:
         return None
-    try:
-        payload = json.loads(candidate.read_text(encoding="utf-8"))
-    except (OSError, json.JSONDecodeError):
-        return None
-    metadata = payload.get("metadata") or {}
-    if "skipped_raw" in metadata:
-        return int(metadata["skipped_raw"] or 0)
-    return sum(int(page.get("skipped_raw") or 0) for page in payload.get("pages") or [])
+    ir = read_manual_ir(candidate)
+    return sum(page.skipped_raw for page in ir.pages)
 
 
 def _manual_ir_path(production_idml: Path) -> Path | None:
@@ -176,6 +178,11 @@ def _designer_checklist(model: str, region: str, lang: str) -> str:
     return f"""# Designer Checklist
 
 - Target: `{model}_{region}_{lang}`
+- **Install the fonts in `Document fonts/` first.** Importing an IDML produces
+  an untitled document, and InDesign resolves a `Document fonts` folder
+  relative to a saved document, so the bundled copies are not picked up on that
+  first open — every bundled face is reported missing and substituted. See
+  `fonts_manifest.md` for the list and which families are not shipped.
 - Open `production/manual.production.idml` for visual parity review.
 - Open `flow/manual.flow.idml` for the rendered, editable continuous-story
   template; verify that linked images, native tables, and registered component

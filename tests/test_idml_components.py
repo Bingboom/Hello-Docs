@@ -9,6 +9,7 @@ through the registry (no forked logic).
 """
 from __future__ import annotations
 
+import re
 import unittest
 import xml.etree.ElementTree as ET
 from pathlib import Path
@@ -35,6 +36,11 @@ MINIMAL_SPECS: dict[str, dict] = {
     "warrantysection": {"kind": "warrantysection", "title": "Limited Warranty",
                         "index": 1, "blocks": [{"kind": "body", "text": "Copy."}]},
     "emphasispill": {"kind": "emphasispill", "texts": ["Charge before first use."]},
+    "headingpill": {
+        "kind": "headingpill",
+        "heading": "CHARGING VIA SOLAR PANELS",
+        "pill": "SOLD SEPARATELY",
+    },
     "referencefigure": {
         "kind": "referencefigure",
         "layout": "charging_ac",
@@ -49,6 +55,34 @@ def _ctx():
 
     return RenderContext(params={}, page_w=368.79, m_l=28.35, m_r=28.35,
                          root=ROOT, bundle_root=ROOT / "does-not-exist")
+
+
+def _guidance_stack_spec(image: str, guidance: list | None = None) -> dict:
+    """An `oppanel` spec already promoted to the guidance-stack layout.
+
+    Shape mirrors what `tools.idml.oppanel.promote_operation_guidance_stack`
+    emits: the panel keeps its own art/rows and gains a three-member
+    `guidance` run of notice / body / notice.
+    """
+    return {
+        "kind": "oppanel",
+        "layout": "image_guidance_stack",
+        "image": image,
+        "rows": [],
+        "guidance": guidance if guidance is not None else [
+            {"kind": "notice", "spec": {
+                "kind": "notice",
+                "label": "NOTE",
+                "texts": ["Charge before first use."],
+            }},
+            {"kind": "body", "text": "Interstitial guidance copy."},
+            {"kind": "notice", "spec": {
+                "kind": "notice",
+                "label": "TIP",
+                "texts": ["Keep the unit ventilated."],
+            }},
+        ],
+    }
 
 
 class ComponentRegistryTests(unittest.TestCase):
@@ -179,6 +213,115 @@ class ComponentRegistryTests(unittest.TestCase):
         self.assertIn('FillColor="Color/HB Brand Dark"', xml)
         self.assertNotIn('FillColor="Color/HB Brand Dark" RowSpan=', xml)
         self.assertIn('BaselineShift="0.7"', next(iter(stories.values())))
+
+    def test_heading_pill_reuses_h2_marker_and_rounded_emphasis_geometry(self) -> None:
+        from tools.export_idml import load_layout_params
+        from tools.idml.components import RenderContext, render
+
+        params = load_layout_params(ROOT / "data" / "layout_params.csv")
+        stories: dict[str, str] = {}
+
+        def add_story(sid: str, _title: str, parts: list[str]) -> str:
+            stories[sid] = "".join(parts)
+            return sid
+
+        xml, height = render(
+            MINIMAL_SPECS["headingpill"],
+            RenderContext(
+                params=params,
+                page_w=368.79,
+                m_l=28.35,
+                m_r=28.35,
+                root=ROOT,
+                bundle_root=ROOT / "does-not-exist",
+                native_structure_markers=True,
+                add_story=add_story,
+            ),
+            tid="charging_heading",
+            terminal=False,
+        )
+
+        self.assertIn("<Table ", xml)
+        self.assertIn("charging_heading_h2_marker_circle", xml)
+        self.assertIn('AppliedParagraphStyle="ParagraphStyle/Heading2"', xml)
+        self.assertIn("st_anchor_headingpill_charging_heading", xml)
+        self.assertIn('FillColor="Color/HB Brand Dark"', xml)
+        self.assertIn("SOLD SEPARATELY", "".join(stories.values()))
+        self.assertGreater(height, 0.0)
+
+    def test_heading_width_reserves_a_full_em_for_wide_characters(self) -> None:
+        from tools.idml.components.emphasis import _gilroy_bold_upper_width
+
+        for text in ("ソーラー充電", "（別売）"):
+            with self.subTest(text=text):
+                self.assertGreaterEqual(_gilroy_bold_upper_width(text, 8.0), len(text) * 8.0)
+        # Mixed-script text retains the approved Latin advances.
+        self.assertAlmostEqual(
+            _gilroy_bold_upper_width("AC", 8.0) + 16.0,
+            _gilroy_bold_upper_width("AC充電", 8.0),
+        )
+
+    def test_heading_pill_owns_compact_trilingual_column_geometry(self) -> None:
+        from tools.export_idml import load_layout_params
+        from tools.idml.components import RenderContext, render
+
+        params = load_layout_params(ROOT / "data" / "layout_params.csv")
+        localized = (
+            ("en", "CHARGING VIA SOLAR PANELS", "SOLD SEPARATELY"),
+            ("fr", "CHARGEMENT PAR PANNEAUX SOLAIRES", "VENDU SÉPARÉMENT"),
+            ("es", "CARGA MEDIANTE PANELES SOLARES", "SE VENDE POR SEPARADO"),
+        )
+        suffix_columns = []
+        for language, heading, pill in localized:
+            with self.subTest(language=language):
+                stories = {}
+
+                def add_story(sid, _title, parts):
+                    stories[sid] = "".join(parts)
+                    return sid
+
+                xml, _height = render(
+                    {
+                        "kind": "headingpill",
+                        "heading": heading,
+                        "pill": pill,
+                        "variant": "charging",
+                    },
+                    RenderContext(
+                        params=params,
+                        page_w=368.79,
+                        m_l=28.35,
+                        m_r=28.35,
+                        root=ROOT,
+                        bundle_root=ROOT,
+                        language=language,
+                        native_structure_markers=True,
+                        add_story=add_story,
+                    ),
+                    tid=f"charging_heading_{language}",
+                    terminal=True,
+                )
+
+                root = ET.fromstring(xml)
+                columns = [
+                    float(column.attrib["SingleColumnWidth"])
+                    for column in root.iter("Column")
+                ]
+                cells = list(root.iter("Cell"))
+                self.assertEqual(2, len(columns))
+                self.assertLess(sum(columns), 250.0)
+                self.assertAlmostEqual(
+                    10.9,
+                    float(cells[1].attrib["LeftInset"])
+                    + float(params["idml_charging_emphasis_horizontal_padding"][0])
+                    + 1.25,
+                )
+                self.assertIn(heading, xml)
+                self.assertIn(pill, "".join(stories.values()))
+                suffix_columns.append(columns[1])
+
+        self.assertLess(suffix_columns[0], suffix_columns[1])
+        self.assertLess(suffix_columns[1], suffix_columns[2])
 
     def test_reference_body_and_l2_typography_use_idml_calibration_tokens(self) -> None:
         from tools.export_idml import load_layout_params
@@ -365,6 +508,69 @@ class ComponentRegistryTests(unittest.TestCase):
         self.assertIn('LeftIndent="5.67"', list_style)
         self.assertIn('FirstLineIndent="-5.67"', list_style)
 
+    def test_warranty_source_markers_are_not_prefixed_with_an_extra_bullet(self) -> None:
+        from tools.export_idml import load_layout_params
+        from tools.idml.components import RenderContext
+        from tools.idml.components.warranty import _section_body
+
+        ctx = RenderContext(
+            params=load_layout_params(ROOT / "data/layout_params.csv"),
+            page_w=368.79, m_l=28.35, m_r=28.35, root=ROOT, bundle_root=ROOT,
+        )
+        for marker, kind in (("1.", "list"), ("12)", "list"), ("–", "sublist"), ("•", "list")):
+            with self.subTest(marker=marker):
+                parts, _ = _section_body(
+                    [{"kind": kind, "text": marker + " Warranty text"}], ctx,
+                    tid="source_marker", width=300, layout_spec={}, section_index=1,
+                )
+                root = ET.fromstring(parts[0])
+                text = "".join(node.text or "" for node in root.iter("Content"))
+                self.assertEqual(marker + "\tWarranty text", text)
+                indent = float(root.attrib["LeftIndent"])
+                self.assertGreaterEqual(indent, 5.67)
+
+    def test_warranty_sublist_marker_uses_portable_bullet_font(self) -> None:
+        from tools.export_idml import load_layout_params
+        from tools.idml.components import RenderContext, render
+
+        params = load_layout_params(ROOT / "data" / "layout_params.csv")
+        stories: dict[str, str] = {}
+
+        def add_story(sid, _title, parts):
+            stories[sid] = "".join(parts)
+            return sid
+
+        render(
+            {
+                "kind": "warrantysection",
+                "title": "保証内容",
+                "index": 7,
+                "blocks": [{"kind": "sublist", "text": "◦ 修理条件"}],
+            },
+            RenderContext(
+                params=params,
+                page_w=368.79,
+                m_l=28.35,
+                m_r=28.35,
+                root=ROOT,
+                bundle_root=ROOT / "does-not-exist",
+                language="ja",
+                add_story=add_story,
+            ),
+            tid="warranty_sublist_font",
+            terminal=True,
+        )
+
+        story = stories["st_anchor_warranty_body_warranty_sublist_font"]
+        marker_range = story.split("<Content>◦</Content>", 1)[0].rsplit(
+            "<CharacterStyleRange", 1,
+        )[1]
+        self.assertIn('PointSize="4.8"', marker_range)
+        self.assertIn(
+            '<AppliedFont type="string">Noto Sans Symbols2</AppliedFont>',
+            marker_range,
+        )
+
     def test_app_numbered_headings_and_lists_share_hanging_contract(self) -> None:
         from tools.export_idml import load_layout_params
         from tools.idml.styles import styles_xml
@@ -390,6 +596,63 @@ class ComponentRegistryTests(unittest.TestCase):
         from tools.idml.components import RenderContext, render
 
         params = load_layout_params(ROOT / "data" / "layout_params.csv")
+        stories = []
+
+        def add_story(sid, title, parts):
+            stories.append((sid, title, parts))
+            return sid
+
+        xml, _height = render(
+            {
+                "kind": "warrantyyears",
+                "items": [
+                    {
+                        "number": "3",
+                        "unit": "YEARS",
+                        "label": "Standard Warranty",
+                        "text": "Copy.",
+                    },
+                    {
+                        "number": "2",
+                        "unit": "YEARS",
+                        "label": "Extended Warranty",
+                        "text": "Copy.",
+                    },
+                ],
+            },
+            RenderContext(
+                params=params,
+                page_w=368.79,
+                m_l=28.35,
+                m_r=28.35,
+                root=ROOT,
+                bundle_root=ROOT / "does-not-exist",
+                add_story=add_story,
+            ),
+            tid="warranty_year_subtitle_alignment",
+            terminal=True,
+        )
+        self.assertEqual(2, xml.count('LeftIndent="26.21"'))
+        self.assertEqual(2, xml.count('<Position type="unit">26.21</Position>'))
+        self.assertIn("<Content>\tYEARS</Content>", xml)
+        self.assertIn("<Content>Standard Warranty</Content>", xml)
+        self.assertIn("<Content>Extended Warranty</Content>", xml)
+        self.assertEqual(2, len(stories))
+        self.assertEqual(2, xml.count('VerticalJustification="TopAlign" TopInset="0"'))
+
+    def test_warranty_years_reuse_the_je_portable_glyph_on_target_plans(
+        self,
+    ) -> None:
+        from tools.export_idml import load_layout_params
+        from tools.idml.components import RenderContext, render
+
+        params = load_layout_params(ROOT / "data" / "layout_params.csv")
+        stories = []
+
+        def add_story(sid, title, parts):
+            stories.append((sid, title, parts))
+            return sid
+
         xml, _height = render(
             {
                 "kind": "warrantyyears",
@@ -407,13 +670,329 @@ class ComponentRegistryTests(unittest.TestCase):
                 m_r=28.35,
                 root=ROOT,
                 bundle_root=ROOT / "does-not-exist",
+                native_structure_markers=True,
+                add_story=add_story,
             ),
-            tid="warranty_year_subtitle_alignment",
+            tid="warranty_native_year",
             terminal=True,
         )
-        self.assertIn('LeftIndent="21.31"', xml)
-        self.assertIn('VerticalJustification="TopAlign"', xml)
-        self.assertNotIn('VerticalJustification="CenterAlign"', xml)
+
+        self.assertIn('Self="bg_warranty_year_warranty_native_year_0"', xml)
+        self.assertIn('Self="tf_warranty_year_warranty_native_year_0"', xml)
+        self.assertIn('FillColor="Color/HB Brand Dark"', xml)
+        self.assertNotIn("<Content>❸</Content>", xml)
+        self.assertIn("<Content>\tYEARS</Content>", xml)
+        self.assertIn('<Position type="unit">26.21</Position>', xml)
+        self.assertEqual(1, len(stories))
+        self.assertIn("<Content>3</Content>", "".join(stories[0][2]))
+        self.assertIn('FillColor="Color/Paper"', "".join(stories[0][2]))
+
+    def test_bp_warranty_years_use_reference_subtitle_and_rhythm(self) -> None:
+        from tools.export_idml import load_layout_params
+        from tools.idml.components import RenderContext, render
+
+        params = load_layout_params(
+            ROOT / "data" / "layout_params.csv",
+            (ROOT / "data" / "layout_params.idml-compact.csv",),
+        )
+        stories = []
+
+        def add_story(sid, title, parts):
+            stories.append((sid, title, parts))
+            return sid
+
+        xml, _height = render(
+            {
+                "kind": "warrantyyears",
+                "layout_variant": "bp_default",
+                "items": [{
+                    "number": "3",
+                    "unit": "YEARS",
+                    "label": "— Standard Warranty",
+                    "text": "Reference-width explanatory copy.",
+                }],
+            },
+            RenderContext(
+                params=params,
+                page_w=368.79,
+                m_l=28.35,
+                m_r=28.35,
+                root=ROOT,
+                bundle_root=ROOT / "does-not-exist",
+                language="en",
+                native_structure_markers=True,
+                add_story=add_story,
+            ),
+            tid="warranty_bp_year",
+            terminal=True,
+        )
+
+        self.assertIn('Self="bg_warranty_year_warranty_bp_year_0"', xml)
+        self.assertNotIn("<Content>❸</Content>", xml)
+        self.assertIn('Self="tf_warranty_year_warranty_bp_year_0"', xml)
+        self.assertIn("<Content>3</Content>", "".join(stories[0][2]))
+        self.assertIn("<Content>Standard Warranty</Content>", xml)
+        self.assertNotIn("<Content>— Standard Warranty</Content>", xml)
+        self.assertIn('HorizontalScale="100"', xml)
+        self.assertNotIn('Leading="', xml)
+        self.assertIn('Hyphenation="false"', xml)
+
+    def test_warranty_years_honor_section_estimate_scale(self) -> None:
+        from tools.export_idml import load_layout_params
+        from tools.idml.components import RenderContext, render
+
+        params = load_layout_params(
+            ROOT / "data" / "layout_params.csv",
+            (ROOT / "data" / "layout_params.idml-compact.csv",),
+        )
+        without_section_override = dict(params)
+        without_section_override.pop(
+            "lang_it_idml_warranty_variant_bp_default_"
+            "body_estimate_horizontal_scale_2",
+        )
+        text = (
+            "Il periodo di garanzia standard decorre dalla data di acquisto "
+            "del consumatore originale ed è necessario conservare la prova "
+            "documentale ragionevole. "
+        ) * 3
+        spec = {
+            "kind": "warrantysection",
+            "title": "Periodo di garanzia",
+            "index": 2,
+            "layout_variant": "bp_default",
+            "blocks": [{
+                "kind": "component",
+                "spec": {
+                    "kind": "warrantyyears",
+                    "items": [{
+                        "number": "3",
+                        "unit": "ANNI",
+                        "label": "Garanzia standard",
+                        "text": text,
+                    }],
+                },
+            }],
+        }
+
+        def height(layout_params) -> float:
+            _, rendered_height = render(
+                spec,
+                RenderContext(
+                    params=layout_params,
+                    page_w=368.79,
+                    m_l=28.35,
+                    m_r=28.35,
+                    root=ROOT,
+                    bundle_root=ROOT / "does-not-exist",
+                    language="it",
+                    add_story=lambda sid, _title, _parts: sid,
+                ),
+                tid="warranty_it_period",
+                terminal=True,
+            )
+            return rendered_height
+
+        self.assertLess(height(params), height(without_section_override))
+
+    def test_bp_warranty_body_uses_reference_rhythm_only_in_variant(self) -> None:
+        from tools.export_idml import load_layout_params
+        from tools.idml.components import RenderContext, render
+
+        params = load_layout_params(
+            ROOT / "data" / "layout_params.csv",
+            (ROOT / "data" / "layout_params.idml-compact.csv",),
+        )
+
+        def rendered(layout_variant: str) -> tuple[str, str]:
+            stories = []
+
+            def add_story(sid, title, parts):
+                stories.append((sid, title, parts))
+                return sid
+
+            spec = {
+                "kind": "warrantysection",
+                "title": "Limited Warranty",
+                "index": 1,
+                "blocks": [
+                    {"kind": "body", "text": "First warranty paragraph."},
+                    {"kind": "body", "text": "Second warranty paragraph."},
+                ],
+            }
+            if layout_variant:
+                spec["layout_variant"] = layout_variant
+            xml, _height = render(
+                spec,
+                RenderContext(
+                    params=params,
+                    page_w=368.79,
+                    m_l=28.35,
+                    m_r=28.35,
+                    root=ROOT,
+                    bundle_root=ROOT / "does-not-exist",
+                    language="en",
+                    add_story=add_story,
+                ),
+                tid=f"warranty_body_{layout_variant or 'base'}",
+                terminal=True,
+            )
+            body = next(
+                "".join(parts)
+                for sid, _title, parts in stories
+                if sid.startswith("st_anchor_warranty_body_")
+            )
+            return xml, body
+
+        bp_xml, bp_body = rendered("bp_default")
+        _base_xml, base_body = rendered("")
+
+        # The variant's rhythm is composition, not leading. A numeric Leading
+        # attribute on a style range is dropped by InDesign, so emitting one
+        # only ever created a value the page never used; body copy composes at
+        # HB Warranty Body's own leading under every variant.
+        self.assertNotIn('Leading="', bp_body)
+        self.assertNotIn('Leading="', base_body)
+        self.assertIn('HorizontalScale="100"', bp_body)
+        self.assertIn('Hyphenation="false"', bp_body)
+        self.assertIn('Composer="HL Single"', bp_body)
+        self.assertNotIn('Hyphenation="false"', base_body)
+        body_frame = bp_xml.split(
+            'Self="tf_warranty_body_warranty_body_bp_default"', 1,
+        )[1].split("</TextFrame>", 1)[0]
+        self.assertIn('Anchor="9.07087 -15.1524"', body_frame)
+
+    def test_warranty_section_height_counts_east_asian_glyph_width(self) -> None:
+        from tools.export_idml import load_layout_params
+        from tools.idml.components import RenderContext, render
+
+        params = load_layout_params(ROOT / "data" / "layout_params.csv")
+        context = RenderContext(
+            params=params,
+            page_w=368.79,
+            m_l=28.35,
+            m_r=28.35,
+            root=ROOT,
+            bundle_root=ROOT / "does-not-exist",
+        )
+
+        def height(text: str) -> float:
+            _xml, value = render(
+                {
+                    "kind": "warrantysection",
+                    "title": "Warranty",
+                    "index": 4,
+                    "blocks": [{"kind": "body", "text": text}],
+                },
+                context,
+                tid="warranty_unicode_width",
+                terminal=True,
+            )
+            return value
+
+        self.assertGreater(height("가" * 60), height("A" * 60))
+
+    def test_bp_final_warranty_copy_is_vertically_centered(self) -> None:
+        from tools.export_idml import load_layout_params
+        from tools.idml.components import RenderContext, render
+
+        params = load_layout_params(
+            ROOT / "data" / "layout_params.csv",
+            (ROOT / "data" / "layout_params.idml-compact.csv",),
+        )
+        stories = []
+
+        def add_story(sid, title, parts):
+            stories.append((sid, title, parts))
+            return sid
+
+        xml, _height = render(
+            {
+                "kind": "warrantysection",
+                "title": "Interpretation Rights",
+                "index": 6,
+                "layout_variant": "bp_default",
+                "blocks": [{"kind": "body", "text": "One-line final policy."}],
+            },
+            RenderContext(
+                params=params,
+                page_w=368.79,
+                m_l=28.35,
+                m_r=28.35,
+                root=ROOT,
+                bundle_root=ROOT / "does-not-exist",
+                language="en",
+                add_story=add_story,
+            ),
+            tid="warranty_final_center",
+            terminal=True,
+        )
+
+        body_frame = xml.split(
+            'Self="tf_warranty_body_warranty_final_center"', 1,
+        )[1].split("</TextFrame>", 1)[0]
+        self.assertIn('VerticalJustification="CenterAlign"', body_frame)
+
+    def test_warranty_variant_correction_resolves_per_language(self) -> None:
+        """A variant correction must follow the same language cascade as its base.
+
+        The values it offsets are per-language (`lang_<code>_idml_warranty_*`), and
+        those base tokens are also read by the approved JE-1000F/US reference
+        layout. If the variant layer were language-blind, a per-language BP
+        correction would have to be folded back into the shared base — which moves
+        the host's approved geometry and breaks its `layout_params_sha256` pin.
+        """
+        from tools.export_idml import load_layout_params
+        from tools.idml.components import RenderContext
+        from tools.idml.components.warranty import _variant_adjust
+
+        params = load_layout_params(
+            ROOT / "data" / "layout_params.csv",
+            (ROOT / "data" / "layout_params.idml-compact.csv",),
+        )
+        spec = {"layout_variant": "bp_default"}
+
+        def adjust(language: str, key: str) -> float:
+            return _variant_adjust(
+                spec,
+                RenderContext(
+                    params=params,
+                    page_w=368.79,
+                    m_l=28.35,
+                    m_r=28.35,
+                    root=ROOT,
+                    bundle_root=ROOT / "does-not-exist",
+                    language=language,
+                ),
+                key,
+            )
+
+        # en and es need opposite corrections on the same key — the whole point of
+        # the cascade. These two numbers are what used to live in the base tokens.
+        self.assertAlmostEqual(-5.5, adjust("en", "panel_height_adjust_5"), places=3)
+        self.assertAlmostEqual(8.0, adjust("es", "panel_height_adjust_5"), places=3)
+
+        # fr declares no bp_default correction, so it must fall through to zero
+        # rather than inherit either sibling's value.
+        self.assertAlmostEqual(0.0, adjust("fr", "panel_height_adjust_5"), places=3)
+
+        # An unregistered variant contributes nothing at all.
+        self.assertAlmostEqual(
+            0.0,
+            _variant_adjust(
+                {"layout_variant": "no_such_variant"},
+                RenderContext(
+                    params=params,
+                    page_w=368.79,
+                    m_l=28.35,
+                    m_r=28.35,
+                    root=ROOT,
+                    bundle_root=ROOT / "does-not-exist",
+                    language="en",
+                ),
+                "panel_height_adjust_5",
+            ),
+            places=3,
+        )
 
     def test_localized_warranty_note_uses_reviewed_reference_width(self) -> None:
         from tools.export_idml import IdmlWriter, load_layout_params
@@ -467,6 +1046,102 @@ class ComponentRegistryTests(unittest.TestCase):
         self.assertGreater(heights["es"], heights["fr"])
         self.assertIn('HorizontalScale="96"', xml_by_language["fr"])
         self.assertIn('HorizontalScale="100"', xml_by_language["en"])
+
+    def test_warranty_lead_preserves_authored_multiline_target_copy(self) -> None:
+        from tools.export_idml import load_layout_params
+        from tools.idml.components import RenderContext, render
+
+        params = load_layout_params(ROOT / "data" / "layout_params.csv")
+        stories = []
+
+        def add_story(sid, title, parts):
+            stories.append((sid, title, parts))
+            return sid
+
+        _single_xml, single_height = render(
+            {
+                "kind": "warrantylead",
+                "texts": ["Line one Line two Line three"],
+            },
+            RenderContext(
+                params=params,
+                page_w=368.79,
+                m_l=28.35,
+                m_r=28.35,
+                root=ROOT,
+                bundle_root=ROOT / "does-not-exist",
+                language="fr",
+                add_story=add_story,
+            ),
+            tid="warranty_lead_single",
+            terminal=True,
+        )
+        _multi_xml, multiline_height = render(
+            {
+                "kind": "warrantylead",
+                "texts": ["Line one", "Line two", "Line three"],
+            },
+            RenderContext(
+                params=params,
+                page_w=368.79,
+                m_l=28.35,
+                m_r=28.35,
+                root=ROOT,
+                bundle_root=ROOT / "does-not-exist",
+                language="fr",
+                add_story=add_story,
+            ),
+            tid="warranty_lead_multiline",
+            terminal=True,
+        )
+
+        self.assertGreater(multiline_height, single_height)
+        multiline_story = stories[-1][2][0]
+        self.assertEqual(2, multiline_story.count("<Br/>"))
+
+    def test_warranty_layout_variant_resolves_shared_section_tokens(self) -> None:
+        from tools.export_idml import load_layout_params
+        from tools.idml.components import RenderContext, render
+
+        params = load_layout_params(
+            ROOT / "data" / "layout_params.csv",
+            (ROOT / "data" / "layout_params.idml-compact.csv",),
+        )
+        stories = []
+
+        def add_story(sid, title, parts):
+            stories.append((sid, title, parts))
+            return sid
+
+        xml, _height = render(
+            {
+                "kind": "warrantysection",
+                "title": "Garantie limitée",
+                "index": 1,
+                "layout_variant": "multiline_lead",
+                "blocks": [{"kind": "body", "text": "Copy."}],
+            },
+            RenderContext(
+                params=params,
+                page_w=368.79,
+                m_l=28.35,
+                m_r=28.35,
+                root=ROOT,
+                bundle_root=ROOT / "does-not-exist",
+                language="fr",
+                add_story=add_story,
+            ),
+            tid="warranty_multiline_variant",
+            terminal=True,
+        )
+
+        self.assertIn('SpaceBefore="2.36"', xml)
+        body = next(
+            "".join(parts) for sid, _title, parts in stories if "body" in sid
+        )
+        self.assertIn('HorizontalScale="97"', body)
+        self.assertNotIn('Leading="', body)
+        self.assertIn('Hyphenation="false"', body)
 
     def test_warranty_lead_uses_approved_shell_width_and_host_inset(self) -> None:
         from tools.export_idml import load_layout_params
@@ -794,6 +1469,50 @@ class ComponentRegistryTests(unittest.TestCase):
         self.assertIn('LeftIndent="6" FirstLineIndent="-4"', body)
         self.assertIn('PointSize="5"', body)
 
+    def test_multilingual_plural_note_labels_render_through_shared_notice(self) -> None:
+        from tools.idml.components import RenderContext, render
+
+        base = _ctx()
+        for language, label in (
+            ("en", "NOTES"),
+            ("fr", "REMARQUES"),
+            ("es", "OBSERVACIONES"),
+        ):
+            with self.subTest(language=language):
+                stories: dict[str, str] = {}
+
+                def add_story(story_id: str, _title: str, parts: list[str]) -> str:
+                    stories[story_id] = "".join(parts)
+                    return story_id
+
+                xml, height = render(
+                    {
+                        "kind": "notice",
+                        "label": label,
+                        "variant": "note",
+                        "texts": ["First item.", "Second item."],
+                        "list": True,
+                    },
+                    RenderContext(
+                        params=base.params,
+                        page_w=base.page_w,
+                        m_l=base.m_l,
+                        m_r=base.m_r,
+                        root=base.root,
+                        bundle_root=base.bundle_root,
+                        language=language,
+                        add_story=add_story,
+                    ),
+                    tid=f"plural_note_{language}",
+                    terminal=True,
+                )
+                self.assertGreater(height, 0.0)
+                self.assertIn(f'grp_notice_plural_note_{language}', xml)
+                rendered = "".join(stories.values())
+                self.assertIn(label, rendered)
+                self.assertIn("First item.", rendered)
+                self.assertIn("Second item.", rendered)
+
     def test_notice_symbol_fallback_keeps_valid_character_attributes(self) -> None:
         from tools.idml.components import RenderContext, render
 
@@ -831,7 +1550,9 @@ class ComponentRegistryTests(unittest.TestCase):
             if story_id == "st_anchor_notice_body_notice_symbol"
         )
         ET.fromstring(f"<root>{body}</root>")
-        self.assertIn("※", body)
+        self.assertIn("<!--HB_NATIVE_REFERENCE_MARK-->", body)
+        self.assertIn('<Polygon Self="__HB_NATIVE_REFERENCE_MARK_GLYPH__"', body)
+        self.assertNotIn("<Content>※</Content>", body)
 
     def test_notice_reference_geometry_overrides_width_height_and_inline_offset(self) -> None:
         from tools.idml.components import RenderContext, render
@@ -1070,6 +1791,193 @@ class ComponentRegistryTests(unittest.TestCase):
             'FillColor="Color/Paper"',
             host,
         )
+
+    def test_image_guidance_stack_stacks_art_notice_body_notice_in_one_card(
+        self,
+    ) -> None:
+        """The four members must stay stacked, in order, inside one card.
+
+        `_render_image_guidance_stack` composes art, the first notice, the
+        editable interstitial body, and the second notice into a single outer
+        group whose members are positioned by explicit bottom offsets. If the
+        emission order flips, or the offsets lose their sign, the art
+        overprints the notices instead of sitting above them — a silent
+        visual regression no other gate catches, because the IDML still
+        parses. The nested notices are re-anchored by `_nested_notice_group`,
+        which slices `render_notice` output on the literal `<Group
+        Self="grp_notice_` and rewrites `ItemTransform` by regex, so this
+        also pins that coupling: a rename inside notice.py breaks the slice.
+
+        Everything the card emits lands in the anchored sub-story, not in the
+        returned inline XML, so both are searched together.
+        """
+        from tools.export_idml import load_layout_params
+        from tools.idml.components import RenderContext, render
+
+        params = load_layout_params(ROOT / "data" / "layout_params.csv")
+        stories: dict[str, str] = {}
+
+        def add_story(sid: str, _title: str, parts: list[str]) -> str:
+            stories[sid] = "".join(parts)
+            return sid
+
+        tid = "guidance_stack"
+        xml, height = render(
+            _guidance_stack_spec("docs/renderers/latex/assets/op_energy_saving.png"),
+            RenderContext(
+                params=params, page_w=368.79, m_l=28.35, m_r=28.35,
+                root=ROOT, bundle_root=ROOT,
+                add_story=add_story,
+            ),
+            tid=tid, terminal=True,
+        )
+        composed = xml + "".join(stories.values())
+
+        members = [
+            f"grp_oppanel_image_guidance_art_{tid}",
+            f"grp_notice_{tid}_notice_1",
+            f"tf_oppanel_guidance_body_{tid}",
+            f"grp_notice_{tid}_notice_2",
+        ]
+        pattern = "|".join(re.escape(member) for member in members)
+        self.assertEqual(
+            members,
+            re.findall(f'Self="({pattern})"', composed),
+            "guidance-stack members are missing or out of document order",
+        )
+
+        transforms = dict(
+            (name, (x, float(y)))
+            for name, x, y in re.findall(
+                r'<Group Self="(grp_notice_' + re.escape(tid) + r'_notice_[12])"'
+                r'[^>]*?ItemTransform="1 0 0 1 ([-\d.]+) ([-\d.]+)"',
+                composed,
+            )
+        )
+        self.assertEqual(
+            ["7", "7"],
+            [transforms[f"grp_notice_{tid}_notice_1"][0],
+             transforms[f"grp_notice_{tid}_notice_2"][0]],
+            "both nested notices must stay pinned to the card's left inset",
+        )
+        self.assertEqual(-7.0, transforms[f"grp_notice_{tid}_notice_2"][1])
+        self.assertLess(
+            transforms[f"grp_notice_{tid}_notice_1"][1],
+            transforms[f"grp_notice_{tid}_notice_2"][1],
+            "the first notice must sit further down the card than the second",
+        )
+        self.assertIn("Interstitial guidance copy.", composed)
+        self.assertGreater(height, 0.0)
+
+    def test_image_guidance_stack_falls_back_flat_when_the_art_is_missing(
+        self,
+    ) -> None:
+        """Without art, the run degrades to flat blocks — never a half card.
+
+        A permissive (flow/preview) build may not have the governed operation
+        artwork on disk. The renderer then emits the two notices and the body
+        copy as ordinary stacked output instead of composing a card around a
+        missing image. If that branch ever emitted the card frames anyway,
+        the export would place an empty art group and an unfilled body frame
+        over the notices.
+        """
+        from tools.export_idml import load_layout_params
+        from tools.idml.components import RenderContext, render
+
+        params = load_layout_params(ROOT / "data" / "layout_params.csv")
+        stories: dict[str, str] = {}
+
+        def add_story(sid: str, _title: str, parts: list[str]) -> str:
+            stories[sid] = "".join(parts)
+            return sid
+
+        tid = "guidance_stack_flat"
+        xml, height = render(
+            _guidance_stack_spec("_assets/operation/definitely_missing_art.png"),
+            RenderContext(
+                params=params, page_w=368.79, m_l=28.35, m_r=28.35,
+                root=ROOT, bundle_root=ROOT / "does-not-exist",
+                add_story=add_story,
+            ),
+            tid=tid, terminal=True,
+        )
+        composed = xml + "".join(stories.values())
+
+        self.assertNotIn("grp_oppanel_image_guidance_art_", composed)
+        self.assertNotIn("tf_oppanel_guidance_body_", composed)
+        self.assertIn(f"st_anchor_notice_body_{tid}_notice_1", stories)
+        self.assertIn(f"st_anchor_notice_body_{tid}_notice_2", stories)
+        self.assertGreater(height, 0.0)
+
+    def test_image_guidance_stack_fails_closed_on_a_missing_governed_asset(
+        self,
+    ) -> None:
+        """An approved/target build must abort, not silently drop the art.
+
+        `strict_component_assets` is what separates a governed reference
+        build from a permissive preview. If the strict and permissive
+        branches were ever swapped, a shipped book would quietly lose the
+        operation illustration instead of failing the build.
+        """
+        from tools.export_idml import load_layout_params
+        from tools.idml.components import RenderContext, render
+
+        params = load_layout_params(ROOT / "data" / "layout_params.csv")
+        with self.assertRaisesRegex(
+            FileNotFoundError,
+            "operation image-guidance asset missing: "
+            "_assets/operation/definitely_missing_art.png",
+        ):
+            render(
+                _guidance_stack_spec(
+                    "_assets/operation/definitely_missing_art.png",
+                ),
+                RenderContext(
+                    params=params, page_w=368.79, m_l=28.35, m_r=28.35,
+                    root=ROOT, bundle_root=ROOT / "does-not-exist",
+                    strict_component_assets=True,
+                    add_story=lambda sid, _title, _parts: sid,
+                ),
+                tid="guidance_stack_strict", terminal=True,
+            )
+
+    def test_image_guidance_stack_requires_notice_body_notice(self) -> None:
+        """The guidance run's shape is a contract, checked before layout.
+
+        The plan declares `layout_variant: guidance_stack` and the promoter
+        builds exactly notice / body / notice. A malformed or reordered run
+        would otherwise be indexed positionally and render a notice where the
+        editable body belongs, so the renderer refuses it up front.
+        """
+        from tools.export_idml import load_layout_params
+        from tools.idml.components import RenderContext, render
+
+        params = load_layout_params(ROOT / "data" / "layout_params.csv")
+        notice = {"kind": "notice", "spec": {
+            "kind": "notice", "label": "NOTE", "texts": ["Copy."],
+        }}
+        body = {"kind": "body", "text": "Interstitial guidance copy."}
+        for label, guidance in (
+            ("empty", []),
+            ("reordered", [notice, notice, body]),
+        ):
+            with self.subTest(guidance=label):
+                with self.assertRaisesRegex(
+                    ValueError,
+                    "image_guidance_stack requires notice, body, notice guidance",
+                ):
+                    render(
+                        _guidance_stack_spec(
+                            "docs/renderers/latex/assets/op_energy_saving.png",
+                            guidance,
+                        ),
+                        RenderContext(
+                            params=params, page_w=368.79, m_l=28.35, m_r=28.35,
+                            root=ROOT, bundle_root=ROOT,
+                            add_story=lambda sid, _title, _parts: sid,
+                        ),
+                        tid=f"guidance_stack_shape_{label}", terminal=True,
+                    )
 
     def test_unknown_kind_renders_nothing(self) -> None:
         from tools.idml.components import render

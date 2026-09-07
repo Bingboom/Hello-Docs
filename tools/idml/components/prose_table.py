@@ -10,8 +10,8 @@ import math
 import re
 
 from ..character_metrics import with_character_metrics
-from ..language_contract import governed_languages
-from ..line_metrics import east_asian_width_units
+from ..language_contract import governed_languages, layout_override_languages
+from ..line_metrics import east_asian_width_units, estimated_text_width
 from ..params import component_param_pt, param_pt, param_text
 from ..primitives import (
     cell,
@@ -23,6 +23,7 @@ from ..primitives import (
 from ..table_borders import suppress_outer_edges_xml
 from ..text_clean import strip_rst_inline
 from .base import RenderContext
+from .image_table import has_inline_images, render_image_table
 from .key_combinations import (
     is_key_combinations_rows,
     render_key_combinations,
@@ -50,6 +51,32 @@ class _TroubleshootingLocaleCalibration:
     right_line_baseline: tuple[int, ...]
 
 
+# Languages whose approved trouble-table geometry carries a contract-required
+# space-before row (en included: this component reads lang_en_ directly, not
+# the unscoped base token). Other honored languages read their row
+# permissively and fall back to the resolved en value until their reference
+# layout is approved.
+_TROUBLE_SPACE_BEFORE_CONTRACT = (
+    ("en", 8.74), ("fr", 6.70), ("es", 7.75),
+)
+
+
+def _table_space_before_pairs(token) -> tuple[tuple[str, float], ...]:
+    """Resolve the per-language space-before pairs from one token reader."""
+    pairs: dict[str, float] = {
+        code: token(f"lang_{code}_idml_trouble_table_space_before", default)
+        for code, default in _TROUBLE_SPACE_BEFORE_CONTRACT
+    }
+    for code in layout_override_languages():
+        if code not in pairs:
+            pairs[code] = token(
+                f"lang_{code}_idml_trouble_table_space_before",
+                pairs["en"],
+                strict=False,
+            )
+    return tuple(pairs.items())
+
+
 @dataclass(frozen=True)
 class TroubleshootingTableStyle:
     """Source-side geometry contract for the editable troubleshooting table.
@@ -70,18 +97,25 @@ class TroubleshootingTableStyle:
     header_single_height: float
     body_single_height: float
     row_minima: tuple[float, ...]
+    left_line_baseline: tuple[int, ...]
+    right_line_baseline: tuple[int, ...]
     steps_pad_tb: float
     outer_radius: float
+    compact_outer_radius: float
     panel_min_height: float
     import_safety: float
+    native_carrier_allowance: float
     glyph_width_ratio: float
     left_optical_width: float
     inner_rule: float
     outer_rule: float
     extra_row_min_height: float
     space_before: float = 9.74
-    table_space_before_by_language: tuple[float, float, float] = (
-        8.74, 6.70, 7.75,
+    # (language, pt) pairs: the approved trouble-table space-before per
+    # honored layout language. A language without a pair falls back to en,
+    # so a language entering tuning renders before its row exists.
+    table_space_before_by_language: tuple[tuple[str, float], ...] = (
+        ("en", 8.74), ("fr", 6.70), ("es", 7.75),
     )
 
     @classmethod
@@ -92,12 +126,21 @@ class TroubleshootingTableStyle:
         language: str | None = None,
     ) -> TroubleshootingTableStyle:
         """Resolve shared type/row tokens once for rendering and estimation."""
-        def token(key: str, default: float) -> float:
+        def token(
+            key: str,
+            default: float,
+            *,
+            strict: bool | None = None,
+        ) -> float:
             value = component_param_pt(
                 ctx.params,
                 key,
                 default,
-                strict=ctx.strict_component_assets,
+                strict=(
+                    ctx.strict_component_assets
+                    if strict is None
+                    else strict
+                ),
                 owner="TroubleshootingTableStyle",
             )
             if not math.isfinite(value) or value <= 0:
@@ -127,11 +170,18 @@ class TroubleshootingTableStyle:
             language,
             _TROUBLESHOOTING_LOCALE_CALIBRATIONS["en"],
         )
-        minima_key = (
-            f"lang_{language}_idml_trouble_row_minima"
-            if language in governed_languages()
-            else "idml_trouble_row_minima"
-        )
+        override_minima_key = f"lang_{language}_idml_trouble_row_minima"
+        if language in governed_languages():
+            # Approved locales: their row IS the contract (strict check below).
+            minima_key = override_minima_key
+        elif (
+            language in layout_override_languages()
+            and override_minima_key in ctx.params
+        ):
+            # A line in layout tuning is honored the moment its row lands.
+            minima_key = override_minima_key
+        else:
+            minima_key = "idml_trouble_row_minima"
         minima_raw = param_text(
             ctx.params,
             minima_key,
@@ -156,6 +206,34 @@ class TroubleshootingTableStyle:
                 "TroubleshootingTableStyle idml_trouble_row_minima must contain "
                 "twelve finite positive heights"
             )
+
+        def line_baseline(side: str, fallback: tuple[int, ...]) -> tuple[int, ...]:
+            """Native line counts per row, from data when the language has them.
+
+            These gate how far a row may grow beyond its measured height, so
+            borrowing another language's counts suppresses growth the copy
+            actually needs. The KR overlay shipped measured Korean counts
+            before anything read them.
+            """
+            key = f"lang_{language}_idml_trouble_{side}_line_baseline"
+            raw = param_text(
+                ctx.params, key, ";".join(str(value) for value in fallback),
+            )
+            try:
+                counts = tuple(int(value.strip()) for value in raw.split(";"))
+            except ValueError as exc:
+                raise ValueError(
+                    f"TroubleshootingTableStyle {key} must contain "
+                    "semicolon-separated integers"
+                ) from exc
+            if len(counts) != len(row_minima) or any(
+                count < 1 for count in counts
+            ):
+                raise ValueError(
+                    f"TroubleshootingTableStyle {key} must contain "
+                    f"{len(row_minima)} positive line counts"
+                )
+            return counts
 
         header_h = token("comp_data_table_header_height", 14.74)
         row_h = token("comp_data_table_row_height", 11.91)
@@ -183,27 +261,39 @@ class TroubleshootingTableStyle:
                 "idml_trouble_body_height_correction", 2.79,
             ),
             row_minima=row_minima,
+            left_line_baseline=line_baseline(
+                "left", calibration.left_line_baseline,
+            ),
+            right_line_baseline=line_baseline(
+                "right", calibration.right_line_baseline,
+            ),
             steps_pad_tb=token("comp_trouble_steps_pad_tb", 2.83465),
             outer_radius=token("comp_table_outer_arc", 6.8),
+            # Compact tables are a target-overlay extension of the shared
+            # component, not part of the approved JE full-table identity.
+            compact_outer_radius=token(
+                "idml_trouble_compact_outer_radius",
+                4.8,
+                strict=False,
+            ),
             panel_min_height=token("idml_trouble_panel_min_height", 237.79),
             import_safety=nonnegative_token("idml_trouble_import_safety", 0.0),
+            native_carrier_allowance=nonnegative_token(
+                "idml_trouble_native_carrier_allowance",
+                1.0,
+            ),
             glyph_width_ratio=token("idml_trouble_glyph_width_ratio", 0.50),
             left_optical_width=token("idml_trouble_left_optical_width", 4.0),
             inner_rule=token("idml_trouble_inner_rule", 0.25),
             outer_rule=token("idml_trouble_outer_rule", 0.57),
             extra_row_min_height=token("idml_trouble_extra_row_min_height", 11.15),
-            table_space_before_by_language=(
-                token("lang_en_idml_trouble_table_space_before", 8.74),
-                token("lang_fr_idml_trouble_table_space_before", 6.70),
-                token("lang_es_idml_trouble_table_space_before", 7.75),
-            ),
+            table_space_before_by_language=_table_space_before_pairs(token),
         )
         return style
 
     def table_space_before(self, language: str) -> float:
-        governed = governed_languages()
-        index = governed.index(language) if language in governed else 0
-        return self.table_space_before_by_language[index]
+        pairs = dict(self.table_space_before_by_language)
+        return pairs.get(language, pairs["en"])
 
     def minimum_for_row(self, row_index: int) -> float:
         if row_index < len(self.row_minima):
@@ -211,15 +301,9 @@ class TroubleshootingTableStyle:
         return self.extra_row_min_height
 
 
-_TROUBLESHOOTING_HEADER_LANGUAGES = {
-    "error code": "en",
-    "code d'erreur": "fr",
-    "code d’erreur": "fr",
-    "código de fallo": "es",
-    "codigo de fallo": "es",
-    "código de error": "es",
-    "codigo de error": "es",
-}
+def _troubleshooting_language(language: str | None) -> str:
+    """Normalize the declared page language for calibration lookup."""
+    return (language or "en").split("-", 1)[0].strip().casefold() or "en"
 _TROUBLESHOOTING_LOCALE_CALIBRATIONS = {
     "en": _TroubleshootingLocaleCalibration(
         native_row_heights=(
@@ -318,6 +402,124 @@ def _troubleshooting_cell_geometry(
     return top, bottom, left, 3.0, valign
 
 
+def _troubleshooting_is_compact(
+    raw_rows: list[list],
+    style: TroubleshootingTableStyle,
+) -> bool:
+    """Return whether this source table is shorter than the JE master."""
+    return len(raw_rows) < len(style.row_minima)
+
+
+def _troubleshooting_column_widths(
+    raw_rows: list[list],
+    *,
+    body_width: float,
+    style: TroubleshootingTableStyle,
+) -> tuple[float, float]:
+    """Keep full-master geometry fixed and size compact code columns by copy."""
+    base_left = body_width * style.left_ratio + style.left_optical_width
+    if not _troubleshooting_is_compact(raw_rows, style) or not raw_rows:
+        return base_left, body_width - base_left
+
+    header = _plain_cell(raw_rows[0][0])
+    header_need = estimated_text_width(
+        header,
+        point_size=style.header_size,
+        narrow_width_ratio=style.glyph_width_ratio,
+    ) + 2.88 + 3.0 + style.left_optical_width
+    code_need = base_left
+    for row in raw_rows[1:]:
+        code = strip_rst_inline(str(row[0] if row else ""))
+        longest_line = max(code.splitlines() or [""], key=len)
+        code_need = max(
+            code_need,
+            estimated_text_width(
+                longest_line,
+                point_size=style.code_size,
+                narrow_width_ratio=style.glyph_width_ratio,
+            ) + 1.5 + 3.0 + style.left_optical_width,
+        )
+    # Compact localized headers may claim more width than their source proof.
+    # The cap protects corrective-measure copy while still allowing FR/ES to
+    # grow beyond the narrow English code column.
+    maximum = body_width * min(0.20, style.left_ratio + 0.06)
+    left_width = min(maximum, max(base_left, header_need, code_need))
+    return left_width, body_width - left_width
+
+
+def _compact_troubleshooting_row_heights(
+    raw_rows: list[list],
+    *,
+    column_widths: tuple[float, float],
+    style: TroubleshootingTableStyle,
+) -> tuple[float, ...]:
+    """Derive short-table minima from live code and corrective-measure copy."""
+    heights: list[float] = []
+    for row_index, row in enumerate(raw_rows):
+        left = row[0] if row else ""
+        right = row[1] if len(row) > 1 else ""
+        step_count = str(right).count("|") if str(right).lstrip().startswith("|") else 0
+        measured_lines: list[int] = []
+        for column_index, text in enumerate((left, right)):
+            top, bottom, left_inset, right_inset, _ = (
+                _troubleshooting_cell_geometry(
+                    row_index,
+                    column_index,
+                    step_count=step_count,
+                    steps_pad_tb=style.steps_pad_tb,
+                )
+            )
+            size = (
+                style.header_size
+                if row_index == 0
+                else style.code_size
+                if column_index == 0
+                else style.body_size
+            )
+            measured_lines.append(_troubleshooting_line_count(
+                text,
+                max(
+                    1.0,
+                    column_widths[column_index] - left_inset - right_inset,
+                ),
+                size=size,
+                glyph_width_ratio=style.glyph_width_ratio,
+            ))
+        if row_index == 0:
+            top_l, bottom_l, *_ = _troubleshooting_cell_geometry(
+                row_index,
+                0,
+                step_count=step_count,
+                steps_pad_tb=style.steps_pad_tb,
+            )
+            top_r, bottom_r, *_ = _troubleshooting_cell_geometry(
+                row_index,
+                1,
+                step_count=step_count,
+                steps_pad_tb=style.steps_pad_tb,
+            )
+            minimum = max(
+                style.header_single_height,
+                measured_lines[0] * style.header_leading + top_l + bottom_l,
+                measured_lines[1] * style.header_leading + top_r + bottom_r,
+            )
+        else:
+            top_r, bottom_r, *_ = _troubleshooting_cell_geometry(
+                row_index,
+                1,
+                step_count=step_count,
+                steps_pad_tb=style.steps_pad_tb,
+            )
+            base = style.body_single_height
+            minimum = max(
+                base,
+                base * measured_lines[0],
+                measured_lines[1] * style.body_leading + top_r + bottom_r,
+            )
+        heights.append(round(minimum, 3))
+    return tuple(heights)
+
+
 def _troubleshooting_line_count(
     text: object,
     width: float,
@@ -359,17 +561,25 @@ def _troubleshooting_frame_height(
 ) -> float:
     """Budget localized AutoGrow rows before emitting the fixed panel group.
 
-    The approved EN/FR/ES copy has a native-InDesign row-height baseline.  It
-    captures font shaping that a deterministic build cannot query from a host
-    application (notably the two-line FR/ES code header).  The same width,
-    type, leading and inset calculation then adds growth when edited copy wraps
-    beyond that reviewed baseline.
+    The reviewed copy has a native-InDesign row-height and line-count
+    baseline. It captures font shaping that a deterministic build cannot query
+    from a host application (notably the two-line FR/ES code header). The same
+    width, type, leading and inset calculation then adds growth when edited
+    copy wraps beyond that reviewed baseline. Both halves of the baseline now
+    come off the resolved style, so a language supplies its own by shipping
+    layout rows rather than by being added to a table in this file.
     """
-    left_width = body_width * style.left_ratio + style.left_optical_width
-    column_widths = (left_width, body_width - left_width)
-    header = _plain_cell(raw_rows[0][0]).casefold() if raw_rows else ""
-    language = _TROUBLESHOOTING_HEADER_LANGUAGES.get(header, "en")
-    calibration = _TROUBLESHOOTING_LOCALE_CALIBRATIONS[language]
+    column_widths = _troubleshooting_column_widths(
+        raw_rows,
+        body_width=body_width,
+        style=style,
+    )
+    if _troubleshooting_is_compact(raw_rows, style):
+        return sum(_compact_troubleshooting_row_heights(
+            raw_rows,
+            column_widths=column_widths,
+            style=style,
+        )) + style.import_safety
     budget = 0.0
     for row_index, row in enumerate(raw_rows):
         right = str(row[1]) if len(row) > 1 else ""
@@ -396,12 +606,11 @@ def _troubleshooting_frame_height(
                 glyph_width_ratio=style.glyph_width_ratio,
             )
             measured_lines.append(lines)
-        if row_index < len(calibration.native_row_heights):
-            native_height = style.minimum_for_row(row_index)
-            left_baseline = calibration.left_line_baseline[row_index]
-            right_baseline = calibration.right_line_baseline[row_index]
+        native_height = style.minimum_for_row(row_index)
+        if row_index < len(style.left_line_baseline):
+            left_baseline = style.left_line_baseline[row_index]
+            right_baseline = style.right_line_baseline[row_index]
         else:
-            native_height = style.minimum_for_row(row_index)
             left_baseline = right_baseline = 1
         left_growth = max(0, measured_lines[0] - left_baseline) * (
             style.header_leading if row_index == 0 else style.code_leading
@@ -410,6 +619,11 @@ def _troubleshooting_frame_height(
             style.header_leading if row_index == 0 else style.body_leading
         )
         budget += native_height + max(left_growth, right_growth)
+    # Short product-specific tables keep the same type, row minima and rounded
+    # shell, but do not inherit the full twelve-row master panel depth.  The
+    # complete governed EN/FR/ES tables still retain the reviewed minimum.
+    if len(raw_rows) < len(style.row_minima):
+        return budget + style.import_safety
     if budget <= style.panel_min_height:
         return style.panel_min_height
     return budget + style.import_safety
@@ -506,13 +720,22 @@ def _troubleshooting_table(
     inner hairlines all have their own shared layout tokens.
     """
     body_w = ctx.text_measure - (1.13 if ctx.add_story is not None else 0.0)
-    # The reference divider is four points to the right of the bare ratio.
-    # Keep that optical allowance distinct from cell padding so the visible
-    # code column stays aligned in every language.
-    left_w = body_w * style.left_ratio + style.left_optical_width
-    cols = [left_w, body_w - left_w]
-    header = _plain_cell(raw_rows[0][0]).casefold() if raw_rows else ""
-    language = _TROUBLESHOOTING_HEADER_LANGUAGES.get(header, "en")
+    cols = list(_troubleshooting_column_widths(
+        raw_rows,
+        body_width=body_w,
+        style=style,
+    ))
+    is_compact = _troubleshooting_is_compact(raw_rows, style)
+    compact_row_heights = (
+        _compact_troubleshooting_row_heights(
+            raw_rows,
+            column_widths=(cols[0], cols[1]),
+            style=style,
+        )
+        if is_compact
+        else None
+    )
+    language = _troubleshooting_language(ctx.language)
 
     cells: list[str] = []
     for ri, row in enumerate(raw_rows):
@@ -522,12 +745,15 @@ def _troubleshooting_table(
         if ri == 0:
             styles = ("HB Data Header", "HB Data Header")
             fills: tuple[str | None, str | None] = (
-                "Color/HB Bg K05",
-                "Color/HB Bg K05",
+                ("Color/HB Header K08" if is_compact else "Color/HB Bg K05"),
+                (None if is_compact else "Color/HB Bg K05"),
             )
         else:
             styles = ("HB Data Code", "HB Data Body")
-            fills = ("Color/HB Bg K05", None)
+            fills = (
+                "Color/HB Header K08" if is_compact else "Color/HB Bg K05",
+                None,
+            )
         for ci, (text, paragraph_style, fill) in enumerate(
             zip((left, right), styles, fills)
         ):
@@ -558,6 +784,11 @@ def _troubleshooting_table(
                     point_size=style.body_size,
                     leading=style.body_leading,
                 )
+            content = content.replace(
+                "<ParagraphStyleRange ",
+                '<ParagraphStyleRange Hyphenation="false" ',
+                1,
+            )
             if ri == 0 and ci == 0 and language == "en":
                 content = content.replace(
                     'FontStyle="Bold"',
@@ -587,9 +818,9 @@ def _troubleshooting_table(
     # correction keeps the PDF minima equal to the shared LaTeX tokens.
     rows = "\n".join(
         f'    <Row Self="{tid}r{ri}" Name="{ri}" '
-        f'SingleRowHeight="{style.header_single_height if ri == 0 else style.body_single_height:g}" '
-        f'MinimumHeight="{style.minimum_for_row(ri):g}" '
-        'AutoGrow="true"/>'
+        f'SingleRowHeight="{(compact_row_heights[ri] if compact_row_heights is not None else style.header_single_height if ri == 0 else style.body_single_height):g}" '
+        f'MinimumHeight="{(compact_row_heights[ri] if compact_row_heights is not None else style.minimum_for_row(ri)):g}" '
+        f'AutoGrow="{str(compact_row_heights is None).lower()}"/>'
         for ri in range(len(raw_rows))
     )
     columns = "\n".join(
@@ -746,20 +977,20 @@ def _body_data_table(
 
 
 def render_table_block(raw_rows: list[list], ctx: RenderContext, *, tid: str,
-                       terminal: bool, span_columns: bool = True) -> tuple[str, float]:
+                       terminal: bool, span_columns: bool = True,
+                       troubleshooting: bool = False) -> tuple[str, float]:
+    if has_inline_images(raw_rows):
+        return render_image_table(raw_rows, ctx, tid=tid, terminal=terminal,
+                                  span_columns=span_columns)
     n_cols = max(len(r) for r in raw_rows)
     first_cell = str(raw_rows[0][0]).replace("**", "").strip() if raw_rows else ""
     is_overview = first_cell in {"POWER Button", "Total Output", "Handle"}
-    # Troubleshooting is a shared visual component across EN/FR/ES. Detect
-    # the semantic header in every governed language so localized pages do
-    # not silently fall back to the legacy square table.
-    trouble_headers = {
-        "error code", "code d'erreur", "code d’erreur",
-        "código de fallo", "codigo de fallo",
-        "código de error", "codigo de error",
-    }
-    trouble_header = str(raw_rows[0][0]).strip().casefold() if raw_rows else ""
-    is_troubleshooting = n_cols == 2 and trouble_header in trouble_headers
+    # The caller declares this table's semantic; it is never re-derived from
+    # the printed header. Matching localized copy is what STYLE_DEFINITION
+    # §0.5 forbids, and the header set only ever held EN/FR/ES spellings, so
+    # ja/zh/de/it/uk/pt-BR/ko all fell through to the legacy square table
+    # while manual_style.yaml declared HB-TABLE-TROUBLESHOOTING `aligned`.
+    is_troubleshooting = n_cols == 2 and troubleshooting
     body_kind = body_data_table_kind(raw_rows)
     is_auto_resume = body_kind == "auto_resume"
     is_key_combinations = body_kind == "key_combinations"
@@ -805,10 +1036,7 @@ def render_table_block(raw_rows: list[list], ctx: RenderContext, *, tid: str,
     elif is_troubleshooting:
         troubleshooting_style = TroubleshootingTableStyle.from_context(
             ctx,
-            language=_TROUBLESHOOTING_HEADER_LANGUAGES.get(
-                trouble_header,
-                "en",
-            ),
+            language=_troubleshooting_language(ctx.language),
         )
         table, framed_h = _troubleshooting_table(
             raw_rows,
@@ -914,7 +1142,14 @@ def render_table_block(raw_rows: list[list], ctx: RenderContext, *, tid: str,
             fill="Color/Paper",
             stroke="Color/HB Brand Dark",
             stroke_weight=troubleshooting_style.outer_rule,
-            radius=troubleshooting_style.outer_radius,
+            radius=(
+                troubleshooting_style.compact_outer_radius
+                if len(raw_rows) < len(troubleshooting_style.row_minima)
+                else troubleshooting_style.outer_radius
+            ),
+            terminal_carrier_height=(
+                troubleshooting_style.native_carrier_allowance
+            ),
         )
     else:
         xml = wrap_table_paragraph(table, terminal, span_columns=span_columns)
@@ -937,9 +1172,9 @@ def render_table_block(raw_rows: list[list], ctx: RenderContext, *, tid: str,
             raise RuntimeError("troubleshooting style was not resolved")
         # LaTeX's HBDataTableFrame has a dedicated before gap.  Keep it on
         # the host paragraph so page-flow and table geometry remain separate.
-        header = _plain_cell(raw_rows[0][0]).casefold() if raw_rows else ""
-        language = _TROUBLESHOOTING_HEADER_LANGUAGES.get(header, "en")
-        table_space_before = troubleshooting_style.table_space_before(language)
+        table_space_before = troubleshooting_style.table_space_before(
+            _troubleshooting_language(ctx.language),
+        )
         xml = xml.replace(
             "<ParagraphStyleRange ",
             f'<ParagraphStyleRange SpaceBefore="{table_space_before:g}" ',

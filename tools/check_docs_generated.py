@@ -5,6 +5,8 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Callable
 
+from tools.utils.korean_josa import josa_base_key
+
 SNIPPET_SLOT_RE = re.compile(r"\{\{snippet:([a-zA-Z0-9_.-]+)\}\}")
 
 
@@ -79,6 +81,7 @@ def _load_generated_runtime(
     load_page_contracts: Callable[[Path], list[Any]],
     resolve_contracts_dir: Callable[..., Path],
     load_rst_substitutions: Callable[[Path], dict[str, str]],
+    load_config_rst_substitutions: Callable[[dict], dict[str, str]],
 ) -> GeneratedPageRuntime:
     spec_master_csv = resolve_spec_master_csv_path(cfg, data_root=data_root)
     spec_rows = read_spec_master_rows(spec_master_csv)
@@ -98,7 +101,10 @@ def _load_generated_runtime(
         registry_error=registry_error,
         contract_ids={contract.page_id for contract in contracts},
         contract_file_names={f"{contract.page_id}.yaml" for contract in contracts},
-        base_substitutions=load_rst_substitutions(docs_dir / "conf_base.py"),
+        base_substitutions={
+            **load_rst_substitutions(docs_dir / "conf_base.py"),
+            **load_config_rst_substitutions(cfg),
+        },
     )
 
 
@@ -568,6 +574,12 @@ def _placeholder_consistency_issues(
     used_placeholders: set[str] = set()
     for text in [template_text, *snippet_sources]:
         used_placeholders.update(collect_placeholder_tokens(text))
+    # A ko template names a particle pair (|PRODUCT_NAME_JOSA_EUN|); the renderer
+    # derives that companion from PRODUCT_NAME at build time, so the base key
+    # counts as used and the companion counts as supplied.
+    used_placeholders.update(
+        base for base in [josa_base_key(name) for name in sorted(used_placeholders)] if base
+    )
 
     unused_field_map = sorted(
         placeholder for placeholder in recipe.field_map if not field_binding_is_used(placeholder, used_placeholders)
@@ -588,7 +600,10 @@ def _placeholder_consistency_issues(
         )
 
     unknown_placeholders = sorted(
-        placeholder for placeholder in used_placeholders if placeholder not in available_placeholders
+        placeholder
+        for placeholder in used_placeholders
+        if placeholder not in available_placeholders
+        and (josa_base_key(placeholder) or placeholder) not in available_placeholders
     )
     if unknown_placeholders:
         issues.append(
@@ -597,7 +612,8 @@ def _placeholder_consistency_issues(
                 code="UNKNOWN_RECIPE_PLACEHOLDERS",
                 message=(
                     f"Recipe '{recipe.page_id}' uses placeholders that are not supplied by Spec_Master, "
-                    f"field_map, or conf_base for lang '{lang}': {', '.join(unknown_placeholders)}"
+                    "field_map, conf_base, or build.rst_substitutions for "
+                    f"lang '{lang}': {', '.join(unknown_placeholders)}"
                 ),
                 target=target,
                 path=template_path,
@@ -642,18 +658,25 @@ def _orphan_snippet_issues(
     issue_cls: type[Any],
     target: Any,
     collect_registry_snippet_ids: Callable[[list[Any]], set[str]],
+    docs_dir: Path,
 ) -> list[Any]:
     if runtime.registry_error is not None or not runtime.registry_entries:
         return []
 
+    from tools.snippet_references import repo_wide_snippet_references
+
+    referenced = used_snippet_ids | repo_wide_snippet_references(docs_dir)
     issues: list[Any] = []
-    orphan_snippet_ids = sorted(collect_registry_snippet_ids(runtime.registry_entries) - used_snippet_ids)
+    orphan_snippet_ids = sorted(collect_registry_snippet_ids(runtime.registry_entries) - referenced)
     for snippet_id in orphan_snippet_ids:
         issues.append(
             _issue(
                 issue_cls,
                 code="ORPHAN_SNIPPET",
-                message=f"Snippet '{snippet_id}' is defined in the registry but not used by any draft recipe",
+                message=(
+                    f"Snippet '{snippet_id}' is defined in the registry but is referenced by no "
+                    "template token and no draft recipe"
+                ),
                 target=target,
                 path=runtime.registry_path,
             )
@@ -680,6 +703,7 @@ def collect_generated_page_issues(
     load_page_contracts: Callable[[Path], list[Any]],
     resolve_contracts_dir: Callable[..., Path],
     load_rst_substitutions: Callable[[Path], dict[str, str]],
+    load_config_rst_substitutions: Callable[[dict], dict[str, str]],
     resolve_config_path: Callable[..., Path],
     load_draft_recipe: Callable[[Path], Any],
     missing_required_row_keys: Callable[..., list[str]],
@@ -718,6 +742,7 @@ def collect_generated_page_issues(
         load_page_contracts=load_page_contracts,
         resolve_contracts_dir=resolve_contracts_dir,
         load_rst_substitutions=load_rst_substitutions,
+        load_config_rst_substitutions=load_config_rst_substitutions,
     )
 
     issues: list[Any] = []
@@ -816,6 +841,7 @@ def collect_generated_page_issues(
             issue_cls=issue_cls,
             target=target,
             collect_registry_snippet_ids=collect_registry_snippet_ids,
+            docs_dir=docs_dir,
         )
     )
     return issues

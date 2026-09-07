@@ -22,7 +22,10 @@ ROOT = bootstrap_repo_root(__file__, parent_count=1)
 from tools.config_pages import CsvPage
 from tools import lang_registry
 from tools.build_docs_bundle import prepare_manual_bundle as _prepare_manual_bundle_impl
-from tools.language_block_trim import trim_bundle_language_blocks
+from tools.language_block_trim import (
+    trim_bundle_language_blocks,
+    trim_bundle_language_pages,
+)
 from tools.build_docs_cli import parse_args as _parse_args_impl
 from tools.build_docs_entry import run_build as _run_build_impl
 from tools.build_docs_export import build_target as _build_target_impl
@@ -397,11 +400,18 @@ def _resolve_sphinx_build_cmd(builder: str) -> list[str]:
 _normalize_sphinx_tag_value = _normalize_sphinx_tag_value_impl
 
 
-def _sphinx_tag_args(*, model: str | None = None, region: str | None = None, lang: str | None = None) -> list[str]:
+def _sphinx_tag_args(
+    *,
+    model: str | None = None,
+    region: str | None = None,
+    lang: str | None = None,
+    category: str | None = None,
+) -> list[str]:
     return _sphinx_tag_args_impl(
         model=model,
         region=region,
         lang=lang,
+        category=category,
         normalize_sphinx_tag_value=_normalize_sphinx_tag_value,
     )
 
@@ -589,6 +599,7 @@ def sphinx_build(
     model: str | None = None,
     region: str | None = None,
     lang: str | None = None,
+    category: str | None = None,
     minimal_theme: bool = False,
     substitutions: dict[str, str] | None = None,
 ) -> None:
@@ -600,6 +611,7 @@ def sphinx_build(
         model=model,
         region=region,
         lang=lang,
+        category=category,
         minimal_theme=minimal_theme,
         substitutions=substitutions,
         should_use_minimal_html_theme=_should_use_minimal_html_theme,
@@ -632,11 +644,18 @@ def _warning_ratchet_hook(builder: str, warn_log: Path) -> None:
         )
 
 
-def patch_fonts(patch_fonts_script: str, main_tex: str, *, build_dir: Path) -> None:
+def patch_fonts(
+    patch_fonts_script: str,
+    main_tex: str,
+    *,
+    build_dir: Path,
+    language: str | None,
+) -> None:
     return _patch_fonts_impl(
         patch_fonts_script,
         main_tex,
         build_dir=build_dir,
+        language=language,
         run=run,
         repo_root=paths.root,
         python_executable=sys.executable,
@@ -738,6 +757,7 @@ def prepare_manual_bundle(
         docs_dir=paths.docs_dir,
         repo_root=getattr(paths, "root", ROOT),
         trim_bundle_language_blocks=trim_bundle_language_blocks,
+        trim_bundle_language_pages=trim_bundle_language_pages,
     )
 
 

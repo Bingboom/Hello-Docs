@@ -43,6 +43,7 @@ from tools.check_docs_bundle import (  # noqa: E402
 )
 from tools.check_docs_entry import run_check_entry as _run_check_entry_impl  # noqa: E402
 from tools.check_docs_capability import collect_capability_issues as _collect_capability_issues_impl  # noqa: E402
+from tools.check_docs_terminology import collect_terminology_issues as _collect_terminology_issues_impl  # noqa: E402
 from tools.check_docs_lang_parity import collect_lang_parity_issues as _collect_lang_parity_issues_impl  # noqa: E402
 from tools.check_docs_lang_parity import load_known_exceptions as _load_lang_parity_exceptions  # noqa: E402
 from tools.check_docs_language_scope import (  # noqa: E402
@@ -101,7 +102,11 @@ from tools.utils.spec_master import (  # noqa: E402
     source_language_for_row,
     resolve_template_substitutions_from_spec_master,
 )
-from tools.word_bundle_common import load_rst_substitutions, resolve_config_path  # noqa: E402
+from tools.word_bundle_common import (  # noqa: E402
+    load_config_rst_substitutions,
+    load_rst_substitutions,
+    resolve_config_path,
+)
 from tools.word_bundle_html import _convert_rst_fragment_to_html  # noqa: E402
 
 @dataclass(frozen=True)
@@ -434,6 +439,7 @@ def collect_generated_page_issues(
         load_page_contracts=load_page_contracts,
         resolve_contracts_dir=resolve_contracts_dir,
         load_rst_substitutions=load_rst_substitutions,
+        load_config_rst_substitutions=load_config_rst_substitutions,
         resolve_config_path=resolve_config_path,
         load_draft_recipe=load_draft_recipe,
         missing_required_row_keys=missing_required_row_keys,
@@ -526,6 +532,9 @@ def collect_check_issues(
         collect_duplicate_render_text_issues=collect_duplicate_render_text_issues,
         collect_capability_issues=lambda **kw: _collect_capability_issues_impl(
             data_dir=kw.pop("docs_dir").parent / "data",
+            issue_cls=CheckIssue, **kw),
+        collect_terminology_issues=lambda **kw: _collect_terminology_issues_impl(
+            data_dir=Paths(root=ROOT).data_dir,
             issue_cls=CheckIssue, **kw),
         collect_lang_parity_issues=lambda **kw: _collect_lang_parity_issues_impl(
             issue_cls=CheckIssue,

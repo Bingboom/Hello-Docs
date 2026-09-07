@@ -67,61 +67,353 @@
         }
     }
 
-    function resizeLcdTableShell(frame) {
-        var table = frame.parentStory.tables[0];
-        var frameBounds = frame.geometricBounds;
-        var oldBottom = Number(frameBounds[2]);
-        var tableHeight = 0;
-        for (var ri = 0; ri < table.rows.length; ri += 1) {
-            tableHeight += Number(table.rows[ri].height);
+    function isTroubleshootingTableStory(story) {
+        try {
+            return String(story.storyTitle || "") === "troubleshooting table";
+        } catch (_) {
+            return false;
         }
-        var newBottom = Number(frameBounds[0]) + tableHeight;
-        var delta = newBottom - oldBottom;
-        if (Math.abs(delta) < 0.01) { return false; }
-
-        var oldHeight = oldBottom - Number(frameBounds[0]);
-        var oldWidth = Number(frameBounds[3]) - Number(frameBounds[1]);
-        var siblings = frame.parent.allPageItems;
-        for (var si = 0; si < siblings.length; si += 1) {
-            var item = siblings[si];
-            if (item.constructor.name !== "Rectangle") { continue; }
-            var bounds = item.geometricBounds;
-            var itemHeight = Number(bounds[2]) - Number(bounds[0]);
-            var itemWidth = Number(bounds[3]) - Number(bounds[1]);
-            var isFullShell = itemHeight > oldHeight * 0.9 && itemWidth > oldWidth * 0.9;
-            var isBottomMask = !isFullShell &&
-                Math.abs(Number(bounds[2]) - oldBottom) < 0.2;
-            if (isFullShell) {
-                bounds[2] = newBottom;
-                item.geometricBounds = bounds;
-            } else if (isBottomMask) {
-                bounds[0] = Number(bounds[0]) + delta;
-                bounds[2] = Number(bounds[2]) + delta;
-                item.geometricBounds = bounds;
-            }
-        }
-        frameBounds[2] = newBottom;
-        frame.geometricBounds = frameBounds;
-        return true;
     }
 
-    function fitLcdTableShells(doc) {
+    function growTableTerminalCarrier(doc, story, frame, maxGrowth) {
+        if (!story.overflows) { return false; }
+        var growth = 0.0;
+        while (story.overflows && growth < maxGrowth) {
+            var frameBounds = frame.geometricBounds;
+            frameBounds[2] = Number(frameBounds[2]) + 2.0;
+            frame.geometricBounds = frameBounds;
+            growth += 2.0;
+            doc.recompose();
+        }
+        return growth > 0;
+    }
+
+    function fitLcdCarrierFrames(doc) {
         var fitted = 0;
-        var items = doc.allPageItems;
-        for (var ii = 0; ii < items.length; ii += 1) {
-            var frame = items[ii];
-            if (frame.constructor.name !== "TextFrame" ||
-                    frame.parent.constructor.name !== "Group") { continue; }
+        for (var si = 0; si < doc.stories.length; si += 1) {
+            var story = doc.stories[si];
             try {
-                if (frame.parentStory.tables.length === 1 &&
-                        isLcdTableStory(frame.parentStory) &&
-                        resizeLcdTableShell(frame)) {
+                if (!isLcdTableStory(story) ||
+                        story.tables.length !== 1 ||
+                        story.textContainers.length < 2) { continue; }
+                var frame = story.textContainers[story.textContainers.length - 1];
+                if (frame.constructor.name === "TextFrame" &&
+                        itemLabel(frame).indexOf(
+                            "hb:self=tf_terminal_carrier_group_"
+                        ) === 0 &&
+                        growTableTerminalCarrier(
+                            doc, story, frame, 24.0
+                        )) {
                     fitted += 1;
                 }
             } catch (_) {}
         }
         doc.recompose();
         return fitted;
+    }
+
+    function fitTroubleshootingCarrierFrames(doc) {
+        var fitted = 0;
+        for (var si = 0; si < doc.stories.length; si += 1) {
+            var story = doc.stories[si];
+            try {
+                if (!isTroubleshootingTableStory(story) ||
+                        story.tables.length !== 1 ||
+                        story.textContainers.length < 2) { continue; }
+                var frame = story.textContainers[story.textContainers.length - 1];
+                if (frame.constructor.name === "TextFrame" &&
+                        itemLabel(frame).indexOf(
+                            "hb:self=tf_terminal_carrier_group_"
+                        ) === 0 &&
+                        growTableTerminalCarrier(
+                            doc, story, frame, 24.0
+                        )) {
+                    fitted += 1;
+                }
+            } catch (_) {}
+        }
+        doc.recompose();
+        return fitted;
+    }
+
+    function waitForInstalledApplicationFont(fontName) {
+        // Document Fonts activation is asynchronous when an IDML opens. The
+        // document can therefore keep a live system-substitution object even
+        // though the same-name portable font appears in app.fonts moments
+        // later. Poll the font registry, not the UI, and keep the wait bounded.
+        for (var attempt = 0; attempt < 20; attempt += 1) {
+            var candidate = app.fonts.itemByName(fontName);
+            if (candidate.isValid && candidate.status === FontStatus.INSTALLED) {
+                return candidate;
+            }
+            $.sleep(100);
+        }
+        return null;
+    }
+
+    function isJapaneseCodeUnit(code) {
+        return (code >= 0x3000 && code <= 0x30ff) ||
+            (code >= 0x31f0 && code <= 0x31ff) ||
+            (code >= 0x3400 && code <= 0x4dbf) ||
+            (code >= 0x4e00 && code <= 0x9fff) ||
+            (code >= 0xf900 && code <= 0xfaff) ||
+            (code >= 0xff66 && code <= 0xff9d);
+    }
+
+    function rebindJapanesePortableFont(doc, fontName, documentLanguage) {
+        if (String(documentLanguage || "") !== "ja") {
+            return null;
+        }
+        var targetFont = waitForInstalledApplicationFont(fontName);
+        if (targetFont === null) {
+            throw Error(
+                "portable document font did not activate: " + fontName
+            );
+        }
+        var replacements = 0;
+        var familyName = String(fontName).split("\t")[0];
+        var fontsByStyle = {};
+        var styleCounts = {};
+        fontsByStyle[String(fontName).split("\t")[1]] = targetFont;
+        for (var si = 0; si < doc.stories.length; si += 1) {
+            var characters = doc.stories[si].characters.everyItem().getElements();
+            for (var ci = 0; ci < characters.length; ci += 1) {
+                var contents = String(characters[ci].contents || "");
+                if (contents.length > 0 &&
+                        isJapaneseCodeUnit(contents.charCodeAt(0))) {
+                    // Assigning a Font changes its face as well as its family.
+                    // Capture the composed weight before replacing the font;
+                    // a Regular-only rebind silently flattens the hierarchy.
+                    var style = String(characters[ci].fontStyle);
+                    var faceName = familyName + "\t" + style;
+                    if (!fontsByStyle[style]) {
+                        fontsByStyle[style] = waitForInstalledApplicationFont(faceName);
+                        if (fontsByStyle[style] === null) {
+                            throw Error("portable document font did not activate: " + faceName);
+                        }
+                    }
+                    characters[ci].appliedFont = fontsByStyle[style];
+                    characters[ci].fontStyle = style;
+                    styleCounts[style] = (styleCounts[style] || 0) + 1;
+                    replacements += 1;
+                }
+            }
+        }
+        doc.recompose();
+        var targetLocation = "";
+        try { targetLocation = String(targetFont.location || ""); } catch (_) {}
+        return {
+            target: String(targetFont.name),
+            target_location: targetLocation,
+            outcome: "rebound",
+            replacements: replacements,
+            style_counts: styleCounts,
+            reason: "japanese_portable_font_rebind"
+        };
+    }
+
+    function substituteMissingFont(doc, sourceName, targetNames) {
+        var sourceFont = doc.fonts.itemByName(sourceName);
+        if (!sourceFont.isValid || sourceFont.status === FontStatus.INSTALLED) {
+            return null;
+        }
+        // The source guard above is weaker than "this mapping is still
+        // needed": InDesign keeps a substituted source in doc.fonts as a
+        // non-installed entry even after every range moved to the fallback
+        // (see the preflight comment at the font_usage_audit loop). Without
+        // this gate a second mapping for the same source re-enters and can
+        // demand a target face the document no longer needs. Same predicate
+        // as the preflight, which is fail-closed on a failed audit, so a skip
+        // here can never hide a gate failure.
+        if (!fontHasTextUsage(doc, sourceFont)) {
+            return null;
+        }
+        var targetFont = null;
+        var targetName = "";
+        for (var ti = 0; ti < targetNames.length; ti += 1) {
+            var candidate = app.fonts.itemByName(targetNames[ti]);
+            if (candidate.isValid && candidate.status === FontStatus.INSTALLED) {
+                targetFont = candidate;
+                targetName = targetNames[ti];
+                break;
+            }
+        }
+        if (targetFont === null) {
+            throw Error(
+                "no installed host fallback font for " + sourceName
+                + "; tried: " + targetNames.join(", ")
+            );
+        }
+
+        var changed = [];
+        try {
+            app.findTextPreferences = NothingEnum.nothing;
+            app.changeTextPreferences = NothingEnum.nothing;
+            app.findTextPreferences.appliedFont = sourceFont;
+            app.changeTextPreferences.appliedFont = targetFont;
+            changed = doc.changeText();
+        } finally {
+            app.findTextPreferences = NothingEnum.nothing;
+            app.changeTextPreferences = NothingEnum.nothing;
+        }
+        var forcedResiduals = 0;
+        try {
+            app.findTextPreferences = NothingEnum.nothing;
+            app.findTextPreferences.appliedFont = sourceFont;
+            var residuals = doc.findText();
+            for (var ri = 0; ri < residuals.length; ri += 1) {
+                try {
+                    residuals[ri].appliedFont = targetFont;
+                    forcedResiduals += 1;
+                } catch (_) {}
+            }
+        } finally {
+            app.findTextPreferences = NothingEnum.nothing;
+        }
+        return {
+            source: sourceName,
+            target: targetName,
+            replacements: changed.length,
+            forced_residuals: forcedResiduals,
+            reason: "host_missing_font"
+        };
+    }
+
+    function applyHostFontSubstitutions(doc) {
+        var substitutions = [];
+        // One row per source font, targets in preference order: the first
+        // INSTALLED candidate wins. Repeating a source across rows instead
+        // does not cascade — changeText moves every range on the source in
+        // one pass, so the later rows only re-enter and can throw for a face
+        // the document no longer needs.
+        var mappings = [
+            ["Segoe UI Symbol\tRegular", ["Apple Symbols\tRegular"]],
+            ["Yu Gothic\tRegular", [
+                "Hiragino Kaku Gothic Pro\tW3",
+                "Apple Symbols\tRegular",
+                "Arial Unicode MS\tRegular"
+            ]],
+            ["Noto Sans KR\tRegular", ["Arial Unicode MS\tRegular"]]
+        ];
+        for (var mi = 0; mi < mappings.length; mi += 1) {
+            var result = substituteMissingFont(doc, mappings[mi][0], mappings[mi][1]);
+            if (result !== null) { substitutions.push(result); }
+        }
+        doc.recompose();
+        return substitutions;
+    }
+
+    function textHasVisibleContent(value) {
+        return String(value || "")
+            .replace(/[\u0000-\u0020\u0016\uFEFF\uFFFC]+/g, "")
+            .length > 0;
+    }
+
+    function appliedFontName(textRange) {
+        try {
+            var applied = textRange.appliedFont;
+            if (applied && applied.name) { return String(applied.name); }
+            return String(applied || "");
+        } catch (_) {
+            return "";
+        }
+    }
+
+    function fontHasTextUsage(doc, font) {
+        var matches = [];
+        try {
+            app.findTextPreferences = NothingEnum.nothing;
+            app.changeTextPreferences = NothingEnum.nothing;
+            app.findTextPreferences.appliedFont = font;
+            matches = doc.findText();
+            for (var mi = 0; mi < matches.length; mi += 1) {
+                if (!textHasVisibleContent(matches[mi].contents)) { continue; }
+                var appliedName = appliedFontName(matches[mi]);
+                var missingFamily = String(font.name || "").split("\t")[0];
+                var appliedFamily = appliedName.split("\t")[0];
+                if (!appliedFamily || appliedFamily === missingFamily) { return true; }
+            }
+            return false;
+        } catch (_) {
+            // A failed audit must remain fail-closed: retain the missing-font
+            // finding instead of silently declaring an unverified face clean.
+            return true;
+        } finally {
+            app.findTextPreferences = NothingEnum.nothing;
+            app.changeTextPreferences = NothingEnum.nothing;
+        }
+    }
+
+    function fontUsageSamples(doc, font) {
+        var samples = [];
+        try {
+            app.findTextPreferences = NothingEnum.nothing;
+            app.findTextPreferences.appliedFont = font;
+            var matches = doc.findText();
+            for (var mi = 0; mi < matches.length && samples.length < 12; mi += 1) {
+                if (!textHasVisibleContent(matches[mi].contents)) { continue; }
+                samples.push({
+                    contents: String(matches[mi].contents).slice(0, 32),
+                    applied_font: appliedFontName(matches[mi])
+                });
+            }
+        } catch (error) {
+            samples.push({error: String(error)});
+        } finally {
+            app.findTextPreferences = NothingEnum.nothing;
+        }
+        return samples;
+    }
+
+    function fitTerminalCarrierFrames(doc, errors) {
+        var results = [];
+        for (var si = 0; si < doc.stories.length; si += 1) {
+            var story = doc.stories[si];
+            try {
+                if (!story.isValid) { continue; }
+                var title = String(story.storyTitle || "");
+                var isMeasuredOverview = title.indexOf("product_overview") >= 0;
+                if (!story.overflows ||
+                        (story.tables.length > 0 && !isMeasuredOverview) ||
+                        story.textContainers.length === 0) { continue; }
+                var frame = story.textContainers[story.textContainers.length - 1];
+                if (!frame || !frame.isValid ||
+                        frame.constructor.name !== "TextFrame" ||
+                        !frame.parentPage || !frame.parentPage.isValid) { continue; }
+                var isTaggedCarrier = itemLabel(frame).indexOf(
+                    "hb:self=tf_terminal_carrier_group_"
+                ) === 0;
+                if (!isMeasuredOverview && !isTaggedCarrier) { continue; }
+                var maxGrowth = isMeasuredOverview ? 160.0 : 24.0;
+                var growth = 0.0;
+                while (story.overflows && growth < maxGrowth) {
+                    if (!story.isValid || !frame.isValid) {
+                        throw Error("carrier became invalid while fitting");
+                    }
+                    var bounds = frame.geometricBounds;
+                    bounds[2] = Number(bounds[2]) + 4.0;
+                    frame.geometricBounds = bounds;
+                    growth += 4.0;
+                    doc.recompose();
+                }
+                results.push({
+                    title: title,
+                    label: itemLabel(frame),
+                    growth: growth,
+                    cleared: !story.overflows
+                });
+            } catch (error) {
+                errors.push({
+                    story_index: si,
+                    title: (function () {
+                        try { return String(story.storyTitle || ""); }
+                        catch (_) { return ""; }
+                    }()),
+                    error: String(error)
+                });
+            }
+        }
+        return results;
     }
 
     function isComposedSymbolTableStory(story) {
@@ -141,24 +433,12 @@
         for (var ri = 0; ri < table.rows.length; ri += 1) {
             tableHeight += Number(table.rows[ri].height);
         }
-        var newBottom = Number(frameBounds[0]) + tableHeight + 0.25;
+        var newBottom = Number(frameBounds[0]) + tableHeight + 4.0;
         if (Math.abs(newBottom - oldBottom) < 0.01) { return false; }
 
-        var pageItems = frame.parentPage.allPageItems;
-        for (var pi = 0; pi < pageItems.length; pi += 1) {
-            var item = pageItems[pi];
-            if (item.constructor.name !== "Rectangle") { continue; }
-            var bounds = item.geometricBounds;
-            var sameShell =
-                Math.abs(Number(bounds[0]) - Number(frameBounds[0])) < 0.2 &&
-                Math.abs(Number(bounds[1]) - Number(frameBounds[1])) < 0.2 &&
-                Math.abs(Number(bounds[2]) - oldBottom) < 0.2 &&
-                Math.abs(Number(bounds[3]) - Number(frameBounds[3])) < 0.2;
-            if (sameShell) {
-                bounds[2] = newBottom;
-                item.geometricBounds = bounds;
-            }
-        }
+        // SymbolsPanel owns every visible shell, plate, mask, and row.
+        // Fit only this transparent terminal-marker carrier; finalization
+        // must not rewrite the component's visual geometry.
         frameBounds[2] = newBottom;
         frame.geometricBounds = frameBounds;
         return true;
@@ -183,9 +463,167 @@
         return fitted;
     }
 
+    function tableIdentity(table) {
+        try { return "id:" + String(table.id); }
+        catch (_) {
+            try { return "specifier:" + String(table.toSpecifier()); }
+            catch (_) { return ""; }
+        }
+    }
+
+    function collectTableCellOversets(
+        story, storyIndex, table, tablePath, depth, fallbackPage, seen, oversets
+    ) {
+        var identity = tableIdentity(table);
+        if (identity && seen[identity]) { return; }
+        if (identity) { seen[identity] = true; }
+        var cells = table.cells.everyItem().getElements();
+        for (var ci = 0; ci < cells.length; ci += 1) {
+            var cell = cells[ci];
+            var page = fallbackPage.page;
+            var pageName = fallbackPage.page_name;
+            try {
+                var parentFrames = cell.insertionPoints[0].parentTextFrames;
+                if (parentFrames.length > 0) {
+                    var parentPage = parentFrames[0].parentPage;
+                    if (parentPage && parentPage.isValid) {
+                        page = parentPage.documentOffset + 1;
+                        pageName = String(parentPage.name || "");
+                    }
+                }
+            } catch (_) {}
+            if (cell.overflows) {
+                oversets.push({
+                    story_index: storyIndex,
+                    story_id: String(story.id),
+                    story_label: itemLabel(story),
+                    story_title: String(story.storyTitle || ""),
+                    table_path: tablePath,
+                    table_depth: depth,
+                    table_id: identity,
+                    cell_index: ci,
+                    cell_id: String(cell.id),
+                    cell_name: String(cell.name || ""),
+                    page: page,
+                    page_name: pageName,
+                    preview: String(cell.contents).replace(/[\r\n]+/g, " ").slice(0, 120)
+                });
+            }
+            // InDesign exposes inline badge tables through the containing
+            // cell.  That collection can also point back to an ancestor, so
+            // recurse with a stable-ID visited set instead of assuming a tree.
+            try {
+                var nested = cell.tables.everyItem().getElements();
+                for (var ni = 0; ni < nested.length; ni += 1) {
+                    collectTableCellOversets(
+                        story, storyIndex, nested[ni],
+                        tablePath + "/cell[" + ci + "]/table[" + ni + "]",
+                        depth + 1, {page: page, page_name: pageName},
+                        seen, oversets
+                    );
+                }
+            } catch (_) {}
+        }
+    }
+
+    function collectOversetTableCells(doc) {
+        var oversets = [];
+        for (var si = 0; si < doc.stories.length; si += 1) {
+            var story = doc.stories[si];
+            var tables = story.tables.everyItem().getElements();
+            var fallbackPage = {page: 0, page_name: ""};
+            try {
+                if (story.textContainers.length > 0) {
+                    var storyPage = story.textContainers[0].parentPage;
+                    if (storyPage && storyPage.isValid) {
+                        fallbackPage.page = storyPage.documentOffset + 1;
+                        fallbackPage.page_name = String(storyPage.name || "");
+                    }
+                }
+            } catch (_) {}
+            var seen = {};
+            for (var ti = 0; ti < tables.length; ti += 1) {
+                collectTableCellOversets(
+                    story, si, tables[ti], "table[" + ti + "]", 0,
+                    fallbackPage, seen, oversets
+                );
+            }
+        }
+        return oversets;
+    }
+
+    function collectPostReopenState(doc) {
+        var state = {
+            completed: true,
+            page_count: doc.pages.length,
+            story_count: doc.stories.length,
+            overset_stories: [],
+            overset_table_cells: [],
+            missing_fonts: [],
+            bad_links: [],
+            font_usage_audit: []
+        };
+        for (var si = 0; si < doc.stories.length; si += 1) {
+            var story = doc.stories[si];
+            if (!story.overflows) { continue; }
+            var containers = [];
+            for (var tci = 0; tci < story.textContainers.length; tci += 1) {
+                var container = story.textContainers[tci];
+                var containerPage = container.parentPage;
+                containers.push({
+                    page: containerPage && containerPage.isValid ?
+                        containerPage.documentOffset + 1 : 0,
+                    label: itemLabel(container)
+                });
+            }
+            state.overset_stories.push({
+                index: si,
+                id: String(story.id),
+                label: itemLabel(story),
+                story_title: String(story.storyTitle || ""),
+                preview: String(story.contents).replace(/[\r\n]+/g, " ").slice(0, 120),
+                text_containers: containers
+            });
+        }
+        state.overset_table_cells = collectOversetTableCells(doc);
+
+        var fonts = doc.fonts.everyItem().getElements();
+        for (var fi = 0; fi < fonts.length; fi += 1) {
+            var font = fonts[fi];
+            if (font.status === FontStatus.INSTALLED) { continue; }
+            var hasTextUsage = fontHasTextUsage(doc, font);
+            var finding = {
+                name: String(font.name),
+                status: String(font.status),
+                live_text_usage: hasTextUsage,
+                samples: fontUsageSamples(doc, font)
+            };
+            state.font_usage_audit.push(finding);
+            // The save/reopen gate is deliberately stricter than import-time
+            // repair: any NOT_AVAILABLE resource after reopen means the INDD
+            // is not portable, even when InDesign cannot find a live range.
+            state.missing_fonts.push({
+                name: finding.name,
+                status: finding.status,
+                live_text_usage: hasTextUsage
+            });
+        }
+
+        for (var li = 0; li < doc.links.length; li += 1) {
+            var link = doc.links[li];
+            if (link.status === LinkStatus.NORMAL) { continue; }
+            state.bad_links.push({
+                name: String(link.name),
+                status: String(link.status),
+                path: String(link.filePath || "")
+            });
+        }
+        return state;
+    }
+
     var job = jsonParse(readText(HB_JOB_PATH));
     var report = {
-        schema_version: "indesign-preflight/v1",
+        schema_version: "indesign-preflight/v2",
         input_idml: job.input_idml,
         output_indd: job.output_indd,
         output_pdf: job.output_pdf,
@@ -193,11 +631,29 @@
         page_count: 0,
         story_count: 0,
         overset_stories: [],
+        overset_table_cells: [],
         missing_fonts: [],
         bad_links: [],
         stable_labels: {pages: 0, text_frames: 0},
         fitted_lcd_table_groups: 0,
+        fitted_troubleshooting_table_groups: 0,
+        fitted_troubleshooting_carrier_frames: 0,
         fitted_symbol_table_shells: 0,
+        carrier_frame_fits: [],
+        carrier_frame_errors: [],
+        portable_font_rebinds: [],
+        font_substitutions: [],
+        font_usage_audit: [],
+        post_reopen: {
+            completed: false,
+            page_count: 0,
+            story_count: 0,
+            overset_stories: [],
+            overset_table_cells: [],
+            missing_fonts: [],
+            bad_links: [],
+            font_usage_audit: []
+        },
         pdf_export: {
             requested_preset: String(job.pdf_preset || ""),
             applied_preset: null,
@@ -223,8 +679,30 @@
         doc.cmykProfile = job.output_intent;
         report.pdf_export.applied_document_cmyk_profile = String(doc.cmykProfile);
         doc.recompose();
-        report.fitted_lcd_table_groups = fitLcdTableShells(doc);
+        // Keep the report key for compatibility. LCD finalization may grow
+        // only the transparent terminal carrier, never the visible shell.
+        report.fitted_lcd_table_groups = fitLcdCarrierFrames(doc);
+        report.fitted_troubleshooting_carrier_frames =
+            fitTroubleshootingCarrierFrames(doc);
         report.fitted_symbol_table_shells = fitComposedSymbolTableShells(doc);
+        report.carrier_frame_fits = fitTerminalCarrierFrames(
+            doc, report.carrier_frame_errors
+        );
+        report.font_substitutions = applyHostFontSubstitutions(doc);
+        report.fitted_lcd_table_groups += fitLcdCarrierFrames(doc);
+        report.fitted_troubleshooting_carrier_frames +=
+            fitTroubleshootingCarrierFrames(doc);
+        report.carrier_frame_fits = report.carrier_frame_fits.concat(
+            fitTerminalCarrierFrames(doc, report.carrier_frame_errors)
+        );
+        report.font_substitutions = report.font_substitutions.concat(
+            applyHostFontSubstitutions(doc)
+        );
+        report.fitted_troubleshooting_carrier_frames +=
+            fitTroubleshootingCarrierFrames(doc);
+        report.carrier_frame_fits = report.carrier_frame_fits.concat(
+            fitTerminalCarrierFrames(doc, report.carrier_frame_errors)
+        );
         report.page_count = doc.pages.length;
         report.story_count = doc.stories.length;
 
@@ -258,17 +736,32 @@
                     index: si,
                     id: String(story.id),
                     label: itemLabel(story),
+                    story_title: String(story.storyTitle || ""),
                     preview: String(story.contents).replace(/[\r\n]+/g, " ").slice(0, 120),
                     text_containers: containers
                 });
             }
         }
+        report.overset_table_cells = collectOversetTableCells(doc);
 
         var fonts = doc.fonts.everyItem().getElements();
         for (var fi = 0; fi < fonts.length; fi += 1) {
             var font = fonts[fi];
+            // InDesign keeps a substituted source font in doc.fonts even
+            // after every text range has moved to the installed fallback.
+            // Only a live text use is a preflight failure; an unused resource
+            // entry is provenance, not a missing deliverable dependency.
             if (font.status !== FontStatus.INSTALLED) {
-                report.missing_fonts.push({name: String(font.name), status: String(font.status)});
+                var hasTextUsage = fontHasTextUsage(doc, font);
+                report.font_usage_audit.push({
+                    name: String(font.name),
+                    status: String(font.status),
+                    live_text_usage: hasTextUsage,
+                    samples: fontUsageSamples(doc, font)
+                });
+                if (hasTextUsage) {
+                    report.missing_fonts.push({name: String(font.name), status: String(font.status)});
+                }
             }
         }
 
@@ -284,6 +777,38 @@
 
         report.stage = "save_indd";
         doc.save(File(job.output_indd));
+        doc.close(SaveOptions.NO);
+        doc = null;
+        report.stage = "reopen_indd";
+        var showPortableFontBootstrap = String(job.document_language || "") === "ja";
+        doc = app.open(File(job.output_indd), showPortableFontBootstrap);
+        doc.recompose();
+        var japanesePortableRebind = rebindJapanesePortableFont(
+            doc, "HB Manual Sans JP (OTF)\tRegular", job.document_language
+        );
+        if (japanesePortableRebind !== null) {
+            if (japanesePortableRebind.replacements <= 0) {
+                throw Error(
+                    "Japanese document contains no portable-font rebinds"
+                );
+            }
+            report.portable_font_rebinds.push(japanesePortableRebind);
+            report.stage = "save_portable_font_rebind";
+            doc.save(File(job.output_indd));
+            doc.close(SaveOptions.NO);
+            doc = null;
+            report.stage = "reopen_indd_after_portable_font_rebind";
+            doc = app.open(File(job.output_indd), false);
+            doc.recompose();
+        }
+        report.post_reopen = collectPostReopenState(doc);
+        if (report.post_reopen.overset_stories.length > 0 ||
+                report.post_reopen.overset_table_cells.length > 0) {
+            report.stage = "preflight_overset";
+            throw Error(
+                "saved INDD contains overset text; PDF export skipped"
+            );
+        }
         report.stage = "validate_pdf_preset";
         var pdfPreset = app.pdfExportPresets.itemByName(job.pdf_preset);
         if (!pdfPreset.isValid) {
@@ -296,11 +821,28 @@
         doc.exportFile(ExportFormat.pdfType, File(job.output_pdf), false, pdfPreset);
         report.stage = "complete";
         report.success = report.overset_stories.length === 0 &&
-            report.missing_fonts.length === 0 && report.bad_links.length === 0;
-        doc.close(SaveOptions.YES);
+            report.overset_table_cells.length === 0 &&
+            report.missing_fonts.length === 0 && report.bad_links.length === 0 &&
+            report.carrier_frame_errors.length === 0 &&
+            report.post_reopen.completed &&
+            report.post_reopen.page_count === report.page_count &&
+            report.post_reopen.story_count === report.story_count &&
+            report.post_reopen.overset_stories.length === 0 &&
+            report.post_reopen.overset_table_cells.length === 0 &&
+            report.post_reopen.missing_fonts.length === 0 &&
+            report.post_reopen.bad_links.length === 0;
+        doc.close(SaveOptions.NO);
         doc = null;
     } catch (error) {
         report.error = String(error) + (error.line ? " at line " + error.line : "");
+        report.exception = {
+            stage: report.stage,
+            name: String(error.name || ""),
+            message: String(error.message || ""),
+            number: Number(error.number || 0),
+            line: Number(error.line || 0),
+            raw: String(error)
+        };
         if (doc !== null) {
             try { doc.close(SaveOptions.NO); } catch (_) {}
         }

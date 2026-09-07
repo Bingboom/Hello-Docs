@@ -69,6 +69,84 @@ class LatexCalloutTests(unittest.TestCase):
                     ),
                 )
 
+    def test_plural_notice_labels_are_recognised_so_the_box_survives(self) -> None:
+        """An unrecognised label does not warn — it silently loses the box.
+
+        replace_notice_tables converts a notice table only when
+        variant_for_label returns a variant; otherwise it leaves the table
+        alone and LaTeX emits \\sphinxstylestrong{LABEL} while Word emits
+        loose paragraphs. Nothing appears in any log. The shipped books print
+        the plural for a multi-item notes block, and `tip` already carried
+        TIPS / CONSEILS / CONSEJOS while `note` did not — so every plural
+        notes callout in the corpus was flattened.
+        """
+        from tools.component_specs.callout import variant_for_label
+
+        for label, expected in (
+            ("NOTE", "note"), ("NOTES", "note"),
+            ("REMARQUE", "note"), ("REMARQUES", "note"),
+            ("NOTA", "note"), ("NOTAS", "note"),
+            ("TIP", "tip"), ("TIPS", "tip"),
+            ("CONSEIL", "tip"), ("CONSEILS", "tip"),
+            ("CONSEJO", "tip"), ("CONSEJOS", "tip"),
+        ):
+            with self.subTest(label=label):
+                self.assertEqual(expected, variant_for_label(label))
+
+    def test_every_registered_language_signal_word_resolves(self) -> None:
+        """The reverse index closes what the en/fr/es-only map used to drop.
+
+        These are the exact labels the corpus survey measured losing their box
+        in every renderer except Word — 78 of 156 authored callouts, with
+        de/ko/uk/zh at 100% loss. The data plane (Localized_Copy +
+        symbols_blocks through tools.signal_words, fixture fallback in CI)
+        supplies them; the zh 提示 collision (note vs tips both print it)
+        resolves to note, matching the Word pipeline's setdefault behaviour.
+        """
+        from tools.component_specs.callout import variant_for_label
+
+        for label, expected in (
+            ("VORSICHT", "caution"), ("HINWEIS", "note"),     # de
+            ("주의", "caution"), ("참고", "note"),              # ko
+            ("경고", "warning"), ("위험", "danger"),            # ko
+            ("УВАГА", "caution"), ("ПРИМІТКА", "note"),        # uk
+            ("注意", "caution"), ("提示", "note"),              # zh (collision -> note)
+            ("备注", "note"), ("说明", "note"),                 # zh synonyms (static)
+            ("警告", "warning"), ("ご注意", "caution"),          # ja / zh
+            ("備考", "note"),                                   # ja
+            ("ATTENZIONE", "caution"), ("AVVERTENZA", "warning"),  # it
+            ("CUIDADO", "caution"), ("AVISO", "warning"),      # pt-BR
+            ("GEFAHR", "danger"), ("PERICOLO", "danger"),      # de / it
+        ):
+            with self.subTest(label=label):
+                self.assertEqual(expected, variant_for_label(label))
+
+    def test_an_unrecognised_label_leaves_the_table_unconverted(self) -> None:
+        """Pin the degradation itself, so the cost of a missing label is visible.
+
+        Every registered language now resolves through the data index, so the
+        control must be a label no language registers. The MECHANISM this pins
+        is unchanged: an unknown label means replace_notice_tables declines,
+        LaTeX emits \\sphinxstylestrong{LABEL}, Word emits loose paragraphs,
+        and nothing appears in any log.
+        """
+        from tools.component_specs.callout import variant_for_label
+
+        self.assertIsNone(variant_for_label("NOT A SIGNAL WORD"))
+
+        source = (
+            ".. list-table::\n"
+            "   :header-rows: 0\n"
+            "   :widths: 12 88\n"
+            "\n"
+            "   * - **NOT A SIGNAL WORD**\n"
+            "     - Something worth boxing.\n"
+        )
+        doctree = self._transform(source)
+
+        self.assertEqual([], list(doctree.findall(HBCallout)))
+        self.assertEqual(1, len(list(doctree.findall(nodes.table))))
+
     def _transform(self, source: str, *, output_format: str = "latex") -> nodes.document:
         doctree = publish_doctree(source)
         app = SimpleNamespace(builder=SimpleNamespace(format=output_format))

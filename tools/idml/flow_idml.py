@@ -14,6 +14,8 @@ from . import params as _params
 from . import primitives as _prim
 from . import styles as _styles
 from .font_family import PRIMARY_FONT_FAMILY_TOKEN
+from .inline_images import prepare_inline_images
+from .inline_text import localize_cjk_fallback_font
 from .line_metrics import estimated_line_count
 from .params import IDPKG
 from .primitives import _ATTR_ENTITIES
@@ -66,6 +68,8 @@ class _FlowBlock:
 
 def write_flow_outputs(*, root: Path, model: str, region: str, lang: str,
                        data_root: Path, bundle_root: Path,
+                       layout_params_csv: Path | None = None,
+                       layout_param_overlays: tuple[Path, ...] = (),
                        build_command: list[str] | None = None) -> FlowOutputs:
     artifacts = flow_md.write_flow_artifacts(
         root=root,
@@ -84,7 +88,10 @@ def write_flow_outputs(*, root: Path, model: str, region: str, lang: str,
         encoding="utf-8",
     )
     idml_path = out_dir / "manual.flow.idml"
-    params = _params.load_layout_params(root / "data" / "layout_params.csv")
+    params = _params.load_layout_params(
+        layout_params_csv or root / "data" / "layout_params.csv",
+        layout_param_overlays,
+    )
     writer = _FlowIdmlWriter(
         params=params,
         style_map=style_map,
@@ -255,7 +262,10 @@ class _FlowIdmlWriter:
 
     def _text_part(self, style_key: str, text: str, terminal: bool) -> str:
         style = self.style_map.get(style_key, self.style_map["paragraph"])
-        return _prim.psr(style, text, terminal=terminal)
+        tid = f"flow_text_{getattr(self, '_inline_count', 0)}"
+        self._inline_count = getattr(self, "_inline_count", 0) + 1
+        text, images = prepare_inline_images(text, self._render_context(), tid=tid)
+        return _prim.psr(style, text, terminal=terminal, inline_replacements=images)
 
     @staticmethod
     def _psr(style: str, text: str, *, terminal: bool = False) -> str:
@@ -317,13 +327,17 @@ class _FlowIdmlWriter:
     def _add_story_parts(self, sid: str, title: str,
                          parts: list[str]) -> str:
         safe_parts = [_sanitize_fallback_font_attrs(part) for part in parts]
+        story_parts = localize_cjk_fallback_font(
+            "".join(safe_parts),
+            self.language,
+        )
         xml = (
             '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n'
             f'<idPkg:Story xmlns:idPkg="{IDPKG}" DOMVersion="15.0">\n'
             f'<Story Self="{sid}" AppliedTOCStyle="n" TrackChanges="false" '
             f'StoryTitle="{escape(title, _ATTR_ENTITIES)}">\n'
             '<StoryPreference OpticalMarginAlignment="false" FrameType="TextFrameType"/>\n'
-            + "".join(safe_parts) + '</Story>\n</idPkg:Story>\n'
+            + story_parts + '</Story>\n</idPkg:Story>\n'
         )
         self.stories.append((sid, xml))
         return sid
@@ -355,7 +369,7 @@ class _FlowIdmlWriter:
         return _styles.graphic_xml(self.params)
 
     def fonts_xml(self) -> str:
-        return _styles.fonts_xml()
+        return _styles.fonts_xml(self.language)
 
     def styles_xml(self) -> str:
         # Flow owns the semantic style names, while actual components use the

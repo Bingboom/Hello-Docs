@@ -49,6 +49,7 @@ def _text(value: str, *, preserve_strong: bool = False) -> str:
     tilde_token = "\u0000HB_TILDE\u0000"
     value = value.replace(r"\textasciitilde{}", tilde_token)
     value = value.replace(r"\HBSpecMarkerOne{}", "①")
+    value = value.replace(r"\HBSpecMarkerTwo{}", "②")
     value = value.replace(r"\HBSpecMultilineRowStrut{}", "")
     value = value.replace(r"\newline", "\n").replace(r"\par", "\n")
     value = value.replace(r"\textbullet", "•")
@@ -73,6 +74,44 @@ def _calls(text: str, macro: str, argc: int) -> list[list[str]]:
         args, end = _read_braced_args(text, start + len(needle), argc)
         if len(args) == argc:
             found.append(args)
+            cursor = end
+        else:
+            cursor = start + len(needle)
+
+
+def _optional_calls(
+    text: str,
+    macro: str,
+    argc: int,
+) -> list[tuple[str, list[str]]]:
+    """Return an optional semantic key plus the required braced arguments.
+
+    The optional value is renderer metadata: LaTeX ignores it, while Manual
+    IR carries it into editable components. Legacy calls without ``[...]``
+    remain readable with an empty key.
+    """
+
+    found: list[tuple[str, list[str]]] = []
+    cursor = 0
+    needle = "\\" + macro
+    while True:
+        start = text.find(needle, cursor)
+        if start < 0:
+            return found
+        args_start = start + len(needle)
+        while args_start < len(text) and text[args_start] in " \t\n":
+            args_start += 1
+        optional = ""
+        if args_start < len(text) and text[args_start] == "[":
+            optional_end = text.find("]", args_start + 1)
+            if optional_end < 0:
+                cursor = args_start + 1
+                continue
+            optional = text[args_start + 1:optional_end].strip()
+            args_start = optional_end + 1
+        args, end = _read_braced_args(text, args_start, argc)
+        if len(args) == argc:
+            found.append((optional, args))
             cursor = end
         else:
             cursor = start + len(needle)
@@ -128,16 +167,31 @@ def _symbol_payload(body: str) -> dict[str, Any] | None:
         headers = [_text(args[0]), _text(args[1])]
         if macro == "HBSymbolTable":
             rows = [
-                {"figure": figure.strip(), "label": _text(label), "text": _text(meaning)}
-                for figure, label, meaning in _calls(args[2], "HBSymbolSignalRow", 3)
+                {
+                    "signal_key": key.casefold(),
+                    "figure": figure.strip(),
+                    "label": _text(label),
+                    "text": _text(meaning),
+                }
+                for key, (figure, label, meaning) in _optional_calls(
+                    args[2], "HBSymbolSignalRow", 3,
+                )
             ]
             return {"kind": "symbol_signals", "headers": headers, "rows": rows}
         groups = args[2:]
-        rows = [
-            {"figure": figure.strip(), "text": _text(meaning)}
-            for group in groups
-            for figure, meaning in _calls(group, "HBSymbolIconRow", 2)
-        ]
+        rows = []
+        for group_index, group in enumerate(groups):
+            column = "left" if group_index % 2 == 0 else "right"
+            continuation = macro.endswith("Split") and group_index >= 2
+            rows.extend(
+                {
+                    "figure": figure.strip(),
+                    "text": _text(meaning),
+                    "column": column,
+                    "continuation": continuation,
+                }
+                for figure, meaning in _calls(group, "HBSymbolIconRow", 2)
+            )
         return {"kind": "symbol_icons", "headers": headers, "rows": rows}
     return None
 
@@ -197,6 +251,7 @@ def is_data_plumbing(body: str) -> bool:
     return stripped in {
         r"\fi",
         r"\HBPageBreak",
+        r"\HBPrefacePageBegin",
         r"\HBPrefacePageEnd",
         r"\HBSpecPageEnd",
     }

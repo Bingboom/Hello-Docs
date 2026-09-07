@@ -157,7 +157,12 @@ def _family_page_manifest_path(*, model: str | None, region: str | None) -> tupl
     return resolve_page_manifest_path(cfg, root=ROOT, model=model, region=region), config_path
 
 
-def _target_config_path_for_review_mapping(*, region: str | None, lang: str) -> Path | None:
+def _target_config_path_for_review_mapping(
+    *,
+    model: str | None,
+    region: str | None,
+    lang: str,
+) -> Path | None:
     from tools.config_loader import load_config_mapping
     from tools.queue_config_resolution import resolve_config_path_for_task
 
@@ -167,6 +172,7 @@ def _target_config_path_for_review_mapping(*, region: str | None, lang: str) -> 
         return None
     return resolve_config_path_for_task(
         repo_root=ROOT,
+        model=model,
         region=normalized_region,
         lang=normalized_lang,
         config_loader=load_config_mapping,
@@ -262,7 +268,11 @@ def resolve_review_page_path_map(
     if review_manifest_path != family_manifest_path.resolve():
         return {}
 
-    target_config_path = _target_config_path_for_review_mapping(region=region, lang=normalized_target_lang)
+    target_config_path = _target_config_path_for_review_mapping(
+        model=model,
+        region=region,
+        lang=normalized_target_lang,
+    )
     if target_config_path is None:
         return {}
 
@@ -663,6 +673,18 @@ def _merge_parameter_lines(
         # page into malformed RST. Prose refreshes onto prose stay allowed;
         # replacements that would change the line's structural class are not.
         if _line_structure_class(merged_lines[review_idx]) != _line_structure_class(template_line):
+            continue
+        # _render_placeholder_values rebuilds the line from the TEMPLATE's
+        # inter-placeholder text and the TEMPLATE's indentation, so it is only
+        # safe when the review line is still that same line with its slots
+        # filled. Require that first: if the review line no longer matches the
+        # template's shape, a reviewer has edited it — authored prose sharing
+        # the line with a placeholder, or a different indent — and rebuilding
+        # would silently revert their edit. Leaving the line's parameters stale
+        # is the recoverable failure; destroying the edit is not.
+        # tools/check_review_branch_sync.py is the notice path for a shared
+        # source change that an open review branch still has to pick up.
+        if _extract_placeholder_values(template_line, merged_lines[review_idx]) is None:
             continue
         merged_lines[review_idx] = _render_placeholder_values(template_line, runtime_values)
 

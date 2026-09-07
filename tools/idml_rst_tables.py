@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import re
+import unicodedata
 
 _SEP_SEGMENT_RE = re.compile(r"^[=+-]+$")
 
@@ -11,7 +12,7 @@ def _is_table_rule(line: str) -> bool:
 
 
 def _clean_grid_segment(segment: str) -> tuple[str, bool]:
-    text = segment.strip().strip("|").strip()
+    text = segment.strip()
     is_rule = bool(_SEP_SEGMENT_RE.fullmatch(text))
     return ("" if is_rule else text, is_rule)
 
@@ -31,6 +32,11 @@ def parse_grid_table(grid: list[str]) -> list[list[str]]:
     rows: list[list[str]] = []
     current: list[list[str]] | None = None
     for line in grid:
+        # RST borders measure display columns: Japanese glyphs occupy two.
+        # A padding slot after a wide glyph lets existing border offsets slice
+        # cells without consuming the next column.
+        line = "".join(ch + ("\0" if unicodedata.east_asian_width(ch) in "WF" else "")
+                       for ch in line)
         stripped = line.strip()
         if _is_table_rule(stripped):
             if current is not None:
@@ -38,14 +44,14 @@ def parse_grid_table(grid: list[str]) -> list[list[str]]:
                              for cell in current])
             current = None
             continue
-        if not stripped.startswith("|"):
+        if not stripped.startswith(("|", "+")):
             continue
         if current is None:
             current = [[] for _ in range(len(cols) - 1)]
         split_after_line = False
         for ci in range(len(cols) - 1):
             a, b = cols[ci] + 1, cols[ci + 1]
-            text, is_rule = _clean_grid_segment(line[a:b] if a < len(line) else "")
+            text, is_rule = _clean_grid_segment(line[a:b].replace("\0", "") if a < len(line) else "")
             split_after_line = split_after_line or is_rule
             if text:
                 current[ci].append(text)
@@ -58,24 +64,64 @@ def parse_grid_table(grid: list[str]) -> list[list[str]]:
 
 def parse_list_table(body: list[str]) -> list[list[str]]:
     """Parse a list-table directive body into row cell-text lists."""
+    def join_cell(parts: list[str]) -> str:
+        if any(part.lstrip().startswith("|") for part in parts):
+            return "\n".join(
+                part.lstrip()[1:].lstrip()
+                if part.lstrip().startswith("|")
+                else part.strip()
+                for part in parts
+                if part.strip()
+            ).strip()
+        if any(part.startswith("- ") for part in parts):
+            return "\n".join(part for part in parts if part).strip()
+        return " ".join(part for part in parts if part).strip()
+
     rows: list[list[str]] = []
+    row: list[str] | None = None
     cell: list[str] | None = None
+    cell_marker_column: int | None = None
+
+    def flush_cell() -> None:
+        nonlocal cell
+        if row is not None and cell is not None:
+            row.append(join_cell(cell))
+        cell = None
+
     for raw in body:
         line = raw.strip()
         if not line or line.startswith(":"):
             continue
-        m = re.match(r"\*\s+-\s?(.*)", line)
-        if m:
-            rows.append([])
-            cell = [m.group(1).strip()]
-            rows[-1].append("")
-        elif line.startswith("- ") and rows:
-            if cell is not None:
-                rows[-1][-1] = " ".join(x for x in cell if x).strip()
-            cell = [line[2:].strip()]
-            rows[-1].append("")
-        elif cell is not None:
+        row_match = re.match(
+            r"^(?P<prefix>[ \t]*\*[ \t]+)-(?:[ \t]?(?P<text>.*))?$",
+            raw,
+        )
+        if row_match:
+            flush_cell()
+            row = []
+            rows.append(row)
+            cell = [(row_match.group("text") or "").strip()]
+            cell_marker_column = len(row_match.group("prefix").expandtabs(8))
+            continue
+
+        cell_match = re.match(
+            r"^(?P<indent>[ \t]*)-(?:[ \t]?(?P<text>.*))?$",
+            raw,
+        )
+        if cell_match and row is not None and cell_marker_column is not None:
+            marker_column = len(cell_match.group("indent").expandtabs(8))
+            text = (cell_match.group("text") or "").strip()
+            if marker_column == cell_marker_column:
+                flush_cell()
+                cell = [text]
+            elif marker_column > cell_marker_column and cell is not None:
+                cell.append(f"- {text}".rstrip())
+            elif cell is not None:
+                cell.append(line)
+            continue
+
+        if cell is not None:
             cell.append(line)
-        if cell is not None and rows:
-            rows[-1][-1] = " ".join(x for x in cell if x).strip()
+
+    flush_cell()
     return [r for r in rows if any(r)]

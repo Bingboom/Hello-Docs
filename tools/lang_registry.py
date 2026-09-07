@@ -33,6 +33,7 @@ class LanguageSpec:
     status_word_column: str
     spec_title_column: str | None
     display_name: str
+    native_name: str
     template_directory: str
     separator: str
 
@@ -82,6 +83,7 @@ LANGUAGE_REGISTRY = (
         status_word_column="en",
         spec_title_column="title_en",
         display_name="English",
+        native_name="English",
         template_directory="page_shared/en",
         separator=": ",
     ),
@@ -103,6 +105,7 @@ LANGUAGE_REGISTRY = (
         status_word_column="zh",
         spec_title_column="title_zh",
         display_name="Chinese",
+        native_name="中文",
         template_directory="page_zh",
         separator=": ",
     ),
@@ -124,6 +127,7 @@ LANGUAGE_REGISTRY = (
         status_word_column="jp",
         spec_title_column="title_jp",
         display_name="Japanese",
+        native_name="日本語",
         template_directory="page_jp",
         separator="：",
     ),
@@ -144,6 +148,7 @@ LANGUAGE_REGISTRY = (
         status_word_column="fr",
         spec_title_column="title_fr",
         display_name="French",
+        native_name="Français",
         template_directory="page_shared/fr",
         separator=" : ",
     ),
@@ -164,6 +169,7 @@ LANGUAGE_REGISTRY = (
         status_word_column="es",
         spec_title_column="title_es",
         display_name="Spanish",
+        native_name="Español",
         template_directory="page_shared/es",
         separator=": ",
     ),
@@ -196,6 +202,7 @@ LANGUAGE_REGISTRY = (
         status_word_column="pt-BR",
         spec_title_column=None,
         display_name="Portuguese (Brazil)",
+        native_name="Português (Brasil)",
         template_directory="page_shared/pt-BR",
         separator=": ",
     ),
@@ -216,6 +223,7 @@ LANGUAGE_REGISTRY = (
         status_word_column="de",
         spec_title_column="title_de",
         display_name="German",
+        native_name="Deutsch",
         template_directory="page_shared/de",
         separator=": ",
     ),
@@ -236,6 +244,7 @@ LANGUAGE_REGISTRY = (
         status_word_column="it",
         spec_title_column="title_it",
         display_name="Italian",
+        native_name="Italiano",
         template_directory="page_shared/it",
         separator=": ",
     ),
@@ -256,6 +265,7 @@ LANGUAGE_REGISTRY = (
         status_word_column="uk",
         spec_title_column="title_uk",
         display_name="Ukrainian",
+        native_name="Українська",
         template_directory="page_shared/uk",
         separator=": ",
     ),
@@ -265,6 +275,8 @@ LANGUAGE_REGISTRY = (
         column_suffixes=("ko",),
         table_columns=(
             ("spec_master", _columns("Row_label_ko", "Param_ko", "Value_ko")),
+            ("spec_footnotes", _columns("Text_ko")),
+            ("spec_notes", _columns("Text_ko")),
             ("symbols_blocks", _columns("label_ko", "aliases_ko", "text_ko")),
             ("lcd_icons", _columns("icon_ko", "icon_desc_ko")),
             ("troubleshooting", _columns("corrective_measures_ko")),
@@ -274,6 +286,7 @@ LANGUAGE_REGISTRY = (
         status_word_column="ko",
         spec_title_column="title_ko",
         display_name="Korean",
+        native_name="한국어",
         template_directory="page_shared/ko",
         separator=": ",
     ),
@@ -343,9 +356,19 @@ IDML_LANGUAGE_PACKS = {
 }
 
 # Only languages with an approved reference-layout geometry receive governed
-# IDML spacing/placement overrides.  Registration of a new language does not
-# accidentally opt it into the production-master layout contract.
+# IDML flow behavior (fixed approved heights, reference offsets, planned
+# composition).  Registration of a new language does not accidentally opt it
+# into the production-master layout contract.
 _IDML_GOVERNED_LANGUAGE_CODES = frozenset(("en", "fr", "es"))
+
+# Languages whose lang_<code>_ layout-override rows are honored by the shared
+# token cascade.  This is governance's on-ramp: a line in active layout
+# tuning (ko: KR line, 2026-08) gets its rows read by every component the
+# moment they land, while keeping measured/fallback flow behavior until its
+# reference layout is approved and it joins the governed set above.  Which
+# override rows are *contract-required* under approved-reference builds is a
+# third, per-component declaration (contract_languages).
+_IDML_LAYOUT_TUNING_LANGUAGE_CODES = frozenset(("ko",))
 
 # Source-table headers retain their historical order for snapshot and manifest
 # compatibility.  Keep that order in the registry so schema consumers do not
@@ -421,6 +444,20 @@ def governed_languages() -> tuple[str, ...]:
         spec.code
         for spec in LANGUAGE_REGISTRY
         if spec.code in _IDML_GOVERNED_LANGUAGE_CODES
+    )
+
+
+def layout_override_languages() -> tuple[str, ...]:
+    """Return languages whose ``lang_<code>_`` layout rows are honored.
+
+    Governed languages plus lines in active layout tuning: the cascade reads
+    their override rows, but only governed languages get approved-reference
+    flow behavior.
+    """
+
+    honored = _IDML_GOVERNED_LANGUAGE_CODES | _IDML_LAYOUT_TUNING_LANGUAGE_CODES
+    return tuple(
+        spec.code for spec in LANGUAGE_REGISTRY if spec.code in honored
     )
 
 

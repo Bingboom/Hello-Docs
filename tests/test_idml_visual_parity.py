@@ -20,7 +20,10 @@ from tools.idml.components.rounded_table import rounded_table_panel, table_text_
 from tools.idml.page_objects import (
     anchored_panel_group_paragraph,
     h1_bar_h_pt,
+    h1_frame_opts,
+    h1_pill_paragraph,
     heading_bar_opts,
+    heading_text,
     left_rounded_path_geometry,
     rounded_path_geometry,
 )
@@ -91,6 +94,20 @@ class IdmlVisualParityTests(unittest.TestCase):
             h1_bar_h_pt(writer),
             places=5,
         )
+
+    def test_fixed_and_flowed_h1_share_the_je_visible_cap_centre(self) -> None:
+        writer = IdmlWriter(load_layout_params(ROOT / "data" / "layout_params.csv"))
+        rect = (28.35, 27.92, 312.09, h1_bar_h_pt(writer))
+        opts = h1_frame_opts(rect)
+        fixed = heading_text(writer, "IMPORTANT SAFETY INFORMATION", level=1)
+        h1_pill_paragraph(writer, "STORAGE", rect[2])
+        flowed = dict(writer.stories)["st_anchor_h1pill_0"]
+
+        self.assertEqual("CenterAlign", opts["valign"])
+        self.assertEqual((34.35, 27.92, 300.09, rect[3]), opts["text_rect"])
+        for story in (fixed, flowed):
+            self.assertIn('BaselineShift="0.5"', story)
+            self.assertNotIn('BaselineShift="-1.5"', story)
 
     def test_heading_styles_derive_keep_with_next_from_shared_needspace(self) -> None:
         params = load_layout_params(ROOT / "data" / "layout_params.csv")
@@ -204,6 +221,182 @@ class IdmlVisualParityTests(unittest.TestCase):
                 self.assertIn('<Position type="unit">11.4</Position>', item)
                 self.assertIn("<Content>•\t", item)
                 self.assertNotIn("<Content>• ", item)
+
+    def test_target_assembly_headings_use_font_independent_vector_markers(
+        self,
+    ) -> None:
+        params = load_layout_params(ROOT / "data" / "layout_params.csv")
+        writer = IdmlWriter(params, native_structure_markers=True)
+
+        heading, *_ = build_text_paragraph(
+            writer,
+            kind="h2",
+            text="AC OUTPUT ON/OFF",
+            terminal=True,
+            is_preface=False,
+            has_twocol_layout=False,
+            in_twocol=False,
+            bundle_root=ROOT,
+            page_language="en",
+            story_id="st_operation",
+            block_index=2,
+        )
+
+        self.assertNotIn("<Content>●</Content>", heading)
+        self.assertNotIn("Segoe UI Symbol", heading)
+        self.assertIn("st_operation_h2_marker_2_circle", heading)
+        self.assertIn('FillColor="Color/HB Brand Dark"', heading)
+        self.assertIn("st_operation_h2_marker_2_gap", heading)
+
+        writer.add_spec_story(
+            [{
+                "title": "GENERAL INFO",
+                "rows": [
+                    ("Chemistry", "LiFePO₄"),
+                    ("Input", "36.8V⎓75A"),
+                ],
+            }],
+            [],
+            lang="en",
+            title="SPECIFICATIONS",
+        )
+        spec_story = dict(writer.stories)["st_spec"]
+        self.assertNotIn("<Content>●</Content>", spec_story)
+        self.assertNotIn("Segoe UI Symbol", spec_story)
+        self.assertIn("st_spec_section_marker_0_circle", spec_story)
+        spec_xml = "".join(
+            xml
+            for story_id, xml in writer.stories
+            if story_id == "st_spec" or story_id.startswith("st_anchor_spec_")
+        )
+        self.assertNotIn("st_spec_spec_symbol_3_direct_current", spec_xml)
+        self.assertIn(
+            '<AppliedFont type="string">Noto Sans Symbols</AppliedFont>',
+            spec_xml,
+        )
+        self.assertIn("<Content>⎓</Content>", spec_xml)
+        self.assertIn('Position="Subscript"', spec_xml)
+        self.assertIn("<Content>4</Content>", spec_xml)
+        self.assertNotIn("Segoe UI Symbol", spec_xml)
+
+        warranty, _ = writer._render_component(
+            "st_warranty",
+            0,
+            {
+                "kind": "warrantyyears",
+                "items": [{
+                    "number": "3",
+                    "unit": "YEARS",
+                    "label": "For the original buyer",
+                    "text": "Limited warranty coverage.",
+                }],
+            },
+            ROOT,
+            True,
+        )
+        self.assertNotIn("Yu Gothic", warranty)
+        self.assertNotIn("❸", warranty)
+        self.assertIn('Self="bg_warranty_year_st_warranty_cmp0_0"', warranty)
+        self.assertIn('Self="tf_warranty_year_st_warranty_cmp0_0"', warranty)
+        warranty_number_story = next(
+            xml
+            for story_id, xml in writer.stories
+            if story_id == "st_anchor_warranty_year_st_warranty_cmp0_0"
+        )
+        self.assertIn("<Content>3</Content>", warranty_number_story)
+        self.assertIn('FillColor="Color/Paper"', warranty_number_story)
+        warranty_number_size = param_pt(
+            writer.params, "type_warranty_year_number_font_size", 21.0,
+        )
+        self.assertIn(
+            f'PointSize="{warranty_number_size:g}" FontStyle="Bold"',
+            warranty_number_story,
+        )
+
+        compact_params = load_layout_params(
+            ROOT / "data" / "layout_params.csv",
+            (ROOT / "data" / "layout_params.idml-compact.csv",),
+        )
+        compact_writer = IdmlWriter(
+            compact_params,
+            native_structure_markers=True,
+        )
+        compact_warranty, _ = compact_writer._render_component(
+            "st_warranty_compact",
+            0,
+            {
+                "kind": "warrantyyears",
+                "items": [{
+                    "number": "3",
+                    "unit": "YEARS",
+                    "label": "For the original buyer",
+                    "text": "Limited warranty coverage.",
+                }],
+            },
+            ROOT,
+            True,
+        )
+        self.assertEqual(warranty, compact_warranty.replace(
+            "st_warranty_compact_cmp0",
+            "st_warranty_cmp0",
+        ))
+        self.assertNotIn("❸", compact_warranty)
+        self.assertIn(
+            'Self="bg_warranty_year_st_warranty_compact_cmp0_0"',
+            compact_warranty,
+        )
+        compact_number_story = next(
+            xml
+            for story_id, xml in compact_writer.stories
+            if story_id == "st_anchor_warranty_year_st_warranty_compact_cmp0_0"
+        )
+        self.assertIn("<Content>3</Content>", compact_number_story)
+
+        base_period_writer = IdmlWriter(
+            writer.params,
+            native_structure_markers=False,
+        )
+        period_writer = IdmlWriter(
+            compact_params,
+            native_structure_markers=True,
+        )
+        period_spec = {
+            "kind": "warrantysection",
+            "title": "WARRANTY PERIOD",
+            "index": 2,
+            "blocks": [{
+                "kind": "component",
+                "spec": {
+                    "kind": "warrantyyears",
+                    "items": [{
+                        "number": "3",
+                        "unit": "YEARS",
+                        "label": "Standard Warranty",
+                        "text": "Limited warranty coverage.",
+                    }],
+                },
+            }],
+        }
+        base_period, base_period_height = base_period_writer._render_component(
+            "st_warranty_period",
+            0,
+            period_spec,
+            ROOT,
+            True,
+        )
+        period, period_height = period_writer._render_component(
+            "st_warranty_period",
+            0,
+            period_spec,
+            ROOT,
+            True,
+        )
+        self.assertEqual(base_period, period)
+        self.assertEqual(base_period_height, period_height)
+        self.assertIn(
+            'Self="tf_warranty_body_st_warranty_period_cmp0"',
+            period,
+        )
 
     def test_body_table_group_uses_panel_fill_for_corner_masks(self) -> None:
         writer = IdmlWriter(load_layout_params(ROOT / "data" / "layout_params.csv"))
@@ -626,7 +819,10 @@ class IdmlVisualParityTests(unittest.TestCase):
             ["FE", "Contact support."],
         ])
 
-        render_table_block(rows, ctx, tid="tbl_test_trouble", terminal=True)
+        render_table_block(
+            rows, ctx, tid="tbl_test_trouble", terminal=True,
+            troubleshooting=True,
+        )
 
         table_story = dict(writer.stories)["st_anchor_trouble_tbl_test_trouble"]
         self.assertIn('MinimumHeight="62.03" AutoGrow="true"', table_story)
@@ -636,28 +832,72 @@ class IdmlVisualParityTests(unittest.TestCase):
         self.assertIn('TopEdgeStrokeWeight="0.25"', table_story)
         self.assertIn('TopEdgeStrokeColor="Color/HB Brand Dark"', table_story)
 
-    def test_localized_troubleshooting_headers_use_shared_rounded_component(self) -> None:
-        for header in ("Code d'erreur", "Código de fallo", "Código de error"):
-            writer = IdmlWriter(load_layout_params(ROOT / "data" / "layout_params.csv"))
-            ctx = RenderContext(
-                params=writer.params,
-                page_w=writer.page_w,
-                m_l=writer.m_l,
-                m_r=writer.m_r,
-                root=ROOT,
-                bundle_root=ROOT / "docs",
-                add_story=writer._add_story_parts,
-            )
-            render_table_block(
-                [[header, "Mesures correctives"], ["F0", "Redémarrer le produit."]],
-                ctx,
-                tid="tbl_localized_trouble",
-                terminal=True,
-            )
-            self.assertIn(
-                'st_anchor_trouble_tbl_localized_trouble',
-                dict(writer.stories),
-            )
+    def _render_trouble(
+        self, rows: list[list[str]], *, language: str, declared: bool,
+    ) -> dict[str, str]:
+        writer = IdmlWriter(load_layout_params(ROOT / "data" / "layout_params.csv"))
+        ctx = RenderContext(
+            params=writer.params,
+            page_w=writer.page_w,
+            m_l=writer.m_l,
+            m_r=writer.m_r,
+            root=ROOT,
+            bundle_root=ROOT / "docs",
+            add_story=writer._add_story_parts,
+            language=language,
+        )
+        render_table_block(
+            rows,
+            ctx,
+            tid="tbl_localized_trouble",
+            terminal=True,
+            troubleshooting=declared,
+        )
+        return dict(writer.stories)
+
+    def test_every_language_gets_the_shared_rounded_troubleshooting_component(
+        self,
+    ) -> None:
+        """The component follows the declaration, not the printed header.
+
+        The header set only ever held EN/FR/ES spellings, so ja/zh/de/it/uk/
+        pt-BR/ko every one fell through to the legacy square table while
+        manual_style.yaml declared HB-TABLE-TROUBLESHOOTING `aligned`. These
+        headers are exactly the ones the old set could never match.
+        """
+        cases = (
+            ("ko", "오류 코드", "조치 방법", "제품을 재시작하십시오."),
+            ("ja", "エラーコード", "対処方法", "製品を再起動してください。"),
+            ("zh", "故障代码", "解决措施", "重启产品。"),
+            ("de", "Fehlercode", "Abhilfemaßnahmen", "Starten Sie das Produkt neu."),
+            ("it", "Codice errore", "Misure correttive", "Riavviare il prodotto."),
+            ("uk", "Код помилки", "Заходи з усунення", "Перезапустіть виріб."),
+            ("pt-BR", "Código de erro", "Medidas corretivas", "Reinicie o produto."),
+        )
+        for language, header, header_right, body in cases:
+            with self.subTest(language=language):
+                stories = self._render_trouble(
+                    [[header, header_right], ["F0", body]],
+                    language=language,
+                    declared=True,
+                )
+
+                self.assertIn("st_anchor_trouble_tbl_localized_trouble", stories)
+
+    def test_an_undeclared_table_never_routes_on_its_printed_header(self) -> None:
+        """STYLE_DEFINITION §0.5: localized copy must not select a composer.
+
+        The English header is the strongest possible probe — it is the one
+        spelling the removed set definitely held. Without the declaration it
+        must render as an ordinary table.
+        """
+        stories = self._render_trouble(
+            [["Error Code", "Corrective Measures"], ["F0", "Restart the product."]],
+            language="en",
+            declared=False,
+        )
+
+        self.assertNotIn("st_anchor_trouble_tbl_localized_trouble", stories)
 
 
 if __name__ == "__main__":

@@ -5,11 +5,18 @@ from __future__ import annotations
 
 import csv
 import re
+from collections.abc import Iterable, Mapping
 from dataclasses import dataclass
 from functools import lru_cache
 from pathlib import Path
 
 from tools import lang_registry
+# Compatibility exports; the implementation must not depend on a business reader.
+from tools.utils.csv_fields import (
+    first_existing_column as first_existing_column,
+    first_text as first_text,
+    localized_columns as localized_columns,
+)
 from tools.utils.spec_master import canonicalize_model_token
 from tools.utils.variable_resolver import parse_model_tokens
 
@@ -22,6 +29,47 @@ _LANG_TEXT_COLUMNS = {
     for spec in lang_registry.LANGUAGE_REGISTRY
     for alias in spec.aliases
 }
+
+
+def snapshot_language_suffixes(lang: str | None) -> tuple[str, ...]:
+    """Exact historical snapshot suffixes, in registry order (not input order).
+
+    This is column spelling, not language normalization: Japanese remains
+    canonical ``ja`` even where the first snapshot suffix is ``jp``. An empty
+    language has no candidates; callers own any default language policy.
+    """
+    spec = lang_registry.language_spec(lang)
+    if spec is not None:
+        return spec.column_suffixes
+    raw = (lang or "").strip().lower()
+    return (raw,) if raw else ()
+
+
+def table_localized_columns(table: str, base: str, lang: str) -> tuple[str, ...]:
+    """Only columns declared for this table/field, then their CSV spellings.
+
+    For example LCD Ukrainian uses ``ukr``; a global ``uk`` alias must not
+    outrank it. Bare legacy fields such as footnotes' ``pt-BR`` are not added
+    here: a caller using those must explicitly include the table's fields.
+    """
+    spec = lang_registry.language_spec(lang)
+    suffixes = (
+        tuple(suffix for column in spec.columns_for_table(table)
+              for suffix in spec.column_suffixes if column == f"{base}_{suffix}")
+        if spec is not None else ((lang or "").strip(),)
+    )
+    return localized_columns((base,), suffixes)
+
+
+def localized_cell(
+    row: Mapping[str, str | None], base: str, lang: str | None, *,
+    fallback_columns: Iterable[str] = (),
+) -> str:
+    """Read exact snapshot suffixes per cell, then explicit fallback columns."""
+    return first_text(
+        row, (f"{base}_{suffix}" for suffix in snapshot_language_suffixes(lang)),
+        fallback_columns=fallback_columns,
+    )
 
 
 @dataclass(frozen=True)

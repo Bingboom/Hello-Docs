@@ -14,6 +14,25 @@ from .model import (
 )
 
 
+# A composition owns one physical page policy even when several semantic source
+# roles are assembled onto that page. Keep only exceptional policies here;
+# ordinary compositions inherit the source role's standard policy.
+_COMPOSITION_TEMPLATE_ROLES = {
+    "front_cover": PageTemplateRole.FRONT_COVER,
+    "preface": PageTemplateRole.NO_FOOTER,
+    "preface_safety_maintenance": PageTemplateRole.STANDARD,
+    "toc": PageTemplateRole.TOC,
+    "back_cover": PageTemplateRole.BACK_COVER,
+}
+
+
+def page_template_role_for_composition_type(
+    composition_type: object,
+) -> PageTemplateRole | None:
+    normalized = str(composition_type or "").strip().casefold().replace("-", "_")
+    return _COMPOSITION_TEMPLATE_ROLES.get(normalized)
+
+
 def page_template_role_for_assembly_role(role: str) -> PageTemplateRole:
     normalized = str(role).strip().casefold().replace("_", "-")
     if normalized == "cover":
@@ -57,11 +76,13 @@ def _source_page(
             f"page-plan entry {ordinal} lacks approved physical mapping: {exc}"
         ) from exc
     assembly_role = str(entry.get("page_role") or "")
-    role = (
-        page_template_role_for_assembly_role(assembly_role)
-        if assembly_role
-        else page_template_role_for_source_ref(source_ref)
-    )
+    role = page_template_role_for_composition_type(entry.get("composition_type"))
+    if role is None:
+        role = (
+            page_template_role_for_assembly_role(assembly_role)
+            if assembly_role
+            else page_template_role_for_source_ref(source_ref)
+        )
     footer_policy, folio_policy = policies_for_role(role)
     extension_id = (
         assembly_role.split(":", 1)[1]
@@ -110,19 +131,18 @@ def legacy_folio_page_plan(
     physical_page_count: int,
     *,
     has_back_cover: bool,
+    front_matter_roles: tuple[str, ...] = ("cover", "preface", "toc"),
 ) -> PagePlan:
     """Compatibility plan for non-reference IDML builds, without XML sniffing."""
+    if (not front_matter_roles or front_matter_roles[0] != "cover"
+            or len(set(front_matter_roles)) != len(front_matter_roles)
+            or any(role not in {"cover", "preface", "toc"} for role in front_matter_roles)):
+        raise PagePlanError("invalid front-matter roles")
     pages: list[SourcePagePlan] = []
     for ordinal in range(1, physical_page_count + 1):
-        if ordinal == 1:
-            role = PageTemplateRole.FRONT_COVER
-            assembly_role = "cover"
-        elif ordinal == 2:
-            role = PageTemplateRole.NO_FOOTER
-            assembly_role = "preface"
-        elif ordinal == 3:
-            role = PageTemplateRole.TOC
-            assembly_role = "toc"
+        if ordinal <= len(front_matter_roles):
+            assembly_role = front_matter_roles[ordinal - 1]
+            role = page_template_role_for_assembly_role(assembly_role)
         elif has_back_cover and ordinal == physical_page_count:
             role = PageTemplateRole.BACK_COVER
             assembly_role = "back_cover"

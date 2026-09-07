@@ -56,6 +56,19 @@ class TestPilotConfigs(unittest.TestCase):
             region="JP",
         )
 
+    def test_kr_config_should_register_je_2000e_target(self) -> None:
+        cfg = check_docs.load_config(ROOT / "configs/config.kr.yaml")
+
+        self.assertIn(
+            {"model": "JE-2000E", "region": "KR"},
+            cfg.get("build", {}).get("targets", []),
+        )
+        self.assertEqual(["ko"], cfg.get("build", {}).get("languages"))
+        self.assertEqual(
+            "docs/manifests/manual_kr.yaml",
+            cfg.get("paths", {}).get("page_manifest"),
+        )
+
     def test_us_single_language_configs_should_resolve_manifest_backed_pages_without_issues(self) -> None:
         cases = (
             ("configs/config.us-en.yaml", "en", "us-en", "docs/manifests/manual_us-single-en.yaml", 17),
@@ -277,7 +290,10 @@ class TestPilotConfigs(unittest.TestCase):
                 self.assertEqual([expected_lang], cfg.get("build", {}).get("languages"))
                 self.assertTrue(cfg.get("build", {}).get("include_lang_in_output_path"))
                 self.assertEqual(expected_manifest, cfg.get("paths", {}).get("page_manifest"))
-                self.assertEqual(["占位符"], cfg.get("checks", {}).get("allowed_foreign_identity_literals"))
+                self.assertEqual(
+                    ["占位符", "Jackery Battery Pack 2000"],
+                    cfg.get("checks", {}).get("allowed_foreign_identity_literals"),
+                )
                 phase2 = cfg.get("sync", {}).get("phase2", {})
                 self.assertEqual(
                     {
@@ -378,14 +394,11 @@ class TestPilotConfigs(unittest.TestCase):
         self.assertLess(text.index("asset:charging/solar_direct"), text.index(adapter_intro))
         self.assertLess(text.index(adapter_intro), text.index("asset:charging/solar_adapter"))
 
-    def test_shared_app_setup_wifi_added_line_uses_reference_numbering(self) -> None:
+    def test_shared_app_setup_wifi_result_line_is_not_numbered(self) -> None:
         for path in (ROOT / "docs" / "templates" / "page_shared").glob("*/12_app_setup_placeholder.rst"):
             with self.subTest(path=path):
                 text = path.read_text(encoding="utf-8")
-                if path.parent.name in {"en", "fr", "es"}:
-                    self.assertIn("| 2.5 ", text)
-                else:
-                    self.assertNotIn("| 2.5 ", text)
+                self.assertNotIn("| 2.5 ", text)
 
     def test_eu_merged_config_should_resolve_manifest_backed_pages_without_issues(self) -> None:
         cfg = check_docs.load_config(ROOT / "configs/config.eu.yaml")
@@ -397,7 +410,10 @@ class TestPilotConfigs(unittest.TestCase):
         self.assertFalse(cfg.get("build", {}).get("include_lang_in_output_path"))
         self.assertTrue(cfg.get("build", {}).get("queue_by_document_key"))
         self.assertEqual("docs/manifests/manual_eu.yaml", cfg.get("paths", {}).get("page_manifest"))
-        self.assertEqual(["占位符"], cfg.get("checks", {}).get("allowed_foreign_identity_literals"))
+        self.assertEqual(
+            ["占位符", "Jackery Battery Pack 2000"],
+            cfg.get("checks", {}).get("allowed_foreign_identity_literals"),
+        )
         phase2 = cfg.get("sync", {}).get("phase2", {})
         self.assertEqual(
             {

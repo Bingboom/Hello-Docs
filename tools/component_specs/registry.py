@@ -3,8 +3,11 @@ from __future__ import annotations
 
 import hashlib
 import json
+from contextlib import contextmanager
+from contextvars import ContextVar
+from copy import deepcopy
 from pathlib import Path
-from typing import Any, Mapping
+from typing import Any, Iterator, Mapping
 
 try:
     import yaml
@@ -26,6 +29,17 @@ REGISTERED_ADAPTER_KEYS: dict[str, frozenset[str]] = {
             "hb_fcc",
             "hb_inbox",
             "hb_overview",
+            "hb_operation",
+            "hb_lcd_mode",
+            "hb_lcd_icon",
+            "hb_troubleshooting",
+            "hb_symbol_signal",
+            "hb_symbol_icon",
+            "hb_warranty_lead",
+            "hb_warranty_section",
+            "hb_warranty_years",
+            "hb_app",
+            "hb_reference_figure",
         }
     ),
     "latex": frozenset(
@@ -35,6 +49,17 @@ REGISTERED_ADAPTER_KEYS: dict[str, frozenset[str]] = {
             "hb_latex_fcc",
             "hb_latex_inbox",
             "hb_latex_overview",
+            "hb_latex_operation",
+            "hb_latex_lcd_mode",
+            "hb_latex_lcd_icon",
+            "hb_latex_troubleshooting",
+            "hb_latex_symbol_signal",
+            "hb_latex_symbol_icon",
+            "hb_latex_warranty_lead",
+            "hb_latex_warranty_section",
+            "hb_latex_warranty_years",
+            "hb_latex_app",
+            "hb_latex_reference_figure",
         }
     ),
     "idml": frozenset(
@@ -44,6 +69,17 @@ REGISTERED_ADAPTER_KEYS: dict[str, frozenset[str]] = {
             "idml_fcc",
             "idml_inbox",
             "idml_overview",
+            "idml_operation",
+            "idml_lcd_mode",
+            "idml_lcd_icon",
+            "idml_troubleshooting",
+            "idml_symbol_signal",
+            "idml_symbol_icon",
+            "idml_warranty_lead",
+            "idml_warranty_section",
+            "idml_warranty_years",
+            "idml_app",
+            "idml_reference_figure",
         }
     ),
     "word": frozenset(
@@ -53,10 +89,25 @@ REGISTERED_ADAPTER_KEYS: dict[str, frozenset[str]] = {
             "word_fcc",
             "word_inbox",
             "word_overview",
+            "word_operation",
+            "word_lcd_mode",
+            "word_lcd_icon",
+            "word_troubleshooting",
+            "word_symbol_signal",
+            "word_symbol_icon",
+            "word_warranty_lead",
+            "word_warranty_section",
+            "word_warranty_years",
+            "word_app",
+            "word_reference_figure",
         }
     ),
 }
 LOCALE_POLICIES = frozenset({"exact", "shared"})
+_ACTIVE_COMPONENT_REGISTRY: ContextVar[Mapping[str, Any] | None] = ContextVar(
+    "active_component_registry",
+    default=None,
+)
 
 
 def default_registry_path() -> Path:
@@ -161,10 +212,16 @@ def validate_component_registry(registry: Mapping[str, Any]) -> list[str]:
                 if not isinstance(raw_asset, Mapping):
                     issues.append(f"{asset_prefix} must be a mapping")
                     continue
-                if set(raw_asset) != {"required", "locale_policies"}:
+                if not set(raw_asset).issubset(
+                    {"required", "locale_policies", "multiple"}
+                ) or not {"required", "locale_policies"}.issubset(raw_asset):
                     issues.append(f"{asset_prefix} has an invalid asset-role shape")
                 if not isinstance(raw_asset.get("required"), bool):
                     issues.append(f"{asset_prefix}.required must be boolean")
+                if "multiple" in raw_asset and not isinstance(
+                    raw_asset.get("multiple"), bool
+                ):
+                    issues.append(f"{asset_prefix}.multiple must be boolean")
                 policies = raw_asset.get("locale_policies")
                 if not _non_empty_strings(policies) or not set(policies).issubset(
                     LOCALE_POLICIES
@@ -190,10 +247,45 @@ def validate_component_registry(registry: Mapping[str, Any]) -> list[str]:
             key = binding.get("key")
             if key not in REGISTERED_ADAPTER_KEYS[renderer]:
                 issues.append(f"{adapter_prefix}.key is unregistered: {key!r}")
+        variant_adapters = raw_component.get("variant_adapters", {})
+        if not isinstance(variant_adapters, Mapping):
+            issues.append(f"{prefix}.variant_adapters must be a mapping")
+            continue
+        for variant, raw_bindings in variant_adapters.items():
+            variant_prefix = f"{prefix}.variant_adapters.{variant}"
+            if variant not in (variants or []):
+                issues.append(f"{variant_prefix}: variant is not registered")
+            if not isinstance(raw_bindings, Mapping):
+                issues.append(f"{variant_prefix} must be a mapping")
+                continue
+            unknown_renderers = set(raw_bindings) - set(RENDERERS)
+            if unknown_renderers:
+                issues.append(
+                    f"{variant_prefix} has unknown renderers {sorted(unknown_renderers)!r}"
+                )
+            if set(raw_bindings) != set(RENDERERS):
+                issues.append(f"{variant_prefix} must declare every renderer")
+            for renderer in RENDERERS:
+                binding = raw_bindings.get(renderer)
+                binding_prefix = f"{variant_prefix}.{renderer}"
+                if not isinstance(binding, Mapping):
+                    issues.append(f"{binding_prefix} must be a mapping")
+                    continue
+                capability = binding.get("capability")
+                if capability not in CAPABILITIES:
+                    issues.append(
+                        f"{binding_prefix}.capability is invalid: {capability!r}"
+                    )
+                key = binding.get("key")
+                if key not in REGISTERED_ADAPTER_KEYS[renderer]:
+                    issues.append(f"{binding_prefix}.key is unregistered: {key!r}")
     return issues
 
 
 def load_component_registry(path: Path | None = None) -> dict[str, Any]:
+    active = _ACTIVE_COMPONENT_REGISTRY.get()
+    if path is None and active is not None:
+        return deepcopy(dict(active))
     registry_path = (path or default_registry_path()).resolve()
     try:
         payload = yaml.safe_load(registry_path.read_text(encoding="utf-8"))
@@ -205,6 +297,27 @@ def load_component_registry(path: Path | None = None) -> dict[str, Any]:
     if issues:
         raise ComponentSpecError("invalid component registry: " + "; ".join(issues))
     return payload
+
+
+@contextmanager
+def component_registry_context(
+    registry: Mapping[str, Any] | None,
+) -> Iterator[None]:
+    """Use a validated frozen registry without reopening its source contract."""
+
+    if registry is None:
+        yield
+        return
+    issues = validate_component_registry(registry)
+    if issues:
+        raise ComponentSpecError(
+            "invalid embedded component registry: " + "; ".join(issues)
+        )
+    token = _ACTIVE_COMPONENT_REGISTRY.set(deepcopy(dict(registry)))
+    try:
+        yield
+    finally:
+        _ACTIVE_COMPONENT_REGISTRY.reset(token)
 
 
 def registry_sha256(registry: Mapping[str, Any]) -> str:
@@ -273,14 +386,17 @@ def validate_component_spec(
     asset_definitions = definition.get("asset_roles")
     seen_assets: set[str] = set()
     for asset in spec.assets:
-        if asset.role in seen_assets:
-            issues.append(f"{spec.component_id}: duplicate asset role {asset.role!r}")
-        seen_assets.add(asset.role)
         asset_definition = (
             asset_definitions.get(asset.role)
             if isinstance(asset_definitions, Mapping)
             else None
         )
+        if asset.role in seen_assets and not (
+            isinstance(asset_definition, Mapping)
+            and asset_definition.get("multiple") is True
+        ):
+            issues.append(f"{spec.component_id}: duplicate asset role {asset.role!r}")
+        seen_assets.add(asset.role)
         if not isinstance(asset_definition, Mapping):
             issues.append(f"{spec.component_id}: unknown asset role {asset.role!r}")
         if not asset.asset_ref.strip():
@@ -334,7 +450,13 @@ def adapter_binding(
     require_valid_component_spec(spec, active_registry)
     if renderer not in RENDERERS:
         raise ComponentSpecError(f"unknown renderer {renderer!r}")
-    binding = active_registry["components"][spec.component_id]["adapters"][renderer]
+    definition = active_registry["components"][spec.component_id]
+    variant_bindings = definition.get("variant_adapters", {}).get(spec.variant)
+    binding = (
+        variant_bindings[renderer]
+        if isinstance(variant_bindings, Mapping)
+        else definition["adapters"][renderer]
+    )
     if binding["key"] not in REGISTERED_ADAPTER_KEYS[renderer]:
         raise ComponentSpecError(
             f"{spec.component_id}: unregistered {renderer} adapter {binding['key']!r}"
@@ -348,6 +470,7 @@ __all__ = [
     "REGISTRY_SCHEMA_VERSION",
     "RENDERERS",
     "adapter_binding",
+    "component_registry_context",
     "default_registry_path",
     "load_component_registry",
     "registry_sha256",

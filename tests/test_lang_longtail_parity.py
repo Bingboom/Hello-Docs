@@ -64,10 +64,11 @@ class LanguageLongTailParityTest(unittest.TestCase):
         self.assertEqual(content_lint._VALUE, expected_value)
         self.assertEqual(content_lint.SUPPORTED_LANGS, expected_languages)
 
-    def test_idml_loader_suffix_candidates_match_registry(self) -> None:
+    def test_snapshot_suffix_candidates_and_idml_compatibility_match_registry(self) -> None:
         for spec in lang_registry.LANGUAGE_REGISTRY:
             with self.subTest(language=spec.code):
-                self.assertEqual(loaders._lang_suffixes(spec.code), spec.column_suffixes)
+                self.assertEqual(localized_copy.snapshot_language_suffixes(spec.code), spec.column_suffixes)
+                self.assertEqual(loaders.normalize_lang(spec.code), spec.column_suffixes[0])
 
     def test_variable_resolver_alias_candidates_match_registry(self) -> None:
         expected_aliases: dict[str, tuple[str, ...]] = {}
@@ -124,6 +125,16 @@ class LanguageLongTailParityTest(unittest.TestCase):
 
     def test_idml_governed_languages_have_one_registry_source(self) -> None:
         self.assertEqual(lang_registry.governed_languages(), ("en", "fr", "es"))
+
+    def test_idml_layout_override_languages_add_only_tuning_lines(self) -> None:
+        self.assertEqual(
+            lang_registry.layout_override_languages(),
+            ("en", "fr", "es", "ko"),
+        )
+        self.assertLessEqual(
+            set(lang_registry.governed_languages()),
+            set(lang_registry.layout_override_languages()),
+        )
 
     def test_longtail_display_registration_is_closed(self) -> None:
         maps = (

@@ -112,20 +112,46 @@ class PageCatalogEntry:
 class TransformSpec:
     op: str
     bbox_pt: Bbox | None = None
+    other_bbox_pt: Bbox | None = None
     images: str | None = None
     graphics: str | None = None
     fill: None = None
+    # drop_leader_strokes only: per-master leader stroke widths. Omitted means
+    # the pipeline defaults (the JE-1000F US master's 1.821pt / 0.30pt).
+    halo_width_pt: float | None = None
+    line_width_pt: float | None = None
+    width_tolerance_pt: float | None = None
+    # retain_vector_drawings only: keep deterministic source-page drawing
+    # groups and optionally normalize selected RGB fills.
+    drawing_indices: tuple[int, ...] = ()
+    fill_rgb_overrides: tuple[tuple[int, tuple[float, float, float]], ...] = ()
+    stroke_suppressed_indices: tuple[int, ...] = ()
 
     def as_manifest(self) -> dict[str, Any]:
         payload: dict[str, Any] = {"op": self.op}
         if self.bbox_pt is not None:
             payload["bbox_pt"] = list(self.bbox_pt)
+        if self.other_bbox_pt is not None:
+            payload["other_bbox_pt"] = list(self.other_bbox_pt)
         if self.images is not None:
             payload["images"] = self.images
         if self.graphics is not None:
             payload["graphics"] = self.graphics
         if self.op == "redact_text":
             payload["fill"] = self.fill
+        for name in ("halo_width_pt", "line_width_pt", "width_tolerance_pt"):
+            value = getattr(self, name)
+            if value is not None:
+                payload[name] = value
+        if self.op == "retain_vector_drawings":
+            payload["drawing_indices"] = list(self.drawing_indices)
+            payload["fill_rgb_overrides"] = {
+                str(index): list(rgb)
+                for index, rgb in self.fill_rgb_overrides
+            }
+            payload["stroke_suppressed_indices"] = list(
+                self.stroke_suppressed_indices
+            )
         return payload
 
 

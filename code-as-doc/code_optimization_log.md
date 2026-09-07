@@ -1659,3 +1659,511 @@ Acceptance evidence:
   `6cf73fff`; the
   [published short URL](https://ht-doc.readthedocs.io/manual_je1000f_us.html)
   returned HTTP 200.
+
+
+## 2026-09-05 — Public IR integrity follow-up
+
+- Migrated the handoff report's last direct IR JSON read to public validation,
+  before artifact mutation; missing and malformed sidecars are distinct.
+- Prepared index discovery rejects missing declared pages. Registered prose
+  macros require complete arguments and account for uncovered raw content.
+  Strict CLI reports source failures without overwriting existing IR output.
+- Existing valid fixture identities/hashes and output goldens are retained;
+  regression cases cover actual strict CLI and handoff entrypoints.
+- This closes the bounded read/prose-integrity batch only. Web whole-ManualIR
+  adoption, Flow projection reconciliation, unresolved substitutions, merged
+  table semantics and specialized data-macro coverage remain separate debt.
+
+Validation evidence: the complete IR dictionaries for the prepared US fixture
+(17 source pages / 185 blocks) and frozen JP bundle (13 / 270) are identical
+with the baseline and revised prose decoder/conditional normalization. Both
+pass strict IR checks. Existing IDML goldens are not regenerated.
+
+
+## 2026-09-05: Web specifications consume public ManualIR
+
+- Real Web bundle specifications now call the public source assembler and IR
+  validator before component projection. Declared HTML parsing belongs to the
+  explicit `manual_ir.web_specs` source adapter; the neutral core imports no
+  HTML/IDML adapter.
+- Web no longer calls the Word specification extractor/re-renderer. Word remains
+  an active consumer of that implementation; it was not incorrectly deleted.
+- Scoped IR retains rich markup with validated ComponentSpec semantics and can
+  replay after public serialization. Invalid later sections no longer leave
+  earlier caller DOM sections modified.
+- Verified by a real bundle test with Word extraction disabled, scoped serialized
+  replay, source/markup integrity cases and exact existing transform output.
+- Debt remains: whole-manual Web IR, other Web components, prepared HTML parsing,
+  renderer-neutral rich text, and separate legacy Word/IDML/Flow source policies.
+
+
+## 2026-09-05: Shared public IR consumer for Web LCD and troubleshooting
+
+- Two real prepared-Web / standalone-MyST consumers now route through public
+  ManualSource assembly, ManualIR validation and one table replay module. The old
+  two direct DOM validation/render paths have become thin entrypoints.
+- A shared HTML provenance constructor also replaces the active specification
+  adapter's duplicate envelope assembly; existing specification IR is unchanged.
+- Declared table payloads preserve semantic row roles, authored headers, inline
+  assets and rich markup. Corrupt/rehashed-inconsistent payloads reject; a bad
+  later table no longer leaves earlier caller DOM modified.
+- Standalone staging ships the bounded public IR runtime and language registry,
+  verified in Python isolated mode without the source checkout or legacy IDML.
+- Debt: prepared/generated HTML parsing and retained markup, unregistered table
+  ComponentSpecs, standalone specification's direct ComponentSpec path, other
+  Web consumers, whole-manual assembly and separate Word/Flow source policies.
+
+
+## 2026-09-05: Standalone specification directive closes its public IR bypass
+
+- `SpecTableDirective` now consumes the existing specification IR pipeline;
+  duplicate ComponentSpec grouping, rowspan and final-table assembly were removed.
+- The standalone runtime stages existing specification modules. No additional
+  parser module, model config, CLI or serialized schema was added.
+- Real directive and isolated Sphinx tests observe public IR assembly/replay and
+  reject injected corrupt IR; continuation rows, inline markup and accessible
+  labels remain covered. One serialization-order assertion now checks actual
+  DOM attributes rather than their order in HTML text.
+- Remaining debt: whole-manual IR, other Web components, neutral rich text and
+  retained HTML, plus separate Word/Flow source policies. The earlier standalone
+  specification bypass is now closed; no JP native-acceptance claim is implied.
+
+
+## 2026-09-05: Prepared Web callouts cross Pandoc as public ManualIR
+
+- Replaced the raw-string callout placeholder transport with public IR. The
+  prepared HTML adapter supplies existing ComponentSpec semantics, exact markup,
+  image references and actual bundle/target provenance; the renderer checks both
+  envelope integrity and semantic/markup/asset agreement before returning bytes.
+- Existing `web_presentation` protection/restoration and `markdown_bundle` caller
+  are migrated. Two bounded adapter/replay modules reuse current ComponentSpec
+  and public source/assembly contracts; no new registry, config or IR schema.
+- Safety nets cover the real RST -> Web -> Pandoc -> Markdown entry in English
+  and Japanese, serialized replay after source removal, corrupt envelopes,
+  correctly rehashed but inconsistent payloads and malformed later callouts.
+  Six pre-change rich callout protection/restoration outputs match byte for byte.
+- Remaining: standalone MyST callout node carrier, already-protected composite
+  figure callouts, other components/whole-manual IR, neutral rich text and
+  existing language-label source lookup. JP native layout remains a separate lane.
+
+
+## 2026-09-05: Standalone MyST callout closes the ComponentSpec-only bypass
+
+- The directive keeps nested document nodes until HTML writing, then passes
+  resolved body markup through the existing callout source adapter, public IR
+  assembler and replay consumer. Direct ComponentSpec-only output exits this
+  Web path; Sphinx remains the Markdown/reference/image carrier.
+- Optional owned declaration fields preserve explicit variant/custom labels
+  and configured language. Invalid declarations or rehashed semantic mismatch
+  fail replay; existing prepared-Web IR payloads remain unchanged.
+- Staging includes existing callout modules, with an extension environment
+  version bump for old doctrees. No new implementation module, registry,
+  config or `manual-ir/v1` change.
+- Isolated Sphinx tests cover serialized replay, source context, resolved links,
+  image assets, default/explicit variants, corrupt IR, nested-table rejection
+  and non-HTML body compatibility. Five pre-change standalone table DOMs match;
+  six pre-change prepared-Web IR envelopes match.
+- Remaining: already-protected composite-figure callouts, whole-manual IR,
+  other components, neutral rich text and label lookup dependencies. Nested
+  tables/callouts are an explicit unsupported body shape under this contract.
+  JP native layout remains a separate workstream.
+
+
+## 2026-09-05: Prepared Inbox and its internal TIP consume public IR
+
+- The real RST/Web consumer now loads a scoped Inbox source, calls the public
+  assembler and replays verified IR before applying the figure. The old direct
+  ComponentSpec-only path and hardcoded `und` wrapper exit.
+- Three cards and the internal TIP remain one existing `HB-SPECIAL-INBOX`;
+  the new source adapter retains rich markup and all image references. No
+  parallel tip semantics, registry/config/schema change or extra renderer.
+- Replay verifies public hashes and owned semantic/asset agreement, including
+  correctly rehashed corrupt payloads. Incomplete/spanned/nested rows fail
+  before caller DOM mutation. Serialized replay survives source deletion.
+- Real RST tests cover EN/FR/ES, existing unsupported-target gating and source
+  context. Three pre-change localized Web outputs remain byte-identical.
+  Existing hotspot limits are unchanged.
+- Remaining: other composite figures, generic figure string protection,
+  whole-manual IR, renderer-neutral rich text, RST/LaTeX parser dependencies,
+  and other renderer consumer migration. JP native layout stays separate.
+
+
+## 2026-09-05: Prepared FCC consumes semantic public IR
+
+- The actual RST/Web FCC consumer now loads a source, assembles public IR and
+  replays the existing `HB-SPECIAL-FCC` semantic fields before changing caller
+  DOM. The direct ComponentSpec-only Web route has exited.
+- Opening lines, ordered paragraphs/measures, column break and logical/resolved
+  mark binding are sufficient for replay; no second retained-HTML interpretation
+  or source config read is introduced. Source identity includes target context
+  and active config/registry/theme hashes.
+- Envelope/owned-payload checks reject invalid semantics, unknown fields,
+  source/language drift and mismatched asset bindings. Real three-locale tests
+  first reproduced the bypass; serialization tests remove source/config and
+  forbid parser calls, including a legitimate semantic edit that drives output.
+  Three pre-change EN/FR/ES outputs remain byte-identical.
+- One source/contract module reuses the existing renderer and 150-line size
+  limit. No new config/schema/registry, dependency or workflow change.
+- Remaining: FCC source HTML/label/filename interpretation and existing paragraph
+  normalization; other composite consumers, generic figure string protection,
+  whole-manual IR, neutral rich text and Word/IDML parser migration. JP native
+  layout remains separate.
+
+
+## 2026-09-05: Signal-word legend uses public IR and atomic validation
+
+- The actual RST/Web signal-table consumer now assembles and replays scoped
+  `web-symbol-signals` IR. Source selection and localized-label extraction move
+  to one source/contract adapter; direct caller DOM decoding exits.
+- The owned block retains headers, labels, meanings, rich table markup and image
+  references. Hashes and semantic/markup/asset agreement are verified before
+  replay; all labels and unspanned two-cell rows are validated before mutation.
+- Reproduced the old final-label failure changing earlier rows, then covered the
+  unchanged-caller behavior. Tests include real three-locale assembly, source-free
+  serialization, rich links/lists/images, corrupt/rehashed payloads, duplicate
+  candidates, surrounding tables and unchanged target admission.
+- Three captured EN/FR/ES outputs remain byte-identical. A parity check caught
+  repeated HTML parsing collapsing adjacent newlines; explicit table whitespace
+  preservation fixes it and is covered by a regression assertion.
+- One source module reuses the existing renderer with no raised size threshold,
+  new ComponentSpec registry, config or serialized schema. Remaining source
+  markup/filename admission, symbol-pair tables, other composite consumers,
+  generic figure string protection and whole-manual/neutral-rich-text work remain
+  separate. JP native layout is unchanged.
+
+
+## 2026-09-05: Icon/meaning pair panels consume public IR
+
+- The real Web source/render path now goes through shared source assembly and
+  verified `web-symbol-pairs` IR. The direct matrix implementation
+  exits `web_presentation`; its rendering body moves to a dedicated consumer.
+- Reuse `manual_ir.web_symbols` for source-family ownership and common
+  provenance/envelope checks. Existing signal payloads and all three captured
+  IR envelopes remain unchanged; no parallel source registry/config/schema.
+- Retain four headers, ordered icon/meaning pairs, table markup and all image
+  references. The existing left-six/right-five contract remains. Reject
+  partial/spanned/nested matrices, duplicate candidates, missing/multiple icons
+  and content in unused cells before changing caller DOM.
+- Real EN/FR/ES whole-page outputs match pre-change bytes. Tests cover the
+  previously absent pair IR emission, source-free replay, rich meaning cells,
+  image order/completeness, corrupt/rehashed payloads and atomic application.
+  Existing hotspot size limits are unchanged.
+- Remaining: fixed matrix/source admission and retained-HTML interpretation,
+  other composite consumers, generic figure string protection, whole-manual
+  IR and neutral rich text. JP native layout stays separate.
+
+
+## 2026-09-05: App download columns consume public IR
+
+- The actual Web caller now assembles `web-app-download` IR and replays its
+  validated payload; the direct source/render function exits `web_presentation`.
+  Source parsing owns heading/copy/image selection and config/CSS provenance;
+  the consumer needs neither the source file nor config at replay.
+- Preserve two ordered rich-copy columns, original semantic image attributes,
+  store/QR artwork bindings and all copy image references. Reject ambiguous or
+  incomplete inputs and inconsistent payloads before caller mutation.
+- The real EN/FR/ES RST emission test failed before migration and passes after.
+  Whole-page HTML matches pre-change bytes with identical composite bindings;
+  tests cover serialized replay, rich content, asset order and atomic failures.
+- No new registry, config, schema or hotspot allowance. Remaining: paragraph
+  splitting/retained HTML, App inline controls and reference figures, other
+  composite callers, generic figure protection and whole-manual/neutral-rich-text
+  IR. JP native layout stays outside this batch.
+
+
+## 2026-09-05: App add-device inline control consumes public IR
+
+- The actual caller now assembles/replays `web-app-control`; its direct source/
+  render function exits `web_presentation`. Prefix/button-vocabulary matching
+  belongs to the source adapter, not the replay consumer.
+- Retain paragraph markup, localized accessible label and image references.
+  Validate the shared envelope and owned payload before replacing the paragraph;
+  ambiguous labels/paragraphs or artwork inside a consumed label fail atomically.
+- Real EN/FR/ES emission tests first fail on the old path, then pass after
+  migration. Source/config-free replay and byte-identical whole-page output are
+  verified, including adjacent rich content and asset retention.
+- No new config, registry, schema or hotspot allowance. Remaining: source
+  matching/retained HTML, generic inline/figure protection, reference components,
+  other callers and whole-manual/neutral-rich-text IR. JP native layout is separate.
+
+
+## 2026-09-05: Whole-document Web IR checkpoint
+
+The actual Web bundle entry assembles one public `manual-ir/v1` content tree and
+consumes it without reopening source RST/CSV. Image staging was mechanically
+shared with Word; cold-process replay and RTD static-copy regressions protect the
+boundary. JBP-2000B JP builds with 9 PDF-derived illustration groups, a shared Inbox component and a declared
+text-only LCD table. The structured on/off instructions remain authoritative over
+the incorrect reference-PDF labels. 3721 unit tests pass (22 skipped), plus target
+checks and US review Web parity. This completes the bounded Web checkpoint, not
+neutral rich text or all-renderer migration. See [the execution record](dev/ir_document_closeout.md).
+
+- 同一收口 PR 的展示验收修正：包装清单接入既有 `HB-SPECIAL-INBOX`，正文不栅格化；
+  PDF 整图覆盖的七块标注以源文精确匹配退出，开关机标题在原生 PDF 提取中更正。
+  19 张图片与独立 IR 重放通过，完整测试 3721 项（22 skipped）。
+
+## 2026-09-05: Web semantic inheritance and figure coverage audit
+
+- Warranty is no longer coupled to the approved composite/geometry target
+  allowlist. JE-1000F EU EN/FR/ES/DE/IT reuse the same live 3-year/2-year badge
+  component while retaining localized units, labels, links and copy.
+- `web-illustrations/v1` finished panels and `web-composite-manifest/v1`
+  component overrides now feed one `web-figure-coverage/v1` inventory in the
+  generated Web IR. Overview, Operation and Charging slots report
+  `finished-panel`, `approved-composite`, `editable-fallback` or `missing`.
+- Approved rows retain packaged asset identity and SHA-256 evidence; inventory
+  structure and totals are validated again before source-free replay. Existing
+  target/hash/source-fragment gates remain fail-closed, and missing localized
+  artwork stays visible instead of being copied from another target.
+
+## 2026-09-05: JE-1000F EU localized Web figure reuse
+
+- Admitted `JE-1000F / EU` to the existing Overview/Operation/Charging figure
+  contract without copying US geometry. `je1000f-eu-v1` extends the US Overview
+  instance; stable-`id` list merging preserves callouts and Web/IDML geometry
+  while EU overrides target, market artwork and EN/FR/ES/DE/IT locale bindings.
+- Localized document language now wins over page-number filename conventions.
+  Coverage includes locale in composite provenance so intentionally identical
+  bytes in different languages remain unambiguous. EU no longer inherits the
+  US-only Preface entry rule.
+- The PDF intake boundary is explicit: 11 localized full-panel composites per
+  language retain Overview, Operation `On` / `Off` and Charging labels. LCD is
+  the separate hybrid component—market-correct hardware/display artwork plus a
+  live six-row HTML table. Quarantine crops remain unpromoted until operator
+  pixel approval and the normal asset registry/read-back process.
+
+
+## 2026-09-05: Whole-document ManualIR v2 neutral flow substrate
+
+- New whole-document Web packages use `manual-ir/v2` with ordered neutral
+  flow/rich-text blocks. HTML tag names no longer form serialized semantic
+  authority; heading levels, lists, links, table spans/scopes, image source/alt,
+  anchors and accessibility state are explicit fields.
+- Web-only classes, styles and data attributes live under optional presentation
+  hints. Removing every hint still yields structured, renderable HTML. Empty
+  fragments retain one empty text block so page/block identity does not vanish.
+- The reader and Web consumer remain compatible with historical
+  `manual-ir/v1` whole-document trees without upgrading or rehashing them. New
+  neutral image references continue through the ordered asset union and frozen
+  SHA-256 replay gate; existing v1 producers remain byte-compatible.
+- This is cut 1 of the seven-cut convergence plan. Existing ComponentSpecs are
+  embedded in cut 2; Operation/Warranty/LCD, Symbols/Troubleshooting, App/reference
+  figures, presentation overlays and anti-copy acceptance gates remain cuts 3–7.
+- Acceptance: 90 focused and 3756 full-suite tests pass (19 skipped); Ruff,
+  maintainability and 1698 documentation links are green. A real 49-page US
+  bundle produced 353 flow blocks and 57 frozen assets, retained 210 final Web
+  images, matched both v1 compatibility and the pre-change fragments exactly,
+  and replayed with all RST/CSV reads forbidden.
+
+
+## 2026-09-05: Registered ComponentSpecs embedded in whole-document ManualIR
+
+- New whole-document packages write `whole-document-components/v1` with
+  `manual-flow/v2` roots. Callout, Spec, FCC, Inbox and Overview ComponentSpecs
+  retain their original page/section order; optional carrier flow preserves
+  rich markup not yet modeled as semantic slots.
+- Web replay dispatches the five embedded families directly and marks them
+  complete before the remaining presentation pass. Replacing all five source
+  projectors with failing doubles still replays the frozen packages, proving
+  the consumer no longer rediscovers their semantics from reconstructed DOM.
+- Component assets and carrier images share the ordered package asset union and
+  SHA-256 gate. Unknown components, duplicate source references, malformed v1
+  component nodes, nested component carriers and slot/carrier disagreement fail
+  before partial output.
+- Real acceptance covered JE-1000F/US (49 pages, 66 specs), JE-1000F/EU
+  (76 pages, 99 specs) and JBP-2000B/JP (12 pages, 9 specs). All three matched
+  detached cut-1 same-source HTML page by page after normalizing only package
+  root URIs; JBP-JP retained its localized finished Overview illustration.
+- Validation passed 120 focused and 3761 full-suite tests (19 skipped), full
+  Ruff, 62 hotspot maintainability checks, documentation-link integrity and the
+  fixture-backed JE-1000F/US target check.
+- This is cut 2 of seven. Operation/Warranty/LCD, Symbols/Troubleshooting,
+  App/reference figures, presentation overlays and anti-copy/four-renderer
+  acceptance remain independently reversible follow-up PRs.
+
+
+## 2026-09-05: Operation, Warranty, and LCD Mode embedded in ManualIR
+
+- Registered `HB-SPECIAL-OPERATION`, `HB-TABLE-LCD-MODE`,
+  `HB-WARRANTY-LEAD`, `HB-WARRANTY-SECTION`, and `HB-WARRANTY-YEARS` with
+  renderer-neutral slots plus explicit Web, LaTeX, IDML, and Word projections.
+- Whole-document assembly claims the five Operation panels, hybrid LCD Mode,
+  Warranty lead, five section cards, and 3/2-year card in document order. Cold
+  Web replay dispatches these embedded specs without reopening RST/CSV or
+  rerunning the retired Warranty/LCD source projectors.
+- Operation keeps the approved target-specific composite transform as a bounded
+  cut-3 compatibility adapter, preserving all five existing
+  `source_fragment_sha256` values. LCD Mode remains market artwork plus six
+  editable action rows; it is not rasterized into a table screenshot.
+- JE-1000F/US produces five Operation figures, one LCD Mode composition and
+  `3/2 YEARS`. The detached `origin/review/JE-1000F-EU@7d764e22` bundle produces
+  the same structures with `3/2 JAHRE` and `3/2 ANNI` for DE/IT.
+- The shared style-contract change required a mechanical approved-plan pin
+  refresh. `reference_layout_rebind.py` changed only
+  `identity.style.style_contract_sha256`; it reported zero page-binding drift,
+  no content reapproval, and an unchanged 58-page composition map.
+- Validation passed 127 focused and 3767 full-suite tests (19 skipped), full
+  Ruff, 62 hotspot guardrails, 1708 documentation links, reference-pin checks,
+  and the isolated fixture-backed JE-1000F/US target check. This is cut 3 of
+  seven; LCD Icons/Troubleshooting/Symbols remain cut 4.
+
+
+## 2026-09-05: LCD, Troubleshooting, and Symbols embedded in ManualIR
+
+- Registered `HB-TABLE-LCD-ICON`, `HB-TABLE-TROUBLESHOOTING`,
+  `HB-TABLE-SYMBOL-SIGNAL`, and `HB-TABLE-SYMBOL-ICON` with renderer-neutral
+  rows and explicit Web, LaTeX, IDML, and Word projections.
+- Extended asset-role declarations with opt-in `multiple: true`. LCD and symbol
+  icons reuse one ordered `icons` role, and row-level `asset_index` values bind
+  each semantic row to its packaged, SHA-256-checked asset. Roles remain unique
+  by default and mismatched binding counts fail closed.
+- Whole-document assembly consumes manifest-declared LCD/Troubleshooting slots
+  without filename guessing, while both Symbols tables retain their governed
+  source-pattern and structural checks. Cold Web replay dispatches native HTML
+  tables directly and does not invoke the old LCD/Troubleshooting/Symbols DOM
+  projectors.
+- The shared symbol-icon parser no longer freezes JE-1000F's geometry: US keeps
+  6+5 panels and JE-3000C/KR keeps 5+2 panels under the same two-panel contract.
+  LCD keeps 26 editable rows and Troubleshooting keeps 11 editable data rows in
+  both representative targets; no table was rasterized.
+- This is cut 4 of seven. App/reference figures, presentation overlays, and the
+  final anti-copy/four-renderer acceptance remain cuts 5–7.
+
+
+## 2026-09-05: App and Reference Figures embedded in ManualIR
+
+- Registered `HB-SPECIAL-APP` and `HB-SPECIAL-REFERENCE-FIGURE`, bringing the
+  whole-document registry to 16 semantic component types. App download,
+  inline-control, and add-device variants retain localized rich copy,
+  accessibility labels, and role-bound shared artwork.
+- Reference Figure instances retain a complete carrier-backed semantic
+  fallback. Approved composites additionally bind replace key, exact/shared
+  locale policy, packaged asset key, content SHA-256, and source-fragment
+  SHA-256; mismatches fail before Web output and another locale is never
+  borrowed silently.
+- Frozen Web replay dispatches both families from ComponentSpec and no longer
+  scans reconstructed page DOM. JE-1000F/US EN/FR/ES produced 9 App and 15
+  Reference Figure instances with 6 approved composites; JE-1000F/EU DE/IT
+  retained localized semantic composition, while JE-3000C/KR retained neutral
+  flow and received no JE-1000F-specific instances.
+- Validation passed 107 focused and 3780 full-suite tests (19 skipped), full
+  Ruff, 62 hotspot guardrails, 1713 documentation links, reference-layout pins,
+  and the fixture-backed US check. Five representative packages cold-replayed
+  without RST/CSV reads; desktop and 390 px review found zero component
+  overflow and zero broken images after loading all 210 US images.
+- Operator-required follow-up 5B remains open: JE-1000F/EU DE/IT Overview,
+  Operation, and Charging slots must be replaced by locale-matched full panels
+  from the supplied EU/UK PDF. For those slots, `editable-fallback` is debt and
+  final acceptance permits only `finished-panel` or `approved-composite`.
+
+
+## 2026-09-05: JE-1000F/EU localized finished-panel gate (cut 5B)
+
+- Replayed the operator-supplied 92-page EU/UK V2.0 PDF from a pinned
+  `0b4424…11cfe` source digest and committed 55 locale-matched full-panel crops:
+  two Overview, five Operation, and four Charging figures for each of
+  EN/FR/ES/DE/IT. The panels retain the source PDF's localized text and leader
+  lines; text-free artwork plus HTML labels is recorded as historical debt and
+  is not an accepted final carrier for these slots.
+- Added one generic contract-driven required-slot gate. JE-1000F/EU declares
+  its five locales and 11 slots in `web_manual.json`; missing, duplicate, or
+  `editable-fallback` rows fail both IR assembly and source-free replay. No
+  model-specific Python branch or copied CSS was added.
+- The versioned recipe, local source registry, Web asset registry, composite
+  manifest, and committed fixture hashes agree. A fresh PDF replay produced
+  239 artifacts (92 archive pages, 92 previews, 55 exports) and all 55 exports
+  matched their approved SHA-256 pins. No live Base/F6 write was performed.
+- Real review-asis Web acceptance produced 76 ordered fragments and 60 figure
+  slots: 55 `approved-composite` plus five intentionally editable LCD Mode
+  fallbacks. Cold replay succeeded with every RST/CSV read forbidden; Italian
+  contributed 11/11 approved panels. The RTD/Sphinx build passed with warnings
+  treated as errors, and DE/IT desktop plus 390 px inspection showed zero
+  visible composite fallback and no horizontal overflow.
+- Validation passed 41 focused and 3785 full-suite tests (22 skipped), full
+  Ruff, 62 hotspot guardrails, 1714 documentation links, and the registry audit
+  (`162` rows, zero errors; 24 pre-existing source-only/debt warnings).
+
+
+## 2026-09-05: Target-layered Web presentation contracts (cut 6)
+
+- Split the monolithic Web presentation file into one shared semantic base,
+  two skeleton profiles, and six small target overlays. Mappings deep-merge,
+  stable-ID lists permit item-level override, ordinary lists replace as a
+  whole, and malformed/ambiguous/escaping layers fail closed.
+- Whole-document assembly now resolves the contract for the actual
+  `(model, region)` once and freezes only that result plus its base/profile/
+  overlay IDs into IR. Source-free replay consumes the frozen contract and
+  packaged assets; it does not reopen the overlay directory. Product Overview
+  always resolves its geometry by the current target instead of a global
+  `instance_id`.
+- Real cold replay with `.rst/.csv` reads forbidden passed for JE-1000F/US
+  (17 pages), JE-1000F/EU (76), JE-3000C/KR (16), and JBP-2000B/JP (12). On the
+  same US/EU IR, the pre-split monolith and resolved target contract produced
+  byte-identical fragments across 17/17 and 76/76 pages.
+- EU retained 55 localized `approved-composite` panels plus five intentionally
+  editable LCD Mode components; Italian remained 11/11 full panels. RTD-
+  equivalent Sphinx passed with warnings as errors, and IT AC Output at 1280
+  px and 390 px loaded the 1264 x 896 localized panel, hid the HTML fallback,
+  and had zero horizontal overflow.
+- The broader asset debt is now recorded instead of being mistaken for a
+  presentation-layer success: US EN still has three Charging
+  `editable-fallback` slots, and KR has nine missing Overview/Operation/Charging
+  panels. Cut 7 must ratchet these counts and reject new figure-capable targets
+  that omit an all-full-panel coverage policy. Only locale-matched
+  `finished-panel` / `approved-composite` artwork can close those rows; HTML
+  text/leader redraw cannot. LCD Mode remains outside this debt.
+- Validation passed 95 layering/IR/Overview tests, 232 Web + ComponentSpec
+  tests, and 3798 full-suite tests (22 skipped), plus full Ruff, mypy
+  `tools/utils`, 62 hotspot guardrails, 1716 documentation links, and the
+  fixture-backed JE-1000F/US check.
+
+
+## 2026-09-05: ManualIR final admission and replay gates (cut 7)
+
+- Added a finished-figure admission contract for every covered target. Locale
+  and required-slot lists must be complete, and accepted statuses are fixed to
+  `finished-panel` / `approved-composite`; textless art plus HTML/SVG labels or
+  leader lines remains `editable-fallback` debt in every language, including
+  EU Italian.
+- Moved the exact nine US Charging fallbacks and nine KR missing panels into a
+  versioned non-increasing debt baseline. Unregistered or worsening debt fails,
+  while a repaired panel makes its old baseline row stale and therefore also
+  fails until that row is deleted. EU has no exception and remains 55/55
+  localized approved composites, with Italian at 11/11.
+- New source-normalized `whole-document-components/v1` packages freeze the
+  ComponentSpec registry, manual theme, target-resolved Overview instance and
+  SHA-256 evidence. Replay dispatches embedded components and assets directly
+  and no longer calls the legacy DOM projector; historical v1/cut-1 packages
+  keep an explicit compatibility route.
+- Added a maintainability guardrail that rejects registered model literals in
+  shared Web/ManualIR/ComponentSpec Python and Web CSS. Target differences stay
+  in the layered presentation overlay, component instance, assets or data.
+- Four representative packages cold-replayed with RST, CSV, renderer-contract
+  reads and the old DOM projector forbidden. Their 401 embedded ComponentSpecs
+  produced 1604 validated Web/LaTeX/IDML/Word adapter bindings. US 49-page and
+  EU 76-page final bundles remained byte-identical to the pre-cut output after
+  normalizing only the output-root file URI; EU Sphinx passed with warnings as
+  errors and Italian kept 11/11 visible full panels with no mobile overflow.
+- Final validation passed 72 focused regression tests and the 3812-test full
+  suite (22 skipped), full Ruff, mypy `tools/utils`, all 62 maintainability
+  hotspots, 1718 documentation links, `git diff --check`, and the staging-safe
+  fixture-backed JE-1000F/US check. The compatibility suite caught and fixed
+  absent `metadata` in historical v1 files; the size ratchet also moved Overview
+  snapshot primitives into a focused helper instead of raising its threshold.
+
+
+## 2026-09-06: Review bundle page-language scope projection
+
+- Closed the final EU five-language rebuild gap exposed by the strict Overview
+  ComponentSpec parser. The historical JE-1000F/EU review index still named
+  fifteen standalone UK pages even though `data/model_languages.csv` now
+  declares EN/FR/ES/DE/IT for that target.
+- Review overlays now project standalone pages by their explicit
+  `\HBApplyLang{...}` declaration before asset finalization. Out-of-scope
+  includes leave the generated index without modifying any review page bytes;
+  unknown or genuinely multi-language pages remain fail-safe and the existing
+  inline block trimmer handles the shared preface.
+- The real merged `review-asis` Web entrypoint rebuilt 76 pages with zero UK
+  pages. Figure coverage remained 55 `approved-composite` panels plus five
+  native HTML LCD Mode compositions; Italian remained 11/11 localized full
+  panels across Overview, Operation, and Charging.

@@ -23,9 +23,11 @@ from .latex_page_plan import (
     write_page_plan,
 )
 from .data_components import parse_data_component
+from .composition_plan import is_explicit_assembly_plan
 from .lcd_reference_profile import apply_lcd_reference_profile
 from .reference_layout_plan import load_approved_reference_plan
 from .source_copy import source_text
+from .target_assembly_plan import load_target_assembly_plan
 
 
 @dataclass(frozen=True)
@@ -48,6 +50,7 @@ class SpecPageData:
 class LcdPageData:
     title: str
     rows: tuple[dict[str, str], ...]
+    hero_reference: str = ""
 
 
 @dataclass(frozen=True)
@@ -55,14 +58,20 @@ class SymbolPageData:
     title: str
     signal_headers: tuple[str, str]
     icon_headers: tuple[str, str]
-    signals: tuple[tuple[str, str], ...]
-    icons: tuple[dict[str, str], ...]
+    signals: tuple[dict[str, str], ...]
+    icons: tuple[dict[str, Any], ...]
 
 
 @dataclass(frozen=True)
 class TroublePageData:
     title: str
     rows: tuple[tuple[str, str], ...]
+    # The source declares both of these and the projection used to discard
+    # them: the intro was never carried, and the header row was dropped by the
+    # `payload[1:]` slice below. Optional so the compositions that do not place
+    # them keep their current output byte-for-byte.
+    intro: str = ""
+    header: tuple[str, str] | None = None
 
 
 def _page_blocks(page: ManualPage) -> tuple[tuple[str, str], ...]:
@@ -102,9 +111,16 @@ def project_pages(ir: ManualIR, bundle_root: Path) -> tuple[ProjectedPage, ...]:
 
 
 def _matching_page(ir: ManualIR, prefix: str, lang: str) -> ManualPage | None:
+    aliases = {
+        "spec_": ("spec_", "specifications_"),
+        "lcd_icons_": ("lcd_icons_", "lcd_display_"),
+        "symbols_": ("symbols_", "symbol_meaning_"),
+    }
+    prefixes = aliases.get(prefix, (prefix,))
     candidates = [
         page for page in ir.pages
-        if Path(page.source_path).name.startswith(prefix) and page.language == lang
+        if Path(page.source_path).name.startswith(prefixes)
+        and page.language == lang
     ]
     return candidates[0] if candidates else None
 
@@ -119,6 +135,14 @@ def _data_payloads(page: ManualPage | None) -> list[dict[str, Any]]:
 def _special_payload(ir: ManualIR, kind: str) -> dict[str, Any] | None:
     return next((payload for page in ir.pages for payload in _data_payloads(page)
                  if payload.get("kind") == kind), None)
+
+
+def toc_with_front_matter(ir: ManualIR, bundle_root: Path, plan: dict | None):
+    """Project explicit TOC front matter once for both placement and folios."""
+    source = toc_page_data(ir, bundle_root)
+    if source and source.get("auto_entries") and "front_matter_roles" in source:
+        plan = {**(plan or {}), "front_matter_roles": source["front_matter_roles"]}
+    return source, plan
 
 
 def toc_page_data(ir: ManualIR, bundle_root: Path | None = None) -> dict[str, Any] | None:
@@ -182,10 +206,12 @@ def spec_page_data(ir: ManualIR, lang: str) -> SpecPageData | None:
 def _circled(index: int) -> str:
     if index <= 20:
         return chr(0x245F + index)
-    return chr(0x323C + index)
+    return f"({index})"
 
 
 def _asset_path(root: Path, data_root: Path, category: str, reference: str) -> str:
+    if not reference.strip():
+        return ""
     path = Path(reference)
     if path.is_absolute() and path.exists():
         return path.as_posix()
@@ -257,9 +283,15 @@ def lcd_page_data(
             )
         except ValueError:
             row["no"] = display_number or _circled(index)
+    hero_reference = next((
+        str(block.payload)
+        for block in (page.blocks if page is not None else ())
+        if block.kind == "image" and isinstance(block.payload, str)
+    ), "")
     return LcdPageData(
         _heading(page, owner="LCD page title"),
         tuple(rows),
+        hero_reference,
     )
 
 
@@ -273,7 +305,12 @@ def symbol_page_data(
     icon_payload = next((payload for payload in payloads
                          if payload.get("kind") == "symbol_icons"), None)
     signals = tuple(
-        (str(row.get("label") or ""), str(row.get("text") or ""))
+        {
+            "signal_key": str(row.get("signal_key") or "").casefold(),
+            "figure": str(row.get("figure") or ""),
+            "label": str(row.get("label") or ""),
+            "text": str(row.get("text") or ""),
+        }
         for row in (signal_payload or {}).get("rows", [])
         if row.get("text")
     )
@@ -281,6 +318,8 @@ def symbol_page_data(
         {
             "figure": _asset_path(root, data_root, "symbols", str(row.get("figure") or "")),
             "text": str(row.get("text") or ""),
+            "column": str(row.get("column") or ""),
+            "continuation": bool(row.get("continuation", False)),
         }
         for row in (icon_payload or {}).get("rows", [])
         if row.get("text")
@@ -316,7 +355,49 @@ def trouble_page_data(ir: ManualIR, lang: str) -> TroublePageData | None:
     return TroublePageData(
         _heading(page, owner="Troubleshooting page title"),
         rows,
+        intro=trouble_intro(ir, lang),
+        header=trouble_header(ir, lang),
     )
+
+
+def trouble_header(ir: ManualIR, lang: str) -> tuple[str, str] | None:
+    """The table's own first row, which `trouble_rows` slices off as a header.
+
+    Before #979 the rendered header came from a per-language copy dictionary,
+    and deleting that dictionary left nothing rendering a header at all even
+    though every source that has one still carries it.
+    """
+    page = _matching_page(ir, "troubleshooting_", lang)
+    if page is None:
+        return None
+    for block in page.blocks:
+        if block.kind != "table" or not isinstance(block.payload, list):
+            continue
+        first = block.payload[0] if block.payload else None
+        if isinstance(first, list) and len(first) >= 2:
+            return (str(first[0]), str(first[1]))
+        return None
+    return None
+
+
+def trouble_intro(ir: ManualIR, lang: str) -> str:
+    """Prose between the heading and the table.
+
+    Every troubleshooting template authors one, and it tells the reader what to
+    do when the listed measure does not resolve the fault, so losing it drops
+    instruction rather than decoration.
+    """
+    page = _matching_page(ir, "troubleshooting_", lang)
+    if page is None:
+        return ""
+    for block in page.blocks:
+        if block.kind == "table":
+            break
+        if block.kind == "body" and isinstance(block.payload, str):
+            text = block.payload.strip()
+            if text:
+                return text
+    return ""
 
 
 def trouble_rows(ir: ManualIR, lang: str) -> tuple[tuple[str, str], ...]:
@@ -368,7 +449,9 @@ def same_source_issues(ir: ManualIR) -> list[str]:
 
 def build_same_source_ir(
     *, root: Path, bundle_root: Path, model: str, region: str, lang: str,
-    data_root: Path,
+    data_root: Path, category: str | None = None,
+    layout_params_csv: Path | None = None,
+    layout_param_overlays: tuple[Path, ...] = (),
 ) -> ManualIR:
     """Build and enforce the target-independent same-source contract.
 
@@ -377,7 +460,9 @@ def build_same_source_ir(
     """
     ir = build_manual_ir(
         root=root, bundle_root=bundle_root, model=model, region=region,
-        lang=lang, source="prepared-bundle", data_root=data_root)
+        lang=lang, source="prepared-bundle", category=category, data_root=data_root,
+        layout_params_csv=layout_params_csv,
+        layout_param_overlays=layout_param_overlays)
     issues = validate_manual_ir(ir)
     issues.extend(same_source_issues(ir))
     issues.extend(asset_resolution_issues(ir, root=root, data_root=data_root))
@@ -391,7 +476,10 @@ def build_reference_page_plan(
     *,
     root: Path,
     bundle_root: Path,
+    target_assembly_plan: Path | None = None,
 ) -> dict[str, Any] | None:
+    """Resolve approved, configured-candidate, then measured page assembly."""
+
     approved = load_approved_reference_plan(root=root, ir=ir)
     if approved is not None:
         issues = validate_page_plan(approved)
@@ -400,6 +488,8 @@ def build_reference_page_plan(
                 "approved reference page plan validation failed: " + "; ".join(issues)
             )
         return approved
+    if target_assembly_plan is not None:
+        return load_target_assembly_plan(target_assembly_plan, ir)
     reference_pdf = find_reference_pdf(bundle_root)
     if reference_pdf is None:
         return None
@@ -411,8 +501,8 @@ def build_reference_page_plan(
 
 
 def emit_reference_page_plan(plan: dict[str, Any] | None, *, out_dir: Path) -> Path | None:
-    """Write a validated LaTeX reference plan beside production IDML."""
-    if plan is None:
+    """Write an actual reference plan; front-matter metadata alone is not one."""
+    if plan is None or not plan.get("pages"):
         return None
     path = write_page_plan(plan, out_dir / PathSegments.LATEX_PAGE_PLAN_JSON)
     approved_contract = plan.get("approved_contract")
@@ -439,7 +529,7 @@ def reference_page_count_issues(
     plan: dict[str, Any] | None,
     emitted_page_count: int,
 ) -> list[str]:
-    """Reject a package whose physical pages drift from its APPROVED plan.
+    """Reject physical-page drift from an explicit assembly contract.
 
     Exact physical-page parity is only meaningful under an approved reference
     plan, where a human mapped the IDML page-by-page to the frozen PDF. The
@@ -452,7 +542,7 @@ def reference_page_count_issues(
     """
     if plan is None:
         return []
-    if plan.get("plan_source") != "approved-reference":
+    if not is_explicit_assembly_plan(plan):
         return []
     expected = int(plan.get("physical_page_count") or 0)
     if emitted_page_count == expected:
@@ -471,7 +561,7 @@ def report_reference_page_count_issues(
     issues = reference_page_count_issues(plan, emitted_page_count)
     for issue in issues:
         print(f"[export-idml] PAGE PLAN FAIL: {issue}")
-    if not issues and plan is not None and plan.get("plan_source") != "approved-reference":
+    if not issues and plan is not None and not is_explicit_assembly_plan(plan):
         expected = int(plan.get("physical_page_count") or 0)
         if expected and emitted_page_count != expected:
             print(

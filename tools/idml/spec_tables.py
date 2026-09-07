@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 from collections.abc import Callable
+import xml.etree.ElementTree as ET
 
 from tools.component_specs.spec_table import (
     idml_spec_table_rows,
@@ -9,7 +10,151 @@ from tools.component_specs.spec_table import (
 )
 
 from .params import param_pt
+from .line_metrics import estimated_line_count
 from .style_names import table_style_ref
+
+
+def measured_spec_table_height(
+    table_xml: str,
+    params: dict[str, tuple[str, str]],
+    *,
+    language: str,
+) -> float:
+    """Size fallback shells from the emitted cell geometry, not a master slot.
+
+    Reference rows can auto-grow in InDesign; their declared minimum heights
+    are not the enclosing frame's content budget. Read the actual insets and
+    column widths so this estimate cannot acquire a second geometry contract.
+    Approved reference and compact callers retain their fixed shells.
+    """
+    table = ET.fromstring(table_xml)
+    widths = [float(col.get("SingleColumnWidth")) for col in table.findall("Column")]
+    heights = [float(row.get("MinimumHeight", "0")) for row in table.findall("Row")]
+    for cell in table.findall("Cell"):
+        column, row = (int(value) for value in cell.get("Name").split(":"))
+        role = "label" if column == 0 else "value"
+        size_key = f"type_spec_{role}_font_size"
+        leading_key = f"type_spec_{role}_font_leading"
+        size = param_pt(params, f"lang_{language}_{size_key}",
+                        param_pt(params, size_key, 6.0))
+        leading = param_pt(params, f"lang_{language}_{leading_key}",
+                           param_pt(params, leading_key, 6.6))
+        measure = widths[column] - sum(
+            float(cell.get(key, "0")) for key in ("LeftInset", "RightInset")
+        )
+        content_height = 0.0
+        for paragraph in cell.findall("ParagraphStyleRange"):
+            text = "".join(
+                "\n" if node.tag == "Br" else (node.text or "")
+                for node in paragraph.iter() if node.tag in {"Content", "Br"}
+            )
+            content_height += max(size, leading) * estimated_line_count(
+                text, measure, point_size=size,
+            )
+        insets = sum(float(cell.get(key, "0")) for key in ("TopInset", "BottomInset"))
+        heights[row] = max(heights[row], content_height + insets)
+    # Reserve the enclosing 0.75 pt stroke and native composition rounding.
+    return sum(heights) + 1.0
+
+
+def spec_table_row_heights(
+    rows: list[tuple[str, str]],
+    params: dict[str, tuple[str, str]],
+    *,
+    density: str,
+    language: str | None = None,
+) -> list[float]:
+    """Return component-owned row heights for one specification table."""
+
+    if density not in {"reference", "compact"}:
+        raise ValueError(f"unsupported specification-table density: {density}")
+    compact = density == "compact"
+    language_key = (
+        (language or "").strip().casefold().replace("_", "-").split("-", 1)[0]
+    )
+    row_height_key = (
+        "idml_compact_spec_table_row_height" if compact
+        else "idml_spec_table_row_height"
+    )
+    multiline_height_key = (
+        "idml_compact_spec_table_multiline_min_height" if compact
+        else "comp_spec_table_multiline_min_height"
+    )
+    row_height = param_pt(
+        params,
+        row_height_key,
+        10.3,
+    )
+    if language_key:
+        row_height = param_pt(
+            params,
+            f"lang_{language_key}_{row_height_key}",
+            row_height,
+        )
+    multiline_height = param_pt(
+        params,
+        multiline_height_key,
+        13.0 if compact else 15.0,
+    )
+    if language_key:
+        multiline_height = param_pt(
+            params,
+            f"lang_{language_key}_{multiline_height_key}",
+            multiline_height,
+        )
+    cell_inset = (
+        param_pt(params, "idml_compact_spec_table_cell_inset", 2.0)
+        if compact else 0.0
+    )
+    value_leading = param_pt(params, "type_spec_value_font_leading", 6.6)
+    if language_key:
+        value_leading = param_pt(
+            params,
+            f"lang_{language_key}_type_spec_value_font_leading",
+            value_leading,
+        )
+    heights: list[float] = []
+    for label, value in rows:
+        explicit_lines = max(
+            len(str(label).splitlines()) or 1,
+            len(str(value).splitlines()) or 1,
+        )
+        if explicit_lines <= 1:
+            heights.append(row_height)
+            continue
+        if not compact:
+            # Reference tables use AutoGrow=true in the emitted IDML.  Keep
+            # their historical minimum-height contract and let InDesign grow
+            # the row from the story contents instead of baking source line
+            # count into the reference geometry.
+            heights.append(max(row_height, multiline_height))
+            continue
+        # Compact cells use fixed-height rows, so the multiline token is only
+        # a floor.  Explicit three-line source values must also reserve their
+        # actual line boxes plus the component-owned top/bottom insets.
+        heights.append(max(
+            row_height,
+            multiline_height,
+            explicit_lines * value_leading + 2.0 * cell_inset,
+        ))
+    return heights
+
+
+def spec_table_height(
+    rows: list[tuple[str, str]],
+    params: dict[str, tuple[str, str]],
+    *,
+    density: str,
+    language: str | None = None,
+) -> float:
+    """Return the visible shell height owned by the table's rows."""
+
+    return sum(spec_table_row_heights(
+        rows,
+        params,
+        density=density,
+        language=language,
+    ))
 
 
 def spec_table_xml(
@@ -23,10 +168,14 @@ def spec_table_xml(
     m_r: float,
     role: str | None,
     visual_parity: bool,
+    density: str,
     section_index: int | None,
     language: str | None,
     paragraph_xml: Callable[..., str],
 ) -> str:
+    if density not in {"reference", "compact"}:
+        raise ValueError(f"unsupported specification-table density: {density}")
+    compact = density == "compact"
     component = spec_table_component_spec(
         section_title=role or tid,
         rows=rows,
@@ -40,10 +189,15 @@ def spec_table_xml(
         "idml_spec_table_left_ratio",
         params.get("comp_spec_table_left_ratio", ("0.315", "")),
     )
-    left_ratio = float(params.get(
-        f"lang_{language_key}_idml_spec_table_left_ratio",
-        default_left_ratio,
-    )[0])
+    density_left_ratio = params.get(
+        f"lang_{language_key}_idml_{density}_spec_table_left_ratio"
+    )
+    language_left_ratio = params.get(
+        f"lang_{language_key}_idml_spec_table_left_ratio"
+    )
+    left_ratio = float(
+        (density_left_ratio or language_left_ratio or default_left_ratio)[0]
+    )
     body_w = page_w - m_l - m_r - (1.13 if visual_parity else 0.0)
     col1 = body_w * left_ratio + (2.3 if visual_parity else 0.0)
     col2 = body_w - col1
@@ -75,7 +229,13 @@ def spec_table_xml(
     )
     cells = []
     for ri, (label, value) in enumerate(rows):
-        if not visual_parity:
+        if compact:
+            inset = param_pt(
+                params,
+                "idml_compact_spec_table_cell_inset",
+                2.0,
+            )
+        elif not visual_parity:
             inset = 2.0
         elif "\n" in value:
             inset = 6.72 + (0.445 if ri == 0 else -0.445)
@@ -96,7 +256,7 @@ def spec_table_xml(
                 terminal=True,
                 superscript_markers=True,
             )
-            if visual_parity:
+            if visual_parity and not compact:
                 if "\n" in value:
                     baseline = -1.43 if ci == 0 else 0.08
                 elif section_index == 2 and ri == 1 or label.startswith("AC Output in Bypass"):
@@ -150,25 +310,17 @@ def spec_table_xml(
                 + content
                 + '    </Cell>'
             )
-    row_height = param_pt(params, "idml_spec_table_row_height", 10.3)
-    multiline_height = param_pt(
+    row_heights = spec_table_row_heights(
+        rows,
         params,
-        "comp_spec_table_multiline_min_height",
-        15.0,
+        density=density,
+        language=language,
     )
     row_xml = "\n".join(
         f'    <Row Self="{tid}r{ri}" Name="{ri}" '
         f'SingleRowHeight="{height:g}" MinimumHeight="{height:g}" '
-        'AutoGrow="true"/>'
-        for ri, ((label, value), height) in enumerate(
-            (
-                row,
-                max(row_height, multiline_height)
-                if "\n" in row[0] or "\n" in row[1]
-                else row_height,
-            )
-            for row in rows
-        )
+        f'AutoGrow="{str(not compact).lower()}"/>'
+        for ri, height in enumerate(row_heights)
     )
     spacing = ' SpaceBefore="0" SpaceAfter="0"' if visual_parity else ""
     return (

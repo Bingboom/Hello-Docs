@@ -48,6 +48,19 @@ class LayoutToken:
     comment: str
 
 
+@dataclass(frozen=True)
+class ResolvedOverride:
+    """One common value that a layer above it replaced."""
+
+    key: str
+    overlay: str
+    base_value: str
+    base_unit: str
+    value: str
+    unit: str
+    comment: str
+
+
 def load_layout_tokens(csv_path: Path) -> dict[str, LayoutToken]:
     tokens: dict[str, LayoutToken] = {}
     seen_keys: set[str] = set()
@@ -74,6 +87,152 @@ def load_layout_tokens(csv_path: Path) -> dict[str, LayoutToken]:
                 unit=unit,
                 comment=(row.get("comment") or "").strip(),
             )
+    return tokens
+
+
+def _language_row_prefixes() -> tuple[frozenset[str], dict[str, str]]:
+    """Prefixes a build can actually look up, plus alias -> canonical hints.
+
+    Language rows are written ``lang_<code>_<base-key>``, and two lookup paths
+    build that prefix from two different spellings of the same language:
+
+    * ``resolve_layout_tokens`` and the IDML cascade use the canonical registry
+      code, taking the base subtag (``pt-BR`` -> ``pt``) or swapping the hyphen
+      (``pt_br``);
+    * the IDML page path runs the language through
+      :func:`tools.idml.loaders.normalize_lang` first, which deliberately maps
+      canonical ``ja`` onto the historical phase2 suffix ``jp``.
+
+    Both spellings are therefore reachable, and which one a given row needs
+    depends on the site that resolves its language — this gate cannot decide
+    that, so it only rejects a spelling **no** path builds, such as a
+    data-column alias (``ukr``, ``cn``) or a typo. Per-target reachability is
+    covered by ``tests/test_layout_language_row_reachability.py``.
+    """
+
+    try:
+        from tools.idml.loaders import normalize_lang
+        from tools.lang_registry import LANGUAGE_REGISTRY
+    except ImportError:  # pragma: no cover - direct script execution
+        from idml.loaders import normalize_lang  # type: ignore[no-redef]
+        from lang_registry import LANGUAGE_REGISTRY  # type: ignore[no-redef]
+
+    prefixes: set[str] = set()
+    canonical_for: dict[str, str] = {}
+    for spec in LANGUAGE_REGISTRY:
+        code = spec.code.casefold()
+        pipeline = normalize_lang(spec.code).casefold()
+        for spelling in (code, pipeline):
+            prefixes.update(
+                {spelling, spelling.replace("-", "_"), spelling.split("-", 1)[0]}
+            )
+        for alias in spec.aliases:
+            folded = alias.casefold()
+            if folded not in {code, pipeline}:
+                canonical_for[folded] = spec.code
+    return frozenset(prefixes), canonical_for
+
+
+def _reject_unreachable_language_rows(
+    tokens: dict[str, LayoutToken], source: Path,
+) -> None:
+    """Fail closed on a language row no lookup path can reach."""
+
+    prefixes, canonical_for = _language_row_prefixes()
+    for key in tokens:
+        if not key.startswith("lang_"):
+            continue
+        if any(key.startswith(f"lang_{prefix}_") for prefix in prefixes):
+            continue
+        spelling = key[len("lang_"):].split("_", 1)[0]
+        canonical = canonical_for.get(spelling.casefold())
+        hint = (
+            f"{spelling!r} is a data-column alias; use the canonical code "
+            f"{canonical!r} or its pipeline spelling"
+            if canonical
+            else f"{spelling!r} is not a registered language code"
+        )
+        raise ValueError(
+            f"layout token {source} declares an unreachable language row "
+            f"{key!r}: {hint}. No lookup path builds a lang_ prefix from that "
+            "spelling, so the row would be silently ignored and the base value "
+            "used instead."
+        )
+
+
+def resolve_layout_token_layers(
+    base_csv: Path,
+    overlay_csvs: tuple[Path, ...] = (),
+) -> tuple[dict[str, LayoutToken], tuple[ResolvedOverride, ...]]:
+    """Load one baseline, then let target-selected overlays extend or override it.
+
+    This is the layout plane's half of the repo's inheritance-and-override
+    principle, and it deliberately works the way the config plane already does
+    (``tools/config_loader.py``: ``extends:`` names the layer below, then a
+    deep merge in which the later definition wins; ``config.eu-de.yaml`` ->
+    ``eu-single-language-base.yaml`` -> ``us-single-language-base.yaml``).
+
+    So: the baseline is the common style definition every manual inherits, and
+    a bound overlay is a layer above it. Binding the overlay to a target *is*
+    the inheritance declaration -- the config's
+    ``idml_layout_params_overlays_by_target`` is this plane's ``import *`` --
+    and after that a key the layer defines simply wins. There is no per-row
+    ceremony, for the same reason ``zh_CN_conf.py`` does not annotate
+    ``project`` before reassigning it.
+
+    Overriding used to be banned outright, to stop a baseline value being
+    replaced *silently*. But a ban is not the only way to be non-silent, and it
+    cost the plane its override axis: with no legal way to say "this book
+    genuinely differs", the difference moved into key names instead. 46 keys
+    across the two live overlays are renamed shadows of a common key -- a
+    ``compact_`` category infix, or ``lang_ko_`` pressed into service as a
+    target axis while changing panel heights rather than any font metric.
+
+    Non-silence now comes from the returned audit trail plus a ratchet test
+    over it, which is how this repo already guards SKIP counts, warnings, file
+    sizes and language literals: one more than the pinned baseline turns red.
+    That makes a new override visible in review without taxing every
+    legitimate one.
+
+    The unreachable-language gate below is the orthogonal half and still runs
+    on every layer. Allowing a layer to override a key says nothing about
+    whether the key's own spelling is one any lookup path can build: a row
+    written ``lang_ukr_*`` when the pipeline only ever spells ``lang_uk_`` is
+    not an override, it is a row nobody reads. One rule is about precedence,
+    the other about reachability.
+    """
+
+    tokens = load_layout_tokens(base_csv)
+    _reject_unreachable_language_rows(tokens, base_csv)
+    applied: list[ResolvedOverride] = []
+    for overlay_csv in overlay_csvs:
+        overlay = load_layout_tokens(overlay_csv)
+        _reject_unreachable_language_rows(overlay, overlay_csv)
+        for key, token in overlay.items():
+            base = tokens.get(key)
+            if base is not None:
+                applied.append(
+                    ResolvedOverride(
+                        key=key,
+                        overlay=overlay_csv.name,
+                        base_value=base.value,
+                        base_unit=base.unit,
+                        value=token.value,
+                        unit=token.unit,
+                        comment=token.comment,
+                    )
+                )
+            tokens[key] = token
+    return tokens, tuple(applied)
+
+
+def load_layout_token_layers(
+    base_csv: Path,
+    overlay_csvs: tuple[Path, ...] = (),
+) -> dict[str, LayoutToken]:
+    """Resolved tokens only; see `resolve_layout_token_layers` for the rules."""
+
+    tokens, _applied = resolve_layout_token_layers(base_csv, overlay_csvs)
     return tokens
 
 

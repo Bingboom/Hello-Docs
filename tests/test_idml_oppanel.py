@@ -2,10 +2,20 @@
 from __future__ import annotations
 
 import json
+from pathlib import Path
 import unittest
 import warnings
 
-from tools.idml.oppanel import parse_rows, transform
+from tools.idml_rst_extract import extract_page
+from tools.idml.oppanel import (
+    parse_rows,
+    promote_operation_guidance_stack,
+    promote_paired_operation_cards,
+    transform,
+)
+
+
+ROOT = Path(__file__).resolve().parents[1]
 
 
 class ParseRowsTest(unittest.TestCase):
@@ -55,6 +65,225 @@ class ParseRowsTest(unittest.TestCase):
 
 
 class TransformTest(unittest.TestCase):
+    def test_declared_paired_cards_variant_promotes_structure_not_copy(self) -> None:
+        blocks = [
+            (
+                "component",
+                json.dumps({
+                    "kind": "oppanel",
+                    "image": "asset:operation/power_control",
+                    "rows": [["On", "Press once"], ["Off", "Hold"]],
+                }),
+            ),
+            (
+                "component",
+                json.dumps({
+                    "kind": "notice",
+                    "label": "NOTE",
+                    "texts": [
+                        "Localized editable note. Second localized instruction."
+                    ],
+                }),
+            ),
+            ("h2", "Localized heading"),
+            ("image", "asset:operation/display_toggle"),
+            ("body", "Localized editable caption."),
+        ]
+        output = promote_paired_operation_cards(blocks)
+        self.assertEqual(
+            ["component", "h2", "component"],
+            [kind for kind, _ in output],
+        )
+        image_notice = json.loads(output[0][1])
+        self.assertEqual("oppanel", image_notice["kind"])
+        self.assertEqual("image_notice", image_notice["layout"])
+        self.assertEqual("asset:operation/power_control", image_notice["image"])
+        self.assertEqual("NOTE", image_notice["notice"]["label"])
+        self.assertTrue(image_notice["notice"]["list"])
+        self.assertEqual(
+            ["Localized editable note.", "Second localized instruction."],
+            image_notice["notice"]["texts"],
+        )
+        image_caption = json.loads(output[2][1])
+        self.assertEqual("oppanel", image_caption["kind"])
+        self.assertEqual("image_caption", image_caption["layout"])
+        self.assertEqual(
+            "asset:operation/display_toggle",
+            image_caption["image"],
+        )
+        self.assertEqual(
+            "Localized editable caption.",
+            image_caption["caption"],
+        )
+
+    def test_operation_guidance_run_becomes_one_outer_card(self) -> None:
+        """A complete guidance run collapses into a single outer panel spec.
+
+        The target assembly declares the guidance_stack variant, and this
+        promotion is the only thing that turns the four loose source blocks
+        into the one component the shared renderer can stack.  If the window
+        widens or narrows, the operation page silently reverts to loose
+        artwork plus floating notices, which is the layout #966 removed.
+        Both admitted body kinds are exercised so dropping
+        body_operation_inter_section from the guard cannot pass unnoticed.
+        """
+        panel = {
+            "kind": "oppanel",
+            "image": "asset:operation/main_power",
+            "rows": [["On", "Press once"], ["Off", "Hold"]],
+        }
+        first_notice = {
+            "kind": "notice",
+            "label": "NOTE",
+            "texts": ["First localized note."],
+        }
+        second_notice = {
+            "kind": "notice",
+            "label": "WARNING",
+            "texts": ["Second localized note."],
+        }
+        body = "Localized editable guidance paragraph."
+        for body_kind in ("body", "body_operation_inter_section"):
+            with self.subTest(body_kind=body_kind):
+                blocks = [
+                    ("component", json.dumps(panel)),
+                    ("component", json.dumps(first_notice)),
+                    (body_kind, body),
+                    ("component", json.dumps(second_notice)),
+                    ("h2", "NEXT SECTION"),
+                ]
+
+                out = promote_operation_guidance_stack(blocks)
+
+                self.assertEqual(
+                    ["component", "h2"],
+                    [kind for kind, _payload in out],
+                )
+                spec = json.loads(out[0][1])
+                self.assertEqual("oppanel", spec["kind"])
+                self.assertEqual("image_guidance_stack", spec["layout"])
+                self.assertEqual("asset:operation/main_power", spec["image"])
+                self.assertEqual(
+                    ["notice", "body", "notice"],
+                    [item["kind"] for item in spec["guidance"]],
+                )
+                self.assertEqual(body, spec["guidance"][1]["text"])
+                self.assertEqual(first_notice, spec["guidance"][0]["spec"])
+                self.assertEqual(second_notice, spec["guidance"][2]["spec"])
+
+    def test_incomplete_guidance_run_is_untouched(self) -> None:
+        """Pages without the full run keep their blocks verbatim.
+
+        The promotion is applied to every operation page, so a page that
+        never had the oppanel + notice + body + notice sequence must pass
+        straight through rather than absorb whatever four blocks happen to
+        sit next to each other.
+        """
+        blocks = [("body", "Only prose."), ("h2", "NEXT SECTION")]
+        self.assertEqual(blocks, promote_operation_guidance_stack(blocks))
+
+    def test_declared_guidance_stack_fails_closed_without_its_run(self) -> None:
+        """A declared guidance_stack with no matching run must raise.
+
+        prose_flow calls this with require_match=True once the plan declares
+        the variant.  Without the raise, a plan could declare guidance_stack
+        and the book would silently render loose blocks instead — the exact
+        drift the declared variant exists to prevent.
+        """
+        blocks = [("body", "Only prose."), ("h2", "NEXT SECTION")]
+        with self.assertRaisesRegex(
+            ValueError,
+            "operation guidance_stack requires oppanel \\+ notice \\+ body "
+            "\\+ notice",
+        ):
+            promote_operation_guidance_stack(blocks, require_match=True)
+
+    def test_already_laid_out_panel_is_not_rewrapped(self) -> None:
+        """A panel that already carries a layout is left alone.
+
+        Earlier promotions hand this pass panels that already declare their
+        variant.  Dropping the empty-layout guard would wrap a composed
+        image_notice card into a second outer card, double-printing the
+        artwork on the operation page.
+        """
+        blocks = [
+            (
+                "component",
+                json.dumps({
+                    "kind": "oppanel",
+                    "layout": "image_notice",
+                    "image": "asset:operation/main_power",
+                }),
+            ),
+            (
+                "component",
+                json.dumps({
+                    "kind": "notice",
+                    "label": "NOTE",
+                    "texts": ["First localized note."],
+                }),
+            ),
+            ("body", "Localized editable guidance paragraph."),
+            (
+                "component",
+                json.dumps({
+                    "kind": "notice",
+                    "label": "WARNING",
+                    "texts": ["Second localized note."],
+                }),
+            ),
+        ]
+
+        out = promote_operation_guidance_stack(blocks)
+
+        self.assertEqual(
+            ["component", "component", "body", "component"],
+            [kind for kind, _payload in out],
+        )
+        self.assertEqual(blocks, out)
+
+    def test_battery_pack_templates_use_neutral_art_and_editable_panel_copy(self) -> None:
+        expected_rows = {
+            "en": [("On", "Press once"), ("Off", "Press and hold for 3 seconds")],
+            "fr": [
+                ("Marche", "Appuyez une fois"),
+                ("Arrêt", "Appuyez et maintenez pendant 3 secondes"),
+            ],
+            "es": [
+                ("Encendido", "Presione una vez"),
+                ("Apagado", "Mantenga presionado durante 3 segundos"),
+            ],
+        }
+        for language, rows in expected_rows.items():
+            with self.subTest(language=language):
+                source = (
+                    ROOT
+                    / "docs"
+                    / "templates"
+                    / "page_bp"
+                    / language
+                    / "05_operation_guide_placeholder.rst"
+                )
+                extracted = extract_page(source, tags={"latex", "idml"})
+                output = transform(extracted.blocks)
+                panels = [
+                    json.loads(payload)
+                    for kind, payload in output
+                    if kind == "component"
+                    and json.loads(payload).get("kind") == "oppanel"
+                ]
+
+                self.assertEqual(0, extracted.skipped_raw)
+                self.assertEqual(1, len(panels))
+                self.assertEqual(
+                    "asset:operation/jbp2000b/power_control",
+                    panels[0]["image"],
+                )
+                self.assertEqual(rows, [tuple(row) for row in panels[0]["rows"]])
+                serialized = source.read_text(encoding="utf-8")
+                self.assertNotIn("operation/jbp2000b/panels_", serialized)
+                self.assertIn("asset:operation/jbp2000b/lcd_control", serialized)
+
     def test_image_plus_rows_with_prereq_becomes_component(self) -> None:
         blocks = [
             ("h2", "AC OUTPUT ON/OFF"),
@@ -326,6 +555,48 @@ class TransformTest(unittest.TestCase):
                 self.assertEqual(image, spec["image"])
                 self.assertEqual(lead, spec["lead"])
                 self.assertEqual(steps, spec["steps"])
+
+    def test_led_panel_survives_a_registered_energy_semantic(self) -> None:
+        """The US template registers energy_saving copy before the LED section.
+
+        The copy-key clause that admits non-governed KR art stems must not
+        pull the governed LED image into the energy branch: its shape check
+        would fail and return None, silently demoting the approved led_light
+        component to a raw image in every JE-1000F US/FR/ES book.
+        """
+        steps = [
+            "Press the LED Light button once to turn on the light.",
+            "Press it again to switch to SOS Mode.",
+            "Press it a third time to turn off the light.",
+        ]
+        blocks = [
+            ("semantic", json.dumps({
+                "kind": "operation_panel_copy",
+                "layout": "energy_saving",
+                "mode_label": "On/Off",
+            })),
+            ("h2", "ENERGY SAVING MODE"),
+            ("body", "Introductory copy."),
+            ("body", "Disable guidance."),
+            ("body", "Low-power guidance."),
+            ("image", "renderers/latex/assets/op_energy_saving.png"),
+            ("body", "Press and hold both buttons for 3 seconds."),
+            ("h2", "LED LIGHT ON/OFF"),
+            ("body", "The LED light has two modes: Light mode and SOS mode."),
+            ("image", "_assets/operation/op_led_light.png"),
+            ("body", "\n".join(steps)),
+        ]
+
+        out = transform(blocks)
+
+        kinds = [kind for kind, _payload in out]
+        self.assertNotIn("image", kinds)
+        layouts = [
+            json.loads(payload)["layout"]
+            for kind, payload in out
+            if kind == "component"
+        ]
+        self.assertEqual(["energy_saving", "led_light"], layouts)
 
     def test_incomplete_special_operation_sections_are_untouched(self) -> None:
         cases = (

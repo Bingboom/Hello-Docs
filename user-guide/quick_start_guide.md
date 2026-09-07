@@ -1,6 +1,6 @@
 # 快速开始指南
 
-Updated: 2026-07-16
+Updated: 2026-08-17
 
 这份指南只讲当前真实可用的工作方式。
 核心规则只有一句：
@@ -53,6 +53,21 @@ python3 tools/source_intake.py verify --candidates reports/source_intake/<run-id
 
 `apply` 默认只做 dry-run 计划；只有人工确认后显式加 `--write --table-binding TABLE=BASE:TABLE_ID`，才会写线上 Feishu 源表。新增行仍先停在候选/人审层，不自动创建线上记录。
 
+如果输入是产品规格书，而且已经有同产品或同区域 sibling，默认走重复入库快速通道，不再手工组装几十行：
+
+```bash
+python3 tools/source_intake.py spec-extract --input <spec.pdf> --rules <rules.json> --document-key <MODEL_REGION> --region <REGION> --reference <sibling-spec.json> --out reports/source_intake/<run-id>
+python3 tools/source_intake.py stage-plan --spec-candidates reports/source_intake/<run-id>/spec_intake_candidates.json --spec-sibling <sibling-spec.json> --placeholder-sibling <sibling-placeholders.json> --overrides <target-differences.json> --document-key <MODEL_REGION> --localized-lang <lang> --out reports/source_intake/<run-id>
+```
+
+`stage-plan` 只克隆 sibling 结构并应用目标差异，输出评审文件和一个 `create_records` 批量 payload，不写飞书。它会拒绝模糊规则匹配、sibling 结构缺行以及未配对的本地化值。输入就绪后，机械步骤目标是 3–5 分钟；后续暂存表回读、人工确认和正式源表写入仍是硬门禁。
+
+JE-2000E 韩规目标复用共享 KR/ko 家族配置；源表确认入库并同步后，用下面的目标命令验收：
+
+```bash
+python3 build.py check --config configs/config.kr.yaml --model JE-2000E --region KR
+```
+
 不要把 [`data/phase2/`](../data/phase2) 当成主编辑面；它是 gitignored 本地 snapshot，每个镜像仓应从自己的 Feishu Base 生成。唯一入库的例外是 [`page_registry.csv`](../data/phase2/page_registry.csv)（仓库维护的页面结构输入，`sync-data` 每次运行都要读取）。
 只有当 `Document_link.是否强制刷新数据 = 勾选` 时，队列才会在这次构建前执行 `sync-data`；不勾时会直接复用当前本地 snapshot。
 
@@ -64,7 +79,7 @@ python3 tools/source_intake.py verify --candidates reports/source_intake/<run-id
 
 - `Document_Key`（必填，例如 `JE-1000F_EU`）
 - `Document_ID`（可选；Start Review 不需要版本号）
-- `Build_family`（可选；填写时作为 config 路由提示）
+- `Build_family`（语言范围，例如 `us-merged`；不填写产品或骨架类型）
 - `Lang`（可选）
 - 语言显示标签和 `queue-query` 的语言别名统一从 `tools/lang_registry.py` 读取；新增语言时只维护注册表及其 aliases，查询仍兼容既有中英文别名。
 - `Version`（可选）
@@ -639,12 +654,60 @@ Git SHA 和归档 snapshot 重建 DOCX、Markdown、PDF。三者必须逐字节 
    ```
 
 6. 只有以下条件全部满足才交付：58 页及 geometry 通过、overset / missing
-   fonts / bad links 全为 0、PDF/X-4 与 `Japan Color 2001 Coated` /
+   fonts / missing glyphs / bad links 全为 0、PDF/X-4 与 `Japan Color 2001 Coated` /
    `JC200103` 正确、52/52 source identity 匹配、所有实际使用资产获批且
    hash 正确、没有可见正文/封底整页 PDF shortcut、58 页逐页 RGB MAD
    `≤ 0.008` 且 changed-pixel ratio `≤ 0.040`，最终 parity JSON 的
    `accepted=true`。写完文档、生成 IDML 或肉眼看起来接近，都不等于已经
    验收通过。
+
+   `tools/indesign_finalize.py` 会在最终 PDF 上扫描可见 `U+FFFD` 与
+   `.notdef` 字形，因此正文和置入 PDF 中保留的文本都会进入机器闸门；已
+   转曲或纯位图素材仍必须依靠逐页视觉验收。
+
+### 构建尚未晋升的 BP@INTL EU candidate
+
+EU 六语加电包继续复用 `BP@INTL`，不需要复制一套页面 renderer：
+
+```bash
+python3 build.py idml \
+  --config configs/config.bp-eu.yaml \
+  --model JBP-2000B \
+  --region EU \
+  --data-root tests/fixtures/phase2
+```
+
+该目标的 `uk` 是乌克兰语，不代表 UK 市场；配套主机显示名必须是
+`Jackery Explorer 2000 Plus`。命令应得到 54 个物理页、76/76 source binding
+和 `skipped_raw=0`。随后仍须在设计 Mac 上运行 `tools/indesign_finalize.py`，
+要求 overset / missing fonts / missing glyphs / bad links 全为 0，并检查
+PDF/X-4。这里的 assembly 仍是 `candidate` / `production_eligible=false`；
+构建成功不等于已经完成 approved reference-layout 晋升。
+
+### 构建尚未晋升的 BP@JP JP candidate
+
+日规加电包使用独立 `BP@JP` 骨架，但继续复用共享组件和 composition 类型：
+
+```bash
+python3 build.py check \
+  --config configs/config.bp-jp.yaml \
+  --model JBP-2000B \
+  --region JP
+
+python3 build.py idml \
+  --config configs/config.bp-jp.yaml \
+  --model JBP-2000B \
+  --region JP \
+  --no-clean
+```
+
+配套主机显示名必须是 `Jackery ポータブル電源 2000 Plus`。目标应输出
+12 个物理页、13/13 source binding、`skipped_raw=0`；`Connections` 为两页，
+Troubleshooting 与 Specifications 共页。随后在设计 Mac 上运行
+`tools/indesign_finalize.py`，要求保存/重开后 overset、missing fonts、
+missing glyphs、bad links 均为 0，PDF/X-4 通过，并逐页对照冻结参考 PDF。
+该计划仍是 `candidate`，首次出包通过不等于 approved reference-layout
+晋升。
 
 ## 9. 一句话规则
 
@@ -674,11 +737,49 @@ Git SHA 和归档 snapshot 重建 DOCX、Markdown、PDF。三者必须逐字节 
 
 ## 10. 2026-04 更新
 
-- `Review Init` 和 `Document_link` 现在都是先按 `Build_family` 路由，再决定是否按 `Document_Key` 合并；像 `us-merged` 这种启用了 `queue_by_document_key` 的 family 会把空 `Lang` 的同一个 `Document_Key` 合成一次 review / build，而 `Build Draft Package` 行只要填写了 `Lang`，就会按 `Document_Key + 规范化 Lang` 拆成独立构建。
+- `Review Init` 和 `Document_link` 都按“`Document_Key` 精确目标 + `Build_family` 语言范围”解析配置，再决定是否按 `Document_Key` 合并；像 `us-merged` 这样的合并语言范围会把空 `Lang` 的同一 `Document_Key` 合成一次 review / build，而 `Build Draft Package` 行只要填写了 `Lang`，就会按 `Document_Key + 规范化 Lang` 拆成独立构建。
 - `Lang=br` / `pt-br` 会规范化为 `pt-BR`；`configs/config.pt-br.yaml` 现在按单语言入口构建巴西葡语文档，队列表用 `Build_family = pt-br` 加 `Lang=br` 或 `Lang=pt-BR`，不要再额外配一条英文对照稿。
 - US 的 `configs/config.us.yaml` 现在是合并多语言入口，会产出一个合并 `en + fr + es` 的 Word：`docs/_build/<model>/US/word/manual_<model>_us.docx`。
-- 队列表建议直接填写 `Build_family`：`us-merged` / `us-en` / `us-es` / `us-fr` / `pt-br` / `jp-ja` / `cn-zh`；`Lang` 现在只保留为兼容字段，不再是主路由字段。
+- 队列表的 `Build_family` 只填写语言范围：`us-merged` / `us-en` / `us-es` / `us-fr` / `pt-br` / `jp-ja` / `cn-zh`；不要填写 BP/MAIN 等产品骨架值。`Lang` 只保留为兼容或单语言收窄字段。
 - 合并 US 流程请填 `Build_family = us-merged`，`Lang` 可以留空；单语言流程请填对应单语言 family，例如 `us-en`、`us-es`、`us-fr` 或 `pt-br`，`Lang` 只填一个语言值即可。
+- JBP 与普通 US 主机在 Base 中都使用 `Build_family = us-merged`；系统根据 `Document_Key` 的精确目标自动选择 BP 或 MAIN 骨架配置。
 - 这条合并 US 流程不再要求法语、西语分别先创一份独立初稿 review bundle。
 - `Spec_Master` 里由 `Source_lang` 定义 source language；`*_source` 内容必须有，其他语言列在 CSV 驱动内容里可以为空，系统会自动回退到 source language 文本。
 - `Spec_Master` 现在是本地读取快照；人工维护规格参数时先改 `规格参数明细` / `页面占位参数`，再用 `sync-data --table spec_master` 或 `spec-master-rebuild` 生成。
+
+
+### 加电包日语 Web 本地验收
+
+在工程仓库使用现有快照试构建（不写线上 Base、不发布）：
+
+```bash
+AUTO_MANUAL_PRESENTATION_PROFILE=web python build.py md --config configs/config.bp-jp.yaml --model JBP-2000B --region JP --source runtime --data-root tests/fixtures/phase2 --staging-root .tmp/bp-web --no-clean --skip-root-index
+python tools/readthedocs_source.py --build-root .tmp/bp-web/docs/_build --output-dir .tmp/bp-web/docs/_build/rtd
+python -m sphinx -b html .tmp/bp-web/docs/_build/rtd .tmp/bp-web/html
+```
+
+Web 图采用 PDF 带字裁切，正确操作说明以结构源为准。
+IR、源读取退出路径与剩余边界见[完整执行记录](../code-as-doc/dev/ir_document_closeout.md)。
+
+### SolarSaga 100 Air 欧规英语 Web 本地验收
+
+该目标从 Safety Tips 开始，不包含封面、目录或电源产品专属章节。使用提交的
+bootstrap fixture 进行只读本地验收：
+
+```bash
+AUTO_MANUAL_PRESENTATION_PROFILE=web python build.py md \
+  --config configs/config.solar-eu-en.yaml \
+  --model JS-100I --region EU --lang en \
+  --data-root tests/fixtures/js100i_eu_en_phase2 \
+  --staging-root .tmp/js100i-web
+python tools/readthedocs_source.py \
+  --build-root .tmp/js100i-web/docs/_build \
+  --output-dir .tmp/js100i-web/docs/_build/rtd \
+  --title "JS-100I Web Acceptance"
+python -m sphinx -b html \
+  .tmp/js100i-web/docs/_build/rtd .tmp/js100i-web/html
+```
+
+这只是本地 Web 验收。正式发布仍由 `Workflow_action=Web Publish` 冻结审核通过的
+线上快照并创建 Hello-Docs `docs/publish/**` PR；不要把 fixture 当成线上源表，也
+不要直接修改业务镜像工程树。

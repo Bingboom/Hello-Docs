@@ -872,14 +872,22 @@ def stage_component_extension(staged_dir: Path) -> bool:
     …) into the exact markup the stylesheet expects, so a document converted to
     the intermediate form renders deterministically instead of relying on shape
     heuristics. The staged Sphinx process cannot assume the source checkout is on
-    ``sys.path``, so it receives the bounded ComponentSpec package, path helper,
-    and registry contract beside the extension. Absent (an incomplete bundle),
+    ``sys.path``, so it receives the bounded ComponentSpec and ManualIR runtime,
+    language registry, path helper and style contracts beside the extension.
+    The legacy prepared-RST/IDML adapter is not staged. Absent (an incomplete bundle),
     the directives simply are not available and Sphinx reports the unknown
     directive.
     """
     source = _SCRIPT_DIR / f"{_EXTENSION_MODULE}.py"
     component_specs = _SCRIPT_DIR / "component_specs"
+    troubleshooting = _SCRIPT_DIR / "web_troubleshooting_component.py"
+    lcd = _SCRIPT_DIR / "web_lcd_component.py"
+    rst_inline = _SCRIPT_DIR / "rst_inline.py"
     path_utils = _SCRIPT_DIR / "utils" / "path_utils.py"
+    table_runtime = ("web_table_ir.py", "web_spec_component.py", "web_callout_ir.py", "lang_registry.py")
+    ir_runtime = ("__init__.py", "builder.py", "hashing.py", "model.py", "serialize.py",
+                  "source.py", "validate.py", "web_source.py", "web_tables.py", "web_specs.py", "web_callouts.py")
+    ir_sources = tuple(_SCRIPT_DIR / "manual_ir" / name for name in ir_runtime)
     registry = (
         _MAYBE_REPO_ROOT
         / "docs"
@@ -888,9 +896,12 @@ def stage_component_extension(staged_dir: Path) -> bool:
         / "component_registry.yaml"
     )
     theme = registry.with_name("manual_theme.yaml")
+    table_style = registry.with_name("web_manual.css")
     if not all(
         path.is_file()
-        for path in (source, path_utils, registry, theme, _SCRIPT_DIR / "__init__.py")
+        for path in (source, troubleshooting, lcd, rst_inline, path_utils, registry, theme, table_style,
+                     _SCRIPT_DIR / "__init__.py", *ir_sources,
+                     *(_SCRIPT_DIR / name for name in table_runtime))
     ) or not component_specs.is_dir():
         return False
     target_dir = staged_dir / _EXTENSION_DIRNAME
@@ -898,6 +909,15 @@ def stage_component_extension(staged_dir: Path) -> bool:
     shutil.copyfile(source, target_dir / f"{_EXTENSION_MODULE}.py")
     staged_tools = target_dir / "tools"
     staged_tools.mkdir()
+    shutil.copyfile(troubleshooting, staged_tools / troubleshooting.name)
+    shutil.copyfile(lcd, staged_tools / lcd.name)
+    shutil.copyfile(rst_inline, staged_tools / rst_inline.name)
+    for name in table_runtime:
+        shutil.copyfile(_SCRIPT_DIR / name, staged_tools / name)
+    staged_ir = staged_tools / "manual_ir"
+    staged_ir.mkdir()
+    for path in ir_sources:
+        shutil.copyfile(path, staged_ir / path.name)
     shutil.copyfile(_SCRIPT_DIR / "__init__.py", staged_tools / "__init__.py")
     shutil.copytree(
         component_specs,
@@ -912,6 +932,7 @@ def stage_component_extension(staged_dir: Path) -> bool:
     staged_registry.mkdir(parents=True)
     shutil.copyfile(registry, staged_registry / registry.name)
     shutil.copyfile(theme, staged_registry / theme.name)
+    shutil.copyfile(table_style, staged_registry / table_style.name)
     return True
 
 

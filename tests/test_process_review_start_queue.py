@@ -614,9 +614,10 @@ class TestProcessReviewStartQueue(unittest.TestCase):
     def test_resolve_review_start_config_path_should_support_new_resolution_signature(self) -> None:
         expected = Path("config.us.yaml")
 
-        def fake_resolver(*, repo_root, region, lang, build_family=None, config_loader):
+        def fake_resolver(*, repo_root, model=None, region, lang, build_family=None, config_loader):
             self.assertEqual(process_review_start_queue.ROOT, repo_root)
             self.assertIs(process_review_start_queue.load_config, config_loader)
+            self.assertEqual("JE-1000F", model)
             self.assertEqual("US", region)
             self.assertEqual("", lang)
             self.assertEqual("us-merged", build_family)
@@ -624,6 +625,7 @@ class TestProcessReviewStartQueue(unittest.TestCase):
 
         with mock.patch.object(process_review_start_queue, "resolve_config_path_for_task", side_effect=fake_resolver):
             resolved = process_review_start_queue._resolve_review_start_config_path(
+                model="JE-1000F",
                 region="US",
                 lang="",
                 build_family="us-merged",
@@ -631,7 +633,7 @@ class TestProcessReviewStartQueue(unittest.TestCase):
 
         self.assertEqual(expected, resolved)
 
-    def test_resolve_review_start_config_path_should_fallback_to_region_config_when_lang_blank(self) -> None:
+    def test_resolve_review_start_config_path_should_match_single_language_target_when_lang_blank(self) -> None:
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
             (root / "config.zh.yaml").write_text("build: {}\n", encoding="utf-8")
@@ -641,6 +643,7 @@ class TestProcessReviewStartQueue(unittest.TestCase):
                     "build": {
                         "family_id": "cn-zh",
                         "languages": ["zh"],
+                        "default_model": "JE-2000E",
                         "default_region": "CN",
                     }
                 },
@@ -648,6 +651,7 @@ class TestProcessReviewStartQueue(unittest.TestCase):
                     "build": {
                         "family_id": "us-merged",
                         "languages": ["en", "fr", "es"],
+                        "default_model": "JE-1000F",
                         "default_region": "US",
                         "queue_by_document_key": True,
                     }
@@ -657,15 +661,11 @@ class TestProcessReviewStartQueue(unittest.TestCase):
             with mock.patch.object(process_review_start_queue, "ROOT", root), \
                 mock.patch.object(
                     process_review_start_queue,
-                    "resolve_config_path_for_task",
-                    side_effect=RuntimeError("No config family matches region='CN' and lang=''"),
-                ), \
-                mock.patch.object(
-                    process_review_start_queue,
                     "load_config",
                     side_effect=lambda path: cfgs[path.name],
                 ):
                 resolved = process_review_start_queue._resolve_review_start_config_path(
+                    model="JE-2000E",
                     region="CN",
                     lang="",
                     build_family="",
@@ -673,7 +673,7 @@ class TestProcessReviewStartQueue(unittest.TestCase):
 
         self.assertEqual(root / "config.zh.yaml", resolved)
 
-    def test_resolve_review_start_config_path_fallback_should_scan_configs_dir(self) -> None:
+    def test_resolve_review_start_config_path_should_scan_configs_dir(self) -> None:
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
             configs_dir = root / "configs"
@@ -684,6 +684,7 @@ class TestProcessReviewStartQueue(unittest.TestCase):
                     "build": {
                         "family_id": "eu-merged",
                         "languages": ["en", "fr", "es", "de", "it", "uk"],
+                        "default_model": "JE-1000F",
                         "default_region": "EU",
                         "queue_by_document_key": True,
                     }
@@ -693,15 +694,11 @@ class TestProcessReviewStartQueue(unittest.TestCase):
             with mock.patch.object(process_review_start_queue, "ROOT", root), \
                 mock.patch.object(
                     process_review_start_queue,
-                    "resolve_config_path_for_task",
-                    side_effect=RuntimeError("No config family matches region='EU' and lang=''"),
-                ), \
-                mock.patch.object(
-                    process_review_start_queue,
                     "load_config",
                     side_effect=lambda path: cfgs[path.name],
                 ):
                 resolved = process_review_start_queue._resolve_review_start_config_path(
+                    model="JE-1000F",
                     region="EU",
                     lang="",
                     build_family="",
@@ -869,7 +866,7 @@ class TestProcessReviewStartQueue(unittest.TestCase):
             mock.patch.object(
                 process_review_start_queue,
                 "resolve_config_path_for_task",
-                side_effect=lambda *, region, lang, build_family=None: Path(td) / ("config.us.yaml" if build_family == "us-merged" else "config.us-en.yaml"),
+                side_effect=lambda *, model=None, region, lang, build_family=None: Path(td) / ("config.us.yaml" if build_family == "us-merged" else "config.us-en.yaml"),
             ) as mock_resolve_config_path, \
             mock.patch.object(
                 process_review_start_queue,
@@ -1061,7 +1058,7 @@ class TestProcessReviewStartQueue(unittest.TestCase):
             mock.patch.object(
                 process_review_start_queue,
                 "resolve_config_path_for_task",
-                side_effect=lambda *, region, lang, build_family=None: Path(td) / "config.us.yaml",
+                side_effect=lambda *, model=None, region, lang, build_family=None: Path(td) / "config.us.yaml",
             ), \
             mock.patch.object(process_review_start_queue, "load_config", return_value={"build": {"queue_by_document_key": True}}), \
             mock.patch.object(process_review_start_queue, "start_review_for_record") as mock_start_review:
@@ -1577,3 +1574,44 @@ class TestProcessReviewStartQueue(unittest.TestCase):
         mock_sync.assert_not_called()
         mock_start_review.assert_not_called()
         source.upsert_record.assert_not_called()
+
+
+class ReviewStartTargetLanguageRoutingTests(unittest.TestCase):
+    def test_start_review_without_build_family_resolves_bp_target_config(self) -> None:
+        resolved = process_review_start_queue._resolve_review_start_config_path(
+            model="JBP-2000B",
+            region="US",
+            lang="",
+            build_family="",
+        )
+
+        self.assertEqual("config.bp-us.yaml", resolved.name)
+
+    def test_start_review_with_us_language_family_resolves_bp_target_config(self) -> None:
+        resolved = process_review_start_queue._resolve_review_start_config_path(
+            model="JBP-2000B",
+            region="US",
+            lang="",
+            build_family="us-merged",
+        )
+
+        self.assertEqual("config.bp-us.yaml", resolved.name)
+
+    def test_start_review_without_build_family_keeps_host_target_on_host_config(self) -> None:
+        resolved = process_review_start_queue._resolve_review_start_config_path(
+            model="JE-1000F",
+            region="US",
+            lang="",
+            build_family="",
+        )
+
+        self.assertEqual("config.us.yaml", resolved.name)
+
+    def test_start_review_without_build_family_rejects_unknown_us_target(self) -> None:
+        with self.assertRaisesRegex(RuntimeError, "No Start Review config declares target"):
+            process_review_start_queue._resolve_review_start_config_path(
+                model="UNKNOWN-2000",
+                region="US",
+                lang="",
+                build_family="",
+            )

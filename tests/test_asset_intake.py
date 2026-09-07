@@ -41,6 +41,32 @@ def _sha256(path: Path) -> str:
 
 @unittest.skipIf(fitz is None, "PyMuPDF not installed")
 class TestAssetIntake(unittest.TestCase):
+    def test_native_pdf_region_swap_preserves_unaffected_art(self):
+        from types import SimpleNamespace
+        from tools.asset_pipeline.extract import _prepare_asset_source
+        from tools.asset_pipeline.models import TransformSpec
+        with TemporaryDirectory() as tmp:
+            source = Path(tmp) / "swap.pdf"
+            doc = fitz.open()
+            page = doc.new_page(width=120, height=100)
+            page.draw_rect(fitz.Rect(10, 10, 30, 20), color=None, fill=(1, 0, 0))
+            page.draw_rect(fitz.Rect(10, 30, 30, 40), color=None, fill=(0, 0, 1))
+            page.draw_circle(fitz.Point(80, 70), 8, fill=(0, 1, 0))
+            doc.save(source)
+            before = page.get_pixmap()
+            doc.close()
+            asset = SimpleNamespace(page=1, asset_key="test", crop_bbox=(0, 0, 120, 100), transforms=(
+                TransformSpec(op="crop", bbox_pt=(0, 0, 120, 100)),
+                TransformSpec(op="swap_pdf_regions", bbox_pt=(10, 10, 30, 20), other_bbox_pt=(10, 30, 30, 40)),
+            ))
+            result, _ = _prepare_asset_source(fitz=fitz, source_path=source, asset=asset)
+            after = result[0].get_pixmap()
+            self.assertEqual(after.pixel(15, 15), before.pixel(15, 35))
+            self.assertEqual(after.pixel(15, 35), before.pixel(15, 15))
+            self.assertEqual(after.pixel(80, 70), before.pixel(80, 70))
+            self.assertEqual(after.pixel(60, 50), before.pixel(60, 50))
+            result.close()
+
     def _make_source(
         self,
         path: Path,
@@ -295,6 +321,42 @@ class TestAssetIntake(unittest.TestCase):
 
             self.assertTrue(all(count >= 1 for count in counts), counts)
 
+    def test_private_marker_scan_skips_unassigned_xref_numbers(self) -> None:
+        class FakeDocument:
+            def xref_length(self) -> int:
+                return 3
+
+            def xref_object(self, xref: int, *, compressed: bool) -> str:
+                self.assert_compressed(compressed)
+                if xref == 2:
+                    raise RuntimeError("code=7: cannot find object in xref (2 0 R)")
+                return "<< /Type /Catalog /AIPrivateData true >>"
+
+            @staticmethod
+            def assert_compressed(compressed: bool) -> None:
+                if compressed:
+                    raise AssertionError("marker scan must request decoded objects")
+
+            @staticmethod
+            def xref_stream(xref: int) -> bytes | None:
+                return None
+
+            @staticmethod
+            def close() -> None:
+                return None
+
+        class FakeFitz:
+            @staticmethod
+            def open(path: str) -> FakeDocument:
+                return FakeDocument()
+
+        with TemporaryDirectory() as tmp:
+            path = Path(tmp) / "xref-gap.pdf"
+            path.write_bytes(b"%PDF-1.6\n")
+
+            with patch("tools.asset_pipeline.extract._fitz", return_value=FakeFitz()):
+                self.assertEqual((1, 0, 0), scan_pdf_private_markers(path))
+
     def test_bbox_scoped_text_redaction_removes_hidden_text_only_in_region(self) -> None:
         with TemporaryDirectory() as tmp:
             root = Path(tmp)
@@ -340,6 +402,52 @@ class TestAssetIntake(unittest.TestCase):
                 extracted = output[0].get_text()
             self.assertIn("KEEP", extracted)
             self.assertNotIn("REMOVE", extracted)
+
+    def test_retain_vector_drawings_outputs_only_selected_source_groups(self) -> None:
+        with TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            source = root / "source.ai"
+            document = fitz.open()
+            page = document.new_page(width=120, height=100)
+            page.draw_rect(fitz.Rect(10, 10, 50, 50), fill=(0.5, 0.5, 0.5))
+            page.draw_circle(fitz.Point(85, 30), 15, fill=(1, 0, 0))
+            page.draw_line(fitz.Point(60, 20), fitz.Point(100, 20))
+            page.insert_text((15, 80), "VECTOR LABEL", fontsize=9)
+            document.save(
+                str(source), garbage=4, clean=True, deflate=True, no_new_id=True,
+            )
+            document.close()
+            with source.open("ab") as handle:
+                handle.write(b"\n% /AIPrivateData /AIMetaData /PieceInfo\n")
+            payload = self._single_page_payload(sha256_file(source))
+            asset = payload["assets"][0]  # type: ignore[index]
+            asset["transforms"] = [
+                {"op": "crop", "bbox_pt": [5, 5, 115, 60]},
+                {
+                    "op": "retain_vector_drawings",
+                    "drawing_indices": [0, 2],
+                    "fill_rgb_overrides": {"0": [0.8, 0.8, 0.8]},
+                    "stroke_suppressed_indices": [0],
+                },
+            ]
+            asset["outputs"] = [
+                {"format": "pdf", "path": "docs/assets/retained.pdf"},
+                {"format": "png", "path": "docs/assets/retained.png", "scale": 4},
+            ]
+            recipe = self._write_recipe(root / "recipe.json", payload)
+
+            result = run_intake(
+                source_path=source,
+                recipe=recipe,
+                output_root=root / "complete-run",
+            )
+
+            pdf = result.output_root / "artifacts/docs/assets/retained.pdf"
+            with fitz.open(pdf) as output:
+                drawings = output[0].get_drawings()
+                self.assertEqual(2, len(drawings))
+                self.assertEqual("", output[0].get_text())
+                self.assertAlmostEqual(0.8, drawings[0]["fill"][0], places=3)
 
     def test_intake_reads_only_verified_private_source_snapshot(self) -> None:
         with TemporaryDirectory() as tmp:

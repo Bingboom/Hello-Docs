@@ -699,6 +699,28 @@ class TestCsvPageRenderers(unittest.TestCase):
         self.assertNotIn("USER MAINTENANCE INSTRUCTIONS", out)
         self.assertNotIn(r"\section{MEANING OF SYMBOLS}", out)
 
+    def test_render_symbols_page_uses_display_width_for_japanese_title(self) -> None:
+        """The RST underline must span display columns, not characters.
+
+        A CJK title underlined by character count leaves the rule half the
+        width of the text, which Sphinx reports as a malformed section title.
+        The underline is checked against the emitted title rather than an
+        expected string so the assertion cannot drift from the shipped copy —
+        and the final check is what fails if anyone returns to len(title).
+        """
+        out = renderers.render_symbols_page(
+            template=self._symbols_template(),
+            blocks=self._symbols_blocks(),
+            sku_id="JBP-2000B",
+            lang="ja",
+            vars_map=self._localized_copy_vars(model="JBP-2000B", region="JP"),
+        )
+
+        title, underline = out.splitlines()[:2]
+        self.assertEqual("絵表示の説明", title)
+        self.assertEqual("=" * 12, underline)
+        self.assertEqual(2 * len(title), len(underline))
+
     def test_render_symbols_page_emits_latex_notice_and_symbol_macros(self) -> None:
         out = renderers.render_symbols_page(
             template=self._symbols_template(),
@@ -711,7 +733,7 @@ class TestCsvPageRenderers(unittest.TestCase):
         self.assertNotIn(r"\HBNoticeBlock{DANGER}", out)
         self.assertIn(r"\HBSymbolTable{Symbol}{Meaning}{%", out)
         self.assertIn(r"\HBSymbolTwoColumnTables{Symbol}{Meaning}{%", out)
-        self.assertIn(r"\HBSymbolSignalRow{warning_triangle.png}{WARNING}{Data warning.}", out)
+        self.assertIn(r"\HBSymbolSignalRow[warning]{warning_triangle.png}{WARNING}{Data warning.}", out)
         self.assertIn(r"\HBSymbolIconRow{warning_triangle.png}{Warning symbol meaning.}", out)
         self.assertIn(".. only:: not latex", out)
         self.assertIn("hb-warning-lockup", out)
@@ -945,7 +967,7 @@ class TestCsvPageRenderers(unittest.TestCase):
 
         self.assertIn("Advertencia desde datos.", out)
         self.assertIn("Consejo desde datos.", out)
-        self.assertIn(r"\HBSymbolSignalRow{warning_triangle.png}{ADVERTENCIA}{Advertencia desde datos.}", out)
+        self.assertIn(r"\HBSymbolSignalRow[warning]{warning_triangle.png}{ADVERTENCIA}{Advertencia desde datos.}", out)
         self.assertIn("Significado del símbolo de advertencia.", out)
         self.assertNotIn("Prácticas peligrosas que pueden resultar en lesiones graves", out)
 
@@ -964,7 +986,7 @@ class TestCsvPageRenderers(unittest.TestCase):
             vars_map=self._localized_copy_vars(),
         )
 
-        self.assertIn(r"\HBSymbolSignalRow{warning_triangle.png}{WARNING}{Data warning.}", out)
+        self.assertIn(r"\HBSymbolSignalRow[warning]{warning_triangle.png}{WARNING}{Data warning.}", out)
         self.assertIn("<span>CAUTION</span>", out)
         self.assertNotIn("ROW_WARNING", out)
         self.assertNotIn("ROW_TEXT_WARNING", out)
@@ -1787,6 +1809,46 @@ class TestCsvPageRenderers(unittest.TestCase):
         self.assertIn("       | 2. Check the open-circuit voltage (V\\ :sub:`oc`) of the connected solar panels.", out)
         self.assertNotIn("EU-only row.", out)
         self.assertNotIn("Old row.", out)
+
+    def test_render_troubleshooting_page_prefers_model_specific_rows_over_all(self) -> None:
+        blocks = [
+            {
+                "No.": "1",
+                "Model": "ALL",
+                "Region": "US",
+                "Is_latest": "TRUE",
+                "error_code": "GENERIC",
+                "corrective_measures_en": "Generic measure.",
+            },
+            {
+                "No.": "2",
+                "Model": "JBP-2000B",
+                "Region": "US",
+                "Is_latest": "TRUE",
+                "error_code": "SPECIFIC",
+                "corrective_measures_en": "Specific measure.",
+            },
+        ]
+
+        specific = renderers.render_troubleshooting_page(
+            template=self._troubleshooting_template(),
+            blocks=blocks,
+            sku_id="",
+            lang="en",
+            vars_map={"model": "JBP-2000B", "region": "US"},
+        )
+        fallback = renderers.render_troubleshooting_page(
+            template=self._troubleshooting_template(),
+            blocks=blocks,
+            sku_id="",
+            lang="en",
+            vars_map={"model": "UNREGISTERED", "region": "US"},
+        )
+
+        self.assertIn("SPECIFIC", specific)
+        self.assertNotIn("GENERIC", specific)
+        self.assertIn("GENERIC", fallback)
+        self.assertNotIn("SPECIFIC", fallback)
 
     def test_render_troubleshooting_page_supports_pt_br_columns_and_region_alias(self) -> None:
         blocks = [

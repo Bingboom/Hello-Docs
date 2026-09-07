@@ -14,6 +14,8 @@ from tools.gen_index_bundle import MaterializedBundle
 from tools.word_bundle_common import paths
 from tools.word_bundle_docx_pandoc import resolve_pandoc_binary
 from tools.word_bundle_html import build_word_bundle_html
+from tools.manual_ir import ManualIR, read_manual_ir
+from tools.utils.path_utils import PathSegments
 from tools.web_presentation import (
     DOCUMENT_PRESENTATION_PROFILE,
     PRESENTATION_PROFILE_ENV,
@@ -27,6 +29,10 @@ from tools.web_presentation import (
     restore_web_callouts_after_pandoc,
     restore_web_figures_after_pandoc,
     restore_web_inline_controls_after_pandoc,
+)
+from tools.web_language_navigation import (
+    protect_web_language_navigation_for_pandoc,
+    restore_web_language_navigation_after_pandoc,
 )
 
 
@@ -112,6 +118,27 @@ def _write_myst_sphinx_scaffold(
                 f'html_css_files = ["{WEB_STYLESHEET_NAME}"]',
             ]
         )
+        if (source_dir / "assets").is_dir():
+            # Web components keep their images in raw HTML so Pandoc can
+            # preserve the approved composition. Sphinx does not discover
+            # image references inside raw HTML. Preserve the ``assets/`` path
+            # segment in the built site so those relative URLs stay valid.
+            conf_lines.extend(
+                [
+                    "",
+                    "from pathlib import Path",
+                    "from shutil import copytree",
+                    "",
+                    "def _copy_packaged_assets(app, exception):",
+                    "    if exception is None:",
+                    '        source = Path(app.srcdir) / "assets"',
+                    '        target = Path(app.outdir) / "assets"',
+                    "        copytree(source, target, dirs_exist_ok=True)",
+                    "",
+                    "def setup(app):",
+                    '    app.connect("build-finished", _copy_packaged_assets)',
+                ]
+            )
     conf_lines.append("")
     conf_path.write_text("\n".join(conf_lines), encoding="utf-8")
     if markdown_path.name == "index.md":
@@ -175,21 +202,42 @@ def export_markdown_from_bundle(
     markdown_writer = resolve_markdown_writer(pandoc_bin)
     markdown_reader = "html" if markdown_writer == "myst" else "html-native_divs-native_spans"
     pandoc_source = bundle_html
-    protected_callouts: dict[str, str] = {}
+    protected_callouts: dict[str, ManualIR | str] = {}
     protected_figures: dict[str, str] = {}
     protected_inline_controls: dict[str, str] = {}
+    protected_language_navigation: dict[str, str] = {}
     temporary_input: tempfile.TemporaryDirectory[str] | None = None
     if presentation_profile == WEB_PRESENTATION_PROFILE:
+        document_ir_path = bundle_html.parent / PathSegments.MANUAL_IR_JSON
+        embedded_components_complete = False
+        if document_ir_path.is_file():
+            document_ir = read_manual_ir(document_ir_path)
+            embedded_components_complete = (
+                document_ir.metadata.get("projection")
+                == "whole-document-components/v1"
+            )
         protected_html, protected_figures = protect_web_figures_for_pandoc(
             bundle_html.read_text(encoding="utf-8")
         )
         protected_html, protected_callouts = protect_web_callouts_for_pandoc(
-            protected_html
+            protected_html,
+            source_path=bundle_html,
+            model=model,
+            region=region,
+            embedded_components_complete=embedded_components_complete,
         )
         protected_html, protected_inline_controls = protect_web_inline_controls_for_pandoc(
             protected_html
         )
-        if protected_figures or protected_callouts or protected_inline_controls:
+        protected_html, protected_language_navigation = (
+            protect_web_language_navigation_for_pandoc(protected_html)
+        )
+        if (
+            protected_figures
+            or protected_callouts
+            or protected_inline_controls
+            or protected_language_navigation
+        ):
             temporary_input = tempfile.TemporaryDirectory(
                 prefix="auto-manual-web-pandoc-",
                 dir=bundle_html.parent,
@@ -216,8 +264,17 @@ def export_markdown_from_bundle(
     finally:
         if temporary_input is not None:
             temporary_input.cleanup()
-    if protected_figures or protected_callouts or protected_inline_controls:
+    if (
+        protected_figures
+        or protected_callouts
+        or protected_inline_controls
+        or protected_language_navigation
+    ):
         markdown_text = out_path.read_text(encoding="utf-8")
+        markdown_text = restore_web_language_navigation_after_pandoc(
+            markdown_text,
+            protected_language_navigation,
+        )
         markdown_text = restore_web_figures_after_pandoc(
             markdown_text,
             protected_figures,

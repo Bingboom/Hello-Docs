@@ -5,13 +5,17 @@ import tempfile
 import unittest
 from dataclasses import replace
 from pathlib import Path
+from unittest.mock import patch
 
 from bs4 import BeautifulSoup, Tag
 from PIL import Image
 
 from tools.component_specs.web_source import validate_web_callout_html
+from tools.web_callout_ir import render_callout_ir
 from tools.web_composite_manifest import load_web_composite_manifest
+from tools.web_composite_presentation import WebCompositeContext
 from tools.web_presentation import (
+    _transform_product_overview,
     WebPresentationError,
     protect_web_callouts_for_pandoc,
     protect_web_figures_for_pandoc,
@@ -47,7 +51,11 @@ def _web_composite_fixture():
     )
 
 
-def _web_fragment(source_name: str, *, with_composites: bool = True) -> str:
+def _web_fragment(
+    source_name: str, *, with_composites: bool = True,
+    declared_troubleshooting: bool = False,
+    declared_lcd_icons: bool = False,
+) -> str:
     source_path = REVIEW_PAGES / source_name
     with tempfile.TemporaryDirectory() as td:
         return _convert_rst_fragment_to_html(
@@ -59,10 +67,65 @@ def _web_fragment(source_name: str, *, with_composites: bool = True) -> str:
             composite_manifest=(_web_composite_fixture() if with_composites else None),
             model="JE-1000F",
             region="US",
+            declared_troubleshooting=declared_troubleshooting,
+            declared_lcd_icons=declared_lcd_icons,
         )
 
 
 class WebPresentationTests(unittest.TestCase):
+    def test_overview_always_resolves_geometry_from_the_actual_target(self) -> None:
+        context = WebCompositeContext(
+            manifest=None,
+            model="JE-1000F",
+            region="US",
+            language="en",
+            error_type=WebPresentationError,
+        )
+        stale_global_override = {
+            "product_overview": {"instance_id": "je1000f-eu-v1"}
+        }
+        resolved = {"instance_id": "je1000f-us-v1"}
+
+        with (
+            patch(
+                "tools.web_presentation.resolve_overview_instance",
+                return_value=resolved,
+            ) as resolver,
+            patch("tools.web_presentation.transform_overview") as transform,
+        ):
+            _transform_product_overview(
+                BeautifulSoup("<section></section>", "html.parser"),
+                source_path=Path("page/03_product_overview_placeholder.rst"),
+                contract=stale_global_override,
+                composites=context,
+            )
+
+        resolver.assert_called_once_with(model="JE-1000F", region="US")
+        self.assertIs(resolved, transform.call_args.kwargs["instance"])
+
+    def test_document_language_selects_composite_without_filename_prefix(self) -> None:
+        context = WebCompositeContext(
+            manifest=None,
+            model="JE-1000F",
+            region="EU",
+            language="it",
+            error_type=WebPresentationError,
+        )
+        component = {
+            "composite_locales": [
+                {"locale": "en"},
+                {"locale": "fr"},
+                {"locale": "es"},
+                {"locale": "de"},
+                {"locale": "it"},
+            ]
+        }
+
+        self.assertEqual(
+            "it",
+            context._locale(component, Path("page/05_operation_guide_placeholder.rst")),
+        )
+
     def test_web_preface_hides_language_inventory_but_keeps_live_copy(self) -> None:
         output = _web_fragment("00_preface.rst")
         soup = BeautifulSoup(output, "html.parser")
@@ -136,10 +199,10 @@ class WebPresentationTests(unittest.TestCase):
         self.assertEqual(5, len(placeholders))
         before_specs = {
             token: validate_web_callout_html(
-                callout_html,
+                render_callout_ir(callout_ir),
                 source_ref=f"pandoc:{token}",
             )
-            for token, callout_html in placeholders.items()
+            for token, callout_ir in placeholders.items()
         }
         pandoc_output = "# Safety\n\n" + "\n\n".join(placeholders) + "\n"
         restored = restore_web_callouts_after_pandoc(pandoc_output, placeholders)
@@ -443,7 +506,7 @@ class WebPresentationTests(unittest.TestCase):
                 "overview.right.ac_input": "AC Input",
             },
             "fr": {
-                "overview.front.power": "Bouton d'alimentation",
+                "overview.front.power": "Bouton POWER",
                 "overview.front.lcd": "LCD",
                 "overview.front.dc12": "Port 12 V CC",
                 "overview.right.handle": "Poignée",
@@ -451,7 +514,7 @@ class WebPresentationTests(unittest.TestCase):
                 "overview.right.ac_input": "Entrée CA",
             },
             "es": {
-                "overview.front.power": "Botón de encendido",
+                "overview.front.power": "Botón POWER",
                 "overview.front.lcd": "LCD",
                 "overview.front.dc12": "Puerto CC 12 V",
                 "overview.right.handle": "Asa",
@@ -732,7 +795,7 @@ class WebPresentationTests(unittest.TestCase):
                 self.assertIs(composition.previous_sibling, heading)
 
     def test_lcd_icons_use_searchable_four_column_pdf_grid(self) -> None:
-        soup = BeautifulSoup(_web_fragment("lcd_icons_en.rst"), "html.parser")
+        soup = BeautifulSoup(_web_fragment("lcd_icons_en.rst", declared_lcd_icons=True), "html.parser")
         composition = soup.select_one("figure.hb-lcd-table-composition")
 
         self.assertIsNotNone(composition)
@@ -769,7 +832,9 @@ class WebPresentationTests(unittest.TestCase):
             "troubleshooting_es.rst",
         ):
             with self.subTest(source=source_name):
-                soup = BeautifulSoup(_web_fragment(source_name), "html.parser")
+                soup = BeautifulSoup(
+                    _web_fragment(source_name, declared_troubleshooting=True), "html.parser"
+                )
                 composition = soup.select_one("figure.hb-troubleshooting-composition")
                 self.assertIsNotNone(composition)
                 table = (
@@ -889,7 +954,7 @@ class WebPresentationTests(unittest.TestCase):
         localized_labels = {
             "symbols_en.rst": ["WARNING", "CAUTION", "NOTE", "TIP"],
             "symbols_fr.rst": ["AVERTISSEMENT", "ATTENTION", "REMARQUE", "CONSEIL"],
-            "symbols_es.rst": ["ADVERTENCIA", "PRECAUCIÓN", "NOTA", "CONSEJO"],
+            "symbols_es.rst": ["ADVERTENCIA", "PRECAUCIÓN", "NOTA", "CONSEJOS"],
         }
 
         for source_name, expected_labels in localized_labels.items():
@@ -1084,19 +1149,64 @@ class WebPresentationTests(unittest.TestCase):
                     else "",
                 )
 
+    def test_ac_wall_composite_captures_caption_on_either_side_of_image(self) -> None:
+        localized = {
+            "en": (
+                '<p id="instruction">Connect the AC charging cable.</p>'
+                '<img src="asset:charging/ac_wall" alt="AC wall charging">',
+                ["instruction", "art"],
+            ),
+            "fr": (
+                '<img src="asset:charging/ac_wall" alt="Charge murale CA">'
+                '<p id="instruction">Connectez le câble de charge CA.</p>',
+                ["art", "instruction"],
+            ),
+        }
+
+        for language, (fragment, expected_order) in localized.items():
+            with self.subTest(language=language):
+                source_path = Path(
+                    f"docs/_build/JE-1000F/EU/{language}/page/charging.rst"
+                )
+                soup = BeautifulSoup(
+                    transform_web_fragment(
+                        f"<h1>CHARGING</h1><h2>AC WALL</h2>{fragment}",
+                        source_path=source_path,
+                        model="JE-1000F",
+                        region="EU",
+                        language=language,
+                    ),
+                    "html.parser",
+                )
+                figure = soup.select_one(
+                    'figure[data-reference-id="charging-ac-wall"]'
+                )
+                self.assertIsNotNone(figure)
+                semantic = figure.select_one(".hb-reference-semantic") if figure else None
+                self.assertIsNotNone(semantic)
+                observed_order = [
+                    "instruction" if child.get("id") == "instruction" else "art"
+                    for child in semantic.find_all(recursive=False)
+                ] if semantic else []
+                self.assertEqual(expected_order, observed_order)
+                self.assertEqual(
+                    "embedded",
+                    figure.get("data-step-captions") if figure else None,
+                )
+
     def test_app_add_device_embeds_steps_and_keeps_live_localized_labels(self) -> None:
         localized = {
             "en": (
                 "12_app_setup_placeholder.rst",
-                ["Main Power Button", "DC/USB Power Button", "AC Power Button"],
+                ["POWER Button", "AC Power Button", "DC / USB Power Button"],
             ),
             "fr": (
                 "p34_12_app_setup_placeholder.rst",
-                ["Bouton POWER", "Bouton d’alimentation CC/USB", "Bouton d’alimentation CA"],
+                ["Bouton POWER", "Bouton d’alimentation CC / USB", "Bouton Power CA"],
             ),
             "es": (
                 "p50_12_app_setup_placeholder.rst",
-                ["Botón de encendido", "Botón de energía CC / USB", "Botón Power CA"],
+                ["Botón POWER", "Botón de energía CC / USB", "Botón Power CA"],
             ),
         }
         artwork_by_locale: dict[str, tuple[str, str]] = {}
@@ -1245,7 +1355,7 @@ class WebPresentationTests(unittest.TestCase):
                 "Alternatively, scan the QR code",
             ),
             "p34_12_app_setup_placeholder.rst": (
-                "Recherchez « Jackery »",
+                "Recherchez \"Jackery\"",
                 "Vous pouvez également scanner",
             ),
             "p50_12_app_setup_placeholder.rst": (
@@ -1370,7 +1480,7 @@ class WebPresentationTests(unittest.TestCase):
             ),
             "p49_11_warranty.rst": (
                 ["AÑOS", "AÑOS"],
-                ["Garantía Estándar", "Garantía extendida"],
+                ["Garantía estándar", "Garantía extendida"],
             ),
         }
 
@@ -1406,6 +1516,77 @@ class WebPresentationTests(unittest.TestCase):
                 self.assertEqual(0, len(soup.find_all("table")))
                 self.assertEqual(0, len(soup.find_all("colgroup")))
                 self.assertNotIn("width: 50%", str(soup))
+
+    def test_warranty_component_is_shared_across_je1000f_eu_locales(self) -> None:
+        localized = {
+            "en": ("YEARS", ["Standard Warranty", "Extended Warranty"]),
+            "fr": ("ANS", ["Garantie standard", "Garantie prolongée"]),
+            "es": ("AÑOS", ["Garantía estándar", "Garantía extendida"]),
+            "de": ("JAHRE", ["Standardgarantie", "Verlängerte Garantie"]),
+            "it": ("ANNI", ["Garanzia standard", "Garanzia estesa"]),
+        }
+
+        for language, (expected_unit, expected_labels) in localized.items():
+            with self.subTest(language=language), tempfile.TemporaryDirectory() as td:
+                root = Path(td)
+                rst_text = (
+                    ROOT
+                    / "docs"
+                    / "templates"
+                    / "page_shared"
+                    / language
+                    / "11_warranty.rst"
+                ).read_text(encoding="utf-8")
+                rst_text = (
+                    rst_text.replace("|LEGAL_COMPANY_NAME|", "Jackery Europe")
+                    .replace("|PRODUCT_NAME|", "Jackery Explorer 1000")
+                    .replace("|WARRANTY_EMAIL|", "hello.eu@jackery.com")
+                )
+                source_path = (
+                    root
+                    / "docs"
+                    / "_review"
+                    / "JE-1000F"
+                    / "EU"
+                    / "page"
+                    / "11_warranty.rst"
+                )
+                source_path.parent.mkdir(parents=True)
+                source_path.write_text(rst_text, encoding="utf-8")
+                output = _convert_rst_fragment_to_html(
+                    rst_text,
+                    source_path,
+                    root / "assets",
+                    active_tags={"region_eu"},
+                    presentation_profile="web",
+                    model="JE-1000F",
+                    region="EU",
+                    language=language,
+                )
+
+                soup = BeautifulSoup(output, "html.parser")
+                self.assertEqual(
+                    ["3", "2"],
+                    [
+                        node.get_text(" ", strip=True)
+                        for node in soup.select(".hb-warranty-year-badge")
+                    ],
+                )
+                self.assertEqual(
+                    [expected_unit, expected_unit],
+                    [
+                        node.get_text(" ", strip=True)
+                        for node in soup.select(".hb-warranty-years-unit")
+                    ],
+                )
+                self.assertEqual(
+                    expected_labels,
+                    [
+                        node.get_text(" ", strip=True)
+                        for node in soup.select(".hb-warranty-period-label")
+                    ],
+                )
+                self.assertEqual(0, len(soup.find_all("table")))
 
     def test_warranty_accepts_reseeded_semantic_containers(self) -> None:
         rst_text = (

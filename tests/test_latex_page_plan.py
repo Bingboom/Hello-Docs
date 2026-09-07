@@ -92,6 +92,63 @@ class LatexPagePlanTests(unittest.TestCase):
         self.assertEqual(0, entries[0]["candidate_count"])
         self.assertFalse(entries[1]["placed"])
 
+    def test_terminal_back_cover_owns_last_physical_page(self) -> None:
+        warranty = ManualPage(
+            page_id="page-0001-warranty",
+            source_ref="page/warranty_es.rst",
+            source_path="page/warranty_es.rst",
+            language="es",
+            source_sha256="0" * 64,
+            skipped_raw=0,
+            blocks=(ManualBlock(
+                block_id="b-warranty",
+                source_ref="page/warranty_es.rst#block-1",
+                kind="body",
+                payload="Warranty includes hello@example.com.",
+                content_sha256="0" * 64,
+            ),),
+        )
+        back_cover = ManualPage(
+            page_id="page-0002-back-cover",
+            source_ref="page/back_cover.rst",
+            source_path="page/back_cover.rst",
+            language="en",
+            source_sha256="0" * 64,
+            skipped_raw=0,
+            blocks=(ManualBlock(
+                block_id="b-back-cover",
+                source_ref="page/back_cover.rst#block-1",
+                kind="data",
+                payload={
+                    "kind": "back_cover",
+                    "email": "hello@example.com",
+                },
+                content_sha256="0" * 64,
+            ),),
+        )
+        synthetic_ir = ManualIR(
+            model=self.ir.model, region=self.ir.region, language=self.ir.language,
+            source=self.ir.source, bundle_root=self.ir.bundle_root,
+            bundle_sha256=self.ir.bundle_sha256,
+            snapshot_sha256=self.ir.snapshot_sha256,
+            layout_params_sha256=self.ir.layout_params_sha256,
+            style_contract_sha256=self.ir.style_contract_sha256,
+            content_sha256=self.ir.content_sha256,
+            pages=(warranty, back_cover),
+        )
+
+        entries = map_pages(
+            synthetic_ir,
+            [
+                "Warranty includes hello@example.com.",
+                "Final artwork without extractable contact copy.",
+            ],
+        )
+
+        self.assertEqual(1, entries[0]["latex_start_page"])
+        self.assertEqual(2, entries[1]["latex_start_page"])
+        self.assertEqual("structural:last-page", entries[1]["matched_anchor"])
+
     def test_story_span_uses_next_source_start(self) -> None:
         plan = {"pages": [
             {"source_path": "page/operations.rst", "latex_start_page": 10},
@@ -101,6 +158,27 @@ class LatexPagePlanTests(unittest.TestCase):
         ]}
         self.assertEqual(9, planned_span(
             plan, ["operations", "charging", "trouble"], fallback=6))
+
+    def test_story_span_falls_back_across_an_unanchored_source(self) -> None:
+        """An unmatched source owns physical pages the story must not absorb.
+
+        The exporter emits that unmatched source as its own spread, so charging
+        the raw anchor distance to the preceding story threads it through
+        trailing blank linked frames -- the JE-1000F/JP blank-body-page defect.
+        """
+        plan = {
+            "physical_page_count": 20,
+            "pages": [
+                {"source_path": "page/whats_in_the_box.rst", "latex_start_page": 5},
+                {"source_path": "page/product_overview.rst"},
+                {"source_path": "page/operations.rst", "latex_start_page": 9},
+            ],
+        }
+
+        self.assertEqual(
+            1,
+            planned_span(plan, ["whats_in_the_box"], fallback=1),
+        )
 
     def test_approved_story_span_prefers_explicit_composition_page_count(self) -> None:
         plan = {

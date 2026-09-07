@@ -1,10 +1,13 @@
 """Editable warranty-page components shared with the LaTeX token layer."""
 from __future__ import annotations
 
-import math
 import re
 
 from .. import page_objects as _po
+from ..inline_text import character_ranges
+from ..line_metrics import estimated_line_count, estimated_text_width
+from ..corner_radii import declared_indexed_radius, declared_radius
+from ..loaders import normalize_lang
 from ..params import param_pt
 from ..primitives import (
     cell,
@@ -15,17 +18,22 @@ from ..primitives import (
 )
 from .base import RenderContext, figure_paragraph
 
-_CIRCLED = {str(index): glyph for index, glyph in enumerate("❶❷❸❹❺❻❼❽❾", 1)}
-
-
 def _plain_strong(text: str) -> str:
     match = re.fullmatch(r"\s*\*\*(.*?)\*\*\s*", text, re.S)
     return match.group(1) if match else text
 
 
 def _language_param(ctx: RenderContext, key: str, default: float) -> float:
+    """A warranty token a language may declare for itself.
+
+    `normalize_lang` because `ctx.language` carries the writer's own source
+    code -- "ja" -- while every layout row is keyed on the phase2 suffix
+    "jp". Without it this reads a prefix nothing declares and silently keeps
+    the shared value. No `lang_ja_` row exists anywhere, so normalizing takes
+    nothing away.
+    """
     base = param_pt(ctx.params, key, default)
-    language = (ctx.language or "").strip().lower()
+    language = normalize_lang(ctx.language) if ctx.language else ""
     if language:
         return param_pt(ctx.params, f"lang_{language}_{key}", base)
     return base
@@ -35,8 +43,13 @@ def _wrapped_lines(text: str, width: float, size: float) -> int:
     plain = text.replace("**", "").strip()
     if not plain:
         return 1
-    chars = max(8, int(width / max(1.0, size * 0.50)))
-    return max(1, math.ceil(len(plain) / chars))
+    return estimated_line_count(
+        plain,
+        width,
+        point_size=size,
+        narrow_width_ratio=0.50,
+        minimum_narrow_chars=8,
+    )
 
 
 def _panel_width(ctx: RenderContext, width: float) -> float:
@@ -45,6 +58,46 @@ def _panel_width(ctx: RenderContext, width: float) -> float:
         ctx,
         "idml_warranty_panel_width_adjust",
         0.0,
+    )
+
+
+def _variant_adjust(
+    spec: dict,
+    ctx: RenderContext,
+    key: str,
+) -> float:
+    """Per-variant additive correction, with the same language cascade as the base.
+
+    The values this offsets are themselves per-language (`_language_param` over
+    `lang_<code>_idml_warranty_*`), so a language-blind variant token could not
+    express a correction that differs between en and es on the same key — the
+    tuning would have to go back onto the shared base tokens, which the approved
+    JE-1000F/US reference layout also reads.
+    """
+
+    variant = str(spec.get("layout_variant") or "").strip().lower()
+    if not variant or re.fullmatch(r"[a-z][a-z0-9_]*", variant) is None:
+        return 0.0
+    return _language_param(
+        ctx,
+        f"idml_warranty_variant_{variant}_{key}",
+        0.0,
+    )
+
+
+def _variant_value(
+    spec: dict,
+    ctx: RenderContext,
+    key: str,
+    default: float,
+) -> float:
+    variant = str(spec.get("layout_variant") or "").strip().lower()
+    if not variant or re.fullmatch(r"[a-z][a-z0-9_]*", variant) is None:
+        return default
+    return _language_param(
+        ctx,
+        f"idml_warranty_variant_{variant}_{key}",
+        default,
     )
 
 
@@ -86,21 +139,155 @@ def _text_frame(
     )
 
 
-def _year_heading(item: dict, ctx: RenderContext) -> str:
+def _variant_body_format(
+    xml: str,
+    spec: dict,
+    ctx: RenderContext,
+    *,
+    horizontal_scale: float,
+) -> str:
+    """Apply the variant's composition attributes to a body paragraph.
+
+    Leading is deliberately not among them. A numeric ``Leading`` attribute on
+    a style range is dropped by InDesign -- see
+    ``character_metrics.with_character_metrics``, which exists to strip exactly
+    this form and re-emit the honored ``<Leading type="unit">`` element. This
+    function used to append one, so the variant's declared body leading has
+    never reached a page; the copy has always composed at the leading its
+    paragraph style carries. ``Hyphenation`` and ``Composer`` below are genuine
+    paragraph attributes and are honored.
+    """
+    attrs: list[str] = []
+    if _variant_value(spec, ctx, "disable_hyphenation", 0.0) >= 0.5:
+        attrs.extend(('Hyphenation="false"', 'Composer="HL Single"'))
+    if attrs:
+        xml = xml.replace(
+            "<ParagraphStyleRange ",
+            f'<ParagraphStyleRange {" ".join(attrs)} ',
+            1,
+        )
+    return xml.replace(
+        'AppliedCharacterStyle="CharacterStyle/$ID/[No character style]"',
+        'AppliedCharacterStyle="CharacterStyle/$ID/[No character style]" '
+        f'HorizontalScale="{horizontal_scale:g}"',
+    )
+
+
+def _year_heading(
+    item: dict,
+    ctx: RenderContext,
+    *,
+    marker_id: str,
+    unit_indent: float,
+) -> str:
+    """Render the shared, font-portable warranty year badge.
+
+    The approved composition uses a dark circular badge with a white live-text
+    numeral.  A Unicode circled digit is not portable across InDesign hosts,
+    while reducing the heading to a bare ``3``/``2`` loses the component's
+    visual contract.  Keep the circle as native IDML geometry and put the
+    ordinary numeral in its own editable story; ordinary ASCII digits are
+    covered by the packaged production face on every target.
+    """
     number = str(item.get("number", "")).strip()
     unit = str(item.get("unit", "")).strip()
-    glyph = _CIRCLED.get(number, number)
-    xml = psr("HB Warranty Year Heading", f"{glyph} {unit}")
     badge_size = param_pt(ctx.params, "type_warranty_year_number_font_size", 21.0)
-    glyph_size = param_pt(ctx.params, "idml_warranty_year_glyph_size", 30.0)
-    xml = xml.replace(
-        'FontStyle="Regular"',
-        f'PointSize="{glyph_size:g}" FontStyle="Regular"',
-        1,
-    )
+    diameter = param_pt(ctx.params, "comp_warranty_year_badge_size", 23.81)
+    badge = ""
+    if ctx.add_story is not None:
+        safe_id = re.sub(r"[^A-Za-z0-9_]+", "_", marker_id).strip("_")
+        safe_id = safe_id or "warranty_year"
+        numeral_xml = psr("HB Warranty Year Heading", number, terminal=True)
+        numeral_xml = numeral_xml.replace(
+            "<ParagraphStyleRange ",
+            '<ParagraphStyleRange Justification="CenterAlign" ',
+            1,
+        )
+        numeral_xml = numeral_xml.replace(
+            'AppliedCharacterStyle="CharacterStyle/$ID/[No character style]"',
+            'AppliedCharacterStyle="CharacterStyle/$ID/[No character style]" '
+            f'FillColor="Color/Paper" PointSize="{badge_size:g}" '
+            'FontStyle="Bold"',
+            1,
+        )
+        numeral_sid = ctx.add_story(
+            f"st_anchor_{safe_id}",
+            f"Warranty year {number} badge",
+            [numeral_xml],
+        )
+        background = (
+            f'<Polygon Self="bg_{safe_id}" ContentType="Unassigned" '
+            'AppliedObjectStyle="ObjectStyle/$ID/[None]" '
+            'FillColor="Color/HB Brand Dark" StrokeColor="Swatch/None" '
+            'StrokeWeight="0" ItemTransform="1 0 0 1 0 0">\n'
+            + _po.rounded_path_geometry(
+                0.0,
+                -diameter,
+                diameter,
+                0.0,
+                diameter / 2.0,
+            )
+            + _anchor()
+            + '</Polygon>\n'
+        )
+        numeral_frame = _text_frame(
+            numeral_sid,
+            f"tf_{safe_id}",
+            0.0,
+            -diameter,
+            diameter,
+            0.0,
+            valign="CenterAlign",
+        )
+        badge = (
+            f'<Group Self="grp_{safe_id}" '
+            'AppliedObjectStyle="ObjectStyle/$ID/[None]" '
+            'ItemTransform="1 0 0 1 0 0">\n'
+            + background
+            + numeral_frame
+            + '</Group>'
+        )
+
+    if badge:
+        # Pin the unit to the same component-owned x coordinate used by the
+        # subtitle below.  Letting a literal space follow the inline badge
+        # made the unit advance font-dependent and allowed the two baselines
+        # to drift apart when the Unicode circled digit became native IDML.
+        xml = psr("HB Warranty Year Heading", f"\t{unit}")
+        tab_properties = (
+            '<Properties><TabList type="list"><ListItem type="record">'
+            '<Alignment type="enumeration">LeftAlign</Alignment>'
+            '<AlignmentCharacter type="string"></AlignmentCharacter>'
+            '<Leader type="string"></Leader>'
+            f'<Position type="unit">{unit_indent:g}</Position>'
+            '</ListItem></TabList></Properties>'
+        )
+        xml = xml.replace(
+            "\n    <CharacterStyleRange",
+            f"\n    {tab_properties}\n    <CharacterStyleRange",
+            1,
+        )
+        marker = (
+            'AppliedCharacterStyle="CharacterStyle/$ID/[No character style]">'
+        )
+        xml = xml.replace(marker, marker + badge, 1)
+    else:
+        # Pure component callers do not own a story registry.  Preserve a
+        # readable fallback there; production IDML writers always provide
+        # ``add_story`` and therefore take the native circular path above.
+        xml = psr("HB Warranty Year Heading", f"**{number}** {unit}")
+        xml = xml.replace(
+            'FontStyle="Bold"',
+            f'PointSize="{badge_size:g}" FontStyle="Bold"',
+            1,
+        )
+    # No Leading here: a numeric Leading attribute on a style range is dropped
+    # by InDesign (see character_metrics.with_character_metrics). The badge
+    # numeral takes HB Warranty Year Heading's own leading, and this paragraph
+    # is always the first line of its cell, so nothing shifts.
     xml = xml.replace(
         "<ParagraphStyleRange ",
-        f'<ParagraphStyleRange Leading="{badge_size + 1:g}" SpaceAfter="1.2" ',
+        '<ParagraphStyleRange SpaceAfter="1.2" ',
         1,
     )
     return xml
@@ -112,17 +299,23 @@ def _years_table(
     *,
     tid: str,
     width: float,
+    section_index: int | None = None,
 ) -> tuple[str, float]:
     items = list(spec.get("items", []))
     if not items:
         return "", 0.0
     gap = param_pt(ctx.params, "comp_warranty_year_column_gap", 2.27)
-    left_ratio = _language_param(
+    left_ratio = _variant_value(
+        spec,
         ctx,
-        "idml_warranty_year_left_ratio",
-        float(ctx.params.get(
-            "comp_warranty_year_left_ratio", ("0.59", "ratio"),
-        )[0]),
+        "year_left_ratio",
+        _language_param(
+            ctx,
+            "idml_warranty_year_left_ratio",
+            float(ctx.params.get(
+                "comp_warranty_year_left_ratio", ("0.59", "ratio"),
+            )[0]),
+        ),
     )
     if len(items) == 2:
         left_w = (width - gap) * left_ratio
@@ -133,37 +326,97 @@ def _years_table(
     max_height = 0.0
     body_size = param_pt(ctx.params, "type_warranty_body_font_size", 6.0)
     body_leading = param_pt(ctx.params, "idml_warranty_body_font_leading", 6.0)
+    rendered_body_leading = _variant_value(
+        spec, ctx, "body_font_leading", body_leading,
+    )
+    section_horizontal_scale = _variant_value(
+        spec,
+        ctx,
+        "body_horizontal_scale",
+        _language_param(ctx, "idml_warranty_body_horizontal_scale", 100.0),
+    )
+    horizontal_scale = _variant_value(
+        spec,
+        ctx,
+        "year_body_horizontal_scale",
+        section_horizontal_scale,
+    )
+    estimate_horizontal_scale = _variant_value(
+        spec,
+        ctx,
+        "body_estimate_horizontal_scale",
+        horizontal_scale,
+    )
+    if section_index is not None:
+        estimate_horizontal_scale = _variant_value(
+            spec,
+            ctx,
+            f"body_estimate_horizontal_scale_{section_index}",
+            estimate_horizontal_scale,
+        )
     badge_size = param_pt(ctx.params, "type_warranty_year_number_font_size", 21.0)
     subtitle_size = param_pt(ctx.params, "type_warranty_year_subtitle_font_size", 7.2)
+    unit_indent = param_pt(
+        ctx.params, "idml_warranty_year_subtitle_left_indent", 21.31,
+    )
+    if ctx.add_story is not None:
+        # The approved 21.31 pt token was measured against the former Unicode
+        # circled-digit advance.  Native badge geometry is 4.90 pt wider at
+        # the unit baseline.  Keep the frozen approved token intact and own
+        # that renderer migration delta inside the shared native component.
+        unit_indent += _language_param(
+            ctx,
+            "idml_warranty_native_badge_indent_adjust",
+            4.90,
+        )
     for index, (item, col_w) in enumerate(zip(items, cols)):
         subtitle = str(item.get("label", "")).strip()
         body = str(item.get("text", "")).strip()
-        content = _year_heading(item, ctx)
+        content = _year_heading(
+            item,
+            ctx,
+            marker_id=f"warranty_year_{tid}_{index}",
+            unit_indent=unit_indent,
+        )
+        if _variant_value(
+            spec, ctx, "strip_year_subtitle_leading_dash", 0.0,
+        ) >= 0.5:
+            subtitle = re.sub(r"^[\s—–-]+", "", subtitle)
         subtitle_xml = psr("HB Warranty Year Subtitle", subtitle)
         # The subtitle's first letter sits on the same vertical as the unit
         # text (the ``Y`` in ``YEARS``), not after an additional optical gap.
-        subtitle_indent = param_pt(
-            ctx.params, "idml_warranty_year_subtitle_left_indent", 21.31,
-        )
         subtitle_xml = subtitle_xml.replace(
             "<ParagraphStyleRange ",
-            f'<ParagraphStyleRange LeftIndent="{subtitle_indent:g}" ',
+            f'<ParagraphStyleRange LeftIndent="{unit_indent:g}" ',
             1,
         )
         content += subtitle_xml
         # The reference returns the explanatory copy to the left edge of each
         # column; only the subtitle carries the optical badge offset.
-        content += psr("HB Warranty Body", body, terminal=True)
+        content += _variant_body_format(
+            psr("HB Warranty Body", body, terminal=True),
+            spec,
+            ctx,
+            horizontal_scale=horizontal_scale,
+        )
         cells.append(cell(
             f"{tid}c{index}", f"{index}:0", content,
             stroke=False, top=0, bottom=0,
             left=0, right=(gap if index < len(items) - 1 else 0),
             valign="TopAlign",
         ))
-        lines = _wrapped_lines(body, col_w - 2.0, body_size)
+        lines = _wrapped_lines(
+            body,
+            col_w - 2.0,
+            body_size * estimate_horizontal_scale / 100.0,
+        )
         max_height = max(
             max_height,
-            badge_size + 1.0 + subtitle_size + 2.0 + lines * body_leading,
+            badge_size
+            + 1.0
+            + subtitle_size
+            + 2.0
+            + lines * rendered_body_leading,
         )
     return component_table(
         tid, cols, cells, n_rows=1, outer_stroke=False,
@@ -196,9 +449,10 @@ def render_warrantylead(
     measure_w: float | None = None,
 ) -> tuple[str, float]:
     width = _panel_width(ctx, measure_w or ctx.text_measure)
-    text = " ".join(
+    lead_lines = [
         _plain_strong(str(value)) for value in spec.get("texts", []) if value
-    )
+    ]
+    text = "\n".join(lead_lines)
     size = param_pt(ctx.params, "type_warranty_lead_font_size", 7.0)
     leading = param_pt(ctx.params, "type_warranty_lead_font_leading", 8.2)
     pad_lr = param_pt(ctx.params, "comp_warranty_lead_pad_lr", 10.2)
@@ -207,13 +461,24 @@ def render_warrantylead(
         "idml_warranty_lead_pad_tb",
         param_pt(ctx.params, "comp_warranty_lead_pad_tb", 7.65),
     )
-    horizontal_scale = _language_param(
-        ctx, "idml_warranty_lead_horizontal_scale", 100.0,
+    horizontal_scale = _variant_value(
+        spec,
+        ctx,
+        "lead_horizontal_scale",
+        _language_param(ctx, "idml_warranty_lead_horizontal_scale", 100.0),
     )
-    lines = _wrapped_lines(text, width - 2 * pad_lr, size)
+    lines = (
+        len(lead_lines)
+        if len(lead_lines) > 1
+        else _wrapped_lines(text, width - 2 * pad_lr, size)
+    ) or 1
     natural_height = lines * leading + 2 * pad_tb
-    height = _language_param(
+    governed_height = _language_param(
         ctx, "idml_warranty_lead_height", natural_height,
+    )
+    height = (
+        max(natural_height, governed_height)
+        if len(lead_lines) > 1 else governed_height
     )
     content = psr("HB Warranty Lead", text, terminal=True).replace(
         'AppliedCharacterStyle="CharacterStyle/$ID/[No character style]"',
@@ -242,7 +507,11 @@ def render_warrantylead(
         fill="Color/HB Bg K05",
         stroke="Swatch/None",
         stroke_weight=0,
-        radius=param_pt(ctx.params, "comp_warranty_lead_arc", 9.07),
+        radius=declared_radius(
+            spec,
+            "lead",
+            param_pt(ctx.params, "comp_warranty_lead_arc", 9.07),
+        ),
         inset=(pad_tb, pad_lr, pad_tb, pad_lr),
         valign="CenterAlign",
         auto_height=False,
@@ -265,15 +534,43 @@ def _section_body(
     *,
     tid: str,
     width: float,
+    layout_spec: dict,
+    section_index: int,
 ) -> tuple[list[str], float]:
-    body_size = param_pt(ctx.params, "type_warranty_body_font_size", 6.0)
-    body_leading = param_pt(ctx.params, "idml_warranty_body_font_leading", 6.0)
-    list_leading = param_pt(ctx.params, "type_warranty_body_font_leading", 7.2)
+    # These three must resolve exactly as `para_styles` resolves them: the
+    # panel height is computed from them, so a size the style prints but the
+    # estimate does not see would size every panel for the wrong type.
+    body_size = _language_param(ctx, "type_warranty_body_font_size", 6.0)
+    body_leading = _language_param(ctx, "idml_warranty_body_font_leading", 6.0)
+    list_leading = _language_param(ctx, "type_warranty_body_font_leading", 7.2)
     body_after = param_pt(ctx.params, "idml_warranty_paragraph_after", 2.83)
     list_after = param_pt(ctx.params, "idml_warranty_list_after", 1.0)
-    horizontal_scale = _language_param(
-        ctx, "idml_warranty_body_horizontal_scale", 100.0,
+    horizontal_scale = _variant_value(
+        layout_spec,
+        ctx,
+        "body_horizontal_scale",
+        _language_param(
+            ctx, "idml_warranty_body_horizontal_scale", 100.0,
+        ),
     )
+    estimate_horizontal_scale = _variant_value(
+        layout_spec,
+        ctx,
+        "body_estimate_horizontal_scale",
+        horizontal_scale,
+    )
+    estimate_horizontal_scale = _variant_value(
+        layout_spec,
+        ctx,
+        f"body_estimate_horizontal_scale_{section_index}",
+        estimate_horizontal_scale,
+    )
+    # `idml_warranty_variant_*_body_font_leading` is not read here any more.
+    # It only ever reached the page as a `Leading` attribute, which InDesign
+    # drops, so section body copy composes at HB Warranty Body's own leading
+    # and the budget below matches what prints. `_years_table` still reads the
+    # token for its own height estimate; that estimate is now the only thing
+    # the token affects, and it is a separate correction.
     list_indent = param_pt(
         ctx.params, "idml_warranty_list_left_indent", 5.67,
     )
@@ -283,11 +580,30 @@ def _section_body(
         kind = str(block.get("kind", "body"))
         terminal = block_index == len(blocks) - 1
         if kind == "component" and block.get("spec", {}).get("kind") == "warrantyyears":
+            years_spec = dict(block["spec"])
+            if layout_spec.get("layout_variant"):
+                years_spec["layout_variant"] = layout_spec["layout_variant"]
             table, table_height = _years_table(
-                block["spec"], ctx, tid=f"{tid}_years", width=width,
+                years_spec,
+                ctx,
+                tid=f"{tid}_years",
+                width=width,
+                section_index=section_index,
             )
-            parts.append(wrap_table_paragraph(table, True, span_columns=False))
-            height += table_height
+            # The native circle reaches above the ordinary text ascender.  A
+            # composition-level clearance keeps it below the section-title
+            # plate without baking a page-specific offset into JE/JBP/KR.
+            badge_clearance = param_pt(
+                ctx.params,
+                "comp_warranty_section_pad_top",
+                9.07,
+            )
+            parts.append(wrap_table_paragraph(
+                table,
+                True,
+                span_columns=False,
+            ))
+            height += badge_clearance + table_height
             continue
         text = str(block.get("text", ""))
         is_list = kind in {"list", "sublist"}
@@ -296,14 +612,21 @@ def _section_body(
         paragraph_after = list_after if is_list else body_after
         list_marker = ""
         list_text = text
+        marker_size = 4.8
+        marker_indent = list_indent
         if is_list:
-            marker_match = re.match(r"^\s*([•◦])(?:\s+|$)", text)
+            marker_match = re.match(r"^\s*([•◦–-]|\d+[.)])(?:\s+|$)", text)
             if marker_match:
                 list_marker = marker_match.group(1)
                 list_text = text[marker_match.end():]
             else:
                 list_marker = "◦" if kind == "sublist" else "•"
                 list_text = text.lstrip()
+            if list_marker[0].isdigit():
+                marker_size = body_size
+                marker_indent = max(
+                    list_indent, estimated_text_width(list_marker, point_size=marker_size) + 1.5,
+                )
         paragraph = psr(
             style,
             list_text if is_list else text,
@@ -312,10 +635,10 @@ def _section_body(
         if is_list:
             first_line_indent = param_pt(
                 ctx.params, "idml_warranty_list_first_line_indent", -list_indent,
-            )
+            ) - (marker_indent - list_indent)
             paragraph = paragraph.replace(
                 "<ParagraphStyleRange ",
-                f'<ParagraphStyleRange LeftIndent="{list_indent:g}" '
+                f'<ParagraphStyleRange LeftIndent="{marker_indent:g}" '
                 f'FirstLineIndent="{first_line_indent:g}" RightIndent="0" ',
                 1,
             )
@@ -327,15 +650,19 @@ def _section_body(
                 '<Alignment type="enumeration">LeftAlign</Alignment>'
                 '<AlignmentCharacter type="string"></AlignmentCharacter>'
                 '<Leader type="string"></Leader>'
-                f'<Position type="unit">{list_indent:g}</Position>'
+                f'<Position type="unit">{marker_indent:g}</Position>'
                 '</ListItem></TabList></Properties>'
             )
-            bullet_xml = (
-                '<CharacterStyleRange '
+            bullet_xml = "".join(character_ranges(
+                list_marker,
+                bold=False,
+                superscript_markers=False,
+                replacements={},
+            )).replace(
+                'AppliedCharacterStyle="CharacterStyle/$ID/[No character style]"',
                 'AppliedCharacterStyle="CharacterStyle/$ID/[No character style]" '
-                'PointSize="4.8">'
-                f'<Content>{list_marker}</Content>'
-                '</CharacterStyleRange>'
+                f'PointSize="{marker_size:g}"',
+                1,
             )
             tab_xml = (
                 '<CharacterStyleRange '
@@ -348,10 +675,11 @@ def _section_body(
                 f"\n    {tab_properties}\n    {bullet_xml}\n    {tab_xml}\n    <CharacterStyleRange",
                 1,
             )
-        paragraph = paragraph.replace(
-            'AppliedCharacterStyle="CharacterStyle/$ID/[No character style]"',
-            'AppliedCharacterStyle="CharacterStyle/$ID/[No character style]" '
-            f'HorizontalScale="{horizontal_scale:g}"',
+        paragraph = _variant_body_format(
+            paragraph,
+            layout_spec,
+            ctx,
+            horizontal_scale=horizontal_scale,
         )
         if not terminal:
             paragraph = paragraph.replace(
@@ -361,12 +689,12 @@ def _section_body(
             )
         parts.append(paragraph)
         available = width - (
-            list_indent if kind in {"list", "sublist"} else 0.0
+            marker_indent if kind in {"list", "sublist"} else 0.0
         )
         height += _wrapped_lines(
             list_text if is_list else text,
             available,
-            body_size * horizontal_scale / 100.0,
+            body_size * estimate_horizontal_scale / 100.0,
         ) * leading
         if not terminal:
             height += paragraph_after
@@ -397,7 +725,12 @@ def render_warrantysection(
     )
     inner_w = width - 2 * pad_lr
     body_parts, body_height = _section_body(
-        blocks, ctx, tid=tid, width=inner_w,
+        blocks,
+        ctx,
+        tid=tid,
+        width=inner_w,
+        layout_spec=spec,
+        section_index=index,
     )
     trim_key = (
         "idml_warranty_panel_trim_first" if index == 1
@@ -413,19 +746,44 @@ def render_warrantysection(
         ctx,
         f"idml_warranty_panel_height_adjust_{index}",
         0.0,
+    ) + _variant_adjust(
+        spec,
+        ctx,
+        f"panel_height_adjust_{index}",
     )
     panel_h = max(
         22.0,
         pad_top + body_height + pad_bottom - trim + panel_adjust,
     )
-    title_size = param_pt(ctx.params, "idml_warranty_title_font_size", 8.0)
+    title_horizontal_scale = _language_param(
+        ctx,
+        "idml_warranty_title_horizontal_scale",
+        100.0,
+    )
+    title_estimate_scale = _language_param(
+        ctx,
+        "idml_warranty_title_estimate_horizontal_scale",
+        title_horizontal_scale,
+    )
+    title_estimate_size = (
+        param_pt(ctx.params, "idml_warranty_title_font_size", 8.0)
+        * title_estimate_scale
+        / 100.0
+    )
     title_leading = param_pt(ctx.params, "type_warranty_title_font_leading", 8.8)
     title_pad_lr = param_pt(ctx.params, "comp_warranty_title_pad_lr", 5.1)
     title_pad_tb = param_pt(ctx.params, "comp_warranty_title_pad_tb", 1.98)
     title_h = title_leading + 2 * title_pad_tb
     title_w = min(
         width - 2 * pad_lr,
-        max(55.0, len(title) * title_size * 0.53 + 2 * title_pad_lr),
+        max(
+            55.0,
+            estimated_text_width(
+                title,
+                point_size=title_estimate_size,
+                narrow_width_ratio=0.53,
+            ) + 2 * title_pad_lr,
+        ),
     )
     if ctx.add_story is None:
         fallback = psr("HB Warranty Title", title) + "".join(body_parts)
@@ -438,10 +796,16 @@ def render_warrantysection(
         )
         return wrap_table_paragraph(table, terminal, span_columns), panel_h
 
+    title_xml = psr("HB Warranty Title", title, terminal=True).replace(
+        'AppliedCharacterStyle="CharacterStyle/$ID/[No character style]"',
+        'AppliedCharacterStyle="CharacterStyle/$ID/[No character style]" '
+        f'HorizontalScale="{title_horizontal_scale:g}"',
+        1,
+    )
     title_sid = ctx.add_story(
         f"st_anchor_warranty_title_{tid}",
         f"{title} warranty panel title",
-        [psr("HB Warranty Title", title, terminal=True)],
+        [title_xml],
     )
     body_sid = ctx.add_story(
         f"st_anchor_warranty_body_{tid}",
@@ -449,7 +813,12 @@ def render_warrantysection(
         body_parts,
     )
     rule = param_pt(ctx.params, "comp_warranty_section_rule", 0.9)
-    arc = param_pt(ctx.params, "comp_warranty_section_arc", 6.8)
+    arc = declared_indexed_radius(
+        spec,
+        "section",
+        spec.get("index"),
+        param_pt(ctx.params, "comp_warranty_section_arc", 6.8),
+    )
     title_arc = param_pt(ctx.params, "comp_warranty_title_arc", 4.82)
     title_x = param_pt(ctx.params, "comp_warranty_title_inset", 8.50)
     outer = (
@@ -485,17 +854,42 @@ def render_warrantysection(
         -panel_h + title_h / 2.0,
         valign="CenterAlign",
     )
+    body_top_adjust = _variant_value(
+        spec,
+        ctx,
+        f"body_top_adjust_{index}",
+        _variant_value(spec, ctx, "body_top_adjust", 0.0),
+    )
+    if any(
+        str(block.get("kind") or "") == "component"
+        and str(block.get("spec", {}).get("kind") or "") == "warrantyyears"
+        for block in blocks
+    ):
+        # SpaceBefore on the first paragraph of an InDesign text frame is
+        # ignored.  Allocate the extra height above and move the body frame's
+        # top edge instead, keeping the native circles clear of the title.
+        body_top_adjust += param_pt(
+            ctx.params,
+            "comp_warranty_section_pad_top",
+            9.07,
+        )
     body_frame = _text_frame(
         body_sid,
         f"tf_warranty_body_{tid}",
         pad_lr,
-        -panel_h + pad_top,
+        -panel_h + pad_top + body_top_adjust,
         width - pad_lr,
         -(
             _language_param(
                 ctx, "idml_warranty_exclusions_body_bottom_inset", 0.0,
             )
             if index == 5 else max(0.0, pad_bottom - trim)
+        ),
+        valign=(
+            "CenterAlign"
+            if index == 6
+            and _variant_value(spec, ctx, "final_body_center", 0.0) >= 0.5
+            else "TopAlign"
         ),
     )
     group = (
@@ -518,6 +912,14 @@ def render_warrantysection(
         ctx,
         f"idml_warranty_section_{index}_before",
         param_pt(ctx.params, before_default_key, 4.25),
+    )
+    before = max(
+        0.0,
+        before + _variant_adjust(
+            spec,
+            ctx,
+            f"section_{index}_before_adjust",
+        ),
     )
     after = param_pt(ctx.params, "comp_warranty_section_after", 1.13)
     host = host.replace(

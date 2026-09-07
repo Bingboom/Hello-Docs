@@ -16,6 +16,24 @@ from tools.manual_ir import ManualIR
 
 
 def project_manual_ir_components(ir: ManualIR) -> tuple[ComponentSpec, ...]:
+    if ir.metadata.get("projection") == "whole-document-components/v1":
+        from tools.manual_ir.components import component_specs_in_flow
+
+        component_registry = ir.metadata.get("component_registry")
+        return component_specs_in_flow(
+            tuple(
+                block.payload
+                for page in ir.pages
+                for block in page.blocks
+                if block.kind == "flow"
+            ),
+            component_registry=(
+                component_registry
+                if isinstance(component_registry, dict)
+                else None
+            ),
+        )
+
     projected: list[ComponentSpec] = []
     try:
         overview_instance = resolve_overview_instance(model=ir.model, region=ir.region)

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import re
 import sys
 import tempfile
 import threading
@@ -8,12 +9,14 @@ import unittest
 import xml.etree.ElementTree as ET
 import zipfile
 from pathlib import Path
+from types import SimpleNamespace
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
 from tools.export_idml import (  # noqa: E402
     IdmlWriter,
+    _new_production_writer,
     check_idml,
     load_layout_params,
     load_lcd_rows,
@@ -25,6 +28,9 @@ from tools.export_idml import (  # noqa: E402
 )
 from tools.idml import export_paths as idml_export_paths  # noqa: E402
 from tools.idml import page_placed  # noqa: E402
+from tools.idml.target_assembly_render import (  # noqa: E402
+    needs_legacy_back_cover_fallback,
+)
 from tools.idml.character_metrics import (  # noqa: E402
     signal_label_metrics,
     tail_label_metrics,
@@ -149,6 +155,15 @@ def _top_level_story_paragraphs(xml: str) -> list[ET.Element]:
 
 
 class ExportIdmlTests(unittest.TestCase):
+    def test_target_assembly_does_not_synthesize_undeclared_back_cover(self) -> None:
+        target = SimpleNamespace(enabled=True, back_cover_added=False)
+        legacy = SimpleNamespace(enabled=False, back_cover_added=False)
+        rendered_target = SimpleNamespace(enabled=True, back_cover_added=True)
+
+        self.assertFalse(needs_legacy_back_cover_fallback(target))
+        self.assertTrue(needs_legacy_back_cover_fallback(legacy))
+        self.assertFalse(needs_legacy_back_cover_fallback(rendered_target))
+
     def _write_package(self) -> Path:
         params = load_layout_params(ROOT / "data" / "layout_params.csv")
         sections = load_spec_sections(FIXTURE_DATA_ROOT, "JE-1000F", "US")
@@ -165,6 +180,43 @@ class ExportIdmlTests(unittest.TestCase):
     def test_package_passes_structural_check(self) -> None:
         out = self._write_package()
         self.assertEqual(check_idml(out), [])
+
+    def test_both_final_assembly_modes_enable_portable_native_markers(self) -> None:
+        params = load_layout_params(ROOT / "data" / "layout_params.csv")
+        for plan_source in ("approved-reference", "target-assembly"):
+            with self.subTest(plan_source=plan_source):
+                writer = _new_production_writer(
+                    params,
+                    model="JE-1000F",
+                    region="US",
+                    language="en",
+                    page_plan={"plan_source": plan_source},
+                )
+                self.assertTrue(writer.native_structure_markers)
+
+    def test_structural_check_rejects_unrouted_cjk_glyph(self) -> None:
+        params = load_layout_params(ROOT / "data" / "layout_params.csv")
+        writer = IdmlWriter(params)
+        story = writer._add_story_parts(
+            "st_bad_cjk",
+            "Bad CJK",
+            [
+                '  <ParagraphStyleRange '
+                'AppliedParagraphStyle="ParagraphStyle/HB Callout Label">\n'
+                '    <CharacterStyleRange '
+                'AppliedCharacterStyle="CharacterStyle/$ID/[No character style]">'
+                '<Content>팁</Content></CharacterStyleRange>\n'
+                '  </ParagraphStyleRange>\n'
+            ],
+        )
+        writer.add_spread_chain(story, 1, 0)
+        out = Path(tempfile.mkdtemp()) / "bad-cjk.idml"
+        writer.write(out)
+
+        issues = check_idml(out)
+
+        self.assertEqual(1, len(issues))
+        self.assertTrue(all("requires NanumGothic" in issue for issue in issues))
 
     def test_mimetype_is_first_and_stored(self) -> None:
         out = self._write_package()
@@ -234,26 +286,52 @@ class ExportIdmlTests(unittest.TestCase):
         h1_range = story.split("</ParagraphStyleRange>")[0]
         self.assertIn("<Br/>", h1_range)
 
-    def test_symbol_glyphs_use_fallback_font_without_text_rewrite(self) -> None:
+    def test_symbol_glyphs_use_distributable_fallback_fonts(self) -> None:
         params = load_layout_params(ROOT / "data" / "layout_params.csv")
         w = IdmlWriter(params)
         psr = w._psr(
             "HB Body",
-            "16 V-60 V\u23935 A and LiFePO\u2084 \u203b \u2460 Nº de modelo",
+            "16 V-60 V\u23935 A and LiFePO\u2084 \u203b \u2460 ● Nº de modelo",
             terminal=True,
         )
         self.assertIn("\u2393", psr)
         self.assertIn("\u2084", psr)
-        self.assertIn("\u203b", psr)
         self.assertIn("\u2460", psr)
         self.assertIn("<Content>º</Content>", psr)
         self.assertIn("<Content> de modelo</Content>", psr)
         self.assertNotIn(" DC ", psr)
         self.assertNotIn('AppliedFont="Arial Unicode MS"', psr)
-        self.assertIn("<Properties><AppliedFont type=\"string\">Apple Symbols</AppliedFont></Properties>", psr)
+        self.assertIn("<Properties><AppliedFont type=\"string\">Noto Sans Symbols</AppliedFont></Properties>", psr)
         self.assertIn("<Content>\u2393</Content>", psr)
-        self.assertIn("<Properties><AppliedFont type=\"string\">Arial Unicode MS</AppliedFont></Properties>", psr)
+        self.assertIn("<Properties><AppliedFont type=\"string\">Noto Sans</AppliedFont></Properties>", psr)
+        self.assertIn("<Properties><AppliedFont type=\"string\">Noto Sans Symbols2</AppliedFont></Properties>", psr)
+        self.assertNotIn("<Content>\u203b</Content>", psr)
+        self.assertIn("<!--HB_NATIVE_REFERENCE_MARK-->", psr)
+        self.assertIn('<Polygon Self="__HB_NATIVE_REFERENCE_MARK_GLYPH__"', psr)
+        self.assertNotIn('HorizontalScale="70.8"', psr)
         self.assertIn('FontStyle="Regular"', psr)
+
+    def test_reference_mark_package_ids_are_unique_and_font_independent(self) -> None:
+        params = load_layout_params(ROOT / "data" / "layout_params.csv")
+        writer = IdmlWriter(params)
+        story = writer._add_story_parts(
+            "st_reference_mark",
+            "Reference marks",
+            [writer._psr("HB Body", "A※B※C", terminal=True)],
+        )
+        writer.add_spread_chain(story, 1, 0)
+        out = Path(tempfile.mkdtemp()) / "reference-mark.idml"
+        writer.write(out)
+
+        with zipfile.ZipFile(out) as zf:
+            xml = zf.read("Stories/Story_st_reference_mark.xml").decode("utf-8")
+        ids = re.findall(r'<(?:Rectangle|Polygon) Self="(hb_refmark_[^"]+)"', xml)
+        self.assertEqual(6, len(ids))
+        self.assertEqual(len(ids), len(set(ids)))
+        self.assertEqual(2, xml.count("<Polygon "))
+        self.assertNotIn("HB_NATIVE_REFERENCE_MARK", xml)
+        self.assertNotIn("<Content>※</Content>", xml)
+        self.assertNotIn("Noto Sans</AppliedFont>", xml)
 
     def test_cjk_text_uses_fallback_runs_without_changing_latin_text(self) -> None:
         params = load_layout_params(ROOT / "data" / "layout_params.csv")
@@ -262,12 +340,18 @@ class ExportIdmlTests(unittest.TestCase):
             "Latin 日本語、한국어 Latin",
             terminal=True,
         )
-        fallback = (
+        cjk_fallback = (
             '<Properties><AppliedFont type="string">Arial Unicode MS'
             '</AppliedFont></Properties>'
         )
-        self.assertEqual(1, psr.count(fallback))
-        self.assertIn("<Content>日本語、한국어</Content>", psr)
+        korean_fallback = (
+            '<Properties><AppliedFont type="string">NanumGothic'
+            '</AppliedFont></Properties>'
+        )
+        self.assertEqual(1, psr.count(cjk_fallback))
+        self.assertEqual(1, psr.count(korean_fallback))
+        self.assertIn("<Content>日本語、</Content>", psr)
+        self.assertIn("<Content>한국어</Content>", psr)
         self.assertIn("<Content>Latin </Content>", psr)
         self.assertIn("<Content> Latin</Content>", psr)
 
@@ -315,10 +399,16 @@ class ExportIdmlTests(unittest.TestCase):
         fonts = IdmlWriter(params).fonts_xml()
         self.assertIn('Name="Arial Unicode MS"', fonts)
         self.assertIn('PostScriptName="ArialUnicodeMS"', fonts)
-        self.assertIn('Name="Apple Symbols"', fonts)
-        self.assertIn('PostScriptName="AppleSymbols"', fonts)
-        self.assertIn('Name="Apple SD Gothic Neo"', fonts)
-        self.assertIn('PostScriptName="AppleSDGothicNeo-Regular"', fonts)
+        self.assertIn('Name="Noto Sans"', fonts)
+        self.assertIn('PostScriptName="NotoSans-Regular"', fonts)
+        self.assertIn('Name="Noto Sans Symbols"', fonts)
+        self.assertIn('PostScriptName="NotoSansSymbols-Regular"', fonts)
+        self.assertIn('Name="Noto Sans Symbols2"', fonts)
+        self.assertIn('PostScriptName="NotoSansSymbols2-Regular"', fonts)
+        self.assertNotIn('Name="Segoe UI Symbol"', fonts)
+        self.assertNotIn('Name="Yu Gothic"', fonts)
+        self.assertNotIn('Name="Apple Symbols"', fonts)
+        self.assertNotIn('Name="Apple SD Gothic Neo"', fonts)
 
     def test_page_count_follows_content(self) -> None:
         params = load_layout_params(ROOT / "data" / "layout_params.csv")
@@ -543,6 +633,91 @@ class ExportIdmlTests(unittest.TestCase):
             [block["kind"] for block in semantic["blocks"]],
         )
 
+    def test_bp_warranty_templates_enter_the_shared_je_semantic_components(
+        self,
+    ) -> None:
+        from tools.idml.oppanel import transform
+        from tools.idml_rst_extract import extract_page
+
+        for language in ("en", "fr", "es"):
+            with self.subTest(language=language):
+                page = (
+                    ROOT / "docs" / "templates" / "page_bp" / language
+                    / "11_warranty.rst"
+                )
+                extracted = extract_page(page, {"latex"})
+                semantic = [
+                    json.loads(payload)
+                    for kind, payload in extracted.blocks
+                    if kind == "semantic"
+                ]
+                self.assertEqual(
+                    ["warranty_lead"] + ["warranty_section"] * 6,
+                    [block["kind"] for block in semantic],
+                )
+                self.assertIn(
+                    "warranty_years",
+                    semantic[2]["roles"],
+                )
+
+                projected = transform(extracted.blocks)
+                component_specs = [
+                    json.loads(payload)
+                    for kind, payload in projected
+                    if kind == "component"
+                ]
+                self.assertEqual(
+                    ["warrantylead"] + ["warrantysection"] * 6,
+                    [spec["kind"] for spec in component_specs],
+                )
+                period = component_specs[2]
+                self.assertEqual(
+                    "warrantyyears",
+                    period["blocks"][0]["spec"]["kind"],
+                )
+
+    def test_bp_jp_warranty_uses_shared_sections_without_inventing_year_badges(
+        self,
+    ) -> None:
+        from tools.idml.oppanel import transform
+        from tools.idml_rst_extract import extract_page
+
+        page = (
+            ROOT / "docs" / "templates" / "page_bp" / "ja"
+            / "11_warranty.rst"
+        )
+        extracted = extract_page(page, {"latex"})
+        semantic = [
+            json.loads(payload)
+            for kind, payload in extracted.blocks
+            if kind == "semantic"
+        ]
+        self.assertEqual(
+            ["warranty_lead"] + ["warranty_section"] * 7,
+            [block["kind"] for block in semantic],
+        )
+        self.assertNotIn(
+            "warranty_years",
+            {role for block in semantic for role in block["roles"]},
+        )
+
+        projected = transform(extracted.blocks)
+        component_specs = [
+            json.loads(payload)
+            for kind, payload in projected
+            if kind == "component"
+        ]
+        self.assertEqual(
+            ["warrantylead"] + ["warrantysection"] * 7,
+            [spec["kind"] for spec in component_specs],
+        )
+        self.assertFalse(any(
+            child.get("spec", {}).get("kind") == "warrantyyears"
+            for spec in component_specs
+            for child in spec.get("blocks", [])
+            if isinstance(child, dict)
+        ))
+
     def test_inline_image_anchors_hang_from_baseline(self) -> None:
         params = load_layout_params(ROOT / "data" / "layout_params.csv")
         w = IdmlWriter(params)
@@ -604,7 +779,9 @@ class ExportIdmlTests(unittest.TestCase):
 
     def test_symbols_story_has_signal_and_icon_tables(self) -> None:
         params = load_layout_params(ROOT / "data" / "layout_params.csv")
-        signals, icons = load_symbols_rows(FIXTURE_DATA_ROOT)
+        signals, icons = load_symbols_rows(
+            FIXTURE_DATA_ROOT, model="JBP-2000B", region="EU"
+        )
         self.assertTrue(signals)
         w = IdmlWriter(params)
         w.add_symbols_story(
@@ -637,14 +814,21 @@ class ExportIdmlTests(unittest.TestCase):
         self.assertEqual(icons[0]["order"], "1")
 
     def test_symbols_rows_use_requested_language(self) -> None:
-        signals, icons = load_symbols_rows(FIXTURE_DATA_ROOT, "fr")
+        signals, icons = load_symbols_rows(
+            FIXTURE_DATA_ROOT, "fr", model="JBP-2000B", region="EU"
+        )
         self.assertIn(
             ("AVERTISSEMENT",
              "Pratiques dangereuses pouvant entraîner des blessures graves, "
              "la mort et/ou des dommages matériels."),
             signals,
         )
-        self.assertEqual(icons, [])
+        self.assertEqual(len(icons), 1)
+        self.assertEqual(icons[0]["symbol_key"], "weee2")
+        self.assertIn(
+            "Les piles et accumulateurs ne doivent pas être jetés",
+            icons[0]["text"],
+        )
         self.assertFalse(any(row[0] == "WARNING" for row in signals))
 
     def test_symbol_signal_rows_drop_empty_meanings(self) -> None:
@@ -761,6 +945,24 @@ class ExportIdmlTests(unittest.TestCase):
             self.assertAlmostEqual(fh / fw, ih / iw, places=2)
         except ImportError:
             self.assertAlmostEqual(fh / fw, 0.62, places=2)
+
+    def test_art_frames_honor_pdf_page_aspect_ratio(self) -> None:
+        try:
+            import fitz
+        except ImportError:
+            self.skipTest("PyMuPDF is unavailable")
+        params = load_layout_params(ROOT / "data" / "layout_params.csv")
+        writer = IdmlWriter(params)
+        with tempfile.TemporaryDirectory() as tmp:
+            asset = Path(tmp) / "wide-art.pdf"
+            document = fitz.open()
+            document.new_page(width=300, height=90)
+            document.save(asset)
+            document.close()
+
+            frame_width, frame_height = writer._art_frame_size(asset)
+
+        self.assertAlmostEqual(frame_height / frame_width, 0.3, places=3)
 
     def test_components_render_as_tables(self) -> None:
         params = load_layout_params(ROOT / "data" / "layout_params.csv")
@@ -980,7 +1182,7 @@ class ExportIdmlTests(unittest.TestCase):
         story = dict(writer.stories)["st_operation_rhythm"]
 
         self.assertIn('SpaceAfter="7.5"', story)
-        self.assertIn('Leading="8.1" SpaceAfter="7"', story)
+        self.assertIn('SpaceAfter="7"', story)
         self.assertIn(
             'SpaceBefore="22" SpaceAfter="6.5" '
             'AppliedParagraphStyle="ParagraphStyle/Heading2" '
@@ -1676,6 +1878,39 @@ class ExportIdmlTests(unittest.TestCase):
 
         self.assertEqual(emitted, ["ups + methods", "storage"])
 
+    def test_prose_flow_keeps_back_matter_sections_off_the_previous_tail(self) -> None:
+        """Warranty and App Setup never share one linked chain.
+
+        The measured-fallback merge exists to avoid overset, but merging these
+        two puts the App opening under the warranty tail and detaches its
+        button labels across the page break -- the JE-1000F/JP screenshot
+        finding for printed pages 22-24.
+        """
+        from tools.idml.prose_flow import ProseFlowBuffer
+
+        flow = ProseFlowBuffer()
+        flow.add("11_warranty", [("body", "warranty"), ("body", "overflow")])
+        flow.add("12_app_setup_placeholder", [("body", "app")])
+        emitted = []
+        plan = {"pages": [
+            {"source_path": "page/11_warranty.rst", "latex_start_page": 21},
+            {
+                "source_path": "page/12_app_setup_placeholder.rst",
+                "latex_start_page": 22,
+            },
+        ]}
+
+        flow.flush(
+            lambda _sid, title, _blocks, _columns: emitted.append(title),
+            lambda stem: stem,
+            plan,
+            estimate_pages=lambda blocks, _columns: len(blocks),
+        )
+
+        self.assertEqual(
+            emitted, ["11_warranty", "12_app_setup_placeholder"],
+        )
+
     def test_long_troubleshooting_table_starts_on_its_second_page(self) -> None:
         from tools.idml.prose_flow import align_trouble_table
 
@@ -1763,7 +1998,7 @@ class ExportIdmlTests(unittest.TestCase):
         self.assertAlmostEqual(storage_first_top_offset(params, "fr"), 11.80)
         self.assertAlmostEqual(storage_first_top_offset(params, "es"), 11.82)
 
-    def test_four_page_operation_flow_keeps_final_h2_on_last_page(self) -> None:
+    def test_measured_operation_flow_does_not_invent_a_final_page_break(self) -> None:
         from tools.idml.prose_flow import align_operation_tail
 
         blocks = [("h1", "Operations"), ("h2", "LCD"), ("table", "[]"),
@@ -1775,7 +2010,11 @@ class ExportIdmlTests(unittest.TestCase):
 
         aligned = align_operation_tail(blocks, plan, "05_operation_guide")
 
-        self.assertEqual(aligned[-3], ("layout", "page_break"))
+        self.assertEqual(aligned, blocks)
+        explicit = [*blocks[:-2], ("layout", "page_break"), *blocks[-2:]]
+        self.assertEqual(
+            align_operation_tail(explicit, plan, "05_operation_guide"), explicit,
+        )
 
     def test_approved_operation_flow_uses_all_three_page_boundaries(self) -> None:
         from tools.idml.prose_flow import align_operation_tail
@@ -2263,6 +2502,185 @@ class ExportIdmlTests(unittest.TestCase):
             with self.subTest(stem=stem):
                 self.assertEqual(blocks, promote_reference_figures(blocks, plan, stem))
 
+    def test_target_asset_refs_rebind_every_image_slot_in_order(self) -> None:
+        """A target plan owns which art each image slot carries.
+
+        Catches a regression where the rebinding walks the wrong slots (art
+        would land under the wrong caption), touches non-image blocks, or where
+        the ``target-assembly`` guard broadens and an approved-reference book
+        starts having its reference art silently replaced.
+        """
+        from tools.idml.prose_flow import _apply_target_asset_refs
+
+        blocks = [
+            ("h1", "OPERATION"),
+            ("image", "a.png"),
+            ("body", "copy"),
+            ("image", "b.png"),
+        ]
+        items = [("05_operation_guide_placeholder", list(blocks), 1)]
+        entries = {
+            "05_operation_guide_placeholder": {
+                "composition_data": {
+                    "assets": {"image_refs": ["new_a.pdf", "new_b.pdf"]},
+                },
+            },
+        }
+
+        rebound = _apply_target_asset_refs(
+            items, entries, {"plan_source": "target-assembly"},
+        )
+
+        self.assertEqual(
+            [
+                (
+                    "05_operation_guide_placeholder",
+                    [
+                        ("h1", "OPERATION"),
+                        ("image", "new_a.pdf"),
+                        ("body", "copy"),
+                        ("image", "new_b.pdf"),
+                    ],
+                    1,
+                ),
+            ],
+            rebound,
+        )
+
+        self.assertEqual(
+            items,
+            _apply_target_asset_refs(
+                items, entries, {"plan_source": "approved-reference"},
+            ),
+        )
+
+    def test_target_asset_refs_fail_closed_on_a_slot_count_mismatch(self) -> None:
+        """Too few or too many refs must raise, never bind partially.
+
+        Catches a regression where a short ``image_refs`` list leaves later
+        slots on stale source art, or a long one silently drops the surplus —
+        both ship a book whose art no longer matches its target contract.
+        """
+        from tools.idml.prose_flow import _apply_target_asset_refs
+
+        blocks = [
+            ("h1", "OPERATION"),
+            ("image", "a.png"),
+            ("body", "copy"),
+            ("image", "b.png"),
+        ]
+        items = [("05_operation_guide_placeholder", list(blocks), 1)]
+        plan = {"plan_source": "target-assembly"}
+
+        def entries_with(refs: list[str]) -> dict[str, dict]:
+            return {
+                "05_operation_guide_placeholder": {
+                    "composition_data": {"assets": {"image_refs": refs}},
+                },
+            }
+
+        with self.assertRaisesRegex(ValueError, "do not cover every image slot"):
+            _apply_target_asset_refs(items, entries_with(["only_a.pdf"]), plan)
+
+        with self.assertRaisesRegex(ValueError, "contain extra image slots"):
+            _apply_target_asset_refs(
+                items, entries_with(["a.pdf", "b.pdf", "c.pdf"]), plan,
+            )
+
+    def test_target_page_breaks_insert_markers_by_block_kind_and_ordinal(self) -> None:
+        """Markers land *before* the matched block, later rules first.
+
+        Catches a regression where a marker lands after its block (the page
+        would break one heading too late), where insertions stop running in
+        reverse index order (every rule after the first would be off by N), or
+        where ``top_gap_pt`` stops rendering as ``page_break:<pt>`` — the exact
+        shape the prose renderer parses.
+        """
+        from tools.idml.prose_flow import _apply_target_page_breaks
+
+        blocks = [
+            ("h1", "A"),
+            ("h2", "B"),
+            ("body", "c"),
+            ("h2", "D"),
+            ("h2", "E"),
+        ]
+        items = [("05_operation_guide_placeholder", list(blocks), 1)]
+        entries = {
+            "05_operation_guide_placeholder": {
+                "composition_data": {
+                    "page_breaks": [
+                        {"at_kind": "h2", "occurrence": 1, "top_gap_pt": 12.5},
+                        {"at_kind": "h2", "occurrence": 3},
+                    ],
+                },
+            },
+        }
+
+        aligned = _apply_target_page_breaks(
+            items, entries, {"plan_source": "target-assembly"},
+        )
+
+        self.assertEqual(
+            [
+                (
+                    "05_operation_guide_placeholder",
+                    [
+                        ("h1", "A"),
+                        ("layout", "page_break:12.5"),
+                        ("h2", "B"),
+                        ("body", "c"),
+                        ("h2", "D"),
+                        ("layout", "page_break"),
+                        ("h2", "E"),
+                    ],
+                    1,
+                ),
+            ],
+            aligned,
+        )
+
+        self.assertEqual(
+            items,
+            _apply_target_page_breaks(
+                items, entries, {"plan_source": "approved-reference"},
+            ),
+        )
+
+    def test_target_page_breaks_fail_closed_on_an_unreachable_rule(self) -> None:
+        """An ordinal the page cannot reach, or a malformed rule, must raise.
+
+        Catches a regression where a stale rule silently no-ops after the source
+        RST loses a heading — the page would then run long instead of breaking
+        where the target contract says it must.
+        """
+        from tools.idml.prose_flow import _apply_target_page_breaks
+
+        blocks = [
+            ("h1", "A"),
+            ("h2", "B"),
+            ("body", "c"),
+            ("h2", "D"),
+            ("h2", "E"),
+        ]
+        items = [("05_operation_guide_placeholder", list(blocks), 1)]
+        plan = {"plan_source": "target-assembly"}
+
+        def entries_with(rules: list) -> dict[str, dict]:
+            return {
+                "05_operation_guide_placeholder": {
+                    "composition_data": {"page_breaks": rules},
+                },
+            }
+
+        with self.assertRaisesRegex(ValueError, "cannot find h2 occurrence 9"):
+            _apply_target_page_breaks(
+                items, entries_with([{"at_kind": "h2", "occurrence": 9}]), plan,
+            )
+
+        with self.assertRaisesRegex(ValueError, "page_breaks rule must be an object"):
+            _apply_target_page_breaks(items, entries_with(["h2"]), plan)
+
     def test_approved_app_figures_keep_step_numbers_and_movable_labels(self) -> None:
         from tools.idml.prose_flow import promote_reference_figures
 
@@ -2466,6 +2884,16 @@ class ExportIdmlTests(unittest.TestCase):
         self.assertEqual(res.blocks[0], ("layout", "twocol_start"))
         self.assertEqual(res.blocks[2], ("layout", "twocol_end"))
         self.assertEqual(json.loads(res.blocks[1][1])["kind"], "warninglead")
+
+    def test_safety_single_column_latex_wrappers_are_lossless_noops(self) -> None:
+        from tools.idml_rst_extract import ExtractResult, _extract_raw_latex
+
+        res = ExtractResult()
+        _extract_raw_latex(r"\begin{safetysinglecol}", res)
+        _extract_raw_latex(r"\end{safetysinglecol}", res)
+
+        self.assertEqual([], res.blocks)
+        self.assertEqual(0, res.skipped_raw)
 
     def test_safety_lead_and_nested_lists_keep_their_source_semantics(self) -> None:
         from tools.idml_rst_extract import _parse_text
@@ -2728,7 +3156,7 @@ class ExportIdmlTests(unittest.TestCase):
         )
         spread = dict(w.spreads)["sp_2"]
         self.assertEqual(spread.count("<TextFrame "), 8)
-        self.assertEqual(spread.count("<Rectangle "), 22)
+        self.assertEqual(spread.count("<Rectangle "), 25)
         self.assertEqual(
             spread.count('AppliedObjectStyle="ObjectStyle/HB Capsule Heading"'),
             2,
@@ -2954,12 +3382,39 @@ class ExportIdmlTests(unittest.TestCase):
         )
         self.assertEqual(2, french.count('BaselineShift="2.25"'))
 
+    def test_korean_signal_badge_uses_korean_text_face(self) -> None:
+        params = load_layout_params(ROOT / "data" / "layout_params.csv")
+        writer = IdmlWriter(params, language="ko")
+
+        korean = writer._symbol_signal_bar(
+            "sig_ko", "주의", ROOT, "ko", signal_key="caution",
+        )
+        root = ET.fromstring(korean)
+        label_ranges = [
+            element
+            for element in root.iter("CharacterStyleRange")
+            if element.findtext("Content")
+        ]
+
+        self.assertEqual(" 주의", "".join(
+            element.findtext("Content") or "" for element in label_ranges
+        ))
+        cjk_ranges = [
+            element
+            for element in label_ranges
+            if any(ord(character) >= 0x1100 for character in element.findtext("Content"))
+        ]
+        self.assertTrue(cjk_ranges)
+        self.assertTrue(all(
+            element.findtext("Properties/AppliedFont") == "NanumGothic"
+            for element in cjk_ranges
+        ))
+
     def test_safety_symbols_composition_constants_are_layout_tokens(self) -> None:
         params = load_layout_params(ROOT / "data" / "layout_params.csv")
         overrides = {
             "idml_symbols_maintenance_title_gap": "4",
             "idml_symbols_title_gap": "10",
-            "idml_symbols_h1_optical_offset": "2.5",
             "idml_symbols_page_bottom_allowance": "3",
             "idml_symbols_table_frame_allowance": "0.5",
             "idml_symbols_fallback_import_allowance": "4",
@@ -2977,7 +3432,6 @@ class ExportIdmlTests(unittest.TestCase):
         self.assertEqual(17.0, style.subbar_height)
         self.assertEqual(4.0, style.maintenance_title_gap)
         self.assertEqual(10.0, style.symbols_title_gap)
-        self.assertEqual(2.5, style.h1_optical_offset)
         self.assertEqual(3.0, style.page_bottom_allowance)
         self.assertEqual(0.5, style.table_frame_allowance)
         self.assertEqual(4.0, style.fallback_import_allowance)
@@ -2998,7 +3452,9 @@ class ExportIdmlTests(unittest.TestCase):
             ("h1", "INSTRUCTIONS D'ENTRETIEN PAR L'UTILISATEUR"),
             ("body", "Pendant le cycle de vie des produits de stockage d'énergie."),
         ]
-        signals, _ = load_symbols_rows(FIXTURE_DATA_ROOT, "fr")
+        signals, _ = load_symbols_rows(
+            FIXTURE_DATA_ROOT, "fr", model="JBP-2000B", region="EU"
+        )
         icons = [{"figure": "", "text": "Icône localisée"}]
         w.add_safety_symbols_page(
             "st_safety_symbols_fr",
@@ -3129,6 +3585,83 @@ class ExportIdmlTests(unittest.TestCase):
         dense = template_symbol_split(icons, dense=True)
         self.assertEqual([len(rows) for rows in dense], [4, 4, 2, 1])
 
+    def test_template_icon_split_preserves_authored_uneven_columns(self) -> None:
+        icons = [
+            {
+                "figure": f"{index}_left.png",
+                "text": f"left {index}",
+                "column": "left",
+                "continuation": False,
+            }
+            for index in range(1, 6)
+        ] + [
+            {
+                "figure": f"{index}_right.png",
+                "text": f"right {index}",
+                "column": "right",
+                "continuation": False,
+            }
+            for index in range(1, 3)
+        ]
+
+        left, right, overflow_left, overflow_right = template_symbol_split(icons)
+
+        self.assertEqual([f"left {index}" for index in range(1, 6)],
+                         [row["text"] for row in left])
+        self.assertEqual(["right 1", "right 2"],
+                         [row["text"] for row in right])
+        self.assertEqual([], overflow_left)
+        self.assertEqual([], overflow_right)
+
+    def test_template_icon_split_preserves_authored_continuations(self) -> None:
+        icons = [
+            {"text": "left", "column": "left", "continuation": False},
+            {"text": "right", "column": "right", "continuation": False},
+            {"text": "left overflow", "column": "left", "continuation": True},
+            {"text": "right overflow", "column": "right", "continuation": True},
+        ]
+
+        split = template_symbol_split(icons, dense=True)
+
+        self.assertEqual(
+            [["left"], ["right"], ["left overflow"], ["right overflow"]],
+            [[row["text"] for row in rows] for rows in split],
+        )
+
+    def test_template_icon_split_recovers_semantic_columns_from_assets(self) -> None:
+        icons = [
+            {"figure": "10_warning_triangle_hash.png", "text": "warning"},
+            {"figure": "20_read_manual_hash.png", "text": "manual"},
+            {"figure": "30_electric_shock_hash.png", "text": "shock"},
+            {"figure": "40_battery_charging_hash.png", "text": "charging"},
+            {"figure": "10_do_not_dismantle_hash.png", "text": "dismantle"},
+            {"figure": "20_no_open_flame_hash.png", "text": "flame"},
+            {
+                "figure": "30_keep_away_from_children_hash.png",
+                "text": "children",
+            },
+            {"figure": "40_li_ion_hash.png", "text": "li-ion"},
+            {
+                "figure": "50_explosive_material_hash.png",
+                "text": "explosive",
+            },
+            {"figure": "60_heavy_object_hash.png", "text": "heavy"},
+            {"figure": "50_weee_hash.png", "text": "weee"},
+        ]
+
+        left, right, overflow_left, overflow_right = template_symbol_split(icons)
+
+        self.assertEqual(
+            ["warning", "manual", "shock", "charging", "explosive", "heavy"],
+            [row["text"] for row in left],
+        )
+        self.assertEqual(
+            ["dismantle", "flame", "children", "li-ion", "weee"],
+            [row["text"] for row in right],
+        )
+        self.assertEqual([], overflow_left)
+        self.assertEqual([], overflow_right)
+
     def test_safety_symbols_weee_uses_canonical_cropped_asset(self) -> None:
         params = load_layout_params(ROOT / "data" / "layout_params.csv")
         w = IdmlWriter(params)
@@ -3150,7 +3683,11 @@ class ExportIdmlTests(unittest.TestCase):
         )
         self.assertNotIn("11_weee_shifted_source.png", left)
 
-    def test_dense_safety_symbols_page_returns_reference_continuation_rows(self) -> None:
+    def test_standard_symbols_panel_derives_continuation_from_available_height(
+        self,
+    ) -> None:
+        import json
+
         params = load_layout_params(ROOT / "data" / "layout_params.csv")
         icons = [
             {"figure": "1_warning_triangle.png", "text": "Avertissement"},
@@ -3169,15 +3706,30 @@ class ExportIdmlTests(unittest.TestCase):
         w = IdmlWriter(params)
         spread_id, overflow = w.add_safety_symbols_page(
             "st_safety_symbols_dense",
-            [],
+            [
+                ("component", json.dumps({
+                    "kind": "warnbox",
+                    "label": "AVERTISSEMENT",
+                    "texts": ["Avertissement de sécurité."],
+                })),
+                ("component", json.dumps({
+                    "kind": "warnbox",
+                    "label": "DANGER",
+                    "texts": ["Danger de sécurité."],
+                })),
+            ],
             [("h1", "ENTRETIEN"), ("body", "Corps.")],
-            [("AVERTISSEMENT", "Pratique dangereuse.")],
+            [
+                ("AVERTISSEMENT", "Pratique dangereuse."),
+                ("ATTENTION", "Risque de blessure."),
+                ("REMARQUE", "Risque de dommage."),
+                ("CONSEIL", "Information utile."),
+            ],
             icons,
             ROOT,
             22,
             "fr",
             **_symbol_source_kwargs("fr"),
-            dense=True,
         )
 
         self.assertEqual(spread_id, "sp_22")
@@ -3291,11 +3843,11 @@ class ExportIdmlTests(unittest.TestCase):
         self.assertIn(">TIP<", stories["st_fcc_inbox_tip_label"])
         self.assertNotIn("TIPS", stories["st_fcc_inbox_tip_label"])
         self.assertIn(
-            'PointSize="8" Leading="9" FontStyle="Bold" BaselineShift="2.63"',
+            'PointSize="8" FontStyle="Bold" BaselineShift="2.63"',
             stories["st_fcc_inbox_tip_label"],
         )
         self.assertIn(
-            'PointSize="6.5" Leading="7.83" FontStyle="Medium" '
+            'PointSize="6.5" FontStyle="Medium" '
             'HorizontalScale="106.9" BaselineShift="0.9"',
             stories["st_fcc_inbox_tip_body"],
         )
@@ -3484,7 +4036,7 @@ class ExportIdmlTests(unittest.TestCase):
         title = bounds("tf_st_fcc_es_layout_title")
         card = bounds("bg_st_fcc_es_layout_card_1")
         tip = bounds("bg_st_fcc_es_layout_tip_strip")
-        self.assertAlmostEqual(263.5 - 1.96, title[1], places=3)
+        self.assertAlmostEqual(263.5, title[1], places=3)
         self.assertAlmostEqual(288.0, card[1], places=3)
         self.assertAlmostEqual(160.8, card[3] - card[1], places=3)
         self.assertAlmostEqual(454.0, tip[1], places=3)
@@ -3722,11 +4274,22 @@ class ExportIdmlTests(unittest.TestCase):
 
         cases = [
             ("REMARQUE", "note"),
+            ("NOTES", "note"),
+            ("REMARQUES", "note"),
             ("NOTA", "note"),
+            ("NOTAS", "note"),
+            ("OBSERVACIONES", "note"),
+            ("IMPORTANT", "note"),
             ("CONSEILS", "tip"),
             ("CONSEJOS", "tip"),
             ("ATTENTION", "caution"),
             ("PRECAUCIÓN", "caution"),
+            ("경고", "warning"),
+            ("위험", "danger"),
+            ("주의", "caution"),
+            ("참고", "note"),
+            ("중요", "note"),
+            ("팁", "tip"),
         ]
         for label, variant in cases:
             with self.subTest(label=label):
@@ -3752,6 +4315,18 @@ class ExportIdmlTests(unittest.TestCase):
                     data["texts"],
                     ["First localized item.", "Second localized item."],
                 )
+
+    def test_known_notice_label_cannot_fall_back_to_generic_table(self) -> None:
+        from tools.idml_rst_extract import _parse_text
+
+        text = """
+.. list-table::
+   :header-rows: 0
+
+   * - **주의**
+"""
+        with self.assertRaisesRegex(ValueError, "known notice label"):
+            _parse_text(text, {"latex"})
 
     def test_inline_strong_markup_becomes_bold_runs(self) -> None:
         params = load_layout_params(ROOT / "data" / "layout_params.csv")
@@ -3837,7 +4412,7 @@ class ExportIdmlTests(unittest.TestCase):
         self.assertIn(
             'TopInset="2.14" BottomInset="2.14"', continuation_cell)
         self.assertIn(
-            '<AppliedFont type="string">Apple SD Gothic Neo</AppliedFont>',
+            '<AppliedFont type="string">Noto Sans Symbols</AppliedFont>',
             number_cell,
         )
 
@@ -3923,6 +4498,7 @@ class ExportIdmlTests(unittest.TestCase):
     def test_lcd_governed_height_budget_is_fixed_for_all_us_languages(self) -> None:
         params = load_layout_params(ROOT / "data" / "layout_params.csv")
         self.assertEqual(("3.8", "pt"), params["idml_lcd_governed_icon_line_reserve"])
+        self.assertEqual(("1.0", "pt"), params["idml_lcd_native_carrier_allowance"])
         rows = [
             {
                 "no": str(index),
@@ -3947,6 +4523,28 @@ class ExportIdmlTests(unittest.TestCase):
                 ]
                 self.assertEqual(19, continuation.count('AutoGrow="true"'))
                 self.assertNotIn('AutoGrow="false"', continuation)
+                host_sid = "st_lcd" if language == "en" else f"st_lcd_{language}"
+                host = dict(writer.stories)[host_sid]
+                for segment_index in (0, 1):
+                    main_frame_id = (
+                        f"tf_group_st_anchor_lcd_table_{language}_{segment_index}"
+                    )
+                    carrier_id = (
+                        "tf_terminal_carrier_group_st_anchor_lcd_table_"
+                        f"{language}_{segment_index}"
+                    )
+                    self.assertIn(
+                        f'Self="{main_frame_id}" '
+                        f'ParentStory="st_anchor_lcd_table_{language}_{segment_index}" '
+                        f'PreviousTextFrame="n" NextTextFrame="{carrier_id}"',
+                        host,
+                    )
+                    carrier = host.split(
+                        f'<TextFrame Self="{carrier_id}"', 1,
+                    )[1].split("</TextFrame>", 1)[0]
+                    self.assertIn('Anchor="0 1"', carrier)
+                    self.assertIn('FillColor="Swatch/None"', carrier)
+                    self.assertIn('StrokeColor="Swatch/None"', carrier)
 
     def test_lcd_french_first_page_uses_reference_body_column_width(self) -> None:
         params = load_layout_params(ROOT / "data" / "layout_params.csv")
@@ -4258,17 +4856,27 @@ class ExportIdmlTests(unittest.TestCase):
                 title=SOURCE_TITLES["en"]["lcd"],
             )
 
-    def test_lcd_high_circled_numbers_use_a_font_that_covers_them(self) -> None:
+    def test_lcd_portable_marker_font_covers_the_retained_unicode_block(self) -> None:
         params = load_layout_params(ROOT / "data" / "layout_params.csv")
-        for number in ("㉑", "㉗"):
+        for number in ("①", "⑳"):
             with self.subTest(number=number):
                 psr = IdmlWriter(params)._psr(
                     "HB Spec Label", number, terminal=True)
                 self.assertIn(
                     '<Properties><AppliedFont type="string">'
-                    'Apple SD Gothic Neo</AppliedFont>',
+                    'Noto Sans Symbols</AppliedFont>',
                     psr,
                 )
+
+    def test_lcd_high_circled_numbers_degrade_to_portable_ascii_labels(self) -> None:
+        params = load_layout_params(ROOT / "data" / "layout_params.csv")
+        psr = IdmlWriter(params)._psr(
+            "HB Spec Label", "㉑ ㉗", terminal=True,
+        )
+        self.assertIn("<Content>(21) (27)</Content>", psr)
+        self.assertNotIn("㉑", psr)
+        self.assertNotIn("㉗", psr)
+        self.assertNotIn("Arial Unicode MS", psr)
 
     def test_shading_uses_paragraph_prefixed_attributes(self) -> None:
         # bare ShadingOn/ShadingColor are silently ignored by InDesign
@@ -4446,6 +5054,20 @@ class ExportIdmlTests(unittest.TestCase):
         rows = _parse_list_table(body)
         self.assertEqual(rows[0], ["Buttons", "Operation", "Function"])
         self.assertEqual(rows[1], ["A + B", "Hold 3s", "Toggle mode"])
+
+    def test_list_table_line_blocks_preserve_breaks_without_pipe_text(self) -> None:
+        from tools.idml_rst_extract import _parse_list_table
+
+        rows = _parse_list_table([
+            "   * - | F6-F9,",
+            "       | FA, FC",
+            "     - Contact Jackery Customer Support.",
+        ])
+
+        self.assertEqual(
+            rows,
+            [["F6-F9,\nFA, FC", "Contact Jackery Customer Support."]],
+        )
 
     def test_full_bundle_extraction_has_zero_skips(self) -> None:
         from tools.idml_rst_extract import bundle_page_order, extract_page

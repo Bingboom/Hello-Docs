@@ -1,6 +1,7 @@
 """Tests for the publish IDML delivery package (tools/idml/delivery.py)."""
 from __future__ import annotations
 
+import io
 import json
 import tempfile
 import unittest
@@ -31,9 +32,18 @@ def _write_production_idml(path: Path, uris: list[str]) -> None:
         f'<Document xmlns:idPkg="{_IDPKG}" Self="doc">'
         '<idPkg:Story src="Stories/Story_s1.xml"/></Document>\n'
     )
+    fonts = (
+        '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n'
+        f'<idPkg:Fonts xmlns:idPkg="{_IDPKG}">'
+        '<FontFamily Self="ff_noto_sans" Name="Noto Sans"/>'
+        '<FontFamily Self="ff_noto_sans_symbols" Name="Noto Sans Symbols"/>'
+        '<FontFamily Self="ff_noto_sans_symbols2" Name="Noto Sans Symbols2"/>'
+        '</idPkg:Fonts>\n'
+    )
     with zipfile.ZipFile(path, "w") as zf:
         zf.writestr(zipfile.ZipInfo("mimetype"), MIMETYPE, compress_type=zipfile.ZIP_STORED)
         zf.writestr("designmap.xml", designmap, compress_type=zipfile.ZIP_DEFLATED)
+        zf.writestr("Resources/Fonts.xml", fonts, compress_type=zipfile.ZIP_DEFLATED)
         zf.writestr("Stories/Story_s1.xml", story, compress_type=zipfile.ZIP_DEFLATED)
 
 
@@ -49,7 +59,9 @@ def _write_handoff_tree(root: Path) -> Path:
         encoding="utf-8",
     )
     (handoff / "layout_feedback.md").write_text("feedback\n", encoding="utf-8")
-    (handoff / "missing_assets_report.md").write_text("missing\n", encoding="utf-8")
+    (handoff / "missing_assets_report.md").write_text(
+        "missing\n", encoding="utf-8", newline="\n"
+    )
     (handoff / "production" / "source_trace.json").write_text(
         json.dumps({"version": "unknown", "model": "JE-1000F"}), encoding="utf-8"
     )
@@ -130,7 +142,7 @@ class BuildDeliveryPackageTest(unittest.TestCase):
             self.assertEqual([uris[2]], out.missing_links)
             self.assertEqual(2, len(out.links))
 
-    def test_fonts_are_opt_in(self) -> None:
+    def test_portable_fonts_are_automatic_and_commercial_fonts_are_opt_in(self) -> None:
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
             idml, handoff, _ = self._fixture(root)
@@ -146,9 +158,18 @@ class BuildDeliveryPackageTest(unittest.TestCase):
             with zipfile.ZipFile(with_fonts.zip_path) as zf:
                 names = set(zf.namelist())
                 self.assertIn("Document fonts/Gilroy-Regular.otf", names)
+                self.assertIn("Document fonts/NotoSans-Regular.ttf", names)
+                self.assertIn("Document fonts/NotoSansSymbols-Regular.ttf", names)
+                self.assertIn("Document fonts/NotoSansSymbols2-Regular.ttf", names)
+                self.assertIn("Document fonts/LICENSES/OFL-Noto.txt", names)
                 self.assertNotIn("Document fonts/notes.txt", names)
                 manifest = zf.read("fonts_manifest.md").decode("utf-8")
-                self.assertIn("included under `Document fonts/`", manifest)
+                self.assertIn("ship under `Document fonts/`", manifest)
+                # The bundled copies are not enough on their own: an IDML opens
+                # as an untitled document, so InDesign never consults the
+                # folder. Saying so is the difference between a designer
+                # installing four files and reporting the book as broken.
+                self.assertIn("install them before", manifest)
 
             without_fonts = build_delivery_package(
                 production_idml=idml, handoff_root=handoff,
@@ -156,9 +177,13 @@ class BuildDeliveryPackageTest(unittest.TestCase):
             )
             with zipfile.ZipFile(without_fonts.zip_path) as zf:
                 names = set(zf.namelist())
-                self.assertFalse(any(n.startswith("Document fonts/") for n in names))
+                self.assertIn("Document fonts/NotoSans-Regular.ttf", names)
+                self.assertIn("Document fonts/NotoSansSymbols-Regular.ttf", names)
+                self.assertIn("Document fonts/NotoSansSymbols2-Regular.ttf", names)
+                self.assertFalse(any("Gilroy" in n for n in names))
                 manifest = zf.read("fonts_manifest.md").decode("utf-8")
-                self.assertIn("No font files are included", manifest)
+                self.assertIn("ship under `Document fonts/`", manifest)
+                self.assertIn("install them before", manifest)
 
     def test_rewrites_links_in_real_flow_idml_too(self) -> None:
         with tempfile.TemporaryDirectory() as td:
@@ -180,11 +205,8 @@ class BuildDeliveryPackageTest(unittest.TestCase):
             with zipfile.ZipFile(out.zip_path) as zf:
                 self.assertIn("Links/flow-asset.png", zf.namelist())
                 flow = zf.read("flow/manual.flow.idml")
-                with tempfile.NamedTemporaryFile(suffix=".idml") as fh:
-                    fh.write(flow)
-                    fh.flush()
-                    with zipfile.ZipFile(fh.name) as flow_zip:
-                        story = flow_zip.read("Stories/Story_s1.xml").decode("utf-8")
+                with zipfile.ZipFile(io.BytesIO(flow)) as flow_zip:
+                    story = flow_zip.read("Stories/Story_s1.xml").decode("utf-8")
                 self.assertIn('LinkResourceURI="file:Links/flow-asset.png"', story)
             self.assertEqual(3, len(out.links))
 

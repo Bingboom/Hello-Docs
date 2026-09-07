@@ -102,6 +102,11 @@ class ComponentSpecTests(unittest.TestCase):
             ("CONSEJOS", "tip"),
             ("PELIGRO", "danger"),
             ("PRECAUCIÓN", "caution"),
+            ("NOTES", "note"),
+            ("REMARQUES", "note"),
+            ("NOTAS", "note"),
+            ("OBSERVACIONES", "note"),
+            ("IMPORTANT", "note"),
         ):
             with self.subTest(label=label):
                 spec = self._spec(label)
@@ -158,6 +163,21 @@ class ComponentSpecTests(unittest.TestCase):
             any(
                 "unknown renderer 'canvas'" in issue
                 for issue in validate_component_registry(extra_renderer_registry)
+            )
+        )
+
+        incomplete_variant_registry = deepcopy(self.registry)
+        incomplete_variant_registry["components"][COMPONENT_ID][
+            "variant_adapters"
+        ] = {
+            "warning": {
+                "web": {"capability": "rendered", "key": "manual_callout_table"}
+            }
+        }
+        self.assertTrue(
+            any(
+                "must declare every renderer" in issue
+                for issue in validate_component_registry(incomplete_variant_registry)
             )
         )
 

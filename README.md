@@ -49,9 +49,18 @@ manifest 中新增 FCC 语言但未补齐渲染契约时会直接失败。
 | 第一次接手项目 | [`ONBOARDING.md`](ONBOARDING.md) |
 | 完整命令和运维流程 | [`code-as-doc/build_doc_guide.md`](code-as-doc/build_doc_guide.md) |
 | 当前工作流和编辑规则 | [`user-guide/hello_auto-doc.md`](user-guide/hello_auto-doc.md) |
+| 复用已有样式和完整组件 | [`code-as-doc/dev/style_component_usage_guide.md`](code-as-doc/dev/style_component_usage_guide.md) |
+| 规格书结构化入库 | [`.agents/skills/spec-sheet-structured-intake/SKILL.md`](.agents/skills/spec-sheet-structured-intake/SKILL.md) |
 | 工程面、业务面与飞书 Base | [`user-guide/two_plane_map.md`](user-guide/two_plane_map.md) |
 | 最短上手示例 | [`user-guide/quick_start_guide.md`](user-guide/quick_start_guide.md) |
+| 公共 IR 的调用方与迁移边界 | [`Shared-source plan`](code-as-doc/dev/latex_indesign_same_source_plan.md) |
+| 整本 IR → Web 收口与加电包日语验收 | [`执行目标与证据`](code-as-doc/dev/ir_document_closeout.md) |
+| JS-100I 欧规英语 Web 目标与验收 | [`目标实现记录`](code-as-doc/dev/js100i_eu_en_web_acceptance.md) |
+| JBP-3600A / EU / en Web 工程接入 | [`来源映射与验收记录`](code-as-doc/reviews/jbp3600a_eu_en_web_intake_2026-09.md) |
+| ManualIR v2 中立 flow、v1 兼容与后续组件边界 | [`ManualIR v2 plan`](code-as-doc/dev/manual_ir_v2_neutral_flow_plan.md) |
+| Web 共享层、产品骨架与目标差异如何继承 | [`Web presentation overlay`](code-as-doc/dev/web_presentation_overlay_plan_2026-09.md) |
 | 长期架构边界 | [`System Evolution Strategy.md`](code-as-doc/architecture/System%20Evolution%20Strategy.md) |
 | AI Agent 操作规则 | [`AGENTS.md`](AGENTS.md) |
+| 钉钉悟空 MCP Bridge 源码与部署 | [`agent/wukong-bridge/README.md`](agent/wukong-bridge/README.md) |
 
 README 只保留路线图、视频位和最短入口；详细机制由上表中的权威文档维护。

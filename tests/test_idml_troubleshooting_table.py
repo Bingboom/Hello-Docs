@@ -114,6 +114,30 @@ ES_ROWS = [
 ]
 
 
+JBP_EN_ROWS = [
+    ["Error Code", "Corrective Measures"],
+    ["F0", "Restart the product."],
+    ["F1, F2", "Contact Jackery Customer Support."],
+    ["F3", "Restart the product."],
+    [
+        "F4",
+        "Connect the product to loads to discharge its battery until the "
+        "fault disappears.",
+    ],
+    [
+        "F5",
+        "Charge the product via solar panels or AC wall outlet until the "
+        "fault disappears.",
+    ],
+    ["F6-F9,\nFA, FC", "Contact Jackery Customer Support."],
+    [
+        "FF",
+        "Place the product in an environment with a proper temperature and "
+        "wait till the fault disappears.",
+    ],
+]
+
+
 class TroubleshootingTableContractTests(unittest.TestCase):
     def _render(
         self,
@@ -122,6 +146,7 @@ class TroubleshootingTableContractTests(unittest.TestCase):
         strict: bool = False,
         params: dict[str, tuple[str, str]] | None = None,
         suffix: str = "localized",
+        language: str = "en",
     ) -> tuple[str, str, float]:
         writer = IdmlWriter(
             params
@@ -137,12 +162,16 @@ class TroubleshootingTableContractTests(unittest.TestCase):
             bundle_root=ROOT / "docs",
             add_story=writer._add_story_parts,
             strict_component_assets=strict,
+            language=language,
         )
+        # The caller declares the semantic; it is no longer inferred from the
+        # printed header (which only ever recognised EN/FR/ES).
         xml, estimated_height = render_table_block(
             rows,
             ctx,
             tid=f"trouble_{suffix}",
             terminal=True,
+            troubleshooting=True,
         )
         story = dict(writer.stories)[f"st_anchor_trouble_trouble_{suffix}"]
         return xml, story, estimated_height
@@ -157,7 +186,9 @@ class TroubleshootingTableContractTests(unittest.TestCase):
                 self.assertEqual(12, len(rows))
                 self.assertEqual("FE", rows[-1][0])
 
-                xml, story, height = self._render(rows, suffix=language)
+                xml, story, height = self._render(
+                    rows, suffix=language, language=language,
+                )
 
                 self.assertIn("<Content>FE</Content>", story)
                 self.assertIn('AutoSizingType="Off"', xml)
@@ -171,10 +202,84 @@ class TroubleshootingTableContractTests(unittest.TestCase):
         self.assertIn('Anchor="0 -237.79"', xml)
         self.assertAlmostEqual(246.53, height, places=2)
 
+    def test_seven_row_table_reuses_rows_without_full_master_depth(self) -> None:
+        short_rows = EN_ROWS[:8]
+
+        xml, story, height = self._render(short_rows, suffix="short_en")
+
+        self.assertEqual(8, len(short_rows))
+        self.assertIn("<Content>F6</Content>", story)
+        self.assertNotIn("<Content>F7</Content>", story)
+        self.assertNotIn('Anchor="0 -237.79"', xml)
+        self.assertLess(height, 190.0)
+
+    def test_compact_table_sizes_columns_and_rows_from_live_copy(self) -> None:
+        xml, story, height = self._render(JBP_EN_ROWS, suffix="jbp_en")
+
+        self.assertIn('SingleColumnWidth="42.88"', story)
+        self.assertIn('MinimumHeight="29.391"', story)
+        self.assertIn('MinimumHeight="17.9"', story)
+        self.assertIn(
+            'SingleRowHeight="29.391" MinimumHeight="29.391" '
+            'AutoGrow="false"',
+            story,
+        )
+        self.assertIn('FillColor="Color/HB Header K08"', story)
+        right_header = story.split(
+            '<Cell Self="trouble_jbp_enc0_1"',
+            1,
+        )[1].split("</Cell>", 1)[0]
+        self.assertNotIn("FillColor=", right_header)
+        self.assertIn('Hyphenation="false"', story)
+        self.assertIn('Anchor="-0.37 -4.8"', xml)
+        main_frame_id = "tf_group_st_anchor_trouble_trouble_jbp_en"
+        carrier_id = "tf_terminal_carrier_group_st_anchor_trouble_trouble_jbp_en"
+        self.assertIn(
+            f'Self="{main_frame_id}" ParentStory="st_anchor_trouble_trouble_jbp_en" '
+            f'PreviousTextFrame="n" NextTextFrame="{carrier_id}"',
+            xml,
+        )
+        self.assertIn(
+            f'Self="{carrier_id}" ParentStory="st_anchor_trouble_trouble_jbp_en" '
+            f'PreviousTextFrame="{main_frame_id}" NextTextFrame="n"',
+            xml,
+        )
+        main_frame = xml.split(f'<TextFrame Self="{main_frame_id}"', 1)[1].split(
+            "</TextFrame>", 1,
+        )[0]
+        carrier = xml.split(f'<TextFrame Self="{carrier_id}"', 1)[1].split(
+            "</TextFrame>", 1,
+        )[0]
+        self.assertIn('Anchor="311.344 0"', main_frame)
+        self.assertNotIn('Anchor="311.344 1"', main_frame)
+        self.assertIn('Anchor="0 1"', carrier)
+        self.assertIn('FillColor="Swatch/None"', carrier)
+        self.assertIn('StrokeColor="Swatch/None"', carrier)
+        self.assertGreater(height, 130.0)
+        self.assertLess(height, 150.0)
+
+    def test_compact_table_consumes_target_overlay_outer_radius(self) -> None:
+        params = load_layout_params(
+            ROOT / "data" / "layout_params.csv",
+            (ROOT / "data" / "layout_params.idml-compact.csv",),
+        )
+        params["idml_trouble_compact_outer_radius"] = ("5.25", "pt")
+
+        xml, _story, _height = self._render(
+            JBP_EN_ROWS,
+            strict=True,
+            params=params,
+            suffix="jbp_overlay_radius",
+        )
+
+        self.assertIn('Anchor="-0.37 -5.25"', xml)
+
     def test_body_cells_are_natively_vertically_centered_in_all_locales(self) -> None:
         for language, rows in (("en", EN_ROWS), ("fr", FR_ROWS), ("es", ES_ROWS)):
             with self.subTest(language=language):
-                _xml, story, _height = self._render(rows, suffix=language)
+                _xml, story, _height = self._render(
+                    rows, suffix=language, language=language,
+                )
                 for row_index in range(1, len(rows)):
                     for column_index in range(2):
                         cell_id = f'trouble_{language}c{row_index}_{column_index}'
@@ -253,6 +358,7 @@ class TroubleshootingTableContractTests(unittest.TestCase):
                         strict=True,
                         params=params,
                         suffix=f"missing_minima_{language}",
+                        language=language,
                     )
 
     def test_visible_table_calibrations_are_resolved_from_layout_tokens(self) -> None:

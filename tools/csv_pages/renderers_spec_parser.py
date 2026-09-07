@@ -9,6 +9,12 @@ import re
 from typing import cast
 
 from .. import lang_registry
+from tools.utils.spec_footnotes import (
+    append_footnote_markers as _append_footnote_markers,
+    footnote_marker_for_order as _footnote_marker_for_order,
+    parse_footnote_refs as _parse_footnote_refs,
+)
+from ..localized_copy import first_text, localized_columns
 from .renderers_common import _enabled, _scope_allows, apply_vars, rst_escape
 from ..utils.spec_master import (
     canonicalize_model_token,
@@ -46,13 +52,7 @@ def _to_float(value: str, default: float = 0.0) -> float:
 
 
 def _first_non_empty(row: dict[str, str], keys: list[str]) -> str:
-    for key in keys:
-        if key not in row:
-            continue
-        value = rst_escape(row.get(key) or "")
-        if value:
-            return value
-    return ""
+    return rst_escape(first_text(row, keys))
 
 
 def _is_enabled_row(row: dict[str, str]) -> bool:
@@ -88,22 +88,6 @@ def _pick_spec_lang_text(
     lang: str,
     default_keys: list[str] | None = None,
 ) -> str:
-    def lang_suffix_candidates(raw_lang: str) -> list[str]:
-        raw = (raw_lang or "").strip()
-        aliases = lang_registry.language_alias_candidates(raw) or (raw,)
-        candidates = []
-        for alias in aliases:
-            candidates.extend(
-                [
-                    alias,
-                    alias.casefold(),
-                    alias.upper(),
-                    alias.replace("-", "_"),
-                    alias.casefold().replace("-", "_"),
-                ]
-            )
-        return list(dict.fromkeys(candidate for candidate in candidates if candidate))
-
     def normalized_lang_key(raw_lang: str) -> str:
         raw = (raw_lang or "").strip().casefold()
         canonical = lang_registry.canonical_language(raw_lang)
@@ -121,7 +105,7 @@ def _pick_spec_lang_text(
             base,
         ]
     else:
-        keys = [f"{base}_{suffix}" for suffix in lang_suffix_candidates(lang)]
+        keys = list(localized_columns((base,), lang_registry.language_alias_candidates(lang), uppercase=True))
         keys.extend([f"{base}_source", f"{base.lower()}_source", base])
     if default_keys:
         keys.extend(default_keys)
@@ -162,44 +146,7 @@ def _pick_title_lang(lang: str, vars_map: dict[str, str]) -> str:
     return "en"
 
 
-_CIRCLED_NUMBER_MARKERS: dict[int, str] = {
-    1: "\u2460",
-    2: "\u2461",
-    3: "\u2462",
-    4: "\u2463",
-    5: "\u2464",
-    6: "\u2465",
-    7: "\u2466",
-    8: "\u2467",
-    9: "\u2468",
-    10: "\u2469",
-}
 _LEGACY_FOOTNOTE_PREFIX_RE = re.compile(r"^(?:[\u2460-\u2473]|\(\d+\)|\d+\.)\s*")
-
-
-def _footnote_marker_for_order(order: float) -> str:
-    normalized = int(order)
-    if normalized <= 0:
-        return ""
-    return _CIRCLED_NUMBER_MARKERS.get(normalized, f"({normalized})")
-
-
-def _parse_footnote_refs(value: str) -> list[str]:
-    refs: list[str] = []
-    for token in (value or "").split(","):
-        item = token.strip()
-        if item and item not in refs:
-            refs.append(item)
-    return refs
-
-
-def _append_footnote_markers(text: str, refs: list[str], marker_by_id: dict[str, str]) -> str:
-    if not text:
-        return text
-    markers = "".join(marker_by_id.get(ref, "") for ref in refs if marker_by_id.get(ref, ""))
-    if not markers:
-        return text
-    return f"{text}{markers}"
 
 
 def _strip_legacy_footnote_prefix(text: str) -> str:

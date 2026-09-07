@@ -1,0 +1,589 @@
+from dataclasses import replace
+from pathlib import Path
+import json
+import hashlib
+import shutil
+import subprocess
+import sys
+import tempfile
+from types import SimpleNamespace
+import unittest
+from unittest.mock import patch
+
+from bs4 import BeautifulSoup
+
+from tools.manual_ir import (
+    ManualSource,
+    SourcePage,
+    build_manual_ir_from_source,
+    read_manual_ir,
+    write_manual_ir,
+)
+from tools.manual_ir.document import content_tree, validate_document
+from tools.manual_ir.flow import flow_nodes_to_html
+from tools.component_specs.projection import project_manual_ir_components
+from tools.component_specs.overview_instance import (
+    overview_instance_sha256,
+    resolve_overview_instance,
+)
+from tools.component_specs.overview_adapters import (
+    idml_overview_projection,
+    latex_overview_projection,
+    web_overview_projection,
+    word_overview_projection,
+)
+from tools.component_specs.registry import registry_sha256
+from tools.component_specs.theme import theme_sha256
+from tools.web_presentation import protect_web_callouts_for_pandoc
+from tools.web_presentation import transform_web_fragment
+from tools.web_document_ir import render_document_fragments
+from tools.web_document_source import _consume_covered_annotations, load_web_document
+from tools.word_bundle_html import build_word_bundle_html
+
+
+ROOT = Path(__file__).resolve().parents[1]
+
+
+class WebDocumentIRTests(unittest.TestCase):
+    def test_embedded_spec_and_callout_replay_without_source_projectors(self):
+        spec = (
+            '<h2 class="hb-spec-section"><span class="hb-spec-bullet">•</span>'
+            '<span class="hb-spec-section-text">INPUT</span></h2>'
+            '<table class="manual-spec-table"><tbody><tr><td>Voltage</td>'
+            '<td><em>100 V</em></td></tr></tbody></table>'
+        )
+        callout = (
+            '<table class="manual-callout-table" lang="en"><tbody><tr>'
+            '<td class="manual-callout-label">WARNING</td>'
+            '<td class="manual-callout-body"><p>Keep <strong>dry</strong>.</p>'
+            '</td></tr></tbody></table>'
+        )
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            page = root / "page_en.rst"
+            markup = "<h1>Demo</h1>" + spec + callout
+            page.write_text(
+                ".. raw:: html\n\n" + "\n".join(
+                    f"   {line}" for line in markup.splitlines()
+                ) + "\n",
+                encoding="utf-8",
+            )
+            bundle = SimpleNamespace(
+                bundle_dir=root,
+                page_dir=root,
+                page_paths=(page,),
+                title="Demo",
+                reference_doc=None,
+                model="OTHER",
+                region="US",
+                lang="en",
+                languages=("en",),
+            )
+            package = root / "package"
+            build_word_bundle_html(
+                {},
+                "OTHER",
+                "US",
+                materialized_bundle=bundle,
+                output_dir=package,
+                presentation_profile="web",
+            )
+            ir = read_manual_ir(package / "manual.ir.json")
+            frozen_contract = ir.metadata["web_contract"]
+            self.assertIsNone(
+                frozen_contract["presentation_layers"]["target_overlay"]
+            )
+            self.assertEqual([], frozen_contract["figure_targets"])
+            self.assertEqual([], frozen_contract["preface"]["targets"])
+            self.assertEqual([], frozen_contract["figure_coverage"]["requirements"])
+            self.assertNotIn("target_overlays", frozen_contract)
+            self.assertEqual(
+                ["HB-TABLE-SPEC", "HB-CALLOUT-STRIP"],
+                [candidate.component_id for candidate in project_manual_ir_components(ir)],
+            )
+            page.unlink()
+            source_projector_error = AssertionError(
+                "source projector called during embedded replay"
+            )
+            with (
+                patch(
+                    "tools.web_presentation.transform_specification_tables",
+                    side_effect=source_projector_error,
+                ),
+                patch(
+                    "tools.web_presentation.load_web_callout_source",
+                    side_effect=source_projector_error,
+                ),
+            ):
+                fragment = render_document_fragments(ir, package_root=package)[0]
+                protected, callouts = protect_web_callouts_for_pandoc(
+                    fragment,
+                    embedded_components_complete=True,
+                )
+            self.assertIn("hb-spec-table-composition", fragment)
+            self.assertIn("manual-callout-table", fragment)
+            self.assertEqual(1, len(callouts))
+            self.assertIn("AUTOMANUALWEBCALLOUT", protected)
+
+    def test_japanese_box_contents_uses_shared_inbox_outside_figure_target(self):
+        from tools.web_presentation import transform_web_fragment
+        cells = ''.join(f'<td><img src="{i}.png"><p>{label}</p></td>'
+                        for i, label in enumerate(('本体', '拡張ケーブル', '取扱説明書')))
+        markup = f'<h1>同梱品</h1><table><tr>{cells}</tr></table><table><tr><td>注意</td><td>付属品についての注意</td></tr></table>'
+        result = transform_web_fragment(markup, source_path=Path('box_contents_ja.rst'),
+                                        model='OTHER-BP', region='JP', language='ja')
+        soup = BeautifulSoup(result, 'html.parser')
+        self.assertEqual(len(soup.select('[data-component-id="HB-SPECIAL-INBOX"]')), 1)
+        self.assertEqual([n.get_text(strip=True) for n in soup.select('.hb-inbox-label')],
+                         ['本体', '拡張ケーブル', '取扱説明書'])
+        self.assertEqual(len(soup.select('.hb-inbox-card')), 3)
+        self.assertIn('付属品についての注意', soup.get_text())
+
+    def test_finished_art_consumes_only_exact_bound_annotations(self):
+        entry = {"covered_annotations": [{"selector": ".line-block", "text": "オン 1回押す オフ 3秒間長押し"}]}
+        markup = '<img src="power.png"><div class="line-block">オン 1回押す オフ 3秒間長押し</div><p>保留する説明</p>'
+        soup = BeautifulSoup(markup, "html.parser")
+        _consume_covered_annotations(soup, entry, soup.img)
+        self.assertIsNone(soup.select_one(".line-block"))
+        self.assertEqual(soup.img["alt"], entry["covered_annotations"][0]["text"])
+        self.assertEqual(soup.p.get_text(), "保留する説明")
+        for changed in (markup.replace("1回押す", "2回押す"), markup + '<div class="line-block">オン 1回押す オフ 3秒間長押し</div>'):
+            soup = BeautifulSoup(changed, "html.parser")
+            with self.assertRaisesRegex(ValueError, "changed or ambiguous"):
+                _consume_covered_annotations(soup, entry, soup.img)
+
+    def build(self, root, manifest=None):
+        pages = root / "source"
+        pages.mkdir()
+        (pages / "figure.png").write_bytes(b"frozen illustration")
+        (pages / "03_product_overview_placeholder.rst").write_text(
+            "日語文書\n========\n\n説明 **重要**。\n\n.. image:: figure.png\n   :alt: 帯字図\n"
+        )
+        (pages / "spec_ja.rst").write_text(
+            "仕様\n====\n\n.. list-table::\n\n   * - 容量\n     - 2042.8Wh\n"
+        )
+        bundle = SimpleNamespace(
+            bundle_dir=pages, page_dir=pages, page_paths=tuple(pages.glob("*.rst")),
+            title="加電包", reference_doc=None, model="BP", region="JP", lang="", languages=("ja",),
+        )
+        output = root / "package"
+        cfg = {"paths": {"web_illustration_manifest": str(manifest)}} if manifest else {}
+        with patch("tools.word_bundle_html._convert_rst_fragment_to_html", side_effect=AssertionError("old reader")):
+            build_word_bundle_html(cfg, "BP", "JP", materialized_bundle=bundle,
+                                   output_dir=output, presentation_profile="web")
+        return read_manual_ir(output / "manual.ir.json"), output, pages
+
+    def test_finished_illustration_scope_hash_and_usage_are_enforced(self):
+        for failure in (None, "target", "hash", "unused", "ambiguous"):
+            with self.subTest(failure=failure), tempfile.TemporaryDirectory() as td:
+                root = Path(td)
+                art = root / "finished.png"
+                art.write_bytes(b"approved finished PDF crop")
+                entry = {"path": art.name, "replaces": ["figure.png"],
+                         "sha256": hashlib.sha256(art.read_bytes()).hexdigest()}
+                manifest = {"schema_version": "web-illustrations/v1", "model": "BP", "region": "JP",
+                            "language": "ja", "illustrations": [entry]}
+                if failure == "target":
+                    manifest["region"] = "US"
+                elif failure == "hash":
+                    entry["sha256"] = "0" * 64
+                elif failure == "unused":
+                    entry["replaces"] = ["absent.png"]
+                elif failure == "ambiguous":
+                    entry["replaces"].append("figure.png")
+                path = root / "illustrations.json"
+                path.write_text(json.dumps(manifest))
+                if failure:
+                    with self.assertRaises(ValueError):
+                        self.build(root, path)
+                else:
+                    ir, package, _ = self.build(root, path)
+                    self.assertEqual((package / ir.asset_refs[0]).read_bytes(), art.read_bytes())
+                    self.assertIn("manual-finished-illustration", "".join(render_document_fragments(ir, package_root=package)))
+                    coverage = ir.metadata["web_figure_coverage"]
+                    self.assertEqual("web-figure-coverage/v1", coverage["schema_version"])
+                    self.assertEqual(1, coverage["summary"]["total"])
+                    self.assertEqual(1, coverage["summary"]["by_status"]["finished-panel"])
+                    self.assertEqual(["figure.png"], coverage["slots"][0]["replaces"])
+
+    def test_whole_document_replays_after_source_removed_and_package_moved(self):
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            ir, output, pages = self.build(root)
+            before = render_document_fragments(ir, package_root=output)
+            shutil.rmtree(pages)
+            relocated = root / "relocated"
+            shutil.copytree(output, relocated)
+            with patch("tools.web_document_source.load_web_document", side_effect=AssertionError("source reopened")):
+                after = render_document_fragments(read_manual_ir(relocated / "manual.ir.json"), package_root=relocated)
+            self.assertEqual([x.replace(str(output), "PACKAGE") for x in before],
+                             [x.replace(str(relocated), "PACKAGE") for x in after])
+            self.assertEqual(ir.language, "ja")
+            self.assertEqual(len(ir.pages), 2)
+            self.assertEqual("manual-ir/v2", ir.schema_version)
+            self.assertEqual("whole-document-components/v1", ir.metadata["projection"])
+            self.assertEqual(
+                "preface-auto-resume/v1",
+                ir.metadata["web_source_normalization"],
+            )
+            self.assertEqual(
+                "component-registry/v1",
+                ir.metadata["component_registry"]["schema_version"],
+            )
+            self.assertEqual(
+                registry_sha256(ir.metadata["component_registry"]),
+                ir.metadata["component_registry_sha256"],
+            )
+            self.assertEqual(
+                "manual-theme/v1",
+                ir.metadata["manual_theme"]["schema_version"],
+            )
+            self.assertEqual(
+                theme_sha256(ir.metadata["manual_theme"]),
+                ir.metadata["manual_theme_sha256"],
+            )
+            self.assertTrue(all(
+                block.payload["schema_version"] == "manual-flow/v2"
+                for page in ir.pages
+                for block in page.blocks
+            ))
+            self.assertTrue(all(
+                block.kind == "flow"
+                for page in ir.pages
+                for block in page.blocks
+            ))
+            block_json = json.dumps(
+                [block.payload for page in ir.pages for block in page.blocks],
+                ensure_ascii=False,
+            )
+            self.assertNotIn('"type":', block_json)
+            self.assertNotIn('"tag":', block_json)
+            self.assertIn("2042.8Wh", "".join(after))
+            self.assertTrue(ir.asset_refs)
+            self.assertIn("<strong>重要</strong>", "".join(after))
+
+    def test_whole_document_components_replay_never_calls_legacy_dom_projector(self):
+        with tempfile.TemporaryDirectory() as td:
+            ir, output, _ = self.build(Path(td))
+
+            with patch(
+                "tools.web_document_ir.transform_web_fragment",
+                side_effect=AssertionError("legacy DOM projector called"),
+            ):
+                fragments = render_document_fragments(ir, package_root=output)
+
+            self.assertEqual(2, len(fragments))
+            self.assertIn("2042.8Wh", "".join(fragments))
+
+    def test_overview_replay_and_four_adapters_use_frozen_target_instance(self):
+        source_page = (
+            ROOT
+            / "docs"
+            / "_review"
+            / "JE-1000F"
+            / "US"
+            / "page"
+            / "03_product_overview_placeholder.rst"
+        )
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            page = (
+                root
+                / "docs"
+                / "_review"
+                / "JE-1000F"
+                / "US"
+                / "page"
+                / source_page.name
+            )
+            page.parent.mkdir(parents=True)
+            artwork = page.parent / "overview"
+            artwork.mkdir()
+            (artwork / "front_controls.png").write_bytes(b"front")
+            (artwork / "right_side_ports.png").write_bytes(b"right")
+            page.write_text(
+                source_page.read_text(encoding="utf-8")
+                .replace(
+                    "asset:overview/front_controls",
+                    "overview/front_controls.png",
+                )
+                .replace(
+                    "asset:overview/right_side_ports",
+                    "overview/right_side_ports.png",
+                ),
+                encoding="utf-8",
+            )
+            output = root / "package"
+            materialized = SimpleNamespace(
+                bundle_dir=page.parent,
+                title="Jackery Explorer 1000",
+                model="JE-1000F",
+                region="US",
+                lang="en",
+                languages=("en",),
+            )
+            ir = load_web_document(
+                materialized,
+                page_paths=(page,),
+                declarations={},
+                page_languages={page.name: "en"},
+                active_tags={"region_us"},
+                output_dir=output,
+                composite_manifest=None,
+            )
+            instance = ir.metadata["overview_instance"]
+            self.assertEqual("je1000f-us-v1", instance["instance_id"])
+            self.assertEqual(
+                overview_instance_sha256(instance),
+                ir.metadata["overview_instance_sha256"],
+            )
+
+            with patch(
+                "tools.web_embedded_components.resolve_overview_instance",
+                side_effect=AssertionError("external Overview contract reopened"),
+            ):
+                fragment = render_document_fragments(ir, package_root=output)[0]
+            self.assertEqual(2, fragment.count("hb-annotated-figure"))
+
+            spec = next(
+                candidate
+                for candidate in project_manual_ir_components(ir)
+                if candidate.component_id == "HB-SPECIAL-OVERVIEW"
+            )
+            projections = (
+                web_overview_projection(spec, instance),
+                latex_overview_projection(spec, instance),
+                idml_overview_projection(spec, instance),
+                word_overview_projection(spec, instance),
+            )
+            self.assertTrue(
+                all(
+                    result["geometry_ref"] == "je1000f-us-v1"
+                    for result in projections
+                )
+            )
+
+    def test_pre_cut7_component_ir_uses_explicit_compatibility_projector(self):
+        with tempfile.TemporaryDirectory() as td:
+            ir, output, _ = self.build(Path(td))
+            metadata = dict(ir.metadata)
+            metadata.pop("component_registry")
+            metadata.pop("component_registry_sha256")
+            metadata.pop("manual_theme")
+            metadata.pop("manual_theme_sha256")
+            metadata.pop("web_source_normalization")
+            legacy = replace(ir, metadata=metadata)
+
+            with patch(
+                "tools.web_document_ir.transform_web_fragment",
+                wraps=transform_web_fragment,
+            ) as projector:
+                fragments = render_document_fragments(legacy, package_root=output)
+
+            self.assertEqual(2, len(fragments))
+            self.assertGreater(projector.call_count, 0)
+
+    def test_source_normalized_component_ir_requires_untampered_frozen_registry(self):
+        with tempfile.TemporaryDirectory() as td:
+            ir, output, _ = self.build(Path(td))
+            path = output / "tampered-registry.json"
+            payload = ir.to_dict()
+            payload["metadata"].pop("component_registry")
+            payload["metadata"].pop("component_registry_sha256")
+            path.write_text(json.dumps(payload), encoding="utf-8")
+            with self.assertRaisesRegex(
+                ValueError,
+                "requires a frozen component registry",
+            ):
+                read_manual_ir(path)
+
+            payload = ir.to_dict()
+            payload["metadata"].pop("manual_theme")
+            payload["metadata"].pop("manual_theme_sha256")
+            path.write_text(json.dumps(payload), encoding="utf-8")
+            with self.assertRaisesRegex(
+                ValueError,
+                "requires a frozen manual theme",
+            ):
+                read_manual_ir(path)
+
+            payload = ir.to_dict()
+            payload["metadata"]["component_registry"]["registry_id"] += "-changed"
+            path.write_text(json.dumps(payload), encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "hash mismatch"):
+                read_manual_ir(path)
+
+    def test_source_normalized_figure_ir_requires_target_frozen_overview(self):
+        with tempfile.TemporaryDirectory() as td:
+            ir, output, _ = self.build(Path(td))
+            path = output / "figure-target.json"
+            payload = ir.to_dict()
+            payload["model"] = "JE-1000F"
+            payload["region"] = "US"
+            payload["metadata"]["web_contract"]["figure_targets"] = [
+                {"model": "JE-1000F", "region": "US"}
+            ]
+            path.write_text(json.dumps(payload), encoding="utf-8")
+            with self.assertRaisesRegex(
+                ValueError,
+                "requires a frozen Overview instance",
+            ):
+                read_manual_ir(path)
+
+            instance = resolve_overview_instance(model="JE-1000F", region="US")
+            payload["metadata"]["overview_instance"] = instance
+            payload["metadata"]["overview_instance_sha256"] = (
+                overview_instance_sha256(instance)
+            )
+            path.write_text(json.dumps(payload), encoding="utf-8")
+            loaded = read_manual_ir(path)
+            self.assertEqual(
+                "je1000f-us-v1",
+                loaded.metadata["overview_instance"]["instance_id"],
+            )
+
+            payload["metadata"]["overview_instance"]["instance_id"] += "-changed"
+            path.write_text(json.dumps(payload), encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "hash mismatch"):
+                read_manual_ir(path)
+
+            instance = resolve_overview_instance(model="JE-1000F", region="EU")
+            payload["metadata"]["overview_instance"] = instance
+            payload["metadata"]["overview_instance_sha256"] = (
+                overview_instance_sha256(instance)
+            )
+            path.write_text(json.dumps(payload), encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "target does not match document"):
+                read_manual_ir(path)
+
+    def test_missing_or_changed_asset_fails_before_render(self):
+        with tempfile.TemporaryDirectory() as td:
+            ir, output, _ = self.build(Path(td))
+            file = output / ir.asset_refs[0]
+            file.write_bytes(b"changed")
+            with self.assertRaisesRegex(ValueError, "asset missing or changed"):
+                render_document_fragments(ir, package_root=output)
+            file.unlink()
+            with self.assertRaisesRegex(ValueError, "asset missing or changed"):
+                render_document_fragments(ir, package_root=output)
+
+    def test_cold_process_replay_cannot_import_or_read_source_tables(self):
+        with tempfile.TemporaryDirectory() as td:
+            _, package, pages = self.build(Path(td))
+            shutil.rmtree(pages)
+            script = '''
+from pathlib import Path
+from unittest.mock import patch
+import sys
+original = Path.open
+def guarded(path, *args, **kwargs):
+    normalized = path.as_posix()
+    if path.suffix in {".rst", ".csv"} or "/docs/renderers/contracts/" in normalized:
+        raise AssertionError("source read during replay: " + str(path))
+    return original(path, *args, **kwargs)
+with patch.object(Path, "open", guarded):
+    from tools.manual_ir import read_manual_ir
+    from tools.web_document_ir import render_document_fragments
+    package = Path(sys.argv[1])
+    result = render_document_fragments(read_manual_ir(package / "manual.ir.json"), package_root=package)
+    assert len(result) == 2
+'''
+            subprocess.run([sys.executable, "-c", script, str(package)], check=True, capture_output=True)
+
+    def test_packaged_ir_images_survive_rtd_static_copy(self):
+        from tools.readthedocs_source import _copy_manual_assets_to_static, _static_src_for_manual_asset
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            ir, package, _ = self.build(root)
+            rtd = root / "rtd"
+            manual = Path("BP/JP/md")
+            destination = rtd / manual
+            shutil.copytree(package, destination)
+            _copy_manual_assets_to_static(output_dir=rtd, destination_dir=destination, manual_relative=manual)
+            for ref in ir.asset_refs:
+                src = _static_src_for_manual_asset(
+                    src=ref, markdown_path=destination / "manual.md", output_dir=rtd,
+                    destination_dir=destination, manual_relative=manual,
+                )
+                self.assertIn("_static/manual-assets", src)
+                self.assertTrue((destination / src).is_file())
+
+    def test_tree_tampering_and_wrong_projection_rejected(self):
+        with tempfile.TemporaryDirectory() as td:
+            ir, output, _ = self.build(Path(td))
+            with self.assertRaisesRegex(ValueError, "whole-document-flow"):
+                validate_document(replace(ir, metadata={**ir.metadata, "projection": "other"}))
+            write_manual_ir(ir, output / "tampered.json")
+            data = json.loads((output / "tampered.json").read_text())
+            data["pages"][0]["blocks"][0]["payload"].setdefault("children", []).append(
+                {"kind": "text", "text": "changed"}
+            )
+            (output / "tampered.json").write_text(json.dumps(data))
+            with self.assertRaisesRegex(ValueError, "hash mismatch"):
+                read_manual_ir(output / "tampered.json")
+
+    def test_existing_v1_document_content_replays_identically(self):
+        with tempfile.TemporaryDirectory() as td:
+            ir, output, _ = self.build(Path(td))
+            legacy_pages = tuple(
+                SourcePage(
+                    page_id=page.page_id,
+                    source_ref=page.source_ref,
+                    source_path=page.source_path,
+                    language=page.language,
+                    source_sha256=page.source_sha256,
+                    skipped_raw=page.skipped_raw,
+                    blocks=((
+                        "document_content",
+                        content_tree(
+                            flow_nodes_to_html(
+                                [block.payload for block in page.blocks]
+                            )
+                        ),
+                    ),),
+                )
+                for page in ir.pages
+            )
+            legacy = build_manual_ir_from_source(ManualSource(
+                model=ir.model,
+                region=ir.region,
+                language=ir.language,
+                source=ir.source,
+                bundle_root=ir.bundle_root,
+                bundle_sha256=ir.bundle_sha256,
+                snapshot_sha256=ir.snapshot_sha256,
+                layout_params_sha256=ir.layout_params_sha256,
+                style_contract_sha256=ir.style_contract_sha256,
+                pages=legacy_pages,
+                metadata={**ir.metadata, "projection": "whole-document-content/v1"},
+            ))
+            self.assertEqual("manual-ir/v1", legacy.schema_version)
+            self.assertEqual(
+                render_document_fragments(ir, package_root=output),
+                render_document_fragments(legacy, package_root=output),
+            )
+
+    def test_figure_coverage_tampering_is_rejected_before_replay(self):
+        with tempfile.TemporaryDirectory() as td:
+            ir, output, _ = self.build(Path(td))
+            data = ir.to_dict()
+            data["metadata"]["web_figure_coverage"]["summary"]["total"] = 99
+            tampered = output / "tampered-coverage.json"
+            tampered.write_text(json.dumps(data), encoding="utf-8")
+
+            with self.assertRaisesRegex(ValueError, "summary total"):
+                render_document_fragments(read_manual_ir(tampered), package_root=output)
+
+    def test_declared_lcd_without_separate_icons_keeps_all_copy(self):
+        from tools.csv_pages.renderers_lcd_icons import _rst_table
+        from tools.word_bundle_html import _convert_rst_fragment_to_html
+        rows = [{"no": "1", "figure": "", "name": "残量", "description": "現在の残量です。"}]
+        with tempfile.TemporaryDirectory() as td:
+            markup = _convert_rst_fragment_to_html(
+                _rst_table(rows, status_labels=()), Path(td) / "lcd_ja.rst", Path(td),
+                presentation_profile="web", language="ja", declared_lcd_icons=True,
+            )
+            soup = BeautifulSoup(markup, "html.parser")
+            self.assertIn("現在の残量です。", soup.get_text())
+            self.assertIsNone(soup.img)
+            self.assertIsNotNone(soup.select_one(".hb-lcd-table-composition"))

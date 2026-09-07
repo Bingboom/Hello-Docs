@@ -43,6 +43,7 @@ class LanguageRegistryTest(unittest.TestCase):
         for spec in specs:
             with self.subTest(language=spec.code):
                 self.assertTrue(spec.display_name)
+                self.assertTrue(spec.native_name)
                 self.assertTrue(spec.template_directory)
                 self.assertIn(spec.code, spec.aliases)
                 self.assertTrue(spec.column_suffixes)
@@ -55,6 +56,13 @@ class LanguageRegistryTest(unittest.TestCase):
                     self.assertIn(table_name, lang_registry.CORE_TABLE_NAMES)
                     self.assertTrue(columns)
                     self.assertEqual(len(columns), len(set(columns)))
+
+        for code, pack in lang_registry.IDML_LANGUAGE_PACKS.items():
+            with self.subTest(native_name=code):
+                self.assertEqual(
+                    lang_registry.LANGUAGE_BY_CODE[code].native_name,
+                    pack.toc_label,
+                )
 
     def test_table_schema_language_columns_match_registry(self) -> None:
         language_column_patterns = {
@@ -80,6 +88,28 @@ class LanguageRegistryTest(unittest.TestCase):
                 for spec in lang_registry.LANGUAGE_REGISTRY:
                     for column in spec.columns_for_table(table_name):
                         self.assertIn(column, TABLE_SCHEMAS[table_name].columns)
+
+    def test_required_headers_are_produced_by_table_columns(self) -> None:
+        """A required header the schema never emits is a silent contract break.
+
+        ``Text_ko`` was required by ``spec_footnotes``/``spec_notes`` while the
+        registry produced no Korean column for those tables, so Korean footnote
+        and note text could never reach a build.
+        """
+
+        for logical_name, schema in sorted(TABLE_SCHEMAS.items()):
+            with self.subTest(table=logical_name):
+                missing = tuple(
+                    header
+                    for header in schema.required_headers
+                    if header not in schema.columns
+                )
+                self.assertEqual(
+                    missing,
+                    (),
+                    f"{logical_name} requires header(s) it never emits: "
+                    + ", ".join(missing),
+                )
 
     def test_manual_copy_source_language_surfaces_match_registry(self) -> None:
         specs = lang_registry.LANGUAGE_REGISTRY

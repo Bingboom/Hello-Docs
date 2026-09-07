@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import json
 import unittest
+import zipfile
 from pathlib import Path
 from unittest.mock import patch
 
@@ -16,7 +17,11 @@ from tools.indesign_finalize import (
     DEFAULT_PDFX,
     JSX,
     VERSION_PIN,
+    _collect_finalize_result,
+    _idml_document_language,
     _job,
+    _pdf_missing_glyphs,
+    _overset_pages,
     _parse_pdf_export_compliance,
     check_version_pin,
     main,
@@ -26,6 +31,151 @@ from tools.indesign_finalize import (
 
 
 class InDesignFinalizeTests(unittest.TestCase):
+    def test_idml_document_language_comes_from_the_frozen_package_label(self) -> None:
+        with temp_test_root() as root:
+            path = Path(root) / "manual.idml"
+            with zipfile.ZipFile(path, "w") as package:
+                package.writestr(
+                    "designmap.xml",
+                    '<Document Label="hb:language=ja" Name="manual"/>',
+                )
+
+            self.assertEqual("ja", _idml_document_language(path))
+
+    def test_pdf_missing_glyphs_flags_replacement_and_notdef(self) -> None:
+        class FakePage:
+            def get_texttrace(self):
+                return [{
+                    "font": "Example Font",
+                    "chars": [
+                        (0xFFFD, 42, (1.0, 2.0), (1.0, 2.0, 3.0, 4.0)),
+                        (ord("경"), 0, (5.0, 6.0), (5.0, 6.0, 7.0, 8.0)),
+                        (ord("A"), 12, (9.0, 10.0), (9.0, 10.0, 11.0, 12.0)),
+                        (ord(" "), 0, (13.0, 14.0), (13.0, 14.0, 15.0, 16.0)),
+                    ],
+                }]
+
+        class FakeDocument:
+            def __enter__(self):
+                return self
+
+            def __exit__(self, *_args):
+                return None
+
+            def __iter__(self):
+                return iter([FakePage()])
+
+        with patch("fitz.open", return_value=FakeDocument()):
+            findings = _pdf_missing_glyphs(Path("fake.pdf"))
+
+        self.assertEqual([item["codepoint"] for item in findings], [
+            "U+FFFD", "U+ACBD",
+        ])
+        self.assertEqual(findings[0]["reasons"], ["replacement_character"])
+        self.assertEqual(findings[1]["reasons"], ["notdef_glyph"])
+        self.assertEqual(findings[1]["glyph_id"], 0)
+        self.assertEqual(findings[1]["page"], 1)
+        self.assertEqual(findings[1]["font"], "Example Font")
+
+    def test_finalize_result_fails_closed_on_missing_pdf_glyphs(self) -> None:
+        finding = {
+            "page": 3,
+            "character": "경",
+            "codepoint": "U+ACBD",
+            "glyph_id": 0,
+            "font": "Gilroy-Bold",
+            "reasons": ["notdef_glyph"],
+        }
+        with temp_test_root() as root:
+            report_path = Path(root) / "report.json"
+            pdf_path = Path(root) / "output.pdf"
+            report_path.write_text(json.dumps({
+                "success": True,
+                "overset_stories": [],
+                "overset_table_cells": [],
+                "missing_fonts": [],
+                "bad_links": [],
+            }), encoding="utf-8")
+            pdf_path.write_bytes(b"%PDF-test")
+            job = {
+                "job_id": "glyph-negative-control",
+                "output_pdf": str(pdf_path),
+                "report_json": str(report_path),
+                "pdfx": DEFAULT_PDFX,
+                "output_intent": DEFAULT_OUTPUT_INTENT,
+                "output_condition": DEFAULT_OUTPUT_CONDITION,
+            }
+            with patch(
+                "tools.indesign_finalize._pdf_export_compliance",
+                return_value={"pass": True},
+            ), patch(
+                "tools.indesign_finalize._pdf_missing_glyphs",
+                return_value=[finding],
+            ), patch(
+                "tools.indesign_finalize.indesign_version",
+                return_value="Adobe InDesign test",
+            ):
+                result = _collect_finalize_result(job, pin_status="match")
+
+            written = json.loads(report_path.read_text(encoding="utf-8"))
+            self.assertFalse(result["success"])
+            self.assertEqual(result["missing_glyphs_count"], 1)
+            self.assertFalse(written["success"])
+            self.assertEqual(written["missing_glyphs"], [finding])
+            self.assertFalse(written["pdf_glyph_validation"]["pass"])
+
+    def test_finalize_result_fails_closed_on_post_reopen_font_error(self) -> None:
+        with temp_test_root() as root:
+            report_path = Path(root) / "report.json"
+            pdf_path = Path(root) / "output.pdf"
+            report_path.write_text(json.dumps({
+                "schema_version": "indesign-preflight/v2",
+                "success": True,
+                "page_count": 1,
+                "story_count": 1,
+                "overset_stories": [],
+                "overset_table_cells": [],
+                "missing_fonts": [],
+                "bad_links": [],
+                "post_reopen": {
+                    "completed": True,
+                    "page_count": 1,
+                    "story_count": 1,
+                    "overset_stories": [],
+                    "overset_table_cells": [],
+                    "missing_fonts": [{
+                        "name": "HB Refmark Symbols",
+                        "status": "NOT_AVAILABLE",
+                    }],
+                    "bad_links": [],
+                },
+            }), encoding="utf-8")
+            pdf_path.write_bytes(b"%PDF-test")
+            job = {
+                "job_id": "reopen-negative-control",
+                "output_pdf": str(pdf_path),
+                "report_json": str(report_path),
+                "pdfx": DEFAULT_PDFX,
+                "output_intent": DEFAULT_OUTPUT_INTENT,
+                "output_condition": DEFAULT_OUTPUT_CONDITION,
+            }
+            with patch(
+                "tools.indesign_finalize._pdf_export_compliance",
+                return_value={"pass": True},
+            ), patch(
+                "tools.indesign_finalize._pdf_missing_glyphs",
+                return_value=[],
+            ), patch(
+                "tools.indesign_finalize.indesign_version",
+                return_value="Adobe InDesign test",
+            ):
+                result = _collect_finalize_result(job, pin_status="match")
+
+            written = json.loads(report_path.read_text(encoding="utf-8"))
+            self.assertFalse(result["success"])
+            self.assertEqual(1, result["missing_fonts_count"])
+            self.assertIn("close/reopen", written["error"])
+
     def test_job_paths_are_absolute_and_script_checks_required_gates(self) -> None:
         job = _job(argparse.Namespace(
             idml="input.idml", indd="output.indd", pdf="output.pdf",
@@ -37,18 +187,121 @@ class InDesignFinalizeTests(unittest.TestCase):
             "input_idml", "output_indd", "output_pdf", "report_json")))
         jsx = JSX.read_text(encoding="utf-8")
         self.assertIn("story.overflows", jsx)
+        self.assertIn("cell.overflows", jsx)
+        self.assertIn("collectOversetTableCells(doc)", jsx)
+        self.assertIn("overset_table_cells", jsx)
+        self.assertIn("collectTableCellOversets(", jsx)
+        self.assertIn("cell.tables.everyItem().getElements()", jsx)
+        self.assertIn("if (identity && seen[identity])", jsx)
+        self.assertIn('report.stage = "preflight_overset"', jsx)
+        self.assertLess(
+            jsx.index('report.stage = "preflight_overset"'),
+            jsx.index("doc.exportFile"),
+        )
+        self.assertIn('story_title: String(story.storyTitle || "")', jsx)
+        self.assertGreaterEqual(
+            jsx.count('story_title: String(story.storyTitle || "")'),
+            3,
+        )
         self.assertIn("FontStatus.INSTALLED", jsx)
         self.assertIn("LinkStatus.NORMAL", jsx)
         self.assertIn("hb:page=", jsx)
         self.assertIn("doc.exportFile", jsx)
+        self.assertIn("collectPostReopenState(doc)", jsx)
+        self.assertIn('report.stage = "reopen_indd"', jsx)
+        self.assertIn("doc = app.open(File(job.output_indd), false)", jsx)
+        self.assertIn("showPortableFontBootstrap", jsx)
+        self.assertIn(
+            "doc = app.open(File(job.output_indd), showPortableFontBootstrap)",
+            jsx,
+        )
+        self.assertIn('report.stage = "save_portable_font_rebind"', jsx)
+        self.assertIn(
+            'report.stage = "reopen_indd_after_portable_font_rebind"',
+            jsx,
+        )
+        self.assertLess(
+            jsx.index('report.stage = "save_portable_font_rebind"'),
+            jsx.index("report.post_reopen = collectPostReopenState(doc)"),
+        )
+        self.assertIn("report.post_reopen.missing_fonts.length === 0", jsx)
         self.assertIn("backgroundTaskPreferences.enableBackgroundTask = false", jsx)
-        self.assertIn("fitLcdTableShells(doc)", jsx)
+        self.assertIn("fitLcdCarrierFrames(doc)", jsx)
         self.assertIn('indexOf(" table segment ")', jsx)
-        self.assertIn("table.rows[ri].height", jsx)
         self.assertIn("fitted_lcd_table_groups", jsx)
+        lcd_fit = jsx.split(
+            "function fitLcdCarrierFrames(doc)",
+            1,
+        )[1].split("function fitTroubleshootingCarrierFrames", 1)[0]
+        self.assertNotIn("allPageItems", lcd_fit)
+        self.assertNotIn("item.geometricBounds", lcd_fit)
+        self.assertNotIn("table.rows", lcd_fit)
+        self.assertIn(
+            '"hb:self=tf_terminal_carrier_group_"',
+            lcd_fit,
+        )
+        self.assertIn('=== "troubleshooting table"', jsx)
+        self.assertIn("fitted_troubleshooting_table_groups", jsx)
+        self.assertIn("fitted_troubleshooting_carrier_frames", jsx)
+        self.assertIn("fitTroubleshootingCarrierFrames(doc)", jsx)
+        self.assertIn(
+            "function growTableTerminalCarrier(doc, story, frame, maxGrowth)",
+            jsx,
+        )
+        self.assertIn("doc, story, frame, 24.0", jsx)
+        troubleshooting_fit = jsx.split(
+            "function fitTroubleshootingCarrierFrames(doc)",
+            1,
+        )[1].split("function substituteMissingFont", 1)[0]
+        self.assertNotIn("allPageItems", troubleshooting_fit)
+        self.assertNotIn("item.geometricBounds", troubleshooting_fit)
+        self.assertNotIn("table.rows", troubleshooting_fit)
+        self.assertIn(
+            '"hb:self=tf_terminal_carrier_group_"',
+            troubleshooting_fit,
+        )
         self.assertIn("fitComposedSymbolTableShells(doc)", jsx)
         self.assertIn('title.indexOf("Symbol icons ")', jsx)
         self.assertIn("fitted_symbol_table_shells", jsx)
+        symbol_fit = jsx.split(
+            "function resizeComposedTableShell(frame)", 1
+        )[1].split("function fitComposedSymbolTableShells(doc)", 1)[0]
+        self.assertNotIn("allPageItems", symbol_fit)
+        self.assertNotIn("item.geometricBounds", symbol_fit)
+        self.assertIn("applyHostFontSubstitutions(doc)", jsx)
+        self.assertIn(
+            "rebindJapanesePortableFont(doc, fontName, documentLanguage)",
+            jsx,
+        )
+        self.assertIn("waitForInstalledApplicationFont(fontName)", jsx)
+        self.assertIn('"japanese_portable_font_rebind"', jsx)
+        self.assertIn('String(documentLanguage || "") !== "ja"', jsx)
+        self.assertIn("isJapaneseCodeUnit(contents.charCodeAt(0))", jsx)
+        self.assertIn('"HB Manual Sans JP (OTF)\\tRegular"', jsx)
+        self.assertIn("portable_font_rebinds", jsx)
+        self.assertIn("font_substitutions", jsx)
+        self.assertIn("fontHasTextUsage(doc, font)", jsx)
+        self.assertIn("matches = doc.findText()", jsx)
+        self.assertIn("textHasVisibleContent(matches[mi].contents)", jsx)
+        self.assertNotIn("resizeLcdTableShell", jsx)
+        self.assertIn("tableHeight + 4.0", jsx)
+        self.assertIn("forced_residuals", jsx)
+        self.assertIn("appliedFontName(matches[mi])", jsx)
+        self.assertIn("font_usage_audit", jsx)
+        self.assertIn("fontUsageSamples(doc, font)", jsx)
+        self.assertIn(
+            "fitTerminalCarrierFrames(doc, report.carrier_frame_errors)",
+            jsx,
+        )
+        self.assertIn("carrier_frame_fits", jsx)
+        self.assertIn("carrier_frame_errors", jsx)
+        self.assertIn('title.indexOf("product_overview")', jsx)
+        terminal_fit = jsx.split(
+            "function fitTerminalCarrierFrames(doc, errors)", 1
+        )[1].split("function isComposedSymbolTableStory", 1)[0]
+        self.assertIn('"hb:self=tf_terminal_carrier_group_"', terminal_fit)
+        self.assertIn("!frame.isValid", terminal_fit)
+        self.assertNotIn("isMarkerOnlyCarrier", terminal_fit)
         self.assertIn("app.pdfExportPresets.itemByName(job.pdf_preset)", jsx)
         self.assertIn("if (!pdfPreset.isValid)", jsx)
         self.assertIn("app.pdfExportPreferences.pageRange = PageRange.ALL_PAGES", jsx)
@@ -57,6 +310,87 @@ class InDesignFinalizeTests(unittest.TestCase):
             "doc.exportFile(ExportFormat.pdfType, File(job.output_pdf), false, pdfPreset)",
             jsx,
         )
+
+    def test_overset_pages_merge_story_and_nested_cell_findings(self) -> None:
+        self.assertEqual(
+            [30, 38, 46],
+            _overset_pages({
+                "overset_stories": [{
+                    "text_containers": [{"page": 30}, {"page": 0}],
+                }],
+                "overset_table_cells": [
+                    {"page": 30, "table_depth": 1},
+                    {"page": 38, "table_depth": 1},
+                ],
+                "post_reopen": {
+                    "overset_stories": [],
+                    "overset_table_cells": [
+                        {"page": 38, "table_depth": 1},
+                        {"page": 46, "table_depth": 1},
+                        {"page": 0, "table_depth": 1},
+                    ],
+                },
+            }),
+        )
+
+    def test_font_substitution_table_is_one_row_per_source(self) -> None:
+        """A repeated source font re-enters after its text has already moved.
+
+        changeText moves every range on a source font in one pass, so a second
+        row for the same source can never act as a glyph-level cascade — it
+        only re-enters substituteMissingFont and demands a target face the
+        document no longer needs, which throws and aborts finalize before the
+        .indd and .pdf are written. Targets belong in one ordered list per
+        source, first installed wins.
+        """
+        import re
+
+        jsx = JSX.read_text(encoding="utf-8")
+        block = jsx.split("var mappings = [", 1)[1].split("\n        ];", 1)[0]
+        rows = [
+            (match.group(1), re.findall(r'"([^"]+)"', match.group(2)))
+            for match in re.finditer(
+                r'\["([^"]+)",\s*\[([^\]]*)\]\]', block, re.S,
+            )
+        ]
+
+        self.assertTrue(rows, "mappings must be [source, [target, ...]] rows")
+        sources = [source for source, _targets in rows]
+        self.assertEqual(
+            len(sources),
+            len(set(sources)),
+            "a second row for the same source font re-enters "
+            "substituteMissingFont after the first has cleared its text — "
+            "group its targets into one ordered list instead",
+        )
+        # The JSX source carries a literal backslash-t, not a tab character.
+        self.assertEqual(
+            {
+                r"Segoe UI Symbol\tRegular",
+                r"Yu Gothic\tRegular",
+                r"Noto Sans KR\tRegular",
+            },
+            set(sources),
+        )
+        for source, targets in rows:
+            with self.subTest(source=source):
+                self.assertTrue(targets, "every source needs a fallback target")
+
+        # The necessity gate must stay above the target lookup, or a mapping
+        # for an already-cleared source can still throw.
+        body = jsx.split("function substituteMissingFont", 1)[1].split(
+            "\n    function ", 1,
+        )[0]
+        self.assertIn("if (!fontHasTextUsage(doc, sourceFont))", body)
+        self.assertLess(
+            body.index("fontHasTextUsage"), body.index("app.fonts.itemByName"),
+        )
+        self.assertIn("no installed host fallback font for", body)
+
+        audit = jsx.split("function fontHasTextUsage", 1)[1].split(
+            "\n    function ", 1,
+        )[0]
+        self.assertIn("return true;", audit.split("} catch (_) {", 1)[1])
 
     def test_default_pdf_preset_is_pdfx4(self) -> None:
         self.assertEqual("[PDF/X-4:2008 (Japan)]", DEFAULT_PDF_PRESET)
@@ -201,6 +535,58 @@ class VersionPinTests(unittest.TestCase):
                    return_value=("mismatch", "drift")):
             with patch("sys.argv", ["indesign_finalize.py", "--check-host"]):
                 self.assertEqual(main(), 2)
+
+    def test_the_outputs_default_beside_the_package(self) -> None:
+        """A finalize report belongs next to the artefact it describes.
+
+        The JP round's ledger asked for the report to stay inside
+        docs/_build/<MODEL>/<REGION>/ so findings are readable in the tree; it
+        got a transcription into chat instead, because every path was a required
+        flag and the host operator supplied them by hand.
+        """
+        captured = {}
+
+        def fake_job(args):
+            captured.update(
+                indd=args.indd, pdf=args.pdf, report=args.report
+            )
+            raise SystemExit(0)
+
+        idml = "docs/_build/JBP-2000B/JP/idml/manual_jbp2000b_jp.idml"
+        with patch("tools.indesign_finalize.check_version_pin",
+                   return_value=("match", "ok")), \
+             patch("tools.indesign_finalize._job", side_effect=fake_job), \
+             patch("sys.argv", ["indesign_finalize.py", "--idml", idml]):
+            with self.assertRaises(SystemExit):
+                main()
+
+        self.assertEqual(
+            "docs/_build/JBP-2000B/JP/idml/manual_jbp2000b_jp.indd", captured["indd"]
+        )
+        self.assertEqual(
+            "docs/_build/JBP-2000B/JP/idml/manual_jbp2000b_jp.pdf", captured["pdf"]
+        )
+        self.assertEqual(
+            "docs/_build/JBP-2000B/JP/idml/finalize_report.json", captured["report"]
+        )
+
+    def test_an_explicit_output_path_still_wins(self) -> None:
+        captured = {}
+
+        def fake_job(args):
+            captured.update(report=args.report, pdf=args.pdf)
+            raise SystemExit(0)
+
+        with patch("tools.indesign_finalize.check_version_pin",
+                   return_value=("match", "ok")), \
+             patch("tools.indesign_finalize._job", side_effect=fake_job), \
+             patch("sys.argv", ["indesign_finalize.py", "--idml", "a/b.idml",
+                                "--report", "elsewhere/r.json"]):
+            with self.assertRaises(SystemExit):
+                main()
+
+        self.assertEqual("elsewhere/r.json", captured["report"])
+        self.assertEqual("a/b.pdf", captured["pdf"])
 
     def test_run_refuses_on_mismatch_without_override_and_never_launches(self) -> None:
         with patch("tools.indesign_finalize.check_version_pin",

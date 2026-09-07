@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from dataclasses import replace
 import json
 import tempfile
 import unittest
@@ -7,6 +8,7 @@ from pathlib import Path
 
 from tools.idml.design_handoff import write_handoff_package
 from tools.idml.flow_idml import FlowOutputs
+from tools.manual_ir import build_manual_ir, write_manual_ir
 
 
 class IdmlDesignHandoffTests(unittest.TestCase):
@@ -22,11 +24,14 @@ class IdmlDesignHandoffTests(unittest.TestCase):
             flow_dir = idml_dir / "flow"
             flow_dir.mkdir(parents=True)
             production = idml_dir / "manual_je1000f_us_en.idml"
-            production.write_text("idml", encoding="utf-8")
-            (idml_dir / "manual.ir.json").write_text(
-                json.dumps({"metadata": {"skipped_raw": 2}}),
-                encoding="utf-8",
-            )
+            from tests.test_idml_delivery import _write_production_idml
+            _write_production_idml(production, [])
+            repo = Path(__file__).resolve().parents[1]
+            ir = build_manual_ir(root=repo, bundle_root=repo / "tests/fixtures/idml_bundle",
+                                 model="JE-1000F", region="US", lang="en", source="review")
+            ir = replace(ir, pages=(replace(ir.pages[0], skipped_raw=2), *ir.pages[1:]),
+                         metadata={**ir.metadata, "skipped_raw": 2})
+            write_manual_ir(ir, idml_dir / "manual.ir.json")
             manifest = flow_dir / "manual.flow.asset_manifest.csv"
             manifest.write_text(
                 "\n".join([
@@ -61,7 +66,15 @@ class IdmlDesignHandoffTests(unittest.TestCase):
             )
 
             self.assertTrue(outputs.production_idml.is_file())
-            self.assertEqual("idml", outputs.production_idml.read_text(encoding="utf-8"))
+            self.assertTrue(outputs.production_idml.is_file())
+            document_fonts = outputs.production_idml.parent / "Document fonts"
+            self.assertTrue((document_fonts / "NotoSans-Regular.ttf").is_file())
+            self.assertTrue(
+                (document_fonts / "NotoSansSymbols-Regular.ttf").is_file()
+            )
+            self.assertTrue(
+                (document_fonts / "NotoSansSymbols2-Regular.ttf").is_file()
+            )
             trace = json.loads(outputs.production_trace.read_text(encoding="utf-8"))
             self.assertEqual("production", trace["idml_mode"])
             self.assertTrue(trace["production_idml"].endswith("manual.production.idml"))

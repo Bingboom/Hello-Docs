@@ -8,6 +8,13 @@ from pathlib import Path
 from typing import Any, Mapping
 
 from tools.component_specs.model import ComponentSpecError
+from tools.component_specs.overview_instance_validation import (
+    non_empty as _non_empty,
+    number_list as _number_list,
+    overview_instance_sha256,
+    point_list as _point_list,
+    resolved_overview_instance_issues,
+)
 from tools.utils.path_utils import Paths, repo_root
 
 
@@ -19,30 +26,85 @@ def default_overview_instances_path() -> Path:
     return Paths(root=repo_root()).overview_component_instances_contract
 
 
-def _number_list(value: Any, *, length: int, field: str) -> list[float]:
-    if (
-        not isinstance(value, list)
-        or len(value) != length
-        or any(isinstance(item, bool) or not isinstance(item, (int, float)) for item in value)
-    ):
-        raise ComponentSpecError(f"{field} must contain {length} numbers")
-    return [float(item) for item in value]
+def _merge_instance_value(base: Any, override: Any) -> Any:
+    """Merge one instance override, including stable ``id``-keyed lists.
+
+    Geometry-heavy component instances should be able to inherit a complete
+    view and override only target-local bindings such as composite locales.
+    Ordinary lists remain replace-on-write; lists of mappings with stable
+    ``id`` fields merge in place and preserve the base order.
+    """
+    if isinstance(base, Mapping) and isinstance(override, Mapping):
+        merged = deepcopy(dict(base))
+        for key, value in override.items():
+            merged[key] = (
+                _merge_instance_value(merged[key], value)
+                if key in merged
+                else deepcopy(value)
+            )
+        return merged
+    if isinstance(base, list) and isinstance(override, list):
+        keyed_base = all(
+            isinstance(item, Mapping) and str(item.get("id") or "").strip()
+            for item in base
+        )
+        keyed_override = all(
+            isinstance(item, Mapping) and str(item.get("id") or "").strip()
+            for item in override
+        )
+        if keyed_base and keyed_override:
+            override_by_id = {
+                str(item["id"]): item
+                for item in override
+            }
+            merged = [
+                _merge_instance_value(item, override_by_id[str(item["id"])])
+                if str(item["id"]) in override_by_id
+                else deepcopy(item)
+                for item in base
+            ]
+            base_ids = {str(item["id"]) for item in base}
+            merged.extend(
+                deepcopy(item)
+                for item in override
+                if str(item["id"]) not in base_ids
+            )
+            return merged
+    return deepcopy(override)
 
 
-def _point_list(value: Any, *, field: str) -> list[list[float]]:
-    if not isinstance(value, list) or len(value) < 2:
-        raise ComponentSpecError(f"{field} must contain at least two points")
-    return [
-        _number_list(point, length=2, field=f"{field}[{index}]")
-        for index, point in enumerate(value)
-    ]
+def _resolve_instance_definition(
+    instances: Mapping[str, Any],
+    instance_id: str,
+    *,
+    resolving: tuple[str, ...] = (),
+) -> dict[str, Any]:
+    """Materialize a target instance, including an optional shared base instance."""
+    raw = instances.get(instance_id)
+    if not isinstance(raw, Mapping):
+        raise ComponentSpecError(f"instances.{instance_id} must be a mapping")
+    if instance_id in resolving:
+        chain = " -> ".join((*resolving, instance_id))
+        raise ComponentSpecError(f"overview instance inheritance cycle: {chain}")
 
+    base_id = str(raw.get("extends") or "").strip()
+    if not base_id:
+        return deepcopy(dict(raw))
+    if base_id not in instances:
+        raise ComponentSpecError(
+            f"instances.{instance_id}.extends names unknown instance {base_id!r}"
+        )
 
-def _non_empty(value: Any, *, field: str) -> str:
-    text = str(value or "").strip()
-    if not text:
-        raise ComponentSpecError(f"{field} must be a non-empty string")
-    return text
+    materialized = _resolve_instance_definition(
+        instances,
+        base_id,
+        resolving=(*resolving, instance_id),
+    )
+    materialized = _merge_instance_value(
+        materialized,
+        {key: value for key, value in raw.items() if key != "extends"},
+    )
+    return materialized
 
 
 def _validate_instance(instance_id: str, raw: Any) -> dict[str, Any]:
@@ -67,11 +129,6 @@ def _validate_instance(instance_id: str, raw: Any) -> dict[str, Any]:
     if not isinstance(page, Mapping):
         raise ComponentSpecError(f"{prefix}.page must be a mapping")
     _number_list(page.get("title_frame"), length=4, field=f"{prefix}.page.title_frame")
-    _number_list(
-        page.get("title_text_rect"),
-        length=4,
-        field=f"{prefix}.page.title_text_rect",
-    )
 
     views = instance.get("views")
     if not isinstance(views, list) or not views:
@@ -113,10 +170,15 @@ def _validate_instance(instance_id: str, raw: Any) -> dict[str, Any]:
                     f"{view_prefix}: duplicate composite locale {locale!r}"
                 )
             locale_ids.add(locale)
-            patterns = mapping.get("source_patterns")
-            if not isinstance(patterns, list) or not patterns:
+            patterns = mapping.get("source_patterns", [])
+            if not isinstance(patterns, list):
                 raise ComponentSpecError(
-                    f"{locale_prefix}.source_patterns must be non-empty"
+                    f"{locale_prefix}.source_patterns must be a list"
+                )
+            for pattern_index, pattern in enumerate(patterns):
+                _non_empty(
+                    pattern,
+                    field=f"{locale_prefix}.source_patterns[{pattern_index}]",
                 )
 
         web = view.get("web")
@@ -148,6 +210,12 @@ def _validate_instance(instance_id: str, raw: Any) -> dict[str, Any]:
             length=4,
             field=f"{view_prefix}.idml.heading_bullet_rect",
         )
+        if "heading_text_rect" in idml:
+            _number_list(
+                idml.get("heading_text_rect"),
+                length=4,
+                field=f"{view_prefix}.idml.heading_text_rect",
+            )
 
         callouts = view.get("callouts")
         if not isinstance(callouts, list) or not callouts:
@@ -257,8 +325,9 @@ def validate_overview_instance_registry(payload: Mapping[str, Any]) -> list[str]
     if default_id not in instances:
         issues.append("default_instance_id must name a registered instance")
     targets: set[tuple[str, str]] = set()
-    for instance_id, raw in instances.items():
+    for instance_id in instances:
         try:
+            raw = _resolve_instance_definition(instances, str(instance_id))
             instance = _validate_instance(str(instance_id), raw)
         except ComponentSpecError as exc:
             issues.append(str(exc))
@@ -269,6 +338,12 @@ def validate_overview_instance_registry(payload: Mapping[str, Any]) -> list[str]
             issues.append(f"duplicate target instance for {key[0]}/{key[1]}")
         targets.add(key)
     return issues
+
+
+def validate_resolved_overview_instance(payload: Mapping[str, Any]) -> list[str]:
+    """Validate one fully materialized target instance for frozen IR replay."""
+
+    return resolved_overview_instance_issues(payload, validator=_validate_instance)
 
 
 @lru_cache(maxsize=4)
@@ -301,21 +376,25 @@ def resolve_overview_instance(
     active = dict(registry or load_overview_instance_registry())
     instances = active["instances"]
     if instance_id:
-        raw = instances.get(instance_id)
-        if raw is None:
+        if instance_id not in instances:
             raise ComponentSpecError(f"unknown overview instance {instance_id!r}")
+        raw = _resolve_instance_definition(instances, instance_id)
         instance = _validate_instance(instance_id, raw)
     else:
+        materialized = {
+            str(key): _resolve_instance_definition(instances, str(key))
+            for key in instances
+        }
         matches = [
             (key, value)
-            for key, value in instances.items()
+            for key, value in materialized.items()
             if str(value["target"]["model"]).casefold() == str(model or "").casefold()
             and str(value["target"]["region"]).casefold()
             == str(region or "").casefold()
         ]
         if not model and not region:
             default_id = str(active["default_instance_id"])
-            matches = [(default_id, instances[default_id])]
+            matches = [(default_id, materialized[default_id])]
         if len(matches) != 1:
             raise ComponentSpecError(
                 f"expected one overview instance for {model!r}/{region!r}; "
@@ -332,6 +411,8 @@ __all__ = [
     "SCHEMA_VERSION",
     "default_overview_instances_path",
     "load_overview_instance_registry",
+    "overview_instance_sha256",
     "resolve_overview_instance",
+    "validate_resolved_overview_instance",
     "validate_overview_instance_registry",
 ]

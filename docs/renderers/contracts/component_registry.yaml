@@ -74,7 +74,7 @@ components:
   HB-SPECIAL-INBOX:
     style_id: HB-SPECIAL-INBOX
     source_kinds: [inbox]
-    variants: [three-card-responsive]
+    variants: [three-card-responsive, responsive-card-grid]
     slots:
       accessibility_label:
         required: true
@@ -89,15 +89,22 @@ components:
         required: true
         content_kinds: [rich_text]
     asset_roles:
-      card_1_art: {required: true, locale_policies: [shared]}
-      card_2_art: {required: true, locale_policies: [shared]}
-      card_3_art: {required: true, locale_policies: [shared]}
+      card_1_art: {required: false, locale_policies: [shared]}
+      card_2_art: {required: false, locale_policies: [shared]}
+      card_3_art: {required: false, locale_policies: [shared]}
+      card_art: {required: false, multiple: true, locale_policies: [shared]}
     token_roles: [component.special.inbox]
     adapters:
       web: {capability: rendered, key: hb_inbox}
       latex: {capability: rendered, key: hb_latex_inbox}
       idml: {capability: rendered, key: idml_inbox}
       word: {capability: rendered, key: word_inbox}
+    variant_adapters:
+      responsive-card-grid:
+        web: {capability: rendered, key: hb_inbox}
+        latex: {capability: not-applicable, key: hb_latex_inbox}
+        idml: {capability: not-applicable, key: idml_inbox}
+        word: {capability: not-applicable, key: word_inbox}
 
   HB-SPECIAL-OVERVIEW:
     style_id: HB-SPECIAL-OVERVIEW
@@ -122,3 +129,271 @@ components:
       latex: {capability: projection-only, key: hb_latex_overview}
       idml: {capability: rendered, key: idml_overview}
       word: {capability: projection-only, key: word_overview}
+
+  HB-SPECIAL-OPERATION:
+    style_id: HB-SPECIAL-OPERATION
+    source_kinds: [operation_panel]
+    variants: [status-right, footer-overlay, footer-panel]
+    slots:
+      operation_id:
+        required: true
+        content_kinds: [inline_text]
+      accessibility_label:
+        required: true
+        content_kinds: [inline_text]
+      steps:
+        required: true
+        content_kinds: [ordered_steps]
+      prerequisite:
+        required: false
+        content_kinds: [rich_text]
+      supporting_copy:
+        required: false
+        content_kinds: [line_items]
+    asset_roles:
+      artwork: {required: true, locale_policies: [shared, exact]}
+    token_roles: [component.special.operation]
+    adapters:
+      web: {capability: rendered, key: hb_operation}
+      latex: {capability: projection-only, key: hb_latex_operation}
+      idml: {capability: rendered, key: idml_operation}
+      word: {capability: projection-only, key: word_operation}
+
+  HB-SPECIAL-APP:
+    style_id: HB-SPECIAL-APP
+    source_kinds: [app_download, app_inline_control, app_add_device]
+    variants: [download, inline-control, add-device]
+    slots:
+      accessibility_label:
+        required: true
+        content_kinds: [inline_text]
+      columns:
+        required: false
+        content_kinds: [ordered_columns]
+      paragraph:
+        required: false
+        content_kinds: [rich_text]
+      reference_id:
+        required: false
+        content_kinds: [inline_text]
+      labels:
+        required: false
+        content_kinds: [ordered_labels]
+    asset_roles:
+      source_art: {required: false, locale_policies: [exact]}
+      store_art: {required: false, locale_policies: [shared]}
+      qr_art: {required: false, locale_policies: [shared]}
+      phone_art: {required: false, locale_policies: [shared]}
+      control_art: {required: false, locale_policies: [shared]}
+    token_roles: [component.special.app]
+    adapters:
+      web: {capability: rendered, key: hb_app}
+      latex: {capability: rendered, key: hb_latex_app}
+      idml: {capability: rendered, key: idml_app}
+      word: {capability: projection-only, key: word_app}
+
+  HB-SPECIAL-REFERENCE-FIGURE:
+    style_id: HB-SPECIAL-REFERENCE-FIGURE
+    source_kinds: [reference_figure]
+    variants: [semantic-fallback, approved-composite]
+    slots:
+      reference_id:
+        required: true
+        content_kinds: [inline_text]
+      accessibility_label:
+        required: true
+        content_kinds: [inline_text]
+      caption_mode:
+        required: true
+        content_kinds: [inline_text]
+      caption_layout:
+        required: true
+        content_kinds: [inline_text]
+      captions:
+        required: false
+        content_kinds: [ordered_labels]
+      adjacent_copy:
+        required: false
+        content_kinds: [rich_text]
+    asset_roles:
+      source_art: {required: true, locale_policies: [exact, shared]}
+      approved_composite: {required: false, locale_policies: [exact, shared]}
+    token_roles: [component.special.reference-figure]
+    adapters:
+      web: {capability: rendered, key: hb_reference_figure}
+      latex: {capability: projection-only, key: hb_latex_reference_figure}
+      idml: {capability: projection-only, key: idml_reference_figure}
+      word: {capability: projection-only, key: word_reference_figure}
+
+  HB-TABLE-LCD-MODE:
+    style_id: HB-TABLE-LCD-MODE
+    source_kinds: [table_lcd_mode]
+    variants: [two-state-three-action]
+    slots:
+      accessibility_label:
+        required: true
+        content_kinds: [inline_text]
+      groups:
+        required: true
+        content_kinds: [ordered_groups]
+    asset_roles:
+      artwork: {required: true, locale_policies: [shared, exact]}
+    token_roles: [component.table.lcd-mode]
+    adapters:
+      web: {capability: rendered, key: hb_lcd_mode}
+      latex: {capability: rendered, key: hb_latex_lcd_mode}
+      idml: {capability: rendered, key: idml_lcd_mode}
+      word: {capability: projection-only, key: word_lcd_mode}
+
+  HB-TABLE-LCD-ICON:
+    style_id: HB-TABLE-LCD-ICON
+    source_kinds: [table_lcd_icon, lcd-icons]
+    variants: [icon-catalog]
+    slots:
+      accessibility_label:
+        required: true
+        content_kinds: [inline_text]
+      rows:
+        required: true
+        content_kinds: [ordered_rows]
+    asset_roles:
+      icons:
+        required: true
+        multiple: true
+        locale_policies: [shared, exact]
+    token_roles: [component.table.lcd-icon]
+    adapters:
+      web: {capability: rendered, key: hb_lcd_icon}
+      latex: {capability: rendered, key: hb_latex_lcd_icon}
+      idml: {capability: rendered, key: idml_lcd_icon}
+      word: {capability: projection-only, key: word_lcd_icon}
+
+  HB-TABLE-TROUBLESHOOTING:
+    style_id: HB-TABLE-TROUBLESHOOTING
+    source_kinds: [table_troubleshooting, troubleshooting]
+    variants: [two-column]
+    slots:
+      headers:
+        required: true
+        content_kinds: [ordered_headers]
+      rows:
+        required: true
+        content_kinds: [ordered_rows]
+    asset_roles: {}
+    token_roles: [component.table.troubleshooting]
+    adapters:
+      web: {capability: rendered, key: hb_troubleshooting}
+      latex: {capability: rendered, key: hb_latex_troubleshooting}
+      idml: {capability: rendered, key: idml_troubleshooting}
+      word: {capability: projection-only, key: word_troubleshooting}
+
+  HB-TABLE-SYMBOL-SIGNAL:
+    style_id: HB-TABLE-SYMBOL-SIGNAL
+    source_kinds: [table_symbol_signal]
+    variants: [localized-badges]
+    slots:
+      accessibility_label:
+        required: true
+        content_kinds: [inline_text]
+      headers:
+        required: true
+        content_kinds: [ordered_headers]
+      rows:
+        required: true
+        content_kinds: [ordered_rows]
+    asset_roles: {}
+    token_roles: [component.table.symbol-signal]
+    adapters:
+      web: {capability: rendered, key: hb_symbol_signal}
+      latex: {capability: rendered, key: hb_latex_symbol_signal}
+      idml: {capability: rendered, key: idml_symbol_signal}
+      word: {capability: projection-only, key: word_symbol_signal}
+
+  HB-TABLE-SYMBOL-ICON:
+    style_id: HB-TABLE-SYMBOL-ICON
+    source_kinds: [table_symbol_icon, symbols]
+    variants: [two-panel-responsive]
+    slots:
+      accessibility_label:
+        required: true
+        content_kinds: [inline_text]
+      headers:
+        required: true
+        content_kinds: [ordered_headers]
+      panels:
+        required: true
+        content_kinds: [ordered_panels]
+    asset_roles:
+      icons:
+        required: true
+        multiple: true
+        locale_policies: [shared, exact]
+    token_roles: [component.table.symbol-icon]
+    adapters:
+      web: {capability: rendered, key: hb_symbol_icon}
+      latex: {capability: rendered, key: hb_latex_symbol_icon}
+      idml: {capability: rendered, key: idml_symbol_icon}
+      word: {capability: projection-only, key: word_symbol_icon}
+
+  HB-WARRANTY-LEAD:
+    style_id: HB-WARRANTY-LEAD
+    source_kinds: [warranty_lead]
+    variants: [intro-panel]
+    slots:
+      accessibility_label:
+        required: true
+        content_kinds: [inline_text]
+      lead:
+        required: true
+        content_kinds: [rich_text]
+      local_note:
+        required: true
+        content_kinds: [rich_text]
+    asset_roles: {}
+    token_roles: [component.warranty.lead]
+    adapters:
+      web: {capability: rendered, key: hb_warranty_lead}
+      latex: {capability: rendered, key: hb_latex_warranty_lead}
+      idml: {capability: rendered, key: idml_warranty_lead}
+      word: {capability: projection-only, key: word_warranty_lead}
+
+  HB-WARRANTY-SECTION:
+    style_id: HB-WARRANTY-SECTION
+    source_kinds: [warranty_section]
+    variants: [rounded-card]
+    slots:
+      title:
+        required: true
+        content_kinds: [inline_text]
+      section_index:
+        required: true
+        content_kinds: [block_index]
+      blocks:
+        required: true
+        content_kinds: [ordered_blocks]
+    asset_roles: {}
+    token_roles: [component.warranty.section]
+    adapters:
+      web: {capability: rendered, key: hb_warranty_section}
+      latex: {capability: rendered, key: hb_latex_warranty_section}
+      idml: {capability: rendered, key: idml_warranty_section}
+      word: {capability: projection-only, key: word_warranty_section}
+
+  HB-WARRANTY-YEARS:
+    style_id: HB-WARRANTY-YEARS
+    source_kinds: [warranty_years]
+    variants: [numeric-badges]
+    slots:
+      title:
+        required: true
+        content_kinds: [inline_text]
+      periods:
+        required: true
+        content_kinds: [ordered_periods]
+    asset_roles: {}
+    token_roles: [component.warranty.years]
+    adapters:
+      web: {capability: rendered, key: hb_warranty_years}
+      latex: {capability: rendered, key: hb_latex_warranty_years}
+      idml: {capability: rendered, key: idml_warranty_years}
+      word: {capability: projection-only, key: word_warranty_years}

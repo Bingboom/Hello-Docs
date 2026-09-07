@@ -18,13 +18,25 @@ if _REPO_ROOT not in sys.path:  # export_idml.py runs as a direct script
     sys.path.insert(0, _REPO_ROOT)
 
 from tools.utils.path_utils import latex_renderer_of
+from tools.lang_registry import canonical_language
 
 from .params import IDPKG
 
 _ATTR = {'"': "&quot;"}
 
 
-def placed_asset_for(page_stem: str, lang: str, docs_dir: Path) -> Path | None:
+def _cover_model_slug(model: str | None) -> str:
+    """Return the filename slug used by model-bound finished cover art."""
+    return re.sub(r"[^a-z0-9]+", "", (model or "").lower())
+
+
+def placed_asset_for(
+    page_stem: str,
+    lang: str,
+    docs_dir: Path,
+    *,
+    model: str | None = None,
+) -> Path | None:
     """Resolve the production-approved full-page asset, if any.
 
     Only the cover is allowed to use a full-page placed PDF. Product overview
@@ -32,9 +44,36 @@ def placed_asset_for(page_stem: str, lang: str, docs_dir: Path) -> Path | None:
     and the back cover is composed from its source-authored semantic payload.
     """
     assets_dir = latex_renderer_of(docs_dir) / "assets"
-    lang = (lang or "en").lower()
+    requested_lang = (lang or "en").strip().lower()
+    canonical_lang = canonical_language(requested_lang) or requested_lang
+    asset_languages = tuple(dict.fromkeys((canonical_lang, requested_lang)))
     if page_stem.startswith("cover"):
-        candidates = [f"cover-{lang}.pdf", "cover-en.pdf"]
+        model_slug = _cover_model_slug(model)
+        candidates: list[str] = []
+
+        def add_candidate(name: str) -> None:
+            if name not in candidates:
+                candidates.append(name)
+
+        if model_slug:
+            for asset_lang in asset_languages:
+                add_candidate(f"cover_{model_slug}-{asset_lang}.pdf")
+
+        # The unscoped ``cover-<lang>.pdf`` files predate model-bound cover
+        # names and belong to JE-1000F.  Keep that compatibility only for the
+        # owning model (and old callers without model context); otherwise a
+        # missing target cover must not silently place another product.
+        if not model_slug or model_slug == "je1000f":
+            for asset_lang in asset_languages:
+                add_candidate(f"cover-{asset_lang}.pdf")
+
+        if model_slug and "en" not in asset_languages:
+            add_candidate(f"cover_{model_slug}-en.pdf")
+        if (
+            (not model_slug or model_slug == "je1000f")
+            and "en" not in asset_languages
+        ):
+            add_candidate("cover-en.pdf")
     else:
         return None
     for name in candidates:
@@ -89,6 +128,37 @@ _BACK_COVER_COPY = {
         "phone": "1-888-502-2236 (US)",
         "lines": "hello@jackery.com\nwww.jackery.com",
     },
+}
+
+_JBP_US_BACK_COVER_PROFILE = {
+    "qr_asset": "docs/renderers/latex/assets/back_cover_qr_jbp2000b.pdf",
+    "display_address": "5310 Bunche Dr., Fremont, CA 94538-8301",
+    "phone_suffix": "(US)",
+    "contact_lines": "hello@jackery.com\nwww.jackery.com",
+    "company_x": 28.096,
+    "company_y": 430.5,
+    "address_y": 446.2,
+    "bar_x": 28.8,
+    "bar_y": 461.2,
+    "bar_width": 272.2,
+    "bar_height": 36.8,
+    "bar_stroke_weight": 0.35,
+    "bar_corner_radius": 5.5,
+    "phone_x": 60.298,
+    "phone_y": 468.6,
+    "phone_width": 137.0,
+    "phone_height": 21.0,
+    "divider_x": 199.5,
+    "lines_x": 224.691,
+    "lines_y": 467.7,
+    "lines_width": 69.0,
+    "lines_height": 23.0,
+    "qr_x": 305.6,
+    "qr_y": 460.4,
+    "qr_size": 37.2,
+    "qr_art_size": 30.0,
+    "qr_stroke_weight": 0.35,
+    "qr_corner_radius": 5.5,
 }
 
 
@@ -162,6 +232,58 @@ def add_back_cover_page(
     """Compose the template's back page: company block + contact bar."""
     if profile is None:
         return _add_legacy_back_cover_page(writer, region, page_index, copy)
+    if profile.get("variant") == "qr_only":
+        if docs_dir is None:
+            raise ValueError("qr-only back cover requires docs_dir")
+        qr_asset = str(profile.get("qr_asset") or "").strip()
+        qr_rect = profile.get("qr_rect")
+        if not qr_asset or not isinstance(qr_rect, list) or len(qr_rect) != 4:
+            raise ValueError(
+                "qr-only back cover requires qr_asset and four-value qr_rect"
+            )
+        asset = docs_dir.parent / qr_asset
+        if not asset.is_file():
+            raise ValueError(f"back-cover QR asset is missing: {asset}")
+        qr_x, qr_y, qr_width, qr_height = map(float, qr_rect)
+        if qr_width <= 0 or qr_height <= 0:
+            raise ValueError("qr-only back-cover rectangle must be positive")
+        x1, y1, x2, y2 = writer._page_rect(
+            qr_x, qr_y, qr_width, qr_height,
+        )
+        sid = "st_back_cover"
+        spread_id = f"sp_{page_index}"
+        frame = (
+            f'  <Rectangle Self="rc_{sid}_qr" ContentType="GraphicType" '
+            'AppliedObjectStyle="ObjectStyle/$ID/[None]" '
+            'StrokeColor="Swatch/None" StrokeWeight="0" '
+            'ItemTransform="1 0 0 1 0 0">\n'
+            + writer._path_geometry(x1, y1, x2, y2)
+            + f'    <Image Self="rc_{sid}_qr_img" '
+            f'ItemTransform="1 0 0 1 {x1:g} {y1:g}">\n'
+            f'      <Link Self="rc_{sid}_qr_lnk" '
+            f'LinkResourceURI="{escape(asset.resolve().as_uri(), _ATTR)}"/>\n'
+            '    </Image>\n'
+            '    <FrameFittingOption FittingOnEmptyFrame="Proportionally" '
+            'FittingAlignment="CenterAnchor" AutoFit="true"/>\n'
+            '  </Rectangle>\n'
+        )
+        xml = (
+            '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n'
+            f'<idPkg:Spread xmlns:idPkg="{IDPKG}" DOMVersion="15.0">\n'
+            f'<Spread Self="{spread_id}" PageCount="1" BindingLocation="0" '
+            'ShowMasterItems="true">\n'
+            f'  <Page Self="{spread_id}_pg" Name="{page_index + 1}" '
+            'AppliedMaster="n" OverrideList="" TabOrder="" '
+            'GridStartingPoint="TopOutside" '
+            f'GeometricBounds="0 0 {writer.page_h:g} {writer.page_w:g}" '
+            f'ItemTransform="1 0 0 1 {-writer.page_w / 2:g} '
+            f'{-writer.page_h / 2:g}"/>\n'
+            + frame
+            + '</Spread>\n'
+            '</idPkg:Spread>\n'
+        )
+        writer.spreads.append((spread_id, xml))
+        return True
     copy = copy or _BACK_COVER_COPY.get(region)
     if copy is None:
         return False
@@ -170,10 +292,14 @@ def add_back_cover_page(
     body_x = float(profile.get("company_x", 27.4))
     body_w = writer.page_w - body_x * 2
     sid = "st_back_cover"
-    def sized_psr(style: str, text: str, size: float, leading: float,
+    def sized_psr(style: str, text: str, size: float,
                   *, bold: bool = False, terminal: bool = True) -> str:
+        # PointSize only. A numeric Leading attribute on a style range is
+        # dropped by InDesign (character_metrics.with_character_metrics exists
+        # to strip it), so the back-cover leadings this used to emit never
+        # applied; each line composes at its paragraph style's own leading.
         xml = writer._psr(style, text, terminal=terminal)
-        attrs = f'PointSize="{size:g}" Leading="{leading:g}"'
+        attrs = f'PointSize="{size:g}"'
         if bold:
             attrs += ' FontStyle="Bold"'
         return xml.replace(
@@ -185,15 +311,13 @@ def add_back_cover_page(
 
     company_sid = writer._add_story_parts(
         f"{sid}_company", "Back cover company",
-        [sized_psr("HB Title L2", copy["company"], 12.0, 14.5,
-                   bold=True)])
+        [sized_psr("HB Title L2", copy["company"], 12.0, bold=True)])
     address_sid = writer._add_story_parts(
         f"{sid}_address", "Back cover address",
         [sized_psr(
             "HB Body",
             str(profile.get("display_address") or copy["address"]),
             8.0,
-            10.0,
         )])
     phone_match = re.fullmatch(r"\s*(.*?)\s*(\(US\))\s*", copy["phone"])
     phone_number = phone_match.group(1) if phone_match else copy["phone"]
@@ -203,17 +327,17 @@ def add_back_cover_page(
     )
     phone_sid = writer._add_story_parts(
         f"{sid}_phone", "Back cover phone",
-        [sized_psr("HB Spec Section", phone_number, 15.415, 18.5, bold=True)])
+        [sized_psr("HB Spec Section", phone_number, 15.415, bold=True)])
     phone_suffix_sid = (writer._add_story_parts(
         f"{sid}_phone_suffix", "Back cover phone suffix",
-        [sized_psr("HB Body", phone_suffix, 8.0, 10.0)]) if phone_suffix else None)
+        [sized_psr("HB Body", phone_suffix, 8.0)]) if phone_suffix else None)
     lines = str(profile.get("contact_lines") or "") or copy.get("lines", "") or "\n".join(filter(None, (
         copy.get("email", ""),
         copy.get("web", ""),
     )))
     lines_sid = (writer._add_story_parts(
         f"{sid}_lines", "Back cover contact lines",
-        [sized_psr("HB Body", lines, 8.005, 10.8)]) if lines else None)
+        [sized_psr("HB Body", lines, 8.005)]) if lines else None)
 
     company_y = float(profile.get("company_y", writer.page_h - writer.m_b - 64.0))
     bar_x = float(profile.get("bar_x", body_x))
@@ -422,6 +546,12 @@ def add_preferred_back_cover_page(
         .get("editable_components", {})
         .get("back_cover")
     )
+    if (
+        profile is None
+        and _cover_model_slug(getattr(writer, "model", None)) == "jbp2000b"
+        and region.upper() == "US"
+    ):
+        profile = _JBP_US_BACK_COVER_PROFILE
     return add_back_cover_page(
         writer, region, page_index, copy, profile=profile, docs_dir=docs_dir,
     )

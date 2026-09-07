@@ -15,6 +15,7 @@ from tools.idml.reference_layout_plan import (
     validate_approved_reference_plan,
 )
 from tools.manual_ir import ManualIR, ManualPage
+from tools.manual_ir.hashing import value_sha256
 from tools.utils.path_utils import PathSegments, Paths
 
 
@@ -47,7 +48,9 @@ def _manual_ir() -> ManualIR:
         snapshot_sha256="2" * 64,
         layout_params_sha256="3" * 64,
         style_contract_sha256="4" * 64,
-        content_sha256="1" * 64,
+        content_sha256=value_sha256({
+            "page_ids": [page.page_id for page in pages], "block_hashes": [],
+        }),
         pages=pages,
         metadata={"layout_params_hash_algorithm": "ordered-layout-tokens/v1"},
     )
@@ -195,15 +198,12 @@ class ReferenceLayoutPlanTests(unittest.TestCase):
             [],
             contract["idml_contract"]["allowed_unclassified_source_refs"],
         )
-        # Operator-approved content+assembly rebind (2026-08-14, second pass):
-        # the manifest now declares 00_toc/99_back_cover (ordinal_neutral), so
-        # their language pins moved from the hand-era 'toc'/'cover' markers to
-        # 'en', and the POWER Button terminology decree refreshed six content
-        # pages plus the app control labels. Source order and the 58-page
-        # composition map were verified unchanged; the rebound identity was
-        # confirmed byte-equal to the CI-built manual IR of run 31785387549.
+        # The 2026-08-29 operator-approved content rebind keeps the exact
+        # Hello-Docs review derivative and admits the current editable IDML
+        # semantic projection. It changed zero page bindings and left the
+        # 52-source / 58-page composition map unchanged.
         self.assertEqual(
-            "af9314473f7d8c58bac2aa2980a153557d9fa421c339b2ed878e5f3860d1574c",
+            "b46905f6953e4c4684623f204890a55ad5826e0fbbc610119738a4c53929590a",
             contract["identity"]["content"]["manual_content_sha256"],
         )
         self.assertRegex(contract["identity"]["assembly"]["sha256"], r"^[0-9a-f]{64}$")
