@@ -96,7 +96,7 @@ The basic safety precautions should be followed when using this product, includi
 
 # LCD DISPLAY
 
-<img src="../../../_static/manual-assets/JBP-3600A/EU/md/assets/ir/f82efe218bc0b63cb953aced0c85f7c9553935e68d5cf70a3577df9212f550ce/lcd_map.png" style="width: 420px;" width="420" height="248" alt="LCD DISPLAY" />
+<img src="../../../_static/manual-assets/JBP-3600A/EU/md/assets/ir/5e793d99a847adcde354e0512007d592d6cad53d40c380899208fe905898cb6e/jbp3600a_lcd_map.png" style="width: 420px;" width="420" height="250" alt="LCD DISPLAY" />
 
 
 

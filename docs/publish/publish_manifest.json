@@ -1,6 +1,6 @@
 {
   "schema_version": "auto-manual-web-publish-branch/v1",
-  "built_at": "2026-09-07T00:15:15+00:00",
+  "built_at": "2026-09-08T01:54:51+00:00",
   "targets": [
     {
       "schema_version": "auto-manual-web-publish-target/v1",
@@ -19,8 +19,8 @@
       "region": "EU",
       "lang": "en",
       "version": "2.0",
-      "built_at": "2026-09-07T00:15:15+00:00",
-      "git_ref": "d25a34eb5f2199d8f414eb682241452b58698662",
+      "built_at": "2026-09-08T01:54:51+00:00",
+      "git_ref": "359c7edc833d659aaf78e0b128eea595c3ce58e4",
       "route": "JBP-3600A/EU/md",
       "manual": "manual_jbp3600a_eu.md"
     },
@@ -41,8 +41,8 @@
       "region": "EU",
       "lang": "en",
       "version": "2.0",
-      "built_at": "2026-09-07T00:12:56+00:00",
-      "git_ref": "50bdf3f56f72dac49f5489a9f69b93a4952fba94",
+      "built_at": "2026-09-08T01:37:19+00:00",
+      "git_ref": "513abdb97309bbb1fdc3dd24a9a74838062c96a3",
       "route": "JS-100I/EU/md",
       "manual": "manual_js100i_eu_en.md"
     }
@@ -129,6 +129,11 @@
       "sha256": "5a72ce9c7bb2cafb17bfdd02e349601bc9cdc0d0840ae0ae7faf5c6ad39bc972"
     },
     {
+      "path": "sources/web/JBP-3600A/EU/md/assets/ir/5e793d99a847adcde354e0512007d592d6cad53d40c380899208fe905898cb6e/jbp3600a_lcd_map.png",
+      "size": 22025,
+      "sha256": "5e793d99a847adcde354e0512007d592d6cad53d40c380899208fe905898cb6e"
+    },
+    {
       "path": "sources/web/JBP-3600A/EU/md/assets/ir/66c3df77e4f84cccad4b9f162798b181c007e89d3f0e9dd4fdf52c392827cbab/10_do_not_dismantle_Ml7EbCjtYohuKAxWNDUc93UMnVc.png",
       "size": 1580,
       "sha256": "66c3df77e4f84cccad4b9f162798b181c007e89d3f0e9dd4fdf52c392827cbab"
@@ -199,11 +204,6 @@
       "sha256": "eb094578bf165fa39399de1d957cc71a92191f2b0e7ed0a620885065ebedf8a3"
     },
     {
-      "path": "sources/web/JBP-3600A/EU/md/assets/ir/f82efe218bc0b63cb953aced0c85f7c9553935e68d5cf70a3577df9212f550ce/lcd_map.png",
-      "size": 92895,
-      "sha256": "f82efe218bc0b63cb953aced0c85f7c9553935e68d5cf70a3577df9212f550ce"
-    },
-    {
       "path": "sources/web/JBP-3600A/EU/md/conf.py",
       "size": 816,
       "sha256": "29566df849d4a133042fdf77f6892d7c6a35e2a2e7369d082abd929aa432bd10"
@@ -215,13 +215,13 @@
     },
     {
       "path": "sources/web/JBP-3600A/EU/md/manual_jbp3600a_eu.md",
-      "size": 23995,
-      "sha256": "38940fef9baf637f625b0cbc58773b445e88c5e14de3965c5796cff0d79f467d"
+      "size": 24004,
+      "sha256": "dec447799ba563640061d77fa2a11e5534b478ed04aee3ac7dc01e84db9a1c79"
     },
     {
       "path": "sources/web/JBP-3600A/EU/md/publish_meta.json",
       "size": 305,
-      "sha256": "83bc19d564104701f6f4939de606fc49328b393e60b0bdd9cf4ab6d4d48a193a"
+      "sha256": "ae415c67f3eb3e68ae66e96973d6f7c697d2baa44a47b51580937a5ebb6e28f1"
     },
     {
       "path": "sources/web/JE-1000F/US/md/assets/10_Input_Power_LOAZbnxfqoHFwIxx2Myc532jnzb_d5100a538e96.png",
@@ -716,7 +716,7 @@
     {
       "path": "sources/web/JS-100I/EU/md/publish_meta.json",
       "size": 302,
-      "sha256": "c00d72b04f11973bd1bcdc831d6b2a6a6b0699cc048f0886ccd7a7aa0bc31a9c"
+      "sha256": "c19d06797448a1ace2cc283e931e5af75008bb6de701eb7d79c9081af6504cf3"
     },
     {
       "path": "web/JA-AD01A/EU/md/_static/web_manual.css",
@@ -789,6 +789,11 @@
       "sha256": "5a72ce9c7bb2cafb17bfdd02e349601bc9cdc0d0840ae0ae7faf5c6ad39bc972"
     },
     {
+      "path": "web/JBP-3600A/EU/md/assets/ir/5e793d99a847adcde354e0512007d592d6cad53d40c380899208fe905898cb6e/jbp3600a_lcd_map.png",
+      "size": 22025,
+      "sha256": "5e793d99a847adcde354e0512007d592d6cad53d40c380899208fe905898cb6e"
+    },
+    {
       "path": "web/JBP-3600A/EU/md/assets/ir/66c3df77e4f84cccad4b9f162798b181c007e89d3f0e9dd4fdf52c392827cbab/10_do_not_dismantle_Ml7EbCjtYohuKAxWNDUc93UMnVc.png",
       "size": 1580,
       "sha256": "66c3df77e4f84cccad4b9f162798b181c007e89d3f0e9dd4fdf52c392827cbab"
@@ -859,19 +864,14 @@
       "sha256": "eb094578bf165fa39399de1d957cc71a92191f2b0e7ed0a620885065ebedf8a3"
     },
     {
-      "path": "web/JBP-3600A/EU/md/assets/ir/f82efe218bc0b63cb953aced0c85f7c9553935e68d5cf70a3577df9212f550ce/lcd_map.png",
-      "size": 92895,
-      "sha256": "f82efe218bc0b63cb953aced0c85f7c9553935e68d5cf70a3577df9212f550ce"
-    },
-    {
       "path": "web/JBP-3600A/EU/md/index.md",
       "size": 91,
       "sha256": "1bdcbb0e913e540b9cc94cbe434fbb91aa2c5a89f291d439681b2b6616eb5d46"
     },
     {
       "path": "web/JBP-3600A/EU/md/manual_jbp3600a_eu.md",
-      "size": 24982,
-      "sha256": "aa99550178380f804166a78d652e6747ce51bf85899e63c7dd64a0e1ca4bda84"
+      "size": 24991,
+      "sha256": "98e0290ab8d0bb04d1026bfbc2b97cd3efb8234a67e95a814376f7a75ea51c22"
     },
     {
       "path": "web/JE-1000F/US/md/assets/10_Input_Power_LOAZbnxfqoHFwIxx2Myc532jnzb_d5100a538e96.png",
@@ -1404,6 +1404,11 @@
       "sha256": "5a72ce9c7bb2cafb17bfdd02e349601bc9cdc0d0840ae0ae7faf5c6ad39bc972"
     },
     {
+      "path": "web/_static/manual-assets/JBP-3600A/EU/md/assets/ir/5e793d99a847adcde354e0512007d592d6cad53d40c380899208fe905898cb6e/jbp3600a_lcd_map.png",
+      "size": 22025,
+      "sha256": "5e793d99a847adcde354e0512007d592d6cad53d40c380899208fe905898cb6e"
+    },
+    {
       "path": "web/_static/manual-assets/JBP-3600A/EU/md/assets/ir/66c3df77e4f84cccad4b9f162798b181c007e89d3f0e9dd4fdf52c392827cbab/10_do_not_dismantle_Ml7EbCjtYohuKAxWNDUc93UMnVc.png",
       "size": 1580,
       "sha256": "66c3df77e4f84cccad4b9f162798b181c007e89d3f0e9dd4fdf52c392827cbab"
@@ -1472,11 +1477,6 @@
       "path": "web/_static/manual-assets/JBP-3600A/EU/md/assets/ir/eb094578bf165fa39399de1d957cc71a92191f2b0e7ed0a620885065ebedf8a3/50_weee_L9o3bcXq0oSsqdxSX86covnpnle.png",
       "size": 1274,
       "sha256": "eb094578bf165fa39399de1d957cc71a92191f2b0e7ed0a620885065ebedf8a3"
-    },
-    {
-      "path": "web/_static/manual-assets/JBP-3600A/EU/md/assets/ir/f82efe218bc0b63cb953aced0c85f7c9553935e68d5cf70a3577df9212f550ce/lcd_map.png",
-      "size": 92895,
-      "sha256": "f82efe218bc0b63cb953aced0c85f7c9553935e68d5cf70a3577df9212f550ce"
     },
     {
       "path": "web/_static/manual-assets/JE-1000F/US/md/assets/10_Input_Power_LOAZbnxfqoHFwIxx2Myc532jnzb_d5100a538e96.png",
