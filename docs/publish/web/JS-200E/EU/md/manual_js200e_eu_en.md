@@ -271,5 +271,3 @@ Unfold the bracket and place it on a flat surface. The design load is 1600 Pa, a
 
 
 <figure aria-label="Customer Service" class="hb-warranty-card" data-component-id="HB-WARRANTY-SECTION" data-warranty-card-index="3"><p><strong>3-year limited warranty</strong></p><p><strong>hello.eu@jackery.com</strong></p><p>Lifetime technical support</p></figure>
-
-

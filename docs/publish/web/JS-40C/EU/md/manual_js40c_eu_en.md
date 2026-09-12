@@ -284,5 +284,3 @@ To maximize the power generation, adjust the orientation of SolarSaga 40 Air thr
 <li><p><a class="reference external" href="mailto:hello.eu@jackery.com">hello.eu@jackery.com</a></p></li>
 <li><p>Lifetime technical support</p></li>
 </ul></figure>
-
-
