@@ -149,20 +149,14 @@ Up to 5 sets of these products can be used along with Jackery Explorer 3600 Plus
 
 
 
-<table>
-<colgroup>
-<col style="width: 12%" />
-<col style="width: 88%" />
-</colgroup>
-<tbody>
-<tr>
-<td><p><strong>NOTES</strong></p></td>
-<td><p>The display of the connection icon on the LCD screen (Jackery Explorer 3600 Plus) signifies a successful connection between the battery pack and Jackery Explorer 3600 Plus.</p>
+
+
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>NOTES</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>The display of the connection icon on the LCD screen (Jackery Explorer 3600 Plus) signifies a successful connection between the battery pack and Jackery Explorer 3600 Plus.</p>
 <p>When using the product, do not stack more than three battery packs in one tower to prevent it from falling and causing injury.</p>
-<p>Please do not stack the product on the top of Jackery Explorer 3600 Plus.</p></td>
-</tr>
-</tbody>
-</table>
+<p>Please do not stack the product on the top of Jackery Explorer 3600 Plus.</p>
+</td></tr></tbody></table>
+
+
 
 <img src="../../../_static/manual-assets/JBP-3600A/EU/md/assets/ir/55c449da0da26e4224e3f3d2ab9964180618a6179d1eb9d8d9c37351569f892f/stacking_locking.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/jbp3600a_eu_en/stacking_locking.png" data-web-finished-panel-sha256="55c449da0da26e4224e3f3d2ab9964180618a6179d1eb9d8d9c37351569f892f" alt="Battery pack stacking and expansion-cable locking and unlocking steps." />
 
