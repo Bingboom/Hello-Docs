@@ -465,7 +465,7 @@ If any of the following fault codes appear, follow the listed corrective actions
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">2 × DC8020 Ports</th>
-<td class="hb-spec-value manual-spec-value">11 V-16 V⎓8 A max., Double to 8 A max.<br/>16 V-60 V⎓12 A, Double to 21 A / 800 W max.</td>
+<td class="hb-spec-value manual-spec-value">PV: 16 V-60 V⎓12 A, Double to 21 A / 800 W max.<br/>Car: 11 V-16 V⎓8 A max., Double to 8 A max.</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">1 × DC Expansion Port</th>
@@ -483,23 +483,27 @@ If any of the following fault codes appear, follow the listed corrective actions
 <figure aria-label="OUTPUT PORTS" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">3 × AC</th>
+<th class="hb-spec-label manual-spec-label" scope="row">3 × AC Output</th>
 <td class="hb-spec-value manual-spec-value">230 V~ 50 Hz, 10 A max., 2400 W rated total, 4800 W surge peak</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">AC Output in Bypass Mode<sup class="hb-spec-reference">①</sup></th>
-<td class="hb-spec-value manual-spec-value">220 V-240 V~ 50 Hz, 10 A max.</td>
+<td class="hb-spec-value manual-spec-value">230 V~ 50 Hz, 10 A max.</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">2 × USB-C</th>
-<td class="hb-spec-value manual-spec-value">30 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓2.5 A, 15 V⎓2 A, 20 V⎓1.5 A<br/>140 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓3 A, 15 V⎓3 A, 20 V⎓5 A, 28 V⎓5 A</td>
-</tr>
-<tr>
-<th class="hb-spec-label manual-spec-label" scope="row">1 × USB-A</th>
+<th class="hb-spec-label manual-spec-label" scope="row">1 × USB-A Output</th>
 <td class="hb-spec-value manual-spec-value">18 W max., 5-6 V⎓3 A, 6-9 V⎓2 A, 9-12 V⎓1.5 A</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">1 × DC 12 V Port</th>
+<th class="hb-spec-label manual-spec-label" scope="row">1 × USB-C 30W Output</th>
+<td class="hb-spec-value manual-spec-value">30 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓2.5 A, 15 V⎓2 A, 20 V⎓1.5 A</td>
+</tr>
+<tr>
+<th class="hb-spec-label manual-spec-label" scope="row">1 × USB-C 140W Output</th>
+<td class="hb-spec-value manual-spec-value">140 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓3 A, 15 V⎓3 A, 20 V⎓5 A, 28 V⎓5 A</td>
+</tr>
+<tr>
+<th class="hb-spec-label manual-spec-label" scope="row">1 × DC 12V Port</th>
 <td class="hb-spec-value manual-spec-value">12 V⎓10 A max.</td>
 </tr>
 <tr>

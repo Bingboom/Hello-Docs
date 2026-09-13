@@ -430,7 +430,7 @@ If any of the following fault codes appear, follow the listed corrective actions
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">2 × DC8020 Ports</th>
-<td class="hb-spec-value manual-spec-value">Vehicle: 12 V-16 V⎓8 A max., Double to 8 A max.<br/>PV: 16 V-60 V⎓12 A, Double to 24 A max. / 1000 W max.</td>
+<td class="hb-spec-value manual-spec-value">Vehicle: 12 V-16 V⎓8 A max., Double to 8 A max.<br/>PV: 16 V-60 V⎓12 A max., Double to 24 A / 1000 W max.</td>
 </tr>
 </tbody>
 </table></figure>

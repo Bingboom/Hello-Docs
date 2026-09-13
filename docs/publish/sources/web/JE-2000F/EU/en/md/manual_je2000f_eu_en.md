@@ -464,15 +464,19 @@ If any of the following fault codes appear, follow the listed corrective actions
 <tbody>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">3 × AC</th>
-<td class="hb-spec-value manual-spec-value">230 V~ 50 Hz, 10 A max., 2200 W rated in total, 4400 W surge peak</td>
+<td class="hb-spec-value manual-spec-value">230 V~ 50 Hz, 2200 W rated in total, 4400 W surge peak</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">AC Output in Bypass Mode<sup class="hb-spec-reference">①</sup></th>
 <td class="hb-spec-value manual-spec-value">220 V-240 V ~ 50 Hz, 2200 W max.</td>
 </tr>
 <tr>
+<th class="hb-spec-label manual-spec-label" scope="row">USB-C 30W</th>
+<td class="hb-spec-value manual-spec-value">30 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓2.5 A, 15 V⎓2 A, 20 V⎓1.5 A</td>
+</tr>
+<tr>
 <th class="hb-spec-label manual-spec-label" scope="row">USB-C 100W</th>
-<td class="hb-spec-value manual-spec-value">30 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓2.5 A, 15 V⎓2 A, 20 V⎓1.5 A<br/>100 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓3 A, 15 V⎓3 A, 20 V⎓5 A</td>
+<td class="hb-spec-value manual-spec-value">100 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓3 A, 15 V⎓3 A, 20 V⎓5 A</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">1 × USB-A</th>

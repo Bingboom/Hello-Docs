@@ -10,7 +10,7 @@ Please note that no further notifications will be given in case of any update, r
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>NOTE</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>This battery pack is compatible with both the Jackery Explorer 2000 Plus and the Jackery Explorer 1000 Plus. Throughout this manual, "the portable power station" refers to either model unless otherwise specified.</p></td></tr></tbody></table>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>NOTE</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>This battery pack is compatible with both the Jackery E1000 Plus V2 and the Jackery E2000 Plus V2. Throughout this manual, "the portable power station" refers to either model unless otherwise specified.</p></td></tr></tbody></table>
 
 
 
