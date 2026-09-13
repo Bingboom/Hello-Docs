@@ -631,15 +631,19 @@ If any of the following fault codes appear, follow the listed corrective actions
 <tbody>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">3 × AC</th>
-<td class="hb-spec-value manual-spec-value">230V~50Hz, 7.83A, 1800W Rated<sup class="hb-spec-reference">②</sup></td>
+<td class="hb-spec-value manual-spec-value">230V~50Hz, 7.83A, 1800W Rated</td>
+</tr>
+<tr>
+<th class="hb-spec-label manual-spec-label" scope="row">AC Total Output<sup class="hb-spec-reference">②</sup></th>
+<td class="hb-spec-value manual-spec-value">1800W Rated, 3600W Surge peak</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">AC Output in Bypass Mode<sup class="hb-spec-reference">①</sup></th>
 <td class="hb-spec-value manual-spec-value">220V-240V~50Hz, 7.83A</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">USB-C 140W</th>
-<td class="hb-spec-value manual-spec-value">30W Max, 5V⎓3A, 9V⎓3A, 12V⎓2.5A, 15V⎓2A, 20V⎓1.5A<br/>140W Max, 5V⎓3A, 9V⎓3A, 12V⎓3A, 15V⎓3A, 20V⎓5A, 28V⎓5A</td>
+<th class="hb-spec-label manual-spec-label" scope="row">2 × USB-C</th>
+<td class="hb-spec-value manual-spec-value">USB-C 30W: 30W Max, 5V⎓3A, 9V⎓3A, 12V⎓2.5A, 15V⎓2A, 20V⎓1.5A<br/>USB-C 140W: 140W Max, 5V⎓3A, 9V⎓3A, 12V⎓3A, 15V⎓3A, 20V⎓5A, 28V⎓5A</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">1 × USB-A</th>

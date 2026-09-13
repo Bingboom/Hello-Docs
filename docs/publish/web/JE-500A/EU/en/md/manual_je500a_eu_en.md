@@ -1,3 +1,11 @@
+# IMPORTANT
+
+Congratulations on your new Jackery Explorer 500. Please read this manual carefully before using the product, particularly the relevant precautions to ensure proper use. Keep this manual in an accessible place for frequent reference.
+
+In compliance with laws and regulations, the right of final interpretation of this document and all related documents of this product resides with the Company.
+
+Please kindly notice that no further notifications will be given in case of any update, revision or termination.
+
 # SAFETY PRECAUTIONS
 
 Warning
@@ -57,11 +65,11 @@ The car charging cable is not included but is available for purchase separately 
 
 # PRODUCT OVERVIEW
 
-<img src="../../../../_static/manual-assets/JE-500A/EU/en/md/assets/ir/1376f5885a8da6ea38c6d303b7a7a901ceef77b45aff1d4ea673b794e7e2d681/overview.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je500a_eu_en/overview.png" data-web-finished-panel-sha256="1376f5885a8da6ea38c6d303b7a7a901ceef77b45aff1d4ea673b794e7e2d681" alt="Jackery Explorer 500 front and right-side views with source port labels" />
+<img src="../../../../_static/manual-assets/JE-500A/EU/en/md/assets/ir/749ca081dde5bfee3d3ac2dfc811f3e4078a11380c1cdc908bd832c7d9ae47bf/overview.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je500a_eu_en/overview.png" data-web-finished-panel-sha256="749ca081dde5bfee3d3ac2dfc811f3e4078a11380c1cdc908bd832c7d9ae47bf" alt="Jackery Explorer 500 front and right-side views with source port labels" />
 
 # LCD DISPLAY
 
-<img src="../../../../_static/manual-assets/JE-500A/EU/en/md/assets/ir/d1d49221243b8049cf987081884f4911fea912183779504bde6c4de72637d8a3/lcd_map.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je500a_eu_en/lcd_map.png" data-web-finished-panel-sha256="d1d49221243b8049cf987081884f4911fea912183779504bde6c4de72637d8a3" alt="Jackery Explorer 500 numbered LCD display" />
+<img src="../../../../_static/manual-assets/JE-500A/EU/en/md/assets/ir/122991a64cd306c82e70b0279024fa0bcad517e9fe0bfd8a30d6a81f0c46de99/lcd_map.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je500a_eu_en/lcd_map.png" data-web-finished-panel-sha256="122991a64cd306c82e70b0279024fa0bcad517e9fe0bfd8a30d6a81f0c46de99" alt="Jackery Explorer 500 numbered LCD display" />
 
 | No. | Indicator | Description |
 |----|----|----|
@@ -169,7 +177,7 @@ Make sure the AC charging cable is fully and securely plugged into the AC input 
 
 ## CHARGING VIA SOLAR PANELS
 
-The Jackery Explorer 500 has one DC8020 input port, which supports direct connection of either one 100W or one 200W solar panel. If you need to connect two 100W solar panels simultaneously to a DC8020 input port, please use a solar panel connector (sold separately, not included).
+The Jackery Explorer 500 has one DC8020 input port, which supports direct connection of either one 100W or one 200W solar panel. If you need to connect two 100W solar panels simultaneously to a DC8020 input port, please use a solar panel connector (sold separately, not included). Please refer to the diagram below for connection details.
 
 <img src="../../../../_static/manual-assets/JE-500A/EU/en/md/assets/ir/b5ee7098b2ead6e003736617199e48fe491e50eb731307d620d03c5e4c8349a5/charging_solar_single.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je500a_eu_en/charging_solar_single.png" data-web-finished-panel-sha256="b5ee7098b2ead6e003736617199e48fe491e50eb731307d620d03c5e4c8349a5" alt="Explorer 500 connected to one SolarSaga 200 panel" /> <img src="../../../../_static/manual-assets/JE-500A/EU/en/md/assets/ir/f282bcc365a10885a5392a9bf54bbf4ad77e0c563594f3cc200c03aa414f19a9/charging_solar_dual.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je500a_eu_en/charging_solar_dual.png" data-web-finished-panel-sha256="f282bcc365a10885a5392a9bf54bbf4ad77e0c563594f3cc200c03aa414f19a9" alt="Explorer 500 connected to two SolarSaga 100 panels with a connector" />
 
@@ -295,8 +303,8 @@ If any of the following fault codes appear, follow the listed corrective actions
 </tr>
 <tr>
 <td><p>1 × DC8020 Port</p></td>
-<td><p>11V-16V 8A Max</p>
-<p>16V-60V 10.5A, 200W Max</p></td>
+<td><p>11V-16V⎓8A Max</p>
+<p>16V-60V⎓10.5A, 200W Max</p></td>
 </tr>
 </tbody>
 </table>
@@ -308,10 +316,10 @@ If any of the following fault codes appear, follow the listed corrective actions
 | 2 × AC Output | 230V\~ 50Hz, 2.18A |
 | AC Total Output | 500W Rated, 1000W Surge peak |
 | AC Output in Bypass Mode (1) | 230V\~ 50Hz, 500W |
-| 1 × USB-C1 Output | 100W Max, 5V 3A, 9V 3A, 12V 3A, 15V 3A, 20V 5A |
-| 1 × USB-C2 Output | 30W Max, 5V 3A, 9V 3A, 12V 2.5A, 15V 2A, 20V 1.5A |
-| 1 × USB-A Output | 18W Max, 5-6V 3A, 6-9V 2A, 9-12V 1.5A |
-| Cigarette Lighter Port | 12V 10A Max |
+| 1 × USB-C1 Output | 100W Max, 5V⎓3A, 9V⎓3A, 12V⎓3A, 15V⎓3A, 20V⎓5A |
+| 1 × USB-C2 Output | 30W Max, 5V⎓3A, 9V⎓3A, 12V⎓2.5A, 15V⎓2A, 20V⎓1.5A |
+| 1 × USB-A Output | 18W Max, 5-6V⎓3A, 6-9V⎓2A, 9-12V⎓1.5A |
+| Cigarette Lighter Port | 12V⎓10A Max |
 
 ## ENVIRONMENTAL OPERATING TEMPERATURE
 
@@ -369,3 +377,21 @@ Jackery\'s warranty does not apply to:
 ## Interpretation Rights
 
 Jackery reserves the right to final interpretation of the above customers\' after-sales policy.
+
+# EU Regulations
+
+RED Declaration of Conformity
+
+Shenzhen Hello Tech Energy Co., Ltd. hereby declares that this: Jackery Explorer 500 with JE-500A is in compliance with the essential requirements and other relevant provisions of the LVD Directive 2014/35/EU, EMC Directive 2014/30/EU and ROHS Directive 2011/65/EU as amended by 2015/863/EU. The full text of the EU declaration of conformity is available at the following internet address:
+
+<a href="https://de.jackery.com/pages/user-guides" class="reference external">https://de.jackery.com/pages/user-guides</a>
+
+MANUFACTURER: SHENZHEN HELLO TECH ENERGY CO., LTD.
+
+<a href="mailto:sales@hello-tech.com" class="reference external">sales@hello-tech.com</a>
+
+Address: F2-3, Bldg. 7, Jiaanda Science and technology industrial park factory, the east side of Huafan Road, Tongsheng Community, Dalang Street, Longhua District, Shenzhen, Guangdong, China
+
++86 400 668 9293
+
+www.hello-tech.com
