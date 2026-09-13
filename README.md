@@ -13,7 +13,9 @@ Web 发布身份与旧链接兼容规则见[locale 发布契约](code-as-doc/dev
 
 Web 发布产物可运行[本地只读检查](code-as-doc/dev/manual_operations_health_report.md)；本地通过不等于线上部署通过。
 
-Web 单语源投影的内部接入边界见[说明](code-as-doc/dev/web_language_projection.md)；不代表已接通独立语言发布。
+Web profile 配合显式 `--lang` 会冻结完整配置语言源，再将所选语言投影为
+`check`、Markdown 和 HTML 共用的规范 RST；边界见[说明](code-as-doc/dev/web_language_projection.md)。
+这项本地构建能力不代表已接通独立语言发布。
 
 ![Auto-Manual workflow roadmap](docs/readme-assets/auto-manual-roadmap.svg)
 
@@ -58,6 +60,7 @@ manifest 中新增 FCC 语言但未补齐渲染契约时会直接失败。
 | 完整命令和运维流程 | [`code-as-doc/build_doc_guide.md`](code-as-doc/build_doc_guide.md) |
 | Web 发布：队列与 Git-only 输入、冻结快照、RTD 和本地版本封存 | [`code-as-doc/dev/web_publish_pipeline.md`](code-as-doc/dev/web_publish_pipeline.md)；[`OPS-04a 封存契约`](code-as-doc/dev/ops_04a_web_version_seal.md) |
 | RTD 手册中心：首页、地区筛选与发布链接 | [`code-as-doc/dev/rtd_manual_portal.md`](code-as-doc/dev/rtd_manual_portal.md) |
+| RTD 手册反馈入口（默认关闭） | [`code-as-doc/dev/rtd_manual_portal.md`](code-as-doc/dev/rtd_manual_portal.md) |
 | 当前工作流和编辑规则 | [`user-guide/hello_auto-doc.md`](user-guide/hello_auto-doc.md) |
 | 复用已有样式和完整组件 | [`code-as-doc/dev/style_component_usage_guide.md`](code-as-doc/dev/style_component_usage_guide.md) |
 | 规格书结构化入库 | [`.agents/skills/spec-sheet-structured-intake/SKILL.md`](.agents/skills/spec-sheet-structured-intake/SKILL.md) |

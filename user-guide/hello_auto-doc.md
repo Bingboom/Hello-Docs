@@ -9,8 +9,9 @@ Web 发布候选按型号/市场/语言隔离，并保留旧链接重定向，�
 Web 冻结产物可使用[只读健康报告](../code-as-doc/dev/manual_operations_health_report.md)
 检查本地页面/资源。该报告不会访问线上表、确认部署或收集访客数据。
 
-Web 单语源投影现在有[内部复用 helper](../code-as-doc/dev/web_language_projection.md)；
-目前不改变操作入口、审稿源或正式发布流程，不表示计划中的语言已上线。
+Web profile 配合显式 `--lang` 现在会[冻结完整配置语言源并生成规范单语投影](../code-as-doc/dev/web_language_projection.md)：
+`check`、Markdown 和 HTML 使用同一份所选语言 RST。该能力不改变队列、审稿源或
+正式发布流程，也不表示计划中的语言已上线。
 
 Updated: 2026-09-05
 
@@ -1311,7 +1312,7 @@ finished artwork.
 - Scientific subscripts and specification superscripts are protected across the same Pandoc step, so source notation such as ``V\ :sub:`oc``` renders as semantic `V<sub>oc</sub>` and governed `①` references render as `<sup>①</sup>` in every language rather than showing literal inline Markdown notation.
 - Web Publish first materializes target-scoped `md` directories, then assembles `docs/publish/web/` as the homepage catalog without rewriting the repo-root [`docs/index.rst`](../docs/index.rst). The assembler also writes one collision-checked root alias named from each manual stem; it forwards to the nested model/region page with a relative target and is the URL persisted in `HTML_link`. A pre-push three-dot diff guard permits only `docs/publish/**` in the production PR.
 - RTD is the responsive Web presentation surface; it is not the release authority for IDML, LaTeX, PDF, DOCX or formal print Markdown
-- The [RTD manual center](../code-as-doc/dev/rtd_manual_portal.md) adds product cards, model/name search and US/EU/UK filtering at build time over the frozen index. EU is temporarily the default; EU and UK reuse the same EU publications and links, with no duplicate source or release. All published manuals remain available through ordinary links, including without JavaScript. The portal does not create missing translations or independent language URLs; the current publication retains all its existing bundled languages. Other pages keep their current Furo/manual styles.
+- The [RTD manual center](../code-as-doc/dev/rtd_manual_portal.md) adds product cards, model/name search and US/EU/UK filtering at build time over the frozen index. EU is temporarily the default; EU and UK reuse the same EU publications and links, with no duplicate source or release. All published manuals remain available through ordinary links, including without JavaScript. The portal does not create missing translations or independent language URLs; the current publication retains all its existing bundled languages. Optional feedback channels are disabled by default and expose only locally copied frozen page context when explicitly configured. Other pages keep their current Furo/manual styles.
 
 `fast` behavior:
 
