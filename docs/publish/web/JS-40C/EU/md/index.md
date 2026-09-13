@@ -1,7 +1,10 @@
-# Jackery SolarSaga 40 Air User Manual
+---
+orphan: true
+---
 
-```{toctree}
-:maxdepth: 2
+# JS-40C / EU / en
 
-manual_js40c_eu_en
-```
+<meta http-equiv="refresh" content="0; url=../en/md/manual_js40c_eu_en.html">
+<script>window.location.replace("../en/md/manual_js40c_eu_en.html");</script>
+
+[Continue to the manual](../en/md/manual_js40c_eu_en.md)
