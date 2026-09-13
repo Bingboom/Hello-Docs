@@ -1,7 +1,10 @@
-# Jackery Explorer 1000 Plus User Manual
+---
+orphan: true
+---
 
-```{toctree}
-:maxdepth: 2
+# JE-1000H / EU / en
 
-manual_je1000h_eu_en
-```
+<meta http-equiv="refresh" content="0; url=../en/md/manual_je1000h_eu_en.html">
+<script>window.location.replace("../en/md/manual_je1000h_eu_en.html");</script>
+
+[Continue to the manual](../en/md/manual_je1000h_eu_en.md)
