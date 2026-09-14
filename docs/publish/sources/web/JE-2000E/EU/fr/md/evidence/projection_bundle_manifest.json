@@ -1,0 +1,139 @@
+{
+  "schema_version": "web-language-bundle/v1",
+  "language": "fr",
+  "model": "JE-2000E",
+  "region": "EU",
+  "source_index_sha256": "ccda324c7fbe4084d41960871d317ad8c3c3440fb4f13db6af0b17fbd2217ee6",
+  "source_pages": [
+    {
+      "path": "page/safety_fr.rst",
+      "sha256": "2240ae527ae8955cfb310563a32979c935b3e313905750b577e7ae634ce7b31e"
+    },
+    {
+      "path": "page/01_user_maintenance_instructions.rst",
+      "sha256": "49273d4ec089b9a8dea2442af876f32a18146cc7d996baa1fb26a353c66419c3"
+    },
+    {
+      "path": "page/symbols_fr.rst",
+      "sha256": "b6aebe98c74ebb78bf3b3a566375094b427370a4b70dd6fb0f0330e23261ccc0"
+    },
+    {
+      "path": "page/02_whats_in_the_box.rst",
+      "sha256": "10803c5f3ce91dfa421b61c523db9954f1035ab9fb795dc3dca682b732c774b6"
+    },
+    {
+      "path": "page/03_product_overview_je2000e.rst",
+      "sha256": "cc4e87bd5dd3a2a1fd2e4ff3ff8cd26cfafc788dea7c907284425996c5521aa7"
+    },
+    {
+      "path": "page/lcd_icons_fr.rst",
+      "sha256": "fcd0bd8247e848c9587a1282073dfd7e53e2c3311901bd7a0336451cfdb7ca92"
+    },
+    {
+      "path": "page/05_operation_guide_je2000e.rst",
+      "sha256": "d38ec3ea50dfa1b630a71f365b1bd0d7c42373914416ac4cfa32eb48a43a806d"
+    },
+    {
+      "path": "page/06_ups_mode.rst",
+      "sha256": "efd8ddce57e451c24d05794d3231db15e6daa367dda72fcb7ebdb68384dc7914"
+    },
+    {
+      "path": "page/07_extra_battery.rst",
+      "sha256": "8cfc62f2ade57a99c78e939fb6286ef8fcacb3d20e143ff64c90d6999271ef50"
+    },
+    {
+      "path": "page/charging.rst",
+      "sha256": "abd3919f8a8006d011562a61684ad5d2ea6c6a1bdf5d0cdd7c5a19450a3294a2"
+    },
+    {
+      "path": "page/08_charging_methods.rst",
+      "sha256": "d1d28776eaa7627fe54705c1515c5117657acb0b9077a57e9e8207499a25cb87"
+    },
+    {
+      "path": "page/09_storage_and_maintenance.rst",
+      "sha256": "a44a46e17da9747ebb3c5bd1e672a81ae758e2b0e2cfc24cea1a26fef7cee01d"
+    },
+    {
+      "path": "page/troubleshooting_fr.rst",
+      "sha256": "582eae5bba3f46afa6cae59e864912d872a373dd62aabc341894e57c854ed34d"
+    },
+    {
+      "path": "page/spec_fr.rst",
+      "sha256": "5ce272ce21b644e0ca3d01a070e93872fd919616c42027ab2abae6479cedba32"
+    },
+    {
+      "path": "page/11_warranty.rst",
+      "sha256": "3d3cf3f279d3940acab5dd1eea44e6d40459f366bf0833653839920ca678b818"
+    },
+    {
+      "path": "page/12_app_setup_je2000e.rst",
+      "sha256": "e6485c71bbb7d64d1c84c446493045335b7906392e0eaa88e977e812b68918ce"
+    }
+  ],
+  "pages": [
+    {
+      "path": "page/safety_fr.rst",
+      "sha256": "2240ae527ae8955cfb310563a32979c935b3e313905750b577e7ae634ce7b31e"
+    },
+    {
+      "path": "page/01_user_maintenance_instructions.rst",
+      "sha256": "49273d4ec089b9a8dea2442af876f32a18146cc7d996baa1fb26a353c66419c3"
+    },
+    {
+      "path": "page/symbols_fr.rst",
+      "sha256": "b6aebe98c74ebb78bf3b3a566375094b427370a4b70dd6fb0f0330e23261ccc0"
+    },
+    {
+      "path": "page/02_whats_in_the_box.rst",
+      "sha256": "10803c5f3ce91dfa421b61c523db9954f1035ab9fb795dc3dca682b732c774b6"
+    },
+    {
+      "path": "page/03_product_overview_je2000e.rst",
+      "sha256": "cc4e87bd5dd3a2a1fd2e4ff3ff8cd26cfafc788dea7c907284425996c5521aa7"
+    },
+    {
+      "path": "page/lcd_icons_fr.rst",
+      "sha256": "fcd0bd8247e848c9587a1282073dfd7e53e2c3311901bd7a0336451cfdb7ca92"
+    },
+    {
+      "path": "page/05_operation_guide_je2000e.rst",
+      "sha256": "d38ec3ea50dfa1b630a71f365b1bd0d7c42373914416ac4cfa32eb48a43a806d"
+    },
+    {
+      "path": "page/06_ups_mode.rst",
+      "sha256": "efd8ddce57e451c24d05794d3231db15e6daa367dda72fcb7ebdb68384dc7914"
+    },
+    {
+      "path": "page/07_extra_battery.rst",
+      "sha256": "8cfc62f2ade57a99c78e939fb6286ef8fcacb3d20e143ff64c90d6999271ef50"
+    },
+    {
+      "path": "page/charging.rst",
+      "sha256": "abd3919f8a8006d011562a61684ad5d2ea6c6a1bdf5d0cdd7c5a19450a3294a2"
+    },
+    {
+      "path": "page/08_charging_methods.rst",
+      "sha256": "d1d28776eaa7627fe54705c1515c5117657acb0b9077a57e9e8207499a25cb87"
+    },
+    {
+      "path": "page/09_storage_and_maintenance.rst",
+      "sha256": "a44a46e17da9747ebb3c5bd1e672a81ae758e2b0e2cfc24cea1a26fef7cee01d"
+    },
+    {
+      "path": "page/troubleshooting_fr.rst",
+      "sha256": "582eae5bba3f46afa6cae59e864912d872a373dd62aabc341894e57c854ed34d"
+    },
+    {
+      "path": "page/spec_fr.rst",
+      "sha256": "5ce272ce21b644e0ca3d01a070e93872fd919616c42027ab2abae6479cedba32"
+    },
+    {
+      "path": "page/11_warranty.rst",
+      "sha256": "3d3cf3f279d3940acab5dd1eea44e6d40459f366bf0833653839920ca678b818"
+    },
+    {
+      "path": "page/12_app_setup_je2000e.rst",
+      "sha256": "e6485c71bbb7d64d1c84c446493045335b7906392e0eaa88e977e812b68918ce"
+    }
+  ]
+}
