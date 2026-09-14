@@ -1,0 +1,131 @@
+{
+  "schema_version": "web-language-bundle/v1",
+  "language": "it",
+  "model": "JE-2000F",
+  "region": "EU",
+  "source_index_sha256": "1d8ac757548ab7b0dc2e8156d7cf31d95f8937e610ead3d9bb3891105203ef00",
+  "source_pages": [
+    {
+      "path": "page/safety_it.rst",
+      "sha256": "a4c75ea3f837e51fa0cfbbd90f4729fa7340caf70e96dded244ec9db896e0246"
+    },
+    {
+      "path": "page/01_user_maintenance_instructions.rst",
+      "sha256": "3064865c67fd4928d6185791d502bfe5eca1d416b208de6e1ad4f6d9200b9c42"
+    },
+    {
+      "path": "page/symbols_it.rst",
+      "sha256": "dfaf83c21d16346577c144ebf46131045e1600d19b0951ac7acb792395784643"
+    },
+    {
+      "path": "page/02_whats_in_the_box.rst",
+      "sha256": "40e4cbc4c302fb0ceccbcab31167e876a67b0ea8b0fa7647f327a7269127f18c"
+    },
+    {
+      "path": "page/03_product_overview_placeholder.rst",
+      "sha256": "cb5a2786240bd0bb87ea3fa809cf66d1c6351fb30eec358862010c7ab3cf1fe3"
+    },
+    {
+      "path": "page/lcd_icons_it.rst",
+      "sha256": "d4ab3ab00ce30035a8e47992936e8b1f4582c0452d8041635d980a708a9eb47d"
+    },
+    {
+      "path": "page/05_operation_guide_placeholder.rst",
+      "sha256": "2ed5b107b6a5ee78947467bf51dc2daa0254f1e9f87d32d3db56d82163fdbf1e"
+    },
+    {
+      "path": "page/06_ups_mode.rst",
+      "sha256": "9db4b8ee5b3a288f29219997ad715550fc1968aa8fdb20edc162229509228f4c"
+    },
+    {
+      "path": "page/charging.rst",
+      "sha256": "3e712beb1ec5622a1612910174e1766c6b8dd5b225dd4d2e17ab23803acb6a34"
+    },
+    {
+      "path": "page/08_charging_methods.rst",
+      "sha256": "f9283507d331cd95dcd48719123b9e62624a5081c1fc2d451212f52b02d88f14"
+    },
+    {
+      "path": "page/09_storage_and_maintenance.rst",
+      "sha256": "beef29d75639dc624f8881600dd1c1eb53aebc01048f9cec8fe0bb00932cc7fd"
+    },
+    {
+      "path": "page/troubleshooting_it.rst",
+      "sha256": "9d2af874facc6a3db4ca44a5a403b0708ad82a0be1f54e9c41349bce578e104e"
+    },
+    {
+      "path": "page/spec_it.rst",
+      "sha256": "e1eab47d8bbb212b1401f40a69d5d23eaf486c6a2f162646efbffe8026595acc"
+    },
+    {
+      "path": "page/11_warranty.rst",
+      "sha256": "17d59f967e503f24931a04bac00e7352fbc9f5766532d8fbdc5a9a00a6bf18e2"
+    },
+    {
+      "path": "page/12_app_setup_placeholder.rst",
+      "sha256": "9ff4d5e4a2e0bdd5209197db52e333a84f984f6d971d2da0b11a3d40a0163df3"
+    }
+  ],
+  "pages": [
+    {
+      "path": "page/safety_it.rst",
+      "sha256": "a4c75ea3f837e51fa0cfbbd90f4729fa7340caf70e96dded244ec9db896e0246"
+    },
+    {
+      "path": "page/01_user_maintenance_instructions.rst",
+      "sha256": "3064865c67fd4928d6185791d502bfe5eca1d416b208de6e1ad4f6d9200b9c42"
+    },
+    {
+      "path": "page/symbols_it.rst",
+      "sha256": "dfaf83c21d16346577c144ebf46131045e1600d19b0951ac7acb792395784643"
+    },
+    {
+      "path": "page/02_whats_in_the_box.rst",
+      "sha256": "40e4cbc4c302fb0ceccbcab31167e876a67b0ea8b0fa7647f327a7269127f18c"
+    },
+    {
+      "path": "page/03_product_overview_placeholder.rst",
+      "sha256": "cb5a2786240bd0bb87ea3fa809cf66d1c6351fb30eec358862010c7ab3cf1fe3"
+    },
+    {
+      "path": "page/lcd_icons_it.rst",
+      "sha256": "d4ab3ab00ce30035a8e47992936e8b1f4582c0452d8041635d980a708a9eb47d"
+    },
+    {
+      "path": "page/05_operation_guide_placeholder.rst",
+      "sha256": "2ed5b107b6a5ee78947467bf51dc2daa0254f1e9f87d32d3db56d82163fdbf1e"
+    },
+    {
+      "path": "page/06_ups_mode.rst",
+      "sha256": "9db4b8ee5b3a288f29219997ad715550fc1968aa8fdb20edc162229509228f4c"
+    },
+    {
+      "path": "page/charging.rst",
+      "sha256": "3e712beb1ec5622a1612910174e1766c6b8dd5b225dd4d2e17ab23803acb6a34"
+    },
+    {
+      "path": "page/08_charging_methods.rst",
+      "sha256": "f9283507d331cd95dcd48719123b9e62624a5081c1fc2d451212f52b02d88f14"
+    },
+    {
+      "path": "page/09_storage_and_maintenance.rst",
+      "sha256": "beef29d75639dc624f8881600dd1c1eb53aebc01048f9cec8fe0bb00932cc7fd"
+    },
+    {
+      "path": "page/troubleshooting_it.rst",
+      "sha256": "9d2af874facc6a3db4ca44a5a403b0708ad82a0be1f54e9c41349bce578e104e"
+    },
+    {
+      "path": "page/spec_it.rst",
+      "sha256": "e1eab47d8bbb212b1401f40a69d5d23eaf486c6a2f162646efbffe8026595acc"
+    },
+    {
+      "path": "page/11_warranty.rst",
+      "sha256": "17d59f967e503f24931a04bac00e7352fbc9f5766532d8fbdc5a9a00a6bf18e2"
+    },
+    {
+      "path": "page/12_app_setup_placeholder.rst",
+      "sha256": "9ff4d5e4a2e0bdd5209197db52e333a84f984f6d971d2da0b11a3d40a0163df3"
+    }
+  ]
+}
