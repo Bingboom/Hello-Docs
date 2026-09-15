@@ -1,6 +1,6 @@
 {
   "schema_version": "auto-manual-web-publish-branch/v2",
-  "built_at": "2026-09-14T22:51:09+00:00",
+  "built_at": "2026-09-15T03:56:27+00:00",
   "targets": [
     {
       "schema_version": "auto-manual-web-publish-target/v2",
@@ -572,6 +572,36 @@
       "legacy_aliases": [
         "manual_je3600a_eu_en"
       ]
+    },
+    {
+      "schema_version": "auto-manual-web-publish-target/v2",
+      "model": "JE-3600A",
+      "region": "EU",
+      "lang": "es",
+      "version": "2026-05-25",
+      "built_at": "2026-09-15T03:56:27+00:00",
+      "git_ref": "0f3b93f166edc28bdcedefa3b28167bab2c2b3cc",
+      "route": "JE-3600A/EU/es/md",
+      "manual": "manual_je3600a_eu_es.md",
+      "language_scope": "single",
+      "language_projection_evidence_path": "evidence/language_projection_receipt.json",
+      "language_projection_evidence_sha256": "862ee0dbaf935f2603fb74d2c0fe60f8ef57ae52d627981e5da4104a81ef1184",
+      "legacy_default": false
+    },
+    {
+      "schema_version": "auto-manual-web-publish-target/v2",
+      "model": "JE-3600A",
+      "region": "EU",
+      "lang": "fr",
+      "version": "2026-05-25",
+      "built_at": "2026-09-15T03:56:19+00:00",
+      "git_ref": "0f3b93f166edc28bdcedefa3b28167bab2c2b3cc",
+      "route": "JE-3600A/EU/fr/md",
+      "manual": "manual_je3600a_eu_fr.md",
+      "language_scope": "single",
+      "language_projection_evidence_path": "evidence/language_projection_receipt.json",
+      "language_projection_evidence_sha256": "adbd5e99990e95d1e690502be7551a86aff58791cb2ec6536b0502243c1685ca",
+      "legacy_default": false
     },
     {
       "schema_version": "auto-manual-web-publish-target/v2",
@@ -9641,6 +9671,376 @@
       "path": "sources/web/JE-3600A/EU/en/md/publish_meta.json",
       "size": 480,
       "sha256": "6d931e8192c7a66c5248f4d066df1740d96eca5848df9c16852f7a25cadd6868"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/es/md/assets/app_add_device_steps_9b7e0cf44d0f.png",
+      "size": 398750,
+      "sha256": "9b7e0cf44d0f37dc89cc04bb57bba1ebb9c3bbc5db3f0190575dd03e96ab0d0f"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/es/md/assets/app_control_panel_2b9bc2598d7a.png",
+      "size": 11976,
+      "sha256": "2b9bc2598d7a272629311ecc2f494091c31f15ee2ebb4d59bda5f6e8ee5c9f49"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/es/md/assets/ir/01d3694dd833380066161364a6c67f5d26a088bfd4428b72d836c26e4f123a90/connect_result.png",
+      "size": 70855,
+      "sha256": "01d3694dd833380066161364a6c67f5d26a088bfd4428b72d836c26e4f123a90"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/es/md/assets/ir/1dcd41d6ababd9c9d5c9d9ad08bdc2d5f2b6c0c3ad301dcb7b5260e0ec08d45e/no_open_flame.png",
+      "size": 3534,
+      "sha256": "1dcd41d6ababd9c9d5c9d9ad08bdc2d5f2b6c0c3ad301dcb7b5260e0ec08d45e"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/es/md/assets/ir/24a37b773bf14cd76f160a25dfa413576a95405a1f57f69059487b29b7791bfd/lcd_mode.png",
+      "size": 76021,
+      "sha256": "24a37b773bf14cd76f160a25dfa413576a95405a1f57f69059487b29b7791bfd"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/es/md/assets/ir/24e0e4f3297ce1a6b1032cbadc0d6ebece16bcbd7bb9f83ce45c32bed7be6b03/connections-es.png",
+      "size": 107393,
+      "sha256": "24e0e4f3297ce1a6b1032cbadc0d6ebece16bcbd7bb9f83ce45c32bed7be6b03"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/es/md/assets/ir/287650f3a89ae520e32f0d75df8401151b808004ee50075b96aff70af04ca4ef/ac_charging_cable.png",
+      "size": 4023,
+      "sha256": "287650f3a89ae520e32f0d75df8401151b808004ee50075b96aff70af04ca4ef"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/es/md/assets/ir/37bf4f4918f338372737a22a6a43c72d1610cae96e063cc66201f9f529701c24/download.png",
+      "size": 31919,
+      "sha256": "37bf4f4918f338372737a22a6a43c72d1610cae96e063cc66201f9f529701c24"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/es/md/assets/ir/37f4c64bfeaac2df031b0fb30a0228f4ef0ba7f015385e52eec69a5d2ccdb414/ac_wall.png",
+      "size": 60220,
+      "sha256": "37f4c64bfeaac2df031b0fb30a0228f4ef0ba7f015385e52eec69a5d2ccdb414"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/es/md/assets/ir/43a46a51a98773dd307ff35dd1ac684790109b2b8c437f87ceacbc3636bc1d75/op_ac_output.png",
+      "size": 91190,
+      "sha256": "43a46a51a98773dd307ff35dd1ac684790109b2b8c437f87ceacbc3636bc1d75"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/es/md/assets/ir/474b6e86398672ad0e36c08df860c09fe1645f96c95e80c9d68cc5549f012f4c/add_device.png",
+      "size": 64112,
+      "sha256": "474b6e86398672ad0e36c08df860c09fe1645f96c95e80c9d68cc5549f012f4c"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/es/md/assets/ir/562f998c918a50bdedcaaeff1e005b505ced57e8252bc987fe0662ea9fa8b658/front_product.jpg",
+      "size": 2140722,
+      "sha256": "562f998c918a50bdedcaaeff1e005b505ced57e8252bc987fe0662ea9fa8b658"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/es/md/assets/ir/5866fb05040e5b4423c473d5e7abf87122e0e93f5afce742696a09454b4bd675/ups_mode.png",
+      "size": 73961,
+      "sha256": "5866fb05040e5b4423c473d5e7abf87122e0e93f5afce742696a09454b4bd675"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/es/md/assets/ir/66609a9cc0f1869e79e44e5047372110ec1ff10396d880c96893814c0c07891e/read_manual.png",
+      "size": 1204,
+      "sha256": "66609a9cc0f1869e79e44e5047372110ec1ff10396d880c96893814c0c07891e"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/es/md/assets/ir/6c7f1deea2f6211ba3ed3273900aa7595234d3b8fe5a67830defa4cf13ee6fe6/main_unit1.png",
+      "size": 7470,
+      "sha256": "6c7f1deea2f6211ba3ed3273900aa7595234d3b8fe5a67830defa4cf13ee6fe6"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/es/md/assets/ir/74004806e6c0996fb77b2260c046e055194855a96bed97c519bb58c292e3b5e2/op_main_power.png",
+      "size": 70605,
+      "sha256": "74004806e6c0996fb77b2260c046e055194855a96bed97c519bb58c292e3b5e2"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/es/md/assets/ir/8332edf8c7678e11924ab5efbc3aea63a72516f20f9ae4fde1c9d55983e1e287/solar_direct.png",
+      "size": 188770,
+      "sha256": "8332edf8c7678e11924ab5efbc3aea63a72516f20f9ae4fde1c9d55983e1e287"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/es/md/assets/ir/87ac44e52863324b761a672089e6b0497e40fdf48432f698fccf30508060c60a/manual_icon1.png",
+      "size": 1614,
+      "sha256": "87ac44e52863324b761a672089e6b0497e40fdf48432f698fccf30508060c60a"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/es/md/assets/ir/8c65096005f70912215be1b2d24e744c6fcb92c8b4dccfb1b29e4c4bb469e0ea/keep_away_from_children.png",
+      "size": 3143,
+      "sha256": "8c65096005f70912215be1b2d24e744c6fcb92c8b4dccfb1b29e4c4bb469e0ea"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/es/md/assets/ir/928144ad19fa6b76c0fb278183af72ada10cc23289731a26a8b2b407afb3373f/warning_triangle.png",
+      "size": 2093,
+      "sha256": "928144ad19fa6b76c0fb278183af72ada10cc23289731a26a8b2b407afb3373f"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/es/md/assets/ir/9dd943d3063031c0795ff8c4b2b6aac266bfb2bff78e2250e445f27352c23a07/energy_saving.png",
+      "size": 67712,
+      "sha256": "9dd943d3063031c0795ff8c4b2b6aac266bfb2bff78e2250e445f27352c23a07"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/es/md/assets/ir/9df8813895e672545085c2356f72c13fc30323f72fab4de973416ea66093ee7d/solar_adapter.png",
+      "size": 75753,
+      "sha256": "9df8813895e672545085c2356f72c13fc30323f72fab4de973416ea66093ee7d"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/es/md/assets/ir/b04dca41b7cc3211a30f3a3fc2b1e904c25330f28104e4338a8ed67a11378011/right_side_ports.png",
+      "size": 33048,
+      "sha256": "b04dca41b7cc3211a30f3a3fc2b1e904c25330f28104e4338a8ed67a11378011"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/es/md/assets/ir/b34cdb33005dc744cdf77d3c486ee731d41fec1c144b91a0b30fbb88aab59f21/connections_accessories-es.png",
+      "size": 32306,
+      "sha256": "b34cdb33005dc744cdf77d3c486ee731d41fec1c144b91a0b30fbb88aab59f21"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/es/md/assets/ir/c2bcb028b70040e2242004f31ec0e611d420081c85e609341c74454f82c624fe/battery_disposal.png",
+      "size": 3423,
+      "sha256": "c2bcb028b70040e2242004f31ec0e611d420081c85e609341c74454f82c624fe"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/es/md/assets/ir/c46c92d6ee991a400208635802b5d2682f215cacaa748a3ca73068fdb18cdec3/op_dc_usb_output.png",
+      "size": 96118,
+      "sha256": "c46c92d6ee991a400208635802b5d2682f215cacaa748a3ca73068fdb18cdec3"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/es/md/assets/ir/cc7007d5671cf4abfbc552aeed661b5d7cf73e3fdd3f275af5f9183f40134dc0/car_charge.png",
+      "size": 54306,
+      "sha256": "cc7007d5671cf4abfbc552aeed661b5d7cf73e3fdd3f275af5f9183f40134dc0"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/es/md/assets/ir/e80dd654688b0e08d114bdf65eea7ff4fe45f1c78c94da1760cf62b3951ccdf9/do_not_dismantle.png",
+      "size": 2699,
+      "sha256": "e80dd654688b0e08d114bdf65eea7ff4fe45f1c78c94da1760cf62b3951ccdf9"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/es/md/assets/ir/f82efe218bc0b63cb953aced0c85f7c9553935e68d5cf70a3577df9212f550ce/lcd_map.png",
+      "size": 92895,
+      "sha256": "f82efe218bc0b63cb953aced0c85f7c9553935e68d5cf70a3577df9212f550ce"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/es/md/assets/ir/fe0e23b319fae67f446b21dd4393a0b62d97ebf1d30ba158fd35b66ef013cda0/weee.png",
+      "size": 2528,
+      "sha256": "fe0e23b319fae67f446b21dd4393a0b62d97ebf1d30ba158fd35b66ef013cda0"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/es/md/assets/ir/ff9fba0a2b117b5061f2c698e7ec60759aadcbb0a4eb60c8cdf15d2b7ef324ea/li_ion.png",
+      "size": 3419,
+      "sha256": "ff9fba0a2b117b5061f2c698e7ec60759aadcbb0a4eb60c8cdf15d2b7ef324ea"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/es/md/conf.py",
+      "size": 823,
+      "sha256": "875d89f6a4ca986a6988908914508bc8cd1674fda7c4c3505964f86cb52706ed"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/es/md/evidence/language_projection_receipt.json",
+      "size": 52164,
+      "sha256": "862ee0dbaf935f2603fb74d2c0fe60f8ef57ae52d627981e5da4104a81ef1184"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/es/md/evidence/projection_bundle_manifest.json",
+      "size": 4716,
+      "sha256": "5a61b0285addf7ebae2b10e2e268110c758f1d17241244f3e12c9cce342a7264"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/es/md/index.md",
+      "size": 100,
+      "sha256": "0d3330c55d37057b0b026560cc04c53db8b199269cd55d08504c89e6f72a065c"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/es/md/manual_je3600a_eu_es.md",
+      "size": 50371,
+      "sha256": "143d2a4c0d568670178d4eeb9893860f077bf65006511c8b32c4a8fc51ca4cab"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/es/md/publish_meta.json",
+      "size": 565,
+      "sha256": "61bb0ffd0de1b5a20238ef882821590d0b4604e7c34eef411613c59a134d703e"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/fr/md/assets/app_add_device_steps_9b7e0cf44d0f.png",
+      "size": 398750,
+      "sha256": "9b7e0cf44d0f37dc89cc04bb57bba1ebb9c3bbc5db3f0190575dd03e96ab0d0f"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/fr/md/assets/app_control_panel_2b9bc2598d7a.png",
+      "size": 11976,
+      "sha256": "2b9bc2598d7a272629311ecc2f494091c31f15ee2ebb4d59bda5f6e8ee5c9f49"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/fr/md/assets/ir/01d3694dd833380066161364a6c67f5d26a088bfd4428b72d836c26e4f123a90/connect_result.png",
+      "size": 70855,
+      "sha256": "01d3694dd833380066161364a6c67f5d26a088bfd4428b72d836c26e4f123a90"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/fr/md/assets/ir/1dcd41d6ababd9c9d5c9d9ad08bdc2d5f2b6c0c3ad301dcb7b5260e0ec08d45e/no_open_flame.png",
+      "size": 3534,
+      "sha256": "1dcd41d6ababd9c9d5c9d9ad08bdc2d5f2b6c0c3ad301dcb7b5260e0ec08d45e"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/fr/md/assets/ir/24a37b773bf14cd76f160a25dfa413576a95405a1f57f69059487b29b7791bfd/lcd_mode.png",
+      "size": 76021,
+      "sha256": "24a37b773bf14cd76f160a25dfa413576a95405a1f57f69059487b29b7791bfd"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/fr/md/assets/ir/287650f3a89ae520e32f0d75df8401151b808004ee50075b96aff70af04ca4ef/ac_charging_cable.png",
+      "size": 4023,
+      "sha256": "287650f3a89ae520e32f0d75df8401151b808004ee50075b96aff70af04ca4ef"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/fr/md/assets/ir/37bf4f4918f338372737a22a6a43c72d1610cae96e063cc66201f9f529701c24/download.png",
+      "size": 31919,
+      "sha256": "37bf4f4918f338372737a22a6a43c72d1610cae96e063cc66201f9f529701c24"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/fr/md/assets/ir/37f4c64bfeaac2df031b0fb30a0228f4ef0ba7f015385e52eec69a5d2ccdb414/ac_wall.png",
+      "size": 60220,
+      "sha256": "37f4c64bfeaac2df031b0fb30a0228f4ef0ba7f015385e52eec69a5d2ccdb414"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/fr/md/assets/ir/43a46a51a98773dd307ff35dd1ac684790109b2b8c437f87ceacbc3636bc1d75/op_ac_output.png",
+      "size": 91190,
+      "sha256": "43a46a51a98773dd307ff35dd1ac684790109b2b8c437f87ceacbc3636bc1d75"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/fr/md/assets/ir/474b6e86398672ad0e36c08df860c09fe1645f96c95e80c9d68cc5549f012f4c/add_device.png",
+      "size": 64112,
+      "sha256": "474b6e86398672ad0e36c08df860c09fe1645f96c95e80c9d68cc5549f012f4c"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/fr/md/assets/ir/562f998c918a50bdedcaaeff1e005b505ced57e8252bc987fe0662ea9fa8b658/front_product.jpg",
+      "size": 2140722,
+      "sha256": "562f998c918a50bdedcaaeff1e005b505ced57e8252bc987fe0662ea9fa8b658"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/fr/md/assets/ir/5866fb05040e5b4423c473d5e7abf87122e0e93f5afce742696a09454b4bd675/ups_mode.png",
+      "size": 73961,
+      "sha256": "5866fb05040e5b4423c473d5e7abf87122e0e93f5afce742696a09454b4bd675"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/fr/md/assets/ir/66609a9cc0f1869e79e44e5047372110ec1ff10396d880c96893814c0c07891e/read_manual.png",
+      "size": 1204,
+      "sha256": "66609a9cc0f1869e79e44e5047372110ec1ff10396d880c96893814c0c07891e"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/fr/md/assets/ir/6c7f1deea2f6211ba3ed3273900aa7595234d3b8fe5a67830defa4cf13ee6fe6/main_unit1.png",
+      "size": 7470,
+      "sha256": "6c7f1deea2f6211ba3ed3273900aa7595234d3b8fe5a67830defa4cf13ee6fe6"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/fr/md/assets/ir/74004806e6c0996fb77b2260c046e055194855a96bed97c519bb58c292e3b5e2/op_main_power.png",
+      "size": 70605,
+      "sha256": "74004806e6c0996fb77b2260c046e055194855a96bed97c519bb58c292e3b5e2"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/fr/md/assets/ir/7ff14402dd9def3bf19e29e391094f4f39da69976cbdfd0249f1b53c0f9ed017/connections_accessories-fr.png",
+      "size": 31546,
+      "sha256": "7ff14402dd9def3bf19e29e391094f4f39da69976cbdfd0249f1b53c0f9ed017"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/fr/md/assets/ir/8332edf8c7678e11924ab5efbc3aea63a72516f20f9ae4fde1c9d55983e1e287/solar_direct.png",
+      "size": 188770,
+      "sha256": "8332edf8c7678e11924ab5efbc3aea63a72516f20f9ae4fde1c9d55983e1e287"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/fr/md/assets/ir/87ac44e52863324b761a672089e6b0497e40fdf48432f698fccf30508060c60a/manual_icon1.png",
+      "size": 1614,
+      "sha256": "87ac44e52863324b761a672089e6b0497e40fdf48432f698fccf30508060c60a"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/fr/md/assets/ir/8c65096005f70912215be1b2d24e744c6fcb92c8b4dccfb1b29e4c4bb469e0ea/keep_away_from_children.png",
+      "size": 3143,
+      "sha256": "8c65096005f70912215be1b2d24e744c6fcb92c8b4dccfb1b29e4c4bb469e0ea"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/fr/md/assets/ir/928144ad19fa6b76c0fb278183af72ada10cc23289731a26a8b2b407afb3373f/warning_triangle.png",
+      "size": 2093,
+      "sha256": "928144ad19fa6b76c0fb278183af72ada10cc23289731a26a8b2b407afb3373f"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/fr/md/assets/ir/9dd943d3063031c0795ff8c4b2b6aac266bfb2bff78e2250e445f27352c23a07/energy_saving.png",
+      "size": 67712,
+      "sha256": "9dd943d3063031c0795ff8c4b2b6aac266bfb2bff78e2250e445f27352c23a07"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/fr/md/assets/ir/9df8813895e672545085c2356f72c13fc30323f72fab4de973416ea66093ee7d/solar_adapter.png",
+      "size": 75753,
+      "sha256": "9df8813895e672545085c2356f72c13fc30323f72fab4de973416ea66093ee7d"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/fr/md/assets/ir/b04dca41b7cc3211a30f3a3fc2b1e904c25330f28104e4338a8ed67a11378011/right_side_ports.png",
+      "size": 33048,
+      "sha256": "b04dca41b7cc3211a30f3a3fc2b1e904c25330f28104e4338a8ed67a11378011"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/fr/md/assets/ir/ba46a72fb3bdf8f9157a4e1835cc0b702b5e484692ad835c563927c313b46fb5/connections-fr.png",
+      "size": 107769,
+      "sha256": "ba46a72fb3bdf8f9157a4e1835cc0b702b5e484692ad835c563927c313b46fb5"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/fr/md/assets/ir/c2bcb028b70040e2242004f31ec0e611d420081c85e609341c74454f82c624fe/battery_disposal.png",
+      "size": 3423,
+      "sha256": "c2bcb028b70040e2242004f31ec0e611d420081c85e609341c74454f82c624fe"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/fr/md/assets/ir/c46c92d6ee991a400208635802b5d2682f215cacaa748a3ca73068fdb18cdec3/op_dc_usb_output.png",
+      "size": 96118,
+      "sha256": "c46c92d6ee991a400208635802b5d2682f215cacaa748a3ca73068fdb18cdec3"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/fr/md/assets/ir/cc7007d5671cf4abfbc552aeed661b5d7cf73e3fdd3f275af5f9183f40134dc0/car_charge.png",
+      "size": 54306,
+      "sha256": "cc7007d5671cf4abfbc552aeed661b5d7cf73e3fdd3f275af5f9183f40134dc0"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/fr/md/assets/ir/e80dd654688b0e08d114bdf65eea7ff4fe45f1c78c94da1760cf62b3951ccdf9/do_not_dismantle.png",
+      "size": 2699,
+      "sha256": "e80dd654688b0e08d114bdf65eea7ff4fe45f1c78c94da1760cf62b3951ccdf9"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/fr/md/assets/ir/f82efe218bc0b63cb953aced0c85f7c9553935e68d5cf70a3577df9212f550ce/lcd_map.png",
+      "size": 92895,
+      "sha256": "f82efe218bc0b63cb953aced0c85f7c9553935e68d5cf70a3577df9212f550ce"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/fr/md/assets/ir/fe0e23b319fae67f446b21dd4393a0b62d97ebf1d30ba158fd35b66ef013cda0/weee.png",
+      "size": 2528,
+      "sha256": "fe0e23b319fae67f446b21dd4393a0b62d97ebf1d30ba158fd35b66ef013cda0"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/fr/md/assets/ir/ff9fba0a2b117b5061f2c698e7ec60759aadcbb0a4eb60c8cdf15d2b7ef324ea/li_ion.png",
+      "size": 3419,
+      "sha256": "ff9fba0a2b117b5061f2c698e7ec60759aadcbb0a4eb60c8cdf15d2b7ef324ea"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/fr/md/conf.py",
+      "size": 826,
+      "sha256": "72d695fe88a707da25789a106abb60870502a837a715aabe48ff49138fe8377e"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/fr/md/evidence/language_projection_receipt.json",
+      "size": 52164,
+      "sha256": "adbd5e99990e95d1e690502be7551a86aff58791cb2ec6536b0502243c1685ca"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/fr/md/evidence/projection_bundle_manifest.json",
+      "size": 4716,
+      "sha256": "54b92e810dcd04377f909f7fe52de0f8eec232c37fe752d41f488f59f991e5fb"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/fr/md/index.md",
+      "size": 103,
+      "sha256": "9a7bd68911825814b929f7ebd98066701e2f213dec994fb3efb6f2c8046d93ef"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/fr/md/manual_je3600a_eu_fr.md",
+      "size": 51177,
+      "sha256": "acac9bea391a9235de430beab33dc9651ac9ff67c148c8e227497fd11a3ef55a"
+    },
+    {
+      "path": "sources/web/JE-3600A/EU/fr/md/publish_meta.json",
+      "size": 565,
+      "sha256": "7d679dd647e03e0887364f7fb86384a763b87d4e5e0dff3836f030bca917cf6c"
     },
     {
       "path": "sources/web/JE-500A/EU/en/md/_static/web_manual.css",
@@ -18883,6 +19283,356 @@
       "sha256": "ed25a9d2df272c8c05137707e6adfdd3b0c9e822c1e17897b4d0107f4c764ba3"
     },
     {
+      "path": "web/JE-3600A/EU/es/md/assets/app_add_device_steps_9b7e0cf44d0f.png",
+      "size": 398750,
+      "sha256": "9b7e0cf44d0f37dc89cc04bb57bba1ebb9c3bbc5db3f0190575dd03e96ab0d0f"
+    },
+    {
+      "path": "web/JE-3600A/EU/es/md/assets/app_control_panel_2b9bc2598d7a.png",
+      "size": 11976,
+      "sha256": "2b9bc2598d7a272629311ecc2f494091c31f15ee2ebb4d59bda5f6e8ee5c9f49"
+    },
+    {
+      "path": "web/JE-3600A/EU/es/md/assets/ir/01d3694dd833380066161364a6c67f5d26a088bfd4428b72d836c26e4f123a90/connect_result.png",
+      "size": 70855,
+      "sha256": "01d3694dd833380066161364a6c67f5d26a088bfd4428b72d836c26e4f123a90"
+    },
+    {
+      "path": "web/JE-3600A/EU/es/md/assets/ir/1dcd41d6ababd9c9d5c9d9ad08bdc2d5f2b6c0c3ad301dcb7b5260e0ec08d45e/no_open_flame.png",
+      "size": 3534,
+      "sha256": "1dcd41d6ababd9c9d5c9d9ad08bdc2d5f2b6c0c3ad301dcb7b5260e0ec08d45e"
+    },
+    {
+      "path": "web/JE-3600A/EU/es/md/assets/ir/24a37b773bf14cd76f160a25dfa413576a95405a1f57f69059487b29b7791bfd/lcd_mode.png",
+      "size": 76021,
+      "sha256": "24a37b773bf14cd76f160a25dfa413576a95405a1f57f69059487b29b7791bfd"
+    },
+    {
+      "path": "web/JE-3600A/EU/es/md/assets/ir/24e0e4f3297ce1a6b1032cbadc0d6ebece16bcbd7bb9f83ce45c32bed7be6b03/connections-es.png",
+      "size": 107393,
+      "sha256": "24e0e4f3297ce1a6b1032cbadc0d6ebece16bcbd7bb9f83ce45c32bed7be6b03"
+    },
+    {
+      "path": "web/JE-3600A/EU/es/md/assets/ir/287650f3a89ae520e32f0d75df8401151b808004ee50075b96aff70af04ca4ef/ac_charging_cable.png",
+      "size": 4023,
+      "sha256": "287650f3a89ae520e32f0d75df8401151b808004ee50075b96aff70af04ca4ef"
+    },
+    {
+      "path": "web/JE-3600A/EU/es/md/assets/ir/37bf4f4918f338372737a22a6a43c72d1610cae96e063cc66201f9f529701c24/download.png",
+      "size": 31919,
+      "sha256": "37bf4f4918f338372737a22a6a43c72d1610cae96e063cc66201f9f529701c24"
+    },
+    {
+      "path": "web/JE-3600A/EU/es/md/assets/ir/37f4c64bfeaac2df031b0fb30a0228f4ef0ba7f015385e52eec69a5d2ccdb414/ac_wall.png",
+      "size": 60220,
+      "sha256": "37f4c64bfeaac2df031b0fb30a0228f4ef0ba7f015385e52eec69a5d2ccdb414"
+    },
+    {
+      "path": "web/JE-3600A/EU/es/md/assets/ir/43a46a51a98773dd307ff35dd1ac684790109b2b8c437f87ceacbc3636bc1d75/op_ac_output.png",
+      "size": 91190,
+      "sha256": "43a46a51a98773dd307ff35dd1ac684790109b2b8c437f87ceacbc3636bc1d75"
+    },
+    {
+      "path": "web/JE-3600A/EU/es/md/assets/ir/474b6e86398672ad0e36c08df860c09fe1645f96c95e80c9d68cc5549f012f4c/add_device.png",
+      "size": 64112,
+      "sha256": "474b6e86398672ad0e36c08df860c09fe1645f96c95e80c9d68cc5549f012f4c"
+    },
+    {
+      "path": "web/JE-3600A/EU/es/md/assets/ir/562f998c918a50bdedcaaeff1e005b505ced57e8252bc987fe0662ea9fa8b658/front_product.jpg",
+      "size": 2140722,
+      "sha256": "562f998c918a50bdedcaaeff1e005b505ced57e8252bc987fe0662ea9fa8b658"
+    },
+    {
+      "path": "web/JE-3600A/EU/es/md/assets/ir/5866fb05040e5b4423c473d5e7abf87122e0e93f5afce742696a09454b4bd675/ups_mode.png",
+      "size": 73961,
+      "sha256": "5866fb05040e5b4423c473d5e7abf87122e0e93f5afce742696a09454b4bd675"
+    },
+    {
+      "path": "web/JE-3600A/EU/es/md/assets/ir/66609a9cc0f1869e79e44e5047372110ec1ff10396d880c96893814c0c07891e/read_manual.png",
+      "size": 1204,
+      "sha256": "66609a9cc0f1869e79e44e5047372110ec1ff10396d880c96893814c0c07891e"
+    },
+    {
+      "path": "web/JE-3600A/EU/es/md/assets/ir/6c7f1deea2f6211ba3ed3273900aa7595234d3b8fe5a67830defa4cf13ee6fe6/main_unit1.png",
+      "size": 7470,
+      "sha256": "6c7f1deea2f6211ba3ed3273900aa7595234d3b8fe5a67830defa4cf13ee6fe6"
+    },
+    {
+      "path": "web/JE-3600A/EU/es/md/assets/ir/74004806e6c0996fb77b2260c046e055194855a96bed97c519bb58c292e3b5e2/op_main_power.png",
+      "size": 70605,
+      "sha256": "74004806e6c0996fb77b2260c046e055194855a96bed97c519bb58c292e3b5e2"
+    },
+    {
+      "path": "web/JE-3600A/EU/es/md/assets/ir/8332edf8c7678e11924ab5efbc3aea63a72516f20f9ae4fde1c9d55983e1e287/solar_direct.png",
+      "size": 188770,
+      "sha256": "8332edf8c7678e11924ab5efbc3aea63a72516f20f9ae4fde1c9d55983e1e287"
+    },
+    {
+      "path": "web/JE-3600A/EU/es/md/assets/ir/87ac44e52863324b761a672089e6b0497e40fdf48432f698fccf30508060c60a/manual_icon1.png",
+      "size": 1614,
+      "sha256": "87ac44e52863324b761a672089e6b0497e40fdf48432f698fccf30508060c60a"
+    },
+    {
+      "path": "web/JE-3600A/EU/es/md/assets/ir/8c65096005f70912215be1b2d24e744c6fcb92c8b4dccfb1b29e4c4bb469e0ea/keep_away_from_children.png",
+      "size": 3143,
+      "sha256": "8c65096005f70912215be1b2d24e744c6fcb92c8b4dccfb1b29e4c4bb469e0ea"
+    },
+    {
+      "path": "web/JE-3600A/EU/es/md/assets/ir/928144ad19fa6b76c0fb278183af72ada10cc23289731a26a8b2b407afb3373f/warning_triangle.png",
+      "size": 2093,
+      "sha256": "928144ad19fa6b76c0fb278183af72ada10cc23289731a26a8b2b407afb3373f"
+    },
+    {
+      "path": "web/JE-3600A/EU/es/md/assets/ir/9dd943d3063031c0795ff8c4b2b6aac266bfb2bff78e2250e445f27352c23a07/energy_saving.png",
+      "size": 67712,
+      "sha256": "9dd943d3063031c0795ff8c4b2b6aac266bfb2bff78e2250e445f27352c23a07"
+    },
+    {
+      "path": "web/JE-3600A/EU/es/md/assets/ir/9df8813895e672545085c2356f72c13fc30323f72fab4de973416ea66093ee7d/solar_adapter.png",
+      "size": 75753,
+      "sha256": "9df8813895e672545085c2356f72c13fc30323f72fab4de973416ea66093ee7d"
+    },
+    {
+      "path": "web/JE-3600A/EU/es/md/assets/ir/b04dca41b7cc3211a30f3a3fc2b1e904c25330f28104e4338a8ed67a11378011/right_side_ports.png",
+      "size": 33048,
+      "sha256": "b04dca41b7cc3211a30f3a3fc2b1e904c25330f28104e4338a8ed67a11378011"
+    },
+    {
+      "path": "web/JE-3600A/EU/es/md/assets/ir/b34cdb33005dc744cdf77d3c486ee731d41fec1c144b91a0b30fbb88aab59f21/connections_accessories-es.png",
+      "size": 32306,
+      "sha256": "b34cdb33005dc744cdf77d3c486ee731d41fec1c144b91a0b30fbb88aab59f21"
+    },
+    {
+      "path": "web/JE-3600A/EU/es/md/assets/ir/c2bcb028b70040e2242004f31ec0e611d420081c85e609341c74454f82c624fe/battery_disposal.png",
+      "size": 3423,
+      "sha256": "c2bcb028b70040e2242004f31ec0e611d420081c85e609341c74454f82c624fe"
+    },
+    {
+      "path": "web/JE-3600A/EU/es/md/assets/ir/c46c92d6ee991a400208635802b5d2682f215cacaa748a3ca73068fdb18cdec3/op_dc_usb_output.png",
+      "size": 96118,
+      "sha256": "c46c92d6ee991a400208635802b5d2682f215cacaa748a3ca73068fdb18cdec3"
+    },
+    {
+      "path": "web/JE-3600A/EU/es/md/assets/ir/cc7007d5671cf4abfbc552aeed661b5d7cf73e3fdd3f275af5f9183f40134dc0/car_charge.png",
+      "size": 54306,
+      "sha256": "cc7007d5671cf4abfbc552aeed661b5d7cf73e3fdd3f275af5f9183f40134dc0"
+    },
+    {
+      "path": "web/JE-3600A/EU/es/md/assets/ir/e80dd654688b0e08d114bdf65eea7ff4fe45f1c78c94da1760cf62b3951ccdf9/do_not_dismantle.png",
+      "size": 2699,
+      "sha256": "e80dd654688b0e08d114bdf65eea7ff4fe45f1c78c94da1760cf62b3951ccdf9"
+    },
+    {
+      "path": "web/JE-3600A/EU/es/md/assets/ir/f82efe218bc0b63cb953aced0c85f7c9553935e68d5cf70a3577df9212f550ce/lcd_map.png",
+      "size": 92895,
+      "sha256": "f82efe218bc0b63cb953aced0c85f7c9553935e68d5cf70a3577df9212f550ce"
+    },
+    {
+      "path": "web/JE-3600A/EU/es/md/assets/ir/fe0e23b319fae67f446b21dd4393a0b62d97ebf1d30ba158fd35b66ef013cda0/weee.png",
+      "size": 2528,
+      "sha256": "fe0e23b319fae67f446b21dd4393a0b62d97ebf1d30ba158fd35b66ef013cda0"
+    },
+    {
+      "path": "web/JE-3600A/EU/es/md/assets/ir/ff9fba0a2b117b5061f2c698e7ec60759aadcbb0a4eb60c8cdf15d2b7ef324ea/li_ion.png",
+      "size": 3419,
+      "sha256": "ff9fba0a2b117b5061f2c698e7ec60759aadcbb0a4eb60c8cdf15d2b7ef324ea"
+    },
+    {
+      "path": "web/JE-3600A/EU/es/md/evidence/language_projection_receipt.json",
+      "size": 52164,
+      "sha256": "862ee0dbaf935f2603fb74d2c0fe60f8ef57ae52d627981e5da4104a81ef1184"
+    },
+    {
+      "path": "web/JE-3600A/EU/es/md/evidence/projection_bundle_manifest.json",
+      "size": 4716,
+      "sha256": "5a61b0285addf7ebae2b10e2e268110c758f1d17241244f3e12c9cce342a7264"
+    },
+    {
+      "path": "web/JE-3600A/EU/es/md/index.md",
+      "size": 100,
+      "sha256": "0d3330c55d37057b0b026560cc04c53db8b199269cd55d08504c89e6f72a065c"
+    },
+    {
+      "path": "web/JE-3600A/EU/es/md/manual_je3600a_eu_es.md",
+      "size": 51931,
+      "sha256": "cc7e746d7836b5b27860546926d1e6a0d2387dd338ecf1ae28bb4dc1c3b174f3"
+    },
+    {
+      "path": "web/JE-3600A/EU/fr/md/assets/app_add_device_steps_9b7e0cf44d0f.png",
+      "size": 398750,
+      "sha256": "9b7e0cf44d0f37dc89cc04bb57bba1ebb9c3bbc5db3f0190575dd03e96ab0d0f"
+    },
+    {
+      "path": "web/JE-3600A/EU/fr/md/assets/app_control_panel_2b9bc2598d7a.png",
+      "size": 11976,
+      "sha256": "2b9bc2598d7a272629311ecc2f494091c31f15ee2ebb4d59bda5f6e8ee5c9f49"
+    },
+    {
+      "path": "web/JE-3600A/EU/fr/md/assets/ir/01d3694dd833380066161364a6c67f5d26a088bfd4428b72d836c26e4f123a90/connect_result.png",
+      "size": 70855,
+      "sha256": "01d3694dd833380066161364a6c67f5d26a088bfd4428b72d836c26e4f123a90"
+    },
+    {
+      "path": "web/JE-3600A/EU/fr/md/assets/ir/1dcd41d6ababd9c9d5c9d9ad08bdc2d5f2b6c0c3ad301dcb7b5260e0ec08d45e/no_open_flame.png",
+      "size": 3534,
+      "sha256": "1dcd41d6ababd9c9d5c9d9ad08bdc2d5f2b6c0c3ad301dcb7b5260e0ec08d45e"
+    },
+    {
+      "path": "web/JE-3600A/EU/fr/md/assets/ir/24a37b773bf14cd76f160a25dfa413576a95405a1f57f69059487b29b7791bfd/lcd_mode.png",
+      "size": 76021,
+      "sha256": "24a37b773bf14cd76f160a25dfa413576a95405a1f57f69059487b29b7791bfd"
+    },
+    {
+      "path": "web/JE-3600A/EU/fr/md/assets/ir/287650f3a89ae520e32f0d75df8401151b808004ee50075b96aff70af04ca4ef/ac_charging_cable.png",
+      "size": 4023,
+      "sha256": "287650f3a89ae520e32f0d75df8401151b808004ee50075b96aff70af04ca4ef"
+    },
+    {
+      "path": "web/JE-3600A/EU/fr/md/assets/ir/37bf4f4918f338372737a22a6a43c72d1610cae96e063cc66201f9f529701c24/download.png",
+      "size": 31919,
+      "sha256": "37bf4f4918f338372737a22a6a43c72d1610cae96e063cc66201f9f529701c24"
+    },
+    {
+      "path": "web/JE-3600A/EU/fr/md/assets/ir/37f4c64bfeaac2df031b0fb30a0228f4ef0ba7f015385e52eec69a5d2ccdb414/ac_wall.png",
+      "size": 60220,
+      "sha256": "37f4c64bfeaac2df031b0fb30a0228f4ef0ba7f015385e52eec69a5d2ccdb414"
+    },
+    {
+      "path": "web/JE-3600A/EU/fr/md/assets/ir/43a46a51a98773dd307ff35dd1ac684790109b2b8c437f87ceacbc3636bc1d75/op_ac_output.png",
+      "size": 91190,
+      "sha256": "43a46a51a98773dd307ff35dd1ac684790109b2b8c437f87ceacbc3636bc1d75"
+    },
+    {
+      "path": "web/JE-3600A/EU/fr/md/assets/ir/474b6e86398672ad0e36c08df860c09fe1645f96c95e80c9d68cc5549f012f4c/add_device.png",
+      "size": 64112,
+      "sha256": "474b6e86398672ad0e36c08df860c09fe1645f96c95e80c9d68cc5549f012f4c"
+    },
+    {
+      "path": "web/JE-3600A/EU/fr/md/assets/ir/562f998c918a50bdedcaaeff1e005b505ced57e8252bc987fe0662ea9fa8b658/front_product.jpg",
+      "size": 2140722,
+      "sha256": "562f998c918a50bdedcaaeff1e005b505ced57e8252bc987fe0662ea9fa8b658"
+    },
+    {
+      "path": "web/JE-3600A/EU/fr/md/assets/ir/5866fb05040e5b4423c473d5e7abf87122e0e93f5afce742696a09454b4bd675/ups_mode.png",
+      "size": 73961,
+      "sha256": "5866fb05040e5b4423c473d5e7abf87122e0e93f5afce742696a09454b4bd675"
+    },
+    {
+      "path": "web/JE-3600A/EU/fr/md/assets/ir/66609a9cc0f1869e79e44e5047372110ec1ff10396d880c96893814c0c07891e/read_manual.png",
+      "size": 1204,
+      "sha256": "66609a9cc0f1869e79e44e5047372110ec1ff10396d880c96893814c0c07891e"
+    },
+    {
+      "path": "web/JE-3600A/EU/fr/md/assets/ir/6c7f1deea2f6211ba3ed3273900aa7595234d3b8fe5a67830defa4cf13ee6fe6/main_unit1.png",
+      "size": 7470,
+      "sha256": "6c7f1deea2f6211ba3ed3273900aa7595234d3b8fe5a67830defa4cf13ee6fe6"
+    },
+    {
+      "path": "web/JE-3600A/EU/fr/md/assets/ir/74004806e6c0996fb77b2260c046e055194855a96bed97c519bb58c292e3b5e2/op_main_power.png",
+      "size": 70605,
+      "sha256": "74004806e6c0996fb77b2260c046e055194855a96bed97c519bb58c292e3b5e2"
+    },
+    {
+      "path": "web/JE-3600A/EU/fr/md/assets/ir/7ff14402dd9def3bf19e29e391094f4f39da69976cbdfd0249f1b53c0f9ed017/connections_accessories-fr.png",
+      "size": 31546,
+      "sha256": "7ff14402dd9def3bf19e29e391094f4f39da69976cbdfd0249f1b53c0f9ed017"
+    },
+    {
+      "path": "web/JE-3600A/EU/fr/md/assets/ir/8332edf8c7678e11924ab5efbc3aea63a72516f20f9ae4fde1c9d55983e1e287/solar_direct.png",
+      "size": 188770,
+      "sha256": "8332edf8c7678e11924ab5efbc3aea63a72516f20f9ae4fde1c9d55983e1e287"
+    },
+    {
+      "path": "web/JE-3600A/EU/fr/md/assets/ir/87ac44e52863324b761a672089e6b0497e40fdf48432f698fccf30508060c60a/manual_icon1.png",
+      "size": 1614,
+      "sha256": "87ac44e52863324b761a672089e6b0497e40fdf48432f698fccf30508060c60a"
+    },
+    {
+      "path": "web/JE-3600A/EU/fr/md/assets/ir/8c65096005f70912215be1b2d24e744c6fcb92c8b4dccfb1b29e4c4bb469e0ea/keep_away_from_children.png",
+      "size": 3143,
+      "sha256": "8c65096005f70912215be1b2d24e744c6fcb92c8b4dccfb1b29e4c4bb469e0ea"
+    },
+    {
+      "path": "web/JE-3600A/EU/fr/md/assets/ir/928144ad19fa6b76c0fb278183af72ada10cc23289731a26a8b2b407afb3373f/warning_triangle.png",
+      "size": 2093,
+      "sha256": "928144ad19fa6b76c0fb278183af72ada10cc23289731a26a8b2b407afb3373f"
+    },
+    {
+      "path": "web/JE-3600A/EU/fr/md/assets/ir/9dd943d3063031c0795ff8c4b2b6aac266bfb2bff78e2250e445f27352c23a07/energy_saving.png",
+      "size": 67712,
+      "sha256": "9dd943d3063031c0795ff8c4b2b6aac266bfb2bff78e2250e445f27352c23a07"
+    },
+    {
+      "path": "web/JE-3600A/EU/fr/md/assets/ir/9df8813895e672545085c2356f72c13fc30323f72fab4de973416ea66093ee7d/solar_adapter.png",
+      "size": 75753,
+      "sha256": "9df8813895e672545085c2356f72c13fc30323f72fab4de973416ea66093ee7d"
+    },
+    {
+      "path": "web/JE-3600A/EU/fr/md/assets/ir/b04dca41b7cc3211a30f3a3fc2b1e904c25330f28104e4338a8ed67a11378011/right_side_ports.png",
+      "size": 33048,
+      "sha256": "b04dca41b7cc3211a30f3a3fc2b1e904c25330f28104e4338a8ed67a11378011"
+    },
+    {
+      "path": "web/JE-3600A/EU/fr/md/assets/ir/ba46a72fb3bdf8f9157a4e1835cc0b702b5e484692ad835c563927c313b46fb5/connections-fr.png",
+      "size": 107769,
+      "sha256": "ba46a72fb3bdf8f9157a4e1835cc0b702b5e484692ad835c563927c313b46fb5"
+    },
+    {
+      "path": "web/JE-3600A/EU/fr/md/assets/ir/c2bcb028b70040e2242004f31ec0e611d420081c85e609341c74454f82c624fe/battery_disposal.png",
+      "size": 3423,
+      "sha256": "c2bcb028b70040e2242004f31ec0e611d420081c85e609341c74454f82c624fe"
+    },
+    {
+      "path": "web/JE-3600A/EU/fr/md/assets/ir/c46c92d6ee991a400208635802b5d2682f215cacaa748a3ca73068fdb18cdec3/op_dc_usb_output.png",
+      "size": 96118,
+      "sha256": "c46c92d6ee991a400208635802b5d2682f215cacaa748a3ca73068fdb18cdec3"
+    },
+    {
+      "path": "web/JE-3600A/EU/fr/md/assets/ir/cc7007d5671cf4abfbc552aeed661b5d7cf73e3fdd3f275af5f9183f40134dc0/car_charge.png",
+      "size": 54306,
+      "sha256": "cc7007d5671cf4abfbc552aeed661b5d7cf73e3fdd3f275af5f9183f40134dc0"
+    },
+    {
+      "path": "web/JE-3600A/EU/fr/md/assets/ir/e80dd654688b0e08d114bdf65eea7ff4fe45f1c78c94da1760cf62b3951ccdf9/do_not_dismantle.png",
+      "size": 2699,
+      "sha256": "e80dd654688b0e08d114bdf65eea7ff4fe45f1c78c94da1760cf62b3951ccdf9"
+    },
+    {
+      "path": "web/JE-3600A/EU/fr/md/assets/ir/f82efe218bc0b63cb953aced0c85f7c9553935e68d5cf70a3577df9212f550ce/lcd_map.png",
+      "size": 92895,
+      "sha256": "f82efe218bc0b63cb953aced0c85f7c9553935e68d5cf70a3577df9212f550ce"
+    },
+    {
+      "path": "web/JE-3600A/EU/fr/md/assets/ir/fe0e23b319fae67f446b21dd4393a0b62d97ebf1d30ba158fd35b66ef013cda0/weee.png",
+      "size": 2528,
+      "sha256": "fe0e23b319fae67f446b21dd4393a0b62d97ebf1d30ba158fd35b66ef013cda0"
+    },
+    {
+      "path": "web/JE-3600A/EU/fr/md/assets/ir/ff9fba0a2b117b5061f2c698e7ec60759aadcbb0a4eb60c8cdf15d2b7ef324ea/li_ion.png",
+      "size": 3419,
+      "sha256": "ff9fba0a2b117b5061f2c698e7ec60759aadcbb0a4eb60c8cdf15d2b7ef324ea"
+    },
+    {
+      "path": "web/JE-3600A/EU/fr/md/evidence/language_projection_receipt.json",
+      "size": 52164,
+      "sha256": "adbd5e99990e95d1e690502be7551a86aff58791cb2ec6536b0502243c1685ca"
+    },
+    {
+      "path": "web/JE-3600A/EU/fr/md/evidence/projection_bundle_manifest.json",
+      "size": 4716,
+      "sha256": "54b92e810dcd04377f909f7fe52de0f8eec232c37fe752d41f488f59f991e5fb"
+    },
+    {
+      "path": "web/JE-3600A/EU/fr/md/index.md",
+      "size": 103,
+      "sha256": "9a7bd68911825814b929f7ebd98066701e2f213dec994fb3efb6f2c8046d93ef"
+    },
+    {
+      "path": "web/JE-3600A/EU/fr/md/manual_je3600a_eu_fr.md",
+      "size": 52737,
+      "sha256": "58c3d89e4983ae7d76e723437df043d181e6c54828089f7743dad8bc5b7a4dd5"
+    },
+    {
       "path": "web/JE-3600A/EU/md/index.md",
       "size": 264,
       "sha256": "0b97ff97464a37351d5e27a152c683130cf30d3542269da059c918a8ead89a03"
@@ -27228,6 +27978,316 @@
       "sha256": "ff9fba0a2b117b5061f2c698e7ec60759aadcbb0a4eb60c8cdf15d2b7ef324ea"
     },
     {
+      "path": "web/_static/manual-assets/JE-3600A/EU/es/md/assets/app_add_device_steps_9b7e0cf44d0f.png",
+      "size": 398750,
+      "sha256": "9b7e0cf44d0f37dc89cc04bb57bba1ebb9c3bbc5db3f0190575dd03e96ab0d0f"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/es/md/assets/app_control_panel_2b9bc2598d7a.png",
+      "size": 11976,
+      "sha256": "2b9bc2598d7a272629311ecc2f494091c31f15ee2ebb4d59bda5f6e8ee5c9f49"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/es/md/assets/ir/01d3694dd833380066161364a6c67f5d26a088bfd4428b72d836c26e4f123a90/connect_result.png",
+      "size": 70855,
+      "sha256": "01d3694dd833380066161364a6c67f5d26a088bfd4428b72d836c26e4f123a90"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/es/md/assets/ir/1dcd41d6ababd9c9d5c9d9ad08bdc2d5f2b6c0c3ad301dcb7b5260e0ec08d45e/no_open_flame.png",
+      "size": 3534,
+      "sha256": "1dcd41d6ababd9c9d5c9d9ad08bdc2d5f2b6c0c3ad301dcb7b5260e0ec08d45e"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/es/md/assets/ir/24a37b773bf14cd76f160a25dfa413576a95405a1f57f69059487b29b7791bfd/lcd_mode.png",
+      "size": 76021,
+      "sha256": "24a37b773bf14cd76f160a25dfa413576a95405a1f57f69059487b29b7791bfd"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/es/md/assets/ir/24e0e4f3297ce1a6b1032cbadc0d6ebece16bcbd7bb9f83ce45c32bed7be6b03/connections-es.png",
+      "size": 107393,
+      "sha256": "24e0e4f3297ce1a6b1032cbadc0d6ebece16bcbd7bb9f83ce45c32bed7be6b03"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/es/md/assets/ir/287650f3a89ae520e32f0d75df8401151b808004ee50075b96aff70af04ca4ef/ac_charging_cable.png",
+      "size": 4023,
+      "sha256": "287650f3a89ae520e32f0d75df8401151b808004ee50075b96aff70af04ca4ef"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/es/md/assets/ir/37bf4f4918f338372737a22a6a43c72d1610cae96e063cc66201f9f529701c24/download.png",
+      "size": 31919,
+      "sha256": "37bf4f4918f338372737a22a6a43c72d1610cae96e063cc66201f9f529701c24"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/es/md/assets/ir/37f4c64bfeaac2df031b0fb30a0228f4ef0ba7f015385e52eec69a5d2ccdb414/ac_wall.png",
+      "size": 60220,
+      "sha256": "37f4c64bfeaac2df031b0fb30a0228f4ef0ba7f015385e52eec69a5d2ccdb414"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/es/md/assets/ir/43a46a51a98773dd307ff35dd1ac684790109b2b8c437f87ceacbc3636bc1d75/op_ac_output.png",
+      "size": 91190,
+      "sha256": "43a46a51a98773dd307ff35dd1ac684790109b2b8c437f87ceacbc3636bc1d75"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/es/md/assets/ir/474b6e86398672ad0e36c08df860c09fe1645f96c95e80c9d68cc5549f012f4c/add_device.png",
+      "size": 64112,
+      "sha256": "474b6e86398672ad0e36c08df860c09fe1645f96c95e80c9d68cc5549f012f4c"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/es/md/assets/ir/562f998c918a50bdedcaaeff1e005b505ced57e8252bc987fe0662ea9fa8b658/front_product.jpg",
+      "size": 2140722,
+      "sha256": "562f998c918a50bdedcaaeff1e005b505ced57e8252bc987fe0662ea9fa8b658"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/es/md/assets/ir/5866fb05040e5b4423c473d5e7abf87122e0e93f5afce742696a09454b4bd675/ups_mode.png",
+      "size": 73961,
+      "sha256": "5866fb05040e5b4423c473d5e7abf87122e0e93f5afce742696a09454b4bd675"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/es/md/assets/ir/66609a9cc0f1869e79e44e5047372110ec1ff10396d880c96893814c0c07891e/read_manual.png",
+      "size": 1204,
+      "sha256": "66609a9cc0f1869e79e44e5047372110ec1ff10396d880c96893814c0c07891e"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/es/md/assets/ir/6c7f1deea2f6211ba3ed3273900aa7595234d3b8fe5a67830defa4cf13ee6fe6/main_unit1.png",
+      "size": 7470,
+      "sha256": "6c7f1deea2f6211ba3ed3273900aa7595234d3b8fe5a67830defa4cf13ee6fe6"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/es/md/assets/ir/74004806e6c0996fb77b2260c046e055194855a96bed97c519bb58c292e3b5e2/op_main_power.png",
+      "size": 70605,
+      "sha256": "74004806e6c0996fb77b2260c046e055194855a96bed97c519bb58c292e3b5e2"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/es/md/assets/ir/8332edf8c7678e11924ab5efbc3aea63a72516f20f9ae4fde1c9d55983e1e287/solar_direct.png",
+      "size": 188770,
+      "sha256": "8332edf8c7678e11924ab5efbc3aea63a72516f20f9ae4fde1c9d55983e1e287"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/es/md/assets/ir/87ac44e52863324b761a672089e6b0497e40fdf48432f698fccf30508060c60a/manual_icon1.png",
+      "size": 1614,
+      "sha256": "87ac44e52863324b761a672089e6b0497e40fdf48432f698fccf30508060c60a"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/es/md/assets/ir/8c65096005f70912215be1b2d24e744c6fcb92c8b4dccfb1b29e4c4bb469e0ea/keep_away_from_children.png",
+      "size": 3143,
+      "sha256": "8c65096005f70912215be1b2d24e744c6fcb92c8b4dccfb1b29e4c4bb469e0ea"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/es/md/assets/ir/928144ad19fa6b76c0fb278183af72ada10cc23289731a26a8b2b407afb3373f/warning_triangle.png",
+      "size": 2093,
+      "sha256": "928144ad19fa6b76c0fb278183af72ada10cc23289731a26a8b2b407afb3373f"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/es/md/assets/ir/9dd943d3063031c0795ff8c4b2b6aac266bfb2bff78e2250e445f27352c23a07/energy_saving.png",
+      "size": 67712,
+      "sha256": "9dd943d3063031c0795ff8c4b2b6aac266bfb2bff78e2250e445f27352c23a07"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/es/md/assets/ir/9df8813895e672545085c2356f72c13fc30323f72fab4de973416ea66093ee7d/solar_adapter.png",
+      "size": 75753,
+      "sha256": "9df8813895e672545085c2356f72c13fc30323f72fab4de973416ea66093ee7d"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/es/md/assets/ir/b04dca41b7cc3211a30f3a3fc2b1e904c25330f28104e4338a8ed67a11378011/right_side_ports.png",
+      "size": 33048,
+      "sha256": "b04dca41b7cc3211a30f3a3fc2b1e904c25330f28104e4338a8ed67a11378011"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/es/md/assets/ir/b34cdb33005dc744cdf77d3c486ee731d41fec1c144b91a0b30fbb88aab59f21/connections_accessories-es.png",
+      "size": 32306,
+      "sha256": "b34cdb33005dc744cdf77d3c486ee731d41fec1c144b91a0b30fbb88aab59f21"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/es/md/assets/ir/c2bcb028b70040e2242004f31ec0e611d420081c85e609341c74454f82c624fe/battery_disposal.png",
+      "size": 3423,
+      "sha256": "c2bcb028b70040e2242004f31ec0e611d420081c85e609341c74454f82c624fe"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/es/md/assets/ir/c46c92d6ee991a400208635802b5d2682f215cacaa748a3ca73068fdb18cdec3/op_dc_usb_output.png",
+      "size": 96118,
+      "sha256": "c46c92d6ee991a400208635802b5d2682f215cacaa748a3ca73068fdb18cdec3"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/es/md/assets/ir/cc7007d5671cf4abfbc552aeed661b5d7cf73e3fdd3f275af5f9183f40134dc0/car_charge.png",
+      "size": 54306,
+      "sha256": "cc7007d5671cf4abfbc552aeed661b5d7cf73e3fdd3f275af5f9183f40134dc0"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/es/md/assets/ir/e80dd654688b0e08d114bdf65eea7ff4fe45f1c78c94da1760cf62b3951ccdf9/do_not_dismantle.png",
+      "size": 2699,
+      "sha256": "e80dd654688b0e08d114bdf65eea7ff4fe45f1c78c94da1760cf62b3951ccdf9"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/es/md/assets/ir/f82efe218bc0b63cb953aced0c85f7c9553935e68d5cf70a3577df9212f550ce/lcd_map.png",
+      "size": 92895,
+      "sha256": "f82efe218bc0b63cb953aced0c85f7c9553935e68d5cf70a3577df9212f550ce"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/es/md/assets/ir/fe0e23b319fae67f446b21dd4393a0b62d97ebf1d30ba158fd35b66ef013cda0/weee.png",
+      "size": 2528,
+      "sha256": "fe0e23b319fae67f446b21dd4393a0b62d97ebf1d30ba158fd35b66ef013cda0"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/es/md/assets/ir/ff9fba0a2b117b5061f2c698e7ec60759aadcbb0a4eb60c8cdf15d2b7ef324ea/li_ion.png",
+      "size": 3419,
+      "sha256": "ff9fba0a2b117b5061f2c698e7ec60759aadcbb0a4eb60c8cdf15d2b7ef324ea"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/fr/md/assets/app_add_device_steps_9b7e0cf44d0f.png",
+      "size": 398750,
+      "sha256": "9b7e0cf44d0f37dc89cc04bb57bba1ebb9c3bbc5db3f0190575dd03e96ab0d0f"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/fr/md/assets/app_control_panel_2b9bc2598d7a.png",
+      "size": 11976,
+      "sha256": "2b9bc2598d7a272629311ecc2f494091c31f15ee2ebb4d59bda5f6e8ee5c9f49"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/fr/md/assets/ir/01d3694dd833380066161364a6c67f5d26a088bfd4428b72d836c26e4f123a90/connect_result.png",
+      "size": 70855,
+      "sha256": "01d3694dd833380066161364a6c67f5d26a088bfd4428b72d836c26e4f123a90"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/fr/md/assets/ir/1dcd41d6ababd9c9d5c9d9ad08bdc2d5f2b6c0c3ad301dcb7b5260e0ec08d45e/no_open_flame.png",
+      "size": 3534,
+      "sha256": "1dcd41d6ababd9c9d5c9d9ad08bdc2d5f2b6c0c3ad301dcb7b5260e0ec08d45e"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/fr/md/assets/ir/24a37b773bf14cd76f160a25dfa413576a95405a1f57f69059487b29b7791bfd/lcd_mode.png",
+      "size": 76021,
+      "sha256": "24a37b773bf14cd76f160a25dfa413576a95405a1f57f69059487b29b7791bfd"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/fr/md/assets/ir/287650f3a89ae520e32f0d75df8401151b808004ee50075b96aff70af04ca4ef/ac_charging_cable.png",
+      "size": 4023,
+      "sha256": "287650f3a89ae520e32f0d75df8401151b808004ee50075b96aff70af04ca4ef"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/fr/md/assets/ir/37bf4f4918f338372737a22a6a43c72d1610cae96e063cc66201f9f529701c24/download.png",
+      "size": 31919,
+      "sha256": "37bf4f4918f338372737a22a6a43c72d1610cae96e063cc66201f9f529701c24"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/fr/md/assets/ir/37f4c64bfeaac2df031b0fb30a0228f4ef0ba7f015385e52eec69a5d2ccdb414/ac_wall.png",
+      "size": 60220,
+      "sha256": "37f4c64bfeaac2df031b0fb30a0228f4ef0ba7f015385e52eec69a5d2ccdb414"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/fr/md/assets/ir/43a46a51a98773dd307ff35dd1ac684790109b2b8c437f87ceacbc3636bc1d75/op_ac_output.png",
+      "size": 91190,
+      "sha256": "43a46a51a98773dd307ff35dd1ac684790109b2b8c437f87ceacbc3636bc1d75"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/fr/md/assets/ir/474b6e86398672ad0e36c08df860c09fe1645f96c95e80c9d68cc5549f012f4c/add_device.png",
+      "size": 64112,
+      "sha256": "474b6e86398672ad0e36c08df860c09fe1645f96c95e80c9d68cc5549f012f4c"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/fr/md/assets/ir/562f998c918a50bdedcaaeff1e005b505ced57e8252bc987fe0662ea9fa8b658/front_product.jpg",
+      "size": 2140722,
+      "sha256": "562f998c918a50bdedcaaeff1e005b505ced57e8252bc987fe0662ea9fa8b658"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/fr/md/assets/ir/5866fb05040e5b4423c473d5e7abf87122e0e93f5afce742696a09454b4bd675/ups_mode.png",
+      "size": 73961,
+      "sha256": "5866fb05040e5b4423c473d5e7abf87122e0e93f5afce742696a09454b4bd675"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/fr/md/assets/ir/66609a9cc0f1869e79e44e5047372110ec1ff10396d880c96893814c0c07891e/read_manual.png",
+      "size": 1204,
+      "sha256": "66609a9cc0f1869e79e44e5047372110ec1ff10396d880c96893814c0c07891e"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/fr/md/assets/ir/6c7f1deea2f6211ba3ed3273900aa7595234d3b8fe5a67830defa4cf13ee6fe6/main_unit1.png",
+      "size": 7470,
+      "sha256": "6c7f1deea2f6211ba3ed3273900aa7595234d3b8fe5a67830defa4cf13ee6fe6"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/fr/md/assets/ir/74004806e6c0996fb77b2260c046e055194855a96bed97c519bb58c292e3b5e2/op_main_power.png",
+      "size": 70605,
+      "sha256": "74004806e6c0996fb77b2260c046e055194855a96bed97c519bb58c292e3b5e2"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/fr/md/assets/ir/7ff14402dd9def3bf19e29e391094f4f39da69976cbdfd0249f1b53c0f9ed017/connections_accessories-fr.png",
+      "size": 31546,
+      "sha256": "7ff14402dd9def3bf19e29e391094f4f39da69976cbdfd0249f1b53c0f9ed017"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/fr/md/assets/ir/8332edf8c7678e11924ab5efbc3aea63a72516f20f9ae4fde1c9d55983e1e287/solar_direct.png",
+      "size": 188770,
+      "sha256": "8332edf8c7678e11924ab5efbc3aea63a72516f20f9ae4fde1c9d55983e1e287"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/fr/md/assets/ir/87ac44e52863324b761a672089e6b0497e40fdf48432f698fccf30508060c60a/manual_icon1.png",
+      "size": 1614,
+      "sha256": "87ac44e52863324b761a672089e6b0497e40fdf48432f698fccf30508060c60a"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/fr/md/assets/ir/8c65096005f70912215be1b2d24e744c6fcb92c8b4dccfb1b29e4c4bb469e0ea/keep_away_from_children.png",
+      "size": 3143,
+      "sha256": "8c65096005f70912215be1b2d24e744c6fcb92c8b4dccfb1b29e4c4bb469e0ea"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/fr/md/assets/ir/928144ad19fa6b76c0fb278183af72ada10cc23289731a26a8b2b407afb3373f/warning_triangle.png",
+      "size": 2093,
+      "sha256": "928144ad19fa6b76c0fb278183af72ada10cc23289731a26a8b2b407afb3373f"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/fr/md/assets/ir/9dd943d3063031c0795ff8c4b2b6aac266bfb2bff78e2250e445f27352c23a07/energy_saving.png",
+      "size": 67712,
+      "sha256": "9dd943d3063031c0795ff8c4b2b6aac266bfb2bff78e2250e445f27352c23a07"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/fr/md/assets/ir/9df8813895e672545085c2356f72c13fc30323f72fab4de973416ea66093ee7d/solar_adapter.png",
+      "size": 75753,
+      "sha256": "9df8813895e672545085c2356f72c13fc30323f72fab4de973416ea66093ee7d"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/fr/md/assets/ir/b04dca41b7cc3211a30f3a3fc2b1e904c25330f28104e4338a8ed67a11378011/right_side_ports.png",
+      "size": 33048,
+      "sha256": "b04dca41b7cc3211a30f3a3fc2b1e904c25330f28104e4338a8ed67a11378011"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/fr/md/assets/ir/ba46a72fb3bdf8f9157a4e1835cc0b702b5e484692ad835c563927c313b46fb5/connections-fr.png",
+      "size": 107769,
+      "sha256": "ba46a72fb3bdf8f9157a4e1835cc0b702b5e484692ad835c563927c313b46fb5"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/fr/md/assets/ir/c2bcb028b70040e2242004f31ec0e611d420081c85e609341c74454f82c624fe/battery_disposal.png",
+      "size": 3423,
+      "sha256": "c2bcb028b70040e2242004f31ec0e611d420081c85e609341c74454f82c624fe"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/fr/md/assets/ir/c46c92d6ee991a400208635802b5d2682f215cacaa748a3ca73068fdb18cdec3/op_dc_usb_output.png",
+      "size": 96118,
+      "sha256": "c46c92d6ee991a400208635802b5d2682f215cacaa748a3ca73068fdb18cdec3"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/fr/md/assets/ir/cc7007d5671cf4abfbc552aeed661b5d7cf73e3fdd3f275af5f9183f40134dc0/car_charge.png",
+      "size": 54306,
+      "sha256": "cc7007d5671cf4abfbc552aeed661b5d7cf73e3fdd3f275af5f9183f40134dc0"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/fr/md/assets/ir/e80dd654688b0e08d114bdf65eea7ff4fe45f1c78c94da1760cf62b3951ccdf9/do_not_dismantle.png",
+      "size": 2699,
+      "sha256": "e80dd654688b0e08d114bdf65eea7ff4fe45f1c78c94da1760cf62b3951ccdf9"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/fr/md/assets/ir/f82efe218bc0b63cb953aced0c85f7c9553935e68d5cf70a3577df9212f550ce/lcd_map.png",
+      "size": 92895,
+      "sha256": "f82efe218bc0b63cb953aced0c85f7c9553935e68d5cf70a3577df9212f550ce"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/fr/md/assets/ir/fe0e23b319fae67f446b21dd4393a0b62d97ebf1d30ba158fd35b66ef013cda0/weee.png",
+      "size": 2528,
+      "sha256": "fe0e23b319fae67f446b21dd4393a0b62d97ebf1d30ba158fd35b66ef013cda0"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-3600A/EU/fr/md/assets/ir/ff9fba0a2b117b5061f2c698e7ec60759aadcbb0a4eb60c8cdf15d2b7ef324ea/li_ion.png",
+      "size": 3419,
+      "sha256": "ff9fba0a2b117b5061f2c698e7ec60759aadcbb0a4eb60c8cdf15d2b7ef324ea"
+    },
+    {
       "path": "web/_static/manual-assets/JE-500A/EU/en/md/assets/ir/122991a64cd306c82e70b0279024fa0bcad517e9fe0bfd8a30d6a81f0c46de99/lcd_map.png",
       "size": 74646,
       "sha256": "122991a64cd306c82e70b0279024fa0bcad517e9fe0bfd8a30d6a81f0c46de99"
@@ -27544,8 +28604,8 @@
     },
     {
       "path": "web/index.md",
-      "size": 4374,
-      "sha256": "ab2167e01028be6fd058762e52fde8b4c0d8d4f88dfa67085bc09361a9c7848c"
+      "size": 4603,
+      "sha256": "7e77cbf005ceed67e62ae91297a9267e6ca79663b4778eee79fbbb43d0bf4bd4"
     },
     {
       "path": "web/manual_jaacwhe100eua1_eu_en.md",
@@ -27721,6 +28781,16 @@
       "path": "web/manual_je3600a_eu_en.md",
       "size": 332,
       "sha256": "6a63bf75f90a4bb49cd815709e58543cb0b44ae4f58b10a62dcadec06d10ccb3"
+    },
+    {
+      "path": "web/manual_je3600a_eu_es.md",
+      "size": 338,
+      "sha256": "b2fe65238590039860c825bf638d204d0805fbb504b34a9d24b132ff202c6207"
+    },
+    {
+      "path": "web/manual_je3600a_eu_fr.md",
+      "size": 341,
+      "sha256": "a13d1a9bfcf11cb4529ad500e4a93714bb73e558d866cd5857a65d81a62e2e22"
     },
     {
       "path": "web/manual_je500a_eu_en.md",
