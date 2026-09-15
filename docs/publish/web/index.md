@@ -35,6 +35,8 @@
 - [JE-3000C / EU / en - Jackery Explorer 3000 User Manual](JE-3000C/EU/en/md/manual_je3000c_eu_en.md)
 - [JE-300D / EU / en - Jackery Explorer 300D User Manual](JE-300D/EU/en/md/manual_je300d_eu_en.md)
 - [JE-3600A / EU / en - Jackery Explorer 3600 Plus User Manual](JE-3600A/EU/en/md/manual_je3600a_eu_en.md)
+- [JE-3600A / EU / es - Jackery Explorer 3600 Plus Manual de usuario](JE-3600A/EU/es/md/manual_je3600a_eu_es.md)
+- [JE-3600A / EU / fr - Jackery Explorer 3600 Plus Manuel d'utilisation](JE-3600A/EU/fr/md/manual_je3600a_eu_fr.md)
 - [JE-500A / EU / en - Jackery Explorer 500 User Manual](JE-500A/EU/en/md/manual_je500a_eu_en.md)
 - [JS-100F / EU / en - Jackery SolarSaga 100 User Manual](JS-100F/EU/en/md/manual_js100f_eu_en.md)
 - [JS-100I / EU / en - Jackery SolarSaga 100 Air User Manual](JS-100I/EU/en/md/manual_js100i_eu_en.md)
