@@ -1699,16 +1699,16 @@ body {
 #furo-main-content table.lcd-text-only col:nth-child(4) { width: 65% !important; }
 
 /*
- * JBP-2000B EU page 8 keeps the published composition: a compact LCD map and
+ * JBP-2000B and JBP-3600A EU keep the published composition: a compact LCD map and
  * bordered two-column legend, followed by two rounded operation cards.  The
  * selectors are pinned to the frozen EU artwork paths so the treatment cannot
  * leak into another battery-pack target that happens to reuse these headings.
  */
 #furo-main-content
   #lcd-display:has(
-    > img[data-web-finished-panel-path="assets/jbp2000b_eu_en/lcd.png"]
+    > img:is([data-web-finished-panel-path="assets/jbp2000b_eu_en/lcd.png"], [data-web-finished-panel-path="assets/jbp3600a_eu_en/lcd_annotated.png"])
   )
-  > img[data-web-finished-panel-path="assets/jbp2000b_eu_en/lcd.png"] {
+  > img:is([data-web-finished-panel-path="assets/jbp2000b_eu_en/lcd.png"], [data-web-finished-panel-path="assets/jbp3600a_eu_en/lcd_annotated.png"]) {
   display: block;
   width: 78% !important;
   max-width: 34rem !important;
@@ -1718,7 +1718,7 @@ body {
 
 #furo-main-content
   #lcd-display:has(
-    > img[data-web-finished-panel-path="assets/jbp2000b_eu_en/lcd.png"]
+    > img:is([data-web-finished-panel-path="assets/jbp2000b_eu_en/lcd.png"], [data-web-finished-panel-path="assets/jbp3600a_eu_en/lcd_annotated.png"])
   )
   > table.lcd-text-only {
   width: 100% !important;
@@ -1737,7 +1737,7 @@ body {
 
 #furo-main-content
   #lcd-display:has(
-    > img[data-web-finished-panel-path="assets/jbp2000b_eu_en/lcd.png"]
+    > img:is([data-web-finished-panel-path="assets/jbp2000b_eu_en/lcd.png"], [data-web-finished-panel-path="assets/jbp3600a_eu_en/lcd_annotated.png"])
   )
   > table.lcd-text-only tr > :nth-child(n + 3) {
   box-sizing: border-box;
@@ -1748,7 +1748,7 @@ body {
 
 #furo-main-content
   #lcd-display:has(
-    > img[data-web-finished-panel-path="assets/jbp2000b_eu_en/lcd.png"]
+    > img:is([data-web-finished-panel-path="assets/jbp2000b_eu_en/lcd.png"], [data-web-finished-panel-path="assets/jbp3600a_eu_en/lcd_annotated.png"])
   )
   > table.lcd-text-only tr:not(:last-child) > :nth-child(n + 3) {
   border-bottom: 1px solid var(--hb-line) !important;
@@ -1756,7 +1756,7 @@ body {
 
 #furo-main-content
   #lcd-display:has(
-    > img[data-web-finished-panel-path="assets/jbp2000b_eu_en/lcd.png"]
+    > img:is([data-web-finished-panel-path="assets/jbp2000b_eu_en/lcd.png"], [data-web-finished-panel-path="assets/jbp3600a_eu_en/lcd_annotated.png"])
   )
   > table.lcd-text-only tr > :nth-child(3) {
   border-right: 1px solid var(--hb-line) !important;
@@ -1766,7 +1766,7 @@ body {
 
 #furo-main-content
   #lcd-display:has(
-    > img[data-web-finished-panel-path="assets/jbp2000b_eu_en/lcd.png"]
+    > img:is([data-web-finished-panel-path="assets/jbp2000b_eu_en/lcd.png"], [data-web-finished-panel-path="assets/jbp3600a_eu_en/lcd_annotated.png"])
   )
   > table.lcd-text-only p {
   margin: 0;
@@ -1774,14 +1774,14 @@ body {
 
 #furo-main-content
   #power-on-off:has(
-    > img[data-web-finished-panel-path="assets/jbp2000b_eu_en/power.png"]
+    > img:is([data-web-finished-panel-path="assets/jbp2000b_eu_en/power.png"], [data-web-finished-panel-path="assets/jbp3600a_eu_en/power_annotated.png"])
   )
-  > img[data-web-finished-panel-path="assets/jbp2000b_eu_en/power.png"],
+  > img:is([data-web-finished-panel-path="assets/jbp2000b_eu_en/power.png"], [data-web-finished-panel-path="assets/jbp3600a_eu_en/power_annotated.png"]),
 #furo-main-content
   #lcd-display-on-off:has(
-    > img[data-web-finished-panel-path="assets/jbp2000b_eu_en/lcd_control.png"]
+    > img:is([data-web-finished-panel-path="assets/jbp2000b_eu_en/lcd_control.png"], [data-web-finished-panel-path="assets/jbp3600a_eu_en/lcd_control_clean.png"])
   )
-  > img[data-web-finished-panel-path="assets/jbp2000b_eu_en/lcd_control.png"] {
+  > img:is([data-web-finished-panel-path="assets/jbp2000b_eu_en/lcd_control.png"], [data-web-finished-panel-path="assets/jbp3600a_eu_en/lcd_control_clean.png"]) {
   display: block;
   box-sizing: border-box;
   width: 100% !important;
@@ -1797,7 +1797,7 @@ body {
 
 #furo-main-content
   #power-on-off:has(
-    > img[data-web-finished-panel-path="assets/jbp2000b_eu_en/power.png"]
+    > img:is([data-web-finished-panel-path="assets/jbp2000b_eu_en/power.png"], [data-web-finished-panel-path="assets/jbp3600a_eu_en/power_annotated.png"])
   )
   > table.manual-callout-table {
   width: 100% !important;
@@ -1808,7 +1808,7 @@ body {
 
 #furo-main-content
   #lcd-display-on-off:has(
-    > img[data-web-finished-panel-path="assets/jbp2000b_eu_en/lcd_control.png"]
+    > img:is([data-web-finished-panel-path="assets/jbp2000b_eu_en/lcd_control.png"], [data-web-finished-panel-path="assets/jbp3600a_eu_en/lcd_control_clean.png"])
   )
   > p:last-child {
   box-sizing: border-box;
@@ -1827,7 +1827,7 @@ body {
 #furo-main-content
   #operations
   > #lcd-display-on-off:has(
-    > img[data-web-finished-panel-path="assets/jbp2000b_eu_en/lcd_control.png"]
+    > img:is([data-web-finished-panel-path="assets/jbp2000b_eu_en/lcd_control.png"], [data-web-finished-panel-path="assets/jbp3600a_eu_en/lcd_control_clean.png"])
   ) {
   margin-top: 1.25rem;
 }
@@ -1835,15 +1835,15 @@ body {
 @media (max-width: 520px) {
   #furo-main-content
     #lcd-display:has(
-      > img[data-web-finished-panel-path="assets/jbp2000b_eu_en/lcd.png"]
+      > img:is([data-web-finished-panel-path="assets/jbp2000b_eu_en/lcd.png"], [data-web-finished-panel-path="assets/jbp3600a_eu_en/lcd_annotated.png"])
     )
-    > img[data-web-finished-panel-path="assets/jbp2000b_eu_en/lcd.png"] {
+    > img:is([data-web-finished-panel-path="assets/jbp2000b_eu_en/lcd.png"], [data-web-finished-panel-path="assets/jbp3600a_eu_en/lcd_annotated.png"]) {
     width: 100% !important;
   }
 
   #furo-main-content
     #lcd-display:has(
-      > img[data-web-finished-panel-path="assets/jbp2000b_eu_en/lcd.png"]
+      > img:is([data-web-finished-panel-path="assets/jbp2000b_eu_en/lcd.png"], [data-web-finished-panel-path="assets/jbp3600a_eu_en/lcd_annotated.png"])
     )
     > table.lcd-text-only {
     font-size: 0.72rem;
@@ -1851,7 +1851,7 @@ body {
 
   #furo-main-content
     #power-on-off:has(
-      > img[data-web-finished-panel-path="assets/jbp2000b_eu_en/power.png"]
+      > img:is([data-web-finished-panel-path="assets/jbp2000b_eu_en/power.png"], [data-web-finished-panel-path="assets/jbp3600a_eu_en/power_annotated.png"])
     )
     > table.manual-callout-table {
     display: table;
@@ -1859,7 +1859,7 @@ body {
 
   #furo-main-content
     #power-on-off:has(
-      > img[data-web-finished-panel-path="assets/jbp2000b_eu_en/power.png"]
+      > img:is([data-web-finished-panel-path="assets/jbp2000b_eu_en/power.png"], [data-web-finished-panel-path="assets/jbp3600a_eu_en/power_annotated.png"])
     )
     > table.manual-callout-table tbody {
     display: table-row-group;
@@ -1867,7 +1867,7 @@ body {
 
   #furo-main-content
     #power-on-off:has(
-      > img[data-web-finished-panel-path="assets/jbp2000b_eu_en/power.png"]
+      > img:is([data-web-finished-panel-path="assets/jbp2000b_eu_en/power.png"], [data-web-finished-panel-path="assets/jbp3600a_eu_en/power_annotated.png"])
     )
     > table.manual-callout-table tr {
     display: table-row;
@@ -1875,12 +1875,12 @@ body {
 
   #furo-main-content
     #power-on-off:has(
-      > img[data-web-finished-panel-path="assets/jbp2000b_eu_en/power.png"]
+      > img:is([data-web-finished-panel-path="assets/jbp2000b_eu_en/power.png"], [data-web-finished-panel-path="assets/jbp3600a_eu_en/power_annotated.png"])
     )
     > table.manual-callout-table .manual-callout-label,
   #furo-main-content
     #power-on-off:has(
-      > img[data-web-finished-panel-path="assets/jbp2000b_eu_en/power.png"]
+      > img:is([data-web-finished-panel-path="assets/jbp2000b_eu_en/power.png"], [data-web-finished-panel-path="assets/jbp3600a_eu_en/power_annotated.png"])
     )
     > table.manual-callout-table .manual-callout-body {
     display: table-cell;
@@ -1888,7 +1888,7 @@ body {
 
   #furo-main-content
     #power-on-off:has(
-      > img[data-web-finished-panel-path="assets/jbp2000b_eu_en/power.png"]
+      > img:is([data-web-finished-panel-path="assets/jbp2000b_eu_en/power.png"], [data-web-finished-panel-path="assets/jbp3600a_eu_en/power_annotated.png"])
     )
     > table.manual-callout-table .manual-callout-label {
     width: 22% !important;
@@ -1897,11 +1897,32 @@ body {
 
   #furo-main-content
     #power-on-off:has(
-      > img[data-web-finished-panel-path="assets/jbp2000b_eu_en/power.png"]
+      > img:is([data-web-finished-panel-path="assets/jbp2000b_eu_en/power.png"], [data-web-finished-panel-path="assets/jbp3600a_eu_en/power_annotated.png"])
     )
     > table.manual-callout-table .manual-callout-body {
     width: 78% !important;
   }
+}
+
+/* Separate annotated views keep their native Web headings outside the artwork. */
+#furo-main-content img[data-web-finished-panel-path="assets/jbp3600a_eu_en/overview_front.png"] {
+  display: block;
+  max-width: 25rem !important;
+  margin: 1rem auto 2rem;
+}
+#furo-main-content img[data-web-finished-panel-path="assets/jbp3600a_eu_en/overview_left.png"] {
+  display: block;
+  max-width: 34rem !important;
+  margin: 1rem auto 2rem;
+}
+
+#furo-main-content img[data-web-finished-panel-path="assets/jbp3600a_eu_en/clearance_clean.png"] {
+  display: block;
+  box-sizing: border-box;
+  border: 2px solid var(--hb-line-soft);
+  border-radius: 0.82rem;
+  padding: 0.5rem;
+  background: var(--hb-paper);
 }
 
 /* Shared top-of-manual navigation for merged multilingual Web documents. */
