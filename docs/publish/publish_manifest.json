@@ -1,6 +1,6 @@
 {
   "schema_version": "auto-manual-web-publish-branch/v2",
-  "built_at": "2026-09-16T09:54:35+00:00",
+  "built_at": "2026-09-16T22:22:35+00:00",
   "targets": [
     {
       "schema_version": "auto-manual-web-publish-target/v2",
@@ -752,6 +752,24 @@
       "language_projection_evidence_path": "evidence/language_projection_receipt.json",
       "language_projection_evidence_sha256": "adbd5e99990e95d1e690502be7551a86aff58791cb2ec6536b0502243c1685ca",
       "legacy_default": false
+    },
+    {
+      "schema_version": "auto-manual-web-publish-target/v2",
+      "model": "JE-5000A",
+      "region": "JP",
+      "lang": "ja",
+      "version": "git-2026-09-16-bce73f25",
+      "built_at": "2026-09-16T22:22:35+00:00",
+      "git_ref": "0df8dc0bfcd2654fa95f4113c716186c079b432e",
+      "route": "JE-5000A/JP/ja/md",
+      "manual": "manual_je5000a_jp.md",
+      "language_scope": "single",
+      "source_kind": "pdf_sideload",
+      "legacy_default": true,
+      "legacy_route": "JE-5000A/JP/md",
+      "legacy_aliases": [
+        "manual_je5000a_jp"
+      ]
     },
     {
       "schema_version": "auto-manual-web-publish-target/v2",
@@ -12561,6 +12579,76 @@
       "path": "sources/web/JE-3600A/EU/fr/md/publish_meta.json",
       "size": 565,
       "sha256": "7d679dd647e03e0887364f7fb86384a763b87d4e5e0dff3836f030bca917cf6c"
+    },
+    {
+      "path": "sources/web/JE-5000A/JP/ja/md/assets/cover.png",
+      "size": 160409,
+      "sha256": "80b96cb2bea2fd658c319eed00f380155463d4750dfc3f0182724faf1906bd46"
+    },
+    {
+      "path": "sources/web/JE-5000A/JP/ja/md/assets/lcd_screen.png",
+      "size": 243491,
+      "sha256": "330621334a5747a8bda3a9493d7cce4efb9fca21c8170613d014c09480f63fec"
+    },
+    {
+      "path": "sources/web/JE-5000A/JP/ja/md/assets/lcd_screen_2.png",
+      "size": 287791,
+      "sha256": "debc39f63cae0222a3e3a96ea45bbcea7ef72bfb80645a4c9a3da6b311c98f95"
+    },
+    {
+      "path": "sources/web/JE-5000A/JP/ja/md/assets/overview_front.png",
+      "size": 178654,
+      "sha256": "911ee3b315eca3f6ad258c05180aa3dda781fc6b7e44147801fcfcd0526e57b6"
+    },
+    {
+      "path": "sources/web/JE-5000A/JP/ja/md/assets/overview_sides.png",
+      "size": 175969,
+      "sha256": "d6678768423c98218886941c866f909786fad5545ab694af0ea012633ae17579"
+    },
+    {
+      "path": "sources/web/JE-5000A/JP/ja/md/assets/safety_1.png",
+      "size": 282949,
+      "sha256": "72f2b2f468120311f22b4b4394a1234baaf86291784d580ecffb58535c5b9d6c"
+    },
+    {
+      "path": "sources/web/JE-5000A/JP/ja/md/assets/safety_2.png",
+      "size": 256518,
+      "sha256": "c8d6268fdaf5b3040c6f8f2f4faefb54e505e476a4caceb0d07485bcbd1fa049"
+    },
+    {
+      "path": "sources/web/JE-5000A/JP/ja/md/assets/troubleshooting.png",
+      "size": 225802,
+      "sha256": "7afed97f2976164aa190fff27b1b28fcc33c49558b21a82d9012c1ba6d6e1a05"
+    },
+    {
+      "path": "sources/web/JE-5000A/JP/ja/md/assets/usage_buttons_1.png",
+      "size": 205779,
+      "sha256": "89b7026f6a33aea55600649998f83286c3169a27a4594d2ecfe2003aa81dbfdf"
+    },
+    {
+      "path": "sources/web/JE-5000A/JP/ja/md/assets/usage_buttons_2.png",
+      "size": 215652,
+      "sha256": "504108bd90f4cdc107f9716d4bdcb9c53f20bfbe2b7e1263c5d810012d6d644c"
+    },
+    {
+      "path": "sources/web/JE-5000A/JP/ja/md/conf.py",
+      "size": 495,
+      "sha256": "2ad6667ee8cbd1ed67b9ed69993255d17a60494dc64c21c5e2b5c8e1c643e409"
+    },
+    {
+      "path": "sources/web/JE-5000A/JP/ja/md/index.md",
+      "size": 108,
+      "sha256": "099319d3b635d1be0d4d8d7af5d913d9a51e8b46ac91fd0cc78f6cb24bb9b7cb"
+    },
+    {
+      "path": "sources/web/JE-5000A/JP/ja/md/manual_je5000a_jp.md",
+      "size": 42513,
+      "sha256": "556380cef01eb72ba2de47c1c76a5fbf3bac4a1db9f0b660ccdba889dc85e356"
+    },
+    {
+      "path": "sources/web/JE-5000A/JP/ja/md/publish_meta.json",
+      "size": 501,
+      "sha256": "6615cc7346adef4ab83821958f57e1460a78b0858598b4b3696a662edf8f19c3"
     },
     {
       "path": "sources/web/JE-500A/EU/en/md/_static/web_manual.css",
@@ -24433,6 +24521,76 @@
       "sha256": "0b97ff97464a37351d5e27a152c683130cf30d3542269da059c918a8ead89a03"
     },
     {
+      "path": "web/JE-5000A/JP/ja/md/assets/cover.png",
+      "size": 160409,
+      "sha256": "80b96cb2bea2fd658c319eed00f380155463d4750dfc3f0182724faf1906bd46"
+    },
+    {
+      "path": "web/JE-5000A/JP/ja/md/assets/lcd_screen.png",
+      "size": 243491,
+      "sha256": "330621334a5747a8bda3a9493d7cce4efb9fca21c8170613d014c09480f63fec"
+    },
+    {
+      "path": "web/JE-5000A/JP/ja/md/assets/lcd_screen_2.png",
+      "size": 287791,
+      "sha256": "debc39f63cae0222a3e3a96ea45bbcea7ef72bfb80645a4c9a3da6b311c98f95"
+    },
+    {
+      "path": "web/JE-5000A/JP/ja/md/assets/overview_front.png",
+      "size": 178654,
+      "sha256": "911ee3b315eca3f6ad258c05180aa3dda781fc6b7e44147801fcfcd0526e57b6"
+    },
+    {
+      "path": "web/JE-5000A/JP/ja/md/assets/overview_sides.png",
+      "size": 175969,
+      "sha256": "d6678768423c98218886941c866f909786fad5545ab694af0ea012633ae17579"
+    },
+    {
+      "path": "web/JE-5000A/JP/ja/md/assets/safety_1.png",
+      "size": 282949,
+      "sha256": "72f2b2f468120311f22b4b4394a1234baaf86291784d580ecffb58535c5b9d6c"
+    },
+    {
+      "path": "web/JE-5000A/JP/ja/md/assets/safety_2.png",
+      "size": 256518,
+      "sha256": "c8d6268fdaf5b3040c6f8f2f4faefb54e505e476a4caceb0d07485bcbd1fa049"
+    },
+    {
+      "path": "web/JE-5000A/JP/ja/md/assets/troubleshooting.png",
+      "size": 225802,
+      "sha256": "7afed97f2976164aa190fff27b1b28fcc33c49558b21a82d9012c1ba6d6e1a05"
+    },
+    {
+      "path": "web/JE-5000A/JP/ja/md/assets/usage_buttons_1.png",
+      "size": 205779,
+      "sha256": "89b7026f6a33aea55600649998f83286c3169a27a4594d2ecfe2003aa81dbfdf"
+    },
+    {
+      "path": "web/JE-5000A/JP/ja/md/assets/usage_buttons_2.png",
+      "size": 215652,
+      "sha256": "504108bd90f4cdc107f9716d4bdcb9c53f20bfbe2b7e1263c5d810012d6d644c"
+    },
+    {
+      "path": "web/JE-5000A/JP/ja/md/index.md",
+      "size": 108,
+      "sha256": "099319d3b635d1be0d4d8d7af5d913d9a51e8b46ac91fd0cc78f6cb24bb9b7cb"
+    },
+    {
+      "path": "web/JE-5000A/JP/ja/md/manual_je5000a_jp.md",
+      "size": 42513,
+      "sha256": "556380cef01eb72ba2de47c1c76a5fbf3bac4a1db9f0b660ccdba889dc85e356"
+    },
+    {
+      "path": "web/JE-5000A/JP/md/index.md",
+      "size": 255,
+      "sha256": "cfcfafeb07eb6f551ed492d3744965506b9b6cccde08555e9662855df527ce68"
+    },
+    {
+      "path": "web/JE-5000A/JP/md/manual_je5000a_jp.md",
+      "size": 255,
+      "sha256": "cfcfafeb07eb6f551ed492d3744965506b9b6cccde08555e9662855df527ce68"
+    },
+    {
       "path": "web/JE-500A/EU/en/md/_static/web_manual.css",
       "size": 59379,
       "sha256": "721d4c8b46f49188c65454e3d048e44cc4eb6e8fe9dc3cd970b7247f456b5fb7"
@@ -35153,6 +35311,56 @@
       "sha256": "ff9fba0a2b117b5061f2c698e7ec60759aadcbb0a4eb60c8cdf15d2b7ef324ea"
     },
     {
+      "path": "web/_static/manual-assets/JE-5000A/JP/ja/md/assets/cover.png",
+      "size": 160409,
+      "sha256": "80b96cb2bea2fd658c319eed00f380155463d4750dfc3f0182724faf1906bd46"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-5000A/JP/ja/md/assets/lcd_screen.png",
+      "size": 243491,
+      "sha256": "330621334a5747a8bda3a9493d7cce4efb9fca21c8170613d014c09480f63fec"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-5000A/JP/ja/md/assets/lcd_screen_2.png",
+      "size": 287791,
+      "sha256": "debc39f63cae0222a3e3a96ea45bbcea7ef72bfb80645a4c9a3da6b311c98f95"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-5000A/JP/ja/md/assets/overview_front.png",
+      "size": 178654,
+      "sha256": "911ee3b315eca3f6ad258c05180aa3dda781fc6b7e44147801fcfcd0526e57b6"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-5000A/JP/ja/md/assets/overview_sides.png",
+      "size": 175969,
+      "sha256": "d6678768423c98218886941c866f909786fad5545ab694af0ea012633ae17579"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-5000A/JP/ja/md/assets/safety_1.png",
+      "size": 282949,
+      "sha256": "72f2b2f468120311f22b4b4394a1234baaf86291784d580ecffb58535c5b9d6c"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-5000A/JP/ja/md/assets/safety_2.png",
+      "size": 256518,
+      "sha256": "c8d6268fdaf5b3040c6f8f2f4faefb54e505e476a4caceb0d07485bcbd1fa049"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-5000A/JP/ja/md/assets/troubleshooting.png",
+      "size": 225802,
+      "sha256": "7afed97f2976164aa190fff27b1b28fcc33c49558b21a82d9012c1ba6d6e1a05"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-5000A/JP/ja/md/assets/usage_buttons_1.png",
+      "size": 205779,
+      "sha256": "89b7026f6a33aea55600649998f83286c3169a27a4594d2ecfe2003aa81dbfdf"
+    },
+    {
+      "path": "web/_static/manual-assets/JE-5000A/JP/ja/md/assets/usage_buttons_2.png",
+      "size": 215652,
+      "sha256": "504108bd90f4cdc107f9716d4bdcb9c53f20bfbe2b7e1263c5d810012d6d644c"
+    },
+    {
       "path": "web/_static/manual-assets/JE-500A/EU/en/md/assets/ir/122991a64cd306c82e70b0279024fa0bcad517e9fe0bfd8a30d6a81f0c46de99/lcd_map.png",
       "size": 74646,
       "sha256": "122991a64cd306c82e70b0279024fa0bcad517e9fe0bfd8a30d6a81f0c46de99"
@@ -35469,8 +35677,8 @@
     },
     {
       "path": "web/index.md",
-      "size": 5750,
-      "sha256": "9e574a75e9a8531a57ddb67c9ae1e316083311b2867815be91eb86e0dd7d022e"
+      "size": 5871,
+      "sha256": "3bea7f4b31193374538e4c111e3bd4b2611634220df75182528d82a28650f1ab"
     },
     {
       "path": "web/manual_jaacwhe100eua1_eu_en.md",
@@ -35706,6 +35914,11 @@
       "path": "web/manual_je3600a_eu_fr.md",
       "size": 341,
       "sha256": "a13d1a9bfcf11cb4529ad500e4a93714bb73e558d866cd5857a65d81a62e2e22"
+    },
+    {
+      "path": "web/manual_je5000a_jp.md",
+      "size": 340,
+      "sha256": "81686c0e0c0ecaedde7434f1aa6b1dc3c8aa34a4e7d51bd85d6b209f0b9d329c"
     },
     {
       "path": "web/manual_je500a_eu_en.md",
