@@ -51,11 +51,11 @@ During the lifecycle of energy storage products, a certain degree of capacity an
 
 
 
-<figure aria-label="WHAT'S IN THE BOX" class="hb-inbox-composition" data-card-count="3" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="three-card-responsive"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Power station image placeholder." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je1000h_eu_en/inbox_unit.png" data-web-finished-panel-sha256="3feaa38f0be1906ad7c304e8cbe259f533650f0d4a005827334156798fabd4b1" src="../../../../_static/manual-assets/JE-1000H/EU/en/md/assets/ir/3feaa38f0be1906ad7c304e8cbe259f533650f0d4a005827334156798fabd4b1/inbox_unit.png"/><div class="hb-inbox-label">
+<figure aria-label="WHAT'S IN THE BOX" class="hb-inbox-composition" data-card-count="3" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="three-card-responsive"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Power station image placeholder." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je1000h_eu_en/inbox_unit.png" data-web-finished-panel-sha256="cbb57cbb7dcdec53fda5acdb25fe2b7f80adb3957c5bde2e37a525f78c8645be" src="../../../../_static/manual-assets/JE-1000H/EU/en/md/assets/ir/cbb57cbb7dcdec53fda5acdb25fe2b7f80adb3957c5bde2e37a525f78c8645be/inbox_unit.png"/><div class="hb-inbox-label">
 <p><strong>Jackery Explorer 1000 Plus</strong></p>
-</div></li><li class="hb-inbox-card" data-item-number="2"><img alt="AC charging cable image placeholder." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je1000h_eu_en/inbox_cable.png" data-web-finished-panel-sha256="12cb6f3e1b9cd8aefa23be1e914b5afad27b9067f4529baacf48a5b840f4138c" src="../../../../_static/manual-assets/JE-1000H/EU/en/md/assets/ir/12cb6f3e1b9cd8aefa23be1e914b5afad27b9067f4529baacf48a5b840f4138c/inbox_cable.png"/><div class="hb-inbox-label">
+</div></li><li class="hb-inbox-card" data-item-number="2"><img alt="AC charging cable image placeholder." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je1000h_eu_en/inbox_cable.png" data-web-finished-panel-sha256="2a75ef72ab34cda8853810c539393482dc58dfa7765b0688b235040e370f516c" src="../../../../_static/manual-assets/JE-1000H/EU/en/md/assets/ir/2a75ef72ab34cda8853810c539393482dc58dfa7765b0688b235040e370f516c/inbox_cable.png"/><div class="hb-inbox-label">
 <p><strong>AC Charging Cable</strong></p>
-</div></li><li class="hb-inbox-card" data-item-number="3"><img alt="User manual image placeholder." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je1000h_eu_en/inbox_documents.png" data-web-finished-panel-sha256="fabb53c578d2fa84e895afe88b15c126815e8a530644931256e72122fe7c354d" src="../../../../_static/manual-assets/JE-1000H/EU/en/md/assets/ir/fabb53c578d2fa84e895afe88b15c126815e8a530644931256e72122fe7c354d/inbox_documents.png"/><div class="hb-inbox-label">
+</div></li><li class="hb-inbox-card" data-item-number="3"><img alt="User manual image placeholder." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je1000h_eu_en/inbox_documents.png" data-web-finished-panel-sha256="35d6d8550dd9fc38de2f041440229c42fafd16dc2a2924f8e12fd319b10644a7" src="../../../../_static/manual-assets/JE-1000H/EU/en/md/assets/ir/35d6d8550dd9fc38de2f041440229c42fafd16dc2a2924f8e12fd319b10644a7/inbox_documents.png"/><div class="hb-inbox-label">
 <p>User Manual</p>
 </div></li></ol><div class="hb-inbox-tip" role="note"><div class="hb-inbox-tip-label"><p><strong>TIP</strong></p></div><div class="hb-inbox-tip-body"><p>The car charging cable is not included but is available for purchase separately on our website.
 For assistance, please contact Jackery customer service.</p></div></div></figure>
@@ -66,15 +66,15 @@ For assistance, please contact Jackery customer service.</p></div></div></figure
 
 ## FRONT VIEW
 
-<img src="../../../../_static/manual-assets/JE-1000H/EU/en/md/assets/ir/56719582b38d07315aeaadedb43420450ea0dd428f7b87a7346a2fecb7cf6b3b/overview_front.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_en/overview_front.png" data-web-finished-panel-sha256="56719582b38d07315aeaadedb43420450ea0dd428f7b87a7346a2fecb7cf6b3b" alt="Power Button LCD DC 12 V Port 12V⎓10A Max LED Light Button DC / USB Power Button LED Light USB-C 30 W Output 30W Max, 5V⎓3A, 9V⎓3A, 12V⎓2.5A, 15V⎓2A, 20V⎓1.5A AC1/AC2 Power Button USB-C 140W Output 140W Max, 5V⎓3A, 9V⎓3A, 12V⎓3A, 15V⎓3A, 20V⎓5A, 28V⎓5A USB-A 18 W Output 18W Max, 5-6V⎓3A, 6-9V⎓2A, 9-12V⎓1.5A AC Output 230V~50Hz, 7.83A, 1800W Rated；Total Output 1800W Rated, 3600W Surge Peak" />
+<img src="../../../../_static/manual-assets/JE-1000H/EU/en/md/assets/ir/1a62b777369b5f615ca05592553f2388d131ad60a0456cb3717bdc195cc2842c/overview_front.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_en/overview_front.png" data-web-finished-panel-sha256="1a62b777369b5f615ca05592553f2388d131ad60a0456cb3717bdc195cc2842c" alt="Power Button LCD DC 12 V Port 12V⎓10A Max LED Light Button DC / USB Power Button LED Light USB-C 30 W Output 30W Max, 5V⎓3A, 9V⎓3A, 12V⎓2.5A, 15V⎓2A, 20V⎓1.5A AC1/AC2 Power Button USB-C 140W Output 140W Max, 5V⎓3A, 9V⎓3A, 12V⎓3A, 15V⎓3A, 20V⎓5A, 28V⎓5A USB-A 18 W Output 18W Max, 5-6V⎓3A, 6-9V⎓2A, 9-12V⎓1.5A AC Output 230V~50Hz, 7.83A, 1800W Rated；Total Output 1800W Rated, 3600W Surge Peak" />
 
 ## LEFT AND RIGHT SIDE VIEW
 
-<img src="../../../../_static/manual-assets/JE-1000H/EU/en/md/assets/ir/dbc969c18fdee845ceacc0e3d017e625ece67e9ec1bd2d76ed8d2abdc243b5d8/overview_side.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_en/overview_side.png" data-web-finished-panel-sha256="dbc969c18fdee845ceacc0e3d017e625ece67e9ec1bd2d76ed8d2abdc243b5d8" alt="Handle AC Input 220V-240V~50Hz, 10A Max DC Input (2 × DC8020 Ports) PV: 16V-60V⎓12A, Double to 21A Max/400W Max Car: 11V-16V⎓8A Max, Double to 8A Max" />
+<img src="../../../../_static/manual-assets/JE-1000H/EU/en/md/assets/ir/cafbd8797609f332893b2bfcca5727399b69ba4bd21745085edc303ffb8a16ca/overview_side.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_en/overview_side.png" data-web-finished-panel-sha256="cafbd8797609f332893b2bfcca5727399b69ba4bd21745085edc303ffb8a16ca" alt="Handle AC Input 220V-240V~50Hz, 10A Max DC Input (2 × DC8020 Ports) PV: 16V-60V⎓12A, Double to 21A Max/400W Max Car: 11V-16V⎓8A Max, Double to 8A Max" />
 
 # LCD DISPLAY
 
-<img src="../../../../_static/manual-assets/JE-1000H/EU/en/md/assets/ir/7db529f2da0d6e6669bc164b9d7b49b0f761ebbbcaf8682d2ffdf087cf189c29/lcd_map.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_en/lcd_map.png" data-web-finished-panel-sha256="7db529f2da0d6e6669bc164b9d7b49b0f761ebbbcaf8682d2ffdf087cf189c29" alt="LCD DISPLAY" />
+<img src="../../../../_static/manual-assets/JE-1000H/EU/en/md/assets/ir/e12e9ccf9edba3779a7a28c65c72271d67eb21aa0dcb91f37dbf0da64de9aa05/lcd_map.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_en/lcd_map.png" data-web-finished-panel-sha256="e12e9ccf9edba3779a7a28c65c72271d67eb21aa0dcb91f37dbf0da64de9aa05" alt="LCD DISPLAY" />
 
 <table class="longtable lcd-text-only">
 <colgroup>
@@ -276,15 +276,15 @@ Enable/disable this feature in the Jackery App. The setting is not retained when
 
 ## POWER ON/OFF
 
-<img src="../../../../_static/manual-assets/JE-1000H/EU/en/md/assets/ir/b588b6586986f29615f6141292e41b9c7b5705e47cb58c6079202718c41c55df/operation_power.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_en/operation_power.png" data-web-finished-panel-sha256="b588b6586986f29615f6141292e41b9c7b5705e47cb58c6079202718c41c55df" alt="On: Press once. Off: Press and hold for 3s.；Default standby time: 2 hours. The product will automatically shut down after 2 hours of inactivity, with no charging or discharging. *The standby time can be set in the Jackery App. When Energy Saving Mode is enabled, the product will automatically shut down after 12 hours if the AC 1/AC 2 power button or DC/USB power button is ON, but the product is neither charging nor discharging." />
+<img src="../../../../_static/manual-assets/JE-1000H/EU/en/md/assets/ir/bacb69c5df30da46aa8ca8650fc723a8ffd60ef86f419ba2ac36e6a589dbf7e8/operation_power.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_en/operation_power.png" data-web-finished-panel-sha256="bacb69c5df30da46aa8ca8650fc723a8ffd60ef86f419ba2ac36e6a589dbf7e8" alt="On: Press once. Off: Press and hold for 3s.；Default standby time: 2 hours. The product will automatically shut down after 2 hours of inactivity, with no charging or discharging. *The standby time can be set in the Jackery App. When Energy Saving Mode is enabled, the product will automatically shut down after 12 hours if the AC 1/AC 2 power button or DC/USB power button is ON, but the product is neither charging nor discharging." />
 
 ## AC OUTPUT ON/OFF
 
-<img src="../../../../_static/manual-assets/JE-1000H/EU/en/md/assets/ir/24e0dc38a1e34f6a2774f674608fefe0e8aef940acc93b411026747e7d5520a5/operation_ac.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_en/operation_ac.png" data-web-finished-panel-sha256="24e0dc38a1e34f6a2774f674608fefe0e8aef940acc93b411026747e7d5520a5" alt="Prerequisite : The product is powered on.；On Press once Off Press once；AC1 and AC2 power buttons control two separate pairs of AC outlets. Pressing each button turns its corresponding AC outlet pair on or off." />
+<img src="../../../../_static/manual-assets/JE-1000H/EU/en/md/assets/ir/f882fd045951d6c9fff40523c8970b6738bc951b0f69f7d6e9f60c14ae85c739/operation_ac.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_en/operation_ac.png" data-web-finished-panel-sha256="f882fd045951d6c9fff40523c8970b6738bc951b0f69f7d6e9f60c14ae85c739" alt="Prerequisite : The product is powered on.；On Press once Off Press once；AC1 and AC2 power buttons control two separate pairs of AC outlets. Pressing each button turns its corresponding AC outlet pair on or off." />
 
 ## DC 12V/USB OUTPUT ON/OFF
 
-<img src="../../../../_static/manual-assets/JE-1000H/EU/en/md/assets/ir/e29bb5a9493a02437c6ecfac6654d63518236e00541d653f2f9c458740cd9379/operation_dc.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_en/operation_dc.png" data-web-finished-panel-sha256="e29bb5a9493a02437c6ecfac6654d63518236e00541d653f2f9c458740cd9379" alt="Prerequisite : The product is powered on.；On Press once Off Press once" />
+<img src="../../../../_static/manual-assets/JE-1000H/EU/en/md/assets/ir/81ce7c866cc9f2241093199286cc6056c701b9a737998f62089d4c8deb6a119b/operation_dc.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_en/operation_dc.png" data-web-finished-panel-sha256="81ce7c866cc9f2241093199286cc6056c701b9a737998f62089d4c8deb6a119b" alt="Prerequisite : The product is powered on.；On Press once Off Press once" />
 
 
 
@@ -314,7 +314,7 @@ The product can charge your car battery using the Jackery 12V automobile battery
 
 To prevent unnecessary battery consumption from forgetting to turn off the output, the product enables Energy Saving Mode by default. When the AC 1/AC 2 or DC/USB output is turned on, the Energy Saving Mode icon will be displayed on the LCD screen. If no device is connected or the connected device\'s power consumption is below a certain threshold (25 W AC output or 2 W DC/USB output) for 12 hours, the product automatically turns off the outputs. Please set the Energy Saving Mode duration in the Jackery App.
 
-<img src="../../../../_static/manual-assets/JE-1000H/EU/en/md/assets/ir/7df27385f9a5cb6fc9632fb10ff09e3a700ea6d666c007db2ee904c23b5012e4/operation_energy.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_en/operation_energy.png" data-web-finished-panel-sha256="7df27385f9a5cb6fc9632fb10ff09e3a700ea6d666c007db2ee904c23b5012e4" alt="To disable the energy saving mode, press and hold both the AC 1 power button and the POWER button for more than 3 seconds. The product will not automatically turn off the AC 1/AC 2 or DC/USB output.；Press and hold both buttons for more than 3 seconds." />
+<img src="../../../../_static/manual-assets/JE-1000H/EU/en/md/assets/ir/3fa9ce1b0fe5b7dbbebe2ddf58b5602fe602baf82884c68cec460619ca99c806/operation_energy.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_en/operation_energy.png" data-web-finished-panel-sha256="3fa9ce1b0fe5b7dbbebe2ddf58b5602fe602baf82884c68cec460619ca99c806" alt="To disable the energy saving mode, press and hold both the AC 1 power button and the POWER button for more than 3 seconds. The product will not automatically turn off the AC 1/AC 2 or DC/USB output.；Press and hold both buttons for more than 3 seconds." />
 
 
 
@@ -324,7 +324,7 @@ To prevent unnecessary battery consumption from forgetting to turn off the outpu
 
 ## LED LIGHT ON/OFF
 
-<img src="../../../../_static/manual-assets/JE-1000H/EU/en/md/assets/ir/2f5dab488e9cbe54ac6be58e0d0e13ada384f965bee0abe2a48f78ed65fd20c8/operation_led.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_en/operation_led.png" data-web-finished-panel-sha256="2f5dab488e9cbe54ac6be58e0d0e13ada384f965bee0abe2a48f78ed65fd20c8" alt="The LED light has two modes: Light mode and SOS mode. In any mode, press and hold the LED light button to turn off the light.；Press the LED Light button once to turn on the light. Press it again to switch to SOS Mode. Press it a third time to turn off the light." />
+<img src="../../../../_static/manual-assets/JE-1000H/EU/en/md/assets/ir/79de2f1eb5f7518728a64d7e4f0527446967084b30665155c8721723421094f0/operation_led.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_en/operation_led.png" data-web-finished-panel-sha256="79de2f1eb5f7518728a64d7e4f0527446967084b30665155c8721723421094f0" alt="The LED light has two modes: Light mode and SOS mode. In any mode, press and hold the LED light button to turn off the light.；Press the LED Light button once to turn on the light. Press it again to switch to SOS Mode. Press it a third time to turn off the light." />
 
 ## AC and DC Output Resume Function
 
@@ -361,7 +361,7 @@ This function memorizes the output status and automatically resumes AC and DC ou
 <table style="width:100%; border-collapse:collapse; margin:0.75rem 0 0.5rem 0;">
 <tbody>
 <tr>
-<td rowspan="6" style="text-align: center; width: 24%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top;"><img src="../../../../_static/manual-assets/JE-1000H/EU/en/md/assets/ir/6acfbae768cd11ba0b6b6bc4a34de79f05b42f0845caa479f842b071dd3019ef/operation_lcd.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_en/operation_lcd.png" data-web-finished-panel-sha256="6acfbae768cd11ba0b6b6bc4a34de79f05b42f0845caa479f842b071dd3019ef" alt="LCD display mode placeholder." /></td>
+<td rowspan="6" style="text-align: center; width: 24%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top;"><img src="../../../../_static/manual-assets/JE-1000H/EU/en/md/assets/ir/ff82e9c72b570c29c23597624973cb01de0f2602bf53244c73069892df00a2e6/operation_lcd.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_en/operation_lcd.png" data-web-finished-panel-sha256="ff82e9c72b570c29c23597624973cb01de0f2602bf53244c73069892df00a2e6" alt="LCD display mode placeholder." /></td>
 <td rowspan="3" style="width: 18%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Shortly On</td>
 <td style="width: 12%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Turn on</td>
 <td style="width: 46%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Press the POWER button or when the product is charging.</td>
@@ -405,7 +405,7 @@ You can also set the screen display mode in the Jackery App.
 
 Connect the product to a wall outlet with the AC charging cable, then press the AC1/AC2 power button and power your appliances at the same time.
 
-<img src="../../../../_static/manual-assets/JE-1000H/EU/en/md/assets/ir/638a8ee9e9b951e6325c01d36b9b380fb0c0c0da56fbe977b057e49142c3d114/ups.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_en/ups.png" data-web-finished-panel-sha256="638a8ee9e9b951e6325c01d36b9b380fb0c0c0da56fbe977b057e49142c3d114" alt="UPS connection diagram placeholder." />
+<img src="../../../../_static/manual-assets/JE-1000H/EU/en/md/assets/ir/8d04872fe2448278c83cc7369e0be3c351e5872220797b681f520f462d1d06ac/ups.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_en/ups.png" data-web-finished-panel-sha256="8d04872fe2448278c83cc7369e0be3c351e5872220797b681f520f462d1d06ac" alt="UPS connection diagram placeholder." />
 
 An uninterruptible power supply (UPS) is a type of continual power system that provides automated backup electric power to a load when the mains grid power fails.
 
@@ -430,7 +430,7 @@ the actual output power is lower than the rated output power in this mode but re
 
 This product can support up to 5 battery packs to meet the need for large power capacity. For details on how to use it, please refer to the *Jackery Battery Pack 2000 User Manual*.
 
-<img src="../../../../_static/manual-assets/JE-1000H/EU/en/md/assets/ir/9caac72ff94d2f04310efee34e7897b2d490dfbefe56acb16847ca168b618056/battery_pack.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_en/battery_pack.png" data-web-finished-panel-sha256="9caac72ff94d2f04310efee34e7897b2d490dfbefe56acb16847ca168b618056" alt="Jackery Explorer 1000 Plus connected to Battery Pack 2000 units with 200 mm clearance." />
+<img src="../../../../_static/manual-assets/JE-1000H/EU/en/md/assets/ir/9b5b124765eec84f47fb619b08687ba7e1278b1e1a56458b697d56c8b855c982/battery_pack.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_en/battery_pack.png" data-web-finished-panel-sha256="9b5b124765eec84f47fb619b08687ba7e1278b1e1a56458b697d56c8b855c982" alt="Jackery Explorer 1000 Plus connected to Battery Pack 2000 units with 200 mm clearance." />
 
 
 
@@ -467,7 +467,7 @@ This product can support up to 5 battery packs to meet the need for large power 
 
 ## CHARGING VIA AC WALL OUTLET
 
-<img src="../../../../_static/manual-assets/JE-1000H/EU/en/md/assets/ir/b19d42044757c96f1e684490e92abd7a057e8f58a5c71e40b2ab65cb189fa237/charging_ac.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_en/charging_ac.png" data-web-finished-panel-sha256="b19d42044757c96f1e684490e92abd7a057e8f58a5c71e40b2ab65cb189fa237" alt="Connect the AC charging cable to the AC input port of the product and a wall outlet." />
+<img src="../../../../_static/manual-assets/JE-1000H/EU/en/md/assets/ir/04238d7a8bb3f61aae17a225747dc8ba43551e15d774b8afa69ff26f811b8688/charging_ac.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_en/charging_ac.png" data-web-finished-panel-sha256="04238d7a8bb3f61aae17a225747dc8ba43551e15d774b8afa69ff26f811b8688" alt="Connect the AC charging cable to the AC input port of the product and a wall outlet." />
 
 
 
@@ -485,11 +485,11 @@ Under this mode, you can rapidly power up the portable power station using the A
 
 Jackery Explorer 1000 Plus has two DC8020 input ports and is compatible with the Jackery solar panels.
 
-<img src="../../../../_static/manual-assets/JE-1000H/EU/en/md/assets/ir/139c61822de1bc7bb3bd567e641698131ba326e41ac5b9000b0f398f3806557d/charging_solar.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_en/charging_solar.png" data-web-finished-panel-sha256="139c61822de1bc7bb3bd567e641698131ba326e41ac5b9000b0f398f3806557d" alt="Solar charging connection diagram placeholder 1." />
+<img src="../../../../_static/manual-assets/JE-1000H/EU/en/md/assets/ir/de6ebb3777501784a81de4c84db93eb8310379e13398992646766ea9c3c75231/charging_solar.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_en/charging_solar.png" data-web-finished-panel-sha256="de6ebb3777501784a81de4c84db93eb8310379e13398992646766ea9c3c75231" alt="Solar charging connection diagram placeholder 1." />
 
 If one DC8020 input port needs to connect two solar panels simultaneously, please refer to the figure below for charging through the solar panel connector (sold separately, not included as standard).
 
-<img src="../../../../_static/manual-assets/JE-1000H/EU/en/md/assets/ir/5bf687729ceaabae2249719984667676a2c428735fe6bea5e37233e9c99015de/charging_solar_adapter.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_en/charging_solar_adapter.png" data-web-finished-panel-sha256="5bf687729ceaabae2249719984667676a2c428735fe6bea5e37233e9c99015de" alt="Solar charging connection diagram placeholder 2." />
+<img src="../../../../_static/manual-assets/JE-1000H/EU/en/md/assets/ir/a7fca91770a3371e7ac62e95d1a5d30c6ebfb6d3d5a246d331c2dd49ca6da972/charging_solar_adapter.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_en/charging_solar_adapter.png" data-web-finished-panel-sha256="a7fca91770a3371e7ac62e95d1a5d30c6ebfb6d3d5a246d331c2dd49ca6da972" alt="Solar charging connection diagram placeholder 2." />
 
 
 
@@ -514,7 +514,7 @@ It is recommended to use the Jackery solar panel to charge the product. Ensure t
 
 This product can be charged using a 12V car charger. Ensure that the car charger and the 12V car power outlet (car cigarette lighter) provide a good connection.
 
-<img src="../../../../_static/manual-assets/JE-1000H/EU/en/md/assets/ir/39ca23e7236727c81ef3065fd7f639dbcad39091d1e8d6c723709e9c0ba0dc2e/charging_car.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_en/charging_car.png" data-web-finished-panel-sha256="39ca23e7236727c81ef3065fd7f639dbcad39091d1e8d6c723709e9c0ba0dc2e" alt="Vehicle *The car charging cable is sold separately." />
+<img src="../../../../_static/manual-assets/JE-1000H/EU/en/md/assets/ir/10eacfb9504b987c581ce68dfc01387f0864fc2b4ae456c3a9b9d2821d7b6f30/charging_car.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_en/charging_car.png" data-web-finished-panel-sha256="10eacfb9504b987c581ce68dfc01387f0864fc2b4ae456c3a9b9d2821d7b6f30" alt="Vehicle *The car charging cable is sold separately." />
 
 
 
@@ -754,7 +754,7 @@ The sales receipt from the first consumer purchaser, or other reasonable documen
 
 ## 1. Download the App and log in
 
-<img src="../../../../_static/manual-assets/JE-1000H/EU/en/md/assets/ir/fcbd24d9755519e191fcfb716cefcb294821566540275b791a8aa451e6a5dcc7/app_download.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_en/app_download.png" data-web-finished-panel-sha256="fcbd24d9755519e191fcfb716cefcb294821566540275b791a8aa451e6a5dcc7" alt="Search for &quot;Jackery&quot; in Google Play or App Store to install the App. After that, you can register and log in. Alternatively, scan the QR code below to download and install the App." />
+<img src="../../../../_static/manual-assets/JE-1000H/EU/en/md/assets/ir/845df881529b9f95b0d43c4b48ec76c7adbb4ad9ddadac4fc63ff56e57338fd4/app_download.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_en/app_download.png" data-web-finished-panel-sha256="845df881529b9f95b0d43c4b48ec76c7adbb4ad9ddadac4fc63ff56e57338fd4" alt="Search for &quot;Jackery&quot; in Google Play or App Store to install the App. After that, you can register and log in. Alternatively, scan the QR code below to download and install the App." />
 
 ## 2. Add device
 
@@ -762,7 +762,7 @@ The sales receipt from the first consumer purchaser, or other reasonable documen
 
 2.2 Press the power button on the device to turn on, the Wi-Fi and Bluetooth icons on the device flash to indicate that the device has entered the network configuration mode, tap the \"**Icon Flashed**\" button, and allow the App to connect to nearby devices and open Bluetooth permissions.
 
-<img src="../../../../_static/manual-assets/JE-1000H/EU/en/md/assets/ir/8fe49742d4139dea0a90d60693f77e6b4d6985e9df96c9e76c655bc4561c61c5/app_control_panel.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-add-device" data-web-finished-panel-path="assets/je1000h_eu_en/app_control_panel.png" data-web-finished-panel-sha256="8fe49742d4139dea0a90d60693f77e6b4d6985e9df96c9e76c655bc4561c61c5" alt="Power Button AC 2 power button DC/USB power button AC 1 power button" />
+<img src="../../../../_static/manual-assets/JE-1000H/EU/en/md/assets/ir/1d1ef5ed408f1ca462099ccbfac4e9d0ffe297b45e8cbc9931a241e0d951acf1/app_control_panel.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-add-device" data-web-finished-panel-path="assets/je1000h_eu_en/app_control_panel.png" data-web-finished-panel-sha256="1d1ef5ed408f1ca462099ccbfac4e9d0ffe297b45e8cbc9931a241e0d951acf1" alt="Power Button AC 2 power button DC/USB power button AC 1 power button" />
 
 2.3 After tapping the searched device icon, the App automatically connects the device via Bluetooth.
 
@@ -790,7 +790,7 @@ The sales receipt from the first consumer purchaser, or other reasonable documen
 
 After the device is successfully added to the App, the Wi-Fi icon on the device will always be on.
 
-<img src="../../../../_static/manual-assets/JE-1000H/EU/en/md/assets/ir/ce4b7f91c9cab96df5c7d41e4e4db9fa3f19fcdfbed734faa35a36a1cba32603/app_connect_result.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_en/app_connect_result.png" data-web-finished-panel-sha256="ce4b7f91c9cab96df5c7d41e4e4db9fa3f19fcdfbed734faa35a36a1cba32603" alt="App setup result screen placeholder." />
+<img src="../../../../_static/manual-assets/JE-1000H/EU/en/md/assets/ir/445080eb46857ae1d88bb4112c932b4122ff395c03eece92cc3e28e51588d763/app_connect_result.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_en/app_connect_result.png" data-web-finished-panel-sha256="445080eb46857ae1d88bb4112c932b4122ff395c03eece92cc3e28e51588d763" alt="App setup result screen placeholder." />
 
 The above screenshots are for reference only.
 
