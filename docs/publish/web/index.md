@@ -49,6 +49,7 @@
 - [JE-3600A / EU / fr - Jackery Explorer 3600 Plus Manuel d'utilisation](JE-3600A/EU/fr/md/manual_je3600a_eu_fr.md)
 - [JE-5000A / JP / ja - Jackery ポータブル電源 5000 Plus 取扱説明書](JE-5000A/JP/ja/md/manual_je5000a_jp.md)
 - [JE-500A / EU / en - Jackery Explorer 500 User Manual](JE-500A/EU/en/md/manual_je500a_eu_en.md)
+- [JHP-3600A / US / en - Jackery HomePower 3600 Plus User Manual](JHP-3600A/US/en/md/manual_jhp3600a_us_en.md)
 - [JS-100F / EU / en - Jackery SolarSaga 100 User Manual](JS-100F/EU/en/md/manual_js100f_eu_en.md)
 - [JS-100I / EU / en - Jackery SolarSaga 100 Air User Manual](JS-100I/EU/en/md/manual_js100i_eu_en.md)
 - [JS-200E / EU / en - Jackery SolarSaga 200 User Manual](JS-200E/EU/en/md/manual_js200e_eu_en.md)
