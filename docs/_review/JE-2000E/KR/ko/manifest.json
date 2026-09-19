@@ -1,0 +1,53 @@
+{
+  "generated_at": "2026-09-05T07:57:08.926302+00:00",
+  "git_sha": "5698539abcd9ae69688064ad3eeba0078b854215",
+  "model": "JE-2000E",
+  "region": "KR",
+  "lang": "ko",
+  "runtime_bundle_dir": "docs/_build/JE-2000E/KR/ko/rst",
+  "review_dir": "docs/_review/JE-2000E/KR/ko",
+  "index_path": "docs/_review/JE-2000E/KR/ko/index.rst",
+  "page_files": [
+    "docs/_review/JE-2000E/KR/ko/page/00_preface.rst",
+    "docs/_review/JE-2000E/KR/ko/page/01_user_maintenance_instructions.rst",
+    "docs/_review/JE-2000E/KR/ko/page/02_whats_in_the_box.rst",
+    "docs/_review/JE-2000E/KR/ko/page/03_product_overview_placeholder.rst",
+    "docs/_review/JE-2000E/KR/ko/page/05_operation_guide_placeholder.rst",
+    "docs/_review/JE-2000E/KR/ko/page/06_ups_mode.rst",
+    "docs/_review/JE-2000E/KR/ko/page/07_extra_battery.rst",
+    "docs/_review/JE-2000E/KR/ko/page/08_charging_methods.rst",
+    "docs/_review/JE-2000E/KR/ko/page/09_storage_and_maintenance.rst",
+    "docs/_review/JE-2000E/KR/ko/page/11_warranty.rst",
+    "docs/_review/JE-2000E/KR/ko/page/12_app_setup_placeholder.rst",
+    "docs/_review/JE-2000E/KR/ko/page/charging.rst",
+    "docs/_review/JE-2000E/KR/ko/page/lcd_icons_ko.rst",
+    "docs/_review/JE-2000E/KR/ko/page/safety_ko.rst",
+    "docs/_review/JE-2000E/KR/ko/page/spec_ko.rst",
+    "docs/_review/JE-2000E/KR/ko/page/symbols_ko.rst",
+    "docs/_review/JE-2000E/KR/ko/page/troubleshooting_ko.rst"
+  ],
+  "generated_files": [
+    "docs/_review/JE-2000E/KR/ko/generated/JE-2000E/draft/03_product_overview_ko.rst",
+    "docs/_review/JE-2000E/KR/ko/generated/JE-2000E/draft/05_operation_guide_ko.rst",
+    "docs/_review/JE-2000E/KR/ko/generated/JE-2000E/draft/12_app_setup_ko.rst",
+    "docs/_review/JE-2000E/KR/ko/generated/JE-2000E/lcd_icons_ko.rst",
+    "docs/_review/JE-2000E/KR/ko/generated/JE-2000E/spec_ko.rst",
+    "docs/_review/JE-2000E/KR/ko/generated/JE-2000E/symbols_ko.rst",
+    "docs/_review/JE-2000E/KR/ko/generated/JE-2000E/troubleshooting_ko.rst"
+  ],
+  "override_files": [
+    "docs/_review/JE-2000E/KR/ko/overrides/README.md"
+  ],
+  "semantic_asset_references": 34,
+  "page_manifest": "docs/manifests/manual_kr.yaml",
+  "recipe_ids": [
+    "03_product_overview",
+    "05_operation_guide",
+    "12_app_setup"
+  ],
+  "snippet_ids": [],
+  "spec_master": {
+    "path": "/home/runner/work/Hello-Docs/Hello-Docs/.tmp/review-start/phase2/Spec_Master.csv",
+    "sha256": "13218026900e0e30ca4ff4ac125ab0de4420a0694f47e4e6ef144df9ac5d514d"
+  }
+}
