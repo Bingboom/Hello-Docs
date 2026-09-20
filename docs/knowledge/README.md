@@ -12,8 +12,25 @@
 发布构建将 `ai-share/` 复制到网站同名路径，知识库入口为 `/workspace/`。
 原有说明书仍由 `docs/publish/` 管理。
 
+## 直接在 Hello-Docs 修改
+
+`docs/knowledge/**` 是 Hello-Docs 业务内容的直接编辑区，也是单向工程镜像规则的
+明确例外。分享内容不需要复制到 auto-manual，也不需要等待工程仓库先同步；
+auto-manual 的同步会完整保留这里已经合入 `Hello-Docs/main` 的内容。
+
+修改流程：
+
+1. 从最新的 `Hello-Docs/main` 建立 `docs/knowledge-<主题>` 内容分支。
+2. 文字改动先修改 `ai-share/分享稿.md`，同时把已确认的同一版文字更新到
+   `ai-share/00_打开分享.html`；样式、图片和示例则修改同目录对应文件。
+3. 只提交 `docs/knowledge/**` 下的文件。本次内容 PR 不夹带模板、构建代码、
+   `docs/publish/**` 或产品说明书评审文件。
+4. 本地打开 `ai-share/00_打开分享.html`，检查目录跳转、参考链接、图片、窄屏
+   布局和打印效果。
+5. 向 `Hello-Docs/main` 提交内容 PR。合入后，Read the Docs 从该 main commit
+   重新构建 `/ai-share/`。
+
+更细的 Agent 操作边界和验收项见同目录 [`AGENTS.md`](AGENTS.md)。
+
 分享内容通过 Hello-Docs 的内容 PR 更新；页面模板和构建代码通过
 auto-manual 工程 PR 更新。不要把分享内容复制回工程仓库。
-
-首次上线顺序：先合入并同步工程侧对 `docs/knowledge/` 的保留规则及构建支持，
-再合入本目录。旧同步规则不会保留这个目录。
