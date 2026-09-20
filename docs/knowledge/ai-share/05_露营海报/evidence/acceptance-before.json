@@ -1,0 +1,89 @@
+{
+  "captured_at": "2026-09-20T13:17:00+00:00",
+  "state": {
+    "local-300": {
+      "record_id": "local-300",
+      "model_id": "DEMO-300",
+      "version": 2,
+      "status": "success",
+      "updated_at": "2026-09-20T13:13:04+00:00",
+      "change_summary": "样式、插画或构建器更新 / 文件修复",
+      "pdf": "output/pdf/DEMO-300.pdf",
+      "pdf_sha256": "e3d36c9652fcef1f0f913448993a16095e6a805c002a0c53bb3c45d72ec527e8",
+      "input_sha256": "2b0120021d62158346f896f5a0a11ece0fd716a054e9e9101c1ffb7ce07646c2",
+      "source": {
+        "record_id": "local-300",
+        "model_id": "DEMO-300",
+        "product_name": "小野 300",
+        "capacity_wh": "288",
+        "rated_power_w": "300",
+        "weight_kg": "3.6",
+        "price_cny": "599",
+        "asset": "xiaoye-300.png",
+        "data_note": "教学虚构数据，非真实产品参数",
+        "layout": "hero",
+        "tagline": "轻装出游的小伙伴",
+        "introduction_template": "把周末装进背包。{{product_name}} 以 {{weight_kg}} kg 的小巧身形，陪你开启轻装出游的想象。",
+        "scene": "轻装出游",
+        "introduction": "把周末装进背包。小野 300 以 3.6 kg 的小巧身形，陪你开启轻装出游的想象。"
+      },
+      "error": ""
+    },
+    "local-500": {
+      "record_id": "local-500",
+      "model_id": "DEMO-500",
+      "version": 3,
+      "status": "success",
+      "updated_at": "2026-09-20T13:13:14+00:00",
+      "change_summary": "教学价：899 → 999",
+      "pdf": "output/pdf/DEMO-500.pdf",
+      "pdf_sha256": "5bd2038eb5e4fe4f6d4d8212b4b43a2f665053c482c748d8ed4c4f89184de40d",
+      "input_sha256": "80a18a587da1757ec9a6249120688199b3fd583dacf8cd5bfd85a7f5e5658def",
+      "source": {
+        "record_id": "local-500",
+        "model_id": "DEMO-500",
+        "product_name": "小野 500",
+        "capacity_wh": "512",
+        "rated_power_w": "500",
+        "weight_kg": "5.2",
+        "price_cny": "999",
+        "asset": "xiaoye-500.png",
+        "data_note": "教学虚构数据，非真实产品参数",
+        "layout": "split",
+        "tagline": "周末露营的小帮手",
+        "introduction_template": "找一片树荫，留一点时间。{{product_name}} 的 {{capacity_wh}} Wh 教学容量，让露营装备介绍一目了然。",
+        "scene": "周末露营",
+        "introduction": "找一片树荫，留一点时间。小野 500 的 512 Wh 教学容量，让露营装备介绍一目了然。"
+      },
+      "error": ""
+    },
+    "local-1000": {
+      "record_id": "local-1000",
+      "model_id": "DEMO-1000",
+      "version": 2,
+      "status": "success",
+      "updated_at": "2026-09-20T13:13:23+00:00",
+      "change_summary": "样式、插画或构建器更新 / 文件修复",
+      "pdf": "output/pdf/DEMO-1000.pdf",
+      "pdf_sha256": "f468608e5e5202ea3f3484ce63165ea1a1938117a5f31c2abc0b8135ca99439d",
+      "input_sha256": "8d12bc13f4bdb7a168cd9c831430de1df5258e8af3f781f71fe1ce684f890fb0",
+      "source": {
+        "record_id": "local-1000",
+        "model_id": "DEMO-1000",
+        "product_name": "小野 1000",
+        "capacity_wh": "1024",
+        "rated_power_w": "1000",
+        "weight_kg": "9.8",
+        "price_cny": "1599",
+        "asset": "xiaoye-1000.png",
+        "data_note": "教学虚构数据，非真实产品参数",
+        "layout": "cards",
+        "tagline": "多人营地的大块头",
+        "introduction_template": "约上朋友，一起去野。{{product_name}} 以 {{rated_power_w}} W 的教学额定输出，演示多人营地的产品故事。",
+        "scene": "多人营地",
+        "introduction": "约上朋友，一起去野。小野 1000 以 1000 W 的教学额定输出，演示多人营地的产品故事。"
+      },
+      "error": ""
+    }
+  }
+}
