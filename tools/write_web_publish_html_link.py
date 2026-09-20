@@ -18,7 +18,9 @@ except ImportError:  # pragma: no cover - direct script execution fallback
 ROOT = bootstrap_repo_root(__file__, parent_count=1)
 
 from tools.listen_build_queue_lark import fetch_field_id_map  # noqa: E402
+from tools.manual_operations_online_health import publication_url  # noqa: E402
 from tools.phase2_support import LarkCliSource, cli_bin, load_config, phase2_identity  # noqa: E402
+from tools.rtd_deployment_receipt import DEFAULT_RTD_BASE_URL  # noqa: E402
 from tools.queue_bound_binding import collect_queue_preflight_errors, resolve_document_link_binding  # noqa: E402
 from tools.queue_bound_lark_ops import run_lark_cli_json  # noqa: E402
 from tools.utils.path_utils import PathSegments  # noqa: E402
@@ -30,9 +32,6 @@ from tools.write_publish_html_link import (  # noqa: E402
 )
 
 
-DEFAULT_RTD_BASE_URL = "https://ht-doc.readthedocs.io"
-
-
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Write Read the Docs Web Publish URLs back to Document_link.HTML_link."
@@ -41,6 +40,15 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--base-url", default=DEFAULT_RTD_BASE_URL)
     parser.add_argument("--releases-root", default="reports/releases")
     parser.add_argument("--record-id", action="append", default=[])
+    parser.add_argument(
+        "--pending",
+        action="store_true",
+        help=(
+            "Record the deterministic URL in the release metadata only and defer the "
+            "Document_link.HTML_link write to the post-deploy receipt lane "
+            "(web-publish-receipt.yml). No Bitable interaction happens in this mode."
+        ),
+    )
     return parser.parse_args(argv)
 
 
@@ -67,12 +75,23 @@ def _read_metadata(path: Path) -> dict[str, Any]:
 
 
 def target_rtd_url(*, base_url: str, payload: dict[str, Any]) -> str:
+    """Return the canonical nested page for the target (M4 link semantics).
+
+    ``Document_link.HTML_link`` registers the canonical
+    ``<model>/<region>/<lang>/md/<manual>.html`` route, matching the stored
+    target's ``route`` in ``publish_manifest.json``. The flat root alias
+    (``/<manual>.html``) remains the countable printed/QR entry layer and is
+    no longer the registered value. ``publication_url`` enforces HTTPS and
+    rejects unsafe route segments before anything reaches the Bitable.
+    """
     model = str(payload.get("model") or "").strip()
     region = str(payload.get("region") or "").strip()
+    lang = str(payload.get("lang") or "").strip()
     markdown_path = Path(str(payload.get("md_output_path") or "").strip())
-    if not model or not region or not markdown_path.stem:
-        raise RuntimeError("Web Publish metadata is missing model, region, or md_output_path")
-    return f"{base_url.rstrip('/')}/{markdown_path.stem}.html"
+    if not model or not region or not lang or not markdown_path.stem:
+        raise RuntimeError("Web Publish metadata is missing model, region, lang, or md_output_path")
+    route = "/".join((model, region, lang, PathSegments.MD, f"{markdown_path.stem}.html"))
+    return publication_url(base_url, route)
 
 
 def persist_rtd_url(*, metadata_path: Path, payload: dict[str, Any], url: str) -> None:
@@ -90,6 +109,7 @@ def write_web_publish_html_links(
     base_url: str,
     releases_root: Path,
     explicit_record_ids: tuple[str, ...] = (),
+    pending: bool = False,
 ) -> int:
     metadata_paths = latest_web_publish_metadata(releases_root)
     if not metadata_paths:
@@ -113,6 +133,27 @@ def write_web_publish_html_links(
             "No Web Publish metadata matched the requested queue record ids: "
             + ", ".join(sorted(explicit))
         )
+
+    if pending:
+        # REV-07: build time proves the candidate exists, not that it is live.
+        # The deterministic URL is preserved as run evidence above; the actual
+        # Document_link.HTML_link registration belongs to the post-deploy
+        # receipt lane, which writes only after the publish PR merges and
+        # verify_deployment passes against the live RTD site.
+        deferred = 0
+        for record_ids, url in targets:
+            for record_id in record_ids:
+                print(
+                    f"[web-publish-link] PENDING {record_id}: HTML_link registration "
+                    f"deferred to the post-deploy receipt lane ({url})"
+                )
+                deferred += 1
+        if not deferred:
+            print(
+                "[web-publish-link] No queue record ids were recorded; the receipt "
+                "lane will have nothing to register for this run."
+            )
+        return deferred
 
     cfg = load_config(config_path)
     errors = collect_queue_preflight_errors(cfg)
@@ -152,11 +193,15 @@ def main(argv: list[str] | None = None) -> int:
             base_url=str(args.base_url),
             releases_root=resolve_repo_path(args.releases_root),
             explicit_record_ids=tuple(str(item).strip() for item in args.record_id if str(item).strip()),
+            pending=bool(args.pending),
         )
     except Exception as exc:
         print(f"[web-publish-link] ERROR: {exc}", file=sys.stderr)
         return 1
-    print(f"[web-publish-link] Completed HTML_link writeback for {written} record(s).")
+    if args.pending:
+        print(f"[web-publish-link] Recorded {written} pending HTML_link registration(s).")
+    else:
+        print(f"[web-publish-link] Completed HTML_link writeback for {written} record(s).")
     return 0
 
 

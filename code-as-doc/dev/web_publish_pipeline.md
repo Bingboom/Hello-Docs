@@ -8,7 +8,7 @@ Read the Docs. Web delivery is intentionally separate from print delivery.
 | `Workflow_action` | Worker | Output authority |
 | --- | --- | --- |
 | `Publish` | `feishu-build-queue.yml` | IDML, LaTeX, PDF, DOCX, formal Markdown and release manifests |
-| `Web Publish` | `feishu-web-publish-queue.yml` | frozen MyST candidate under `Hello-Docs/publish:docs/publish/`, a scope-guarded PR into `main`, and `HTML_link` |
+| `Web Publish` | `feishu-web-publish-queue.yml` + `web-publish-receipt.yml` | frozen MyST candidate under `Hello-Docs/publish:docs/publish/`, a scope-guarded PR into `main`, and — after that PR merges and the deployment verifies — `HTML_link` |
 
 `Publish` never deploys HTML. `Web Publish` never uploads or rewrites print
 artifacts. Both actions render reviewed content selected by
@@ -179,8 +179,12 @@ change JP D1–D4 or promote production eligibility.
    rebuilds `docs/publish/web/`, and writes a SHA-256 inventory in
    `docs/publish/publish_manifest.json`. Assembly rechecks fresh md/html against
    evidence and retains the receipt plus projection manifest with stored MyST.
-   Stored replay rechecks the retained MyST/assets; the HTML digest is historical
-   evidence, not a new HTML render check. Legacy links retain their redirects.
+   The stored target metadata (and therefore the manifest target entry) carries
+   the validated `queue_record_ids` forward, so the post-merge receipt lane can
+   still locate its queue rows after the release metadata of the queue run is
+   gone. Stored replay rechecks the retained MyST/assets; the HTML digest is
+   historical evidence, not a new HTML render check. Legacy links retain their
+   redirects.
 6. The workflow reconciles the generated `Hello-Docs/publish` candidate with
    current `main`, then refuses to push if the PR diff contains any path outside
    `docs/publish/**`. Review branches are build inputs only; they are never
@@ -189,100 +193,40 @@ change JP D1–D4 or promote production eligibility.
    or updates the single `publish -> main` PR. A human merges that PR after
    review; only the resulting `main` push is a production RTD trigger. One
    global concurrency group serializes the complete build, branch update, PR,
-   and writeback transaction.
+   and pending-registration transaction. At build time the queue records the
+   deterministic URL in the release metadata only (`--pending`); it makes no
+   `HTML_link` write, because at that point the PR is unmerged and RTD has not
+   deployed.
 8. The assembler creates a collision-checked root alias named from the manual
    stem (for example `/manual_je1000f_us.html`) that forwards to the canonical
-   nested Sphinx route. That concise deterministic URL is written to
-   `Document_link.HTML_link`. Relative forwarding keeps the generated alias
-   valid in both RTD single-version and `/en/latest` deployments. A seven-day
-   workflow artifact retains the Web release evidence; the Git branch remains
-   the durable snapshot.
+   nested Sphinx route. The root alias is the countable printed/QR entry layer
+   only. The deterministic URL that the receipt lane later writes to
+   `Document_link.HTML_link` is the canonical nested page itself (for example
+   `/JE-1000F/US/en/md/manual_je1000f_us.html`), matching the stored target
+   `route` in `publish_manifest.json`. Relative forwarding keeps the generated
+   alias valid in both RTD single-version and `/en/latest` deployments. A
+   seven-day workflow artifact retains the Web release evidence; the Git
+   branch remains the durable snapshot.
+9. After the human merges `publish -> main`,
+   [`web-publish-receipt.yml`](../../.github/workflows/web-publish-receipt.yml)
+   runs on the Hello-Docs `main` push (paths `docs/publish/**`):
+   [`tools/write_web_publish_receipt_links.py`](../../tools/write_web_publish_receipt_links.py)
+   reads the merged manifest, selects the targets that recorded
+   `queue_record_ids`, polls `verify_deployment` (frozen-source fingerprint,
+   byte identity, expected RTD project slug; fresh `FetchSession` per attempt)
+   until the deployment verifies or the deploy timeout expires, and only then
+   writes the canonical URL to each queue row — idempotently (an equal stored
+   value is skipped, so reruns never re-register) and with a same-record
+   readback after every write. Verification failure or timeout registers
+   nothing and opens the `queue-failure-web-receipt` sentinel; the retry is a
+   `workflow_dispatch` re-run (optionally scoped by `record_ids`), never a
+   re-publish of the manual.
 
 ### 2.2 Git-only transaction
 
 Use this path only when the operator has designated reviewed Git content as the
-release authority and explicitly excluded online-table writes. It never
-creates synthetic queue rows, and assembly/build/verification never write any
-online table. Writing `Document_link.HTML_link` and the published-manual
-catalog row is a distinct, explicit, human-gated step
-(`build.py web-receipt --write`, step 7 below) run only after the release PR
-has merged and production has been verified — never automatically as part of
-build, staging, or the release PR.
-
-`python build.py web-release --config <config> --model <M> --region <R> --lang
-<L> --version <V>` is the formal entry point for steps 2 and 3 below: it runs
-the warm-up + check/md/html web-profile build, captures and seals the
-per-language projection receipt, runs the local strict `sphinx -W`
-verification (deliberately *without* the `-D extensions=...,tools.rtd_portal`
-override step 4 below adds: the portal's catalog/language-switcher logic is a
-whole-site concern over the assembled `docs/publish/**` tree — including the
-`sources/web/**/publish_meta.json` sibling metadata `tools/publish_branch_assembly.py`
-writes there — that a lone, not-yet-assembled book never has; adding the
-override here would fail on that missing structure instead of verifying
-anything about this book's own content), stages the sealed bundle under
-`<model>/<region>/<lang>/versions/<version>/web/`, and writes
-`latest/web/publish_meta.json` — the same library functions the queue-driven
-Web Publish worker uses (`tools.queue_build_execution`,
-`tools.queue_bound_outputs`, `tools.web_language_release_evidence`), run
-directly against the current checkout instead of a queue row. `--dry-run`
-prints the resolved target list and exits without building. `--targets-file`
-runs a batch of `MODEL,REGION,LANG[,VERSION]` rows and keeps going past a
-single failed book, so a multi-language family (for example three rows for
-one model/region) does not abort the rest. It does not perform step 1
-(authoring `source_manifest.json`) or steps 4–6 (assembling into
-`docs/publish/**` and opening the release PR) below; those remain manual until
-a later conveyor-belt command covers them. See
-[`tools/web_publish.py`](../../tools/web_publish.py) for the implementation
-and `tests/test_web_publish.py` for its contract.
-
-`python build.py web-assemble [--releases-root <path>] [--title <title>]
-[--hello-docs-repo <owner/repo>] [--push]` is the formal entry point for steps
-4 and 5 below: it makes an isolated blobless clone of Hello-Docs
-(`--filter=blob:none`: the full commit graph up front, file contents fetched
-lazily on checkout — never `--depth`, since the ancestry check below needs
-real history) under a scratch temporary directory (never the operator's own
-local Hello-Docs checkout), reconciles it against the existing `publish`
-branch tip when one exists (preserving any targets already staged there),
-assembles every book staged under `--releases-root` (default
-`reports/releases`) with the same `tools/publish_branch_assembly.py` this
-section already documents, and runs
-the same aggregate `sphinx -W -b html -D extensions=myst_parser,tools.rtd_portal`
-verification — the same `-D` portal-extension override `.readthedocs.yaml`
-passes (see §3), so the RTD portal machinery (multi-book catalog, per-page
-language switcher, the `settings.json` language table) is exercised locally
-too, not just plain MyST. It then checks the
-candidate's three-dot diff against `main` and refuses to continue if any path
-outside `docs/publish/**` changed — the same scope guard the queue workflow's
-"Validate publish PR scope" step enforces. By default it stops there
-(assemble + verify + scope guard only, no network write); only `--push`
-advances the shared `publish` branch with an ordinary, never-forced push and
-opens or updates the single `publish -> main` PR. It never merges that PR —
-merging stays a human step in every path. It does not author
-`source_manifest.json` (step 1) or perform the post-merge verification (step
-6); those remain manual. See [`tools/web_assemble.py`](../../tools/web_assemble.py)
-for the implementation and `tests/test_web_assemble.py` for its contract.
-
-`python build.py web-receipt --config <config> [--model <M> --region <R>
---lang <L>] [--write]` is the formal entry point for step 7 below: for every
-`latest/web/publish_meta.json` target under `--releases-root` (default
-`reports/releases`, narrowed by `--model`/`--region`/`--lang` when given), it
-resolves the `Document_link` row through a priority chain (explicit
-`--receipt-record-id` overrides > `publish_meta.json`'s `queue_record_ids` >
-a live search by model/region/lang, needed because a Git-only book never had
-a queue row and so `queue_record_ids` is always empty for it), writes
-`HTML_link`, then creates or updates the matching published-manual catalog
-(发布文档管理) row by (model, region, lang, `doc_type=web`), and GETs each
-written record back to confirm the persisted value before reporting success.
-Zero matching `Document_link` rows is reported, not auto-repaired — this
-command never creates a queue row. More than one candidate row (for either
-table) is rejected with every candidate listed; resolving that is an
-operator decision. Defaults to dry-run: without `--write` it only reads local
-`publish_meta.json` files and prints the resolved plan, touching no live
-table; `--write` performs the live writes. See
-[`tools/web_receipt.py`](../../tools/web_receipt.py) and
-[`tools/manual_catalog_writeback.py`](../../tools/manual_catalog_writeback.py)
-for the implementation and `tests/test_web_receipt.py` /
-`tests/test_manual_catalog_writeback.py` for their contract.
+release authority and explicitly excluded online-table writes. It does not
+create synthetic queue rows or write `HTML_link`.
 
 1. Commit the complete target structure, sources and assets with a
    `source_manifest.json`. Record the target identity, source authority,
@@ -308,103 +252,69 @@ for the implementation and `tests/test_web_receipt.py` /
 
    ```bash
    python tools/publish_branch_assembly.py --releases-root <isolated-release-root> --output-dir <hello-docs-candidate>/docs/publish
-   cd <hello-docs-candidate> && python -m sphinx -W -b html -D extensions=myst_parser,tools.rtd_portal docs/publish/web <isolated-verification-html>
+   python -m sphinx -W -b html <hello-docs-candidate>/docs/publish/web <isolated-verification-html>
    ```
 
-   The `cd` matters, not just the `-D` flag: `tools.rtd_portal` must import as
-   a package, so this has to run with `<hello-docs-candidate>` (which carries
-   its own synced `tools/`) as the working directory, the same way Read the
-   Docs builds from the checked-out repository root — not from an arbitrary
-   directory with `docs/publish/web` passed as an absolute path. Omitting
-   either the `-D` override or this working directory silently verifies plain
-   MyST instead of the portal-enabled build RTD actually runs (see §3).
    The assembler replaces matching target routes, retains the other stored
    targets, rebuilds the aggregate Sphinx tree, and rewrites
-   `publish_manifest.json`. `python build.py web-assemble` (without `--push`)
-   runs exactly this step against a fresh isolated clone.
+   `publish_manifest.json`.
 5. Commit that candidate on the normal Hello-Docs release branch and open the
    usual `docs/publish/**`-only PR. Do not include engineering code, review
-   branches, print artifacts, or unrelated targets. `python build.py
-   web-assemble --push` runs this step too: a non-force `publish` push plus
-   opening or updating the single `publish -> main` PR.
+   branches, print artifacts, or unrelated targets.
 6. After the approved PR merges, verify the Read the Docs build commit, each
    canonical target route, each short root alias, all referenced assets, and
    desktop/mobile rendering.
-7. Only once that verification is in hand, run `build.py web-receipt --write`
-   for the released target(s) to write `Document_link.HTML_link` and the
-   published-manual catalog row, and confirm the reported per-target GET
-   readback for both records.
 
 The durable evidence is the source Git commit, source-manifest and input hashes,
 release metadata, publish-manifest hash, Hello-Docs snapshot commit, Read the
-Docs build commit, and the verified production URLs. For a Git-only
-transaction, `Document_link.HTML_link` and the published-manual catalog row
-are written only by the explicit step 7 receipt above, after that evidence is
-already in hand; no earlier step in this section writes online staging,
-source, asset, build, or link records.
+Docs build commit, and the verified production URLs. `Document_link.HTML_link`
+readback belongs only to the queue-driven transaction. A Git-only transaction
+does not write online staging, source, asset, build, or link records.
 
-### 2.3 PDF sideload bypass
+### 2.3 Catalog mirror and continuous reconciliation (M1/M2)
 
-Steps 2-3 above assume the target's structured intake (spec extraction,
-templating) is already done, so `build.py check`/render can actually run.
-Some books must go live before that is true — the printed PDF exists but
-`spec-sheet-structured-intake` has not landed real phase2 data for the
-target yet. `python build.py web-sideload --config <config> --model <M>
---region <R> --lang <L> --version <V> --md-dir <bundle>
-[--debt "category:location:payoff action"]... [--dry-run]` is the bypass for
-exactly that gap: it stages an **externally converted** MyST Markdown
-source — never rendered by this repo's RST -> Web-profile pipeline — using
-the same `tools.queue_bound_outputs.stage_web_publish_assets_to_host_repo`
-and `write_web_publish_metadata` that `web-release` uses, so `web-assemble`
-collects it with equal standing to a pipeline-built book.
+The operations catalog sheet 「说明书目录」 (spreadsheet
+`K13JsXoUjhd75sth7eec1sKpnKd`, sheet `15c75c`) is a **derived view** of the
+publication record, never a second authority. The single frozen-record
+authority for Web targets is `docs/publish/publish_manifest.json` on
+Hello-Docs `main` (REV-06/M0-10: `reports/releases` is deliberately not in
+Git). Rows align on the `(model, region, lang)` triple; version strings are
+display-only vocabulary and are not machine-reconciled across faces (M0-11).
 
-`--md-dir` must already be shaped like a staged `md/` bundle: a
-`manual_<stem>.md` whose filename matches what the config's output-naming
-template would produce for that exact model/region/lang (the same
-derivation `resolve_md_output_path_for_target` uses for `web-release`'s
-collision precheck), an `index.md` toctree naming that stem, `conf.py`, and
-an optional `assets/`. A wrong filename fails with the exact expected name
-rather than silently staging under the wrong route. Before staging,
-`web-sideload` runs its own local strict `sphinx -W -b html` build of that
-bundle — the same rigor `web-release` applies to a pipeline build, just
-against externally supplied source, and (for the same reason given for
-`web-release` above) without the aggregate step's `tools.rtd_portal`
-override either — and that HTML output is staged directly (there is no
-separate pipeline HTML build to reuse here).
+[`tools/ops_catalog_sync.py`](../../tools/ops_catalog_sync.py) owns both
+directions:
 
-Because there is no RST -> Web-profile pipeline run, there is no per-language
-projection evidence to seal. The staged `publish_meta.json` instead carries
-an explicit `"source_kind": "pdf_sideload"` marker (a pipeline-built
-target either omits `source_kind` or carries `"source_kind": "pipeline"`,
-unchanged from before this marker existed). That marker is the **only**
-thing `tools.publish_locale_identity` / `tools.publish_branch_assembly`
-accept as exempting a target from the otherwise-mandatory
-`language_projection_evidence_*` gate described in §1 and §2.2 above; every
-pipeline target — with or without an explicit `source_kind` — stays exactly
-as fail-closed on that evidence as it was before sideload existed. The
-marker is carried through unconditionally into the stored
-`docs/publish/sources/web/**/publish_meta.json` and from there into
-`publish_manifest.json`'s per-target entry, so which targets bypassed the
-pipeline is always auditable from the assembled release, not just from a
-local `reports/releases/` snapshot.
+- **`sync` (M2, catalog registration as a post-publication transaction).**
+  Reads the manifest at a pinned Hello-Docs commit (the recorded source SHA)
+  and upserts only the machine columns A..K (文档ID/型号/市场/语言/当前版本/
+  正文链接/根别名链接/语言范围声明/目标构建时间UTC/内容提交/收录状态). The
+  human-owned columns L..O (负责人/运营状态/下次复盘日期/运营备注) are never
+  written on existing rows; a new row seeds 运营状态=待评估 only. New targets
+  append at the bottom; an existing row is rewritten only when a machine
+  column actually differs; a row whose key has left the manifest is reported
+  as an orphan and never modified or deleted. Default is dry-run; `--write`
+  is an operator-authorized run that applies row by row, reads each row back
+  (verifying the human columns survived byte-for-byte), and records a failed
+  row for a later idempotent retry without blocking the other rows. This
+  registration is a separately approved transaction after publication: it
+  does not change the Git-only contract above (no queue rows, no source-table
+  writes), and a failed deployment must never be registered as online.
+- **`reconcile` (M1, continuous three-face cross-check).** Read-only
+  comparison of manifest ↔ ops sheet ↔ `Document_link.HTML_link` queue
+  receipts. Receipts register the canonical nested page (M4 semantics, as
+  `write_web_publish_html_link.py` writes it); a flat root-alias receipt is
+  flagged as `receipt_flat_form_link`. Every difference is classified against
+  the committed whitelist
+  [`data/ops_catalog_reconcile_whitelist.json`](../../data/ops_catalog_reconcile_whitelist.json)
+  (seeded from the REV-06 M0 diff table: the 49-target Git-only
+  no-receipt baseline, M0-05). A whitelisted difference is listed and exits 0
+  so known history never re-alarms; any new difference exits 1. Growing the
+  whitelist is an operator decision recorded in the entry's `reason`; targets
+  never enter it automatically.
 
-Every `web-sideload` run also records one **unconditional** debt-ledger
-entry (category `整本未结构化`, payoff action "run
-`spec-sheet-structured-intake`, then re-run `web-release`"), through the
-same `tools.web_publish.record_debt_entries` ledger `web-release` uses —
-regardless of any `--debt` entries also passed. Payoff is mechanical, not a
-separate withdrawal step: once real phase2 data exists for the target, an
-ordinary `build.py web-release` run for the same model/region/lang writes
-the same `latest/web/publish_meta.json` identity, overwriting the sideloaded
-metadata with a real pipeline build (and its evidence) in place. From there,
-`web-assemble` and `web-receipt` proceed exactly as documented in §2.2.
-
-See [`tools/web_sideload.py`](../../tools/web_sideload.py) for the
-implementation, `tests/test_web_sideload.py` for its contract, and
-`tests/test_publish_branch_assembly.py`'s `pdf_sideload`/`pipeline`
-control-pair tests for the evidence-gate exemption boundary. The full
-operator workflow, including PDF extraction guidance, lives in
-[`.agents/skills/pdf-web-sideload/SKILL.md`](../../.agents/skills/pdf-web-sideload/SKILL.md).
+Neither mode fabricates queue history for alignment (the acceptance goal is
+"no unexplained difference", not "no difference"), and both refuse to act on a
+sheet whose header row no longer matches the 15-column contract.
 
 ## 3. Repository and hosting boundaries
 
@@ -424,18 +334,33 @@ operator workflow, including PDF extraction guidance, lives in
   The assembler rejects IDML, InDesign, LaTeX, PDF, DOCX, source-artwork, and
   archive files before the candidate branch can be pushed. Print artifacts
   remain under release storage and short-lived GitHub Actions artifacts.
+- The assembled Sphinx source keeps one physical copy of each asset. A manual
+  used to carry its artwork beside the Markdown, again under
+  `_static/manual-assets/<model>/<region>/<lang>/`, and again for every sibling
+  language that shares the same picture, so the frozen tree grew to several
+  times the content it holds. `tools/publish_asset_pool.py` stores one copy per
+  unique content hash under
+  `docs/publish/web/_static/manual-assets/_pool/<aa>/<sha256><ext>` and repoints
+  every HTML `<img src>` and Markdown image at it. Only `src` is rewritten:
+  `data-web-finished-panel-path` is the logical identity the published
+  stylesheet selects on, so it stays exactly as authored. Copies that no manual
+  references are dropped rather than pooled. `docs/publish/sources` is never
+  touched and remains the self-contained replayable bundle; `docs/publish/web`
+  is a render tree.
+- Pooling is self-verifying and fail-closed. It records, per manual, the content
+  hash every reference resolves to, repeats the measurement after rewriting, and
+  refuses to finish if any manual would point at different bytes — so a rewrite
+  that lost or swapped a picture fails assembly instead of shipping. References
+  that were already broken stay broken and are not turned into a new assembly
+  failure. Pooling an already-pooled tree is rejected outright.
+- Deployment size is shared infrastructure, not a per-target budget. The
+  [deployment receipt](rtd_deployment_receipt.md) inventories the built output
+  *and* the whole `docs/publish/` source tree against a fixed ceiling, and a
+  build that exceeds it fails RTD for every later publisher until someone
+  reverts. Check the remaining headroom before adding a target or raising an
+  asset resolution, and prefer reducing duplication over reducing quality.
 - The Read the Docs project uses `main` as its default build branch and builds
-  `docs/publish/web/` through `.readthedocs.yaml`, whose `build.jobs.build.html`
-  step runs `python -m sphinx -b html -D extensions=myst_parser,tools.rtd_portal
-  docs/publish/web "$READTHEDOCS_OUTPUT/html"`. The assembled `conf.py` only
-  ever declares `extensions = ["myst_parser"]`
-  (`tools/readthedocs_source.py::_write_conf_py`); Read the Docs bolts
-  `tools.rtd_portal` on with this `-D` flag alone. Any local aggregate
-  verification of `docs/publish/web` must pass the same `-D extensions=...`
-  override, or it silently exercises plain MyST instead of the portal-enabled
-  build production actually runs — the gap that let production build 34602012
-  crash (`Unknown portal publication language: ja`) while the local
-  `web-assemble` verification step below stayed green.
+  `docs/publish/web/` through `.readthedocs.yaml`.
 - RTD never receives Feishu credentials and never reads mutable attachments.
   It renders only the frozen, hash-inventoried Git snapshot.
 
@@ -446,6 +371,53 @@ the newly published target, and append normal commits. A non-fast-forward push
 fails instead of overwriting another publisher. The three-dot PR diff is checked
 before the push so branch-history drift cannot smuggle code or review files into
 the release PR.
+
+### 3.1 Hosting convergence and legacy entry review
+
+The shared outlet above is the code/release contract; it does not establish that
+every historical RTD project follows that contract. The operator-supplied
+2026-09-17 investigation reports HT-Manuals on `Hello-Docs/publish` and HT-Doc on
+`Hello-Docs/main`, with overlapping targets at different versions. This docs-only
+change has not rechecked the RTD dashboard or moved either site. The
+[revitalization plan](../manual_production_revitalization_plan.md) registers that
+reconciliation as WP1.
+
+Before an authorized hosting migration:
+
+1. Capture each project's actual branch, build commit, publication identities,
+   versions and URLs at the same time. Map every old URL to its intended content
+   and version; distinguish latest-entry aliases from version-bound history.
+2. Read existing `HTML_link`, printed QR and delivery references. Preserve the
+   original values and record missing/ambiguous mappings. Git-only publication
+   itself still makes no online writes; any catalog/link migration is a separate
+   scoped operation with same-record readback.
+3. Verify the proposed redirects or compatibility pages using supported hosting
+   facilities, including body, images, language routes, downloads where present,
+   and desktop/mobile access. Preserve historical version meaning; a blanket
+   redirect to the newest manual is not sufficient.
+4. After compatibility acceptance and approval for the concrete hosting change,
+   stop the old project's independent updates while preserving its usable entry
+   behavior. Keep `Hello-Docs/publish`: retiring an RTD build trigger does not
+   retire the release-candidate branch.
+5. For both input paths, record the agreed site, actual deployed commit/release
+   and URL verification separately from PR merge. Until a machine gate exists,
+   retain this as a manual release acceptance check; do not claim it is automated.
+   On migration failure restore the captured mappings/configuration and approved
+   snapshot, and leave unresolved entries visible with an owner and next action.
+
+First-time onboarding of a new portal region or publication language also has a
+three-place registration in this repository, verified by the JP trial and its
+revert: the `regions` and `language_labels` maps in
+`tools/rtd_portal_assets/settings.json`, the region list in the portal template
+`manual_portal.html`, and the market hint strings in `portal.js`. A missing
+`language_labels` entry fails the aggregated portal build outright; a missing
+region entry or hint string leaves the new market invisible in the portal UI. A
+regional pilot (REV-19) that introduces a new region or language updates all
+three together.
+
+The current HT-Doc consolidation target is separate from the already-selected
+custom domain's [DNS handoff](rtd_custom_domain_runbook.md). A documentation PR
+neither changes hosting configuration nor approves online writes.
 
 ## 4. Operator contract
 
@@ -469,11 +441,55 @@ Success requires all three pieces of evidence:
 - the GitHub run is green;
 - `Hello-Docs/publish` contains the expected target and manifest hashes, and the
   open `publish -> main` PR contains no path outside `docs/publish/**`;
-- after that PR is merged, `Hello-Docs/main` contains the same manifest and the
-  RTD page opens at the `HTML_link` route.
+- after that PR is merged, `Hello-Docs/main` contains the same manifest, the
+  `Web Publish Receipt` run is green, and the RTD page opens at the registered
+  `HTML_link` route.
+
+### 4.1 Receipt timing: three timestamps, kept separate
+
+Following the revitalization plan §5.1, the release records three distinct
+facts and never lets one stand in for another:
+
+| Fact | Proven by | Recorded where |
+| --- | --- | --- |
+| Approval | the human merge of `publish -> main` | PR merge commit on Hello-Docs `main` |
+| Deployment | the RTD build of that `main` push | RTD build history; receipt-lane verify attempts |
+| Online verification | `verify_deployment` passing against the live site | `web-publish-receipt.yml` run + `HTML_link` write with same-record readback |
+
+`HTML_link` is written only after the third fact: a merged PR proves the
+candidate was accepted, an RTD build proves the deploy pipeline ran, and only
+the live-content verification proves readers actually reach the target version.
+A deployment that fails verification is never registered as online; a failed
+registration goes to an independent retry (re-run the receipt workflow),
+never to a re-publish of the manual.
 
 For the Git-only path, use the evidence contract in section 2.2. Do not create
 placeholder online records or write `HTML_link` to imitate queue completion.
+
+The receipt lane proves the link was correct at registration time; it does not
+watch for later drift.
+[`verify-web-deployment.yml`](../../.github/workflows/verify-web-deployment.yml)
+is the independent detector: a daily scheduled run on the Hello-Docs business
+plane feeds every target of `Hello-Docs/main:docs/publish/publish_manifest.json`
+through [`tools/verify_web_deployment_targets.py`](../../tools/verify_web_deployment_targets.py),
+which runs the full `tools.rtd_deployment_receipt.verify_deployment` check per
+canonical nested page — frozen-source byte identity plus the expected RTD
+project slug derived from the base URL — and fails the run on any unreachable
+page, drifted bytes, or wrong-site deployment. Failures open the
+`web-deployment-verify` sentinel issue through the shared
+`queue-sentinel-issue` action; the next fully green run closes it.
+
+The whole catalog shares one paced, caching transport session (`--rps`, default
+2 req/s, overridable per dispatch or via the `AUTO_MANUAL_RTD_VERIFY_RPS` repo
+variable), and the nightly run uses `--asset-scope markup`: each page and its
+HTML/CSS/JS are byte-checked and every other referenced resource must exist in
+the served receipt, which keeps one sweep near 65 requests instead of ~2,300.
+Dispatch with `asset-scope: full` for an on-demand deep run that re-downloads
+every binary asset. Rate-limited targets are reported **throttled** and exit 75, kept
+separate from mismatches at exit 1: a 429 leaves a target undecided, so a
+throttled-only run is a re-run signal, not a content incident. Both still fail
+the job and open the sentinel — fail-closed is preserved — but the issue body
+states which of the two happened, with per-class counts.
 
 ## 5. Rollback
 

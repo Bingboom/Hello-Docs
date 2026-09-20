@@ -50,20 +50,20 @@ Seguire sempre queste precauzioni di base durante l\'utilizzo di questo prodotto
 |  |  |  |  |
 |----|----|----|----|
 | **Simbolo** | **Significato** | **Simbolo** | **Significato** |
-| <img src="../../../../_static/manual-assets/JBP-2000B/EU/it/md/assets/ir/1c272a00fbd28d6562d4126040ba43e5747f6a6550878c4b13e05a5c28014577/10_warning_triangle_RkOwbJ9j1oUHJgxFEx3cqhVynjb.png" style="width: 40px;" width="40" height="35" alt="warning_triangle" /> | Simboli di avvertenza e attenzione. Leggere per essere informati su possibili pericoli o rischi. | <img src="../../../../_static/manual-assets/JBP-2000B/EU/it/md/assets/ir/e345b3278827691751b6beac9c8343c75ac7a98100618fbef1db73a27329b99d/30_keep_away_from_children_Nc5NbV2kyoMaTSxvismcAlzbnlh.png" style="width: 40px;" width="40" height="33" alt="keep_away_from_children" /> | Tenere lontano dalla portata dei bambini. |
-| <img src="../../../../_static/manual-assets/JBP-2000B/EU/it/md/assets/ir/d14506fa5a9d449039887db61a259f1841f1826de2f190f54063f96195b955f5/20_read_manual_VK1Ab1MGIoOHdgx1rkUchOHRntb.png" style="width: 40px;" width="40" height="26" alt="read_manual" /> | Prima dell\'utilizzo, leggere il manuale d\'istruzioni. | <img src="../../../../_static/manual-assets/JBP-2000B/EU/it/md/assets/ir/ea7766d417e962cf711bccf3de79d6f639602848ace780353cb329329d13cc91/40_li_ion_ZEcHbhY0Eo3XOExtXKCcbEVjnpe.png" style="width: 40px;" width="40" height="47" alt="li_ion" /> | Questo simbolo indica che nel prodotto è presente una batteria agli ioni di litio (Li-ion), che deve essere smaltita o riciclata correttamente. |
-| <img src="../../../../_static/manual-assets/JBP-2000B/EU/it/md/assets/ir/66c3df77e4f84cccad4b9f162798b181c007e89d3f0e9dd4fdf52c392827cbab/10_do_not_dismantle_Ml7EbCjtYohuKAxWNDUc93UMnVc.png" style="width: 40px;" width="40" height="34" alt="do_not_dismantle" /> | Non smontare il prodotto. | <img src="../../../../_static/manual-assets/JBP-2000B/EU/it/md/assets/ir/eb094578bf165fa39399de1d957cc71a92191f2b0e7ed0a620885065ebedf8a3/50_weee_L9o3bcXq0oSsqdxSX86covnpnle.png" style="width: 40px;" width="40" height="51" alt="weee" /> | Questo simbolo indica che il prodotto non deve essere smaltito insieme ai rifiuti domestici, ma deve essere conferito a un centro di raccolta designato per il riciclo. Lo smaltimento e il riciclo corretti contribuiscono a proteggere l\'ambiente. Per ulteriori informazioni sullo smaltimento e sul riciclo di questo prodotto, contattare la comunità locale, il servizio di smaltimento o il rivenditore. |
-| <img src="../../../../_static/manual-assets/JBP-2000B/EU/it/md/assets/ir/422379347e71e7827c3da380e421f2cb106da5d2f74781fc45782a2f86d493d2/20_no_open_flame_SAbnbxa6iohb2rxxk3PcEh8cnuf.png" style="width: 40px;" width="40" height="37" alt="no_open_flame" /> | Non fumare né utilizzare fiamme libere. | <img src="../../../../_static/manual-assets/JBP-2000B/EU/it/md/assets/ir/7fb57972ebd1fb8bf82abc75d0d320ecaa9abc6544020f2374da2f1272a46171/70_weee2_VL7tbeJhHoy9wBxRZIdcygPBnmf.png" style="width: 40px;" width="40" height="32" alt="weee2" /> | Le batterie e gli accumulatori non devono essere smaltiti insieme ai rifiuti domestici. Come consumatore, sei legalmente obbligato a smaltire tutte le batterie e gli accumulatori nei punti di raccolta designati, indipendentemente dal fatto che contengano sostanze pericolose. Per favore, restituisci le batterie e gli accumulatori usati a un punto di raccolta locale, a un centro di riciclo o al rivenditore presso cui sono stati acquistati. Un corretto smaltimento garantisce un riciclo responsabile per l\'ambiente e previene potenziali danni alla salute umana e all\'ambiente. |
+| <img src="../../../../_static/manual-assets/_pool/1c/1c272a00fbd28d6562d4126040ba43e5747f6a6550878c4b13e05a5c28014577.png" style="width: 40px;" width="40" height="35" alt="warning_triangle" /> | Simboli di avvertenza e attenzione. Leggere per essere informati su possibili pericoli o rischi. | <img src="../../../../_static/manual-assets/_pool/e3/e345b3278827691751b6beac9c8343c75ac7a98100618fbef1db73a27329b99d.png" style="width: 40px;" width="40" height="33" alt="keep_away_from_children" /> | Tenere lontano dalla portata dei bambini. |
+| <img src="../../../../_static/manual-assets/_pool/d1/d14506fa5a9d449039887db61a259f1841f1826de2f190f54063f96195b955f5.png" style="width: 40px;" width="40" height="26" alt="read_manual" /> | Prima dell\'utilizzo, leggere il manuale d\'istruzioni. | <img src="../../../../_static/manual-assets/_pool/ea/ea7766d417e962cf711bccf3de79d6f639602848ace780353cb329329d13cc91.png" style="width: 40px;" width="40" height="47" alt="li_ion" /> | Questo simbolo indica che nel prodotto è presente una batteria agli ioni di litio (Li-ion), che deve essere smaltita o riciclata correttamente. |
+| <img src="../../../../_static/manual-assets/_pool/66/66c3df77e4f84cccad4b9f162798b181c007e89d3f0e9dd4fdf52c392827cbab.png" style="width: 40px;" width="40" height="34" alt="do_not_dismantle" /> | Non smontare il prodotto. | <img src="../../../../_static/manual-assets/_pool/eb/eb094578bf165fa39399de1d957cc71a92191f2b0e7ed0a620885065ebedf8a3.png" style="width: 40px;" width="40" height="51" alt="weee" /> | Questo simbolo indica che il prodotto non deve essere smaltito insieme ai rifiuti domestici, ma deve essere conferito a un centro di raccolta designato per il riciclo. Lo smaltimento e il riciclo corretti contribuiscono a proteggere l\'ambiente. Per ulteriori informazioni sullo smaltimento e sul riciclo di questo prodotto, contattare la comunità locale, il servizio di smaltimento o il rivenditore. |
+| <img src="../../../../_static/manual-assets/_pool/42/422379347e71e7827c3da380e421f2cb106da5d2f74781fc45782a2f86d493d2.png" style="width: 40px;" width="40" height="37" alt="no_open_flame" /> | Non fumare né utilizzare fiamme libere. | <img src="../../../../_static/manual-assets/_pool/7f/7fb57972ebd1fb8bf82abc75d0d320ecaa9abc6544020f2374da2f1272a46171.png" style="width: 40px;" width="40" height="32" alt="weee2" /> | Le batterie e gli accumulatori non devono essere smaltiti insieme ai rifiuti domestici. Come consumatore, sei legalmente obbligato a smaltire tutte le batterie e gli accumulatori nei punti di raccolta designati, indipendentemente dal fatto che contengano sostanze pericolose. Per favore, restituisci le batterie e gli accumulatori usati a un punto di raccolta locale, a un centro di riciclo o al rivenditore presso cui sono stati acquistati. Un corretto smaltimento garantisce un riciclo responsabile per l\'ambiente e previene potenziali danni alla salute umana e all\'ambiente. |
 
 # CONTENUTO DELLA CONFEZIONE
 
 
 
-<figure aria-label="CONTENUTO DELLA CONFEZIONE" class="hb-inbox-composition" data-card-count="3" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="three-card-responsive"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Jackery Battery Pack 2000." class="hb-inbox-art" src="../../../../_static/manual-assets/JBP-2000B/EU/it/md/assets/ir/97378797f84abf92d40fdf97bdf655b8f6eab326f908700e99424c02f5d57306/jbp2000b_in_box_main_unit.png"/><div class="hb-inbox-label">
+<figure aria-label="CONTENUTO DELLA CONFEZIONE" class="hb-inbox-composition" data-card-count="3" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="three-card-responsive"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Jackery Battery Pack 2000." class="hb-inbox-art" src="../../../../_static/manual-assets/_pool/97/97378797f84abf92d40fdf97bdf655b8f6eab326f908700e99424c02f5d57306.png"/><div class="hb-inbox-label">
 <p><strong>Jackery Battery Pack 2000</strong></p>
-</div></li><li class="hb-inbox-card" data-item-number="2"><img alt="Cavo di espansione." class="hb-inbox-art" src="../../../../_static/manual-assets/JBP-2000B/EU/it/md/assets/ir/2f6216b28c08a64de215bcbae3c62e2c90219a0aa93d53ed77ee365fd21b11fc/jbp2000b_expansion_cable.png"/><div class="hb-inbox-label">
+</div></li><li class="hb-inbox-card" data-item-number="2"><img alt="Cavo di espansione." class="hb-inbox-art" src="../../../../_static/manual-assets/_pool/2f/2f6216b28c08a64de215bcbae3c62e2c90219a0aa93d53ed77ee365fd21b11fc.png"/><div class="hb-inbox-label">
 <p><strong>Cavo di espansione</strong></p>
-</div></li><li class="hb-inbox-card" data-item-number="3"><img alt="Manuale d'uso." class="hb-inbox-art" src="../../../../_static/manual-assets/JBP-2000B/EU/it/md/assets/ir/87ac44e52863324b761a672089e6b0497e40fdf48432f698fccf30508060c60a/manual_icon1.png"/><div class="hb-inbox-label">
+</div></li><li class="hb-inbox-card" data-item-number="3"><img alt="Manuale d'uso." class="hb-inbox-art" src="../../../../_static/manual-assets/_pool/87/87ac44e52863324b761a672089e6b0497e40fdf48432f698fccf30508060c60a.png"/><div class="hb-inbox-label">
 <p>Manuale d'uso</p>
 </div></li></ol></figure>
 
@@ -73,7 +73,7 @@ Seguire sempre queste precauzioni di base durante l\'utilizzo di questo prodotto
 
 ## Aspetto del prodotto
 
-<img src="../../../../_static/manual-assets/JBP-2000B/EU/it/md/assets/ir/c405e6a1fdd35bb593429ee85568e843e02ced8e8a43d672ef1cb8034774cce3/jbp2000b_front_controls.png" style="width: 360px;" width="360" height="191" alt="Vista frontale del Battery Pack 2000." />
+<img src="../../../../_static/manual-assets/_pool/c4/c405e6a1fdd35bb593429ee85568e843e02ced8e8a43d672ef1cb8034774cce3.png" style="width: 360px;" width="360" height="191" alt="Vista frontale del Battery Pack 2000." />
 
 |                               |         |
 |-------------------------------|---------|
@@ -81,7 +81,7 @@ Seguire sempre queste precauzioni di base durante l\'utilizzo di questo prodotto
 
 ## VISTA LATERALE SINISTRA
 
-<img src="../../../../_static/manual-assets/JBP-2000B/EU/it/md/assets/ir/6ac9bc60991ebd6da65bcea1f62a1f82a737d8f38031144396d857f35ccbd8fc/jbp2000b_left_side_ports.png" style="width: 360px;" width="360" height="261" alt="Vista laterale sinistra con maniglia e porte di espansione CC A e B." />
+<img src="../../../../_static/manual-assets/_pool/6a/6ac9bc60991ebd6da65bcea1f62a1f82a737d8f38031144396d857f35ccbd8fc.png" style="width: 360px;" width="360" height="261" alt="Vista laterale sinistra con maniglia e porte di espansione CC A e B." />
 
 <table>
 <colgroup>
@@ -104,7 +104,7 @@ Seguire sempre queste precauzioni di base durante l\'utilizzo di questo prodotto
 
 # DISPLAY LCD
 
-<img src="../../../../_static/manual-assets/JBP-2000B/EU/it/md/assets/ir/ad4a3f6c7140f14222b620191aed30bf8fcc230c8e16a10d86d9f4c7ef27353b/jbp2000b_lcd_screen.png" style="width: 420px;" width="420" height="303" alt="DISPLAY LCD" />
+<img src="../../../../_static/manual-assets/_pool/ad/ad4a3f6c7140f14222b620191aed30bf8fcc230c8e16a10d86d9f4c7ef27353b.png" style="width: 420px;" width="420" height="303" alt="DISPLAY LCD" />
 
 <table class="longtable lcd-text-only">
 <colgroup>
@@ -134,7 +134,7 @@ In caso di guasto del sistema, verrà visualizzato il codice di errore corrispon
 
 ## ACCENSIONE/SPEGNIMENTO
 
-<img src="../../../../_static/manual-assets/JBP-2000B/EU/it/md/assets/ir/c8332fadce5987fef4ecd43938fb3a61bda2211b588bd20fd7c52a18768b1799/jbp2000b_power_control.png" style="width: 360px;" width="360" height="90" alt="Funzionamento del pulsante Power del Battery Pack 2000." />
+<img src="../../../../_static/manual-assets/_pool/c8/c8332fadce5987fef4ecd43938fb3a61bda2211b588bd20fd7c52a18768b1799.png" style="width: 360px;" width="360" height="90" alt="Funzionamento del pulsante Power del Battery Pack 2000." />
 
 **Accensione**
 
@@ -154,7 +154,7 @@ Tenere premuto per 3 secondi
 
 ## DISPLAY LCD ACCESO/SPENTO
 
-<img src="../../../../_static/manual-assets/JBP-2000B/EU/it/md/assets/ir/4d5f74e927261d7c174b45b5c0eb039d0e7c11ff4ab4c932e5719d2138415975/jbp2000b_lcd_control.png" style="width: 360px;" width="360" height="91" alt="Funzionamento del display LCD del Battery Pack 2000." />
+<img src="../../../../_static/manual-assets/_pool/4d/4d5f74e927261d7c174b45b5c0eb039d0e7c11ff4ab4c932e5719d2138415975.png" style="width: 360px;" width="360" height="91" alt="Funzionamento del display LCD del Battery Pack 2000." />
 
 Premendo il pulsante Power principale, l\'indicatore di funzionamento si accende e il display LCD si illumina. Premendolo di nuovo, il display LCD si spegne.
 
@@ -162,7 +162,7 @@ Premendo il pulsante Power principale, l\'indicatore di funzionamento si accende
 
 La power station portatile può essere utilizzato insieme a un massimo di 5 set di questo prodotto per soddisfare esigenze di maggiore capacità.
 
-<img src="../../../../_static/manual-assets/JBP-2000B/EU/it/md/assets/ir/8951b52e1a2fd330c8e7b996a7b0b91442b5dce1e68c7d8139dddf2672b61a7e/jbp2000b_eu_stack_clearance.png" style="width: 500px;" width="500" height="378" alt="Diagramma di collegamento, impilamento e spazio libero dei pacchi batteria." />
+<img src="../../../../_static/manual-assets/_pool/89/8951b52e1a2fd330c8e7b996a7b0b91442b5dce1e68c7d8139dddf2672b61a7e.png" style="width: 500px;" width="500" height="378" alt="Diagramma di collegamento, impilamento e spazio libero dei pacchi batteria." />
 
 
 
@@ -185,7 +185,7 @@ La power station portatile può essere utilizzato insieme a un massimo di 5 set 
 
 
 
-<img src="../../../../_static/manual-assets/JBP-2000B/EU/it/md/assets/ir/0857c9708d7e635f93233585d21cd2c41fd11e46983f7dab94bfe52b468d0fe3/jbp2000b_eu_connection_locking_it.png" style="width: 100%;;width:100.0%" alt="Ordine di collegamento corretto e fasi di blocco e sblocco del cavo di espansione." />
+<img src="../../../../_static/manual-assets/_pool/08/0857c9708d7e635f93233585d21cd2c41fd11e46983f7dab94bfe52b468d0fe3.png" style="width: 100%;;width:100.0%" alt="Ordine di collegamento corretto e fasi di blocco e sblocco del cavo di espansione." />
 
 # RISOLUZIONE DEI PROBLEMI
 
@@ -209,13 +209,13 @@ Quando si carica dalla parete, questo prodotto deve essere utilizzato con la pow
 
 
 
-<img src="../../../../_static/manual-assets/JBP-2000B/EU/it/md/assets/ir/e249b7661d9874293f6f1ad478e9392d2bcd4a625ecc60ec27fa2898cbb4361f/jbp2000b_eu_ac_charging.png" style="width: 100%;;width:100.0%" alt="Collegamento per la ricarica da presa a muro CA tramite la power station portatile." />
+<img src="../../../../_static/manual-assets/_pool/e2/e249b7661d9874293f6f1ad478e9392d2bcd4a625ecc60ec27fa2898cbb4361f.png" style="width: 100%;;width:100.0%" alt="Collegamento per la ricarica da presa a muro CA tramite la power station portatile." />
 
 ## RICARICA TRAMITE PANNELLI SOLARI (VENDUTI SEPARATAMENTE)
 
 Caricare il prodotto con i pannelli solari e la power station portatile come mostrato nella figura sottostante. Per ulteriori informazioni, consultare il manuale utente della power station portatile.
 
-<img src="../../../../_static/manual-assets/JBP-2000B/EU/it/md/assets/ir/e7777b74c8b716d19c996bff31a0d33de8a4ea60260d00aaed789f97ceb60fef/jbp2000b_eu_solar_charging.png" style="width: 500px;" width="500" height="286" alt="Collegamento per la ricarica solare tramite la power station portatile." />
+<img src="../../../../_static/manual-assets/_pool/e7/e7777b74c8b716d19c996bff31a0d33de8a4ea60260d00aaed789f97ceb60fef.png" style="width: 500px;" width="500" height="286" alt="Collegamento per la ricarica solare tramite la power station portatile." />
 
 # STOCCAGGIO
 

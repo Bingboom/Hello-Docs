@@ -67,8 +67,6 @@ class PathSegments:
     TM_HIT_RATE = "tm_hit_rate"
     PDF_ANNOTATE = "pdf_annotate"
     FLOW_DASHBOARD = "flow_dashboard"
-    WEB_DEBT_LEDGER_JSONL = "web_debt_ledger.jsonl"
-    DEBT_LEDGER_JSON = "debt_ledger.json"
 
     PARAMS_TEX = "params.tex"
     FONTS_TEX = "fonts.tex"
@@ -86,6 +84,7 @@ class PathSegments:
     TARGET_ASSEMBLY_PLAN_JSON = "target_assembly_plan.json"
     WEB_COMPOSITE_MANIFEST_JSON = "web_composite_manifest.json"
     PUBLISH_META_JSON = "publish_meta.json"
+    OPS_CATALOG_RECONCILE_WHITELIST_JSON = "ops_catalog_reconcile_whitelist.json"
 
     DEFAULT_CONFIG_US = "config.us.yaml"
     DEFAULT_CONFIG_JA = "config.ja.yaml"
@@ -207,6 +206,14 @@ def release_rebuild_verification_of(version_dir: Path) -> Path:
     return version_dir / PathSegments.RELEASE_REBUILD_VERIFICATION_JSON
 
 
+def ops_catalog_reconcile_whitelist_of(base_root: Path) -> Path:
+    return (
+        base_root
+        / PathSegments.DATA
+        / PathSegments.OPS_CATALOG_RECONCILE_WHITELIST_JSON
+    )
+
+
 def content_qc_reports_of(base_root: Path) -> Path:
     return base_root / PathSegments.REPORTS / PathSegments.CONTENT_QC
 
@@ -233,10 +240,6 @@ def pdf_annotate_reports_of(base_root: Path) -> Path:
 
 def flow_dashboard_reports_of(base_root: Path) -> Path:
     return base_root / PathSegments.REPORTS / PathSegments.FLOW_DASHBOARD
-
-
-def web_debt_ledger_of(base_root: Path) -> Path:
-    return base_root / PathSegments.REPORTS / PathSegments.WEB_DEBT_LEDGER_JSONL
 
 
 @dataclass(frozen=True)
@@ -368,6 +371,10 @@ class Paths:
         return docs_publish_web_of(self.docs_dir)
 
     @property
+    def ops_catalog_reconcile_whitelist(self) -> Path:
+        return ops_catalog_reconcile_whitelist_of(self.root)
+
+    @property
     def content_qc_reports_dir(self) -> Path:
         return content_qc_reports_of(self.root)
 
@@ -394,10 +401,6 @@ class Paths:
     @property
     def flow_dashboard_reports_dir(self) -> Path:
         return flow_dashboard_reports_of(self.root)
-
-    @property
-    def web_debt_ledger_path(self) -> Path:
-        return web_debt_ledger_of(self.root)
 
     def safety_rst(self, lang: str) -> Path:
         return self.docs_dir / f"safety_{lang}.rst"

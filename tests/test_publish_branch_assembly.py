@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 import shutil
 import subprocess
@@ -25,7 +26,6 @@ class PublishBranchAssemblyTests(unittest.TestCase):
         manual_stem: str | None = None,
         legacy_default: bool | None = None,
         language_scope: str | None = None,
-        source_kind: str | None = None,
     ) -> Path:
         lang_root = root / "reports" / "releases" / model / region / lang
         web_root = lang_root / "versions" / version / "web"
@@ -82,13 +82,7 @@ class PublishBranchAssemblyTests(unittest.TestCase):
             payload["legacy_default"] = legacy_default
         if language_scope is not None:
             payload["language_scope"] = language_scope
-        if source_kind is not None:
-            payload["source_kind"] = source_kind
-        # A pdf_sideload target never ran the RST -> Web-profile pipeline, so
-        # it never seals language-projection evidence even when it declares
-        # language_scope=single -- that is the whole point of the exemption
-        # under test below.
-        if language_scope == "single" and source_kind != "pdf_sideload":
+        if language_scope == "single":
             (md_root / "manual.ir.json").write_text('{"schema": "manual-ir/v2"}\n', encoding="utf-8")
             (md_root / "manual_bundle.html").write_text("<article>Manual</article>\n", encoding="utf-8")
             receipt, receipt_sha256 = seal_language_evidence_fixture(
@@ -143,7 +137,12 @@ class PublishBranchAssemblyTests(unittest.TestCase):
             web_markdown = output_dir.joinpath(
                 "web", "JE-1000F", "US", "en", "md", "manual_je1000f_us_en_web_publish_2.0.md"
             ).read_text(encoding="utf-8")
-            self.assertIn("../../../../_static/manual-assets/JE-1000F/US/en/md/assets/demo.png", web_markdown)
+            pooled = re.search(r'src="([^"]+)"', web_markdown).group(1)
+            self.assertIn("_static/manual-assets/_pool/", pooled)
+            self.assertEqual(
+                b"png",
+                (output_dir / "web" / "JE-1000F" / "US" / "en" / "md" / pooled).resolve().read_bytes(),
+            )
             short_alias = output_dir.joinpath(
                 "web", "manual_je1000f_us_en_web_publish_2.0.md"
             ).read_text(encoding="utf-8")
@@ -166,6 +165,38 @@ class PublishBranchAssemblyTests(unittest.TestCase):
             self.assertTrue(manifest["targets"][0]["legacy_default"])
             self.assertEqual("legacy_unspecified", manifest["targets"][0]["language_scope"])
             self.assertNotIn("publish_manifest.json", {entry["path"] for entry in manifest["files"]})
+            # REV-07: the queue-row ids thread through assembly into the stored
+            # metadata and manifest so the post-merge receipt lane can locate
+            # the Document_link rows after the queue run's releases tree is gone.
+            self.assertEqual(["rec_web"], manifest["targets"][0]["queue_record_ids"])
+            stored_meta = json.loads(
+                stored_source.joinpath("publish_meta.json").read_text(encoding="utf-8")
+            )
+            self.assertEqual(["rec_web"], stored_meta["queue_record_ids"])
+
+    def test_unsafe_queue_record_id_should_fail_assembly(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            lang_root = self._write_target(
+                root,
+                model="JE-1000F",
+                region="US",
+                lang="en",
+                version="2.0",
+                git_ref="review/JE-1000F-US",
+            )
+            metadata_path = lang_root / "latest" / "web" / "publish_meta.json"
+            payload = json.loads(metadata_path.read_text(encoding="utf-8"))
+            payload["queue_record_ids"] = ["rec_ok", "../escape"]
+            metadata_path.write_text(json.dumps(payload) + "\n", encoding="utf-8")
+
+            with self.assertRaisesRegex(RuntimeError, "unsafe queue record id"):
+                publish_branch_assembly.assemble_web_publish_branch(
+                    repo_root=root,
+                    releases_root=root / "reports" / "releases",
+                    output_dir=root / "publish-worktree" / "docs" / "publish",
+                    title="Manual Library",
+                )
 
     def test_incremental_assembly_should_preserve_existing_web_targets(self) -> None:
         with tempfile.TemporaryDirectory() as td:
@@ -415,6 +446,123 @@ class PublishBranchAssemblyTests(unittest.TestCase):
                     output_dir=root / "publish-worktree" / "docs" / "publish",
                     title="Manual Library",
                 )
+
+    def _publish_us_pilot_locales(self, root: Path, *, english_stem: str) -> Path:
+        """Replay the JE-1000F/US pilot: a live English book, then three locale rows.
+
+        ``write_web_publish_metadata`` never emits ``legacy_default``, so the
+        release payloads staged here deliberately carry none.  The single
+        default has to survive on the stored English tree alone.
+        """
+
+        releases_root = root / "reports" / "releases"
+        output_dir = root / "publish-worktree" / "docs" / "publish"
+        live_release = self._write_target(
+            root,
+            model="JE-1000F",
+            region="US",
+            lang="en",
+            version="2.3",
+            git_ref="review/JE-1000F-US",
+            manual_stem="manual_je1000f_us",
+        )
+        publish_branch_assembly.assemble_web_publish_branch(
+            repo_root=root,
+            releases_root=releases_root,
+            output_dir=output_dir,
+            title="Manual Library",
+        )
+        stored_en = self._stored_payload(output_dir, lang="en")
+        self.assertEqual("legacy_unspecified", stored_en["language_scope"])
+        self.assertTrue(stored_en["legacy_default"])
+
+        shutil.rmtree(live_release)
+        for lang, stem in (
+            ("en", english_stem),
+            ("fr", "manual_je1000f_us_fr"),
+            ("es", "manual_je1000f_us_es"),
+        ):
+            self._write_target(
+                root,
+                model="JE-1000F",
+                region="US",
+                lang=lang,
+                version="2.4",
+                git_ref="review/JE-1000F-US",
+                manual_stem=stem,
+                language_scope="single",
+            )
+        self.manifest_path = publish_branch_assembly.assemble_web_publish_branch(
+            repo_root=root,
+            releases_root=releases_root,
+            output_dir=output_dir,
+            title="Manual Library",
+        )
+        return output_dir
+
+    def _stored_payload(self, output_dir: Path, *, lang: str) -> dict:
+        metadata = (
+            output_dir / "sources" / "web" / "JE-1000F" / "US" / lang / "md" / "publish_meta.json"
+        )
+        return json.loads(metadata.read_text(encoding="utf-8"))
+
+    def test_us_pilot_locales_should_inherit_exactly_one_default(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            output_dir = self._publish_us_pilot_locales(
+                Path(td), english_stem="manual_je1000f_us"
+            )
+
+            defaults = {}
+            for lang in ("en", "fr", "es"):
+                payload = self._stored_payload(output_dir, lang=lang)
+                defaults[lang] = payload["legacy_default"]
+                self.assertEqual("single", payload["language_scope"])
+            self.assertEqual({"en": True, "fr": False, "es": False}, defaults)
+
+            manifest = json.loads(self.manifest_path.read_text(encoding="utf-8"))
+            self.assertEqual(
+                1, sum(1 for item in manifest["targets"] if item["legacy_default"] is True)
+            )
+            english = self._stored_payload(output_dir, lang="en")
+            self.assertEqual("JE-1000F/US/md", english["legacy_route"])
+            self.assertEqual(["manual_je1000f_us"], english["legacy_aliases"])
+
+    def test_us_pilot_should_keep_the_published_english_url_reachable(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            output_dir = self._publish_us_pilot_locales(
+                Path(td), english_stem="manual_je1000f_us"
+            )
+
+            web = output_dir / "web"
+            canonical = web / "JE-1000F" / "US" / "en" / "md" / "manual_je1000f_us.md"
+            self.assertTrue(canonical.is_file())
+            for lang, stem in (("fr", "manual_je1000f_us_fr"), ("es", "manual_je1000f_us_es")):
+                self.assertTrue((web / "JE-1000F" / "US" / lang / "md" / f"{stem}.md").is_file())
+            self.assertIn(
+                "JE-1000F/US/en/md/manual_je1000f_us.html",
+                (web / "manual_je1000f_us.md").read_text(encoding="utf-8"),
+            )
+            self.assertIn(
+                "../en/md/manual_je1000f_us.html",
+                (web / "JE-1000F" / "US" / "md" / "index.md").read_text(encoding="utf-8"),
+            )
+
+    def test_renaming_the_default_stem_should_orphan_the_published_locale_url(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            output_dir = self._publish_us_pilot_locales(
+                Path(td), english_stem="manual_je1000f_us_en"
+            )
+
+            web = output_dir / "web"
+            # Only the site root and the legacy JE-1000F/US/md route get an alias;
+            # nothing redirects inside the locale route, so the published
+            # JE-1000F/US/en/md/manual_je1000f_us.html URL simply disappears.
+            self.assertFalse((web / "JE-1000F" / "US" / "en" / "md" / "manual_je1000f_us.md").exists())
+            self.assertTrue((web / "JE-1000F" / "US" / "en" / "md" / "manual_je1000f_us_en.md").is_file())
+            self.assertIn(
+                "JE-1000F/US/en/md/manual_je1000f_us_en.html",
+                (web / "manual_je1000f_us.md").read_text(encoding="utf-8"),
+            )
 
     def test_normalized_release_version_path_should_match_existing_producer(self) -> None:
         with tempfile.TemporaryDirectory() as td:
@@ -764,87 +912,6 @@ class PublishBranchAssemblyTests(unittest.TestCase):
                     output_dir=root / "publish" / "docs",
                     title="Manual Library",
                 )
-
-    def test_pipeline_single_language_scope_without_receipt_should_still_be_rejected(self) -> None:
-        # Negative control for the pdf_sideload evidence exemption below: an
-        # ordinary pipeline target (no source_kind, or source_kind=pipeline)
-        # that declares language_scope=single but strips its evidence fields
-        # must stay exactly as fail-closed as it was before source_kind
-        # existed. This is the same shape as
-        # test_single_language_scope_without_receipt_should_be_rejected above,
-        # restated with an explicit source_kind so a future change to the
-        # exemption cannot silently widen past pdf_sideload without this
-        # test catching it.
-        with tempfile.TemporaryDirectory() as td:
-            root = Path(td)
-            lang_root = self._write_target(
-                root,
-                model="MODEL",
-                region="EU",
-                lang="fr",
-                version="2.0",
-                git_ref="review/MODEL-EU",
-                language_scope="single",
-                source_kind="pipeline",
-            )
-            metadata = lang_root / "latest" / "web" / "publish_meta.json"
-            payload = json.loads(metadata.read_text(encoding="utf-8"))
-            payload.pop("language_projection_evidence_path")
-            payload.pop("language_projection_evidence_sha256")
-            metadata.write_text(json.dumps(payload) + "\n", encoding="utf-8")
-
-            with self.assertRaisesRegex(RuntimeError, "language_projection_evidence_path"):
-                publish_branch_assembly.assemble_web_publish_branch(
-                    repo_root=root,
-                    releases_root=root / "reports" / "releases",
-                    output_dir=root / "publish" / "docs",
-                    title="Manual Library",
-                )
-
-    def test_pdf_sideload_target_is_exempt_from_the_evidence_gate(self) -> None:
-        with tempfile.TemporaryDirectory() as td:
-            root = Path(td)
-            self._write_target(
-                root,
-                model="MODEL",
-                region="EU",
-                lang="fr",
-                version="2.0",
-                git_ref="review/MODEL-EU",
-                language_scope="single",
-                source_kind="pdf_sideload",
-            )
-            output_dir = root / "publish-worktree" / "docs" / "publish"
-
-            manifest_path = publish_branch_assembly.assemble_web_publish_branch(
-                repo_root=root,
-                releases_root=root / "reports" / "releases",
-                output_dir=output_dir,
-                title="Manual Library",
-            )
-
-            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-            self.assertEqual(1, len(manifest["targets"]))
-            self.assertEqual("pdf_sideload", manifest["targets"][0]["source_kind"])
-            self.assertNotIn("language_projection_evidence_path", manifest["targets"][0])
-            stored = json.loads(
-                (
-                    output_dir
-                    / "sources"
-                    / "web"
-                    / "MODEL"
-                    / "EU"
-                    / "fr"
-                    / "md"
-                    / "publish_meta.json"
-                ).read_text(encoding="utf-8")
-            )
-            self.assertEqual("pdf_sideload", stored["source_kind"])
-            self.assertEqual("single", stored["language_scope"])
-            # No evidence/ directory was ever sealed for this target.
-            self.assertFalse(
-                (root / "reports" / "releases" / "MODEL" / "EU" / "fr" / "versions" / "2.0" / "web" / "evidence").exists()
-            )
 
     def test_assembly_should_reject_print_artifacts_inside_web_assets(self) -> None:
         with tempfile.TemporaryDirectory() as td:

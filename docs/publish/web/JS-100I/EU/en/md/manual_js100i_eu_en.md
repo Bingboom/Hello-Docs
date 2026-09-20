@@ -40,15 +40,15 @@
 
 
 
-<figure aria-label="WHAT'S IN THE BOX" class="hb-inbox-composition" data-card-count="5" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="responsive-card-grid"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Jackery SolarSaga 100 Air solar panel." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/js100i_eu_en/inbox_panel.png" data-web-finished-panel-sha256="bfe453b396d7c30b52136317f6e3ca084f4ad6e9e59abe908772de525244f58a" src="../../../../_static/manual-assets/JS-100I/EU/en/md/assets/ir/bfe453b396d7c30b52136317f6e3ca084f4ad6e9e59abe908772de525244f58a/inbox_panel.png"/><div class="hb-inbox-label">
+<figure aria-label="WHAT'S IN THE BOX" class="hb-inbox-composition" data-card-count="5" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="responsive-card-grid"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Jackery SolarSaga 100 Air solar panel." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/js100i_eu_en/inbox_panel.png" data-web-finished-panel-sha256="bfe453b396d7c30b52136317f6e3ca084f4ad6e9e59abe908772de525244f58a" src="../../../../_static/manual-assets/_pool/bf/bfe453b396d7c30b52136317f6e3ca084f4ad6e9e59abe908772de525244f58a.png"/><div class="hb-inbox-label">
 <p><strong>Jackery SolarSaga 100 Air</strong></p>
-</div></li><li class="hb-inbox-card" data-item-number="2"><img alt="Storage bag." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/js100i_eu_en/inbox_bag.png" data-web-finished-panel-sha256="7995365a1852cadaa0a34a5d758a299a6e0415179c657fe6a57166b515f3c515" src="../../../../_static/manual-assets/JS-100I/EU/en/md/assets/ir/7995365a1852cadaa0a34a5d758a299a6e0415179c657fe6a57166b515f3c515/inbox_bag.png"/><div class="hb-inbox-label">
+</div></li><li class="hb-inbox-card" data-item-number="2"><img alt="Storage bag." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/js100i_eu_en/inbox_bag.png" data-web-finished-panel-sha256="7995365a1852cadaa0a34a5d758a299a6e0415179c657fe6a57166b515f3c515" src="../../../../_static/manual-assets/_pool/79/7995365a1852cadaa0a34a5d758a299a6e0415179c657fe6a57166b515f3c515.png"/><div class="hb-inbox-label">
 <p><strong>Storage Bag</strong></p>
-</div></li><li class="hb-inbox-card" data-item-number="3"><img alt="Multifunctional solar charging cable, 3 metres." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/js100i_eu_en/inbox_cable.png" data-web-finished-panel-sha256="0d1e2c82ce86e51eeb4a1001096fb5073c867927d8f4c86ec29cff2a86f8014f" src="../../../../_static/manual-assets/JS-100I/EU/en/md/assets/ir/0d1e2c82ce86e51eeb4a1001096fb5073c867927d8f4c86ec29cff2a86f8014f/inbox_cable.png"/><div class="hb-inbox-label">
+</div></li><li class="hb-inbox-card" data-item-number="3"><img alt="Multifunctional solar charging cable, 3 metres." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/js100i_eu_en/inbox_cable.png" data-web-finished-panel-sha256="0d1e2c82ce86e51eeb4a1001096fb5073c867927d8f4c86ec29cff2a86f8014f" src="../../../../_static/manual-assets/_pool/0d/0d1e2c82ce86e51eeb4a1001096fb5073c867927d8f4c86ec29cff2a86f8014f.png"/><div class="hb-inbox-label">
 <p><strong>Multifunctional Solar Charging Cable (3m)</strong></p>
-</div></li><li class="hb-inbox-card" data-item-number="4"><img alt="DC8020 to DC7909 adapter." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/js100i_eu_en/inbox_adapter.png" data-web-finished-panel-sha256="2ef8624af0e7c186791e46be41b09cac73a548962a381667e7471fd85bf722b5" src="../../../../_static/manual-assets/JS-100I/EU/en/md/assets/ir/2ef8624af0e7c186791e46be41b09cac73a548962a381667e7471fd85bf722b5/inbox_adapter.png"/><div class="hb-inbox-label">
+</div></li><li class="hb-inbox-card" data-item-number="4"><img alt="DC8020 to DC7909 adapter." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/js100i_eu_en/inbox_adapter.png" data-web-finished-panel-sha256="2ef8624af0e7c186791e46be41b09cac73a548962a381667e7471fd85bf722b5" src="../../../../_static/manual-assets/_pool/2e/2ef8624af0e7c186791e46be41b09cac73a548962a381667e7471fd85bf722b5.png"/><div class="hb-inbox-label">
 <p><strong>DC8020 to DC7909 Adapter</strong></p>
-</div></li><li class="hb-inbox-card" data-item-number="5"><img alt="User manual." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/js100i_eu_en/inbox_manual.png" data-web-finished-panel-sha256="d93feafa1c2c5c987c915a64d9ea076eaf375dd55f46db61e105925575fcc27c" src="../../../../_static/manual-assets/JS-100I/EU/en/md/assets/ir/d93feafa1c2c5c987c915a64d9ea076eaf375dd55f46db61e105925575fcc27c/inbox_manual.png"/><div class="hb-inbox-label">
+</div></li><li class="hb-inbox-card" data-item-number="5"><img alt="User manual." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/js100i_eu_en/inbox_manual.png" data-web-finished-panel-sha256="d93feafa1c2c5c987c915a64d9ea076eaf375dd55f46db61e105925575fcc27c" src="../../../../_static/manual-assets/_pool/d9/d93feafa1c2c5c987c915a64d9ea076eaf375dd55f46db61e105925575fcc27c.png"/><div class="hb-inbox-label">
 <p><strong>User Manual</strong></p>
 </div></li></ol><div class="hb-inbox-tip" role="note"><div class="hb-inbox-tip-label"><p><strong>NOTE</strong></p></div><div class="hb-inbox-tip-body"><p>The multifunctional solar charging cable is only compatible with the SolarSaga 100 Air (JS-100I) solar panel. Do not use it with other solar panel models.</p></div></div></figure>
 
@@ -58,7 +58,7 @@
 
 The front view identifies the **Sun Angle Indicator**. The rear view identifies the **Junction Box**, **Stand**, and **Hole for Ground Stake (Ø10mm)**.
 
-<img src="../../../../_static/manual-assets/JS-100I/EU/en/md/assets/ir/966069f8f78c491f61bc00ef7a2dca50c0a8aab780b2062c47c549b57d904298/product_views.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js100i_eu_en/product_views.png" data-web-finished-panel-sha256="966069f8f78c491f61bc00ef7a2dca50c0a8aab780b2062c47c549b57d904298" alt="Front and rear views of the SolarSaga 100 Air, labelled with the sun angle indicator, junction box, stand, and 10 mm ground-stake hole." />
+<img src="../../../../_static/manual-assets/_pool/96/966069f8f78c491f61bc00ef7a2dca50c0a8aab780b2062c47c549b57d904298.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js100i_eu_en/product_views.png" data-web-finished-panel-sha256="966069f8f78c491f61bc00ef7a2dca50c0a8aab780b2062c47c549b57d904298" alt="Front and rear views of the SolarSaga 100 Air, labelled with the sun angle indicator, junction box, stand, and 10 mm ground-stake hole." />
 
 # UNFOLDING THE SOLAR PANEL
 
@@ -70,7 +70,7 @@ The front view identifies the **Sun Angle Indicator**. The rear view identifies 
 
 4.  Adjust the panel to face the sun, then connect it to your portable power station.
 
-<img src="../../../../_static/manual-assets/JS-100I/EU/en/md/assets/ir/73e17cf2c009daec15123b51fb4b7db8bfbed043474d5a7e166b61fd62a765e7/unfold_steps_1_3.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js100i_eu_en/unfold_steps_1_3.png" data-web-finished-panel-sha256="73e17cf2c009daec15123b51fb4b7db8bfbed043474d5a7e166b61fd62a765e7" alt="Steps 1 to 3: remove the panel from the bag, unfold its four sections, and open the two support stands." /> <img src="../../../../_static/manual-assets/JS-100I/EU/en/md/assets/ir/d10b0bff038014a4b0df8c749901c926da47a6171134c472af7cab8244cf93aa/unfold_step_4.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js100i_eu_en/unfold_step_4.png" data-web-finished-panel-sha256="d10b0bff038014a4b0df8c749901c926da47a6171134c472af7cab8244cf93aa" alt="Step 4: face the unfolded panel toward the sun and connect it to a portable power station." />
+<img src="../../../../_static/manual-assets/_pool/73/73e17cf2c009daec15123b51fb4b7db8bfbed043474d5a7e166b61fd62a765e7.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js100i_eu_en/unfold_steps_1_3.png" data-web-finished-panel-sha256="73e17cf2c009daec15123b51fb4b7db8bfbed043474d5a7e166b61fd62a765e7" alt="Steps 1 to 3: remove the panel from the bag, unfold its four sections, and open the two support stands." /> <img src="../../../../_static/manual-assets/_pool/d1/d10b0bff038014a4b0df8c749901c926da47a6171134c472af7cab8244cf93aa.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js100i_eu_en/unfold_step_4.png" data-web-finished-panel-sha256="d10b0bff038014a4b0df8c749901c926da47a6171134c472af7cab8244cf93aa" alt="Step 4: face the unfolded panel toward the sun and connect it to a portable power station." />
 
 # FOLDING THE SOLAR PANEL
 
@@ -80,7 +80,7 @@ The front view identifies the **Sun Angle Indicator**. The rear view identifies 
 
 3.  Place the solar panel back into the storage bag.
 
-<img src="../../../../_static/manual-assets/JS-100I/EU/en/md/assets/ir/57cd5b938e761df6af232a5a0ad74d57c33eb2e779ce283e9bb680d684e0a9b0/fold_steps.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js100i_eu_en/fold_steps.png" data-web-finished-panel-sha256="57cd5b938e761df6af232a5a0ad74d57c33eb2e779ce283e9bb680d684e0a9b0" alt="Three illustrated steps for disconnecting, folding, and storing the SolarSaga 100 Air." />
+<img src="../../../../_static/manual-assets/_pool/57/57cd5b938e761df6af232a5a0ad74d57c33eb2e779ce283e9bb680d684e0a9b0.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js100i_eu_en/fold_steps.png" data-web-finished-panel-sha256="57cd5b938e761df6af232a5a0ad74d57c33eb2e779ce283e9bb680d684e0a9b0" alt="Three illustrated steps for disconnecting, folding, and storing the SolarSaga 100 Air." />
 
 # CHARGING JACKERY PORTABLE POWER STATION
 
@@ -94,7 +94,7 @@ Compatible with Jackery portable power stations with DC8020 input port(s). Conne
 
 Compatible with Jackery portable power stations with DC7909 input port(s). Fit the **DC8020--DC7909 Adapter** between the solar charging cable and the power station.
 
-<img src="../../../../_static/manual-assets/JS-100I/EU/en/md/assets/ir/eb60e9c4e9ebeb0f3b99f8e1d9d737116bb968d6c4657ad29a990badcf882595/dc_connections.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js100i_eu_en/dc_connections.png" data-web-finished-panel-sha256="eb60e9c4e9ebeb0f3b99f8e1d9d737116bb968d6c4657ad29a990badcf882595" alt="English-labelled DC8020 and DC7909 adapter connection diagrams." />
+<img src="../../../../_static/manual-assets/_pool/eb/eb60e9c4e9ebeb0f3b99f8e1d9d737116bb968d6c4657ad29a990badcf882595.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js100i_eu_en/dc_connections.png" data-web-finished-panel-sha256="eb60e9c4e9ebeb0f3b99f8e1d9d737116bb968d6c4657ad29a990badcf882595" alt="English-labelled DC8020 and DC7909 adapter connection diagrams." />
 
 ## DC8020 to USB-C Adapter Cable (Sold Separately)
 
@@ -108,7 +108,7 @@ The DC8020 to USB-C Adapter Cable is used to charge Jackery portable power stati
 
 Connect the two solar panels to the solar panel connector respectively and then connect the solar panel connector to the DC input port of the portable power station.
 
-<img src="../../../../_static/manual-assets/JS-100I/EU/en/md/assets/ir/9106d5c1b9df86b719139e34173d645c92347a8736df6403bf08368252818fc1/optional_connections.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js100i_eu_en/optional_connections.png" data-web-finished-panel-sha256="9106d5c1b9df86b719139e34173d645c92347a8736df6403bf08368252818fc1" alt="English-labelled USB-C adapter and two-panel connector diagrams." />
+<img src="../../../../_static/manual-assets/_pool/91/9106d5c1b9df86b719139e34173d645c92347a8736df6403bf08368252818fc1.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js100i_eu_en/optional_connections.png" data-web-finished-panel-sha256="9106d5c1b9df86b719139e34173d645c92347a8736df6403bf08368252818fc1" alt="English-labelled USB-C adapter and two-panel connector diagrams." />
 
 - Ensure that only solar panels of the same model are connected to the input of the connector.
 
@@ -118,7 +118,7 @@ The product has a sun angle indicator. When sunlight hits its surface, a shadow 
 
 If the shadow falls on the white inner circle at its bottom, it means that the solar panel is facing directly towards the sun and you can get optimal power generation; if not, it is suggested to adjust its angle until it does.
 
-<img src="../../../../_static/manual-assets/JS-100I/EU/en/md/assets/ir/4d13eb653050866121bb5de2f823f0309f0fd92156e470a602f63e6ad3c24fe6/angle_and_device.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js100i_eu_en/angle_and_device.png" data-web-finished-panel-sha256="4d13eb653050866121bb5de2f823f0309f0fd92156e470a602f63e6ad3c24fe6" alt="English-labelled sun angle indicator guidance and device-powering connection diagram." />
+<img src="../../../../_static/manual-assets/_pool/4d/4d13eb653050866121bb5de2f823f0309f0fd92156e470a602f63e6ad3c24fe6.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js100i_eu_en/angle_and_device.png" data-web-finished-panel-sha256="4d13eb653050866121bb5de2f823f0309f0fd92156e470a602f63e6ad3c24fe6" alt="English-labelled sun angle indicator guidance and device-powering connection diagram." />
 
 Note
 
@@ -128,7 +128,7 @@ To maximize the power generation, adjust the orientation of Jackery SolarSaga 10
 
 Use the multifunctional adapter\'s USB-C, LED and USB-A interfaces to power a cell phone, power bank or tablet as shown.
 
-<img src="../../../../_static/manual-assets/JS-100I/EU/en/md/assets/ir/e2d23601137015dfd900301d9e19ef8a87a46e8a2c3f646a68d79d4715ee3218/multifunctional_adapter.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js100i_eu_en/multifunctional_adapter.png" data-web-finished-panel-sha256="e2d23601137015dfd900301d9e19ef8a87a46e8a2c3f646a68d79d4715ee3218" alt="Multifunctional adapter with English-labelled USB-A, USB-C and LED interfaces." />
+<img src="../../../../_static/manual-assets/_pool/e2/e2d23601137015dfd900301d9e19ef8a87a46e8a2c3f646a68d79d4715ee3218.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js100i_eu_en/multifunctional_adapter.png" data-web-finished-panel-sha256="e2d23601137015dfd900301d9e19ef8a87a46e8a2c3f646a68d79d4715ee3218" alt="Multifunctional adapter with English-labelled USB-A, USB-C and LED interfaces." />
 
 - Insert the rubber plug when USB ports are not in use to prevent dust.
 

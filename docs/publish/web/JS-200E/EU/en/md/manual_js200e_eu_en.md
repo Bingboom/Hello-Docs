@@ -38,11 +38,11 @@
 
 
 
-<figure aria-label="WHAT'S IN THE BOX" class="hb-inbox-composition" data-card-count="3" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="three-card-responsive"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Jackery SolarSaga 200 solar panel." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/js200e_eu_en/inbox_panel.png" data-web-finished-panel-sha256="5f7d48fe9d333b6ddced3b275264255b0ea69e99c7a7864a8bb6409c260f7bc4" src="../../../../_static/manual-assets/JS-200E/EU/en/md/assets/ir/5f7d48fe9d333b6ddced3b275264255b0ea69e99c7a7864a8bb6409c260f7bc4/inbox_panel.png"/><div class="hb-inbox-label">
+<figure aria-label="WHAT'S IN THE BOX" class="hb-inbox-composition" data-card-count="3" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="three-card-responsive"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Jackery SolarSaga 200 solar panel." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/js200e_eu_en/inbox_panel.png" data-web-finished-panel-sha256="5f7d48fe9d333b6ddced3b275264255b0ea69e99c7a7864a8bb6409c260f7bc4" src="../../../../_static/manual-assets/_pool/5f/5f7d48fe9d333b6ddced3b275264255b0ea69e99c7a7864a8bb6409c260f7bc4.png"/><div class="hb-inbox-label">
 <p><strong>Jackery SolarSaga 200</strong></p>
-</div></li><li class="hb-inbox-card" data-item-number="2"><img alt="Multifunctional solar charging cable." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/js200e_eu_en/inbox_cable.png" data-web-finished-panel-sha256="bae06edb4dfdd0e5c5a1e920f183361289160991a109ecc49a1f81b38a80b969" src="../../../../_static/manual-assets/JS-200E/EU/en/md/assets/ir/bae06edb4dfdd0e5c5a1e920f183361289160991a109ecc49a1f81b38a80b969/inbox_cable.png"/><div class="hb-inbox-label">
+</div></li><li class="hb-inbox-card" data-item-number="2"><img alt="Multifunctional solar charging cable." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/js200e_eu_en/inbox_cable.png" data-web-finished-panel-sha256="bae06edb4dfdd0e5c5a1e920f183361289160991a109ecc49a1f81b38a80b969" src="../../../../_static/manual-assets/_pool/ba/bae06edb4dfdd0e5c5a1e920f183361289160991a109ecc49a1f81b38a80b969.png"/><div class="hb-inbox-label">
 <p><strong>Multifunctional Solar Charging Cable</strong></p>
-</div></li><li class="hb-inbox-card" data-item-number="3"><img alt="JS-200E user manual." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/js200e_eu_en/inbox_manual.png" data-web-finished-panel-sha256="11247bf9bb352f6eed95ded80202ff5520fa8846e11437af7e1fa4f26be90d8e" src="../../../../_static/manual-assets/JS-200E/EU/en/md/assets/ir/11247bf9bb352f6eed95ded80202ff5520fa8846e11437af7e1fa4f26be90d8e/inbox_manual.png"/><div class="hb-inbox-label">
+</div></li><li class="hb-inbox-card" data-item-number="3"><img alt="JS-200E user manual." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/js200e_eu_en/inbox_manual.png" data-web-finished-panel-sha256="11247bf9bb352f6eed95ded80202ff5520fa8846e11437af7e1fa4f26be90d8e" src="../../../../_static/manual-assets/_pool/11/11247bf9bb352f6eed95ded80202ff5520fa8846e11437af7e1fa4f26be90d8e.png"/><div class="hb-inbox-label">
 <p><strong>User Manual</strong></p>
 </div></li></ol></figure>
 
@@ -62,13 +62,13 @@ Connect the cable to the solar panel and the DC input port of the portable power
 
 Suitable for the DC input port of Jackery portable power station (diameter: 8.1 mm).
 
-<img src="../../../../_static/manual-assets/JS-200E/EU/en/md/assets/ir/e665f6fa4a843c1e9544668a0bff6734f83f2db513a21a45f8b2c1728eafca3c/dc8020_connection.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js200e_eu_en/dc8020_connection.png" data-web-finished-panel-sha256="e665f6fa4a843c1e9544668a0bff6734f83f2db513a21a45f8b2c1728eafca3c" alt="SolarSaga 200 connected to a Jackery portable power station through the DC8020 male connector." />
+<img src="../../../../_static/manual-assets/_pool/e6/e665f6fa4a843c1e9544668a0bff6734f83f2db513a21a45f8b2c1728eafca3c.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js200e_eu_en/dc8020_connection.png" data-web-finished-panel-sha256="e665f6fa4a843c1e9544668a0bff6734f83f2db513a21a45f8b2c1728eafca3c" alt="SolarSaga 200 connected to a Jackery portable power station through the DC8020 male connector." />
 
 # DC8020--DC7909 ADAPTER
 
 Suitable for the DC input port of Jackery portable power station (diameter: 8.0 mm).
 
-<img src="../../../../_static/manual-assets/JS-200E/EU/en/md/assets/ir/470a7ccf868679553aa0ff9bbcc14059f4b6f6dc5f196100ebf7237bb2dd3bcd/dc7909_connection.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js200e_eu_en/dc7909_connection.png" data-web-finished-panel-sha256="470a7ccf868679553aa0ff9bbcc14059f4b6f6dc5f196100ebf7237bb2dd3bcd" alt="SolarSaga 200 connected to a Jackery portable power station through the DC8020–DC7909 adapter." />
+<img src="../../../../_static/manual-assets/_pool/47/470a7ccf868679553aa0ff9bbcc14059f4b6f6dc5f196100ebf7237bb2dd3bcd.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js200e_eu_en/dc7909_connection.png" data-web-finished-panel-sha256="470a7ccf868679553aa0ff9bbcc14059f4b6f6dc5f196100ebf7237bb2dd3bcd" alt="SolarSaga 200 connected to a Jackery portable power station through the DC8020–DC7909 adapter." />
 
 ## WHEN USING THE SOLAR PANEL CONNECTOR
 
@@ -76,7 +76,7 @@ Connect the two solar panels to the solar panel connector respectively and then 
 
 - Ensure that only solar panels of the same model are connected to the input of the connector.
 
-<img src="../../../../_static/manual-assets/JS-200E/EU/en/md/assets/ir/e3a5de366e53ed8dd6605a1b3f086ed8d45671c2493a334c100564d1d2f99d66/solar_panel_connector.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js200e_eu_en/solar_panel_connector.png" data-web-finished-panel-sha256="e3a5de366e53ed8dd6605a1b3f086ed8d45671c2493a334c100564d1d2f99d66" alt="Two SolarSaga 200 panels connected to a Jackery portable power station through the solar panel connector." />
+<img src="../../../../_static/manual-assets/_pool/e3/e3a5de366e53ed8dd6605a1b3f086ed8d45671c2493a334c100564d1d2f99d66.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js200e_eu_en/solar_panel_connector.png" data-web-finished-panel-sha256="e3a5de366e53ed8dd6605a1b3f086ed8d45671c2493a334c100564d1d2f99d66" alt="Two SolarSaga 200 panels connected to a Jackery portable power station through the solar panel connector." />
 
 Note
 
@@ -86,21 +86,21 @@ To maximize the power generation, adjust the orientation of SolarSaga 200 throug
 
 The carry handle has a sun angle indicator. When sunlight hits its surface, a shadow will appear at its bottom.
 
-<img src="../../../../_static/manual-assets/JS-200E/EU/en/md/assets/ir/4aa673aa5f1ea9e3613b9e61112850dfb8f704127642910fcbd2f4db423df356/sun_angle_indicator.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js200e_eu_en/sun_angle_indicator.png" data-web-finished-panel-sha256="4aa673aa5f1ea9e3613b9e61112850dfb8f704127642910fcbd2f4db423df356" alt="SolarSaga 200 sun angle indicator with the indicator point and shadow labelled." />
+<img src="../../../../_static/manual-assets/_pool/4a/4aa673aa5f1ea9e3613b9e61112850dfb8f704127642910fcbd2f4db423df356.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js200e_eu_en/sun_angle_indicator.png" data-web-finished-panel-sha256="4aa673aa5f1ea9e3613b9e61112850dfb8f704127642910fcbd2f4db423df356" alt="SolarSaga 200 sun angle indicator with the indicator point and shadow labelled." />
 
 If the shadow falls on the white inner circle at its bottom, it means that the solar panel is facing directly towards sun and you can get optimal power generation; if not, it is suggested to adjust its angle until it does.
 
-<img src="../../../../_static/manual-assets/JS-200E/EU/en/md/assets/ir/9e4752e62aa71df42b2ae8c344d39738a197ace851c8b797f14034b51b8b3b63/shadow_guidance.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js200e_eu_en/shadow_guidance.png" data-web-finished-panel-sha256="9e4752e62aa71df42b2ae8c344d39738a197ace851c8b797f14034b51b8b3b63" alt="Correct and incorrect shadow positions for the sun angle indicator." />
+<img src="../../../../_static/manual-assets/_pool/9e/9e4752e62aa71df42b2ae8c344d39738a197ace851c8b797f14034b51b8b3b63.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js200e_eu_en/shadow_guidance.png" data-web-finished-panel-sha256="9e4752e62aa71df42b2ae8c344d39738a197ace851c8b797f14034b51b8b3b63" alt="Correct and incorrect shadow positions for the sun angle indicator." />
 
 ## POWER YOUR DEVICE
 
-<img src="../../../../_static/manual-assets/JS-200E/EU/en/md/assets/ir/4ef7d0e0b649bba4cdab9749f678c2c0621f2b28430972979308c9aa86a88dff/power_device.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js200e_eu_en/power_device.png" data-web-finished-panel-sha256="4ef7d0e0b649bba4cdab9749f678c2c0621f2b28430972979308c9aa86a88dff" alt="SolarSaga 200 powering a cell phone, power bank and tablet through the multifunctional adapter while connected to a portable power station." />
+<img src="../../../../_static/manual-assets/_pool/4e/4ef7d0e0b649bba4cdab9749f678c2c0621f2b28430972979308c9aa86a88dff.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js200e_eu_en/power_device.png" data-web-finished-panel-sha256="4ef7d0e0b649bba4cdab9749f678c2c0621f2b28430972979308c9aa86a88dff" alt="SolarSaga 200 powering a cell phone, power bank and tablet through the multifunctional adapter while connected to a portable power station." />
 
 Note
 
 This multifunctional solar charging cable is only suitable for charging the Jackery SolarSaga 200 (JS-200E) and should not be used with other solar panels.
 
-<img src="../../../../_static/manual-assets/JS-200E/EU/en/md/assets/ir/f48eeddf7ca152780aef9b626c3ec39fcd83c74bf66ce168bbf6514a494ddeaa/rubber_plug.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js200e_eu_en/rubber_plug.png" data-web-finished-panel-sha256="f48eeddf7ca152780aef9b626c3ec39fcd83c74bf66ce168bbf6514a494ddeaa" alt="Rubber plug above the multifunctional adapter&#39;s USB-C, LED and USB-A interfaces." />
+<img src="../../../../_static/manual-assets/_pool/f4/f48eeddf7ca152780aef9b626c3ec39fcd83c74bf66ce168bbf6514a494ddeaa.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js200e_eu_en/rubber_plug.png" data-web-finished-panel-sha256="f48eeddf7ca152780aef9b626c3ec39fcd83c74bf66ce168bbf6514a494ddeaa" alt="Rubber plug above the multifunctional adapter&#39;s USB-C, LED and USB-A interfaces." />
 
 Note
 

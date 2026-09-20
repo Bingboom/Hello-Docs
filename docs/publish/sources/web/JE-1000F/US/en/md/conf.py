@@ -11,3 +11,15 @@ myst_heading_anchors = 3
 suppress_warnings = ["myst.header"]
 html_static_path = ["_static"]
 html_css_files = ["web_manual.css"]
+
+from pathlib import Path
+from shutil import copytree
+
+def _copy_packaged_assets(app, exception):
+    if exception is None:
+        source = Path(app.srcdir) / "assets"
+        target = Path(app.outdir) / "assets"
+        copytree(source, target, dirs_exist_ok=True)
+
+def setup(app):
+    app.connect("build-finished", _copy_packaged_assets)
