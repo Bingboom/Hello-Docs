@@ -78,7 +78,7 @@ blockquote{background:#eff6ff;border-left-color:#60a5fa;color:#334869}
 <li><strong>commit：正式拍下一张快照，再写一句说明。</strong> 这就是一个留在电脑里的版本。下次继续改，不会自动覆盖这次存档。</li>
 </ul>
 <p>文件本身还是照常编辑和保存。add、commit 是把选好的改动记入版本历史；Git 不会自动记录每次打字。<a href="https://git-scm.com/docs/git-add" target="_blank" rel="noopener noreferrer">Git 的 add 说明</a> · <a href="https://git-scm.com/docs/git-commit" target="_blank" rel="noopener noreferrer">commit 说明</a></p>
-<figure class="learning-figure"><a href="../配图/09-Git存档-q版.png" target="_blank" aria-label="放大配图：本地存档：修改并保存 → add 选好改动 → commit 存一版；需要时再 Push"><picture><img src="../配图/09-Git存档-q版.png" alt="本地存档：修改并保存 → add 选好改动 → commit 存一版；需要时再 Push" loading="lazy"></picture></a><figcaption>本地存档：修改并保存 → add 选好改动 → commit 存一版；需要时再 Push · 点击图片可放大查看</figcaption></figure><h3>用 GitHub Desktop，就按这几步做</h3>
+<figure class="learning-figure"><a href="../配图/09-Git存档-q版.png?v=46fe2fad" target="_blank" aria-label="放大配图：本地存档：修改并保存 → add 选好改动 → commit 存一版；需要多端同步或共同协作时，再 Push 到 GitHub（可选）"><picture><img src="../配图/09-Git存档-q版.png?v=46fe2fad" alt="本地存档：修改并保存 → add 选好改动 → commit 存一版；需要多端同步或共同协作时，再 Push 到 GitHub（可选）" loading="lazy"></picture></a><figcaption>本地存档：修改并保存 → add 选好改动 → commit 存一版；需要多端同步或共同协作时，再 Push 到 GitHub（可选） · 点击图片可放大查看</figcaption></figure><h3>用 GitHub Desktop，就按这几步做</h3>
 <ol>
 <li>改好文件并保存，试一下功能是否正常。</li>
 <li>在 <strong>Changes</strong> 里查看差异，勾选这次要存的文件。这对应“选好这次的改动”，不用另找一个 add 按钮。</li>
@@ -96,8 +96,9 @@ git commit -m &quot;增加按学生搜索&quot;
 <p>第一行先看看哪些文件改了；第二行选中 <code>index.html</code> 当前的改动；第三行存成一个版本。文件名要换成你实际修改的文件。add 之后如果又改了文件，想把新改动一起存进去，就再 add 一次。</p>
 </details>
 
-<h3>要同步到 GitHub 时，再用 Push</h3>
-<p><strong>Commit 存在自己的电脑里；Push 才是上传到 GitHub。</strong> 在 Desktop 中点击 <strong>Push origin</strong>，就把本地的新存档同步上去；新建项目首次上传时通常显示 <strong>Publish repository</strong>。</p>
+<h3>需要多端同步或共同协作时，再推送到 GitHub</h3>
+<p><strong>Push 是可选的：需要在多台电脑间同步项目，或与其他人共同协作时，再把本地版本推送到 GitHub。只在自己的电脑上使用，保存本地版本就可以，不需要推送。</strong></p>
+<p>推送后，可以在另一台电脑上获取这些版本，协作者也能获取和接着修改。<strong>Commit 是在本机存一版；Push 是把这些版本推送到 GitHub。</strong> 在 Desktop 中点击 <strong>Push origin</strong> 即可推送；新建项目首次上传时通常显示 <strong>Publish repository</strong>。</p>
 <p>上传前确认仓库是公开还是私有，不要上传密码或未经授权的业务资料。<a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/about-repositories" target="_blank" rel="noopener noreferrer">可见范围说明</a> · <a href="https://docs.github.com/en/desktop/overview/creating-your-first-repository-using-github-desktop" target="_blank" rel="noopener noreferrer">创建和发布仓库说明</a></p>
 <p>代码上传到 GitHub，也不等于网页已经上线。</p>
 <div class="footer">本页可离线阅读。外部资料链接需要联网。<br>练习中的学生信息均为虚构数据。</div></main></div><script>document.getElementById('print').onclick=()=>window.print();document.querySelectorAll('pre').forEach(p=>{if(p.closest('.output'))return;const w=document.createElement('div');w.className='code-wrap';p.before(w);w.append(p);const b=document.createElement('button');b.className='copy';b.textContent='复制';b.onclick=async()=>{try{if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(p.innerText)}else{const t=document.createElement('textarea');t.value=p.innerText;document.body.append(t);t.select();if(!document.execCommand('copy'))throw Error('copy');t.remove()}b.textContent='已复制'}catch{b.textContent='请选中文字复制'}setTimeout(()=>b.textContent='复制',2200)};w.append(b)});let closed=[];window.addEventListener('beforeprint',()=>{closed=[...document.querySelectorAll('details:not([open])')];closed.forEach(x=>x.open=true)});window.addEventListener('afterprint',()=>closed.forEach(x=>x.open=false));window.addEventListener('scroll',()=>{const h=document.documentElement;document.getElementById('progress').style.width=((h.scrollTop/(h.scrollHeight-h.clientHeight||1))*100)+'%'});</script></body></html>

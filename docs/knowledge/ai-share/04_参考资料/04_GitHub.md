@@ -122,9 +122,11 @@ git commit -m "增加按学生搜索"
 
 </details>
 
-### 要同步到 GitHub 时，再用 Push
+### 需要多端同步或共同协作时，再推送到 GitHub
 
-**Commit 存在自己的电脑里；Push 才是上传到 GitHub。** 在 Desktop 中点击 **Push origin**，就把本地的新存档同步上去；新建项目首次上传时通常显示 **Publish repository**。
+**Push 是可选的：需要在多台电脑间同步项目，或与其他人共同协作时，再把本地版本推送到 GitHub。只在自己的电脑上使用，保存本地版本就可以，不需要推送。**
+
+推送后，可以在另一台电脑上获取这些版本，协作者也能获取和接着修改。**Commit 是在本机存一版；Push 是把这些版本推送到 GitHub。** 在 Desktop 中点击 **Push origin** 即可推送；新建项目首次上传时通常显示 **Publish repository**。
 
 上传前确认仓库是公开还是私有，不要上传密码或未经授权的业务资料。[可见范围说明](https://docs.github.com/en/repositories/creating-and-managing-repositories/about-repositories) · [创建和发布仓库说明](https://docs.github.com/en/desktop/overview/creating-your-first-repository-using-github-desktop)
 
