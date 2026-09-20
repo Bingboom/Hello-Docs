@@ -12,7 +12,7 @@ GitHub 上有些项目用 Jupyter Notebook 展示做法。它像一本能动手�
 
 可以从这份 Notebook 看一个独立的小例子：
 
-- [GitHub 原例：读取自行车计数资料](../03_GitHub原例/阅读版.html)：来自 [Pandas Cookbook](https://github.com/jvns/pandas-cookbook)，展示读取数据、选一列、画图的过程。英文原始 Notebook、配套数据和来源许可也一起放在包里。
+- [从 the craft of selfteaching 开始：改一句产品介绍](../03_GitHub原例/阅读版.html)：参考[the craft of selfteaching](https://github.com/selfteaching/the-craft-of-selfteaching)，先运行一句产品介绍，只改价格再看结果；结合露营海报理解变量怎样填入文字。
 
 先打开“阅读版”就能看说明、代码和已经生成的结果，不用安装软件。想修改并重新运行时，再把对应文件夹交给 Agent：
 

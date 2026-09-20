@@ -67,7 +67,9 @@ def main():
                 '<a href="../00_打开分享.html">返回分享稿</a></header>'
                 '<div class="layout"><main>' + material + '</main></div></body></html>')
         (ROOT / output_name).write_text(page, 'utf-8')
-    for source in sorted((SHARE / '04_参考资料').glob('*.md')):
+    references = sorted((SHARE / '04_参考资料').glob('*.md'))
+    references.append(SHARE / '03_GitHub原例' / '阅读版.md')
+    for source in references:
         target = source.with_suffix('.html')
         if not target.exists():
             continue
