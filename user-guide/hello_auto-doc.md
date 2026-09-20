@@ -571,6 +571,7 @@ GitHub note:
 - When one model needs a different placeholder-backed page layout but the family page order stays the same, that `generated_page` may use `model_overrides.<MODEL>.recipe` and/or `.template`. This is a narrow layout exception: other models still resolve the shared paths, and product/spec values remain in phase2 source tables.
 - **Languages are per model, not per family.** A family config's `build.languages` is the union across that region's models — `configs/config.eu.yaml` lists six because the EU line carries Ukrainian templates, while JE-1000F does not ship Ukrainian. [`../data/model_languages.csv`](../data/model_languages.csv) (`Document_key,Project,languages,notes`, languages `;`-separated) narrows the family list per `<MODEL>_<REGION>` at bundle-plan time, dropping that language's pages **and** its generated data pages (`spec_uk.rst`, `symbols_uk.rst`, …). Never delete a language from the family config to fix one model: the models that do ship it would lose it too. Resolution intersects while preserving the family's order, so the config still owns ordering. It is fail-open like the capability gate — no row keeps every family language — and it is a tracked CSV, so the git diff is the review surface.
 - Prefaces carry every family language *inside one file*, which page selection cannot narrow. Those manifest entries declare `lang_blocks: true` and the assembler drops the out-of-scope blocks (`**FR IMPORTANT**` headers, `\HBLangTagLine{XX}` in `raw:: latex`), keeping page-structure macros. The annotation is required, not inferred, because `**IT ...**` is ordinary bold text elsewhere. This replaces forking a template per language line (`00_preface_single_language.rst` was the hand-made version of exactly this trim). A trimmed target also gets a `MANUAL_LANGUAGE_SCOPE` derived from its real languages, so the cover line stops advertising a language the book no longer contains.
+- JE-1000F US en/fr/es is the document-output exception: its three `manual_us-single-*.yaml` manifests intentionally keep the trilingual preface for IDML/Word/PDF. Their configs use `build.web_language_block_pages` instead, so only the Web en/fr/es routes remove the two foreign `IMPORTANT` blocks.
 - A committed `docs/_review` derivative is per `(model, region)` and shared by a region's merged and single-language configs, so it holds the merged book's languages. The trim runs again on the overlaid bundle copy — `docs/_review` itself is never rewritten, and the merged build is unaffected because all its languages are in scope.
 - New `check` codes: `LANG_SCOPE_UNSHIPPED_LANGUAGE` (a scope row disjoint from the family the config declares — today `configs/config.eu-uk.yaml` with its inherited JE-1000F/EU default target, which ships no Ukrainian) and `LANG_SCOPE_FOREIGN_SCRIPT` (a bundle page carrying a dropped language's script, which catches leakage that has neither a `_<lang>` filename suffix nor a language tag). The per-language contract / generated-page / identity / parity collectors all see the narrowed set, so a model shipping five of six family languages no longer fails on the sixth's missing source data.
 - `Review Preview Package` is the separate packaging path when you need to share rendered review HTML with design
@@ -1827,6 +1828,12 @@ Web 提示框支持 `NOTES` 标签；纯文字 LCD 说明表隐藏无对应图�
 For the EU charger family, the Web illustration path resolves from the selected model and region. Charger pages retain their installation components without inheriting power-station LCD or auto-resume tables.
 
 ### Manual Center 内容检索
+
+产品优化建议入口与内容检索、售后反馈、访问统计分别配置。访客在网页填写，
+由独立接收接口交给机器人写入专用飞书多维表，不要求访客登录飞书。
+本机 OpenClaw `main`（HT-Docs）已被指定为 Mac agent。接收服务负责入库，
+OpenClaw 负责入库后的分析；分析结果先供人工审核。未验证公网接收地址前不启用线上入口。
+配置、数据边界和联调步骤见 [产品 VOC](../code-as-doc/dev/product_voc.md)。
 
 首页以紧凑产品列表呈现已发布手册；同一关键词框同时检索型号、章节及
 正文（含文字表格），结果可直接进入对应章节。地区、类别及语言筛选适用

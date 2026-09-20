@@ -20,6 +20,7 @@ Web 发布产物可运行[本地只读检查](code-as-doc/dev/manual_operations_
 
 Web profile 配合显式 `--lang` 会冻结完整配置语言源，再将所选语言投影为
 `check`、Markdown 和 HTML 共用的规范 RST；边界见[说明](code-as-doc/dev/web_language_projection.md)。
+JE-1000F US 的三语前言仅在 Web 投影中拆分，IDML/Word/PDF 仍保留三语；配置边界见[构建指南](code-as-doc/build_doc_guide.md)。
 这项本地构建能力不代表已接通独立语言发布。
 审稿语言裁剪同时清理生成页副本和目录引用，原审稿文件保留；见[构建指南](code-as-doc/build_doc_guide.md)。
 Web 队列支持显式语言的单语配置，约束与未释放的发布门禁见[队列契约](code-as-doc/dev/web_publish_locale_queue.md)。
@@ -69,6 +70,7 @@ manifest 中新增 FCC 语言但未补齐渲染契约时会直接失败。
 | Web 发布：队列与 Git-only 输入、冻结快照、RTD 和本地版本封存 | [`code-as-doc/dev/web_publish_pipeline.md`](code-as-doc/dev/web_publish_pipeline.md)；[`OPS-04a 封存契约`](code-as-doc/dev/ops_04a_web_version_seal.md)；[`RTD 部署回执与严格读取`](code-as-doc/dev/rtd_deployment_receipt.md) |
 | RTD 手册中心：首页、地区筛选与发布链接 | [`code-as-doc/dev/rtd_manual_portal.md`](code-as-doc/dev/rtd_manual_portal.md) |
 | RTD 手册反馈：售后邮箱入口与发布后健康检查 | [`code-as-doc/dev/rtd_manual_portal.md`](code-as-doc/dev/rtd_manual_portal.md) |
+| 产品改进建议：网页表单与飞书机器人代提交 | [`VOC 接入`](code-as-doc/dev/product_voc.md) |
 | RTD 访问统计（默认关闭，Cloudflare Web Analytics） | [`code-as-doc/dev/rtd_manual_portal.md`](code-as-doc/dev/rtd_manual_portal.md) |
 | RTD 页面元数据：标题/hreflang/canonical 按发布身份派生 | [`code-as-doc/dev/rtd_manual_portal.md`](code-as-doc/dev/rtd_manual_portal.md) |
 | 说明书产线盘活、发布入口整合与中长期计划 | [盘活与演进方案](code-as-doc/manual_production_revitalization_plan.md)；[逐项执行台账](code-as-doc/dev/manual_revitalization_execution.md) |
