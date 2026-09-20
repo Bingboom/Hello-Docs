@@ -19,7 +19,7 @@ blockquote{background:#eff6ff;border-left-color:#60a5fa;color:#334869}
 .progress{background:linear-gradient(90deg,#f97316,#fbbf24)}
 @media print{main{box-shadow:none}h2:before{display:none}}
 </style><link rel="stylesheet" href="../阅读样式.css">
-</head><body class="reading-guide"><div id="progress" class="progress"></div><header class="topbar"><a href="../00_打开分享.html">← 返回分享稿<small>AI 使用知识分享</small></a><button id="print">打印 / 保存 PDF</button></header><div class="layout"><aside><p class="nav-title">阅读目录</p><nav><a href="#s1">改一点，再用一次</a></nav><p>先看结果，改一点再试。<br>需要时，再理解背后的做法。</p></aside><main><h1>跟着做一次：学生情况卡</h1>
+</head><body class="reading-guide"><div id="progress" class="progress"></div><header class="topbar"><a href="../00_打开分享.html">← 返回分享稿<small>AI 使用知识分享</small></a><button id="print">打印 / 保存 PDF</button></header><div class="layout"><aside><p class="nav-title">阅读目录</p><nav><a href="#s1">改一点，再用一次</a></nav></aside><main><h1>跟着做一次：学生情况卡</h1>
 <p>假设你是一位班主任，要给全班 45 个学生准备家长会材料。成绩、课堂表现和家访记录散在几份文件里，需要逐个找资料、算成绩变化，再复制到文档里排版。</p>
 <p>可以让 Agent 帮忙写一个程序，按学生汇总资料、计算变化，生成每人一页的情况卡。下次资料更新，换上新资料，就能重新生成。</p>
 <p>这次先用 3 个虚构学生的资料，姓名、成绩和记录都用于演示。</p>
@@ -30,7 +30,7 @@ blockquote{background:#eff6ff;border-left-color:#60a5fa;color:#334869}
 <li>在 Codex 或 Claude Code 中打开这个文件夹。</li>
 <li>把下面的完整需求发给它。样例资料已经包含在里面，Agent 会创建需要的文件。</li>
 </ol>
-<p>把这个文件夹当成一张工作台，资料、程序和使用说明都放在一起。有现成资料时，可以把文件放进去让 Agent 先查看；这次直接用下面的虚构资料。</p>
+<p>项目用到的资料、程序和使用说明都保存在这个文件夹里。有自己的资料，可以先放进去让 Agent 查看；这次练习用下面的虚构资料。</p>
 <h3>直接复制这段需求</h3>
 <details><summary>展开完整需求 · 可直接复制给 Agent</summary><pre><code class="language-text">我要准备家长会材料。手头有成绩、课堂表现和家访记录，
 想给每个学生准备一页，方便打印给家长看。
@@ -70,7 +70,7 @@ blockquote{background:#eff6ff;border-left-color:#60a5fa;color:#334869}
 你能试的部分先试一下，告诉我哪些试过了、哪些还没试。
 </code></pre></details>
 <h3>打开结果，核对几处</h3>
-<p>Agent 可以把这个需要做成一个本地网页。做完后，按照它给出的说明打开结果，载入资料并生成情况卡。它也可能采用其他方式；具体怎么用，以交付的文件和说明为准。</p>
+<p>Agent 可能会做出一个能在电脑上打开的网页，也可能用其他方式实现。完成后，按它给的说明打开文件，试着生成情况卡。</p>
 <p>如果还不清楚，可以直接问：“文件夹里有好几个文件，我应该先打开哪个？带我生成一次。”</p>
 <p>先看是否有 3 个学生，再核对：</p>
 <ul>
@@ -94,7 +94,7 @@ blockquote{background:#eff6ff;border-left-color:#60a5fa;color:#334869}
 <p>把样例中张三的数学期末成绩从 90 改成 95，其他内容不动。我重新生成一次看看。</p>
 </blockquote>
 <p>按照页面的用法重新载入资料、生成情况卡。张三应显示提高 25 分，其他学生的内容不变。如果还是 90 分，就把这个现象告诉 Agent。</p>
-<p>这时可以看到：改动的是资料，原来的页面还能继续处理，结果也跟着改变。</p>
+<p>这次只改了成绩，不用重做页面。以后换上新一批资料，也是这样继续用。</p>
 <h3>加一个自己用得上的功能</h3>
 <blockquote>
 <p>加一个搜索框，输入姓名或学号，就能找到对应学生的情况卡。</p>
@@ -107,8 +107,8 @@ blockquote{background:#eff6ff;border-left-color:#60a5fa;color:#334869}
 <blockquote>
 <p>有个学生的记录很长，打印时被截掉了。内容长的时候，让它接到下一页。</p>
 </blockquote>
-<p>每次围绕一个具体问题修改，再用资料试一次。反馈时说清楚“我做了什么、实际出现什么、原本希望看到什么”，比只说“再改改”更容易找到问题。</p>
+<p>一次先改一个地方，改完试一下。遇到问题，把刚才点了什么、哪里不对、希望改成什么样告诉 Agent，最好附上截图。</p>
 <h3>下次怎么继续用</h3>
-<p>按照使用说明更换资料，再打开原来的页面生成。如果新资料的格式变了，就交给 Agent 检查怎样读取；需要增加功能时，再让它修改这个项目。</p>
+<p>下次换上新资料，按使用说明再生成一次。如果新表格的栏目和原来不一样，就先让 Agent 调整读取方式，再检查结果。</p>
 <p>让它把操作步骤更新到使用说明里，下次不用翻聊天记录找用法。</p>
 <div class="footer">本页可离线阅读。外部资料链接需要联网。<br>练习中的学生信息均为虚构数据。</div></main></div><script>document.getElementById('print').onclick=()=>window.print();document.querySelectorAll('pre').forEach(p=>{if(p.closest('.output'))return;const w=document.createElement('div');w.className='code-wrap';p.before(w);w.append(p);const b=document.createElement('button');b.className='copy';b.textContent='复制';b.onclick=async()=>{try{if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(p.innerText)}else{const t=document.createElement('textarea');t.value=p.innerText;document.body.append(t);t.select();if(!document.execCommand('copy'))throw Error('copy');t.remove()}b.textContent='已复制'}catch{b.textContent='请选中文字复制'}setTimeout(()=>b.textContent='复制',2200)};w.append(b)});let closed=[];window.addEventListener('beforeprint',()=>{closed=[...document.querySelectorAll('details:not([open])')];closed.forEach(x=>x.open=true)});window.addEventListener('afterprint',()=>closed.forEach(x=>x.open=false));window.addEventListener('scroll',()=>{const h=document.documentElement;document.getElementById('progress').style.width=((h.scrollTop/(h.scrollHeight-h.clientHeight||1))*100)+'%'});</script></body></html>

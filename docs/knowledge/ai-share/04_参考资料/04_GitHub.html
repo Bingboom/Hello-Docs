@@ -19,10 +19,10 @@ blockquote{background:#eff6ff;border-left-color:#60a5fa;color:#334869}
 .progress{background:linear-gradient(90deg,#f97316,#fbbf24)}
 @media print{main{box-shadow:none}h2:before{display:none}}
 </style><link rel="stylesheet" href="../阅读样式.css">
-</head><body class="reading-guide"><div id="progress" class="progress"></div><header class="topbar"><a href="../00_打开分享.html">← 返回分享稿<small>AI 使用知识分享</small></a><button id="print">打印 / 保存 PDF</button></header><div class="layout"><aside><p class="nav-title">阅读目录</p><nav></nav><p>先看结果，改一点再试。<br>需要时，再理解背后的做法。</p></aside><main><h1>去 GitHub 找现成项目</h1>
+</head><body class="reading-guide"><div id="progress" class="progress"></div><header class="topbar"><a href="../00_打开分享.html">← 返回分享稿<small>AI 使用知识分享</small></a><button id="print">打印 / 保存 PDF</button></header><div class="layout"><aside><p class="nav-title">阅读目录</p><nav></nav></aside><main><h1>去 GitHub 找现成项目</h1>
 <h3>GitHub 是什么，为什么去那里找</h3>
-<p><a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a> 是存放和分享代码项目的网站。可以把它想成一个项目展架：有人展示做好的程序，也把做法、使用说明和示例放在旁边。一个项目通常叫一个“仓库”，先把它理解成装着这些文件的文件夹就行。</p>
-<p>比如你想批量整理文件、从资料生成文档，可能已经有人做过接近的功能。先看看别人的项目，就能知道已有的做法是什么、效果怎样，再让 Agent 帮忙试用和修改。有时不需要直接采用整个项目，看懂它怎么解决问题，也能给自己的尝试带来启发。</p>
+<p><a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a> 上有很多别人分享的代码项目。有些已经做成了可以使用的工具，附有使用说明和演示。项目文件通常放在一个“仓库”里，后面说的下载项目，就是把仓库里的文件下载到电脑。</p>
+<p>比如想批量改文件名、自动生成文档，可以先搜搜有没有现成的工具。找到合适的，再让 Agent 帮忙运行和调整。即使不能直接用，也可以参考别人是怎么做的。</p>
 <h3>按自己要做的事去找</h3>
 <p>打开 <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>，在搜索框输入想做的功能。比如 <code>batch rename</code>（批量改名）、<code>document generation</code>（生成文档）。搜索词可以先让 Agent 帮你想，也可以把需求直接交给能联网的 Agent：</p>
 <blockquote>
@@ -31,7 +31,7 @@ blockquote{background:#eff6ff;border-left-color:#60a5fa;color:#334869}
 <p>打开项目后，先看页面上的介绍、效果图或演示，再看 <code>README</code>，也就是它的使用说明。重点看它能解决什么问题、怎么使用，不用一开始就逐个读代码文件。拿不准时，把链接交给 Agent，让它结合你的需求解释。</p>
 <p>找到接近的项目后，再决定是否下载试用。准备采用或修改其中的代码时，查看 <code>LICENSE</code> 里允许怎样使用。<a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository" target="_blank" rel="noopener noreferrer">GitHub 许可证说明</a></p>
 <h3>把项目下载到电脑上</h3><figure class="learning-figure"><a href="../配图/06-GitHub-q版.png?v=eafd92b2" target="_blank" aria-label="放大配图：找项目、下载、试用与修改，再保存可用版本"><picture><img src="../配图/06-GitHub-q版.png?v=eafd92b2" alt="找项目、下载、试用与修改，再保存可用版本" loading="lazy"></picture></a><figcaption>找项目、下载、试用与修改，再保存可用版本 · 点击图片可放大查看</figcaption></figure>
-<p><strong>建议初学者用 GitHub Desktop 操作</strong>，下载项目、查看改动、保存版本都可以通过按钮完成，不用先记 Git 命令。Git 负责保存版本，GitHub Desktop 提供相应的按钮；GitHub 是网站，另外两个是电脑上的软件。</p>
+<p><strong>建议初学者用 GitHub Desktop 操作</strong>，下载项目、查看改动、保存版本都可以通过按钮完成，不用先记 Git 命令。这里有三个名字容易混：Git 用来管理版本，GitHub 是存放和分享项目的网站，GitHub Desktop 则让你在电脑上通过界面操作，不必逐条输入命令。</p>
 <p><strong>先准备 Git 和 GitHub Desktop。</strong></p>
 <p><strong>Windows：</strong> 从 <a href="https://git-scm.com/install/windows" target="_blank" rel="noopener noreferrer">Git 官方下载页</a>下载安装程序，按向导完成安装，再重新打开 PowerShell。</p>
 <p>安装完成后，在 PowerShell 中输入下面的命令。显示版本号，就说明 Git 已经安装好。</p>
@@ -45,7 +45,7 @@ blockquote{background:#eff6ff;border-left-color:#60a5fa;color:#334869}
 <li>用 Codex 或 Claude Code 打开下载得到的整个文件夹，把下面这段话发给 Agent。</li>
 </ol>
 <p>这里的 Fork 是把副本放进自己的 GitHub 账号，Clone 是把仓库下载到电脑。也可以直接 Clone 原仓库；上面采用先 Fork 的方式，方便以后保存自己的修改。<a href="https://docs.github.com/en/pull-requests/how-tos/work-with-forks/fork-a-repo" target="_blank" rel="noopener noreferrer">Fork 说明</a> · <a href="https://docs.github.com/en/desktop/adding-and-cloning-repositories/cloning-and-forking-repositories-from-github-desktop" target="_blank" rel="noopener noreferrer">Clone 说明</a></p>
-<h3>让 Agent 陪着读，先把它跑起来</h3>
+<h3>让 Agent 帮你运行项目</h3>
 <p>先请 Agent 帮忙说明项目用途，再运行它：</p>
 <pre><code class="language-text">先读一下这个项目的说明，告诉我它能做什么，再帮我运行起来。
 需要装什么软件、点哪里、输入什么命令，请一步步告诉我。
@@ -60,7 +60,7 @@ blockquote{background:#eff6ff;border-left-color:#60a5fa;color:#334869}
 <p>有的项目还需要安装 Python、Node.js 等软件。遇到这些提示，不需要先把它们全部学会，可以把项目说明和报错交给 Agent，让它一步步协助安装和运行。下载好仓库，只是先拿到了文件。</p>
 <h3>一个人做东西，为什么也值得用 Git？</h3>
 <p>情况卡原来能正常打印。你让 Agent 加一个搜索框，搜索做好了，打印却乱了。这时最想知道的是：<strong>刚才改了哪里？原来能用的那版还在吗？</strong></p>
-<p>Git 就像给项目留“存档点”。确认能用时存一版，再继续改。对自己做工具的人，它有三个很实际的用处：</p>
+<p>Git 就像给项目留“存档点”。确认能用时存一版，再继续改。即使只有自己一个人用，也能派上用场：</p>
 <ul>
 <li><strong>改坏了，有以前的版本可找。</strong> 原来能用的内容如果已经存进 Git，就可以取出来比较，必要时恢复。</li>
 <li><strong>想查问题，有改动记录可看。</strong> 能看到这次哪些文件、哪些内容变了，也可以让 Agent 对照记录排查，不用全凭回忆。</li>
@@ -70,12 +70,12 @@ blockquote{background:#eff6ff;border-left-color:#60a5fa;color:#334869}
 <blockquote>
 <p>上一个版本打印正常，这次加搜索后排版乱了。帮我对比这次的改动，看看哪里影响了打印，保留搜索功能，把打印修好。</p>
 </blockquote>
-<p><strong>每做好一个能用的部分，就留一个存档点，再继续尝试。</strong> 这样比较有底气让 Agent 帮你改，也不用复制出一堆“最终版、最终版2、真的最终版”。Git 能找回的是已经存过的内容，所以这个习惯比记住命令更重要。</p>
+<p><strong>每做好一个能用的部分，就留一个存档点，再继续尝试。</strong> 以后改出了问题，就有之前的版本可以对照，也不用复制一堆“最终版、最终版2”。记得在继续修改前存一版，没存过的内容，Git 也没法帮你找回。</p>
 <h3>先学会在本地存一版</h3>
 <p><strong>先在自己的电脑上存版本就行，不用急着上传 GitHub。</strong> 日常可以先记住两个动作：</p>
 <ul>
-<li><strong>add：选好这次要存的改动。</strong> 像拍合照前，先确定这次谁入镜。</li>
-<li><strong>commit：正式拍下一张快照，再写一句说明。</strong> 这就是一个留在电脑里的版本。下次继续改，不会自动覆盖这次存档。</li>
+<li><strong>add：选好这次要存的改动。</strong> 这次只想保存哪些文件的改动，就先选中哪些。</li>
+<li><strong>commit：把选好的改动存成一个版本，写一句说明。</strong> 比如写“增加按学号搜索”，以后就知道这一版改了什么。继续修改文件，也不会覆盖已经提交的版本。</li>
 </ul>
 <p>文件本身还是照常编辑和保存。add、commit 是把选好的改动记入版本历史；Git 不会自动记录每次打字。<a href="https://git-scm.com/docs/git-add" target="_blank" rel="noopener noreferrer">Git 的 add 说明</a> · <a href="https://git-scm.com/docs/git-commit" target="_blank" rel="noopener noreferrer">commit 说明</a></p>
 <figure class="learning-figure"><a href="../配图/09-Git存档-q版.png?v=46fe2fad" target="_blank" aria-label="放大配图：本地存档：修改并保存 → add 选好改动 → commit 存一版；需要多端同步或共同协作时，再 Push 到 GitHub（可选）"><picture><img src="../配图/09-Git存档-q版.png?v=46fe2fad" alt="本地存档：修改并保存 → add 选好改动 → commit 存一版；需要多端同步或共同协作时，再 Push 到 GitHub（可选）" loading="lazy"></picture></a><figcaption>本地存档：修改并保存 → add 选好改动 → commit 存一版；需要多端同步或共同协作时，再 Push 到 GitHub（可选） · 点击图片可放大查看</figcaption></figure><h3>用 GitHub Desktop，就按这几步做</h3>
@@ -97,8 +97,8 @@ git commit -m &quot;增加按学生搜索&quot;
 </details>
 
 <h3>需要多端同步或共同协作时，再推送到 GitHub</h3>
-<p><strong>Push 是可选的：需要在多台电脑间同步项目，或与其他人共同协作时，再把本地版本推送到 GitHub。只在自己的电脑上使用，保存本地版本就可以，不需要推送。</strong></p>
-<p>推送后，可以在另一台电脑上获取这些版本，协作者也能获取和接着修改。<strong>Commit 是在本机存一版；Push 是把这些版本推送到 GitHub。</strong> 在 Desktop 中点击 <strong>Push origin</strong> 即可推送；新建项目首次上传时通常显示 <strong>Publish repository</strong>。</p>
+<p><strong>如果想换台电脑接着做，或者把项目交给同事一起修改，就可以推送到 GitHub。只在自己这台电脑上用，保存在本地就行，不需要推送。</strong></p>
+<p>推送后，另一台电脑或有权限的同事就能获取这些版本，接着修改。<strong>Commit 是在本机存一版；Push 是把这些版本推送到 GitHub。</strong> 在 Desktop 中点击 <strong>Push origin</strong> 即可推送；新建项目首次上传时通常显示 <strong>Publish repository</strong>。</p>
 <p>上传前确认仓库是公开还是私有，不要上传密码或未经授权的业务资料。<a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/about-repositories" target="_blank" rel="noopener noreferrer">可见范围说明</a> · <a href="https://docs.github.com/en/desktop/overview/creating-your-first-repository-using-github-desktop" target="_blank" rel="noopener noreferrer">创建和发布仓库说明</a></p>
 <p>代码上传到 GitHub，也不等于网页已经上线。</p>
 <div class="footer">本页可离线阅读。外部资料链接需要联网。<br>练习中的学生信息均为虚构数据。</div></main></div><script>document.getElementById('print').onclick=()=>window.print();document.querySelectorAll('pre').forEach(p=>{if(p.closest('.output'))return;const w=document.createElement('div');w.className='code-wrap';p.before(w);w.append(p);const b=document.createElement('button');b.className='copy';b.textContent='复制';b.onclick=async()=>{try{if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(p.innerText)}else{const t=document.createElement('textarea');t.value=p.innerText;document.body.append(t);t.select();if(!document.execCommand('copy'))throw Error('copy');t.remove()}b.textContent='已复制'}catch{b.textContent='请选中文字复制'}setTimeout(()=>b.textContent='复制',2200)};w.append(b)});let closed=[];window.addEventListener('beforeprint',()=>{closed=[...document.querySelectorAll('details:not([open])')];closed.forEach(x=>x.open=true)});window.addEventListener('afterprint',()=>closed.forEach(x=>x.open=false));window.addEventListener('scroll',()=>{const h=document.documentElement;document.getElementById('progress').style.width=((h.scrollTop/(h.scrollHeight-h.clientHeight||1))*100)+'%'});</script></body></html>
