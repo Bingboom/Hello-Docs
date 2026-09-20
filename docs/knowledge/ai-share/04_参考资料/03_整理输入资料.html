@@ -19,20 +19,18 @@ blockquote{background:#eff6ff;border-left-color:#60a5fa;color:#334869}
 .progress{background:linear-gradient(90deg,#f97316,#fbbf24)}
 @media print{main{box-shadow:none}h2:before{display:none}}
 </style><link rel="stylesheet" href="../阅读样式.css">
-</head><body class="reading-guide"><div id="progress" class="progress"></div><header class="topbar"><a href="../00_打开分享.html">← 返回分享稿<small>AI 使用知识分享</small></a><button id="print">打印 / 保存 PDF</button></header><div class="layout"><aside><p class="nav-title">阅读目录</p><nav></nav></aside><main><h1>下次再做，怎样少重复交代</h1>
-<p>现有的文档、表格和记录，可以先一起交给 Agent。比如要根据家长反馈准备一份家长会报告，可以直接告诉它：</p>
+</head><body class="reading-guide"><div id="progress" class="progress"></div><header class="topbar"><a href="../00_打开分享.html">← 返回分享稿<small>AI 使用知识分享</small></a><button id="print">打印 / 保存 PDF</button></header><div class="layout"><aside><p class="nav-title">阅读目录</p><nav></nav></aside><main><h1 id="下次再做怎样少重复交代">下次再做，怎样少重复交代</h1>
+<p>小林已经做出三张海报。下次活动又有新资料，他不想重新解释颜色、排版和参数怎么用，于是把确认过的要求留下来：</p>
 <blockquote>
-<p>根据这个文件夹里的资料，帮我写一份家长会报告初稿。重点讲家长关心的问题，结合具体反馈说明，注明出处，方便我核对。读不到的文件、需要我补充的信息，单独告诉我。</p>
+<p>把这次确认的海报要求记进项目说明：三张共享颜色、字体和组件样式，但排版不同；参数从表格取，插画不带文字；PDF 用 LaTeX 生成。下次先读说明，再处理新资料。</p>
 </blockquote>
-<p>拿到初稿后，就对着它修改：这部分太长，那条反馈理解错了，某个结论还缺依据。可以让 Agent 回头查原文、补内容、调整顺序，再整理成发言稿或 PPT，直到能用。</p>
-<p>如果下个月还要做同类报告，最值得先保存的是这次已经确认的要求。比如先讲哪些问题、用什么口径统计、哪些内容不用放进报告，免得下次又从头交代。</p>
-<p>可以让 Agent 在项目里写一份说明，把这些要求和最终报告一起留下来。下次交给它新资料时，让它先读这份说明，再按同样的要求做。</p>
-<p>比如，可以继续告诉它：</p>
+<p>他保存的是已经确定的做法，不是一大段零散聊天。原始资料、生成结果和使用说明分别保留，后面就容易接着做。</p>
+<p>如果同事发来的资料很乱，小林也可以先说：</p>
 <blockquote>
-<p>把这次确认的报告结构、统计口径和修改要求记进项目说明，下次先读这份说明再做。需要计算和核对的地方也写清楚，原始资料和最终报告分别保留。</p>
+<p>根据这个文件夹的资料整理产品参数和介绍，标明出处。数字冲突、读不到或缺少的内容单独列出来，不要自己补猜。先给我看整理结果。</p>
 </blockquote>
-<p>先这样继续用就行。如果反复遇到同一类整理和计算，再让 Agent 把这些步骤保存成脚本，或者把需要长期使用的信息整理成表。</p>
-<p>遇到下面这些事，也可以直接把需求交给 Agent：</p>
+<p>拿到结果后，小林核对型号、数字和介绍，再让 Agent 生成海报。资料核对清楚，比生成后逐张找错更省事。</p>
+<h3 id="哪些重复工作可以交给-agent">哪些重复工作可以交给 Agent</h3>
 <div class="table-scroll"><table>
 <thead>
 <tr>
@@ -40,24 +38,37 @@ blockquote{background:#eff6ff;border-left-color:#60a5fa;color:#334869}
 <th>可以交给 Agent 的任务</th>
 </tr>
 </thead>
-<tbody><tr>
-<td>收到几十份作业，文件名很乱</td>
-<td>按学号、姓名、科目批量命名，再分好文件夹</td>
+<tbody>
+<tr>
+<td>产品图片文件名很乱</td>
+<td>按型号整理命名，保留原文件</td>
 </tr>
 <tr>
-<td>家长会需要介绍全班情况</td>
-<td>把成绩统计、活动记录和照片整理成 PPT 初稿</td>
+<td>新活动需要一批介绍资料</td>
+<td>根据参数与文案生成统一风格的海报</td>
 </tr>
 <tr>
-<td>经常翻找某个学生的资料</td>
-<td>做一个查询页面，一起查看成绩、课堂表现和家访记录</td>
+<td>经常查某款最新海报</td>
+<td>把参数、介绍和附件放到同一产品记录</td>
 </tr>
-</tbody></table></div>
-<p>简单的筛选、计算，用表格就能完成。如果经常要处理很多份文件，或者每次都要重复好几个步骤，再考虑让 Agent 做个工具。</p>
-<h3>用多维表保存和关联资料</h3><figure class="learning-figure"><a href="../配图/04-资料关联-q版.png" target="_blank" aria-label="放大配图：同一个学生的资料关联起来，供不同任务使用"><picture><img src="../配图/04-资料关联-q版.png" alt="同一个学生的资料关联起来，供不同任务使用" loading="lazy"></picture></a><figcaption>同一个学生的资料关联起来，供不同任务使用 · 点击图片可放大查看</figcaption></figure>
-<p>如果只是做一次报告，让 Agent 根据现有文件整理就够了。后来需要经常查一个学生的历次成绩、家访和反馈，或者几位老师要一起维护记录，再考虑用多维表。</p>
-<p>这部分整理也可以请 Agent 协助，不必自己逐条录入。比如把学生名单、成绩、家访和反馈分别整理成表，再关联到对应学生。确认整理无误后，打开张三的记录，就能查看他的历次成绩和相关记录。</p>
-<p>连接好相应工具并授权后，也可以让 Agent 读取这些表，帮你整理情况卡或报告。开家长会、查学生记录、写学期总结，都可以用这份资料。</p>
-<p>练习时使用虚构资料；处理真实资料时，确认使用环境和资料权限。</p>
-<p>整理到什么程度，取决于实际怎么用。先把报告交付好，有长期查询或共同维护的需要，再把资料管理起来。</p>
-<div class="footer">本页可离线阅读。外部资料链接需要联网。<br>练习中的学生信息均为虚构数据。</div></main></div><script>document.getElementById('print').onclick=()=>window.print();document.querySelectorAll('pre').forEach(p=>{if(p.closest('.output'))return;const w=document.createElement('div');w.className='code-wrap';p.before(w);w.append(p);const b=document.createElement('button');b.className='copy';b.textContent='复制';b.onclick=async()=>{try{if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(p.innerText)}else{const t=document.createElement('textarea');t.value=p.innerText;document.body.append(t);t.select();if(!document.execCommand('copy'))throw Error('copy');t.remove()}b.textContent='已复制'}catch{b.textContent='请选中文字复制'}setTimeout(()=>b.textContent='复制',2200)};w.append(b)});let closed=[];window.addEventListener('beforeprint',()=>{closed=[...document.querySelectorAll('details:not([open])')];closed.forEach(x=>x.open=true)});window.addEventListener('afterprint',()=>closed.forEach(x=>x.open=false));window.addEventListener('scroll',()=>{const h=document.documentElement;document.getElementById('progress').style.width=((h.scrollTop/(h.scrollHeight-h.clientHeight||1))*100)+'%'});</script></body></html>
+<tr>
+<td>每次都要修改价格再导出</td>
+<td>做成改资料后更新对应海报的工具</td>
+</tr>
+</tbody>
+</table></div>
+<p>先解决眼前的问题。重复出现的步骤，再让 Agent 写成程序，不必一开始就设计完整系统。</p>
+<h3 id="用多维表保存和关联资料">用多维表保存和关联资料</h3>
+<p>同事也要查资料时，小林把资料放进钉钉多维表。配置好 MCP 后，他给出目标空间和需求，建表、整理资料、关联型号、上传附件由 Agent 在账号权限和工具支持范围内完成。</p>
+<figure>
+<img src="../配图/04-资料关联-露营-q版.png" alt="围绕同一个型号，关联参数、文案、插画和交付物" />
+<figcaption aria-hidden="true">围绕同一个型号，关联参数、文案、插画和交付物</figcaption>
+</figure>
+<p>围绕同一个型号，关联参数、文案、插画和交付物</p>
+<blockquote>
+<p>在这个钉钉空间里建一张“产品与海报”表，把三款产品的参数和介绍整理进去，再把对应海报图片和 PDF 放到各自那一行。不要修改空间里的其他资料。完成后给我表格链接，并检查有没有放错产品。</p>
+</blockquote>
+<p>小林打开表格，只需检查自己熟悉的业务内容：型号、参数、介绍、附件是不是对应。他不必事先研究字段 ID 或逐条录入。</p>
+<p>练习用虚构资料；真实业务资料应放在获准使用的空间内。MCP 不会扩大账号权限，也不保证提供软件的所有功能。</p>
+<p>一张表集中资料，不等于自动更新已经开启。持续更新需要另行实现并测试；本案例目前完成了本地自动生成和钉钉一次上传。</p>
+</main></div><script>document.getElementById('print').onclick=()=>window.print();document.querySelectorAll('pre').forEach(p=>{if(p.closest('.output'))return;const w=document.createElement('div');w.className='code-wrap';p.before(w);w.append(p);const b=document.createElement('button');b.className='copy';b.textContent='复制';b.onclick=async()=>{try{if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(p.innerText)}else{const t=document.createElement('textarea');t.value=p.innerText;document.body.append(t);t.select();if(!document.execCommand('copy'))throw Error('copy');t.remove()}b.textContent='已复制'}catch{b.textContent='请选中文字复制'}setTimeout(()=>b.textContent='复制',2200)};w.append(b)});let closed=[];window.addEventListener('beforeprint',()=>{closed=[...document.querySelectorAll('details:not([open])')];closed.forEach(x=>x.open=true)});window.addEventListener('afterprint',()=>closed.forEach(x=>x.open=false));window.addEventListener('scroll',()=>{const h=document.documentElement;document.getElementById('progress').style.width=((h.scrollTop/(h.scrollHeight-h.clientHeight||1))*100)+'%'});</script></body></html>

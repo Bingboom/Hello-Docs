@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>小野露营市集 · 本地海报工作台</title><link rel="stylesheet" href="/web/style.css"></head>
+<body>
+<header><a class="brand" href="/">小野 <span>WEEKEND CAMP</span></a><span class="local">本地演示 · 未连接钉钉</span></header>
+<main>
+  <section class="intro"><div><p class="eyebrow">一个表格，三张海报，一次自动更新</p><h1>明天出摊，今天把海报准备好。</h1><p>改一款产品的教学价，等系统把新 PDF 送回这一行。<br>所有产品、参数、插画与价格均为教学虚构内容。</p></div><div class="scenario"><small>今天的任务</small><strong>小野 500 的活动价<br>从 ¥999 调整为 ¥899</strong><span>另外两款的版本应保持不变。</span></div></section>
+  <div class="pipeline"><span>01 读取 CSV</span><b>→</b><span>02 替换内容变量</span><b>→</b><span>03 共用 LaTeX 组件</span><b>→</b><span>04 保存 PDF 与版本</span></div>
+  <section class="panel"><div class="section-head"><div><h2>产品数据</h2><p id="worker">正在连接本地程序…</p></div><div class="links"><a href="/data/products.csv" target="_blank">产品 CSV ↗</a><a href="/data/content.csv" target="_blank">内容 CSV ↗</a></div></div>
+    <p id="message" role="status"></p><div class="scroll"><table><thead><tr><th>产品 / 记录 ID</th><th>容量</th><th>额定输出</th><th>重量</th><th>教学价（可修改）</th><th>交付物与版本</th><th>最近成功更新</th></tr></thead><tbody id="products"></tbody></table></div>
+  </section>
+  <section><div class="section-head"><div><h2>共享样式，三种排版</h2><p>大图主视觉 / 图文分栏 / 参数卡片。预览均由实际 LaTeX PDF 渲染。</p></div><a href="/latex/components.tex" target="_blank">查看共享组件 ↗</a></div><div id="posters" class="posters"></div></section>
+  <section class="panel"><div class="section-head"><div><h2>实际运行记录</h2><p>数据保存与后台构建是两个步骤；每条记录均来自程序执行。</p></div><a href="/output/records.csv" target="_blank">本地回写表 ↗</a></div><ol id="events" class="events"></ol></section>
+  <footer>CSV 管内容 · 组件管结构 · theme.tex 管样式 · 程序维护交付物与更新信息<br>本地演示需保持此服务运行。未上传钉钉，也未设置开机自启。</footer>
+</main><script src="/web/app.js"></script>
+</body></html>

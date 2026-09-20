@@ -1,0 +1,153 @@
+<!doctype html><html lang="zh-CN"><head><meta name="robots" content="noindex,nofollow"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>小野露营市集：本地海报自动更新案例</title><style>
+.learning-figure{margin:28px 0 34px}.learning-figure img{display:block;width:100%;height:auto;border-radius:12px}.learning-figure figcaption{font-size:12px;line-height:1.7;color:var(--muted);margin-top:10px}.learning-figure a{display:block}.learning-figure figcaption a{display:inline}.learning-figure{break-inside:avoid}
+
+:root{--ink:#252d3d;--muted:#69768b;--green:#2563eb;--paper:#ffffff;--line:#e3e9f2;--tint:#eff6ff;--orange:#c65316}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:78px}body{margin:0;background:#f6f8fc;color:var(--ink);font:16px/1.9 -apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif}a{color:var(--green);text-underline-offset:4px;overflow-wrap:anywhere}button{font:inherit;cursor:pointer}.topbar{background:var(--paper);border-bottom:1px solid var(--line);padding:12px 30px;display:flex;justify-content:space-between;align-items:center;gap:20px;position:sticky;top:0;z-index:3}.topbar a{text-decoration:none;font-size:14px;font-weight:650}.topbar small{font-weight:400;color:var(--muted);margin-left:10px}.topbar button,.copy{border:1px solid var(--line);background:white;color:var(--green);border-radius:6px;padding:5px 12px;font-size:12px}.layout{display:grid;grid-template-columns:220px minmax(0,900px);gap:42px;max-width:1270px;margin:auto;padding:40px 30px 80px}aside{position:sticky;top:92px;align-self:start;font-size:13px}.nav-title{font-size:11px;letter-spacing:2px;color:var(--muted);margin:0 0 16px}nav a{display:block;text-decoration:none;color:var(--muted);padding:8px 0 8px 12px;border-left:2px solid var(--line);line-height:1.65}nav a:hover,nav a:focus{color:var(--green);border-color:var(--green)}aside p{font-size:12px;color:var(--muted);margin-top:28px}main{min-width:0;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:42px 48px;box-shadow:0 8px 30px #233b6808}h1{font-size:32px;line-height:1.35;letter-spacing:-.7px;margin:5px 0 24px}h2{font-size:24px;line-height:1.5;margin:58px 0 22px;border-top:1px solid var(--line);padding-top:32px}h3{font-size:19px;line-height:1.6;margin:28px 0 13px}p{margin:14px 0}li{margin:7px 0}ul,ol{padding-left:24px}strong{font-weight:650}blockquote{margin:22px 0;padding:14px 20px;border-left:3px solid #f97316;background:var(--tint);color:#34435d;border-radius:0 8px 8px 0}blockquote p{margin:3px 0}pre{background:#f5f7fb;border:1px solid var(--line);padding:24px 20px 18px;border-radius:8px;font:13px/1.8 ui-monospace,SFMono-Regular,Consolas,monospace;overflow:auto;tab-size:4;position:relative;white-space:pre-wrap;overflow-wrap:anywhere}code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.88em;background:#edf2fa;padding:2px 5px;border-radius:4px}pre code{padding:0;font-size:inherit;background:transparent}.table-scroll{overflow-x:auto;margin:22px 0}table{border-collapse:collapse;width:100%;font-size:14px;text-align:left}th{background:var(--tint);font-weight:600;color:#315c9c}td,th{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}td:first-child{min-width:125px}img{max-width:100%;height:auto}details{margin:24px 0;border:1px solid #dce5f2;border-radius:8px;padding:0 18px}summary{cursor:pointer;padding:15px 0;color:var(--green);font-weight:600}details pre{margin-top:0}.code-wrap{position:relative}.copy{position:absolute;right:7px;top:7px;z-index:1;line-height:1.3;font-size:11px}.code-wrap pre{padding-top:38px}.page-note{border:1px solid var(--line);background:#fff8ee;border-radius:8px;padding:14px 18px;font-size:14px;margin:22px 0}.cell{margin:24px 0}.cell-label{font-size:11px;color:var(--muted);letter-spacing:1px;margin:0 0 5px}.output{background:white;border-left:3px solid #f59e0b;padding:12px 15px;overflow:auto}.output pre{background:white;border:none;padding:0;margin:0;white-space:pre;font-size:13px}.output img{display:block;max-width:100%;margin:12px auto}.output table{font-size:11px;line-height:1.5}.output td,.output th{padding:7px;min-width:0}.footer{border-top:1px solid var(--line);padding-top:20px;margin-top:50px;font-size:12px;color:var(--muted)}.progress{position:fixed;top:0;left:0;height:3px;background:var(--green);z-index:5;width:0}a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #fb923c;outline-offset:3px}.notice{font-size:13px;color:var(--muted)}
+@media(max-width:900px){.layout{display:block;padding:20px 16px 45px}aside{position:static;margin-bottom:22px}nav{display:flex;flex-wrap:wrap;gap:4px 14px}nav a{padding:4px 8px;max-width:100%;font-size:12px}aside p{display:none}main{padding:25px 22px}h1{font-size:27px}h2{font-size:22px;margin-top:42px}.topbar{padding:10px 16px}.topbar small{display:none}pre{font-size:12px}td,th{padding:9px}}
+@media print{@page{size:A4;margin:16mm}body{background:white;font-size:11pt}.topbar,aside,.copy,.progress{display:none}.layout{display:block;padding:0;max-width:none}main{padding:0;border:0;box-shadow:none}h1{font-size:24pt}h2{font-size:18pt;margin-top:24px;break-after:avoid}h3{break-after:avoid}pre,blockquote,.cell{break-inside:avoid}a{color:inherit}details{border:0;padding:0}summary{display:none}.table-scroll{overflow:visible}.output{overflow:visible}*{print-color-adjust:exact;-webkit-print-color-adjust:exact}}
+
+/* A bright reading theme shared by the guide and reference pages. */
+.topbar{background:rgba(255,255,255,.96)}.topbar>a{color:var(--ink)}
+.topbar button:hover,.copy:hover{background:#eff6ff;border-color:#93b4f5}
+main{border-radius:18px;box-shadow:0 12px 36px #233b6808}
+h1{color:#1d2b45}h2{border-top:0;position:relative;padding-top:28px}
+h2:before{content:"";position:absolute;top:0;left:0;width:36px;height:4px;border-radius:3px;background:#f97316}
+
+nav a:hover,nav a:focus{background:#fff3e8;color:#b94b10;border-color:#f97316;border-radius:0 6px 6px 0}
+blockquote{background:#f7f7f6;border-left:2px solid #d5d5d2;color:#4b4b49;border-radius:0 6px 6px 0}
+main a{color:#50504d;text-decoration-color:#b6b6b0;text-decoration-thickness:1px;text-underline-offset:4px}main a:hover{color:#9a4318;text-decoration-color:currentColor}
+.learning-figure img{border:1px solid #e7edf6;border-radius:16px}
+.page-note{background:#fff9f0;border-color:#ffe4bf}
+.progress{background:linear-gradient(90deg,#f97316,#fbbf24)}
+@media print{main{box-shadow:none}h2:before{display:none}}
+.intro-summary{font-size:13px;line-height:1.7;color:var(--muted);margin:-8px 0 26px;padding:0;background:none;border:0}
+</style><link rel="stylesheet" href="../阅读样式.css">
+<style>
+    .material .layout{display:block;max-width:1240px}.material main{padding:32px}
+    .poster-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+    .poster-grid figure{margin:0}.poster-grid img{display:block;width:100%;border-radius:12px}
+    figcaption{font-size:13px;color:var(--muted);padding:10px 0}
+    @media(max-width:650px){.poster-grid{grid-template-columns:1fr}.material main{padding:20px}}
+    @media print{.poster-grid{grid-template-columns:repeat(3,minmax(0,1fr))}figure{break-inside:avoid}}
+    </style></head><body class="reading-guide material"><header class="topbar"><a href="index.html">小野露营市集 · 分享素材</a><a href="../00_打开分享.html">返回分享稿</a></header><div class="layout"><main><h1 id="小野露营市集本地海报自动更新案例">小野露营市集：本地海报自动更新案例</h1>
+<p>这是供 AI 知识分享使用的教学小系统。三款产品、全部参数、价格和 Q 版插画均为虚构内容，不可作为真实产品规格或销售资料。</p>
+<h2 id="s0">先看什么</h2>
+<p>双击 <a href="index.html">index.html</a> 查看三张成品和素材索引，无需安装运行环境。交互演示必须启动本地程序。</p>
+<p>三张 A5 PDF 都由 XeLaTeX 编译，分别采用大图主视觉、图文分栏、参数卡片排版；共享色彩、字体、字号层级及组件样式。PNG 只是从 PDF 渲染的预览，不是独立排版的替代品。</p>
+<h2 id="s1">启动交互演示</h2>
+<p>需要 Python 3.10+、XeLaTeX（TeX Live / MacTeX）、Poppler 的 <code>pdfinfo</code> / <code>pdftoppm</code> / <code>pdftotext</code>。不需要 Python 第三方库，也不需要钉钉账号。</p>
+<p>本次实际运行环境为 macOS；程序使用 Unix 文件锁，Windows 原生 Python 不适用，可考虑 WSL，但未在该环境验收。跨机器还需安装主题中指定的中英文字体，不把本机通过视为所有环境都通过。</p>
+<p>在本目录执行：</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> demo.py serve <span class="at">--port</span> 8765</span></code></pre></div>
+<p>macOS 也可双击 <code>启动本地演示.command</code>。看到地址后，在浏览器打开 <code>http://127.0.0.1:8765</code>。窗口需保持运行；Ctrl+C 停止。本例没有设置开机自启、系统计划任务或云端监控。</p>
+<p>如果 8765 端口已被占用，先核实是否本演示已经运行；也可换用 <code>--port 8766</code>。首次生成三张通常需要几十秒，以实际机器为准。</p>
+<h2 id="s2">三分钟操作</h2>
+<ol type="1">
+<li>看产品表和内容表：<code>products.csv</code> 保存参数、价格和版式，<code>content.csv</code> 保存带 <code>{{变量}}</code> 的介绍文案；两表以 <code>model_id</code> 关联。</li>
+<li>看三张 PDF：图片、文字、参数与价格相同职责的组件共享样式，但布局不同。</li>
+<li>只改小野 500 的教学价并保存。保存动作只写 CSV，独立后台每两秒检测变化并调用 XeLaTeX。</li>
+<li>等待这一行显示新版本，打开 PDF 确认价格；对照另外两款的版本和文件 SHA，确认它们没有更新。</li>
+<li>查看“本地回写表”和运行记录：更新时间、版本、摘要和 PDF SHA 都来自真实程序执行。</li>
+</ol>
+<p>交付时的小野 500 已是 899，因为验收实际执行了 999 → 899。再次演示可先改回 999，等更新完成，再改为 899。版本继续递增，不清除历史。</p>
+<h2 id="s3">文件分工</h2>
+<div class="table-scroll"><table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>文件</th>
+<th>负责什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>data/products.csv</code></td>
+<td>输入事实、记录 ID、资产文件名、版式选择</td>
+</tr>
+<tr>
+<td><code>data/content.csv</code></td>
+<td>标题、带变量的介绍文案、使用场景</td>
+</tr>
+<tr>
+<td><code>assets/*.png</code></td>
+<td>固定 Q 版插画；修改参数时不重新生成图片</td>
+</tr>
+<tr>
+<td><code>latex/theme.tex</code></td>
+<td>统一字体、颜色、字号辅助函数、基础画布参数</td>
+</tr>
+<tr>
+<td><code>latex/components.tex</code></td>
+<td>标题、介绍、插画、指标、参数卡、价格和页脚组件</td>
+</tr>
+<tr>
+<td><code>latex/layout_*.tex</code></td>
+<td>三种不同的页面结构和位置，不重复定义主题样式</td>
+</tr>
+<tr>
+<td><code>latex/poster.tex</code></td>
+<td>共用页面入口，加载本次选定的版式</td>
+</tr>
+<tr>
+<td><code>demo.py</code></td>
+<td>查表、校验、变量替换、编译、变更检测、版本记录、本地 HTTP 界面</td>
+</tr>
+<tr>
+<td><code>output/pdf</code></td>
+<td>当前三张 PDF，生成成功后原子替换</td>
+</tr>
+<tr>
+<td><code>output/history</code></td>
+<td>历史 PDF、输入快照、LaTeX 源文件和真实编译日志</td>
+</tr>
+<tr>
+<td><code>output/records.csv</code></td>
+<td>输出状态表，不作为输入，不引发循环更新</td>
+</tr>
+<tr>
+<td><code>output/events.jsonl</code></td>
+<td>真实运行事件；包括开发中的失败，不伪造成功</td>
+</tr>
+<tr>
+<td><code>deliverables</code></td>
+<td>本次验收冻结的三张 PDF 与预览，便于离线分享</td>
+</tr>
+<tr>
+<td><code>evidence</code></td>
+<td>本次真实截图、验收基线与报告</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="s4">借鉴 Auto-Manual 的地方</h2>
+<p>借鉴工程仓库 <code>docs/renderers/contracts/STYLE_DEFINITION.md</code> §0.1、§8.2、附录 A 的分层方式：内容、主题、组件和版式分开。没有复制说明书的视觉样式，也没有接入正式说明书生产链。这里是独立教学样例，不宣称复用了完整 Auto-Manual 构建器。</p>
+<p>每条记录选择 <code>hero</code>、<code>split</code> 或 <code>cards</code>。布局文件只组合组件；组件统一消费主题颜色和字体。修改共享样式影响全部海报，修改某个布局只影响使用该布局的记录。</p>
+<h2 id="s5">更新与失败边界</h2>
+<ul>
+<li>输入摘要包含该条数据、引用的内容、插画、公共主题/组件、选定版式和构建程序。输出状态与更新时间不参与输入摘要。</li>
+<li>同一份数据未变化且 PDF 校验一致时跳过构建。外部编辑 CSV 的内容和价格变化也会触发检测。</li>
+<li>未知变量、重复型号/记录 ID、非法数字、缺图、缺字、溢出或编译失败会报错；不以空值或零替代。</li>
+<li>失败不覆盖上一份成功 PDF，也不增加成功版本。相同失败输入 30 秒后允许重试。</li>
+<li>编译时数据再次变化，旧快照不会发布，等待下一轮处理。</li>
+<li>数据应保留示例的字段结构。输入表删行不会自动删除历史文件，演示不提供批量删除操作。</li>
+<li>服务只监听 <code>127.0.0.1</code>，包含 Host 和写请求令牌检查；不应直接暴露公网。</li>
+<li>自动更新仅在服务运行、电脑唤醒时有效。钉钉读取、上传、回写、长期无人值守均是后续接入，不属于本次本地验收。</li>
+</ul>
+<h2 id="s6">验证</h2>
+<div class="sourceCode" id="cb2"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> unittest <span class="at">-v</span> test_demo</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> demo.py build</span></code></pre></div>
+<p>行为测试使用临时目录与测试编译器；真实 PDF 编译和浏览器改价另由 <code>evidence/acceptance.json</code> 取证，二者不能互相替代。验收截图中的版本号包含早期原型迭代，不从 1 重新编号。</p>
+<p><code>verify_acceptance.py before</code> 保存新验收基线；它拒绝覆盖现有基线。随后通过浏览器改价，再执行 <code>python3 verify_acceptance.py verify</code> 核实只更新目标记录。再次验收请保留旧 evidence 并使用独立副本。</p>
+<p><code>seed-data.mjs</code> 仅用于制备初始教学 CSV，依赖 Codex 的 Artifact Tool；普通用户运行本例无需执行它。<code>assets/provenance.json</code> 保存内置图像生成工具的原始提示词。</p>
+<p>维护分享材料时，在安装 Pandoc 的环境运行 <code>python3 render_materials.py</code>，从 Markdown 更新主稿和四个素材页面，再执行 <code>python3 validate_materials.py</code> 检查同文和链接。<code>python3 package_materials.py</code> 只冻结与验收哈希一致的成品并打包，排除运行目录、旧原型截图和私有钉钉绑定。</p>
+<h2 id="s7">钉钉当前状态</h2>
+<p>用户确认图片可入表后，已把三张最终海报 PNG 一次性上传到教学表的对应型号行，并回读核验附件及文件哈希。三份 PDF 也已上传到对应型号行并回读确认。成功版本、成功更新时间仍未自动回写。此操作由工具执行，未接入 demo.py 的后台，后续本地改价不会自动更新钉钉预览。</p>
+<h2 id="s8">分享素材</h2>
+<ul>
+<li><a href="演示脚本.html">逐步演示脚本</a></li>
+<li><a href="素材清单.html">截图与素材清单</a></li>
+<li>上一级 <code>分享稿.md</code> 和 <code>00_打开分享.html</code> 是同文的本地分享稿。</li>
+<li>老的学生卡、Notebook 和 GitHub 示例保留为独立参考资料，不再作为本分享主线。</li>
+</ul>
+</main></div></body></html>
