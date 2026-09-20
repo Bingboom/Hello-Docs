@@ -23,7 +23,7 @@ GitHub 上有些项目用 Jupyter Notebook 展示做法。它像一本能动手�
 
 ### 按自己要做的事去找
 
-打开 GitHub，在搜索框输入想做的功能。比如 `batch rename`（批量改名）、`document generation`（生成文档）。搜索词可以先让 Agent 帮你想，也可以把需求直接交给能联网的 Agent：
+打开 [GitHub](https://github.com/)，在搜索框输入想做的功能。比如 `batch rename`（批量改名）、`document generation`（生成文档）。搜索词可以先让 Agent 帮你想，也可以把需求直接交给能联网的 Agent：
 
 > 我想把成绩、课堂表现和家访记录合在一起，批量生成每个学生的情况卡。帮我在 GitHub 找几个功能接近的项目，给我实际找到的链接。用简单的话说清楚：各自能做什么、有没有效果示例、在我的电脑上试用需要准备什么。
 

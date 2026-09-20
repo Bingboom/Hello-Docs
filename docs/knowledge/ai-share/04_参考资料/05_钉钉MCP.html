@@ -18,9 +18,10 @@ blockquote{background:#eff6ff;border-left-color:#60a5fa;color:#334869}
 .page-note{background:#fff9f0;border-color:#ffe4bf}
 .progress{background:linear-gradient(90deg,#f97316,#fbbf24)}
 @media print{main{box-shadow:none}h2:before{display:none}}
-</style></head><body><div id="progress" class="progress"></div><header class="topbar"><a href="../00_打开分享.html">← 返回分享稿<small>AI 使用知识分享</small></a><button id="print">打印 / 保存 PDF</button></header><div class="layout"><aside><p class="nav-title">阅读目录</p><nav></nav><p>先看结果，改一点再试。<br>需要时，再理解背后的做法。</p></aside><main><h1>让 Agent 使用钉钉里的资料</h1>
+</style><link rel="stylesheet" href="../阅读样式.css">
+</head><body class="reading-guide"><div id="progress" class="progress"></div><header class="topbar"><a href="../00_打开分享.html">← 返回分享稿<small>AI 使用知识分享</small></a><button id="print">打印 / 保存 PDF</button></header><div class="layout"><aside><p class="nav-title">阅读目录</p><nav></nav><p>先看结果，改一点再试。<br>需要时，再理解背后的做法。</p></aside><main><h1>让 Agent 使用钉钉里的资料</h1>
 <p>资料放在钉钉表格或文档里时，可以连接对应的 MCP 服务，让 Agent 在授权范围内直接使用这些资料。先把它理解为接通钉钉功能的一种方式就够了。</p>
-<h3>钉钉 MCP 案例：读取学生资料，生成家长会文档</h3><figure class="learning-figure"><a href="../配图/07-MCP.svg?v=1f9d9dd3" target="_blank" aria-label="放大配图：读取表格，匹配和计算，写入新文档，再由人核对"><picture><source media="(max-width:600px)" srcset="../配图/07-MCP-mobile.svg?v=3c6ec1c4"><img src="../配图/07-MCP.svg?v=1f9d9dd3" alt="读取表格，匹配和计算，写入新文档，再由人核对" loading="lazy"></picture></a><figcaption>读取表格，匹配和计算，写入新文档，再由人核对 · 点击图片可放大查看</figcaption></figure>
+<h3>钉钉 MCP 案例：读取学生资料，生成家长会文档</h3><figure class="learning-figure"><a href="../配图/07-MCP-q版.png" target="_blank" aria-label="放大配图：读取表格，匹配和计算，写入新文档，再由人核对"><picture><img src="../配图/07-MCP-q版.png" alt="读取表格，匹配和计算，写入新文档，再由人核对" loading="lazy"></picture></a><figcaption>读取表格，匹配和计算，写入新文档，再由人核对 · 点击图片可放大查看</figcaption></figure>
 <p>沿用前面的三个虚构学生。这次把成绩、课堂表现和家访记录放在钉钉 AI 表格里，让 Agent 读取这些资料，按学生整理后，写成一篇钉钉文档。下面是使用示例。</p>
 <p><strong>先接上这次需要的两项服务。</strong></p>
 <p>打开 <a href="https://aihub.dingtalk.com/#/mcp" target="_blank" rel="noopener noreferrer">钉钉 MCP 入口</a>，找到“钉钉 AI 表格”和“钉钉文档”：前者用来读取表格，后者用来创建和写入文档。登录后，按照页面上的“使用 MCP”说明连接 Agent 并完成授权。</p>

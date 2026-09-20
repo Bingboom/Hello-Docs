@@ -18,15 +18,16 @@ blockquote{background:#eff6ff;border-left-color:#60a5fa;color:#334869}
 .page-note{background:#fff9f0;border-color:#ffe4bf}
 .progress{background:linear-gradient(90deg,#f97316,#fbbf24)}
 @media print{main{box-shadow:none}h2:before{display:none}}
-</style></head><body><div id="progress" class="progress"></div><header class="topbar"><a href="../00_打开分享.html">← 返回分享稿<small>AI 使用知识分享</small></a><button id="print">打印 / 保存 PDF</button></header><div class="layout"><aside><p class="nav-title">阅读目录</p><nav></nav><p>先看结果，改一点再试。<br>需要时，再理解背后的做法。</p></aside><main><h1>用过以后，再看代码怎样工作</h1>
+</style><link rel="stylesheet" href="../阅读样式.css">
+</head><body class="reading-guide"><div id="progress" class="progress"></div><header class="topbar"><a href="../00_打开分享.html">← 返回分享稿<small>AI 使用知识分享</small></a><button id="print">打印 / 保存 PDF</button></header><div class="layout"><aside><p class="nav-title">阅读目录</p><nav></nav><p>先看结果，改一点再试。<br>需要时，再理解背后的做法。</p></aside><main><h1>用过以后，再看代码怎样工作</h1>
 <p>刚才我们没有手写每一行代码，但已经用到了代码的几个基本能力：</p>
-<figure class="learning-figure"><a href="../配图/03-查找判断.svg?v=f490235a" target="_blank" aria-label="放大配图：找到成绩 → 算出变化 → 写入结果"><picture><source media="(max-width:600px)" srcset="../配图/03-查找判断-mobile.svg?v=20962835"><img src="../配图/03-查找判断.svg?v=f490235a" alt="找到成绩 → 算出变化 → 写入结果" loading="lazy"></picture></a><figcaption>找到成绩 → 算出变化 → 写入结果 · 点击图片可放大查看</figcaption></figure>
+<figure class="learning-figure"><a href="../配图/03-查找判断-q版.png" target="_blank" aria-label="放大配图：找到成绩 → 算出变化 → 写入结果"><picture><img src="../配图/03-查找判断-q版.png" alt="找到成绩 → 算出变化 → 写入结果" loading="lazy"></picture></a><figcaption>找到成绩 → 算出变化 → 写入结果 · 点击图片可放大查看</figcaption></figure>
 
 <p>这是一种常见的处理方式。你决定怎样算、缺少记录怎么办、结果放哪里，Agent 把这些做法写成程序。</p>
 <h3 id="follow-up-list">再看一个例子：帮我列一份待沟通名单</h3>
 <p>老师可以直接把需要说出来：</p>
 <blockquote><p>成绩下降了，或者家长有反馈的学生，都先找出来；已经沟通过的，这次先不列入。</p></blockquote>
-<figure class="learning-figure"><a href="../配图/08-字典与或非.svg?v=f79ba625" target="_blank" aria-label="放大配图：找到资料 → 按要求筛选 → 列出名单 → 更新后再查"><picture><source media="(max-width:600px)" srcset="../配图/08-字典与或非-mobile.svg?v=d052dc5f"><img src="../配图/08-字典与或非.svg?v=f79ba625" alt="找到资料 → 按要求筛选 → 列出名单 → 更新后再查" loading="lazy"></picture></a><figcaption>从一句工作要求，到一份待沟通名单 · 点击图片可放大查看</figcaption></figure>
+<figure class="learning-figure"><a href="../配图/08-字典与或非-q版.png" target="_blank" aria-label="放大配图：找到资料 → 按要求筛选 → 列出名单 → 更新后再查"><picture><img src="../配图/08-字典与或非-q版.png" alt="找到资料 → 按要求筛选 → 列出名单 → 更新后再查" loading="lazy"></picture></a><figcaption>从一句工作要求，到一份待沟通名单 · 点击图片可放大查看</figcaption></figure>
 <p><strong>你把要求说清楚，程序就能对每条资料按同一套规则处理。</strong>下次更新资料，再运行就能得到新的名单；老师核对后，再决定怎样沟通。</p>
 <p class="notice">这里也用到了前面提到的代码能力：按学号查资料，可以用“字典”；“或者”“并且”“还没有”，对应判断条件里的 <code>or</code>、<code>and</code>、<code>not</code>。先看懂筛选过程，需要时再认这些写法。</p>
 <h3>为什么 Agent 可能先把资料整理成表</h3>

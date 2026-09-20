@@ -18,18 +18,19 @@ blockquote{background:#eff6ff;border-left-color:#60a5fa;color:#334869}
 .page-note{background:#fff9f0;border-color:#ffe4bf}
 .progress{background:linear-gradient(90deg,#f97316,#fbbf24)}
 @media print{main{box-shadow:none}h2:before{display:none}}
-</style></head><body><div id="progress" class="progress"></div><header class="topbar"><a href="../00_打开分享.html">← 返回分享稿<small>AI 使用知识分享</small></a><button id="print">打印 / 保存 PDF</button></header><div class="layout"><aside><p class="nav-title">阅读目录</p><nav></nav><p>先看结果，改一点再试。<br>需要时，再理解背后的做法。</p></aside><main><h1>去 GitHub 找现成项目</h1>
+</style><link rel="stylesheet" href="../阅读样式.css">
+</head><body class="reading-guide"><div id="progress" class="progress"></div><header class="topbar"><a href="../00_打开分享.html">← 返回分享稿<small>AI 使用知识分享</small></a><button id="print">打印 / 保存 PDF</button></header><div class="layout"><aside><p class="nav-title">阅读目录</p><nav></nav><p>先看结果，改一点再试。<br>需要时，再理解背后的做法。</p></aside><main><h1>去 GitHub 找现成项目</h1>
 <h3>GitHub 是什么，为什么去那里找</h3>
 <p><a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a> 是存放和分享代码项目的网站。可以把它想成一个项目展架：有人展示做好的程序，也把做法、使用说明和示例放在旁边。一个项目通常叫一个“仓库”，先把它理解成装着这些文件的文件夹就行。</p>
 <p>比如你想批量整理文件、从资料生成文档，可能已经有人做过接近的功能。先看看别人的项目，就能知道已有的做法是什么、效果怎样，再让 Agent 帮忙试用和修改。有时不需要直接采用整个项目，看懂它怎么解决问题，也能给自己的尝试带来启发。</p>
 <h3>按自己要做的事去找</h3>
-<p>打开 GitHub，在搜索框输入想做的功能。比如 <code>batch rename</code>（批量改名）、<code>document generation</code>（生成文档）。搜索词可以先让 Agent 帮你想，也可以把需求直接交给能联网的 Agent：</p>
+<p>打开 <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>，在搜索框输入想做的功能。比如 <code>batch rename</code>（批量改名）、<code>document generation</code>（生成文档）。搜索词可以先让 Agent 帮你想，也可以把需求直接交给能联网的 Agent：</p>
 <blockquote>
 <p>我想把成绩、课堂表现和家访记录合在一起，批量生成每个学生的情况卡。帮我在 GitHub 找几个功能接近的项目，给我实际找到的链接。用简单的话说清楚：各自能做什么、有没有效果示例、在我的电脑上试用需要准备什么。</p>
 </blockquote>
 <p>打开项目后，先看页面上的介绍、效果图或演示，再看 <code>README</code>，也就是它的使用说明。重点看它能解决什么问题、怎么使用，不用一开始就逐个读代码文件。拿不准时，把链接交给 Agent，让它结合你的需求解释。</p>
 <p>找到接近的项目后，再决定是否下载试用。准备采用或修改其中的代码时，查看 <code>LICENSE</code> 里允许怎样使用。<a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository" target="_blank" rel="noopener noreferrer">GitHub 许可证说明</a></p>
-<h3>把项目下载到电脑上</h3><figure class="learning-figure"><a href="../配图/06-GitHub.svg?v=dfcb23e9" target="_blank" aria-label="放大配图：找项目、下载、试用与修改，再保存可用版本"><picture><source media="(max-width:600px)" srcset="../配图/06-GitHub-mobile.svg?v=d51b4d80"><img src="../配图/06-GitHub.svg?v=dfcb23e9" alt="找项目、下载、试用与修改，再保存可用版本" loading="lazy"></picture></a><figcaption>找项目、下载、试用与修改，再保存可用版本 · 点击图片可放大查看</figcaption></figure>
+<h3>把项目下载到电脑上</h3><figure class="learning-figure"><a href="../配图/06-GitHub-q版.png?v=eafd92b2" target="_blank" aria-label="放大配图：找项目、下载、试用与修改，再保存可用版本"><picture><img src="../配图/06-GitHub-q版.png?v=eafd92b2" alt="找项目、下载、试用与修改，再保存可用版本" loading="lazy"></picture></a><figcaption>找项目、下载、试用与修改，再保存可用版本 · 点击图片可放大查看</figcaption></figure>
 <p><strong>建议初学者用 GitHub Desktop 操作</strong>，下载项目、查看改动、保存版本都可以通过按钮完成，不用先记 Git 命令。Git 负责保存版本，GitHub Desktop 提供相应的按钮；GitHub 是网站，另外两个是电脑上的软件。</p>
 <p><strong>先准备 Git 和 GitHub Desktop。</strong></p>
 <p><strong>Windows：</strong> 从 <a href="https://git-scm.com/install/windows" target="_blank" rel="noopener noreferrer">Git 官方下载页</a>下载安装程序，按向导完成安装，再重新打开 PowerShell。</p>
@@ -77,7 +78,7 @@ blockquote{background:#eff6ff;border-left-color:#60a5fa;color:#334869}
 <li><strong>commit：正式拍下一张快照，再写一句说明。</strong> 这就是一个留在电脑里的版本。下次继续改，不会自动覆盖这次存档。</li>
 </ul>
 <p>文件本身还是照常编辑和保存。add、commit 是把选好的改动记入版本历史；Git 不会自动记录每次打字。<a href="https://git-scm.com/docs/git-add" target="_blank" rel="noopener noreferrer">Git 的 add 说明</a> · <a href="https://git-scm.com/docs/git-commit" target="_blank" rel="noopener noreferrer">commit 说明</a></p>
-<figure class="learning-figure"><a href="../配图/09-Git存档.svg?v=1690e935" target="_blank" aria-label="放大配图：本地存档：修改并保存 → add 选好改动 → commit 存一版；需要时再 Push"><picture><source media="(max-width:600px)" srcset="../配图/09-Git存档-mobile.svg?v=0a75b344"><img src="../配图/09-Git存档.svg?v=1690e935" alt="本地存档：修改并保存 → add 选好改动 → commit 存一版；需要时再 Push" loading="lazy"></picture></a><figcaption>本地存档：修改并保存 → add 选好改动 → commit 存一版；需要时再 Push · 点击图片可放大查看</figcaption></figure><h3>用 GitHub Desktop，就按这几步做</h3>
+<figure class="learning-figure"><a href="../配图/09-Git存档-q版.png" target="_blank" aria-label="放大配图：本地存档：修改并保存 → add 选好改动 → commit 存一版；需要时再 Push"><picture><img src="../配图/09-Git存档-q版.png" alt="本地存档：修改并保存 → add 选好改动 → commit 存一版；需要时再 Push" loading="lazy"></picture></a><figcaption>本地存档：修改并保存 → add 选好改动 → commit 存一版；需要时再 Push · 点击图片可放大查看</figcaption></figure><h3>用 GitHub Desktop，就按这几步做</h3>
 <ol>
 <li>改好文件并保存，试一下功能是否正常。</li>
 <li>在 <strong>Changes</strong> 里查看差异，勾选这次要存的文件。这对应“选好这次的改动”，不用另找一个 add 按钮。</li>
