@@ -56,9 +56,9 @@ During the lifecycle of energy storage products, a certain degree of capacity an
 
 
 
-<figure aria-label="WHAT'S IN THE BOX" class="hb-inbox-composition" data-card-count="2" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="responsive-card-grid"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Jackery Explorer 300D" class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je300d_eu_en/inbox_unit.png" data-web-finished-panel-sha256="b8b2eea4b34aa606a538492672ccaddb0603033c5a9c8ccc9002fc8ece942378" src="../../../../_static/manual-assets/JE-300D/EU/en/md/assets/ir/b8b2eea4b34aa606a538492672ccaddb0603033c5a9c8ccc9002fc8ece942378/inbox_unit.png"/><div class="hb-inbox-label">
+<figure aria-label="WHAT'S IN THE BOX" class="hb-inbox-composition" data-card-count="2" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="responsive-card-grid"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Jackery Explorer 300D" class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je300d_eu_en/inbox_unit.png" data-web-finished-panel-sha256="b8b2eea4b34aa606a538492672ccaddb0603033c5a9c8ccc9002fc8ece942378" src="../../../../_static/manual-assets/_pool/b8/b8b2eea4b34aa606a538492672ccaddb0603033c5a9c8ccc9002fc8ece942378.png"/><div class="hb-inbox-label">
 <p><strong>Jackery Explorer 300D</strong></p>
-</div></li><li class="hb-inbox-card" data-item-number="2"><img alt="Jackery Explorer 300D user manual" class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je300d_eu_en/inbox_manual.png" data-web-finished-panel-sha256="765791290f2b210d500e997b17736cd6093b964518216b0c09eaff9c90b183c0" src="../../../../_static/manual-assets/JE-300D/EU/en/md/assets/ir/765791290f2b210d500e997b17736cd6093b964518216b0c09eaff9c90b183c0/inbox_manual.png"/><div class="hb-inbox-label">
+</div></li><li class="hb-inbox-card" data-item-number="2"><img alt="Jackery Explorer 300D user manual" class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je300d_eu_en/inbox_manual.png" data-web-finished-panel-sha256="765791290f2b210d500e997b17736cd6093b964518216b0c09eaff9c90b183c0" src="../../../../_static/manual-assets/_pool/76/765791290f2b210d500e997b17736cd6093b964518216b0c09eaff9c90b183c0.png"/><div class="hb-inbox-label">
 <p><strong>User Manual</strong></p>
 </div></li></ol></figure>
 
@@ -70,11 +70,11 @@ The car charging cable is not included but is available for purchase separately 
 
 # PRODUCT OVERVIEW
 
-<img src="../../../../_static/manual-assets/JE-300D/EU/en/md/assets/ir/478049d90e38375cad71c7b0bc07be267f9bc8118012e3ed72cc84c775dab25d/overview.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je300d_eu_en/overview.png" data-web-finished-panel-sha256="478049d90e38375cad71c7b0bc07be267f9bc8118012e3ed72cc84c775dab25d" alt="Jackery Explorer 300D ports, controls, LCD and two-in-one carry handle" /> <img src="../../../../_static/manual-assets/JE-300D/EU/en/md/assets/ir/54e26c1d7c2d5f4726928b2835ce1a3882c2ff7600dceb8eee1b677f815db1a5/strap_panel.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je300d_eu_en/strap_panel.png" data-web-finished-panel-sha256="54e26c1d7c2d5f4726928b2835ce1a3882c2ff7600dceb8eee1b677f815db1a5" alt="Adjustable strap attached to the Jackery Explorer 300D" />
+<img src="../../../../_static/manual-assets/_pool/47/478049d90e38375cad71c7b0bc07be267f9bc8118012e3ed72cc84c775dab25d.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je300d_eu_en/overview.png" data-web-finished-panel-sha256="478049d90e38375cad71c7b0bc07be267f9bc8118012e3ed72cc84c775dab25d" alt="Jackery Explorer 300D ports, controls, LCD and two-in-one carry handle" /> <img src="../../../../_static/manual-assets/_pool/54/54e26c1d7c2d5f4726928b2835ce1a3882c2ff7600dceb8eee1b677f815db1a5.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je300d_eu_en/strap_panel.png" data-web-finished-panel-sha256="54e26c1d7c2d5f4726928b2835ce1a3882c2ff7600dceb8eee1b677f815db1a5" alt="Adjustable strap attached to the Jackery Explorer 300D" />
 
 # LCD DISPLAY
 
-<img src="../../../../_static/manual-assets/JE-300D/EU/en/md/assets/ir/c42a8624462964f5723c87f1b4ec5f7bfab203a45cf56d8111c40502ff7dd362/lcd_map.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je300d_eu_en/lcd_map.png" data-web-finished-panel-sha256="c42a8624462964f5723c87f1b4ec5f7bfab203a45cf56d8111c40502ff7dd362" alt="Jackery Explorer 300D LCD with indicators numbered 1 through 10" />
+<img src="../../../../_static/manual-assets/_pool/c4/c42a8624462964f5723c87f1b4ec5f7bfab203a45cf56d8111c40502ff7dd362.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je300d_eu_en/lcd_map.png" data-web-finished-panel-sha256="c42a8624462964f5723c87f1b4ec5f7bfab203a45cf56d8111c40502ff7dd362" alt="Jackery Explorer 300D LCD with indicators numbered 1 through 10" />
 
 | No. | Indicator | Description |
 |----|----|----|
@@ -94,11 +94,11 @@ The car charging cable is not included but is available for purchase separately 
 
 ## POWER ON/OFF
 
-<img src="../../../../_static/manual-assets/JE-300D/EU/en/md/assets/ir/a7640fa6749321ef150af82a8f0287f9f143738022a7978aa2b1c81ce64333b6/operation_power.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je300d_eu_en/operation_power.png" data-web-finished-panel-sha256="a7640fa6749321ef150af82a8f0287f9f143738022a7978aa2b1c81ce64333b6" alt="Main power button on and off operation" />
+<img src="../../../../_static/manual-assets/_pool/a7/a7640fa6749321ef150af82a8f0287f9f143738022a7978aa2b1c81ce64333b6.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je300d_eu_en/operation_power.png" data-web-finished-panel-sha256="a7640fa6749321ef150af82a8f0287f9f143738022a7978aa2b1c81ce64333b6" alt="Main power button on and off operation" />
 
 ## USB OUTPUT ON/OFF
 
-<img src="../../../../_static/manual-assets/JE-300D/EU/en/md/assets/ir/d13c5ec13b1edef292de5d5bf5c2d4cfd5aec80add9e0d1c3b215ed86287088a/operation_usb.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je300d_eu_en/operation_usb.png" data-web-finished-panel-sha256="d13c5ec13b1edef292de5d5bf5c2d4cfd5aec80add9e0d1c3b215ed86287088a" alt="USB output connection panel" />
+<img src="../../../../_static/manual-assets/_pool/d1/d13c5ec13b1edef292de5d5bf5c2d4cfd5aec80add9e0d1c3b215ed86287088a.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je300d_eu_en/operation_usb.png" data-web-finished-panel-sha256="d13c5ec13b1edef292de5d5bf5c2d4cfd5aec80add9e0d1c3b215ed86287088a" alt="USB output connection panel" />
 
 Caution!
 
@@ -110,7 +110,7 @@ Caution!
 
 ## DC 12V OUTPUT ON/OFF
 
-<img src="../../../../_static/manual-assets/JE-300D/EU/en/md/assets/ir/2b64a719fea3cab863ec3bc8d893c702c18bd8bd4c36e42889abf157190b9424/operation_dc.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je300d_eu_en/operation_dc.png" data-web-finished-panel-sha256="2b64a719fea3cab863ec3bc8d893c702c18bd8bd4c36e42889abf157190b9424" alt="DC 12V output on and off panel" />
+<img src="../../../../_static/manual-assets/_pool/2b/2b64a719fea3cab863ec3bc8d893c702c18bd8bd4c36e42889abf157190b9424.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je300d_eu_en/operation_dc.png" data-web-finished-panel-sha256="2b64a719fea3cab863ec3bc8d893c702c18bd8bd4c36e42889abf157190b9424" alt="DC 12V output on and off panel" />
 
 Caution!
 
@@ -122,7 +122,7 @@ Caution!
 
 ## ENERGY SAVING MODE
 
-<img src="../../../../_static/manual-assets/JE-300D/EU/en/md/assets/ir/4f0aa946c07e74d129019673b7fbdef3c368112cf6a28d17a3fd69af01e906ae/operation_energy.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je300d_eu_en/operation_energy.png" data-web-finished-panel-sha256="4f0aa946c07e74d129019673b7fbdef3c368112cf6a28d17a3fd69af01e906ae" alt="Energy Saving Mode controls and auto-off behavior" />
+<img src="../../../../_static/manual-assets/_pool/4f/4f0aa946c07e74d129019673b7fbdef3c368112cf6a28d17a3fd69af01e906ae.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je300d_eu_en/operation_energy.png" data-web-finished-panel-sha256="4f0aa946c07e74d129019673b7fbdef3c368112cf6a28d17a3fd69af01e906ae" alt="Energy Saving Mode controls and auto-off behavior" />
 
 Note
 
@@ -130,11 +130,11 @@ Energy Saving Mode resumes its previous state after power-on. Manual switching i
 
 ## LED LIGHT ON/OFF
 
-<img src="../../../../_static/manual-assets/JE-300D/EU/en/md/assets/ir/2843b1e0f14ad0859423e7193d87c3b2755f635181e5acedff7ca70451b1d07d/operation_led.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je300d_eu_en/operation_led.png" data-web-finished-panel-sha256="2843b1e0f14ad0859423e7193d87c3b2755f635181e5acedff7ca70451b1d07d" alt="LED light, SOS mode and off sequence" />
+<img src="../../../../_static/manual-assets/_pool/28/2843b1e0f14ad0859423e7193d87c3b2755f635181e5acedff7ca70451b1d07d.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je300d_eu_en/operation_led.png" data-web-finished-panel-sha256="2843b1e0f14ad0859423e7193d87c3b2755f635181e5acedff7ca70451b1d07d" alt="LED light, SOS mode and off sequence" />
 
 ## LCD SCREEN ON/OFF
 
-<img src="../../../../_static/manual-assets/JE-300D/EU/en/md/assets/ir/2c8fc1e46667c014b8c9c78ad6d0628581deb5ffefd9b02126ee5fe14b4cf2ab/operation_lcd.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je300d_eu_en/operation_lcd.png" data-web-finished-panel-sha256="2c8fc1e46667c014b8c9c78ad6d0628581deb5ffefd9b02126ee5fe14b4cf2ab" alt="Main Power Button device art for LCD screen control" />
+<img src="../../../../_static/manual-assets/_pool/2c/2c8fc1e46667c014b8c9c78ad6d0628581deb5ffefd9b02126ee5fe14b4cf2ab.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je300d_eu_en/operation_lcd.png" data-web-finished-panel-sha256="2c8fc1e46667c014b8c9c78ad6d0628581deb5ffefd9b02126ee5fe14b4cf2ab" alt="Main Power Button device art for LCD screen control" />
 
 | Mode | Action | Result |
 |----|----|----|
@@ -159,7 +159,7 @@ Note
 
 ## USB-C CHARGING (140W MAX)
 
-<img src="../../../../_static/manual-assets/JE-300D/EU/en/md/assets/ir/7b35cfeff5a8c021f47c9bd575be8b49cfb4ad99fd05ccd56fe474665c612806/charging_usb_c.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je300d_eu_en/charging_usb_c.png" data-web-finished-panel-sha256="7b35cfeff5a8c021f47c9bd575be8b49cfb4ad99fd05ccd56fe474665c612806" alt="USB-C charging with the two-in-one carry handle cable" />
+<img src="../../../../_static/manual-assets/_pool/7b/7b35cfeff5a8c021f47c9bd575be8b49cfb4ad99fd05ccd56fe474665c612806.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je300d_eu_en/charging_usb_c.png" data-web-finished-panel-sha256="7b35cfeff5a8c021f47c9bd575be8b49cfb4ad99fd05ccd56fe474665c612806" alt="USB-C charging with the two-in-one carry handle cable" />
 
 Caution!
 
@@ -169,7 +169,7 @@ When charging through the USB-C port, this product supports up to 140W, which re
 
 The Jackery Explorer 300D has one DC8020 input port, which supports direct connection of a solar panel.
 
-<img src="../../../../_static/manual-assets/JE-300D/EU/en/md/assets/ir/23a83f3953d284aec4b8d232dee7c4e0d9cbbe08c733403cf9f6572197c42b6d/charging_solar.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je300d_eu_en/charging_solar.png" data-web-finished-panel-sha256="23a83f3953d284aec4b8d232dee7c4e0d9cbbe08c733403cf9f6572197c42b6d" alt="SolarSaga 40 Air connected to the Jackery Explorer 300D" />
+<img src="../../../../_static/manual-assets/_pool/23/23a83f3953d284aec4b8d232dee7c4e0d9cbbe08c733403cf9f6572197c42b6d.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je300d_eu_en/charging_solar.png" data-web-finished-panel-sha256="23a83f3953d284aec4b8d232dee7c4e0d9cbbe08c733403cf9f6572197c42b6d" alt="SolarSaga 40 Air connected to the Jackery Explorer 300D" />
 
 It is recommended to use a Jackery solar panel to charge the product. Ensure that the open-circuit voltage (Voc) of the solar panel falls within the Jackery Explorer 300D\'s DC input voltage range (16V--28V). Jackery is not responsible for any damage or loss resulting from the use of third-party solar panels.
 
@@ -177,7 +177,7 @@ It is recommended to use a Jackery solar panel to charge the product. Ensure tha
 
 This product can be charged using a 12V car charger. Ensure that the car charger and the car cigarette lighter provide a good connection.
 
-<img src="../../../../_static/manual-assets/JE-300D/EU/en/md/assets/ir/2966eb1a32157fc1e04aae20fbc8e0954957b44fb9abeb68bfd7094b52a1aba7/charging_car.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je300d_eu_en/charging_car.png" data-web-finished-panel-sha256="2966eb1a32157fc1e04aae20fbc8e0954957b44fb9abeb68bfd7094b52a1aba7" alt="12V vehicle charging connection" />
+<img src="../../../../_static/manual-assets/_pool/29/2966eb1a32157fc1e04aae20fbc8e0954957b44fb9abeb68bfd7094b52a1aba7.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je300d_eu_en/charging_car.png" data-web-finished-panel-sha256="2966eb1a32157fc1e04aae20fbc8e0954957b44fb9abeb68bfd7094b52a1aba7" alt="12V vehicle charging connection" />
 
 Caution!
 

@@ -50,20 +50,20 @@ The basic safety precautions should be followed when using this product, includi
 |  |  |  |  |
 |----|----|----|----|
 | **Symbol** | **Meaning** | **Symbol** | **Meaning** |
-| <img src="../../../../_static/manual-assets/JBP-2000B/EU/en/md/assets/ir/1c272a00fbd28d6562d4126040ba43e5747f6a6550878c4b13e05a5c28014577/10_warning_triangle_RkOwbJ9j1oUHJgxFEx3cqhVynjb.png" style="width: 40px;" width="40" height="35" alt="warning_triangle" /> | Warning and Caution Symbols. Alerts individuals to information that must be read to avoid potential hazards or risks. | <img src="../../../../_static/manual-assets/JBP-2000B/EU/en/md/assets/ir/e345b3278827691751b6beac9c8343c75ac7a98100618fbef1db73a27329b99d/30_keep_away_from_children_Nc5NbV2kyoMaTSxvismcAlzbnlh.png" style="width: 40px;" width="40" height="33" alt="keep_away_from_children" /> | Keep away from children. |
-| <img src="../../../../_static/manual-assets/JBP-2000B/EU/en/md/assets/ir/d14506fa5a9d449039887db61a259f1841f1826de2f190f54063f96195b955f5/20_read_manual_VK1Ab1MGIoOHdgx1rkUchOHRntb.png" style="width: 40px;" width="40" height="26" alt="read_manual" /> | Read the user manual before operation. | <img src="../../../../_static/manual-assets/JBP-2000B/EU/en/md/assets/ir/ea7766d417e962cf711bccf3de79d6f639602848ace780353cb329329d13cc91/40_li_ion_ZEcHbhY0Eo3XOExtXKCcbEVjnpe.png" style="width: 40px;" width="40" height="47" alt="li_ion" /> | This symbol indicates that a lithium-ion (Li-ion) battery is inside the product and should be disposed of or recycled properly. |
-| <img src="../../../../_static/manual-assets/JBP-2000B/EU/en/md/assets/ir/66c3df77e4f84cccad4b9f162798b181c007e89d3f0e9dd4fdf52c392827cbab/10_do_not_dismantle_Ml7EbCjtYohuKAxWNDUc93UMnVc.png" style="width: 40px;" width="40" height="34" alt="do_not_dismantle" /> | Do not dismantle the product. | <img src="../../../../_static/manual-assets/JBP-2000B/EU/en/md/assets/ir/eb094578bf165fa39399de1d957cc71a92191f2b0e7ed0a620885065ebedf8a3/50_weee_L9o3bcXq0oSsqdxSX86covnpnle.png" style="width: 40px;" width="40" height="51" alt="weee" /> | This symbol indicates that the product shall not be disposed of as household waste, and should be delivered to a designated collection facility for recycling. Proper disposal and recycling can help protect the environment. For more information about the disposal and recycling of this product, contact your local community, disposal service, or dealer. |
-| <img src="../../../../_static/manual-assets/JBP-2000B/EU/en/md/assets/ir/422379347e71e7827c3da380e421f2cb106da5d2f74781fc45782a2f86d493d2/20_no_open_flame_SAbnbxa6iohb2rxxk3PcEh8cnuf.png" style="width: 40px;" width="40" height="37" alt="no_open_flame" /> | Keep the product away from fire. | <img src="../../../../_static/manual-assets/JBP-2000B/EU/en/md/assets/ir/7fb57972ebd1fb8bf82abc75d0d320ecaa9abc6544020f2374da2f1272a46171/70_weee2_VL7tbeJhHoy9wBxRZIdcygPBnmf.png" style="width: 40px;" width="40" height="32" alt="weee2" /> | Batteries and accumulators must not be disposed of with household waste. As a consumer, you are legally required to dispose of all batteries and accumulators at designated collection points, regardless of whether they contain hazardous substances. Please return used batteries and accumulators to a local collection point, recycling center, or to the retailer where they were purchased. Proper disposal ensures environmentally responsible recycling and prevents potential harm to human health and the environment. |
+| <img src="../../../../_static/manual-assets/_pool/1c/1c272a00fbd28d6562d4126040ba43e5747f6a6550878c4b13e05a5c28014577.png" style="width: 40px;" width="40" height="35" alt="warning_triangle" /> | Warning and Caution Symbols. Alerts individuals to information that must be read to avoid potential hazards or risks. | <img src="../../../../_static/manual-assets/_pool/e3/e345b3278827691751b6beac9c8343c75ac7a98100618fbef1db73a27329b99d.png" style="width: 40px;" width="40" height="33" alt="keep_away_from_children" /> | Keep away from children. |
+| <img src="../../../../_static/manual-assets/_pool/d1/d14506fa5a9d449039887db61a259f1841f1826de2f190f54063f96195b955f5.png" style="width: 40px;" width="40" height="26" alt="read_manual" /> | Read the user manual before operation. | <img src="../../../../_static/manual-assets/_pool/ea/ea7766d417e962cf711bccf3de79d6f639602848ace780353cb329329d13cc91.png" style="width: 40px;" width="40" height="47" alt="li_ion" /> | This symbol indicates that a lithium-ion (Li-ion) battery is inside the product and should be disposed of or recycled properly. |
+| <img src="../../../../_static/manual-assets/_pool/66/66c3df77e4f84cccad4b9f162798b181c007e89d3f0e9dd4fdf52c392827cbab.png" style="width: 40px;" width="40" height="34" alt="do_not_dismantle" /> | Do not dismantle the product. | <img src="../../../../_static/manual-assets/_pool/eb/eb094578bf165fa39399de1d957cc71a92191f2b0e7ed0a620885065ebedf8a3.png" style="width: 40px;" width="40" height="51" alt="weee" /> | This symbol indicates that the product shall not be disposed of as household waste, and should be delivered to a designated collection facility for recycling. Proper disposal and recycling can help protect the environment. For more information about the disposal and recycling of this product, contact your local community, disposal service, or dealer. |
+| <img src="../../../../_static/manual-assets/_pool/42/422379347e71e7827c3da380e421f2cb106da5d2f74781fc45782a2f86d493d2.png" style="width: 40px;" width="40" height="37" alt="no_open_flame" /> | Keep the product away from fire. | <img src="../../../../_static/manual-assets/_pool/7f/7fb57972ebd1fb8bf82abc75d0d320ecaa9abc6544020f2374da2f1272a46171.png" style="width: 40px;" width="40" height="32" alt="weee2" /> | Batteries and accumulators must not be disposed of with household waste. As a consumer, you are legally required to dispose of all batteries and accumulators at designated collection points, regardless of whether they contain hazardous substances. Please return used batteries and accumulators to a local collection point, recycling center, or to the retailer where they were purchased. Proper disposal ensures environmentally responsible recycling and prevents potential harm to human health and the environment. |
 
 # WHAT\'S IN THE BOX
 
 
 
-<figure aria-label="WHAT'S IN THE BOX" class="hb-inbox-composition" data-card-count="3" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="three-card-responsive"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Jackery Battery Pack 2000." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/jbp2000b_eu_en/inbox_unit.png" data-web-finished-panel-sha256="c0e6712d6df6ae0ae40bf5e070d847bfe20bd6acd1d9d0520ca58104e9d77d41" src="../../../../_static/manual-assets/JBP-2000B/EU/en/md/assets/ir/c0e6712d6df6ae0ae40bf5e070d847bfe20bd6acd1d9d0520ca58104e9d77d41/inbox_unit.png"/><div class="hb-inbox-label">
+<figure aria-label="WHAT'S IN THE BOX" class="hb-inbox-composition" data-card-count="3" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="three-card-responsive"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Jackery Battery Pack 2000." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/jbp2000b_eu_en/inbox_unit.png" data-web-finished-panel-sha256="c0e6712d6df6ae0ae40bf5e070d847bfe20bd6acd1d9d0520ca58104e9d77d41" src="../../../../_static/manual-assets/_pool/c0/c0e6712d6df6ae0ae40bf5e070d847bfe20bd6acd1d9d0520ca58104e9d77d41.png"/><div class="hb-inbox-label">
 <p><strong>Jackery Battery Pack 2000</strong></p>
-</div></li><li class="hb-inbox-card" data-item-number="2"><img alt="Expansion Cable." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/jbp2000b_eu_en/inbox_cable.png" data-web-finished-panel-sha256="08d0efe964a47742a5bc5b03a533dd5953319b3d49a54042c1f5fba969228524" src="../../../../_static/manual-assets/JBP-2000B/EU/en/md/assets/ir/08d0efe964a47742a5bc5b03a533dd5953319b3d49a54042c1f5fba969228524/inbox_cable.png"/><div class="hb-inbox-label">
+</div></li><li class="hb-inbox-card" data-item-number="2"><img alt="Expansion Cable." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/jbp2000b_eu_en/inbox_cable.png" data-web-finished-panel-sha256="08d0efe964a47742a5bc5b03a533dd5953319b3d49a54042c1f5fba969228524" src="../../../../_static/manual-assets/_pool/08/08d0efe964a47742a5bc5b03a533dd5953319b3d49a54042c1f5fba969228524.png"/><div class="hb-inbox-label">
 <p><strong>Expansion Cable</strong></p>
-</div></li><li class="hb-inbox-card" data-item-number="3"><img alt="User Manual." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/jbp2000b_eu_en/inbox_manual.png" data-web-finished-panel-sha256="9cce7fb0673bed9b73efed48531ee1d71ecf15c99bd3995f8e76a55bb7252b48" src="../../../../_static/manual-assets/JBP-2000B/EU/en/md/assets/ir/9cce7fb0673bed9b73efed48531ee1d71ecf15c99bd3995f8e76a55bb7252b48/inbox_manual.png"/><div class="hb-inbox-label">
+</div></li><li class="hb-inbox-card" data-item-number="3"><img alt="User Manual." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/jbp2000b_eu_en/inbox_manual.png" data-web-finished-panel-sha256="9cce7fb0673bed9b73efed48531ee1d71ecf15c99bd3995f8e76a55bb7252b48" src="../../../../_static/manual-assets/_pool/9c/9cce7fb0673bed9b73efed48531ee1d71ecf15c99bd3995f8e76a55bb7252b48.png"/><div class="hb-inbox-label">
 <p>User Manual</p>
 </div></li></ol></figure>
 
@@ -71,11 +71,11 @@ The basic safety precautions should be followed when using this product, includi
 
 # PRODUCT OVERVIEW
 
-<img src="../../../../_static/manual-assets/JBP-2000B/EU/en/md/assets/ir/0fa91d8a07e2b1d1df783526554aefb589aa1cbfd930605973ee105b005b8228/overview.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/jbp2000b_eu_en/overview.png" data-web-finished-panel-sha256="0fa91d8a07e2b1d1df783526554aefb589aa1cbfd930605973ee105b005b8228" alt="POWER button LCD；Handle DC Expansion Port A (Connect to Expansion Cable Terminal A) DC Expansion Port B (Connect to Expansion Cable Terminal B)；FRONT VIEW；LEFT SIDE VIEW" />
+<img src="../../../../_static/manual-assets/_pool/0f/0fa91d8a07e2b1d1df783526554aefb589aa1cbfd930605973ee105b005b8228.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/jbp2000b_eu_en/overview.png" data-web-finished-panel-sha256="0fa91d8a07e2b1d1df783526554aefb589aa1cbfd930605973ee105b005b8228" alt="POWER button LCD；Handle DC Expansion Port A (Connect to Expansion Cable Terminal A) DC Expansion Port B (Connect to Expansion Cable Terminal B)；FRONT VIEW；LEFT SIDE VIEW" />
 
 # LCD DISPLAY
 
-<img src="../../../../_static/manual-assets/JBP-2000B/EU/en/md/assets/ir/6f61db7caf815d28f215a36484b265b246a58ec07a1393da2e39f1e336d801af/lcd.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/jbp2000b_eu_en/lcd.png" data-web-finished-panel-sha256="6f61db7caf815d28f215a36484b265b246a58ec07a1393da2e39f1e336d801af" alt="LCD DISPLAY" />
+<img src="../../../../_static/manual-assets/_pool/6f/6f61db7caf815d28f215a36484b265b246a58ec07a1393da2e39f1e336d801af.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/jbp2000b_eu_en/lcd.png" data-web-finished-panel-sha256="6f61db7caf815d28f215a36484b265b246a58ec07a1393da2e39f1e336d801af" alt="LCD DISPLAY" />
 
 <table class="longtable lcd-text-only">
 <colgroup>
@@ -105,7 +105,7 @@ When the system fails, it will be displayed as the corresponding fault code F0-F
 
 ## POWER ON/OFF
 
-<img src="../../../../_static/manual-assets/JBP-2000B/EU/en/md/assets/ir/3243b5e04fe279d9ea9fad1f42096ac4d535eb26edf6043488c332d63cd88349/power.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/jbp2000b_eu_en/power.png" data-web-finished-panel-sha256="3243b5e04fe279d9ea9fad1f42096ac4d535eb26edf6043488c332d63cd88349" alt="On Press once Off Press and hold for 3 seconds" />
+<img src="../../../../_static/manual-assets/_pool/32/3243b5e04fe279d9ea9fad1f42096ac4d535eb26edf6043488c332d63cd88349.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/jbp2000b_eu_en/power.png" data-web-finished-panel-sha256="3243b5e04fe279d9ea9fad1f42096ac4d535eb26edf6043488c332d63cd88349" alt="On Press once Off Press and hold for 3 seconds" />
 
 
 
@@ -117,7 +117,7 @@ When the system fails, it will be displayed as the corresponding fault code F0-F
 
 ## LCD DISPLAY ON/OFF
 
-<img src="../../../../_static/manual-assets/JBP-2000B/EU/en/md/assets/ir/1fc1729ce1b8c9fffc09c092cbad3c185f8f77d1713b7fff9c188300df33c207/lcd_control.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/jbp2000b_eu_en/lcd_control.png" data-web-finished-panel-sha256="1fc1729ce1b8c9fffc09c092cbad3c185f8f77d1713b7fff9c188300df33c207" alt="Jackery Battery Pack 2000 LCD display operation." />
+<img src="../../../../_static/manual-assets/_pool/1f/1fc1729ce1b8c9fffc09c092cbad3c185f8f77d1713b7fff9c188300df33c207.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/jbp2000b_eu_en/lcd_control.png" data-web-finished-panel-sha256="1fc1729ce1b8c9fffc09c092cbad3c185f8f77d1713b7fff9c188300df33c207" alt="Jackery Battery Pack 2000 LCD display operation." />
 
 When you press the main POWER button or when charging the product, the LCD display is illuminated. When you press it again, the LCD display will be switched off.
 
@@ -125,7 +125,7 @@ When you press the main POWER button or when charging the product, the LCD displ
 
 Up to five battery packs can be used with the portable power station to provide additional capacity.
 
-<img src="../../../../_static/manual-assets/JBP-2000B/EU/en/md/assets/ir/f00c0537c6d2d5b0e17f988f26b4233db5e132cb44655976a81edf669bed6239/clearance.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/jbp2000b_eu_en/clearance.png" data-web-finished-panel-sha256="f00c0537c6d2d5b0e17f988f26b4233db5e132cb44655976a81edf669bed6239" alt="Battery Pack connection, stacking, and clearance diagram." />
+<img src="../../../../_static/manual-assets/_pool/f0/f00c0537c6d2d5b0e17f988f26b4233db5e132cb44655976a81edf669bed6239.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/jbp2000b_eu_en/clearance.png" data-web-finished-panel-sha256="f00c0537c6d2d5b0e17f988f26b4233db5e132cb44655976a81edf669bed6239" alt="Battery Pack connection, stacking, and clearance diagram." />
 
 
 
@@ -149,7 +149,7 @@ Up to five battery packs can be used with the portable power station to provide 
 
 
 
-<img src="../../../../_static/manual-assets/JBP-2000B/EU/en/md/assets/ir/979f98e8cd5c8668442656db231bffd8aff53321496da30585aaf5da213ee669/locking.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/jbp2000b_eu_en/locking.png" data-web-finished-panel-sha256="979f98e8cd5c8668442656db231bffd8aff53321496da30585aaf5da213ee669" alt="Correct connection order and expansion-cable locking and unlocking steps." />
+<img src="../../../../_static/manual-assets/_pool/97/979f98e8cd5c8668442656db231bffd8aff53321496da30585aaf5da213ee669.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/jbp2000b_eu_en/locking.png" data-web-finished-panel-sha256="979f98e8cd5c8668442656db231bffd8aff53321496da30585aaf5da213ee669" alt="Correct connection order and expansion-cable locking and unlocking steps." />
 
 # TROUBLESHOOTING
 
@@ -173,13 +173,13 @@ To charge the battery pack from an AC wall outlet, connect it to the portable po
 
 
 
-<img src="../../../../_static/manual-assets/JBP-2000B/EU/en/md/assets/ir/0b4ea051dcd300831613ac1da9ee58a848256999ea462bb30a1a582be10caf3d/ac_charging.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/jbp2000b_eu_en/ac_charging.png" data-web-finished-panel-sha256="0b4ea051dcd300831613ac1da9ee58a848256999ea462bb30a1a582be10caf3d" alt="AC wall charging connection through the portable power station." />
+<img src="../../../../_static/manual-assets/_pool/0b/0b4ea051dcd300831613ac1da9ee58a848256999ea462bb30a1a582be10caf3d.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/jbp2000b_eu_en/ac_charging.png" data-web-finished-panel-sha256="0b4ea051dcd300831613ac1da9ee58a848256999ea462bb30a1a582be10caf3d" alt="AC wall charging connection through the portable power station." />
 
 ## CHARGING VIA SOLAR PANELS (SOLD SEPARATELY)
 
 Charge the battery pack using solar panels and the portable power station, as shown in the figure below. For more information, refer to the user manual for the portable power station.
 
-<img src="../../../../_static/manual-assets/JBP-2000B/EU/en/md/assets/ir/7d3a1d2b3a59fce8643f73dd1d297e1bfcf9bd14ef0afeb46a5d838be974e7e1/solar_charging.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/jbp2000b_eu_en/solar_charging.png" data-web-finished-panel-sha256="7d3a1d2b3a59fce8643f73dd1d297e1bfcf9bd14ef0afeb46a5d838be974e7e1" alt="Solar charging connection through the portable power station." />
+<img src="../../../../_static/manual-assets/_pool/7d/7d3a1d2b3a59fce8643f73dd1d297e1bfcf9bd14ef0afeb46a5d838be974e7e1.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/jbp2000b_eu_en/solar_charging.png" data-web-finished-panel-sha256="7d3a1d2b3a59fce8643f73dd1d297e1bfcf9bd14ef0afeb46a5d838be974e7e1" alt="Solar charging connection through the portable power station." />
 
 # STORAGE
 

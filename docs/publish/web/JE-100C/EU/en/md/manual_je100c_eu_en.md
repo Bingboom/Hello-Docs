@@ -50,11 +50,11 @@ During the lifecycle of energy storage products, a certain degree of capacity an
 
 
 
-<figure aria-label="WHAT'S IN THE BOX" class="hb-inbox-composition" data-card-count="3" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="three-card-responsive"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Jackery Explorer 100D" class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je100c_eu_en/inbox_unit.png" data-web-finished-panel-sha256="9e8cfb5917ef0d87bda25b46850c3d566b22b48d52fc7d01f875a220f7b37bed" src="../../../../_static/manual-assets/JE-100C/EU/en/md/assets/ir/9e8cfb5917ef0d87bda25b46850c3d566b22b48d52fc7d01f875a220f7b37bed/inbox_unit.png"/><div class="hb-inbox-label">
+<figure aria-label="WHAT'S IN THE BOX" class="hb-inbox-composition" data-card-count="3" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="three-card-responsive"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Jackery Explorer 100D" class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je100c_eu_en/inbox_unit.png" data-web-finished-panel-sha256="9e8cfb5917ef0d87bda25b46850c3d566b22b48d52fc7d01f875a220f7b37bed" src="../../../../_static/manual-assets/_pool/9e/9e8cfb5917ef0d87bda25b46850c3d566b22b48d52fc7d01f875a220f7b37bed.png"/><div class="hb-inbox-label">
 <p><strong>Jackery Explorer 100D</strong></p>
-</div></li><li class="hb-inbox-card" data-item-number="2"><img alt="USB-C Cable" class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je100c_eu_en/inbox_cable.png" data-web-finished-panel-sha256="440667657c702a6cb0c99f574430f9303253b3ada6a32aa8609cf562306d2a6e" src="../../../../_static/manual-assets/JE-100C/EU/en/md/assets/ir/440667657c702a6cb0c99f574430f9303253b3ada6a32aa8609cf562306d2a6e/inbox_cable.png"/><div class="hb-inbox-label">
+</div></li><li class="hb-inbox-card" data-item-number="2"><img alt="USB-C Cable" class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je100c_eu_en/inbox_cable.png" data-web-finished-panel-sha256="440667657c702a6cb0c99f574430f9303253b3ada6a32aa8609cf562306d2a6e" src="../../../../_static/manual-assets/_pool/44/440667657c702a6cb0c99f574430f9303253b3ada6a32aa8609cf562306d2a6e.png"/><div class="hb-inbox-label">
 <p><strong>USB-C Cable</strong></p>
-</div></li><li class="hb-inbox-card" data-item-number="3"><img alt="User Manual" class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je100c_eu_en/inbox_manual.png" data-web-finished-panel-sha256="4320efcbbc0506ca4cabe0cd0b4c268357fc87a224b3a76cf69cffd2f8771075" src="../../../../_static/manual-assets/JE-100C/EU/en/md/assets/ir/4320efcbbc0506ca4cabe0cd0b4c268357fc87a224b3a76cf69cffd2f8771075/inbox_manual.png"/><div class="hb-inbox-label">
+</div></li><li class="hb-inbox-card" data-item-number="3"><img alt="User Manual" class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je100c_eu_en/inbox_manual.png" data-web-finished-panel-sha256="4320efcbbc0506ca4cabe0cd0b4c268357fc87a224b3a76cf69cffd2f8771075" src="../../../../_static/manual-assets/_pool/43/4320efcbbc0506ca4cabe0cd0b4c268357fc87a224b3a76cf69cffd2f8771075.png"/><div class="hb-inbox-label">
 <p><strong>User Manual</strong></p>
 </div></li></ol></figure>
 
@@ -62,7 +62,7 @@ During the lifecycle of energy storage products, a certain degree of capacity an
 
 # PRODUCT OVERVIEW
 
-<img src="../../../../_static/manual-assets/JE-100C/EU/en/md/assets/ir/f1a11b8f9078d9e62f8e27cc3c252b0809addc4486b05ab04baa417fa3368311/overview.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je100c_eu_en/overview.png" data-web-finished-panel-sha256="f1a11b8f9078d9e62f8e27cc3c252b0809addc4486b05ab04baa417fa3368311" alt="Explorer 100D product overview with port and control labels" />
+<img src="../../../../_static/manual-assets/_pool/f1/f1a11b8f9078d9e62f8e27cc3c252b0809addc4486b05ab04baa417fa3368311.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je100c_eu_en/overview.png" data-web-finished-panel-sha256="f1a11b8f9078d9e62f8e27cc3c252b0809addc4486b05ab04baa417fa3368311" alt="Explorer 100D product overview with port and control labels" />
 
 Note
 
@@ -72,7 +72,7 @@ Additional straps can be purchased and attached to the sides of the product.
 
 ## INTERFACE 1
 
-<img src="../../../../_static/manual-assets/JE-100C/EU/en/md/assets/ir/523ab4c85b2e737b9d22510fa91ae6a3d7382e842bcc2171c11e563ee4c9fa85/lcd_interface_1.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je100c_eu_en/lcd_interface_1.png" data-web-finished-panel-sha256="523ab4c85b2e737b9d22510fa91ae6a3d7382e842bcc2171c11e563ee4c9fa85" alt="LCD interface 1 device display" />
+<img src="../../../../_static/manual-assets/_pool/52/523ab4c85b2e737b9d22510fa91ae6a3d7382e842bcc2171c11e563ee4c9fa85.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je100c_eu_en/lcd_interface_1.png" data-web-finished-panel-sha256="523ab4c85b2e737b9d22510fa91ae6a3d7382e842bcc2171c11e563ee4c9fa85" alt="LCD interface 1 device display" />
 
 | No. | Indicator | Description |
 |----|----|----|
@@ -92,7 +92,7 @@ Additional straps can be purchased and attached to the sides of the product.
 
 ## INTERFACE 2
 
-<img src="../../../../_static/manual-assets/JE-100C/EU/en/md/assets/ir/fc613c38fa55870a9f3bbde3c09e3967755da14b86de1b22bfef42c0bfa761ef/lcd_interface_2.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je100c_eu_en/lcd_interface_2.png" data-web-finished-panel-sha256="fc613c38fa55870a9f3bbde3c09e3967755da14b86de1b22bfef42c0bfa761ef" alt="LCD interface 2 device display" />
+<img src="../../../../_static/manual-assets/_pool/fc/fc613c38fa55870a9f3bbde3c09e3967755da14b86de1b22bfef42c0bfa761ef.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je100c_eu_en/lcd_interface_2.png" data-web-finished-panel-sha256="fc613c38fa55870a9f3bbde3c09e3967755da14b86de1b22bfef42c0bfa761ef" alt="LCD interface 2 device display" />
 
 | No. | Indicator | Description |
 |----|----|----|
@@ -102,7 +102,7 @@ Additional straps can be purchased and attached to the sides of the product.
 
 ## INTERFACE 3
 
-<img src="../../../../_static/manual-assets/JE-100C/EU/en/md/assets/ir/7282f47a25d4216f3306267313b027a3a0a7133f62cf66d7b3dc516aa038b539/lcd_interface_3.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je100c_eu_en/lcd_interface_3.png" data-web-finished-panel-sha256="7282f47a25d4216f3306267313b027a3a0a7133f62cf66d7b3dc516aa038b539" alt="LCD interface 3 device display" />
+<img src="../../../../_static/manual-assets/_pool/72/7282f47a25d4216f3306267313b027a3a0a7133f62cf66d7b3dc516aa038b539.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je100c_eu_en/lcd_interface_3.png" data-web-finished-panel-sha256="7282f47a25d4216f3306267313b027a3a0a7133f62cf66d7b3dc516aa038b539" alt="LCD interface 3 device display" />
 
 | No. | Indicator | Description |
 |----|----|----|
@@ -113,7 +113,7 @@ Additional straps can be purchased and attached to the sides of the product.
 
 ## OUTPUT ON/OFF
 
-<img src="../../../../_static/manual-assets/JE-100C/EU/en/md/assets/ir/dc99870298b82c1a04fd29c4560af6e8d3dea92ea6c8aa5f44f06cb3e1d754f3/operation_output.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je100c_eu_en/operation_output.png" data-web-finished-panel-sha256="dc99870298b82c1a04fd29c4560af6e8d3dea92ea6c8aa5f44f06cb3e1d754f3" alt="Output on and off operation panel" />
+<img src="../../../../_static/manual-assets/_pool/dc/dc99870298b82c1a04fd29c4560af6e8d3dea92ea6c8aa5f44f06cb3e1d754f3.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je100c_eu_en/operation_output.png" data-web-finished-panel-sha256="dc99870298b82c1a04fd29c4560af6e8d3dea92ea6c8aa5f44f06cb3e1d754f3" alt="Output on and off operation panel" />
 
 Caution!
 
@@ -129,7 +129,7 @@ The Energy Saving Mode is disabled by default. To prevent unnecessary battery dr
 
 If no device is connected or the connected device\'s power consumption is below 2W for 2 hours, the product automatically turns off the outputs. When the output is on, the icon \"2H\" will appear on the screen.
 
-<img src="../../../../_static/manual-assets/JE-100C/EU/en/md/assets/ir/4c1df5c3334b08628ba40fca2dc13be19a75aa34312da0c0f87ba8621068dbcc/operation_energy.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je100c_eu_en/operation_energy.png" data-web-finished-panel-sha256="4c1df5c3334b08628ba40fca2dc13be19a75aa34312da0c0f87ba8621068dbcc" alt="Energy Saving Mode operation panel" />
+<img src="../../../../_static/manual-assets/_pool/4c/4c1df5c3334b08628ba40fca2dc13be19a75aa34312da0c0f87ba8621068dbcc.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je100c_eu_en/operation_energy.png" data-web-finished-panel-sha256="4c1df5c3334b08628ba40fca2dc13be19a75aa34312da0c0f87ba8621068dbcc" alt="Energy Saving Mode operation panel" />
 
 Note
 
@@ -137,7 +137,7 @@ Energy Saving Mode resumes its previous state after powering on. Manual switchin
 
 ## LCD SCREEN
 
-<img src="../../../../_static/manual-assets/JE-100C/EU/en/md/assets/ir/d33d3830b8f36e02a0a32f6ffa57d3d6dfbeab7980c1285e77316089590dd957/operation_lcd.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je100c_eu_en/operation_lcd.png" data-web-finished-panel-sha256="d33d3830b8f36e02a0a32f6ffa57d3d6dfbeab7980c1285e77316089590dd957" alt="DISPLAY button device art" />
+<img src="../../../../_static/manual-assets/_pool/d3/d33d3830b8f36e02a0a32f6ffa57d3d6dfbeab7980c1285e77316089590dd957.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je100c_eu_en/operation_lcd.png" data-web-finished-panel-sha256="d33d3830b8f36e02a0a32f6ffa57d3d6dfbeab7980c1285e77316089590dd957" alt="DISPLAY button device art" />
 
 | Function | Description |
 |----|----|
@@ -159,7 +159,7 @@ Caution!
 
 ## CHARGING VIA AC CHARGING CABLE
 
-<img src="../../../../_static/manual-assets/JE-100C/EU/en/md/assets/ir/6b4866ef484b9ca9a5ff10dd4cf3fb1f9a18146e02bb38aa27a4c1697c7b5d22/charging_ac.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je100c_eu_en/charging_ac.png" data-web-finished-panel-sha256="6b4866ef484b9ca9a5ff10dd4cf3fb1f9a18146e02bb38aa27a4c1697c7b5d22" alt="Charging via AC charging cable" />
+<img src="../../../../_static/manual-assets/_pool/6b/6b4866ef484b9ca9a5ff10dd4cf3fb1f9a18146e02bb38aa27a4c1697c7b5d22.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je100c_eu_en/charging_ac.png" data-web-finished-panel-sha256="6b4866ef484b9ca9a5ff10dd4cf3fb1f9a18146e02bb38aa27a4c1697c7b5d22" alt="Charging via AC charging cable" />
 
 Caution!
 
@@ -173,7 +173,7 @@ This product supports a maximum solar charging power of 100W and can be used wit
 
 Charged by 40W or 100W solar panel:
 
-<img src="../../../../_static/manual-assets/JE-100C/EU/en/md/assets/ir/96adfad1e72c557534fb1a3eaee933f045d01552429f2afbc95d43eac7bb8367/charging_solar.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je100c_eu_en/charging_solar.png" data-web-finished-panel-sha256="96adfad1e72c557534fb1a3eaee933f045d01552429f2afbc95d43eac7bb8367" alt="Charging with one SolarSaga 40 Air panel" />
+<img src="../../../../_static/manual-assets/_pool/96/96adfad1e72c557534fb1a3eaee933f045d01552429f2afbc95d43eac7bb8367.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je100c_eu_en/charging_solar.png" data-web-finished-panel-sha256="96adfad1e72c557534fb1a3eaee933f045d01552429f2afbc95d43eac7bb8367" alt="Charging with one SolarSaga 40 Air panel" />
 
 The DC8020 to USB-C cable is sold separately.
 
@@ -183,7 +183,7 @@ It is recommended to use the Jackery solar panel to charge the product. Ensure t
 
 This product can be charged using 12V and 24V car chargers. Ensure that the car charger and the car power outlet (car cigarette lighter) provide a good connection.
 
-<img src="../../../../_static/manual-assets/JE-100C/EU/en/md/assets/ir/439af9be59566f839c65c898bd363142e7dc30eaffdc673bda7494d3f1d1ef3e/charging_car.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je100c_eu_en/charging_car.png" data-web-finished-panel-sha256="439af9be59566f839c65c898bd363142e7dc30eaffdc673bda7494d3f1d1ef3e" alt="Charging via a car charger" />
+<img src="../../../../_static/manual-assets/_pool/43/439af9be59566f839c65c898bd363142e7dc30eaffdc673bda7494d3f1d1ef3e.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je100c_eu_en/charging_car.png" data-web-finished-panel-sha256="439af9be59566f839c65c898bd363142e7dc30eaffdc673bda7494d3f1d1ef3e" alt="Charging via a car charger" />
 
 The car charging cable and DC8020 to USB-C cable are sold separately.
 

@@ -2,11 +2,11 @@
 
 
 
-<figure aria-label="WHAT'S IN THE BOX" class="hb-inbox-composition" data-card-count="3" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="three-card-responsive"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Jackery 102W GaN 3-Port Fast Charger." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/ja_ad01a_eu_en/inbox_charger.png" data-web-finished-panel-sha256="a396d8928907bc7b10a5e141799aba30d83fd635b06d4596e65762200ba0e902" src="../../../../_static/manual-assets/JA-AD01A/EU/en/md/assets/ir/a396d8928907bc7b10a5e141799aba30d83fd635b06d4596e65762200ba0e902/inbox_charger.png"/><div class="hb-inbox-label">
+<figure aria-label="WHAT'S IN THE BOX" class="hb-inbox-composition" data-card-count="3" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="three-card-responsive"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Jackery 102W GaN 3-Port Fast Charger." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/ja_ad01a_eu_en/inbox_charger.png" data-web-finished-panel-sha256="a396d8928907bc7b10a5e141799aba30d83fd635b06d4596e65762200ba0e902" src="../../../../_static/manual-assets/_pool/a3/a396d8928907bc7b10a5e141799aba30d83fd635b06d4596e65762200ba0e902.png"/><div class="hb-inbox-label">
 <p><strong>Jackery 102W GaN 3-Port Fast Charger</strong></p>
-</div></li><li class="hb-inbox-card" data-item-number="2"><img alt="100W Charging Cable." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/ja_ad01a_eu_en/inbox_cable.png" data-web-finished-panel-sha256="374329d66fdc7ea6b80344070fa0765b404316b91a20e918083c944e603cb921" src="../../../../_static/manual-assets/JA-AD01A/EU/en/md/assets/ir/374329d66fdc7ea6b80344070fa0765b404316b91a20e918083c944e603cb921/inbox_cable.png"/><div class="hb-inbox-label">
+</div></li><li class="hb-inbox-card" data-item-number="2"><img alt="100W Charging Cable." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/ja_ad01a_eu_en/inbox_cable.png" data-web-finished-panel-sha256="374329d66fdc7ea6b80344070fa0765b404316b91a20e918083c944e603cb921" src="../../../../_static/manual-assets/_pool/37/374329d66fdc7ea6b80344070fa0765b404316b91a20e918083c944e603cb921.png"/><div class="hb-inbox-label">
 <p><strong>100W Charging Cable</strong></p>
-</div></li><li class="hb-inbox-card" data-item-number="3"><img alt="User Manual." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/ja_ad01a_eu_en/inbox_manual.png" data-web-finished-panel-sha256="2c01ae279f52fb0060bd61c931786a7d587a65d9d9f1a31ae542ad98b2402c49" src="../../../../_static/manual-assets/JA-AD01A/EU/en/md/assets/ir/2c01ae279f52fb0060bd61c931786a7d587a65d9d9f1a31ae542ad98b2402c49/inbox_manual.png"/><div class="hb-inbox-label">
+</div></li><li class="hb-inbox-card" data-item-number="3"><img alt="User Manual." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/ja_ad01a_eu_en/inbox_manual.png" data-web-finished-panel-sha256="2c01ae279f52fb0060bd61c931786a7d587a65d9d9f1a31ae542ad98b2402c49" src="../../../../_static/manual-assets/_pool/2c/2c01ae279f52fb0060bd61c931786a7d587a65d9d9f1a31ae542ad98b2402c49.png"/><div class="hb-inbox-label">
 <p><strong>User Manual</strong></p>
 </div></li></ol><div class="hb-inbox-tip" role="note"><div class="hb-inbox-tip-label"><p><strong>TIP</strong></p></div><div class="hb-inbox-tip-body"><p>To achieve 100W output, the fast charger must be paired with a 100W charging cable.
 For safe and fast charging, please use the charging cable included with the product.</p></div></div></figure>
@@ -15,7 +15,7 @@ For safe and fast charging, please use the charging cable included with the prod
 
 # PRODUCT OVERVIEW
 
-<img src="../../../../_static/manual-assets/JA-AD01A/EU/en/md/assets/ir/d05f6b83b300a74601b84d82705d771def9e701682d5bc0fcc22b697a649af7f/product_overview.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/ja_ad01a_eu_en/product_overview.png" data-web-finished-panel-sha256="d05f6b83b300a74601b84d82705d771def9e701682d5bc0fcc22b697a649af7f" alt="Jackery 102W GaN 3-Port Fast Charger with two USB-C ports and one USB-A port." />
+<img src="../../../../_static/manual-assets/_pool/d0/d05f6b83b300a74601b84d82705d771def9e701682d5bc0fcc22b697a649af7f.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/ja_ad01a_eu_en/product_overview.png" data-web-finished-panel-sha256="d05f6b83b300a74601b84d82705d771def9e701682d5bc0fcc22b697a649af7f" alt="Jackery 102W GaN 3-Port Fast Charger with two USB-C ports and one USB-A port." />
 
 # SPECIFICATIONS
 
@@ -115,7 +115,7 @@ For safe and fast charging, please use the charging cable included with the prod
 
 Connect your devices to the USB ports.
 
-<img src="../../../../_static/manual-assets/JA-AD01A/EU/en/md/assets/ir/e72a51b3fe88ee3ec0a029c171935d753daa1d4e45be7765e957dc62aa5b38a8/using_product.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/ja_ad01a_eu_en/using_product.png" data-web-finished-panel-sha256="e72a51b3fe88ee3ec0a029c171935d753daa1d4e45be7765e957dc62aa5b38a8" alt="USB-C1 connected to a laptop, USB-C2 connected to a phone, and USB-A connected to a mouse." />
+<img src="../../../../_static/manual-assets/_pool/e7/e72a51b3fe88ee3ec0a029c171935d753daa1d4e45be7765e957dc62aa5b38a8.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/ja_ad01a_eu_en/using_product.png" data-web-finished-panel-sha256="e72a51b3fe88ee3ec0a029c171935d753daa1d4e45be7765e957dc62aa5b38a8" alt="USB-C1 connected to a laptop, USB-C2 connected to a phone, and USB-A connected to a mouse." />
 
 # WARNING
 

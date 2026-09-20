@@ -50,20 +50,20 @@ Befolgen Sie bei der Verwendung dieses Produkts stets die folgenden grundlegende
 |  |  |  |  |
 |----|----|----|----|
 | **Symbol** | **Bedeutung** | **Symbol** | **Bedeutung** |
-| <img src="../../../../_static/manual-assets/JBP-2000B/EU/de/md/assets/ir/1c272a00fbd28d6562d4126040ba43e5747f6a6550878c4b13e05a5c28014577/10_warning_triangle_RkOwbJ9j1oUHJgxFEx3cqhVynjb.png" style="width: 40px;" width="40" height="35" alt="warning_triangle" /> | Warn- und Vorsichtssymbole. Lesen Sie diese Hinweise, um auf mögliche Gefahren oder Risiken aufmerksam gemacht zu werden. | <img src="../../../../_static/manual-assets/JBP-2000B/EU/de/md/assets/ir/e345b3278827691751b6beac9c8343c75ac7a98100618fbef1db73a27329b99d/30_keep_away_from_children_Nc5NbV2kyoMaTSxvismcAlzbnlh.png" style="width: 40px;" width="40" height="33" alt="keep_away_from_children" /> | Halten Sie das Produkt fern von Kindern. |
-| <img src="../../../../_static/manual-assets/JBP-2000B/EU/de/md/assets/ir/d14506fa5a9d449039887db61a259f1841f1826de2f190f54063f96195b955f5/20_read_manual_VK1Ab1MGIoOHdgx1rkUchOHRntb.png" style="width: 40px;" width="40" height="26" alt="read_manual" /> | Lesen Sie vor der Anwendung die Benutzeranleitung. | <img src="../../../../_static/manual-assets/JBP-2000B/EU/de/md/assets/ir/ea7766d417e962cf711bccf3de79d6f639602848ace780353cb329329d13cc91/40_li_ion_ZEcHbhY0Eo3XOExtXKCcbEVjnpe.png" style="width: 40px;" width="40" height="47" alt="li_ion" /> | Dieses Symbol weist darauf hin, dass sich im Produkt ein Lithium-Ionen-Akku (Li-Ion) befindet, der ordnungsgemäß entsorgt oder recycelt werden muss. |
-| <img src="../../../../_static/manual-assets/JBP-2000B/EU/de/md/assets/ir/66c3df77e4f84cccad4b9f162798b181c007e89d3f0e9dd4fdf52c392827cbab/10_do_not_dismantle_Ml7EbCjtYohuKAxWNDUc93UMnVc.png" style="width: 40px;" width="40" height="34" alt="do_not_dismantle" /> | Demontieren Sie das Produkt nicht. | <img src="../../../../_static/manual-assets/JBP-2000B/EU/de/md/assets/ir/eb094578bf165fa39399de1d957cc71a92191f2b0e7ed0a620885065ebedf8a3/50_weee_L9o3bcXq0oSsqdxSX86covnpnle.png" style="width: 40px;" width="40" height="51" alt="weee" /> | Dieses Symbol weist darauf hin, dass das Produkt nicht über den Hausmüll entsorgt werden darf, sondern einer ausgewiesenen Sammelstelle zum Recycling zugeführt werden muss. Eine ordnungsgemäße Entsorgung und Wiederverwertung trägt zum Schutz der Umwelt bei. Weitere Informationen zur Entsorgung und zum Recycling dieses Produkts erhalten Sie bei Ihrer Gemeinde, Ihrem Entsorgungsdienst oder Ihrem Händler. |
-| <img src="../../../../_static/manual-assets/JBP-2000B/EU/de/md/assets/ir/422379347e71e7827c3da380e421f2cb106da5d2f74781fc45782a2f86d493d2/20_no_open_flame_SAbnbxa6iohb2rxxk3PcEh8cnuf.png" style="width: 40px;" width="40" height="37" alt="no_open_flame" /> | Rauchen Sie nicht und verwenden Sie keine offenen Flammen. | <img src="../../../../_static/manual-assets/JBP-2000B/EU/de/md/assets/ir/7fb57972ebd1fb8bf82abc75d0d320ecaa9abc6544020f2374da2f1272a46171/70_weee2_VL7tbeJhHoy9wBxRZIdcygPBnmf.png" style="width: 40px;" width="40" height="32" alt="weee2" /> | Batterien und Akkumulatoren dürfen nicht über den Hausmüll entsorgt werden. Als Verbraucher sind Sie gesetzlich verpflichtet, alle Batterien und Akkumulatoren an dafür vorgesehenen Sammelstellen zu entsorgen, unabhängig davon, ob sie Schadstoffe enthalten. Bitte geben Sie gebrauchte Batterien und Akkumulatoren an einer örtlichen Sammelstelle, einem Recyclingzentrum oder beim Händler zurück, bei dem sie gekauft wurden. Die ordnungsgemäße Entsorgung gewährleistet eine umweltgerechte Wiederverwertung und verhindert mögliche Schäden für die menschliche Gesundheit und die Umwelt. |
+| <img src="../../../../_static/manual-assets/_pool/1c/1c272a00fbd28d6562d4126040ba43e5747f6a6550878c4b13e05a5c28014577.png" style="width: 40px;" width="40" height="35" alt="warning_triangle" /> | Warn- und Vorsichtssymbole. Lesen Sie diese Hinweise, um auf mögliche Gefahren oder Risiken aufmerksam gemacht zu werden. | <img src="../../../../_static/manual-assets/_pool/e3/e345b3278827691751b6beac9c8343c75ac7a98100618fbef1db73a27329b99d.png" style="width: 40px;" width="40" height="33" alt="keep_away_from_children" /> | Halten Sie das Produkt fern von Kindern. |
+| <img src="../../../../_static/manual-assets/_pool/d1/d14506fa5a9d449039887db61a259f1841f1826de2f190f54063f96195b955f5.png" style="width: 40px;" width="40" height="26" alt="read_manual" /> | Lesen Sie vor der Anwendung die Benutzeranleitung. | <img src="../../../../_static/manual-assets/_pool/ea/ea7766d417e962cf711bccf3de79d6f639602848ace780353cb329329d13cc91.png" style="width: 40px;" width="40" height="47" alt="li_ion" /> | Dieses Symbol weist darauf hin, dass sich im Produkt ein Lithium-Ionen-Akku (Li-Ion) befindet, der ordnungsgemäß entsorgt oder recycelt werden muss. |
+| <img src="../../../../_static/manual-assets/_pool/66/66c3df77e4f84cccad4b9f162798b181c007e89d3f0e9dd4fdf52c392827cbab.png" style="width: 40px;" width="40" height="34" alt="do_not_dismantle" /> | Demontieren Sie das Produkt nicht. | <img src="../../../../_static/manual-assets/_pool/eb/eb094578bf165fa39399de1d957cc71a92191f2b0e7ed0a620885065ebedf8a3.png" style="width: 40px;" width="40" height="51" alt="weee" /> | Dieses Symbol weist darauf hin, dass das Produkt nicht über den Hausmüll entsorgt werden darf, sondern einer ausgewiesenen Sammelstelle zum Recycling zugeführt werden muss. Eine ordnungsgemäße Entsorgung und Wiederverwertung trägt zum Schutz der Umwelt bei. Weitere Informationen zur Entsorgung und zum Recycling dieses Produkts erhalten Sie bei Ihrer Gemeinde, Ihrem Entsorgungsdienst oder Ihrem Händler. |
+| <img src="../../../../_static/manual-assets/_pool/42/422379347e71e7827c3da380e421f2cb106da5d2f74781fc45782a2f86d493d2.png" style="width: 40px;" width="40" height="37" alt="no_open_flame" /> | Rauchen Sie nicht und verwenden Sie keine offenen Flammen. | <img src="../../../../_static/manual-assets/_pool/7f/7fb57972ebd1fb8bf82abc75d0d320ecaa9abc6544020f2374da2f1272a46171.png" style="width: 40px;" width="40" height="32" alt="weee2" /> | Batterien und Akkumulatoren dürfen nicht über den Hausmüll entsorgt werden. Als Verbraucher sind Sie gesetzlich verpflichtet, alle Batterien und Akkumulatoren an dafür vorgesehenen Sammelstellen zu entsorgen, unabhängig davon, ob sie Schadstoffe enthalten. Bitte geben Sie gebrauchte Batterien und Akkumulatoren an einer örtlichen Sammelstelle, einem Recyclingzentrum oder beim Händler zurück, bei dem sie gekauft wurden. Die ordnungsgemäße Entsorgung gewährleistet eine umweltgerechte Wiederverwertung und verhindert mögliche Schäden für die menschliche Gesundheit und die Umwelt. |
 
 # LIEFERUMFANG
 
 
 
-<figure aria-label="LIEFERUMFANG" class="hb-inbox-composition" data-card-count="3" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="three-card-responsive"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Jackery Battery Pack 2000." class="hb-inbox-art" src="../../../../_static/manual-assets/JBP-2000B/EU/de/md/assets/ir/97378797f84abf92d40fdf97bdf655b8f6eab326f908700e99424c02f5d57306/jbp2000b_in_box_main_unit.png"/><div class="hb-inbox-label">
+<figure aria-label="LIEFERUMFANG" class="hb-inbox-composition" data-card-count="3" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="three-card-responsive"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Jackery Battery Pack 2000." class="hb-inbox-art" src="../../../../_static/manual-assets/_pool/97/97378797f84abf92d40fdf97bdf655b8f6eab326f908700e99424c02f5d57306.png"/><div class="hb-inbox-label">
 <p><strong>Jackery Battery Pack 2000</strong></p>
-</div></li><li class="hb-inbox-card" data-item-number="2"><img alt="Verlängerungskabel." class="hb-inbox-art" src="../../../../_static/manual-assets/JBP-2000B/EU/de/md/assets/ir/2f6216b28c08a64de215bcbae3c62e2c90219a0aa93d53ed77ee365fd21b11fc/jbp2000b_expansion_cable.png"/><div class="hb-inbox-label">
+</div></li><li class="hb-inbox-card" data-item-number="2"><img alt="Verlängerungskabel." class="hb-inbox-art" src="../../../../_static/manual-assets/_pool/2f/2f6216b28c08a64de215bcbae3c62e2c90219a0aa93d53ed77ee365fd21b11fc.png"/><div class="hb-inbox-label">
 <p><strong>Verlängerungskabel</strong></p>
-</div></li><li class="hb-inbox-card" data-item-number="3"><img alt="Benutzerhandbuch." class="hb-inbox-art" src="../../../../_static/manual-assets/JBP-2000B/EU/de/md/assets/ir/87ac44e52863324b761a672089e6b0497e40fdf48432f698fccf30508060c60a/manual_icon1.png"/><div class="hb-inbox-label">
+</div></li><li class="hb-inbox-card" data-item-number="3"><img alt="Benutzerhandbuch." class="hb-inbox-art" src="../../../../_static/manual-assets/_pool/87/87ac44e52863324b761a672089e6b0497e40fdf48432f698fccf30508060c60a.png"/><div class="hb-inbox-label">
 <p>Benutzerhandbuch</p>
 </div></li></ol></figure>
 
@@ -73,7 +73,7 @@ Befolgen Sie bei der Verwendung dieses Produkts stets die folgenden grundlegende
 
 ## PRODUKTDARSTELLUNG
 
-<img src="../../../../_static/manual-assets/JBP-2000B/EU/de/md/assets/ir/c405e6a1fdd35bb593429ee85568e843e02ced8e8a43d672ef1cb8034774cce3/jbp2000b_front_controls.png" style="width: 360px;" width="360" height="191" alt="Vorderansicht des Battery Pack 2000." />
+<img src="../../../../_static/manual-assets/_pool/c4/c405e6a1fdd35bb593429ee85568e843e02ced8e8a43d672ef1cb8034774cce3.png" style="width: 360px;" width="360" height="191" alt="Vorderansicht des Battery Pack 2000." />
 
 |                   |         |
 |-------------------|---------|
@@ -81,7 +81,7 @@ Befolgen Sie bei der Verwendung dieses Produkts stets die folgenden grundlegende
 
 ## LINKE SEITENANSICHT
 
-<img src="../../../../_static/manual-assets/JBP-2000B/EU/de/md/assets/ir/6ac9bc60991ebd6da65bcea1f62a1f82a737d8f38031144396d857f35ccbd8fc/jbp2000b_left_side_ports.png" style="width: 360px;" width="360" height="261" alt="Linke Seitenansicht mit Griff und DC-Erweiterungsports A und B." />
+<img src="../../../../_static/manual-assets/_pool/6a/6ac9bc60991ebd6da65bcea1f62a1f82a737d8f38031144396d857f35ccbd8fc.png" style="width: 360px;" width="360" height="261" alt="Linke Seitenansicht mit Griff und DC-Erweiterungsports A und B." />
 
 <table>
 <colgroup>
@@ -104,7 +104,7 @@ Befolgen Sie bei der Verwendung dieses Produkts stets die folgenden grundlegende
 
 # LCD-ANZEIGE
 
-<img src="../../../../_static/manual-assets/JBP-2000B/EU/de/md/assets/ir/ad4a3f6c7140f14222b620191aed30bf8fcc230c8e16a10d86d9f4c7ef27353b/jbp2000b_lcd_screen.png" style="width: 420px;" width="420" height="303" alt="LCD-ANZEIGE" />
+<img src="../../../../_static/manual-assets/_pool/ad/ad4a3f6c7140f14222b620191aed30bf8fcc230c8e16a10d86d9f4c7ef27353b.png" style="width: 420px;" width="420" height="303" alt="LCD-ANZEIGE" />
 
 <table class="longtable lcd-text-only">
 <colgroup>
@@ -134,7 +134,7 @@ Bei einem Systemfehler wird der entsprechende Fehlercode F0-FF angezeigt.</td>
 
 ## EINSCHALTEN / AUSSCHALTEN
 
-<img src="../../../../_static/manual-assets/JBP-2000B/EU/de/md/assets/ir/c8332fadce5987fef4ecd43938fb3a61bda2211b588bd20fd7c52a18768b1799/jbp2000b_power_control.png" style="width: 360px;" width="360" height="90" alt="Bedienung des POWER-Schalters am Battery Pack 2000." />
+<img src="../../../../_static/manual-assets/_pool/c8/c8332fadce5987fef4ecd43938fb3a61bda2211b588bd20fd7c52a18768b1799.png" style="width: 360px;" width="360" height="90" alt="Bedienung des POWER-Schalters am Battery Pack 2000." />
 
 **Ein**
 
@@ -160,7 +160,7 @@ Einmal drücken
 
 ## LCD-DISPLAY EIN/AUS
 
-<img src="../../../../_static/manual-assets/JBP-2000B/EU/de/md/assets/ir/4d5f74e927261d7c174b45b5c0eb039d0e7c11ff4ab4c932e5719d2138415975/jbp2000b_lcd_control.png" style="width: 360px;" width="360" height="91" alt="Bedienung des LCD-Displays am Battery Pack 2000." />
+<img src="../../../../_static/manual-assets/_pool/4d/4d5f74e927261d7c174b45b5c0eb039d0e7c11ff4ab4c932e5719d2138415975.png" style="width: 360px;" width="360" height="91" alt="Bedienung des LCD-Displays am Battery Pack 2000." />
 
 Wenn Sie den Hauptschalter drücken oder das Gerät aufladen, wird das LCD-Display beleuchtet. Wenn Sie den Hauptschalter erneut drücken, wird das Display ausgeschaltet.
 
@@ -168,7 +168,7 @@ Wenn Sie den Hauptschalter drücken oder das Gerät aufladen, wird das LCD-Displ
 
 Die tragbare Powerstation kann mit bis zu 5 Sätzen dieses Produkts gleichzeitig verwendet werden, um größere Kapazitätsanforderungen zu erfüllen.
 
-<img src="../../../../_static/manual-assets/JBP-2000B/EU/de/md/assets/ir/8951b52e1a2fd330c8e7b996a7b0b91442b5dce1e68c7d8139dddf2672b61a7e/jbp2000b_eu_stack_clearance.png" style="width: 500px;" width="500" height="378" alt="Anschluss-, Stapel- und Abstandsdiagramm für die Batteriepacks." />
+<img src="../../../../_static/manual-assets/_pool/89/8951b52e1a2fd330c8e7b996a7b0b91442b5dce1e68c7d8139dddf2672b61a7e.png" style="width: 500px;" width="500" height="378" alt="Anschluss-, Stapel- und Abstandsdiagramm für die Batteriepacks." />
 
 
 
@@ -198,7 +198,7 @@ Die tragbare Powerstation kann mit bis zu 5 Sätzen dieses Produkts gleichzeitig
 </tbody>
 </table>
 
-<img src="../../../../_static/manual-assets/JBP-2000B/EU/de/md/assets/ir/c784e46834d0f7bdb3c7a62ec2cf4bdf30052a93a22783fd72b87b44f4aeda11/jbp2000b_eu_connection_locking_de.png" style="width: 100%;;width:100.0%" alt="Richtige Anschlussreihenfolge sowie Verriegeln und Entriegeln des Verlängerungskabels." />
+<img src="../../../../_static/manual-assets/_pool/c7/c784e46834d0f7bdb3c7a62ec2cf4bdf30052a93a22783fd72b87b44f4aeda11.png" style="width: 100%;;width:100.0%" alt="Richtige Anschlussreihenfolge sowie Verriegeln und Entriegeln des Verlängerungskabels." />
 
 # FEHLERSUCHE
 
@@ -222,13 +222,13 @@ Beim Aufladen über das Hauptstromnetz muss dieses Gerät mit der tragbaren Powe
 
 
 
-<img src="../../../../_static/manual-assets/JBP-2000B/EU/de/md/assets/ir/e249b7661d9874293f6f1ad478e9392d2bcd4a625ecc60ec27fa2898cbb4361f/jbp2000b_eu_ac_charging.png" style="width: 100%;;width:100.0%" alt="Aufladen über eine AC-Steckdose mit der tragbaren Powerstation." />
+<img src="../../../../_static/manual-assets/_pool/e2/e249b7661d9874293f6f1ad478e9392d2bcd4a625ecc60ec27fa2898cbb4361f.png" style="width: 100%;;width:100.0%" alt="Aufladen über eine AC-Steckdose mit der tragbaren Powerstation." />
 
 ## AUFLADEN ÜBER SOLARPANEL (SEPARAT ERHÄLTLICH)
 
 Laden Sie das Gerät wie in der unten dargestellten Abbildung mit Solarmodulen und der tragbaren Powerstation auf. Weitere Informationen finden Sie im Benutzerhandbuch der tragbaren Powerstation.
 
-<img src="../../../../_static/manual-assets/JBP-2000B/EU/de/md/assets/ir/e7777b74c8b716d19c996bff31a0d33de8a4ea60260d00aaed789f97ceb60fef/jbp2000b_eu_solar_charging.png" style="width: 500px;" width="500" height="286" alt="Solarladeverbindung über die tragbare Powerstation." />
+<img src="../../../../_static/manual-assets/_pool/e7/e7777b74c8b716d19c996bff31a0d33de8a4ea60260d00aaed789f97ceb60fef.png" style="width: 500px;" width="500" height="286" alt="Solarladeverbindung über die tragbare Powerstation." />
 
 # LAGERUNG
 

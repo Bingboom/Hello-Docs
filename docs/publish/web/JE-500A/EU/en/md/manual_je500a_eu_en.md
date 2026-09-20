@@ -49,11 +49,11 @@ During the lifecycle of energy storage products, a certain degree of capacity an
 
 
 
-<figure aria-label="WHAT'S IN THE BOX" class="hb-inbox-composition" data-card-count="3" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="three-card-responsive"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Jackery Explorer 500" class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je500a_eu_en/inbox_unit.png" data-web-finished-panel-sha256="7b4b6ac8a1522e7d23216b966d330c14a746c51da591147915f65b2aa1480022" src="../../../../_static/manual-assets/JE-500A/EU/en/md/assets/ir/7b4b6ac8a1522e7d23216b966d330c14a746c51da591147915f65b2aa1480022/inbox_unit.png"/><div class="hb-inbox-label">
+<figure aria-label="WHAT'S IN THE BOX" class="hb-inbox-composition" data-card-count="3" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="three-card-responsive"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Jackery Explorer 500" class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je500a_eu_en/inbox_unit.png" data-web-finished-panel-sha256="7b4b6ac8a1522e7d23216b966d330c14a746c51da591147915f65b2aa1480022" src="../../../../_static/manual-assets/_pool/7b/7b4b6ac8a1522e7d23216b966d330c14a746c51da591147915f65b2aa1480022.png"/><div class="hb-inbox-label">
 <p><strong>Jackery Explorer 500</strong></p>
-</div></li><li class="hb-inbox-card" data-item-number="2"><img alt="AC Charging Cable" class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je500a_eu_en/inbox_cable.png" data-web-finished-panel-sha256="6c419c9a79e96a131b615ecab2041de53655e127f928818217d9f02a2522175b" src="../../../../_static/manual-assets/JE-500A/EU/en/md/assets/ir/6c419c9a79e96a131b615ecab2041de53655e127f928818217d9f02a2522175b/inbox_cable.png"/><div class="hb-inbox-label">
+</div></li><li class="hb-inbox-card" data-item-number="2"><img alt="AC Charging Cable" class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je500a_eu_en/inbox_cable.png" data-web-finished-panel-sha256="6c419c9a79e96a131b615ecab2041de53655e127f928818217d9f02a2522175b" src="../../../../_static/manual-assets/_pool/6c/6c419c9a79e96a131b615ecab2041de53655e127f928818217d9f02a2522175b.png"/><div class="hb-inbox-label">
 <p><strong>AC Charging Cable</strong></p>
-</div></li><li class="hb-inbox-card" data-item-number="3"><img alt="User Manual" class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je500a_eu_en/inbox_manual.png" data-web-finished-panel-sha256="4d4ae035ed1d7362bf6c5824e06f7ef7bfb7c32c087f76bbed0e8963ab151d8e" src="../../../../_static/manual-assets/JE-500A/EU/en/md/assets/ir/4d4ae035ed1d7362bf6c5824e06f7ef7bfb7c32c087f76bbed0e8963ab151d8e/inbox_manual.png"/><div class="hb-inbox-label">
+</div></li><li class="hb-inbox-card" data-item-number="3"><img alt="User Manual" class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je500a_eu_en/inbox_manual.png" data-web-finished-panel-sha256="4d4ae035ed1d7362bf6c5824e06f7ef7bfb7c32c087f76bbed0e8963ab151d8e" src="../../../../_static/manual-assets/_pool/4d/4d4ae035ed1d7362bf6c5824e06f7ef7bfb7c32c087f76bbed0e8963ab151d8e.png"/><div class="hb-inbox-label">
 <p><strong>User Manual</strong></p>
 </div></li></ol></figure>
 
@@ -65,11 +65,11 @@ The car charging cable is not included but is available for purchase separately 
 
 # PRODUCT OVERVIEW
 
-<img src="../../../../_static/manual-assets/JE-500A/EU/en/md/assets/ir/749ca081dde5bfee3d3ac2dfc811f3e4078a11380c1cdc908bd832c7d9ae47bf/overview.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je500a_eu_en/overview.png" data-web-finished-panel-sha256="749ca081dde5bfee3d3ac2dfc811f3e4078a11380c1cdc908bd832c7d9ae47bf" alt="Jackery Explorer 500 front and right-side views with source port labels" />
+<img src="../../../../_static/manual-assets/_pool/74/749ca081dde5bfee3d3ac2dfc811f3e4078a11380c1cdc908bd832c7d9ae47bf.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je500a_eu_en/overview.png" data-web-finished-panel-sha256="749ca081dde5bfee3d3ac2dfc811f3e4078a11380c1cdc908bd832c7d9ae47bf" alt="Jackery Explorer 500 front and right-side views with source port labels" />
 
 # LCD DISPLAY
 
-<img src="../../../../_static/manual-assets/JE-500A/EU/en/md/assets/ir/122991a64cd306c82e70b0279024fa0bcad517e9fe0bfd8a30d6a81f0c46de99/lcd_map.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je500a_eu_en/lcd_map.png" data-web-finished-panel-sha256="122991a64cd306c82e70b0279024fa0bcad517e9fe0bfd8a30d6a81f0c46de99" alt="Jackery Explorer 500 numbered LCD display" />
+<img src="../../../../_static/manual-assets/_pool/12/122991a64cd306c82e70b0279024fa0bcad517e9fe0bfd8a30d6a81f0c46de99.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je500a_eu_en/lcd_map.png" data-web-finished-panel-sha256="122991a64cd306c82e70b0279024fa0bcad517e9fe0bfd8a30d6a81f0c46de99" alt="Jackery Explorer 500 numbered LCD display" />
 
 | No. | Indicator | Description |
 |----|----|----|
@@ -92,7 +92,7 @@ The car charging cable is not included but is available for purchase separately 
 
 ## POWER ON/OFF
 
-<img src="../../../../_static/manual-assets/JE-500A/EU/en/md/assets/ir/917e33ac3fe6d39682e828150c4e177df65b06470973ad2a8b30ecf234f2b0b5/operation_power.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je500a_eu_en/operation_power.png" data-web-finished-panel-sha256="917e33ac3fe6d39682e828150c4e177df65b06470973ad2a8b30ecf234f2b0b5" alt="Main power button operation and default standby time" />
+<img src="../../../../_static/manual-assets/_pool/91/917e33ac3fe6d39682e828150c4e177df65b06470973ad2a8b30ecf234f2b0b5.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je500a_eu_en/operation_power.png" data-web-finished-panel-sha256="917e33ac3fe6d39682e828150c4e177df65b06470973ad2a8b30ecf234f2b0b5" alt="Main power button operation and default standby time" />
 
 Note
 
@@ -100,11 +100,11 @@ When Energy Saving Mode is enabled and either the AC or DC power button is turne
 
 ## AC OUTPUT ON/OFF
 
-<img src="../../../../_static/manual-assets/JE-500A/EU/en/md/assets/ir/912720a91c40d3d78ffa10bbadf35fbad5634c2addef3ec4611257843dbd90f7/operation_ac.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je500a_eu_en/operation_ac.png" data-web-finished-panel-sha256="912720a91c40d3d78ffa10bbadf35fbad5634c2addef3ec4611257843dbd90f7" alt="AC output button operation" />
+<img src="../../../../_static/manual-assets/_pool/91/912720a91c40d3d78ffa10bbadf35fbad5634c2addef3ec4611257843dbd90f7.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je500a_eu_en/operation_ac.png" data-web-finished-panel-sha256="912720a91c40d3d78ffa10bbadf35fbad5634c2addef3ec4611257843dbd90f7" alt="AC output button operation" />
 
 ## DC/USB OUTPUT ON/OFF
 
-<img src="../../../../_static/manual-assets/JE-500A/EU/en/md/assets/ir/d0739d91fa9459a9b20daa920916ebd2eb9fd43223cd9ff899de516da07094fd/operation_dc.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je500a_eu_en/operation_dc.png" data-web-finished-panel-sha256="d0739d91fa9459a9b20daa920916ebd2eb9fd43223cd9ff899de516da07094fd" alt="DC and USB output button operation and compatible outputs" />
+<img src="../../../../_static/manual-assets/_pool/d0/d0739d91fa9459a9b20daa920916ebd2eb9fd43223cd9ff899de516da07094fd.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je500a_eu_en/operation_dc.png" data-web-finished-panel-sha256="d0739d91fa9459a9b20daa920916ebd2eb9fd43223cd9ff899de516da07094fd" alt="DC and USB output button operation and compatible outputs" />
 
 Caution!
 
@@ -116,15 +116,15 @@ Caution!
 
 ## ENERGY SAVING MODE
 
-<img src="../../../../_static/manual-assets/JE-500A/EU/en/md/assets/ir/b5148f1429c9d695dd4583a7c6a76746d94e1d40f912bfca08af589cc1930867/operation_energy.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je500a_eu_en/operation_energy.png" data-web-finished-panel-sha256="b5148f1429c9d695dd4583a7c6a76746d94e1d40f912bfca08af589cc1930867" alt="Energy Saving Mode operation panel" />
+<img src="../../../../_static/manual-assets/_pool/b5/b5148f1429c9d695dd4583a7c6a76746d94e1d40f912bfca08af589cc1930867.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je500a_eu_en/operation_energy.png" data-web-finished-panel-sha256="b5148f1429c9d695dd4583a7c6a76746d94e1d40f912bfca08af589cc1930867" alt="Energy Saving Mode operation panel" />
 
 ## LED LIGHT ON/OFF
 
-<img src="../../../../_static/manual-assets/JE-500A/EU/en/md/assets/ir/66e09838c35f1cdcaab60cf558bb11b0a5c02633822a39e32dbf9ee39d2eeff7/operation_led.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je500a_eu_en/operation_led.png" data-web-finished-panel-sha256="66e09838c35f1cdcaab60cf558bb11b0a5c02633822a39e32dbf9ee39d2eeff7" alt="LED Light and SOS Mode operation panel" />
+<img src="../../../../_static/manual-assets/_pool/66/66e09838c35f1cdcaab60cf558bb11b0a5c02633822a39e32dbf9ee39d2eeff7.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je500a_eu_en/operation_led.png" data-web-finished-panel-sha256="66e09838c35f1cdcaab60cf558bb11b0a5c02633822a39e32dbf9ee39d2eeff7" alt="LED Light and SOS Mode operation panel" />
 
 ## LCD SCREEN ON/OFF
 
-<img src="../../../../_static/manual-assets/JE-500A/EU/en/md/assets/ir/465a2cdaea0b3fd712b43e7b54d7401f9960ecff6ba6b28330baa17761e8ddba/operation_lcd_device.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je500a_eu_en/operation_lcd_device.png" data-web-finished-panel-sha256="465a2cdaea0b3fd712b43e7b54d7401f9960ecff6ba6b28330baa17761e8ddba" alt="Main Power Button device illustration for LCD control" />
+<img src="../../../../_static/manual-assets/_pool/46/465a2cdaea0b3fd712b43e7b54d7401f9960ecff6ba6b28330baa17761e8ddba.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je500a_eu_en/operation_lcd_device.png" data-web-finished-panel-sha256="465a2cdaea0b3fd712b43e7b54d7401f9960ecff6ba6b28330baa17761e8ddba" alt="Main Power Button device illustration for LCD control" />
 
 | Mode | Action | Result |
 |----|----|----|
@@ -139,7 +139,7 @@ Caution!
 
 Connect the product to a wall outlet with the AC charging cable, then press the AC output button and power your appliances at the same time.
 
-<img src="../../../../_static/manual-assets/JE-500A/EU/en/md/assets/ir/63ef25268470ef8f618f184145439c98e42b5d7cbc76a211cb69bb7c25406c00/ups.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je500a_eu_en/ups.png" data-web-finished-panel-sha256="63ef25268470ef8f618f184145439c98e42b5d7cbc76a211cb69bb7c25406c00" alt="UPS connection between the wall outlet, Explorer 500, and appliance" />
+<img src="../../../../_static/manual-assets/_pool/63/63ef25268470ef8f618f184145439c98e42b5d7cbc76a211cb69bb7c25406c00.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je500a_eu_en/ups.png" data-web-finished-panel-sha256="63ef25268470ef8f618f184145439c98e42b5d7cbc76a211cb69bb7c25406c00" alt="UPS connection between the wall outlet, Explorer 500, and appliance" />
 
 An uninterruptible power supply (UPS) is a type of continual power system that provides automated backup electric power to a load when the mains grid power fails.
 
@@ -169,7 +169,7 @@ Note
 
 Connect the AC charging cable to the AC input port of the product and a wall outlet.
 
-<img src="../../../../_static/manual-assets/JE-500A/EU/en/md/assets/ir/e0775440c5c86fd4649ae7d736546c72269b367d513a789e59ac1f19758e67d4/charging_ac.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je500a_eu_en/charging_ac.png" data-web-finished-panel-sha256="e0775440c5c86fd4649ae7d736546c72269b367d513a789e59ac1f19758e67d4" alt="Charging the Explorer 500 via an AC wall outlet" />
+<img src="../../../../_static/manual-assets/_pool/e0/e0775440c5c86fd4649ae7d736546c72269b367d513a789e59ac1f19758e67d4.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je500a_eu_en/charging_ac.png" data-web-finished-panel-sha256="e0775440c5c86fd4649ae7d736546c72269b367d513a789e59ac1f19758e67d4" alt="Charging the Explorer 500 via an AC wall outlet" />
 
 Caution!
 
@@ -179,7 +179,7 @@ Make sure the AC charging cable is fully and securely plugged into the AC input 
 
 The Jackery Explorer 500 has one DC8020 input port, which supports direct connection of either one 100W or one 200W solar panel. If you need to connect two 100W solar panels simultaneously to a DC8020 input port, please use a solar panel connector (sold separately, not included). Please refer to the diagram below for connection details.
 
-<img src="../../../../_static/manual-assets/JE-500A/EU/en/md/assets/ir/b5ee7098b2ead6e003736617199e48fe491e50eb731307d620d03c5e4c8349a5/charging_solar_single.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je500a_eu_en/charging_solar_single.png" data-web-finished-panel-sha256="b5ee7098b2ead6e003736617199e48fe491e50eb731307d620d03c5e4c8349a5" alt="Explorer 500 connected to one SolarSaga 200 panel" /> <img src="../../../../_static/manual-assets/JE-500A/EU/en/md/assets/ir/f282bcc365a10885a5392a9bf54bbf4ad77e0c563594f3cc200c03aa414f19a9/charging_solar_dual.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je500a_eu_en/charging_solar_dual.png" data-web-finished-panel-sha256="f282bcc365a10885a5392a9bf54bbf4ad77e0c563594f3cc200c03aa414f19a9" alt="Explorer 500 connected to two SolarSaga 100 panels with a connector" />
+<img src="../../../../_static/manual-assets/_pool/b5/b5ee7098b2ead6e003736617199e48fe491e50eb731307d620d03c5e4c8349a5.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je500a_eu_en/charging_solar_single.png" data-web-finished-panel-sha256="b5ee7098b2ead6e003736617199e48fe491e50eb731307d620d03c5e4c8349a5" alt="Explorer 500 connected to one SolarSaga 200 panel" /> <img src="../../../../_static/manual-assets/_pool/f2/f282bcc365a10885a5392a9bf54bbf4ad77e0c563594f3cc200c03aa414f19a9.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je500a_eu_en/charging_solar_dual.png" data-web-finished-panel-sha256="f282bcc365a10885a5392a9bf54bbf4ad77e0c563594f3cc200c03aa414f19a9" alt="Explorer 500 connected to two SolarSaga 100 panels with a connector" />
 
 It is recommended to use the Jackery Solar Panel to charge the Explorer 500. Ensure that the open-circuit voltage (Voc) of the solar panel falls within the Jackery Explorer 500\'s DC input voltage range (16V-60V). Jackery is not responsible for any damage or loss resulting from the use of third-party solar panels.
 
@@ -195,7 +195,7 @@ Caution!
 
 This product can be charged using a 12V car charger. Ensure that the car charger and the car cigarette lighter provide a good connection.
 
-<img src="../../../../_static/manual-assets/JE-500A/EU/en/md/assets/ir/b30e15d8e60cc46f2133500607a4eebd3cd19ec7dee0336c969e56129ad71659/charging_car.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je500a_eu_en/charging_car.png" data-web-finished-panel-sha256="b30e15d8e60cc46f2133500607a4eebd3cd19ec7dee0336c969e56129ad71659" alt="Explorer 500 connected to a vehicle cigarette lighter port" />
+<img src="../../../../_static/manual-assets/_pool/b3/b30e15d8e60cc46f2133500607a4eebd3cd19ec7dee0336c969e56129ad71659.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je500a_eu_en/charging_car.png" data-web-finished-panel-sha256="b30e15d8e60cc46f2133500607a4eebd3cd19ec7dee0336c969e56129ad71659" alt="Explorer 500 connected to a vehicle cigarette lighter port" />
 
 Caution!
 

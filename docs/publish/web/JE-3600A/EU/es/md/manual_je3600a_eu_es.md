@@ -33,8 +33,8 @@ Durante el ciclo de vida de los productos de almacenamiento de energía, se espe
 
 
 
-<figure aria-label="Símbolo / Significado" class="hb-symbol-pair-composition" data-component-id="HB-TABLE-SYMBOL-ICON"><div class="hb-symbol-pair-grid"><div class="hb-symbol-panel hb-symbol-panel-1"><table class="hb-symbol-panel-table"><colgroup><col class="hb-symbol-col-icon"/><col class="hb-symbol-col-meaning"/></colgroup><thead><tr><th class="hb-symbol-icon-heading" scope="col"><p><strong>Símbolo</strong></p></th><th class="hb-symbol-meaning-heading" scope="col"><p><strong>Significado</strong></p></th></tr></thead><tbody><tr><td class="hb-symbol-icon"><img alt="warning_triangle" class="hb-symbol-art" src="../../../../_static/manual-assets/JE-3600A/EU/es/md/assets/ir/928144ad19fa6b76c0fb278183af72ada10cc23289731a26a8b2b407afb3373f/warning_triangle.png"/></td><td class="hb-symbol-meaning"><p>Símbolos de advertencia y precaución. Alertan a las personas sobre información que debe leerse para evitar posibles peligros o riesgos.</p></td></tr><tr><td class="hb-symbol-icon"><img alt="read_manual" class="hb-symbol-art" src="../../../../_static/manual-assets/JE-3600A/EU/es/md/assets/ir/66609a9cc0f1869e79e44e5047372110ec1ff10396d880c96893814c0c07891e/read_manual.png"/></td><td class="hb-symbol-meaning"><p>Lea el manual del operador</p></td></tr><tr><td class="hb-symbol-icon"><img alt="do_not_dismantle" class="hb-symbol-art" src="../../../../_static/manual-assets/JE-3600A/EU/es/md/assets/ir/e80dd654688b0e08d114bdf65eea7ff4fe45f1c78c94da1760cf62b3951ccdf9/do_not_dismantle.png"/></td><td class="hb-symbol-meaning"><p>No desarme el producto.</p></td></tr><tr><td class="hb-symbol-icon"><img alt="no_open_flame" class="hb-symbol-art" src="../../../../_static/manual-assets/JE-3600A/EU/es/md/assets/ir/1dcd41d6ababd9c9d5c9d9ad08bdc2d5f2b6c0c3ad301dcb7b5260e0ec08d45e/no_open_flame.png"/></td><td class="hb-symbol-meaning"><p>Mantenga el producto alejado del fuego.</p></td></tr></tbody></table></div><div class="hb-symbol-panel hb-symbol-panel-2"><table class="hb-symbol-panel-table"><colgroup><col class="hb-symbol-col-icon"/><col class="hb-symbol-col-meaning"/></colgroup><thead><tr><th class="hb-symbol-icon-heading" scope="col"><p><strong>Símbolo</strong></p></th><th class="hb-symbol-meaning-heading" scope="col"><p><strong>Significado</strong></p></th></tr></thead><tbody><tr><td class="hb-symbol-icon"><img alt="keep_away_from_children" class="hb-symbol-art" src="../../../../_static/manual-assets/JE-3600A/EU/es/md/assets/ir/8c65096005f70912215be1b2d24e744c6fcb92c8b4dccfb1b29e4c4bb469e0ea/keep_away_from_children.png"/></td><td class="hb-symbol-meaning"><p>No se permiten niños</p></td></tr><tr><td class="hb-symbol-icon"><img alt="li_ion" class="hb-symbol-art" src="../../../../_static/manual-assets/JE-3600A/EU/es/md/assets/ir/ff9fba0a2b117b5061f2c698e7ec60759aadcbb0a4eb60c8cdf15d2b7ef324ea/li_ion.png"/></td><td class="hb-symbol-meaning"><p>Este símbolo indica que el producto contiene una batería de iones de litio (Li-ion), la cual debe desecharse o reciclarse de forma adecuada.</p></td></tr><tr><td class="hb-symbol-icon"><img alt="weee" class="hb-symbol-art" src="../../../../_static/manual-assets/JE-3600A/EU/es/md/assets/ir/fe0e23b319fae67f446b21dd4393a0b62d97ebf1d30ba158fd35b66ef013cda0/weee.png"/></td><td class="hb-symbol-meaning"><p>Este símbolo indica que el producto no debe desecharse con los residuos domésticos. En su lugar, debe llevarse a un punto de recogida designado para su correcto reciclaje.
-El desecho y reciclaje adecuados ayudan a proteger el medioambiente. Para más información, póngase en contacto con su autoridad local, el servicio de gestión de residuos o el distribuidor del producto.</p></td></tr><tr><td class="hb-symbol-icon"><img alt="weee2" class="hb-symbol-art" src="../../../../_static/manual-assets/JE-3600A/EU/es/md/assets/ir/c2bcb028b70040e2242004f31ec0e611d420081c85e609341c74454f82c624fe/battery_disposal.png"/></td><td class="hb-symbol-meaning"><p>Las baterías y acumuladores no deben desecharse junto con los residuos domésticos.
+<figure aria-label="Símbolo / Significado" class="hb-symbol-pair-composition" data-component-id="HB-TABLE-SYMBOL-ICON"><div class="hb-symbol-pair-grid"><div class="hb-symbol-panel hb-symbol-panel-1"><table class="hb-symbol-panel-table"><colgroup><col class="hb-symbol-col-icon"/><col class="hb-symbol-col-meaning"/></colgroup><thead><tr><th class="hb-symbol-icon-heading" scope="col"><p><strong>Símbolo</strong></p></th><th class="hb-symbol-meaning-heading" scope="col"><p><strong>Significado</strong></p></th></tr></thead><tbody><tr><td class="hb-symbol-icon"><img alt="warning_triangle" class="hb-symbol-art" src="../../../../_static/manual-assets/_pool/92/928144ad19fa6b76c0fb278183af72ada10cc23289731a26a8b2b407afb3373f.png"/></td><td class="hb-symbol-meaning"><p>Símbolos de advertencia y precaución. Alertan a las personas sobre información que debe leerse para evitar posibles peligros o riesgos.</p></td></tr><tr><td class="hb-symbol-icon"><img alt="read_manual" class="hb-symbol-art" src="../../../../_static/manual-assets/_pool/66/66609a9cc0f1869e79e44e5047372110ec1ff10396d880c96893814c0c07891e.png"/></td><td class="hb-symbol-meaning"><p>Lea el manual del operador</p></td></tr><tr><td class="hb-symbol-icon"><img alt="do_not_dismantle" class="hb-symbol-art" src="../../../../_static/manual-assets/_pool/e8/e80dd654688b0e08d114bdf65eea7ff4fe45f1c78c94da1760cf62b3951ccdf9.png"/></td><td class="hb-symbol-meaning"><p>No desarme el producto.</p></td></tr><tr><td class="hb-symbol-icon"><img alt="no_open_flame" class="hb-symbol-art" src="../../../../_static/manual-assets/_pool/1d/1dcd41d6ababd9c9d5c9d9ad08bdc2d5f2b6c0c3ad301dcb7b5260e0ec08d45e.png"/></td><td class="hb-symbol-meaning"><p>Mantenga el producto alejado del fuego.</p></td></tr></tbody></table></div><div class="hb-symbol-panel hb-symbol-panel-2"><table class="hb-symbol-panel-table"><colgroup><col class="hb-symbol-col-icon"/><col class="hb-symbol-col-meaning"/></colgroup><thead><tr><th class="hb-symbol-icon-heading" scope="col"><p><strong>Símbolo</strong></p></th><th class="hb-symbol-meaning-heading" scope="col"><p><strong>Significado</strong></p></th></tr></thead><tbody><tr><td class="hb-symbol-icon"><img alt="keep_away_from_children" class="hb-symbol-art" src="../../../../_static/manual-assets/_pool/8c/8c65096005f70912215be1b2d24e744c6fcb92c8b4dccfb1b29e4c4bb469e0ea.png"/></td><td class="hb-symbol-meaning"><p>No se permiten niños</p></td></tr><tr><td class="hb-symbol-icon"><img alt="li_ion" class="hb-symbol-art" src="../../../../_static/manual-assets/_pool/ff/ff9fba0a2b117b5061f2c698e7ec60759aadcbb0a4eb60c8cdf15d2b7ef324ea.png"/></td><td class="hb-symbol-meaning"><p>Este símbolo indica que el producto contiene una batería de iones de litio (Li-ion), la cual debe desecharse o reciclarse de forma adecuada.</p></td></tr><tr><td class="hb-symbol-icon"><img alt="weee" class="hb-symbol-art" src="../../../../_static/manual-assets/_pool/fe/fe0e23b319fae67f446b21dd4393a0b62d97ebf1d30ba158fd35b66ef013cda0.png"/></td><td class="hb-symbol-meaning"><p>Este símbolo indica que el producto no debe desecharse con los residuos domésticos. En su lugar, debe llevarse a un punto de recogida designado para su correcto reciclaje.
+El desecho y reciclaje adecuados ayudan a proteger el medioambiente. Para más información, póngase en contacto con su autoridad local, el servicio de gestión de residuos o el distribuidor del producto.</p></td></tr><tr><td class="hb-symbol-icon"><img alt="weee2" class="hb-symbol-art" src="../../../../_static/manual-assets/_pool/c2/c2bcb028b70040e2242004f31ec0e611d420081c85e609341c74454f82c624fe.png"/></td><td class="hb-symbol-meaning"><p>Las baterías y acumuladores no deben desecharse junto con los residuos domésticos.
 Como consumidor, usted está obligado por ley a desechar todas las baterías y acumuladores en los puntos de recolección designados, independientemente de si contienen sustancias peligrosas.
 Devuelva las baterías y acumuladores usados a un punto de recolección local, un centro de reciclaje o al minorista donde los compró. La eliminación adecuada garantiza un reciclaje responsable con el medio ambiente y evita posibles daños a la salud humana y al medio ambiente.</p></td></tr></tbody></table></div></div></figure>
 
@@ -44,11 +44,11 @@ Devuelva las baterías y acumuladores usados a un punto de recolección local, u
 
 
 
-<figure aria-label="CONTENIDO DE LA CAJA" class="hb-inbox-composition" data-card-count="3" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="three-card-responsive"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Imagen de la estación de energía." class="hb-inbox-art" src="../../../../_static/manual-assets/JE-3600A/EU/es/md/assets/ir/6c7f1deea2f6211ba3ed3273900aa7595234d3b8fe5a67830defa4cf13ee6fe6/main_unit1.png"/><div class="hb-inbox-label">
+<figure aria-label="CONTENIDO DE LA CAJA" class="hb-inbox-composition" data-card-count="3" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="three-card-responsive"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Imagen de la estación de energía." class="hb-inbox-art" src="../../../../_static/manual-assets/_pool/6c/6c7f1deea2f6211ba3ed3273900aa7595234d3b8fe5a67830defa4cf13ee6fe6.png"/><div class="hb-inbox-label">
 <p><strong>Jackery Explorer 3600 Plus</strong></p>
-</div></li><li class="hb-inbox-card" data-item-number="2"><img alt="Imagen del cable de carga de CA." class="hb-inbox-art" src="../../../../_static/manual-assets/JE-3600A/EU/es/md/assets/ir/287650f3a89ae520e32f0d75df8401151b808004ee50075b96aff70af04ca4ef/ac_charging_cable.png"/><div class="hb-inbox-label">
+</div></li><li class="hb-inbox-card" data-item-number="2"><img alt="Imagen del cable de carga de CA." class="hb-inbox-art" src="../../../../_static/manual-assets/_pool/28/287650f3a89ae520e32f0d75df8401151b808004ee50075b96aff70af04ca4ef.png"/><div class="hb-inbox-label">
 <p><strong>Cable de carga de CA</strong></p>
-</div></li><li class="hb-inbox-card" data-item-number="3"><img alt="Imagen del manual del usuario." class="hb-inbox-art" src="../../../../_static/manual-assets/JE-3600A/EU/es/md/assets/ir/87ac44e52863324b761a672089e6b0497e40fdf48432f698fccf30508060c60a/manual_icon1.png"/><div class="hb-inbox-label">
+</div></li><li class="hb-inbox-card" data-item-number="3"><img alt="Imagen del manual del usuario." class="hb-inbox-art" src="../../../../_static/manual-assets/_pool/87/87ac44e52863324b761a672089e6b0497e40fdf48432f698fccf30508060c60a.png"/><div class="hb-inbox-label">
 <p><strong>Manual del usuario</strong></p>
 </div></li></ol><div class="hb-inbox-tip" role="note"><div class="hb-inbox-tip-label"><p><strong>CONSEJOS</strong></p></div><div class="hb-inbox-tip-body"><p>El cable de carga para vehículo no está incluido, pero está disponible para su compra por separado en nuestro sitio web.
 Para obtener asistencia, comunícate con el servicio al cliente de Jackery.</p></div></div></figure>
@@ -59,15 +59,15 @@ Para obtener asistencia, comunícate con el servicio al cliente de Jackery.</p><
 
 ## VISTA FRONTAL
 
-<img src="../../../../_static/manual-assets/JE-3600A/EU/es/md/assets/ir/562f998c918a50bdedcaaeff1e005b505ced57e8252bc987fe0662ea9fa8b658/front_product.jpg" style="width: 640px;" width="640" height="360" alt="Vista frontal del Jackery Explorer 3600 Plus con los controles y puertos de salida etiquetados." />
+<img src="../../../../_static/manual-assets/_pool/56/562f998c918a50bdedcaaeff1e005b505ced57e8252bc987fe0662ea9fa8b658.jpg" style="width: 640px;" width="640" height="360" alt="Vista frontal del Jackery Explorer 3600 Plus con los controles y puertos de salida etiquetados." />
 
 ## VISTA LATERAL DERECHA
 
-<img src="../../../../_static/manual-assets/JE-3600A/EU/es/md/assets/ir/b04dca41b7cc3211a30f3a3fc2b1e904c25330f28104e4338a8ed67a11378011/right_side_ports.png" style="width: 640px;" width="640" height="319" alt="Vista lateral derecha con asa retráctil, puertos de entrada, puerto de expansión y ruedas." />
+<img src="../../../../_static/manual-assets/_pool/b0/b04dca41b7cc3211a30f3a3fc2b1e904c25330f28104e4338a8ed67a11378011.png" style="width: 640px;" width="640" height="319" alt="Vista lateral derecha con asa retráctil, puertos de entrada, puerto de expansión y ruedas." />
 
 # PANTALLA LCD
 
-<img src="../../../../_static/manual-assets/JE-3600A/EU/es/md/assets/ir/f82efe218bc0b63cb953aced0c85f7c9553935e68d5cf70a3577df9212f550ce/lcd_map.png" style="width: 420px;" width="420" height="248" alt="PANTALLA LCD" />
+<img src="../../../../_static/manual-assets/_pool/f8/f82efe218bc0b63cb953aced0c85f7c9553935e68d5cf70a3577df9212f550ce.png" style="width: 420px;" width="420" height="248" alt="PANTALLA LCD" />
 
 <table class="longtable lcd-text-only">
 <colgroup>
@@ -219,11 +219,11 @@ Off: The battery level is not below 20% or the product is charging.</td>
 
 ## ENCENDIDO/APAGADO
 
-<img src="../../../../_static/manual-assets/JE-3600A/EU/es/md/assets/ir/74004806e6c0996fb77b2260c046e055194855a96bed97c519bb58c292e3b5e2/op_main_power.png" style="width: 640px;" width="640" height="250" alt="Panel de instrucciones completo de encendido y apagado." />
+<img src="../../../../_static/manual-assets/_pool/74/74004806e6c0996fb77b2260c046e055194855a96bed97c519bb58c292e3b5e2.png" style="width: 640px;" width="640" height="250" alt="Panel de instrucciones completo de encendido y apagado." />
 
 ## ENCENDER/APAGAR SALIDA USB
 
-<img src="../../../../_static/manual-assets/JE-3600A/EU/es/md/assets/ir/c46c92d6ee991a400208635802b5d2682f215cacaa748a3ca73068fdb18cdec3/op_dc_usb_output.png" style="width: 640px;" width="640" height="370" alt="Panel de instrucciones completo de encendido y apagado de la salida USB." />
+<img src="../../../../_static/manual-assets/_pool/c4/c46c92d6ee991a400208635802b5d2682f215cacaa748a3ca73068fdb18cdec3.png" style="width: 640px;" width="640" height="370" alt="Panel de instrucciones completo de encendido y apagado de la salida USB." />
 
 
 
@@ -238,11 +238,11 @@ Off: The battery level is not below 20% or the product is charging.</td>
 
 ## ENCENDER/APAGAR SALIDA CA
 
-<img src="../../../../_static/manual-assets/JE-3600A/EU/es/md/assets/ir/43a46a51a98773dd307ff35dd1ac684790109b2b8c437f87ceacbc3636bc1d75/op_ac_output.png" style="width: 640px;" width="640" height="448" alt="Panel de instrucciones completo de encendido y apagado de la salida CA." />
+<img src="../../../../_static/manual-assets/_pool/43/43a46a51a98773dd307ff35dd1ac684790109b2b8c437f87ceacbc3636bc1d75.png" style="width: 640px;" width="640" height="448" alt="Panel de instrucciones completo de encendido y apagado de la salida CA." />
 
 ## MODO DE AHORRO DE ENERGÍA
 
-<img src="../../../../_static/manual-assets/JE-3600A/EU/es/md/assets/ir/9dd943d3063031c0795ff8c4b2b6aac266bfb2bff78e2250e445f27352c23a07/energy_saving.png" style="width: 640px;" width="640" height="191" alt="Panel de instrucciones completo del modo de ahorro de energía." />
+<img src="../../../../_static/manual-assets/_pool/9d/9dd943d3063031c0795ff8c4b2b6aac266bfb2bff78e2250e445f27352c23a07.png" style="width: 640px;" width="640" height="191" alt="Panel de instrucciones completo del modo de ahorro de energía." />
 
 
 
@@ -255,7 +255,7 @@ Off: The battery level is not below 20% or the product is charging.</td>
 <table style="width:100%; border-collapse:collapse; margin:0.75rem 0 0.5rem 0;">
 <tbody>
 <tr>
-<td rowspan="6" style="text-align: center; width: 24%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top;"><img src="../../../../_static/manual-assets/JE-3600A/EU/es/md/assets/ir/24a37b773bf14cd76f160a25dfa413576a95405a1f57f69059487b29b7791bfd/lcd_mode.png" style="max-width:140px; width:100%; height:auto; display:block; margin:0 auto;" width="140" height="220" alt="Pantalla LCD y botón POWER del Explorer 3600 Plus." /></td>
+<td rowspan="6" style="text-align: center; width: 24%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top;"><img src="../../../../_static/manual-assets/_pool/24/24a37b773bf14cd76f160a25dfa413576a95405a1f57f69059487b29b7791bfd.png" style="max-width:140px; width:100%; height:auto; display:block; margin:0 auto;" width="140" height="220" alt="Pantalla LCD y botón POWER del Explorer 3600 Plus." /></td>
 <td rowspan="3" style="width: 18%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Encendido breve</td>
 <td style="width: 12%; border: 1px solid #cfcfcf; padding: 8px">Encender</td>
 <td style="border: 1px solid #cfcfcf; padding: 8px">Presione el botón POWER principal o cuando el producto se esté cargando.</td>
@@ -290,7 +290,7 @@ También puedes configurar el modo de visualización de la pantalla en la aplica
 
 Conecte el producto a una toma de corriente con el cable de carga de CA, luego presione el botón de energía CA y alimente sus electrodomésticos al mismo tiempo.
 
-<img src="../../../../_static/manual-assets/JE-3600A/EU/es/md/assets/ir/5866fb05040e5b4423c473d5e7abf87122e0e93f5afce742696a09454b4bd675/ups_mode.png" style="width: 360px;" width="360" height="273" alt="Diagrama de conexión UPS." />
+<img src="../../../../_static/manual-assets/_pool/58/5866fb05040e5b4423c473d5e7abf87122e0e93f5afce742696a09454b4bd675.png" style="width: 360px;" width="360" height="273" alt="Diagrama de conexión UPS." />
 
 Un sistema de alimentación ininterrumpida (UPS) es un tipo de sistema de energía continua que proporciona energía eléctrica de respaldo automática a una carga cuando falla la energía de la red principal.
 
@@ -315,7 +315,7 @@ la potencia de salida real es inferior a la potencia nominal en este modo, pero 
 
 Este producto puede soportar hasta 5 paquetes de baterías para satisfacer la necesidad de una gran capacidad de energía. Para detalles sobre su uso, consulte el manual de usuario del Jackery Battery Pack 3600.
 
-<img src="../../../../_static/manual-assets/JE-3600A/EU/es/md/assets/ir/24e0e4f3297ce1a6b1032cbadc0d6ebece16bcbd7bb9f83ce45c32bed7be6b03/connections-es.png" style="width: 640px;" width="640" height="394" alt="Explorer 3600 Plus conectado a cinco Jackery Battery Pack 3600 con la separación de ventilación requerida." />
+<img src="../../../../_static/manual-assets/_pool/24/24e0e4f3297ce1a6b1032cbadc0d6ebece16bcbd7bb9f83ce45c32bed7be6b03.png" style="width: 640px;" width="640" height="394" alt="Explorer 3600 Plus conectado a cinco Jackery Battery Pack 3600 con la separación de ventilación requerida." />
 
 
 
@@ -327,7 +327,7 @@ Este producto puede soportar hasta 5 paquetes de baterías para satisfacer la ne
 
 
 
-<img src="../../../../_static/manual-assets/JE-3600A/EU/es/md/assets/ir/b34cdb33005dc744cdf77d3c486ee731d41fec1c144b91a0b30fbb88aab59f21/connections_accessories-es.png" style="width: 640px;" width="640" height="159" alt="Jackery Battery Pack 3600, cable de expansión, manual de usuario y accesorios HomePower." />
+<img src="../../../../_static/manual-assets/_pool/b3/b34cdb33005dc744cdf77d3c486ee731d41fec1c144b91a0b30fbb88aab59f21.png" style="width: 640px;" width="640" height="159" alt="Jackery Battery Pack 3600, cable de expansión, manual de usuario y accesorios HomePower." />
 
 # CARGANDO
 
@@ -352,7 +352,7 @@ Cuando la carga en la pared de CA y la carga solar están activadas al mismo tie
 
 Conecte el cable de carga de CA al puerto de entrada de CA del producto y a una toma de corriente.
 
-<img src="../../../../_static/manual-assets/JE-3600A/EU/es/md/assets/ir/37f4c64bfeaac2df031b0fb30a0228f4ef0ba7f015385e52eec69a5d2ccdb414/ac_wall.png" style="width: 360px;" width="360" height="144" alt="Diagrama de carga por toma de CA." />
+<img src="../../../../_static/manual-assets/_pool/37/37f4c64bfeaac2df031b0fb30a0228f4ef0ba7f015385e52eec69a5d2ccdb414.png" style="width: 360px;" width="360" height="144" alt="Diagrama de carga por toma de CA." />
 
 
 
@@ -368,11 +368,11 @@ Bajo este modo, puedes cargar rápidamente la estación de energía portátil ut
 
 Jackery Explorer 3600 Plus cuenta con dos puertos de entrada DC8020 y es compatible con los paneles solares de Jackery.
 
-<img src="../../../../_static/manual-assets/JE-3600A/EU/es/md/assets/ir/8332edf8c7678e11924ab5efbc3aea63a72516f20f9ae4fde1c9d55983e1e287/solar_direct.png" style="width: 360px;" width="360" height="158" alt="Diagrama de conexión para carga solar 1." />
+<img src="../../../../_static/manual-assets/_pool/83/8332edf8c7678e11924ab5efbc3aea63a72516f20f9ae4fde1c9d55983e1e287.png" style="width: 360px;" width="360" height="158" alt="Diagrama de conexión para carga solar 1." />
 
 Si se necesita conectar dos paneles solares a un solo puerto de entrada DC8020 al mismo tiempo, consulte la figura siguiente para la carga mediante el conector de panel solar (se vende por separado y no se incluye de serie).
 
-<img src="../../../../_static/manual-assets/JE-3600A/EU/es/md/assets/ir/9df8813895e672545085c2356f72c13fc30323f72fab4de973416ea66093ee7d/solar_adapter.png" style="width: 360px;" width="360" height="171" alt="Diagrama de conexión para carga solar 2." />
+<img src="../../../../_static/manual-assets/_pool/9d/9df8813895e672545085c2356f72c13fc30323f72fab4de973416ea66093ee7d.png" style="width: 360px;" width="360" height="171" alt="Diagrama de conexión para carga solar 2." />
 
 
 
@@ -397,7 +397,7 @@ Se recomienda usar el panel solar Jackery para cargar el Jackery Explorer 3600 P
 
 Este producto puede cargarse usando un cargador para vehículo de 12 V. Asegúrese de que el cargador de vehículo y el encendedor de vehículo ofrezcan una buena conexión.
 
-<img src="../../../../_static/manual-assets/JE-3600A/EU/es/md/assets/ir/cc7007d5671cf4abfbc552aeed661b5d7cf73e3fdd3f275af5f9183f40134dc0/car_charge.png" style="width: 360px;" width="360" height="193" alt="Diagrama de carga en vehículo." />
+<img src="../../../../_static/manual-assets/_pool/cc/cc7007d5671cf4abfbc552aeed661b5d7cf73e3fdd3f275af5f9183f40134dc0.png" style="width: 360px;" width="360" height="193" alt="Diagrama de carga en vehículo." />
 
 Vehículo
 
@@ -639,7 +639,7 @@ Si aparece alguno de los siguientes códigos de fallo, siga las acciones correct
 
 ## 1. Descargar la aplicación e iniciar sesión
 
-<img src="../../../../_static/manual-assets/JE-3600A/EU/es/md/assets/ir/37bf4f4918f338372737a22a6a43c72d1610cae96e063cc66201f9f529701c24/download.png" style="width: 320px;" width="320" height="65" alt="Código QR de descarga de la aplicación y marcador de tienda." />
+<img src="../../../../_static/manual-assets/_pool/37/37bf4f4918f338372737a22a6a43c72d1610cae96e063cc66201f9f529701c24.png" style="width: 320px;" width="320" height="65" alt="Código QR de descarga de la aplicación y marcador de tienda." />
 
 Buscar \"Jackery\" en Google Play o en la App Store para instalar la aplicación. Después, podrá registrarse e iniciar sesión. Alternativamente, escanee el código QR a continuación para descargar e instalar la app.
 
@@ -651,7 +651,7 @@ Buscar \"Jackery\" en Google Play o en la App Store para instalar la aplicación
 
 
 
-<figure class="hb-app-add-device-composition" data-component-id="HB-SPECIAL-APP" data-reference-id="app-add-device" data-step-captions="embedded"><div class="hb-app-add-device-phone-stage"><img alt="Marcador de posición para el paso de añadir dispositivo en la aplicación." class="hb-app-add-device-phone-art" src="../../../../_static/manual-assets/JE-3600A/EU/es/md/assets/app_add_device_steps_9b7e0cf44d0f.png"/></div><div class="hb-app-add-device-control-panel"><img alt="" aria-hidden="true" class="hb-app-add-device-control-art" loading="lazy" src="../../../../_static/manual-assets/JE-3600A/EU/es/md/assets/app_control_panel_2b9bc2598d7a.png"/><span class="hb-app-add-device-live-label hb-app-add-device-live-label-main-power">Power Button</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-dc-usb">USB Power Button</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-ac-power">AC Power Button</span></div></figure>
+<figure class="hb-app-add-device-composition" data-component-id="HB-SPECIAL-APP" data-reference-id="app-add-device" data-step-captions="embedded"><div class="hb-app-add-device-phone-stage"><img alt="Marcador de posición para el paso de añadir dispositivo en la aplicación." class="hb-app-add-device-phone-art" src="../../../../_static/manual-assets/_pool/9b/9b7e0cf44d0f37dc89cc04bb57bba1ebb9c3bbc5db3f0190575dd03e96ab0d0f.png"/></div><div class="hb-app-add-device-control-panel"><img alt="" aria-hidden="true" class="hb-app-add-device-control-art" loading="lazy" src="../../../../_static/manual-assets/_pool/2b/2b9bc2598d7a272629311ecc2f494091c31f15ee2ebb4d59bda5f6e8ee5c9f49.png"/><span class="hb-app-add-device-live-label hb-app-add-device-live-label-main-power">Power Button</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-dc-usb">USB Power Button</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-ac-power">AC Power Button</span></div></figure>
 
 
 
@@ -678,7 +678,7 @@ Buscar \"Jackery\" en Google Play o en la App Store para instalar la aplicación
 
 Después de agregar exitosamente el dispositivo en la App, el icono del Wi-Fi en el dispositivo permanecerá siempre encendido.
 
-<img src="../../../../_static/manual-assets/JE-3600A/EU/es/md/assets/ir/01d3694dd833380066161364a6c67f5d26a088bfd4428b72d836c26e4f123a90/connect_result.png" style="width: 360px;" width="360" height="203" alt="Marcador de posición de la pantalla de resultado de conexión en la aplicación." />
+<img src="../../../../_static/manual-assets/_pool/01/01d3694dd833380066161364a6c67f5d26a088bfd4428b72d836c26e4f123a90.png" style="width: 360px;" width="360" height="203" alt="Marcador de posición de la pantalla de resultado de conexión en la aplicación." />
 
 Las capturas de pantalla anteriores sirven solo de referencia.
 

@@ -180,7 +180,7 @@ Connect the cable to the solar panel and the DC input port of the portable power
 
 
 
-<img src="../../../../_static/manual-assets/JS-100F/EU/en/md/assets/ir/9d58c401b669761603fa12209189ae6d70e9344d9a4c960bf2c11556ac2ad6e7/connection_adapters.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js100f_eu_en/connection_adapters.png" data-web-finished-panel-sha256="9d58c401b669761603fa12209189ae6d70e9344d9a4c960bf2c11556ac2ad6e7" alt="SolarSaga 100 connection diagrams for a DC8020-DC7909 adapter and a DC8020 input." />
+<img src="../../../../_static/manual-assets/_pool/9d/9d58c401b669761603fa12209189ae6d70e9344d9a4c960bf2c11556ac2ad6e7.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js100f_eu_en/connection_adapters.png" data-web-finished-panel-sha256="9d58c401b669761603fa12209189ae6d70e9344d9a4c960bf2c11556ac2ad6e7" alt="SolarSaga 100 connection diagrams for a DC8020-DC7909 adapter and a DC8020 input." />
 
 
 
@@ -197,7 +197,7 @@ Connect the cable to the solar panel and the DC input port of the portable power
 
 Connect the two solar panels to the solar panel connector respectively and then connect the solar panel connector to the DC input port of the portable power station.
 
-<img src="../../../../_static/manual-assets/JS-100F/EU/en/md/assets/ir/5a9d559d420ebecc9314ec8e515f11e35e4d29a6453a5dec5d143ab311e0663e/solar_panel_connector.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js100f_eu_en/solar_panel_connector.png" data-web-finished-panel-sha256="5a9d559d420ebecc9314ec8e515f11e35e4d29a6453a5dec5d143ab311e0663e" alt="Two SolarSaga 100 panels connected through a solar panel connector to a portable power station." />
+<img src="../../../../_static/manual-assets/_pool/5a/5a9d559d420ebecc9314ec8e515f11e35e4d29a6453a5dec5d143ab311e0663e.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js100f_eu_en/solar_panel_connector.png" data-web-finished-panel-sha256="5a9d559d420ebecc9314ec8e515f11e35e4d29a6453a5dec5d143ab311e0663e" alt="Two SolarSaga 100 panels connected through a solar panel connector to a portable power station." />
 
 
 
@@ -216,11 +216,11 @@ The carry handle has a sun angle indicator. When sunlight hits its surface, a sh
 
 If the shadow falls on the white inner circle at its bottom, it means that the solar panel is facing directly towards the sun and you can get optimal power generation; if not, it is suggested to adjust its angle until it does.
 
-<img src="../../../../_static/manual-assets/JS-100F/EU/en/md/assets/ir/5953e99ca5d65cbfffdfbee2291fc7f0bba21236135f3c2ea44a4284b1ca895a/sun_angle_indicator.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js100f_eu_en/sun_angle_indicator.png" data-web-finished-panel-sha256="5953e99ca5d65cbfffdfbee2291fc7f0bba21236135f3c2ea44a4284b1ca895a" alt="English-labelled SolarSaga 100 sun angle indicator showing correct and incorrect shadow positions." />
+<img src="../../../../_static/manual-assets/_pool/59/5953e99ca5d65cbfffdfbee2291fc7f0bba21236135f3c2ea44a4284b1ca895a.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js100f_eu_en/sun_angle_indicator.png" data-web-finished-panel-sha256="5953e99ca5d65cbfffdfbee2291fc7f0bba21236135f3c2ea44a4284b1ca895a" alt="English-labelled SolarSaga 100 sun angle indicator showing correct and incorrect shadow positions." />
 
 # POWER YOUR DEVICE
 
-<img src="../../../../_static/manual-assets/JS-100F/EU/en/md/assets/ir/2b7dded6f6f74f47afa29de2df52c7278b0468dc276cd3e7c0d5e79eefe530f3/power_device.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js100f_eu_en/power_device.png" data-web-finished-panel-sha256="2b7dded6f6f74f47afa29de2df52c7278b0468dc276cd3e7c0d5e79eefe530f3" alt="SolarSaga 100 powering a portable power station, cell phone, power bank and tablet through the multifunctional adapter." />
+<img src="../../../../_static/manual-assets/_pool/2b/2b7dded6f6f74f47afa29de2df52c7278b0468dc276cd3e7c0d5e79eefe530f3.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js100f_eu_en/power_device.png" data-web-finished-panel-sha256="2b7dded6f6f74f47afa29de2df52c7278b0468dc276cd3e7c0d5e79eefe530f3" alt="SolarSaga 100 powering a portable power station, cell phone, power bank and tablet through the multifunctional adapter." />
 
 # WARRANTY
 
