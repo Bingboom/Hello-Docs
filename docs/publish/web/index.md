@@ -18,6 +18,8 @@
 - [JE-1000F / EU / fr - Jackery Explorer 1000 Manuel d'utilisation](JE-1000F/EU/fr/md/manual_je1000f_eu_fr.md)
 - [JE-1000F / EU / it - Jackery Explorer 1000 Manuale utente](JE-1000F/EU/it/md/manual_je1000f_eu_it.md)
 - [JE-1000F / US / en - Jackery Explorer 1000 User Manual](JE-1000F/US/en/md/manual_je1000f_us.md)
+- [JE-1000F / US / es - Jackery Explorer 1000 Manual de usuario](JE-1000F/US/es/md/manual_je1000f_us_es.md)
+- [JE-1000F / US / fr - Jackery Explorer 1000 Manuel d'utilisation](JE-1000F/US/fr/md/manual_je1000f_us_fr.md)
 - [JE-1000H / EU / de - Jackery Explorer 1000 Plus Benutzerhandbuch](JE-1000H/EU/de/md/manual_je1000h_eu_de.md)
 - [JE-1000H / EU / en - Jackery Explorer 1000 Plus User Manual](JE-1000H/EU/en/md/manual_je1000h_eu_en.md)
 - [JE-1000H / EU / es - Jackery Explorer 1000 Plus Manual de usuario](JE-1000H/EU/es/md/manual_je1000h_eu_es.md)
