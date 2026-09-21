@@ -41,11 +41,11 @@ Durante il ciclo di vita dei prodotti per l\'accumulo di energia, è previsto un
 
 
 
-<figure aria-label="CONTENUTO DELLA CONFEZIONE" class="hb-inbox-composition" data-card-count="3" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="three-card-responsive"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Segnaposto immagine della stazione di alimentazione." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je1000h_eu_it/inbox_unit.png" data-web-finished-panel-sha256="dca486053fb7c7aaa3a7d01dcdb06e1d356a9caa7667e1fed4a54a94103b4c8f" src="assets/ir/dca486053fb7c7aaa3a7d01dcdb06e1d356a9caa7667e1fed4a54a94103b4c8f/inbox_unit.png"/><div class="hb-inbox-label">
+<figure aria-label="CONTENUTO DELLA CONFEZIONE" class="hb-inbox-composition" data-card-count="3" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="three-card-responsive"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Segnaposto immagine della stazione di alimentazione." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je1000h_eu_it/inbox_unit.png" data-web-finished-panel-sha256="fc268673c6c5a2349c19b39d3ef57e7dbcf66ca334b7f68297ac304ef4b97ef9" src="assets/ir/fc268673c6c5a2349c19b39d3ef57e7dbcf66ca334b7f68297ac304ef4b97ef9/inbox_unit.png"/><div class="hb-inbox-label">
 <p><strong>Jackery Explorer 1000 Plus</strong></p>
-</div></li><li class="hb-inbox-card" data-item-number="2"><img alt="Segnaposto immagine del cavo di ricarica CA." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je1000h_eu_it/inbox_cable.png" data-web-finished-panel-sha256="4f766b3a8d990a8f307a81e807e58cff96e82353dd7f7bbbeaf5799518fc05a1" src="assets/ir/4f766b3a8d990a8f307a81e807e58cff96e82353dd7f7bbbeaf5799518fc05a1/inbox_cable.png"/><div class="hb-inbox-label">
+</div></li><li class="hb-inbox-card" data-item-number="2"><img alt="Segnaposto immagine del cavo di ricarica CA." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je1000h_eu_it/inbox_cable.png" data-web-finished-panel-sha256="c235c66f37e7dd8ed202a76f825fa8c7d6b8800284e19d72e2a05a5fe0060686" src="assets/ir/c235c66f37e7dd8ed202a76f825fa8c7d6b8800284e19d72e2a05a5fe0060686/inbox_cable.png"/><div class="hb-inbox-label">
 <p><strong>Cavo di ricarica CA</strong></p>
-</div></li><li class="hb-inbox-card" data-item-number="3"><img alt="Segnaposto immagine del manuale utente." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je1000h_eu_it/inbox_documents.png" data-web-finished-panel-sha256="261112e3c5dc6c6633501e81ba79b3a720b72de3c2ea9e3f8afe90b353aad8be" src="assets/ir/261112e3c5dc6c6633501e81ba79b3a720b72de3c2ea9e3f8afe90b353aad8be/inbox_documents.png"/><div class="hb-inbox-label">
+</div></li><li class="hb-inbox-card" data-item-number="3"><img alt="Segnaposto immagine del manuale utente." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je1000h_eu_it/inbox_documents.png" data-web-finished-panel-sha256="0e3964401d96c1bf2b1a431da19b0d9af00d7bed461d2b57a4ff77071d1ada0e" src="assets/ir/0e3964401d96c1bf2b1a431da19b0d9af00d7bed461d2b57a4ff77071d1ada0e/inbox_documents.png"/><div class="hb-inbox-label">
 <p>Manuale utente</p>
 </div></li></ol><div class="hb-inbox-tip" role="note"><div class="hb-inbox-tip-label"><p><strong>SUGGERIMENTO</strong></p></div><div class="hb-inbox-tip-body"><p>Il cavo di ricarica per auto non è incluso, ma è disponibile per l'acquisto separato sul nostro sito web.
 Per assistenza, contatta il servizio clienti Jackery.</p></div></div></figure>
@@ -56,15 +56,15 @@ Per assistenza, contatta il servizio clienti Jackery.</p></div></div></figure>
 
 ## VISTA FRONTALE
 
-<img src="assets/ir/d7e80b773b7ea6200f57f5e709d9eb40d4aa7fce640b9aac0f1132a11ee834fe/overview_front.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_it/overview_front.png" data-web-finished-panel-sha256="d7e80b773b7ea6200f57f5e709d9eb40d4aa7fce640b9aac0f1132a11ee834fe" alt="Pulsante di alimentazione principale LCD Presa da 12V CC 12 V 10 A max Pulsante luce LED Pulsante Alimentazione DC/USB Luce LED Uscita USB-C 30W 30 W max, 5 V 3 A, 9 V 3 A, 12 V 2,5 A, 15 V 2 A, 20 V 1,5A Pulsante AC 1/2 Uscita USB-C 140W 140 W max, 5 V 3 A, 9 V 3 A, 12 V 3 A, 15 V 3 A, 20 V 5 A, 28 V 5 A Uscita USB-A 18W 18 W max, 5-6 V 3 A, 6-9 V 2 A, 9-12 V 1,5 A Uscita CA 230V~ 50Hz, 7,83A, 1800W nomi；Uscita totale 1800 W nominali, 3600 W di picco" />
+<img src="assets/ir/dce1dd9ae22bc57d6822f8f5bb96646795cb8aa2794341016497f257d40f3a90/overview_front.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_it/overview_front.png" data-web-finished-panel-sha256="dce1dd9ae22bc57d6822f8f5bb96646795cb8aa2794341016497f257d40f3a90" alt="Pulsante di alimentazione principale LCD Presa da 12V CC 12 V 10 A max Pulsante luce LED Pulsante Alimentazione DC/USB Luce LED Uscita USB-C 30W 30 W max, 5 V 3 A, 9 V 3 A, 12 V 2,5 A, 15 V 2 A, 20 V 1,5A Pulsante AC 1/2 Uscita USB-C 140W 140 W max, 5 V 3 A, 9 V 3 A, 12 V 3 A, 15 V 3 A, 20 V 5 A, 28 V 5 A Uscita USB-A 18W 18 W max, 5-6 V 3 A, 6-9 V 2 A, 9-12 V 1,5 A Uscita CA 230V~ 50Hz, 7,83A, 1800W nomi；Uscita totale 1800 W nominali, 3600 W di picco" />
 
 ## VISTA LATO DESTRO
 
-<img src="assets/ir/14da1419f1b77949098681bd58c509f485c002d18a7b5c0ac4b5deae1f728f17/overview_side.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_it/overview_side.png" data-web-finished-panel-sha256="14da1419f1b77949098681bd58c509f485c002d18a7b5c0ac4b5deae1f728f17" alt="Maniglia Ingresso CA 220 V-240 V~50 Hz, 10 A max Ingresso DC (2×porte DC8020) 16 V-60 V 12 A, raddoppia ﬁno a 21 A / 400 W Max 11 V-16 V 8 A max, raddoppia ﬁno a 8 A" />
+<img src="assets/ir/9f6c2998269cf98bf2879e7a13025ec030cd7843a7ad0a3ce0cff61a70debbf3/overview_side.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_it/overview_side.png" data-web-finished-panel-sha256="9f6c2998269cf98bf2879e7a13025ec030cd7843a7ad0a3ce0cff61a70debbf3" alt="Maniglia Ingresso CA 220 V-240 V~50 Hz, 10 A max Ingresso DC (2×porte DC8020) 16 V-60 V 12 A, raddoppia ﬁno a 21 A / 400 W Max 11 V-16 V 8 A max, raddoppia ﬁno a 8 A" />
 
 # DISPLAY LCD
 
-<img src="assets/ir/d98590bedd6194d97b4004aa3c8b55d288a0b01585a1ab2f512448779fca9089/lcd_map.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_it/lcd_map.png" data-web-finished-panel-sha256="d98590bedd6194d97b4004aa3c8b55d288a0b01585a1ab2f512448779fca9089" alt="DISPLAY LCD" />
+<img src="assets/ir/70d05a78600c7bfe8471aae895b840e0b82bc3aa210f7a8fd596d629abb4cd95/lcd_map.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_it/lcd_map.png" data-web-finished-panel-sha256="70d05a78600c7bfe8471aae895b840e0b82bc3aa210f7a8fd596d629abb4cd95" alt="DISPLAY LCD" />
 
 <table class="longtable lcd-text-only">
 <colgroup>
@@ -261,15 +261,15 @@ Questa funzione può essere attivata o disattivata tramite l'app Jackery. L'impo
 
 ## ACCENSIONE/SPEGNIMENTO
 
-<img src="assets/ir/c2bb4f3236518efb9dafbefa50c3b61620dafe741d525fe150ee357aff50d263/operation_power.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_it/operation_power.png" data-web-finished-panel-sha256="c2bb4f3236518efb9dafbefa50c3b61620dafe741d525fe150ee357aff50d263" alt="Accensione: premi una volta. Spegnimento: tieni premuto per 3 s.；Tempo di standby predefinito: 2 ore. Il prodotto si spegnerà automaticamente dopo 2 ore di inattività, senza ricarica o scarica. *Il tempo di standby può essere impostato nell&#39;App Jackery. Quando la Modalità risparmio energetico è attiva, il prodotto si spegnerà automaticamente dopo 12 ore se l&#39;uscita CA o DC/USB è attiva ma il prodotto non sta caricando o scaricando." />
+<img src="assets/ir/e122fa74a7699441f4ccb7ba8bccb78f3dabb2cf5b8d7fd15ba7ed6c45821f29/operation_power.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_it/operation_power.png" data-web-finished-panel-sha256="e122fa74a7699441f4ccb7ba8bccb78f3dabb2cf5b8d7fd15ba7ed6c45821f29" alt="Accensione: premi una volta. Spegnimento: tieni premuto per 3 s.；Tempo di standby predefinito: 2 ore. Il prodotto si spegnerà automaticamente dopo 2 ore di inattività, senza ricarica o scarica. *Il tempo di standby può essere impostato nell&#39;App Jackery. Quando la Modalità risparmio energetico è attiva, il prodotto si spegnerà automaticamente dopo 12 ore se l&#39;uscita CA o DC/USB è attiva ma il prodotto non sta caricando o scaricando." />
 
 ## USCITA CA ATTIVA/DISATTIVA
 
-<img src="assets/ir/6932beb5b7628415f8c9f548efc5ebc9ae709fd4e5f88633f0c7caf33197b7a2/operation_ac.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_it/operation_ac.png" data-web-finished-panel-sha256="6932beb5b7628415f8c9f548efc5ebc9ae709fd4e5f88633f0c7caf33197b7a2" alt="Prerequisito : il prodotto è acceso.；Accensione Premi una volta Spegnimento Premi una volta" />
+<img src="assets/ir/43d361a8907a9dddb5bb1af4767d228fe833d33795917fcfdc0f7b8ffd3ecc48/operation_ac.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_it/operation_ac.png" data-web-finished-panel-sha256="43d361a8907a9dddb5bb1af4767d228fe833d33795917fcfdc0f7b8ffd3ecc48" alt="Prerequisito : il prodotto è acceso.；Accensione Premi una volta Spegnimento Premi una volta" />
 
 ## USCITA CC 12 V/ USB ATTIVA/DISATTIVA
 
-<img src="assets/ir/ac065f6a17cc2379301fc304baa58008ccfc5db606e78267929894423866907d/operation_dc.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_it/operation_dc.png" data-web-finished-panel-sha256="ac065f6a17cc2379301fc304baa58008ccfc5db606e78267929894423866907d" alt="Prerequisito : il prodotto è acceso.；Accensione Premi una volta Spegnimento Premi una volta" />
+<img src="assets/ir/0c565c113463ddf956220ee6a0632f601b5f088a24ae17205a2a2209d836cc44/operation_dc.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_it/operation_dc.png" data-web-finished-panel-sha256="0c565c113463ddf956220ee6a0632f601b5f088a24ae17205a2a2209d836cc44" alt="Prerequisito : il prodotto è acceso.；Accensione Premi una volta Spegnimento Premi una volta" />
 
 
 
@@ -301,7 +301,7 @@ Per evitare un consumo inutile della batteria dovuto al mancato spegnimento dell
 
 Quando si alimentano dispositivi a basso consumo (CA \<= 25 W oppure DC/USB \<= 2 W), disattiva la Modalità risparmio energetico per evitare che l\'uscita si spenga automaticamente durante il funzionamento.
 
-<img src="assets/ir/f876aac2bd3e85c4cb73640a50c535a12b774a8af9fa4ee2dd2e7a64729e0d2e/operation_energy.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_it/operation_energy.png" data-web-finished-panel-sha256="f876aac2bd3e85c4cb73640a50c535a12b774a8af9fa4ee2dd2e7a64729e0d2e" alt="Per disattivare la Modalità risparmio energetico, tieni premuti per più di 3 secondi sia il pulsante CA sia il pulsante POWER principale. Una volta disattivata la Modalità risparmio energetico, l&#39;icona non comparirà più sullo schermo LCD e il prodotto non spegnerà automaticamente l&#39;uscita CA o DC/USB.；Tieni premuti entrambi i pulsanti per più di 3 secondi." />
+<img src="assets/ir/612797878c24cb2c564bbda868eba56263aab29c19ea3b9c800e9e11a5d894c5/operation_energy.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_it/operation_energy.png" data-web-finished-panel-sha256="612797878c24cb2c564bbda868eba56263aab29c19ea3b9c800e9e11a5d894c5" alt="Per disattivare la Modalità risparmio energetico, tieni premuti per più di 3 secondi sia il pulsante CA sia il pulsante POWER principale. Una volta disattivata la Modalità risparmio energetico, l&#39;icona non comparirà più sullo schermo LCD e il prodotto non spegnerà automaticamente l&#39;uscita CA o DC/USB.；Tieni premuti entrambi i pulsanti per più di 3 secondi." />
 
 
 
@@ -311,7 +311,7 @@ Quando si alimentano dispositivi a basso consumo (CA \<= 25 W oppure DC/USB \<= 
 
 ## LUCE LED ON/OFF
 
-<img src="assets/ir/e2b1729c1de1822dd31bbf79f916390b9ffeffefdeec9026c14aaa5446fade15/operation_led.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_it/operation_led.png" data-web-finished-panel-sha256="e2b1729c1de1822dd31bbf79f916390b9ffeffefdeec9026c14aaa5446fade15" alt="La luce LED ha due modalità: modalità luce e modalità SOS. In qualsiasi modalità, tieni premuto il pulsante della luce LED per spegnere la luce.；Premi una volta il pulsante luce LED per accendere la luce. Premilo di nuovo per passare alla modalità SOS. Premilo una terza volta per spegnere la luce." />
+<img src="assets/ir/c2822ca068f7aa1a2eb19316afd756484b9a65f36a937c9344d021403e9cbed8/operation_led.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_it/operation_led.png" data-web-finished-panel-sha256="c2822ca068f7aa1a2eb19316afd756484b9a65f36a937c9344d021403e9cbed8" alt="La luce LED ha due modalità: modalità luce e modalità SOS. In qualsiasi modalità, tieni premuto il pulsante della luce LED per spegnere la luce.；Premi una volta il pulsante luce LED per accendere la luce. Premilo di nuovo per passare alla modalità SOS. Premilo una terza volta per spegnere la luce." />
 
 ## Funzione di ripristino delle uscite CA e CC
 
@@ -346,7 +346,7 @@ La funzione di ripristino delle uscite CA e CC è disattivata per impostazione p
 
 
 
-<figure aria-label="Segnaposto modalità display LCD." class="hb-lcd-mode-composition" data-component-id="HB-TABLE-LCD-MODE"><div class="hb-lcd-mode-art-panel"><img alt="Segnaposto modalità display LCD." class="hb-lcd-mode-art" src="assets/ir/c6bacc45e0f3657fc45c7d662feef112b7b99421b3b59c5d0e360d64d3d1b081/operation_lcd.png"/></div><div class="hb-lcd-mode-table-panel"><table class="hb-lcd-mode-table"><colgroup><col class="hb-lcd-mode-col-state"/><col class="hb-lcd-mode-col-action"/><col class="hb-lcd-mode-col-copy"/></colgroup><tbody><tr><td class="hb-lcd-mode-state" rowspan="3">Acceso brevemente</td><td class="hb-lcd-mode-action">Accendi</td><td class="hb-lcd-mode-copy">Premi il pulsante POWER principale oppure quando il prodotto è in carica.</td></tr><tr><td class="hb-lcd-mode-action">Spegni</td><td class="hb-lcd-mode-copy">Premi il pulsante POWER principale.</td></tr><tr><td class="hb-lcd-mode-action">Spegnimento automatico</td><td class="hb-lcd-mode-copy">Lo schermo LCD si spegne automaticamente ed entra in modalità sleep dopo 2 minuti di inattività.</td></tr><tr><td class="hb-lcd-mode-state" rowspan="3">Acceso fisso (in carica o in scarica)</td><td class="hb-lcd-mode-action">Accendi</td><td class="hb-lcd-mode-copy">Premi due volte il pulsante POWER principale quando il prodotto è acceso.</td></tr><tr><td class="hb-lcd-mode-action">Spegni</td><td class="hb-lcd-mode-copy">Premi il pulsante POWER principale.</td></tr><tr><td class="hb-lcd-mode-action">Spegnimento automatico</td><td class="hb-lcd-mode-copy">Lo schermo LCD si spegne automaticamente dopo 2 ore di inattività.</td></tr></tbody></table></div></figure>
+<figure aria-label="Segnaposto modalità display LCD." class="hb-lcd-mode-composition" data-component-id="HB-TABLE-LCD-MODE"><div class="hb-lcd-mode-art-panel"><img alt="Segnaposto modalità display LCD." class="hb-lcd-mode-art" src="assets/ir/3ca82a98654ca8850ff447bc3c9868c6d24f9e757b47742dcf2e596c36c077a8/operation_lcd.png"/></div><div class="hb-lcd-mode-table-panel"><table class="hb-lcd-mode-table"><colgroup><col class="hb-lcd-mode-col-state"/><col class="hb-lcd-mode-col-action"/><col class="hb-lcd-mode-col-copy"/></colgroup><tbody><tr><td class="hb-lcd-mode-state" rowspan="3">Acceso brevemente</td><td class="hb-lcd-mode-action">Accendi</td><td class="hb-lcd-mode-copy">Premi il pulsante POWER principale oppure quando il prodotto è in carica.</td></tr><tr><td class="hb-lcd-mode-action">Spegni</td><td class="hb-lcd-mode-copy">Premi il pulsante POWER principale.</td></tr><tr><td class="hb-lcd-mode-action">Spegnimento automatico</td><td class="hb-lcd-mode-copy">Lo schermo LCD si spegne automaticamente ed entra in modalità sleep dopo 2 minuti di inattività.</td></tr><tr><td class="hb-lcd-mode-state" rowspan="3">Acceso fisso (in carica o in scarica)</td><td class="hb-lcd-mode-action">Accendi</td><td class="hb-lcd-mode-copy">Premi due volte il pulsante POWER principale quando il prodotto è acceso.</td></tr><tr><td class="hb-lcd-mode-action">Spegni</td><td class="hb-lcd-mode-copy">Premi il pulsante POWER principale.</td></tr><tr><td class="hb-lcd-mode-action">Spegnimento automatico</td><td class="hb-lcd-mode-copy">Lo schermo LCD si spegne automaticamente dopo 2 ore di inattività.</td></tr></tbody></table></div></figure>
 
 
 
@@ -389,7 +389,7 @@ Puoi anche impostare la modalità di visualizzazione dello schermo nell\'App Jac
 
 Collega il prodotto a una presa a muro con il cavo di ricarica CA, quindi premi il pulsante AC 1/2 e alimenta contemporaneamente i tuoi apparecchi.
 
-<img src="assets/ir/e92b356619e90c8b4097793a18bf7bda2c8156b643fc55c12812f93c4d6cb481/ups.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_it/ups.png" data-web-finished-panel-sha256="e92b356619e90c8b4097793a18bf7bda2c8156b643fc55c12812f93c4d6cb481" alt="Segnaposto diagramma di connessione UPS." />
+<img src="assets/ir/ec7b20037dcac28472e15977cd197ca21eaa3eb0bc2e3c458d4f36b1aded3d12/ups.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_it/ups.png" data-web-finished-panel-sha256="ec7b20037dcac28472e15977cd197ca21eaa3eb0bc2e3c458d4f36b1aded3d12" alt="Segnaposto diagramma di connessione UPS." />
 
 Un gruppo di continuità (UPS) è un sistema di alimentazione continua che fornisce automaticamente energia di riserva a un carico quando viene a mancare l\'alimentazione della rete elettrica.
 
@@ -414,7 +414,7 @@ la potenza di uscita effettiva in questa modalità è inferiore alla potenza nom
 
 Questo prodotto può supportare fino a 5 pacchi batteria per soddisfare l\'esigenza di grande capacità di alimentazione. Per i dettagli su come utilizzarlo, consultare il manuale d\'uso del Jackery Battery Pack 2000.
 
-<img src="assets/ir/851d01a053128e536d1a8570234d7ba3c485b859fb8b7f4f6a1be7fc9d558f29/battery_pack.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_it/battery_pack.png" data-web-finished-panel-sha256="851d01a053128e536d1a8570234d7ba3c485b859fb8b7f4f6a1be7fc9d558f29" alt="Jackery Explorer 1000 Plus collegato a unità Jackery Battery Pack 2000 con uno spazio di 200 mm." />
+<img src="assets/ir/4b86f595de899ab4c7ca078ca22c86fb18fd975e054fdbd5ce50faa3c12e653a/battery_pack.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_it/battery_pack.png" data-web-finished-panel-sha256="4b86f595de899ab4c7ca078ca22c86fb18fd975e054fdbd5ce50faa3c12e653a" alt="Jackery Explorer 1000 Plus collegato a unità Jackery Battery Pack 2000 con uno spazio di 200 mm." />
 
 
 
@@ -451,7 +451,7 @@ Questo prodotto può supportare fino a 5 pacchi batteria per soddisfare l\'esige
 
 ## RICARICA TRAMITE PRESA A MURO CA
 
-<img src="assets/ir/579b9e6652bf4b9ed8e8c04bd29d25ed556454a83efefc247af38bb60bd5af9c/charging_ac.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_it/charging_ac.png" data-web-finished-panel-sha256="579b9e6652bf4b9ed8e8c04bd29d25ed556454a83efefc247af38bb60bd5af9c" alt="Collegare il cavo di ricarica CA alla porta di ingresso CA del prodotto e a una presa a muro." />
+<img src="assets/ir/d11bcc52c8b17a5ada2e4a1ea5080b0fb23dac30dc3c5112a9c0d3d77431b6aa/charging_ac.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_it/charging_ac.png" data-web-finished-panel-sha256="d11bcc52c8b17a5ada2e4a1ea5080b0fb23dac30dc3c5112a9c0d3d77431b6aa" alt="Collegare il cavo di ricarica CA alla porta di ingresso CA del prodotto e a una presa a muro." />
 
 
 
@@ -469,11 +469,11 @@ In questa modalità, è possibile ricaricare rapidamente la power station portat
 
 Jackery Explorer 1000 Plus dispone di due porte di ingresso DC8020 ed è compatibile con i pannelli solari Jackery.
 
-<img src="assets/ir/1311bdc3de265e0a9cbf7ac3998635f04c778acee07d1b0eacb24f8b805285ca/charging_solar.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_it/charging_solar.png" data-web-finished-panel-sha256="1311bdc3de265e0a9cbf7ac3998635f04c778acee07d1b0eacb24f8b805285ca" alt="Segnaposto diagramma di collegamento per la ricarica solare 1." />
+<img src="assets/ir/2de12fb0e1a7100bec8dee8ac5701a54d055986b4e6ef4ebfcc92c527a59cb5a/charging_solar.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_it/charging_solar.png" data-web-finished-panel-sha256="2de12fb0e1a7100bec8dee8ac5701a54d055986b4e6ef4ebfcc92c527a59cb5a" alt="Segnaposto diagramma di collegamento per la ricarica solare 1." />
 
 Se una porta di ingresso DC8020 deve collegare contemporaneamente due pannelli solari, fare riferimento alla figura seguente per la ricarica tramite il connettore per pannelli solari (venduto separatamente, non incluso di serie).
 
-<img src="assets/ir/d6cc13d97ede0e20be3c1dbc8a1ad4ac61bcb81d4d90d2e46bec43a997a905d2/charging_solar_adapter.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_it/charging_solar_adapter.png" data-web-finished-panel-sha256="d6cc13d97ede0e20be3c1dbc8a1ad4ac61bcb81d4d90d2e46bec43a997a905d2" alt="Segnaposto diagramma di collegamento per la ricarica solare 2." />
+<img src="assets/ir/0ae63e952c783fd27cffebcf948a095b03eade283c96a07aedf3c4b9bf1836bb/charging_solar_adapter.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_it/charging_solar_adapter.png" data-web-finished-panel-sha256="0ae63e952c783fd27cffebcf948a095b03eade283c96a07aedf3c4b9bf1836bb" alt="Segnaposto diagramma di collegamento per la ricarica solare 2." />
 
 
 
@@ -498,7 +498,7 @@ Si consiglia di utilizzare il pannello solare Jackery per caricare il prodotto. 
 
 Questo prodotto può essere caricato con un caricabatterie per auto da 12 V. Assicurarsi che il caricabatterie e l\'accendisigari dell\'auto siano ben collegati.
 
-<img src="assets/ir/0735708ba35a130589a77b256309c735860921e5bf606b6fef1c6d3fa79d22bc/charging_car.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_it/charging_car.png" data-web-finished-panel-sha256="0735708ba35a130589a77b256309c735860921e5bf606b6fef1c6d3fa79d22bc" alt="Veicolo *Il cavo di ricarica per auto è venduto separatamente." />
+<img src="assets/ir/9233956d503da7561651a6161a569139dec390242189c557ef5ca93fab734dc1/charging_car.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_it/charging_car.png" data-web-finished-panel-sha256="9233956d503da7561651a6161a569139dec390242189c557ef5ca93fab734dc1" alt="Veicolo *Il cavo di ricarica per auto è venduto separatamente." />
 
 
 
@@ -739,7 +739,7 @@ Per stabilire la data di inizio del periodo di garanzia è necessaria la ricevut
 
 ## 1. Per scaricare l\'app e accedere
 
-<img src="assets/ir/a55b6941002823c780f4df49b17c95aa8388afad1e47fe09489ba89a2514a441/app_download.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_it/app_download.png" data-web-finished-panel-sha256="a55b6941002823c780f4df49b17c95aa8388afad1e47fe09489ba89a2514a441" alt="Cerca &quot;Jackery&quot; su Google Play o nell&#39;App Store per installare l&#39;app. Dopodiché, puoi registrarti e accedere. In alternativa, scansiona il codice QR qui sotto per scaricare e installare l&#39;app." />
+<img src="assets/ir/575e3c5960ec99439414b794186870137f81ace9121955a8e97875a448a9bf67/app_download.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_it/app_download.png" data-web-finished-panel-sha256="575e3c5960ec99439414b794186870137f81ace9121955a8e97875a448a9bf67" alt="Cerca &quot;Jackery&quot; su Google Play o nell&#39;App Store per installare l&#39;app. Dopodiché, puoi registrarti e accedere. In alternativa, scansiona il codice QR qui sotto per scaricare e installare l&#39;app." />
 
 ## 2. Per aggiungere il dispositivo
 
@@ -747,7 +747,7 @@ Per stabilire la data di inizio del periodo di garanzia è necessaria la ricevut
 
 2.2 Premi il pulsante di alimentazione principale sul dispositivo per accenderlo; le icone Wi-Fi e Bluetooth sul dispositivo lampeggiano per indicare che il dispositivo è entrato nella modalità di configurazione di rete. Fai clic sul pulsante \"**Icon Flashed**\" (icona lampeggiante) e consenti all\'app di connettersi ai dispositivi vicini e di aprire le autorizzazioni Bluetooth.
 
-<img src="assets/ir/47e11ee0f361e46f24e6cd79cebc87df47b562709a880d20951f5e1c0be048e2/app_control_panel.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-add-device" data-web-finished-panel-path="assets/je1000h_eu_it/app_control_panel.png" data-web-finished-panel-sha256="47e11ee0f361e46f24e6cd79cebc87df47b562709a880d20951f5e1c0be048e2" alt="Pulsante di alimentazione principale Pulsante AC 1/2 Pulsante Alimentazione DC/USB" />
+<img src="assets/ir/7357b6540864fa70b9899a972bdaca031d30dcd337248296832d91541b7673e5/app_control_panel.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-add-device" data-web-finished-panel-path="assets/je1000h_eu_it/app_control_panel.png" data-web-finished-panel-sha256="7357b6540864fa70b9899a972bdaca031d30dcd337248296832d91541b7673e5" alt="Pulsante di alimentazione principale Pulsante AC 1/2 Pulsante Alimentazione DC/USB" />
 
 2.3 Dopo aver toccato l\'icona del dispositivo trovato, l\'app si connette automaticamente al dispositivo tramite Bluetooth.
 
@@ -775,7 +775,7 @@ Per stabilire la data di inizio del periodo di garanzia è necessaria la ricevut
 
 Dopo che il dispositivo è stato aggiunto con successo all\'app, l\'icona Wi-Fi sul dispositivo resterà sempre accesa.
 
-<img src="assets/ir/642006095e26e29149e7eab3f6e8949be12aa88f57a0d5d32c668cf360fd8d30/app_connect_result.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_it/app_connect_result.png" data-web-finished-panel-sha256="642006095e26e29149e7eab3f6e8949be12aa88f57a0d5d32c668cf360fd8d30" alt="Segnaposto schermata di risultato configurazione app." />
+<img src="assets/ir/543eb7fa576492210ed60a9f1f8719b0496411ca291c613bd1b259d26e63273a/app_connect_result.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_it/app_connect_result.png" data-web-finished-panel-sha256="543eb7fa576492210ed60a9f1f8719b0496411ca291c613bd1b259d26e63273a" alt="Segnaposto schermata di risultato configurazione app." />
 
 Le schermate sopra sono solo a scopo illustrativo.
 
