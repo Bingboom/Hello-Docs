@@ -19,7 +19,7 @@ blockquote{background:#eff6ff;border-left-color:#60a5fa;color:#334869}
 .progress{background:linear-gradient(90deg,#f97316,#fbbf24)}
 @media print{main{box-shadow:none}h2:before{display:none}}
 </style><link rel="stylesheet" href="../阅读样式.css?v=bc7db0f95bc5">
-</head><body class="reading-guide"><div id="progress" class="progress"></div><header class="topbar"><a href="../00_打开分享.html">← 返回分享稿<small>AI 使用知识分享</small></a><button id="print">打印 / 保存 PDF</button></header><div class="layout"><aside><p class="nav-title">阅读目录</p><nav><a class="toc-level-2" href="#s0">一、先找到与你的问题有关的一小节</a><a class="toc-level-2" href="#s1">二、先运行：让程序写出一句介绍</a><a class="toc-level-2" href="#s2">三、改一点：只改价格，再运行一次</a><a class="toc-level-2" href="#s3">四、遇到问题：让 Agent 对着结果解释</a><a class="toc-level-2" href="#s4">五、接回海报：从一句话走向一张表</a><a class="toc-level-2" href="#s5">六、继续阅读与来源说明</a></nav><p>先看结果，改一点再试。<br>需要时，再理解背后的做法。</p></aside><main><h1 id="从-the-craft-of-selfteaching-开始改一句产品介绍">从 the craft of selfteaching 开始：改一句产品介绍</h1>
+</head><body class="reading-guide"><div id="progress" class="progress"></div><header class="topbar"><a href="../index.html">← 返回分享稿<small>AI 使用知识分享</small></a><button id="print">打印 / 保存 PDF</button></header><div class="layout"><aside><p class="nav-title">阅读目录</p><nav><a class="toc-level-2" href="#s0">一、先找到与你的问题有关的一小节</a><a class="toc-level-2" href="#s1">二、先运行：让程序写出一句介绍</a><a class="toc-level-2" href="#s2">三、改一点：只改价格，再运行一次</a><a class="toc-level-2" href="#s3">四、遇到问题：让 Agent 对着结果解释</a><a class="toc-level-2" href="#s4">五、接回海报：从一句话走向一张表</a><a class="toc-level-2" href="#s5">六、继续阅读与来源说明</a></nav><p>先看结果，改一点再试。<br>需要时，再理解背后的做法。</p></aside><main><h1 id="从-the-craft-of-selfteaching-开始改一句产品介绍">从 the craft of selfteaching 开始：改一句产品介绍</h1>
 <p>不必先读完整本书，再开始动手。小林已经有了一个具体问题：产品价格变了，介绍里的数字能不能一起变？我们就从这个问题出发，读一点、运行一次、改一点，再看结果。</p>
 <p>本页参考李笑来 the craft of selfteaching的“字符串”学习主题，为露营海报另写一份中文练习。不是原书摘录，也不是原书代码的运行记录。三款小野产品均为教学虚构型号。</p>
 <h2 id="s0">一、先找到与你的问题有关的一小节</h2>
@@ -70,7 +70,7 @@ blockquote{background:#eff6ff;border-left-color:#60a5fa;color:#334869}
 <blockquote>
 <p>请保留刚才生成介绍的逻辑，改成从产品表读取资料。先只处理小野 500，把读到的参数和生成的文字展示出来。缺少参数时提示我，不要猜。确认正确后再接到海报里。</p>
 </blockquote>
-<p>这一步还没有实现 CSV 读取、PDF 排版、文件监听或钉钉上传，不要把一句介绍的小练习说成完整系统。回到 <a href="../00_打开分享.html">主稿</a> 和 <a href="../04_参考资料/01_完整练习.html">露营海报练习</a>，再按需要逐步增加功能。</p>
+<p>这一步还没有实现 CSV 读取、PDF 排版、文件监听或钉钉上传，不要把一句介绍的小练习说成完整系统。回到 <a href="../index.html">主稿</a> 和 <a href="../04_参考资料/01_完整练习.html">露营海报练习</a>，再按需要逐步增加功能。</p>
 <p>主案例内容表中的 <code>{{product_name}}</code> 是海报工具约定的模板标记；这里 f-string 的 <code>{product_name}</code> 是 Python 写法。它们都用于填入变量，但不能直接混用，读取和替换方式要由程序明确处理。</p>
 <h2 id="s5">六、继续阅读与来源说明</h2>
 <ul>

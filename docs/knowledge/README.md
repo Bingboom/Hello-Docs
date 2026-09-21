@@ -2,7 +2,7 @@
 
 这里由 Hello-Docs 独立维护，存放分享稿、配图、示例及参考资料。
 
-- `ai-share/00_打开分享.html`：AI 使用知识分享主稿。
+- `ai-share/index.html`：AI 使用知识分享主稿。
 - `ai-share/05_露营海报/`：当前分享主线；两张 CSV、三种共享样式的 LaTeX 海报、本地自动更新程序和真实操作素材。
 - `ai-share/配图/`：当前页面使用的 Q 版配图（`*-q版.png`）与保留的原图。
 - `ai-share/阅读样式.css`：主稿、参考阅读页及学生情况卡共用的样式；提示框采用浅灰底、细灰线，链接保留下划线。
@@ -23,10 +23,10 @@ auto-manual 的同步会完整保留这里已经合入 `Hello-Docs/main` 的内�
 
 1. 从最新的 `Hello-Docs/main` 建立 `docs/knowledge-<主题>` 内容分支。
 2. 文字改动先修改 `ai-share/分享稿.md`，同时把已确认的同一版文字更新到
-   `ai-share/00_打开分享.html`；样式、图片和示例则修改同目录对应文件。
+   `ai-share/index.html`；样式、图片和示例则修改同目录对应文件。
 3. 只提交 `docs/knowledge/**` 下的文件。本次内容 PR 不夹带模板、构建代码、
    `docs/publish/**` 或产品说明书评审文件。
-4. 本地打开 `ai-share/00_打开分享.html`，检查目录跳转、参考链接、图片、窄屏
+4. 本地打开 `ai-share/index.html`，检查目录跳转、参考链接、图片、窄屏
    布局和打印效果。
 5. 向 `Hello-Docs/main` 提交内容 PR。合入后，Read the Docs 从该 main commit
    重新构建 `/ai-share/`。
