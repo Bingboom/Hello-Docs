@@ -90,6 +90,7 @@ def main():
             f'{TOOL_ROOT}/README.md',
             f'{TOOL_ROOT}/requirements.txt',
             f'{TOOL_ROOT}/启动小野海报工作台.command',
+            f'{TOOL_ROOT}/启动小野海报工作台.bat',
             f'{TOOL_ROOT}/工作台文件/xiaoye_workbench.py',
             f'{TOOL_ROOT}/工作台文件/generate_xiaoye_posters.py',
             f'{TOOL_ROOT}/工作台文件/xiaoye-workbench.html',
