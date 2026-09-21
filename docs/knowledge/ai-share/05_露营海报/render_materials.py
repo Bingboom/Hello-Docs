@@ -3,6 +3,7 @@
 
 This edits only knowledge-content HTML, never the product-manual pipeline.
 """
+import hashlib
 import html
 from pathlib import Path
 import re
@@ -10,6 +11,12 @@ import subprocess
 
 ROOT = Path(__file__).resolve().parent
 SHARE = ROOT.parent
+
+
+def refresh_stylesheet(shell):
+    version = hashlib.sha256((SHARE / '阅读样式.css').read_bytes()).hexdigest()[:12]
+    return re.sub(r'href="((?:\.\./)?阅读样式\.css)(?:\?[^"<>]*)?"',
+                  lambda match: f'href="{match.group(1)}?v={version}"', shell)
 
 
 def render(source):
@@ -21,15 +28,23 @@ def render(source):
 
 def body_and_nav(source):
     body = render(source)
-    headings = []
+    section_count = 0
 
     def heading(match):
-        identity = f's{len(headings)}'
+        nonlocal section_count
+        identity = f's{section_count}'
+        section_count += 1
         text = match.group(1)
-        headings.append(f'<a href="#{identity}">{text}</a>')
         return f'<h2 id="{identity}">{text}</h2>'
 
     body = re.sub(r'<h2[^>]*>(.*?)</h2>', heading, body, flags=re.S)
+    # Keep the existing section and Pandoc subsection IDs stable for incoming links.
+    headings = [
+        f'<a class="toc-level-{level}" href="#{html.escape(identity, quote=True)}">{text}</a>'
+        for level, identity, text in re.findall(
+            r'<h([23])\b[^>]*\bid="([^"]+)"[^>]*>(.*?)</h\1>', body, re.S
+        )
+    ]
     body = re.sub(r'<table([^>]*)>(.*?)</table>',
                   r'<div class="table-scroll"><table\1>\2</table></div>', body, flags=re.S)
     return body, ''.join(headings)
@@ -37,13 +52,13 @@ def body_and_nav(source):
 
 def main():
     main_path = SHARE / '00_打开分享.html'
-    original = main_path.read_text('utf-8')
+    original = refresh_stylesheet(main_path.read_text('utf-8'))
     body, nav = body_and_nav(SHARE / '分享稿.md')
     main_html = re.sub(r'<main>.*?</main>', lambda _: '<main>' + body + '</main>', original, flags=re.S)
     main_html = re.sub(r'<nav>.*?</nav>', lambda _: '<nav>' + nav + '</nav>', main_html, flags=re.S)
     main_path.write_text(main_html, 'utf-8')
     head = original.split('</head>')[0]
-    head = head.replace('href="阅读样式.css"', 'href="../阅读样式.css"')
+    head = head.replace('href="阅读样式.css', 'href="../阅读样式.css')
     head += '''<style>
     .material .layout{display:block;max-width:1240px}.material main{padding:32px}
     .poster-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
@@ -67,11 +82,12 @@ def main():
                 '<a href="../00_打开分享.html">返回分享稿</a></header>'
                 '<div class="layout"><main>' + material + '</main></div></body></html>')
         (ROOT / output_name).write_text(page, 'utf-8')
-    for source in sorted((SHARE / '04_参考资料').glob('*.md')):
+    references = sorted((SHARE / '04_参考资料').glob('*.md'))
+    references.append(SHARE / '03_GitHub原例' / '阅读版.md')
+    for source in references:
         target = source.with_suffix('.html')
-        if not target.exists():
-            continue
-        shell = target.read_text('utf-8')
+        template = target if target.exists() else SHARE / '04_参考资料' / '05_钉钉MCP.html'
+        shell = refresh_stylesheet(template.read_text('utf-8'))
         content, navigation = body_and_nav(source)
         shell = re.sub(r'<main>.*?</main>', lambda _: '<main>' + content + '</main>', shell, flags=re.S)
         shell = re.sub(r'<nav>.*?</nav>', lambda _: '<nav>' + navigation + '</nav>', shell, flags=re.S)
