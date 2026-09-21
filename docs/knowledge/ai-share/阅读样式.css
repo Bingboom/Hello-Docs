@@ -25,6 +25,11 @@ a:hover{color:#9a5735;text-decoration-color:currentColor}
 .reading-guide .page-note{background:#f7f7f6;border-color:var(--line);color:#4b4b49}
 .reading-guide .output{border-left-color:#c9a67f}
 .reading-guide .progress{background:linear-gradient(90deg,#c99b7a,#bbc7ad)}
+.reading-guide .process-cta{margin:18px 0 28px}
+.reading-guide .process-cta a{display:inline-flex;align-items:center;padding:8px 12px;border:1px solid #d9ad8c;border-radius:8px;background:#fbf1e9;color:#75492f;font-weight:600;text-decoration:none;box-shadow:0 2px 8px #7a4c2c0a}
+.reading-guide .process-cta a:hover{background:#f7e8dc;border-color:#c98f67;color:#663c25}
+.reading-guide .process-cta-link{display:inline-block;padding:3px 7px;border:1px solid #d9ad8c;border-radius:6px;background:#fbf1e9;color:#75492f;font-weight:600;text-decoration:none}
+.reading-guide .process-cta-link:hover{background:#f7e8dc;border-color:#c98f67;color:#663c25}
 a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #9b866f;outline-offset:3px}
 .student-demo{color:var(--ink)}
 .student-demo .inputs,.student-demo .card,.student-demo .tag{border-color:var(--line)}

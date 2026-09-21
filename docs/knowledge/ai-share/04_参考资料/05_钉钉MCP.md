@@ -32,7 +32,7 @@
 
 小林检查三款都有自己的记录，参数与本地资料一致，PNG 和 PDF 都能打开。随后截取实际表格页面，作为分享素材。
 
-[查看本次教学表](https://alidocs.dingtalk.com/i/nodes/oP0MALyR8k75ewkwSDQoEkxn83bzYmDO?entrance=data&sheetId=e84ttux)（需要相应权限）。自己跟做时，请新建练习表，不修改这张演示表。
+[查看本次教学表](https://alidocs.dingtalk.com/i/nodes/jb9Y4gmKWr75RdmdSeQzdAlkVGXn6lpz?utm_scene=person_space&iframeQuery=viewId%3DqvGDAH2%26sheetId%3DhERWDMS)（需要相应权限）。自己跟做时，请新建练习表，不修改这张演示表。
 
 本次已完成三款 PNG 和 PDF 的一次上传；这不等于钉钉资料变化后会持续自动更新。
 

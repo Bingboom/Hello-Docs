@@ -11,7 +11,8 @@ ROOT = Path(__file__).resolve().parent
 SHARE = ROOT.parent
 # User-approved link displayed in the sharing article; no upload credentials.
 PUBLIC_TABLE_URL = ('https://alidocs.dingtalk.com/i/nodes/'
-                    'oP0MALyR8k75ewkwSDQoEkxn83bzYmDO?entrance=data&sheetId=e84ttux')
+                    'jb9Y4gmKWr75RdmdSeQzdAlkVGXn6lpz?utm_scene=person_space&'
+                    'iframeQuery=viewId%3DqvGDAH2%26sheetId%3DhERWDMS')
 
 
 def sha(path):

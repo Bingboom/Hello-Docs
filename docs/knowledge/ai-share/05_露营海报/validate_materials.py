@@ -39,11 +39,21 @@ def main():
     ]
     headings = re.findall(r'<h[12][^>]*>(.*?)</h[12]>', html)
     assert headings == approved_structure, 'Approved story structure changed'
-    for source in ('配图/00-概览-q版.png', '配图/01-场景-露营海报-q版.png',
-                   '05_露营海报/evidence/13-posters-browser.png',
+    for source in ('配图/小野300-Sol-High-实图.png', '配图/01-场景-露营海报-q版.png',
+                   '配图/小野500-HTML-实图.png', '配图/小野1000-HTML-实图.png',
+                   '配图/钉钉产品与海报-实录.png',
+                   '配图/钉钉MCP回读核对-实录.png',
                    '05_露营海报/evidence/18-dingtalk-product-table.png',
                    '06_动画示例/pelican-bike.html'):
         assert f'src="{source}"' in html, f'Missing retained/adapted illustration: {source}'
+    exercise_html = (SHARE / '04_参考资料' / '01_完整练习.html').read_text('utf-8')
+    for source in ('../配图/HTML工作台-改价899-实录.png',
+                   '../配图/小野500-改价899-实图.png',
+                   '../配图/HTML工作台2-自动导出-实录.png',
+                   '../配图/工作台使用说明-实录.png',
+                   '../配图/钉钉产品与海报-实录.png',
+                   '../配图/钉钉MCP回读核对-实录.png'):
+        assert f'src="{source}"' in exercise_html, f'Missing process evidence: {source}'
     missing = []
     count = 0
     references = list((SHARE / '04_参考资料').glob('*.html'))
