@@ -8,6 +8,8 @@
 
 三张 A5 PDF 都由 XeLaTeX 编译，分别采用大图主视觉、图文分栏、参数卡片排版；共享色彩、字体、字号层级及组件样式。PNG 只是从 PDF 渲染的预览，不是独立排版的替代品。
 
+初次跟做，可以从 [HTML + CSS 海报练习](../04_参考资料/01_完整练习.html) 开始，用浏览器打印或保存 PDF。下面的启动步骤用于运行本目录已有的 LaTeX 演示。
+
 ## 启动交互演示
 
 需要 Python 3.10+、XeLaTeX（TeX Live / MacTeX）、Poppler 的 `pdfinfo` / `pdftoppm` / `pdftotext`。不需要 Python 第三方库，也不需要钉钉账号。

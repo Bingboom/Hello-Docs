@@ -16,11 +16,11 @@ GitHub 上有些项目用 Jupyter Notebook 展示做法。它像一本能动手�
 
 - [从 the craft of selfteaching 开始：改一句产品介绍](../03_GitHub原例/阅读版.html)：参考[the craft of selfteaching](https://github.com/selfteaching/the-craft-of-selfteaching)，先运行一句产品介绍，只改价格再看结果；结合露营海报理解变量怎样填入文字。
 
-先打开“阅读版”就能看说明、代码和已经生成的结果，不用安装软件。想修改并重新运行时，再把对应文件夹交给 Agent：
+先打开“阅读版”就能看说明、代码和已经生成的结果，不用安装软件。想修改并重新运行时，把对应文件夹交给 Agent，并明确运行其中的 `product_intro.py`：
 
-> 帮我运行这份产品介绍的 Python 小练习，先让我看到原来的结果。然后带我只改价格，再运行一次。每次只解释当前这一步用到的知识。
+> 请运行 product_intro.py，先让我看到原来的结果。然后带我只改价格，再运行一次。每次只解释当前这一步用到的知识，不运行目录里的旧 Notebook。
 
-阅读版展示的是保存下来的运行结果；重新执行小练习只需要 Python。具体准备方法见例子文件夹里的使用说明。原书使用 Notebook，不代表本地小练习也需要同样的环境。
+阅读版展示的是保存下来的运行结果；重新执行小练习只需要 Python。具体准备方法见 [使用说明](../03_GitHub原例/使用说明.txt)。原书使用 Notebook，不代表本地小练习也需要同样的环境。
 
 ### 按自己要做的事去找
 
@@ -36,7 +36,7 @@ GitHub 上有些项目用 Jupyter Notebook 展示做法。它像一本能动手�
 
 ![找项目、下载、试用与修改，再保存可用版本](../配图/06-GitHub-q版.png)
 
-找项目、下载、试用与修改，再保存可用版本
+图中展示了先 Fork 再 Clone 的路线；只在本地试用，可以跳过 Fork，按下面的步骤直接 Clone。
 
 **建议初学者用 GitHub Desktop 操作**，下载项目、查看改动、保存版本都可以通过按钮完成，不用先记 Git 命令。这里有三个名字容易混：Git 用来管理版本，GitHub 是存放和分享项目的网站，GitHub Desktop 则让你在电脑上通过界面操作，不必逐条输入命令。
 
@@ -54,11 +54,11 @@ git --version
 
 **再下载选好的项目。**
 
-1. 在仓库页面点击 **Fork → Create fork**，得到自己账号下的一份副本，复制它的网址。
+1. 打开选中的仓库，复制仓库网址。先在本地试用，不必先 Fork。
 2. 打开 GitHub Desktop，选择 **File → Clone Repository → URL**，粘贴网址，选好保存位置，点击 **Clone**。
 3. 用 Codex 或 Claude Code 打开下载得到的整个文件夹，把下面这段话发给 Agent。
 
-这里的 Fork 是把副本放进自己的 GitHub 账号，Clone 是把仓库下载到电脑。也可以直接 Clone 原仓库；上面采用先 Fork 的方式，方便以后保存自己的修改。[Fork 说明](https://docs.github.com/en/pull-requests/how-tos/work-with-forks/fork-a-repo) · [Clone 说明](https://docs.github.com/en/desktop/adding-and-cloning-repositories/cloning-and-forking-repositories-from-github-desktop)
+Clone 是把仓库下载到电脑，本地修改可以直接用 Git 保存。以后想把改造版推送到自己账号，再考虑 Fork：在 GitHub 网页点击 **Fork → Create fork** 建立自己的仓库副本。已经 Clone 的项目，可以请 Agent 或按 Desktop 提示将推送目标设为自己的 Fork，不用丢掉本地修改重新开始。[Fork 说明](https://docs.github.com/en/pull-requests/how-tos/work-with-forks/fork-a-repo) · [Clone 说明](https://docs.github.com/en/desktop/adding-and-cloning-repositories/cloning-and-forking-repositories-from-github-desktop)
 
 ### 让 Agent 帮你运行项目
 

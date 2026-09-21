@@ -30,10 +30,10 @@ def main():
     nav_ids = re.findall(r'href="#([^"]+)"', expected_nav)
     assert nav_ids == heading_ids, 'Every section and subsection must appear in the TOC in order'
     approved_structure = [
-        '【产品运营部】AI 使用知识分享', '一、GPT-6 到底能做到什么？',
+        '【产品运营部】AI 使用知识分享', '一、GPT-6 Astra 到底能做到什么？',
         '二、厉害的不只是做出一个动画', '三、放到工作里，能替我们做什么？',
         '四、不会写代码，怎么把它用起来？', '五、从做一次，到以后都能用',
-        '六、海报之外，GPT-6 Astra 还能接着做什么？',
+        '六、海报之外，Agent 还能接着做什么？',
         '附录 1：跟着小林，从空文件夹做出一个海报工具',
         '附录 2：从 GitHub 找参考仓库，做成自己的工具',
     ]
