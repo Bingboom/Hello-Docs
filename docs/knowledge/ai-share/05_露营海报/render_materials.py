@@ -50,15 +50,21 @@ def body_and_nav(source):
     return body, ''.join(headings)
 
 
+def render_article(source, target, template):
+    original = refresh_stylesheet(template.read_text('utf-8'))
+    body, nav = body_and_nav(source)
+    article = re.sub(r'<main>.*?</main>', lambda _: '<main>' + body + '</main>', original, flags=re.S)
+    article = re.sub(r'<nav>.*?</nav>', lambda _: '<nav>' + nav + '</nav>', article, flags=re.S)
+    target.write_text(article, 'utf-8')
+
+
 def main():
     main_path = SHARE / 'index.html'
     legacy_path = SHARE / '00_打开分享.html'
     template_path = main_path if main_path.exists() else legacy_path
     original = refresh_stylesheet(template_path.read_text('utf-8'))
-    body, nav = body_and_nav(SHARE / '分享稿.md')
-    main_html = re.sub(r'<main>.*?</main>', lambda _: '<main>' + body + '</main>', original, flags=re.S)
-    main_html = re.sub(r'<nav>.*?</nav>', lambda _: '<nav>' + nav + '</nav>', main_html, flags=re.S)
-    main_path.write_text(main_html, 'utf-8')
+    render_article(SHARE / '分享稿.md', main_path, template_path)
+    render_article(SHARE / '实用版分享稿.md', SHARE / 'practical.html', template_path)
     legacy_path.write_text('''<!doctype html><html lang="zh-CN"><head>
 <meta charset="utf-8"><meta name="robots" content="noindex,nofollow">
 <meta http-equiv="refresh" content="0;url=index.html"><link rel="canonical" href="index.html">
