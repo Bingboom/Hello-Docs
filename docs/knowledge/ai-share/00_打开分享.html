@@ -20,159 +20,194 @@ main a{color:#50504d;text-decoration-color:#b6b6b0;text-decoration-thickness:1px
 .progress{background:linear-gradient(90deg,#f97316,#fbbf24)}
 @media print{main{box-shadow:none}h2:before{display:none}}
 .intro-summary{font-size:13px;line-height:1.7;color:var(--muted);margin:-8px 0 26px;padding:0;background:none;border:0}
-</style><link rel="stylesheet" href="阅读样式.css">
-</head><body class="reading-guide"><div id="progress" class="progress"></div><header class="topbar"><a href="#">产品运营部<small>AI 使用知识分享</small></a><button id="print">打印 / 保存 PDF</button></header><div class="layout"><aside><p class="nav-title">阅读目录</p><nav><a href="#s0">一、用代码解决工作中的问题</a><a href="#s1">二、从需求到实现</a><a href="#s2">三、修改与调试</a><a href="#s3">四、复用与维护</a><a href="#s4">五、GitHub：借鉴项目与版本管理</a><a href="#s5">六、让 Agent 调用更多工具：CLI 与 MCP</a><a href="#s6">附录：跟着小林，从空文件夹做出一个海报工具</a></nav></aside><main><h1 id="产品运营部ai-使用知识分享">【产品运营部】AI 使用知识分享</h1>
+</style><link rel="stylesheet" href="阅读样式.css?v=ffeed69e28af">
+</head><body class="reading-guide"><div id="progress" class="progress"></div><header class="topbar"><a href="#">产品运营部<small>AI 使用知识分享</small></a><button id="print">打印 / 保存 PDF</button></header><div class="layout"><aside><p class="nav-title">阅读目录</p><nav><a class="toc-level-2" href="#s0">一、GPT-6 到底能做到什么？</a><a class="toc-level-2" href="#s1">二、厉害的不只是做出一个动画</a><a class="toc-level-3" href="#所以gpt-6-astra-的专长怎么理解">所以，GPT-6 Astra 的专长怎么理解？</a><a class="toc-level-3" href="#换个模型会骑成什么样">换个模型，会骑成什么样？</a><a class="toc-level-2" href="#s2">三、放到工作里，能替我们做什么？</a><a class="toc-level-3" href="#交稿前熟悉的那条消息来了">交稿前，熟悉的那条消息来了</a><a class="toc-level-2" href="#s3">四、不会写代码，怎么把它用起来？</a><a class="toc-level-3" href="#你负责看结果也负责说不对">你负责看结果，也负责说“不对”</a><a class="toc-level-3" href="#为什么后来又有了表格和变量">为什么后来又有了表格和变量？</a><a class="toc-level-2" href="#s4">五、从做一次，到以后都能用</a><a class="toc-level-3" href="#第一件事别让我每次都喊再生成一次">第一件事：别让我每次都喊“再生成一次”</a><a class="toc-level-3" href="#第二件事别把文件变成最终版真的最终版">第二件事：别把文件变成“最终版真的最终版”</a><a class="toc-level-3" href="#第三件事同事去哪里拿海报">第三件事：同事去哪里拿海报？</a><a class="toc-level-3" href="#那以后在钉钉改价也会自己更新吗">那以后在钉钉改价，也会自己更新吗？</a><a class="toc-level-2" href="#s5">六、海报之外，GPT-6 Astra 还能接着做什么？</a><a class="toc-level-3" href="#从三张海报到一整场活动的物料">从三张海报，到一整场活动的物料</a><a class="toc-level-3" href="#从打印出来到让人打开就能看">从打印出来，到让人打开就能看</a><a class="toc-level-3" href="#从发出去到知道下一版该改什么">从发出去，到知道下一版该改什么</a><a class="toc-level-3" href="#今天先走哪一步">今天先走哪一步？</a><a class="toc-level-2" href="#s6">附录 1：跟着小林，从空文件夹做出一个海报工具</a><a class="toc-level-3" href="#打开空文件夹">1. 打开空文件夹</a><a class="toc-level-3" href="#提供资料先核对表格">2. 提供资料，先核对表格</a><a class="toc-level-3" href="#先做一张再扩展成三张">3. 先做一张，再扩展成三张</a><a class="toc-level-3" href="#做页面测试自动更新">4. 做页面，测试自动更新</a><a class="toc-level-3" href="#让工具说明状态并保留好文件">5. 让工具说明状态，并保留好文件</a><a class="toc-level-3" href="#本地确认后再放到钉钉">6. 本地确认后，再放到钉钉</a><a class="toc-level-2" href="#s7">附录 2：从 GitHub 找参考仓库，做成自己的工具</a><a class="toc-level-3" href="#先说要做什么再想搜什么">1. 先说要做什么，再想搜什么</a><a class="toc-level-3" href="#先看效果和说明不用先读代码">2. 先看效果和说明，不用先读代码</a><a class="toc-level-3" href="#把选中的仓库放到电脑上">3. 把选中的仓库放到电脑上</a><a class="toc-level-3" href="#先跑原来的例子别急着大改">4. 先跑原来的例子，别急着大改</a><a class="toc-level-3" href="#每次只改一个看得见的部分">5. 每次只改一个看得见的部分</a><a class="toc-level-3" href="#留下自己的版本下次接着用">6. 留下自己的版本，下次接着用</a></nav></aside><main><h1 id="产品运营部ai-使用知识分享">【产品运营部】AI 使用知识分享</h1>
 <blockquote>
-<p>让 Agent 写代码，把想法做成能用的工具。</p>
+<p>从一只会骑车的鹈鹕，到一个能帮你赶上交稿的小工具。</p>
 </blockquote>
-<h2 id="s0">一、用代码解决工作中的问题</h2>
-<p>周五下午，小林接到一个任务：给周末的露营市集做三张产品海报。资料已经有了，但名称、介绍、参数和价格散在表格里。负责人又补了一句：“活动价可能还会改。”</p>
-<p>如果只做这一次，逐张排版也能完成。可下次换产品、改价格，还要重复取数、改字、检查。小林想：能不能把这些重复步骤交给一个小工具？</p>
-<p>他不需要一开始就知道程序怎么写，先把手头的资料、想要的结果和不能出错的地方讲清楚。Agent 负责实现，小林负责看结果、提修改要求。</p>
+<h2 id="s0">一、GPT-6 到底能做到什么？</h2>
+<p>先不看参数表。我们给它出一道有点不正经的题：</p>
+<blockquote>
+<p>生成鹈鹕骑车的 HTML</p>
+</blockquote>
+<p>就这一句。提示词里没规定画风，没写分镜，也没告诉它鹈鹕的脚该怎么够到踏板。</p>
+<p>下面是这次分享选用的作品。试着按一下暂停，看看脚和踏板；再调调速度，或者按一下车铃。</p>
+<iframe src="06_动画示例/pelican-bike.html" title="鹈鹕海边骑行动画，可暂停、调速和按铃" loading="lazy" sandbox="allow-scripts" style="display:block;width:100%;height:780px;border:1px solid #e7e4de;border-radius:14px;background:#f7f4e9;">
+</iframe>
+<p><a href="06_动画示例/pelican-bike.html">单独打开动画</a> · <a href="04_参考资料/06_GPT-6-Astra.html">看看它是怎么做的</a></p>
+<p>如果你的第一反应是“这不就是一段动图吗”，可以再点一下暂停。</p>
+<p>它不是事先录好的视频，也不是循环播放的 GIF。这是一份 HTML 文件：鹈鹕、自行车和海边风景由代码画出来，脚、踏板和车轮由程序控制。你点按钮，程序就改变动作。</p>
+<p><strong>我们给的是一句话，拿到的是一件能打开、能操作、还能接着改的作品。</strong> 这才是今天值得往下聊的地方。</p>
+<h2 id="s1">二、厉害的不只是做出一个动画</h2>
+<p>一只鸟、一辆车，各画各的并不难理解。让鸟坐对位置、脚跟着踏板走、车轮跟着转，还能一起暂停，就不是“把几个东西摆在一张图上”了。</p>
+<p>你可以盯着这三个地方看：</p>
+<ul>
+<li><strong>脚有没有在骑？</strong> 腿部要跟着踏板的位置变化，而不是在车旁边随便晃。</li>
+<li><strong>画面有没有配合？</strong> 车轮转、围巾飘、背景移动，合在一起才像在海边骑行。</li>
+<li><strong>按钮是不是摆设？</strong> 暂停和调速要真的起作用，不只是画了一个漂亮界面。</li>
+</ul>
+<p>这份作品把画面、动作和交互放进了同一个程序。再往前走一步，我们还可以提修改：</p>
+<blockquote>
+<p>只把围巾改成蓝色，其他画面和动作不变。</p>
+</blockquote>
+<p>这句话看着简单，却多了一层要求：<strong>不光要会做，还要知道哪些能改、哪些要保留。</strong> 改完得重新打开看看，不能只听它说“已经完成”。</p>
+<h3 id="所以gpt-6-astra-的专长怎么理解">所以，GPT-6 Astra 的专长怎么理解？</h3>
+<p>按当前 Codex 的模型定位，Astra 适合复杂、高要求的任务，侧重推理与较难的编程。放到实际使用里，就是可以让它处理那些“要求好几条，还得一起成立”的工作：读懂已有资料，理清相互关系，写出实现，再根据运行结果继续修正。</p>
+<p>鹈鹕给了我们一个直观入口：从一句不完整的想法，补出画面、代码和交互。工作里则可能是“读对参数、保持样式、改一款不影响另外两款”。我们要观察的，不只是它写了多少代码，而是这些要求最后有没有一起做到。</p>
+<p>这里展示的是具体作品，不是“模型永远不会出错”的证明。模型定位的来源说明、实现细节和测试方法，放在 <a href="04_参考资料/06_GPT-6-Astra.html">GPT-6 Astra 引用稿</a>。</p>
+<h3 id="换个模型会骑成什么样">换个模型，会骑成什么样？</h3>
+<p>这也是一句很方便拿去试的提示词。给不同模型同一句话，保存各自的第一次结果，打开看看：认得出是鹈鹕吗？车能看吗？文件能运行吗？如果做了动画，动作顺不顺？</p>
+<p>尽量用相同工具、全新对话和相同尝试次数；追加修改时，也给同一个要求。暂停、调速和车铃不是原题要求，是这份作品里可以观察的额外设计。</p>
+<p>目前这里没有多模型实测排名。一道题看不出所有能力，但足够让我们从“听说很厉害”，变成“我亲自试过它怎么做”。</p>
+<h2 id="s2">三、放到工作里，能替我们做什么？</h2>
+<p>做出一只会骑车的鹈鹕很有意思。但对我们来说，更重要的问题是：<strong>同样的能力，能不能用来完成明天要交的工作？</strong></p>
+<p>周五下午，小林收到一条消息：</p>
+<blockquote>
+<p>明天露营市集，三款产品各做一张小海报。要有介绍、参数、活动价，风格统一，但别长得一模一样。</p>
+</blockquote>
+<p>过了一会儿，又来一条：</p>
+<blockquote>
+<p>价格可能还要改。</p>
+</blockquote>
+<p>小林看了一眼表格，又看了一眼时间。他需要的显然不只是一张漂亮图片——参数要对，三张要成套，临时改价还得来得及。</p>
+<p>先看这个案例最后做出的东西：</p>
 <figure>
-<img src="配图/00-概览-q版.png" alt="从一个需求，变成一套能再用的做法：说清要求、Agent 实现、核对结果、留着复用" />
-<figcaption aria-hidden="true">从一个需求，变成一套能再用的做法：说清要求、Agent 实现、核对结果、留着复用</figcaption>
+<img src="05_露营海报/evidence/13-posters-browser.png" alt="真实工作台截图：三张共享风格、不同排版的 LaTeX 海报" />
+<figcaption aria-hidden="true">真实工作台截图：三张共享风格、不同排版的 LaTeX 海报</figcaption>
 </figure>
-<p>今天就跟着小林做这件事。每次先看一个结果，再理解它背后的做法，最后试一个小改动。不要求记住所有命令。</p>
-<p><strong>先想一下：</strong> 你的工作里，哪件事总是“换一份资料，再做一遍”？先选一个具体动作，不急着设计完整系统。</p>
-<h2 id="s1">二、从需求到实现</h2>
-<p>先看小林想得到什么：三张带 Q 版插画、介绍、参数和价格的海报。它们看起来属于同一个系列，但排版不同，既能打印，也能发给同事。</p>
-<figure>
-<img src="05_露营海报/evidence/13-posters-browser.png" alt="真实工作台截图：三张不同排版的 LaTeX 海报" />
-<figcaption aria-hidden="true">真实工作台截图：三张不同排版的 LaTeX 海报</figcaption>
-</figure>
-<p>这是本案例实际生成的预览：三份 A5 单页 PDF，分别使用大图、图文分栏和参数卡片排版。PDF 用 LaTeX 制作；插画是生成素材，文字和参数另行排版，不画死在图片里。</p>
-<p>“小野 300 / 500 / 1000”及其参数、价格、插画均为教学虚构资料，不是真实销售资料。</p>
-<p><a href="05_露营海报/index.html">打开三款成品和案例素材</a></p>
-<h3 id="怎样开始">怎样开始</h3>
-<p>小林用已经安装并登录的 Codex 或 Claude Code 打开一个<strong>空文件夹</strong>，把资料交给 Agent，先提一个小要求：</p>
-<p><strong>对 Agent 说：</strong></p>
+<p>三份 A5 单页 PDF：小野 300 用大图，小野 500 用图文分栏，小野 1000 用参数卡片。颜色、字体和组件样式共用，布局各有各的样子。</p>
+<p>插画是生成素材，介绍、参数和价格则用 LaTeX 单独排版。这样改价格时，不需要让 AI 再画一张“数字差不多”的图。</p>
+<p>本案例的“小野 300 / 500 / 1000”、参数、价格和插画都明确用于教学，不是真实销售资料。<a href="05_露营海报/index.html">打开三款海报和案例素材</a>。</p>
+<h3 id="交稿前熟悉的那条消息来了">交稿前，熟悉的那条消息来了</h3>
+<blockquote>
+<p>小野 500 改成 899，另外两款不动。</p>
+</blockquote>
+<p>这次小林在本地页面把 999 改成 899，点保存，然后停手。没有再发“帮我重新生成”。</p>
+<p>后台发现变化后，只重做了小野 500。打开新 PDF，价格已经是 899；另外两款文件保持不变。</p>
+<p><a href="05_露营海报/evidence/10-three-layouts-before.png">改价前的真实截图</a> · <a href="05_露营海报/evidence/11-three-layouts-saved.png">保存后</a> · <a href="05_露营海报/evidence/12-three-layouts-after.png">自动更新完成</a></p>
+<p>这比“AI 帮我做了三张海报”多了一点东西：<strong>它帮小林做出了一套以后还能继续用的办法。</strong> 下次改资料，不必重新从排版开始。</p>
+<p>不过，保存成功和海报更新成功是两件事。案例核验了新 PDF 和另外两款文件，记录在 <a href="05_露营海报/evidence/acceptance.json">验收结果</a>；不是只看页面上的数字变了就算完成。</p>
+<h2 id="s3">四、不会写代码，怎么把它用起来？</h2>
+<p>别被刚才的结果吓住。小林开头并没有说：“请给我设计一个包含变量替换、组件化排版和增量构建的系统。”</p>
+<p>他打开的只是一个<strong>空文件夹</strong>。</p>
+<p>用已经安装并登录的 Codex 或 Claude Code 打开它，把资料交给 Agent，然后说：</p>
 <blockquote>
 <p>帮我做一张小野 300 的产品海报，放上介绍、参数、价格和这张插画，PDF 用 LaTeX 制作。先把预览打开给我看。资料缺了就问我，不要猜，也先不要上传钉钉。</p>
 </blockquote>
-<p>先做一张，是为了尽早看见结果：参数是否对应、字是否清楚、插画是否放对。第一张确认后，再增加另外两款。</p>
-<p><strong>讲一点：资料为什么要整理成表？</strong></p>
-<p>小林不想每次都重新交代一遍产品资料，所以把它们整理成两张表：产品表放参数和价格，内容表放介绍。两张表用同一个型号对应起来。本地保存成 CSV——一种简单的表格文件。</p>
+<p>先要一张，不是因为只能做一张，而是这样最容易看出自己到底想要什么。</p>
 <figure>
-<img src="05_露营海报/evidence/18-dingtalk-product-table.png" alt="钉钉多维表真实截图：三个教学虚构型号的产品参数、介绍模板和变量" />
-<figcaption aria-hidden="true">钉钉多维表真实截图：三个教学虚构型号的产品参数、介绍模板和变量</figcaption>
+<img src="配图/00-概览-q版.png" alt="从一个需求到一套能再用的做法：说清要求、Agent 实现、核对结果、留着复用" />
+<figcaption aria-hidden="true">从一个需求到一套能再用的做法：说清要求、Agent 实现、核对结果、留着复用</figcaption>
 </figure>
-<p><a href="https://alidocs.dingtalk.com/i/nodes/oP0MALyR8k75ewkwSDQoEkxn83bzYmDO?entrance=data&amp;sheetId=e84ttux">打开钉钉多维表：产品与海报</a></p>
-<p>这是整理后放到钉钉的教学表；开始做本地工具时，还不需要连接钉钉。</p>
-<p>比如产品表里写“小野 500，512 Wh”，介绍模板里写：</p>
+<h3 id="你负责看结果也负责说不对">你负责看结果，也负责说“不对”</h3>
+<p>第一张出来后，小林说：“方向对，但三张都这样排，有点像复制粘贴。”</p>
+<p>于是接着提：</p>
+<blockquote>
+<p>300 保留大图；500 改成图片在左、参数在右；1000 用三张参数卡片。三张只共享颜色、字体和组件样式，布局要不同，不要修改产品数据。</p>
+</blockquote>
+<p><strong>共享样式，不等于共享排版。</strong> 就像同一套积木，可以搭出不同的东西。共同的颜色和字体放在一处管理，每张海报决定自己的摆法。这种组织方式借鉴了 Auto-Manual，没有照搬说明书的外观。</p>
+<p>你不用先会写布局文件，也能判断：数字有没有错？文字是不是挤了？三张像不像一个系列？</p>
+<p>发现问题，就截下真实结果，具体地说：</p>
+<blockquote>
+<p>小野 500 的介绍挤到价格上了。请调整间距，保留现在的左右分栏，另外两张不动。改好后再打开给我看。</p>
+</blockquote>
+<p>这就是修改与调试的起点。本次制作也遇到过字体不可用、编译失败，修正配置后才生成成功。报错不是故事的结尾，是下一次修改的线索。</p>
+<h3 id="为什么后来又有了表格和变量">为什么后来又有了表格和变量？</h3>
+<p>因为小林不想下次换产品时，还得重新打一遍所有资料。</p>
+<p>于是产品表放名称、参数和价格，内容表放介绍模板，用型号把两边对应起来。本地以 CSV 保存，整理后也放进了钉钉教学表：</p>
+<figure>
+<img src="05_露营海报/evidence/18-dingtalk-product-table.png" alt="钉钉多维表真实截图：教学型号的产品参数、介绍模板与变量" />
+<figcaption aria-hidden="true">钉钉多维表真实截图：教学型号的产品参数、介绍模板与变量</figcaption>
+</figure>
+<p><a href="https://alidocs.dingtalk.com/i/nodes/oP0MALyR8k75ewkwSDQoEkxn83bzYmDO?entrance=data&amp;sheetId=e84ttux">打开钉钉教学表：产品与海报</a></p>
+<p>比如介绍模板留两个空位：</p>
 <blockquote>
 <p>{{product_name}} 的 {{capacity_wh}} Wh 教学容量</p>
 </blockquote>
-<p>程序按型号找到对应资料，填好后就变成：</p>
+<p>程序按型号查表，填出来就是：</p>
 <blockquote>
 <p>小野 500 的 512 Wh 教学容量</p>
 </blockquote>
-<p>大括号里的部分是<strong>变量标记</strong>：位置固定，内容从资料中取，不由 AI 临时猜。先核对这一句，理解后再看整个流程：</p>
+<p>大括号是变量标记。你可以把它理解成“这里请填表格里的值”，不是“这里请 AI 自由发挥”。</p>
 <figure>
-<img src="配图/01-场景-露营海报-q版.png" alt="露营海报流程示意：产品 CSV、内容 CSV 和 Q 版插画经过查表与变量替换，生成共享样式、不同排版的三款 PDF" />
-<figcaption aria-hidden="true">露营海报流程示意：产品 CSV、内容 CSV 和 Q 版插画经过查表与变量替换，生成共享样式、不同排版的三款 PDF</figcaption>
+<img src="配图/01-场景-露营海报-q版.png" alt="露营海报流程示意：产品 CSV、内容 CSV 和插画经过查表与变量替换，生成共享样式、不同排版的 PDF" />
+<figcaption aria-hidden="true">露营海报流程示意：产品 CSV、内容 CSV 和插画经过查表与变量替换，生成共享样式、不同排版的 PDF</figcaption>
 </figure>
-<p><strong>你也试一下：</strong> 让 Agent 在测试副本里改一项容量，再生成一句介绍。看数字是否跟着变化，产品名是否仍然对应。这里先手动要求生成，不代表已经实现自动更新。</p>
-<p>想看看变量怎样写成代码，可以打开 <a href="03_GitHub原例/阅读版.html">the craft of selfteaching：一句产品介绍的小练习</a>。本例模板标记与 Python 写法不同，引用稿里有对照说明。</p>
-<h2 id="s2">三、修改与调试</h2>
-<p>第一张能看了，小林才发现：“三张都用一个版式，摆在一起有点单调。”</p>
-<p><strong>对 Agent 说：</strong></p>
-<blockquote>
-<p>小野 300 保留大图；500 改成图片在左、参数在右；1000 改成下面三张参数卡片。三张只共享颜色、字体和组件样式，布局要不同，不要修改产品数据。</p>
-</blockquote>
-<p><strong>看结果：</strong> 打开 <a href="05_露营海报/index.html">三款海报</a>，先看排版是否不同，再看数字有没有被一起改掉。小野 500 应仍是 512 Wh、500 W、5.2 kg，每份 PDF 都应只有一页。</p>
-<p><strong>讲一点：共享样式，不等于共享排版。</strong></p>
-<p>可以把颜色、字体和价格条的样式理解成一套公共零件。三张海报用同一套零件，却可以摆在不同位置。以后要换品牌色，就修改公共样式；只想调整小野 500 的图文位置，就改它的布局。</p>
-<p>小林不必先学会所有文件的写法。对着成品，他可以继续问：</p>
-<blockquote>
-<p>为什么修改 500 的分栏，不会把另外两张也改掉？请指出对应文件，只讲这一次改动涉及的部分。</p>
-</blockquote>
-<p><strong>你也试一下：</strong> 只把一张海报的介绍字号调大，其他内容不变。打开结果，看看有没有溢出、截断。不好看就截下问题，告诉 Agent 哪里不对，让它继续改。</p>
-<p>这就是调试：提出一个改动，运行，看结果，再定位问题。本次制作也遇到过字体不可用导致编译失败，修正配置后才生成成功。出错并不奇怪，重要的是能展示问题和修正后的结果。</p>
-<p><a href="04_参考资料/02_代码怎样工作.html">想看代码怎样配合</a> · <a href="05_露营海报/README.html">需要时再查文件分工和运行说明</a></p>
-<h2 id="s3">四、复用与维护</h2>
-<p>海报做完，负责人通知：“小野 500 从 999 改成 899，另外两款不动。”</p>
-<p>小林这次想省掉反复发“重新生成”的步骤。</p>
-<p><strong>对 Agent 说：</strong></p>
+<p>先有“下次能不能少做一遍”的需求，再遇见表格、变量和组件，不必反过来先背完一套术语。</p>
+<p><a href="03_GitHub原例/阅读版.html">想看变量的小练习</a> · <a href="04_参考资料/02_代码怎样工作.html">想知道代码怎样配合</a></p>
+<h2 id="s4">五、从做一次，到以后都能用</h2>
+<p>能做出海报之后，小林才继续加要求。不是一次提得越多越好，而是每加一项，都能试一试到底有没有用。</p>
+<h3 id="第一件事别让我每次都喊再生成一次">第一件事：别让我每次都喊“再生成一次”</h3>
 <blockquote>
 <p>让我在本地页面改价格。保存后，工具自己发现变化，只更新受影响的海报。告诉我哪款更新成功、最近改了什么；失败时保留上一次成功的文件。</p>
 </blockquote>
-<p><strong>实际结果：</strong></p>
-<div class="table-scroll"><table>
-<thead>
-<tr>
-<th>产品</th>
-<th>修改前价格</th>
-<th>修改后价格</th>
-<th>海报结果</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>小野 300</td>
-<td>599 元</td>
-<td>599 元</td>
-<td>文件不变</td>
-</tr>
-<tr>
-<td>小野 500</td>
-<td>999 元</td>
-<td>899 元</td>
-<td>新 PDF 显示 899</td>
-</tr>
-<tr>
-<td>小野 1000</td>
-<td>1599 元</td>
-<td>1599 元</td>
-<td>文件不变</td>
-</tr>
-</tbody>
-</table></div>
-<p><a href="05_露营海报/evidence/10-three-layouts-before.png">改价前</a> · <a href="05_露营海报/evidence/11-three-layouts-saved.png">保存后</a> · <a href="05_露营海报/evidence/12-three-layouts-after.png">自动更新完成</a></p>
-<p>上面是已有演示的真实截图，文件核验见 <a href="05_露营海报/evidence/acceptance.json">验收记录</a>。</p>
-<p><strong>讲一点：保存数据，不等于海报已经更新。</strong></p>
-<p>背后还需要程序持续检查变化、重新生成文件，再记录结果。所以不能只看到网页上的价格变了，就认为完成了；还要打开新 PDF，核对另外两张是否不受影响。</p>
-<p><strong>你也试一下：</strong> 在本地工作台只改小野 500 的价格，保存后不要再发生成指令。等状态显示成功，再打开 PDF。素材包已经是 899；复现这次演示时，先改回 999 并等生成成功，再改到 899。</p>
-<p>目前自动更新只在本地服务运行、电脑唤醒时有效。钉钉端的持续触发和附件自动更新尚未实现。</p>
-<p>下次换一批产品时，整理好的表格格式、样式和代码还可以复用。小林只需交代变化的部分，再做同样的核对，不必重新描述整个工具。</p>
-<p><a href="04_参考资料/03_整理输入资料.html">资料和要求怎样留给下次用</a></p>
-<h2 id="s4">五、GitHub：借鉴项目与版本管理</h2>
-<p>工具能用了，小林有两个新问题：“不懂的地方去哪儿学？”“改坏了怎么找回上一版？”</p>
-<p><strong>先借鉴一个小做法。</strong></p>
-<p>GitHub 上既有可运行的项目，也有学习资料。例如 <a href="https://github.com/selfteaching/the-craft-of-selfteaching">the craft of selfteaching</a>，可以从目录里找到“字符串”，结合刚才的变量练习读一小节，再运行和修改代码。</p>
-<p>它是学习资料，不是现成的海报生成器。露营海报的数据、样式、组件和布局分开维护，则借鉴了 Auto-Manual 的组织方式，没有照搬说明书的外观或接入正式生产链。借鉴前要看清项目用途和许可。</p>
-<p><strong>你也试一下：</strong> 打开 <a href="03_GitHub原例/阅读版.html">一句产品介绍的小练习</a>，先运行一次，再只改价格。不懂的地方，让 Agent 结合这次输出解释，不急着把整本书看完。</p>
-<p><strong>再留下一份可用版本。</strong></p>
-<p>小林确认三张海报都能生成后，可以用 Git 保存一个版本。改动后再看差异，知道哪些文件变了，也方便找回修改前的内容。GitHub Desktop 提供图形界面，不必先背命令。</p>
-<p><strong>对 Agent 说：</strong></p>
+<p>第三节的改价演示，就是这一步的结果。程序持续检查资料变化，生成后记录版本和状态。电脑要保持唤醒，本地服务也要运行；关掉服务，它不会自己继续工作。</p>
+<p>想亲手复现，素材包里的小野 500 已是 899：先在本地改回 999、等生成成功，再改成 899。保存后不要追加生成指令，等状态成功，再打开 PDF 检查。</p>
+<p>启动工具时，也不必先背命令。可以直接让有终端工具的 Agent “启动工作台、打开页面，并告诉我用完怎么关闭”。它通过命令调用程序，这种入口叫 <strong>CLI</strong>。<a href="05_露营海报/README.html">具体运行说明</a> 留着需要时查。</p>
+<h3 id="第二件事别把文件变成最终版真的最终版">第二件事：别把文件变成“最终版真的最终版”</h3>
+<p>确认三张海报都能用了，就留一个存档点。下次改坏了，至少知道上一版长什么样。</p>
+<p>这件事由 <strong>Git</strong> 管：在本机记录文件版本、查看改动。需要同步和协作时，再推送到 <strong>GitHub</strong>；也可以用 GitHub Desktop 的按钮操作。</p>
 <blockquote>
-<p>帮我查看这次改动，确认没有把账号信息或临时文件放进去。先展示差异，等我确认后再保存一个版本，说明这次做成了什么。</p>
+<p>帮我查看这次改动，确认没有账号信息或临时文件。先展示差异，等我确认后再保存一个版本，说明这次做成了什么。</p>
 </blockquote>
-<p>Git 在本机记录版本；需要多台电脑同步或与人协作时，再推送到 GitHub。保存本地版本和上传到远端，是两件事。</p>
-<p><a href="04_参考资料/04_GitHub.html">GitHub 实践：找项目、下载和保存版本</a></p>
-<h2 id="s5">六、让 Agent 调用更多工具：CLI 与 MCP</h2>
-<p>最后，小林想让同事在钉钉的产品表里直接拿到海报。此前 Agent 已经能操作本地文件，现在还要连接工作软件。</p>
-<p>先看两个具体动作，再认识它们的名字。</p>
-<h3 id="cli通过命令调用工具">CLI：通过命令调用工具</h3>
-<p><strong>对 Agent 说：</strong></p>
-<blockquote>
-<p>把本地海报工作台启动起来，打开页面给我看，再告诉我用完怎么关闭。</p>
-</blockquote>
-<p>有终端访问能力的 Agent，可以调用现成程序来完成这件事。这类通过命令调用工具的方式，叫 CLI（命令行接口）。</p>
-<p><strong>看结果：</strong> 页面真的打开、产品资料能显示、海报能查看。运行命令本身不是完成标志。</p>
-<p>检查文件改动也一样：GitHub Desktop 可以点开看，Agent 也可以运行 <code>git status</code>。使用的是同一个工具的不同入口。具体启动命令放在 <a href="05_露营海报/README.html">运行说明</a>，需要时再查。</p>
-<h3 id="mcp连接工具和资料">MCP：连接工具和资料</h3>
-<p><strong>对 Agent 说：</strong></p>
+<p>Git 不会自动记住每次修改，确认能用时要主动存一版。<a href="04_参考资料/04_GitHub.html">版本管理的图解步骤</a> · <a href="04_参考资料/03_整理输入资料.html">下次还用得上的资料怎么整理</a>。</p>
+<h3 id="第三件事同事去哪里拿海报">第三件事：同事去哪里拿海报？</h3>
+<p>小林不想在群里反复发附件。同事本来就在钉钉查产品，那就把海报放回对应的产品行。</p>
+<p>接好钉钉 <strong>MCP</strong> 后，Agent 可以调用服务提供的工具，在账号权限和工具支持范围内读表、写表、上传附件。你给目标位置和要求，不用自己先找字段 ID、记录 ID：</p>
 <blockquote>
 <p>把三款最终海报的 PNG 和 PDF，按型号放到教学表对应行。不要覆盖其他字段。完成后重新读取这三行，检查型号与附件是否对应。</p>
 </blockquote>
-<p>接好钉钉 MCP 后，Agent 可以调用服务提供的读表、写表或上传功能，在账号权限和工具支持范围内完成操作。小林提供目标位置与要求，不需要先找到字段 ID、记录 ID。</p>
-<p><strong>实际结果：</strong> 本案例已建立三条虚构产品记录，上传三张 PNG 和三份 PDF，并回读核对。打开 <a href="https://alidocs.dingtalk.com/i/nodes/oP0MALyR8k75ewkwSDQoEkxn83bzYmDO?entrance=data&amp;sheetId=e84ttux">教学表</a>，就能从对应产品行查找附件。</p>
-<p><strong>你也核对一下：</strong> 点开小野 500 的附件，看产品名和价格是否正确，再检查另外两款。后续要自己练习，先复制成测试表，不在这张教学表里随意改数据。</p>
-<p>CLI 和 MCP 都能让 Agent 使用已有工具：前者常通过命令调用，后者按服务约定连接工具与资料；一个任务可以同时用到两者。</p>
-<p>小林下一步还想“钉钉改了资料，海报和附件也自己更新”。这仍需持续运行的服务或触发机制，以及失败处理。<strong>接好 MCP、完成一次上传，不等于开启了自动化。</strong> 目前钉钉端的成功版本、成功时间也尚未接入自动回写。</p>
-<p><a href="04_参考资料/05_钉钉MCP.html">钉钉 MCP 连接与操作说明</a> · <a href="https://modelcontextprotocol.io/docs/getting-started/intro">MCP 官方说明</a></p>
-<h2 id="s6">附录：跟着小林，从空文件夹做出一个海报工具</h2>
+<p>本案例已经完成这次上传：三张 PNG、三份 PDF，按型号放好并回读核对。可以到 <a href="https://alidocs.dingtalk.com/i/nodes/oP0MALyR8k75ewkwSDQoEkxn83bzYmDO?entrance=data&amp;sheetId=e84ttux">教学表</a> 点开查看；要自己改数据，请先复制测试表。</p>
+<p>CLI 和 MCP 都是让 Agent 使用工具的入口。模型更强，不代表自动有账号权限；连接成功，也不代表任务已经完成。<a href="04_参考资料/05_钉钉MCP.html">钉钉 MCP 连接与操作说明</a>。</p>
+<h3 id="那以后在钉钉改价也会自己更新吗">那以后在钉钉改价，也会自己更新吗？</h3>
+<p>这是小林想做的下一步，<strong>本案例还没有接通</strong>。目前跑通的是本地自动生成，以及钉钉的一次上传；钉钉变化触发、附件自动替换、成功版本与时间自动回写，仍需持续服务和实际验证。</p>
+<p>边界说清楚，就知道下一步该验什么：在测试表改一款资料，不再发指令，看看新海报和对应附件能不能自己更新，失败时旧文件还在不在。一次上传成功，不能代替这个测试。</p>
+<h2 id="s5">六、海报之外，GPT-6 Astra 还能接着做什么？</h2>
+<p>周末市集结束，小林以为这个工具可以收起来了。周一，同事看过海报，问了三个问题：</p>
+<blockquote>
+<p>下次上十款产品，也能这样做吗？</p>
+<p>不去现场的人，能不能在手机上看？</p>
+<p>顾客问得最多的问题，能不能补进下一版介绍？</p>
+</blockquote>
+<p>这时，海报就不只是海报了。它成了一个起点：已经有整理好的资料、有能复用的样式，也有可以继续修改的程序。接下来，不必换一个大而空的目标，顺着这三个问题往前走就好。</p>
+<p>下面是可以继续尝试的延伸场景，不是本案例已经完成的功能。</p>
+<h3 id="从三张海报到一整场活动的物料">从三张海报，到一整场活动的物料</h3>
+<p>十款产品，不只是把“生成三次”改成“生成十次”。有的产品名很长，有的缺图，有的没有活动价；同一个价格又可能同时出现在海报、价签和销售介绍卡上。</p>
+<p>小林可以接着说：</p>
+<blockquote>
+<p>仍用这份产品表，为下次活动做海报、桌面价签和销售介绍卡。共用品牌风格，各自排版。缺资料的先列出来，不要编；先拿两款差别最大的产品试做，我确认后再批量生成。</p>
+</blockquote>
+<p>要挑战的能力从“做出一页”变成了“让一批不同的东西都做对”：资料怎么对应、样式怎么复用、长文字怎么处理、哪些产品应该暂停生成。这类多条件配合的任务，正适合拿来尝试 Astra 的推理与编程能力。</p>
+<h3 id="从打印出来到让人打开就能看">从打印出来，到让人打开就能看</h3>
+<p>再往前一步，小林想给没来现场的同事发一个链接，而不是六个附件。</p>
+<blockquote>
+<p>用同一份资料做一个手机上也好看的产品展示页，能按使用场景筛选、对比参数、下载海报。先在本地打开给我看，确认后再决定放到哪里。</p>
+</blockquote>
+<p>还记得开头的鹈鹕吗？当时 HTML 里是车轮、踏板和按钮；这里换成了产品卡片、筛选和下载。同样是把想法变成可操作的页面，只是从“好玩”走到了“有用”。</p>
+<p>这里要检查的也更具体：筛选有没有漏产品，参数有没有串行，手机上按钮能不能点。页面做出来之后，还要单独安排托管，才能真的把链接发给别人。</p>
+<h3 id="从发出去到知道下一版该改什么">从发出去，到知道下一版该改什么</h3>
+<p>活动结束，大家问得最多的可能不是参数，而是“我这种使用场景，该看哪一款？”小林不想让这些问题散在聊天记录里。</p>
+<blockquote>
+<p>在展示页上增加自愿反馈入口，只收集问题和使用场景。把反馈整理回测试表，归纳常见问题，给出介绍文案的修改建议。不要自动改产品参数；我确认文案后，再更新相关物料。</p>
+</blockquote>
+<p>这一步就不只是生成内容了：要连接页面、表格和反馈，分清“顾客说了什么”和“产品事实是什么”，还要决定哪里自动做、哪里停下来等人确认。真正开放使用前，需要验证接收服务、权限和隐私说明。</p>
+<p><strong>任务升级了，对模型的要求也升级了。</strong> 从一句提示词做动画，到一份表批量生成物料，再到多个工具之间的协作——值得期待的是它能否理解更多关联、处理例外、修改后不破坏原来的功能，而不是单纯一次写更多代码。</p>
+<p>这也回到了开头“GPT-6 到底有多厉害”的问题。鹈鹕让我们看到一个直观的作品；海报让我们验证一件工作；后面的延伸，则可以成为继续检验 Astra 的题目。强不强，最终看它能不能把这些具体要求做成、运行起来，并经得起修改。</p>
+<h3 id="今天先走哪一步">今天先走哪一步？</h3>
+<p>如果你只是好奇“GPT-6 到底有多厉害”，现在就把这句话发给它：</p>
+<blockquote>
+<p>生成鹈鹕骑车的 HTML</p>
+</blockquote>
+<p>打开作品，点一点，再提一个小修改。别只看它的回答，看它交出来的东西。</p>
+<p>如果你已经想到工作里的一件烦心事，那就换个开头：</p>
+<blockquote>
+<p>我每次都要把这份资料整理成这个结果。请先帮我做最小的一版，打开给我看；我确认后，再考虑批量和自动更新。</p>
+</blockquote>
+<p>先选一件小事：一张海报、一页产品介绍，或者一批文件重命名。做完一次，再问“下次哪些步骤可以不用重做”。</p>
+<p>不会写代码，也可以从这里开始；但核对内容、判断好坏、确认能不能交出去，仍然需要你。</p>
+<p>想多懂一点原理，可以读 <a href="https://github.com/selfteaching/the-craft-of-selfteaching">the craft of selfteaching</a>。它不是海报生成器，而是一份适合边学边试的学习资料。本分享另做了 <a href="03_GitHub原例/阅读版.html">一句产品介绍的小练习</a>：运行一次，只改价格，再看输出，先弄明白一个小变化。</p>
+<p><strong>今天不必带走一整套编程知识。带走一个能用的小结果，再知道怎么让它变好，就已经开始了。</strong></p>
+<h2 id="s6">附录 1：跟着小林，从空文件夹做出一个海报工具</h2>
 <p>准备一台电脑、已登录的 Codex 或 Claude Code，以及一个空文件夹。下面涉及的产品资料仅用于教学；需要安装软件时，先让 Agent 解释用途，再确认。</p>
 <h3 id="打开空文件夹">1. 打开空文件夹</h3>
 <p><strong>对 Agent 说：</strong></p>
@@ -264,4 +299,57 @@ main a{color:#50504d;text-decoration-color:#b6b6b0;text-decoration-thickness:1px
 <p>这一步是后续扩展，本案例尚未跑通。验收时必须实际改一款数据，确认文件和附件自行更新，不能用一次人工上传代替。</p>
 <p><a href="04_参考资料/01_完整练习.html">完整练习</a> · <a href="05_露营海报/README.html">技术与运行说明</a> · <a href="05_露营海报/演示脚本.html">现场演示脚本</a> · <a href="05_露营海报/素材清单.html">真实截图与素材清单</a></p>
 <p>从一个小结果开始：先做出来，看清它怎么工作，再改成自己需要的样子。</p>
+<h2 id="s7">附录 2：从 GitHub 找参考仓库，做成自己的工具</h2>
+<p>小林准备给海报工具加一个产品展示页。正想从头描述，同事提醒他：“这种东西，可能已经有人做过了。”</p>
+<p>不用每次都从空文件夹开始。另一条入口是：<strong>找到一个接近需求的项目，先跑起来，再改成自己的。</strong> GitHub 上存放项目文件的地方叫“仓库”，可以把它理解成带说明书的工具材料包。</p>
+<h3 id="先说要做什么再想搜什么">1. 先说要做什么，再想搜什么</h3>
+<p>小林想找的不是“厉害的 AI 项目”，而是“能展示产品、筛选、下载海报的网页”。功能越具体，越容易找到可以借鉴的东西。</p>
+<p>打开 <a href="https://github.com/">GitHub</a>，试着搜 <code>product catalog</code>（产品目录）、<code>product showcase</code>（产品展示）。如果要找海报生成工具，可以试 <code>poster generator</code>；找批量文档工具，可以试 <code>document generation</code>。先搜最想解决的一个功能，不必把所有要求塞进搜索框。</p>
+<p>也可以把需求交给能联网的 Agent：</p>
+<blockquote>
+<p>我想用产品表和图片做一个展示页，能按场景筛选、查看参数、下载海报。请在 GitHub 找 3 个接近的参考仓库，给我实际查到的链接、效果示例和简单比较。优先选说明清楚、能在本地试用的小项目，先不要下载运行。</p>
+</blockquote>
+<p><strong>这一步的结果：</strong> 得到几个能打开的仓库链接，知道各自哪里接近自己的需求，而不是收集一长串看不懂的项目名字。</p>
+<h3 id="先看效果和说明不用先读代码">2. 先看效果和说明，不用先读代码</h3>
+<p>打开候选仓库，先看截图或演示，再看 <code>README</code>（使用说明）。小林关心四件事：它现在能做什么；自己的电脑能不能运行；需要账号、付费服务或额外软件吗；能否按许可证要求修改和使用。</p>
+<p>看不懂，就把链接交给 Agent：</p>
+<blockquote>
+<p>请读这个仓库的说明和 LICENSE，用小白能听懂的话告诉我：哪些功能已经有，哪些还需要改，运行起来要准备什么。有没有必须联网或上传数据的地方？先给我建议，不执行安装命令。</p>
+</blockquote>
+<p><code>LICENSE</code> 是使用许可。公开能看见，不等于可以任意复制、修改和发布；没找到许可时，先确认，不急着搬代码。Star 多可以作为线索，但不能代替“适不适合我”。</p>
+<p><strong>这一步的结果：</strong> 选出一个小而接近的项目，讲得清“借它什么、自己改什么”。学习资料和成品工具也要分开：比如 <a href="https://github.com/selfteaching/the-craft-of-selfteaching">the craft of selfteaching</a> 适合学习，不是现成的海报生成器。</p>
+<h3 id="把选中的仓库放到电脑上">3. 把选中的仓库放到电脑上</h3>
+<p>偶尔试一次，可以在仓库页面点 <strong>Code → Download ZIP</strong>，下载后解压到单独文件夹。不要只打开其中一段代码，要让 Agent 看到整个项目及其说明。</p>
+<p>准备持续修改，建议用 <a href="https://desktop.github.com/">GitHub Desktop</a>：安装后选择 <strong>File → Clone Repository → URL</strong>，粘贴仓库网址，选保存位置，再点 <strong>Clone</strong>。这就是把仓库下载到本机，同时保留版本历史。</p>
+<p>先在本地试用，不必先 Fork。以后想把改造版放到自己账号，再按项目许可决定是否 Fork——也就是在 GitHub 上建立自己的仓库副本。</p>
+<figure>
+<img src="配图/06-GitHub-q版.png" alt="从 GitHub 找项目、下载试用、逐步修改，再保存可用版本" />
+<figcaption aria-hidden="true">从 GitHub 找项目、下载试用、逐步修改，再保存可用版本</figcaption>
+</figure>
+<h3 id="先跑原来的例子别急着大改">4. 先跑原来的例子，别急着大改</h3>
+<p>用 Codex 或 Claude Code 打开项目文件夹，对 Agent 说：</p>
+<blockquote>
+<p>先读这个项目的 README，帮我检查运行条件。需要安装软件或执行下载脚本，先解释用途，等我确认。用项目自带的示例资料在本地运行，打开给我看；先不要修改功能，也不要连接公司账号或上传业务资料。</p>
+</blockquote>
+<p>如果报错，把实际报错交给它继续排查。先用示例数据，不把密码、客户资料塞进去“试试看”。</p>
+<p><strong>这一步的结果：</strong> 原项目在自己的电脑上能运行，知道怎么打开、怎么关闭。下载到文件夹，只算拿到了材料，还不算工具已经能用。</p>
+<h3 id="每次只改一个看得见的部分">5. 每次只改一个看得见的部分</h3>
+<p>小林先不提“接钉钉、自动更新、收集反馈”，只换一张产品卡：</p>
+<blockquote>
+<p>把示例中的一张产品卡换成小野 500 的教学资料和图片，保留现有布局、筛选和按钮。请先说明需要改哪些文件，再修改并打开结果给我看。资料缺了就问，不要猜。</p>
+</blockquote>
+<p>确认产品名、参数和图片都对应后，再提下一步：</p>
+<blockquote>
+<p>把另外两款也接进来，数据统一从产品表读取。每张卡的下载按钮要对应自己的海报，别把三款都指向同一份文件。</p>
+</blockquote>
+<p>亲自点开三款产品，试一次筛选，再分别下载。做对一小步，再加下一项功能；发现问题，就告诉 Agent 哪个操作、哪里不对、期望怎样。</p>
+<p><strong>这一步的结果：</strong> 不只是换了个标题，而是拿自己的资料，真正完成了一次需要的操作。</p>
+<h3 id="留下自己的版本下次接着用">6. 留下自己的版本，下次接着用</h3>
+<p>改好后，让 Agent 留一份简短说明：</p>
+<blockquote>
+<p>请写清楚怎么启动和关闭、在哪里换产品资料和图片、怎么检查下载文件。保留原项目的来源、许可证和署名要求，并说明我们改了哪些功能。然后展示本次差异，等我确认后，用 Git 保存一个能用的版本。</p>
+</blockquote>
+<p>用 GitHub Desktop 可以查看 <strong>Changes</strong>，确认改动后填写说明、点击 <strong>Commit</strong>。如果最初下载的是 ZIP，先让 Agent 帮忙初始化本地 Git 仓库。需要同步或分享时，再决定是否上传；不要把密钥和未经授权的业务资料一起传上去。</p>
+<p><a href="04_参考资料/04_GitHub.html">GitHub 下载、版本保存和推送的详细图解</a></p>
+<p>从空文件夹开始，是把需求交给 Agent 实现；从参考仓库开始，是带着一个已经存在的做法继续改造。两条路的落脚点一样：<strong>先让它在你这里能用，再让它更适合你。</strong></p>
 </main></div><script>document.getElementById('print').onclick=()=>window.print();document.querySelectorAll('pre').forEach(p=>{if(p.closest('.output'))return;const w=document.createElement('div');w.className='code-wrap';p.before(w);w.append(p);const b=document.createElement('button');b.className='copy';b.textContent='复制';b.onclick=async()=>{try{if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(p.innerText)}else{const t=document.createElement('textarea');t.value=p.innerText;document.body.append(t);t.select();if(!document.execCommand('copy'))throw Error('copy');t.remove()}b.textContent='已复制'}catch{b.textContent='请选中文字复制'}setTimeout(()=>b.textContent='复制',2200)};w.append(b)});let closed=[];window.addEventListener('beforeprint',()=>{closed=[...document.querySelectorAll('details:not([open])')];closed.forEach(x=>x.open=true)});window.addEventListener('afterprint',()=>closed.forEach(x=>x.open=false));window.addEventListener('scroll',()=>{const h=document.documentElement;document.getElementById('progress').style.width=((h.scrollTop/(h.scrollHeight-h.clientHeight||1))*100)+'%'});</script></body></html>

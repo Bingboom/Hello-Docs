@@ -18,22 +18,23 @@ blockquote{background:#eff6ff;border-left-color:#60a5fa;color:#334869}
 .page-note{background:#fff9f0;border-color:#ffe4bf}
 .progress{background:linear-gradient(90deg,#f97316,#fbbf24)}
 @media print{main{box-shadow:none}h2:before{display:none}}
-</style><link rel="stylesheet" href="../阅读样式.css">
-</head><body class="reading-guide"><div id="progress" class="progress"></div><header class="topbar"><a href="../00_打开分享.html">← 返回分享稿<small>AI 使用知识分享</small></a><button id="print">打印 / 保存 PDF</button></header><div class="layout"><aside><p class="nav-title">阅读目录</p><nav></nav></aside><main><h1 id="去-github-找现成项目">去 GitHub 找现成项目</h1>
+</style><link rel="stylesheet" href="../阅读样式.css?v=ffeed69e28af">
+</head><body class="reading-guide"><div id="progress" class="progress"></div><header class="topbar"><a href="../00_打开分享.html">← 返回分享稿<small>AI 使用知识分享</small></a><button id="print">打印 / 保存 PDF</button></header><div class="layout"><aside><p class="nav-title">阅读目录</p><nav><a class="toc-level-3" href="#github-是什么为什么去那里找">GitHub 是什么，为什么去那里找</a><a class="toc-level-3" href="#从一句产品介绍开始试">从一句产品介绍开始试</a><a class="toc-level-3" href="#按自己要做的事去找">按自己要做的事去找</a><a class="toc-level-3" href="#把项目下载到电脑上">把项目下载到电脑上</a><a class="toc-level-3" href="#让-agent-帮你运行项目">让 Agent 帮你运行项目</a><a class="toc-level-3" href="#一个人做东西为什么也值得用-git">一个人做东西，为什么也值得用 Git？</a><a class="toc-level-3" href="#先学会在本地存一版">先学会在本地存一版</a><a class="toc-level-3" href="#用-github-desktop就按这几步做">用 GitHub Desktop，就按这几步做</a><a class="toc-level-3" href="#需要多端同步或共同协作时再推送到-github">需要多端同步或共同协作时，再推送到 GitHub</a></nav></aside><main><h1 id="去-github-找现成项目">去 GitHub 找现成项目</h1>
+<p><a href="../00_打开分享.html#s7">跟着小林走一遍：从参考仓库做成自己的工具</a></p>
 <h3 id="github-是什么为什么去那里找">GitHub 是什么，为什么去那里找</h3>
 <p><a href="https://github.com/">GitHub</a> 上有很多别人分享的代码项目。有些已经做成了可以使用的工具，附有使用说明和演示。项目文件通常放在一个“仓库”里，后面说的下载项目，就是把仓库里的文件下载到电脑。</p>
 <p>比如想批量改文件名、自动生成文档，可以先搜搜有没有现成的工具。找到合适的，再让 Agent 帮忙运行和调整。即使不能直接用，也可以参考别人是怎么做的。</p>
-<h3 id="包内就有一个-notebook-例子">包内就有一个 Notebook 例子</h3>
+<h3 id="从一句产品介绍开始试">从一句产品介绍开始试</h3>
 <p>GitHub 上有些项目用 Jupyter Notebook 展示做法。它像一本能动手试的笔记：一段说明、一段代码，下面就是运行结果。先看结果，再改一个条件、运行一次，就能看看变化。</p>
-<p>可以从这份 Notebook 看一个独立的小例子：</p>
+<p>本分享借鉴这种边看边试的方式，另写了一个普通 Python 小练习，不需要先安装 Jupyter：</p>
 <ul>
 <li><a href="../03_GitHub原例/阅读版.html">从 the craft of selfteaching 开始：改一句产品介绍</a>：参考<a href="https://github.com/selfteaching/the-craft-of-selfteaching">the craft of selfteaching</a>，先运行一句产品介绍，只改价格再看结果；结合露营海报理解变量怎样填入文字。</li>
 </ul>
 <p>先打开“阅读版”就能看说明、代码和已经生成的结果，不用安装软件。想修改并重新运行时，再把对应文件夹交给 Agent：</p>
 <blockquote>
-<p>帮我准备运行这份 Notebook 所需的环境，先让我看到原来的结果。然后带我改一个条件，再运行一次。每次只解释当前这一步用到的知识。</p>
+<p>帮我运行这份产品介绍的 Python 小练习，先让我看到原来的结果。然后带我只改价格，再运行一次。每次只解释当前这一步用到的知识。</p>
 </blockquote>
-<p>阅读版展示的是保存下来的运行结果；重新执行 Python 代码，需要 Python 和 Jupyter 环境。具体准备方法见例子文件夹里的使用说明。</p>
+<p>阅读版展示的是保存下来的运行结果；重新执行小练习只需要 Python。具体准备方法见例子文件夹里的使用说明。原书使用 Notebook，不代表本地小练习也需要同样的环境。</p>
 <h3 id="按自己要做的事去找">按自己要做的事去找</h3>
 <p>打开 <a href="https://github.com/">GitHub</a>，在搜索框输入想做的功能。比如 <code>batch rename</code>（批量改名）、<code>document generation</code>（生成文档）。搜索词可以先让 Agent 帮你想，也可以把需求直接交给能联网的 Agent：</p>
 <blockquote>

@@ -10,6 +10,10 @@ a:hover{color:#9a5735;text-decoration-color:currentColor}
 .reading-guide h1+blockquote{background:none;border:0;padding:0;font-size:13px;color:var(--muted);margin:0 0 26px}
 .reading-guide .intro-summary{font-size:13px;line-height:1.7;color:var(--muted);margin:-8px 0 26px;padding:0;background:none;border:0}
 .reading-guide nav a:hover,.reading-guide nav a:focus{background:#f3eee7;border-color:#c99b7a;color:#705843}
+.reading-guide nav{display:block;max-height:calc(100vh - 150px);overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin}
+.reading-guide nav .toc-level-2{font-weight:600}
+.reading-guide nav .toc-level-3{padding:5px 8px 5px 26px;font-size:12px;font-weight:400;line-height:1.6}
+@media(max-width:900px){.reading-guide nav{max-height:42vh}.reading-guide nav .toc-level-2{padding:7px 8px 7px 12px}}
 .reading-guide .topbar button,.reading-guide .copy{color:#50504d}
 .reading-guide .topbar button:hover,.reading-guide .copy:hover{background:#f7f7f6;border-color:#c7c4bd}
 .reading-guide pre,.reading-guide code{background:#f6f5f2;border-color:var(--line)}

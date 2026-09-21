@@ -18,8 +18,8 @@ blockquote{background:#eff6ff;border-left-color:#60a5fa;color:#334869}
 .page-note{background:#fff9f0;border-color:#ffe4bf}
 .progress{background:linear-gradient(90deg,#f97316,#fbbf24)}
 @media print{main{box-shadow:none}h2:before{display:none}}
-</style><link rel="stylesheet" href="../阅读样式.css">
-</head><body class="reading-guide"><div id="progress" class="progress"></div><header class="topbar"><a href="../00_打开分享.html">← 返回分享稿<small>AI 使用知识分享</small></a><button id="print">打印 / 保存 PDF</button></header><div class="layout"><aside><p class="nav-title">阅读目录</p><nav><a href="#s0">改一点，再用一次</a></nav></aside><main><h1 id="跟着小林做一次露营产品海报">跟着小林做一次：露营产品海报</h1>
+</style><link rel="stylesheet" href="../阅读样式.css?v=ffeed69e28af">
+</head><body class="reading-guide"><div id="progress" class="progress"></div><header class="topbar"><a href="../00_打开分享.html">← 返回分享稿<small>AI 使用知识分享</small></a><button id="print">打印 / 保存 PDF</button></header><div class="layout"><aside><p class="nav-title">阅读目录</p><nav><a class="toc-level-3" href="#在一个空文件夹里开始">在一个空文件夹里开始</a><a class="toc-level-3" href="#直接复制这段需求">直接复制这段需求</a><a class="toc-level-3" href="#打开结果核对几处">打开结果，核对几处</a><a class="toc-level-2" href="#s0">改一点，再用一次</a><a class="toc-level-3" href="#换一个价格看结果是否跟着变">换一个价格，看结果是否跟着变</a><a class="toc-level-3" href="#加一个自己用得上的功能">加一个自己用得上的功能</a><a class="toc-level-3" href="#下次怎么继续用">下次怎么继续用</a></nav></aside><main><h1 id="跟着小林做一次露营产品海报">跟着小林做一次：露营产品海报</h1>
 <p>小林要给周末露营市集准备三款产品海报。同事给了参数和介绍，又提醒他活动价可能会改。小林想做一个小工具：资料填一次，海报能生成，以后改价也能更新。</p>
 <p>这页是动手练习。先从空文件夹做起，不需要先下载现成程序。产品型号和参数均为教学虚构。</p>
 <h3 id="在一个空文件夹里开始">在一个空文件夹里开始</h3>
@@ -65,5 +65,5 @@ blockquote{background:#eff6ff;border-left-color:#60a5fa;color:#334869}
 <blockquote>
 <p>把下次怎么打开、怎么换资料、出错时看哪里写成简单说明。不要让我翻聊天记录找用法。</p>
 </blockquote>
-<p>从空文件夹到钉钉附件的完整故事，见 <a href="../00_打开分享.html#s6">主稿附录</a>。本地更新和云端更新不是一回事；本案例的钉钉持续自动更新尚未完成。</p>
+<p>从空文件夹到钉钉附件的完整故事，见 <a href="../00_打开分享.html#s6">主稿附录 1</a>；想从现有项目开始，可以看 <a href="../00_打开分享.html#s7">附录 2：从 GitHub 找参考仓库</a>。本地更新和云端更新不是一回事；本案例的钉钉持续自动更新尚未完成。</p>
 </main></div><script>document.getElementById('print').onclick=()=>window.print();document.querySelectorAll('pre').forEach(p=>{if(p.closest('.output'))return;const w=document.createElement('div');w.className='code-wrap';p.before(w);w.append(p);const b=document.createElement('button');b.className='copy';b.textContent='复制';b.onclick=async()=>{try{if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(p.innerText)}else{const t=document.createElement('textarea');t.value=p.innerText;document.body.append(t);t.select();if(!document.execCommand('copy'))throw Error('copy');t.remove()}b.textContent='已复制'}catch{b.textContent='请选中文字复制'}setTimeout(()=>b.textContent='复制',2200)};w.append(b)});let closed=[];window.addEventListener('beforeprint',()=>{closed=[...document.querySelectorAll('details:not([open])')];closed.forEach(x=>x.open=true)});window.addEventListener('afterprint',()=>closed.forEach(x=>x.open=false));window.addEventListener('scroll',()=>{const h=document.documentElement;document.getElementById('progress').style.width=((h.scrollTop/(h.scrollHeight-h.clientHeight||1))*100)+'%'});</script></body></html>
