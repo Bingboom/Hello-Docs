@@ -9,6 +9,10 @@ from package_materials import public_file
 from render_materials import ROOT, SHARE, body_and_nav
 
 
+TOOL_ZIP = SHARE / 'downloads' / 'xiaoye-poster-workbench.zip'
+TOOL_ROOT = '小野海报工作台'
+
+
 class Links(HTMLParser):
     def __init__(self):
         super().__init__()
@@ -50,14 +54,14 @@ def main():
     assert headings == approved_structure, 'Approved story structure changed'
     practical_structure = [
         '【产品运营部】AI 使用知识分享：从工作需求做起',
-        '一、先从一件明天要交的工作开始', '二、不会写代码，怎么把它用起来？',
-        '三、从做一次，到以后都能用', '四、海报之外，Agent 还能接着做什么？',
-        '附录 1：跟着小林，从空文件夹做出一个海报工具',
-        '附录 2：从 GitHub 找参考仓库，做成自己的工具',
+        '一、先从一件具体的工作开始', '二、打开一个空文件夹',
+        '三、改一次价，不用重新来', '四、接下来还能往哪儿走',
+        '附录：从 GitHub 找参考仓库，做成自己的工具',
         '彩蛋：一句话生成会骑车的鹈鹕',
     ]
     practical_headings = re.findall(r'<h[12][^>]*>(.*?)</h[12]>', practical_html)
     assert practical_headings == practical_structure, 'Practical story structure changed'
+    assert '附录 1：跟着小林' not in practical_html, 'Hands-on steps must stay in the main story'
     egg_position = practical_html.index('彩蛋：一句话生成会骑车的鹈鹕')
     assert practical_html.index('06_动画示例/pelican-bike.html') > egg_position
     for source in ('配图/小野300-Sol-High-实图.png', '配图/01-场景-露营海报-q版.png',
@@ -75,6 +79,23 @@ def main():
                    '../配图/钉钉产品与海报-实录.png',
                    '../配图/钉钉MCP回读核对-实录.png'):
         assert f'src="{source}"' in exercise_html, f'Missing process evidence: {source}'
+    assert TOOL_ZIP.is_file(), 'Missing final workbench download'
+    import zipfile
+    with zipfile.ZipFile(TOOL_ZIP) as archive:
+        assert archive.testzip() is None, 'Workbench ZIP is corrupt'
+        names = archive.namelist()
+        assert names and all(Path(name).parts[0] == TOOL_ROOT for name in names)
+        assert not any(Path(name).is_absolute() or '..' in Path(name).parts for name in names)
+        required = {
+            f'{TOOL_ROOT}/README.md',
+            f'{TOOL_ROOT}/requirements.txt',
+            f'{TOOL_ROOT}/启动小野海报工作台.command',
+            f'{TOOL_ROOT}/工作台文件/xiaoye_workbench.py',
+            f'{TOOL_ROOT}/工作台文件/generate_xiaoye_posters.py',
+            f'{TOOL_ROOT}/工作台文件/xiaoye-workbench.html',
+            f'{TOOL_ROOT}/工作台文件/xiaoye-poster-products.csv',
+        }
+        assert required.issubset(names), 'Workbench ZIP is missing required files'
     missing = []
     count = 0
     references = list((SHARE / '04_参考资料').glob('*.html'))
@@ -99,7 +120,9 @@ def main():
                 continue
             target = (path.parent / unquote(parts.path)).resolve() if parts.path else path.resolve()
             count += 1
-            if not target.is_file() or not target.is_relative_to(SHARE) or not public_file(target):
+            allowed_download = target == TOOL_ZIP.resolve()
+            if (not target.is_file() or not target.is_relative_to(SHARE)
+                    or (not allowed_download and not public_file(target))):
                 missing.append(f'{path.name}: {link}')
             elif parts.fragment and target.suffix == '.html':
                 ids = re.findall(r'\bid=[\"\']([^\"\']+)[\"\']', target.read_text('utf-8'))
