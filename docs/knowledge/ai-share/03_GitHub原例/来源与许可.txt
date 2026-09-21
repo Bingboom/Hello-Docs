@@ -1,3 +1,15 @@
+本目录包含两套独立材料，请按文件区分来源。
+
+一、本次露营海报配套练习
+文件：阅读版.md、阅读版.html、product_intro.py、使用说明.txt。
+阅读版参考李笑来 the craft of selfteaching 的字符串学习主题。
+本分享另行编写中文讲解和产品介绍代码，不是原书摘录，也不是原书代码运行记录。
+来源：https://github.com/selfteaching/the-craft-of-selfteaching
+原书许可说明见上游 README；本页仅链接原书，不将旧 Pandas 示例的许可归于本次练习。
+三款小野产品及参数均为教学虚构。运行 product_intro.py 只需 Python，无第三方依赖。
+
+二、保留的 Pandas Cookbook 旧参考例子
+文件：Chapter 1 - Reading from a CSV.ipynb、data/bikes.csv、requirements.txt、UPSTREAM_README.md。
 项目：Pandas Cookbook
 作者：Julia Evans（jvns）及项目贡献者
 仓库：https://github.com/jvns/pandas-cookbook
@@ -7,7 +19,5 @@
 许可：Creative Commons Attribution-ShareAlike 4.0 International
 https://creativecommons.org/licenses/by-sa/4.0/
 许可依据：随包 UPSTREAM_README.md 的 License 部分。
-
-原始 Notebook 和数据文件未修改。另附“阅读版.html”，保留原文，显示本次执行产生的输出；页面为本地阅读排版，未载入上游 Notebook 中的外部字体样式。其上游内容遵循同一许可。
-这是英文参考例子，中文主例见 ../02_Notebook例子/阅读版.html。
-运行原例需要 Python、Jupyter、pandas、matplotlib；双击阅读版不需要安装这些软件。
+原始 Notebook 和数据文件未修改。当前阅读版.html 已是第一部分的产品介绍练习，不再展示此 Notebook。
+运行旧 Notebook 需要 Python、Jupyter、pandas、matplotlib；只做产品介绍练习不需要安装这些依赖。

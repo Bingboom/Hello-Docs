@@ -30,11 +30,11 @@ blockquote{background:#eff6ff;border-left-color:#60a5fa;color:#334869}
 <ul>
 <li><a href="../03_GitHub原例/阅读版.html">从 the craft of selfteaching 开始：改一句产品介绍</a>：参考<a href="https://github.com/selfteaching/the-craft-of-selfteaching">the craft of selfteaching</a>，先运行一句产品介绍，只改价格再看结果；结合露营海报理解变量怎样填入文字。</li>
 </ul>
-<p>先打开“阅读版”就能看说明、代码和已经生成的结果，不用安装软件。想修改并重新运行时，再把对应文件夹交给 Agent：</p>
+<p>先打开“阅读版”就能看说明、代码和已经生成的结果，不用安装软件。想修改并重新运行时，把对应文件夹交给 Agent，并明确运行其中的 <code>product_intro.py</code>：</p>
 <blockquote>
-<p>帮我运行这份产品介绍的 Python 小练习，先让我看到原来的结果。然后带我只改价格，再运行一次。每次只解释当前这一步用到的知识。</p>
+<p>请运行 product_intro.py，先让我看到原来的结果。然后带我只改价格，再运行一次。每次只解释当前这一步用到的知识，不运行目录里的旧 Notebook。</p>
 </blockquote>
-<p>阅读版展示的是保存下来的运行结果；重新执行小练习只需要 Python。具体准备方法见例子文件夹里的使用说明。原书使用 Notebook，不代表本地小练习也需要同样的环境。</p>
+<p>阅读版展示的是保存下来的运行结果；重新执行小练习只需要 Python。具体准备方法见 <a href="../03_GitHub原例/使用说明.txt">使用说明</a>。原书使用 Notebook，不代表本地小练习也需要同样的环境。</p>
 <h3 id="按自己要做的事去找">按自己要做的事去找</h3>
 <p>打开 <a href="https://github.com/">GitHub</a>，在搜索框输入想做的功能。比如 <code>batch rename</code>（批量改名）、<code>document generation</code>（生成文档）。搜索词可以先让 Agent 帮你想，也可以把需求直接交给能联网的 Agent：</p>
 <blockquote>
@@ -47,7 +47,7 @@ blockquote{background:#eff6ff;border-left-color:#60a5fa;color:#334869}
 <img src="../配图/06-GitHub-q版.png" alt="找项目、下载、试用与修改，再保存可用版本" />
 <figcaption aria-hidden="true">找项目、下载、试用与修改，再保存可用版本</figcaption>
 </figure>
-<p>找项目、下载、试用与修改，再保存可用版本</p>
+<p>图中展示了先 Fork 再 Clone 的路线；只在本地试用，可以跳过 Fork，按下面的步骤直接 Clone。</p>
 <p><strong>建议初学者用 GitHub Desktop 操作</strong>，下载项目、查看改动、保存版本都可以通过按钮完成，不用先记 Git 命令。这里有三个名字容易混：Git 用来管理版本，GitHub 是存放和分享项目的网站，GitHub Desktop 则让你在电脑上通过界面操作，不必逐条输入命令。</p>
 <p><strong>先准备 Git 和 GitHub Desktop。</strong></p>
 <p><strong>Windows：</strong> 从 <a href="https://git-scm.com/install/windows">Git 官方下载页</a>下载安装程序，按向导完成安装，再重新打开 PowerShell。</p>
@@ -56,11 +56,11 @@ blockquote{background:#eff6ff;border-left-color:#60a5fa;color:#334869}
 <p>然后到 <a href="https://github.com/signup">GitHub 注册账号</a>，验证邮箱；从 <a href="https://desktop.github.com/">官网下载 GitHub Desktop</a>，安装后登录，按引导设置姓名和邮箱。<a href="https://docs.github.com/en/desktop/installing-and-authenticating-to-github-desktop/installing-github-desktop">安装说明</a></p>
 <p><strong>再下载选好的项目。</strong></p>
 <ol type="1">
-<li>在仓库页面点击 <strong>Fork → Create fork</strong>，得到自己账号下的一份副本，复制它的网址。</li>
+<li>打开选中的仓库，复制仓库网址。先在本地试用，不必先 Fork。</li>
 <li>打开 GitHub Desktop，选择 <strong>File → Clone Repository → URL</strong>，粘贴网址，选好保存位置，点击 <strong>Clone</strong>。</li>
 <li>用 Codex 或 Claude Code 打开下载得到的整个文件夹，把下面这段话发给 Agent。</li>
 </ol>
-<p>这里的 Fork 是把副本放进自己的 GitHub 账号，Clone 是把仓库下载到电脑。也可以直接 Clone 原仓库；上面采用先 Fork 的方式，方便以后保存自己的修改。<a href="https://docs.github.com/en/pull-requests/how-tos/work-with-forks/fork-a-repo">Fork 说明</a> · <a href="https://docs.github.com/en/desktop/adding-and-cloning-repositories/cloning-and-forking-repositories-from-github-desktop">Clone 说明</a></p>
+<p>Clone 是把仓库下载到电脑，本地修改可以直接用 Git 保存。以后想把改造版推送到自己账号，再考虑 Fork：在 GitHub 网页点击 <strong>Fork → Create fork</strong> 建立自己的仓库副本。已经 Clone 的项目，可以请 Agent 或按 Desktop 提示将推送目标设为自己的 Fork，不用丢掉本地修改重新开始。<a href="https://docs.github.com/en/pull-requests/how-tos/work-with-forks/fork-a-repo">Fork 说明</a> · <a href="https://docs.github.com/en/desktop/adding-and-cloning-repositories/cloning-and-forking-repositories-from-github-desktop">Clone 说明</a></p>
 <h3 id="让-agent-帮你运行项目">让 Agent 帮你运行项目</h3>
 <p>先请 Agent 帮忙说明项目用途，再运行它：</p>
 <pre class="text"><code>先读一下这个项目的说明，告诉我它能做什么，再帮我运行起来。
