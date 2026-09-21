@@ -41,11 +41,11 @@ Im Lebenszyklus von Energiespeicherprodukten ist ein gewisser Kapazitäts- und E
 
 
 
-<figure aria-label="LIEFERUMFANG" class="hb-inbox-composition" data-card-count="3" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="three-card-responsive"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Abbildung der Powerstation als Platzhalter." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je1000h_eu_de/inbox_unit.png" data-web-finished-panel-sha256="dca486053fb7c7aaa3a7d01dcdb06e1d356a9caa7667e1fed4a54a94103b4c8f" src="../../../../_static/manual-assets/_pool/dc/dca486053fb7c7aaa3a7d01dcdb06e1d356a9caa7667e1fed4a54a94103b4c8f.png"/><div class="hb-inbox-label">
+<figure aria-label="LIEFERUMFANG" class="hb-inbox-composition" data-card-count="3" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="three-card-responsive"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Abbildung der Powerstation als Platzhalter." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je1000h_eu_de/inbox_unit.png" data-web-finished-panel-sha256="fc268673c6c5a2349c19b39d3ef57e7dbcf66ca334b7f68297ac304ef4b97ef9" src="../../../../_static/manual-assets/_pool/fc/fc268673c6c5a2349c19b39d3ef57e7dbcf66ca334b7f68297ac304ef4b97ef9.png"/><div class="hb-inbox-label">
 <p><strong>Jackery Explorer 1000 Plus</strong></p>
-</div></li><li class="hb-inbox-card" data-item-number="2"><img alt="Abbildung des AC-Ladekabels als Platzhalter." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je1000h_eu_de/inbox_cable.png" data-web-finished-panel-sha256="4f766b3a8d990a8f307a81e807e58cff96e82353dd7f7bbbeaf5799518fc05a1" src="../../../../_static/manual-assets/_pool/4f/4f766b3a8d990a8f307a81e807e58cff96e82353dd7f7bbbeaf5799518fc05a1.png"/><div class="hb-inbox-label">
+</div></li><li class="hb-inbox-card" data-item-number="2"><img alt="Abbildung des AC-Ladekabels als Platzhalter." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je1000h_eu_de/inbox_cable.png" data-web-finished-panel-sha256="c235c66f37e7dd8ed202a76f825fa8c7d6b8800284e19d72e2a05a5fe0060686" src="../../../../_static/manual-assets/_pool/c2/c235c66f37e7dd8ed202a76f825fa8c7d6b8800284e19d72e2a05a5fe0060686.png"/><div class="hb-inbox-label">
 <p><strong>AC-Ladekabel</strong></p>
-</div></li><li class="hb-inbox-card" data-item-number="3"><img alt="Abbildung des Benutzerhandbuchs als Platzhalter." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je1000h_eu_de/inbox_documents.png" data-web-finished-panel-sha256="261112e3c5dc6c6633501e81ba79b3a720b72de3c2ea9e3f8afe90b353aad8be" src="../../../../_static/manual-assets/_pool/26/261112e3c5dc6c6633501e81ba79b3a720b72de3c2ea9e3f8afe90b353aad8be.png"/><div class="hb-inbox-label">
+</div></li><li class="hb-inbox-card" data-item-number="3"><img alt="Abbildung des Benutzerhandbuchs als Platzhalter." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je1000h_eu_de/inbox_documents.png" data-web-finished-panel-sha256="0e3964401d96c1bf2b1a431da19b0d9af00d7bed461d2b57a4ff77071d1ada0e" src="../../../../_static/manual-assets/_pool/0e/0e3964401d96c1bf2b1a431da19b0d9af00d7bed461d2b57a4ff77071d1ada0e.png"/><div class="hb-inbox-label">
 <p>Benutzerhandbuch</p>
 </div></li></ol><div class="hb-inbox-tip" role="note"><div class="hb-inbox-tip-label"><p><strong>TIPP</strong></p></div><div class="hb-inbox-tip-body"><p>Das Autoladekabel ist nicht im Lieferumfang enthalten, kann jedoch separat auf unserer Website erworben werden.
 Bei Fragen wenden Sie sich bitte an den Jackery-Kundendienst.</p></div></div></figure>
@@ -56,15 +56,15 @@ Bei Fragen wenden Sie sich bitte an den Jackery-Kundendienst.</p></div></div></f
 
 ## VORDERANSICHT
 
-<img src="../../../../_static/manual-assets/_pool/d8/d8243877763263a4e944e249f76f0be61db3f1a4de3d46db40f57ed6d2de4e6a.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_de/overview_front.png" data-web-finished-panel-sha256="d8243877763263a4e944e249f76f0be61db3f1a4de3d46db40f57ed6d2de4e6a" alt="Hauptnetzschalter LCD DC-12V-Ausgangstaste 12 V 10 A max LED-Lichttaste DC/USB-Stromtaste LED-Licht USB-C-30-W-Ausgang 30 W max, 5 V 3 A, 9 V 3 A, 12 V 2,5 A, 15 V 2 A, 20 V 1,5A AC-1-Ausgangstaste/AC-2-Ausgangstaste USB-C-140-W-Ausgang 140 W max, 5 V 3 A, 9 V 3 A, 12 V 3 A, 15 V 3 A, 20 V 5 A, 28 V 5 A USB-A-18-W-Ausgang 18 W max, 5-6 V 3 A, 6-9 V 2 A, 9-12 V 1,5 A AC-Ausgang 230V~ 50 Hz, 7,83 A, 1800 W；Gesamtausgang 1800 W Nennleistung, 3600 W Spitzenleistung (Surge)" />
+<img src="../../../../_static/manual-assets/_pool/0e/0e0d05a704860c778a7e3888b0f985f797e5020f62efb583befc2a5f0a273eee.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_de/overview_front.png" data-web-finished-panel-sha256="0e0d05a704860c778a7e3888b0f985f797e5020f62efb583befc2a5f0a273eee" alt="Hauptnetzschalter LCD DC-12V-Ausgangstaste 12 V 10 A max LED-Lichttaste DC/USB-Stromtaste LED-Licht USB-C-30-W-Ausgang 30 W max, 5 V 3 A, 9 V 3 A, 12 V 2,5 A, 15 V 2 A, 20 V 1,5A AC-1-Ausgangstaste/AC-2-Ausgangstaste USB-C-140-W-Ausgang 140 W max, 5 V 3 A, 9 V 3 A, 12 V 3 A, 15 V 3 A, 20 V 5 A, 28 V 5 A USB-A-18-W-Ausgang 18 W max, 5-6 V 3 A, 6-9 V 2 A, 9-12 V 1,5 A AC-Ausgang 230V~ 50 Hz, 7,83 A, 1800 W；Gesamtausgang 1800 W Nennleistung, 3600 W Spitzenleistung (Surge)" />
 
 ## ANSICHT DER RECHTEN SEITE
 
-<img src="../../../../_static/manual-assets/_pool/80/80015317c2ab085c4fb3e189625c890f57b025c618e29087c1c623801c0ba158.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_de/overview_side.png" data-web-finished-panel-sha256="80015317c2ab085c4fb3e189625c890f57b025c618e29087c1c623801c0ba158" alt="Griff AC-Eingang 220 V-240 V~50 Hz, 10 A max DC-Eingang (2×DC8020-Anschlüsse) 16 V-60 V 12 A, Doppelanschluss 21 A / 400W Max 11 V-16 V 8 A max, Doppelanschluss 8 A" />
+<img src="../../../../_static/manual-assets/_pool/f1/f1f6cd07c33a4ec3e1f95a07a5619c1dc275bf4dfd51eb695a0775a8ddd3fb93.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_de/overview_side.png" data-web-finished-panel-sha256="f1f6cd07c33a4ec3e1f95a07a5619c1dc275bf4dfd51eb695a0775a8ddd3fb93" alt="Griff AC-Eingang 220 V-240 V~50 Hz, 10 A max DC-Eingang (2×DC8020-Anschlüsse) 16 V-60 V 12 A, Doppelanschluss 21 A / 400W Max 11 V-16 V 8 A max, Doppelanschluss 8 A" />
 
 # LCD-ANZEIGE
 
-<img src="../../../../_static/manual-assets/_pool/34/346760d177b6ab79ef1bf244d3a566280bfbc1eaa963b968e893494c7f5b6ae9.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_de/lcd_map.png" data-web-finished-panel-sha256="346760d177b6ab79ef1bf244d3a566280bfbc1eaa963b968e893494c7f5b6ae9" alt="LCD-ANZEIGE" />
+<img src="../../../../_static/manual-assets/_pool/84/845184de0a6f88c796255c21fd5415a078d9092db302975be4067de9ab10cde7.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_de/lcd_map.png" data-web-finished-panel-sha256="845184de0a6f88c796255c21fd5415a078d9092db302975be4067de9ab10cde7" alt="LCD-ANZEIGE" />
 
 <table class="longtable lcd-text-only">
 <colgroup>
@@ -263,15 +263,15 @@ Diese Funktion kann in der Jackery-App aktiviert oder deaktiviert werden. Die Ei
 
 ## HAUPTSTROMVERSORGUNG EIN/AUS
 
-<img src="../../../../_static/manual-assets/_pool/1a/1a74b53ae4fd4a2e65430d7550e12f917dda57543b274a6b5fa57fba47c51698.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_de/operation_power.png" data-web-finished-panel-sha256="1a74b53ae4fd4a2e65430d7550e12f917dda57543b274a6b5fa57fba47c51698" alt="Ein: Einmal drücken. Aus: 3 s lang gedrückt halten.；Standard-Standby-Zeit: 2 Stunden. Das Produkt schaltet sich nach 2 Stunden Inaktivität automatisch aus, wenn weder geladen noch entladen wird. *Die Standby-Zeit kann in der Jackery-App eingestellt werden. Wenn der Energiesparmodus aktiviert ist, schaltet sich das Produkt automatisch nach 12 Stunden aus, wenn die AC- oder DC/USB-Einschalttaste eingeschaltet ist, das Produkt jedoch weder lädt noch entlädt." />
+<img src="../../../../_static/manual-assets/_pool/1f/1fb03a94c8542afd5e7fc284180ea71c6b9b0f52f06a119be6a75c996c6b08d7.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_de/operation_power.png" data-web-finished-panel-sha256="1fb03a94c8542afd5e7fc284180ea71c6b9b0f52f06a119be6a75c996c6b08d7" alt="Ein: Einmal drücken. Aus: 3 s lang gedrückt halten.；Standard-Standby-Zeit: 2 Stunden. Das Produkt schaltet sich nach 2 Stunden Inaktivität automatisch aus, wenn weder geladen noch entladen wird. *Die Standby-Zeit kann in der Jackery-App eingestellt werden. Wenn der Energiesparmodus aktiviert ist, schaltet sich das Produkt automatisch nach 12 Stunden aus, wenn die AC- oder DC/USB-Einschalttaste eingeschaltet ist, das Produkt jedoch weder lädt noch entlädt." />
 
 ## AC-AUSGANG EIN/AUS
 
-<img src="../../../../_static/manual-assets/_pool/56/561eb48089e0956daa7b26cf5757ab8bd58e5a8971b6734a69442dcefaf30e5c.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_de/operation_ac.png" data-web-finished-panel-sha256="561eb48089e0956daa7b26cf5757ab8bd58e5a8971b6734a69442dcefaf30e5c" alt="Voraussetzung : Das Produkt ist eingeschaltet.；Ein Einmal drücken Aus Einmal drücken" />
+<img src="../../../../_static/manual-assets/_pool/e5/e519003e8066a0434ba5bfc6b37cc660a2f23500453410f7e6e220f8f2d87fe0.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_de/operation_ac.png" data-web-finished-panel-sha256="e519003e8066a0434ba5bfc6b37cc660a2f23500453410f7e6e220f8f2d87fe0" alt="Voraussetzung : Das Produkt ist eingeschaltet.；Ein Einmal drücken Aus Einmal drücken" />
 
 ## DC 12V/USB-AUSGANG EIN/AUS
 
-<img src="../../../../_static/manual-assets/_pool/6f/6f8366143f47c877cebe6f35244915eb00b3b47e5318515b13326c596168fa14.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_de/operation_dc.png" data-web-finished-panel-sha256="6f8366143f47c877cebe6f35244915eb00b3b47e5318515b13326c596168fa14" alt="Voraussetzung : Das Produkt ist eingeschaltet.；Ein Einmal drücken Aus Einmal drücken" />
+<img src="../../../../_static/manual-assets/_pool/b7/b79505e80e2d003044270282dadf86dd55d5245bd658c8441556a855b0314e66.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_de/operation_dc.png" data-web-finished-panel-sha256="b79505e80e2d003044270282dadf86dd55d5245bd658c8441556a855b0314e66" alt="Voraussetzung : Das Produkt ist eingeschaltet.；Ein Einmal drücken Aus Einmal drücken" />
 
 
 
@@ -303,7 +303,7 @@ Um zu verhindern, dass die Batterie unnötig entladen wird, wenn das Ausschalten
 
 Wenn Sie Geräte mit geringem Stromverbrauch betreiben (AC \<= 25 W oder DC/USB \<= 2 W), deaktivieren Sie den Energiesparmodus, damit der Ausgang während des Betriebs nicht automatisch ausgeschaltet wird.
 
-<img src="../../../../_static/manual-assets/_pool/81/81005f5bd430c78d72040c1e67040e9e48db3f32c484799381807b2ac01f624f.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_de/operation_energy.png" data-web-finished-panel-sha256="81005f5bd430c78d72040c1e67040e9e48db3f32c484799381807b2ac01f624f" alt="Um den Energiesparmodus zu deaktivieren, halten Sie sowohl die AC-Einschalttaste als auch die Haupt-POWER-Taste länger als 3 Sekunden gedrückt. Sobald der Energiesparmodus deaktiviert ist, wird das Symbol nicht mehr auf dem LCD angezeigt, und das Produkt schaltet den AC- oder DC/USB-Ausgang nicht mehr automatisch aus.；Halten Sie beide Tasten länger als 3 Sekunden gedrückt." />
+<img src="../../../../_static/manual-assets/_pool/71/716cb664b3654a2cafe8cccbf433d93735d0d3cf5466c562019a13b657a7e62d.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_de/operation_energy.png" data-web-finished-panel-sha256="716cb664b3654a2cafe8cccbf433d93735d0d3cf5466c562019a13b657a7e62d" alt="Um den Energiesparmodus zu deaktivieren, halten Sie sowohl die AC-Einschalttaste als auch die Haupt-POWER-Taste länger als 3 Sekunden gedrückt. Sobald der Energiesparmodus deaktiviert ist, wird das Symbol nicht mehr auf dem LCD angezeigt, und das Produkt schaltet den AC- oder DC/USB-Ausgang nicht mehr automatisch aus.；Halten Sie beide Tasten länger als 3 Sekunden gedrückt." />
 
 
 
@@ -313,7 +313,7 @@ Wenn Sie Geräte mit geringem Stromverbrauch betreiben (AC \<= 25 W oder DC/USB 
 
 ## LED-LICHT EIN/AUS
 
-<img src="../../../../_static/manual-assets/_pool/c9/c997c0714ca3e14a7ecaf9e65df6bc642f4adbbdf1af2e6d6722aef258a5b829.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_de/operation_led.png" data-web-finished-panel-sha256="c997c0714ca3e14a7ecaf9e65df6bc642f4adbbdf1af2e6d6722aef258a5b829" alt="Die LED-Leuchte verfügt über zwei Modi: Lichtmodus und SOS-Modus. Halten Sie in jedem Modus die LED-Lichttaste gedrückt, um das Licht auszuschalten.；Drücken Sie die LED-Lichttaste einmal, um das Licht einzuschalten. Drücken Sie sie erneut, um in den SOS-Modus zu wechseln. Drücken Sie sie ein drittes Mal, um das Licht auszuschalten." />
+<img src="../../../../_static/manual-assets/_pool/4f/4fdc5548fc8aec3252599168df25e9490c5225b62564c500879e867cab252d84.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_de/operation_led.png" data-web-finished-panel-sha256="4fdc5548fc8aec3252599168df25e9490c5225b62564c500879e867cab252d84" alt="Die LED-Leuchte verfügt über zwei Modi: Lichtmodus und SOS-Modus. Halten Sie in jedem Modus die LED-Lichttaste gedrückt, um das Licht auszuschalten.；Drücken Sie die LED-Lichttaste einmal, um das Licht einzuschalten. Drücken Sie sie erneut, um in den SOS-Modus zu wechseln. Drücken Sie sie ein drittes Mal, um das Licht auszuschalten." />
 
 ## Wiederaufnahmefunktion für AC- und DC-Ausgänge
 
@@ -348,7 +348,7 @@ Die Wiederaufnahmefunktion für AC- und DC-Ausgänge ist standardmäßig deaktiv
 
 
 
-<figure aria-label="Platzhalter für den LCD-Anzeigemodus." class="hb-lcd-mode-composition" data-component-id="HB-TABLE-LCD-MODE"><div class="hb-lcd-mode-art-panel"><img alt="Platzhalter für den LCD-Anzeigemodus." class="hb-lcd-mode-art" src="../../../../_static/manual-assets/_pool/b6/b601c7552c5b88ad972b18da990138caf07d9ad854aa613bd22468af0b363ec7.png"/></div><div class="hb-lcd-mode-table-panel"><table class="hb-lcd-mode-table"><colgroup><col class="hb-lcd-mode-col-state"/><col class="hb-lcd-mode-col-action"/><col class="hb-lcd-mode-col-copy"/></colgroup><tbody><tr><td class="hb-lcd-mode-state" rowspan="3">Kurzzeitig an</td><td class="hb-lcd-mode-action">Ein</td><td class="hb-lcd-mode-copy">Drücken Sie die Haupt-POWER-Taste oder während das Produkt geladen wird.</td></tr><tr><td class="hb-lcd-mode-action">Aus</td><td class="hb-lcd-mode-copy">Drücken Sie die Haupt-POWER-Taste.</td></tr><tr><td class="hb-lcd-mode-action">Autom. aus</td><td class="hb-lcd-mode-copy">Die LCD-Anzeige schaltet sich nach 2 Minuten Inaktivität automatisch aus und wechselt in den Schlafmodus.</td></tr><tr><td class="hb-lcd-mode-state" rowspan="3">Dauerhaft an (beim Laden oder Entladen)</td><td class="hb-lcd-mode-action">Ein</td><td class="hb-lcd-mode-copy">Drücken Sie die Haupt-POWER-Taste zweimal, wenn das Produkt eingeschaltet ist.</td></tr><tr><td class="hb-lcd-mode-action">Aus</td><td class="hb-lcd-mode-copy">Drücken Sie die Haupt-POWER-Taste.</td></tr><tr><td class="hb-lcd-mode-action">Autom. aus</td><td class="hb-lcd-mode-copy">Die LCD-Anzeige schaltet sich nach 2 Stunden Inaktivität automatisch aus.</td></tr></tbody></table></div></figure>
+<figure aria-label="Platzhalter für den LCD-Anzeigemodus." class="hb-lcd-mode-composition" data-component-id="HB-TABLE-LCD-MODE"><div class="hb-lcd-mode-art-panel"><img alt="Platzhalter für den LCD-Anzeigemodus." class="hb-lcd-mode-art" src="../../../../_static/manual-assets/_pool/e5/e5464677b66827e24a9f4b9283f98b18d6e888f72d5a2732fc02ca3131c07637.png"/></div><div class="hb-lcd-mode-table-panel"><table class="hb-lcd-mode-table"><colgroup><col class="hb-lcd-mode-col-state"/><col class="hb-lcd-mode-col-action"/><col class="hb-lcd-mode-col-copy"/></colgroup><tbody><tr><td class="hb-lcd-mode-state" rowspan="3">Kurzzeitig an</td><td class="hb-lcd-mode-action">Ein</td><td class="hb-lcd-mode-copy">Drücken Sie die Haupt-POWER-Taste oder während das Produkt geladen wird.</td></tr><tr><td class="hb-lcd-mode-action">Aus</td><td class="hb-lcd-mode-copy">Drücken Sie die Haupt-POWER-Taste.</td></tr><tr><td class="hb-lcd-mode-action">Autom. aus</td><td class="hb-lcd-mode-copy">Die LCD-Anzeige schaltet sich nach 2 Minuten Inaktivität automatisch aus und wechselt in den Schlafmodus.</td></tr><tr><td class="hb-lcd-mode-state" rowspan="3">Dauerhaft an (beim Laden oder Entladen)</td><td class="hb-lcd-mode-action">Ein</td><td class="hb-lcd-mode-copy">Drücken Sie die Haupt-POWER-Taste zweimal, wenn das Produkt eingeschaltet ist.</td></tr><tr><td class="hb-lcd-mode-action">Aus</td><td class="hb-lcd-mode-copy">Drücken Sie die Haupt-POWER-Taste.</td></tr><tr><td class="hb-lcd-mode-action">Autom. aus</td><td class="hb-lcd-mode-copy">Die LCD-Anzeige schaltet sich nach 2 Stunden Inaktivität automatisch aus.</td></tr></tbody></table></div></figure>
 
 
 
@@ -391,7 +391,7 @@ Sie können den Bildschirm-Anzeigemodus auch in der Jackery-App einstellen.
 
 Schließen Sie das Produkt mit dem AC-Ladekabel an eine Steckdose an und drücken Sie anschließend die AC-1-Ausgangstaste/AC-2-Ausgangstaste, um Ihre Geräte gleichzeitig zu versorgen.
 
-<img src="../../../../_static/manual-assets/_pool/e9/e92b356619e90c8b4097793a18bf7bda2c8156b643fc55c12812f93c4d6cb481.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_de/ups.png" data-web-finished-panel-sha256="e92b356619e90c8b4097793a18bf7bda2c8156b643fc55c12812f93c4d6cb481" alt="Abbildung der UPS-Verbindung als Platzhalter." />
+<img src="../../../../_static/manual-assets/_pool/ec/ec7b20037dcac28472e15977cd197ca21eaa3eb0bc2e3c458d4f36b1aded3d12.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_de/ups.png" data-web-finished-panel-sha256="ec7b20037dcac28472e15977cd197ca21eaa3eb0bc2e3c458d4f36b1aded3d12" alt="Abbildung der UPS-Verbindung als Platzhalter." />
 
 Eine unterbrechungsfreie Stromversorgung (UPS) ist ein kontinuierliches Stromversorgungssystem, das bei einem Ausfall der Netzstromversorgung automatisch Backup-Strom für angeschlossene Geräte bereitstellt.
 
@@ -416,7 +416,7 @@ liegt die tatsächliche Ausgangsleistung in diesem Modus unter der Nennleistung;
 
 Dieses Gerät unterstützt bis zu fünf Batteriepacks, um einen hohen Leistungsbedarf abzudecken. Weitere Informationen zur Verwendung finden Sie im Benutzerhandbuch des Jackery Battery Pack 2000.
 
-<img src="../../../../_static/manual-assets/_pool/25/25d36e6c2c1db5f12e7eac9837377d36cdcf8776068f628dd1d31e8796df1630.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_de/battery_pack.png" data-web-finished-panel-sha256="25d36e6c2c1db5f12e7eac9837377d36cdcf8776068f628dd1d31e8796df1630" alt="Jackery Explorer 1000 Plus mit Jackery Battery Pack 2000 verbunden, mit 200 mm Abstand." />
+<img src="../../../../_static/manual-assets/_pool/29/292450ab5eaa7bd3cfda084551929411b861c4f5ae245d5f8145ceecb4b7a594.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_de/battery_pack.png" data-web-finished-panel-sha256="292450ab5eaa7bd3cfda084551929411b861c4f5ae245d5f8145ceecb4b7a594" alt="Jackery Explorer 1000 Plus mit Jackery Battery Pack 2000 verbunden, mit 200 mm Abstand." />
 
 
 
@@ -453,7 +453,7 @@ Dieses Gerät unterstützt bis zu fünf Batteriepacks, um einen hohen Leistungsb
 
 ## AUFLADEN ÜBER EINE AC-STECKDOSE
 
-<img src="../../../../_static/manual-assets/_pool/0d/0d9261c357e9ee6e3972262800ffe380dc034e332eda058b3c10b73f82af7195.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_de/charging_ac.png" data-web-finished-panel-sha256="0d9261c357e9ee6e3972262800ffe380dc034e332eda058b3c10b73f82af7195" alt="Schließen Sie das AC-Ladekabel an den AC-Eingangsanschluss des Produkts und an eine Steckdose an." />
+<img src="../../../../_static/manual-assets/_pool/e3/e3f9fcac9b3d26894a10fc13a0aba32ef027568941f2eb4ca19aabb99cc04c6e.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_de/charging_ac.png" data-web-finished-panel-sha256="e3f9fcac9b3d26894a10fc13a0aba32ef027568941f2eb4ca19aabb99cc04c6e" alt="Schließen Sie das AC-Ladekabel an den AC-Eingangsanschluss des Produkts und an eine Steckdose an." />
 
 
 
@@ -471,11 +471,11 @@ In diesem Modus können Sie die tragbare Powerstation mit der AC-Lademethode sch
 
 Jackery Explorer 1000 Plus verfügt über zwei DC8020-Eingangsanschlüsse und ist mit den Jackery-Solarmodulen kompatibel.
 
-<img src="../../../../_static/manual-assets/_pool/58/58dae6a4dcd40324c12aa8259dd6bd6a59141ee9cbce2eed8d9cb0e3d0cc9e0f.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_de/charging_solar.png" data-web-finished-panel-sha256="58dae6a4dcd40324c12aa8259dd6bd6a59141ee9cbce2eed8d9cb0e3d0cc9e0f" alt="Abbildung der Solarladeverbindung als Platzhalter 1." />
+<img src="../../../../_static/manual-assets/_pool/b7/b70f035b55edfc0b546cb7eec4c0bc11f8a105d0c9e84e52bd4875fd9397e206.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_de/charging_solar.png" data-web-finished-panel-sha256="b70f035b55edfc0b546cb7eec4c0bc11f8a105d0c9e84e52bd4875fd9397e206" alt="Abbildung der Solarladeverbindung als Platzhalter 1." />
 
 Wenn ein DC8020-Eingangsanschluss zwei Solarmodule gleichzeitig anschließen muss, beziehen Sie sich bitte auf die folgende Abbildung zum Aufladen über den Solarpanel-Anschluss (separat erhältlich, nicht im Lieferumfang enthalten).
 
-<img src="../../../../_static/manual-assets/_pool/15/15b84ff464c54f616720e5727b54c304a99725eda0de306a8d6fee3b302e4bfb.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_de/charging_solar_adapter.png" data-web-finished-panel-sha256="15b84ff464c54f616720e5727b54c304a99725eda0de306a8d6fee3b302e4bfb" alt="Abbildung der Solarladeverbindung als Platzhalter 2." />
+<img src="../../../../_static/manual-assets/_pool/d8/d88923ba59009a0ca82c136a418c081ef59df36d261c8cd1ac940996e2cdc7cf.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_de/charging_solar_adapter.png" data-web-finished-panel-sha256="d88923ba59009a0ca82c136a418c081ef59df36d261c8cd1ac940996e2cdc7cf" alt="Abbildung der Solarladeverbindung als Platzhalter 2." />
 
 
 
@@ -500,7 +500,7 @@ Es wird empfohlen, das Jackery-Solarpanel zum Laden des Produkts zu verwenden. S
 
 Dieses Produkt kann mit einem 12-V-Autoladegerät aufgeladen werden. Stellen Sie sicher, dass das Autoladegerät und die 12-V-Autosteckdose (Zigarettenanzünder) gut verbunden sind.
 
-<img src="../../../../_static/manual-assets/_pool/a1/a1bd0ca1d720699a1d3ae426bac38841a23737e1e269ca60106c8d2d04b139b2.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_de/charging_car.png" data-web-finished-panel-sha256="a1bd0ca1d720699a1d3ae426bac38841a23737e1e269ca60106c8d2d04b139b2" alt="Fahrzeug *Das Autoladekabel ist separat erhältlich." />
+<img src="../../../../_static/manual-assets/_pool/69/6942c72cac464da264cf3e381358e572145de843cefb307c4f79be56b7fb8004.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_de/charging_car.png" data-web-finished-panel-sha256="6942c72cac464da264cf3e381358e572145de843cefb307c4f79be56b7fb8004" alt="Fahrzeug *Das Autoladekabel ist separat erhältlich." />
 
 
 
@@ -742,7 +742,7 @@ Die Kaufquittung des ersten Käufers oder ein anderer angemessener schriftlicher
 
 ## 1. Laden Sie die App herunter und melden Sie sich an
 
-<img src="../../../../_static/manual-assets/_pool/3f/3f164ecc5029229306c93d615d6b5a7e3af8eb297b2d5a393d3cba422248414a.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_de/app_download.png" data-web-finished-panel-sha256="3f164ecc5029229306c93d615d6b5a7e3af8eb297b2d5a393d3cba422248414a" alt="Suchen Sie im Google Play Store oder im App Store nach &quot;Jackery&quot;, um die App zu installieren. Danach können Sie sich registrieren und anmelden. Alternativ können Sie den folgenden QR-Code scannen, um die App herunterzuladen und zu installieren." />
+<img src="../../../../_static/manual-assets/_pool/9b/9b296f0184c0fab0f68297668f6ef34786959141e06bcc14724fe65d98bf1117.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_de/app_download.png" data-web-finished-panel-sha256="9b296f0184c0fab0f68297668f6ef34786959141e06bcc14724fe65d98bf1117" alt="Suchen Sie im Google Play Store oder im App Store nach &quot;Jackery&quot;, um die App zu installieren. Danach können Sie sich registrieren und anmelden. Alternativ können Sie den folgenden QR-Code scannen, um die App herunterzuladen und zu installieren." />
 
 ## 2. Gerät hinzufügen
 
@@ -750,7 +750,7 @@ Die Kaufquittung des ersten Käufers oder ein anderer angemessener schriftlicher
 
 2.2 Drücken Sie die Hauptnetzschalter am Gerät, um es einzuschalten. Die WLAN- und Bluetooth-Symbole auf dem Gerät blinken, um anzuzeigen, dass das Gerät in den Netzwerkkonfigurationsmodus gewechselt ist. Tippen Sie auf die Schaltfläche \"**Symbol blinkt**\" und erlauben Sie der App, sich mit Geräten in der Nähe zu verbinden und auf Bluetooth zuzugreifen.
 
-<img src="../../../../_static/manual-assets/_pool/c1/c189e57f71f73b4b56628ad973f9161a7a162cb1d30704dd67aa2b15138f707f.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-add-device" data-web-finished-panel-path="assets/je1000h_eu_de/app_control_panel.png" data-web-finished-panel-sha256="c189e57f71f73b4b56628ad973f9161a7a162cb1d30704dd67aa2b15138f707f" alt="Hauptnetzschalter AC-1-Ausgangstaste/AC-2-Ausgangstaste DC/USB-Stromtaste" />
+<img src="../../../../_static/manual-assets/_pool/32/32be43d727ee211dbd524928f63b6f303fbfd106fc4692c19cb5cf675c472f5f.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-add-device" data-web-finished-panel-path="assets/je1000h_eu_de/app_control_panel.png" data-web-finished-panel-sha256="32be43d727ee211dbd524928f63b6f303fbfd106fc4692c19cb5cf675c472f5f" alt="Hauptnetzschalter AC-1-Ausgangstaste/AC-2-Ausgangstaste DC/USB-Stromtaste" />
 
 2.3 Nachdem Sie auf das gefundene Gerätesymbol getippt haben, koppelt sich die App automatisch per Bluetooth mit dem Gerät.
 
@@ -778,7 +778,7 @@ Die Kaufquittung des ersten Käufers oder ein anderer angemessener schriftlicher
 
 Nachdem das Gerät erfolgreich zur App hinzugefügt wurde, leuchtet das WLAN-Symbol am Gerät dauerhaft.
 
-<img src="../../../../_static/manual-assets/_pool/a7/a701b6be8113b127fba1dbd619d493c570cec2198e87fb24d081f744ef8037f5.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_de/app_connect_result.png" data-web-finished-panel-sha256="a701b6be8113b127fba1dbd619d493c570cec2198e87fb24d081f744ef8037f5" alt="Platzhalter für das Ergebnis der App-Einrichtung." />
+<img src="../../../../_static/manual-assets/_pool/e0/e0e36cec969102ba748c3265a32a62d1ed9ab2aab0a9979a4925f153b3a3e1cd.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_de/app_connect_result.png" data-web-finished-panel-sha256="e0e36cec969102ba748c3265a32a62d1ed9ab2aab0a9979a4925f153b3a3e1cd" alt="Platzhalter für das Ergebnis der App-Einrichtung." />
 
 Die oben gezeigten Screenshots dienen nur als Referenz.
 
