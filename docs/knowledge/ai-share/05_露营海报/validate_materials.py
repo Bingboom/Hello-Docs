@@ -53,7 +53,7 @@ def main():
     headings = re.findall(r'<h[12][^>]*>(.*?)</h[12]>', html)
     assert headings == approved_structure, 'Approved story structure changed'
     practical_structure = [
-        '【产品运营部】AI 使用知识分享：从工作需求做起',
+        '【产品运营部】AI 使用知识分享',
         '一、先从一件具体的工作开始', '二、打开一个空文件夹',
         '三、改一次价，不用重新来', '四、接下来还能往哪儿走',
         '附录：从 GitHub 找参考仓库，做成自己的工具',
