@@ -58,19 +58,23 @@ def render_article(source, target, template):
     target.write_text(article, 'utf-8')
 
 
+def write_redirect(target, destination):
+    target.write_text(f'''<!doctype html><html lang="zh-CN"><head>
+<meta charset="utf-8"><meta name="robots" content="noindex,nofollow">
+<meta http-equiv="refresh" content="0;url={destination}"><link rel="canonical" href="{destination}">
+<title>AI 使用知识分享</title>
+<script>location.replace('{destination}' + location.search + location.hash)</script>
+</head><body><p><a href="{destination}">打开 AI 使用知识分享</a></p></body></html>''', 'utf-8')
+
+
 def main():
     main_path = SHARE / 'index.html'
     legacy_path = SHARE / '00_打开分享.html'
     template_path = main_path if main_path.exists() else legacy_path
     original = refresh_stylesheet(template_path.read_text('utf-8'))
-    render_article(SHARE / '分享稿.md', main_path, template_path)
-    render_article(SHARE / '实用版分享稿.md', SHARE / 'practical.html', template_path)
-    legacy_path.write_text('''<!doctype html><html lang="zh-CN"><head>
-<meta charset="utf-8"><meta name="robots" content="noindex,nofollow">
-<meta http-equiv="refresh" content="0;url=index.html"><link rel="canonical" href="index.html">
-<title>AI 使用知识分享</title>
-<script>location.replace('index.html' + location.search + location.hash)</script>
-</head><body><p>分享入口已改为英文文件名。<a href="index.html">打开 AI 使用知识分享</a></p></body></html>''', 'utf-8')
+    render_article(SHARE / '实用版分享稿.md', main_path, template_path)
+    write_redirect(SHARE / 'practical.html', 'index.html')
+    write_redirect(legacy_path, 'index.html')
     head = original.split('</head>')[0]
     head = head.replace('href="阅读样式.css', 'href="../阅读样式.css')
     head += '''<style>
