@@ -43,7 +43,7 @@ def main():
         '一、先从一件具体的工作开始', '二、打开一个空文件夹',
         '三、改一次价，不用重新来', '四、接下来还能往哪儿走',
         '附录：从 GitHub 找参考仓库，做成自己的工具',
-        '彩蛋：一句话生成会骑车的鹈鹕',
+        '彩蛋：一句话生成会骑车的鹈鹕（这只鸟太贵了<img src="配图/doge-head.png" alt="狗头" style="display:inline-block;width:30px;height:25px;margin:0 3px;vertical-align:-4px;object-fit:contain">，慎用）',
     ]
     practical_headings = re.findall(r'<h[12][^>]*>(.*?)</h[12]>', html)
     assert practical_headings == practical_structure, 'Practical story structure changed'
@@ -54,6 +54,7 @@ def main():
                    '配图/小野500-HTML-实图.png', '配图/小野1000-HTML-实图.png',
                    '配图/钉钉产品与海报-实录.png',
                    '配图/钉钉MCP回读核对-实录.png',
+                   '配图/doge-head.png',
                    '06_动画示例/pelican-bike.html'):
         assert f'src="{source}"' in html, f'Missing retained/adapted illustration: {source}'
     exercise_html = (SHARE / '04_参考资料' / '01_完整练习.html').read_text('utf-8')
