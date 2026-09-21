@@ -51,12 +51,20 @@ def body_and_nav(source):
 
 
 def main():
-    main_path = SHARE / '00_打开分享.html'
-    original = refresh_stylesheet(main_path.read_text('utf-8'))
+    main_path = SHARE / 'index.html'
+    legacy_path = SHARE / '00_打开分享.html'
+    template_path = main_path if main_path.exists() else legacy_path
+    original = refresh_stylesheet(template_path.read_text('utf-8'))
     body, nav = body_and_nav(SHARE / '分享稿.md')
     main_html = re.sub(r'<main>.*?</main>', lambda _: '<main>' + body + '</main>', original, flags=re.S)
     main_html = re.sub(r'<nav>.*?</nav>', lambda _: '<nav>' + nav + '</nav>', main_html, flags=re.S)
     main_path.write_text(main_html, 'utf-8')
+    legacy_path.write_text('''<!doctype html><html lang="zh-CN"><head>
+<meta charset="utf-8"><meta name="robots" content="noindex,nofollow">
+<meta http-equiv="refresh" content="0;url=index.html"><link rel="canonical" href="index.html">
+<title>AI 使用知识分享</title>
+<script>location.replace('index.html' + location.search + location.hash)</script>
+</head><body><p>分享入口已改为英文文件名。<a href="index.html">打开 AI 使用知识分享</a></p></body></html>''', 'utf-8')
     head = original.split('</head>')[0]
     head = head.replace('href="阅读样式.css', 'href="../阅读样式.css')
     head += '''<style>
@@ -79,7 +87,7 @@ def main():
         page_head = re.sub(r'<title>.*?</title>', '<title>' + title + '</title>', head)
         page = (page_head + '<body class="reading-guide material">'
                 '<header class="topbar"><a href="index.html">小野露营市集 · 分享素材</a>'
-                '<a href="../00_打开分享.html">返回分享稿</a></header>'
+                '<a href="../index.html">返回分享稿</a></header>'
                 '<div class="layout"><main>' + material + '</main></div></body></html>')
         (ROOT / output_name).write_text(page, 'utf-8')
     references = sorted((SHARE / '04_参考资料').glob('*.md'))

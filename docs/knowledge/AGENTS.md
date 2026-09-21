@@ -19,7 +19,7 @@ It is an intentional exception to the repository's one-way code-mirror rule.
 ## AI sharing guide
 
 - `ai-share/分享稿.md` is the editable prose source.
-- `ai-share/00_打开分享.html` is the page served at `/ai-share/` and must carry
+- `ai-share/index.html` is the page served at `/ai-share/` and must carry
   the same approved wording as the prose source.
 - Keep links and assets relative so the same directory works on RTD and in the
   downloadable offline bundle.
@@ -29,7 +29,7 @@ It is an intentional exception to the repository's one-way code-mirror rule.
 ## Validation
 
 - Review the diff and confirm every changed path is under `docs/knowledge/**`.
-- Serve `docs/knowledge` locally and open `ai-share/00_打开分享.html`; check the
+- Serve `docs/knowledge` locally and open `ai-share/index.html`; check the
   navigation, reference links, images, narrow-screen layout, and print view.
 - When prose changes, compare `分享稿.md` with the rendered HTML and confirm the
   headings, order, examples, and links stay aligned.

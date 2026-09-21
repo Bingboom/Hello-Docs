@@ -22,7 +22,9 @@ class Links(HTMLParser):
 
 
 def main():
-    html = (SHARE / '00_打开分享.html').read_text('utf-8')
+    html = (SHARE / 'index.html').read_text('utf-8')
+    legacy_html = (SHARE / '00_打开分享.html').read_text('utf-8')
+    assert 'content="0;url=index.html"' in legacy_html, 'Legacy Chinese entry must redirect to index.html'
     expected, expected_nav = body_and_nav(SHARE / '分享稿.md')
     assert re.search(r'<main>(.*?)</main>', html, re.S).group(1) == expected
     assert re.search(r'<nav>(.*?)</nav>', html, re.S).group(1) == expected_nav
@@ -58,7 +60,7 @@ def main():
     count = 0
     references = list((SHARE / '04_参考资料').glob('*.html'))
     references.append(SHARE / '03_GitHub原例' / '阅读版.html')
-    paths = [SHARE / '00_打开分享.html', *ROOT.glob('*.html'), *references,
+    paths = [SHARE / 'index.html', SHARE / '00_打开分享.html', *ROOT.glob('*.html'), *references,
              SHARE / '06_动画示例' / 'pelican-bike.html']
     for page in references:
         source = page.with_suffix('.md')
