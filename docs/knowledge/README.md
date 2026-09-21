@@ -3,6 +3,7 @@
 这里由 Hello-Docs 独立维护，存放分享稿、配图、示例及参考资料。
 
 - `ai-share/index.html`：AI 使用知识分享主稿。
+- `ai-share/practical.html`：从工作需求切入的独立版本；主稿保持不变，鹈鹕动画放在文末彩蛋。
 - `ai-share/05_露营海报/`：当前分享主线；两张 CSV、三种共享样式的 LaTeX 海报、本地自动更新程序和真实操作素材。
 - `ai-share/配图/`：当前页面使用的 Q 版配图（`*-q版.png`）与保留的原图。
 - `ai-share/阅读样式.css`：主稿、参考阅读页及学生情况卡共用的样式；提示框采用浅灰底、细灰线，链接保留下划线。
@@ -22,8 +23,9 @@ auto-manual 的同步会完整保留这里已经合入 `Hello-Docs/main` 的内�
 修改流程：
 
 1. 从最新的 `Hello-Docs/main` 建立 `docs/knowledge-<主题>` 内容分支。
-2. 文字改动先修改 `ai-share/分享稿.md`，同时把已确认的同一版文字更新到
-   `ai-share/index.html`；样式、图片和示例则修改同目录对应文件。
+2. 主稿文字改动先修改 `ai-share/分享稿.md`，工作实践版修改
+   `ai-share/实用版分享稿.md`；运行素材渲染脚本生成对应的 `index.html` 或
+   `practical.html`。样式、图片和示例则修改同目录对应文件。
 3. 只提交 `docs/knowledge/**` 下的文件。本次内容 PR 不夹带模板、构建代码、
    `docs/publish/**` 或产品说明书评审文件。
 4. 本地打开 `ai-share/index.html`，检查目录跳转、参考链接、图片、窄屏

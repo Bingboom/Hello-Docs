@@ -23,14 +23,21 @@ class Links(HTMLParser):
 
 def main():
     html = (SHARE / 'index.html').read_text('utf-8')
+    practical_html = (SHARE / 'practical.html').read_text('utf-8')
     legacy_html = (SHARE / '00_打开分享.html').read_text('utf-8')
     assert 'content="0;url=index.html"' in legacy_html, 'Legacy Chinese entry must redirect to index.html'
     expected, expected_nav = body_and_nav(SHARE / '分享稿.md')
     assert re.search(r'<main>(.*?)</main>', html, re.S).group(1) == expected
     assert re.search(r'<nav>(.*?)</nav>', html, re.S).group(1) == expected_nav
+    practical_expected, practical_nav = body_and_nav(SHARE / '实用版分享稿.md')
+    assert re.search(r'<main>(.*?)</main>', practical_html, re.S).group(1) == practical_expected
+    assert re.search(r'<nav>(.*?)</nav>', practical_html, re.S).group(1) == practical_nav
     heading_ids = re.findall(r'<h[23]\b[^>]*\bid="([^"]+)"', expected)
     nav_ids = re.findall(r'href="#([^"]+)"', expected_nav)
     assert nav_ids == heading_ids, 'Every section and subsection must appear in the TOC in order'
+    practical_heading_ids = re.findall(r'<h[23]\b[^>]*\bid="([^"]+)"', practical_expected)
+    practical_nav_ids = re.findall(r'href="#([^"]+)"', practical_nav)
+    assert practical_nav_ids == practical_heading_ids, 'Every practical-page heading must appear in order'
     approved_structure = [
         '【产品运营部】AI 使用知识分享', '一、GPT-6 Astra 到底能做到什么？',
         '二、厉害的不只是做出一个动画', '三、放到工作里，能替我们做什么？',
@@ -41,6 +48,18 @@ def main():
     ]
     headings = re.findall(r'<h[12][^>]*>(.*?)</h[12]>', html)
     assert headings == approved_structure, 'Approved story structure changed'
+    practical_structure = [
+        '【产品运营部】AI 使用知识分享：从工作需求做起',
+        '一、先从一件明天要交的工作开始', '二、不会写代码，怎么把它用起来？',
+        '三、从做一次，到以后都能用', '四、海报之外，Agent 还能接着做什么？',
+        '附录 1：跟着小林，从空文件夹做出一个海报工具',
+        '附录 2：从 GitHub 找参考仓库，做成自己的工具',
+        '彩蛋：一句话生成会骑车的鹈鹕',
+    ]
+    practical_headings = re.findall(r'<h[12][^>]*>(.*?)</h[12]>', practical_html)
+    assert practical_headings == practical_structure, 'Practical story structure changed'
+    egg_position = practical_html.index('彩蛋：一句话生成会骑车的鹈鹕')
+    assert practical_html.index('06_动画示例/pelican-bike.html') > egg_position
     for source in ('配图/小野300-Sol-High-实图.png', '配图/01-场景-露营海报-q版.png',
                    '配图/小野500-HTML-实图.png', '配图/小野1000-HTML-实图.png',
                    '配图/钉钉产品与海报-实录.png',
@@ -60,7 +79,8 @@ def main():
     count = 0
     references = list((SHARE / '04_参考资料').glob('*.html'))
     references.append(SHARE / '03_GitHub原例' / '阅读版.html')
-    paths = [SHARE / 'index.html', SHARE / '00_打开分享.html', *ROOT.glob('*.html'), *references,
+    paths = [SHARE / 'index.html', SHARE / 'practical.html', SHARE / '00_打开分享.html',
+             *ROOT.glob('*.html'), *references,
              SHARE / '06_动画示例' / 'pelican-bike.html']
     for page in references:
         source = page.with_suffix('.md')
