@@ -1,4 +1,4 @@
-<!doctype html><html lang="zh-CN"><head><meta name="robots" content="noindex,nofollow"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>用过以后，再看代码怎样工作</title><style>
+<!doctype html><html lang="zh-CN"><head><meta name="robots" content="noindex,nofollow"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HTML 工作台：结果与核验边界</title><style>
 .learning-figure{margin:28px 0 34px}.learning-figure img{display:block;width:100%;height:auto;border-radius:12px}.learning-figure figcaption{font-size:12px;line-height:1.7;color:var(--muted);margin-top:10px}.learning-figure a{display:block}.learning-figure figcaption a{display:inline}.learning-figure{break-inside:avoid}
 
 :root{--ink:#252d3d;--muted:#69768b;--green:#2563eb;--paper:#ffffff;--line:#e3e9f2;--tint:#eff6ff;--orange:#c65316}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:78px}body{margin:0;background:#f6f8fc;color:var(--ink);font:16px/1.9 -apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif}a{color:var(--green);text-underline-offset:4px;overflow-wrap:anywhere}button{font:inherit;cursor:pointer}.topbar{background:var(--paper);border-bottom:1px solid var(--line);padding:12px 30px;display:flex;justify-content:space-between;align-items:center;gap:20px;position:sticky;top:0;z-index:3}.topbar a{text-decoration:none;font-size:14px;font-weight:650}.topbar small{font-weight:400;color:var(--muted);margin-left:10px}.topbar button,.copy{border:1px solid var(--line);background:white;color:var(--green);border-radius:6px;padding:5px 12px;font-size:12px}.layout{display:grid;grid-template-columns:220px minmax(0,900px);gap:42px;max-width:1270px;margin:auto;padding:40px 30px 80px}aside{position:sticky;top:92px;align-self:start;font-size:13px}.nav-title{font-size:11px;letter-spacing:2px;color:var(--muted);margin:0 0 16px}nav a{display:block;text-decoration:none;color:var(--muted);padding:8px 0 8px 12px;border-left:2px solid var(--line);line-height:1.65}nav a:hover,nav a:focus{color:var(--green);border-color:var(--green)}aside p{font-size:12px;color:var(--muted);margin-top:28px}main{min-width:0;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:42px 48px;box-shadow:0 8px 30px #233b6808}h1{font-size:32px;line-height:1.35;letter-spacing:-.7px;margin:5px 0 24px}h2{font-size:24px;line-height:1.5;margin:58px 0 22px;border-top:1px solid var(--line);padding-top:32px}h3{font-size:19px;line-height:1.6;margin:28px 0 13px}p{margin:14px 0}li{margin:7px 0}ul,ol{padding-left:24px}strong{font-weight:650}blockquote{margin:22px 0;padding:14px 20px;border-left:3px solid #f97316;background:var(--tint);color:#34435d;border-radius:0 8px 8px 0}blockquote p{margin:3px 0}h1+blockquote{background:transparent;border-left:3px solid #fb923c;font-size:18px;margin-bottom:32px}pre{background:#f5f7fb;border:1px solid var(--line);padding:24px 20px 18px;border-radius:8px;font:13px/1.8 ui-monospace,SFMono-Regular,Consolas,monospace;overflow:auto;tab-size:4;position:relative;white-space:pre-wrap;overflow-wrap:anywhere}code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.88em;background:#edf2fa;padding:2px 5px;border-radius:4px}pre code{padding:0;font-size:inherit;background:transparent}.table-scroll{overflow-x:auto;margin:22px 0}table{border-collapse:collapse;width:100%;font-size:14px;text-align:left}th{background:var(--tint);font-weight:600;color:#315c9c}td,th{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}td:first-child{min-width:125px}img{max-width:100%;height:auto}details{margin:24px 0;border:1px solid #dce5f2;border-radius:8px;padding:0 18px}summary{cursor:pointer;padding:15px 0;color:var(--green);font-weight:600}details pre{margin-top:0}.code-wrap{position:relative}.copy{position:absolute;right:7px;top:7px;z-index:1;line-height:1.3;font-size:11px}.code-wrap pre{padding-top:38px}.page-note{border:1px solid var(--line);background:#fff8ee;border-radius:8px;padding:14px 18px;font-size:14px;margin:22px 0}.cell{margin:24px 0}.cell-label{font-size:11px;color:var(--muted);letter-spacing:1px;margin:0 0 5px}.output{background:white;border-left:3px solid #f59e0b;padding:12px 15px;overflow:auto}.output pre{background:white;border:none;padding:0;margin:0;white-space:pre;font-size:13px}.output img{display:block;max-width:100%;margin:12px auto}.output table{font-size:11px;line-height:1.5}.output td,.output th{padding:7px;min-width:0}.footer{border-top:1px solid var(--line);padding-top:20px;margin-top:50px;font-size:12px;color:var(--muted)}.progress{position:fixed;top:0;left:0;height:3px;background:var(--green);z-index:5;width:0}a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #fb923c;outline-offset:3px}.notice{font-size:13px;color:var(--muted)}
@@ -19,87 +19,69 @@ blockquote{background:#eff6ff;border-left-color:#60a5fa;color:#334869}
 .progress{background:linear-gradient(90deg,#f97316,#fbbf24)}
 @media print{main{box-shadow:none}h2:before{display:none}}
 </style><link rel="stylesheet" href="../阅读样式.css?v=ec6208a0cc2b">
-</head><body class="reading-guide"><div id="progress" class="progress"></div><header class="topbar"><a href="../index.html">← 返回分享稿<small>AI 使用知识分享</small></a><button id="print">打印 / 保存 PDF</button></header><div class="layout"><aside><p class="nav-title">阅读目录</p><nav><a class="toc-level-3" href="#再看一个例子帮我列出需要更新的海报">再看一个例子：帮我列出需要更新的海报</a><a class="toc-level-3" href="#为什么-agent-可能先把资料整理成表">为什么 Agent 可能先把资料整理成表</a><a class="toc-level-3" href="#下次为什么还能继续用">下次为什么还能继续用</a></nav></aside><main><h1 id="用过以后再看代码怎样工作">用过以后，再看代码怎样工作</h1>
-<p>小林看到海报上的“小野 500 · 512 Wh”，想知道它是怎么从表格变过来的。把刚才的结果拆开，就能看懂程序在做什么，不用先记代码语法。</p>
-<figure>
-<img src="../配图/03-查找判断-露营-q版.png" alt="按型号找资料 → 填入变量 → 写入海报" />
-<figcaption aria-hidden="true">按型号找资料 → 填入变量 → 写入海报</figcaption>
-</figure>
-<p>按型号找资料 → 填入变量 → 写入海报</p>
+</head><body class="reading-guide"><div id="progress" class="progress"></div><header class="topbar"><a href="../index.html">← 返回分享稿<small>AI 使用知识分享</small></a><button id="print">打印 / 保存 PDF</button></header><div class="layout"><aside><p class="nav-title">阅读目录</p><nav><a class="toc-level-2" href="#s0">已留下什么结果</a><a class="toc-level-2" href="#s1">哪些结论还不能替它下</a><a class="toc-level-2" href="#s2">在自己的电脑上怎么验</a></nav></aside><main><h1 id="html-工作台结果与核验边界">HTML 工作台：结果与核验边界</h1>
+<p>本页汇总 HTML 工作台已有的操作实录、导出文件和检查方法，并列出尚待验证的项目。</p>
+<p><a href="01_完整练习.html">回到完整练习</a> · <a href="07_工作台使用说明.html">工作台使用说明</a> · <a href="../downloads/xiaoye-poster-workbench.zip">下载同路线工具包</a></p>
+<h2 id="s0">已留下什么结果</h2>
 <div class="table-scroll"><table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
 <thead>
 <tr>
-<th>刚才看到的结果</th>
-<th>程序做了什么</th>
+<th>环节</th>
+<th>已有材料</th>
+<th>能确认什么</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>小野 500 用自己的参数和介绍</td>
-<td>查找：按型号找到对应资料</td>
+<td>三款排版</td>
+<td><a href="01_完整练习.html#s1">完整练习第 2 步</a></td>
+<td>599、999、1599 元的三张海报，共享风格、不同布局</td>
 </tr>
 <tr>
-<td>介绍中的容量变成 512 Wh</td>
-<td>替换：把表格里的值填进文案变量</td>
+<td>改价结果</td>
+<td><a href="../配图/HTML工作台-改价899-实录.png">工作台实录</a> 与 <a href="../配图/小野500-改价899-实图.png">899 元海报</a></td>
+<td>小野 500 显示 999 → 899、v2；另外两款界面显示 v1</td>
 </tr>
 <tr>
-<td>每款得到自己的 PDF</td>
-<td>写入：将文字、插画放进对应版式</td>
+<td>自动导出</td>
+<td><a href="../配图/HTML工作台2-自动导出-实录.png">工作台实录</a>、<a href="../07_HTML海报过程/自动导出/xiaoye-500-poster.pdf">PDF</a>、<a href="../07_HTML海报过程/自动导出/xiaoye-500-poster.png">PNG</a></td>
+<td>已留存 899 元导出文件；练习记录 PDF 为 A5 单页，含型号、价格与教学标记</td>
 </tr>
 <tr>
-<td>三款都能生成</td>
-<td>重复：处理完一款，再处理下一款</td>
+<td>重启</td>
+<td><a href="01_完整练习.html#s5">完整练习第 6 步</a></td>
+<td>已记录重新启动后 899 元、v4 仍保留，下载入口可用</td>
+</tr>
+<tr>
+<td>钉钉一次上传</td>
+<td><a href="01_完整练习.html#s6">完整练习第 7 步</a></td>
+<td>三条教学记录及 PNG、PDF 上传和 MCP 回读实录；发现异常后重新上传</td>
 </tr>
 </tbody>
 </table></div>
-<p>参数缺失时，程序应提示补充，不猜一个数字填进去。小林只需要把这个规则告诉 Agent，再看错误提示是否真的出现。</p>
-<h3 id="再看一个例子帮我列出需要更新的海报">再看一个例子：帮我列出需要更新的海报</h3>
-<p>小林可以直接说：</p>
-<blockquote>
-<p>价格或者介绍改过了，而且资料齐全的产品，帮我列出来准备更新。缺少插画的先提示我补充，不要继续生成。</p>
-</blockquote>
-<figure>
-<img src="../配图/08-字典与或非-露营-q版.png" alt="按小林的要求筛选待更新产品（教学规则示例）" />
-<figcaption aria-hidden="true">按小林的要求筛选待更新产品（教学规则示例）</figcaption>
-</figure>
-<p>按小林的要求筛选待更新产品（教学规则示例）</p>
-<p>这个例子里，小野 300 没变化，不列入；小野 500 改了价格且资料齐全，列入；小野 1000 改了文案但缺插画，先提示补充。小林核对名单后，再让程序处理。</p>
-<p>程序会把这段要求拆成两个判断：资料是否齐全，价格或介绍是否有变化。资料齐全，而且至少一项有变化，就进入待更新名单；资料不全，则提示补充。小林用日常语言说清条件，Agent 把条件写成代码，再用这三款产品检查筛选结果是否符合要求。</p>
-<h3 id="为什么-agent-可能先把资料整理成表">为什么 Agent 可能先把资料整理成表</h3>
-<p>小林最初给的是几段文字。为了下次还能查找，Agent 可以整理成“型号、产品名称、容量、价格”等固定栏目。</p>
-<p>产品表和内容表都保留型号，就能把同一款的参数与介绍对应起来。比如 DEMO-500 对应小野 500，不能仅靠“第二行”匹配，因为表格可能重新排序。</p>
-<div class="table-scroll"><table>
-<thead>
-<tr>
-<th>文件</th>
-<th>在本案例里的作用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>products.csv、content.csv</td>
-<td>保存产品参数和介绍；CSV 是常见表格文件</td>
-</tr>
-<tr>
-<td>assets 里的图片</td>
-<td>固定插画，改价时不重新画</td>
-</tr>
-<tr>
-<td>排版文件</td>
-<td>公共样式和三种不同版式</td>
-</tr>
-<tr>
-<td>demo.py</td>
-<td>读取资料、生成海报、运行本地页面</td>
-</tr>
-<tr>
-<td>README</td>
-<td>说明怎样打开和使用</td>
-</tr>
-</tbody>
-</table></div>
-<p>这些文件由 Agent 创建和维护。小林不必先手工整理成这个结构，提供现有资料即可。</p>
-<h3 id="下次为什么还能继续用">下次为什么还能继续用</h3>
-<p>小林提供资料 → 程序查表、填变量和排版 → 小林核对 PDF。</p>
-<p>程序保存了这套做法，下一次改资料就能复用。加上后台检测后，本地数据变化还可以触发更新。是否真的生效，要用一次改价测试确认，不能只看 Agent 的完成说明。</p>
+<h2 id="s1">哪些结论还不能替它下</h2>
+<ul>
+<li>改价前的整页 HTML 工作台截图尚未记录；现有改价后截图不能代替完整的前后取证。</li>
+<li>界面里另外两款仍为 v1，不等于已经提供了这两款改价前后的文件哈希报告。若要严格证明文件未变，需在同一轮测试中记录并对比。</li>
+<li>第 3 步已经有资料表，独立运行统一生成入口后的逐款核对记录仍待补。</li>
+<li>已有自动导出文件，不等于系统手动打印对话框也已经逐项验证。</li>
+<li>工具说明要求导出失败时保留旧文件，但本页没有附上 HTML 版故障注入的完整记录，不能据此宣称所有失败路径都已通过。</li>
+<li>包内有 macOS、Windows 启动脚本；现有记录不能替代每台电脑的环境检查与跨平台实测。</li>
+<li>本地保存价格触发更新与钉钉自动同步不是一回事。后者尚未实现。</li>
+</ul>
+<h2 id="s2">在自己的电脑上怎么验</h2>
+<p>第一次从零做海报，只需检查一张页面能打开，再改一处文字并核对。以下检查留到你决定运行完整工作台时再做：</p>
+<ol type="1">
+<li>完整解压工具包，按使用说明检查环境，启动工作台。</li>
+<li>先把小野 500 设为 999，等输出成功。记录三款价格、版本与更新时间；需要严格核验时，让 Agent 记录三款 HTML、PDF、PNG 的文件哈希。</li>
+<li>只把小野 500 改为 899，点保存后不再发送生成指令。</li>
+<li>等成功后，分别打开新的 HTML、PDF、PNG，确认都是 899；再检查另外两款价格、版本、时间，必要时对比文件哈希。</li>
+<li>关闭服务并重新打开，确认资料和文件仍在。若失败，保留报错和截图，先排查，不把输入框的值当作完成依据。</li>
+</ol>
+<p>不要为了贴合教程把版本号重置成截图中的数字，也不要在共享钉钉教学表中做破坏性测试。</p>
 </main></div><script>document.getElementById('print').onclick=()=>window.print();document.querySelectorAll('pre').forEach(p=>{if(p.closest('.output'))return;const w=document.createElement('div');w.className='code-wrap';p.before(w);w.append(p);const b=document.createElement('button');b.className='copy';b.textContent='复制';b.onclick=async()=>{try{if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(p.innerText)}else{const t=document.createElement('textarea');t.value=p.innerText;document.body.append(t);t.select();if(!document.execCommand('copy'))throw Error('copy');t.remove()}b.textContent='已复制'}catch{b.textContent='请选中文字复制'}setTimeout(()=>b.textContent='复制',2200)};w.append(b)});let closed=[];window.addEventListener('beforeprint',()=>{closed=[...document.querySelectorAll('details:not([open])')];closed.forEach(x=>x.open=true)});window.addEventListener('afterprint',()=>closed.forEach(x=>x.open=false));window.addEventListener('scroll',()=>{const h=document.documentElement;document.getElementById('progress').style.width=((h.scrollTop/(h.scrollHeight-h.clientHeight||1))*100)+'%'});</script></body></html>

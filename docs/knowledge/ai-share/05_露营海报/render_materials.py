@@ -52,6 +52,7 @@ def body_and_nav(source):
 
 def render_article(source, target, template):
     original = refresh_stylesheet(template.read_text('utf-8'))
+    original = original.replace('class="reading-guide"', 'class="reading-guide share-main"', 1)
     body, nav = body_and_nav(source)
     article = re.sub(r'<main>.*?</main>', lambda _: '<main>' + body + '</main>', original, flags=re.S)
     article = re.sub(r'<nav>.*?</nav>', lambda _: '<nav>' + nav + '</nav>', article, flags=re.S)
@@ -72,7 +73,10 @@ def main():
     legacy_path = SHARE / '00_打开分享.html'
     template_path = main_path if main_path.exists() else legacy_path
     original = refresh_stylesheet(template_path.read_text('utf-8'))
-    render_article(SHARE / '实用版分享稿.md', main_path, template_path)
+    source = SHARE / '分享稿.md'
+    # Keep the former practical-source filename as a synchronized compatibility copy.
+    (SHARE / '实用版分享稿.md').write_text(source.read_text('utf-8'), 'utf-8')
+    render_article(source, main_path, template_path)
     write_redirect(SHARE / 'practical.html', 'index.html')
     write_redirect(legacy_path, 'index.html')
     head = original.split('</head>')[0]

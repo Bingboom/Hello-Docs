@@ -14,7 +14,7 @@ GitHub 上有些项目用 Jupyter Notebook 展示做法。它像一本能动手�
 
 本分享借鉴这种边看边试的方式，另写了一个普通 Python 小练习，不需要先安装 Jupyter：
 
-- [从 the craft of selfteaching 开始：改一句产品介绍](../03_GitHub原例/阅读版.html)：参考[the craft of selfteaching](https://github.com/selfteaching/the-craft-of-selfteaching)，先运行一句产品介绍，只改价格再看结果；结合露营海报理解变量怎样填入文字。
+- [动手小练习：让产品介绍里的价格跟着变](../03_GitHub原例/阅读版.html)：参考 [the craft of selfteaching](https://github.com/selfteaching/the-craft-of-selfteaching)，先运行一句产品介绍，只改价格再看结果；结合露营海报理解变量怎样填入文字。
 
 先打开“阅读版”就能看说明、代码和已经生成的结果，不用安装软件。想修改并重新运行时，把对应文件夹交给 Agent，并明确运行其中的 `product_intro.py`：
 

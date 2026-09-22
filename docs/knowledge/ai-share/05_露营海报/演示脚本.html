@@ -1,4 +1,4 @@
-<!doctype html><html lang="zh-CN"><head><meta name="robots" content="noindex,nofollow"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>从鹈鹕到露营海报：现场演示脚本</title><style>
+<!doctype html><html lang="zh-CN"><head><meta name="robots" content="noindex,nofollow"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>从一张海报到一个小工具：现场演示脚本</title><style>
 .learning-figure{margin:28px 0 34px}.learning-figure img{display:block;width:100%;height:auto;border-radius:12px}.learning-figure figcaption{font-size:12px;line-height:1.7;color:var(--muted);margin-top:10px}.learning-figure a{display:block}.learning-figure figcaption a{display:inline}.learning-figure{break-inside:avoid}
 
 :root{--ink:#252d3d;--muted:#69768b;--green:#2563eb;--paper:#ffffff;--line:#e3e9f2;--tint:#eff6ff;--orange:#c65316}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:78px}body{margin:0;background:#f6f8fc;color:var(--ink);font:16px/1.9 -apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif}a{color:var(--green);text-underline-offset:4px;overflow-wrap:anywhere}button{font:inherit;cursor:pointer}.topbar{background:var(--paper);border-bottom:1px solid var(--line);padding:12px 30px;display:flex;justify-content:space-between;align-items:center;gap:20px;position:sticky;top:0;z-index:3}.topbar a{text-decoration:none;font-size:14px;font-weight:650}.topbar small{font-weight:400;color:var(--muted);margin-left:10px}.topbar button,.copy{border:1px solid var(--line);background:white;color:var(--green);border-radius:6px;padding:5px 12px;font-size:12px}.layout{display:grid;grid-template-columns:220px minmax(0,900px);gap:42px;max-width:1270px;margin:auto;padding:40px 30px 80px}aside{position:sticky;top:92px;align-self:start;font-size:13px}.nav-title{font-size:11px;letter-spacing:2px;color:var(--muted);margin:0 0 16px}nav a{display:block;text-decoration:none;color:var(--muted);padding:8px 0 8px 12px;border-left:2px solid var(--line);line-height:1.65}nav a:hover,nav a:focus{color:var(--green);border-color:var(--green)}aside p{font-size:12px;color:var(--muted);margin-top:28px}main{min-width:0;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:42px 48px;box-shadow:0 8px 30px #233b6808}h1{font-size:32px;line-height:1.35;letter-spacing:-.7px;margin:5px 0 24px}h2{font-size:24px;line-height:1.5;margin:58px 0 22px;border-top:1px solid var(--line);padding-top:32px}h3{font-size:19px;line-height:1.6;margin:28px 0 13px}p{margin:14px 0}li{margin:7px 0}ul,ol{padding-left:24px}strong{font-weight:650}blockquote{margin:22px 0;padding:14px 20px;border-left:3px solid #f97316;background:var(--tint);color:#34435d;border-radius:0 8px 8px 0}blockquote p{margin:3px 0}pre{background:#f5f7fb;border:1px solid var(--line);padding:24px 20px 18px;border-radius:8px;font:13px/1.8 ui-monospace,SFMono-Regular,Consolas,monospace;overflow:auto;tab-size:4;position:relative;white-space:pre-wrap;overflow-wrap:anywhere}code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.88em;background:#edf2fa;padding:2px 5px;border-radius:4px}pre code{padding:0;font-size:inherit;background:transparent}.table-scroll{overflow-x:auto;margin:22px 0}table{border-collapse:collapse;width:100%;font-size:14px;text-align:left}th{background:var(--tint);font-weight:600;color:#315c9c}td,th{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}td:first-child{min-width:125px}img{max-width:100%;height:auto}details{margin:24px 0;border:1px solid #dce5f2;border-radius:8px;padding:0 18px}summary{cursor:pointer;padding:15px 0;color:var(--green);font-weight:600}details pre{margin-top:0}.code-wrap{position:relative}.copy{position:absolute;right:7px;top:7px;z-index:1;line-height:1.3;font-size:11px}.code-wrap pre{padding-top:38px}.page-note{border:1px solid var(--line);background:#fff8ee;border-radius:8px;padding:14px 18px;font-size:14px;margin:22px 0}.cell{margin:24px 0}.cell-label{font-size:11px;color:var(--muted);letter-spacing:1px;margin:0 0 5px}.output{background:white;border-left:3px solid #f59e0b;padding:12px 15px;overflow:auto}.output pre{background:white;border:none;padding:0;margin:0;white-space:pre;font-size:13px}.output img{display:block;max-width:100%;margin:12px auto}.output table{font-size:11px;line-height:1.5}.output td,.output th{padding:7px;min-width:0}.footer{border-top:1px solid var(--line);padding-top:20px;margin-top:50px;font-size:12px;color:var(--muted)}.progress{position:fixed;top:0;left:0;height:3px;background:var(--green);z-index:5;width:0}a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #fb923c;outline-offset:3px}.notice{font-size:13px;color:var(--muted)}
@@ -20,7 +20,7 @@ main a{color:#50504d;text-decoration-color:#b6b6b0;text-decoration-thickness:1px
 .progress{background:linear-gradient(90deg,#f97316,#fbbf24)}
 @media print{main{box-shadow:none}h2:before{display:none}}
 .intro-summary{font-size:13px;line-height:1.7;color:var(--muted);margin:-8px 0 26px;padding:0;background:none;border:0}
-</style><link rel="stylesheet" href="../阅读样式.css?v=bc7db0f95bc5">
+</style><link rel="stylesheet" href="../阅读样式.css?v=ec6208a0cc2b">
 <style>
     .material .layout{display:block;max-width:1240px}.material main{padding:32px}
     .poster-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
@@ -28,48 +28,45 @@ main a{color:#50504d;text-decoration-color:#b6b6b0;text-decoration-thickness:1px
     figcaption{font-size:13px;color:var(--muted);padding:10px 0}
     @media(max-width:650px){.poster-grid{grid-template-columns:1fr}.material main{padding:20px}}
     @media print{.poster-grid{grid-template-columns:repeat(3,minmax(0,1fr))}figure{break-inside:avoid}}
-    </style></head><body class="reading-guide material"><header class="topbar"><a href="index.html">小野露营市集 · 分享素材</a><a href="../index.html">返回分享稿</a></header><div class="layout"><main><h1 id="从鹈鹕到露营海报现场演示脚本">从鹈鹕到露营海报：现场演示脚本</h1>
-<p>建议用 12–15 分钟，按“看作品—解决工作—动手起步—延伸场景”讲。产品和价格均为教学虚构。现场展示正在运行的本地程序，不把截图当作实时运行。只有后半段延伸是设想，不当成已完成的演示。</p>
-<h2 id="s0">先让鹈鹕登场（2 分钟）</h2>
-<p>打开主稿里的动画，先给观众看原提示词：“生成鹈鹕骑车的 HTML”。不先解释术语，暂停一下、调一下速度，再请观众看脚和踏板。</p>
-<p>“我们给了一句话，它交出来的是一个可以运行和操作的作品。这里值得看的是：画面、动作和按钮能不能一起工作。接着提出‘只改围巾颜色，其他不动’，又能观察它怎样理解修改范围。”</p>
-<p>修改请求可以留作观众练习，不冒充已经完成的现场修改；尚无多模型对比结果，不给模型排名。</p>
-<h2 id="s1">转到工作：周五下午的一项任务（1 分钟）</h2>
-<p>“会骑车的鹈鹕很有意思。但同样的能力，能不能帮我们做完明天要交的工作？”</p>
-<p>“明天要去露营市集。小林要给三款产品准备小海报，能看懂产品特点、参数和活动价，还要方便打印。先把这件小事做出来。”</p>
-<p>展示三张 PDF。请观众先看出三种布局，再指出它们共用字体、色彩和参数样式。</p>
-<h2 id="s2">先看临时改价：保存后停手（2 分钟）</h2>
-<p>演示前确保小野 500 已是 999 并记录三款当前版本。若目前为 899，先在页面改回 999，等生成成功；不要清理或手改版本号。</p>
-<p>“负责人又发消息：小野 500 改成 899，另外两款不动。”</p>
-<p>在本地页面把 999 改成 899，保存后不再运行生成命令。等状态成功，打开新 PDF 核对 899，再确认另外两款版本未变。文件哈希核验放在验收记录里，不要求观众理解 SHA。</p>
-<p>“小林拿到的不只是三张图，还有一套下次能继续用的办法。”</p>
-<h2 id="s3">回到起点：空文件夹和一张海报（1 分钟）</h2>
-<p>展示主稿里的第一条海报需求。“不是上来就造完整系统。先给资料、要一张真实预览，发现哪里不对，再具体地改。”</p>
-<p>指向三张成品，让观众看出共享风格与不同布局。需要讲调试时，用“介绍挤到价格上了，请改间距，其他两款不动”这类具体反馈，不先打开代码文件。</p>
-<h2 id="s4">再解释输入：两张小表（1 分钟）</h2>
-<p>打开主稿里的钉钉教学表链接或真实表格截图，找到小野 500 的参数和介绍模板，指向 <code>{{product_name}}</code> 和 <code>{{capacity_wh}}</code>。说明本地工具把资料保存为 CSV；教学表不是已经接通的实时数据源。</p>
-<p>“一张表放参数，一张表放可复用的句子。程序按型号关联，变量让句子用上这一款产品的数据。字段对不上就报错，不猜数字。”</p>
-<h2 id="s5">有人想深挖时：样式可以共享，排版可以不同（可选）</h2>
-<p>打开 <code>latex/theme.tex</code> 和 <code>latex/layout_split.tex</code>。指出前者管颜色、字体，后者决定图片在左、参数在右。对照 <code>layout_cards.tex</code>，看看相同参数怎样进入卡片布局。</p>
-<p>“插画是提前制作好的素材。每次参数变化，只替换文字、数字和版式输入，再让 XeLaTeX 输出 PDF。”</p>
-<p>需要展示 CLI 时运行 <code>python3 demo.py build</code>。如果没有输入变化，它应跳过，而不是无意义地重新生成。</p>
-<h2 id="s6">收束：交付物也需要维护（1 分钟）</h2>
-<p>“系统保存了新文件，也知道它对应哪条产品记录、哪版数据、什么时候生成、这次改了什么。如果生成失败，旧文件仍可使用，状态里会留下原因。”</p>
-<p>打开本地回写表，展示版本、更新时间、变更摘要。参数由人确认，系统负责生成和维护记录。</p>
-<h2 id="s7">同事去哪里拿：钉钉对应行的附件（1 分钟）</h2>
-<p>“本地确认好后，借助已授权的工具，把图片和 PDF 放回对应的产品行。同事在平时查产品的位置就能找到海报。”</p>
-<p>当前已按型号上传三张最终海报 PNG，可在教学表“海报预览”字段查看；三份 PDF 也已上传到对应的“海报 PDF”字段，自动同步未接入。教学表建立、一次文件上传、持续自动更新是三个不同验收阶段，不要把它们混为一谈。</p>
-<h2 id="s8">回应开头：海报之外，还能接着做什么？（2–3 分钟）</h2>
-<p>“周一，同事问：十款产品能做吗？手机能看吗？顾客的问题能不能补进下一版？”</p>
-<p>跟着主稿第六节，依次提出三种延伸：同一份资料生成海报、价签和销售介绍卡；做可筛选、可下载的产品展示页；收集自愿反馈、整理问题，让人确认后再更新文案。</p>
-<p>“开头 HTML 里是鹈鹕和踏板，现在换成了产品和按钮。再往后，还要让多个文件、页面和工具相互配合。这才是可以继续拿来检验 Astra 的复杂任务。”</p>
-<p>明确这些是下一步设想，不展示虚构的成功截图，也不把升级模型说成自动接通权限和服务。最后邀请观众从鹈鹕提示词，或自己的一件重复工作开始；具体跟做步骤就在主稿附录。</p>
-<h2 id="s9">现场故障预案</h2>
+    </style></head><body class="reading-guide material"><header class="topbar"><a href="index.html">小野露营市集 · 分享素材</a><a href="../index.html">返回分享稿</a></header><div class="layout"><main><h1 id="从一张海报到一个小工具现场演示脚本">从一张海报到一个小工具：现场演示脚本</h1>
+<p>建议用 12–15 分钟，顺序与主稿一致：先讲工作，再看怎么做，接着演示改价与交付，最后留一个小练习。鹈鹕放在文末作可选彩蛋。全部产品和价格均为教学虚构。</p>
+<h2 id="s0">演示前：准备工作台</h2>
+<p>使用 <a href="../downloads/xiaoye-poster-workbench.zip">HTML 工作台下载包</a>，按 <a href="../04_参考资料/07_工作台使用说明.html">工作台使用说明</a> 检查环境并启动。页面地址为 <a href="http://127.0.0.1:62100/workbench" class="uri">http://127.0.0.1:62100/workbench</a>。</p>
+<p>提前打开三款 HTML、PDF 和 PNG。小野 500 若已是 899，先在页面改回 999，等所有输出成功，记录三款当前版本与更新时间；不要清理历史或手改版本号。静态截图用于备用，不能说成正在运行的页面。</p>
+<h2 id="s1">先讲任务：周五下午的一条消息（1 分钟）</h2>
+<p>“明天露营市集，三款产品各做一张海报，风格统一，但别长得一模一样。小林手里有资料和插画，先要把这件事做出来。”</p>
+<p>展示主稿第一节的三张海报。先看出三种布局，再指出共用的色彩、字体和参数样式。此处展示的是改价前的成品，小野 500 为 999。</p>
+<h2 id="s2">回到起点：一个空文件夹，一张海报（2 分钟）</h2>
+<p>跟着主稿第二节，打开 <a href="../04_参考资料/01_完整练习.html#s0">完整练习第 1 步</a>，展示第一条需求和真实结果。</p>
+<p>“先给完整资料，只做一张。看看数字对不对、图片对不对、文字有没有挤出去，再提下一次修改。我们熟悉业务，就能判断哪里不对，不需要先读懂全部代码。”</p>
+<p>再展示另外两张：“共享风格，不是复制排版。300 用大图，500 做分栏，1000 做参数卡片。”</p>
+<p>需要解释资料复用时，打开 <a href="../07_HTML海报过程/资料表预览.html">两张资料表的预览</a>。说明这份静态记录的小野 500 为 999；运行中的工作台读取下载包内的本地 CSV，不是实时读取钉钉。表格按型号关联，变量把这一款的资料填进句子。</p>
+<h2 id="s3">改一次价：保存后停手（3 分钟）</h2>
+<p>跟着主稿第三节：</p>
+<p>“海报做好了，负责人又发消息：小野 500 改成 899，另外两款不动。”</p>
+<p>在运行的工作台里把 999 改成 899，点保存后停止操作，不再向 Agent 发送生成指令。等更新成功，分别打开这款的新 HTML、PDF 和 PNG，核对 899；再查看另外两款的价格、版本和更新时间没有变化。</p>
+<p>“第一次，我们让 AI 帮忙把做法写成程序。以后改价格，程序就按已经确定的规则更新文件，不用每次重新描述需求。今天留下来的，不只是三张海报，还有下次可以继续用的办法。”</p>
+<p>强调：保存成功不等于导出成功。页面变了但 PDF 还是旧价格，不能算完成。<a href="../04_参考资料/08_工作台验收记录.html">现有结果与核验边界</a> 供会后查看。</p>
+<h2 id="s4">留住能用的一版，再交给同事（2 分钟）</h2>
+<p>展示工作台里的版本与变更记录：“程序告诉我们这次改了哪一款、是否成功；生成失败要保留上一份成功文件。”</p>
+<p>再说明 Git 的用途：“确认工具能用时，在本地保存一个版本。GitHub 是后续同步和协作的地方，不是做出第一张海报的前置条件。”</p>
+<p>打开主稿第三节的钉钉教学表和原始实录：“确认过的 PNG、PDF 按型号放回对应产品行，上传后还要重新读取、打开附件检查。”</p>
+<p>已经记录的是一次上传，不是持续同步。现场不修改共享教学表；需要演示上传时，用单独授权的测试表。明确说明：在钉钉改价自动生成并替换附件，尚未接通。</p>
+<h2 id="s5">往前走，但今天先做一小步（2 分钟）</h2>
+<p>跟着主稿第四节，提三个下一步：批量活动物料、手机产品展示页、反馈整理。这些是延伸方向，不是已有功能。</p>
+<p>“第一次不必把整套系统做完。先用提供的资料做出一张海报，再改一个标题，打开检查。能走通这一圈，今天就成功了。”</p>
+<p>指向完整练习第 1 步；下载包用于先体验成品，不代替学习制作过程。请大家想一件自己反复在做的工作，下一次再试着把它留下来。</p>
+<h2 id="s6">可选彩蛋：会骑车的鹈鹕（1–2 分钟）</h2>
+<p>时间允许再打开主稿文末的动画，展示原提示词：“生成鹈鹕骑车的 HTML”。暂停、调速、按铃，观察脚与踏板怎样配合。</p>
+<p>“这是一个开放式作品。工作工具也是一样：要打开、操作、核对，不能只听 Agent 说已经完成。”</p>
+<p>“只改围巾颜色，其他不动”可留作观众练习，不冒充现场已经执行。没有多模型实测排名，不用这个作品证明模型在所有任务上都更强。</p>
+<h2 id="s7">现场故障预案</h2>
 <ul>
-<li>本地服务未启动：运行启动命令，等页面显示“本地服务运行中”。</li>
-<li>字体或 XeLaTeX 缺失：展示已冻结的成品，并明确本机运行未通过；不声称截图就是现场运行。</li>
-<li>生成较慢：看真实日志，等成功再打开 PDF；不要只凭价格输入框变化就宣布更新成功。</li>
-<li>数据校验失败：按提示修正本地输入，不清空错误状态伪装成功。</li>
-<li>不依赖网络完成本地主线；钉钉后续另演示。</li>
+<li>服务未启动：按使用说明启动，确认地址与状态。网页中的静态实录不是工作台。</li>
+<li>缺 Python、Node.js、浏览器或依赖：说明环境尚未就绪；时间不够就展示已留存的结果，不宣称现场跑通。</li>
+<li>导出慢或失败：看真实错误，等成功再打开文件；不要只凭价格框变化宣布成功。</li>
+<li>端口冲突：先核实是否已有该工作台运行，不随意结束其他程序。</li>
+<li>钉钉打不开：展示真实上传实录，说明当前网络或权限问题。本地主线不依赖钉钉连接。</li>
+<li>用完回到服务终端按 Control-C；不要留下后台服务却让听众以为已经关闭。</li>
 </ul>
 </main></div></body></html>
