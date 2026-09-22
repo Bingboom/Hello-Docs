@@ -31,8 +31,9 @@ def main():
     legacy_html = (SHARE / '00_打开分享.html').read_text('utf-8')
     assert 'content="0;url=index.html"' in legacy_html, 'Legacy Chinese entry must redirect to index.html'
     assert 'content="0;url=index.html"' in practical_html, 'Practical alias must redirect to index.html'
-    assert (SHARE / '分享稿.md').is_file(), 'Original article source must stay preserved in Git'
-    expected, expected_nav = body_and_nav(SHARE / '实用版分享稿.md')
+    source = SHARE / '分享稿.md'
+    assert source.read_bytes() == (SHARE / '实用版分享稿.md').read_bytes(), 'Main Markdown copies diverged'
+    expected, expected_nav = body_and_nav(source)
     assert re.search(r'<main>(.*?)</main>', html, re.S).group(1) == expected
     assert re.search(r'<nav>(.*?)</nav>', html, re.S).group(1) == expected_nav
     heading_ids = re.findall(r'<h[23]\b[^>]*\bid="([^"]+)"', expected)
@@ -83,6 +84,12 @@ def main():
             f'{TOOL_ROOT}/工作台文件/xiaoye-poster-products.csv',
         }
         assert required.issubset(names), 'Workbench ZIP is missing required files'
+        assert archive.read(f'{TOOL_ROOT}/README.md') == (
+            SHARE / '04_参考资料' / '07_工作台使用说明.md'
+        ).read_bytes(), 'Public workbench guide and packaged README diverged'
+    assert '05_露营海报/evidence/acceptance.json' not in html, 'Main links to LaTeX evidence'
+    assert '05_露营海报/README.html' not in html, 'Main links to LaTeX runtime'
+    assert '04_参考资料/08_工作台验收记录.html' in html, 'Missing HTML evidence entry'
     missing = []
     count = 0
     references = list((SHARE / '04_参考资料').glob('*.html'))

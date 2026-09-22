@@ -18,12 +18,15 @@ blockquote{background:#eff6ff;border-left-color:#60a5fa;color:#334869}
 .page-note{background:#fff9f0;border-color:#ffe4bf}
 .progress{background:linear-gradient(90deg,#f97316,#fbbf24)}
 @media print{main{box-shadow:none}h2:before{display:none}}
-</style><link rel="stylesheet" href="../阅读样式.css?v=bc7db0f95bc5">
+</style><link rel="stylesheet" href="../阅读样式.css?v=ec6208a0cc2b">
 </head><body class="reading-guide"><div id="progress" class="progress"></div><header class="topbar"><a href="../index.html">← 返回分享稿<small>AI 使用知识分享</small></a><button id="print">打印 / 保存 PDF</button></header><div class="layout"><aside><p class="nav-title">阅读目录</p><nav><a class="toc-level-2" href="#s0">1. 准备插画，做出第一张</a><a class="toc-level-2" href="#s1">2. 补齐另外两款，做出三种排版</a><a class="toc-level-2" href="#s2">3. 把资料留在项目里</a><a class="toc-level-2" href="#s3">4. 做一个能改价的工作台</a><a class="toc-level-2" href="#s4">5. 检查打印，并导出 PDF</a><a class="toc-level-2" href="#s5">6. 留下下次打开的方法</a><a class="toc-level-2" href="#s6">7. 需要在钉钉分享时，再做这一步</a></nav></aside><main><h1 id="海报生成过程提示词与结果对照">海报生成过程：提示词与结果对照</h1>
 <p>按顺序复制提示词，看到这一步的结果，再继续下一步。始终使用同一个项目文件夹，尽量留在同一个对话里。每步保留实际结果截图；中间如果补充了要求或修过问题，也把追加的提示词和修正后的结果一起留下。本页引用的截图、HTML、CSV、PDF、PNG 和使用说明，都是这些提示词实际生成的文件。</p>
+<p><strong>第一次只做第 1 步，再改一处文字并核对，就可以收工。</strong> 第 2–3 步再练三款海报与资料复用，第 4–6 步再做工作台和自动导出，第 7 步是可选的钉钉分享。不是一次就要搭完七步。</p>
+<p>本页统一使用 <strong>HTML + CSS → 浏览器导出 PDF / PNG</strong>。想先体验成品，可下载 <a href="../downloads/xiaoye-poster-workbench.zip">配套工作台</a>，按 <a href="07_工作台使用说明.html">使用说明</a> 检查环境；这是试用入口，不代替从空文件夹制作的过程。<a href="08_工作台验收记录.html">结果与核验边界</a> 单独列出已留下的证据。</p>
 <p><strong>记录进度：</strong> 第 1 步已有 GPT-5.6 Sol（High）的真实生成截图，第 2 步已补齐三款海报实图；第 3 步已补资料表截图，重新生成的核对结果待补；第 4 步已补改价后的工作台和小野 500 海报实图；第 5 步已补自动导出工作台、PDF 与 PNG；第 6 步已补使用说明，并验证重启后保留 899 元；第 7 步已完成真实表格上传与 MCP 回读核对。</p>
 <h2 id="s0">1. 准备插画，做出第一张</h2>
-<p>用已安装并登录的 Codex 或 Claude Code 打开一个空文件夹。下载下面三张插画，放进这个文件夹，保留文件名。这次先用现成插画，不需要另外生成图片。</p>
+<p>先确认 Codex 或 Claude Code 已安装、能登录并打开项目文件夹；还没有准备好时，先完成这一步。本轮只生成能在浏览器打开的 HTML，不需要先配置 Python、Node.js 或自动导出工具。</p>
+<p>打开一个空文件夹，先下载小野 300 插画，保留文件名。另两张等做到第 2 步再下载。这次用现成插画，不需要另外生成图片。</p>
 <ul>
 <li><a href="../05_露营海报/assets/xiaoye-300.png" download="xiaoye-300.png">小野 300 插画</a></li>
 <li><a href="../05_露营海报/assets/xiaoye-500.png" download="xiaoye-500.png">小野 500 插画</a></li>
@@ -51,6 +54,11 @@ GPT-5.6 Sol（High）生成，使用配套的小野 300 插画。点击可查看
 <p>按我附上的海报截图调整当前 HTML：奶油色底、森林绿文字，左上是两行大标题，中间偏右放大产品插画，右侧加“小野 300”标牌；底部三张参数卡横排，下面是深绿色价格条。尽量贴近截图的比例和留白。文字和数字保留为独立元素，不要直接把截图铺成整张海报；产品数据不变。调整后打开给我看。</p>
 </blockquote>
 <p><strong>本步截图：</strong> 第一张海报的完整画面。上方已放入本次实际结果。</p>
+<p><strong>第一次练习，到这里再做一个小修改就够了：</strong></p>
+<blockquote>
+<p>把标题“轻装出游的小伙伴”改成“周末，轻装出发”。产品参数、价格、图片和布局保持不变，改完重新打开给我看。</p>
+</blockquote>
+<p>亲自确认新标题已出现，599 元和三个参数没变，文字没有挤出页面。能完成这一次“提出要求—看结果—再修改—再检查”，第一次练习就成功了；暂时不做批量、后台和钉钉也完全可以。下面继续记录原始制作过程，实录里的标题保持原样，不把这条练习建议冒充已执行的操作。</p>
 <h2 id="s1">2. 补齐另外两款，做出三种排版</h2>
 <p>第一张满意后，继续发：</p>
 <blockquote>
@@ -82,7 +90,7 @@ GPT-5.6 Sol（High）生成，使用配套的小野 300 插画。点击可查看
 </figcaption>
 </figure>
 </div>
-<p>这里保留改价前的结果：小野 500 为 <strong>999 元</strong>。后面完成改价测试后，再补充 899 元的结果作对照。</p>
+<p>这里保留改价前的结果：小野 500 为 <strong>999 元</strong>；第 4 步展示已记录的 899 元海报，可前后对照。</p>
 <h2 id="s2">3. 把资料留在项目里</h2>
 <p>继续发：</p>
 <blockquote>
@@ -159,7 +167,7 @@ GPT-5.6 Sol（High）生成，使用配套的小野 300 插画。点击可查看
 <figure class="learning-figure">
 <a href="../配图/工作台使用说明-实录.png"><img src="../配图/工作台使用说明-实录.png" alt="提示词实际生成的工作台使用说明页面截图"></a>
 <figcaption>
-提示词实际生成的工作台使用说明。点击可放大查看。
+制作当时生成的使用说明实录，保留原样；下载包的当前目录和启动方式以文字版使用说明为准。
 </figcaption>
 </figure>
 <p><a href="07_工作台使用说明.html">打开完整使用说明</a></p>

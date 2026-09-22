@@ -3,6 +3,11 @@
 body{background:#f8f7f4;color:var(--ink)}
 a{color:#50504d;text-decoration-color:#b6b6b0;text-decoration-thickness:1px;text-underline-offset:4px}
 a:hover{color:#9a5735;text-decoration-color:currentColor}
+/* Highlight article references without changing navigation, image links, or CTA buttons. */
+@media screen{
+  .share-main main a:not(:has(img)):not(.process-cta a):not(.process-cta-link){color:#1d4f91;text-decoration-line:underline;text-decoration-color:#7399c6;text-decoration-thickness:1px;text-underline-offset:4px}
+  .share-main main a:not(:has(img)):not(.process-cta a):not(.process-cta-link):is(:hover,:focus-visible){color:#163e73;background:#eaf2fc;text-decoration-color:currentColor}
+}
 .reading-guide main{border-color:var(--line);box-shadow:0 8px 30px #302f2b05}
 .reading-guide h1{color:var(--ink)}
 .reading-guide h2:before{height:3px;background:#d7a17d}
