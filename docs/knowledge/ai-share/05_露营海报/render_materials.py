@@ -5,6 +5,7 @@ This edits only knowledge-content HTML, never the product-manual pipeline.
 """
 import hashlib
 import html
+import os
 from pathlib import Path
 import re
 import subprocess
@@ -68,6 +69,16 @@ def write_redirect(target, destination):
 </head><body><p><a href="{destination}">打开 AI 使用知识分享</a></p></body></html>''', 'utf-8')
 
 
+def add_analytics(page):
+    shell = page.read_text('utf-8')
+    shell = re.sub(r'<script\b[^>]*data-share-analytics[^>]*></script>\s*', '', shell)
+    asset = SHARE / 'reading-analytics.js'
+    version = hashlib.sha256(asset.read_bytes()).hexdigest()[:12]
+    relative = Path(os.path.relpath(asset, page.parent)).as_posix()
+    snippet = f'<script defer data-share-analytics src="{relative}?v={version}"></script>'
+    page.write_text(shell.replace('</head>', snippet + '</head>', 1), 'utf-8')
+
+
 def main():
     main_path = SHARE / 'index.html'
     legacy_path = SHARE / '00_打开分享.html'
@@ -116,6 +127,9 @@ def main():
         title = html.escape(source.read_text('utf-8').splitlines()[0].lstrip('# '))
         shell = re.sub(r'<title>.*?</title>', lambda _: '<title>' + title + '</title>', shell)
         target.write_text(shell, 'utf-8')
+    # Redirects and the embedded animation deliberately do not count as article views.
+    for page in [main_path, *ROOT.glob('*.html'), *(source.with_suffix('.html') for source in references)]:
+        add_analytics(page)
     print('Generated sharing article, materials, and aligned reference pages.')
 
 

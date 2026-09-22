@@ -97,6 +97,11 @@ def main():
     paths = [SHARE / 'index.html', SHARE / 'practical.html', SHARE / '00_打开分享.html',
              *ROOT.glob('*.html'), *references,
              SHARE / '06_动画示例' / 'pelican-bike.html']
+    excluded = {SHARE / 'practical.html', SHARE / '00_打开分享.html',
+                SHARE / '06_动画示例' / 'pelican-bike.html'}
+    for page in paths:
+        count_snippets = page.read_text('utf-8').count('data-share-analytics')
+        assert count_snippets == (0 if page in excluded else 1), f'Analytics injection: {page}'
     for page in references:
         source = page.with_suffix('.md')
         if source.exists():
