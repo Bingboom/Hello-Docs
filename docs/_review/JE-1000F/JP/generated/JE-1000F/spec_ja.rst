@@ -19,7 +19,7 @@
    \hline
    \HBTypeSpecLabel{サイズ＆重量} & \HBTypeSpecValue{約314 × 201 × 236 mm (約10.6 kg）} \\
    \hline
-   \HBTypeSpecLabel{サイクル寿命} & \HBTypeSpecValue{6000回（6000回の充放電後も容量の70％以上を維持）} \\
+   \HBTypeSpecLabel{サイクル寿命} & \HBTypeSpecValue{4000回（4000回の充放電後も容量の70％以上を維持）} \\
    \end{tabularx}
    \end{spectable}
 
@@ -115,7 +115,7 @@
           </tr>
           <tr>
             <th scope="row" class="hb-spec-label">サイクル寿命</th>
-            <td class="hb-spec-value">6000回（6000回の充放電後も容量の70％以上を維持）</td>
+            <td class="hb-spec-value">4000回（4000回の充放電後も容量の70％以上を維持）</td>
           </tr>
         </tbody>
       </table>
