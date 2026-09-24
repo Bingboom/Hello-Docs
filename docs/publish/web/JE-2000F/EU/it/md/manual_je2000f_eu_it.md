@@ -617,7 +617,7 @@ Cerca \"Jackery\" su Google Play o nell\'App Store per installare l\'app. Dopodi
 
 Dopo che il dispositivo è stato aggiunto con successo all\'app, l\'icona Wi-Fi sul dispositivo resterà sempre accesa.
 
-<img src="../../../../_static/manual-assets/_pool/01/01d3694dd833380066161364a6c67f5d26a088bfd4428b72d836c26e4f123a90.png" style="width: 360px;" width="360" height="203" alt="Segnaposto schermata di risultato configurazione app." />
+<img src="../../../../_static/manual-assets/_pool/67/6797b35ec9237f51288866c2a4b16a2a98052341c3692d7978883fd15fe3a842.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-connect-result" data-web-finished-panel-path="assets/je2000f_eu_shared/app_connect_result.png" data-web-finished-panel-sha256="6797b35ec9237f51288866c2a4b16a2a98052341c3692d7978883fd15fe3a842" alt="Segnaposto schermata di risultato configurazione app." />
 
 Le schermate sopra sono solo a scopo illustrativo.
 
