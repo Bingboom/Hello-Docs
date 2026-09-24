@@ -8,6 +8,8 @@ import sys
 import unittest
 from pathlib import Path
 from tempfile import TemporaryDirectory
+from types import SimpleNamespace
+from unittest.mock import patch
 
 from tools import rtd_portal
 from tools.rtd_alias_entry import alias_head_markup, forward_markers
@@ -65,6 +67,29 @@ class RtdPortalTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "Missing or unsafe"):
                 rtd_portal.catalog(self.root, self.settings)
 
+    def test_catalog_is_reused_only_within_one_build(self):
+        root = self.assemble()
+        app = SimpleNamespace(srcdir=root)
+        with patch.object(rtd_portal, "catalog", wraps=rtd_portal.catalog) as collect:
+            rtd_portal.prepare_catalog(app)
+            for _ in range(10):
+                self.assertEqual(len(rtd_portal.portal_data(app)[1]), 3)
+            self.assertEqual(collect.call_count, 1)
+            # Another Sphinx application must not inherit the first one's cache.
+            rtd_portal.portal_data(SimpleNamespace(srcdir=root))
+            self.assertEqual(collect.call_count, 2)
+            # Success and failure both clear state, preserving fail-closed validation
+            # if the same application builds changed sources next time.
+            for exception in (None, RuntimeError("build interrupted")):
+                rtd_portal.clear_catalog_cache(app, exception)
+                index = root / "index.md"
+                original = index.read_text()
+                index.write_text("- [Bad](missing.md)\n")
+                with self.assertRaisesRegex(ValueError, "Missing or unsafe"):
+                    rtd_portal.portal_data(app)
+                index.write_text(original)
+                self.assertEqual(len(rtd_portal.portal_data(app)[1]), 3)
+
     def test_missing_or_remote_image_is_not_replaced_with_another_model(self):
         source = self.root / "manual.md"
         for src in ("https://host/product.png", "../outside.png", "/outside.png", "missing.png"):
@@ -78,8 +103,14 @@ class RtdPortalTests(unittest.TestCase):
         shutil.copytree(rtd_portal.ASSETS, assets)
         settings = dict(self.settings, product_voc_endpoint="")
         (assets / "settings.json").write_text(json.dumps(settings))
+        knowledge = self.root / "knowledge"
+        share = knowledge / "ai-share"
+        (share / "配图").mkdir(parents=True)
+        (share / "00_打开分享.html").write_text("<!doctype html><p>业务资料</p>")
+        (share / "配图" / "00-概览.svg").write_text('<svg xmlns="http://www.w3.org/2000/svg"/>')
         with (root / "conf.py").open("a") as conf:
             conf.write(f"\nfrom pathlib import Path\nfrom tools import rtd_portal as portal\nportal.ASSETS = Path({str(assets)!r})\n")
+            conf.write(f"rtd_knowledge_dir = {str(knowledge)!r}\n")
         before = {p.relative_to(root): hashlib.sha256(p.read_bytes()).hexdigest()
                   for p in root.rglob("*") if p.is_file()}
         # Compare manual content with the same site branding on both builds.
@@ -129,10 +160,37 @@ class RtdPortalTests(unittest.TestCase):
         self.assertIn('value="EU" data-binding="EU" selected', page)
         self.assertIn('value="UK" data-binding="EU"', page)
         self.assertIn('id="ethical-ad-placement"', page)
-        self.assertIn("All published manuals", page)
+        self.assertIn("按目录查看全部说明书", page)
+        self.assertIn("说明书资料库", page)
+        self.assertNotIn('class="brand" href="#" aria-label="Jackery', page)
+        self.assertIn('href="workspace/index.html">知识库</a>', page)
+        self.assertIn('class="selected" href="#">工作资料</a>', page)
         self.assertIn('JE-TEST/JP/md/manual_JP.html', page)
         self.assertTrue((self.root / "after" / "_static" / "portal.css").is_file())
         self.assertNotIn("LOCAL DESIGN PREVIEW", page)
+        self.assertNotIn("AI 分享与说明书", page)
+
+        workspace = (self.root / "after" / "workspace" / "index.html").read_text()
+        self.assertIn("知识库", workspace)
+        self.assertNotIn("我的知识库", workspace)
+        self.assertIn("分享资料", workspace)
+        self.assertIn(">知识库</a>", workspace)
+        self.assertIn(">工作资料</a>", workspace)
+        self.assertNotIn("内部版", workspace)
+        self.assertNotIn("对外版", workspace)
+        self.assertNotIn("Jackery", workspace)
+        self.assertIn('href="../ai-share/00_打开分享.html"', workspace)
+        self.assertIn('href="../index.html"', workspace)
+        self.assertTrue(
+            (self.root / "after" / "ai-share" / "00_打开分享.html").is_file()
+        )
+        self.assertTrue(
+            (self.root / "after" / "ai-share" / "配图" / "00-概览.svg").is_file()
+        )
+        self.assertEqual(
+            (self.root / "after" / "ai-share" / "00_打开分享.html").read_bytes(),
+            (share / "00_打开分享.html").read_bytes(),
+        )
 
 
 if __name__ == "__main__":

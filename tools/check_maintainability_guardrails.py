@@ -67,7 +67,8 @@ HOTSPOT_LINE_THRESHOLDS: dict[str, int] = {
     "tools/web_reference_components.py": 161,
     # Component migrations add ordered stylesheet modules while the assembler
     # remains intentionally logic-free and stays at its existing line cap.
-    "tools/web_stylesheets.py": 40,
+    # 40 -> 41: one ordered module entry for the base-art Operation styles.
+    "tools/web_stylesheets.py": 41,
     "tools/web_fcc_component.py": 150,
     "tools/web_inbox_component.py": 120,
     "tools/component_specs/fcc.py": 280,
@@ -94,7 +95,9 @@ HOTSPOT_LINE_THRESHOLDS: dict[str, int] = {
     # Registered 2026-08-03 at 347 lines with 33 lines of growth headroom.
     "tools/web_composite_manifest.py": 380,
     # Registered 2026-08-03 at 202 lines with 38 lines of growth headroom.
-    "tools/web_composite_presentation.py": 240,
+    # 240 -> 242: a base-art figure stops after its identity attributes are
+    # bound; its layout lives in tools/web_base_art_operation.py.
+    "tools/web_composite_presentation.py": 242,
     # Registered 2026-08-03 at 139 lines with 41 lines of growth headroom.
     "tools/web_symbol_components.py": 180,
     # Registered 2026-08-03 at 201 lines with 39 lines of growth headroom.
@@ -115,7 +118,7 @@ HOTSPOT_LINE_THRESHOLDS: dict[str, int] = {
     # (1470 -> 1260; extractor +9 for the parity constant); P3 moved the
     # story builders and composed-page assemblers out (1260 -> 647); P4 moved
     # package assembly (spread chain / designmap / zip) out (647 -> 563).
-    "tools/export_idml.py": 607,  # back-cover placement policy lives in tools/idml/page_placed.py
+    "tools/export_idml.py": 604,  # back-cover placement policy lives in tools/idml/page_placed.py
     "tools/idml_rst_extract.py": 520,
     "tools/idml/primitives.py": 300,
     "tools/idml/styles.py": 220,
@@ -126,7 +129,9 @@ HOTSPOT_LINE_THRESHOLDS: dict[str, int] = {
     # +2 per-language data-page titles/sids (parity); +9 target-declared
     # figure callouts -- one planning call, one lookup, and the skip for a
     # label table now printed over the art (tools/idml/components/prose_image.py).
-    "tools/idml/stories.py": 256,
+    # +3 figure-break estimate: one chain-height parameter and two forced-break
+    # resets; the accumulator itself lives in tools/idml/story_estimates.py.
+    "tools/idml/stories.py": 259,
     "tools/idml/pages.py": 500,
     "tools/idml/package.py": 160,
 }

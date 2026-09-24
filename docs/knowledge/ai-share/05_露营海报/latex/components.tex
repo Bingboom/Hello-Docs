@@ -1,0 +1,62 @@
+% Stable component API: layout/paint here, content supplied by the page.
+\newcommand{\CampCanvas}{%
+  \fill[CampPaper] (0,0) rectangle (148,210);
+  \fill[CampLeaf] (108,17) circle (32);
+  \draw[CampRule,line width=0.5pt] (\CampLeft,25) -- (\CampRight,25);
+  \node[camptext] at (\CampLeft,11) {\CampType{9}{12}{\bfseries 小野 / WEEKEND CAMP}};
+  \node[anchor=north east,inner sep=0,text=CampMuted] at (\CampRight,11)
+    {\CampType{7}{10}{露营快闪店 · 教学演示}};
+}
+\newcommand{\CampHeading}[3]{%
+  \node[camptext] at (\CampLeft,32) {\CampType{29}{34}{\bfseries #1}};
+  \node[camptext,text=CampMuted] at (\CampLeft,49) {\CampType{11}{15}{#2}};
+  \node[anchor=north east,inner sep=0,text=CampMuted] at (\CampRight,35)
+    {\CampType{8}{11}{#3}};
+}
+\newcommand{\CampHero}[1]{%
+  \CampHeroAt{74}{93}{73}{#1}
+}
+\newcommand{\CampHeroAt}[4]{%
+  \node[anchor=center,inner sep=0] at (#1,#2)
+    {\includegraphics[width=#3mm,height=#3mm,keepaspectratio]{#4}};
+}
+\newcommand{\CampIntroAt}[4]{%
+  \node[camptext,text width=#3mm,align=left] at (#1,#2)
+    {\CampType{9}{14}{#4}};
+}
+\newcommand{\CampIntro}[1]{%
+  \node[camptext,text width=\CampWidth,align=left] at (\CampLeft,132)
+    {\CampType{9}{14}{#1}};
+}
+\newcommand{\CampMetric}[3]{%
+  \CampMetricAt{#1}{153}{#2}{#3}
+}
+\newcommand{\CampMetricAt}[4]{%
+  \node[camptext] at (#1,#2) {\CampType{17}{20}{\bfseries #3}};
+  \node[camptext,text=CampMuted] at (#1,{#2+10}) {\CampType{7}{10}{#4}};
+}
+\newcommand{\CampMetricCard}[4]{%
+  \fill[CampLeaf,rounded corners=2mm] (#1,127) rectangle ({#1+38},168);
+  \node[camptext] at ({#1+4},136) {\CampType{17}{20}{\bfseries #2}};
+  \node[camptext,text=CampMuted] at ({#1+4},146) {\CampType{8}{11}{#3}};
+  \node[camptext,text=CampMuted] at ({#1+4},157) {\CampType{7}{10}{#4}};
+}
+\newcommand{\CampSpecs}[3]{%
+  \draw[CampRule,line width=0.5pt] (\CampLeft,148) -- (\CampRight,148);
+  \CampMetric{12}{#1 Wh}{电池容量（虚构）}
+  \CampMetric{56}{#2 W}{额定输出（虚构）}
+  \CampMetric{100}{#3 kg}{整机重量（虚构）}
+}
+\newcommand{\CampPrice}[2]{%
+  \fill[CampInk,rounded corners=3mm] (\CampLeft,177) rectangle (\CampRight,196);
+  \node[anchor=west,inner sep=0,text=white] at (17,186.5)
+    {\CampType{8}{11}{市集教学价}\hspace{4mm}\CampType{24}{27}{\bfseries ¥#1}};
+  \node[anchor=east,inner sep=0,text=white] at (131,186.5)
+    {\CampType{8}{11}{#2}};
+}
+\newcommand{\CampFooter}[2]{%
+  \node[camptext,text=CampMuted] at (\CampLeft,201)
+    {\CampType{6}{8}{教学虚构产品与价格 · 非真实销售资料}};
+  \node[anchor=north east,inner sep=0,text=CampMuted] at (\CampRight,201)
+    {\CampType{6}{8}{v#1 / #2}};
+}

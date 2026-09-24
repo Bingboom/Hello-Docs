@@ -1,0 +1,23 @@
+% One shared visual system. No product-specific values or branches here.
+\usepackage[a5paper,margin=0mm]{geometry}
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\IfFontExistsTF{Arial}{\setmainfont{Arial}}{\setmainfont{texgyreheros-regular.otf}[BoldFont=texgyreheros-bold.otf]}
+\IfFontExistsTF{PingFang SC}{\setCJKmainfont{PingFang SC}}{\setCJKmainfont{FandolHei-Regular.otf}[BoldFont=FandolHei-Bold.otf]}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\definecolor{CampPaper}{HTML}{FAF7EF}
+\definecolor{CampInk}{HTML}{193B31}
+\definecolor{CampMuted}{HTML}{657368}
+\definecolor{CampLeaf}{HTML}{E4EADC}
+\definecolor{CampOrange}{HTML}{D96B3C}
+\definecolor{CampRule}{HTML}{D9DFD1}
+\newcommand{\CampLeft}{12}
+\newcommand{\CampRight}{136}
+\newcommand{\CampWidth}{124mm}
+\newcommand{\CampType}[3]{\fontsize{#1}{#2}\selectfont #3}
+\tikzset{camptext/.style={anchor=north west,inner sep=0pt,outer sep=0pt,text=CampInk}}

@@ -1,0 +1,123 @@
+<!doctype html><html lang="zh-CN"><head><meta name="robots" content="noindex,nofollow"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>去 GitHub 找现成项目</title><style>
+.learning-figure{margin:28px 0 34px}.learning-figure img{display:block;width:100%;height:auto;border-radius:12px}.learning-figure figcaption{font-size:12px;line-height:1.7;color:var(--muted);margin-top:10px}.learning-figure a{display:block}.learning-figure figcaption a{display:inline}.learning-figure{break-inside:avoid}
+
+:root{--ink:#252d3d;--muted:#69768b;--green:#2563eb;--paper:#ffffff;--line:#e3e9f2;--tint:#eff6ff;--orange:#c65316}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:78px}body{margin:0;background:#f6f8fc;color:var(--ink);font:16px/1.9 -apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif}a{color:var(--green);text-underline-offset:4px;overflow-wrap:anywhere}button{font:inherit;cursor:pointer}.topbar{background:var(--paper);border-bottom:1px solid var(--line);padding:12px 30px;display:flex;justify-content:space-between;align-items:center;gap:20px;position:sticky;top:0;z-index:3}.topbar a{text-decoration:none;font-size:14px;font-weight:650}.topbar small{font-weight:400;color:var(--muted);margin-left:10px}.topbar button,.copy{border:1px solid var(--line);background:white;color:var(--green);border-radius:6px;padding:5px 12px;font-size:12px}.layout{display:grid;grid-template-columns:220px minmax(0,900px);gap:42px;max-width:1270px;margin:auto;padding:40px 30px 80px}aside{position:sticky;top:92px;align-self:start;font-size:13px}.nav-title{font-size:11px;letter-spacing:2px;color:var(--muted);margin:0 0 16px}nav a{display:block;text-decoration:none;color:var(--muted);padding:8px 0 8px 12px;border-left:2px solid var(--line);line-height:1.65}nav a:hover,nav a:focus{color:var(--green);border-color:var(--green)}aside p{font-size:12px;color:var(--muted);margin-top:28px}main{min-width:0;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:42px 48px;box-shadow:0 8px 30px #233b6808}h1{font-size:32px;line-height:1.35;letter-spacing:-.7px;margin:5px 0 24px}h2{font-size:24px;line-height:1.5;margin:58px 0 22px;border-top:1px solid var(--line);padding-top:32px}h3{font-size:19px;line-height:1.6;margin:28px 0 13px}p{margin:14px 0}li{margin:7px 0}ul,ol{padding-left:24px}strong{font-weight:650}blockquote{margin:22px 0;padding:14px 20px;border-left:3px solid #f97316;background:var(--tint);color:#34435d;border-radius:0 8px 8px 0}blockquote p{margin:3px 0}h1+blockquote{background:transparent;border-left:3px solid #fb923c;font-size:18px;margin-bottom:32px}pre{background:#f5f7fb;border:1px solid var(--line);padding:24px 20px 18px;border-radius:8px;font:13px/1.8 ui-monospace,SFMono-Regular,Consolas,monospace;overflow:auto;tab-size:4;position:relative;white-space:pre-wrap;overflow-wrap:anywhere}code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.88em;background:#edf2fa;padding:2px 5px;border-radius:4px}pre code{padding:0;font-size:inherit;background:transparent}.table-scroll{overflow-x:auto;margin:22px 0}table{border-collapse:collapse;width:100%;font-size:14px;text-align:left}th{background:var(--tint);font-weight:600;color:#315c9c}td,th{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}td:first-child{min-width:125px}img{max-width:100%;height:auto}details{margin:24px 0;border:1px solid #dce5f2;border-radius:8px;padding:0 18px}summary{cursor:pointer;padding:15px 0;color:var(--green);font-weight:600}details pre{margin-top:0}.code-wrap{position:relative}.copy{position:absolute;right:7px;top:7px;z-index:1;line-height:1.3;font-size:11px}.code-wrap pre{padding-top:38px}.page-note{border:1px solid var(--line);background:#fff8ee;border-radius:8px;padding:14px 18px;font-size:14px;margin:22px 0}.cell{margin:24px 0}.cell-label{font-size:11px;color:var(--muted);letter-spacing:1px;margin:0 0 5px}.output{background:white;border-left:3px solid #f59e0b;padding:12px 15px;overflow:auto}.output pre{background:white;border:none;padding:0;margin:0;white-space:pre;font-size:13px}.output img{display:block;max-width:100%;margin:12px auto}.output table{font-size:11px;line-height:1.5}.output td,.output th{padding:7px;min-width:0}.footer{border-top:1px solid var(--line);padding-top:20px;margin-top:50px;font-size:12px;color:var(--muted)}.progress{position:fixed;top:0;left:0;height:3px;background:var(--green);z-index:5;width:0}a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #fb923c;outline-offset:3px}.notice{font-size:13px;color:var(--muted)}
+@media(max-width:900px){.layout{display:block;padding:20px 16px 45px}aside{position:static;margin-bottom:22px}nav{display:flex;flex-wrap:wrap;gap:4px 14px}nav a{padding:4px 8px;max-width:100%;font-size:12px}aside p{display:none}main{padding:25px 22px}h1{font-size:27px}h2{font-size:22px;margin-top:42px}.topbar{padding:10px 16px}.topbar small{display:none}pre{font-size:12px}td,th{padding:9px}}
+@media print{@page{size:A4;margin:16mm}body{background:white;font-size:11pt}.topbar,aside,.copy,.progress{display:none}.layout{display:block;padding:0;max-width:none}main{padding:0;border:0;box-shadow:none}h1{font-size:24pt}h2{font-size:18pt;margin-top:24px;break-after:avoid}h3{break-after:avoid}pre,blockquote,.cell{break-inside:avoid}a{color:inherit}details{border:0;padding:0}summary{display:none}.table-scroll{overflow:visible}.output{overflow:visible}*{print-color-adjust:exact;-webkit-print-color-adjust:exact}}
+
+/* A bright reading theme shared by the guide and reference pages. */
+.topbar{background:rgba(255,255,255,.96)}.topbar>a{color:var(--ink)}
+.topbar button:hover,.copy:hover{background:#eff6ff;border-color:#93b4f5}
+main{border-radius:18px;box-shadow:0 12px 36px #233b6808}
+h1{color:#1d2b45}h2{border-top:0;position:relative;padding-top:28px}
+h2:before{content:"";position:absolute;top:0;left:0;width:36px;height:4px;border-radius:3px;background:#f97316}
+h1+blockquote{background:#fff7ed;border-left:3px solid #f97316;color:#9a4318;font-size:18px}
+nav a:hover,nav a:focus{background:#fff3e8;color:#b94b10;border-color:#f97316;border-radius:0 6px 6px 0}
+blockquote{background:#eff6ff;border-left-color:#60a5fa;color:#334869}
+.learning-figure img{border:1px solid #e7edf6;border-radius:16px}
+.page-note{background:#fff9f0;border-color:#ffe4bf}
+.progress{background:linear-gradient(90deg,#f97316,#fbbf24)}
+@media print{main{box-shadow:none}h2:before{display:none}}
+</style><link rel="stylesheet" href="../阅读样式.css?v=ec6208a0cc2b">
+<script defer data-share-analytics src="../reading-analytics.js?v=154433b2c7ec"></script></head><body class="reading-guide"><div id="progress" class="progress"></div><header class="topbar"><a href="../index.html">← 返回分享稿<small>AI 使用知识分享</small></a><button id="print">打印 / 保存 PDF</button></header><div class="layout"><aside><p class="nav-title">阅读目录</p><nav><a class="toc-level-3" href="#github-是什么为什么去那里找">GitHub 是什么，为什么去那里找</a><a class="toc-level-3" href="#从一句产品介绍开始试">从一句产品介绍开始试</a><a class="toc-level-3" href="#按自己要做的事去找">按自己要做的事去找</a><a class="toc-level-3" href="#把项目下载到电脑上">把项目下载到电脑上</a><a class="toc-level-3" href="#让-agent-帮你运行项目">让 Agent 帮你运行项目</a><a class="toc-level-3" href="#一个人做东西为什么也值得用-git">一个人做东西，为什么也值得用 Git？</a><a class="toc-level-3" href="#先学会在本地存一版">先学会在本地存一版</a><a class="toc-level-3" href="#用-github-desktop就按这几步做">用 GitHub Desktop，就按这几步做</a><a class="toc-level-3" href="#需要多端同步或共同协作时再推送到-github">需要多端同步或共同协作时，再推送到 GitHub</a></nav></aside><main><h1 id="去-github-找现成项目">去 GitHub 找现成项目</h1>
+<p><a href="../index.html#s4">跟着小林走一遍：从参考仓库做成自己的工具</a></p>
+<h3 id="github-是什么为什么去那里找">GitHub 是什么，为什么去那里找</h3>
+<p><a href="https://github.com/">GitHub</a> 上有很多别人分享的代码项目。有些已经做成了可以使用的工具，附有使用说明和演示。项目文件通常放在一个“仓库”里，后面说的下载项目，就是把仓库里的文件下载到电脑。</p>
+<p>比如想批量改文件名、自动生成文档，可以先搜搜有没有现成的工具。找到合适的，再让 Agent 帮忙运行和调整。即使不能直接用，也可以参考别人是怎么做的。</p>
+<h3 id="从一句产品介绍开始试">从一句产品介绍开始试</h3>
+<p>GitHub 上有些项目用 Jupyter Notebook 展示做法。它像一本能动手试的笔记：一段说明、一段代码，下面就是运行结果。先看结果，再改一个条件、运行一次，就能看看变化。</p>
+<p>本分享借鉴这种边看边试的方式，另写了一个普通 Python 小练习，不需要先安装 Jupyter：</p>
+<ul>
+<li><a href="../03_GitHub原例/阅读版.html">动手小练习：让产品介绍里的价格跟着变</a>：参考 <a href="https://github.com/selfteaching/the-craft-of-selfteaching">the craft of selfteaching</a>，先运行一句产品介绍，只改价格再看结果；结合露营海报理解变量怎样填入文字。</li>
+</ul>
+<p>先打开“阅读版”就能看说明、代码和已经生成的结果，不用安装软件。想修改并重新运行时，把对应文件夹交给 Agent，并明确运行其中的 <code>product_intro.py</code>：</p>
+<blockquote>
+<p>请运行 product_intro.py，先让我看到原来的结果。然后带我只改价格，再运行一次。每次只解释当前这一步用到的知识，不运行目录里的旧 Notebook。</p>
+</blockquote>
+<p>阅读版展示的是保存下来的运行结果；重新执行小练习只需要 Python。具体准备方法见 <a href="../03_GitHub原例/使用说明.txt">使用说明</a>。原书使用 Notebook，不代表本地小练习也需要同样的环境。</p>
+<h3 id="按自己要做的事去找">按自己要做的事去找</h3>
+<p>打开 <a href="https://github.com/">GitHub</a>，在搜索框输入想做的功能。比如 <code>batch rename</code>（批量改名）、<code>document generation</code>（生成文档）。搜索词可以先让 Agent 帮你想，也可以把需求直接交给能联网的 Agent：</p>
+<blockquote>
+<p>我想把产品参数、介绍文案和插画合在一起，批量生成产品海报，数据变了还能更新。帮我在 GitHub 找几个功能接近的项目，给我实际找到的链接。用简单的话说清楚：各自能做什么、有没有效果示例、在我的电脑上试用需要准备什么。</p>
+</blockquote>
+<p>打开项目后，先看页面上的介绍、效果图或演示，再看 <code>README</code>，也就是它的使用说明。重点看它能解决什么问题、怎么使用，不用一开始就逐个读代码文件。拿不准时，把链接交给 Agent，让它结合你的需求解释。</p>
+<p>找到接近的项目后，再决定是否下载试用。准备采用或修改其中的代码时，查看 <code>LICENSE</code> 里允许怎样使用。<a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository">GitHub 许可证说明</a></p>
+<h3 id="把项目下载到电脑上">把项目下载到电脑上</h3>
+<figure>
+<img src="../配图/06-GitHub-q版.png" alt="找项目、下载、试用与修改，再保存可用版本" />
+<figcaption aria-hidden="true">找项目、下载、试用与修改，再保存可用版本</figcaption>
+</figure>
+<p>图中展示了先 Fork 再 Clone 的路线；只在本地试用，可以跳过 Fork，按下面的步骤直接 Clone。</p>
+<p><strong>建议初学者用 GitHub Desktop 操作</strong>，下载项目、查看改动、保存版本都可以通过按钮完成，不用先记 Git 命令。这里有三个名字容易混：Git 用来管理版本，GitHub 是存放和分享项目的网站，GitHub Desktop 则让你在电脑上通过界面操作，不必逐条输入命令。</p>
+<p><strong>先准备 Git 和 GitHub Desktop。</strong></p>
+<p><strong>Windows：</strong> 从 <a href="https://git-scm.com/install/windows">Git 官方下载页</a>下载安装程序，按向导完成安装，再重新打开 PowerShell。</p>
+<p>安装完成后，在 PowerShell 中输入下面的命令。显示版本号，就说明 Git 已经安装好。</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode powershell"><code class="sourceCode powershell"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>git <span class="op">--</span>version</span></code></pre></div>
+<p>然后到 <a href="https://github.com/signup">GitHub 注册账号</a>，验证邮箱；从 <a href="https://desktop.github.com/">官网下载 GitHub Desktop</a>，安装后登录，按引导设置姓名和邮箱。<a href="https://docs.github.com/en/desktop/installing-and-authenticating-to-github-desktop/installing-github-desktop">安装说明</a></p>
+<p><strong>再下载选好的项目。</strong></p>
+<ol type="1">
+<li>打开选中的仓库，复制仓库网址。先在本地试用，不必先 Fork。</li>
+<li>打开 GitHub Desktop，选择 <strong>File → Clone Repository → URL</strong>，粘贴网址，选好保存位置，点击 <strong>Clone</strong>。</li>
+<li>用 Codex 或 Claude Code 打开下载得到的整个文件夹，把下面这段话发给 Agent。</li>
+</ol>
+<p>Clone 是把仓库下载到电脑，本地修改可以直接用 Git 保存。以后想把改造版推送到自己账号，再考虑 Fork：在 GitHub 网页点击 <strong>Fork → Create fork</strong> 建立自己的仓库副本。已经 Clone 的项目，可以请 Agent 或按 Desktop 提示将推送目标设为自己的 Fork，不用丢掉本地修改重新开始。<a href="https://docs.github.com/en/pull-requests/how-tos/work-with-forks/fork-a-repo">Fork 说明</a> · <a href="https://docs.github.com/en/desktop/adding-and-cloning-repositories/cloning-and-forking-repositories-from-github-desktop">Clone 说明</a></p>
+<h3 id="让-agent-帮你运行项目">让 Agent 帮你运行项目</h3>
+<p>先请 Agent 帮忙说明项目用途，再运行它：</p>
+<pre class="text"><code>先读一下这个项目的说明，告诉我它能做什么，再帮我运行起来。
+需要装什么软件、点哪里、输入什么命令，请一步步告诉我。
+如果出错了，帮我看看原因。
+
+先看看原来的功能能不能用，
+再看看要改成“按型号读取资料、生成产品海报”，需要调整哪里。
+先改一个能看见结果的部分，让我试用。
+做好后，把下次怎么打开和使用也记进 README。</code></pre>
+<p>项目运行后，可以再问：“我刚才点的这个功能，对应哪些文件？如果想改输出内容，要改哪里？”带着已经看见的结果读代码，会更容易把文件和功能对应起来。</p>
+<p>有的项目还需要安装 Python、Node.js 等软件。遇到这些提示，不需要先把它们全部学会，可以把项目说明和报错交给 Agent，让它一步步协助安装和运行。下载好仓库，只是先拿到了文件。</p>
+<h3 id="一个人做东西为什么也值得用-git">一个人做东西，为什么也值得用 Git？</h3>
+<p>小林的三张海报原来都能正常生成。后来他请 Agent 调整图文分栏，产品图变大了，介绍却挤到了价格上。这时他想知道的是：<strong>刚才改了哪里？原来能用的那版还在吗？</strong></p>
+<p>Git 就像给项目留“存档点”。确认能用时存一版，再继续改。即使只有自己一个人用，也能派上用场：</p>
+<ul>
+<li><strong>改坏了，有以前的版本可找。</strong> 原来能用的内容如果已经存进 Git，就可以取出来比较，必要时恢复。</li>
+<li><strong>想查问题，有改动记录可看。</strong> 能看到这次哪些文件、哪些内容变了，也可以让 Agent 对照记录排查，不用全凭回忆。</li>
+<li><strong>做了一半，下次容易接着做。</strong> “能生成三张海报”“调整图文分栏”“改价后自动更新”各留一版、写句说明，过一阵子回来，还知道自己做到了哪里。</li>
+</ul>
+<p>遇到这样的排版问题，小林可以直接告诉 Agent：</p>
+<blockquote>
+<p>上一个版本的海报排版正常，这次放大产品图后，介绍挤到了价格上。帮我对比这次改了哪里，保留大图效果，把文字间距修好，另外两款不要改。</p>
+</blockquote>
+<p><strong>每做好一个能用的部分，就留一个存档点，再继续尝试。</strong> 以后改出了问题，就有之前的版本可以对照，也不用复制一堆“最终版、最终版2”。记得在继续修改前存一版，没存过的内容，Git 也没法帮你找回。</p>
+<h3 id="先学会在本地存一版">先学会在本地存一版</h3>
+<p><strong>先在自己的电脑上存版本就行，不用急着上传 GitHub。</strong> 日常可以先记住两个动作：</p>
+<ul>
+<li><strong>add：选好这次要存的改动。</strong> 这次只想保存哪些文件的改动，就先选中哪些。</li>
+<li><strong>commit：把选好的改动存成一个版本，写一句说明。</strong> 比如写“调整海报图文分栏”，以后就知道这一版改了什么。继续修改文件，也不会覆盖已经提交的版本。</li>
+</ul>
+<p>文件本身还是照常编辑和保存。add、commit 是把选好的改动记入版本历史；Git 不会自动记录每次打字。<a href="https://git-scm.com/docs/git-add">Git 的 add 说明</a> · <a href="https://git-scm.com/docs/git-commit">commit 说明</a></p>
+<h3 id="用-github-desktop就按这几步做">用 GitHub Desktop，就按这几步做</h3>
+<figure>
+<img src="../配图/09-Git存档-露营-q版.png" alt="修改海报后保存版本，需要协作时再推送 GitHub" />
+<figcaption aria-hidden="true">修改海报后保存版本，需要协作时再推送 GitHub</figcaption>
+</figure>
+<p>修改并保存 → 选好改动 → 存一版；需要协作时再推送 GitHub</p>
+<ol type="1">
+<li>改好文件并保存，试一下功能是否正常。</li>
+<li>在 <strong>Changes</strong> 里查看差异，勾选这次要存的文件。这对应“选好这次的改动”，不用另找一个 add 按钮。</li>
+<li>写一句说明，比如“调整海报图文分栏”，点击 <strong>Commit</strong>。以后在 <strong>History</strong> 里查看这些存档。<a href="https://docs.github.com/en/desktop/making-changes-in-a-branch/committing-and-reviewing-changes-to-your-project-in-github-desktop">Desktop 提交说明</a></li>
+</ol>
+<p>从 GitHub Clone 下来的项目，已经是 Git 仓库。自己新建的文件夹，可以先请 Agent 帮你建立 Git 仓库，并设置提交用的姓名和邮箱。准备好后，就可以反复“修改 → 选好改动 → 存一版”。</p>
+<details>
+<summary>
+想试命令时，再看 add 和 commit 怎么写
+</summary>
+<p>在已经建立 Git 仓库的项目文件夹里，例如只保存这次对 <code>index.html</code> 的修改：</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> status</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add index.html</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">&quot;调整海报图文分栏&quot;</span></span></code></pre></div>
+<p>第一行先看看哪些文件改了；第二行选中 <code>index.html</code> 当前的改动；第三行存成一个版本。文件名要换成你实际修改的文件。add 之后如果又改了文件，想把新改动一起存进去，就再 add 一次。</p>
+</details>
+<h3 id="需要多端同步或共同协作时再推送到-github">需要多端同步或共同协作时，再推送到 GitHub</h3>
+<p><strong>如果想换台电脑接着做，或者把项目交给同事一起修改，就可以推送到 GitHub。只在自己这台电脑上用，保存在本地就行，不需要推送。</strong></p>
+<p>推送后，另一台电脑或有权限的同事就能获取这些版本，接着修改。<strong>Commit 是在本机存一版；Push 是把这些版本推送到 GitHub。</strong> 在 Desktop 中点击 <strong>Push origin</strong> 即可推送；新建项目首次上传时通常显示 <strong>Publish repository</strong>。</p>
+<p>上传前确认仓库是公开还是私有，不要上传密码或未经授权的业务资料。<a href="https://docs.github.com/en/repositories/creating-and-managing-repositories/about-repositories">可见范围说明</a> · <a href="https://docs.github.com/en/desktop/overview/creating-your-first-repository-using-github-desktop">创建和发布仓库说明</a></p>
+<p>代码上传到 GitHub，也不等于网页已经上线。</p>
+</main></div><script>document.getElementById('print').onclick=()=>window.print();document.querySelectorAll('pre').forEach(p=>{if(p.closest('.output'))return;const w=document.createElement('div');w.className='code-wrap';p.before(w);w.append(p);const b=document.createElement('button');b.className='copy';b.textContent='复制';b.onclick=async()=>{try{if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(p.innerText)}else{const t=document.createElement('textarea');t.value=p.innerText;document.body.append(t);t.select();if(!document.execCommand('copy'))throw Error('copy');t.remove()}b.textContent='已复制'}catch{b.textContent='请选中文字复制'}setTimeout(()=>b.textContent='复制',2200)};w.append(b)});let closed=[];window.addEventListener('beforeprint',()=>{closed=[...document.querySelectorAll('details:not([open])')];closed.forEach(x=>x.open=true)});window.addEventListener('afterprint',()=>closed.forEach(x=>x.open=false));window.addEventListener('scroll',()=>{const h=document.documentElement;document.getElementById('progress').style.width=((h.scrollTop/(h.scrollHeight-h.clientHeight||1))*100)+'%'});</script></body></html>

@@ -1,8 +1,8 @@
 {
   "actions": {
-    "check": "e84cfbb579e4c8ded1b4a34646a090b9725c0fdf1056a9b618d1e43e7c4c96b0",
-    "html": "e84cfbb579e4c8ded1b4a34646a090b9725c0fdf1056a9b618d1e43e7c4c96b0",
-    "md": "e84cfbb579e4c8ded1b4a34646a090b9725c0fdf1056a9b618d1e43e7c4c96b0"
+    "check": "c3cb65dc0f33384462443044070bdaaf0cf9da8870309889843ad894a139a922",
+    "html": "c3cb65dc0f33384462443044070bdaaf0cf9da8870309889843ad894a139a922",
+    "md": "c3cb65dc0f33384462443044070bdaaf0cf9da8870309889843ad894a139a922"
   },
   "canonical_source": {
     "files": [
@@ -43,8 +43,8 @@
       },
       {
         "path": "page/p42_05_operation_guide_placeholder.rst",
-        "sha256": "6e3ee5839ea0df11dfc979fac03be37e33d5e5b761cb8fde9ff1ce190f8f6564",
-        "size": 10925
+        "sha256": "8c3194aba5aefbbd3b3fadbd15fd7548da46504ec85013fac4e035b8ca7513cf",
+        "size": 10906
       },
       {
         "path": "page/p43_06_ups_mode.rst",
@@ -83,7 +83,7 @@
       },
       {
         "path": "page/spec_es.rst",
-        "sha256": "000338ac1deb3eccab4d379403b52110ebb87e68bdd2319ce85e2caf1ae2c282",
+        "sha256": "efa5f49100e16334277bb1ea4c227821efce09702340a9db9a919f5dd4f32431",
         "size": 8141
       },
       {
@@ -97,7 +97,7 @@
         "size": 1984
       }
     ],
-    "sha256": "02056155567effb6963cb2deff7dea69f665e1ca64188e1102ba0a6df1d95964"
+    "sha256": "9b1c9c2d329a54516ff69b5a0d1652ee9200894e99589450e429627dcbca6d8f"
   },
   "git_ref": "review/JE-1000F-US",
   "html": {
@@ -343,11 +343,6 @@
         "size": 92895
       },
       {
-        "path": "_images/led_light.png",
-        "sha256": "bf4fce34dd33d44a77c7a96dd6aff81ccd76bdc5f6ba34cf59d69f95d021cdd3",
-        "size": 55120
-      },
-      {
         "path": "_images/main_unit1.png",
         "sha256": "6c7f1deea2f6211ba3ed3273900aa7595234d3b8fe5a67830defa4cf13ee6fe6",
         "size": 7470
@@ -371,6 +366,11 @@
         "path": "_images/op_energy_saving.png",
         "sha256": "9dd943d3063031c0795ff8c4b2b6aac266bfb2bff78e2250e445f27352c23a07",
         "size": 67712
+      },
+      {
+        "path": "_images/op_led_light_je1000f_us.png",
+        "sha256": "483c0dcfcfd6c0f8c460a32d9e320f07c3b7571cc1af80b1ac9d5b8f235430cc",
+        "size": 61759
       },
       {
         "path": "_images/op_main_power.png",
@@ -704,8 +704,8 @@
       },
       {
         "path": "index.html",
-        "sha256": "2131d34f7d5ba591bd9bcf1a2752a88b28b48125a5023042b172fb4c7e9f7e73",
-        "size": 90703
+        "sha256": "0769276211cdc094e4fe55290db5329ae784f5650617df79e5370dc7bb190dbd",
+        "size": 90731
       },
       {
         "path": "jbp2000b_ac_charging.pdf",
@@ -1348,6 +1348,46 @@
         "size": 55120
       },
       {
+        "path": "op_led_light_je1000f_eu.pdf",
+        "sha256": "673aaf0f3172c7fe530d7c41b0abdd68ff88cac6a4582d2d183f7bf6ab94d0ac",
+        "size": 86285
+      },
+      {
+        "path": "op_led_light_je1000f_eu.png",
+        "sha256": "95e50a6dd12c5b15aadae9ecebf6d7afc187116c197c3905d83c48ccbd2072ae",
+        "size": 58980
+      },
+      {
+        "path": "op_led_light_je1000f_eu_en.pdf",
+        "sha256": "4cf3bbe867ce02fc55b343bdf47dba2a537bfb362ee330af363e6a2d1062f571",
+        "size": 85133
+      },
+      {
+        "path": "op_led_light_je1000f_eu_en.png",
+        "sha256": "bd1e161e77343ed2e9cd99ea4ccdea96f4caa184102714f4ea48135583ea04b2",
+        "size": 59862
+      },
+      {
+        "path": "op_led_light_je1000f_jp.pdf",
+        "sha256": "0ce448a42a4b61f4f72a5b8bc3749aad06e9136b57b435de16917b2f831628ca",
+        "size": 390039
+      },
+      {
+        "path": "op_led_light_je1000f_jp.png",
+        "sha256": "099fd6defbf232560f23e6c7b3f6ab1acd7977b3835ae4adeff4eca8b4294128",
+        "size": 58121
+      },
+      {
+        "path": "op_led_light_je1000f_us.pdf",
+        "sha256": "4425605f9fe43cee58c9478cf2b3b373be3ea7e1f6a21781ef34cb638fcd24db",
+        "size": 86171
+      },
+      {
+        "path": "op_led_light_je1000f_us.png",
+        "sha256": "483c0dcfcfd6c0f8c460a32d9e320f07c3b7571cc1af80b1ac9d5b8f235430cc",
+        "size": 61759
+      },
+      {
         "path": "op_main_power.pdf",
         "sha256": "eed017db8ecb2ac6c104c2676cf43fe7be77b61c5c251080dd81b157fb60725c",
         "size": 85976
@@ -1404,7 +1444,7 @@
       },
       {
         "path": "searchindex.js",
-        "sha256": "b5645abc3e8f1be969a857d9cd2ad2cbc9bf470bca2beea9a023f09d81019675",
+        "sha256": "75f2a39e204cd57de064f380e7e805f8d43c9ab33c1ad10ffa4c6e0253354c0d",
         "size": 16718
       },
       {
@@ -1433,7 +1473,7 @@
         "size": 316221
       }
     ],
-    "sha256": "82fea28a2722bfb532b79f0ea7bb152f04908e36265a7c40290443820fd7ab87"
+    "sha256": "2373810695b7b6c7853cc4017b41cc94382a15a1002213b0c0582f1d86dae33c"
   },
   "language": "es",
   "markdown": {
@@ -1547,6 +1587,11 @@
         "path": "assets/ir/4693ab0b798e6ef25ff596164ebcbabc15c6dce30890c33763360108a1c1ecfb/operation.ac-output_en_4693ab0b798e.png",
         "sha256": "4693ab0b798e6ef25ff596164ebcbabc15c6dce30890c33763360108a1c1ecfb",
         "size": 125155
+      },
+      {
+        "path": "assets/ir/483c0dcfcfd6c0f8c460a32d9e320f07c3b7571cc1af80b1ac9d5b8f235430cc/op_led_light_je1000f_us.png",
+        "sha256": "483c0dcfcfd6c0f8c460a32d9e320f07c3b7571cc1af80b1ac9d5b8f235430cc",
+        "size": 61759
       },
       {
         "path": "assets/ir/488d554029be9f4473106ef47c1833aa752dbd0ca244604668b9e0c392515daf/operation.led-light_en_488d554029be.png",
@@ -1754,11 +1799,6 @@
         "size": 110491
       },
       {
-        "path": "assets/ir/bf4fce34dd33d44a77c7a96dd6aff81ccd76bdc5f6ba34cf59d69f95d021cdd3/led_light.png",
-        "sha256": "bf4fce34dd33d44a77c7a96dd6aff81ccd76bdc5f6ba34cf59d69f95d021cdd3",
-        "size": 55120
-      },
-      {
         "path": "assets/ir/c46c92d6ee991a400208635802b5d2682f215cacaa748a3ca73068fdb18cdec3/op_dc_usb_output.png",
         "sha256": "c46c92d6ee991a400208635802b5d2682f215cacaa748a3ca73068fdb18cdec3",
         "size": 96118
@@ -1874,31 +1914,6 @@
         "size": 1814
       },
       {
-        "path": "assets/operation.ac-output_es_68234e8398f8_68234e8398f8.png",
-        "sha256": "68234e8398f88e381f9eb6693fba1b32e9eff5cb71407cb29950ee95f9372125",
-        "size": 133898
-      },
-      {
-        "path": "assets/operation.dc-usb-output_es_3c0d7f87bdce_3c0d7f87bdce.png",
-        "sha256": "3c0d7f87bdce508a870933221177b16b4b25a514edaa78de008a3b720b2c736d",
-        "size": 137967
-      },
-      {
-        "path": "assets/operation.energy-saving_es_c5fdc8a41e8e_c5fdc8a41e8e.png",
-        "sha256": "c5fdc8a41e8e27cc4719dd12cbcf3e9913e868412da1b01831c15eff43b1a733",
-        "size": 183817
-      },
-      {
-        "path": "assets/operation.led-light_es_d71deb65e91f_d71deb65e91f.png",
-        "sha256": "d71deb65e91ff74884761b12b651b09849739385c73f32bc289415d67ae927fb",
-        "size": 146582
-      },
-      {
-        "path": "assets/operation.main-power_es_1593f45faaa4_1593f45faaa4.png",
-        "sha256": "1593f45faaa4c14efaeeae9a556f76ba38594642777a610ea314049e9df336cd",
-        "size": 136312
-      },
-      {
         "path": "assets/product-overview.front_es_e1db532310ae_e1db532310ae.png",
         "sha256": "e1db532310aefe548105c849352c2332c8b65fc944044f4336b2465a71c4d7f3",
         "size": 190353
@@ -1920,19 +1935,19 @@
       },
       {
         "path": "manual_je1000f_us_es.md",
-        "sha256": "8d1ddfff1947097c42edd5c200b7ae42afd6b428928d58ee40dbf2ef750677ca",
-        "size": 95499
+        "sha256": "9a8524bc97127d1c9b50ea82522ba54a3a8fe04067bf71890063e20dd7b203c6",
+        "size": 95775
       }
     ],
     "manual": "manual_je1000f_us_es.md",
-    "sha256": "65e4c704305687a3fe6977e2fd91b1cebcd62b98e8f5e40aba4a2ea2e4a24087"
+    "sha256": "0d8932c50b23806bccef0bae14a71f8cdb72101c5f6cf51aeaeb35644e6afa30"
   },
   "model": "JE-1000F",
   "projection_manifest": {
     "path": "projection_bundle_manifest.json",
-    "sha256": "d197c3f5a3bdeeebf0da2c63ef74ce4e77532c1fb95fddd99e3f6599487809d5"
+    "sha256": "1f0a79c4852e39537904e2d4fc5013cebe7f1a5580bb13dffaa50b0920e2865c"
   },
   "region": "US",
   "schema_version": "auto-manual-web-language-release-evidence/v1",
-  "version": "2.4"
+  "version": "2.5"
 }

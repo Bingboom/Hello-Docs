@@ -13,8 +13,12 @@ tools/export_idml.py          façade + CLI: main()'s page-composition state mac
                               every method is a thin delegate), full re-export surface
 tools/bundle_asset_manifest.py
                               fail-closed renderer boundary for semantic bundle assets:
-                              schema/target/consumer/format/path/hash validation
+                              schema/target/consumer/format/path/hash validation;
+                              manifest_asset_slot maps a staged file back to the slot
+                              its source named
 tools/idml/
+  asset_slots.py              recognise governed art by asset slot, not file name
+                              (bundle_asset_slots lookup; RenderContext.asset_slot)
   asset_contracts.py          approved-contract component/page ownership plus hidden
                               native-IDML asset requirements shared by bundle
                               finalization and component promotion; no target-named
@@ -43,6 +47,11 @@ tools/idml/
                               App display-variant binding, and exact duplicate guard
   reference_layout_plan.py    registry lookup + approved-plan validation; exact-target
                               approved files missing from the registry fail closed
+  component_targets.py        per-language registry `component_targets`: a single-language
+                              build composes registered components only while every
+                              source matches its approved-plan pin; else inert + warning
+  registered_component_plan.py one-page registered compositions (Storage+Troubleshooting,
+                              Charging, Warranty) for an active component target
   reference_layout_rebind.py  complete Manual-IR identity/page-binding refresh with
                               unchanged-composition validation and atomic replacement
   reference_layout_scaffold.py review-only draft generator: refreshes Manual-IR
@@ -56,7 +65,8 @@ tools/idml/
                               source page has no explicit HBFccBlock
   notice_labels.py            localized NOTE/TIP/CAUTION/WARNING/DANGER label mapping
                               for notice-style list-table extraction
-  stories.py                  story builders: prose (block-stream dispatch), lcd, symbols,
+  stories.py                  story builders: prose (block-stream dispatch; under a measured
+                              plan story_estimates.StoryHeight counts figure breaks), lcd, symbols,
                               trouble, spec, text; delegates localized operation rhythm
   package.py                  zip contract (mimetype first + STORED), designmap wiring,
                               linked spread chain, height estimation

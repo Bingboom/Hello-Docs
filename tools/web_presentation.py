@@ -10,7 +10,7 @@ from __future__ import annotations
 
 import fnmatch
 import re
-from collections.abc import Sequence
+from collections.abc import Mapping, Sequence
 from pathlib import Path
 from typing import Any
 
@@ -29,6 +29,8 @@ from tools.web_composite_presentation import (
 )
 from tools.web_app_controls import transform_app_control
 from tools.web_app_download import transform_app_download
+from tools.web_base_art_operation import BASE_ART_CLASS, arrange_base_art_operation
+from tools.web_base_art_reference import arrange_base_art_reference
 from tools.web_fcc_component import transform_fcc
 from tools.web_inbox_component import transform_inbox
 from tools.web_overview_component import transform_overview
@@ -536,6 +538,15 @@ def _transform_operation_figure(
         source_path=source_path,
         image_key=str(spec["image_key"]),
     )
+    if BASE_ART_CLASS in figure.get("class", []):
+        arrange_base_art_operation(
+            soup,
+            figure=figure,
+            stage=stage,
+            spec=spec,
+            source_path=source_path,
+            error_type=WebPresentationError,
+        )
     figure.append(stage)
 
 
@@ -849,6 +860,7 @@ def _transform_operations(
     contract: dict[str, Any],
     composites: WebCompositeContext,
     resolved_component_ids: frozenset[str] = frozenset(),
+    operation_panel_copy: Sequence[Mapping[str, Any]] = (),
 ) -> None:
     operation_contract = contract["operations"]
     _ensure_auto_resume_table(
@@ -884,10 +896,17 @@ def _transform_operations(
             raise WebPresentationError(
                 f"{source_path}: operation page is missing governed image {spec['image_key']}"
             )
+        from tools.component_specs.operation_html import base_art_panel_copy
+
         _transform_operation_figure(
             soup,
             image=image,
-            spec=spec,
+            spec={
+                **spec,
+                **base_art_panel_copy(
+                    operation_panel_copy, figure=spec, source_path=source_path,
+                ),
+            },
             source_path=source_path,
             composites=composites,
         )
@@ -969,6 +988,16 @@ def _transform_reference_figure(
         caption_labels=caption_labels,
     )
     image["class"] = [*image.get("class", []), "hb-composite-art"]
+    if BASE_ART_CLASS in figure.get("class", []):
+        arrange_base_art_reference(
+            soup,
+            semantic=semantic,
+            image=image,
+            label_block=label_block,
+            spec=spec,
+            source_path=source_path,
+            error_type=WebPresentationError,
+        )
     append_reference_captions(
         soup,
         figure,
@@ -1367,6 +1396,7 @@ def transform_web_fragment(
     declared_lcd_icons: bool = False,
     resolved_component_ids: frozenset[str] | set[str] = frozenset(),
     embedded_components_complete: bool = False,
+    operation_panel_copy: Sequence[Mapping[str, Any]] = (),
 ) -> str:
     """Render declared semantics, then apply target-governed figure composition."""
     soup = BeautifulSoup(html_fragment, "html.parser")
@@ -1567,6 +1597,7 @@ def transform_web_fragment(
             contract=data,
             composites=composites,
             resolved_component_ids=resolved,
+            operation_panel_copy=operation_panel_copy,
         )
     if (
         is_fcc

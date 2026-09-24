@@ -1,0 +1,131 @@
+<!doctype html><html lang="zh-CN"><head><meta name="robots" content="noindex,nofollow"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>GPT-6 Astra：把复杂要求做成可运行的作品</title><style>
+.learning-figure{margin:28px 0 34px}.learning-figure img{display:block;width:100%;height:auto;border-radius:12px}.learning-figure figcaption{font-size:12px;line-height:1.7;color:var(--muted);margin-top:10px}.learning-figure a{display:block}.learning-figure figcaption a{display:inline}.learning-figure{break-inside:avoid}
+
+:root{--ink:#252d3d;--muted:#69768b;--green:#2563eb;--paper:#ffffff;--line:#e3e9f2;--tint:#eff6ff;--orange:#c65316}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:78px}body{margin:0;background:#f6f8fc;color:var(--ink);font:16px/1.9 -apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif}a{color:var(--green);text-underline-offset:4px;overflow-wrap:anywhere}button{font:inherit;cursor:pointer}.topbar{background:var(--paper);border-bottom:1px solid var(--line);padding:12px 30px;display:flex;justify-content:space-between;align-items:center;gap:20px;position:sticky;top:0;z-index:3}.topbar a{text-decoration:none;font-size:14px;font-weight:650}.topbar small{font-weight:400;color:var(--muted);margin-left:10px}.topbar button,.copy{border:1px solid var(--line);background:white;color:var(--green);border-radius:6px;padding:5px 12px;font-size:12px}.layout{display:grid;grid-template-columns:220px minmax(0,900px);gap:42px;max-width:1270px;margin:auto;padding:40px 30px 80px}aside{position:sticky;top:92px;align-self:start;font-size:13px}.nav-title{font-size:11px;letter-spacing:2px;color:var(--muted);margin:0 0 16px}nav a{display:block;text-decoration:none;color:var(--muted);padding:8px 0 8px 12px;border-left:2px solid var(--line);line-height:1.65}nav a:hover,nav a:focus{color:var(--green);border-color:var(--green)}aside p{font-size:12px;color:var(--muted);margin-top:28px}main{min-width:0;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:42px 48px;box-shadow:0 8px 30px #233b6808}h1{font-size:32px;line-height:1.35;letter-spacing:-.7px;margin:5px 0 24px}h2{font-size:24px;line-height:1.5;margin:58px 0 22px;border-top:1px solid var(--line);padding-top:32px}h3{font-size:19px;line-height:1.6;margin:28px 0 13px}p{margin:14px 0}li{margin:7px 0}ul,ol{padding-left:24px}strong{font-weight:650}blockquote{margin:22px 0;padding:14px 20px;border-left:3px solid #f97316;background:var(--tint);color:#34435d;border-radius:0 8px 8px 0}blockquote p{margin:3px 0}h1+blockquote{background:transparent;border-left:3px solid #fb923c;font-size:18px;margin-bottom:32px}pre{background:#f5f7fb;border:1px solid var(--line);padding:24px 20px 18px;border-radius:8px;font:13px/1.8 ui-monospace,SFMono-Regular,Consolas,monospace;overflow:auto;tab-size:4;position:relative;white-space:pre-wrap;overflow-wrap:anywhere}code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.88em;background:#edf2fa;padding:2px 5px;border-radius:4px}pre code{padding:0;font-size:inherit;background:transparent}.table-scroll{overflow-x:auto;margin:22px 0}table{border-collapse:collapse;width:100%;font-size:14px;text-align:left}th{background:var(--tint);font-weight:600;color:#315c9c}td,th{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}td:first-child{min-width:125px}img{max-width:100%;height:auto}details{margin:24px 0;border:1px solid #dce5f2;border-radius:8px;padding:0 18px}summary{cursor:pointer;padding:15px 0;color:var(--green);font-weight:600}details pre{margin-top:0}.code-wrap{position:relative}.copy{position:absolute;right:7px;top:7px;z-index:1;line-height:1.3;font-size:11px}.code-wrap pre{padding-top:38px}.page-note{border:1px solid var(--line);background:#fff8ee;border-radius:8px;padding:14px 18px;font-size:14px;margin:22px 0}.cell{margin:24px 0}.cell-label{font-size:11px;color:var(--muted);letter-spacing:1px;margin:0 0 5px}.output{background:white;border-left:3px solid #f59e0b;padding:12px 15px;overflow:auto}.output pre{background:white;border:none;padding:0;margin:0;white-space:pre;font-size:13px}.output img{display:block;max-width:100%;margin:12px auto}.output table{font-size:11px;line-height:1.5}.output td,.output th{padding:7px;min-width:0}.footer{border-top:1px solid var(--line);padding-top:20px;margin-top:50px;font-size:12px;color:var(--muted)}.progress{position:fixed;top:0;left:0;height:3px;background:var(--green);z-index:5;width:0}a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #fb923c;outline-offset:3px}.notice{font-size:13px;color:var(--muted)}
+@media(max-width:900px){.layout{display:block;padding:20px 16px 45px}aside{position:static;margin-bottom:22px}nav{display:flex;flex-wrap:wrap;gap:4px 14px}nav a{padding:4px 8px;max-width:100%;font-size:12px}aside p{display:none}main{padding:25px 22px}h1{font-size:27px}h2{font-size:22px;margin-top:42px}.topbar{padding:10px 16px}.topbar small{display:none}pre{font-size:12px}td,th{padding:9px}}
+@media print{@page{size:A4;margin:16mm}body{background:white;font-size:11pt}.topbar,aside,.copy,.progress{display:none}.layout{display:block;padding:0;max-width:none}main{padding:0;border:0;box-shadow:none}h1{font-size:24pt}h2{font-size:18pt;margin-top:24px;break-after:avoid}h3{break-after:avoid}pre,blockquote,.cell{break-inside:avoid}a{color:inherit}details{border:0;padding:0}summary{display:none}.table-scroll{overflow:visible}.output{overflow:visible}*{print-color-adjust:exact;-webkit-print-color-adjust:exact}}
+
+/* A bright reading theme shared by the guide and reference pages. */
+.topbar{background:rgba(255,255,255,.96)}.topbar>a{color:var(--ink)}
+.topbar button:hover,.copy:hover{background:#eff6ff;border-color:#93b4f5}
+main{border-radius:18px;box-shadow:0 12px 36px #233b6808}
+h1{color:#1d2b45}h2{border-top:0;position:relative;padding-top:28px}
+h2:before{content:"";position:absolute;top:0;left:0;width:36px;height:4px;border-radius:3px;background:#f97316}
+h1+blockquote{background:#fff7ed;border-left:3px solid #f97316;color:#9a4318;font-size:18px}
+nav a:hover,nav a:focus{background:#fff3e8;color:#b94b10;border-color:#f97316;border-radius:0 6px 6px 0}
+blockquote{background:#eff6ff;border-left-color:#60a5fa;color:#334869}
+.learning-figure img{border:1px solid #e7edf6;border-radius:16px}
+.page-note{background:#fff9f0;border-color:#ffe4bf}
+.progress{background:linear-gradient(90deg,#f97316,#fbbf24)}
+@media print{main{box-shadow:none}h2:before{display:none}}
+</style><link rel="stylesheet" href="../阅读样式.css?v=ec6208a0cc2b">
+<script defer data-share-analytics src="../reading-analytics.js?v=154433b2c7ec"></script></head><body class="reading-guide"><div id="progress" class="progress"></div><header class="topbar"><a href="../index.html">← 返回分享稿<small>AI 使用知识分享</small></a><button id="print">打印 / 保存 PDF</button></header><div class="layout"><aside><p class="nav-title">阅读目录</p><nav><a class="toc-level-2" href="#s0">先看结果：鹈鹕真的骑起来了</a><a class="toc-level-2" href="#s1">它的专长是什么？</a><a class="toc-level-2" href="#s2">这只鹈鹕体现了哪些工作？</a><a class="toc-level-2" href="#s3">同一句提示词，也能用来比较不同模型</a><a class="toc-level-2" href="#s4">做出来之后，再改一点</a><a class="toc-level-2" href="#s5">使用时记住两个边界</a><a class="toc-level-2" href="#s6">资料与示例来源</a></nav></aside><main><h1 id="gpt-6-astra把复杂要求做成可运行的作品">GPT-6 Astra：把复杂要求做成可运行的作品</h1>
+<blockquote>
+<p>先看一个能动的作品，再说这类任务为什么适合交给它。</p>
+</blockquote>
+<h2 id="s0">先看结果：鹈鹕真的骑起来了</h2>
+<p>这份“鹈鹕骑车”是本次分享选用的代码动画案例。它不是循环播放的一张 GIF，而是一份在浏览器里运行的 HTML：图形、布局、动作和控制按钮一起组成了作品。</p>
+<iframe src="../06_动画示例/pelican-bike.html" title="鹈鹕海边骑行动画，可暂停、调速和按铃" loading="lazy" sandbox="allow-scripts" style="display:block;width:100%;height:780px;border:1px solid #e7e4de;border-radius:14px;background:#f7f4e9;">
+</iframe>
+<p><a href="../06_动画示例/pelican-bike.html">单独打开动画，完整体验</a> · <a href="../06_动画示例/pelican-bike.html" download="pelican-bike.html">下载 HTML 文件</a></p>
+<p><strong>你也试一下：</strong> 暂停后观察脚、踏板和车轮的位置；再继续播放，把速度调快，看看动作是否一起变化。按一下车铃，还会出现“叮铃”的反馈。浏览器允许播放声音时，可以听到铃声。</p>
+<h2 id="s1">它的专长是什么？</h2>
+<p>当前 Codex 模型说明把 GPT-6 Astra 定位为面向复杂、高要求任务的高能力模型；随附参考将重点概括为质量优先、推理与较难的编程工作。可以优先考虑让它处理“要求不止一条，而且必须互相配合”的任务。</p>
+<p>在这次分享的场景里，可以这样理解：</p>
+<div class="table-scroll"><table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>任务特点</th>
+<th>可以交给它什么</th>
+<th>自己要看什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>多个要求要同时成立</td>
+<td>把故事、外观、动作和交互拆成可以实现的部分</td>
+<td>是否漏要求，结果是否符合原意</td>
+</tr>
+<tr>
+<td>代码之间有依赖</td>
+<td>协调脚踩踏板、车轮旋转、背景移动和暂停状态</td>
+<td>动作是否连贯，暂停和恢复是否正常</td>
+</tr>
+<tr>
+<td>需要一边运行一边修正</td>
+<td>查看现有代码，定位问题，修改后再验证</td>
+<td>问题是否真的消失，有没有影响别的功能</td>
+</tr>
+<tr>
+<td>要交付可继续修改的作品</td>
+<td>整理 HTML、样式和脚本，说明在哪里改文字、颜色与速度</td>
+<td>文件能否独立打开，修改入口是否清楚</td>
+</tr>
+</tbody>
+</table></div>
+<p>这些是适合尝试的任务类型，不是每次都能成功的保证。简单改一句话或替换一个链接，也不一定需要选择最复杂的模型。</p>
+<h2 id="s2">这只鹈鹕体现了哪些工作？</h2>
+<p>从这份文件本身可以看到三层配合：</p>
+<ul>
+<li><strong>画出来：</strong> 用 SVG 描述鹈鹕、车架、车轮和海边背景，放大后仍保持清晰。</li>
+<li><strong>动起来：</strong> JavaScript 根据时间更新车轮、踏板、腿部和背景的位置。腿部不是随意摆动，而是根据脚踏板的位置计算关节位置。</li>
+<li><strong>用起来：</strong> 暂停、继续、调速和车铃都对应具体行为；文件还考虑了系统的减少动态效果偏好。</li>
+</ul>
+<p>有审美的画面只是其中一部分。更值得观察的是：这些要求能否在同一份程序里协调工作，修改一处后其他部分是否仍然正常。</p>
+<p>这是一件具体作品的展示，不是官方基准测试，也不能仅凭它判断模型总体排名。代码动画也不等同于模型直接生成视频。</p>
+<h2 id="s3">同一句提示词，也能用来比较不同模型</h2>
+<p>本次作品使用的提示词是：</p>
+<blockquote>
+<p>生成鹈鹕骑车的 HTML</p>
+</blockquote>
+<p>把同一句话交给不同模型，可以观察它们怎样把一个简短要求变成实际作品。先保存每个模型的首次结果，再分别打开，而不是只看它对自己作品的描述。</p>
+<div class="table-scroll"><table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>比较什么</th>
+<th>打开作品后看什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>是否理解要求</td>
+<td>主体能否认出是鹈鹕，鸟与自行车的位置是否合理</td>
+</tr>
+<tr>
+<td>视觉与动作表现</td>
+<td>构图是否清楚；如果做了动画，车轮、踏板和腿部是否连贯</td>
+</tr>
+<tr>
+<td>代码可用性</td>
+<td>HTML 能否在相同浏览器直接打开，是否有报错或缺少资源</td>
+</tr>
+<tr>
+<td>修改能力</td>
+<td>追加同一项改动后，是否按要求改变，同时保留其他功能</td>
+</tr>
+</tbody>
+</table></div>
+<p>尽量固定应用、可用工具、对话上下文和生成机会，并记录模型名称与设置。如果一个模型可以运行浏览器排错，另一个只能输出文字，比较到的就是“模型加工具”的整体效果，不能只归因于模型。</p>
+<p>短提示词没有明确要求动画、暂停、调速和车铃。可以观察模型有没有主动加入这些设计，但不能把未要求的功能当成硬性合格线。如果要专门测试动画，再给所有模型统一追加“让脚踩踏板、车轮转动”，作为另一轮测试。</p>
+<p>一次生成有偶然性，可以多试几次并保留所有结果，不只挑最好的一张。本文尚未做多模型实测，因此没有给出排名或胜负结论。</p>
+<h2 id="s4">做出来之后，再改一点</h2>
+<p>第一次做好后，不必推倒重来。可以继续说：“只把围巾改成蓝色，动作不变”，或者“把速度降一点，保留手动调速”。每次改一处，更容易看出模型是否理解并保留了原有要求。</p>
+<p>连接回小林的海报工具，也是同样的做法：说清楚数据、样式、布局和更新规则之间的关系，让 Agent 实现，再用真实结果逐项核对。</p>
+<p>海报还可以成为下一步的起点：同一份资料生成多种活动物料，做成能筛选、下载的产品展示页，再收集反馈、提出下一版文案建议。这些尚未完成的延伸场景放在 <a href="../index.html#s3">主稿第四节：接下来还能往哪儿走</a>。它们将更多关联、例外处理和跨工具协作放到一起，适合用来继续检验模型，而不是直接当成已经验证的能力成绩。</p>
+<h2 id="s5">使用时记住两个边界</h2>
+<p><strong>模型能力与工具权限是两回事。</strong> 模型负责理解、推理和生成代码；能否读取文件、运行浏览器、上传钉钉，还取决于当前应用提供的工具与授权。模型不会因为更强，就自动拥有账号权限。</p>
+<p><strong>作品效果与验收结论是两回事。</strong> 看起来流畅，不代表所有尺寸、浏览器和操作都测过。交付前仍要打开、点击、修改、复查，不能把“已写代码”当成“已经做好”。</p>
+<h2 id="s6">资料与示例来源</h2>
+<p>模型定位依据当前 Codex 模型目录说明及随附的 OpenAI Docs 参考。公开官方文档本次未能成功访问，因此这里不列参数、定价、跑分或跨模型排名；上述定位不替代最新官方文档。</p>
+<p>动画使用本次提供的原始 HTML 文件，保留原有画面与交互。本文对技术实现的说明来自文件代码检查；未把单个作品效果外推为模型性能保证。</p>
+<p><a href="../index.html">返回分享稿</a></p>
+</main></div><script>document.getElementById('print').onclick=()=>window.print();document.querySelectorAll('pre').forEach(p=>{if(p.closest('.output'))return;const w=document.createElement('div');w.className='code-wrap';p.before(w);w.append(p);const b=document.createElement('button');b.className='copy';b.textContent='复制';b.onclick=async()=>{try{if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(p.innerText)}else{const t=document.createElement('textarea');t.value=p.innerText;document.body.append(t);t.select();if(!document.execCommand('copy'))throw Error('copy');t.remove()}b.textContent='已复制'}catch{b.textContent='请选中文字复制'}setTimeout(()=>b.textContent='复制',2200)};w.append(b)});let closed=[];window.addEventListener('beforeprint',()=>{closed=[...document.querySelectorAll('details:not([open])')];closed.forEach(x=>x.open=true)});window.addEventListener('afterprint',()=>closed.forEach(x=>x.open=false));window.addEventListener('scroll',()=>{const h=document.documentElement;document.getElementById('progress').style.width=((h.scrollTop/(h.scrollHeight-h.clientHeight||1))*100)+'%'});</script></body></html>

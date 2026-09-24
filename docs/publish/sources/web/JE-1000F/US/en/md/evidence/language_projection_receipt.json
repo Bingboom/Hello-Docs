@@ -1,8 +1,8 @@
 {
   "actions": {
-    "check": "e360ebafd21606522c3a99104894de406608bb6424f7a412fab2fd43e2a25a40",
-    "html": "e360ebafd21606522c3a99104894de406608bb6424f7a412fab2fd43e2a25a40",
-    "md": "e360ebafd21606522c3a99104894de406608bb6424f7a412fab2fd43e2a25a40"
+    "check": "998a2d84a47543cc5ed5d9ca3c765ad2a331fbb88dd6cb625e02c88fe6f860d7",
+    "html": "998a2d84a47543cc5ed5d9ca3c765ad2a331fbb88dd6cb625e02c88fe6f860d7",
+    "md": "998a2d84a47543cc5ed5d9ca3c765ad2a331fbb88dd6cb625e02c88fe6f860d7"
   },
   "canonical_source": {
     "files": [
@@ -38,8 +38,8 @@
       },
       {
         "path": "page/05_operation_guide_placeholder.rst",
-        "sha256": "a5da816934e5325b8a238502a69e30c503f9ff273ec27caf862f638bb29bacfc",
-        "size": 9646
+        "sha256": "eb5545a6a4b37bd654202b8b86ccc16ddcf59e7dba71c537d934b3eeacca1da5",
+        "size": 9627
       },
       {
         "path": "page/06_ups_mode.rst",
@@ -97,7 +97,7 @@
         "size": 1714
       }
     ],
-    "sha256": "8f973f5d98047bea2ed24c7c2ed13f03c8402bafc3659b5bdc20f829799cdeda"
+    "sha256": "fab6c69da5540446bd42d085d61ccb40903a51bb5b9ea2fa4d6ddb3573549142"
   },
   "git_ref": "review/JE-1000F-US",
   "html": {
@@ -343,11 +343,6 @@
         "size": 92895
       },
       {
-        "path": "_images/led_light.png",
-        "sha256": "bf4fce34dd33d44a77c7a96dd6aff81ccd76bdc5f6ba34cf59d69f95d021cdd3",
-        "size": 55120
-      },
-      {
         "path": "_images/main_unit1.png",
         "sha256": "6c7f1deea2f6211ba3ed3273900aa7595234d3b8fe5a67830defa4cf13ee6fe6",
         "size": 7470
@@ -371,6 +366,11 @@
         "path": "_images/op_energy_saving.png",
         "sha256": "9dd943d3063031c0795ff8c4b2b6aac266bfb2bff78e2250e445f27352c23a07",
         "size": 67712
+      },
+      {
+        "path": "_images/op_led_light_je1000f_us.png",
+        "sha256": "483c0dcfcfd6c0f8c460a32d9e320f07c3b7571cc1af80b1ac9d5b8f235430cc",
+        "size": 61759
       },
       {
         "path": "_images/op_main_power.png",
@@ -704,8 +704,8 @@
       },
       {
         "path": "index.html",
-        "sha256": "737b8ec59bd83835d0d7034b0781b682190e357f48356f809a890cc9e7a6d2d0",
-        "size": 84602
+        "sha256": "60483095f68a5957048dbb2ebb8dc3f1f64a17859d210544153e7229a0840b48",
+        "size": 84630
       },
       {
         "path": "jbp2000b_ac_charging.pdf",
@@ -1348,6 +1348,46 @@
         "size": 55120
       },
       {
+        "path": "op_led_light_je1000f_eu.pdf",
+        "sha256": "673aaf0f3172c7fe530d7c41b0abdd68ff88cac6a4582d2d183f7bf6ab94d0ac",
+        "size": 86285
+      },
+      {
+        "path": "op_led_light_je1000f_eu.png",
+        "sha256": "95e50a6dd12c5b15aadae9ecebf6d7afc187116c197c3905d83c48ccbd2072ae",
+        "size": 58980
+      },
+      {
+        "path": "op_led_light_je1000f_eu_en.pdf",
+        "sha256": "4cf3bbe867ce02fc55b343bdf47dba2a537bfb362ee330af363e6a2d1062f571",
+        "size": 85133
+      },
+      {
+        "path": "op_led_light_je1000f_eu_en.png",
+        "sha256": "bd1e161e77343ed2e9cd99ea4ccdea96f4caa184102714f4ea48135583ea04b2",
+        "size": 59862
+      },
+      {
+        "path": "op_led_light_je1000f_jp.pdf",
+        "sha256": "0ce448a42a4b61f4f72a5b8bc3749aad06e9136b57b435de16917b2f831628ca",
+        "size": 390039
+      },
+      {
+        "path": "op_led_light_je1000f_jp.png",
+        "sha256": "099fd6defbf232560f23e6c7b3f6ab1acd7977b3835ae4adeff4eca8b4294128",
+        "size": 58121
+      },
+      {
+        "path": "op_led_light_je1000f_us.pdf",
+        "sha256": "4425605f9fe43cee58c9478cf2b3b373be3ea7e1f6a21781ef34cb638fcd24db",
+        "size": 86171
+      },
+      {
+        "path": "op_led_light_je1000f_us.png",
+        "sha256": "483c0dcfcfd6c0f8c460a32d9e320f07c3b7571cc1af80b1ac9d5b8f235430cc",
+        "size": 61759
+      },
+      {
         "path": "op_main_power.pdf",
         "sha256": "eed017db8ecb2ac6c104c2676cf43fe7be77b61c5c251080dd81b157fb60725c",
         "size": 85976
@@ -1433,7 +1473,7 @@
         "size": 316221
       }
     ],
-    "sha256": "3a7c0a7328017b7858eb4818187b6472fa8223ed6e1b727f35be025d9f64df8b"
+    "sha256": "6948f7f0f834a61054115692abe32939159e860f118fbfc9969c154b3af96521"
   },
   "language": "en",
   "markdown": {
@@ -1547,6 +1587,11 @@
         "path": "assets/ir/4693ab0b798e6ef25ff596164ebcbabc15c6dce30890c33763360108a1c1ecfb/operation.ac-output_en_4693ab0b798e.png",
         "sha256": "4693ab0b798e6ef25ff596164ebcbabc15c6dce30890c33763360108a1c1ecfb",
         "size": 125155
+      },
+      {
+        "path": "assets/ir/483c0dcfcfd6c0f8c460a32d9e320f07c3b7571cc1af80b1ac9d5b8f235430cc/op_led_light_je1000f_us.png",
+        "sha256": "483c0dcfcfd6c0f8c460a32d9e320f07c3b7571cc1af80b1ac9d5b8f235430cc",
+        "size": 61759
       },
       {
         "path": "assets/ir/488d554029be9f4473106ef47c1833aa752dbd0ca244604668b9e0c392515daf/operation.led-light_en_488d554029be.png",
@@ -1754,11 +1799,6 @@
         "size": 110491
       },
       {
-        "path": "assets/ir/bf4fce34dd33d44a77c7a96dd6aff81ccd76bdc5f6ba34cf59d69f95d021cdd3/led_light.png",
-        "sha256": "bf4fce34dd33d44a77c7a96dd6aff81ccd76bdc5f6ba34cf59d69f95d021cdd3",
-        "size": 55120
-      },
-      {
         "path": "assets/ir/c46c92d6ee991a400208635802b5d2682f215cacaa748a3ca73068fdb18cdec3/op_dc_usb_output.png",
         "sha256": "c46c92d6ee991a400208635802b5d2682f215cacaa748a3ca73068fdb18cdec3",
         "size": 96118
@@ -1874,31 +1914,6 @@
         "size": 1814
       },
       {
-        "path": "assets/operation.ac-output_en_4693ab0b798e_4693ab0b798e.png",
-        "sha256": "4693ab0b798e6ef25ff596164ebcbabc15c6dce30890c33763360108a1c1ecfb",
-        "size": 125155
-      },
-      {
-        "path": "assets/operation.dc-usb-output_en_3c8feee86b09_3c8feee86b09.png",
-        "sha256": "3c8feee86b099e85e0178ba83db38ec40b52baaa8d41a2172b328e947a598e0a",
-        "size": 131969
-      },
-      {
-        "path": "assets/operation.energy-saving_en_d38d3c13c237_d38d3c13c237.png",
-        "sha256": "d38d3c13c237f3e3eef2b48edac752a94e4822c7b4e396ee9ece9b9581f14fa5",
-        "size": 167799
-      },
-      {
-        "path": "assets/operation.led-light_en_488d554029be_488d554029be.png",
-        "sha256": "488d554029be9f4473106ef47c1833aa752dbd0ca244604668b9e0c392515daf",
-        "size": 142860
-      },
-      {
-        "path": "assets/operation.main-power_en_a292238cebb3_a292238cebb3.png",
-        "sha256": "a292238cebb32d3492fd6780933690adafe71600b1aa565916c8be39e817327a",
-        "size": 124280
-      },
-      {
         "path": "assets/product-overview.front_en_413380d3e618_413380d3e618.svg",
         "sha256": "413380d3e618828b4c03040b34b5e6ffb1db82654b9e5343703316ed80da8cea",
         "size": 394332
@@ -1920,19 +1935,19 @@
       },
       {
         "path": "manual_je1000f_us.md",
-        "sha256": "8435f2d85617364fe0318b5f19016043868984f73a85f050dfe4f55ae91df7da",
-        "size": 89466
+        "sha256": "b623dee0d8d057f43c29be5768241ac17e30369ef0f9ceb43557e99ebb55075d",
+        "size": 89769
       }
     ],
     "manual": "manual_je1000f_us.md",
-    "sha256": "b01d20f01b4d122d0ee9d9d1ac54dafc9a9f6cc256f2f1b805f9062b47e3879d"
+    "sha256": "c52741150e4c63508398030410cc37561df5a87189753679987a57b777c5a277"
   },
   "model": "JE-1000F",
   "projection_manifest": {
     "path": "projection_bundle_manifest.json",
-    "sha256": "d7aa3dde509db498ea4a733f5a77aca7f494e8d2ccdd67dadbf56be6fd0b6cf0"
+    "sha256": "8a0e9579f7bc56e22f71772bc057f879039ff2c06cf621d09d36109bbe5f65f8"
   },
   "region": "US",
   "schema_version": "auto-manual-web-language-release-evidence/v1",
-  "version": "2.4"
+  "version": "2.5"
 }

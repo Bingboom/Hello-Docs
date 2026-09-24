@@ -861,6 +861,24 @@ Web Publish / Read the Docs note:
   separate versioned debt baseline. That baseline currently contains nine US
   Charging fallbacks and nine KR missing panels; new or worsening debt fails,
   and a repaired row must be deleted from the baseline in the same change.
+  While a reference figure waits for its finished panel, its source art fills
+  the figure width (the source's inline `:width:` no longer shrinks it).
+  A target overlay may instead grant one Operation or reference slot the bounded
+  `base-art-live-copy` state (today all five JE-1000F/US Operation figures and
+  its Charging car figure, EN/FR/ES; LED on the target's own
+  `operation/je1000f_us/led_light` art): the frozen text-free artwork is the
+  only image and the source copy stays live HTML on anchors the overlay's
+  `base_art_layout` declares for that exact art (`art_sha256`, bracket-arm
+  `step_anchors`, optional `duration_anchor`, `prerequisite_rect` with its
+  measured `prerequisite_fill` tone, `footer_x`, or a footer-panel card's
+  `art_width` and `step_markers`; a reference figure declares a `panel_top` band,
+  its `panel_fill` tone and one `labels` rectangle per captured source line).
+  Coverage binds each such slot to its packaged asset path/hash and rejects a
+  layout measured on different art, so a new art version must be re-measured
+  before it ships; a mode without its exact `slot_status_overrides` grant, an
+  unknown mode, or incomplete anchors stops contract loading. Details and the
+  measured anchors:
+  [`je1000f_us_base_art_web.md`](dev/je1000f_us_base_art_web.md).
   Its 55 crop/page/content/source-fragment pins are recorded by
   `data/asset_recipes/manual_je1000f_eu_web_panels.json`; Italian is 11/11
   approved full panels. Text-free artwork with HTML/SVG labels or leaders is
@@ -1030,6 +1048,19 @@ page, or density should reuse an existing visual component, follow
 [`dev/style_component_usage_guide.md`](dev/style_component_usage_guide.md) before
 adding page-level geometry or finalizer behavior.
 
+The same registry entry declares `JE-1000F / US / en` as a pilot **component
+target** (`component_targets`): its single-language build composes the approved
+contract's registered pages (LCD profile, native Overview, Charging,
+Storage+Troubleshooting, Warranty, main-power base art) without the contract's
+physical page plan, and `build.py idml` skips the measured LaTeX plan for it.
+This happens only while every source page of the build matches its pin in the
+approved contract (today: business review content, `--source review`, as the
+publish queue uses). Any drift keeps the ordinary layout and prints
+`COMPONENT TARGET INERT` with each pinned/built digest; refresh the pins through
+the rebind route below, never by hand. Other languages, the trilingual replica
+and every other target are unchanged. Details:
+[`dev/idml_component_targets.md`](dev/idml_component_targets.md).
+
 `JBP-2000B / EU / en+fr+es+de+it+uk` is the second target resolved from the
 same `BP@INTL` skeleton. Build it with `configs/config.bp-eu.yaml`; `uk` is
 Ukrainian and this target makes no UK-market claim. Its paired host is named
@@ -1120,10 +1151,22 @@ configs keep that historical default unless `--lang` is supplied explicitly.
 The approved v2 contract separates enforced identity from provenance:
 
 The committed engineering-plane review copy is synchronized to
-`Bingboom/Hello-Docs:review/JE-1000F-US@e06def5e49e107e1a9595c1f38bb11b1d5496f94`.
+`Bingboom/Hello-Docs:review/JE-1000F-US@731f1954c0e19020bd22b68876b0c536d564f647`,
+which includes the 2026-09-23 refresh to the publish queue's review-sync output
+([Hello-Docs #116](https://github.com/Bingboom/Hello-Docs/pull/116)).
 The 2026-08-29 content reapproval covers the current editable IDML semantic
 projection; its rebind changed zero page bindings and left the 58-page
-composition map unchanged.
+composition map unchanged. The first 2026-09-23 content reapproval moved the
+three operation pages (EN/FR/ES) to the JE-1000F/US LED override art
+(`operation/je1000f_us/led_light`); that rebind changed exactly those three page
+bindings and also left the composition map unchanged. The second refreshed the
+review copy to the state the publish queue's review sync writes (the six
+symbols and troubleshooting pages, EN/FR/ES: signal-row variants and the F9
+"DC/USB" copy from live data); it changed exactly those six page bindings and
+left the composition map unchanged.
+A later 2026-09-23 style re-pin followed the common `idml_symbols_signal_alert_icon`
+row in `data/layout_params.csv`. It changed only the layout-params identity; there
+were no page bindings and no content change.
 
 | Contract item | Approved value |
 | --- | --- |
@@ -1132,11 +1175,11 @@ composition map unchanged.
 | Reference SHA-256 | `e72b1ba01882062e261b17d5ba54a2f7c3099e5ba531a6428be13888641083f2` |
 | Page contract | 58 pages, `368.787 × 524.692 pt`, tolerance `0.02 pt` |
 | Print contract | PDF/X-4, Output Intent `Japan Color 2001 Coated`, Output Condition `JC200103` |
-| Content identity (enforced) | `b46905f6953e4c4684623f204890a55ad5826e0fbbc610119738a4c53929590a` |
+| Content identity (enforced) | `46319119142e5824202d3f12297557ed46b67fb89bcbde363b852802980bc678` |
 | Assembly identity (enforced) | `c5d6d94c5bc6eaf18e767af3113aa9c766fb01c519062751003d310e9684eb57` |
-| Style-contract identity (enforced) | `6db62e7780288ac073bc7502379112ddf10aae8d6c00de29875e9ea1a80d0003` |
-| Layout-params identity (enforced) | `2a7e0ea1b75180acc52ff0f169f42322416bc881de860255f1ca778ce2858d82` |
-| Snapshot provenance (not an activation gate) | `aa4bfb324cd12ff07be2507a51a634e61e2d6043e2dd4fb199bb873afd43f821` |
+| Style-contract identity (enforced) | `cdf3b81f7b002bca4596565418c52c0a852666454b7fb77206ae71d1ab9ae420` |
+| Layout-params identity (enforced) | `9781ef9eec94bd356fd862b231e57d04d2e56f0cd03016d78d85412e7312515b` |
+| Snapshot provenance (not an activation gate) | `4c7b267672c8be081977c5644b444a6eb0059cacbd81de0a995ac6f58a859a2e` |
 
 The 52 plan rows bind every IR source reference, by composition, to this
 physical structure:
@@ -1798,7 +1841,8 @@ with python tools/csv_to_tex_params.py.
 `build.py check` also scans each built bundle for wording the Style Guide has retired:
 
 - `data/terminology_rules.csv` — one row per retired wording: `rule_id`, `lang`, `deprecated_regex`, the `preferred` replacement quoted back in the message, an optional `allow_regex` for contexts where the old form is deliberate (an intentional first-mention gloss, a placeholder token), and a `note` pointing at the Style Guide clause.
-- Pages are matched by language: generated pages take the language from their `_<lang>` filename suffix, authored pages inherit the target's language, so a `ko` rule never fires on a German page.
+- Pages are matched by language: generated pages take the language from their `_<lang>` filename suffix, authored pages inherit the target's language, so a `ko` rule never fires on a German page. A single-language family that declares no per-target `lang` (the JP config, `languages: [ja]`) still resolves its authored pages to that one language; a multi-language family leaves unsuffixed pages unclassified.
+- Japanese rules are keyed `ja` — the JP bundle's page suffix (`spec_ja.rst`) and the JP config's language — not the IDML `jp` prefix. `cover_jp.rst` therefore sits outside them; it carries only product naming. Python's `\b` does not break between kana and ASCII (`APPの` has no word boundary), so Japanese patterns use explicit `(?<![A-Za-z])…(?![A-Za-z])` lookarounds.
 
 Findings surface as `TERMINOLOGY_DEPRECATED`, a warning-only code — a rule can be registered the day a wording is retired and its existing hits cleaned up afterwards without blocking builds. Flip it to a blocking code only once the tracked lines are at zero, the way the capability gate tightened.
 
@@ -2042,6 +2086,16 @@ shorten a chain but never lengthen it past what the story needs, counted as its
 height estimate or one frame per authored page break, whichever is larger. An
 approved-reference or target-assembly contract stays authoritative in both
 directions, since a human mapped it page by page.
+
+Because that cap sizes a fallback chain from the height estimate, the estimate
+also counts the frame foot an unbreakable figure leaves. A figure line cannot
+break: when a single-column story's figure does not fit the space left in a
+frame, InDesign moves it to the next frame and the foot stays empty.
+JE-1000F/JP's charging methods estimated 929 pt (two pages) with full-width
+figures, but its solar-adapter and car figures each moved on, leaving 186 pt
+and 80 pt feet; the section needed about two and a half pages and overset.
+Counting those feet allocates three pages. Two-column stories and
+approved-reference or target-assembly contracts keep the linear estimate.
 Prepared-source integrity: a declared page include that is missing or is not a
 file now stops source discovery with the index and source path. Registered
 prose macros need complete arguments; unsupported content around recognized
@@ -2204,3 +2258,13 @@ Web 提示框支持 `NOTES` 标签；纯文字 LCD 说明表隐藏无对应图�
 Manual Center 的 HTML 构建会从已发布手册生成静态章节检索索引，先于部署
 回执封存执行；无需单独启动后端。维护入口及检索范围见
 [RTD Manual Center](dev/rtd_manual_portal.md)。
+
+同一个构建还会生成 `/workspace/` 个人内容入口，并从 Hello-Docs 的
+`docs/knowledge/ai-share/` 读取分享包，复制到
+`/ai-share/`。说明书中心与 AI 分享保持为两个独立界面，入口页只负责在两者之间
+导航。两个界面共用 RTD 项目的可见性设置，详见
+[Personal workspace entry](dev/rtd_manual_portal.md#personal-workspace-entry)。
+
+RTD 构建中的说明书目录与发布证据每轮校验一次，由页面生成及搜索索引复用；
+构建结束或失败后清除缓存，下次构建仍重新校验。见
+[目录构建校验](dev/rtd_manual_portal.md#catalog-validation-during-a-build)。

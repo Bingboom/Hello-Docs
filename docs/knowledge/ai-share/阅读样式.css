@@ -1,0 +1,45 @@
+/* 分享主稿、参考页及配套演示共用的阅读样式。 */
+:root{--ink:#302f2b;--muted:#76746f;--green:#50504d;--paper:#fff;--line:#e7e4de;--tint:#f7f7f6;--orange:#b66b42}
+body{background:#f8f7f4;color:var(--ink)}
+a{color:#50504d;text-decoration-color:#b6b6b0;text-decoration-thickness:1px;text-underline-offset:4px}
+a:hover{color:#9a5735;text-decoration-color:currentColor}
+/* Highlight article references without changing navigation, image links, or CTA buttons. */
+@media screen{
+  .share-main main a:not(:has(img)):not(.process-cta a):not(.process-cta-link){color:#1d4f91;text-decoration-line:underline;text-decoration-color:#7399c6;text-decoration-thickness:1px;text-underline-offset:4px}
+  .share-main main a:not(:has(img)):not(.process-cta a):not(.process-cta-link):is(:hover,:focus-visible){color:#163e73;background:#eaf2fc;text-decoration-color:currentColor}
+}
+.reading-guide main{border-color:var(--line);box-shadow:0 8px 30px #302f2b05}
+.reading-guide h1{color:var(--ink)}
+.reading-guide h2:before{height:3px;background:#d7a17d}
+.reading-guide blockquote{background:#f7f7f6;border-left:2px solid #d5d5d2;color:#4b4b49;border-radius:0 6px 6px 0}
+.reading-guide h1+blockquote{background:none;border:0;padding:0;font-size:13px;color:var(--muted);margin:0 0 26px}
+.reading-guide .intro-summary{font-size:13px;line-height:1.7;color:var(--muted);margin:-8px 0 26px;padding:0;background:none;border:0}
+.reading-guide nav a:hover,.reading-guide nav a:focus{background:#f3eee7;border-color:#c99b7a;color:#705843}
+.reading-guide nav{display:block;max-height:calc(100vh - 150px);overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin}
+.reading-guide nav .toc-level-2{font-weight:600}
+.reading-guide nav .toc-level-3{padding:5px 8px 5px 26px;font-size:12px;font-weight:400;line-height:1.6}
+@media(max-width:900px){.reading-guide nav{max-height:42vh}.reading-guide nav .toc-level-2{padding:7px 8px 7px 12px}}
+.reading-guide .topbar button,.reading-guide .copy{color:#50504d}
+.reading-guide .topbar button:hover,.reading-guide .copy:hover{background:#f7f7f6;border-color:#c7c4bd}
+.reading-guide pre,.reading-guide code{background:#f6f5f2;border-color:var(--line)}
+.reading-guide pre code{background:transparent}
+.reading-guide th{background:#f2f2ee;color:#50504d}
+.reading-guide details{border-color:var(--line)}
+.reading-guide summary{color:#50504d}
+.reading-guide .learning-figure img{border-color:#e9e4d9;border-radius:14px}
+.reading-guide .page-note{background:#f7f7f6;border-color:var(--line);color:#4b4b49}
+.reading-guide .output{border-left-color:#c9a67f}
+.reading-guide .progress{background:linear-gradient(90deg,#c99b7a,#bbc7ad)}
+.reading-guide .process-cta{margin:18px 0 28px}
+.reading-guide .process-cta a{display:inline-flex;align-items:center;padding:8px 12px;border:1px solid #d9ad8c;border-radius:8px;background:#fbf1e9;color:#75492f;font-weight:600;text-decoration:none;box-shadow:0 2px 8px #7a4c2c0a}
+.reading-guide .process-cta a:hover{background:#f7e8dc;border-color:#c98f67;color:#663c25}
+.reading-guide .process-cta-link{display:inline-block;padding:3px 7px;border:1px solid #d9ad8c;border-radius:6px;background:#fbf1e9;color:#75492f;font-weight:600;text-decoration:none}
+.reading-guide .process-cta-link:hover{background:#f7e8dc;border-color:#c98f67;color:#663c25}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #9b866f;outline-offset:3px}
+.student-demo{color:var(--ink)}
+.student-demo .inputs,.student-demo .card,.student-demo .tag{border-color:var(--line)}
+.student-demo .filebox,.student-demo .visit{background:#f7f7f6;border-color:var(--line)}
+.student-demo .card-top{background:#f1f3ed;border-color:var(--line)}
+.student-demo .primary{background:#60755d}
+.student-demo .print{color:#50504d;border-color:#c7c4bd}
+@media print{body{background:#fff}.reading-guide main{box-shadow:none}}

@@ -1033,7 +1033,7 @@ class WebPresentationTests(unittest.TestCase):
                 self.assertIsNone(table.find("col", attrs={"style": re.compile("width:")}))
                 self.assertFalse(any(node.get("style") for node in table.find_all(True)))
 
-    def test_operation_panels_use_localized_pdf_composites_with_semantic_fallback(self) -> None:
+    def test_operation_panels_render_base_art_live_copy_in_every_locale(self) -> None:
         localized_sources = {
             "en": "05_operation_guide_placeholder.rst",
             "fr": "p26_05_operation_guide_placeholder.rst",
@@ -1050,20 +1050,29 @@ class WebPresentationTests(unittest.TestCase):
         for language, source_name in localized_sources.items():
             with self.subTest(language=language):
                 soup = BeautifulSoup(_web_fragment(source_name), "html.parser")
-                figures = soup.select("figure.hb-operation-figure.hb-has-composite-art")
-                self.assertEqual(5, len(figures))
+                self.assertEqual(5, len(soup.select("figure.hb-operation-figure")))
+                self.assertEqual(
+                    0,
+                    len(soup.select("figure.hb-operation-figure.hb-has-composite-art")),
+                )
+                self.assertEqual(
+                    5,
+                    len(soup.select("figure.hb-operation-figure.hb-base-art-live-copy")),
+                )
                 for operation_id in operation_ids:
                     figure = soup.select_one(
                         f'.hb-operation-figure[data-operation-id="{operation_id}"]'
                     )
                     self.assertIsNotNone(figure)
-                    composite = figure.select_one(
-                        ".hb-composite-stage .hb-composite-art"
-                    ) if figure else None
-                    self.assertIsNotNone(composite)
-                    self.assertIn(
-                        f"operation.{operation_id}_{language}_",
-                        str(composite.get("src", "")) if composite else "",
+                    composite = (
+                        figure.select_one(".hb-composite-stage .hb-composite-art")
+                        if figure
+                        else None
+                    )
+                    self.assertIsNone(composite)
+                    self.assertEqual(
+                        "base-art-live-copy",
+                        figure.get("data-web-presentation-mode") if figure else None,
                     )
                     self.assertIsNotNone(
                         figure.select_one(".hb-operation-stage .hb-operation-steps")
@@ -1085,10 +1094,35 @@ class WebPresentationTests(unittest.TestCase):
                 led_light = soup.select_one(
                     '.hb-operation-figure[data-operation-id="led-light"]'
                 )
-                self.assertIsNotNone(
-                    led_light.select_one(".hb-operation-prerequisite")
-                    if led_light
-                    else None
+                self.assertIsNotNone(led_light)
+                if led_light is None:
+                    continue
+                # The lead is its own panel above the art; like the IDML card it
+                # bolds the phrase through its first colon.
+                lead = led_light.select_one(
+                    ".hb-operation-stage > .hb-operation-prerequisite.hb-operation-lead"
+                )
+                self.assertIsNotNone(lead)
+                bold = lead.select_one("strong") if lead else None
+                self.assertTrue(
+                    bold is not None and bold.get_text().rstrip().endswith(":")
+                )
+                panel = led_light.select_one(".hb-operation-stage > .hb-operation-panel")
+                self.assertEqual("--hb-art-width:56.8%", panel.get("style") if panel else None)
+                self.assertEqual(
+                    [
+                        ("light", "hb-operation-marker-bulb-lit", ""),
+                        ("sos", "hb-operation-marker-sos", "SOS"),
+                        ("off", "hb-operation-marker-bulb-off", ""),
+                    ],
+                    [
+                        (
+                            step.get("data-step-id"),
+                            step.select_one(".hb-operation-step-marker")["class"][-1],
+                            step.select_one(".hb-operation-step-marker").get_text(strip=True),
+                        )
+                        for step in led_light.select(".hb-operation-panel .hb-operation-step")
+                    ],
                 )
 
     def test_operation_steps_share_semantics_without_swallowing_locale_notes(self) -> None:
@@ -1148,45 +1182,67 @@ class WebPresentationTests(unittest.TestCase):
         self.assertEqual(ids_by_locale["en"], ids_by_locale["fr"])
         self.assertEqual(ids_by_locale["en"], ids_by_locale["es"])
 
-    def test_charging_car_uses_localized_pdf_panel_without_baking_in_heading(self) -> None:
+    def test_charging_car_draws_base_art_with_live_copy_without_baking_in_heading(self) -> None:
         localized = {
-            "en": ("08_charging_methods.rst", "Vehicle", "CAUTION"),
-            "fr": ("p29_08_charging_methods.rst", "Véhicule", "ATTENTION"),
-            "es": ("p45_08_charging_methods.rst", "Vehículo", "PRECAUCIÓN"),
+            "en": (
+                "08_charging_methods.rst",
+                ["Vehicle", "*The car charging cable is sold separately."],
+                "CAUTION",
+            ),
+            "fr": (
+                "p29_08_charging_methods.rst",
+                ["Véhicule", "※Le câble de chargement de voiture est vendu séparément."],
+                "ATTENTION",
+            ),
+            "es": (
+                "p45_08_charging_methods.rst",
+                ["Vehículo", "※El cable de carga para vehículo se vende por separado."],
+                "PRECAUCIÓN",
+            ),
         }
 
-        for language, (source_name, vehicle_label, caution_label) in localized.items():
+        for language, (source_name, source_lines, caution_label) in localized.items():
             with self.subTest(language=language):
                 soup = BeautifulSoup(_web_fragment(source_name), "html.parser")
                 figure = soup.select_one(
                     'figure.hb-reference-figure[data-reference-id="charging-car"]'
                 )
                 self.assertIsNotNone(figure)
-                self.assertIn(
-                    f"reference.charging-car_{language}_",
-                    str(figure.select_one(".hb-composite-art").get("src", ""))
-                    if figure
-                    else "",
+                if figure is None:
+                    continue
+                # The registered art is the only image: no approved composite
+                # with baked-in copy is resolved for this target.
+                self.assertIn("hb-base-art-live-copy", figure["class"])
+                self.assertNotIn("hb-has-composite-art", figure["class"])
+                self.assertIsNone(figure.select_one(".hb-composite-stage"))
+                self.assertEqual("base-art-live-copy", figure["data-web-presentation-mode"])
+                self.assertEqual("charging/car_charge", figure["data-web-base-art-ref"])
+                panel = figure.select_one(".hb-reference-semantic > .hb-reference-art-panel")
+                self.assertIsNotNone(panel)
+                if panel is None:
+                    continue
+                self.assertEqual(
+                    ["asset:charging/car_charge"],
+                    [str(image.get("src")) for image in figure.find_all("img")],
                 )
-                semantic = figure.select_one(".hb-reference-semantic") if figure else None
-                self.assertIsNotNone(semantic)
-                self.assertIn(
-                    vehicle_label,
-                    semantic.get_text(" ", strip=True) if semantic else "",
+                self.assertEqual("", panel.find("img")["alt"])
+                labels = panel.select(":scope > .hb-reference-live-label")
+                self.assertEqual(
+                    source_lines,
+                    [" ".join(label.get_text().split()) for label in labels],
                 )
                 self.assertEqual(
-                    2,
-                    len(semantic.select(".hb-reference-labels > .line"))
-                    if semantic
-                    else 0,
+                    [False, True],
+                    ["hb-reference-live-pill" in label["class"] for label in labels],
                 )
-                heading = figure.find_previous("h2") if figure else None
+                self.assertIsNone(figure.select_one(".hb-reference-labels"))
+                heading = figure.find_previous("h2")
                 self.assertIsNotNone(heading)
                 self.assertNotIn(
                     heading.get_text(" ", strip=True) if heading else "",
                     str(figure),
                 )
-                following_callout = figure.find_next("table") if figure else None
+                following_callout = figure.find_next("table")
                 self.assertIn(
                     caution_label,
                     following_callout.get_text(" ", strip=True)
