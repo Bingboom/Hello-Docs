@@ -89,7 +89,7 @@
     ],
     "sha256": "769d10f364d36deee1fdd572797dd2c5c633d7cb9008f12ebf9d0d219daa65c2"
   },
-  "git_ref": "c18fe3f48e0b515f86ad696d5b2e2bb208c7454a",
+  "git_ref": "8cb694ebf08a88ecc5b4d26534f8939deb1adc4b",
   "html": {
     "files": [
       {
@@ -1328,6 +1328,46 @@
         "size": 55120
       },
       {
+        "path": "op_led_light_je1000f_eu.pdf",
+        "sha256": "673aaf0f3172c7fe530d7c41b0abdd68ff88cac6a4582d2d183f7bf6ab94d0ac",
+        "size": 86285
+      },
+      {
+        "path": "op_led_light_je1000f_eu.png",
+        "sha256": "95e50a6dd12c5b15aadae9ecebf6d7afc187116c197c3905d83c48ccbd2072ae",
+        "size": 58980
+      },
+      {
+        "path": "op_led_light_je1000f_eu_en.pdf",
+        "sha256": "4cf3bbe867ce02fc55b343bdf47dba2a537bfb362ee330af363e6a2d1062f571",
+        "size": 85133
+      },
+      {
+        "path": "op_led_light_je1000f_eu_en.png",
+        "sha256": "bd1e161e77343ed2e9cd99ea4ccdea96f4caa184102714f4ea48135583ea04b2",
+        "size": 59862
+      },
+      {
+        "path": "op_led_light_je1000f_jp.pdf",
+        "sha256": "0ce448a42a4b61f4f72a5b8bc3749aad06e9136b57b435de16917b2f831628ca",
+        "size": 390039
+      },
+      {
+        "path": "op_led_light_je1000f_jp.png",
+        "sha256": "099fd6defbf232560f23e6c7b3f6ab1acd7977b3835ae4adeff4eca8b4294128",
+        "size": 58121
+      },
+      {
+        "path": "op_led_light_je1000f_us.pdf",
+        "sha256": "4425605f9fe43cee58c9478cf2b3b373be3ea7e1f6a21781ef34cb638fcd24db",
+        "size": 86171
+      },
+      {
+        "path": "op_led_light_je1000f_us.png",
+        "sha256": "483c0dcfcfd6c0f8c460a32d9e320f07c3b7571cc1af80b1ac9d5b8f235430cc",
+        "size": 61759
+      },
+      {
         "path": "op_main_power.pdf",
         "sha256": "eed017db8ecb2ac6c104c2676cf43fe7be77b61c5c251080dd81b157fb60725c",
         "size": 85976
@@ -1394,8 +1434,8 @@
       },
       {
         "path": "sphinx-warnings.log",
-        "sha256": "0708f6cfe78718be6051942cad4bd074acc2dd0aef89fa6ba7cb3ded1e3cc6fa",
-        "size": 3574
+        "sha256": "c3e4c4cc5addacf495220a72b9bfe21752fae226be07b3b15df2194a3a393895",
+        "size": 3268
       },
       {
         "path": "warning_lockup.jpg",
@@ -1408,7 +1448,7 @@
         "size": 316221
       }
     ],
-    "sha256": "10d2d245c25e1ca05973fe20743bb3e3edd1ceef9fa39ee3cc51a416e40ac548"
+    "sha256": "5c3a8e9a10dd55c9e5c7ff835e672ad521d2353086df44a648edb78ea676c9f0"
   },
   "language": "uk",
   "markdown": {
@@ -1422,11 +1462,6 @@
         "path": "assets/app_control_panel_2b9bc2598d7a.png",
         "sha256": "2b9bc2598d7a272629311ecc2f494091c31f15ee2ebb4d59bda5f6e8ee5c9f49",
         "size": 11976
-      },
-      {
-        "path": "assets/ir/01d3694dd833380066161364a6c67f5d26a088bfd4428b72d836c26e4f123a90/connect_result.png",
-        "sha256": "01d3694dd833380066161364a6c67f5d26a088bfd4428b72d836c26e4f123a90",
-        "size": 70855
       },
       {
         "path": "assets/ir/0b390e24e9bc891e9b8be3919943e8b6e66f5e0402961d24a06f809d0ac3e7ce/charging_car.png",
@@ -1502,6 +1537,11 @@
         "path": "assets/ir/6749bd38fdd0b85af591d65d0d81ae591590aa5c35c7b0f72767057a953c5c67/1_warning_triangle_HO7FbxcSnonkYBxBvslc8RpdnIe.png",
         "sha256": "6749bd38fdd0b85af591d65d0d81ae591590aa5c35c7b0f72767057a953c5c67",
         "size": 4482
+      },
+      {
+        "path": "assets/ir/6797b35ec9237f51288866c2a4b16a2a98052341c3692d7978883fd15fe3a842/app_connect_result.png",
+        "sha256": "6797b35ec9237f51288866c2a4b16a2a98052341c3692d7978883fd15fe3a842",
+        "size": 121527
       },
       {
         "path": "assets/ir/6aab9a14900a08fcd8f8261e6e36fbb9a1220eb931df94ebd149b23930063723/20_Discharge_Timer_DHPMbkjSWoiuALxJyJ8cWyQOn0e.png",
@@ -1705,12 +1745,12 @@
       },
       {
         "path": "manual_je2000f_eu_uk.md",
-        "sha256": "25e637d96aa3302c3e8fcf4e3716d93bc76e5e486c5dc1fe797eb2ee50bbb60e",
-        "size": 91550
+        "sha256": "6f81992a10af0fce86613a4f20a3afae73602311996feed5379b25412d2f1c34",
+        "size": 91808
       }
     ],
     "manual": "manual_je2000f_eu_uk.md",
-    "sha256": "331027831ce8dd9ac254a0aa830f293288cfce9aebe2cbfc55cb997a3ddb03ca"
+    "sha256": "f14aa0324af337b4d8514715cba289ab1cf298289d9262d56bc1167fa6893411"
   },
   "model": "JE-2000F",
   "projection_manifest": {
@@ -1719,5 +1759,5 @@
   },
   "region": "EU",
   "schema_version": "auto-manual-web-language-release-evidence/v1",
-  "version": "2.0"
+  "version": "2.1"
 }
