@@ -5,7 +5,7 @@
 UPS 機能
 ========
 
-.. image:: _assets/templates/word_template/common_assets/operation/ups_mode.png
+.. image:: asset:operation/ups_mode
    :alt: UPS connection diagram.
    :width: 360px
 

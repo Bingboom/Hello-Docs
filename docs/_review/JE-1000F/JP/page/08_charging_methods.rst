@@ -20,7 +20,7 @@
 
   本製品のDC入力ポートは「8020メス」です。ソーラーパネル側の「8020オス」と接続してください。
 
-.. image:: _assets/templates/word_template/common_assets/charging/solar_direct.png
+.. image:: asset:charging/solar_direct
    :alt: Direct solar charging diagram.
    :width: 360px
 
@@ -31,7 +31,7 @@
   - 「Jackery SolarSaga アダプター（Pro/Plus/New専用）」（オス・メス）とも8020端子です。
   - ソーラーパネルの8020オス端子を「Jackery SolarSaga アダプター（Pro/Plus/New専用）」の8020メス端子に接続してください。
 
-.. image:: _assets/templates/word_template/common_assets/charging/solar_adapter.png
+.. image:: asset:charging/solar_adapter
    :alt: Solar charging adapter diagram.
    :width: 360px
 
@@ -65,7 +65,7 @@ Jackeryブランド以外の付属品を使用して充電しないでくださ�
 - 悪路などで車両の振動が激しい場合は、接触不良や発熱・焼損の恐れがあるため、充電を中止してください。
 - 誤使用による故障・損傷については、弊社では責任を負いかねます。あらかじめご了承ください。
 
-.. image:: _assets/templates/word_template/common_assets/charging/car_charge.png
+.. image:: asset:charging/car_charge
    :alt: Car charging diagram.
    :width: 360px
 
