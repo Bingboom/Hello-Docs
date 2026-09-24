@@ -120,6 +120,15 @@ rule. Extracted PDF composites remain quarantine candidates until pixel review
 and normal manifest/registry approval; contract admission alone is not asset
 promotion.
 
+The App connect-result figure is the one EU composite bound as `locale=shared`.
+The EU/UK print repeats the same English screens in all five language blocks,
+so one panel serves EN/FR/ES/DE/IT, as the US `reference.app-connect-result`
+does. As an App UI crop, its recipe entry stays quarantined under the
+App/QR/URL/localized-UI recipe gate; approved `04_资产定义` and `04_资产导出物`
+rows make it Web-buildable. The print App screenshots `app/add_device` and
+`app/connect_result` still resolve to the shared JP-market images for
+JE-1000F/EU until a reviewed promotion covers them.
+
 Every newly generated Web `manual.ir.json` contains a
 `metadata.web_figure_coverage` payload with schema
 `web-figure-coverage/v1`. It audits actual rendered Overview, Operation and
@@ -217,10 +226,15 @@ change JP D1–D4 or promote production eligibility.
    until the deployment verifies or the deploy timeout expires, and only then
    writes the canonical URL to each queue row — idempotently (an equal stored
    value is skipped, so reruns never re-register) and with a same-record
-   readback after every write. Verification failure or timeout registers
-   nothing and opens the `queue-failure-web-receipt` sentinel; the retry is a
-   `workflow_dispatch` re-run (optionally scoped by `record_ids`), never a
-   re-publish of the manual.
+   readback after every write. `HTML_link` is a Bitable URL field, which
+   `lark-cli base +record-get` reads back as a Markdown link whose label and
+   target are both the stored URL. Both comparisons accept exactly that form
+   (`document_link_queue.url_field_matches`); a link whose label or target
+   differs is a mismatch, so a hand-titled link is rewritten to the canonical
+   URL and a link to another page fails the readback. Verification failure or
+   timeout registers nothing and opens the `queue-failure-web-receipt`
+   sentinel; the retry is a `workflow_dispatch` re-run (optionally scoped by
+   `record_ids`), never a re-publish of the manual.
 
 ### 2.2 Git-only transaction
 

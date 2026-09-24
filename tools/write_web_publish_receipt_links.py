@@ -19,9 +19,12 @@ on the Hello-Docs business plane when a ``main`` push touches
 3. For each verified target, write the canonical nested URL to every recorded
    queue row idempotently: read the current value first (same value -> no
    write), write through the shared upsert path otherwise, then read the same
-   record back and require the stored value to match. A failed registration
-   leaves the run red for an independent retry (re-run the workflow); it never
-   re-publishes the manual.
+   record back and require the stored value to match. ``HTML_link`` is a
+   ``url``-type field, which lark-cli renders as ``[url](url)``, so both
+   comparisons normalize through ``document_link_queue.url_field_matches``
+   rather than comparing raw strings. A failed registration leaves the run red
+   for an independent retry (re-run the workflow); it never re-publishes the
+   manual.
 
 Rate limiting is undecided, not disproof: a run that ends throttled exits 75
 (sysexits EX_TEMPFAIL) so CI can say "re-run", mirroring
@@ -46,7 +49,11 @@ except ImportError:  # pragma: no cover - direct script execution fallback
 ROOT = bootstrap_repo_root(__file__, parent_count=1)
 
 from tools import rtd_deployment_receipt as receipt  # noqa: E402
-from tools.document_link_queue import scalar_text  # noqa: E402
+from tools.document_link_queue import (  # noqa: E402
+    describe_url_field,
+    scalar_text,
+    url_field_matches,
+)
 from tools.listen_build_queue_lark import fetch_field_id_map  # noqa: E402
 from tools.manual_operations_online_health import publication_url  # noqa: E402
 from tools.phase2_support import LarkCliSource, cli_bin, load_config, phase2_identity  # noqa: E402
@@ -279,7 +286,13 @@ def register_target_links(
     sleep_fn: Any = time.sleep,
     fetch_fields: Any = None,
 ) -> list[dict[str, str]]:
-    """Idempotent per-row registration: read, compare, write, read back."""
+    """Idempotent per-row registration: read, compare, write, read back.
+
+    ``HTML_link`` is a Bitable ``url``-type field, so a stored URL reads back
+    through lark-cli as ``[url](url)``. Both comparisons go through
+    ``url_field_matches``, which absorbs that rendering artifact and nothing
+    else — a pair whose halves disagree still fails the readback.
+    """
     fetch = fetch_fields or fetch_record_fields
     outcomes: list[dict[str, str]] = []
     for record_id in target["queue_record_ids"]:
@@ -291,7 +304,7 @@ def register_target_links(
             record_id=record_id,
         )
         before = scalar_text(before_fields.get(field_name)).strip()
-        if before == url:
+        if url_field_matches(before, url):
             print(f"[web-receipt] SKIP {record_id}: {field_name} already registered ({url})")
             outcomes.append({"record_id": record_id, "action": "already-registered"})
             continue
@@ -311,10 +324,10 @@ def register_target_links(
             record_id=record_id,
         )
         after = scalar_text(after_fields.get(field_name)).strip()
-        if after != url:
+        if not url_field_matches(after, url):
             raise RuntimeError(
                 f"HTML_link readback mismatch for {record_id}: wrote {url!r}, "
-                f"read back {after!r}"
+                f"read back {describe_url_field(after)}"
             )
         print(f"[web-receipt] WROTE {record_id}: {field_name}={url} (readback verified)")
         outcomes.append({"record_id": record_id, "action": "written"})
