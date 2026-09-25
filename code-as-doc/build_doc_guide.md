@@ -463,7 +463,7 @@ Git branch safety note:
 - start a new branch with `powershell -ExecutionPolicy Bypass -File scripts/start_branch.ps1 <type>/<area>-<topic>` on Windows or `./scripts/start_branch.sh <type>/<area>-<topic>` on mac/Linux so the branch is created from the latest `origin/main`; use a change-type prefix such as `feat/`, `fix/`, `refactor/`, or `docs/`, never an agent-name prefix
 - enable the repo-managed pre-push guard with `git config core.hooksPath .githooks`
 - that guard now runs through the shared [`../scripts/git_branch_guard.py`](../scripts/git_branch_guard.py) core instead of a bash-only hook, with [`.githooks/pre-push.cmd`](../.githooks/pre-push.cmd) and [`.githooks/pre-push.ps1`](../.githooks/pre-push.ps1) kept as Windows-native companion launchers
-- the guard blocks pushes from branches that do not contain the latest `origin/main`; use `git push --no-verify` only when the older base is intentional
+- the guard blocks pushes from branches that do not contain the latest `origin/main`; use `git push --no-verify` only when the older base is intentional. `review/*` and `backport/*` branches, and pushes to remotes other than `origin` such as `hello-docs`, are exempt
 - if a PR adds a new helper boundary or changes workflow ownership, update the owning docs and [`dev/orchestration_module_map.md`](./dev/orchestration_module_map.md) in the same change instead of leaving the new rule as tribal knowledge
 
 ## 2. Config Rule
@@ -2277,6 +2277,8 @@ Manual Center 的 HTML 构建会从已发布手册生成静态章节检索索引
 每月用 `python tools/rtd_system_workspace.py corpus-export` 只读导出后提交；
 导出会把往月汇总数带进快照的 `history`，页面据此显示与上期的对比。
 柱状图是语料库句对覆盖（各语言有译文的句对占记忆库全部句对的比例），不是说明书翻译完成率，页面在图下写明。
+页内“技能与钩子”块在构建时读取 `.agents/skills`、`.claude/skills`、`.claude/settings.json` 与 `.githooks/pre-push`，
+按重点线列出技能，标出未登记的技能和没有测试的钩子；`check` 对这些缺口给出警告。
 状态配置写错时构建只跳过该页并输出警告，不影响手册站点；详见
 [System workspace page](dev/rtd_manual_portal.md#system-workspace-page)。
 
