@@ -730,7 +730,7 @@ Jackery Explorer 3000 має два вхідні порти DC8020 і суміс
 
 Після успішного додавання пристрою до додатка значок Wi-Fi на пристрої буде постійно увімкнений.
 
-<img src="../../../../_static/manual-assets/_pool/01/01d3694dd833380066161364a6c67f5d26a088bfd4428b72d836c26e4f123a90.png" style="width: 360px;" width="360" height="203" alt="Заглушка екрана результату налаштування додатка." />
+<img src="../../../../_static/manual-assets/_pool/0d/0dfd46ee1d5825b432ebffc3f560e7a50f7beb6ed43d208130e268f923b7e1b6.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-connect-result" data-web-finished-panel-path="assets/je3000c_eu_shared/app_connect_result.png" data-web-finished-panel-sha256="0dfd46ee1d5825b432ebffc3f560e7a50f7beb6ed43d208130e268f923b7e1b6" alt="Заглушка екрана результату налаштування додатка." />
 
 Наведені вище знімки екрана наведено лише для довідки.
 

@@ -715,7 +715,7 @@ Suchen Sie im Google Play Store oder im App Store nach \"Jackery\", um die App z
 
 Nachdem das Gerät erfolgreich zur App hinzugefügt wurde, leuchtet das WLAN-Symbol am Gerät dauerhaft.
 
-<img src="assets/ir/01d3694dd833380066161364a6c67f5d26a088bfd4428b72d836c26e4f123a90/connect_result.png" style="width: 360px;" width="360" height="203" alt="Platzhalter für das Ergebnis der App-Einrichtung." />
+<img src="assets/ir/0dfd46ee1d5825b432ebffc3f560e7a50f7beb6ed43d208130e268f923b7e1b6/app_connect_result.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-connect-result" data-web-finished-panel-path="assets/je3000c_eu_shared/app_connect_result.png" data-web-finished-panel-sha256="0dfd46ee1d5825b432ebffc3f560e7a50f7beb6ed43d208130e268f923b7e1b6" alt="Platzhalter für das Ergebnis der App-Einrichtung." />
 
 Die oben gezeigten Screenshots dienen nur als Referenz.
 
