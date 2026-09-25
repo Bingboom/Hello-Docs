@@ -125,9 +125,15 @@ The EU/UK print repeats the same English screens in all five language blocks,
 so one panel serves EN/FR/ES/DE/IT, as the US `reference.app-connect-result`
 does. As an App UI crop, its recipe entry stays quarantined under the
 App/QR/URL/localized-UI recipe gate; approved `04_资产定义` and `04_资产导出物`
-rows make it Web-buildable. The print App screenshots `app/add_device` and
-`app/connect_result` still resolve to the shared JP-market images for
-JE-1000F/EU until a reviewed promotion covers them.
+rows make it Web-buildable. For print, the reviewed promotion
+`je1000f-eu-app-ui-v1` resolves `asset:app/add_device` and
+`asset:app/connect_result` to the EU print's own screens for JE-1000F/EU;
+review pages that still carry raw `common_assets/app/*.png` paths keep the
+shared JP-market images until they switch to `asset:` URIs.
+The frozen JE-1000F/EU 2.0 review copy made that switch on 2026-09-24 (the
+FR/ES/DE/IT/UK pages; the EN page already used the URIs), so a Web rebuild from
+it carries the EU export, not the JP screenshot, as the connect-result figure's
+hidden semantic image in all five routes.
 
 `JE-2000F / EU` binds its App connect-result panel through its six per-language
 `web-illustrations/v1` manifests rather than composites. The six language blocks
