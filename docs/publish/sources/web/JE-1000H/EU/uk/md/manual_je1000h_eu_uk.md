@@ -444,7 +444,7 @@
 
 
 <table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ПРИМІТКА</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
-<li><p>Рекомендований діапазон температури заряджання для пристрою становить від -10°C до 45°C, а діапазон температури розряджання - від -10°C до 45°C.</p></li>
+<li><p>Рекомендований діапазон температури заряджання для пристрою становить від -10 °C до 45 °C, а діапазон температури розряджання - від -10 °C до 45 °C.</p></li>
 <li><p>Робота пристрою поза цим температурним діапазоном може обмежити його можливості заряджання та розряджання або навіть унеможливити заряджання чи розряджання.</p></li>
 <li><p>Потужність заряджання та ємність батареї пристрою можуть змінюватися через коливання температури.</p></li>
 </ul>
@@ -518,11 +518,11 @@ Jackery Explorer 1000 Plus має два вхідні порти DC8020 і су�
 
 Зберігайте пристрій у сухому, чистому та добре вентильованому місці. Температура та вологість під час зберігання:
 
-- 1 month: від -20 °C до 45 °C (0-60 % RH)
+- 1 місяць: від -20 °C до 45 °C (0-60 % RH)
 
-- 3 months: від 0 °C до 45 °C (0-60 % RH)
+- 3 місяці: від 0 °C до 45 °C (0-60 % RH)
 
-- 12 months: від 0 °C до 25 °C (0-60 % RH)
+- 12 місяців: від 0 °C до 25 °C (0-60 % RH)
 
 Якщо цей пристрій зберігати тривалий час (3-6 місяців) із розрядженим акумулятором, він може стати нездатним до заряджання. Щоб уникнути цього та зберегти стан батареї, рекомендується перевіряти та заряджати пристрій кожні три місяці, а також виконувати повний цикл заряджання та розряджання щонайменше раз на 6-12 місяців.
 
@@ -558,32 +558,32 @@ Jackery Explorer 1000 Plus має два вхідні порти DC8020 і су�
 <figure aria-label="ЗАГАЛЬНА ІНФОРМАЦІЯ" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Product Name</th>
+<th class="hb-spec-label manual-spec-label" scope="row">Назва продукту</th>
 <td class="hb-spec-value manual-spec-value">Jackery Explorer 1000 Plus</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Model No.</th>
+<th class="hb-spec-label manual-spec-label" scope="row">Номер моделі</th>
 <td class="hb-spec-value manual-spec-value">JE-1000H</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Ємність</th>
-<td class="hb-spec-value manual-spec-value">1024 Вт-год (20 A-год/51,2</td>
+<td class="hb-spec-value manual-spec-value">1024 Вт-год (20 A-год/51,2 В постійного струму)</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Cell Chemistry</th>
+<th class="hb-spec-label manual-spec-label" scope="row">Хімічний склад елементів</th>
 <td class="hb-spec-value manual-spec-value">LiFePO₄</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Вага</th>
-<td class="hb-spec-value manual-spec-value">Близько 10,8</td>
+<td class="hb-spec-value manual-spec-value">Близько 10,8 кг</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Розміри</th>
-<td class="hb-spec-value manual-spec-value">313,5 × 201 × 233,5</td>
+<td class="hb-spec-value manual-spec-value">313,5 × 201 × 233,5 мм</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Ресурс циклів</th>
-<td class="hb-spec-value manual-spec-value">6000 циклів до 70%</td>
+<td class="hb-spec-value manual-spec-value">6000 циклів до 70%+ ємності</td>
 </tr>
 </tbody>
 </table></figure>
@@ -598,15 +598,15 @@ Jackery Explorer 1000 Plus має два вхідні порти DC8020 і су�
 <tbody>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">1 вхід змінного струму</th>
-<td class="hb-spec-value manual-spec-value">Charge Mode: 220 В-240 В~50 Гц, 10 A<br/>Bypass Mode<sup class="hb-spec-reference">①</sup>: 220 B-240 В~50 Гц, 7,83 A</td>
+<td class="hb-spec-value manual-spec-value">Режим заряджання: 220 В-240 В~ 50 Гц, 10 A макс.<br/>Байпасний режим<sup class="hb-spec-reference">①</sup>: 220 В-240 В~ 50 Гц, 7,83 A</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">2 порти DC8020</th>
-<td class="hb-spec-value manual-spec-value">11 В-16 В 8 A макс., подв. до 8 A<br/>16 В-60 В 12 A, подв. до 21 A макс./400</td>
+<td class="hb-spec-value manual-spec-value">11 В-16 В⎓8 A макс., подв. до 8 A макс.<br/>16 В-60 В⎓12 A, подв. до 21 A макс./400 Вт макс.</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">1 порт розширення постійного струму</th>
-<td class="hb-spec-value manual-spec-value">36,8 В-56 В 59 A</td>
+<td class="hb-spec-value manual-spec-value">36,8 В-56 В⎓59 A макс.</td>
 </tr>
 </tbody>
 </table></figure>
@@ -620,32 +620,32 @@ Jackery Explorer 1000 Plus має два вхідні порти DC8020 і су�
 <figure aria-label="ВИХІДНІ ПОРТИ" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">3 виходи AC</th>
-<td class="hb-spec-value manual-spec-value">230 В~ 50 Гц, 7,83 A, 1800</td>
+<th class="hb-spec-label manual-spec-label" scope="row">3 виходи змінного струму</th>
+<td class="hb-spec-value manual-spec-value">230 В~ 50 Гц, 7,83 A, 1800 Вт ном. потужності</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Загальний вихід змінного струму<sup class="hb-spec-reference">②</sup></th>
-<td class="hb-spec-value manual-spec-value">1800 Вт ном. потужності, 3600</td>
+<td class="hb-spec-value manual-spec-value">1800 Вт ном. потужності, 3600 Вт пікове значення</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Вихід змінного струму у<sup class="hb-spec-reference">①</sup></th>
-<td class="hb-spec-value manual-spec-value">220 B-240 В~50 Гц, 7,83 A</td>
+<th class="hb-spec-label manual-spec-label" scope="row">Вихід змінного струму у байпасному режимі<sup class="hb-spec-reference">①</sup></th>
+<td class="hb-spec-value manual-spec-value">220 В-240 В~ 50 Гц, 7,83 A</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">2 виходи USB-C</th>
-<td class="hb-spec-value manual-spec-value">USB-C 30W: 30 Вт макс., 5 В 3 A, 9 В 3 A, 12 В 2,5 A, 15 В 2 A, 20 В 1,5 A<br/>USB-C 140W: 140 Вт макс., 5 В 3 A, 9 В 3 A, 12 В 3 A, 15 В 3 A, 20 В 5 A, 28 В 5 A</td>
+<td class="hb-spec-value manual-spec-value">USB-C 30W: 30 Вт макс., 5 В⎓3 A, 9 В⎓3 A, 12 В⎓2,5 A, 15 В⎓2 A, 20 В⎓1,5 A<br/>USB-C 140W: 140 Вт макс., 5 В⎓3 A, 9 В⎓3 A, 12 В⎓3 A, 15 В⎓3 A, 20 В⎓5 A, 28 В⎓5 A</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">1 вихід USB-A</th>
-<td class="hb-spec-value manual-spec-value">18 Вт макс., 5-6 В 3 A, 6-9 В 2 A, 9-12 В 1,5 A</td>
+<th class="hb-spec-label manual-spec-label" scope="row">1 вихід USB-A 18W</th>
+<td class="hb-spec-value manual-spec-value">18 Вт макс., 5-6 В⎓3 A, 6-9 В⎓2 A, 9-12 В⎓1,5 A</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">1 × порт DC 12 В</th>
-<td class="hb-spec-value manual-spec-value">12 В 10</td>
+<th class="hb-spec-label manual-spec-label" scope="row">Порт постійного струму 12 В</th>
+<td class="hb-spec-value manual-spec-value">12 В⎓10 А макс.</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">1 порт розширення постійного струму</th>
-<td class="hb-spec-value manual-spec-value">36,8 В-56 В 36 A</td>
+<td class="hb-spec-value manual-spec-value">36,8 В-56 В⎓36 A макс.</td>
 </tr>
 </tbody>
 </table></figure>
@@ -660,11 +660,11 @@ Jackery Explorer 1000 Plus має два вхідні порти DC8020 і су�
 <tbody>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Температура заряджання</th>
-<td class="hb-spec-value manual-spec-value">від -10°C до 45°C</td>
+<td class="hb-spec-value manual-spec-value">від -10 °C до 45 °C</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Температура розряду</th>
-<td class="hb-spec-value manual-spec-value">від -10°C до 45°C</td>
+<th class="hb-spec-label manual-spec-label" scope="row">Температура розряджання</th>
+<td class="hb-spec-value manual-spec-value">від -10 °C до 45 °C</td>
 </tr>
 </tbody>
 </table></figure>

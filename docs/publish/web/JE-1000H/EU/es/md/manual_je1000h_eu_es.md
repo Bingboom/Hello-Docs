@@ -517,11 +517,11 @@ Este producto puede cargarse usando un cargador para vehículo de 12 V. Asegúre
 
 Almacene el producto en un lugar seco y limpio con ventilación adecuada. Temperatura y humedad de almacenamiento:
 
-- 1 month: -20 °C a 45 °C (0-60 % HR)
+- 1 mes: -20 °C a 45 °C (0-60 % HR)
 
-- 3 months: 0 °C a 45 °C (0-60 % HR)
+- 3 meses: 0 °C a 45 °C (0-60 % HR)
 
-- 12 months: 0 °C a 25 °C (0-60 % HR)
+- 12 meses: 0 °C a 25 °C (0-60 % HR)
 
 Si este producto se almacena durante un período prolongado (de 3 a 6 meses) con la batería descargada, podría volverse imposible recargarlo. Para evitar esto y mantener la salud de la batería, se recomienda revisar y recargar el producto cada tres meses, y realizar un ciclo completo de carga y descarga al menos una vez cada 6 a 12 meses.
 
@@ -556,19 +556,19 @@ Si aparece alguno de los siguientes códigos de fallo, siga las acciones correct
 <figure aria-label="INFORMACIÓN GENERAL" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Product Name</th>
+<th class="hb-spec-label manual-spec-label" scope="row">Nombre del producto</th>
 <td class="hb-spec-value manual-spec-value">Jackery Explorer 1000 Plus</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Model No.</th>
+<th class="hb-spec-label manual-spec-label" scope="row">Nº de modelo</th>
 <td class="hb-spec-value manual-spec-value">JE-1000H</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Capacidad</th>
-<td class="hb-spec-value manual-spec-value">1024 Wh (20 Ah/51,2 V DC</td>
+<td class="hb-spec-value manual-spec-value">1024 Wh (20 Ah/51,2 V CC)</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Cell Chemistry</th>
+<th class="hb-spec-label manual-spec-label" scope="row">Química Celular</th>
 <td class="hb-spec-value manual-spec-value">LiFePO₄</td>
 </tr>
 <tr>
@@ -581,7 +581,7 @@ Si aparece alguno de los siguientes códigos de fallo, siga las acciones correct
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Ciclo de vida</th>
-<td class="hb-spec-value manual-spec-value">6000 ciclos de carga hasta 70 %</td>
+<td class="hb-spec-value manual-spec-value">6000 ciclos de carga hasta 70 % + de capacidad</td>
 </tr>
 </tbody>
 </table></figure>
@@ -596,15 +596,15 @@ Si aparece alguno de los siguientes códigos de fallo, siga las acciones correct
 <tbody>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">1 × Entrada CA</th>
-<td class="hb-spec-value manual-spec-value">Charge Mode: 220 V-240 V~50 Hz, 10 A Máx<br/>Bypass Mode<sup class="hb-spec-reference">①</sup>: 220 V-240 V~50 Hz, 7,83 A</td>
+<td class="hb-spec-value manual-spec-value">Modo de carga: 220 V-240 V~ 50 Hz, 10 A máx.<br/>Modo de derivación<sup class="hb-spec-reference">①</sup>: 220 V-240 V~ 50 Hz, 7,83 A</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">2 × Puertos DC8020</th>
-<td class="hb-spec-value manual-spec-value">11 V-16 V 8 A Máx, Doble a 8 A Máx<br/>16 V-60 V 12 A, Doble a 21 A Máx/400 W Máx</td>
+<td class="hb-spec-value manual-spec-value">Auto: 11 V-16 V⎓8 A máx., Doble a 8 A máx.<br/>PV: 16 V-60 V⎓12 A, Doble a 21 A máx./400 W máx.</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">1 × Puerto de expansión CC</th>
-<td class="hb-spec-value manual-spec-value">36,8 V-56 V 59 A Máx</td>
+<td class="hb-spec-value manual-spec-value">36,8 V-56 V⎓59 A máx.</td>
 </tr>
 </tbody>
 </table></figure>
@@ -619,31 +619,31 @@ Si aparece alguno de los siguientes códigos de fallo, siga las acciones correct
 <tbody>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">3 × Salidas CA</th>
-<td class="hb-spec-value manual-spec-value">230 V~50 Hz, 7,83 A Máx, 1800 W nomi</td>
+<td class="hb-spec-value manual-spec-value">230 V~ 50 Hz, 7,83 A máx., 1800 W nominales</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">CA Salida total 2<sup class="hb-spec-reference">②</sup></th>
-<td class="hb-spec-value manual-spec-value">1800 W nominales, 3600 W pico</td>
+<th class="hb-spec-label manual-spec-label" scope="row">CA Salida total<sup class="hb-spec-reference">②</sup></th>
+<td class="hb-spec-value manual-spec-value">1800 W nominales, 3600 W pico de sobretensión</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Salida de CA en modo bypass<sup class="hb-spec-reference">①</sup></th>
-<td class="hb-spec-value manual-spec-value">220 V-240 V~50 Hz, 7,83 A</td>
+<th class="hb-spec-label manual-spec-label" scope="row">Salida de CA del Modo de derivación<sup class="hb-spec-reference">①</sup></th>
+<td class="hb-spec-value manual-spec-value">220 V-240 V~ 50 Hz, 7,83 A</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">2 × Salidas USB-C</th>
-<td class="hb-spec-value manual-spec-value">USB-C 30W: 30 W Máx, 5 V 3 A, 9 V 3 A, 12 V 2,5 A, 15 V 2 A, 20 V 1,5 A<br/>USB-C 140W: 140 W Máx, 5 V 3 A, 9 V 3 A, 12 V 3 A, 15 V 3 A, 20 V 5 A, 28 V 5 A</td>
+<th class="hb-spec-label manual-spec-label" scope="row">2 × Salida USB-C</th>
+<td class="hb-spec-value manual-spec-value">Salida USB-C 30W: 30 W máx., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓2,5 A, 15 V⎓2 A, 20 V⎓1,5 A<br/>Salida USB-C 140W: 140 W máx., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓3 A, 15 V⎓3 A, 20 V⎓5 A, 28 V⎓5 A</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">1 × Salida USB-A</th>
-<td class="hb-spec-value manual-spec-value">18W Máx, 5-6 V 3 A, 6-9 V 2 A, 9-12 V 1,5 A</td>
+<td class="hb-spec-value manual-spec-value">18 W máx., 5-6 V⎓3 A, 6-9 V⎓2 A, 9-12 V⎓1,5 A</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">1 × Puerto DC 12V</th>
-<td class="hb-spec-value manual-spec-value">12 V 10 A Máx</td>
+<td class="hb-spec-value manual-spec-value">12 V⎓10 A máx.</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">1× Puerto de expansión CC</th>
-<td class="hb-spec-value manual-spec-value">36,8 V-56 V 36 A Máx</td>
+<th class="hb-spec-label manual-spec-label" scope="row">1 × Puerto de expansión CC</th>
+<td class="hb-spec-value manual-spec-value">36,8 V-56 V⎓36 A máx.</td>
 </tr>
 </tbody>
 </table></figure>

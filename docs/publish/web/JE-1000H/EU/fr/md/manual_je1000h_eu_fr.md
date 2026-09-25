@@ -441,7 +441,7 @@ Quand la recharge par prise murale CA et la recharge solaire sont effectuées en
 
 
 <table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>REMARQUE</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
-<li><p>La température de charge recommandée pour le produit est de - 10 °C à 45 °C, et la température de décharge est de - 10 °C à 45 °C.</p></li>
+<li><p>La température de charge recommandée pour le produit est de -10 °C à 45 °C, et la température de décharge est de -10 °C à 45 °C.</p></li>
 <li><p>Utiliser le produit en dehors de cette plage de températures peut limiter ses capacités de charge et de décharge, voire empêcher la charge ou la décharge.</p></li>
 <li><p>La puissance de charge et la capacité de la batterie du produit peuvent varier en raison des fluctuations de température.</p></li>
 </ul>
@@ -515,11 +515,11 @@ Ce produit peut être chargé à l\'aide d\'un chargeur de voiture 12 V. Assurez
 
 Conservez le produit dans un endroit propre et sec avec une ventilation adéquate. Température et humidité de stockage :
 
-- 1 month : -20 °C à 45 °C (0-60 % HR)
+- 1 mois : -20 °C à 45 °C (0-60 % HR)
 
-- 3 months : 0 °C à 45 °C (0-60 % HR)
+- 3 mois : 0 °C à 45 °C (0-60 % HR)
 
-- 12 months : 0 °C à 25 °C (0-60 % HR)
+- 12 mois : 0 °C à 25 °C (0-60 % HR)
 
 Si ce produit est stocké pendant une longue période (3 à 6 mois) avec la batterie déchargée, il peut devenir impossible de le recharger. Pour éviter cela et préserver la santé de la batterie, il est recommandé de vérifier et de recharger le produit tous les trois mois, et d\'effectuer un cycle de charge et de décharge complet au moins une fois tous les 6 à 12 mois.
 
@@ -555,19 +555,19 @@ Si l\'un des codes d\'erreur suivants apparaît, suivez les actions correctives 
 <figure aria-label="INFORMATIONS GÉNÉRALES" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Product Name</th>
+<th class="hb-spec-label manual-spec-label" scope="row">Nom du produit</th>
 <td class="hb-spec-value manual-spec-value">Jackery Explorer 1000 Plus</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Model No.</th>
+<th class="hb-spec-label manual-spec-label" scope="row">N° modèle</th>
 <td class="hb-spec-value manual-spec-value">JE-1000H</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Capacité</th>
-<td class="hb-spec-value manual-spec-value">1024 Wh (20 Ah/51,2 V DC</td>
+<td class="hb-spec-value manual-spec-value">1024 Wh (20 Ah/51,2 V CC)</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Cell Chemistry</th>
+<th class="hb-spec-label manual-spec-label" scope="row">Cellule Chimique</th>
 <td class="hb-spec-value manual-spec-value">LiFePO₄</td>
 </tr>
 <tr>
@@ -580,7 +580,7 @@ Si l\'un des codes d\'erreur suivants apparaît, suivez les actions correctives 
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Durée de vie</th>
-<td class="hb-spec-value manual-spec-value">Capacité de 6000 cycles à 70 % ou</td>
+<td class="hb-spec-value manual-spec-value">Capacité de 6000 cycles à 70 % ou plus</td>
 </tr>
 </tbody>
 </table></figure>
@@ -595,15 +595,15 @@ Si l\'un des codes d\'erreur suivants apparaît, suivez les actions correctives 
 <tbody>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">1 × Entrée CA</th>
-<td class="hb-spec-value manual-spec-value">Charge Mode: 220 V-240 V~50 Hz, 10 A max.<br/>Bypass Mode<sup class="hb-spec-reference">①</sup>: 220 V-240 V~50 Hz, 7,83 A</td>
+<td class="hb-spec-value manual-spec-value">Mode de charge: 220 V-240 V~ 50 Hz, 10 A max.<br/>Mode dérivation<sup class="hb-spec-reference">①</sup>: 220 V-240 V~ 50 Hz, 7,83 A</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">2 × Ports DC8020</th>
-<td class="hb-spec-value manual-spec-value">11 V-16 V 8 A max., double à 8 A max.<br/>16 V-60 V 12 A, double à 21 A max./400 W max.</td>
+<td class="hb-spec-value manual-spec-value">Voiture : 11 V-16 V⎓8 A max., double à 8 A max.<br/>PV : 16 V-60 V⎓12 A, double à 21 A max./400 W max.</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">1 × Port d’extension CC</th>
-<td class="hb-spec-value manual-spec-value">36,8 V-56 V 59 A max.</td>
+<td class="hb-spec-value manual-spec-value">36,8 V-56 V⎓59 A max.</td>
 </tr>
 </tbody>
 </table></figure>
@@ -617,32 +617,32 @@ Si l\'un des codes d\'erreur suivants apparaît, suivez les actions correctives 
 <figure aria-label="PORTS DE SORTIE" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">3 × Sorties CA</th>
-<td class="hb-spec-value manual-spec-value">230 V~50 Hz, 7,83 A max., 1800 W nomi</td>
+<th class="hb-spec-label manual-spec-label" scope="row">3 × Sortie CA</th>
+<td class="hb-spec-value manual-spec-value">230 V~ 50 Hz, 7,83 A max., 1800 W nominal</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Sortie totale CA 2<sup class="hb-spec-reference">②</sup></th>
-<td class="hb-spec-value manual-spec-value">1800 W nominal, 3600 W crêt</td>
+<th class="hb-spec-label manual-spec-label" scope="row">Sortie totale CA<sup class="hb-spec-reference">②</sup></th>
+<td class="hb-spec-value manual-spec-value">1800 W nominal, 3600 W crête</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Sortie CA en mode bypass<sup class="hb-spec-reference">①</sup></th>
-<td class="hb-spec-value manual-spec-value">220 V-240 V~50 Hz, 7,83 A Sort</td>
+<th class="hb-spec-label manual-spec-label" scope="row">Sortie CA en mode dérivation<sup class="hb-spec-reference">①</sup></th>
+<td class="hb-spec-value manual-spec-value">220 V-240 V~ 50 Hz, 7,83 A</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">2 × Sortie USB-C</th>
-<td class="hb-spec-value manual-spec-value">USB-C 30W: 30 W max., 5 V 3 A, 9 V 3 A, 12 V 2,5 A, 15 V 2 A, 20 V 1,5A<br/>USB-C 140W: 140 W max., 5 V 3 A, 9 V 3 A, 12 V 3 A, 15 V 3 A, 20 V 5 A, 28 V 5 A</td>
+<td class="hb-spec-value manual-spec-value">Sortie USB-C 30W: 30 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓2,5 A, 15 V⎓2 A, 20 V⎓1,5 A<br/>Sortie USB-C 140W: 140 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓3 A, 15 V⎓3 A, 20 V⎓5 A, 28 V⎓5 A</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">1 × Sortie USB-A</th>
-<td class="hb-spec-value manual-spec-value">18 W max., 5-6 V 3 A, 6-9 V 2 A, 9-12 V 1,5 A</td>
+<td class="hb-spec-value manual-spec-value">18 W max., 5-6 V⎓3 A, 6-9 V⎓2 A, 9-12 V⎓1,5 A</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">1 × Port CC 12 V</th>
-<td class="hb-spec-value manual-spec-value">12 V 10 A max.</td>
+<td class="hb-spec-value manual-spec-value">12 V⎓10 A max.</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">1× Port d’extension CC</th>
-<td class="hb-spec-value manual-spec-value">36,8 V-56 V 36 A max.</td>
+<th class="hb-spec-label manual-spec-label" scope="row">1 × Port d’extension CC</th>
+<td class="hb-spec-value manual-spec-value">36,8 V-56 V⎓36 A max.</td>
 </tr>
 </tbody>
 </table></figure>
@@ -657,11 +657,11 @@ Si l\'un des codes d\'erreur suivants apparaît, suivez les actions correctives 
 <tbody>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Température de charge</th>
-<td class="hb-spec-value manual-spec-value">- 10 °C à 45 °C</td>
+<td class="hb-spec-value manual-spec-value">-10 °C à 45 °C</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Température de décharge</th>
-<td class="hb-spec-value manual-spec-value">- 10 °C à 45 °C</td>
+<td class="hb-spec-value manual-spec-value">-10 °C à 45 °C</td>
 </tr>
 </tbody>
 </table></figure>
