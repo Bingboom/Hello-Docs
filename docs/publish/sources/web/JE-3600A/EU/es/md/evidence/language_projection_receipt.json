@@ -94,7 +94,7 @@
     ],
     "sha256": "ac812486655e7bc915585d473079914d6c3660b03d2687a4fa5064daef6cc02d"
   },
-  "git_ref": "0f3b93f166edc28bdcedefa3b28167bab2c2b3cc",
+  "git_ref": "9efaad3c5ff11831cf124493d3fa96b15a4be16d",
   "html": {
     "files": [
       {
@@ -1208,6 +1208,46 @@
         "size": 55120
       },
       {
+        "path": "op_led_light_je1000f_eu.pdf",
+        "sha256": "673aaf0f3172c7fe530d7c41b0abdd68ff88cac6a4582d2d183f7bf6ab94d0ac",
+        "size": 86285
+      },
+      {
+        "path": "op_led_light_je1000f_eu.png",
+        "sha256": "95e50a6dd12c5b15aadae9ecebf6d7afc187116c197c3905d83c48ccbd2072ae",
+        "size": 58980
+      },
+      {
+        "path": "op_led_light_je1000f_eu_en.pdf",
+        "sha256": "4cf3bbe867ce02fc55b343bdf47dba2a537bfb362ee330af363e6a2d1062f571",
+        "size": 85133
+      },
+      {
+        "path": "op_led_light_je1000f_eu_en.png",
+        "sha256": "bd1e161e77343ed2e9cd99ea4ccdea96f4caa184102714f4ea48135583ea04b2",
+        "size": 59862
+      },
+      {
+        "path": "op_led_light_je1000f_jp.pdf",
+        "sha256": "0ce448a42a4b61f4f72a5b8bc3749aad06e9136b57b435de16917b2f831628ca",
+        "size": 390039
+      },
+      {
+        "path": "op_led_light_je1000f_jp.png",
+        "sha256": "099fd6defbf232560f23e6c7b3f6ab1acd7977b3835ae4adeff4eca8b4294128",
+        "size": 58121
+      },
+      {
+        "path": "op_led_light_je1000f_us.pdf",
+        "sha256": "4425605f9fe43cee58c9478cf2b3b373be3ea7e1f6a21781ef34cb638fcd24db",
+        "size": 86171
+      },
+      {
+        "path": "op_led_light_je1000f_us.png",
+        "sha256": "483c0dcfcfd6c0f8c460a32d9e320f07c3b7571cc1af80b1ac9d5b8f235430cc",
+        "size": 61759
+      },
+      {
         "path": "op_main_power.pdf",
         "sha256": "eed017db8ecb2ac6c104c2676cf43fe7be77b61c5c251080dd81b157fb60725c",
         "size": 85976
@@ -1274,8 +1314,8 @@
       },
       {
         "path": "sphinx-warnings.log",
-        "sha256": "1f3a2eb45ab3c81c3fefe00a5fe898f9622c35ddb58871f1020d8fff7ee77235",
-        "size": 1134
+        "sha256": "2f54b7f01421576aead496311940315ca146ba61eb2d37796dbf8efd73a64b32",
+        "size": 1036
       },
       {
         "path": "warning_lockup.jpg",
@@ -1288,7 +1328,7 @@
         "size": 316221
       }
     ],
-    "sha256": "53fed7034f2b58c13107dcd7fb61200ff187ccae0d7283523e8aa43fb0576c14"
+    "sha256": "b8858e71db156e9bc1e12f120febdc2e58821a49d8368d87cceea4a70d8d124b"
   },
   "language": "es",
   "markdown": {
@@ -1302,11 +1342,6 @@
         "path": "assets/app_control_panel_2b9bc2598d7a.png",
         "sha256": "2b9bc2598d7a272629311ecc2f494091c31f15ee2ebb4d59bda5f6e8ee5c9f49",
         "size": 11976
-      },
-      {
-        "path": "assets/ir/01d3694dd833380066161364a6c67f5d26a088bfd4428b72d836c26e4f123a90/connect_result.png",
-        "sha256": "01d3694dd833380066161364a6c67f5d26a088bfd4428b72d836c26e4f123a90",
-        "size": 70855
       },
       {
         "path": "assets/ir/1dcd41d6ababd9c9d5c9d9ad08bdc2d5f2b6c0c3ad301dcb7b5260e0ec08d45e/no_open_flame.png",
@@ -1404,6 +1439,11 @@
         "size": 75753
       },
       {
+        "path": "assets/ir/a1dfd4b71a46c7d832ee2622e4ff2c19dada15fbed2c6267e4d89f97257d304c/app_connect_result.png",
+        "sha256": "a1dfd4b71a46c7d832ee2622e4ff2c19dada15fbed2c6267e4d89f97257d304c",
+        "size": 355292
+      },
+      {
         "path": "assets/ir/b04dca41b7cc3211a30f3a3fc2b1e904c25330f28104e4338a8ed67a11378011/right_side_ports.png",
         "sha256": "b04dca41b7cc3211a30f3a3fc2b1e904c25330f28104e4338a8ed67a11378011",
         "size": 33048
@@ -1460,12 +1500,12 @@
       },
       {
         "path": "manual_je3600a_eu_es.md",
-        "sha256": "143d2a4c0d568670178d4eeb9893860f077bf65006511c8b32c4a8fc51ca4cab",
-        "size": 50371
+        "sha256": "423caecd47b3f39c664299a51f9df41f6d5bbd143ac3965ce7adec6eba6dc584",
+        "size": 50629
       }
     ],
     "manual": "manual_je3600a_eu_es.md",
-    "sha256": "a3e2fd392b4cd86a6a615432715e29588f09bce433603115b97b92ff5f7b8dcf"
+    "sha256": "0f8c37135deb4af83f7b594e9f7bcf0d5a736f5e06145141acfb7d7383d17865"
   },
   "model": "JE-3600A",
   "projection_manifest": {
@@ -1474,5 +1514,5 @@
   },
   "region": "EU",
   "schema_version": "auto-manual-web-language-release-evidence/v1",
-  "version": "2026-05-25"
+  "version": "2026-05-25.1"
 }
