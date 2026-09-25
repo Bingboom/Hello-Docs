@@ -579,11 +579,7 @@ Vous pouvez également scanner le code QR ci-dessous pour télécharger et insta
 
 2.2 Appuyez sur le bouton POWER principal de l'appareil pour l'allumer. Les icônes Wi-Fi et Bluetooth clignotent sur l'appareil afin d'indiquer qu'il est entré dans le mode Configuration réseau. Cliquez sur le bouton « Icône qui clignote » et autorisez l'application à se connecter aux appareils alentour, puis ouvrez les autorisations Bluetooth.
 
-
-
-<figure class="hb-app-add-device-composition" data-component-id="HB-SPECIAL-APP" data-reference-id="app-add-device" data-step-captions="embedded"><div class="hb-app-add-device-phone-stage"><img alt="Emplacement réservé à l'étape d'ajout d'appareil dans l'application." class="hb-app-add-device-phone-art" src="assets/app_add_device_steps_9b7e0cf44d0f.png"/></div><div class="hb-app-add-device-control-panel"><img alt="" aria-hidden="true" class="hb-app-add-device-control-art" loading="lazy" src="assets/app_control_panel_2b9bc2598d7a.png"/><span class="hb-app-add-device-live-label hb-app-add-device-live-label-main-power">Bouton POWER principal</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-dc-usb">Bouton CC / USB</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-ac-power">Bouton CA</span></div></figure>
-
-
+<img src="assets/ir/cd654b883bf983a016b9c478739ff4fa54f9807e48bca4deb5c3c28afda4799a/app_add_device_panel.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-add-device" data-web-finished-panel-path="assets/je2000f_eu_fr/app_add_device_panel.png" data-web-finished-panel-sha256="cd654b883bf983a016b9c478739ff4fa54f9807e48bca4deb5c3c28afda4799a" alt="Bouton POWER principal Bouton CC / USB Bouton CA" />
 
 2.3 Après avoir appuyé sur l'icône de l'appareil détecté, l'application se connecte automatiquement à l'appareil via Bluetooth.
 

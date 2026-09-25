@@ -591,7 +591,7 @@ Search for \"Jackery\" in Google Play or App Store to install the App. After tha
 
 2.2 Press the main POWER button on the device to turn on, the Wi-Fi and Bluetooth icons on the device flash to indicate that the device has entered the network configuration mode, tap the \"**Icon Flashed**\" button, and allow the App to connect to nearby devices and open Bluetooth permissions.
 
-<img src="assets/ir/19bdaee9345f6cb13e7880e4b06437abfa3b352d432955bc2266d7019b6998ac/app_control_panel.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-add-device" data-web-finished-panel-path="assets/je2000f_eu_en_full_frames/app_control_panel.png" data-web-finished-panel-sha256="19bdaee9345f6cb13e7880e4b06437abfa3b352d432955bc2266d7019b6998ac" alt="Main POWER Button AC Power Button DC / USB Power Button" />
+<img src="assets/ir/58d950017bd22da2161cb5b6d2df5dc5e5a490b39ca0f538f26663b743fc7c66/app_add_device_panel.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-add-device" data-web-finished-panel-path="assets/je2000f_eu_en/app_add_device_panel.png" data-web-finished-panel-sha256="58d950017bd22da2161cb5b6d2df5dc5e5a490b39ca0f538f26663b743fc7c66" alt="Main POWER Button AC Power Button DC / USB Power Button" />
 
 2.3 After tapping the searched device icon, the App automatically connects the device via Bluetooth.
 

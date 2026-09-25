@@ -651,11 +651,7 @@ Vous pouvez également scanner le code QR ci-dessous pour télécharger et insta
 
 2.2 Appuyez sur le bouton d\'alimentation principal de l'appareil pour l'allumer. Les icônes Wi-Fi et Bluetooth clignotent sur l'appareil afin d'indiquer qu'il est entré dans le mode Configuration réseau. Cliquez sur le bouton « Icône qui clignote » et autorisez l'application à se connecter aux appareils alentour, puis ouvrez les autorisations Bluetooth.
 
-
-
-<figure class="hb-app-add-device-composition" data-component-id="HB-SPECIAL-APP" data-reference-id="app-add-device" data-step-captions="embedded"><div class="hb-app-add-device-phone-stage"><img alt="Emplacement réservé à l'étape d'ajout d'appareil dans l'application." class="hb-app-add-device-phone-art" src="../../../../_static/manual-assets/_pool/9b/9b7e0cf44d0f37dc89cc04bb57bba1ebb9c3bbc5db3f0190575dd03e96ab0d0f.png"/></div><div class="hb-app-add-device-control-panel"><img alt="" aria-hidden="true" class="hb-app-add-device-control-art" loading="lazy" src="../../../../_static/manual-assets/_pool/2b/2b9bc2598d7a272629311ecc2f494091c31f15ee2ebb4d59bda5f6e8ee5c9f49.png"/><span class="hb-app-add-device-live-label hb-app-add-device-live-label-main-power">Bouton d'alimentation principal</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-dc-usb">Bouton d'alimentation USB</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-ac-power">Bouton d'alimentation CA</span></div></figure>
-
-
+<img src="../../../../_static/manual-assets/_pool/91/916c92f8f66d6f7bea344d2d595b32367dff362b1b619dc17c87d66b748e9abe.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-add-device" data-web-finished-panel-path="assets/je3600a_eu_fr/app_add_device_panel.png" data-web-finished-panel-sha256="916c92f8f66d6f7bea344d2d595b32367dff362b1b619dc17c87d66b748e9abe" alt="Bouton d&#39;alimentation principal Bouton d&#39;alimentation USB Bouton d&#39;alimentation CA" />
 
 2.3 Après avoir appuyé sur l'icône de l'appareil détecté, l'application se connecte automatiquement à l'appareil via Bluetooth.
 

@@ -582,11 +582,7 @@ Buscar \"Jackery\" en Google Play o en la App Store para instalar la aplicación
 
 2.2 Presione una vez el botón POWER principal del dispositivo para encenderlo. Los iconos del wifi y del Bluetooth del dispositivo parpadearán para indicar que el dispositivo ha entrado en el modo de configuración de red. A continuación, pulse el botón \"icono parpadeante\" y permita que la aplicación se conecte a los dispositivos cercanos y abra los permisos de Bluetooth.
 
-
-
-<figure class="hb-app-add-device-composition" data-component-id="HB-SPECIAL-APP" data-reference-id="app-add-device" data-step-captions="embedded"><div class="hb-app-add-device-phone-stage"><img alt="Marcador de posición para el paso de añadir dispositivo en la aplicación." class="hb-app-add-device-phone-art" src="../../../../_static/manual-assets/_pool/9b/9b7e0cf44d0f37dc89cc04bb57bba1ebb9c3bbc5db3f0190575dd03e96ab0d0f.png"/></div><div class="hb-app-add-device-control-panel"><img alt="" aria-hidden="true" class="hb-app-add-device-control-art" loading="lazy" src="../../../../_static/manual-assets/_pool/2b/2b9bc2598d7a272629311ecc2f494091c31f15ee2ebb4d59bda5f6e8ee5c9f49.png"/><span class="hb-app-add-device-live-label hb-app-add-device-live-label-main-power">Botón POWER principal</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-dc-usb">Botón CC/USB</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-ac-power">Botón CA</span></div></figure>
-
-
+<img src="../../../../_static/manual-assets/_pool/1b/1bd305fd5c9f637b0979accf7e68338bdd994bfe9092f4031bf611a05f96d62b.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-add-device" data-web-finished-panel-path="assets/je2000f_eu_es/app_add_device_panel.png" data-web-finished-panel-sha256="1bd305fd5c9f637b0979accf7e68338bdd994bfe9092f4031bf611a05f96d62b" alt="Botón POWER principal Botón CC/USB Botón CA" />
 
 2.3 Tras hacer clic en el icono del dispositivo buscado, la aplicación conecta automáticamente el dispositivo a través de Bluetooth.
 

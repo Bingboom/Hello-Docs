@@ -683,11 +683,7 @@ Suchen Sie im Google Play Store oder im App Store nach \"Jackery\", um die App z
 
 2.2 Drücken Sie die POWER-Taste am Gerät, um es einzuschalten. Die WLAN- und Bluetooth-Symbole auf dem Gerät blinken, um anzuzeigen, dass das Gerät in den Netzwerkkonfigurationsmodus gewechselt ist. Tippen Sie auf die Schaltfläche \"**Symbol blinkt**\" und erlauben Sie der App, sich mit Geräten in der Nähe zu verbinden und auf Bluetooth zuzugreifen.
 
-
-
-<figure class="hb-app-add-device-composition" data-component-id="HB-SPECIAL-APP" data-reference-id="app-add-device" data-step-captions="embedded"><div class="hb-app-add-device-phone-stage"><img alt="Platzhalter für den Schritt „Gerät hinzufügen“." class="hb-app-add-device-phone-art" src="assets/app_add_device_steps_9b7e0cf44d0f.png"/></div><div class="hb-app-add-device-control-panel"><img alt="" aria-hidden="true" class="hb-app-add-device-control-art" loading="lazy" src="assets/app_control_panel_2b9bc2598d7a.png"/><span class="hb-app-add-device-live-label hb-app-add-device-live-label-main-power">POWER-Taste</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-ac-power">AC-Ausgangstaste</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-dc-usb">DC/USB-Stromtaste</span></div></figure>
-
-
+<img src="assets/ir/5d01f161495e04fc986988816870193c798b8f3bba57fa136e56d400d0101fcb/app_add_device_panel.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-add-device" data-web-finished-panel-path="assets/je3000c_eu_de/app_add_device_panel.png" data-web-finished-panel-sha256="5d01f161495e04fc986988816870193c798b8f3bba57fa136e56d400d0101fcb" alt="POWER-Taste AC-Ausgangstaste DC/USB-Stromtaste" />
 
 2.3 Nachdem Sie auf das gefundene Gerätesymbol getippt haben, koppelt sich die App automatisch per Bluetooth mit dem Gerät.
 

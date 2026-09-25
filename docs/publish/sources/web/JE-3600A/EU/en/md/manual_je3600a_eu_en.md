@@ -658,7 +658,7 @@ Search for \"Jackery\" in Google Play or the App Store to install the App, then 
 
 2.2 Press the POWER button to turn on the device. When the Wi-Fi and Bluetooth icons flash, tap **Icon Flashed**, then allow access to nearby devices and Bluetooth.
 
-<img src="assets/ir/2d802d195f949e5c13ffbfc0c65be91dd737b995d71b422bdf0709dc7cba526b/control_panel.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3600a_eu_en/control_panel.png" data-web-finished-panel-sha256="2d802d195f949e5c13ffbfc0c65be91dd737b995d71b422bdf0709dc7cba526b" alt="Explorer 3600 Plus device controls used during App pairing." />
+<img src="assets/ir/ed037e0a4292ede0e3fb669fad0cc9976d01408c1e86f64327698e76ea5f6c69/app_add_device_panel.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3600a_eu_en/app_add_device_panel.png" data-web-finished-panel-sha256="ed037e0a4292ede0e3fb669fad0cc9976d01408c1e86f64327698e76ea5f6c69" alt="Explorer 3600 Plus device controls used during App pairing." />
 
 
 

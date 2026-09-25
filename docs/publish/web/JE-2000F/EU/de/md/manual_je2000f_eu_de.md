@@ -582,11 +582,7 @@ Suchen Sie im Google Play Store oder im App Store nach \"Jackery\", um die App z
 
 2.2 Drücken Sie die Haupt-POWER-Taste am Gerät, um es einzuschalten. Die WLAN- und Bluetooth-Symbole auf dem Gerät blinken, um anzuzeigen, dass das Gerät in den Netzwerkkonfigurationsmodus gewechselt ist. Tippen Sie auf die Schaltfläche \"**Symbol blinkt**\" und erlauben Sie der App, sich mit Geräten in der Nähe zu verbinden und auf Bluetooth zuzugreifen.
 
-
-
-<figure class="hb-app-add-device-composition" data-component-id="HB-SPECIAL-APP" data-reference-id="app-add-device" data-step-captions="embedded"><div class="hb-app-add-device-phone-stage"><img alt="Platzhalter für den Schritt „Gerät hinzufügen“." class="hb-app-add-device-phone-art" src="../../../../_static/manual-assets/_pool/9b/9b7e0cf44d0f37dc89cc04bb57bba1ebb9c3bbc5db3f0190575dd03e96ab0d0f.png"/></div><div class="hb-app-add-device-control-panel"><img alt="" aria-hidden="true" class="hb-app-add-device-control-art" loading="lazy" src="../../../../_static/manual-assets/_pool/2b/2b9bc2598d7a272629311ecc2f494091c31f15ee2ebb4d59bda5f6e8ee5c9f49.png"/><span class="hb-app-add-device-live-label hb-app-add-device-live-label-main-power">Haupt-POWER-Taste</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-ac-power">AC-Einschalttaste</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-dc-usb">DC/USB-Einschalttaste</span></div></figure>
-
-
+<img src="../../../../_static/manual-assets/_pool/91/91623b3adc677e3460b9a4aa9a0a2616a457a098e7bdfae5a25602b7090e74eb.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-add-device" data-web-finished-panel-path="assets/je2000f_eu_de/app_add_device_panel.png" data-web-finished-panel-sha256="91623b3adc677e3460b9a4aa9a0a2616a457a098e7bdfae5a25602b7090e74eb" alt="Haupt-POWER-Taste AC-Einschalttaste DC/USB-Einschalttaste" />
 
 2.3 Nachdem Sie auf das gefundene Gerätesymbol getippt haben, koppelt sich die App automatisch per Bluetooth mit dem Gerät.
 
