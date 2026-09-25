@@ -68,18 +68,18 @@ Bei Fragen wenden Sie sich bitte an den Jackery-Kundendienst.</p></div></div></f
 </colgroup>
 <tbody>
 <tr>
-<td><p><strong>POWER Button</strong></p></td>
+<td><p><strong>POWER-Taste</strong></p></td>
 <td><p><strong>LCD</strong></p></td>
 </tr>
 <tr>
 <td><p><strong>DC 12 V Port</strong></p>
 <p>12 V⎓10 A max.</p></td>
-<td><p><strong>DC / USB Power Button</strong></p></td>
+<td><p><strong>DC/USB-Stromtaste</strong></p></td>
 </tr>
 <tr>
 <td><p><strong>USB-C 100 W Output</strong></p>
 <p>100 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓3 A, 15 V⎓3 A, 20 V⎓5 A</p></td>
-<td><p><strong>AC Power Button</strong></p></td>
+<td><p><strong>AC-Ausgangstaste</strong></p></td>
 </tr>
 <tr>
 <td><p><strong>USB-A 18 W Output</strong></p>
@@ -348,7 +348,7 @@ Sie können den Bildschirm-Anzeigemodus auch in der Jackery-App einstellen.
 
 # UNTERBRECHUNGSFREIE STROMVERSORGUNG (UPS)
 
-Schließen Sie das Produkt mit dem AC-Ladekabel an eine Steckdose an und drücken Sie anschließend die AC Power Button, um Ihre Geräte gleichzeitig zu versorgen.
+Schließen Sie das Produkt mit dem AC-Ladekabel an eine Steckdose an und drücken Sie anschließend die AC-Ausgangstaste, um Ihre Geräte gleichzeitig zu versorgen.
 
 <img src="assets/ir/5866fb05040e5b4423c473d5e7abf87122e0e93f5afce742696a09454b4bd675/ups_mode.png" style="width: 360px;" width="360" height="273" alt="Abbildung der UPS-Verbindung als Platzhalter." />
 
@@ -681,11 +681,11 @@ Suchen Sie im Google Play Store oder im App Store nach \"Jackery\", um die App z
 
 2.1 Klicken Sie auf die Schaltfläche **+**, um Ihr Gerät hinzuzufügen.
 
-2.2 Drücken Sie die POWER Button am Gerät, um es einzuschalten. Die WLAN- und Bluetooth-Symbole auf dem Gerät blinken, um anzuzeigen, dass das Gerät in den Netzwerkkonfigurationsmodus gewechselt ist. Tippen Sie auf die Schaltfläche \"**Symbol blinkt**\" und erlauben Sie der App, sich mit Geräten in der Nähe zu verbinden und auf Bluetooth zuzugreifen.
+2.2 Drücken Sie die POWER-Taste am Gerät, um es einzuschalten. Die WLAN- und Bluetooth-Symbole auf dem Gerät blinken, um anzuzeigen, dass das Gerät in den Netzwerkkonfigurationsmodus gewechselt ist. Tippen Sie auf die Schaltfläche \"**Symbol blinkt**\" und erlauben Sie der App, sich mit Geräten in der Nähe zu verbinden und auf Bluetooth zuzugreifen.
 
 
 
-<figure class="hb-app-add-device-composition" data-component-id="HB-SPECIAL-APP" data-reference-id="app-add-device" data-step-captions="embedded"><div class="hb-app-add-device-phone-stage"><img alt="Platzhalter für den Schritt „Gerät hinzufügen“." class="hb-app-add-device-phone-art" src="assets/app_add_device_steps_9b7e0cf44d0f.png"/></div><div class="hb-app-add-device-control-panel"><img alt="" aria-hidden="true" class="hb-app-add-device-control-art" loading="lazy" src="assets/app_control_panel_2b9bc2598d7a.png"/><span class="hb-app-add-device-live-label hb-app-add-device-live-label-main-power">POWER Button</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-ac-power">AC Power Button</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-dc-usb">DC / USB Power Button</span></div></figure>
+<figure class="hb-app-add-device-composition" data-component-id="HB-SPECIAL-APP" data-reference-id="app-add-device" data-step-captions="embedded"><div class="hb-app-add-device-phone-stage"><img alt="Platzhalter für den Schritt „Gerät hinzufügen“." class="hb-app-add-device-phone-art" src="assets/app_add_device_steps_9b7e0cf44d0f.png"/></div><div class="hb-app-add-device-control-panel"><img alt="" aria-hidden="true" class="hb-app-add-device-control-art" loading="lazy" src="assets/app_control_panel_2b9bc2598d7a.png"/><span class="hb-app-add-device-live-label hb-app-add-device-live-label-main-power">POWER-Taste</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-ac-power">AC-Ausgangstaste</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-dc-usb">DC/USB-Stromtaste</span></div></figure>
 
 
 
@@ -696,7 +696,7 @@ Suchen Sie im Google Play Store oder im App Store nach \"Jackery\", um die App z
 <table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>HINWEIS</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Wenn während des Kopplungsvorgangs „das Gerät wurde bereits gekoppelt“ angezeigt wird, können die folgenden zwei Möglichkeiten für die Kopplung verwendet werden:</p>
 <ul class="simple">
 <li><p>Der Besitzer des Geräts teilt dieses Gerät über die App mit anderen Benutzern.</p></li>
-<li><p>Halten Sie POWER Button + DC / USB Power Button 3 Sekunden lang gedrückt, um WLAN und Bluetooth des Geräts zurückzusetzen, und koppeln Sie das Gerät anschließend erneut.</p></li>
+<li><p>Halten Sie POWER-Taste + DC/USB-Stromtaste 3 Sekunden lang gedrückt, um WLAN und Bluetooth des Geräts zurückzusetzen, und koppeln Sie das Gerät anschließend erneut.</p></li>
 </ul>
 </td></tr></tbody></table>
 
@@ -735,12 +735,12 @@ Klicken Sie im Hauptbildschirm des Geräts auf das Symbol **Einstellungen** oben
 
 - WLAN und Bluetooth werden automatisch eingeschaltet, nachdem das Gerät eingeschaltet wurde, und die WLAN- und Bluetooth-Symbole auf dem Bildschirm leuchten auf.
 
-- Halten Sie DC / USB Power Button + AC Power Button gleichzeitig gedrückt, bis die WLAN- und Bluetooth-Symbole auf dem Bildschirm aufleuchten.
+- Halten Sie DC/USB-Stromtaste + AC-Ausgangstaste gleichzeitig gedrückt, bis die WLAN- und Bluetooth-Symbole auf dem Bildschirm aufleuchten.
 
 ### 4.2 WLAN und Bluetooth ausschalten
 
-Halten Sie DC / USB Power Button + AC Power Button gleichzeitig gedrückt, bis die WLAN- und Bluetooth-Symbole auf dem Bildschirm erlöschen.
+Halten Sie DC/USB-Stromtaste + AC-Ausgangstaste gleichzeitig gedrückt, bis die WLAN- und Bluetooth-Symbole auf dem Bildschirm erlöschen.
 
 ### 4.3 WLAN und Bluetooth zurücksetzen
 
-Halten Sie POWER Button + DC / USB Power Button gleichzeitig 3 Sekunden lang gedrückt, um WLAN und Bluetooth auf die Werkseinstellungen zurückzusetzen. Das verbundene App-Konto wird entkoppelt.
+Halten Sie POWER-Taste + DC/USB-Stromtaste gleichzeitig 3 Sekunden lang gedrückt, um WLAN und Bluetooth auf die Werkseinstellungen zurückzusetzen. Das verbundene App-Konto wird entkoppelt.

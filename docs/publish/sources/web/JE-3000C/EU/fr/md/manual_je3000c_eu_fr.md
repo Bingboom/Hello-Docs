@@ -68,18 +68,18 @@ Pour obtenir de l'aide, veuillez contacter le service client Jackery.</p></div><
 </colgroup>
 <tbody>
 <tr>
-<td><p><strong>POWER Button</strong></p></td>
+<td><p><strong>Bouton d'alimentation principal</strong></p></td>
 <td><p><strong>LCD</strong></p></td>
 </tr>
 <tr>
 <td><p><strong>DC 12 V Port</strong></p>
 <p>12 V⎓10 A max.</p></td>
-<td><p><strong>DC / USB Power Button</strong></p></td>
+<td><p><strong>Bouton d'alimentation CC/USB</strong></p></td>
 </tr>
 <tr>
 <td><p><strong>USB-C 100 W Output</strong></p>
 <p>100 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓3 A, 15 V⎓3 A, 20 V⎓5 A</p></td>
-<td><p><strong>AC Power Button</strong></p></td>
+<td><p><strong>Bouton d'alimentation CA</strong></p></td>
 </tr>
 <tr>
 <td><p><strong>USB-A 18 W Output</strong></p>
@@ -199,7 +199,7 @@ Le produit s\'éteindra automatiquement après 2 hours d\'inactivité, sans char
 
 \*Le temps de veille peut être réglé dans l\'application Jackery.
 
-Lorsque le mode d\'économie d\'énergie est activé, le produit s\'éteindra automatiquement après 12 hours si le AC power button ou le DC / USB power button est activé mais que le produit ne charge ni ne décharge.
+Lorsque le mode d\'économie d\'énergie est activé, le produit s\'éteindra automatiquement après 12 hours si le bouton d\'alimentation CA ou le bouton d\'alimentation CC/USB est activé mais que le produit ne charge ni ne décharge.
 
 ## SORTIE CA MARCHE/ARRÊT
 
@@ -255,7 +255,7 @@ Le produit peut charger la batterie de votre voiture à l\'aide du câble de cha
 
 ## MODE D\'ÉCONOMIE D\'ÉNERGIE
 
-Pour désactiver le mode d\'économie d\'énergie, appuyez simultanément sur le AC power button et sur le POWER button pendant plus de 3 secondes. Une fois le mode d\'économie d\'énergie désactivé, l\'icône ne s\'affichera plus sur l\'écran LCD et le produit n\'éteindra pas automatiquement la sortie CA ou CC/USB.
+Pour désactiver le mode d\'économie d\'énergie, appuyez simultanément sur le bouton d\'alimentation CA et sur le bouton d\'alimentation principal pendant plus de 3 secondes. Une fois le mode d\'économie d\'énergie désactivé, l\'icône ne s\'affichera plus sur l\'écran LCD et le produit n\'éteindra pas automatiquement la sortie CA ou CC/USB.
 
 Lors de l\'alimentation d\'appareils à faible puissance (CA ≤ 25 W ou CC/USB ≤ 2 W), désactivez le mode d\'économie d\'énergie afin d\'éviter l\'arrêt automatique de la sortie pendant le fonctionnement.
 
@@ -678,11 +678,11 @@ Vous pouvez également scanner le code QR ci-dessous pour télécharger et insta
 
 2.1 Cliquez sur le bouton **+** pour ajouter un appareil.
 
-2.2 Appuyez sur le POWER button de l'appareil pour l'allumer. Les icônes Wi-Fi et Bluetooth clignotent sur l'appareil afin d'indiquer qu'il est entré dans le mode Configuration réseau. Cliquez sur le bouton « Icône qui clignote » et autorisez l'application à se connecter aux appareils alentour, puis ouvrez les autorisations Bluetooth.
+2.2 Appuyez sur le bouton d\'alimentation principal de l'appareil pour l'allumer. Les icônes Wi-Fi et Bluetooth clignotent sur l'appareil afin d'indiquer qu'il est entré dans le mode Configuration réseau. Cliquez sur le bouton « Icône qui clignote » et autorisez l'application à se connecter aux appareils alentour, puis ouvrez les autorisations Bluetooth.
 
 
 
-<figure class="hb-app-add-device-composition" data-component-id="HB-SPECIAL-APP" data-reference-id="app-add-device" data-step-captions="embedded"><div class="hb-app-add-device-phone-stage"><img alt="Emplacement réservé à l'étape d'ajout d'appareil dans l'application." class="hb-app-add-device-phone-art" src="assets/app_add_device_steps_9b7e0cf44d0f.png"/></div><div class="hb-app-add-device-control-panel"><img alt="" aria-hidden="true" class="hb-app-add-device-control-art" loading="lazy" src="assets/app_control_panel_2b9bc2598d7a.png"/><span class="hb-app-add-device-live-label hb-app-add-device-live-label-main-power">POWER Button</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-dc-usb">DC / USB Power Button</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-ac-power">AC Power Button</span></div></figure>
+<figure class="hb-app-add-device-composition" data-component-id="HB-SPECIAL-APP" data-reference-id="app-add-device" data-step-captions="embedded"><div class="hb-app-add-device-phone-stage"><img alt="Emplacement réservé à l'étape d'ajout d'appareil dans l'application." class="hb-app-add-device-phone-art" src="assets/app_add_device_steps_9b7e0cf44d0f.png"/></div><div class="hb-app-add-device-control-panel"><img alt="" aria-hidden="true" class="hb-app-add-device-control-art" loading="lazy" src="assets/app_control_panel_2b9bc2598d7a.png"/><span class="hb-app-add-device-live-label hb-app-add-device-live-label-main-power">Bouton d'alimentation principal</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-dc-usb">Bouton d'alimentation CC/USB</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-ac-power">Bouton d'alimentation CA</span></div></figure>
 
 
 
@@ -693,7 +693,7 @@ Vous pouvez également scanner le code QR ci-dessous pour télécharger et insta
 <table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>REMARQUE</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Si le message «l'appareil a été associé» s'affiche pendant l'appairage, vous pouvez suivre l'une de ces deux étapes pour procéder à la connexion.</p>
 <ul class="simple">
 <li><p>Le propriétaire de l'appareil peut partager ce dernier avec d'autres utilisateurs dans l'application.</p></li>
-<li><p>Maintenez le POWER button et le DC / USB power button enfoncés pendant 3 secondes pour réinitialiser le Wi-Fi et le Bluetooth de l'appareil et l'associer de nouveau.</p></li>
+<li><p>Maintenez le bouton d'alimentation principal et le bouton d'alimentation CC/USB enfoncés pendant 3 secondes pour réinitialiser le Wi-Fi et le Bluetooth de l'appareil et l'associer de nouveau.</p></li>
 </ul>
 </td></tr></tbody></table>
 
@@ -732,12 +732,12 @@ Cliquez sur le bouton des paramètres en haut à droite de l\'interface principa
 
 - Le Wi-Fi et le Bluetooth sont automatiquement activés, une fois l\'appareil allumé. Leurs icônes s\'allument sur l\'écran.
 
-- Appuyez simultanément sur le DC / USB power button et le AC power button jusqu\'à ce que les icônes Wi-Fi et Bluetooth s\'allument sur l\'écran.
+- Appuyez simultanément sur le bouton d\'alimentation CC/USB et le bouton d\'alimentation CA jusqu\'à ce que les icônes Wi-Fi et Bluetooth s\'allument sur l\'écran.
 
 ### 4.2 Pour désactiver le Wi-Fi et le Bluetooth
 
-Appuyez simultanément sur le DC / USB power button et le AC power button jusqu'à ce que les icônes Wi-Fi et Bluetooth s'éteignent sur l'écran.
+Appuyez simultanément sur le bouton d\'alimentation CC/USB et le bouton d\'alimentation CA jusqu'à ce que les icônes Wi-Fi et Bluetooth s'éteignent sur l'écran.
 
 ### 4.3 Pour réinitialiser le Wi-Fi et le Bluetooth
 
-Maintenez le POWER button et le DC / USB power button enfoncés simultanément pendant 3 secondes pour réinitialiser le Wi-Fi et le Bluetooth aux paramètres d'usine. Le compte connecté dans l'application sera dissocié.
+Maintenez le bouton d\'alimentation principal et le bouton d\'alimentation CC/USB enfoncés simultanément pendant 3 secondes pour réinitialiser le Wi-Fi et le Bluetooth aux paramètres d'usine. Le compte connecté dans l'application sera dissocié.
