@@ -1,8 +1,8 @@
 {
   "actions": {
-    "check": "d351d1abc9f9640ff3dbc89236497a9fc00b72ece7643c4e8b45ae47cdfbcdc6",
-    "html": "d351d1abc9f9640ff3dbc89236497a9fc00b72ece7643c4e8b45ae47cdfbcdc6",
-    "md": "d351d1abc9f9640ff3dbc89236497a9fc00b72ece7643c4e8b45ae47cdfbcdc6"
+    "check": "0383ba1e40e415376834d5a53c5986841fcd3445cdecb41af3cf74f1f0881222",
+    "html": "0383ba1e40e415376834d5a53c5986841fcd3445cdecb41af3cf74f1f0881222",
+    "md": "0383ba1e40e415376834d5a53c5986841fcd3445cdecb41af3cf74f1f0881222"
   },
   "canonical_source": {
     "files": [
@@ -63,8 +63,8 @@
       },
       {
         "path": "page/p76_12_app_setup_placeholder.rst",
-        "sha256": "03ee50038f92586d130335fd452eb5be3f066e606e55905ae238103e0f4dd530",
-        "size": 4163
+        "sha256": "668acb82f30090dc278aaa37b613b681997a208fe43d39cd5ef96cd930a27a51",
+        "size": 4207
       },
       {
         "path": "page/safety_it.rst",
@@ -87,9 +87,9 @@
         "size": 1860
       }
     ],
-    "sha256": "53794d085d6cc9d7c9069198c35e49f12cf8abcccbfb0c2f857178a411ffc55d"
+    "sha256": "86a658f463a4f06bc89bc4f31a999ec4f564da9189780de520b5c5d449dbc291"
   },
-  "git_ref": "95a6907c77825da9102473fad94f6848e81cc080",
+  "git_ref": "09f3ba1ffaa581cd4090a66c5fea80a3e8e004c1",
   "html": {
     "files": [
       {
@@ -298,9 +298,9 @@
         "size": 60220
       },
       {
-        "path": "_images/add_device.png",
-        "sha256": "474b6e86398672ad0e36c08df860c09fe1645f96c95e80c9d68cc5549f012f4c",
-        "size": 64112
+        "path": "_images/add_device_je1000f_eu.png",
+        "sha256": "02f840f1341d94d08478c84ea4ae88280ef2806d618484596885efbe4debafe0",
+        "size": 111772
       },
       {
         "path": "_images/car_charge.png",
@@ -308,9 +308,9 @@
         "size": 54306
       },
       {
-        "path": "_images/connect_result.png",
-        "sha256": "01d3694dd833380066161364a6c67f5d26a088bfd4428b72d836c26e4f123a90",
-        "size": 70855
+        "path": "_images/connect_result_je1000f_eu.png",
+        "sha256": "23cde742b3012b96fce07f9efe3475ee2e75230f2b2d39311291a33d4cf51f69",
+        "size": 84390
       },
       {
         "path": "_images/dc_usb_output.png",
@@ -684,8 +684,8 @@
       },
       {
         "path": "index.html",
-        "sha256": "478b45e3eb0c485177b1a6ee42572ff84857904b3974ed34ab6a27322a0a5f03",
-        "size": 83482
+        "sha256": "d39728e2e7f11d6f0eafb9b39ab9763699157a7ea639c05ccb3f2cc1cde2bf09",
+        "size": 83526
       },
       {
         "path": "jbp2000b_ac_charging.pdf",
@@ -1448,7 +1448,7 @@
         "size": 316221
       }
     ],
-    "sha256": "63473f9928784bc86585a1131fb875ce889b645f4e7f17df9d44fc3d7ea8ab1e"
+    "sha256": "7114197d5598e16b9d867f0f2e52eb977725674c2e4a2344e003df6e945ac1cc"
   },
   "language": "it",
   "markdown": {
@@ -1479,9 +1479,9 @@
         "size": 122943
       },
       {
-        "path": "assets/ir/01d3694dd833380066161364a6c67f5d26a088bfd4428b72d836c26e4f123a90/connect_result.png",
-        "sha256": "01d3694dd833380066161364a6c67f5d26a088bfd4428b72d836c26e4f123a90",
-        "size": 70855
+        "path": "assets/ir/02f840f1341d94d08478c84ea4ae88280ef2806d618484596885efbe4debafe0/add_device_je1000f_eu.png",
+        "sha256": "02f840f1341d94d08478c84ea4ae88280ef2806d618484596885efbe4debafe0",
+        "size": 111772
       },
       {
         "path": "assets/ir/114690be6f4d77ceaebe2ed44641ba2735873d3d6415ae04738dc241392096b7/9_keep_away_from_children_EkuMbUU1foXNPuxytfLcW9dinFS.png",
@@ -1507,6 +1507,11 @@
         "path": "assets/ir/236891c20611070753633c7c9286982284851c6df78137cfc5bc26922c6528b6/12_weee2_EccQbCmImosxoPxWSuOcPinpn9e.png",
         "sha256": "236891c20611070753633c7c9286982284851c6df78137cfc5bc26922c6528b6",
         "size": 3441
+      },
+      {
+        "path": "assets/ir/23cde742b3012b96fce07f9efe3475ee2e75230f2b2d39311291a33d4cf51f69/connect_result_je1000f_eu.png",
+        "sha256": "23cde742b3012b96fce07f9efe3475ee2e75230f2b2d39311291a33d4cf51f69",
+        "size": 84390
       },
       {
         "path": "assets/ir/24a37b773bf14cd76f160a25dfa413576a95405a1f57f69059487b29b7791bfd/lcd_mode.png",
@@ -1602,11 +1607,6 @@
         "path": "assets/ir/46e63281907266fd50150c7d0d7b85d72b2f848d9b164fe18a0fd1fa269db8d0/operation.dc-usb-output_it_46e632819072.png",
         "sha256": "46e63281907266fd50150c7d0d7b85d72b2f848d9b164fe18a0fd1fa269db8d0",
         "size": 113088
-      },
-      {
-        "path": "assets/ir/474b6e86398672ad0e36c08df860c09fe1645f96c95e80c9d68cc5549f012f4c/add_device.png",
-        "sha256": "474b6e86398672ad0e36c08df860c09fe1645f96c95e80c9d68cc5549f012f4c",
-        "size": 64112
       },
       {
         "path": "assets/ir/4e3894dbfbe0bbd9fbfa171ab2e00a0c672acf21cc5cd90fd3542a446c5425d2/reference.charging-car_de_4e3894dbfbe0.png",
@@ -2070,19 +2070,19 @@
       },
       {
         "path": "manual_je1000f_eu_it.md",
-        "sha256": "13f2c010553c630509dae9d6ed0144a6841806e9ba3c6ef856401344342304dc",
-        "size": 87070
+        "sha256": "0842e0ffbde4b41b4c4d53069a46b65e9ed665d23071b2c472398a3ef6d97c1a",
+        "size": 87081
       }
     ],
     "manual": "manual_je1000f_eu_it.md",
-    "sha256": "88b912518f8b995babbdea5afa8fb2208a8a0685360d6c7d0c6be373f8fda91a"
+    "sha256": "cda0d66ed910be63f4f8db1cb5683410ad5608c61ca4c3512b2a0ee77c78938d"
   },
   "model": "JE-1000F",
   "projection_manifest": {
     "path": "projection_bundle_manifest.json",
-    "sha256": "ecf1f8eb5f0efd194173bceacef342cc8bd66bc2453fba6c7c23d8e0974aaf03"
+    "sha256": "07fda232b1c2cae157a479453af3b7d5fe16f83fe7c9e3ec25cfb1d16dce09c4"
   },
   "region": "EU",
   "schema_version": "auto-manual-web-language-release-evidence/v1",
-  "version": "2.1"
+  "version": "2.2"
 }
