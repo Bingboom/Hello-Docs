@@ -757,7 +757,7 @@ Jackery Explorer 2000 Plus має два вхідні порти DC8020 і су�
 
 2.2 Натисніть головну кнопку POWER на пристрої, щоб увімкнути його; значки Wi-Fi та Bluetooth на пристрої блимають, що означає перехід пристрою в режим налаштування мережі, торкніться кнопки \"**Значок блимає**\" і дозвольте додатку підключитися до найближчих пристроїв та надати дозвіл Bluetooth.
 
-<img src="assets/ir/474b6e86398672ad0e36c08df860c09fe1645f96c95e80c9d68cc5549f012f4c/add_device.png" style="width: 320px;" width="320" height="280" alt="Заглушка кроку додавання пристрою в додатку." />
+<img src="assets/ir/662646752f7e432edae4e01fc78e9ae9f7a6045f231a62fafb76308c8e96a302/app_add_device.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-add-device" data-web-finished-panel-path="assets/je2000e_eu_shared/app_add_device.png" data-web-finished-panel-sha256="662646752f7e432edae4e01fc78e9ae9f7a6045f231a62fafb76308c8e96a302" alt="Заглушка кроку додавання пристрою в додатку." />
 
 Головна кнопка POWER
 
@@ -793,7 +793,7 @@ Jackery Explorer 2000 Plus має два вхідні порти DC8020 і су�
 
 Після успішного додавання пристрою до додатка значок Wi-Fi на пристрої буде постійно увімкнений.
 
-<img src="assets/ir/01d3694dd833380066161364a6c67f5d26a088bfd4428b72d836c26e4f123a90/connect_result.png" style="width: 360px;" width="360" height="203" alt="Заглушка екрана результату налаштування додатка." />
+<img src="assets/ir/efa9084d8a028e9781cd16eed9cbe71fe281efed640f4e436a1345f956814baf/app_connect_result.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-connect-result" data-web-finished-panel-path="assets/je2000e_eu_shared/app_connect_result.png" data-web-finished-panel-sha256="efa9084d8a028e9781cd16eed9cbe71fe281efed640f4e436a1345f956814baf" alt="Заглушка екрана результату налаштування додатка." />
 
 Наведені вище знімки екрана наведено лише для довідки.
 
