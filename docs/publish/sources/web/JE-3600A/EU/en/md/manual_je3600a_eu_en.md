@@ -328,7 +328,7 @@ the actual output power is lower than the rated output power in this mode but re
 
 This product supports up to five battery packs for applications requiring a larger capacity. For operating instructions, refer to the Jackery Battery Pack 3600 User Manual.
 
-<img src="assets/ir/6b852aa8607ecdb20949e2cdffa6cc87de510489dbb8b2a9c5022589e9de0363/connections.png" style="width: 640px;" width="640" height="412" alt="Explorer 3600 Plus connected to five Jackery Battery Pack 3600 units with required ventilation clearance." />
+<img src="assets/ir/6b852aa8607ecdb20949e2cdffa6cc87de510489dbb8b2a9c5022589e9de0363/connections-en.png" style="width: 640px;" width="640" height="412" alt="Explorer 3600 Plus connected to five Jackery Battery Pack 3600 units with required ventilation clearance." />
 
 
 
@@ -340,7 +340,7 @@ This product supports up to five battery packs for applications requiring a larg
 
 
 
-<img src="assets/ir/ddb432b404e817fc545dbe35a21a17c7c6554217dce0ab3bfd9faf07ae05ea77/connections_accessories.png" style="width: 640px;" width="640" height="167" alt="Jackery Battery Pack 3600, expansion cable, user manual, and HomePower accessory group." />
+<img src="assets/ir/ddb432b404e817fc545dbe35a21a17c7c6554217dce0ab3bfd9faf07ae05ea77/connections_accessories-en.png" style="width: 640px;" width="640" height="167" alt="Jackery Battery Pack 3600, expansion cable, user manual, and HomePower accessory group." />
 
 # CHARGING
 
@@ -674,7 +674,7 @@ If **the device has been bound** appears, ask the device owner to share it in th
 
 2.5 After the device is added, the Wi-Fi icon remains on.
 
-<img src="assets/ir/01d3694dd833380066161364a6c67f5d26a088bfd4428b72d836c26e4f123a90/connect_result.png" style="width: 640px;" width="640" height="361" alt="App device selection, Wi-Fi setup, and successful connection screens." />
+<img src="assets/ir/a1dfd4b71a46c7d832ee2622e4ff2c19dada15fbed2c6267e4d89f97257d304c/app_connect_result.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-connect-result" data-web-finished-panel-path="assets/je3600a_eu_shared/app_connect_result.png" data-web-finished-panel-sha256="a1dfd4b71a46c7d832ee2622e4ff2c19dada15fbed2c6267e4d89f97257d304c" alt="App device selection, Wi-Fi setup, and successful connection screens." />
 
 The screenshots are for reference only.
 

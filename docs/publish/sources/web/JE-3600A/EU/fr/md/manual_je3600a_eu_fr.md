@@ -683,7 +683,7 @@ Vous pouvez également scanner le code QR ci-dessous pour télécharger et insta
 
 Une fois l\'appareil ajouté à la page d\'accueil, l\'icône Wi-Fi de l\'appareil restera allumée.
 
-<img src="assets/ir/01d3694dd833380066161364a6c67f5d26a088bfd4428b72d836c26e4f123a90/connect_result.png" style="width: 360px;" width="360" height="203" alt="Emplacement réservé à l&#39;écran de résultat de connexion dans l&#39;application." />
+<img src="assets/ir/a1dfd4b71a46c7d832ee2622e4ff2c19dada15fbed2c6267e4d89f97257d304c/app_connect_result.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-connect-result" data-web-finished-panel-path="assets/je3600a_eu_shared/app_connect_result.png" data-web-finished-panel-sha256="a1dfd4b71a46c7d832ee2622e4ff2c19dada15fbed2c6267e4d89f97257d304c" alt="Emplacement réservé à l&#39;écran de résultat de connexion dans l&#39;application." />
 
 Les captures d\'écran ci-dessus sont fournies à titre indicatif.
 
