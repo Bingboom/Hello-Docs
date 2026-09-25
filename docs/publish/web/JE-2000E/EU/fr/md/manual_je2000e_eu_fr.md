@@ -739,7 +739,7 @@ Vous pouvez également scanner le code QR ci-dessous pour télécharger et insta
 
 2.2 Appuyez sur le bouton POWER principal de l'appareil pour l'allumer. Les icônes Wi-Fi et Bluetooth clignotent sur l'appareil afin d'indiquer qu'il est entré dans le mode Configuration réseau. Cliquez sur le bouton « Icône qui clignote » et autorisez l'application à se connecter aux appareils alentour, puis ouvrez les autorisations Bluetooth.
 
-<img src="../../../../_static/manual-assets/_pool/47/474b6e86398672ad0e36c08df860c09fe1645f96c95e80c9d68cc5549f012f4c.png" style="width: 320px;" width="320" height="280" alt="Emplacement réservé à l&#39;étape d&#39;ajout d&#39;appareil dans l&#39;application." />
+<img src="../../../../_static/manual-assets/_pool/66/662646752f7e432edae4e01fc78e9ae9f7a6045f231a62fafb76308c8e96a302.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-add-device" data-web-finished-panel-path="assets/je2000e_eu_shared/app_add_device.png" data-web-finished-panel-sha256="662646752f7e432edae4e01fc78e9ae9f7a6045f231a62fafb76308c8e96a302" alt="Emplacement réservé à l&#39;étape d&#39;ajout d&#39;appareil dans l&#39;application." />
 
 Bouton POWER principal
 
@@ -775,7 +775,7 @@ Bouton CA2
 
 Une fois l\'appareil ajouté à la page d\'accueil, l\'icône Wi-Fi de l\'appareil restera allumée.
 
-<img src="../../../../_static/manual-assets/_pool/01/01d3694dd833380066161364a6c67f5d26a088bfd4428b72d836c26e4f123a90.png" style="width: 360px;" width="360" height="203" alt="Emplacement réservé à l&#39;écran de résultat de connexion dans l&#39;application." />
+<img src="../../../../_static/manual-assets/_pool/ef/efa9084d8a028e9781cd16eed9cbe71fe281efed640f4e436a1345f956814baf.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-connect-result" data-web-finished-panel-path="assets/je2000e_eu_shared/app_connect_result.png" data-web-finished-panel-sha256="efa9084d8a028e9781cd16eed9cbe71fe281efed640f4e436a1345f956814baf" alt="Emplacement réservé à l&#39;écran de résultat de connexion dans l&#39;application." />
 
 Les captures d\'écran ci-dessus sont fournies à titre indicatif.
 

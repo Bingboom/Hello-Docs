@@ -745,7 +745,7 @@ Cerca \"Jackery\" su Google Play o nell\'App Store per installare l\'app. Dopodi
 
 2.2 Premi il pulsante POWER principale sul dispositivo per accenderlo; le icone Wi-Fi e Bluetooth sul dispositivo lampeggiano per indicare che il dispositivo è entrato nella modalità di configurazione di rete. Fai clic sul pulsante \"**Icon Flashed**\" (icona lampeggiante) e consenti all\'app di connettersi ai dispositivi vicini e di aprire le autorizzazioni Bluetooth.
 
-<img src="../../../../_static/manual-assets/_pool/47/474b6e86398672ad0e36c08df860c09fe1645f96c95e80c9d68cc5549f012f4c.png" style="width: 320px;" width="320" height="280" alt="Segnaposto per il passaggio di aggiunta dispositivo nell&#39;app." />
+<img src="../../../../_static/manual-assets/_pool/66/662646752f7e432edae4e01fc78e9ae9f7a6045f231a62fafb76308c8e96a302.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-add-device" data-web-finished-panel-path="assets/je2000e_eu_shared/app_add_device.png" data-web-finished-panel-sha256="662646752f7e432edae4e01fc78e9ae9f7a6045f231a62fafb76308c8e96a302" alt="Segnaposto per il passaggio di aggiunta dispositivo nell&#39;app." />
 
 Pulsante POWER principale
 
@@ -781,7 +781,7 @@ Pulsante DC / USB
 
 Dopo che il dispositivo è stato aggiunto con successo all\'app, l\'icona Wi-Fi sul dispositivo resterà sempre accesa.
 
-<img src="../../../../_static/manual-assets/_pool/01/01d3694dd833380066161364a6c67f5d26a088bfd4428b72d836c26e4f123a90.png" style="width: 360px;" width="360" height="203" alt="Segnaposto schermata di risultato configurazione app." />
+<img src="../../../../_static/manual-assets/_pool/ef/efa9084d8a028e9781cd16eed9cbe71fe281efed640f4e436a1345f956814baf.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-connect-result" data-web-finished-panel-path="assets/je2000e_eu_shared/app_connect_result.png" data-web-finished-panel-sha256="efa9084d8a028e9781cd16eed9cbe71fe281efed640f4e436a1345f956814baf" alt="Segnaposto schermata di risultato configurazione app." />
 
 Le schermate sopra sono solo a scopo illustrativo.
 
