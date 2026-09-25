@@ -72,20 +72,20 @@
 <td><p><strong>LCD</strong></p></td>
 </tr>
 <tr>
-<td><p><strong>DC 12 V Port</strong></p>
-<p>12 V⎓10 A max.</p></td>
+<td><p><strong>Порт постійного струму 12 В</strong></p>
+<p>12 В⎓10 А макс.</p></td>
 <td><p><strong>Кнопка живлення DC/USB</strong></p></td>
 </tr>
 <tr>
-<td><p><strong>USB-C 100 W Output</strong></p>
-<p>100 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓3 A, 15 V⎓3 A, 20 V⎓5 A</p></td>
+<td><p><strong>Вихід USB-C 100W MAX</strong></p>
+<p>100 Вт макс., 5 В⎓3 A, 9 В⎓3 A, 12 В⎓3 A, 15 В⎓3 A, 20 В⎓5 A</p></td>
 <td><p><strong>Кнопка живлення AC</strong></p></td>
 </tr>
 <tr>
-<td><p><strong>USB-A 18 W Output</strong></p>
-<p>18 W max., 5-6 V⎓3 A, 6-9 V⎓2 A, 9-12 V⎓1.5 A</p></td>
-<td><p><strong>AC Output</strong></p>
-<p>230 V~ 50 Hz, 15.6 A, 3600 W rated</p></td>
+<td><p><strong>Вихід USB-A 18W MAX</strong></p>
+<p>18 Вт макс., 5-6 В⎓3 A, 6-9 В⎓2 A, 9-12 В⎓1,5 A</p></td>
+<td><p><strong>Вихід змінного струму</strong></p>
+<p>230 В~ 50 Гц, 15,6 A, 3600 Вт</p></td>
 </tr>
 </tbody>
 </table>
@@ -96,8 +96,8 @@
 </colgroup>
 <tbody>
 <tr>
-<td><p><strong>Total AC Output</strong></p>
-<p>3600 W Rated, 7200 W Surge Peak</p></td>
+<td><p><strong>Загальний вихід змінного струму</strong></p>
+<p>3600 Вт ном. потужності, 7200 Вт пікове значення</p></td>
 </tr>
 </tbody>
 </table>
@@ -114,14 +114,14 @@
 <tbody>
 <tr>
 <td><p><strong>Ручка</strong></p></td>
-<td><p><strong>AC Input</strong></p>
-<p>220 V-240 V~ 50 Hz, 10 A max.</p></td>
+<td><p><strong>Вхід змінного струму</strong></p>
+<p>220 В-240 В~ 50 Гц, 10 А макс.</p></td>
 </tr>
 <tr>
 <td></td>
-<td><p><strong>DC Input (2×DC8020 Ports)</strong></p>
-<p>PV: 16-60 V⎓12 A max., Double to 24 A max. / 1000 W max.</p>
-<p>Car: 12-16 V⎓8 A max., Double to 8 A max.</p></td>
+<td><p><strong>Вхід постійного струму (2 порти DC8020)</strong></p>
+<p>ФЕ: 16-60 В⎓12 A, подв. до 24 A макс. / 1000 Вт макс.</p>
+<p>Автомобіль: 12-16 В⎓8 A макс., подв. до 8 A макс.</p></td>
 </tr>
 </tbody>
 </table>
@@ -211,13 +211,13 @@
 
 Вимкнення: натисніть і утримуйте 3 с.
 
-**Стандартний час очікування:** 2 hours.
+**Стандартний час очікування:** 2 години.
 
 Пристрій автоматично вимкнеться після 2 годин бездіяльності, якщо не відбувається заряджання чи розряджання.
 
 \* Час очікування можна налаштувати в Додатку Jackery.
 
-Коли режим енергозбереження ввімкнено, пристрій автоматично вимкнеться після 12 hours, якщо вихід AC або DC / USB увімкнено, але пристрій не заряджається і не розряджається.
+Коли режим енергозбереження ввімкнено, пристрій автоматично вимкнеться після 12 годин, якщо вихід AC або DC / USB увімкнено, але пристрій не заряджається і не розряджається.
 
 ## УВІМК./ВИМК. ВИХОДУ AC
 
@@ -275,7 +275,7 @@
 
 Щоб вимкнути режим енергозбереження, натисніть і утримуйте кнопку AC та основну кнопку POWER одночасно понад 3 секунди. Після вимкнення режиму енергозбереження значок більше не з\'являтиметься на екрані LCD, і пристрій не вимикатиме автоматично вихід AC або DC / USB.
 
-Під час живлення малопотужних пристроїв (AC \<= 25 W або DC / USB \<= 2 W) вимкніть режим енергозбереження, щоб запобігти автоматичному вимкненню виходу під час роботи.
+Під час живлення малопотужних пристроїв (AC \<= 25 Вт або DC / USB \<= 2 Вт) вимкніть режим енергозбереження, щоб запобігти автоматичному вимкненню виходу під час роботи.
 
 <img src="../../../../_static/manual-assets/_pool/9d/9dd943d3063031c0795ff8c4b2b6aac266bfb2bff78e2250e445f27352c23a07.png" style="width: 320px;" width="320" height="95" alt="Заглушка операції керування режимом енергозбереження." />
 
@@ -369,7 +369,7 @@
 
 Джерело безперебійного живлення (UPS) - це тип системи безперервного живлення, яка автоматично забезпечує резервне живлення підключеного навантаження у разі відмови електромережі.
 
-У разі раптового зникнення мережевого живлення Jackery Explorer 3000 автоматично перемкнеться на накопичену енергію протягом 10 ms, щоб ваші прилади продовжували працювати.
+У разі раптового зникнення мережевого живлення Jackery Explorer 3000 автоматично перемкнеться на накопичену енергію протягом 10 мс, щоб ваші прилади продовжували працювати.
 
 У режимі UPS пікова вихідна потужність пристрою досягає 12 A перед відключенням електроенергії. Оскільки в режимі байпасу ввімкнено одночасне заряджання та розряджання,
 
@@ -395,7 +395,7 @@
 
 
 <table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ПРИМІТКА</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
-<li><p>Рекомендований діапазон температури заряджання для пристрою становить 0°C to 45°C, а діапазон температури розряджання - -10°C to 45°C.</p></li>
+<li><p>Рекомендований діапазон температури заряджання для пристрою становить від 0 °C до 45 °C, а діапазон температури розряджання - від -10 °C до 45 °C.</p></li>
 <li><p>Робота пристрою поза цим температурним діапазоном може обмежити його можливості заряджання та розряджання або навіть унеможливити заряджання чи розряджання.</p></li>
 <li><p>Потужність заряджання та ємність батареї пристрою можуть змінюватися через коливання температури.</p></li>
 </ul>
@@ -448,7 +448,7 @@ Jackery Explorer 3000 має два вхідні порти DC8020 і суміс
 
 
 
-Рекомендується використовувати сонячну панель Jackery для заряджання пристрою. Переконайтеся, що напруга холостого ходу (V<sub>oc</sub>) сонячної панелі входить до діапазону входу DC (16V-60V) Jackery Explorer 3000. Jackery не несе відповідальності за будь-які пошкодження або втрати, спричинені використанням сонячних панелей сторонніх виробників.
+Рекомендується використовувати сонячну панель Jackery для заряджання пристрою. Переконайтеся, що напруга холостого ходу (V<sub>oc</sub>) сонячної панелі входить до діапазону входу DC (16 В-60 В) Jackery Explorer 3000. Jackery не несе відповідальності за будь-які пошкодження або втрати, спричинені використанням сонячних панелей сторонніх виробників.
 
 ## ЗАРЯДЖАННЯ ЧЕРЕЗ АВТОМОБІЛЬНИЙ ЗАРЯДНИЙ ПРИСТРІЙ (ПРОДАЄТЬСЯ ОКРЕМО)
 
@@ -475,11 +475,11 @@ Jackery Explorer 3000 має два вхідні порти DC8020 і суміс
 
 Зберігайте пристрій у сухому, чистому та добре вентильованому місці. Температура та вологість під час зберігання:
 
-- 1 month: -20°C to 45°C (0-60 % RH)
+- 1 місяць: від -20 °C до 45 °C (0-60 % RH)
 
-- 3 months: 0 °C to 45°C (0-60 % RH)
+- 3 місяці: від 0 °C до 45 °C (0-60 % RH)
 
-- 12 months: 0 °C to 25°C (0-60 % RH)
+- 12 місяців: від 0 °C до 25 °C (0-60 % RH)
 
 Якщо цей пристрій зберігати тривалий час (3-6 місяців) із розрядженим акумулятором, він може стати нездатним до заряджання. Щоб уникнути цього та зберегти стан батареї, рекомендується перевіряти та заряджати пристрій кожні три місяці, а також виконувати повний цикл заряджання та розряджання щонайменше раз на 6-12 місяців.
 
@@ -512,32 +512,32 @@ Jackery Explorer 3000 має два вхідні порти DC8020 і суміс
 <figure aria-label="ЗАГАЛЬНА ІНФОРМАЦІЯ" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Product Name</th>
+<th class="hb-spec-label manual-spec-label" scope="row">Назва продукту</th>
 <td class="hb-spec-value manual-spec-value">Jackery Explorer 3000</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Model No.</th>
+<th class="hb-spec-label manual-spec-label" scope="row">Номер моделі</th>
 <td class="hb-spec-value manual-spec-value">JE-3000C</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Capacity</th>
-<td class="hb-spec-value manual-spec-value">3072 Wh (60 Ah / 51.2 V DC)</td>
+<th class="hb-spec-label manual-spec-label" scope="row">Ємність</th>
+<td class="hb-spec-value manual-spec-value">3072 Вт-год (60 A-год/51,2 В постійного струму)</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Cell Chemistry</th>
+<th class="hb-spec-label manual-spec-label" scope="row">Хімічний склад елементів</th>
 <td class="hb-spec-value manual-spec-value">LiFePO₄</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Weight</th>
-<td class="hb-spec-value manual-spec-value">About 27 kg</td>
+<th class="hb-spec-label manual-spec-label" scope="row">Вага</th>
+<td class="hb-spec-value manual-spec-value">Близько 27 кг</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Dimensions</th>
-<td class="hb-spec-value manual-spec-value">43.5 × 32.6 × 28.1 cm</td>
+<th class="hb-spec-label manual-spec-label" scope="row">Розміри</th>
+<td class="hb-spec-value manual-spec-value">435 × 326 × 281 мм</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Cycle Life</th>
-<td class="hb-spec-value manual-spec-value">4000 cycles to 70%+ capacity</td>
+<th class="hb-spec-label manual-spec-label" scope="row">Ресурс циклів</th>
+<td class="hb-spec-value manual-spec-value">4000 циклів до 70%+ ємності</td>
 </tr>
 </tbody>
 </table></figure>
@@ -551,12 +551,12 @@ Jackery Explorer 3000 має два вхідні порти DC8020 і суміс
 <figure aria-label="ВХІДНІ ПОРТИ" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">1 × AC Input</th>
-<td class="hb-spec-value manual-spec-value">Charge Mode: 220 V-240 V~ 50 Hz, 10 A max.<br/>Bypass Mode<sup class="hb-spec-reference">①</sup>: 220 V-240 V~ 50 Hz, 10 A max.</td>
+<th class="hb-spec-label manual-spec-label" scope="row">1 вхід змінного струму</th>
+<td class="hb-spec-value manual-spec-value">Режим заряджання: 220 В-240 В~ 50 Гц, 10 A макс.<br/>Байпасний режим<sup class="hb-spec-reference">①</sup>: 220 В-240 В~ 50 Гц, 10 A макс.</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">2 × DC8020 Ports</th>
-<td class="hb-spec-value manual-spec-value">Vehicle: 12 V-16 V⎓8 A max., Double to 8 A max.<br/>PV: 16 V-60 V⎓12 A max., Double to 24 A / 1000 W max.</td>
+<th class="hb-spec-label manual-spec-label" scope="row">2 порти DC8020</th>
+<td class="hb-spec-value manual-spec-value">12 В-16 В⎓8 A макс., подв. до 8 A макс.<br/>16 В-60 В⎓12 A, подв. до 24 A макс./1000 Вт макс.</td>
 </tr>
 </tbody>
 </table></figure>
@@ -570,28 +570,28 @@ Jackery Explorer 3000 має два вхідні порти DC8020 і суміс
 <figure aria-label="ВИХІДНІ ПОРТИ" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">3 × AC</th>
-<td class="hb-spec-value manual-spec-value">230 V~ 50 Hz, 15.6 A, 3600 W rated</td>
+<th class="hb-spec-label manual-spec-label" scope="row">3 виходи змінного струму</th>
+<td class="hb-spec-value manual-spec-value">230 В~ 50 Гц, 15,6 A, 3600 Вт ном. потужності</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Total AC Output</th>
-<td class="hb-spec-value manual-spec-value">3600 W Rated, 7200 W Surge Peak</td>
+<th class="hb-spec-label manual-spec-label" scope="row">Загальний вихід змінного струму<sup class="hb-spec-reference">②</sup></th>
+<td class="hb-spec-value manual-spec-value">3600 Вт ном. потужності, 7200 Вт пікове значення</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">AC Output in Bypass Mode<sup class="hb-spec-reference">①</sup></th>
-<td class="hb-spec-value manual-spec-value">220 V-240 V~ 50 Hz, 10 A max.</td>
+<th class="hb-spec-label manual-spec-label" scope="row">Вихід змінного струму у байпасному режимі<sup class="hb-spec-reference">①</sup></th>
+<td class="hb-spec-value manual-spec-value">220 В-240 В~ 50 Гц, 10 A макс.</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">2 × USB-C</th>
-<td class="hb-spec-value manual-spec-value">100 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓3 A, 15 V⎓3 A, 20 V⎓5 A</td>
+<th class="hb-spec-label manual-spec-label" scope="row">2 виходи USB-C 100W MAX</th>
+<td class="hb-spec-value manual-spec-value">100 Вт макс., 5 В⎓3 A, 9 В⎓3 A, 12 В⎓3 A, 15 В⎓3 A, 20 В⎓5 A</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">2 × USB-A</th>
-<td class="hb-spec-value manual-spec-value">18 W max., 5-6 V⎓3 A, 6-9 V⎓2 A, 9-12 V⎓1.5 A</td>
+<th class="hb-spec-label manual-spec-label" scope="row">2 виходи USB-A 18W MAX</th>
+<td class="hb-spec-value manual-spec-value">18 Вт макс., 5-6 В⎓3 A, 6-9 В⎓2 A, 9-12 В⎓1,5 A</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">1 × DC 12 V Port</th>
-<td class="hb-spec-value manual-spec-value">12 V⎓10 A max.</td>
+<th class="hb-spec-label manual-spec-label" scope="row">Порт постійного струму 12 В</th>
+<td class="hb-spec-value manual-spec-value">12 В⎓10 А макс.</td>
 </tr>
 </tbody>
 </table></figure>
@@ -605,12 +605,12 @@ Jackery Explorer 3000 має два вхідні порти DC8020 і суміс
 <figure aria-label="РОБОЧА ТЕМПЕРАТУРА НАВКОЛИШНЬОГО СЕРЕДОВИЩА" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Charging Temperature</th>
-<td class="hb-spec-value manual-spec-value">0°C to 45°C</td>
+<th class="hb-spec-label manual-spec-label" scope="row">Температура заряджання</th>
+<td class="hb-spec-value manual-spec-value">від 0 °C до 45 °C</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Discharging Temperature</th>
-<td class="hb-spec-value manual-spec-value">-10°C to 45°C</td>
+<th class="hb-spec-label manual-spec-label" scope="row">Температура розряджання</th>
+<td class="hb-spec-value manual-spec-value">від -10 °C до 45 °C</td>
 </tr>
 </tbody>
 </table></figure>
@@ -620,6 +620,8 @@ Jackery Explorer 3000 має два вхідні порти DC8020 і суміс
 ※ USB Type-C® та USB-C® є зареєстрованими торговельними марками USB Implementers Forum.
 
 ① Продукт може заряджати акумулятор від мережевої розетки змінного струму, одночасно подаючи живлення через вихідні порти змінного струму.
+
+② Вказує, що два або більше вихідних портів змінного струму працюють разом.
 
 # ГАРАНТІЯ
 
