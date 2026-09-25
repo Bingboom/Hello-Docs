@@ -443,7 +443,7 @@ Dieses Gerät unterstützt bis zu fünf Batteriepacks, um einen hohen Leistungsb
 
 
 <table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>HINWEIS</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
-<li><p>Die empfohlene Ladetemperatur für das Produkt liegt bei -10°C bis 45°C, und die Entladetemperatur liegt bei -10°C bis 45°C.</p></li>
+<li><p>Die empfohlene Ladetemperatur für das Produkt liegt bei -10 °C bis 45 °C, und die Entladetemperatur liegt bei -10 °C bis 45 °C.</p></li>
 <li><p>Der Betrieb des Produkts außerhalb dieses Temperaturbereichs kann die Lade- und Entladefähigkeit einschränken oder sogar verhindern, dass das Produkt lädt oder entlädt.</p></li>
 <li><p>Ladeleistung und Batteriekapazität des Produkts können sich aufgrund von Temperaturschwankungen ändern.</p></li>
 </ul>
@@ -517,11 +517,11 @@ Dieses Produkt kann mit einem 12-V-Autoladegerät aufgeladen werden. Stellen Sie
 
 Lagern Sie das Produkt an einem trockenen, sauberen und gut belüfteten Ort. Lagertemperatur und Luftfeuchtigkeit:
 
-- 1 month: von -20 °C bis 45 °C (0--60 % rF)
+- 1 Monat: -20 °C bis 45 °C (0--60 % relative Luftfeuchtigkeit)
 
-- 3 months: von 0 °C bis 45 °C (0--60 % rF)
+- 3 Monate: 0 °C bis 45 °C (0--60 % relative Luftfeuchtigkeit)
 
-- 12 months: von 0 °C bis 25 °C (0--60 % rF)
+- 12 Monate: 0 °C bis 25 °C (0--60 % relative Luftfeuchtigkeit)
 
 Wenn dieses Produkt über einen längeren Zeitraum (3 bis 6 Monate) mit entladener Batterie gelagert wird, kann es unaufladbar werden. Um dies zu verhindern und die Batteriegesundheit zu erhalten, wird empfohlen, das Produkt alle drei Monate zu überprüfen und aufzuladen und mindestens einmal alle 6 bis 12 Monate einen vollständigen Lade- und Entladezyklus durchzuführen.
 
@@ -556,19 +556,19 @@ Wenn einer der folgenden Fehlercodes angezeigt wird, befolgen Sie die aufgeführ
 <figure aria-label="ALLGEMEINE INFORMATIONEN" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Product Name</th>
+<th class="hb-spec-label manual-spec-label" scope="row">Produktname</th>
 <td class="hb-spec-value manual-spec-value">Jackery Explorer 1000 Plus</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Model No.</th>
+<th class="hb-spec-label manual-spec-label" scope="row">Modell-Nr.</th>
 <td class="hb-spec-value manual-spec-value">JE-1000H</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Kapazität</th>
-<td class="hb-spec-value manual-spec-value">1024 Wh (20 Ah/51,2 V DC</td>
+<td class="hb-spec-value manual-spec-value">1024 Wh (20 Ah/51,2 V DC)</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Cell Chemistry</th>
+<th class="hb-spec-label manual-spec-label" scope="row">Zellchemie</th>
 <td class="hb-spec-value manual-spec-value">LiFePO₄</td>
 </tr>
 <tr>
@@ -581,7 +581,7 @@ Wenn einer der folgenden Fehlercodes angezeigt wird, befolgen Sie die aufgeführ
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Nutzungsdauer</th>
-<td class="hb-spec-value manual-spec-value">6000 Zyklen bis über 70% Kapa</td>
+<td class="hb-spec-value manual-spec-value">6000 Zyklen bis über 70% Kapazität</td>
 </tr>
 </tbody>
 </table></figure>
@@ -596,15 +596,15 @@ Wenn einer der folgenden Fehlercodes angezeigt wird, befolgen Sie die aufgeführ
 <tbody>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">1 × AC-Eingang</th>
-<td class="hb-spec-value manual-spec-value">Charge Mode: 220 V-240 V~50 Hz, 10 A max<br/>Bypass Mode<sup class="hb-spec-reference">①</sup>: 220 V-240 V~50 Hz, 7,83 A</td>
+<td class="hb-spec-value manual-spec-value">Lademodus: 220 V-240 V~ 50 Hz, 10 A max.<br/>Bypassmodus<sup class="hb-spec-reference">①</sup>: 220 V-240 V~ 50 Hz, 7,83 A</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">2 × DC8020-Anschlüsse</th>
-<td class="hb-spec-value manual-spec-value">11 V-16 V 8 A max, Doppelanschluss 8 A<br/>16 V-60 V 12 A, Doppelanschluss 21 A / 400W Max</td>
+<td class="hb-spec-value manual-spec-value">Fahrzeug: 11 V-16 V⎓8 A max., Doppelanschluss 8 A<br/>PV: 16 V-60 V⎓12 A, Doppelanschluss 21 A / 400 W max.</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">1 × DC-Erweiterungsanschluss</th>
-<td class="hb-spec-value manual-spec-value">36,8 V-56 V 59 A max</td>
+<td class="hb-spec-value manual-spec-value">36,8 V-56 V⎓59 A max.</td>
 </tr>
 </tbody>
 </table></figure>
@@ -618,32 +618,32 @@ Wenn einer der folgenden Fehlercodes angezeigt wird, befolgen Sie die aufgeführ
 <figure aria-label="AUSGANGSANSCHLÜSSE" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">3 × AC-Ausgänge</th>
-<td class="hb-spec-value manual-spec-value">230V~ 50 Hz, 7,83 A, 1800 W</td>
+<th class="hb-spec-label manual-spec-label" scope="row">3 × AC-Ausgang</th>
+<td class="hb-spec-value manual-spec-value">230 V~ 50 Hz, 7,83 A, 1800 W</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">AC-Gesamtleistung 2<sup class="hb-spec-reference">②</sup></th>
-<td class="hb-spec-value manual-spec-value">1800 W Nennleistung, 3600 W Über</td>
+<th class="hb-spec-label manual-spec-label" scope="row">AC-Gesamtleistung<sup class="hb-spec-reference">②</sup></th>
+<td class="hb-spec-value manual-spec-value">1800 W Nennleistung, 3600 W Überspannungsspitze</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">AC-Ausgang im Bypass-Modus<sup class="hb-spec-reference">①</sup></th>
-<td class="hb-spec-value manual-spec-value">220 V-240 V~50Hz, 7,83 A USB</td>
+<th class="hb-spec-label manual-spec-label" scope="row">AC-Ausgang im Bypassmodus<sup class="hb-spec-reference">①</sup></th>
+<td class="hb-spec-value manual-spec-value">220 V-240 V~ 50 Hz, 7,83 A</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">2 × USB-C-Ausgang</th>
-<td class="hb-spec-value manual-spec-value">USB-C 30W: 30 W max, 5 V 3 A, 9 V 3 A, 12 V 2,5 A, 15 V 2 A, 20 V 1,5A<br/>USB-C 140W: 140 W max, 5 V 3 A, 9 V 3 A, 12 V 3 A, 15 V 3 A, 20 V 5 A, 28 V 5 A</td>
+<td class="hb-spec-value manual-spec-value">USB-C 30W: 30 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓2,5 A, 15 V⎓2 A, 20 V⎓1,5 A<br/>USB-C 140W: 140 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓3 A, 15 V⎓3 A, 20 V⎓5 A, 28 V⎓5 A</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">1 × USB-A-Ausgang</th>
-<td class="hb-spec-value manual-spec-value">18 W max, 5-6 V 3 A, 6-9 V 2 A, 9-12 V 1,5 A</td>
+<th class="hb-spec-label manual-spec-label" scope="row">1 × USB-A 18W</th>
+<td class="hb-spec-value manual-spec-value">18 W max., 5-6 V⎓3 A, 6-9 V⎓2 A, 9-12 V⎓1,5 A</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">1 × DC 12 V-Anschluss</th>
-<td class="hb-spec-value manual-spec-value">12 V 10 A max</td>
+<td class="hb-spec-value manual-spec-value">12 V⎓10 A max.</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">1 × DC-Erweiterungsanschluss</th>
-<td class="hb-spec-value manual-spec-value">36,8 V-56 V 36 A max</td>
+<td class="hb-spec-value manual-spec-value">36,8 V-56 V⎓36 A max.</td>
 </tr>
 </tbody>
 </table></figure>
@@ -657,12 +657,12 @@ Wenn einer der folgenden Fehlercodes angezeigt wird, befolgen Sie die aufgeführ
 <figure aria-label="ENVIRONMENTAL OPERATING TEMPERATURE" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Ladtemperatur</th>
-<td class="hb-spec-value manual-spec-value">-10°C bis 45°C</td>
+<th class="hb-spec-label manual-spec-label" scope="row">Ladetemperatur</th>
+<td class="hb-spec-value manual-spec-value">-10 °C bis 45 °C</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Entladetemperatur</th>
-<td class="hb-spec-value manual-spec-value">-10°C bis 45°C</td>
+<td class="hb-spec-value manual-spec-value">-10 °C bis 45 °C</td>
 </tr>
 </tbody>
 </table></figure>

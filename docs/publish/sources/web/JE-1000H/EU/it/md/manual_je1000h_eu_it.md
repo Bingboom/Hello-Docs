@@ -515,11 +515,11 @@ Questo prodotto può essere caricato con un caricabatterie per auto da 12 V. Ass
 
 Conserva il prodotto in un luogo asciutto, pulito e ben ventilato. Temperatura e umidità di conservazione:
 
-- 1 month: da -20 °C a 45 °C (0-60% UR)
+- 1 mese: tra -20 °C e 45 °C (0-60% UR)
 
-- 3 months: da 0 °C a 45 °C (0-60% UR)
+- 3 mesi: tra 0 °C e 45 °C (0-60% UR)
 
-- 12 months: da 0 °C a 25 °C (0-60% UR)
+- 12 mesi: tra 0 °C e 25 °C (0-60% UR)
 
 Se il prodotto viene conservato a lungo termine (da 3 a 6 mesi) con la batteria scarica, potrebbe non essere più possibile ricaricarlo. Per evitarlo e mantenere la salute della batteria, si consiglia di controllare e ricaricare il prodotto ogni tre mesi e di eseguire almeno un ciclo completo di carica e scarica ogni 6-12 mesi.
 
@@ -553,19 +553,19 @@ Se viene visualizzato uno dei seguenti codici di errore, segui le azioni corrett
 <figure aria-label="INFORMAZIONI GENERALI" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Product Name</th>
+<th class="hb-spec-label manual-spec-label" scope="row">Nome del prodotto</th>
 <td class="hb-spec-value manual-spec-value">Jackery Explorer 1000 Plus</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Model No.</th>
+<th class="hb-spec-label manual-spec-label" scope="row">Modello n.</th>
 <td class="hb-spec-value manual-spec-value">JE-1000H</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Capacità</th>
-<td class="hb-spec-value manual-spec-value">1024 Wh (20 Ah/51,2 V DC</td>
+<td class="hb-spec-value manual-spec-value">1024 Wh (20 Ah/51,2 V DC)</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Cell Chemistry</th>
+<th class="hb-spec-label manual-spec-label" scope="row">Chimica celle batteria</th>
 <td class="hb-spec-value manual-spec-value">LiFePO₄</td>
 </tr>
 <tr>
@@ -578,7 +578,7 @@ Se viene visualizzato uno dei seguenti codici di errore, segui le azioni corrett
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Durata del ciclo</th>
-<td class="hb-spec-value manual-spec-value">6000 cicli ﬁno all' 70% di</td>
+<td class="hb-spec-value manual-spec-value">6000 cicli fino all' 70% di capacità</td>
 </tr>
 </tbody>
 </table></figure>
@@ -593,15 +593,15 @@ Se viene visualizzato uno dei seguenti codici di errore, segui le azioni corrett
 <tbody>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">1 × Ingresso CA</th>
-<td class="hb-spec-value manual-spec-value">Charge Mode: 220 V-240 V~50 Hz, 10 A max<br/>Bypass Mode<sup class="hb-spec-reference">①</sup>: 220 V-240 V~50 Hz, 7,83 A</td>
+<td class="hb-spec-value manual-spec-value">Modalità di ricarica: 220 V-240 V~ 50 Hz, 10 A max.<br/>Modalità bypass<sup class="hb-spec-reference">①</sup>: 220 V-240 V~ 50 Hz, 7,83 A</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">2 porte DC8020</th>
-<td class="hb-spec-value manual-spec-value">11 V-16 V 8 A max, raddoppia ﬁno a 8 A<br/>16 V-60 V 12 A, raddoppia ﬁno a 21 A / 400 W Max</td>
+<th class="hb-spec-label manual-spec-label" scope="row">2 × Porte DC8020</th>
+<td class="hb-spec-value manual-spec-value">Auto: 11 V-16 V⎓8 A max., raddoppia fino a 8 A<br/>FV: 16 V-60 V⎓12 A, raddoppia fino a 21 A / 400 W max.</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">1 × Porta di Espansione CC</th>
-<td class="hb-spec-value manual-spec-value">36,8 V-56 V 59 A max</td>
+<td class="hb-spec-value manual-spec-value">36,8 V-56 V⎓59 A max.</td>
 </tr>
 </tbody>
 </table></figure>
@@ -615,32 +615,32 @@ Se viene visualizzato uno dei seguenti codici di errore, segui le azioni corrett
 <figure aria-label="PORTE IN USCITA" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">3 × uscite CA</th>
-<td class="hb-spec-value manual-spec-value">230V~ 50Hz, 7,83A, 1800W nomi</td>
+<th class="hb-spec-label manual-spec-label" scope="row">3 × Uscita CA</th>
+<td class="hb-spec-value manual-spec-value">230 V~ 50 Hz, 7,83 A, 1800 W nominali</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Uscita totale CA 2<sup class="hb-spec-reference">②</sup></th>
-<td class="hb-spec-value manual-spec-value">1800W nominali, 3600W picc</td>
+<th class="hb-spec-label manual-spec-label" scope="row">Uscita totale CA<sup class="hb-spec-reference">②</sup></th>
+<td class="hb-spec-value manual-spec-value">1800 W nominali, 3600 W picco di sovratensione</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Uscita CA in modalità bypass<sup class="hb-spec-reference">①</sup></th>
-<td class="hb-spec-value manual-spec-value">220 V-240 V~50Hz, 7,83 A USB</td>
+<td class="hb-spec-value manual-spec-value">220 V-240 V~ 50 Hz, 7,83 A</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">2 × Uscita USB-C</th>
-<td class="hb-spec-value manual-spec-value">USB-C 30W: 30 W max, 5 V 3 A, 9 V 3 A, 12 V 2,5 A, 15 V 2 A, 20 V 1,5A<br/>USB-C 140W: 140 W max, 5 V 3 A, 9 V 3 A, 12 V 3 A, 15 V 3 A, 20 V 5 A, 28 V 5 A</td>
+<td class="hb-spec-value manual-spec-value">USB-C 30W: 30 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓2,5 A, 15 V⎓2 A, 20 V⎓1,5 A<br/>USB-C 140W: 140 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓3 A, 15 V⎓3 A, 20 V⎓5 A, 28 V⎓5 A</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">1 × Uscita USB-A</th>
-<td class="hb-spec-value manual-spec-value">18 W max, 5-6 V 3 A, 6-9 V 2 A, 9-12 V 1,5 A</td>
+<th class="hb-spec-label manual-spec-label" scope="row">1 × USB-A 18W</th>
+<td class="hb-spec-value manual-spec-value">18 W max., 5-6 V⎓3 A, 6-9 V⎓2 A, 9-12 V⎓1,5 A</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">1 × Porta CC 12 V</th>
-<td class="hb-spec-value manual-spec-value">12 V 10 A max</td>
+<th class="hb-spec-label manual-spec-label" scope="row">1 × Presa da 12V CC</th>
+<td class="hb-spec-value manual-spec-value">12 V⎓10 A max.</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">1 ×  Porta di Espansione CC</th>
-<td class="hb-spec-value manual-spec-value">36,8 V-56 V 36 A max</td>
+<th class="hb-spec-label manual-spec-label" scope="row">1 × Porta di Espansione CC</th>
+<td class="hb-spec-value manual-spec-value">36,8 V-56 V⎓36 A max.</td>
 </tr>
 </tbody>
 </table></figure>
@@ -654,11 +654,11 @@ Se viene visualizzato uno dei seguenti codici di errore, segui le azioni corrett
 <figure aria-label="ENVIRONMENTAL OPERATING TEMPERATURE" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Temperatura di ricarica</th>
+<th class="hb-spec-label manual-spec-label" scope="row">Temperatura di carica</th>
 <td class="hb-spec-value manual-spec-value">tra -10 °C e 45 °C</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Temperatura di scarico</th>
+<th class="hb-spec-label manual-spec-label" scope="row">Temperatura di scarica</th>
 <td class="hb-spec-value manual-spec-value">tra -10 °C e 45 °C</td>
 </tr>
 </tbody>
