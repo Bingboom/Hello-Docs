@@ -1,8 +1,8 @@
 {
   "actions": {
-    "check": "4fbe5b083b5500898ea780524d9b652fc720b728fec14d4681243ca08b13fbfe",
-    "html": "4fbe5b083b5500898ea780524d9b652fc720b728fec14d4681243ca08b13fbfe",
-    "md": "4fbe5b083b5500898ea780524d9b652fc720b728fec14d4681243ca08b13fbfe"
+    "check": "b582632beeb8c6af8cb4eac7d4855c1bb665b3d99304cfcfbf627133bacae040",
+    "html": "b582632beeb8c6af8cb4eac7d4855c1bb665b3d99304cfcfbf627133bacae040",
+    "md": "b582632beeb8c6af8cb4eac7d4855c1bb665b3d99304cfcfbf627133bacae040"
   },
   "canonical_source": {
     "files": [
@@ -23,13 +23,13 @@
       },
       {
         "path": "page/03_product_overview_de.rst",
-        "sha256": "5c2e0106cf29bd98298484eeca8ff7a7b7deada5522947ec8486f99d57506e89",
-        "size": 2420
+        "sha256": "b885030133fb6b75c85e4758a4ec6d96324c6d2dee7e5030914fe5df8dbe4828",
+        "size": 2516
       },
       {
         "path": "page/05_operation_guide_de.rst",
-        "sha256": "002a7f2a9f6f54fe0f50a0eec44b8d888a3b7dc16e35e618a95310b10a06e407",
-        "size": 9281
+        "sha256": "394e84032f50a9c132ace27cb27e51251ce0bb105842a3c7693b575ae1d1d6c6",
+        "size": 9291
       },
       {
         "path": "page/06_ups_mode.rst",
@@ -43,8 +43,8 @@
       },
       {
         "path": "page/09_storage_and_maintenance.rst",
-        "sha256": "df92699854747cd58b3752b0db2e7902e1628b8a70d48dc28f19eea98c7a62a0",
-        "size": 672
+        "sha256": "ecaed764f54e8fc6ad0984379bf00d9bb191f8eea344e248012ab5d3507d4dc4",
+        "size": 754
       },
       {
         "path": "page/11_warranty.rst",
@@ -58,8 +58,8 @@
       },
       {
         "path": "page/charging.rst",
-        "sha256": "1c31ae0abb053635f3478250dac09681f83f5ec25ad024626305bd70de51e9b0",
-        "size": 5106
+        "sha256": "4e9fcf0de64e6662eb74213ec93ac9a1c4b054d5a9592fcae09f040224ae1036",
+        "size": 5112
       },
       {
         "path": "page/lcd_icons_de.rst",
@@ -73,8 +73,8 @@
       },
       {
         "path": "page/spec_de.rst",
-        "sha256": "43e53b7ac2f968b2b365eaee3de3298d2453eff344588af0a02ec13280c95666",
-        "size": 7712
+        "sha256": "40a834502db4d974cf46a6b0ecd514371d84235849f0d919a9b337e411782962",
+        "size": 8149
       },
       {
         "path": "page/symbols_de.rst",
@@ -87,9 +87,9 @@
         "size": 2012
       }
     ],
-    "sha256": "30ea62df71fd7c2c8be1f8208534d408b7e93c74f9d3a57cf0de216022164e4b"
+    "sha256": "c914ecff7907b9679e30d2e76fbb1ce4f691f31e61ed6446aae57728b65e7e3a"
   },
-  "git_ref": "77fe0bd5f856df73ccb885def18efbadc8946ee7",
+  "git_ref": "5c065fb77620c07030bf4d94e36c086d07d91157",
   "html": {
     "files": [
       {
@@ -679,8 +679,8 @@
       },
       {
         "path": "index.html",
-        "sha256": "911fc522fdf965b847214b1b839469fa3cf8bfccd982091b8cf23304a4addb23",
-        "size": 80053
+        "sha256": "c421d4cb6d59fe4550be96fd4c1949e632c47a208ff59afa4f7e6f862959b2ab",
+        "size": 80403
       },
       {
         "path": "jbp2000b_ac_charging.pdf",
@@ -1414,8 +1414,8 @@
       },
       {
         "path": "searchindex.js",
-        "sha256": "de405d1468e3d72072265de026554afb2ef6bbf84af81a018af8fce7ca869522",
-        "size": 16682
+        "sha256": "3f321f51a763bb443a711f3fc70348c068702460f24cf1afdd0afc07bb8e39f4",
+        "size": 16727
       },
       {
         "path": "solar_adapter.pdf",
@@ -1443,7 +1443,7 @@
         "size": 316221
       }
     ],
-    "sha256": "af91e5a1b916b1340cd4bdf05ec07fa10f9db0556593b96e7184d0ba81744e83"
+    "sha256": "9944fbc81e63655589dfdefa86b1fb9c2a26507b5a0df880d08d33351845ae7f"
   },
   "language": "de",
   "markdown": {
@@ -1725,19 +1725,19 @@
       },
       {
         "path": "manual_je3000c_eu_de.md",
-        "sha256": "0ea6d0cd470c317fd87abd8a754526938c17791393a5c92a21105ed6d7699fe1",
-        "size": 65122
+        "sha256": "e12a2d3dd670d9307cd184a11d2deefd6696ee1dda5e69c03f25a2359ef8f7a0",
+        "size": 65442
       }
     ],
     "manual": "manual_je3000c_eu_de.md",
-    "sha256": "987815fa9ede8d0fab03d8e7cc32c712919209e602c383d34d52a28cbca2ba8c"
+    "sha256": "4e27cd5e8f8ed8c1a4b138d226c9e7a1a97ec1d36757ddb64544475d8461ded8"
   },
   "model": "JE-3000C",
   "projection_manifest": {
     "path": "projection_bundle_manifest.json",
-    "sha256": "ef6382567058f2a1eb56273bdcd85ebe9889a82858d8055855a971444f33cff4"
+    "sha256": "b15c4fa3af5b72ff166700c3ab8fc97a082d663ceee9aeed3d4ad87c9095dffd"
   },
   "region": "EU",
   "schema_version": "auto-manual-web-language-release-evidence/v1",
-  "version": "2.3"
+  "version": "2.4"
 }

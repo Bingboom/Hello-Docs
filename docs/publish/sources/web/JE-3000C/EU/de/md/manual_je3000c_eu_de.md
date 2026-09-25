@@ -72,20 +72,20 @@ Bei Fragen wenden Sie sich bitte an den Jackery-Kundendienst.</p></div></div></f
 <td><p><strong>LCD</strong></p></td>
 </tr>
 <tr>
-<td><p><strong>DC 12 V Port</strong></p>
+<td><p><strong>12-V-DC-Anschluss</strong></p>
 <p>12 V⎓10 A max.</p></td>
 <td><p><strong>DC/USB-Stromtaste</strong></p></td>
 </tr>
 <tr>
-<td><p><strong>USB-C 100 W Output</strong></p>
+<td><p><strong>USB-C-100-W-MAX-Ausgang</strong></p>
 <p>100 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓3 A, 15 V⎓3 A, 20 V⎓5 A</p></td>
 <td><p><strong>AC-Ausgangstaste</strong></p></td>
 </tr>
 <tr>
-<td><p><strong>USB-A 18 W Output</strong></p>
-<p>18 W max., 5-6 V⎓3 A, 6-9 V⎓2 A, 9-12 V⎓1.5 A</p></td>
-<td><p><strong>AC Output</strong></p>
-<p>230 V~ 50 Hz, 15.6 A, 3600 W rated</p></td>
+<td><p><strong>USB-A-18-W-MAX-Ausgang</strong></p>
+<p>18 W max., 5-6 V⎓3 A, 6-9 V⎓2 A, 9-12 V⎓1,5 A</p></td>
+<td><p><strong>AC-Ausgang</strong></p>
+<p>230 V~ 50 Hz, 15,6 A, 3600 W</p></td>
 </tr>
 </tbody>
 </table>
@@ -96,8 +96,8 @@ Bei Fragen wenden Sie sich bitte an den Jackery-Kundendienst.</p></div></div></f
 </colgroup>
 <tbody>
 <tr>
-<td><p><strong>Total AC Output</strong></p>
-<p>3600 W Rated, 7200 W Surge Peak</p></td>
+<td><p><strong>AC-Gesamtleistung</strong></p>
+<p>3600 W Nennleistung, 7200 W Überspannungsspitze</p></td>
 </tr>
 </tbody>
 </table>
@@ -114,14 +114,14 @@ Bei Fragen wenden Sie sich bitte an den Jackery-Kundendienst.</p></div></div></f
 <tbody>
 <tr>
 <td><p><strong>Griff</strong></p></td>
-<td><p><strong>AC Input</strong></p>
+<td><p><strong>AC-Eingang</strong></p>
 <p>220 V-240 V~ 50 Hz, 10 A max.</p></td>
 </tr>
 <tr>
 <td></td>
-<td><p><strong>DC Input (2×DC8020 Ports)</strong></p>
-<p>PV: 16-60 V⎓12 A max., Double to 24 A max. / 1000 W max.</p>
-<p>Car: 12-16 V⎓8 A max., Double to 8 A max.</p></td>
+<td><p><strong>DC-Eingang (2 × DC8020 Anschlüsse)</strong></p>
+<p>PV: 16-60 V⎓12 A, Doppelanschluss 24 A max./ 1000 W max.</p>
+<p>Auto: 12-16 V⎓8 A max., Doppelanschluss 8 A max.</p></td>
 </tr>
 </tbody>
 </table>
@@ -196,13 +196,13 @@ Ein: Einmal drücken.
 
 Aus: 3 s lang gedrückt halten.
 
-**Standard-Standby-Zeit:** 2 hours.
+**Standard-Standby-Zeit:** 2 Stunden.
 
-Das Produkt schaltet sich nach 2 hours Inaktivität automatisch aus, wenn weder geladen noch entladen wird.
+Das Produkt schaltet sich nach 2 Stunden Inaktivität automatisch aus, wenn weder geladen noch entladen wird.
 
 \*Die Standby-Zeit kann in der Jackery-App eingestellt werden.
 
-Wenn der Energiesparmodus aktiviert ist, schaltet sich das Produkt automatisch nach 12 hours aus, wenn die AC- oder DC/USB-Einschalttaste eingeschaltet ist, das Produkt jedoch weder lädt noch entlädt.
+Wenn der Energiesparmodus aktiviert ist, schaltet sich das Produkt automatisch nach 12 Stunden aus, wenn die AC- oder DC/USB-Einschalttaste eingeschaltet ist, das Produkt jedoch weder lädt noch entlädt.
 
 ## AC-AUSGANG EIN/AUS
 
@@ -331,7 +331,7 @@ Die Wiederaufnahmefunktion für AC- und DC-Ausgänge ist standardmäßig deaktiv
 </tr>
 <tr>
 <td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Autom. aus</td>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Die LCD-Anzeige schaltet sich nach 2 hours Inaktivität automatisch aus.</td>
+<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Die LCD-Anzeige schaltet sich nach 2 Stunden Inaktivität automatisch aus.</td>
 </tr>
 </tbody>
 </table>
@@ -380,7 +380,7 @@ liegt die tatsächliche Ausgangsleistung in diesem Modus unter der Nennleistung;
 
 
 <table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>HINWEIS</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
-<li><p>Die empfohlene Ladetemperatur für das Produkt liegt bei 0°C to 45°C, und die Entladetemperatur liegt bei -10°C to 45°C.</p></li>
+<li><p>Die empfohlene Ladetemperatur für das Produkt liegt bei 0 °C bis 45 °C, und die Entladetemperatur liegt bei -10 °C bis 45 °C.</p></li>
 <li><p>Der Betrieb des Produkts außerhalb dieses Temperaturbereichs kann die Lade- und Entladefähigkeit einschränken oder sogar verhindern, dass das Produkt lädt oder entlädt.</p></li>
 <li><p>Ladeleistung und Batteriekapazität des Produkts können sich aufgrund von Temperaturschwankungen ändern.</p></li>
 </ul>
@@ -460,11 +460,11 @@ Fahrzeug
 
 Lagern Sie das Produkt an einem trockenen, sauberen und gut belüfteten Ort. Lagertemperatur und Luftfeuchtigkeit:
 
-- 1 month: -20°C to 45°C (0-60 % RH)
+- 1 Monat: -20 °C bis 45 °C (0--60 % relative Luftfeuchtigkeit)
 
-- 3 months: 0 °C to 45°C (0-60 % RH)
+- 3 Monate: 0 °C bis 45 °C (0--60 % relative Luftfeuchtigkeit)
 
-- 12 months: 0 °C to 25°C (0-60 % RH)
+- 12 Monate: 0 °C bis 25 °C (0--60 % relative Luftfeuchtigkeit)
 
 Wenn dieses Produkt über einen längeren Zeitraum (3 bis 6 Monate) mit entladener Batterie gelagert wird, kann es unaufladbar werden. Um dies zu verhindern und die Batteriegesundheit zu erhalten, wird empfohlen, das Produkt alle drei Monate zu überprüfen und aufzuladen und mindestens einmal alle 6 bis 12 Monate einen vollständigen Lade- und Entladezyklus durchzuführen.
 
@@ -497,32 +497,32 @@ Wenn einer der folgenden Fehlercodes angezeigt wird, befolgen Sie die aufgeführ
 <figure aria-label="ALLGEMEINE INFORMATIONEN" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Product Name</th>
+<th class="hb-spec-label manual-spec-label" scope="row">Produktname</th>
 <td class="hb-spec-value manual-spec-value">Jackery Explorer 3000</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Model No.</th>
+<th class="hb-spec-label manual-spec-label" scope="row">Modell-Nr.</th>
 <td class="hb-spec-value manual-spec-value">JE-3000C</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Capacity</th>
-<td class="hb-spec-value manual-spec-value">3072 Wh (60 Ah / 51.2 V DC)</td>
+<th class="hb-spec-label manual-spec-label" scope="row">Kapazität</th>
+<td class="hb-spec-value manual-spec-value">3072 Wh (60 Ah/51,2 V DC)</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Cell Chemistry</th>
+<th class="hb-spec-label manual-spec-label" scope="row">Zellchemie</th>
 <td class="hb-spec-value manual-spec-value">LiFePO₄</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Weight</th>
-<td class="hb-spec-value manual-spec-value">About 27 kg</td>
+<th class="hb-spec-label manual-spec-label" scope="row">Gewicht</th>
+<td class="hb-spec-value manual-spec-value">Etwa 27 kg</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Dimensions</th>
-<td class="hb-spec-value manual-spec-value">43.5 × 32.6 × 28.1 cm</td>
+<th class="hb-spec-label manual-spec-label" scope="row">Abmessungen</th>
+<td class="hb-spec-value manual-spec-value">43,5 × 32,6 × 28,1 cm</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Cycle Life</th>
-<td class="hb-spec-value manual-spec-value">4000 cycles to 70%+ capacity</td>
+<th class="hb-spec-label manual-spec-label" scope="row">Nutzungsdauer</th>
+<td class="hb-spec-value manual-spec-value">4000 Zyklen bis über 70% Kapazität</td>
 </tr>
 </tbody>
 </table></figure>
@@ -536,12 +536,12 @@ Wenn einer der folgenden Fehlercodes angezeigt wird, befolgen Sie die aufgeführ
 <figure aria-label="EINGANGSPORTS" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">1 × AC Input</th>
-<td class="hb-spec-value manual-spec-value">Charge Mode: 220 V-240 V~ 50 Hz, 10 A max.<br/>Bypass Mode<sup class="hb-spec-reference">①</sup>: 220 V-240 V~ 50 Hz, 10 A max.</td>
+<th class="hb-spec-label manual-spec-label" scope="row">1 × AC-Eingang</th>
+<td class="hb-spec-value manual-spec-value">Lademodus: 220-240 V~ 50 Hz, 10 A max.<br/>Bypassmodus<sup class="hb-spec-reference">①</sup>: 220 V-240 V~ 50 Hz, 10 A max.</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">2 × DC8020 Ports</th>
-<td class="hb-spec-value manual-spec-value">Vehicle: 12 V-16 V⎓8 A max., Double to 8 A max.<br/>PV: 16 V-60 V⎓12 A max., Double to 24 A / 1000 W max.</td>
+<th class="hb-spec-label manual-spec-label" scope="row">2 × DC8020-Anschlüsse</th>
+<td class="hb-spec-value manual-spec-value">Auto: 12-16 V⎓8 A max., Doppelanschluss 8 A max.<br/>PV: 16-60 V⎓12 A, Doppelanschluss 24 A / 1000 W max.</td>
 </tr>
 </tbody>
 </table></figure>
@@ -555,27 +555,27 @@ Wenn einer der folgenden Fehlercodes angezeigt wird, befolgen Sie die aufgeführ
 <figure aria-label="AUSGANGSPORTE" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">3 × AC</th>
-<td class="hb-spec-value manual-spec-value">230 V~ 50 Hz, 15.6 A, 3600 W rated</td>
+<th class="hb-spec-label manual-spec-label" scope="row">3 × AC-Ausgang</th>
+<td class="hb-spec-value manual-spec-value">230 V~ 50 Hz, 15,6 A, 3600 W Nennleistung</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Total AC Output</th>
-<td class="hb-spec-value manual-spec-value">3600 W Rated, 7200 W Surge Peak</td>
+<th class="hb-spec-label manual-spec-label" scope="row">AC-Gesamtleistung<sup class="hb-spec-reference">②</sup></th>
+<td class="hb-spec-value manual-spec-value">3600 W Nennleistung, 7200 W Überspannungsspitze</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">AC Output in Bypass Mode<sup class="hb-spec-reference">①</sup></th>
-<td class="hb-spec-value manual-spec-value">220 V-240 V~ 50 Hz, 10 A max.</td>
+<th class="hb-spec-label manual-spec-label" scope="row">AC-Ausgang im Bypassmodus<sup class="hb-spec-reference">①</sup></th>
+<td class="hb-spec-value manual-spec-value">220-240 V~ 50 Hz, 10 A max.</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">2 × USB-C</th>
+<th class="hb-spec-label manual-spec-label" scope="row">2 × USB-C 100W MAX</th>
 <td class="hb-spec-value manual-spec-value">100 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓3 A, 15 V⎓3 A, 20 V⎓5 A</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">2 × USB-A</th>
-<td class="hb-spec-value manual-spec-value">18 W max., 5-6 V⎓3 A, 6-9 V⎓2 A, 9-12 V⎓1.5 A</td>
+<th class="hb-spec-label manual-spec-label" scope="row">2 × USB-A 18W MAX</th>
+<td class="hb-spec-value manual-spec-value">18 W max., 5-6 V⎓3 A, 6-9 V⎓2 A, 9-12 V⎓1,5 A</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">1 × DC 12 V Port</th>
+<th class="hb-spec-label manual-spec-label" scope="row">1 × DC 12 V-Anschluss</th>
 <td class="hb-spec-value manual-spec-value">12 V⎓10 A max.</td>
 </tr>
 </tbody>
@@ -590,12 +590,12 @@ Wenn einer der folgenden Fehlercodes angezeigt wird, befolgen Sie die aufgeführ
 <figure aria-label="UMGEBUNGSTEMPERATUR IM BETRIEB" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Charging Temperature</th>
-<td class="hb-spec-value manual-spec-value">0°C to 45°C</td>
+<th class="hb-spec-label manual-spec-label" scope="row">Ladetemperatur</th>
+<td class="hb-spec-value manual-spec-value">0 °C bis 45 °C</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Discharging Temperature</th>
-<td class="hb-spec-value manual-spec-value">-10°C to 45°C</td>
+<th class="hb-spec-label manual-spec-label" scope="row">Entladetemperatur</th>
+<td class="hb-spec-value manual-spec-value">-10 °C bis 45 °C</td>
 </tr>
 </tbody>
 </table></figure>
@@ -605,6 +605,8 @@ Wenn einer der folgenden Fehlercodes angezeigt wird, befolgen Sie die aufgeführ
 ※ USB Type-C® und USB-C® sind eingetragene Marken des USB Implementers Forum.
 
 ① Das Produkt kann den Akku über die Steckdose aufladen und gleichzeitig Strom über die AC-Ausgänge liefern.
+
+② Zeigt an, dass zwei oder mehr AC-Ausgangsanschlüsse gemeinsam arbeiten.
 
 # GARANTIE
 
