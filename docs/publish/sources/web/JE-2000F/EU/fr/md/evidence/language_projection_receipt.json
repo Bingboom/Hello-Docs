@@ -89,7 +89,7 @@
     ],
     "sha256": "e695384c5a5fdf919f1adaf8abb2e322c8e6434ddb92dd5f8e84abec33ae7513"
   },
-  "git_ref": "8cb694ebf08a88ecc5b4d26534f8939deb1adc4b",
+  "git_ref": "77fe0bd5f856df73ccb885def18efbadc8946ee7",
   "html": {
     "files": [
       {
@@ -1454,16 +1454,6 @@
   "markdown": {
     "files": [
       {
-        "path": "assets/app_add_device_steps_9b7e0cf44d0f.png",
-        "sha256": "9b7e0cf44d0f37dc89cc04bb57bba1ebb9c3bbc5db3f0190575dd03e96ab0d0f",
-        "size": 398750
-      },
-      {
-        "path": "assets/app_control_panel_2b9bc2598d7a.png",
-        "sha256": "2b9bc2598d7a272629311ecc2f494091c31f15ee2ebb4d59bda5f6e8ee5c9f49",
-        "size": 11976
-      },
-      {
         "path": "assets/ir/114690be6f4d77ceaebe2ed44641ba2735873d3d6415ae04738dc241392096b7/9_keep_away_from_children_XErWbsrH9o3xllxqHj9cktZAnnh.png",
         "sha256": "114690be6f4d77ceaebe2ed44641ba2735873d3d6415ae04738dc241392096b7",
         "size": 7645
@@ -1517,11 +1507,6 @@
         "path": "assets/ir/399978cf808e264f7f078d4be4ad265e6b961d3dea450be2d43f12de4becdb98/charging_car.png",
         "sha256": "399978cf808e264f7f078d4be4ad265e6b961d3dea450be2d43f12de4becdb98",
         "size": 104504
-      },
-      {
-        "path": "assets/ir/474b6e86398672ad0e36c08df860c09fe1645f96c95e80c9d68cc5549f012f4c/add_device.png",
-        "sha256": "474b6e86398672ad0e36c08df860c09fe1645f96c95e80c9d68cc5549f012f4c",
-        "size": 64112
       },
       {
         "path": "assets/ir/539834139fe6c2188441e59be515fe30ee3b6b8479f4d685554b416799f205d9/operation_led.png",
@@ -1679,6 +1664,11 @@
         "size": 1293
       },
       {
+        "path": "assets/ir/cd654b883bf983a016b9c478739ff4fa54f9807e48bca4deb5c3c28afda4799a/app_add_device_panel.png",
+        "sha256": "cd654b883bf983a016b9c478739ff4fa54f9807e48bca4deb5c3c28afda4799a",
+        "size": 896902
+      },
+      {
         "path": "assets/ir/ce913ebfc7750764f4206250f5e21aa09bd1cfc074bdee5b0484d61610f1b579/25_Fault_code_Oz87bX3BGo8H7Zxe0XvcTd7FnJL.png",
         "sha256": "ce913ebfc7750764f4206250f5e21aa09bd1cfc074bdee5b0484d61610f1b579",
         "size": 3966
@@ -1745,12 +1735,12 @@
       },
       {
         "path": "manual_je2000f_eu_fr.md",
-        "sha256": "d3c938c66ed0df7d6d293200270bfa3d10ebb24e6484ddd0e407dec9fa6dd4e4",
-        "size": 71391
+        "sha256": "1798f66199066b64a86f22cd027da9f416136e19e66ed1d9333e1b9276aba8e7",
+        "size": 70980
       }
     ],
     "manual": "manual_je2000f_eu_fr.md",
-    "sha256": "e692fea31c072e1520632171bbab8e56853153eb5270d93cf289b219ff8b4a88"
+    "sha256": "97bb4edff181bdf681cd4f782e88c6b206261c1c80b72302263b2c297a759153"
   },
   "model": "JE-2000F",
   "projection_manifest": {
@@ -1759,5 +1749,5 @@
   },
   "region": "EU",
   "schema_version": "auto-manual-web-language-release-evidence/v1",
-  "version": "2.1"
+  "version": "2.2"
 }

@@ -99,7 +99,7 @@
     ],
     "sha256": "0391569182f07fbf65dd54badce7919dd40aecc8fc9e7e84da4e1511a8098dbc"
   },
-  "git_ref": "8cb694ebf08a88ecc5b4d26534f8939deb1adc4b",
+  "git_ref": "77fe0bd5f856df73ccb885def18efbadc8946ee7",
   "html": {
     "files": [
       {
@@ -1474,11 +1474,6 @@
         "size": 7645
       },
       {
-        "path": "assets/ir/19bdaee9345f6cb13e7880e4b06437abfa3b352d432955bc2266d7019b6998ac/app_control_panel.png",
-        "sha256": "19bdaee9345f6cb13e7880e4b06437abfa3b352d432955bc2266d7019b6998ac",
-        "size": 89835
-      },
-      {
         "path": "assets/ir/21b5f19ca9a6e39d8bd515128297cc1b99e43fd263e39ffba4fdf102d50a4bad/16_Charging_Power_Limit_VLf2bJfrkoCL0CxJoMNcL5ZxnCt.png",
         "sha256": "21b5f19ca9a6e39d8bd515128297cc1b99e43fd263e39ffba4fdf102d50a4bad",
         "size": 2772
@@ -1532,6 +1527,11 @@
         "path": "assets/ir/58c1d3604ca7b9774b069c6928775a13465ccb9477f477e9e4d4b30e7f75b88d/26_Output_Power_PviebR618oofvKxcKVRcHLlInqd.png",
         "sha256": "58c1d3604ca7b9774b069c6928775a13465ccb9477f477e9e4d4b30e7f75b88d",
         "size": 6085
+      },
+      {
+        "path": "assets/ir/58d950017bd22da2161cb5b6d2df5dc5e5a490b39ca0f538f26663b743fc7c66/app_add_device_panel.png",
+        "sha256": "58d950017bd22da2161cb5b6d2df5dc5e5a490b39ca0f538f26663b743fc7c66",
+        "size": 898164
       },
       {
         "path": "assets/ir/6008a94a3019ffb701c6246af17623dc1de49b3a74c326a2bac3ee1a34d9c1b2/charging_solar_adapter.png",
@@ -1745,12 +1745,12 @@
       },
       {
         "path": "manual_je2000f_eu_en.md",
-        "sha256": "a431fe28a168986b3c0951fa95510ec7a710295683ebf89f00207c9e804298c5",
-        "size": 66757
+        "sha256": "12b43282506712d324fb9282a116f7480b65b53f9d5b14ea36702d7ec34521c9",
+        "size": 66751
       }
     ],
     "manual": "manual_je2000f_eu_en.md",
-    "sha256": "2daeb0050187d978aa9346913ac7b015eacc3c5b8f1158f6627a5aebe45bf414"
+    "sha256": "b95fda6d10d1bc1acbfbf274d82daa165e3946a08c71a42b887824dd9bfe043f"
   },
   "model": "JE-2000F",
   "projection_manifest": {
@@ -1759,5 +1759,5 @@
   },
   "region": "EU",
   "schema_version": "auto-manual-web-language-release-evidence/v1",
-  "version": "2.1"
+  "version": "2.2"
 }

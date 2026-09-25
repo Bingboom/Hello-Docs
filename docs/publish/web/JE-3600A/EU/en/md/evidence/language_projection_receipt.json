@@ -104,7 +104,7 @@
     ],
     "sha256": "4f806529eb83fee80d75a439c777d49fb177bae7649f4019f5652ed45ba89498"
   },
-  "git_ref": "9efaad3c5ff11831cf124493d3fa96b15a4be16d",
+  "git_ref": "77fe0bd5f856df73ccb885def18efbadc8946ee7",
   "html": {
     "files": [
       {
@@ -1354,11 +1354,6 @@
         "size": 3534
       },
       {
-        "path": "assets/ir/2d802d195f949e5c13ffbfc0c65be91dd737b995d71b422bdf0709dc7cba526b/control_panel.png",
-        "sha256": "2d802d195f949e5c13ffbfc0c65be91dd737b995d71b422bdf0709dc7cba526b",
-        "size": 141239
-      },
-      {
         "path": "assets/ir/2ee9c4e13b8089a03296a1e3f87ad70218fd1321f1c7b71c6915b3494c3b61b9/inbox_cable.png",
         "sha256": "2ee9c4e13b8089a03296a1e3f87ad70218fd1321f1c7b71c6915b3494c3b61b9",
         "size": 8180
@@ -1454,6 +1449,11 @@
         "size": 2699
       },
       {
+        "path": "assets/ir/ed037e0a4292ede0e3fb669fad0cc9976d01408c1e86f64327698e76ea5f6c69/app_add_device_panel.png",
+        "sha256": "ed037e0a4292ede0e3fb669fad0cc9976d01408c1e86f64327698e76ea5f6c69",
+        "size": 824048
+      },
+      {
         "path": "assets/ir/f28d219896d0e44c69baad45ed6fcd2721705388bfdd742268f70407e73006eb/overview_side.png",
         "sha256": "f28d219896d0e44c69baad45ed6fcd2721705388bfdd742268f70407e73006eb",
         "size": 116986
@@ -1495,12 +1495,12 @@
       },
       {
         "path": "manual_je3600a_eu_en.md",
-        "sha256": "129f5650d38113e62e03d66a0932a256d84d91b031938c9b1513d3c9305b24fb",
-        "size": 50801
+        "sha256": "ec4c92076eaa5f34c5e0057da112d9decd3813cd4f26981523d6dd59e6a86ca0",
+        "size": 50815
       }
     ],
     "manual": "manual_je3600a_eu_en.md",
-    "sha256": "dc48da465f2587dfc7a9a55a9e9faf2542dc748a38694cb228435d81fa0f2678"
+    "sha256": "6add680d50dec21339e5673d4215ffe35295816317fafe56032e003ae11bb4b5"
   },
   "model": "JE-3600A",
   "projection_manifest": {
@@ -1509,5 +1509,5 @@
   },
   "region": "EU",
   "schema_version": "auto-manual-web-language-release-evidence/v1",
-  "version": "2026-05-25.1"
+  "version": "2026-05-25.3"
 }

@@ -585,11 +585,7 @@ Cerca \"Jackery\" su Google Play o nell\'App Store per installare l\'app. Dopodi
 
 2.2 Premi il pulsante POWER principale sul dispositivo per accenderlo; le icone Wi-Fi e Bluetooth sul dispositivo lampeggiano per indicare che il dispositivo è entrato nella modalità di configurazione di rete. Fai clic sul pulsante \"**Icon Flashed**\" (icona lampeggiante) e consenti all\'app di connettersi ai dispositivi vicini e di aprire le autorizzazioni Bluetooth.
 
-
-
-<figure class="hb-app-add-device-composition" data-component-id="HB-SPECIAL-APP" data-reference-id="app-add-device" data-step-captions="embedded"><div class="hb-app-add-device-phone-stage"><img alt="Segnaposto per il passaggio di aggiunta dispositivo nell'app." class="hb-app-add-device-phone-art" src="../../../../_static/manual-assets/_pool/9b/9b7e0cf44d0f37dc89cc04bb57bba1ebb9c3bbc5db3f0190575dd03e96ab0d0f.png"/></div><div class="hb-app-add-device-control-panel"><img alt="" aria-hidden="true" class="hb-app-add-device-control-art" loading="lazy" src="../../../../_static/manual-assets/_pool/2b/2b9bc2598d7a272629311ecc2f494091c31f15ee2ebb4d59bda5f6e8ee5c9f49.png"/><span class="hb-app-add-device-live-label hb-app-add-device-live-label-main-power">Pulsante POWER principale</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-ac-power">Pulsante CA</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-dc-usb">Pulsante DC / USB</span></div></figure>
-
-
+<img src="../../../../_static/manual-assets/_pool/35/3517f0e43eb2b0e5480378dee11c240d7ce7c6a46a6b03310d590bcee5b3f38d.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-add-device" data-web-finished-panel-path="assets/je2000f_eu_it/app_add_device_panel.png" data-web-finished-panel-sha256="3517f0e43eb2b0e5480378dee11c240d7ce7c6a46a6b03310d590bcee5b3f38d" alt="Pulsante POWER principale Pulsante CA Pulsante DC / USB" />
 
 2.3 Dopo aver toccato l\'icona del dispositivo trovato, l\'app si connette automaticamente al dispositivo tramite Bluetooth.
 

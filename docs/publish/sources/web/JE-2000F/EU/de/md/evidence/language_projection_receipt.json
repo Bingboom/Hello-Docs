@@ -89,7 +89,7 @@
     ],
     "sha256": "b58dcdcbfa2a9215c6df7c13b89c931a6621b8ed2dd6ed7988f55d4aae07f8a5"
   },
-  "git_ref": "8cb694ebf08a88ecc5b4d26534f8939deb1adc4b",
+  "git_ref": "77fe0bd5f856df73ccb885def18efbadc8946ee7",
   "html": {
     "files": [
       {
@@ -1454,16 +1454,6 @@
   "markdown": {
     "files": [
       {
-        "path": "assets/app_add_device_steps_9b7e0cf44d0f.png",
-        "sha256": "9b7e0cf44d0f37dc89cc04bb57bba1ebb9c3bbc5db3f0190575dd03e96ab0d0f",
-        "size": 398750
-      },
-      {
-        "path": "assets/app_control_panel_2b9bc2598d7a.png",
-        "sha256": "2b9bc2598d7a272629311ecc2f494091c31f15ee2ebb4d59bda5f6e8ee5c9f49",
-        "size": 11976
-      },
-      {
         "path": "assets/ir/0c64da83ffb591ad8c4d9c372eb0ff99a1b120cf58206c603c78050c66fe91d8/ups.png",
         "sha256": "0c64da83ffb591ad8c4d9c372eb0ff99a1b120cf58206c603c78050c66fe91d8",
         "size": 73366
@@ -1517,11 +1507,6 @@
         "path": "assets/ir/37bf4f4918f338372737a22a6a43c72d1610cae96e063cc66201f9f529701c24/download.png",
         "sha256": "37bf4f4918f338372737a22a6a43c72d1610cae96e063cc66201f9f529701c24",
         "size": 31919
-      },
-      {
-        "path": "assets/ir/474b6e86398672ad0e36c08df860c09fe1645f96c95e80c9d68cc5549f012f4c/add_device.png",
-        "sha256": "474b6e86398672ad0e36c08df860c09fe1645f96c95e80c9d68cc5549f012f4c",
-        "size": 64112
       },
       {
         "path": "assets/ir/5272f673d00ff133260066f4fabf0ce13aa20a2c92ed7e8029759bbe4e399f33/operation_power.png",
@@ -1632,6 +1617,11 @@
         "path": "assets/ir/8be87c5a084994e3b4b6ddff46ce0296207a5c49c732f8ed13adfbcb28a36538/8_AC_Power_Indicator_HFPSbvWBgosvCux69jMcuWe6nnh.png",
         "sha256": "8be87c5a084994e3b4b6ddff46ce0296207a5c49c732f8ed13adfbcb28a36538",
         "size": 3962
+      },
+      {
+        "path": "assets/ir/91623b3adc677e3460b9a4aa9a0a2616a457a098e7bdfae5a25602b7090e74eb/app_add_device_panel.png",
+        "sha256": "91623b3adc677e3460b9a4aa9a0a2616a457a098e7bdfae5a25602b7090e74eb",
+        "size": 899007
       },
       {
         "path": "assets/ir/91cec82eeaa553477868d38789d68a4937cb11c5c4d794de74db1edddb3aeea4/14_Solar_Charging_Indicator_RgAUbPXNWoRxiHxKNgkc2gqDnEb.png",
@@ -1745,12 +1735,12 @@
       },
       {
         "path": "manual_je2000f_eu_de.md",
-        "sha256": "bfca3d2b85520291a48fbe1cd8ad4cc10ada938b4de3530b7bbbb86fb65c860c",
-        "size": 69924
+        "sha256": "15b4c88a4c0f3baec97fc67a51a855b9838d2355014176c8c15512a5ef4e8aca",
+        "size": 69531
       }
     ],
     "manual": "manual_je2000f_eu_de.md",
-    "sha256": "8ed20cd5ffa7203d75f7c9d3e07498b58e4cba87d53ac2d21853e77e6ab41893"
+    "sha256": "111bb46e326f68418c236218a674e5cc2c804131560837eeca464a38f9ac0864"
   },
   "model": "JE-2000F",
   "projection_manifest": {
@@ -1759,5 +1749,5 @@
   },
   "region": "EU",
   "schema_version": "auto-manual-web-language-release-evidence/v1",
-  "version": "2.1"
+  "version": "2.2"
 }

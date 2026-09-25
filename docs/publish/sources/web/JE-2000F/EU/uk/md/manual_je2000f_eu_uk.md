@@ -597,11 +597,7 @@ Jackery Explorer 2000 має два вхідні порти DC8020 і суміс
 
 2.2 Натисніть головну кнопку POWER на пристрої, щоб увімкнути його; значки Wi-Fi та Bluetooth на пристрої блимають, що означає перехід пристрою в режим налаштування мережі, торкніться кнопки \"**Значок блимає**\" і дозвольте додатку підключитися до найближчих пристроїв та надати дозвіл Bluetooth.
 
-
-
-<figure class="hb-app-add-device-composition" data-component-id="HB-SPECIAL-APP" data-reference-id="app-add-device" data-step-captions="embedded"><div class="hb-app-add-device-phone-stage"><img alt="Заглушка кроку додавання пристрою в додатку." class="hb-app-add-device-phone-art" src="assets/app_add_device_steps_9b7e0cf44d0f.png"/></div><div class="hb-app-add-device-control-panel"><img alt="" aria-hidden="true" class="hb-app-add-device-control-art" loading="lazy" src="assets/app_control_panel_2b9bc2598d7a.png"/><span class="hb-app-add-device-live-label hb-app-add-device-live-label-main-power">Головна кнопка POWER</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-ac-power">Кнопка AC</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-dc-usb">Кнопка DC / USB</span></div></figure>
-
-
+<img src="assets/ir/8da4a952b5f6e596f445d921f59cc55663dcd547b0a3f75550b57827b762c964/app_add_device_panel.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-add-device" data-web-finished-panel-path="assets/je2000f_eu_uk/app_add_device_panel.png" data-web-finished-panel-sha256="8da4a952b5f6e596f445d921f59cc55663dcd547b0a3f75550b57827b762c964" alt="Головна кнопка POWER Кнопка AC Кнопка DC / USB" />
 
 2.3 Після натискання на значок знайденого пристрою додаток автоматично підключить пристрій через Bluetooth.
 
