@@ -68,18 +68,18 @@
 </colgroup>
 <tbody>
 <tr>
-<td><p><strong>POWER Button</strong></p></td>
+<td><p><strong>Кнопка POWER</strong></p></td>
 <td><p><strong>LCD</strong></p></td>
 </tr>
 <tr>
 <td><p><strong>DC 12 V Port</strong></p>
 <p>12 V⎓10 A max.</p></td>
-<td><p><strong>DC / USB Power Button</strong></p></td>
+<td><p><strong>Кнопка живлення DC/USB</strong></p></td>
 </tr>
 <tr>
 <td><p><strong>USB-C 100 W Output</strong></p>
 <p>100 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓3 A, 15 V⎓3 A, 20 V⎓5 A</p></td>
-<td><p><strong>AC Power Button</strong></p></td>
+<td><p><strong>Кнопка живлення AC</strong></p></td>
 </tr>
 <tr>
 <td><p><strong>USB-A 18 W Output</strong></p>
@@ -700,7 +700,7 @@ Jackery Explorer 3000 має два вхідні порти DC8020 і суміс
 
 
 
-<figure class="hb-app-add-device-composition" data-component-id="HB-SPECIAL-APP" data-reference-id="app-add-device" data-step-captions="embedded"><div class="hb-app-add-device-phone-stage"><img alt="Заглушка кроку додавання пристрою в додатку." class="hb-app-add-device-phone-art" src="assets/app_add_device_steps_9b7e0cf44d0f.png"/></div><div class="hb-app-add-device-control-panel"><img alt="" aria-hidden="true" class="hb-app-add-device-control-art" loading="lazy" src="assets/app_control_panel_2b9bc2598d7a.png"/><span class="hb-app-add-device-live-label hb-app-add-device-live-label-main-power">POWER Button</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-ac-power">AC Power Button</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-dc-usb">DC / USB Power Button</span></div></figure>
+<figure class="hb-app-add-device-composition" data-component-id="HB-SPECIAL-APP" data-reference-id="app-add-device" data-step-captions="embedded"><div class="hb-app-add-device-phone-stage"><img alt="Заглушка кроку додавання пристрою в додатку." class="hb-app-add-device-phone-art" src="assets/app_add_device_steps_9b7e0cf44d0f.png"/></div><div class="hb-app-add-device-control-panel"><img alt="" aria-hidden="true" class="hb-app-add-device-control-art" loading="lazy" src="assets/app_control_panel_2b9bc2598d7a.png"/><span class="hb-app-add-device-live-label hb-app-add-device-live-label-main-power">Кнопка POWER</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-ac-power">Кнопка живлення AC</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-dc-usb">Кнопка живлення DC/USB</span></div></figure>
 
 
 

@@ -68,18 +68,18 @@ Para obtener asistencia, comunícate con el servicio al cliente de Jackery.</p><
 </colgroup>
 <tbody>
 <tr>
-<td><p><strong>POWER Button</strong></p></td>
+<td><p><strong>Botón de encendido principal</strong></p></td>
 <td><p><strong>LCD</strong></p></td>
 </tr>
 <tr>
 <td><p><strong>DC 12 V Port</strong></p>
 <p>12 V⎓10 A max.</p></td>
-<td><p><strong>DC / USB Power Button</strong></p></td>
+<td><p><strong>Botón de energía CC/USB</strong></p></td>
 </tr>
 <tr>
 <td><p><strong>USB-C 100 W Output</strong></p>
 <p>100 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓3 A, 15 V⎓3 A, 20 V⎓5 A</p></td>
-<td><p><strong>AC Power Button</strong></p></td>
+<td><p><strong>Botón de energía CA</strong></p></td>
 </tr>
 <tr>
 <td><p><strong>USB-A 18 W Output</strong></p>
@@ -260,7 +260,7 @@ El producto puede cargar la batería de su vehículo utilizando el cable de carg
 
 ## MODO DE AHORRO DE ENERGÍA
 
-Para desactivar el modo de ahorro de energía, mantenga pulsados simultáneamente el AC power button y el POWER button durante más de 3 segundos. Una vez desactivado el modo de ahorro de energía, el icono dejará de mostrarse en la pantalla LCD y el producto no apagará automáticamente la salida de CA o CC/USB.
+Para desactivar el modo de ahorro de energía, mantenga pulsados simultáneamente el botón de energía CA y el botón de encendido principal durante más de 3 segundos. Una vez desactivado el modo de ahorro de energía, el icono dejará de mostrarse en la pantalla LCD y el producto no apagará automáticamente la salida de CA o CC/USB.
 
 Cuando alimente dispositivos de baja potencia (CA ≤ 25 W o CC/USB ≤ 2 W), desactive el modo de ahorro de energía para evitar que la salida se apague automáticamente durante el funcionamiento.
 
@@ -681,11 +681,11 @@ Buscar \"Jackery\" en Google Play o en la App Store para instalar la aplicación
 
 2.1 Haga clic en el botón **+** para añadir el dispositivo.
 
-2.2 Presione una vez el POWER button del dispositivo para encenderlo. Los iconos del wifi y del Bluetooth del dispositivo parpadearán para indicar que el dispositivo ha entrado en el modo de configuración de red. A continuación, pulse el botón \"icono parpadeante\" y permita que la aplicación se conecte a los dispositivos cercanos y abra los permisos de Bluetooth.
+2.2 Presione una vez el botón de encendido principal del dispositivo para encenderlo. Los iconos del wifi y del Bluetooth del dispositivo parpadearán para indicar que el dispositivo ha entrado en el modo de configuración de red. A continuación, pulse el botón \"icono parpadeante\" y permita que la aplicación se conecte a los dispositivos cercanos y abra los permisos de Bluetooth.
 
 
 
-<figure class="hb-app-add-device-composition" data-component-id="HB-SPECIAL-APP" data-reference-id="app-add-device" data-step-captions="embedded"><div class="hb-app-add-device-phone-stage"><img alt="Marcador de posición para el paso de añadir dispositivo en la aplicación." class="hb-app-add-device-phone-art" src="assets/app_add_device_steps_9b7e0cf44d0f.png"/></div><div class="hb-app-add-device-control-panel"><img alt="" aria-hidden="true" class="hb-app-add-device-control-art" loading="lazy" src="assets/app_control_panel_2b9bc2598d7a.png"/><span class="hb-app-add-device-live-label hb-app-add-device-live-label-main-power">POWER Button</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-dc-usb">DC / USB Power Button</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-ac-power">AC Power Button</span></div></figure>
+<figure class="hb-app-add-device-composition" data-component-id="HB-SPECIAL-APP" data-reference-id="app-add-device" data-step-captions="embedded"><div class="hb-app-add-device-phone-stage"><img alt="Marcador de posición para el paso de añadir dispositivo en la aplicación." class="hb-app-add-device-phone-art" src="assets/app_add_device_steps_9b7e0cf44d0f.png"/></div><div class="hb-app-add-device-control-panel"><img alt="" aria-hidden="true" class="hb-app-add-device-control-art" loading="lazy" src="assets/app_control_panel_2b9bc2598d7a.png"/><span class="hb-app-add-device-live-label hb-app-add-device-live-label-main-power">Botón de encendido principal</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-dc-usb">Botón de energía CC/USB</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-ac-power">Botón de energía CA</span></div></figure>
 
 
 
@@ -696,7 +696,7 @@ Buscar \"Jackery\" en Google Play o en la App Store para instalar la aplicación
 <table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>NOTA</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Si durante el proceso de vinculación se indica que "el dispositivo ha sido vinculado", se pueden utilizar las dos formas siguientes para la conexión:</p>
 <ul class="simple">
 <li><p>El propietario del dispositivo lo compartirá con otros usuarios a través de la App.</p></li>
-<li><p>Mantenga pulsados el POWER button y DC / USB power button durante 3 segundos para reiniciar el Wi‑Fi y el Bluetooth del dispositivo y, a continuación, vuelva a vincularlo.</p></li>
+<li><p>Mantenga pulsados el botón de encendido principal y botón de energía CC/USB durante 3 segundos para reiniciar el Wi‑Fi y el Bluetooth del dispositivo y, a continuación, vuelva a vincularlo.</p></li>
 </ul>
 </td></tr></tbody></table>
 
@@ -732,12 +732,12 @@ Haga clic en el icono **Configuración**, en la esquina superior derecha de la i
 
 - El wifi y el Bluetooth se encienden automáticamente al encender el dispositivo y se iluminan los iconos de wifi y Bluetooth de la pantalla.
 
-- Pulse el DC / USB power button y AC power button al mismo tiempo hasta que se enciendan los iconos de wifi y Bluetooth en la pantalla.
+- Pulse el botón de energía CC/USB y botón de energía CA al mismo tiempo hasta que se enciendan los iconos de wifi y Bluetooth en la pantalla.
 
 ### 4.2 Para desactivar Wi-Fi y Bluetooth
 
-Mantenga pulsados DC / USB power button y AC power button al mismo tiempo hasta que se apaguen los iconos de wifi y Bluetooth en la pantalla.
+Mantenga pulsados botón de energía CC/USB y botón de energía CA al mismo tiempo hasta que se apaguen los iconos de wifi y Bluetooth en la pantalla.
 
 ### 4.3 Para restablecer Wi-Fi y Bluetooth
 
-Pulsa el POWER button y DC / USB power button al mismo tiempo durante 3 segundos para restablecer los ajustes de fábrica de Wi-Fi y Bluetooth. Se desvinculará la cuenta de la aplicación conectada.
+Pulsa el botón de encendido principal y botón de energía CC/USB al mismo tiempo durante 3 segundos para restablecer los ajustes de fábrica de Wi-Fi y Bluetooth. Se desvinculará la cuenta de la aplicación conectada.

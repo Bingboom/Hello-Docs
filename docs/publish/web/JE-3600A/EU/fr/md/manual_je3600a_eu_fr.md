@@ -649,11 +649,11 @@ Vous pouvez également scanner le code QR ci-dessous pour télécharger et insta
 
 2.1 Cliquez sur le bouton **+** pour ajouter un appareil.
 
-2.2 Appuyez sur le power button de l'appareil pour l'allumer. Les icônes Wi-Fi et Bluetooth clignotent sur l'appareil afin d'indiquer qu'il est entré dans le mode Configuration réseau. Cliquez sur le bouton « Icône qui clignote » et autorisez l'application à se connecter aux appareils alentour, puis ouvrez les autorisations Bluetooth.
+2.2 Appuyez sur le bouton d\'alimentation principal de l'appareil pour l'allumer. Les icônes Wi-Fi et Bluetooth clignotent sur l'appareil afin d'indiquer qu'il est entré dans le mode Configuration réseau. Cliquez sur le bouton « Icône qui clignote » et autorisez l'application à se connecter aux appareils alentour, puis ouvrez les autorisations Bluetooth.
 
 
 
-<figure class="hb-app-add-device-composition" data-component-id="HB-SPECIAL-APP" data-reference-id="app-add-device" data-step-captions="embedded"><div class="hb-app-add-device-phone-stage"><img alt="Emplacement réservé à l'étape d'ajout d'appareil dans l'application." class="hb-app-add-device-phone-art" src="../../../../_static/manual-assets/_pool/9b/9b7e0cf44d0f37dc89cc04bb57bba1ebb9c3bbc5db3f0190575dd03e96ab0d0f.png"/></div><div class="hb-app-add-device-control-panel"><img alt="" aria-hidden="true" class="hb-app-add-device-control-art" loading="lazy" src="../../../../_static/manual-assets/_pool/2b/2b9bc2598d7a272629311ecc2f494091c31f15ee2ebb4d59bda5f6e8ee5c9f49.png"/><span class="hb-app-add-device-live-label hb-app-add-device-live-label-main-power">Power Button</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-dc-usb">USB Power Button</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-ac-power">AC Power Button</span></div></figure>
+<figure class="hb-app-add-device-composition" data-component-id="HB-SPECIAL-APP" data-reference-id="app-add-device" data-step-captions="embedded"><div class="hb-app-add-device-phone-stage"><img alt="Emplacement réservé à l'étape d'ajout d'appareil dans l'application." class="hb-app-add-device-phone-art" src="../../../../_static/manual-assets/_pool/9b/9b7e0cf44d0f37dc89cc04bb57bba1ebb9c3bbc5db3f0190575dd03e96ab0d0f.png"/></div><div class="hb-app-add-device-control-panel"><img alt="" aria-hidden="true" class="hb-app-add-device-control-art" loading="lazy" src="../../../../_static/manual-assets/_pool/2b/2b9bc2598d7a272629311ecc2f494091c31f15ee2ebb4d59bda5f6e8ee5c9f49.png"/><span class="hb-app-add-device-live-label hb-app-add-device-live-label-main-power">Bouton d'alimentation principal</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-dc-usb">Bouton d'alimentation USB</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-ac-power">Bouton d'alimentation CA</span></div></figure>
 
 
 
@@ -664,7 +664,7 @@ Vous pouvez également scanner le code QR ci-dessous pour télécharger et insta
 <table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>REMARQUE</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Si le message «l'appareil a été associé» s'affiche pendant l'appairage, vous pouvez suivre l'une de ces deux étapes pour procéder à la connexion.</p>
 <ul class="simple">
 <li><p>Le propriétaire de l'appareil peut partager ce dernier avec d'autres utilisateurs dans l'application.</p></li>
-<li><p>Maintenez le power button et le USB power button enfoncés pendant 3 secondes pour réinitialiser le Wi-Fi et le Bluetooth de l'appareil et l'associer de nouveau.</p></li>
+<li><p>Maintenez le bouton d'alimentation principal et le bouton d'alimentation USB enfoncés pendant 3 secondes pour réinitialiser le Wi-Fi et le Bluetooth de l'appareil et l'associer de nouveau.</p></li>
 </ul>
 </td></tr></tbody></table>
 
@@ -703,12 +703,12 @@ Cliquez sur le bouton des paramètres en haut à droite de l\'interface principa
 
 - Le Wi-Fi et le Bluetooth sont automatiquement activés, une fois l\'appareil allumé. Leurs icônes s\'allument sur l\'écran.
 
-- Appuyez simultanément sur le USB power button et le AC power button jusqu\'à ce que les icônes Wi-Fi et Bluetooth s\'allument sur l\'écran.
+- Appuyez simultanément sur le bouton d\'alimentation USB et le bouton d\'alimentation CA jusqu\'à ce que les icônes Wi-Fi et Bluetooth s\'allument sur l\'écran.
 
 ### 4.2 Pour désactiver le Wi-Fi et le Bluetooth
 
-Appuyez simultanément sur le USB power button et le AC power button jusqu'à ce que les icônes Wi-Fi et Bluetooth s'éteignent sur l'écran.
+Appuyez simultanément sur le bouton d\'alimentation USB et le bouton d\'alimentation CA jusqu'à ce que les icônes Wi-Fi et Bluetooth s'éteignent sur l'écran.
 
 ### 4.3 Pour réinitialiser le Wi-Fi et le Bluetooth
 
-Maintenez le power button et le USB power button enfoncés simultanément pendant 3 secondes pour réinitialiser le Wi-Fi et le Bluetooth aux paramètres d'usine. Le compte connecté dans l'application sera dissocié.
+Maintenez le bouton d\'alimentation principal et le bouton d\'alimentation USB enfoncés simultanément pendant 3 secondes pour réinitialiser le Wi-Fi et le Bluetooth aux paramètres d'usine. Le compte connecté dans l'application sera dissocié.

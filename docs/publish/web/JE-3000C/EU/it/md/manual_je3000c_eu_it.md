@@ -68,18 +68,18 @@ Per assistenza, contatta il servizio clienti Jackery.</p></div></div></figure>
 </colgroup>
 <tbody>
 <tr>
-<td><p><strong>POWER Button</strong></p></td>
+<td><p><strong>Pulsante di accensione principale</strong></p></td>
 <td><p><strong>LCD</strong></p></td>
 </tr>
 <tr>
 <td><p><strong>DC 12 V Port</strong></p>
 <p>12 V⎓10 A max.</p></td>
-<td><p><strong>DC / USB Power Button</strong></p></td>
+<td><p><strong>Pulsante Alimentazione DC/USB</strong></p></td>
 </tr>
 <tr>
 <td><p><strong>USB-C 100 W Output</strong></p>
 <p>100 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓3 A, 15 V⎓3 A, 20 V⎓5 A</p></td>
-<td><p><strong>AC Power Button</strong></p></td>
+<td><p><strong>Pulsante AC</strong></p></td>
 </tr>
 <tr>
 <td><p><strong>USB-A 18 W Output</strong></p>
@@ -351,7 +351,7 @@ Puoi anche impostare la modalità di visualizzazione dello schermo nell\'App Jac
 
 # GRUPPO DI CONTINUITÀ (UPS)
 
-Collega il prodotto a una presa a muro con il cavo di ricarica CA, quindi premi il AC power button e alimenta contemporaneamente i tuoi apparecchi.
+Collega il prodotto a una presa a muro con il cavo di ricarica CA, quindi premi il pulsante AC e alimenta contemporaneamente i tuoi apparecchi.
 
 <img src="../../../../_static/manual-assets/_pool/58/5866fb05040e5b4423c473d5e7abf87122e0e93f5afce742696a09454b4bd675.png" style="width: 360px;" width="360" height="273" alt="Segnaposto diagramma di connessione UPS." />
 
@@ -684,11 +684,11 @@ Cerca \"Jackery\" su Google Play o nell\'App Store per installare l\'app. Dopodi
 
 2.1 Fai clic sul pulsante **+** per aggiungere il dispositivo.
 
-2.2 Premi il POWER button sul dispositivo per accenderlo; le icone Wi-Fi e Bluetooth sul dispositivo lampeggiano per indicare che il dispositivo è entrato nella modalità di configurazione di rete. Fai clic sul pulsante \"**Icon Flashed**\" (icona lampeggiante) e consenti all\'app di connettersi ai dispositivi vicini e di aprire le autorizzazioni Bluetooth.
+2.2 Premi il pulsante di accensione principale sul dispositivo per accenderlo; le icone Wi-Fi e Bluetooth sul dispositivo lampeggiano per indicare che il dispositivo è entrato nella modalità di configurazione di rete. Fai clic sul pulsante \"**Icon Flashed**\" (icona lampeggiante) e consenti all\'app di connettersi ai dispositivi vicini e di aprire le autorizzazioni Bluetooth.
 
 
 
-<figure class="hb-app-add-device-composition" data-component-id="HB-SPECIAL-APP" data-reference-id="app-add-device" data-step-captions="embedded"><div class="hb-app-add-device-phone-stage"><img alt="Segnaposto per il passaggio di aggiunta dispositivo nell'app." class="hb-app-add-device-phone-art" src="../../../../_static/manual-assets/_pool/9b/9b7e0cf44d0f37dc89cc04bb57bba1ebb9c3bbc5db3f0190575dd03e96ab0d0f.png"/></div><div class="hb-app-add-device-control-panel"><img alt="" aria-hidden="true" class="hb-app-add-device-control-art" loading="lazy" src="../../../../_static/manual-assets/_pool/2b/2b9bc2598d7a272629311ecc2f494091c31f15ee2ebb4d59bda5f6e8ee5c9f49.png"/><span class="hb-app-add-device-live-label hb-app-add-device-live-label-main-power">POWER Button</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-ac-power">AC Power Button</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-dc-usb">DC / USB Power Button</span></div></figure>
+<figure class="hb-app-add-device-composition" data-component-id="HB-SPECIAL-APP" data-reference-id="app-add-device" data-step-captions="embedded"><div class="hb-app-add-device-phone-stage"><img alt="Segnaposto per il passaggio di aggiunta dispositivo nell'app." class="hb-app-add-device-phone-art" src="../../../../_static/manual-assets/_pool/9b/9b7e0cf44d0f37dc89cc04bb57bba1ebb9c3bbc5db3f0190575dd03e96ab0d0f.png"/></div><div class="hb-app-add-device-control-panel"><img alt="" aria-hidden="true" class="hb-app-add-device-control-art" loading="lazy" src="../../../../_static/manual-assets/_pool/2b/2b9bc2598d7a272629311ecc2f494091c31f15ee2ebb4d59bda5f6e8ee5c9f49.png"/><span class="hb-app-add-device-live-label hb-app-add-device-live-label-main-power">Pulsante di accensione principale</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-ac-power">Pulsante AC</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-dc-usb">Pulsante Alimentazione DC/USB</span></div></figure>
 
 
 
@@ -699,7 +699,7 @@ Cerca \"Jackery\" su Google Play o nell\'App Store per installare l\'app. Dopodi
 <table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>NOTA</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Se durante la procedura di associazione viene visualizzato il messaggio "<strong>il dispositivo è già stato associato</strong>", puoi usare i due metodi seguenti per la connessione:</p>
 <ul class="simple">
 <li><p>Il proprietario del dispositivo condividerà questo dispositivo con altri utenti tramite l'app.</p></li>
-<li><p>Tieni premuti POWER button + DC / USB power button per 3 secondi per ripristinare il Wi-Fi e il Bluetooth del dispositivo, quindi associa nuovamente il dispositivo.</p></li>
+<li><p>Tieni premuti pulsante di accensione principale + pulsante alimentazione DC/USB per 3 secondi per ripristinare il Wi-Fi e il Bluetooth del dispositivo, quindi associa nuovamente il dispositivo.</p></li>
 </ul>
 </td></tr></tbody></table>
 
@@ -738,12 +738,12 @@ Fai clic sull\'icona **Impostazioni** nell\'angolo in alto a destra dell\'interf
 
 - Wi-Fi e Bluetooth si attivano automaticamente dopo l\'accensione del dispositivo e le icone Wi-Fi e Bluetooth sullo schermo si illuminano.
 
-- Tieni premuti contemporaneamente DC / USB power button + AC power button finché le icone Wi-Fi e Bluetooth sullo schermo si illuminano.
+- Tieni premuti contemporaneamente pulsante alimentazione DC/USB + pulsante AC finché le icone Wi-Fi e Bluetooth sullo schermo si illuminano.
 
 ### 4.2 Per disattivare Wi-Fi e Bluetooth
 
-Tieni premuti contemporaneamente DC / USB power button + AC power button finché le icone Wi-Fi e Bluetooth sullo schermo si spengono.
+Tieni premuti contemporaneamente pulsante alimentazione DC/USB + pulsante AC finché le icone Wi-Fi e Bluetooth sullo schermo si spengono.
 
 ### 4.3 Per ripristinare Wi-Fi e Bluetooth
 
-Tieni premuti contemporaneamente POWER button + DC / USB power button per 3 secondi per ripristinare Wi-Fi e Bluetooth alle impostazioni di fabbrica. L\'account dell\'app collegato verrà disassociato.
+Tieni premuti contemporaneamente pulsante di accensione principale + pulsante alimentazione DC/USB per 3 secondi per ripristinare Wi-Fi e Bluetooth alle impostazioni di fabbrica. L\'account dell\'app collegato verrà disassociato.

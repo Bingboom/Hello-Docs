@@ -647,11 +647,11 @@ Buscar \"Jackery\" en Google Play o en la App Store para instalar la aplicación
 
 2.1 Haga clic en el botón **+** para añadir el dispositivo.
 
-2.2 Presione una vez el power button del dispositivo para encenderlo. Los iconos del wifi y del Bluetooth del dispositivo parpadearán para indicar que el dispositivo ha entrado en el modo de configuración de red. A continuación, pulse el botón \"icono parpadeante\" y permita que la aplicación se conecte a los dispositivos cercanos y abra los permisos de Bluetooth.
+2.2 Presione una vez el botón de encendido principal del dispositivo para encenderlo. Los iconos del wifi y del Bluetooth del dispositivo parpadearán para indicar que el dispositivo ha entrado en el modo de configuración de red. A continuación, pulse el botón \"icono parpadeante\" y permita que la aplicación se conecte a los dispositivos cercanos y abra los permisos de Bluetooth.
 
 
 
-<figure class="hb-app-add-device-composition" data-component-id="HB-SPECIAL-APP" data-reference-id="app-add-device" data-step-captions="embedded"><div class="hb-app-add-device-phone-stage"><img alt="Marcador de posición para el paso de añadir dispositivo en la aplicación." class="hb-app-add-device-phone-art" src="../../../../_static/manual-assets/_pool/9b/9b7e0cf44d0f37dc89cc04bb57bba1ebb9c3bbc5db3f0190575dd03e96ab0d0f.png"/></div><div class="hb-app-add-device-control-panel"><img alt="" aria-hidden="true" class="hb-app-add-device-control-art" loading="lazy" src="../../../../_static/manual-assets/_pool/2b/2b9bc2598d7a272629311ecc2f494091c31f15ee2ebb4d59bda5f6e8ee5c9f49.png"/><span class="hb-app-add-device-live-label hb-app-add-device-live-label-main-power">Power Button</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-dc-usb">USB Power Button</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-ac-power">AC Power Button</span></div></figure>
+<figure class="hb-app-add-device-composition" data-component-id="HB-SPECIAL-APP" data-reference-id="app-add-device" data-step-captions="embedded"><div class="hb-app-add-device-phone-stage"><img alt="Marcador de posición para el paso de añadir dispositivo en la aplicación." class="hb-app-add-device-phone-art" src="../../../../_static/manual-assets/_pool/9b/9b7e0cf44d0f37dc89cc04bb57bba1ebb9c3bbc5db3f0190575dd03e96ab0d0f.png"/></div><div class="hb-app-add-device-control-panel"><img alt="" aria-hidden="true" class="hb-app-add-device-control-art" loading="lazy" src="../../../../_static/manual-assets/_pool/2b/2b9bc2598d7a272629311ecc2f494091c31f15ee2ebb4d59bda5f6e8ee5c9f49.png"/><span class="hb-app-add-device-live-label hb-app-add-device-live-label-main-power">Botón de encendido principal</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-dc-usb">Botón de energía USB</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-ac-power">Botón de energía CA</span></div></figure>
 
 
 
@@ -662,7 +662,7 @@ Buscar \"Jackery\" en Google Play o en la App Store para instalar la aplicación
 <table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>NOTA</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Si durante el proceso de vinculación se indica que "el dispositivo ha sido vinculado", se pueden utilizar las dos formas siguientes para la conexión:</p>
 <ul class="simple">
 <li><p>El propietario del dispositivo lo compartirá con otros usuarios a través de la App.</p></li>
-<li><p>Mantenga pulsados el power button y USB power button durante 3 segundos para reiniciar el Wi‑Fi y el Bluetooth del dispositivo y, a continuación, vuelva a vincularlo.</p></li>
+<li><p>Mantenga pulsados el botón de encendido principal y botón de energía USB durante 3 segundos para reiniciar el Wi‑Fi y el Bluetooth del dispositivo y, a continuación, vuelva a vincularlo.</p></li>
 </ul>
 </td></tr></tbody></table>
 
@@ -698,12 +698,12 @@ Haga clic en el icono **Configuración**, en la esquina superior derecha de la i
 
 - El wifi y el Bluetooth se encienden automáticamente al encender el dispositivo y se iluminan los iconos de wifi y Bluetooth de la pantalla.
 
-- Pulse el USB power button y AC power button al mismo tiempo hasta que se enciendan los iconos de wifi y Bluetooth en la pantalla.
+- Pulse el botón de energía USB y botón de energía CA al mismo tiempo hasta que se enciendan los iconos de wifi y Bluetooth en la pantalla.
 
 ### 4.2 Para desactivar Wi-Fi y Bluetooth
 
-Mantenga pulsados USB power button y AC power button al mismo tiempo hasta que se apaguen los iconos de wifi y Bluetooth en la pantalla.
+Mantenga pulsados botón de energía USB y botón de energía CA al mismo tiempo hasta que se apaguen los iconos de wifi y Bluetooth en la pantalla.
 
 ### 4.3 Para restablecer Wi-Fi y Bluetooth
 
-Pulsa el power button y USB power button al mismo tiempo durante 3 segundos para restablecer los ajustes de fábrica de Wi-Fi y Bluetooth. Se desvinculará la cuenta de la aplicación conectada.
+Pulsa el botón de encendido principal y botón de energía USB al mismo tiempo durante 3 segundos para restablecer los ajustes de fábrica de Wi-Fi y Bluetooth. Se desvinculará la cuenta de la aplicación conectada.
