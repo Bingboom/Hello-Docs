@@ -81,136 +81,137 @@ Para obtener asistencia, comunícate con el servicio al cliente de Jackery.</p><
 <td><p>1</p></td>
 <td></td>
 <td><p>Wi-Fi</p></td>
-<td>On: Wi-Fi connected.
-Blink: Ready to connect to Wi-Fi.
-Off: Wi-Fi disconnected.</td>
+<td><strong>Encendido:</strong> Wi-Fi conectado.
+<strong>Parpadeo:</strong> listo para conectarse al Wi-Fi.
+<strong>Apagado:</strong> Wi-Fi desconectado.</td>
 </tr>
 <tr>
 <td><p>2</p></td>
 <td></td>
 <td><p>Bluetooth</p></td>
-<td>On: Bluetooth connected.
-Blink: Ready to connect to Bluetooth.
-Off: Bluetooth disconnected.</td>
+<td><strong>Encendido:</strong> Bluetooth conectado.
+<strong>Parpadeo:</strong> listo para conectarse al Bluetooth.
+<strong>Apagado:</strong> Bluetooth desconectado.</td>
 </tr>
 <tr>
 <td><p>3</p></td>
 <td></td>
-<td><p>Quiet Charging Mode</p></td>
-<td>On: The noise during charging is significantly minimized, while the charging power is reduced and the charging speed slows down.
-Off: Quiet Charging Mode is disabled.
-Enable/disable this feature in the Jackery App.</td>
+<td><p>Modo de Carga Silenciosa</p></td>
+<td><strong>Encendido:</strong> el ruido durante la carga se minimiza significativamente, mientras que la potencia de carga se reduce y la velocidad de carga disminuye.
+<strong>Apagado:</strong> El modo de carga silenciosa está desactivado.
+Activar/desactivar esta función en la App Jackery.</td>
 </tr>
 <tr>
 <td><p>4</p></td>
 <td></td>
-<td><p>Battery Saving Mode / Self-powered Mode</p></td>
-<td>Battery Saving Mode: Limits the maximum usable battery capacity to extend battery life. Enable/disable this feature in the Jackery App. This feature is not available when the product is connected to battery pack(s).
-Self-powered Mode: Maximizes the use of solar energy and reduces reliance on grid electricity by prioritizing stored solar energy. Enable/disable this feature in the Jackery App. The power station must be connected to both solar panels and the grid simultaneously, with load power limited by bypass power.</td>
+<td><p>Modo de Ahorro de Batería / Modo Autónomo</p></td>
+<td>Modo de Ahorro de Batería: limita la capacidad máxima utilizable de la batería para prolongar su vida útil. Activar/desactivar esta función en la App Jackery. Esta función no está disponible cuando el producto está conectado a paquetes de baterías.
+Modo Autónomo: Maximiza el uso de la energía solar y reduce la dependencia de la electricidad de la red al priorizar la energía solar almacenada, reduciendo los costos eléctricos (por favor, active/desactive esta función en la aplicación). La estación de energía debe estar conectada simultáneamente a los paneles solares y a la red, con la potencia de carga limitada por la potencia de derivación.</td>
 </tr>
 <tr>
 <td><p>5</p></td>
 <td></td>
-<td><p>Charging Plan</p></td>
-<td><p>Customizes the charging time of the Jackery Explorer 3600 Plus. Suitable for situations with fluctuating electricity prices, it allows for charging plans based on peak and off-peak electricity times, reducing electricity costs. Set this feature in the Jackery App.</p></td>
+<td><p>Plan de Carga</p></td>
+<td><p>Personaliza el tiempo de carga del Jackery Explorer 3600 Plus. Adecuado para situaciones con tarifas eléctricas variables, permite establecer planes de carga según las horas pico y valle, reduciendo así los costos de electricidad (por favor, configure esta función en la aplicación Jackery).</p></td>
 </tr>
 <tr>
 <td><p>6</p></td>
 <td></td>
-<td><p>AC Power Indicator</p></td>
-<td><p>The AC output (pure sine wave) is on.</p></td>
+<td><p>Indicador de Energía de CA</p></td>
+<td><p>La salida CA (onda sinusoidal pura) está activada.</p></td>
 </tr>
 <tr>
 <td><p>7</p></td>
 <td></td>
-<td><p>Output Voltage and Frequency</p></td>
-<td><p>Displays the output voltage and frequency when the AC output is turned on.</p></td>
+<td><p>Voltaje y frecuencia de salida</p></td>
+<td><p>Muestra el voltaje y la frecuencia de salida.</p></td>
 </tr>
 <tr>
 <td><p>8</p></td>
 <td></td>
-<td><p>Input Power</p></td>
-<td><p>Displays the input power in watts.</p></td>
+<td><p>Potencia de Entrada</p></td>
+<td><p>Muestra la potencia de entrada en vatios.</p></td>
 </tr>
 <tr>
 <td><p>9</p></td>
 <td></td>
-<td><p>Remaining Charge Time</p></td>
-<td><p>Displays the remaining charging time.</p></td>
+<td><p>Tiempo de Carga Restante</p></td>
+<td><p>Muestra el tiempo de carga restante.</p></td>
 </tr>
 <tr>
 <td><p>10</p></td>
 <td></td>
-<td><p>AC Wall Charging Indicator</p></td>
-<td><p>The product is charged via the AC Input using grid power.</p></td>
+<td><p>Indicador de Carga desde Toma de Corriente CA</p></td>
+<td><p>El producto se carga a través de la entrada CA utilizando energía de la red eléctrica.</p></td>
 </tr>
 <tr>
 <td><p>11</p></td>
 <td></td>
-<td><p>Car Charging Indicator</p></td>
-<td><p>The product is charged via the DC Input (DC8020) using DC 12 V (car charging).</p></td>
+<td><p>Indicador de Carga desde Coche</p></td>
+<td><p>El producto se carga a través de la entrada CC (DC8020) utilizando CC 12 V (carga desde el coche).</p></td>
 </tr>
 <tr>
 <td><p>12</p></td>
 <td></td>
-<td><p>Solar Charging Indicator</p></td>
-<td><p>The product is charged via the DC Input (DC8020) using solar panel(s).</p></td>
+<td><p>Indicador de Carga Solar</p></td>
+<td><p>El producto se carga a través de la entrada CC (DC8020) utilizando paneles solares.</p></td>
 </tr>
 <tr>
 <td><p>13</p></td>
 <td></td>
-<td><p>Battery Power Indicator</p></td>
-<td><p>When the product is being charged, the orange circle around the battery percentage will light up in sequence. When charging other devices, the orange circle will stay on.</p></td>
+<td><p>Indicador de Potencia de la Batería</p></td>
+<td><p>Cuando el producto se está cargando, el círculo naranja alrededor del porcentaje de batería se ilumina secuencialmente. Cuando está cargando otros dispositivos, el círculo naranja permanece encendido.</p></td>
 </tr>
 <tr>
 <td><p>14</p></td>
 <td></td>
-<td><p>Low Battery Indicator</p></td>
-<td>On: The battery level is below 20%.
-Blink: The battery level is below 5%.
-Off: The battery level is not below 20% or the product is charging.</td>
+<td><p>Indicador de Batería Baja</p></td>
+<td><strong>Encendido:</strong> el nivel de la batería está por debajo del 20 %.
+<strong>Parpadeo:</strong> el nivel de la batería está por debajo del 5 %.
+<strong>Apagado:</strong> el nivel de la batería no está por debajo del 20 % o el producto se está cargando.</td>
 </tr>
 <tr>
 <td><p>15</p></td>
 <td></td>
-<td><p>Remaining Battery Percentage</p></td>
-<td><p>Displays the remaining battery percentage.</p></td>
+<td><p>Porcentaje de Batería Restante</p></td>
+<td><p>Muestra el porcentaje de batería restante.</p></td>
 </tr>
 <tr>
 <td><p>16</p></td>
 <td></td>
-<td><p>Battery Pack Indicator and Number of Connected Batteries</p></td>
-<td><p>Displays the quantity of battery packs if any is connected.</p></td>
+<td><p>Indicador de paquete de baterías y número de baterías conectadas</p></td>
+<td><p>Indica que el producto está conectado al número especificado de baterías adicionales 3600.</p></td>
 </tr>
 <tr>
 <td><p>17</p></td>
 <td></td>
-<td><p>Fault Code</p></td>
-<td><p>A product error has occurred. Please refer to the Troubleshooting section for details.</p></td>
+<td><p>Código de fallo</p></td>
+<td><p>Se ha producido un error en el producto. Por favor, consulte la sección de solución de problemas para más detalles.</p></td>
 </tr>
 <tr>
 <td><p>18</p></td>
 <td></td>
-<td><p>High Temperature Indicator / Low Temperature Indicator</p></td>
-<td><p>High temperature protection or low temperature protection is triggered. The product may stop functioning until its temperature returns to the normal operating range.</p></td>
+<td><p>Indicador de Alta Temperatura / Indicador de Baja Temperatura</p></td>
+<td>Se activó la protección por alta temperatura. El producto puede dejar de funcionar hasta que su temperatura vuelva al rango normal de operación.
+Se activó la protección por baja temperatura. El producto puede dejar de funcionar hasta que su temperatura vuelva al rango normal de operación.</td>
 </tr>
 <tr>
 <td><p>19</p></td>
 <td></td>
-<td><p>Energy Saving Mode</p></td>
-<td><p>When the AC or USB output is turned on by pressing the AC or USB power button: On: Energy Saving Mode is enabled. Off: Energy Saving Mode is disabled.</p></td>
+<td><p>Modo de Ahorro de Energía</p></td>
+<td><p>Cuando las salidas CA o USB se encienden presionando los botones de encendido CA o USB: Encendido: Modo de ahorro de energía activado. Apagado: Modo de ahorro de energía desactivado.</p></td>
 </tr>
 <tr>
 <td><p>20</p></td>
 <td></td>
-<td><p>Output Power</p></td>
-<td><p>Displays the output power in watts.</p></td>
+<td><p>Potencia de Salida</p></td>
+<td><p>Muestra la potencia de salida en vatios.</p></td>
 </tr>
 <tr>
 <td><p>21</p></td>
 <td></td>
-<td><p>Remaining Discharge Time</p></td>
-<td><p>Displays the remaining discharging time.</p></td>
+<td><p>Tiempo de Descarga Restante</p></td>
+<td><p>Muestra el tiempo de descarga restante.</p></td>
 </tr>
 </tbody>
 </table>
@@ -279,7 +280,7 @@ Off: The battery level is not below 20% or the product is charging.</td>
 </tr>
 <tr>
 <td style="border: 1px solid #cfcfcf; padding: 8px">Apagado automático</td>
-<td style="border: 1px solid #cfcfcf; padding: 8px">La pantalla LCD se apaga automáticamente después de 2 hours de inactividad.</td>
+<td style="border: 1px solid #cfcfcf; padding: 8px">La pantalla LCD se apaga automáticamente después de 2 horas de inactividad.</td>
 </tr>
 </tbody>
 </table>
@@ -340,7 +341,7 @@ Cuando la carga en la pared de CA y la carga solar están activadas al mismo tie
 
 
 <table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>NOTA</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
-<li><p>La temperatura de carga recomendada para el producto es de -20 °C to 45 °C, y la temperatura de descarga es de -20 °C to 45 °C.</p></li>
+<li><p>La temperatura de carga recomendada para el producto es de -20 °C a 45 °C, y la temperatura de descarga es de -20 °C a 45 °C.</p></li>
 <li><p>Operar el producto fuera de este rango de temperatura puede limitar sus capacidades de carga y descarga, e incluso impedir la carga o descarga.</p></li>
 <li><p>La potencia de carga y la capacidad de la batería del producto pueden variar debido a las fluctuaciones de temperatura.</p></li>
 </ul>
@@ -418,11 +419,11 @@ Vehículo
 
 Almacene el producto en un lugar seco y limpio con ventilación adecuada. Temperatura y humedad de almacenamiento:
 
-- 1 month: -20 °C to 45 °C (0-60% RH)
+- 1 mes: -20 °C a 45 °C (0-60 % HR)
 
-- 3 months: 0 °C to 45 °C (0-60% RH)
+- 3 meses: 0 °C a 45 °C (0-60 % HR)
 
-- 12 months: 0 °C to 25 °C (0-60% RH)
+- 12 meses: 0 °C a 25 °C (0-60 % HR)
 
 Si este producto se almacena durante un período prolongado (de 3 a 6 meses) con la batería descargada, podría volverse imposible recargarlo. Para evitar esto y mantener la salud de la batería, se recomienda revisar y recargar el producto cada tres meses, y realizar un ciclo completo de carga y descarga al menos una vez cada 6 a 12 meses.
 
@@ -432,22 +433,22 @@ Si aparece alguno de los siguientes códigos de fallo, siga las acciones correct
 
 
 
-<figure aria-label="Código de fallo / Medidas correctivas" class="hb-troubleshooting-composition" data-component-id="HB-TABLE-TROUBLESHOOTING" tabindex="0"><table class="hb-troubleshooting-table"><colgroup><col class="hb-troubleshooting-col-code"/><col class="hb-troubleshooting-col-measures"/></colgroup><thead><tr><th class="hb-troubleshooting-code" scope="col"><p>Código de fallo</p></th><th class="hb-troubleshooting-measures" scope="col"><p>Medidas correctivas</p></th></tr></thead><tbody><tr><td class="hb-troubleshooting-code"><p>F0</p></td><td class="hb-troubleshooting-measures"><p>Restart the product.</p></td></tr><tr><td class="hb-troubleshooting-code"><p>F1</p></td><td class="hb-troubleshooting-measures"><p>Restart the product.</p></td></tr><tr><td class="hb-troubleshooting-code"><p>F2</p></td><td class="hb-troubleshooting-measures"><p>Restart the product.</p></td></tr><tr><td class="hb-troubleshooting-code"><p>F3</p></td><td class="hb-troubleshooting-measures"><p>Restart the product.</p></td></tr><tr><td class="hb-troubleshooting-code"><p>F4</p></td><td class="hb-troubleshooting-measures"><p>Connect the product to loads to discharge its battery until the fault disappears.</p></td></tr><tr><td class="hb-troubleshooting-code"><p>F5</p></td><td class="hb-troubleshooting-measures"><p>Charge the product via solar panels or an AC wall outlet until the fault disappears.</p></td></tr><tr><td class="hb-troubleshooting-code"><p>F6</p></td><td class="hb-troubleshooting-measures"><div class="line-block">
-<div class="line">1. Wait for the grid to normalize before charging the product via an AC wall outlet.</div>
-<div class="line">2. Check whether the air intake and exhaust vents are blocked; ensure 200 mm clearance on both sides of the product.</div>
-<div class="line">3. Place the product in a location that is not exposed to direct sunlight or high environmental temperatures.</div>
-<div class="line">4. Disconnect all loads from the product. Keep the product idle and wait until the fault disappears.</div>
-<div class="line">5. Restart the product.</div>
+<figure aria-label="Código de fallo / Medidas correctivas" class="hb-troubleshooting-composition" data-component-id="HB-TABLE-TROUBLESHOOTING" tabindex="0"><table class="hb-troubleshooting-table"><colgroup><col class="hb-troubleshooting-col-code"/><col class="hb-troubleshooting-col-measures"/></colgroup><thead><tr><th class="hb-troubleshooting-code" scope="col"><p>Código de fallo</p></th><th class="hb-troubleshooting-measures" scope="col"><p>Medidas correctivas</p></th></tr></thead><tbody><tr><td class="hb-troubleshooting-code"><p>F0</p></td><td class="hb-troubleshooting-measures"><p>Reiniciar el producto.</p></td></tr><tr><td class="hb-troubleshooting-code"><p>F1</p></td><td class="hb-troubleshooting-measures"><p>Reiniciar el producto.</p></td></tr><tr><td class="hb-troubleshooting-code"><p>F2</p></td><td class="hb-troubleshooting-measures"><p>Reiniciar el producto.</p></td></tr><tr><td class="hb-troubleshooting-code"><p>F3</p></td><td class="hb-troubleshooting-measures"><p>Reiniciar el producto.</p></td></tr><tr><td class="hb-troubleshooting-code"><p>F4</p></td><td class="hb-troubleshooting-measures"><p>Conecte el producto a cargas para descargar su batería hasta que la falla desaparezca.</p></td></tr><tr><td class="hb-troubleshooting-code"><p>F5</p></td><td class="hb-troubleshooting-measures"><p>Cargue el producto mediante paneles solares o toma de corriente CA hasta que la falla desaparezca.</p></td></tr><tr><td class="hb-troubleshooting-code"><p>F6</p></td><td class="hb-troubleshooting-measures"><div class="line-block">
+<div class="line">1. Espere a que la red eléctrica se normalice antes de cargar el producto a través de una toma de corriente CA.</div>
+<div class="line">2. Verifique si las rejillas de entrada y salida de aire están obstruidas; asegure un espacio libre de 20 cm a ambos lados del producto.</div>
+<div class="line">3. Coloque el producto en un lugar que no esté expuesto a la luz solar directa o a altas temperaturas ambientales.</div>
+<div class="line">4. Desconecte todas las cargas del producto. Mantenga el producto inactivo y espere hasta que la falla desaparezca.</div>
+<div class="line">5. Reiniciar el producto.</div>
 </div></td></tr><tr><td class="hb-troubleshooting-code"><p>F7</p></td><td class="hb-troubleshooting-measures"><div class="line-block">
-<div class="line">1. Remove all DC inputs from the product.</div>
-<div class="line">2. Check the open-circuit voltage (Voc) of the connected solar panels. The product allows a maximum DC input voltage of 60 V.</div>
-<div class="line">3. Restart the product and keep it idle. Wait until the fault disappears.</div>
-</div></td></tr><tr><td class="hb-troubleshooting-code"><p>F8</p></td><td class="hb-troubleshooting-measures"><p>Contact Jackery Customer Support.</p></td></tr><tr><td class="hb-troubleshooting-code"><p>F9</p></td><td class="hb-troubleshooting-measures"><p>Remove the load connected to the USB ports of the product. Wait until the fault disappears.</p></td></tr><tr><td class="hb-troubleshooting-code"><p>FA</p></td><td class="hb-troubleshooting-measures"><div class="line-block">
-<div class="line">1. Turn off the AC output of both units.</div>
-<div class="line">2. Press the AC power button on each unit again within 1 minute.</div>
+<div class="line">1. Retire todas las entradas CC del producto.</div>
+<div class="line">2. Verifique el voltaje en circuito abierto (Voc) de los paneles solares conectados. El producto permite un voltaje máximo de entrada CC de 60 V.</div>
+<div class="line">3. Reinicie el producto y manténgalo inactivo. Espere hasta que la falla desaparezca.</div>
+</div></td></tr><tr><td class="hb-troubleshooting-code"><p>F8</p></td><td class="hb-troubleshooting-measures"><p>Contacte con atención al cliente de Jackery.</p></td></tr><tr><td class="hb-troubleshooting-code"><p>F9</p></td><td class="hb-troubleshooting-measures"><p>Retire la carga conectada a los puertos USB del producto. Espere hasta que la falla desaparezca.</p></td></tr><tr><td class="hb-troubleshooting-code"><p>FA</p></td><td class="hb-troubleshooting-measures"><div class="line-block">
+<div class="line">1. Apague la salida CA de ambas unidades.</div>
+<div class="line">2. Presione el botón de encendido de la CA en cada unidad nuevamente, pero en no más de 1 minuto.</div>
 </div></td></tr><tr><td class="hb-troubleshooting-code"><p>FC</p></td><td class="hb-troubleshooting-measures"><div class="line-block">
-<div class="line">1. Restart the battery packs and the Jackery Explorer 3600 Plus respectively.</div>
-<div class="line">2. If the fault persists, disconnect the battery pack from the Jackery Explorer 3600 Plus and connect them again.</div>
+<div class="line">1. Reinicie los paquetes de baterías y el Explorer 3600 Plus respectivamente.</div>
+<div class="line">2. Si la falla persiste, desconecte el paquete de baterías del Explorer 3600 Plus y reconéctelos.</div>
 </div></td></tr></tbody></table></figure>
 
 
@@ -461,32 +462,32 @@ Si aparece alguno de los siguientes códigos de fallo, siga las acciones correct
 <figure aria-label="INFORMACIÓN GENERAL" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Product Name</th>
+<th class="hb-spec-label manual-spec-label" scope="row">Nombre del producto</th>
 <td class="hb-spec-value manual-spec-value">Jackery Explorer 3600 Plus</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Model No.</th>
+<th class="hb-spec-label manual-spec-label" scope="row">Nº de modelo</th>
 <td class="hb-spec-value manual-spec-value">JE-3600A</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Capacity</th>
-<td class="hb-spec-value manual-spec-value">80 Ah / 44.8 V DC (3584 Wh)</td>
+<th class="hb-spec-label manual-spec-label" scope="row">Capacidad</th>
+<td class="hb-spec-value manual-spec-value">80 Ah / 44,8 V CC (3584 Wh)</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Cell Chemistry</th>
+<th class="hb-spec-label manual-spec-label" scope="row">Química Celular</th>
 <td class="hb-spec-value manual-spec-value">LiFePO₄</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Weight</th>
-<td class="hb-spec-value manual-spec-value">About 35 kg</td>
+<th class="hb-spec-label manual-spec-label" scope="row">Peso</th>
+<td class="hb-spec-value manual-spec-value">Aproximadamente 35 kg</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Dimensions</th>
-<td class="hb-spec-value manual-spec-value">38.5 × 30.9 × 49.1 cm</td>
+<th class="hb-spec-label manual-spec-label" scope="row">Dimensiones</th>
+<td class="hb-spec-value manual-spec-value">38,5 × 30,9 × 49,1 cm</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Cycle Life</th>
-<td class="hb-spec-value manual-spec-value">6000 cycles to 70%+ capacity</td>
+<th class="hb-spec-label manual-spec-label" scope="row">Ciclo de vida</th>
+<td class="hb-spec-value manual-spec-value">6000 ciclos de carga hasta 70 % + de capacidad</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">IEC code</th>
@@ -504,16 +505,16 @@ Si aparece alguno de los siguientes códigos de fallo, siga las acciones correct
 <figure aria-label="PUERTOS DE ENTRADA" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">1 × AC Input</th>
-<td class="hb-spec-value manual-spec-value">Charge Mode: 220-240 V~ 50 Hz, 10 A max.<br/>Bypass Mode: 220-240 V~ 50 Hz, 10 A max.</td>
+<th class="hb-spec-label manual-spec-label" scope="row">1 × Entrada CA</th>
+<td class="hb-spec-value manual-spec-value">Modo de carga: 220-240 V~ 50 Hz, 10 A máx.<br/>Modo bypass: 220-240 V~ 50 Hz, 10 A máx.<sup class="hb-spec-reference">①</sup></td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">2 × DC8020 Ports</th>
-<td class="hb-spec-value manual-spec-value">12-16 V⎓8 A max., double to 8 A max.<br/>16-60 V⎓12 A, double to 24 A max. / 1000 W max.</td>
+<th class="hb-spec-label manual-spec-label" scope="row">2 × Puertos DC8020</th>
+<td class="hb-spec-value manual-spec-value">12-16 V⎓8 A máx., Doble a 8 A máx.<br/>16-60 V⎓12 A, Doble a 24 A máx./1000 W máx.</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">1 × DC Expansion Port</th>
-<td class="hb-spec-value manual-spec-value">36.4-50.4 V⎓100 A max.</td>
+<th class="hb-spec-label manual-spec-label" scope="row">1 × Puerto de expansión CC</th>
+<td class="hb-spec-value manual-spec-value">36,4 V-50,4 V⎓100 A máx.</td>
 </tr>
 </tbody>
 </table></figure>
@@ -527,28 +528,28 @@ Si aparece alguno de los siguientes códigos de fallo, siga las acciones correct
 <figure aria-label="PUERTOS DE SALIDA" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">3 × AC Output</th>
+<th class="hb-spec-label manual-spec-label" scope="row">3 × Salidas CA</th>
 <td class="hb-spec-value manual-spec-value">230 V~ 50 Hz, 3600 W</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">AC Total Output</th>
-<td class="hb-spec-value manual-spec-value">3600 W rated, 7200 W surge peak</td>
+<th class="hb-spec-label manual-spec-label" scope="row">CA Salida total</th>
+<td class="hb-spec-value manual-spec-value">3600 W nominales, 7200 W pico de sobretensión<sup class="hb-spec-reference">②</sup></td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">AC Output in Bypass Mode</th>
-<td class="hb-spec-value manual-spec-value">220-240 V~ 50 Hz, 10 A max.</td>
+<th class="hb-spec-label manual-spec-label" scope="row">Salida de CA en modo bypass</th>
+<td class="hb-spec-value manual-spec-value">220-240 V~ 50 Hz, 10 A máx.</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">2 × USB-C 100W Output</th>
-<td class="hb-spec-value manual-spec-value">100 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓3 A, 15 V⎓3 A, 20 V⎓5 A</td>
+<th class="hb-spec-label manual-spec-label" scope="row">2 × Salida USB-C 100W</th>
+<td class="hb-spec-value manual-spec-value">100 W máx., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓3 A, 15 V⎓3 A, 20 V⎓5 A</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">2 × USB-A 18W Output</th>
-<td class="hb-spec-value manual-spec-value">18 W max., 5-6 V⎓3 A, 6-9 V⎓2 A, 9-12 V⎓1.5 A</td>
+<th class="hb-spec-label manual-spec-label" scope="row">2 × Salida USB-A 18W</th>
+<td class="hb-spec-value manual-spec-value">18 W máx., 5-6 V⎓3 A, 6-9 V⎓2 A, 9-12 V⎓1,5 A</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">1 × DC Expansion Port</th>
-<td class="hb-spec-value manual-spec-value">36.4-50.4 V⎓60 A max.</td>
+<th class="hb-spec-label manual-spec-label" scope="row">1 × Puerto de expansión CC</th>
+<td class="hb-spec-value manual-spec-value">36,4 V-50,4 V⎓60 A máx.</td>
 </tr>
 </tbody>
 </table></figure>
@@ -562,17 +563,23 @@ Si aparece alguno de los siguientes códigos de fallo, siga las acciones correct
 <figure aria-label="TEMPERATURA DE FUNCIONAMIENTO" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Charge Temperature</th>
-<td class="hb-spec-value manual-spec-value">-20 °C to 45 °C</td>
+<th class="hb-spec-label manual-spec-label" scope="row">Temperatura de carga</th>
+<td class="hb-spec-value manual-spec-value">-20 °C a 45 °C</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Discharge Temperature</th>
-<td class="hb-spec-value manual-spec-value">-20 °C to 45 °C</td>
+<th class="hb-spec-label manual-spec-label" scope="row">Temperatura de descarga</th>
+<td class="hb-spec-value manual-spec-value">-20 °C a 45 °C</td>
 </tr>
 </tbody>
 </table></figure>
 
 
+
+※ USB Type-C® y USB-C® son marcas registradas de USB Implementers Forum.
+
+① El producto puede cargar la batería desde una toma de corriente CA mientras suministra energía a través de los puertos de salida CA.
+
+② Indica que dos o más puertos de salida CA trabajan en conjunto.
 
 # GARANTÍA
 
