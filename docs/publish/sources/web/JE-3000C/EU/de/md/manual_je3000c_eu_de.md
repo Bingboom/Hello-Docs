@@ -44,11 +44,11 @@ Bitte geben Sie gebrauchte Batterien und Akkumulatoren an einer örtlichen Samme
 
 
 
-<figure aria-label="LIEFERUMFANG" class="hb-inbox-composition" data-card-count="3" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="three-card-responsive"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Abbildung der Powerstation als Platzhalter." class="hb-inbox-art" src="assets/ir/6c7f1deea2f6211ba3ed3273900aa7595234d3b8fe5a67830defa4cf13ee6fe6/main_unit1.png"/><div class="hb-inbox-label">
+<figure aria-label="LIEFERUMFANG" class="hb-inbox-composition" data-card-count="3" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="three-card-responsive"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Abbildung der Powerstation als Platzhalter." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je3000c_eu_de/inbox_unit.png" data-web-finished-panel-sha256="0f23ea8449b9c28cbc70b90f44cd93f12b48182e7a6f53b4cd161da1ce45f8c8" src="assets/ir/0f23ea8449b9c28cbc70b90f44cd93f12b48182e7a6f53b4cd161da1ce45f8c8/inbox_unit.png"/><div class="hb-inbox-label">
 <p><strong>Jackery Explorer 3000</strong></p>
-</div></li><li class="hb-inbox-card" data-item-number="2"><img alt="Abbildung des AC-Ladekabels als Platzhalter." class="hb-inbox-art" src="assets/ir/287650f3a89ae520e32f0d75df8401151b808004ee50075b96aff70af04ca4ef/ac_charging_cable.png"/><div class="hb-inbox-label">
+</div></li><li class="hb-inbox-card" data-item-number="2"><img alt="Abbildung des AC-Ladekabels als Platzhalter." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je3000c_eu_de/inbox_cable.png" data-web-finished-panel-sha256="b004bfbf86e12f5e756ead4c0704440ea903ae79c60cdea73e4b7b96786428e2" src="assets/ir/b004bfbf86e12f5e756ead4c0704440ea903ae79c60cdea73e4b7b96786428e2/inbox_cable.png"/><div class="hb-inbox-label">
 <p><strong>AC-Ladekabel</strong></p>
-</div></li><li class="hb-inbox-card" data-item-number="3"><img alt="Abbildung des Benutzerhandbuchs als Platzhalter." class="hb-inbox-art" src="assets/ir/87ac44e52863324b761a672089e6b0497e40fdf48432f698fccf30508060c60a/manual_icon1.png"/><div class="hb-inbox-label">
+</div></li><li class="hb-inbox-card" data-item-number="3"><img alt="Abbildung des Benutzerhandbuchs als Platzhalter." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je3000c_eu_de/inbox_manual.png" data-web-finished-panel-sha256="b98c6ca475af687033412671c8466ba967dbb8bd52fc7a50759e91838d099145" src="assets/ir/b98c6ca475af687033412671c8466ba967dbb8bd52fc7a50759e91838d099145/inbox_manual.png"/><div class="hb-inbox-label">
 <p>Benutzerhandbuch</p>
 </div></li></ol><div class="hb-inbox-tip" role="note"><div class="hb-inbox-tip-label"><p><strong>TIPP</strong></p></div><div class="hb-inbox-tip-body"><p>Das Autoladekabel ist nicht im Lieferumfang enthalten, kann jedoch separat auf unserer Website erworben werden.
 Bei Fragen wenden Sie sich bitte an den Jackery-Kundendienst.</p></div></div></figure>
@@ -59,7 +59,7 @@ Bei Fragen wenden Sie sich bitte an den Jackery-Kundendienst.</p></div></div></f
 
 ## VORDERANSICHT
 
-<img src="assets/ir/562f998c918a50bdedcaaeff1e005b505ced57e8252bc987fe0662ea9fa8b658/front_product.jpg" style="width: 420px;" width="420" height="236" alt="Abbildung der Vorderansicht als Platzhalter." />
+<img src="assets/ir/81ee2a583672151b4c10c66f7533997adf0e3bc9ba264a141541fa724ef753a5/overview_front.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3000c_eu_de/overview_front.png" data-web-finished-panel-sha256="81ee2a583672151b4c10c66f7533997adf0e3bc9ba264a141541fa724ef753a5" alt="Abbildung der Vorderansicht als Platzhalter." />
 
 <table>
 <colgroup>
@@ -104,31 +104,11 @@ Bei Fragen wenden Sie sich bitte an den Jackery-Kundendienst.</p></div></div></f
 
 ## ANSICHT DER RECHTEN SEITE
 
-<img src="assets/ir/b04dca41b7cc3211a30f3a3fc2b1e904c25330f28104e4338a8ed67a11378011/right_side_ports.png" style="width: 420px;" width="420" height="209" alt="Abbildung der rechten Seitenansicht als Platzhalter." />
-
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr>
-<td><p><strong>Griff</strong></p></td>
-<td><p><strong>AC-Eingang</strong></p>
-<p>220 V-240 V~ 50 Hz, 10 A max.</p></td>
-</tr>
-<tr>
-<td></td>
-<td><p><strong>DC-Eingang (2 × DC8020 Anschlüsse)</strong></p>
-<p>PV: 16-60 V⎓12 A, Doppelanschluss 24 A max./ 1000 W max.</p>
-<p>Auto: 12-16 V⎓8 A max., Doppelanschluss 8 A max.</p></td>
-</tr>
-</tbody>
-</table>
+<img src="assets/ir/32306d99c3354888d8bb31aa71b97760d31173b6201db5c122063e0a40d397de/overview_side.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3000c_eu_de/overview_side.png" data-web-finished-panel-sha256="32306d99c3354888d8bb31aa71b97760d31173b6201db5c122063e0a40d397de" alt="Griff AC-Eingang 220 V-240 V~ 50 Hz, 10 A max. DC-Eingang (2 × DC8020 Anschlüsse) PV: 16-60 V⎓12 A, Doppelanschluss 24 A max./ 1000 W max. Auto: 12-16 V⎓8 A max., Doppelanschluss 8 A max." />
 
 # LCD-ANZEIGE
 
-<img src="assets/ir/f82efe218bc0b63cb953aced0c85f7c9553935e68d5cf70a3577df9212f550ce/lcd_map.png" style="width: 420px;" width="420" height="248" alt="LCD-ANZEIGE" />
+<img src="assets/ir/1aec5c89ee664632aeaf72c60041b13fbd19f2e85f4302c87f278dcb5164b564/lcd_map.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3000c_eu_de/lcd_map.png" data-web-finished-panel-sha256="1aec5c89ee664632aeaf72c60041b13fbd19f2e85f4302c87f278dcb5164b564" alt="LCD-ANZEIGE" />
 
 
 
@@ -190,47 +170,15 @@ Bei Fragen wenden Sie sich bitte an den Jackery-Kundendienst.</p></div></div></f
 
 ## HAUPTSTROMVERSORGUNG EIN/AUS
 
-<img src="assets/ir/74004806e6c0996fb77b2260c046e055194855a96bed97c519bb58c292e3b5e2/op_main_power.png" style="width: 360px;" width="360" height="141" alt="Platzhalter für Ein-/Ausschalten." />
-
-Ein: Einmal drücken.
-
-Aus: 3 s lang gedrückt halten.
-
-**Standard-Standby-Zeit:** 2 Stunden.
-
-Das Produkt schaltet sich nach 2 Stunden Inaktivität automatisch aus, wenn weder geladen noch entladen wird.
-
-\*Die Standby-Zeit kann in der Jackery-App eingestellt werden.
-
-Wenn der Energiesparmodus aktiviert ist, schaltet sich das Produkt automatisch nach 12 Stunden aus, wenn die AC- oder DC/USB-Einschalttaste eingeschaltet ist, das Produkt jedoch weder lädt noch entlädt.
+<img src="assets/ir/c13fbd36ae27d5e1b8c4986c58aeb39a49b08470c7574a219f232c5665ecefcf/operation_power.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3000c_eu_de/operation_power.png" data-web-finished-panel-sha256="c13fbd36ae27d5e1b8c4986c58aeb39a49b08470c7574a219f232c5665ecefcf" alt="Ein: Einmal drücken. Aus: 3 s lang gedrückt halten.；Standard-Standby-Zeit: 2 Stunden. Das Produkt schaltet sich nach 2 Stunden Inaktivität automatisch aus, wenn weder geladen noch entladen wird. *Die Standby-Zeit kann in der Jackery-App eingestellt werden. Wenn der Energiesparmodus aktiviert ist, schaltet sich das Produkt automatisch nach 12 Stunden aus, wenn die AC- oder DC/USB-Einschalttaste eingeschaltet ist, das Produkt jedoch weder lädt noch entlädt." />
 
 ## AC-AUSGANG EIN/AUS
 
-**Voraussetzung**: Das Produkt ist eingeschaltet.
-
-<img src="assets/ir/43a46a51a98773dd307ff35dd1ac684790109b2b8c437f87ceacbc3636bc1d75/op_ac_output.png" style="width: 360px;" width="360" height="252" alt="Platzhalter für AC-Ausgang Ein/Aus." />
-
-**Ein**
-
-Einmal drücken
-
-**Aus**
-
-Einmal drücken
+<img src="assets/ir/00c5cce542535043d60228c490d6617888a0a8d1723f866ef9cc353827000f05/operation_ac.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3000c_eu_de/operation_ac.png" data-web-finished-panel-sha256="00c5cce542535043d60228c490d6617888a0a8d1723f866ef9cc353827000f05" alt="Voraussetzung : Das Produkt ist eingeschaltet.；Ein Einmal drücken Aus Einmal drücken" />
 
 ## DC 12V/USB-AUSGANG EIN/AUS
 
-**Voraussetzung**: Das Produkt ist eingeschaltet.
-
-<img src="assets/ir/c46c92d6ee991a400208635802b5d2682f215cacaa748a3ca73068fdb18cdec3/op_dc_usb_output.png" style="width: 360px;" width="360" height="208" alt="Platzhalter für DC/USB-Ausgang Ein/Aus." />
-
-**Ein**
-
-Einmal drücken
-
-**Aus**
-
-Einmal drücken
+<img src="assets/ir/894ab26cd5a8dec7023c29eefe662dcd852227323bd3e6639396c2f566e0b0a7/operation_dc.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3000c_eu_de/operation_dc.png" data-web-finished-panel-sha256="894ab26cd5a8dec7023c29eefe662dcd852227323bd3e6639396c2f566e0b0a7" alt="Voraussetzung : Das Produkt ist eingeschaltet.；Ein Einmal drücken Aus Einmal drücken" />
 
 
 
@@ -262,15 +210,7 @@ Um den Energiesparmodus zu deaktivieren, halten Sie sowohl die AC-Einschalttaste
 
 Wenn Sie Geräte mit geringem Stromverbrauch betreiben (AC \<= 25 W oder DC/USB \<= 2 W), deaktivieren Sie den Energiesparmodus, damit der Ausgang während des Betriebs nicht automatisch ausgeschaltet wird.
 
-<img src="assets/ir/9dd943d3063031c0795ff8c4b2b6aac266bfb2bff78e2250e445f27352c23a07/energy_saving.png" style="width: 320px;" width="320" height="95" alt="Platzhalter für die Tastenbedienung des Energiesparmodus." />
-
-Halten Sie beide Tasten länger als 3 Sekunden gedrückt.
-
-
-
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>HINWEIS</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Der Energiesparmodus kehrt nach dem Einschalten in seinen vorherigen Zustand zurück. Für einen Moduswechsel ist ein manuelles Umschalten erforderlich.</p></td></tr></tbody></table>
-
-
+<img src="assets/ir/256f0b08488cbbaf11278ea7afd4d66e0239f1bc187f48c7089f6b77868fc2c8/operation_energy.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3000c_eu_de/operation_energy.png" data-web-finished-panel-sha256="256f0b08488cbbaf11278ea7afd4d66e0239f1bc187f48c7089f6b77868fc2c8" alt="Halten Sie beide Tasten länger als 3 Sekunden gedrückt.；HINWEIS Der Energiesparmodus kehrt nach dem Einschalten in seinen vorherigen Zustand zurück. Für einen Moduswechsel ist ein manuelles Umschalten erforderlich." />
 
 ## Wiederaufnahmefunktion für AC- und DC-Ausgänge
 
@@ -307,7 +247,7 @@ Die Wiederaufnahmefunktion für AC- und DC-Ausgänge ist standardmäßig deaktiv
 <table style="width:100%; border-collapse:collapse; margin:0.75rem 0 0.5rem 0;">
 <tbody>
 <tr>
-<td rowspan="6" style="text-align: center; width: 24%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top;"><img src="assets/ir/24a37b773bf14cd76f160a25dfa413576a95405a1f57f69059487b29b7791bfd/lcd_mode.png" style="max-width:140px; width:100%; height:auto; display:block; margin:0 auto;" width="140" height="220" alt="Platzhalter für den LCD-Anzeigemodus." /></td>
+<td rowspan="6" style="text-align: center; width: 24%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top;"><img src="assets/ir/3954b26c4bdd7270751e917c1e9067b74ce3d750791558daabad7a334a5eac6e/operation_lcd.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3000c_eu_de/operation_lcd.png" data-web-finished-panel-sha256="3954b26c4bdd7270751e917c1e9067b74ce3d750791558daabad7a334a5eac6e" alt="Platzhalter für den LCD-Anzeigemodus." /></td>
 <td rowspan="3" style="width: 18%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Kurzzeitig an</td>
 <td style="width: 12%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Ein</td>
 <td style="width: 46%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Drücken Sie die Haupt-POWER-Taste oder während das Produkt geladen wird.</td>
@@ -350,7 +290,7 @@ Sie können den Bildschirm-Anzeigemodus auch in der Jackery-App einstellen.
 
 Schließen Sie das Produkt mit dem AC-Ladekabel an eine Steckdose an und drücken Sie anschließend die AC-Ausgangstaste, um Ihre Geräte gleichzeitig zu versorgen.
 
-<img src="assets/ir/5866fb05040e5b4423c473d5e7abf87122e0e93f5afce742696a09454b4bd675/ups_mode.png" style="width: 360px;" width="360" height="273" alt="Abbildung der UPS-Verbindung als Platzhalter." />
+<img src="assets/ir/41189bca047827b6c753dbf0ba019112645f3176f1fde6033814c55dae1536ab/ups.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3000c_eu_de/ups.png" data-web-finished-panel-sha256="41189bca047827b6c753dbf0ba019112645f3176f1fde6033814c55dae1536ab" alt="Abbildung der UPS-Verbindung als Platzhalter." />
 
 Eine unterbrechungsfreie Stromversorgung (UPS) ist ein kontinuierliches Stromversorgungssystem, das bei einem Ausfall der Netzstromversorgung automatisch Backup-Strom für angeschlossene Geräte bereitstellt.
 
@@ -392,7 +332,7 @@ liegt die tatsächliche Ausgangsleistung in diesem Modus unter der Nennleistung;
 
 Schließen Sie das AC-Ladekabel an den AC-Eingangsanschluss des Produkts und an eine Steckdose an.
 
-<img src="assets/ir/37f4c64bfeaac2df031b0fb30a0228f4ef0ba7f015385e52eec69a5d2ccdb414/ac_wall.png" style="width: 360px;" width="360" height="144" alt="Abbildung des AC-Wandladens als Platzhalter." />
+<img src="assets/ir/9bff9d750aa6c06141ef68dfe2e22ef3d77ea63931740c00a80d2621eb12c0d1/charging_ac.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3000c_eu_de/charging_ac.png" data-web-finished-panel-sha256="9bff9d750aa6c06141ef68dfe2e22ef3d77ea63931740c00a80d2621eb12c0d1" alt="Abbildung des AC-Wandladens als Platzhalter." />
 
 
 
@@ -410,11 +350,9 @@ In diesem Modus können Sie die tragbare Powerstation mit der AC-Lademethode sch
 
 Jackery Explorer 3000 verfügt über zwei DC8020-Eingangsanschlüsse und ist mit den Jackery-Solarmodulen kompatibel.
 
-<img src="assets/ir/8332edf8c7678e11924ab5efbc3aea63a72516f20f9ae4fde1c9d55983e1e287/solar_direct.png" style="width: 360px;" width="360" height="158" alt="Abbildung der Solarladeverbindung als Platzhalter 1." />
+<img src="assets/ir/0f6dfac6b313b214a2b3b028150d5551389bd9bfc674c087d2edeceecc7cb052/charging_solar.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3000c_eu_de/charging_solar.png" data-web-finished-panel-sha256="0f6dfac6b313b214a2b3b028150d5551389bd9bfc674c087d2edeceecc7cb052" alt="Abbildung der Solarladeverbindung als Platzhalter 1." />
 
 Wenn ein DC8020-Eingangsanschluss zwei Solarmodule gleichzeitig anschließen muss, beziehen Sie sich bitte auf die folgende Abbildung zum Aufladen über den Solarpanel-Anschluss (separat erhältlich, nicht im Lieferumfang enthalten).
-
-<img src="assets/ir/9df8813895e672545085c2356f72c13fc30323f72fab4de973416ea66093ee7d/solar_adapter.png" style="width: 360px;" width="360" height="171" alt="Abbildung der Solarladeverbindung als Platzhalter 2." />
 
 
 
@@ -439,11 +377,7 @@ Es wird empfohlen, das Jackery-Solarpanel zum Laden des Produkts zu verwenden. S
 
 Dieses Produkt kann mit einem 12-V-Autoladegerät aufgeladen werden. Stellen Sie sicher, dass das Autoladegerät und die 12-V-Autosteckdose (Zigarettenanzünder) gut verbunden sind.
 
-<img src="assets/ir/cc7007d5671cf4abfbc552aeed661b5d7cf73e3fdd3f275af5f9183f40134dc0/car_charge.png" style="width: 360px;" width="360" height="193" alt="Abbildung der Autoladeverbindung als Platzhalter." />
-
-Fahrzeug
-
-\*Das Autoladekabel ist separat erhältlich.
+<img src="assets/ir/0227f02c17b1464615375d93b70608c4b46cc29bdf5300ed9e149ab94ef3efd1/charging_car.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3000c_eu_de/charging_car.png" data-web-finished-panel-sha256="0227f02c17b1464615375d93b70608c4b46cc29bdf5300ed9e149ab94ef3efd1" alt="Fahrzeug；*Das Autoladekabel ist separat erhältlich." />
 
 
 
