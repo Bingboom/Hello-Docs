@@ -515,11 +515,11 @@ Fahrzeug
 
 Lagern Sie das Produkt an einem trockenen, sauberen und gut belüfteten Ort. Lagertemperatur und Luftfeuchtigkeit:
 
-- 1 mes: von -20 °C bis 45 °C (0--60 % rF)
+- 1 Monat: von -20 °C bis 45 °C (0--60 % rF)
 
-- 3 meses: von 0 °C bis 45 °C (0--60 % rF)
+- 3 Monate: von 0 °C bis 45 °C (0--60 % rF)
 
-- 12 meses: von 0 °C bis 25 °C (0--60 % rF)
+- 12 Monate: von 0 °C bis 25 °C (0--60 % rF)
 
 Wenn dieses Produkt über einen längeren Zeitraum (3 bis 6 Monate) mit entladener Batterie gelagert wird, kann es unaufladbar werden. Um dies zu verhindern und die Batteriegesundheit zu erhalten, wird empfohlen, das Produkt alle drei Monate zu überprüfen und aufzuladen und mindestens einmal alle 6 bis 12 Monate einen vollständigen Lade- und Entladezyklus durchzuführen.
 
@@ -742,15 +742,7 @@ Suchen Sie im Google Play Store oder im App Store nach \"Jackery\", um die App z
 
 2.2 Drücken Sie die Haupt-POWER-Taste am Gerät, um es einzuschalten. Die WLAN- und Bluetooth-Symbole auf dem Gerät blinken, um anzuzeigen, dass das Gerät in den Netzwerkkonfigurationsmodus gewechselt ist. Tippen Sie auf die Schaltfläche \"**Symbol blinkt**\" und erlauben Sie der App, sich mit Geräten in der Nähe zu verbinden und auf Bluetooth zuzugreifen.
 
-<img src="assets/ir/662646752f7e432edae4e01fc78e9ae9f7a6045f231a62fafb76308c8e96a302/app_add_device.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-add-device" data-web-finished-panel-path="assets/je2000e_eu_shared/app_add_device.png" data-web-finished-panel-sha256="662646752f7e432edae4e01fc78e9ae9f7a6045f231a62fafb76308c8e96a302" alt="Platzhalter für den Schritt „Gerät hinzufügen“." />
-
-Haupt-POWER-Taste
-
-AC1-Einschalttaste
-
-AC2-Einschalttaste
-
-DC / USB-Einschalttaste
+<img src="assets/ir/ef9a7f55a2d60bd75276c25497bbf63d7653bdeac2e290e1b89f46488a8ae581/app_add_device_panel.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-add-device" data-web-finished-panel-path="assets/je2000e_eu_de/app_add_device_panel.png" data-web-finished-panel-sha256="ef9a7f55a2d60bd75276c25497bbf63d7653bdeac2e290e1b89f46488a8ae581" alt="Haupt-POWER-Taste AC1-Einschalttaste AC2-Einschalttaste DC / USB-Einschalttaste" />
 
 2.3 Nachdem Sie auf das gefundene Gerätesymbol getippt haben, koppelt sich die App automatisch per Bluetooth mit dem Gerät.
 

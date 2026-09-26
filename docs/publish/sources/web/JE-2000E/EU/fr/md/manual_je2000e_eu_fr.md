@@ -739,15 +739,7 @@ Vous pouvez également scanner le code QR ci-dessous pour télécharger et insta
 
 2.2 Appuyez sur le bouton POWER principal de l'appareil pour l'allumer. Les icônes Wi-Fi et Bluetooth clignotent sur l'appareil afin d'indiquer qu'il est entré dans le mode Configuration réseau. Cliquez sur le bouton « Icône qui clignote » et autorisez l'application à se connecter aux appareils alentour, puis ouvrez les autorisations Bluetooth.
 
-<img src="assets/ir/662646752f7e432edae4e01fc78e9ae9f7a6045f231a62fafb76308c8e96a302/app_add_device.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-add-device" data-web-finished-panel-path="assets/je2000e_eu_shared/app_add_device.png" data-web-finished-panel-sha256="662646752f7e432edae4e01fc78e9ae9f7a6045f231a62fafb76308c8e96a302" alt="Emplacement réservé à l&#39;étape d&#39;ajout d&#39;appareil dans l&#39;application." />
-
-Bouton POWER principal
-
-Bouton CC / USB
-
-Bouton CA1
-
-Bouton CA2
+<img src="assets/ir/0e122ce341ae0faa89352898c058a1f9e343d88837f4af7517772ad046ea8669/app_add_device_panel.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-add-device" data-web-finished-panel-path="assets/je2000e_eu_fr/app_add_device_panel.png" data-web-finished-panel-sha256="0e122ce341ae0faa89352898c058a1f9e343d88837f4af7517772ad046ea8669" alt="Bouton POWER principal Bouton CC / USB Bouton CA1 Bouton CA2" />
 
 2.3 Après avoir appuyé sur l'icône de l'appareil détecté, l'application se connecte automatiquement à l'appareil via Bluetooth.
 

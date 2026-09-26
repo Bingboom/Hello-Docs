@@ -615,7 +615,7 @@ Search for \"Jackery\" in Google Play or App Store to install the App. After tha
 
 2.2 Press the main POWER button on the device to turn on, the Wi-Fi and Bluetooth icons on the device flash to indicate that the device has entered the network configuration mode, tap the \"**Icon Flashed**\" button, and allow the App to connect to nearby devices and open Bluetooth permissions.
 
-<img src="../../../../_static/manual-assets/_pool/2e/2ebc90dfa9afa0b4510e034043404525607a7c4d876318723f6977054f15c5d3.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-add-device" data-web-finished-panel-path="assets/je2000e_eu_en/control_panel.png" data-web-finished-panel-sha256="2ebc90dfa9afa0b4510e034043404525607a7c4d876318723f6977054f15c5d3" alt="Main POWER Button AC1 Power Button AC2 Power Button DC / USB Power Button" />
+<img src="../../../../_static/manual-assets/_pool/17/177b7e6f1ccc14dd9bbfac680c9d9971c1032ce7bc63d109a3b61f51d7404f46.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-add-device" data-web-finished-panel-path="assets/je2000e_eu_en/app_add_device_panel.png" data-web-finished-panel-sha256="177b7e6f1ccc14dd9bbfac680c9d9971c1032ce7bc63d109a3b61f51d7404f46" alt="Main POWER Button AC1 Power Button AC2 Power Button DC / USB Power Button" />
 
 2.3 After tapping the searched device icon, the App automatically connects the device via Bluetooth.
 
