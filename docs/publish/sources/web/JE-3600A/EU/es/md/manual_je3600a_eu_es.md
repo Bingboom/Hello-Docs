@@ -44,11 +44,11 @@ Devuelva las baterías y acumuladores usados a un punto de recolección local, u
 
 
 
-<figure aria-label="CONTENIDO DE LA CAJA" class="hb-inbox-composition" data-card-count="3" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="three-card-responsive"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Imagen de la estación de energía." class="hb-inbox-art" src="assets/ir/6c7f1deea2f6211ba3ed3273900aa7595234d3b8fe5a67830defa4cf13ee6fe6/main_unit1.png"/><div class="hb-inbox-label">
+<figure aria-label="CONTENIDO DE LA CAJA" class="hb-inbox-composition" data-card-count="3" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="three-card-responsive"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Imagen de la estación de energía." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je3600a_eu_es/inbox_unit.png" data-web-finished-panel-sha256="57b84050c54bc3665adeefe0a49bd7364d65601b76f8315ab93aa2bcf79c60b7" src="assets/ir/57b84050c54bc3665adeefe0a49bd7364d65601b76f8315ab93aa2bcf79c60b7/inbox_unit.png"/><div class="hb-inbox-label">
 <p><strong>Jackery Explorer 3600 Plus</strong></p>
-</div></li><li class="hb-inbox-card" data-item-number="2"><img alt="Imagen del cable de carga de CA." class="hb-inbox-art" src="assets/ir/287650f3a89ae520e32f0d75df8401151b808004ee50075b96aff70af04ca4ef/ac_charging_cable.png"/><div class="hb-inbox-label">
+</div></li><li class="hb-inbox-card" data-item-number="2"><img alt="Imagen del cable de carga de CA." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je3600a_eu_es/inbox_cable.png" data-web-finished-panel-sha256="062251011189b6167944ed21be4f84cf0f19ca869fd08bcfad81dbff62940ff6" src="assets/ir/062251011189b6167944ed21be4f84cf0f19ca869fd08bcfad81dbff62940ff6/inbox_cable.png"/><div class="hb-inbox-label">
 <p><strong>Cable de carga de CA</strong></p>
-</div></li><li class="hb-inbox-card" data-item-number="3"><img alt="Imagen del manual del usuario." class="hb-inbox-art" src="assets/ir/87ac44e52863324b761a672089e6b0497e40fdf48432f698fccf30508060c60a/manual_icon1.png"/><div class="hb-inbox-label">
+</div></li><li class="hb-inbox-card" data-item-number="3"><img alt="Imagen del manual del usuario." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je3600a_eu_es/inbox_manual.png" data-web-finished-panel-sha256="545255e32c8e2b47a7b7ea842a3fe87484ec3f8d7a9e11b1fcc73fddc04a98a9" src="assets/ir/545255e32c8e2b47a7b7ea842a3fe87484ec3f8d7a9e11b1fcc73fddc04a98a9/inbox_manual.png"/><div class="hb-inbox-label">
 <p><strong>Manual del usuario</strong></p>
 </div></li></ol><div class="hb-inbox-tip" role="note"><div class="hb-inbox-tip-label"><p><strong>CONSEJOS</strong></p></div><div class="hb-inbox-tip-body"><p>El cable de carga para vehículo no está incluido, pero está disponible para su compra por separado en nuestro sitio web.
 Para obtener asistencia, comunícate con el servicio al cliente de Jackery.</p></div></div></figure>
@@ -59,15 +59,15 @@ Para obtener asistencia, comunícate con el servicio al cliente de Jackery.</p><
 
 ## VISTA FRONTAL
 
-<img src="assets/ir/562f998c918a50bdedcaaeff1e005b505ced57e8252bc987fe0662ea9fa8b658/front_product.jpg" style="width: 640px;" width="640" height="360" alt="Vista frontal del Jackery Explorer 3600 Plus con los controles y puertos de salida etiquetados." />
+<img src="assets/ir/9e5bb7db58051603ac036f112fef8cc4260eb35ccd877783a7daf968e108852a/overview_front.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3600a_eu_es/overview_front.png" data-web-finished-panel-sha256="9e5bb7db58051603ac036f112fef8cc4260eb35ccd877783a7daf968e108852a" alt="Vista frontal del Jackery Explorer 3600 Plus con los controles y puertos de salida etiquetados." />
 
 ## VISTA LATERAL DERECHA
 
-<img src="assets/ir/b04dca41b7cc3211a30f3a3fc2b1e904c25330f28104e4338a8ed67a11378011/right_side_ports.png" style="width: 640px;" width="640" height="319" alt="Vista lateral derecha con asa retráctil, puertos de entrada, puerto de expansión y ruedas." />
+<img src="assets/ir/ae595b600453aa9a6ccabfdc7d32a10315a0328fee1ac053379b0b7cb89c5081/overview_side.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3600a_eu_es/overview_side.png" data-web-finished-panel-sha256="ae595b600453aa9a6ccabfdc7d32a10315a0328fee1ac053379b0b7cb89c5081" alt="Vista lateral derecha con asa retráctil, puertos de entrada, puerto de expansión y ruedas." />
 
 # PANTALLA LCD
 
-<img src="assets/ir/f82efe218bc0b63cb953aced0c85f7c9553935e68d5cf70a3577df9212f550ce/lcd_map.png" style="width: 420px;" width="420" height="248" alt="PANTALLA LCD" />
+<img src="assets/ir/37ef74780972edcdb0cf2dbdd4ec8ccaa4ee898f615b1daa5fa89616cb5ec15f/lcd_map.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3600a_eu_es/lcd_map.png" data-web-finished-panel-sha256="37ef74780972edcdb0cf2dbdd4ec8ccaa4ee898f615b1daa5fa89616cb5ec15f" alt="PANTALLA LCD" />
 
 <table class="longtable lcd-text-only">
 <colgroup>
@@ -220,11 +220,11 @@ Se activó la protección por baja temperatura. El producto puede dejar de funci
 
 ## ENCENDIDO/APAGADO
 
-<img src="assets/ir/74004806e6c0996fb77b2260c046e055194855a96bed97c519bb58c292e3b5e2/op_main_power.png" style="width: 640px;" width="640" height="250" alt="Panel de instrucciones completo de encendido y apagado." />
+<img src="assets/ir/4b6fda21711043389c22cca71979ba0f03f3f3c52b9c818613033ced2503f82a/operation_power.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3600a_eu_es/operation_power.png" data-web-finished-panel-sha256="4b6fda21711043389c22cca71979ba0f03f3f3c52b9c818613033ced2503f82a" alt="Panel de instrucciones completo de encendido y apagado." />
 
 ## ENCENDER/APAGAR SALIDA USB
 
-<img src="assets/ir/c46c92d6ee991a400208635802b5d2682f215cacaa748a3ca73068fdb18cdec3/op_dc_usb_output.png" style="width: 640px;" width="640" height="370" alt="Panel de instrucciones completo de encendido y apagado de la salida USB." />
+<img src="assets/ir/f50f38d7c4a1567e65f30d74162a48b63ee8bd9a5362ee01059b05b5149c5654/operation_usb.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3600a_eu_es/operation_usb.png" data-web-finished-panel-sha256="f50f38d7c4a1567e65f30d74162a48b63ee8bd9a5362ee01059b05b5149c5654" alt="Panel de instrucciones completo de encendido y apagado de la salida USB." />
 
 
 
@@ -239,11 +239,11 @@ Se activó la protección por baja temperatura. El producto puede dejar de funci
 
 ## ENCENDER/APAGAR SALIDA CA
 
-<img src="assets/ir/43a46a51a98773dd307ff35dd1ac684790109b2b8c437f87ceacbc3636bc1d75/op_ac_output.png" style="width: 640px;" width="640" height="448" alt="Panel de instrucciones completo de encendido y apagado de la salida CA." />
+<img src="assets/ir/aec9b82b4a086758ec3dd518d8fe03272701a719cf2a31bb5f795b88cc3d0428/operation_ac.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3600a_eu_es/operation_ac.png" data-web-finished-panel-sha256="aec9b82b4a086758ec3dd518d8fe03272701a719cf2a31bb5f795b88cc3d0428" alt="Panel de instrucciones completo de encendido y apagado de la salida CA." />
 
 ## MODO DE AHORRO DE ENERGÍA
 
-<img src="assets/ir/9dd943d3063031c0795ff8c4b2b6aac266bfb2bff78e2250e445f27352c23a07/energy_saving.png" style="width: 640px;" width="640" height="191" alt="Panel de instrucciones completo del modo de ahorro de energía." />
+<img src="assets/ir/db4ce3a5bc85d12fb1beca84383540e6aa3a9118d766582a9f6f0b11efa440ae/operation_energy.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3600a_eu_es/operation_energy.png" data-web-finished-panel-sha256="db4ce3a5bc85d12fb1beca84383540e6aa3a9118d766582a9f6f0b11efa440ae" alt="Panel de instrucciones completo del modo de ahorro de energía." />
 
 
 
@@ -256,7 +256,7 @@ Se activó la protección por baja temperatura. El producto puede dejar de funci
 <table style="width:100%; border-collapse:collapse; margin:0.75rem 0 0.5rem 0;">
 <tbody>
 <tr>
-<td rowspan="6" style="text-align: center; width: 24%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top;"><img src="assets/ir/24a37b773bf14cd76f160a25dfa413576a95405a1f57f69059487b29b7791bfd/lcd_mode.png" style="max-width:140px; width:100%; height:auto; display:block; margin:0 auto;" width="140" height="220" alt="Pantalla LCD y botón POWER del Explorer 3600 Plus." /></td>
+<td rowspan="6" style="text-align: center; width: 24%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top;"><img src="assets/ir/e6c56996348f010fbdda97a3eb656bc5bd859d93e6ae671e085bc238b5c9d49a/lcd_mode_device.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3600a_eu_es/lcd_mode_device.png" data-web-finished-panel-sha256="e6c56996348f010fbdda97a3eb656bc5bd859d93e6ae671e085bc238b5c9d49a" alt="Pantalla LCD y botón POWER del Explorer 3600 Plus." /></td>
 <td rowspan="3" style="width: 18%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Encendido breve</td>
 <td style="width: 12%; border: 1px solid #cfcfcf; padding: 8px">Encender</td>
 <td style="border: 1px solid #cfcfcf; padding: 8px">Presione el botón POWER principal o cuando el producto se esté cargando.</td>
@@ -291,11 +291,7 @@ También puedes configurar el modo de visualización de la pantalla en la aplica
 
 Conecte el producto a una toma de corriente con el cable de carga de CA, luego presione el botón de energía CA y alimente sus electrodomésticos al mismo tiempo.
 
-<img src="assets/ir/5866fb05040e5b4423c473d5e7abf87122e0e93f5afce742696a09454b4bd675/ups_mode.png" style="width: 360px;" width="360" height="273" alt="Diagrama de conexión UPS." />
-
-Un sistema de alimentación ininterrumpida (UPS) es un tipo de sistema de energía continua que proporciona energía eléctrica de respaldo automática a una carga cuando falla la energía de la red principal.
-
-En caso de una pérdida repentina de energía de la red, Jackery Explorer 3600 Plus cambiará automáticamente a la energía almacenada en menos de 10 ms para mantener sus electrodomésticos en funcionamiento.
+<img src="assets/ir/98d43fdae4902cea310d9c1fcff0728e915cd1c8862e4a0678e42955f0ac72d2/ups.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3600a_eu_es/ups.png" data-web-finished-panel-sha256="98d43fdae4902cea310d9c1fcff0728e915cd1c8862e4a0678e42955f0ac72d2" alt="Un sistema de alimentación ininterrumpida (UPS) es un tipo de sistema de energía continua que proporciona energía eléctrica de respaldo automática a una carga cuando falla la energía de la red principal.；En caso de una pérdida repentina de energía de la red, Jackery Explorer 3600 Plus cambiará automáticamente a la energía almacenada en menos de 10 ms para mantener sus electrodomésticos en funcionamiento." />
 
 En modo UPS, la potencia máxima de salida de la unidad alcanza 10 A antes de los cortes de energía. Como la carga y descarga simultáneas están habilitadas en modo bypass,
 
@@ -353,7 +349,7 @@ Cuando la carga en la pared de CA y la carga solar están activadas al mismo tie
 
 Conecte el cable de carga de CA al puerto de entrada de CA del producto y a una toma de corriente.
 
-<img src="assets/ir/37f4c64bfeaac2df031b0fb30a0228f4ef0ba7f015385e52eec69a5d2ccdb414/ac_wall.png" style="width: 360px;" width="360" height="144" alt="Diagrama de carga por toma de CA." />
+<img src="assets/ir/3083826c7c0ed4795dede769a9304c9f2984787543127c1295f32e1e9c797cda/charging_ac.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3600a_eu_es/charging_ac.png" data-web-finished-panel-sha256="3083826c7c0ed4795dede769a9304c9f2984787543127c1295f32e1e9c797cda" alt="Diagrama de carga por toma de CA." />
 
 
 
@@ -369,11 +365,9 @@ Bajo este modo, puedes cargar rápidamente la estación de energía portátil ut
 
 Jackery Explorer 3600 Plus cuenta con dos puertos de entrada DC8020 y es compatible con los paneles solares de Jackery.
 
-<img src="assets/ir/8332edf8c7678e11924ab5efbc3aea63a72516f20f9ae4fde1c9d55983e1e287/solar_direct.png" style="width: 360px;" width="360" height="158" alt="Diagrama de conexión para carga solar 1." />
+<img src="assets/ir/f0967febf87c4fc8022af15db633d69df90c91d43edf9400f52fb30a834b7728/charging_solar.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3600a_eu_es/charging_solar.png" data-web-finished-panel-sha256="f0967febf87c4fc8022af15db633d69df90c91d43edf9400f52fb30a834b7728" alt="Diagrama de conexión para carga solar 1." />
 
 Si se necesita conectar dos paneles solares a un solo puerto de entrada DC8020 al mismo tiempo, consulte la figura siguiente para la carga mediante el conector de panel solar (se vende por separado y no se incluye de serie).
-
-<img src="assets/ir/9df8813895e672545085c2356f72c13fc30323f72fab4de973416ea66093ee7d/solar_adapter.png" style="width: 360px;" width="360" height="171" alt="Diagrama de conexión para carga solar 2." />
 
 
 
@@ -398,11 +392,7 @@ Se recomienda usar el panel solar Jackery para cargar el Jackery Explorer 3600 P
 
 Este producto puede cargarse usando un cargador para vehículo de 12 V. Asegúrese de que el cargador de vehículo y el encendedor de vehículo ofrezcan una buena conexión.
 
-<img src="assets/ir/cc7007d5671cf4abfbc552aeed661b5d7cf73e3fdd3f275af5f9183f40134dc0/car_charge.png" style="width: 360px;" width="360" height="193" alt="Diagrama de carga en vehículo." />
-
-Vehículo
-
-※El cable de carga para vehículo se vende por separado.
+<img src="assets/ir/a5e5d20db405bf4b4f1754dababc7c36be033b9e4f8d8950609a7dd41756fcee/charging_car.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3600a_eu_es/charging_car.png" data-web-finished-panel-sha256="a5e5d20db405bf4b4f1754dababc7c36be033b9e4f8d8950609a7dd41756fcee" alt="Vehículo；※El cable de carga para vehículo se vende por separado." />
 
 
 
