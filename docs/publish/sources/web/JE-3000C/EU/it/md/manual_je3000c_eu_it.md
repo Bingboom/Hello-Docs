@@ -304,12 +304,6 @@ Collegare il cavo di ricarica CA alla porta di ingresso CA del prodotto e a una 
 
 
 
-**Modalità di ricarica di emergenza**
-
-In questa modalità, è possibile ricaricare rapidamente la power station portatile utilizzando il metodo di ricarica CA. Questa funzione di ricarica di emergenza può essere attivata o disattivata tramite l\'app Jackery. Quando la modalità di ricarica di emergenza è attiva, la luce circolare che indica lo stato di carica (SOC) lampeggia più rapidamente.
-
-\*Per massimizzare la durata della batteria, è preferibile caricare a velocità normale. Utilizzare la modalità di ricarica di emergenza solo quando necessario. Non è consigliata per un uso regolare e prolungato.
-
 ## RICARICA TRAMITE PANNELLI SOLARI (VENDUTI SEPARATAMENTE)
 
 Jackery Explorer 3000 dispone di due porte di ingresso DC8020 ed è compatibile con i pannelli solari Jackery.

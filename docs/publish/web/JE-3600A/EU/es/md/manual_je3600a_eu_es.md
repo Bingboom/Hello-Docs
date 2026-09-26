@@ -347,19 +347,13 @@ Cuando la carga en la pared de CA y la carga solar están activadas al mismo tie
 
 ## CARGA MEDIANTE UNA TOMA DE CORRIENTE DE PARED ALTERNA
 
-Conecte el cable de carga de CA al puerto de entrada de CA del producto y a una toma de corriente.
-
-<img src="../../../../_static/manual-assets/_pool/30/3083826c7c0ed4795dede769a9304c9f2984787543127c1295f32e1e9c797cda.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3600a_eu_es/charging_ac.png" data-web-finished-panel-sha256="3083826c7c0ed4795dede769a9304c9f2984787543127c1295f32e1e9c797cda" alt="Diagrama de carga por toma de CA." />
+<img src="../../../../_static/manual-assets/_pool/30/3083826c7c0ed4795dede769a9304c9f2984787543127c1295f32e1e9c797cda.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3600a_eu_es/charging_ac.png" data-web-finished-panel-sha256="3083826c7c0ed4795dede769a9304c9f2984787543127c1295f32e1e9c797cda" alt="Conecte el cable de carga de CA al puerto de entrada de CA del producto y a una toma de corriente." />
 
 
 
 <table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>PRECAUCIÓN</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Asegúrese de que el cable de carga de CA esté completamente y firmemente insertado en el puerto de entrada de CA. Una conexión incompleta puede causar corriente inestable, sobrecalentamiento, mal contacto o fallos en el funcionamiento del producto.</p></td></tr></tbody></table>
 
 
-
-**Modo de Carga de Emergencia**
-
-Bajo este modo, puedes cargar rápidamente la estación de energía portátil utilizando el método de carga de CA. Esta función de carga de emergencia se puede activar o desactivar a través de la aplicación Jackery. Cuando está en modo de carga de emergencia, la luz circular que indica el estado de carga (SOC) parpadeará más rápido. \*Para maximizar la vida útil de la batería, es mejor cargar a la velocidad estándar. La carga de emergencia debe reservarse para situaciones que requieren un aumento rápido de energía y no se recomienda para un uso regular y prolongado.
 
 ## CARGA MEDIANTE PANELES SOLARES (SE VENDEN POR SEPARADO)
 

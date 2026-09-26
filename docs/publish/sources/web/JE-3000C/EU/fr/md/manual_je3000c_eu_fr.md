@@ -316,12 +316,6 @@ Connectez le câble de charge CA au port d\'entrée CA de l\'appareil et à une 
 
 
 
-**Mode de charge d\'urgence**
-
-Dans ce mode, vous pouvez recharger rapidement la station d'énergie portable en utilisant la méthode de charge CA. Cette fonction de charge d\'urgence peut être activée ou désactivée via l\'application Jackery. En mode de charge d\'urgence, la lumière circulaire indiquant l\'état de charge (SOC) clignote plus rapidement.
-
-\*Pour prolonger au maximum la durée de vie de la batterie, il est préférable de charger à la vitesse standard. La charge d\'urgence doit être utilisée uniquement pour des situations nécessitant un boost rapide en énergie et n\'est pas recommandée pour un usage régulier sur le long terme.
-
 ## CHARGEMENT PAR PANNEAUX SOLAIRES (Vendu séparément)
 
 Le Jackery Explorer 3000 dispose de deux ports d'entrée DC8020 et est compatible avec les panneaux solaires de Jackery.
