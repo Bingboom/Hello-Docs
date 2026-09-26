@@ -361,9 +361,7 @@ This product supports up to five battery packs for applications requiring a larg
 
 ## CHARGING VIA AC WALL OUTLET
 
-Connect the AC charging cable to the AC input port of the product and a wall outlet.
-
-<img src="../../../../_static/manual-assets/_pool/f8/f8d8a51eed0daad27a43d72fec023e0473555fa3f5129ffedcd7e7025ab57d6c.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3600a_eu_en/charging_ac.png" data-web-finished-panel-sha256="f8d8a51eed0daad27a43d72fec023e0473555fa3f5129ffedcd7e7025ab57d6c" alt="AC wall charging diagram placeholder." />
+<img src="../../../../_static/manual-assets/_pool/f8/f8d8a51eed0daad27a43d72fec023e0473555fa3f5129ffedcd7e7025ab57d6c.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3600a_eu_en/charging_ac.png" data-web-finished-panel-sha256="f8d8a51eed0daad27a43d72fec023e0473555fa3f5129ffedcd7e7025ab57d6c" alt="Connect the AC charging cable to the AC input port of the product and a wall outlet." />
 
 
 

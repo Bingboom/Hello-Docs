@@ -345,21 +345,13 @@ Quand la recharge par prise murale CA et la recharge solaire sont effectuées en
 
 ## CHARGEMENT PAR PRISE MURALE CA
 
-<img src="../../../../_static/manual-assets/_pool/42/4292f4c7f2c9dd7bdb7c2e30c27dfcefcfd0091e4f3b00150f285c8719d96708.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3600a_eu_fr/charging_ac.png" data-web-finished-panel-sha256="4292f4c7f2c9dd7bdb7c2e30c27dfcefcfd0091e4f3b00150f285c8719d96708" alt="Schéma de charge sur prise murale CA." />
-
-Connectez le câble de charge CA au port d\'entrée CA de l\'appareil et à une prise murale.
+<img src="../../../../_static/manual-assets/_pool/42/4292f4c7f2c9dd7bdb7c2e30c27dfcefcfd0091e4f3b00150f285c8719d96708.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3600a_eu_fr/charging_ac.png" data-web-finished-panel-sha256="4292f4c7f2c9dd7bdb7c2e30c27dfcefcfd0091e4f3b00150f285c8719d96708" alt="Connectez le câble de charge CA au port d&#39;entrée CA de l&#39;appareil et à une prise murale." />
 
 
 
 <table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENTION</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Assurez-vous que le câble de charge CA est entièrement et solidement inséré dans le port d’entrée CA. Une connexion incomplète peut entraîner un courant instable, une surchauffe, un mauvais contact ou un dysfonctionnement de l'appareil.</p></td></tr></tbody></table>
 
 
-
-**Mode de charge d\'urgence**
-
-Dans ce mode, vous pouvez recharger rapidement la station d'énergie portable en utilisant la méthode de charge CA. Cette fonction de charge d\'urgence peut être activée ou désactivée via l\'application Jackery. En mode de charge d\'urgence, la lumière circulaire indiquant l\'état de charge (SOC) clignote plus rapidement.
-
-\*Pour prolonger au maximum la durée de vie de la batterie, il est préférable de charger à la vitesse standard. La charge d\'urgence doit être utilisée uniquement pour des situations nécessitant un boost rapide en énergie et n\'est pas recommandée pour un usage régulier sur le long terme.
 
 ## CHARGEMENT PAR PANNEAUX SOLAIRES (Vendu séparément)
 

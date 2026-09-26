@@ -299,10 +299,6 @@ Conecte el cable de carga de CA al puerto de entrada de CA del producto y a una 
 
 
 
-**Modo de Carga de Emergencia**
-
-Bajo este modo, puedes cargar rápidamente la estación de energía portátil utilizando el método de carga de CA. Esta función de carga de emergencia se puede activar o desactivar a través de la aplicación Jackery. Cuando está en modo de carga de emergencia, la luz circular que indica el estado de carga (SOC) parpadeará más rápido. \*Para maximizar la vida útil de la batería, es mejor cargar a la velocidad estándar. La carga de emergencia debe reservarse para situaciones que requieren un aumento rápido de energía y no se recomienda para un uso regular y prolongado.
-
 ## CARGA MEDIANTE PANELES SOLARES (SE VENDEN POR SEPARADO)
 
 Jackery Explorer 3000 cuenta con dos puertos de entrada DC8020 y es compatible con los paneles solares de Jackery.
