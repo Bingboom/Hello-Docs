@@ -44,11 +44,11 @@ Devuelva las baterías y acumuladores usados a un punto de recolección local, u
 
 
 
-<figure aria-label="CONTENIDO DE LA CAJA" class="hb-inbox-composition" data-card-count="3" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="three-card-responsive"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Imagen de la estación de energía." class="hb-inbox-art" src="assets/ir/6c7f1deea2f6211ba3ed3273900aa7595234d3b8fe5a67830defa4cf13ee6fe6/main_unit1.png"/><div class="hb-inbox-label">
+<figure aria-label="CONTENIDO DE LA CAJA" class="hb-inbox-composition" data-card-count="3" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="three-card-responsive"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Imagen de la estación de energía." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je2000e_eu_es/inbox_main.png" data-web-finished-panel-sha256="0a9c016c2dfcdaba1081654fc09f60856416a4383d7a652a45093c8fb132bada" src="assets/ir/0a9c016c2dfcdaba1081654fc09f60856416a4383d7a652a45093c8fb132bada/inbox_main.png"/><div class="hb-inbox-label">
 <p><strong>Jackery Explorer 2000 Plus</strong></p>
-</div></li><li class="hb-inbox-card" data-item-number="2"><img alt="Imagen del cable de carga de CA." class="hb-inbox-art" src="assets/ir/287650f3a89ae520e32f0d75df8401151b808004ee50075b96aff70af04ca4ef/ac_charging_cable.png"/><div class="hb-inbox-label">
+</div></li><li class="hb-inbox-card" data-item-number="2"><img alt="Imagen del cable de carga de CA." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je2000e_eu_es/inbox_cable.png" data-web-finished-panel-sha256="9c526f2917e4483af821a37a78898f9add0aa6f7538ac83fd2ff232755e3d28b" src="assets/ir/9c526f2917e4483af821a37a78898f9add0aa6f7538ac83fd2ff232755e3d28b/inbox_cable.png"/><div class="hb-inbox-label">
 <p><strong>Cable de carga de CA</strong></p>
-</div></li><li class="hb-inbox-card" data-item-number="3"><img alt="Imagen del manual del usuario." class="hb-inbox-art" src="assets/ir/87ac44e52863324b761a672089e6b0497e40fdf48432f698fccf30508060c60a/manual_icon1.png"/><div class="hb-inbox-label">
+</div></li><li class="hb-inbox-card" data-item-number="3"><img alt="Imagen del manual del usuario." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je2000e_eu_es/inbox_manual.png" data-web-finished-panel-sha256="4a9ec88f0d97e3c9df2f0f44fb4496ddc5baaa560c5c3fe6636fafb6c79214f5" src="assets/ir/4a9ec88f0d97e3c9df2f0f44fb4496ddc5baaa560c5c3fe6636fafb6c79214f5/inbox_manual.png"/><div class="hb-inbox-label">
 <p><strong>Manual del usuario</strong></p>
 </div></li></ol><div class="hb-inbox-tip" role="note"><div class="hb-inbox-tip-label"><p><strong>CONSEJOS</strong></p></div><div class="hb-inbox-tip-body"><p>El cable de carga para vehículo no está incluido, pero está disponible para su compra por separado en nuestro sitio web.
 Para obtener asistencia, comunícate con el servicio al cliente de Jackery.</p></div></div></figure>
@@ -59,90 +59,15 @@ Para obtener asistencia, comunícate con el servicio al cliente de Jackery.</p><
 
 ## VISTA FRONTAL
 
-<img src="assets/ir/562f998c918a50bdedcaaeff1e005b505ced57e8252bc987fe0662ea9fa8b658/front_product.jpg" style="width: 420px;" width="420" height="236" alt="Diagrama de vista frontal." />
-
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr>
-<td><p><strong>Botón POWER principal</strong></p></td>
-<td><p><strong>LCD</strong></p></td>
-</tr>
-<tr>
-<td><p><strong>Puerto DC 12 V</strong></p>
-<p>12 V⎓10 A máx.</p></td>
-<td><p><strong>Botón de luz LED</strong></p></td>
-</tr>
-<tr>
-<td><p><strong>Botón CC / USB</strong></p></td>
-<td><p><strong>Luz LED</strong></p></td>
-</tr>
-<tr>
-<td><p><strong>Salida USB-C de 30 W</strong></p>
-<p>30 W máx., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓2,5 A, 15 V⎓2 A, 20 V⎓1,5 A</p></td>
-<td><p><strong>Botón CA1</strong></p></td>
-</tr>
-<tr>
-<td><p><strong>Salida USB-C de 100 W</strong></p>
-<p>140 W máx., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓3 A, 15 V⎓3 A, 20 V⎓5 A, 28 V⎓5 A</p></td>
-<td><p><strong>Botón CA2</strong></p></td>
-</tr>
-<tr>
-<td><p><strong>Salida USB-A 18 W</strong></p>
-<p>18 W máx., 5-6 V⎓3 A, 6-9 V⎓2 A, 9-12 V⎓1,5 A</p></td>
-<td><p><strong>Salida de CA</strong></p>
-<p>230 V~ 50 Hz, 10 A máx., 2400 W Nominal</p></td>
-</tr>
-</tbody>
-</table>
-
-<table>
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<tbody>
-<tr>
-<td><p><strong>Salida Total</strong></p>
-<p>2400 W de potencia nominal, 4800 W de pico de sobrecarga</p></td>
-</tr>
-</tbody>
-</table>
+<img src="assets/ir/cc954b94d3a05f5887cefbbe017a6b5991da456b421da8a0bf10e48cb817c9a1/overview_front.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_es/overview_front.png" data-web-finished-panel-sha256="cc954b94d3a05f5887cefbbe017a6b5991da456b421da8a0bf10e48cb817c9a1" alt="Botón POWER principal LCD Puerto DC 12 V 12 V⎓10 A máx. Botón de luz LED Botón CC / USB Luz LED Salida USB-C de 30 W 30 W máx., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓2,5 A, 15 V⎓2 A, 20 V⎓1,5 A Botón CA1 Salida USB-C de 100 W 140 W máx., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓3 A, 15 V⎓3 A, 20 V⎓5 A, 28 V⎓5 A Botón CA2 Salida USB-A 18 W 18 W máx., 5-6 V⎓3 A, 6-9 V⎓2 A, 9-12 V⎓1,5 A Salida de CA 230 V~ 50 Hz, 10 A máx., 2400 W Nominal；Salida Total 2400 W de potencia nominal, 4800 W de pico de sobrecarga" />
 
 ## VISTAS LATERALES IZQUIERDA Y DERECHA
 
-<img src="assets/ir/b04dca41b7cc3211a30f3a3fc2b1e904c25330f28104e4338a8ed67a11378011/right_side_ports.png" style="width: 420px;" width="420" height="209" alt="Diagrama de vistas laterales izquierda y derecha." />
-
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr>
-<td><p><strong>Asa</strong></p></td>
-<td><p><strong>Puerto de expansión CC</strong></p>
-<p>Conectar al paquete de baterías</p></td>
-</tr>
-<tr>
-<td></td>
-<td><p><strong>Entrada de CA</strong></p>
-<p>220 V-240 V~ 50 Hz, 10 A máx.</p></td>
-</tr>
-<tr>
-<td></td>
-<td><p><strong>Entrada de CC (2×Puertos DC8020)</strong></p>
-<p>PV: 16-60 V⎓12 A máx., Doble hasta 21 A / 800 W máx.</p>
-<p>Vehículo: 11-16 V⎓8 A máx., Doble hasta 8 A máx.</p></td>
-</tr>
-</tbody>
-</table>
+<img src="assets/ir/28ffcbf9af284efc6870c0dc8ea46e81ed64bd3ee7da2d4ea4ab9a39cabc47d8/overview_side.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_es/overview_side.png" data-web-finished-panel-sha256="28ffcbf9af284efc6870c0dc8ea46e81ed64bd3ee7da2d4ea4ab9a39cabc47d8" alt="Asa Puerto de expansión CC Conectar al paquete de baterías Entrada de CA 220 V-240 V~ 50 Hz, 10 A máx. Entrada de CC (2×Puertos DC8020) PV: 16-60 V⎓12 A máx., Doble hasta 21 A / 800 W máx. Vehículo: 11-16 V⎓8 A máx., Doble hasta 8 A máx." />
 
 # PANTALLA LCD
 
-<img src="assets/ir/f82efe218bc0b63cb953aced0c85f7c9553935e68d5cf70a3577df9212f550ce/lcd_map.png" style="width: 420px;" width="420" height="248" alt="PANTALLA LCD" />
+<img src="assets/ir/ab12c2def67ebf89f522bbd357393cefa66750662dd9d6583f98266f00712825/lcd_map.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_es/lcd_map.png" data-web-finished-panel-sha256="ab12c2def67ebf89f522bbd357393cefa66750662dd9d6583f98266f00712825" alt="PANTALLA LCD" />
 
 
 
@@ -202,53 +127,15 @@ Para obtener asistencia, comunícate con el servicio al cliente de Jackery.</p><
 
 ## ENCENDIDO/APAGADO
 
-<img src="assets/ir/74004806e6c0996fb77b2260c046e055194855a96bed97c519bb58c292e3b5e2/op_main_power.png" style="width: 360px;" width="360" height="141" alt="Operación de encendido/apagado." />
-
-**Encendido**
-
-Presione una vez
-
-**Apagado**
-
-Mantenga presionado durante más de 3 segundos
-
-**Tiempo de espera predeterminado:** 2 horas.
-
-El producto se apagará automáticamente después de 2 horas de inactividad, sin carga ni descarga.
-
-\*El tiempo de espera puede configurarse en la aplicación Jackery.
-
-Cuando el modo de ahorro de energía está activado, el producto se apagará automáticamente después de 12 horas si la salida de CA o la salida CC/USB está activada, pero el producto no está cargando ni descargando.
+<img src="assets/ir/2372bbde654166c6ccbb9981ddfb41a8e73283cde66ba66c9e296af8e4709550/operation_power.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_es/operation_power.png" data-web-finished-panel-sha256="2372bbde654166c6ccbb9981ddfb41a8e73283cde66ba66c9e296af8e4709550" alt="Encendido Presione una vez Apagado Mantenga presionado durante más de 3 segundos；Tiempo de espera predeterminado: 2 horas. El producto se apagará automáticamente después de 2 horas de inactividad, sin carga ni descarga. *El tiempo de espera puede configurarse en la aplicación Jackery. Cuando el modo de ahorro de energía está activado, el producto se apagará automáticamente después de 12 horas si la salida de CA o la salida CC/USB está activada, pero el producto no está cargando ni descargando." />
 
 ## ENCENDER/APAGAR SALIDA CA
 
-**Requisito previo:** el producto está encendido.
-
-<img src="assets/ir/43a46a51a98773dd307ff35dd1ac684790109b2b8c437f87ceacbc3636bc1d75/op_ac_output.png" style="width: 360px;" width="360" height="252" alt="Operación de salida de CA." />
-
-Los botones CA1 y CA2 controlan dos pares separados de tomas de corriente CA. Al presionar cada botón se enciende o apaga su par correspondiente de tomas de corriente CA.
-
-**Encendido**
-
-Presione una vez
-
-**Apagado**
-
-Presione una vez
+<img src="assets/ir/f895fc8176250f851b519ee65a4b78a5f786b072dc92bd8402a12e9568639bf4/operation_ac.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_es/operation_ac.png" data-web-finished-panel-sha256="f895fc8176250f851b519ee65a4b78a5f786b072dc92bd8402a12e9568639bf4" alt="Requisito previo: el producto está encendido.；Los botones CA1 y CA2 controlan dos pares separados de tomas de corriente CA. Al presionar cada botón se enciende o apaga su par correspondiente de tomas de corriente CA.；Encendido Presione una vez Apagado Presione una vez" />
 
 ## ENCENDER/APAGAR SALIDA CC 12V/USB
 
-**Requisito previo:** el producto está encendido.
-
-<img src="assets/ir/c46c92d6ee991a400208635802b5d2682f215cacaa748a3ca73068fdb18cdec3/op_dc_usb_output.png" style="width: 360px;" width="360" height="208" alt="Operación de salida de CC y USB." />
-
-**Encendido**
-
-Presione una vez
-
-**Apagado**
-
-Presione una vez
+<img src="assets/ir/2452544f4334334d3d2004077c62b34bfca2f0af2cb71d9b809f9bf9777d3518/operation_dc.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_es/operation_dc.png" data-web-finished-panel-sha256="2452544f4334334d3d2004077c62b34bfca2f0af2cb71d9b809f9bf9777d3518" alt="Requisito previo: el producto está encendido.；Encendido Presione una vez Apagado Presione una vez" />
 
 
 
@@ -276,15 +163,7 @@ El producto puede cargar la batería de su vehículo utilizando el cable de carg
 
 ## MODO DE AHORRO DE ENERGÍA
 
-Para evitar un consumo innecesario de batería por olvidar apagar la salida, el producto activa por defecto el Modo de Ahorro de Energía. Cuando la salida de CA o CC/USB está encendida, el icono del modo de ahorro de energía se mostrará en la pantalla LCD. En este modo, si no hay ningún dispositivo conectado o si el consumo del dispositivo conectado está por debajo de cierto umbral (25 W en salida de CA o 2 W en salida de CC/USB), la salida correspondiente se apagará automáticamente después del tiempo configurado. La configuración predeterminada es 12 horas. La duración del Modo de Ahorro de Energía puede configurarse en la aplicación Jackery en 1H, 2 H, 8 H, 12 H o 24 H. Si se establece en \"Never Off\", el Modo de Ahorro de Energía se desactivará.
-
-Para desactivar el modo de ahorro de energía, mantenga pulsados simultáneamente el botón CA1 y el botón POWER principal durante más de 3 segundos. Una vez desactivado el modo de ahorro de energía, el icono dejará de mostrarse en la pantalla LCD y el producto no apagará automáticamente la salida de CA o CC/USB.
-
-Cuando alimente dispositivos de baja potencia (CA ≤ 25 W o CC/USB ≤ 2 W), desactive el modo de ahorro de energía para evitar que la salida se apague automáticamente durante el funcionamiento.
-
-<img src="assets/ir/9dd943d3063031c0795ff8c4b2b6aac266bfb2bff78e2250e445f27352c23a07/energy_saving.png" style="width: 320px;" width="320" height="95" alt="Operación del modo de ahorro de energía." />
-
-Mantenga pulsados ambos botones durante 3 segundos.
+<img src="assets/ir/67ef7e45cce6e4995148f64426e056b9fab49e6b43e03fa88a900a919b6b426d/operation_energy.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_es/operation_energy.png" data-web-finished-panel-sha256="67ef7e45cce6e4995148f64426e056b9fab49e6b43e03fa88a900a919b6b426d" alt="Para evitar un consumo innecesario de batería por olvidar apagar la salida, el producto activa por defecto el Modo de Ahorro de Energía. Cuando la salida de CA o CC/USB está encendida, el icono del modo de ahorro de energía se mostrará en la pantalla LCD. En este modo, si no hay ningún dispositivo conectado o si el consumo del dispositivo conectado está por debajo de cierto umbral (25 W en salida de CA o 2 W en salida de CC/USB), la salida correspondiente se apagará automáticamente después del tiempo configurado. La configuración predeterminada es 12 horas. La duración del Modo de Ahorro de Energía puede configurarse en la aplicación Jackery en 1H, 2 H, 8 H, 12 H o 24 H. Si se establece en &quot;Never Off&quot;, el Modo de Ahorro de Energía se desactivará.；Para desactivar el modo de ahorro de energía, mantenga pulsados simultáneamente el botón CA1 y el botón POWER principal durante más de 3 segundos. Una vez desactivado el modo de ahorro de energía, el icono dejará de mostrarse en la pantalla LCD y el producto no apagará automáticamente la salida de CA o CC/USB.；Cuando alimente dispositivos de baja potencia (CA ≤ 25 W o CC/USB ≤ 2 W), desactive el modo de ahorro de energía para evitar que la salida se apague automáticamente durante el funcionamiento.；Mantenga pulsados ambos botones durante 3 segundos." />
 
 
 
@@ -294,15 +173,7 @@ Mantenga pulsados ambos botones durante 3 segundos.
 
 ## ENCENDER/APAGAR LUZ LED
 
-La luz LED tiene dos modos: modo de luz y modo SOS. En cualquier modo, mantenga presionado el botón de luz LED para apagarla.
-
-<img src="assets/ir/bf4fce34dd33d44a77c7a96dd6aff81ccd76bdc5f6ba34cf59d69f95d021cdd3/led_light.png" style="width: 360px;" width="360" height="206" alt="Operación de la luz LED." />
-
-Presione una vez el botón de la luz LED para encenderla.
-
-Presiónelo nuevamente para cambiar al modo SOS.
-
-Presiónelo una tercera vez para apagar la luz.
+<img src="assets/ir/a5c2bf51a18ab69a4a002107f12abb33f404c3e986bcec537adf2319193957fb/operation_led.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_es/operation_led.png" data-web-finished-panel-sha256="a5c2bf51a18ab69a4a002107f12abb33f404c3e986bcec537adf2319193957fb" alt="La luz LED tiene dos modos: modo de luz y modo SOS. En cualquier modo, mantenga presionado el botón de luz LED para apagarla.；Presione una vez el botón de la luz LED para encenderla. Presiónelo nuevamente para cambiar al modo SOS. Presiónelo una tercera vez para apagar la luz." />
 
 ## Función de reanudación de Salida de CA y CC
 
@@ -339,7 +210,7 @@ La función de reanudación de salida de CA/CC está desactivada de forma predet
 <table style="width:100%; border-collapse:collapse; margin:0.75rem 0 0.5rem 0;">
 <tbody>
 <tr>
-<td rowspan="6" style="text-align: center; width: 24%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top;"><img src="assets/ir/24a37b773bf14cd76f160a25dfa413576a95405a1f57f69059487b29b7791bfd/lcd_mode.png" style="max-width:140px; width:100%; height:auto; display:block; margin:0 auto;" width="140" height="220" alt="Modo de pantalla LCD." /></td>
+<td rowspan="6" style="text-align: center; width: 24%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top;"><img src="assets/ir/71f85bd15d966cb3b856e158091d58f181a6fe4991bd96459ff08e3f9964161f/operation_lcd.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_es/operation_lcd.png" data-web-finished-panel-sha256="71f85bd15d966cb3b856e158091d58f181a6fe4991bd96459ff08e3f9964161f" alt="Modo de pantalla LCD." /></td>
 <td rowspan="3" style="width: 18%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Encendido breve</td>
 <td style="width: 12%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Encender</td>
 <td style="width: 46%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Presione el botón POWER principal o cuando el producto se esté cargando.</td>
@@ -383,11 +254,7 @@ También puede configurar el modo de visualización de la pantalla en la aplicac
 
 Conecte el producto a una toma de corriente con el cable de carga de CA, luego presione el botón de energía CA y alimente sus electrodomésticos al mismo tiempo.
 
-<img src="assets/ir/5866fb05040e5b4423c473d5e7abf87122e0e93f5afce742696a09454b4bd675/ups_mode.png" style="width: 360px;" width="360" height="273" alt="Diagrama de conexión UPS." />
-
-Un sistema de alimentación ininterrumpida (UPS) es un tipo de sistema de energía continua que proporciona energía eléctrica de respaldo automática a una carga cuando falla la energía de la red principal.
-
-En caso de una pérdida repentina de energía de la red, Jackery Explorer 2000 Plus cambiará automáticamente a la energía almacenada en menos de 10 ms para mantener sus electrodomésticos en funcionamiento.
+<img src="assets/ir/656654e0ffbd168b4387004a02ce8bcb0884d9a1c6049192f23c4936a6a747d0/ups.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_es/ups.png" data-web-finished-panel-sha256="656654e0ffbd168b4387004a02ce8bcb0884d9a1c6049192f23c4936a6a747d0" alt="Un sistema de alimentación ininterrumpida (UPS) es un tipo de sistema de energía continua que proporciona energía eléctrica de respaldo automática a una carga cuando falla la energía de la red principal.；En caso de una pérdida repentina de energía de la red, Jackery Explorer 2000 Plus cambiará automáticamente a la energía almacenada en menos de 10 ms para mantener sus electrodomésticos en funcionamiento." />
 
 En modo UPS, la potencia máxima de salida de la unidad alcanza 10 A antes de los cortes de energía. Como la carga y descarga simultáneas están habilitadas en modo bypass,
 
@@ -410,7 +277,7 @@ la potencia de salida real es inferior a la potencia nominal en este modo, pero 
 
 Este producto puede soportar hasta 5 paquetes de baterías para satisfacer la necesidad de una gran capacidad de energía. Para detalles sobre su uso, consulte el *manual de usuario del Jackery Battery Pack 2000*.
 
-<img src="assets/ir/6c7f1deea2f6211ba3ed3273900aa7595234d3b8fe5a67830defa4cf13ee6fe6/main_unit1.png" style="width: 360px;" width="360" height="273" alt="Diagrama de conexión del paquete de baterías." />
+<img src="assets/ir/acaef3bb1842037d52742b65f27fa351f652f393448dae6b35d8c9febcdae23b/extra_battery.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_es/extra_battery.png" data-web-finished-panel-sha256="acaef3bb1842037d52742b65f27fa351f652f393448dae6b35d8c9febcdae23b" alt="Diagrama de conexión del paquete de baterías." />
 
 
 
@@ -449,9 +316,7 @@ Cuando la carga en la pared de CA y la carga solar están activadas al mismo tie
 
 ### CARGA MEDIANTE UNA TOMA DE CORRIENTE DE PARED ALTERNA
 
-Conecte el cable de carga de CA al puerto de entrada de CA del producto y a una toma de corriente.
-
-<img src="assets/ir/37f4c64bfeaac2df031b0fb30a0228f4ef0ba7f015385e52eec69a5d2ccdb414/ac_wall.png" style="width: 360px;" width="360" height="144" alt="Diagrama de carga por toma de CA." />
+<img src="assets/ir/50bb1e623ab68e5dda070494b23af9a09ad3c9f55de0030c3ce7f98ef573279d/charging_ac.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_es/charging_ac.png" data-web-finished-panel-sha256="50bb1e623ab68e5dda070494b23af9a09ad3c9f55de0030c3ce7f98ef573279d" alt="Conecte el cable de carga de CA al puerto de entrada de CA del producto y a una toma de corriente." />
 
 
 
@@ -467,11 +332,9 @@ Bajo este modo, puedes cargar rápidamente la estación de energía portátil ut
 
 Jackery Explorer 2000 Plus cuenta con dos puertos de entrada DC8020 y es compatible con los paneles solares de Jackery.
 
-<img src="assets/ir/8332edf8c7678e11924ab5efbc3aea63a72516f20f9ae4fde1c9d55983e1e287/solar_direct.png" style="width: 360px;" width="360" height="158" alt="Diagrama de conexión para carga solar 1." />
+<img src="assets/ir/674807cf7f7dcddd6b2a81ca9d4bad2501be19623e099159b0ce35e6b09441d1/charging_solar.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_es/charging_solar.png" data-web-finished-panel-sha256="674807cf7f7dcddd6b2a81ca9d4bad2501be19623e099159b0ce35e6b09441d1" alt="Diagrama de conexión para carga solar 1." />
 
 Si se necesita conectar dos paneles solares a un solo puerto de entrada DC8020 al mismo tiempo, consulte la figura siguiente para la carga mediante el conector de panel solar (se vende por separado y no se incluye de serie).
-
-<img src="assets/ir/9df8813895e672545085c2356f72c13fc30323f72fab4de973416ea66093ee7d/solar_adapter.png" style="width: 360px;" width="360" height="171" alt="Diagrama de conexión para carga solar 2." />
 
 
 
@@ -496,11 +359,7 @@ Se recomienda usar el panel solar Jackery para cargar el Jackery Explorer 2000 P
 
 Este producto puede cargarse usando un cargador para vehículo de 12 V. Asegúrese de que el cargador de vehículo y el encendedor de vehículo ofrezcan una buena conexión.
 
-<img src="assets/ir/cc7007d5671cf4abfbc552aeed661b5d7cf73e3fdd3f275af5f9183f40134dc0/car_charge.png" style="width: 360px;" width="360" height="193" alt="Diagrama de carga en vehículo." />
-
-Vehículo
-
-※El cable de carga para vehículo se vende por separado.
+<img src="assets/ir/8ca3aa8fc7e3ed489a34d716704452270a5477f7c0a7d92f397f1fb31e6d0933/charging_car.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_es/charging_car.png" data-web-finished-panel-sha256="8ca3aa8fc7e3ed489a34d716704452270a5477f7c0a7d92f397f1fb31e6d0933" alt="Vehículo ※El cable de carga para vehículo se vende por separado." />
 
 
 

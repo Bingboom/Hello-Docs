@@ -104,7 +104,7 @@
     ],
     "sha256": "6b34ce02dfd4d7fd16050755c001ab152813a4907aa0dcb2376716b5e150988d"
   },
-  "git_ref": "94032b73173f875e6209fa91dce7723f80e77c5d",
+  "git_ref": "206584b3bff6096e83e7fe5e3743a0cc6852b026",
   "html": {
     "files": [
       {
@@ -1559,6 +1559,11 @@
         "size": 378194
       },
       {
+        "path": "assets/ir/212dc1705383bf23f618d42aed0f210026edf755f9417a9435b08f35c4614dc7/inbox_manual.png",
+        "sha256": "212dc1705383bf23f618d42aed0f210026edf755f9417a9435b08f35c4614dc7",
+        "size": 13402
+      },
+      {
         "path": "assets/ir/21b5f19ca9a6e39d8bd515128297cc1b99e43fd263e39ffba4fdf102d50a4bad/16_Charging_Power_Limit_VLf2bJfrkoCL0CxJoMNcL5ZxnCt.png",
         "sha256": "21b5f19ca9a6e39d8bd515128297cc1b99e43fd263e39ffba4fdf102d50a4bad",
         "size": 2772
@@ -1567,11 +1572,6 @@
         "path": "assets/ir/236891c20611070753633c7c9286982284851c6df78137cfc5bc26922c6528b6/12_weee2_EccQbCmImosxoPxWSuOcPinpn9e.png",
         "sha256": "236891c20611070753633c7c9286982284851c6df78137cfc5bc26922c6528b6",
         "size": 3441
-      },
-      {
-        "path": "assets/ir/287650f3a89ae520e32f0d75df8401151b808004ee50075b96aff70af04ca4ef/ac_charging_cable.png",
-        "sha256": "287650f3a89ae520e32f0d75df8401151b808004ee50075b96aff70af04ca4ef",
-        "size": 4023
       },
       {
         "path": "assets/ir/28f3cad42ae32e9e895abfd7cdb16a21b99dfa822c57d542f0e3f59a4b452c6c/12_AC_Wall_Charging_Indicator_ZpOmbCjx8oYUTVxyl4JcvcTanPe.png",
@@ -1594,6 +1594,11 @@
         "size": 349294
       },
       {
+        "path": "assets/ir/48f36d3f9743b72050fe218c72ddcefad0dcbf513ff72877d3e951bb1ad235ab/inbox_main.png",
+        "sha256": "48f36d3f9743b72050fe218c72ddcefad0dcbf513ff72877d3e951bb1ad235ab",
+        "size": 57975
+      },
+      {
         "path": "assets/ir/58c1d3604ca7b9774b069c6928775a13465ccb9477f477e9e4d4b30e7f75b88d/26_Output_Power_PviebR618oofvKxcKVRcHLlInqd.png",
         "sha256": "58c1d3604ca7b9774b069c6928775a13465ccb9477f477e9e4d4b30e7f75b88d",
         "size": 6085
@@ -1607,11 +1612,6 @@
         "path": "assets/ir/6aab9a14900a08fcd8f8261e6e36fbb9a1220eb931df94ebd149b23930063723/20_Discharge_Timer_DHPMbkjSWoiuALxJyJ8cWyQOn0e.png",
         "sha256": "6aab9a14900a08fcd8f8261e6e36fbb9a1220eb931df94ebd149b23930063723",
         "size": 3194
-      },
-      {
-        "path": "assets/ir/6c7f1deea2f6211ba3ed3273900aa7595234d3b8fe5a67830defa4cf13ee6fe6/main_unit1.png",
-        "sha256": "6c7f1deea2f6211ba3ed3273900aa7595234d3b8fe5a67830defa4cf13ee6fe6",
-        "size": 7470
       },
       {
         "path": "assets/ir/71017f43bab44852d5586d1d4f996f3c52d8451bceaa9249e29864652c2f537d/4_Charging_Plan_M96RbyZQxoGjRRxQHsuczeIln1b.png",
@@ -1657,11 +1657,6 @@
         "path": "assets/ir/85921a9ad7fbfa58f98ee7bb0dc904377f31fe3dbface4083d2493144b05362f/17_Battery_Power_Indicator_VLufb9exvoVLfgxz47pcfnRGnaf.png",
         "sha256": "85921a9ad7fbfa58f98ee7bb0dc904377f31fe3dbface4083d2493144b05362f",
         "size": 4879
-      },
-      {
-        "path": "assets/ir/87ac44e52863324b761a672089e6b0497e40fdf48432f698fccf30508060c60a/manual_icon1.png",
-        "sha256": "87ac44e52863324b761a672089e6b0497e40fdf48432f698fccf30508060c60a",
-        "size": 1614
       },
       {
         "path": "assets/ir/89dae4b809de62e67e42949d33826c6e05b147b57e94b3e9c42f4bfff9af591a/2_read_manual_MAQxbZ9MooQjaaxqb6qctq6Sncg.png",
@@ -1742,6 +1737,11 @@
         "path": "assets/ir/c4b830c769a3de7f9effaee82466752f5706a0741ba29675cce45633c1cd8222/22_Energy_Saving_Mode_O4Jdb5pUQoCBAqx0sfQcm9Nbntd.png",
         "sha256": "c4b830c769a3de7f9effaee82466752f5706a0741ba29675cce45633c1cd8222",
         "size": 2056
+      },
+      {
+        "path": "assets/ir/c6cdf9a78185cd034e0032fa427477c576c80d88ef28f90c0b887a4fc0fa4539/inbox_cable.png",
+        "sha256": "c6cdf9a78185cd034e0032fa427477c576c80d88ef28f90c0b887a4fc0fa4539",
+        "size": 30281
       },
       {
         "path": "assets/ir/c7862a87e742d6927b4e1d63a8d0ccb09fbcf980ae662ff94b9134e256e56889/19_Low_Battery_Indicator_KDk9bhs8poHUBdx96PLckPganhd.png",
@@ -1825,12 +1825,12 @@
       },
       {
         "path": "manual_je2000e_eu_en.md",
-        "sha256": "f4bf8da8ec348c0b8c7be9a78b063a238794f45b6384044d47d538c130dde631",
-        "size": 69272
+        "sha256": "a79abf1c05f2834e7c040d5cf19a9c15c488a80c3d2505abd892f261b1d7be08",
+        "size": 69851
       }
     ],
     "manual": "manual_je2000e_eu_en.md",
-    "sha256": "6005f3a6940ed2066d953e6f2f48e991f28e2a03674960085f9f355a12c3b089"
+    "sha256": "b871bea1606f97f83d2b965470c761209d4804905b1fb7b88e357aebd65b3ed4"
   },
   "model": "JE-2000E",
   "projection_manifest": {
@@ -1839,5 +1839,5 @@
   },
   "region": "EU",
   "schema_version": "auto-manual-web-language-release-evidence/v1",
-  "version": "2.2"
+  "version": "2.3"
 }

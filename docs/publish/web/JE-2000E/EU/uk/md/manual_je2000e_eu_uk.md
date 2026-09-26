@@ -44,11 +44,11 @@
 
 
 
-<figure aria-label="ЩО В КОРОБЦІ" class="hb-inbox-composition" data-card-count="3" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="three-card-responsive"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Заглушка зображення електростанції." class="hb-inbox-art" src="../../../../_static/manual-assets/_pool/6c/6c7f1deea2f6211ba3ed3273900aa7595234d3b8fe5a67830defa4cf13ee6fe6.png"/><div class="hb-inbox-label">
+<figure aria-label="ЩО В КОРОБЦІ" class="hb-inbox-composition" data-card-count="3" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="three-card-responsive"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Заглушка зображення електростанції." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je2000e_eu_uk/inbox_main.png" data-web-finished-panel-sha256="0a9c016c2dfcdaba1081654fc09f60856416a4383d7a652a45093c8fb132bada" src="../../../../_static/manual-assets/_pool/0a/0a9c016c2dfcdaba1081654fc09f60856416a4383d7a652a45093c8fb132bada.png"/><div class="hb-inbox-label">
 <p><strong>Jackery Explorer 2000 Plus</strong></p>
-</div></li><li class="hb-inbox-card" data-item-number="2"><img alt="Заглушка зображення кабелю для заряджання AC." class="hb-inbox-art" src="../../../../_static/manual-assets/_pool/28/287650f3a89ae520e32f0d75df8401151b808004ee50075b96aff70af04ca4ef.png"/><div class="hb-inbox-label">
+</div></li><li class="hb-inbox-card" data-item-number="2"><img alt="Заглушка зображення кабелю для заряджання AC." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je2000e_eu_uk/inbox_cable.png" data-web-finished-panel-sha256="9c526f2917e4483af821a37a78898f9add0aa6f7538ac83fd2ff232755e3d28b" src="../../../../_static/manual-assets/_pool/9c/9c526f2917e4483af821a37a78898f9add0aa6f7538ac83fd2ff232755e3d28b.png"/><div class="hb-inbox-label">
 <p><strong>Кабель для заряджання AC</strong></p>
-</div></li><li class="hb-inbox-card" data-item-number="3"><img alt="Заглушка зображення посібника користувача." class="hb-inbox-art" src="../../../../_static/manual-assets/_pool/87/87ac44e52863324b761a672089e6b0497e40fdf48432f698fccf30508060c60a.png"/><div class="hb-inbox-label">
+</div></li><li class="hb-inbox-card" data-item-number="3"><img alt="Заглушка зображення посібника користувача." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je2000e_eu_uk/inbox_manual.png" data-web-finished-panel-sha256="be87c3e284d6896cc21d53e24244568ba9d2039f53640167c826a12c965bc09c" src="../../../../_static/manual-assets/_pool/be/be87c3e284d6896cc21d53e24244568ba9d2039f53640167c826a12c965bc09c.png"/><div class="hb-inbox-label">
 <p>Посібник користувача</p>
 </div></li></ol><div class="hb-inbox-tip" role="note"><div class="hb-inbox-tip-label"><p><strong>ПОРАДИ</strong></p></div><div class="hb-inbox-tip-body"><p>Кабель для заряджання від автомобіля не входить до комплекту, але його можна придбати окремо на нашому вебсайті.
 Для отримання допомоги зверніться до служби підтримки Jackery.</p></div></div></figure>
@@ -59,90 +59,15 @@
 
 ## ВИГЛЯД СПЕРЕДУ
 
-<img src="../../../../_static/manual-assets/_pool/56/562f998c918a50bdedcaaeff1e005b505ced57e8252bc987fe0662ea9fa8b658.jpg" style="width: 420px;" width="420" height="236" alt="Заглушка схеми вигляду спереду." />
-
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr>
-<td><p><strong>Головна кнопка POWER</strong></p></td>
-<td><p><strong>LCD</strong></p></td>
-</tr>
-<tr>
-<td><p><strong>Порт DC 12 В</strong></p>
-<p>12 В⎓10 А макс.</p></td>
-<td><p><strong>Кнопка LED-світла</strong></p></td>
-</tr>
-<tr>
-<td><p><strong>Кнопка POWER DC / USB</strong></p></td>
-<td><p><strong>LED-світло</strong></p></td>
-</tr>
-<tr>
-<td><p><strong>Вихід USB-C 30 Вт</strong></p>
-<p>30 Вт макс., 5 В⎓3 A, 9 В⎓3 A, 12 В⎓2,5 A, 15 В⎓2 A, 20 В⎓1,5 A</p></td>
-<td><p><strong>Кнопка AC1</strong></p></td>
-</tr>
-<tr>
-<td><p><strong>Вихід USB-C 140 Вт</strong></p>
-<p>140 Вт макс., 5 В⎓3 A, 9 В⎓3 A, 12 В⎓3 A, 15 В⎓3 A, 20 В⎓5 A, 28 В⎓5 A</p></td>
-<td><p><strong>Кнопка AC2</strong></p></td>
-</tr>
-<tr>
-<td><p><strong>Вихід USB-A 18 Вт</strong></p>
-<p>18 Вт макс., 5-6 В⎓3 A, 6-9 В⎓2 A, 9-12 В⎓1,5 A</p></td>
-<td><p><strong>Вихід змінного струму</strong></p>
-<p>230 В~ 50 Гц, 10 A макс., 2400 Вт ном. потужності</p></td>
-</tr>
-</tbody>
-</table>
-
-<table>
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<tbody>
-<tr>
-<td><p><strong>Загальна вихідна потужність</strong></p>
-<p>Номінальна потужність 2400 Вт, пікова потужність 4800 Вт</p></td>
-</tr>
-</tbody>
-</table>
+<img src="../../../../_static/manual-assets/_pool/7d/7d68b6cff1963a2b0062c2d863c1a15b0cba1fdf5006162c17647fb00ed7b9c7.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_uk/overview_front.png" data-web-finished-panel-sha256="7d68b6cff1963a2b0062c2d863c1a15b0cba1fdf5006162c17647fb00ed7b9c7" alt="Головна кнопка POWER LCD Порт DC 12 В 12 В⎓10 А макс. Кнопка LED-світла Кнопка POWER DC / USB LED-світло Вихід USB-C 30 Вт 30 Вт макс., 5 В⎓3 A, 9 В⎓3 A, 12 В⎓2,5 A, 15 В⎓2 A, 20 В⎓1,5 A Кнопка AC1 Вихід USB-C 140 Вт 140 Вт макс., 5 В⎓3 A, 9 В⎓3 A, 12 В⎓3 A, 15 В⎓3 A, 20 В⎓5 A, 28 В⎓5 A Кнопка AC2 Вихід USB-A 18 Вт 18 Вт макс., 5-6 В⎓3 A, 6-9 В⎓2 A, 9-12 В⎓1,5 A Вихід змінного струму 230 В~ 50 Гц, 10 A макс., 2400 Вт ном. потужності；Загальна вихідна потужність Номінальна потужність 2400 Вт, пікова потужність 4800 Вт" />
 
 ## ВИГЛЯД З ЛІВОГО ТА ПРАВОГО БОКІВ
 
-<img src="../../../../_static/manual-assets/_pool/b0/b04dca41b7cc3211a30f3a3fc2b1e904c25330f28104e4338a8ed67a11378011.png" style="width: 420px;" width="420" height="209" alt="Заглушка схеми вигляду з лівого та правого боків." />
-
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr>
-<td><p><strong>Ручка</strong></p></td>
-<td><p><strong>Порт розширення постійного струму</strong></p>
-<p>Підключіть до акумуляторного блока</p></td>
-</tr>
-<tr>
-<td></td>
-<td><p><strong>Вхід змінного струму</strong></p>
-<p>220 В-240 В~ 50 Гц, 10 A макс.</p></td>
-</tr>
-<tr>
-<td></td>
-<td><p><strong>Вхід постійного струму (2 порти DC8020)</strong></p>
-<p>PV: 16-60 В⎓12 A макс., подв. до 21 A / 800 Вт макс.</p>
-<p>Автомобіль: 11-16 В⎓8 A макс., подв. до 8 A макс.</p></td>
-</tr>
-</tbody>
-</table>
+<img src="../../../../_static/manual-assets/_pool/6c/6c5e53bd04fbee737738bb5f586e490c2367185cbe1ed2ccba04cd701a99bdf8.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_uk/overview_side.png" data-web-finished-panel-sha256="6c5e53bd04fbee737738bb5f586e490c2367185cbe1ed2ccba04cd701a99bdf8" alt="Ручка Порт розширення постійного струму Підключіть до акумуляторного блока Вхід змінного струму 220 В-240 В~ 50 Гц, 10 A макс. Вхід постійного струму (2 порти DC8020) PV: 16-60 В⎓12 A макс., подв. до 21 A / 800 Вт макс. Автомобіль: 11-16 В⎓8 A макс., подв. до 8 A макс." />
 
 # ЕКРАН LCD
 
-<img src="../../../../_static/manual-assets/_pool/f8/f82efe218bc0b63cb953aced0c85f7c9553935e68d5cf70a3577df9212f550ce.png" style="width: 420px;" width="420" height="248" alt="ЕКРАН LCD" />
+<img src="../../../../_static/manual-assets/_pool/ab/ab12c2def67ebf89f522bbd357393cefa66750662dd9d6583f98266f00712825.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_uk/lcd_map.png" data-web-finished-panel-sha256="ab12c2def67ebf89f522bbd357393cefa66750662dd9d6583f98266f00712825" alt="ЕКРАН LCD" />
 
 
 
@@ -219,49 +144,15 @@
 
 ## ВКЛ./ВИКЛ.
 
-<img src="../../../../_static/manual-assets/_pool/74/74004806e6c0996fb77b2260c046e055194855a96bed97c519bb58c292e3b5e2.png" style="width: 360px;" width="360" height="141" alt="Заглушка операції вмикання/вимикання живлення." />
-
-Увімкнення: натисніть один раз.
-
-Вимкнення: натисніть і утримуйте 3 с.
-
-**Стандартний час очікування:** 2 години.
-
-Пристрій автоматично вимкнеться після 2 годин бездіяльності, якщо не відбувається заряджання чи розряджання.
-
-\* Час очікування можна налаштувати в Додатку Jackery.
-
-Коли режим енергозбереження ввімкнено, пристрій автоматично вимкнеться після 12 годин, якщо вихід AC або DC / USB увімкнено, але пристрій не заряджається і не розряджається.
+<img src="../../../../_static/manual-assets/_pool/98/985bf28528232800bce76485e4996b3bf9aff1a3e4b783c8898858e30e1ba641.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_uk/operation_power.png" data-web-finished-panel-sha256="985bf28528232800bce76485e4996b3bf9aff1a3e4b783c8898858e30e1ba641" alt="Увімкнення: натисніть один раз. Вимкнення: натисніть і утримуйте 3 с.；Стандартний час очікування: 2 години. Пристрій автоматично вимкнеться після 2 годин бездіяльності, якщо не відбувається заряджання чи розряджання. * Час очікування можна налаштувати в Додатку Jackery. Коли режим енергозбереження ввімкнено, пристрій автоматично вимкнеться після 12 годин, якщо вихід AC або DC / USB увімкнено, але пристрій не заряджається і не розряджається." />
 
 ## УВІМК./ВИМК. ВИХОДУ AC
 
-**Передумова**: пристрій увімкнено.
-
-<img src="../../../../_static/manual-assets/_pool/43/43a46a51a98773dd307ff35dd1ac684790109b2b8c437f87ceacbc3636bc1d75.png" style="width: 360px;" width="360" height="252" alt="Заглушка операції вмикання/вимикання виходу AC." />
-
-Кнопка AC1 і кнопка AC2 керують двома окремими парами розеток змінного струму. Натискання кожної кнопки вмикає або вимикає відповідну пару розеток змінного струму.
-
-**Увімкнути**
-
-Натисніть один раз
-
-**Вимкнути**
-
-Натисніть один раз
+<img src="../../../../_static/manual-assets/_pool/67/679643811e8d99afae57b8fa8a6206316c73480aa36824ff3f2da7b2e7054867.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_uk/operation_ac.png" data-web-finished-panel-sha256="679643811e8d99afae57b8fa8a6206316c73480aa36824ff3f2da7b2e7054867" alt="Передумова : пристрій увімкнено.；Кнопка AC1 і кнопка AC2 керують двома окремими парами розеток змінного струму. Натискання кожної кнопки вмикає або вимикає відповідну пару розеток змінного струму.；Увімкнути Натисніть один раз Вимкнути Натисніть один раз" />
 
 ## УВІМК./ВИМК. ВИХОДУ DC 12 В / USB
 
-**Передумова**: пристрій увімкнено.
-
-<img src="../../../../_static/manual-assets/_pool/c4/c46c92d6ee991a400208635802b5d2682f215cacaa748a3ca73068fdb18cdec3.png" style="width: 360px;" width="360" height="208" alt="Заглушка операції вмикання/вимикання виходу DC USB." />
-
-**Увімкнути**
-
-Натисніть один раз
-
-**Вимкнути**
-
-Натисніть один раз
+<img src="../../../../_static/manual-assets/_pool/7f/7fb56e98bcafa7d8500819c34af4836452f99e64fbed1a01514e53ded4e416e5.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_uk/operation_dc.png" data-web-finished-panel-sha256="7fb56e98bcafa7d8500819c34af4836452f99e64fbed1a01514e53ded4e416e5" alt="Передумова : пристрій увімкнено.；Увімкнути Натисніть один раз Вимкнути Натисніть один раз" />
 
 
 
@@ -289,15 +180,7 @@
 
 ## РЕЖИМ ЕНЕРГОЗБЕРЕЖЕННЯ
 
-Щоб запобігти зайвому витрачанню заряду батареї через забутий увімкнений вихід, пристрій за замовчуванням активує режим енергозбереження. Коли вихід AC або DC / USB увімкнено, на екрані LCD відображатиметься значок режиму енергозбереження. У цьому режимі, якщо пристрій не підключено або споживання підключеного пристрою нижче певного порогу (25 Вт для виходу AC або 2 Вт для виходу DC / USB), відповідний вихід автоматично вимкнеться після встановленого часу. Значення за замовчуванням - 12 годин. Тривалість режиму енергозбереження можна встановити в Додатку Jackery на 2H, 8H, 12H або 24H. Якщо вибрано Never Off, режим енергозбереження буде вимкнено.
-
-Щоб вимкнути режим енергозбереження, натисніть і утримуйте кнопку AC1 та основну кнопку POWER одночасно понад 3 секунди. Після вимкнення режиму енергозбереження значок більше не з\'являтиметься на екрані LCD, і пристрій не вимикатиме автоматично вихід AC або DC / USB.
-
-Під час живлення малопотужних пристроїв (AC \<= 25 Вт або DC / USB \<= 2 Вт) вимкніть режим енергозбереження, щоб запобігти автоматичному вимкненню виходу під час роботи.
-
-<img src="../../../../_static/manual-assets/_pool/9d/9dd943d3063031c0795ff8c4b2b6aac266bfb2bff78e2250e445f27352c23a07.png" style="width: 320px;" width="320" height="95" alt="Заглушка операції керування режимом енергозбереження." />
-
-Натисніть і утримуйте обидві кнопки понад 3 секунди.
+<img src="../../../../_static/manual-assets/_pool/d9/d9f31e0059dfef76bbc024c6da12e904e11bf7dbb7c1fdee5b8131fce571e168.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_uk/operation_energy.png" data-web-finished-panel-sha256="d9f31e0059dfef76bbc024c6da12e904e11bf7dbb7c1fdee5b8131fce571e168" alt="Щоб запобігти зайвому витрачанню заряду батареї через забутий увімкнений вихід, пристрій за замовчуванням активує режим енергозбереження. Коли вихід AC або DC / USB увімкнено, на екрані LCD відображатиметься значок режиму енергозбереження. У цьому режимі, якщо пристрій не підключено або споживання підключеного пристрою нижче певного порогу (25 Вт для виходу AC або 2 Вт для виходу DC / USB), відповідний вихід автоматично вимкнеться після встановленого часу. Значення за замовчуванням - 12 годин. Тривалість режиму енергозбереження можна встановити в Додатку Jackery на 2H, 8H, 12H або 24H. Якщо вибрано Never Off, режим енергозбереження буде вимкнено.；Щоб вимкнути режим енергозбереження, натисніть і утримуйте кнопку AC1 та основну кнопку POWER одночасно понад 3 секунди. Після вимкнення режиму енергозбереження значок більше не з&#39;являтиметься на екрані LCD, і пристрій не вимикатиме автоматично вихід AC або DC / USB.；Під час живлення малопотужних пристроїв (AC &lt;= 25 Вт або DC / USB &lt;= 2 Вт) вимкніть режим енергозбереження, щоб запобігти автоматичному вимкненню виходу під час роботи.；Натисніть і утримуйте обидві кнопки понад 3 секунди." />
 
 
 
@@ -307,15 +190,7 @@
 
 ## ВКЛ./ВИКЛ. LED-СВІТЛА
 
-LED-світло має два режими: режим освітлення та режим SOS. У будь-якому режимі натисніть і утримуйте кнопку LED-світла, щоб вимкнути світло.
-
-<img src="../../../../_static/manual-assets/_pool/bf/bf4fce34dd33d44a77c7a96dd6aff81ccd76bdc5f6ba34cf59d69f95d021cdd3.png" style="width: 360px;" width="360" height="206" alt="Заглушка операції режимів LED-світла." />
-
-Натисніть кнопку LED Light один раз, щоб увімкнути світло.
-
-Натисніть її ще раз, щоб перейти в режим SOS.
-
-Натисніть її втретє, щоб вимкнути світло.
+<img src="../../../../_static/manual-assets/_pool/0c/0c1d223f20b2e3ba2f28b3042835cf796a2435fe76a35146db74e7ed43fd9bc1.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_uk/operation_led.png" data-web-finished-panel-sha256="0c1d223f20b2e3ba2f28b3042835cf796a2435fe76a35146db74e7ed43fd9bc1" alt="LED-світло має два режими: режим освітлення та режим SOS. У будь-якому режимі натисніть і утримуйте кнопку LED-світла, щоб вимкнути світло.；Натисніть кнопку LED Light один раз, щоб увімкнути світло. Натисніть її ще раз, щоб перейти в режим SOS. Натисніть її втретє, щоб вимкнути світло." />
 
 ## Функція відновлення виходів AC і DC
 
@@ -352,7 +227,7 @@ LED-світло має два режими: режим освітлення т�
 <table style="width:100%; border-collapse:collapse; margin:0.75rem 0 0.5rem 0;">
 <tbody>
 <tr>
-<td rowspan="6" style="text-align: center; width: 24%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top;"><img src="../../../../_static/manual-assets/_pool/24/24a37b773bf14cd76f160a25dfa413576a95405a1f57f69059487b29b7791bfd.png" style="max-width:140px; width:100%; height:auto; display:block; margin:0 auto;" width="140" height="220" alt="Заглушка режиму дисплея LCD." /></td>
+<td rowspan="6" style="text-align: center; width: 24%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top;"><img src="../../../../_static/manual-assets/_pool/71/71f85bd15d966cb3b856e158091d58f181a6fe4991bd96459ff08e3f9964161f.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_uk/operation_lcd.png" data-web-finished-panel-sha256="71f85bd15d966cb3b856e158091d58f181a6fe4991bd96459ff08e3f9964161f" alt="Заглушка режиму дисплея LCD." /></td>
 <td rowspan="3" style="width: 18%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Короткочасне увімкнення</td>
 <td style="width: 12%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Увімкнути</td>
 <td style="width: 46%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Натисніть кнопку POWER або коли пристрій заряджається.</td>
@@ -396,11 +271,7 @@ LED-світло має два режими: режим освітлення т�
 
 Підключіть виріб до настінної розетки за допомогою кабелю для заряджання AC, потім натисніть кнопку AC і одночасно подавайте живлення на свої прилади.
 
-<img src="../../../../_static/manual-assets/_pool/58/5866fb05040e5b4423c473d5e7abf87122e0e93f5afce742696a09454b4bd675.png" style="width: 360px;" width="360" height="273" alt="Схема підключення UPS." />
-
-Джерело безперебійного живлення (UPS) - це тип системи безперервного живлення, яка автоматично забезпечує резервне живлення підключеного навантаження у разі відмови електромережі.
-
-У разі раптового зникнення мережевого живлення Jackery Explorer 2000 Plus автоматично перемкнеться на накопичену енергію протягом 10 ms, щоб ваші прилади продовжували працювати.
+<img src="../../../../_static/manual-assets/_pool/8d/8d821dcb8c1c1c2ba4885dec2b1e405c11eb2f51ceff27f2bc4f7e2f97061b9e.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_uk/ups.png" data-web-finished-panel-sha256="8d821dcb8c1c1c2ba4885dec2b1e405c11eb2f51ceff27f2bc4f7e2f97061b9e" alt="Джерело безперебійного живлення (UPS) - це тип системи безперервного живлення, яка автоматично забезпечує резервне живлення підключеного навантаження у разі відмови електромережі.；У разі раптового зникнення мережевого живлення Jackery Explorer 2000 Plus автоматично перемкнеться на накопичену енергію протягом 10 ms, щоб ваші прилади продовжували працювати." />
 
 У режимі UPS пікова вихідна потужність пристрою досягає 10 A перед відключенням електроенергії. Оскільки в режимі байпасу ввімкнено одночасне заряджання та розряджання,
 
@@ -423,7 +294,7 @@ LED-світло має два режими: режим освітлення т�
 
 Цей пристрій підтримує до 5 батарейних модулів, щоб задовольнити потребу у великій ємності накопичення енергії. Докладніше про використання див. у *Посібнику користувача Jackery Battery Pack 2000*.
 
-<img src="../../../../_static/manual-assets/_pool/6c/6c7f1deea2f6211ba3ed3273900aa7595234d3b8fe5a67830defa4cf13ee6fe6.png" style="width: 360px;" width="360" height="273" alt="Заглушка схеми підключення батарейного модуля." />
+<img src="../../../../_static/manual-assets/_pool/ac/acaef3bb1842037d52742b65f27fa351f652f393448dae6b35d8c9febcdae23b.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_uk/extra_battery.png" data-web-finished-panel-sha256="acaef3bb1842037d52742b65f27fa351f652f393448dae6b35d8c9febcdae23b" alt="Заглушка схеми підключення батарейного модуля." />
 
 
 
@@ -460,9 +331,7 @@ LED-світло має два режими: режим освітлення т�
 
 ### ЗАРЯДЖАННЯ ЧЕРЕЗ НАСТІННУ РОЗЕТКУ AC
 
-Підключіть кабель для заряджання AC до входу AC пристрою та до настінної розетки.
-
-<img src="../../../../_static/manual-assets/_pool/37/37f4c64bfeaac2df031b0fb30a0228f4ef0ba7f015385e52eec69a5d2ccdb414.png" style="width: 360px;" width="360" height="144" alt="Заглушка схеми заряджання від настінної розетки AC." />
+<img src="../../../../_static/manual-assets/_pool/86/8655ffac8291cf521cca5c656612b45d0bd7d76f00439983b1de89b4e62f5a55.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_uk/charging_ac.png" data-web-finished-panel-sha256="8655ffac8291cf521cca5c656612b45d0bd7d76f00439983b1de89b4e62f5a55" alt="Підключіть кабель для заряджання AC до входу AC пристрою та до настінної розетки." />
 
 
 
@@ -480,11 +349,9 @@ LED-світло має два режими: режим освітлення т�
 
 Jackery Explorer 2000 Plus має два вхідні порти DC8020 і сумісний із сонячними панелями Jackery.
 
-<img src="../../../../_static/manual-assets/_pool/83/8332edf8c7678e11924ab5efbc3aea63a72516f20f9ae4fde1c9d55983e1e287.png" style="width: 360px;" width="360" height="158" alt="Заглушка схеми підключення для сонячного заряджання 1." />
+<img src="../../../../_static/manual-assets/_pool/bb/bb18f58f6e6578e3f92c682435a0d1ee37d6039bdb9f1fe98d3a3b0d63e6e37c.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_uk/charging_solar.png" data-web-finished-panel-sha256="bb18f58f6e6578e3f92c682435a0d1ee37d6039bdb9f1fe98d3a3b0d63e6e37c" alt="Заглушка схеми підключення для сонячного заряджання 1." />
 
 Якщо до одного входу DC8020 потрібно одночасно підключити дві сонячні панелі, зверніться до наведеної нижче схеми заряджання через з\'єднувач сонячних панелей (продається окремо, до стандартної комплектації не входить).
-
-<img src="../../../../_static/manual-assets/_pool/9d/9df8813895e672545085c2356f72c13fc30323f72fab4de973416ea66093ee7d.png" style="width: 360px;" width="360" height="171" alt="Заглушка схеми підключення для сонячного заряджання 2." />
 
 
 
@@ -509,11 +376,7 @@ Jackery Explorer 2000 Plus має два вхідні порти DC8020 і су�
 
 Цей пристрій можна заряджати за допомогою автомобільного зарядного пристрою 12 В. Переконайтеся, що автомобільний зарядний пристрій і автомобільна розетка живлення 12 В (прикурювач) мають надійне з\'єднання.
 
-<img src="../../../../_static/manual-assets/_pool/cc/cc7007d5671cf4abfbc552aeed661b5d7cf73e3fdd3f275af5f9183f40134dc0.png" style="width: 360px;" width="360" height="193" alt="Заглушка схеми підключення для автомобільного заряджання." />
-
-Автомобіль
-
-\* Кабель для заряджання від автомобіля продається окремо.
+<img src="../../../../_static/manual-assets/_pool/41/418a9c7f6855036e7fd6b43760b2efcb1d3e9adec80f09979cc9e41437936bd7.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_uk/charging_car.png" data-web-finished-panel-sha256="418a9c7f6855036e7fd6b43760b2efcb1d3e9adec80f09979cc9e41437936bd7" alt="Автомобіль * Кабель для заряджання від автомобіля продається окремо." />
 
 
 
