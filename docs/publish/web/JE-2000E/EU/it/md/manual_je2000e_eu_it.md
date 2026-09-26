@@ -44,11 +44,11 @@ Per favore, restituisci le batterie e gli accumulatori usati a un punto di racco
 
 
 
-<figure aria-label="CONTENUTO DELLA CONFEZIONE" class="hb-inbox-composition" data-card-count="3" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="three-card-responsive"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Segnaposto immagine della stazione di alimentazione." class="hb-inbox-art" src="../../../../_static/manual-assets/_pool/6c/6c7f1deea2f6211ba3ed3273900aa7595234d3b8fe5a67830defa4cf13ee6fe6.png"/><div class="hb-inbox-label">
+<figure aria-label="CONTENUTO DELLA CONFEZIONE" class="hb-inbox-composition" data-card-count="3" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="three-card-responsive"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Segnaposto immagine della stazione di alimentazione." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je2000e_eu_it/inbox_main.png" data-web-finished-panel-sha256="0a9c016c2dfcdaba1081654fc09f60856416a4383d7a652a45093c8fb132bada" src="../../../../_static/manual-assets/_pool/0a/0a9c016c2dfcdaba1081654fc09f60856416a4383d7a652a45093c8fb132bada.png"/><div class="hb-inbox-label">
 <p><strong>Jackery Explorer 2000 Plus</strong></p>
-</div></li><li class="hb-inbox-card" data-item-number="2"><img alt="Segnaposto immagine del cavo di ricarica CA." class="hb-inbox-art" src="../../../../_static/manual-assets/_pool/28/287650f3a89ae520e32f0d75df8401151b808004ee50075b96aff70af04ca4ef.png"/><div class="hb-inbox-label">
+</div></li><li class="hb-inbox-card" data-item-number="2"><img alt="Segnaposto immagine del cavo di ricarica CA." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je2000e_eu_it/inbox_cable.png" data-web-finished-panel-sha256="9c526f2917e4483af821a37a78898f9add0aa6f7538ac83fd2ff232755e3d28b" src="../../../../_static/manual-assets/_pool/9c/9c526f2917e4483af821a37a78898f9add0aa6f7538ac83fd2ff232755e3d28b.png"/><div class="hb-inbox-label">
 <p><strong>Cavo di ricarica CA</strong></p>
-</div></li><li class="hb-inbox-card" data-item-number="3"><img alt="Segnaposto immagine del manuale utente." class="hb-inbox-art" src="../../../../_static/manual-assets/_pool/87/87ac44e52863324b761a672089e6b0497e40fdf48432f698fccf30508060c60a.png"/><div class="hb-inbox-label">
+</div></li><li class="hb-inbox-card" data-item-number="3"><img alt="Segnaposto immagine del manuale utente." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je2000e_eu_it/inbox_manual.png" data-web-finished-panel-sha256="fbf65a42e2126aea6d62845b86edfbb5f7466e07930f88111fef916a90217f50" src="../../../../_static/manual-assets/_pool/fb/fbf65a42e2126aea6d62845b86edfbb5f7466e07930f88111fef916a90217f50.png"/><div class="hb-inbox-label">
 <p>Manuale utente</p>
 </div></li></ol><div class="hb-inbox-tip" role="note"><div class="hb-inbox-tip-label"><p><strong>SUGGERIMENTO</strong></p></div><div class="hb-inbox-tip-body"><p>Il cavo di ricarica per auto non è incluso, ma è disponibile per l'acquisto separato sul nostro sito web.
 Per assistenza, contatta il servizio clienti Jackery.</p></div></div></figure>
@@ -59,90 +59,15 @@ Per assistenza, contatta il servizio clienti Jackery.</p></div></div></figure>
 
 ## VISTA FRONTALE
 
-<img src="../../../../_static/manual-assets/_pool/56/562f998c918a50bdedcaaeff1e005b505ced57e8252bc987fe0662ea9fa8b658.jpg" style="width: 420px;" width="420" height="236" alt="Segnaposto diagramma vista frontale." />
-
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr>
-<td><p><strong>Pulsante POWER principale</strong></p></td>
-<td><p><strong>LCD</strong></p></td>
-</tr>
-<tr>
-<td><p><strong>Porta 12 V CC</strong></p>
-<p>12 V⎓10 A max.</p></td>
-<td><p><strong>Pulsante luce LED</strong></p></td>
-</tr>
-<tr>
-<td><p><strong>Pulsante DC / USB</strong></p></td>
-<td><p><strong>Luce LED</strong></p></td>
-</tr>
-<tr>
-<td><p><strong>Uscita USB-C 30 W</strong></p>
-<p>30 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓2,5 A, 15 V⎓2 A, 20 V⎓1,5 A</p></td>
-<td><p><strong>Pulsante CA1</strong></p></td>
-</tr>
-<tr>
-<td><p><strong>Uscita USB-C da 140 W</strong></p>
-<p>140 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓3 A, 15 V⎓3 A, 20 V⎓5 A, 28 V⎓5 A</p></td>
-<td><p><strong>Pulsante CA2</strong></p></td>
-</tr>
-<tr>
-<td><p><strong>Uscita USB-A 18 W</strong></p>
-<p>18 W max., 5-6 V⎓3 A, 6-9 V⎓2 A, 9-12 V⎓1,5 A</p></td>
-<td><p><strong>Uscita CA</strong></p>
-<p>230 V~ 50 Hz, 10 A max., 2400 W nominali</p></td>
-</tr>
-</tbody>
-</table>
-
-<table>
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<tbody>
-<tr>
-<td><p><strong>Uscita totale</strong></p>
-<p>2400 W nominali, 4800 W di picco</p></td>
-</tr>
-</tbody>
-</table>
+<img src="../../../../_static/manual-assets/_pool/80/80dd8b7e26c7e8966c06c32eeba21c8d404a7596b933dc5af8720e80460a6b0a.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_it/overview_front.png" data-web-finished-panel-sha256="80dd8b7e26c7e8966c06c32eeba21c8d404a7596b933dc5af8720e80460a6b0a" alt="Pulsante POWER principale LCD Porta 12 V CC 12 V⎓10 A max. Pulsante luce LED Pulsante DC / USB Luce LED Uscita USB-C 30 W 30 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓2,5 A, 15 V⎓2 A, 20 V⎓1,5 A Pulsante CA1 Uscita USB-C da 140 W 140 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓3 A, 15 V⎓3 A, 20 V⎓5 A, 28 V⎓5 A Pulsante CA2 Uscita USB-A 18 W 18 W max., 5-6 V⎓3 A, 6-9 V⎓2 A, 9-12 V⎓1,5 A Uscita CA 230 V~ 50 Hz, 10 A max., 2400 W nominali；Uscita totale 2400 W nominali, 4800 W di picco" />
 
 ## VISTE LATERALI SINISTRA E DESTRA
 
-<img src="../../../../_static/manual-assets/_pool/b0/b04dca41b7cc3211a30f3a3fc2b1e904c25330f28104e4338a8ed67a11378011.png" style="width: 420px;" width="420" height="209" alt="Segnaposto diagramma viste laterali sinistra e destra." />
-
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr>
-<td><p><strong>Maniglia</strong></p></td>
-<td><p><strong>Porta di Espansione CC</strong></p>
-<p>Collegare al pacco batteria</p></td>
-</tr>
-<tr>
-<td></td>
-<td><p><strong>Ingresso CA</strong></p>
-<p>220 V-240 V~ 50 Hz, 10 A max.</p></td>
-</tr>
-<tr>
-<td></td>
-<td><p><strong>Ingresso DC (2×porte DC8020)</strong></p>
-<p>PV: 16-60 V⎓12 A max., fino a 21 A / 800 W max. con doppio ingresso</p>
-<p>Auto: 11-16 V⎓8 A max., fino a 8 A max. con doppio ingresso</p></td>
-</tr>
-</tbody>
-</table>
+<img src="../../../../_static/manual-assets/_pool/99/99a844febdab5cd076ddd6691c694e333a84cda1eea86a74c4409f038f3378b9.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_it/overview_side.png" data-web-finished-panel-sha256="99a844febdab5cd076ddd6691c694e333a84cda1eea86a74c4409f038f3378b9" alt="Maniglia Porta di Espansione CC Collegare al pacco batteria Ingresso CA 220 V-240 V~ 50 Hz, 10 A max. Ingresso DC (2×porte DC8020) PV: 16-60 V⎓12 A max., fino a 21 A / 800 W max. con doppio ingresso Auto: 11-16 V⎓8 A max., fino a 8 A max. con doppio ingresso" />
 
 # DISPLAY LCD
 
-<img src="../../../../_static/manual-assets/_pool/f8/f82efe218bc0b63cb953aced0c85f7c9553935e68d5cf70a3577df9212f550ce.png" style="width: 420px;" width="420" height="248" alt="DISPLAY LCD" />
+<img src="../../../../_static/manual-assets/_pool/ab/ab12c2def67ebf89f522bbd357393cefa66750662dd9d6583f98266f00712825.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_it/lcd_map.png" data-web-finished-panel-sha256="ab12c2def67ebf89f522bbd357393cefa66750662dd9d6583f98266f00712825" alt="DISPLAY LCD" />
 
 
 
@@ -207,49 +132,15 @@ Per assistenza, contatta il servizio clienti Jackery.</p></div></div></figure>
 
 ## ACCENSIONE/SPEGNIMENTO
 
-<img src="../../../../_static/manual-assets/_pool/74/74004806e6c0996fb77b2260c046e055194855a96bed97c519bb58c292e3b5e2.png" style="width: 360px;" width="360" height="141" alt="Segnaposto operazione accensione/spegnimento." />
-
-Accensione: premi una volta.
-
-Spegnimento: tieni premuto per 3 s.
-
-**Tempo di standby predefinito:** 2 ore.
-
-Il prodotto si spegnerà automaticamente dopo 2 ore di inattività, senza ricarica o scarica.
-
-\*Il tempo di standby può essere impostato nell\'App Jackery.
-
-Quando la Modalità risparmio energetico è attiva, il prodotto si spegnerà automaticamente dopo 12 ore se l\'uscita CA o DC/USB è attiva ma il prodotto non sta caricando o scaricando.
+<img src="../../../../_static/manual-assets/_pool/1f/1f678cd2a4c2ff2959697886a2af1fa1042477b5c4199eeffe3619efcd8f33a6.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_it/operation_power.png" data-web-finished-panel-sha256="1f678cd2a4c2ff2959697886a2af1fa1042477b5c4199eeffe3619efcd8f33a6" alt="Accensione: premi una volta. Spegnimento: tieni premuto per 3 s.；Tempo di standby predefinito: 2 ore. Il prodotto si spegnerà automaticamente dopo 2 ore di inattività, senza ricarica o scarica. *Il tempo di standby può essere impostato nell&#39;App Jackery. Quando la Modalità risparmio energetico è attiva, il prodotto si spegnerà automaticamente dopo 12 ore se l&#39;uscita CA o DC/USB è attiva ma il prodotto non sta caricando o scaricando." />
 
 ## USCITA CA ATTIVA/DISATTIVA
 
-**Prerequisito**: il prodotto è acceso.
-
-<img src="../../../../_static/manual-assets/_pool/43/43a46a51a98773dd307ff35dd1ac684790109b2b8c437f87ceacbc3636bc1d75.png" style="width: 360px;" width="360" height="252" alt="Segnaposto operazione uscita CA attiva/disattiva." />
-
-I pulsanti di alimentazione CA1 e CA2 controllano due coppie separate di prese CA. Premendo ciascun pulsante si attiva o disattiva la rispettiva coppia di prese CA.
-
-**Accensione**
-
-Premi una volta
-
-**Spegnimento**
-
-Premi una volta
+<img src="../../../../_static/manual-assets/_pool/3e/3ea92238650865bf01e911a103f50b5579010c3d413a9dc7340c767b38f3ed5c.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_it/operation_ac.png" data-web-finished-panel-sha256="3ea92238650865bf01e911a103f50b5579010c3d413a9dc7340c767b38f3ed5c" alt="Prerequisito : il prodotto è acceso.；I pulsanti di alimentazione CA1 e CA2 controllano due coppie separate di prese CA. Premendo ciascun pulsante si attiva o disattiva la rispettiva coppia di prese CA.；Accensione Premi una volta Spegnimento Premi una volta" />
 
 ## USCITA CC 12 V/ USB ATTIVA/DISATTIVA
 
-**Prerequisito**: il prodotto è acceso.
-
-<img src="../../../../_static/manual-assets/_pool/c4/c46c92d6ee991a400208635802b5d2682f215cacaa748a3ca73068fdb18cdec3.png" style="width: 360px;" width="360" height="208" alt="Segnaposto operazione uscita CC USB attiva/disattiva." />
-
-**Accensione**
-
-Premi una volta
-
-**Spegnimento**
-
-Premi una volta
+<img src="../../../../_static/manual-assets/_pool/dd/dd2198db5431f53d0986e2401a62267b5e164cba6de01938026b8d306d5cbff3.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_it/operation_dc.png" data-web-finished-panel-sha256="dd2198db5431f53d0986e2401a62267b5e164cba6de01938026b8d306d5cbff3" alt="Prerequisito : il prodotto è acceso.；Accensione Premi una volta Spegnimento Premi una volta" />
 
 
 
@@ -277,15 +168,7 @@ Il prodotto può ricaricare la batteria dell\'auto utilizzando il cavo Jackery p
 
 ## MODALITÀ RISPARMIO ENERGETICO
 
-Per evitare un consumo inutile della batteria dovuto al mancato spegnimento dell\'uscita, il prodotto abilita per impostazione predefinita la Modalità risparmio energetico. Quando l\'uscita CA o CC è attiva, l\'icona della Modalità risparmio energetico viene visualizzata sullo schermo LCD. In questa modalità, se non è collegato alcun dispositivo oppure il consumo del dispositivo collegato è inferiore a una certa soglia (25 W per l\'uscita CA o 2 W per l\'uscita DC/USB), l\'uscita corrispondente si spegnerà automaticamente dopo il tempo impostato. L\'impostazione predefinita e 12 ore. La durata della Modalità risparmio energetico può essere impostata nell\'App Jackery su 1 H, 2 H, 8 H, 12 H o 24 H. Se viene impostata su Mai spegnimento, la Modalità risparmio energetico sarà disattivata.
-
-Per disattivare la Modalità risparmio energetico, tieni premuti per più di 3 secondi sia il pulsante CA1 sia il pulsante POWER principale. Una volta disattivata la Modalità risparmio energetico, l\'icona non comparirà più sullo schermo LCD e il prodotto non spegnerà automaticamente l\'uscita CA o DC/USB.
-
-Quando si alimentano dispositivi a basso consumo (CA \<= 25 W oppure DC/USB \<= 2 W), disattiva la Modalità risparmio energetico per evitare che l\'uscita si spenga automaticamente durante il funzionamento.
-
-<img src="../../../../_static/manual-assets/_pool/9d/9dd943d3063031c0795ff8c4b2b6aac266bfb2bff78e2250e445f27352c23a07.png" style="width: 320px;" width="320" height="95" alt="Segnaposto operazione tasti modalità risparmio energetico." />
-
-Tieni premuti entrambi i pulsanti per più di 3 secondi.
+<img src="../../../../_static/manual-assets/_pool/74/7474817b057474da3b7f300f31b25beecb055dc19dc3025470d10b49f2af0240.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_it/operation_energy.png" data-web-finished-panel-sha256="7474817b057474da3b7f300f31b25beecb055dc19dc3025470d10b49f2af0240" alt="Per evitare un consumo inutile della batteria dovuto al mancato spegnimento dell&#39;uscita, il prodotto abilita per impostazione predefinita la Modalità risparmio energetico. Quando l&#39;uscita CA o CC è attiva, l&#39;icona della Modalità risparmio energetico viene visualizzata sullo schermo LCD. In questa modalità, se non è collegato alcun dispositivo oppure il consumo del dispositivo collegato è inferiore a una certa soglia (25 W per l&#39;uscita CA o 2 W per l&#39;uscita DC/USB), l&#39;uscita corrispondente si spegnerà automaticamente dopo il tempo impostato. L&#39;impostazione predefinita e 12 ore. La durata della Modalità risparmio energetico può essere impostata nell&#39;App Jackery su 1 H, 2 H, 8 H, 12 H o 24 H. Se viene impostata su Mai spegnimento, la Modalità risparmio energetico sarà disattivata.；Per disattivare la Modalità risparmio energetico, tieni premuti per più di 3 secondi sia il pulsante CA1 sia il pulsante POWER principale. Una volta disattivata la Modalità risparmio energetico, l&#39;icona non comparirà più sullo schermo LCD e il prodotto non spegnerà automaticamente l&#39;uscita CA o DC/USB.；Quando si alimentano dispositivi a basso consumo (CA &lt;= 25 W oppure DC/USB &lt;= 2 W), disattiva la Modalità risparmio energetico per evitare che l&#39;uscita si spenga automaticamente durante il funzionamento.；Tieni premuti entrambi i pulsanti per più di 3 secondi." />
 
 
 
@@ -295,15 +178,7 @@ Tieni premuti entrambi i pulsanti per più di 3 secondi.
 
 ## LUCE LED ON/OFF
 
-La luce LED ha due modalità: modalità luce e modalità SOS. In qualsiasi modalità, tieni premuto il pulsante della luce LED per spegnere la luce.
-
-<img src="../../../../_static/manual-assets/_pool/bf/bf4fce34dd33d44a77c7a96dd6aff81ccd76bdc5f6ba34cf59d69f95d021cdd3.png" style="width: 360px;" width="360" height="206" alt="Segnaposto operazione modalità luce LED." />
-
-Premi una volta il pulsante luce LED per accendere la luce.
-
-Premilo di nuovo per passare alla modalità SOS.
-
-Premilo una terza volta per spegnere la luce.
+<img src="../../../../_static/manual-assets/_pool/e5/e508e7a2efac75f6077a6c1514e8c2e9978df2cccc447983c9376b2a0a4d2009.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_it/operation_led.png" data-web-finished-panel-sha256="e508e7a2efac75f6077a6c1514e8c2e9978df2cccc447983c9376b2a0a4d2009" alt="La luce LED ha due modalità: modalità luce e modalità SOS. In qualsiasi modalità, tieni premuto il pulsante della luce LED per spegnere la luce.；Premi una volta il pulsante luce LED per accendere la luce. Premilo di nuovo per passare alla modalità SOS. Premilo una terza volta per spegnere la luce." />
 
 ## Funzione di ripristino delle uscite CA e CC
 
@@ -340,7 +215,7 @@ La funzione di ripristino delle uscite CA e CC è disattivata per impostazione p
 <table style="width:100%; border-collapse:collapse; margin:0.75rem 0 0.5rem 0;">
 <tbody>
 <tr>
-<td rowspan="6" style="text-align: center; width: 24%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top;"><img src="../../../../_static/manual-assets/_pool/24/24a37b773bf14cd76f160a25dfa413576a95405a1f57f69059487b29b7791bfd.png" style="max-width:140px; width:100%; height:auto; display:block; margin:0 auto;" width="140" height="220" alt="Segnaposto modalità display LCD." /></td>
+<td rowspan="6" style="text-align: center; width: 24%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top;"><img src="../../../../_static/manual-assets/_pool/71/71f85bd15d966cb3b856e158091d58f181a6fe4991bd96459ff08e3f9964161f.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_it/operation_lcd.png" data-web-finished-panel-sha256="71f85bd15d966cb3b856e158091d58f181a6fe4991bd96459ff08e3f9964161f" alt="Segnaposto modalità display LCD." /></td>
 <td rowspan="3" style="width: 18%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Acceso brevemente</td>
 <td style="width: 12%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Accendi</td>
 <td style="width: 46%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Premi il pulsante POWER principale oppure quando il prodotto è in carica.</td>
@@ -384,11 +259,7 @@ Puoi anche impostare la modalità di visualizzazione dello schermo nell\'App Jac
 
 Collega il prodotto a una presa a muro con il cavo di ricarica CA, quindi premi il pulsante CA e alimenta contemporaneamente i tuoi apparecchi.
 
-<img src="../../../../_static/manual-assets/_pool/58/5866fb05040e5b4423c473d5e7abf87122e0e93f5afce742696a09454b4bd675.png" style="width: 360px;" width="360" height="273" alt="Segnaposto diagramma di connessione UPS." />
-
-Un gruppo di continuità (UPS) è un sistema di alimentazione continua che fornisce automaticamente energia di riserva a un carico quando viene a mancare l\'alimentazione della rete elettrica.
-
-In caso di improvvisa interruzione dell\'alimentazione di rete, Jackery Explorer 2000 Plus passerà automaticamente all\'alimentazione accumulata entro 10 ms per mantenere in funzione i tuoi apparecchi.
+<img src="../../../../_static/manual-assets/_pool/10/10cb6c23c35de220cf103ac486013579198ac15909dfa99478f73473a66e0fd8.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_it/ups.png" data-web-finished-panel-sha256="10cb6c23c35de220cf103ac486013579198ac15909dfa99478f73473a66e0fd8" alt="Un gruppo di continuità (UPS) è un sistema di alimentazione continua che fornisce automaticamente energia di riserva a un carico quando viene a mancare l&#39;alimentazione della rete elettrica.；In caso di improvvisa interruzione dell&#39;alimentazione di rete, Jackery Explorer 2000 Plus passerà automaticamente all&#39;alimentazione accumulata entro 10 ms per mantenere in funzione i tuoi apparecchi." />
 
 In modalità UPS, la potenza di picco dell\'unità raggiunge 10 A prima dei interruzioni di corrente. Poiché in modalità bypass sono abilitati la carica e la scarica simultanee,
 
@@ -411,7 +282,7 @@ la potenza di uscita effettiva in questa modalità è inferiore alla potenza nom
 
 Questo prodotto può supportare fino a 5 battery pack per soddisfare le esigenze di grande capacità energetica. Per i dettagli sull\'utilizzo, fare riferimento al *Manuale utente di Jackery Battery Pack 2000*.
 
-<img src="../../../../_static/manual-assets/_pool/6c/6c7f1deea2f6211ba3ed3273900aa7595234d3b8fe5a67830defa4cf13ee6fe6.png" style="width: 360px;" width="360" height="273" alt="Segnaposto diagramma di collegamento al battery pack." />
+<img src="../../../../_static/manual-assets/_pool/ac/acaef3bb1842037d52742b65f27fa351f652f393448dae6b35d8c9febcdae23b.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_it/extra_battery.png" data-web-finished-panel-sha256="acaef3bb1842037d52742b65f27fa351f652f393448dae6b35d8c9febcdae23b" alt="Segnaposto diagramma di collegamento al battery pack." />
 
 
 
@@ -448,9 +319,7 @@ Questo prodotto può supportare fino a 5 battery pack per soddisfare le esigenze
 
 ### RICARICA TRAMITE PRESA A MURO CA
 
-Collegare il cavo di ricarica CA alla porta di ingresso CA del prodotto e a una presa a muro.
-
-<img src="../../../../_static/manual-assets/_pool/37/37f4c64bfeaac2df031b0fb30a0228f4ef0ba7f015385e52eec69a5d2ccdb414.png" style="width: 360px;" width="360" height="144" alt="Segnaposto diagramma di ricarica da presa a muro CA." />
+<img src="../../../../_static/manual-assets/_pool/ae/aef694a3044c4c69e1b0ef98e7cce02bbbd616eca35b23a6be8aefe57ab4d78f.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_it/charging_ac.png" data-web-finished-panel-sha256="aef694a3044c4c69e1b0ef98e7cce02bbbd616eca35b23a6be8aefe57ab4d78f" alt="Collegare il cavo di ricarica CA alla porta di ingresso CA del prodotto e a una presa a muro." />
 
 
 
@@ -468,11 +337,9 @@ In questa modalità, è possibile ricaricare rapidamente la power station portat
 
 Jackery Explorer 2000 Plus dispone di due porte di ingresso DC8020 ed è compatibile con i pannelli solari Jackery.
 
-<img src="../../../../_static/manual-assets/_pool/83/8332edf8c7678e11924ab5efbc3aea63a72516f20f9ae4fde1c9d55983e1e287.png" style="width: 360px;" width="360" height="158" alt="Segnaposto diagramma di collegamento per la ricarica solare 1." />
+<img src="../../../../_static/manual-assets/_pool/ed/ed5ffb54a716fbef7b3500e06c20ac30e6924d138292a1179f34e95c26496931.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_it/charging_solar.png" data-web-finished-panel-sha256="ed5ffb54a716fbef7b3500e06c20ac30e6924d138292a1179f34e95c26496931" alt="Segnaposto diagramma di collegamento per la ricarica solare 1." />
 
 Se una porta di ingresso DC8020 deve collegare contemporaneamente due pannelli solari, fare riferimento alla figura seguente per la ricarica tramite il connettore per pannelli solari (venduto separatamente, non incluso di serie).
-
-<img src="../../../../_static/manual-assets/_pool/9d/9df8813895e672545085c2356f72c13fc30323f72fab4de973416ea66093ee7d.png" style="width: 360px;" width="360" height="171" alt="Segnaposto diagramma di collegamento per la ricarica solare 2." />
 
 
 
@@ -497,11 +364,7 @@ Si consiglia di utilizzare il pannello solare Jackery per caricare il prodotto. 
 
 Questo prodotto può essere caricato con un caricabatterie per auto da 12 V. Assicurarsi che il caricabatterie e l\'accendisigari dell\'auto siano ben collegati.
 
-<img src="../../../../_static/manual-assets/_pool/cc/cc7007d5671cf4abfbc552aeed661b5d7cf73e3fdd3f275af5f9183f40134dc0.png" style="width: 360px;" width="360" height="193" alt="Segnaposto diagramma di collegamento per la ricarica in auto." />
-
-Veicolo
-
-\*Il cavo di ricarica per auto è venduto separatamente.
+<img src="../../../../_static/manual-assets/_pool/47/47f746c84f9e827432ded2d66faf90e2a8b5acba87f33e79229f80b2c37423d1.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_it/charging_car.png" data-web-finished-panel-sha256="47f746c84f9e827432ded2d66faf90e2a8b5acba87f33e79229f80b2c37423d1" alt="Veicolo *Il cavo di ricarica per auto è venduto separatamente." />
 
 
 
