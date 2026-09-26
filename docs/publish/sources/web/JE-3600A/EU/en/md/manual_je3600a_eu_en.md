@@ -76,7 +76,7 @@ For assistance, please contact Jackery customer service.</p></div></div></figure
 
 # LCD DISPLAY
 
-<img src="assets/ir/6ff9f6fa6492423c218c04fb8994c580457b43a9771282f35b97edd6c682dd3f/lcd_map.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3600a_eu_en/lcd_map.png" data-web-finished-panel-sha256="6ff9f6fa6492423c218c04fb8994c580457b43a9771282f35b97edd6c682dd3f" alt="LCD DISPLAY" />
+<img src="assets/ir/37ef74780972edcdb0cf2dbdd4ec8ccaa4ee898f615b1daa5fa89616cb5ec15f/lcd_map.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3600a_eu_en/lcd_map.png" data-web-finished-panel-sha256="37ef74780972edcdb0cf2dbdd4ec8ccaa4ee898f615b1daa5fa89616cb5ec15f" alt="LCD DISPLAY" />
 
 <table class="longtable lcd-text-only">
 <colgroup>

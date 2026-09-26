@@ -104,7 +104,7 @@
     ],
     "sha256": "4f806529eb83fee80d75a439c777d49fb177bae7649f4019f5652ed45ba89498"
   },
-  "git_ref": "e8c31183362bbd3b4266c2e9a1d1b072f532acd5",
+  "git_ref": "804cede46bf3a9d6e4bc986eff9242ad96aad755",
   "html": {
     "files": [
       {
@@ -1364,6 +1364,11 @@
         "size": 31919
       },
       {
+        "path": "assets/ir/37ef74780972edcdb0cf2dbdd4ec8ccaa4ee898f615b1daa5fa89616cb5ec15f/lcd_map.png",
+        "sha256": "37ef74780972edcdb0cf2dbdd4ec8ccaa4ee898f615b1daa5fa89616cb5ec15f",
+        "size": 83318
+      },
+      {
         "path": "assets/ir/498d3da61a34dd5b4b2be345d047913e2f14f2e1a432ffbe65950de127a08ce2/overview_front.png",
         "sha256": "498d3da61a34dd5b4b2be345d047913e2f14f2e1a432ffbe65950de127a08ce2",
         "size": 78158
@@ -1382,11 +1387,6 @@
         "path": "assets/ir/6b852aa8607ecdb20949e2cdffa6cc87de510489dbb8b2a9c5022589e9de0363/connections-en.png",
         "sha256": "6b852aa8607ecdb20949e2cdffa6cc87de510489dbb8b2a9c5022589e9de0363",
         "size": 476722
-      },
-      {
-        "path": "assets/ir/6ff9f6fa6492423c218c04fb8994c580457b43a9771282f35b97edd6c682dd3f/lcd_map.png",
-        "sha256": "6ff9f6fa6492423c218c04fb8994c580457b43a9771282f35b97edd6c682dd3f",
-        "size": 75777
       },
       {
         "path": "assets/ir/8a16c28d2a7b054188481e51fb8c8ed177c8a750b53fd7b0a8e41951ad2239ac/inbox_unit.png",
@@ -1495,12 +1495,12 @@
       },
       {
         "path": "manual_je3600a_eu_en.md",
-        "sha256": "ec4c92076eaa5f34c5e0057da112d9decd3813cd4f26981523d6dd59e6a86ca0",
+        "sha256": "48e3a23236c13638d12545040b87629b05d79be36745291a854efa3d75fc7958",
         "size": 50815
       }
     ],
     "manual": "manual_je3600a_eu_en.md",
-    "sha256": "6add680d50dec21339e5673d4215ffe35295816317fafe56032e003ae11bb4b5"
+    "sha256": "ac1ee4d51d141da54eefc3acc7dbc575509a891e368d783314a577a634b7ca22"
   },
   "model": "JE-3600A",
   "projection_manifest": {
@@ -1509,5 +1509,5 @@
   },
   "region": "EU",
   "schema_version": "auto-manual-web-language-release-evidence/v1",
-  "version": "2026-05-25.4"
+  "version": "2026-05-25.5"
 }
