@@ -745,15 +745,7 @@ Cerca \"Jackery\" su Google Play o nell\'App Store per installare l\'app. Dopodi
 
 2.2 Premi il pulsante POWER principale sul dispositivo per accenderlo; le icone Wi-Fi e Bluetooth sul dispositivo lampeggiano per indicare che il dispositivo è entrato nella modalità di configurazione di rete. Fai clic sul pulsante \"**Icon Flashed**\" (icona lampeggiante) e consenti all\'app di connettersi ai dispositivi vicini e di aprire le autorizzazioni Bluetooth.
 
-<img src="../../../../_static/manual-assets/_pool/66/662646752f7e432edae4e01fc78e9ae9f7a6045f231a62fafb76308c8e96a302.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-add-device" data-web-finished-panel-path="assets/je2000e_eu_shared/app_add_device.png" data-web-finished-panel-sha256="662646752f7e432edae4e01fc78e9ae9f7a6045f231a62fafb76308c8e96a302" alt="Segnaposto per il passaggio di aggiunta dispositivo nell&#39;app." />
-
-Pulsante POWER principale
-
-Pulsante CA1
-
-Pulsante CA2
-
-Pulsante DC / USB
+<img src="../../../../_static/manual-assets/_pool/a8/a8fa59e49182bb667d5bf6cb996df768a041e3f0be8fe9c19e80eb6cd7ad748e.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-add-device" data-web-finished-panel-path="assets/je2000e_eu_it/app_add_device_panel.png" data-web-finished-panel-sha256="a8fa59e49182bb667d5bf6cb996df768a041e3f0be8fe9c19e80eb6cd7ad748e" alt="Pulsante POWER principale Pulsante CA1 Pulsante CA2 Pulsante DC / USB" />
 
 2.3 Dopo aver toccato l\'icona del dispositivo trovato, l\'app si connette automaticamente al dispositivo tramite Bluetooth.
 

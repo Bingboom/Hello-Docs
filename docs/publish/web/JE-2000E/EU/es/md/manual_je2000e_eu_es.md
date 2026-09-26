@@ -517,11 +517,11 @@ Vehículo
 
 Almacene el producto en un lugar seco y limpio con ventilación adecuada. Temperatura y humedad de almacenamiento:
 
-- 1 monat: -20 °C a 45 °C (0-60 % HR)
+- 1 mes: -20 °C a 45 °C (0-60 % HR)
 
-- 3 monate: 0 °C a 45 °C (0-60 % HR)
+- 3 meses: 0 °C a 45 °C (0-60 % HR)
 
-- 12 monate: 0 °C a 25 °C (0-60 % HR)
+- 12 meses: 0 °C a 25 °C (0-60 % HR)
 
 Si este producto se almacena durante un período prolongado (de 3 a 6 meses) con la batería descargada, podría volverse imposible recargarlo. Para evitar esto y mantener la salud de la batería, se recomienda revisar y recargar el producto cada tres meses, y realizar un ciclo completo de carga y descarga al menos una vez cada 6 a 12 meses.
 
@@ -742,15 +742,7 @@ Buscar \"Jackery\" en Google Play o en la App Store para instalar la aplicación
 
 2.2 Presione una vez el botón POWER principal del dispositivo para encenderlo. Los iconos del wifi y del Bluetooth del dispositivo parpadearán para indicar que el dispositivo ha entrado en el modo de configuración de red. A continuación, pulse el botón \"icono parpadeante\" y permita que la aplicación se conecte a los dispositivos cercanos y abra los permisos de Bluetooth.
 
-<img src="../../../../_static/manual-assets/_pool/66/662646752f7e432edae4e01fc78e9ae9f7a6045f231a62fafb76308c8e96a302.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-add-device" data-web-finished-panel-path="assets/je2000e_eu_shared/app_add_device.png" data-web-finished-panel-sha256="662646752f7e432edae4e01fc78e9ae9f7a6045f231a62fafb76308c8e96a302" alt="Marcador de posición para el paso de añadir dispositivo en la aplicación." />
-
-Botón POWER principal
-
-Botón CC / USB
-
-Botón CA1
-
-Botón CA2
+<img src="../../../../_static/manual-assets/_pool/c9/c9556bd7200b61c11de697f77562d9852f892a939e2e36a5faf0dbe4518b1b87.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-add-device" data-web-finished-panel-path="assets/je2000e_eu_es/app_add_device_panel.png" data-web-finished-panel-sha256="c9556bd7200b61c11de697f77562d9852f892a939e2e36a5faf0dbe4518b1b87" alt="Botón POWER principal Botón CC / USB Botón CA1 Botón CA2" />
 
 2.3 Tras hacer clic en el icono del dispositivo buscado, la aplicación conecta automáticamente el dispositivo a través de Bluetooth.
 
