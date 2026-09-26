@@ -44,11 +44,11 @@ Veuillez rapporter les piles et accumulateurs usagés à un point de collecte lo
 
 
 
-<figure aria-label="CONTENU DE LA BOÎTE" class="hb-inbox-composition" data-card-count="3" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="three-card-responsive"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Image de la station d'énergie." class="hb-inbox-art" src="assets/ir/6c7f1deea2f6211ba3ed3273900aa7595234d3b8fe5a67830defa4cf13ee6fe6/main_unit1.png"/><div class="hb-inbox-label">
+<figure aria-label="CONTENU DE LA BOÎTE" class="hb-inbox-composition" data-card-count="3" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="three-card-responsive"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Image de la station d'énergie." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je3000c_eu_fr/inbox_unit.png" data-web-finished-panel-sha256="920826b80d6bf79b22fac53ef498f90fe67deeb375c5c09a16c787e5d737a20a" src="assets/ir/920826b80d6bf79b22fac53ef498f90fe67deeb375c5c09a16c787e5d737a20a/inbox_unit.png"/><div class="hb-inbox-label">
 <p><strong>Jackery Explorer 3000</strong></p>
-</div></li><li class="hb-inbox-card" data-item-number="2"><img alt="Image du câble de charge CA." class="hb-inbox-art" src="assets/ir/287650f3a89ae520e32f0d75df8401151b808004ee50075b96aff70af04ca4ef/ac_charging_cable.png"/><div class="hb-inbox-label">
+</div></li><li class="hb-inbox-card" data-item-number="2"><img alt="Image du câble de charge CA." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je3000c_eu_fr/inbox_cable.png" data-web-finished-panel-sha256="ed74c99208e4c6536d7a2f60ef696da8a2a6108e088f13bbafa02a3ce653ed6f" src="assets/ir/ed74c99208e4c6536d7a2f60ef696da8a2a6108e088f13bbafa02a3ce653ed6f/inbox_cable.png"/><div class="hb-inbox-label">
 <p><strong>Câble de charge CA</strong></p>
-</div></li><li class="hb-inbox-card" data-item-number="3"><img alt="Image du manuel d’utilisation." class="hb-inbox-art" src="assets/ir/87ac44e52863324b761a672089e6b0497e40fdf48432f698fccf30508060c60a/manual_icon1.png"/><div class="hb-inbox-label">
+</div></li><li class="hb-inbox-card" data-item-number="3"><img alt="Image du manuel d’utilisation." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je3000c_eu_fr/inbox_manual.png" data-web-finished-panel-sha256="0a922d74500800e0d323f5f1be125c3122bd43e859dc499bcac47bad7e5a2bb6" src="assets/ir/0a922d74500800e0d323f5f1be125c3122bd43e859dc499bcac47bad7e5a2bb6/inbox_manual.png"/><div class="hb-inbox-label">
 <p>Manuel d’utilisation</p>
 </div></li></ol><div class="hb-inbox-tip" role="note"><div class="hb-inbox-tip-label"><p><strong>CONSEILS</strong></p></div><div class="hb-inbox-tip-body"><p>Le câble de chargement pour voiture n'est pas inclus, mais peut être acheté séparément sur notre site Web.
 Pour obtenir de l'aide, veuillez contacter le service client Jackery.</p></div></div></figure>
@@ -59,52 +59,11 @@ Pour obtenir de l'aide, veuillez contacter le service client Jackery.</p></div><
 
 ## VUE DE FACE
 
-<img src="assets/ir/562f998c918a50bdedcaaeff1e005b505ced57e8252bc987fe0662ea9fa8b658/front_product.jpg" style="width: 420px;" width="420" height="236" alt="Schéma de la vue de face." />
-
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr>
-<td><p><strong>Bouton d'alimentation principal</strong></p></td>
-<td><p><strong>LCD</strong></p></td>
-</tr>
-<tr>
-<td><p><strong>Port CC 12 V</strong></p>
-<p>12 V⎓10 A max.</p></td>
-<td><p><strong>Bouton d'alimentation CC/USB</strong></p></td>
-</tr>
-<tr>
-<td><p><strong>Sortie USB-C 100W MAX</strong></p>
-<p>100 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓3 A, 15 V⎓3 A, 20 V⎓5 A</p></td>
-<td><p><strong>Bouton d'alimentation CA</strong></p></td>
-</tr>
-<tr>
-<td><p><strong>Sortie USB-A 18W MAX</strong></p>
-<p>18 W max., 5-6 V⎓3 A, 6-9 V⎓2 A, 9-12 V⎓1,5 A</p></td>
-<td><p><strong>Sortie CA</strong></p>
-<p>230 V~ 50 Hz, 15,6 A, 3600 W nominal</p></td>
-</tr>
-</tbody>
-</table>
-
-<table>
-<colgroup>
-<col style="width: 100%" />
-</colgroup>
-<tbody>
-<tr>
-<td><p><strong>Sortie totale CA</strong></p>
-<p>3600 W nominal, 7200 W crête</p></td>
-</tr>
-</tbody>
-</table>
+<img src="assets/ir/4426f8359eb21ef933343621aa1829a218c94cca6e5ef974a8f05a44b8a47cf2/overview_front.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3000c_eu_fr/overview_front.png" data-web-finished-panel-sha256="4426f8359eb21ef933343621aa1829a218c94cca6e5ef974a8f05a44b8a47cf2" alt="Bouton d&#39;alimentation principal LCD Port CC 12 V 12 V⎓10 A max. Bouton d&#39;alimentation CC/USB Sortie USB-C 100W MAX 100 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓3 A, 15 V⎓3 A, 20 V⎓5 A Bouton d&#39;alimentation CA Sortie USB-A 18W MAX 18 W max., 5-6 V⎓3 A, 6-9 V⎓2 A, 9-12 V⎓1,5 A Sortie CA 230 V~ 50 Hz, 15,6 A, 3600 W nominal；Sortie totale CA 3600 W nominal, 7200 W crête" />
 
 ## VUE LATÉRALE DROITE
 
-<img src="assets/ir/b04dca41b7cc3211a30f3a3fc2b1e904c25330f28104e4338a8ed67a11378011/right_side_ports.png" style="width: 420px;" width="420" height="209" alt="Schéma de la vue latérale droite." />
+<img src="assets/ir/56d446d252a5d57dce44b2d4c274ff140c6a97e7d4bf6f70f30b8e4765b8d1c4/overview_side.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3000c_eu_fr/overview_side.png" data-web-finished-panel-sha256="56d446d252a5d57dce44b2d4c274ff140c6a97e7d4bf6f70f30b8e4765b8d1c4" alt="Schéma de la vue latérale droite." />
 
 <table>
 <colgroup>
@@ -128,7 +87,7 @@ Pour obtenir de l'aide, veuillez contacter le service client Jackery.</p></div><
 
 # AFFICHAGE LCD
 
-<img src="assets/ir/f82efe218bc0b63cb953aced0c85f7c9553935e68d5cf70a3577df9212f550ce/lcd_map.png" style="width: 420px;" width="420" height="248" alt="AFFICHAGE LCD" />
+<img src="assets/ir/e837d526e41f6b8a05152b3848921755b6d4f4ba3e7e99ff6f91483ba1947e98/lcd_map.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3000c_eu_fr/lcd_map.png" data-web-finished-panel-sha256="e837d526e41f6b8a05152b3848921755b6d4f4ba3e7e99ff6f91483ba1947e98" alt="AFFICHAGE LCD" />
 
 
 
@@ -187,47 +146,15 @@ Pour obtenir de l'aide, veuillez contacter le service client Jackery.</p></div><
 
 ## MARCHE/ARRÊT
 
-<img src="assets/ir/74004806e6c0996fb77b2260c046e055194855a96bed97c519bb58c292e3b5e2/op_main_power.png" style="width: 360px;" width="360" height="141" alt="Fonction marche/arrêt." />
-
-Marche : appuyez une fois.
-
-Arrêt : appuyez et maintenez pendant 3 secondes.
-
-**Temps de veille par défaut :** 2 heures.
-
-Le produit s\'éteindra automatiquement après 2 heures d\'inactivité, sans charge ni décharge.
-
-\*Le temps de veille peut être réglé dans l\'application Jackery.
-
-Lorsque le mode d\'économie d\'énergie est activé, le produit s\'éteindra automatiquement après 12 heures si le bouton d\'alimentation CA ou le bouton d\'alimentation CC/USB est activé mais que le produit ne charge ni ne décharge.
+<img src="assets/ir/ec32ac665f3e66556ff9f7f238a3f2450e790c758044cb42ea15191cf09a8450/operation_power.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3000c_eu_fr/operation_power.png" data-web-finished-panel-sha256="ec32ac665f3e66556ff9f7f238a3f2450e790c758044cb42ea15191cf09a8450" alt="Marche : appuyez une fois. Arrêt : appuyez et maintenez pendant 3 secondes. Temps de veille par défaut : 2 heures. Le produit s&#39;éteindra automatiquement après 2 heures d&#39;inactivité, sans charge ni décharge. *Le temps de veille peut être réglé dans l&#39;application Jackery. Lorsque le mode d&#39;économie d&#39;énergie est activé, le produit s&#39;éteindra automatiquement après 12 heures si le bouton d&#39;alimentation CA ou le bouton d&#39;alimentation CC/USB est activé mais que le produit ne charge ni ne décharge." />
 
 ## SORTIE CA MARCHE/ARRÊT
 
-**Prérequis :** Le produit est allumé.
-
-<img src="assets/ir/43a46a51a98773dd307ff35dd1ac684790109b2b8c437f87ceacbc3636bc1d75/op_ac_output.png" style="width: 360px;" width="360" height="252" alt="Fonction de sortie CA." />
-
-**Marche**
-
-appuyez une fois
-
-**Arrêt**
-
-appuyez une fois
+<img src="assets/ir/6557298b9caeee08bc603da2705db60c6a535ef38540e27eb9e90e6e4adcc5d2/operation_ac.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3000c_eu_fr/operation_ac.png" data-web-finished-panel-sha256="6557298b9caeee08bc603da2705db60c6a535ef38540e27eb9e90e6e4adcc5d2" alt="Prérequis : Le produit est allumé.；Marche appuyez une fois Arrêt appuyez une fois" />
 
 ## SORTIE CC 12V/USB MARCHE/ARRÊT
 
-**Prérequis :** Le produit est allumé.
-
-<img src="assets/ir/c46c92d6ee991a400208635802b5d2682f215cacaa748a3ca73068fdb18cdec3/op_dc_usb_output.png" style="width: 360px;" width="360" height="208" alt="Fonction de sortie CC et USB." />
-
-**Marche**
-
-appuyez une fois
-
-**Arrêt**
-
-appuyez une fois
+<img src="assets/ir/43db98f7a9687bed4cbe4588af5ac7131513884ec49fa63e1132ccc733364ef0/operation_dc.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3000c_eu_fr/operation_dc.png" data-web-finished-panel-sha256="43db98f7a9687bed4cbe4588af5ac7131513884ec49fa63e1132ccc733364ef0" alt="Prérequis : Le produit est allumé.；Marche appuyez une fois Arrêt appuyez une fois" />
 
 
 
@@ -259,15 +186,7 @@ Pour désactiver le mode d\'économie d\'énergie, appuyez simultanément sur le
 
 Lors de l\'alimentation d\'appareils à faible puissance (CA ≤ 25 W ou CC/USB ≤ 2 W), désactivez le mode d\'économie d\'énergie afin d\'éviter l\'arrêt automatique de la sortie pendant le fonctionnement.
 
-<img src="assets/ir/9dd943d3063031c0795ff8c4b2b6aac266bfb2bff78e2250e445f27352c23a07/energy_saving.png" style="width: 320px;" width="320" height="95" alt="Fonction du mode d&#39;économie d&#39;énergie." />
-
-Maintenez les deux boutons enfoncés pendant plus de 3 secondes.
-
-
-
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>REMARQUE</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Le mode d'économie d'énergie reprend l'état précédent après l'allumage. Toute modification du mode doit être effectuée manuellement.</p></td></tr></tbody></table>
-
-
+<img src="assets/ir/48d9f2ba58336aabe08491c911bb5090609436cea7712969378d239896b9e80c/operation_energy.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3000c_eu_fr/operation_energy.png" data-web-finished-panel-sha256="48d9f2ba58336aabe08491c911bb5090609436cea7712969378d239896b9e80c" alt="Maintenez les deux boutons enfoncés pendant plus de 3 secondes.；REMARQUE Le mode d&#39;économie d&#39;énergie reprend l&#39;état précédent après l&#39;allumage. Toute modification du mode doit être effectuée manuellement." />
 
 ## Fonction de reprise de Sortie CA et CC
 
@@ -304,7 +223,7 @@ La fonction de reprise de la sortie CA/CC est désactivée par défaut. Activez 
 <table style="width:100%; border-collapse:collapse; margin:0.75rem 0 0.5rem 0;">
 <tbody>
 <tr>
-<td rowspan="6" style="text-align: center; width: 24%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top;"><img src="assets/ir/24a37b773bf14cd76f160a25dfa413576a95405a1f57f69059487b29b7791bfd/lcd_mode.png" style="max-width:140px; width:100%; height:auto; display:block; margin:0 auto;" width="140" height="220" alt="Mode d&#39;affichage LCD." /></td>
+<td rowspan="6" style="text-align: center; width: 24%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top;"><img src="assets/ir/974ebc5f6fbf636175670014e3a18ae973ccea78b3bdf915fb7a0f045446d5e4/operation_lcd.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3000c_eu_fr/operation_lcd.png" data-web-finished-panel-sha256="974ebc5f6fbf636175670014e3a18ae973ccea78b3bdf915fb7a0f045446d5e4" alt="Mode d&#39;affichage LCD." /></td>
 <td rowspan="3" style="width: 18%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Allumer en discontinu</td>
 <td style="width: 12%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Allumer</td>
 <td style="width: 46%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Appuyez sur le bouton POWER principal ou lorsque le produit est en charge.</td>
@@ -347,7 +266,7 @@ Vous pouvez également définir le mode d\'affichage de l\'écran dans l\'applic
 
 Connectez le produit à une prise murale à l\'aide du câble de charge CA, puis appuyez sur le bouton d'alimentation CA pour alimenter vos appareils en même temps.
 
-<img src="assets/ir/5866fb05040e5b4423c473d5e7abf87122e0e93f5afce742696a09454b4bd675/ups_mode.png" style="width: 360px;" width="360" height="273" alt="Schéma de connexion ASI." />
+<img src="assets/ir/7ab195f9c3a8c9f32f935b4d308bd9e3718da40f7f8bf765af9d528e01d80ac7/ups.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3000c_eu_fr/ups.png" data-web-finished-panel-sha256="7ab195f9c3a8c9f32f935b4d308bd9e3718da40f7f8bf765af9d528e01d80ac7" alt="Schéma de connexion ASI." />
 
 Une alimentation sans coupure (UPS) est un système d\'alimentation continue qui fournit automatiquement une alimentation électrique de secours à une charge lorsque l\'alimentation du réseau principal est interrompue.
 
@@ -387,7 +306,7 @@ Quand la recharge par prise murale CA et la recharge solaire sont effectuées en
 
 ## CHARGEMENT PAR PRISE MURALE CA
 
-<img src="assets/ir/37f4c64bfeaac2df031b0fb30a0228f4ef0ba7f015385e52eec69a5d2ccdb414/ac_wall.png" style="width: 360px;" width="360" height="144" alt="Schéma de charge sur prise murale CA." />
+<img src="assets/ir/470b3c4a516a97d31377c4e22aaec1332a8bb9e299d53c4eff545c068fae9abc/charging_ac.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3000c_eu_fr/charging_ac.png" data-web-finished-panel-sha256="470b3c4a516a97d31377c4e22aaec1332a8bb9e299d53c4eff545c068fae9abc" alt="Schéma de charge sur prise murale CA." />
 
 Connectez le câble de charge CA au port d\'entrée CA de l\'appareil et à une prise murale.
 
@@ -407,11 +326,9 @@ Dans ce mode, vous pouvez recharger rapidement la station d'énergie portable en
 
 Le Jackery Explorer 3000 dispose de deux ports d'entrée DC8020 et est compatible avec les panneaux solaires de Jackery.
 
-<img src="assets/ir/8332edf8c7678e11924ab5efbc3aea63a72516f20f9ae4fde1c9d55983e1e287/solar_direct.png" style="width: 360px;" width="360" height="158" alt="Schéma de connexion pour la charge solaire 1." />
+<img src="assets/ir/64c2d74df2212a39e3f573ccd7e78731979450712ccc41a3d2b9ac1f5edfc09e/charging_solar.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3000c_eu_fr/charging_solar.png" data-web-finished-panel-sha256="64c2d74df2212a39e3f573ccd7e78731979450712ccc41a3d2b9ac1f5edfc09e" alt="Schéma de connexion pour la charge solaire 1." />
 
 Si un seul port d'entrée DC8020 doit être connecté à deux panneaux solaires simultanément, veuillez vous référer au schéma ci-dessous pour le branchement via le connecteur de panneau solaire (vendu séparément, non inclus en standard).
-
-<img src="assets/ir/9df8813895e672545085c2356f72c13fc30323f72fab4de973416ea66093ee7d/solar_adapter.png" style="width: 360px;" width="360" height="171" alt="Schéma de connexion pour la charge solaire 2." />
 
 
 
@@ -436,11 +353,7 @@ Il est recommandé d'utiliser le panneau solaire Jackery pour charger le Jackery
 
 Ce produit peut être chargé à l\'aide d\'un chargeur de voiture 12 V. Assurez-vous que le chargeur de voiture est correctement connecté à la prise 12 V du véhicule (allume-cigare).
 
-<img src="assets/ir/cc7007d5671cf4abfbc552aeed661b5d7cf73e3fdd3f275af5f9183f40134dc0/car_charge.png" style="width: 360px;" width="360" height="193" alt="Schéma de charge en voiture." />
-
-Véhicule
-
-※Le câble de chargement de voiture est vendu séparément.
+<img src="assets/ir/d947970a3f3225a80553bdefcc4754792a6499f1b052027cd1ab10531366b185/charging_car.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3000c_eu_fr/charging_car.png" data-web-finished-panel-sha256="d947970a3f3225a80553bdefcc4754792a6499f1b052027cd1ab10531366b185" alt="Véhicule；※Le câble de chargement de voiture est vendu séparément." />
 
 
 
