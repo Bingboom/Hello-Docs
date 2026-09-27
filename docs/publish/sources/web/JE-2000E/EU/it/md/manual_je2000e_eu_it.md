@@ -184,76 +184,73 @@ Il prodotto può ricaricare la batteria dell\'auto utilizzando il cavo Jackery p
 
 La funzione di ripristino delle uscite CA e CC è disattivata per impostazione predefinita. Attivare questa funzione nell'App Jackery per consentire al dispositivo di memorizzare lo stato delle uscite CA e CC e ripristinare automaticamente le uscite CA e CC in condizioni definite.
 
-<table>
+
+
+<figure aria-label="Condizioni di ripristino automatico / Condizioni senza ripristino automatico" class="hb-auto-resume-composition"><table class="hb-auto-resume-table"><colgroup><col class="hb-auto-resume-col"/><col class="hb-auto-resume-col"/></colgroup>
 <thead>
-<tr>
-<th class="head"><p>Condizioni di ripristino automatico</p></th>
-<th class="head"><p>Condizioni senza ripristino automatico</p></th>
+<tr><th class="head hb-auto-resume-left" scope="col"><p>Condizioni di ripristino automatico</p></th>
+<th class="head hb-auto-resume-right" scope="col"><p>Condizioni senza ripristino automatico</p></th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><p>Accensione/Riavvio dopo lo spegnimento o il riavvio</p></td>
-<td><p>Spegnimento manuale delle uscite (pulsante/App)</p></td>
+<tr><td class="hb-auto-resume-left"><p>Accensione/Riavvio dopo lo spegnimento o il riavvio</p></td>
+<td class="hb-auto-resume-right"><p>Spegnimento manuale delle uscite (pulsante/App)</p></td>
 </tr>
-<tr>
-<td rowspan="2"><p>SOC batteria ≥ limite di scarica +10% al raggiungimento del limite</p></td>
-<td><p>Spegnimento delle uscite in modalità risparmio energetico</p></td>
+<tr><td class="hb-auto-resume-left" rowspan="2"><p>SOC batteria ≥ limite di scarica +10% al raggiungimento del limite</p></td>
+<td class="hb-auto-resume-right"><p>Spegnimento delle uscite in modalità risparmio energetico</p></td>
 </tr>
-<tr>
-<td><p>Spegnimento delle uscite attivato da protezione</p></td>
+<tr><td class="hb-auto-resume-right"><p>Spegnimento delle uscite attivato da protezione</p></td>
 </tr>
-<tr>
-<td><p>Aggiornamento OTA completato</p></td>
-<td><p>Spegnimento delle uscite attivato dal timer di scarica</p></td>
+<tr><td class="hb-auto-resume-left"><p>Aggiornamento OTA completato</p></td>
+<td class="hb-auto-resume-right"><p>Spegnimento delle uscite attivato dal timer di scarica</p></td>
 </tr>
 </tbody>
-</table>
+</table></figure>
+
+
 
 ## SCHERMO LCD
 
-<table style="width:100%; border-collapse:collapse; margin:0.75rem 0 0.5rem 0;">
-<tbody>
-<tr>
-<td rowspan="6" style="text-align: center; width: 24%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top;"><img src="assets/ir/71f85bd15d966cb3b856e158091d58f181a6fe4991bd96459ff08e3f9964161f/operation_lcd.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_it/operation_lcd.png" data-web-finished-panel-sha256="71f85bd15d966cb3b856e158091d58f181a6fe4991bd96459ff08e3f9964161f" alt="Segnaposto modalità display LCD." /></td>
-<td rowspan="3" style="width: 18%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Acceso brevemente</td>
-<td style="width: 12%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Accendi</td>
-<td style="width: 46%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Premi il pulsante POWER principale oppure quando il prodotto è in carica.</td>
-</tr>
-<tr>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Spegni</td>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Premi il pulsante POWER principale.</td>
-</tr>
-<tr>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Spegnimento automatico</td>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Lo schermo LCD si spegne automaticamente ed entra in modalità sleep dopo 2 minuti di inattività.</td>
-</tr>
-<tr>
-<td rowspan="3" style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Acceso fisso (in carica o in scarica)</td>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Accendi</td>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Premi due volte il pulsante POWER principale quando il prodotto è acceso.</td>
-</tr>
-<tr>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Spegni</td>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Premi il pulsante POWER principale.</td>
-</tr>
-<tr>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Spegnimento automatico</td>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Lo schermo LCD si spegne automaticamente dopo 2 ore di inattività.</td>
-</tr>
-</tbody>
-</table>
+
+
+<figure aria-label="Segnaposto modalità display LCD." class="hb-lcd-mode-composition" data-component-id="HB-TABLE-LCD-MODE"><div class="hb-lcd-mode-art-panel"><img alt="Segnaposto modalità display LCD." class="hb-lcd-mode-art" src="assets/ir/71f85bd15d966cb3b856e158091d58f181a6fe4991bd96459ff08e3f9964161f/operation_lcd.png"/></div><div class="hb-lcd-mode-table-panel"><table class="hb-lcd-mode-table"><colgroup><col class="hb-lcd-mode-col-state"/><col class="hb-lcd-mode-col-action"/><col class="hb-lcd-mode-col-copy"/></colgroup><tbody><tr><td class="hb-lcd-mode-state" rowspan="3">Acceso brevemente</td><td class="hb-lcd-mode-action">Accendi</td><td class="hb-lcd-mode-copy">Premi il pulsante POWER principale oppure quando il prodotto è in carica.</td></tr><tr><td class="hb-lcd-mode-action">Spegni</td><td class="hb-lcd-mode-copy">Premi il pulsante POWER principale.</td></tr><tr><td class="hb-lcd-mode-action">Spegnimento automatico</td><td class="hb-lcd-mode-copy">Lo schermo LCD si spegne automaticamente ed entra in modalità sleep dopo 2 minuti di inattività.</td></tr><tr><td class="hb-lcd-mode-state" rowspan="3">Acceso fisso (in carica o in scarica)</td><td class="hb-lcd-mode-action">Accendi</td><td class="hb-lcd-mode-copy">Premi due volte il pulsante POWER principale quando il prodotto è acceso.</td></tr><tr><td class="hb-lcd-mode-action">Spegni</td><td class="hb-lcd-mode-copy">Premi il pulsante POWER principale.</td></tr><tr><td class="hb-lcd-mode-action">Spegnimento automatico</td><td class="hb-lcd-mode-copy">Lo schermo LCD si spegne automaticamente dopo 2 ore di inattività.</td></tr></tbody></table></div></figure>
+
+
 
 Puoi anche impostare la modalità di visualizzazione dello schermo nell\'App Jackery.
 
 ## COMBINAZIONI DI TASTI
 
-| Pulsanti | Operazione | Funzione |
-|----|----|----|
-| Pulsante POWER principale + Pulsante CA1 | Tieni premuti entrambi per 3 s | Attiva/disattiva la Modalità risparmio energetico |
-| Pulsante POWER principale + Pulsante DC/USB | Tieni premuti entrambi per 3 s | Ripristina Wi-Fi e Bluetooth |
-| Pulsante DC/USB + Pulsante CA1 | Tieni premuti entrambi per 1 s | Attiva/disattiva Wi-Fi e Bluetooth |
-| Pulsante POWER principale + Pulsante luce LED | Tieni premuti entrambi per 1 s | Attiva/disattiva la Modalità di ricarica di emergenza |
+
+
+<figure aria-label="Pulsanti / Operazione / Funzione" class="hb-key-combination-composition" tabindex="0"><table class="hb-key-combination-table"><colgroup><col class="hb-key-col-buttons"/><col class="hb-key-col-operation"/><col class="hb-key-col-function"/></colgroup>
+<thead>
+<tr><th class="head hb-key-buttons" scope="col"><p>Pulsanti</p></th>
+<th class="head hb-key-operation" scope="col"><p>Operazione</p></th>
+<th class="head hb-key-function" scope="col"><p>Funzione</p></th>
+</tr>
+</thead>
+<tbody>
+<tr><td class="hb-key-buttons"><p>Pulsante POWER principale + Pulsante CA1</p></td>
+<td class="hb-key-operation"><p>Tieni premuti entrambi per 3 s</p></td>
+<td class="hb-key-function"><p>Attiva/disattiva la Modalità risparmio energetico</p></td>
+</tr>
+<tr><td class="hb-key-buttons"><p>Pulsante POWER principale + Pulsante DC/USB</p></td>
+<td class="hb-key-operation"><p>Tieni premuti entrambi per 3 s</p></td>
+<td class="hb-key-function"><p>Ripristina Wi-Fi e Bluetooth</p></td>
+</tr>
+<tr><td class="hb-key-buttons"><p>Pulsante DC/USB + Pulsante CA1</p></td>
+<td class="hb-key-operation"><p>Tieni premuti entrambi per 1 s</p></td>
+<td class="hb-key-function"><p>Attiva/disattiva Wi-Fi e Bluetooth</p></td>
+</tr>
+<tr><td class="hb-key-buttons"><p>Pulsante POWER principale + Pulsante luce LED</p></td>
+<td class="hb-key-operation"><p>Tieni premuti entrambi per 1 s</p></td>
+<td class="hb-key-function"><p>Attiva/disattiva la Modalità di ricarica di emergenza</p></td>
+</tr>
+</tbody>
+</table></figure>
+
+
 
 # GRUPPO DI CONTINUITÀ (UPS)
 
@@ -282,7 +279,7 @@ la potenza di uscita effettiva in questa modalità è inferiore alla potenza nom
 
 Questo prodotto può supportare fino a 5 battery pack per soddisfare le esigenze di grande capacità energetica. Per i dettagli sull\'utilizzo, fare riferimento al *Manuale utente di Jackery Battery Pack 2000*.
 
-<img src="assets/ir/acaef3bb1842037d52742b65f27fa351f652f393448dae6b35d8c9febcdae23b/extra_battery.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_it/extra_battery.png" data-web-finished-panel-sha256="acaef3bb1842037d52742b65f27fa351f652f393448dae6b35d8c9febcdae23b" alt="Segnaposto diagramma di collegamento al battery pack." />
+<img src="assets/ir/71c2640879dfc04adc93621859b3713abf0af483f8d6b2ba452b13f854187c0b/extra_battery.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_it/extra_battery.png" data-web-finished-panel-sha256="71c2640879dfc04adc93621859b3713abf0af483f8d6b2ba452b13f854187c0b" alt="Segnaposto diagramma di collegamento al battery pack." />
 
 
 
@@ -296,9 +293,7 @@ Questo prodotto può supportare fino a 5 battery pack per soddisfare le esigenze
 
 
 
-|                               |                        |                    |
-|-------------------------------|------------------------|--------------------|
-| **Jackery Battery Pack 2000** | **Cavo di espansione** | **Manuale utente** |
+<img src="assets/ir/bf8394b547b972858de16221fd6b0927745e92fc4cbdb2ab833d4f30155b7036/battery_pack_kit.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_it/battery_pack_kit.png" data-web-finished-panel-sha256="bf8394b547b972858de16221fd6b0927745e92fc4cbdb2ab833d4f30155b7036" alt="Jackery Battery Pack 2000, Cavo di espansione, Manuale utente (venduti separatamente)" />
 
 ## RICARICA
 

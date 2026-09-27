@@ -1,8 +1,8 @@
 {
   "actions": {
-    "check": "d7f59e49d9b84bf88a7605a44405e38e6bb07b382656f7af1b8208943d9ca67a",
-    "html": "d7f59e49d9b84bf88a7605a44405e38e6bb07b382656f7af1b8208943d9ca67a",
-    "md": "d7f59e49d9b84bf88a7605a44405e38e6bb07b382656f7af1b8208943d9ca67a"
+    "check": "6e8eff9211acaf7b9b18f5ceac5e781f6edc133069d2939f67069408a43e52c1",
+    "html": "6e8eff9211acaf7b9b18f5ceac5e781f6edc133069d2939f67069408a43e52c1",
+    "md": "6e8eff9211acaf7b9b18f5ceac5e781f6edc133069d2939f67069408a43e52c1"
   },
   "canonical_source": {
     "files": [
@@ -63,8 +63,8 @@
       },
       {
         "path": "page/charging.rst",
-        "sha256": "d7976a4f68353822a4b0c281b25acbcd7ae0f19a137885abcef7835dcc7b292b",
-        "size": 5113
+        "sha256": "c003cad48c1969526687b774e4536776827cf60a1231a0963e88dae2cf26d773",
+        "size": 5131
       },
       {
         "path": "page/lcd_icons_de.rst",
@@ -92,9 +92,9 @@
         "size": 2015
       }
     ],
-    "sha256": "a295502971279d7c91f2aa6ce38009666d14e2ad065adf43ecbf874999b753e4"
+    "sha256": "4602215a6f77a083cd5b7a6c30ce23be9c1858b2960ebf94a27c903197b52f1f"
   },
-  "git_ref": "206584b3bff6096e83e7fe5e3743a0cc6852b026",
+  "git_ref": "b8c88cdedb96be191482317fe76661dde469a033",
   "html": {
     "files": [
       {
@@ -308,6 +308,11 @@
         "size": 64112
       },
       {
+        "path": "_images/battery_pack_kit.png",
+        "sha256": "7eadbd024f515b6ba3bf3f51eb9b57a688d8dd786c6d5bbc824b6db178857ce9",
+        "size": 123142
+      },
+      {
         "path": "_images/car_charge.png",
         "sha256": "cc7007d5671cf4abfbc552aeed661b5d7cf73e3fdd3f275af5f9183f40134dc0",
         "size": 54306
@@ -329,8 +334,8 @@
       },
       {
         "path": "_images/extra_battery.png",
-        "sha256": "acaef3bb1842037d52742b65f27fa351f652f393448dae6b35d8c9febcdae23b",
-        "size": 364306
+        "sha256": "71c2640879dfc04adc93621859b3713abf0af483f8d6b2ba452b13f854187c0b",
+        "size": 358998
       },
       {
         "path": "_images/front_product.jpg",
@@ -699,8 +704,8 @@
       },
       {
         "path": "index.html",
-        "sha256": "dc6c3a4fe2ca11e5bd50c493f0fcfb9e4509548dd2a72d6b31732b192f768365",
-        "size": 86046
+        "sha256": "ecebd624207126dbf769471355d86f84d91940e887619cddacbf6cfa37ec5976",
+        "size": 85858
       },
       {
         "path": "jbp2000b_ac_charging.pdf",
@@ -1494,8 +1499,8 @@
       },
       {
         "path": "searchindex.js",
-        "sha256": "79c315f6c06aabe07c7f934f7cc72e1fb6c6296be648283e3b4357733015b1ff",
-        "size": 17788
+        "sha256": "e70db18397f795e1382957b052a82560f7e17efa9afc42ede70c6b566a22b974",
+        "size": 17760
       },
       {
         "path": "solar_adapter.pdf",
@@ -1509,7 +1514,7 @@
       },
       {
         "path": "sphinx-warnings.log",
-        "sha256": "5e064fa1ca031da4dc03285555facdeaf83819d3e0319f7bd06770af42994ba8",
+        "sha256": "43067732d9417f1323a89c347f9da1b3f55f36907b0812480d76d1ede79cb4cb",
         "size": 1692
       },
       {
@@ -1523,7 +1528,7 @@
         "size": 316221
       }
     ],
-    "sha256": "87463736a5593fbaf6eba9d924007f8d3c0e9f35d13c2ee0d70141759693669e"
+    "sha256": "202dffebd3d69642f67fa5742551915bb701461125eeb33442588e7c6f9787fe"
   },
   "language": "de",
   "markdown": {
@@ -1599,6 +1604,11 @@
         "size": 2759
       },
       {
+        "path": "assets/ir/71c2640879dfc04adc93621859b3713abf0af483f8d6b2ba452b13f854187c0b/extra_battery.png",
+        "sha256": "71c2640879dfc04adc93621859b3713abf0af483f8d6b2ba452b13f854187c0b",
+        "size": 358998
+      },
+      {
         "path": "assets/ir/71f85bd15d966cb3b856e158091d58f181a6fe4991bd96459ff08e3f9964161f/operation_lcd.png",
         "sha256": "71f85bd15d966cb3b856e158091d58f181a6fe4991bd96459ff08e3f9964161f",
         "size": 200835
@@ -1632,6 +1642,11 @@
         "path": "assets/ir/7e4de290ea13b86bd50fbb209b4510116116d4fb403b7ef4f83cf1c1db873989/11_weee_WGswbCb5zoaeDSxlHvyc5rFXn7g.png",
         "sha256": "7e4de290ea13b86bd50fbb209b4510116116d4fb403b7ef4f83cf1c1db873989",
         "size": 2150
+      },
+      {
+        "path": "assets/ir/7eadbd024f515b6ba3bf3f51eb9b57a688d8dd786c6d5bbc824b6db178857ce9/battery_pack_kit.png",
+        "sha256": "7eadbd024f515b6ba3bf3f51eb9b57a688d8dd786c6d5bbc824b6db178857ce9",
+        "size": 123142
       },
       {
         "path": "assets/ir/7f743182c0509307793dde001356fff5c3d20dd32b09105b6a1d467af7e7f66d/3_Quiet_Charging_Mode_WLkMbiHS1oGsOtxUCp7cRhFAn1g.png",
@@ -1687,11 +1702,6 @@
         "path": "assets/ir/ab12c2def67ebf89f522bbd357393cefa66750662dd9d6583f98266f00712825/lcd_map.png",
         "sha256": "ab12c2def67ebf89f522bbd357393cefa66750662dd9d6583f98266f00712825",
         "size": 380723
-      },
-      {
-        "path": "assets/ir/acaef3bb1842037d52742b65f27fa351f652f393448dae6b35d8c9febcdae23b/extra_battery.png",
-        "sha256": "acaef3bb1842037d52742b65f27fa351f652f393448dae6b35d8c9febcdae23b",
-        "size": 364306
       },
       {
         "path": "assets/ir/b465458444ae768eee080bb02c636430692aecf841ffe8180065545bff335fdb/operation_led.png",
@@ -1815,19 +1825,19 @@
       },
       {
         "path": "manual_je2000e_eu_de.md",
-        "sha256": "14a964aed7e87dce41d78e112849fd9f36ed8e720bdfa46635688e4482a1ff60",
-        "size": 72118
+        "sha256": "2acdc8906e053635dea505a39edd46dd78fde1f31e37d75d5418642f96e0c6cd",
+        "size": 73128
       }
     ],
     "manual": "manual_je2000e_eu_de.md",
-    "sha256": "cabecea0f93a5fcee880d6d9efadf1fff27465f31fadb9c5d814f20da7dbff2b"
+    "sha256": "506791fa152fa47daa8786ed00722783a4596a7b1eefd163279096a60438c255"
   },
   "model": "JE-2000E",
   "projection_manifest": {
     "path": "projection_bundle_manifest.json",
-    "sha256": "454183f0fee3e9290c479a7f8746f60d866e504e909eaf4e284d659b34554cec"
+    "sha256": "b0cd736e50fe0251770083c19041bf4fe77462002a54d3968f83e272f2ff5392"
   },
   "region": "EU",
   "schema_version": "auto-manual-web-language-release-evidence/v1",
-  "version": "2.3"
+  "version": "2.4"
 }

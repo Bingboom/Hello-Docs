@@ -1,8 +1,8 @@
 {
   "actions": {
-    "check": "2ad9f418e5d0e6143f8da688472ca0bc6c1d61513503e60bc64220fe5540f228",
-    "html": "2ad9f418e5d0e6143f8da688472ca0bc6c1d61513503e60bc64220fe5540f228",
-    "md": "2ad9f418e5d0e6143f8da688472ca0bc6c1d61513503e60bc64220fe5540f228"
+    "check": "4654da1ea423453556d94e1320cc17b63fe9f1a62ac973ce09df3bf6b3f9321e",
+    "html": "4654da1ea423453556d94e1320cc17b63fe9f1a62ac973ce09df3bf6b3f9321e",
+    "md": "4654da1ea423453556d94e1320cc17b63fe9f1a62ac973ce09df3bf6b3f9321e"
   },
   "canonical_source": {
     "files": [
@@ -63,8 +63,8 @@
       },
       {
         "path": "page/charging.rst",
-        "sha256": "ca3ba7a0431578b3a2cb8c1664a0636ece716057982cfe04871c33aab33db6e6",
-        "size": 5483
+        "sha256": "db7244c91955e73ed4418fac26248d8dfaa09df52bd038a2b9f08c54a59b0ae3",
+        "size": 5491
       },
       {
         "path": "page/lcd_icons_fr.rst",
@@ -92,9 +92,9 @@
         "size": 1856
       }
     ],
-    "sha256": "216c0edcfafcfeb2be433e5e930b87a5b55362812c85904202bf6dfb6ca9181d"
+    "sha256": "eadbe00055cac95285e0043ab5bb5bf626951c14f4f7f40090c813a3e49cc506"
   },
-  "git_ref": "206584b3bff6096e83e7fe5e3743a0cc6852b026",
+  "git_ref": "b8c88cdedb96be191482317fe76661dde469a033",
   "html": {
     "files": [
       {
@@ -306,6 +306,11 @@
         "path": "_images/add_device.png",
         "sha256": "474b6e86398672ad0e36c08df860c09fe1645f96c95e80c9d68cc5549f012f4c",
         "size": 64112
+      },
+      {
+        "path": "_images/battery_pack_kit.png",
+        "sha256": "19c2003d531888e872ee7017a6b4d14e8177b3452233ab84d87d00518f316c22",
+        "size": 124112
       },
       {
         "path": "_images/car_charge.png",
@@ -699,8 +704,8 @@
       },
       {
         "path": "index.html",
-        "sha256": "4f0d02928b27e9ba0f887eb17f028eb868df829388f64e24140cfdda060f999a",
-        "size": 87599
+        "sha256": "0615aae793381492215b5202212992825489dd7229d890c92d47b4dbe87b05e5",
+        "size": 87410
       },
       {
         "path": "jbp2000b_ac_charging.pdf",
@@ -1494,8 +1499,8 @@
       },
       {
         "path": "searchindex.js",
-        "sha256": "9e42cb5d3938a98e8347a7a1653cbb20a18d3f4ed89b425c33f07333e8e1305e",
-        "size": 14008
+        "sha256": "83addd8f5aea7e306d325f6359852cc681362bd42c3724150e60038e11516843",
+        "size": 13996
       },
       {
         "path": "solar_adapter.pdf",
@@ -1523,7 +1528,7 @@
         "size": 316221
       }
     ],
-    "sha256": "5e825a401e0df5883d154724b3d6d582bd08ce1dd6aa20a56f47100e65d5b4e3"
+    "sha256": "b5aedfbd18f6dbd73b417d3c40187ef771fbb7b935cdbcde43d741c978c97eef"
   },
   "language": "fr",
   "markdown": {
@@ -1552,6 +1557,11 @@
         "path": "assets/ir/1864630843bcd97b491f86585351ab42db077be1df71401f85c1beadf3dbf5ec/operation_dc.png",
         "sha256": "1864630843bcd97b491f86585351ab42db077be1df71401f85c1beadf3dbf5ec",
         "size": 392490
+      },
+      {
+        "path": "assets/ir/19c2003d531888e872ee7017a6b4d14e8177b3452233ab84d87d00518f316c22/battery_pack_kit.png",
+        "sha256": "19c2003d531888e872ee7017a6b4d14e8177b3452233ab84d87d00518f316c22",
+        "size": 124112
       },
       {
         "path": "assets/ir/21b5f19ca9a6e39d8bd515128297cc1b99e43fd263e39ffba4fdf102d50a4bad/16_Charging_Power_Limit_VLf2bJfrkoCL0CxJoMNcL5ZxnCt.png",
@@ -1815,19 +1825,19 @@
       },
       {
         "path": "manual_je2000e_eu_fr.md",
-        "sha256": "815c4ae13aee15936fd99a383dae6e93783b4c32b2c2e04ba1ce8701ada8ac22",
-        "size": 73553
+        "sha256": "9962a02206658fd410cafda15b0208fc0f2f9841b72e7f4164dc99aebfad8271",
+        "size": 74679
       }
     ],
     "manual": "manual_je2000e_eu_fr.md",
-    "sha256": "8bfa058c386158fbd646179e07de8b9ccbd8e61877dae6b9615f5ac1c1c2228a"
+    "sha256": "25c01d252a90bf2923aeb2255307a024cf0330ac13f27d9861125f3edd023232"
   },
   "model": "JE-2000E",
   "projection_manifest": {
     "path": "projection_bundle_manifest.json",
-    "sha256": "dc1e06caefaed3cc8588a6f86aa9fc217a5315625b7f5215ecf68644d74bf9ec"
+    "sha256": "4c3a2044dececb30f02cb2866af8ce7ec9502d3d57be1edf365ffe272f62d2e3"
   },
   "region": "EU",
   "schema_version": "auto-manual-web-language-release-evidence/v1",
-  "version": "2.3"
+  "version": "2.4"
 }

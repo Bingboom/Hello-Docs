@@ -181,76 +181,73 @@ Das Produkt kann Ihre Fahrzeugbatterie mit dem Jackery 12-V-Autobatterie-Ladekab
 
 Die Wiederaufnahmefunktion für AC- und DC-Ausgänge ist standardmäßig deaktiviert. Aktivieren Sie diese Funktion in der Jackery-App, damit das Gerät den Status der AC- und DC-Ausgänge speichert und die AC- und DC-Ausgänge unter festgelegten Bedingungen automatisch wiederherstellt.
 
-<table>
+
+
+<figure aria-label="Bedingungen für automatische Wiederherstellung / Bedingungen ohne automatische Wiederherstellung" class="hb-auto-resume-composition"><table class="hb-auto-resume-table"><colgroup><col class="hb-auto-resume-col"/><col class="hb-auto-resume-col"/></colgroup>
 <thead>
-<tr>
-<th class="head"><p>Bedingungen für automatische Wiederherstellung</p></th>
-<th class="head"><p>Bedingungen ohne automatische Wiederherstellung</p></th>
+<tr><th class="head hb-auto-resume-left" scope="col"><p>Bedingungen für automatische Wiederherstellung</p></th>
+<th class="head hb-auto-resume-right" scope="col"><p>Bedingungen ohne automatische Wiederherstellung</p></th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><p>Einschalten/Neustart nach Abschalten oder Neustart</p></td>
-<td><p>Manuelles Ausschalten der Ausgänge (Taste/App)</p></td>
+<tr><td class="hb-auto-resume-left"><p>Einschalten/Neustart nach Abschalten oder Neustart</p></td>
+<td class="hb-auto-resume-right"><p>Manuelles Ausschalten der Ausgänge (Taste/App)</p></td>
 </tr>
-<tr>
-<td rowspan="2"><p>Batterie-SOC ≥ Entladegrenze +10% nach Erreichen der Grenze</p></td>
-<td><p>Ausgang im Energiesparmodus deaktiviert</p></td>
+<tr><td class="hb-auto-resume-left" rowspan="2"><p>Batterie-SOC ≥ Entladegrenze +10% nach Erreichen der Grenze</p></td>
+<td class="hb-auto-resume-right"><p>Ausgang im Energiesparmodus deaktiviert</p></td>
 </tr>
-<tr>
-<td><p>Schutzbedingter Ausgang deaktiviert</p></td>
+<tr><td class="hb-auto-resume-right"><p>Schutzbedingter Ausgang deaktiviert</p></td>
 </tr>
-<tr>
-<td><p>OTA-Update abgeschlossen</p></td>
-<td><p>Durch Entlade-Timer gesteuerter Ausgang deaktiviert</p></td>
+<tr><td class="hb-auto-resume-left"><p>OTA-Update abgeschlossen</p></td>
+<td class="hb-auto-resume-right"><p>Durch Entlade-Timer gesteuerter Ausgang deaktiviert</p></td>
 </tr>
 </tbody>
-</table>
+</table></figure>
+
+
 
 ## LCD-ANZEIGE
 
-<table style="width:100%; border-collapse:collapse; margin:0.75rem 0 0.5rem 0;">
-<tbody>
-<tr>
-<td rowspan="6" style="text-align: center; width: 24%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top;"><img src="assets/ir/71f85bd15d966cb3b856e158091d58f181a6fe4991bd96459ff08e3f9964161f/operation_lcd.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_de/operation_lcd.png" data-web-finished-panel-sha256="71f85bd15d966cb3b856e158091d58f181a6fe4991bd96459ff08e3f9964161f" alt="Platzhalter für den LCD-Anzeigemodus." /></td>
-<td rowspan="3" style="width: 18%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Kurzzeitig an</td>
-<td style="width: 12%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Ein</td>
-<td style="width: 46%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Drücken Sie die Haupt-POWER-Taste oder während das Produkt geladen wird.</td>
-</tr>
-<tr>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Aus</td>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Drücken Sie die Haupt-POWER-Taste.</td>
-</tr>
-<tr>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Autom. aus</td>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Die LCD-Anzeige schaltet sich nach 2 Minuten Inaktivität automatisch aus und wechselt in den Schlafmodus.</td>
-</tr>
-<tr>
-<td rowspan="3" style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Dauerhaft an (beim Laden oder Entladen)</td>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Ein</td>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Drücken Sie die Haupt-POWER-Taste zweimal, wenn das Produkt eingeschaltet ist.</td>
-</tr>
-<tr>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Aus</td>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Drücken Sie die Haupt-POWER-Taste.</td>
-</tr>
-<tr>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Autom. aus</td>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Die LCD-Anzeige schaltet sich nach 2 Stunden Inaktivität automatisch aus.</td>
-</tr>
-</tbody>
-</table>
+
+
+<figure aria-label="Platzhalter für den LCD-Anzeigemodus." class="hb-lcd-mode-composition" data-component-id="HB-TABLE-LCD-MODE"><div class="hb-lcd-mode-art-panel"><img alt="Platzhalter für den LCD-Anzeigemodus." class="hb-lcd-mode-art" src="assets/ir/71f85bd15d966cb3b856e158091d58f181a6fe4991bd96459ff08e3f9964161f/operation_lcd.png"/></div><div class="hb-lcd-mode-table-panel"><table class="hb-lcd-mode-table"><colgroup><col class="hb-lcd-mode-col-state"/><col class="hb-lcd-mode-col-action"/><col class="hb-lcd-mode-col-copy"/></colgroup><tbody><tr><td class="hb-lcd-mode-state" rowspan="3">Kurzzeitig an</td><td class="hb-lcd-mode-action">Ein</td><td class="hb-lcd-mode-copy">Drücken Sie die Haupt-POWER-Taste oder während das Produkt geladen wird.</td></tr><tr><td class="hb-lcd-mode-action">Aus</td><td class="hb-lcd-mode-copy">Drücken Sie die Haupt-POWER-Taste.</td></tr><tr><td class="hb-lcd-mode-action">Autom. aus</td><td class="hb-lcd-mode-copy">Die LCD-Anzeige schaltet sich nach 2 Minuten Inaktivität automatisch aus und wechselt in den Schlafmodus.</td></tr><tr><td class="hb-lcd-mode-state" rowspan="3">Dauerhaft an (beim Laden oder Entladen)</td><td class="hb-lcd-mode-action">Ein</td><td class="hb-lcd-mode-copy">Drücken Sie die Haupt-POWER-Taste zweimal, wenn das Produkt eingeschaltet ist.</td></tr><tr><td class="hb-lcd-mode-action">Aus</td><td class="hb-lcd-mode-copy">Drücken Sie die Haupt-POWER-Taste.</td></tr><tr><td class="hb-lcd-mode-action">Autom. aus</td><td class="hb-lcd-mode-copy">Die LCD-Anzeige schaltet sich nach 2 Stunden Inaktivität automatisch aus.</td></tr></tbody></table></div></figure>
+
+
 
 Sie können den Bildschirm-Anzeigemodus auch in der Jackery-App einstellen.
 
 ## TASTENKOMBINATION
 
-| Tasten | Bedienung | Funktion |
-|----|----|----|
-| Haupt-POWER-Taste + AC1-Einschalttaste | Beide 3 s lang gedrückt halten | Energiesparmodus ein-/ausschalten |
-| Haupt-POWER-Taste + DC/USB-Einschalttaste | Beide 3 s lang gedrückt halten | WLAN und Bluetooth zurücksetzen |
-| DC/USB-Einschalttaste + AC1-Einschalttaste | Beide 1 s lang gedrückt halten | WLAN und Bluetooth ein-/ausschalten |
-| Haupt-POWER-Taste + LED-Lichttaste | Beide 1 s lang gedrückt halten | Notfall-Lademodus ein-/ausschalten |
+
+
+<figure aria-label="Tasten / Bedienung / Funktion" class="hb-key-combination-composition" tabindex="0"><table class="hb-key-combination-table"><colgroup><col class="hb-key-col-buttons"/><col class="hb-key-col-operation"/><col class="hb-key-col-function"/></colgroup>
+<thead>
+<tr><th class="head hb-key-buttons" scope="col"><p>Tasten</p></th>
+<th class="head hb-key-operation" scope="col"><p>Bedienung</p></th>
+<th class="head hb-key-function" scope="col"><p>Funktion</p></th>
+</tr>
+</thead>
+<tbody>
+<tr><td class="hb-key-buttons"><p>Haupt-POWER-Taste + AC1-Einschalttaste</p></td>
+<td class="hb-key-operation"><p>Beide 3 s lang gedrückt halten</p></td>
+<td class="hb-key-function"><p>Energiesparmodus ein-/ausschalten</p></td>
+</tr>
+<tr><td class="hb-key-buttons"><p>Haupt-POWER-Taste + DC/USB-Einschalttaste</p></td>
+<td class="hb-key-operation"><p>Beide 3 s lang gedrückt halten</p></td>
+<td class="hb-key-function"><p>WLAN und Bluetooth zurücksetzen</p></td>
+</tr>
+<tr><td class="hb-key-buttons"><p>DC/USB-Einschalttaste + AC1-Einschalttaste</p></td>
+<td class="hb-key-operation"><p>Beide 1 s lang gedrückt halten</p></td>
+<td class="hb-key-function"><p>WLAN und Bluetooth ein-/ausschalten</p></td>
+</tr>
+<tr><td class="hb-key-buttons"><p>Haupt-POWER-Taste + LED-Lichttaste</p></td>
+<td class="hb-key-operation"><p>Beide 1 s lang gedrückt halten</p></td>
+<td class="hb-key-function"><p>Notfall-Lademodus ein-/ausschalten</p></td>
+</tr>
+</tbody>
+</table></figure>
+
+
 
 # UNTERBRECHUNGSFREIE STROMVERSORGUNG (UPS)
 
@@ -279,7 +276,7 @@ liegt die tatsächliche Ausgangsleistung in diesem Modus unter der Nennleistung;
 
 Dieses Produkt unterstützt bis zu 5 Batteriepacks, um den Bedarf an großer Energiekapazität zu decken. Weitere Informationen zur Verwendung finden Sie im *Jackery Battery Pack 2000 Benutzerhandbuch*.
 
-<img src="assets/ir/acaef3bb1842037d52742b65f27fa351f652f393448dae6b35d8c9febcdae23b/extra_battery.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_de/extra_battery.png" data-web-finished-panel-sha256="acaef3bb1842037d52742b65f27fa351f652f393448dae6b35d8c9febcdae23b" alt="Abbildung der Batteriepack-Verbindung als Platzhalter." />
+<img src="assets/ir/71c2640879dfc04adc93621859b3713abf0af483f8d6b2ba452b13f854187c0b/extra_battery.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_de/extra_battery.png" data-web-finished-panel-sha256="71c2640879dfc04adc93621859b3713abf0af483f8d6b2ba452b13f854187c0b" alt="Abbildung der Batteriepack-Verbindung als Platzhalter." />
 
 
 
@@ -293,9 +290,7 @@ Dieses Produkt unterstützt bis zu 5 Batteriepacks, um den Bedarf an großer Ene
 
 
 
-|                               |                        |                      |
-|-------------------------------|------------------------|----------------------|
-| **Jackery Battery Pack 2000** | **Verlängerungskabel** | **Benutzerhandbuch** |
+<img src="assets/ir/7eadbd024f515b6ba3bf3f51eb9b57a688d8dd786c6d5bbc824b6db178857ce9/battery_pack_kit.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_de/battery_pack_kit.png" data-web-finished-panel-sha256="7eadbd024f515b6ba3bf3f51eb9b57a688d8dd786c6d5bbc824b6db178857ce9" alt="Jackery Battery Pack 2000, Verlängerungskabel, Benutzerhandbuch (separat erhältlich)" />
 
 ## LADEN
 

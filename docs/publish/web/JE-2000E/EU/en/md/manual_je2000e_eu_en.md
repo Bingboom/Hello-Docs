@@ -299,9 +299,7 @@ This product can support up to 5 battery packs to meet the need for large power 
 
 
 
-|                               |                     |                 |
-|-------------------------------|---------------------|-----------------|
-| **Jackery Battery Pack 2000** | **Expansion Cable** | **User Manual** |
+<img src="../../../../_static/manual-assets/_pool/a9/a92d67baa23725e768f882b3f47fa885a685ac817fbc469c7883a175312fb1a6.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_en/battery_pack_kit.png" data-web-finished-panel-sha256="a92d67baa23725e768f882b3f47fa885a685ac817fbc469c7883a175312fb1a6" alt="Jackery Battery Pack 2000, Expansion Cable, User Manual (sold separately)" />
 
 ## CHARGING
 
