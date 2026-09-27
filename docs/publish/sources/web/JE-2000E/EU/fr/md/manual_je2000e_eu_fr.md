@@ -2,7 +2,7 @@
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>AVERTISSEMENT</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>INSTRUCTIONS DE SÉCURITÉ POUR PRÉVENIR LES INCENDIES, LES CHOCS ÉLECTRIQUES OU LES BLESSURES</p></td></tr></tbody></table>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>AVERTISSEMENT</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">AVERTISSEMENT</span><span class="manual-callout-label-sizer" aria-hidden="true">ATTENTION</span><span class="manual-callout-label-sizer" aria-hidden="true">REMARQUE</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>INSTRUCTIONS DE SÉCURITÉ POUR PRÉVENIR LES INCENDIES, LES CHOCS ÉLECTRIQUES OU LES BLESSURES</p></td></tr></tbody></table>
 
 
 
@@ -138,7 +138,7 @@ Pour obtenir de l'aide, veuillez contacter le service client Jackery.</p></div><
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENTION</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENTION</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">AVERTISSEMENT</span><span class="manual-callout-label-sizer" aria-hidden="true">ATTENTION</span><span class="manual-callout-label-sizer" aria-hidden="true">REMARQUE</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p><strong>Les ports USB-C de 140 W sont des ports de sortie haute puissance de type Source d'alimentation 3 (PS3) selon USB-PD.</strong> Si l'appareil utilisateur ou l'accessoire connecté ne répond pas aux exigences de sécurité, il peut présenter un risque d'incendie. Avant d'utiliser ces ports, assurez-vous que l'appareil ou l'accessoire connecté dispose d'une protection contre les incendies.</p></li>
 <li><p>Ne connectez Jackery Explorer 2000 Plus qu'à des appareils ou accessoires conformes aux clauses 6.3, 6.4 et 6.5 de la norme IEC/EN/UL 62368-1 (ou autres normes équivalentes).</p></li>
 <li><p>Pour obtenir la puissance de sortie maximale, utilisez le câble USB-C vers USB-C 5 A (28 V CC/5A, 140 W).</p></li>
@@ -151,7 +151,7 @@ Le produit peut charger la batterie de votre voiture à l\'aide du câble de cha
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENTION</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENTION</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">AVERTISSEMENT</span><span class="manual-callout-label-sizer" aria-hidden="true">ATTENTION</span><span class="manual-callout-label-sizer" aria-hidden="true">REMARQUE</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>Le port CC 12V est uniquement compatible avec les batteries de voiture 12V et ne convient pas aux systèmes 24V.</p></li>
 <li><p>Ne démarrez pas la voiture pendant que le produit charge la batterie via le port de sortie CC 12V, car cela pourrait endommager le produit.</p></li>
 <li><p>Cette fonctionnalité est destinée à un usage d'urgence uniquement et ne peut pas charger une batterie de voiture morte ou endommagée.</p></li>
@@ -166,7 +166,7 @@ Le produit peut charger la batterie de votre voiture à l\'aide du câble de cha
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>REMARQUE</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Le mode d'économie d'énergie reprend l'état précédent après l'allumage. Toute modification du mode doit être effectuée manuellement.</p></td></tr></tbody></table>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>REMARQUE</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">AVERTISSEMENT</span><span class="manual-callout-label-sizer" aria-hidden="true">ATTENTION</span><span class="manual-callout-label-sizer" aria-hidden="true">REMARQUE</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Le mode d'économie d'énergie reprend l'état précédent après l'allumage. Toute modification du mode doit être effectuée manuellement.</p></td></tr></tbody></table>
 
 
 
@@ -256,7 +256,7 @@ En mode UPS, la puissance de crête de sortie de l\'appareil atteint 10 A avant 
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENTION</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENTION</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">AVERTISSEMENT</span><span class="manual-callout-label-sizer" aria-hidden="true">ATTENTION</span><span class="manual-callout-label-sizer" aria-hidden="true">REMARQUE</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>Ce produit ne prend pas en charge un basculement instantané (0 ms). Ne le connectez pas à des équipements nécessitant une alimentation avec commutation en 0 ms, tels que des serveurs de données ou des stations de travail.</p></li>
 <li><p>Avant toute utilisation, testez plusieurs fois la compatibilité avec votre appareil.</p></li>
 <li><p>Ne connectez pas de charges dépassant la puissance maximale de sortie du produit. Sinon, la protection contre les surcharges sera déclenchée.</p></li>
@@ -275,7 +275,7 @@ Ce produit peut prendre en charge jusqu\'à 5 packs batterie pour répondre aux 
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENTION</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENTION</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">AVERTISSEMENT</span><span class="manual-callout-label-sizer" aria-hidden="true">ATTENTION</span><span class="manual-callout-label-sizer" aria-hidden="true">REMARQUE</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>Assurez-vous que tous les produits sont éteints avant de connecter Jackery Explorer 2000 Plus au(x) Jackery Battery Pack 2000.</p></li>
 <li><p>Pour assurer le bon fonctionnement du produit, assurez-vous que les entrées et sorties d'air sur les deux côtés ne sont pas obstruées. Laissez un espace d'au moins 200 mm entre les ouvertures et tout objet pour permettre une dissipation thermique adéquate.</p></li>
 <li><p>Lorsque le produit est utilisé avec des batteries d'extension connectées, le nombre maximal de batteries d'extension empilées est de 3 par défaut, et le produit doit être placé sur une surface plane, stable et suffisamment résistante.</p></li>
@@ -297,7 +297,7 @@ Quand la recharge par prise murale CA et la recharge solaire sont effectuées en
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>REMARQUE</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>REMARQUE</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">AVERTISSEMENT</span><span class="manual-callout-label-sizer" aria-hidden="true">ATTENTION</span><span class="manual-callout-label-sizer" aria-hidden="true">REMARQUE</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>La température de charge recommandée pour le produit est de -10 °C à 45 °C, et la température de décharge est de -10 °C à 45 °C.</p></li>
 <li><p>Utiliser le produit en dehors de cette plage de températures peut limiter ses capacités de charge et de décharge, voire empêcher la charge ou la décharge.</p></li>
 <li><p>La puissance de charge et la capacité de la batterie du produit peuvent varier en raison des fluctuations de température.</p></li>
@@ -312,7 +312,7 @@ Quand la recharge par prise murale CA et la recharge solaire sont effectuées en
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENTION</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Assurez-vous que le câble de charge CA est entièrement et solidement inséré dans le port d’entrée CA. Une connexion incomplète peut entraîner un courant instable, une surchauffe, un mauvais contact ou un dysfonctionnement de l'appareil.</p></td></tr></tbody></table>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENTION</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">AVERTISSEMENT</span><span class="manual-callout-label-sizer" aria-hidden="true">ATTENTION</span><span class="manual-callout-label-sizer" aria-hidden="true">REMARQUE</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Assurez-vous que le câble de charge CA est entièrement et solidement inséré dans le port d’entrée CA. Une connexion incomplète peut entraîner un courant instable, une surchauffe, un mauvais contact ou un dysfonctionnement de l'appareil.</p></td></tr></tbody></table>
 
 
 
@@ -332,13 +332,13 @@ Si un seul port d'entrée DC8020 doit être connecté à deux panneaux solaires 
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENTION</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Un port d’entrée DC8020 peut être connecté à un maximum de deux panneaux solaires.</p></td></tr></tbody></table>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENTION</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">AVERTISSEMENT</span><span class="manual-callout-label-sizer" aria-hidden="true">ATTENTION</span><span class="manual-callout-label-sizer" aria-hidden="true">REMARQUE</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Un port d’entrée DC8020 peut être connecté à un maximum de deux panneaux solaires.</p></td></tr></tbody></table>
 
 
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENTION</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Assurez-vous que la tension d’entrée pour les deux ports d’entrée CC est la même. Sinon, le produit pourrait être endommagé. Par exemple:</p>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENTION</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">AVERTISSEMENT</span><span class="manual-callout-label-sizer" aria-hidden="true">ATTENTION</span><span class="manual-callout-label-sizer" aria-hidden="true">REMARQUE</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Assurez-vous que la tension d’entrée pour les deux ports d’entrée CC est la même. Sinon, le produit pourrait être endommagé. Par exemple:</p>
 <ul class="simple">
 <li><p>Utiliser le même modèle de panneaux solaires Jackery et le même nombre de panneaux lors de la connexion des panneaux solaires aux deux ports d’entrée DC8020.</p></li>
 <li><p>Ne chargez pas le produit à la fois avec un chargeur de voiture et un panneau solaire simultanément. Cela pourrait faire sauter le fusible de la voiture ou entraîner un échec de la charge.</p></li>
@@ -357,7 +357,7 @@ Ce produit peut être chargé à l\'aide d\'un chargeur de voiture 12 V. Assurez
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENTION</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENTION</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">AVERTISSEMENT</span><span class="manual-callout-label-sizer" aria-hidden="true">ATTENTION</span><span class="manual-callout-label-sizer" aria-hidden="true">REMARQUE</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>Veuillez démarrer le véhicule avant de charger votre station d'énergie.</p></li>
 <li><p>Si le véhicule roule sur des routes accidentées, il est interdit d'utiliser le chargeur de voiture afin d'éviter tout risque de surchauffe dû à une mauvaise connexion. La société ne sera pas responsable des pertes causées par une utilisation non conforme.</p></li>
 <li><p>La charge par véhicule est uniquement applicable aux véhicules en 12 V CC, pas en 24 V CC. Veuillez ne pas charger ce produit dans un véhicule 24 V afin d'éviter tout risque de blessure ou de dommage matériel.</p></li>
@@ -603,7 +603,7 @@ Vous pouvez également scanner le code QR ci-dessous pour télécharger et insta
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>REMARQUE</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Si le message «l'appareil a été associé» s'affiche pendant l'appairage, vous pouvez suivre l'une de ces deux étapes pour procéder à la connexion.</p>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>REMARQUE</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">AVERTISSEMENT</span><span class="manual-callout-label-sizer" aria-hidden="true">ATTENTION</span><span class="manual-callout-label-sizer" aria-hidden="true">REMARQUE</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Si le message «l'appareil a été associé» s'affiche pendant l'appairage, vous pouvez suivre l'une de ces deux étapes pour procéder à la connexion.</p>
 <ul class="simple">
 <li><p>Le propriétaire de l'appareil peut partager ce dernier avec d'autres utilisateurs dans l'application.</p></li>
 <li><p>Maintenez le bouton POWER principal et le bouton CC / USB enfoncés pendant 3 secondes pour réinitialiser le Wi-Fi et le Bluetooth de l'appareil et l'associer de nouveau.</p></li>
@@ -616,7 +616,7 @@ Vous pouvez également scanner le code QR ci-dessous pour télécharger et insta
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>REMARQUE</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>REMARQUE</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">AVERTISSEMENT</span><span class="manual-callout-label-sizer" aria-hidden="true">ATTENTION</span><span class="manual-callout-label-sizer" aria-hidden="true">REMARQUE</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>Veuillez choisir un réseau Wi-Fi 2,4 GHz. L'appareil ne prend pas en charge le réseau Wi-Fi 5 GHz.</p></li>
 </ul>
 </td></tr></tbody></table>
@@ -631,7 +631,7 @@ Les captures d\'écran ci-dessus sont fournies à titre indicatif.
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENTION</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>L'application Jackery ne peut se connecter qu'à une seule station d'énergie à la fois via Bluetooth. Revenir à la liste des appareils déconnecte automatiquement le Bluetooth. Touchez à nouveau la station d'énergie dans la liste pour vous reconnecter automatiquement.</p></td></tr></tbody></table>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENTION</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">AVERTISSEMENT</span><span class="manual-callout-label-sizer" aria-hidden="true">ATTENTION</span><span class="manual-callout-label-sizer" aria-hidden="true">REMARQUE</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>L'application Jackery ne peut se connecter qu'à une seule station d'énergie à la fois via Bluetooth. Revenir à la liste des appareils déconnecte automatiquement le Bluetooth. Touchez à nouveau la station d'énergie dans la liste pour vous reconnecter automatiquement.</p></td></tr></tbody></table>
 
 
 

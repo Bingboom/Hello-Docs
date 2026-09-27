@@ -2,7 +2,7 @@
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>WARNUNG</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>SICHERHEITSHINWEISE ZUR VERMEIDUNG VON BRANDGEFAHR, STROMSCHLAG ODER VERLETZUNGEN</p></td></tr></tbody></table>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>WARNUNG</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">WARNUNG</span><span class="manual-callout-label-sizer" aria-hidden="true">VORSICHT</span><span class="manual-callout-label-sizer" aria-hidden="true">HINWEIS</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>SICHERHEITSHINWEISE ZUR VERMEIDUNG VON BRANDGEFAHR, STROMSCHLAG ODER VERLETZUNGEN</p></td></tr></tbody></table>
 
 
 
@@ -141,7 +141,7 @@ Bei Fragen wenden Sie sich bitte an den Jackery-Kundendienst.</p></div></div></f
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>VORSICHT</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>VORSICHT</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">WARNUNG</span><span class="manual-callout-label-sizer" aria-hidden="true">VORSICHT</span><span class="manual-callout-label-sizer" aria-hidden="true">HINWEIS</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p><strong>Der USB-C-140-W-Anschluss ist ein Hochleistungs-Ausgangsanschluss des USB-PD-Typs Power Source 3 (PS3).</strong> Wenn das angeschlossene Benutzergerät oder Zubehör die Sicherheitsanforderungen nicht erfüllt, kann Brandgefahr bestehen. Stellen Sie vor der Verwendung dieses Anschlusses sicher, dass das angeschlossene Gerät oder Zubehör über Brandschutz verfügt.</p></li>
 <li><p>Schließen Sie Jackery Explorer 2000 Plus nur an Geräte oder Zubehör an, die den Abschnitten 6.3, 6.4 und 6.5 der IEC/EN/UL 62368-1 (oder anderen gleichwertigen Normen) entsprechen.</p></li>
 <li><p>Verwenden Sie für die maximale Ausgangsleistung das USB-C-auf-USB-C-5 A-Kabel (28 V DC/5 A, 140 W).</p></li>
@@ -154,7 +154,7 @@ Das Produkt kann Ihre Fahrzeugbatterie mit dem Jackery 12-V-Autobatterie-Ladekab
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>VORSICHT</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>VORSICHT</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">WARNUNG</span><span class="manual-callout-label-sizer" aria-hidden="true">VORSICHT</span><span class="manual-callout-label-sizer" aria-hidden="true">HINWEIS</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>Der DC-12-V-Anschluss ist nur mit 12-V-Autobatterien kompatibel und nicht für 24-V-Systeme geeignet.</p></li>
 <li><p>Starten Sie das Fahrzeug nicht, während das Produkt die Fahrzeugbatterie über den 12-V-DC-Ausgang lädt, da dies das Produkt beschädigen kann.</p></li>
 <li><p>Diese Funktion ist nur für den Notfall vorgesehen und kann eine leere oder beschädigte Fahrzeugbatterie nicht aufladen.</p></li>
@@ -169,7 +169,7 @@ Das Produkt kann Ihre Fahrzeugbatterie mit dem Jackery 12-V-Autobatterie-Ladekab
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>HINWEIS</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Der Energiesparmodus kehrt nach dem Einschalten in seinen vorherigen Zustand zurück. Für einen Moduswechsel ist ein manuelles Umschalten erforderlich.</p></td></tr></tbody></table>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>HINWEIS</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">WARNUNG</span><span class="manual-callout-label-sizer" aria-hidden="true">VORSICHT</span><span class="manual-callout-label-sizer" aria-hidden="true">HINWEIS</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Der Energiesparmodus kehrt nach dem Einschalten in seinen vorherigen Zustand zurück. Für einen Moduswechsel ist ein manuelles Umschalten erforderlich.</p></td></tr></tbody></table>
 
 
 
@@ -261,7 +261,7 @@ liegt die tatsächliche Ausgangsleistung in diesem Modus unter der Nennleistung;
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>VORSICHT</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>VORSICHT</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">WARNUNG</span><span class="manual-callout-label-sizer" aria-hidden="true">VORSICHT</span><span class="manual-callout-label-sizer" aria-hidden="true">HINWEIS</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>Dieses Produkt unterstützt kein Umschalten mit 0 ms. Schließen Sie es nicht an Geräte an, die eine Stromversorgung mit 0-ms-Umschaltung erfordern, wie z. B. Datenserver oder Workstations.</p></li>
 <li><p>Testen Sie vor der Verwendung die Kompatibilität mit Ihrem Gerät mehrmals.</p></li>
 <li><p>Schließen Sie keine Lasten an, die die maximale Ausgangsleistung des Produkts überschreiten. Andernfalls wird der Überlastschutz ausgelöst.</p></li>
@@ -280,7 +280,7 @@ Dieses Produkt unterstützt bis zu 5 Batteriepacks, um den Bedarf an großer Ene
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>VORSICHT</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>VORSICHT</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">WARNUNG</span><span class="manual-callout-label-sizer" aria-hidden="true">VORSICHT</span><span class="manual-callout-label-sizer" aria-hidden="true">HINWEIS</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>Stellen Sie sicher, dass alle Produkte ausgeschaltet sind, bevor Sie Jackery Explorer 2000 Plus mit dem Jackery Battery Pack 2000 verbinden.</p></li>
 <li><p>Um einen ordnungsgemäßen Betrieb des Produkts sicherzustellen, müssen die Lufteinlass- und Luftauslassöffnungen auf beiden Seiten frei bleiben. Lassen Sie mindestens 200 mm Abstand zwischen den Öffnungen und anderen Gegenständen, damit eine ausreichende Wärmeableitung gewährleistet ist.</p></li>
 <li><p>Wenn das Produkt mit angeschlossenen Batteriepacks verwendet wird, beträgt die Standard-Maximalanzahl der gestapelten Batteriepacks 3, und das Produkt muss auf einer ebenen, stabilen und ausreichend tragfähigen Oberfläche stehen.</p></li>
@@ -300,7 +300,7 @@ Dieses Produkt unterstützt bis zu 5 Batteriepacks, um den Bedarf an großer Ene
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>HINWEIS</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>HINWEIS</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">WARNUNG</span><span class="manual-callout-label-sizer" aria-hidden="true">VORSICHT</span><span class="manual-callout-label-sizer" aria-hidden="true">HINWEIS</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>Die empfohlene Ladetemperatur für das Produkt liegt bei von -10 °C bis 45 °C, und die Entladetemperatur liegt bei von -10 °C bis 45 °C.</p></li>
 <li><p>Der Betrieb des Produkts außerhalb dieses Temperaturbereichs kann die Lade- und Entladefähigkeit einschränken oder sogar verhindern, dass das Produkt lädt oder entlädt.</p></li>
 <li><p>Ladeleistung und Batteriekapazität des Produkts können sich aufgrund von Temperaturschwankungen ändern.</p></li>
@@ -315,7 +315,7 @@ Dieses Produkt unterstützt bis zu 5 Batteriepacks, um den Bedarf an großer Ene
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>VORSICHT</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Stellen Sie sicher, dass das AC-Ladekabel vollständig und sicher in den AC-Eingangsanschluss eingesteckt ist. Eine unvollständige Verbindung kann zu instabilem Strom, Überhitzung, schlechtem Kontakt oder Fehlfunktionen des Geräts führen.</p></td></tr></tbody></table>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>VORSICHT</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">WARNUNG</span><span class="manual-callout-label-sizer" aria-hidden="true">VORSICHT</span><span class="manual-callout-label-sizer" aria-hidden="true">HINWEIS</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Stellen Sie sicher, dass das AC-Ladekabel vollständig und sicher in den AC-Eingangsanschluss eingesteckt ist. Eine unvollständige Verbindung kann zu instabilem Strom, Überhitzung, schlechtem Kontakt oder Fehlfunktionen des Geräts führen.</p></td></tr></tbody></table>
 
 
 
@@ -335,13 +335,13 @@ Wenn ein DC8020-Eingangsanschluss zwei Solarmodule gleichzeitig anschließen mus
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>VORSICHT</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>An einen DC8020-Eingangsanschluss können höchstens zwei Solarmodule angeschlossen werden.</p></td></tr></tbody></table>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>VORSICHT</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">WARNUNG</span><span class="manual-callout-label-sizer" aria-hidden="true">VORSICHT</span><span class="manual-callout-label-sizer" aria-hidden="true">HINWEIS</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>An einen DC8020-Eingangsanschluss können höchstens zwei Solarmodule angeschlossen werden.</p></td></tr></tbody></table>
 
 
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>VORSICHT</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>VORSICHT</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">WARNUNG</span><span class="manual-callout-label-sizer" aria-hidden="true">VORSICHT</span><span class="manual-callout-label-sizer" aria-hidden="true">HINWEIS</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>Stellen Sie sicher, dass die Eingangsspannung an beiden DC-Eingangsanschlüssen gleich ist. Andernfalls kann das Produkt beschädigt werden. Zum Beispiel:</p></li>
 <li><p>Verwenden Sie beim Anschluss von Solarmodulen an beide DC8020-Eingangsanschlüsse das gleiche Jackery-Solarmodell und die gleiche Anzahl an Modulen.</p></li>
 <li><p>Laden Sie das Produkt nicht gleichzeitig mit einem Autoladegerät und einem Solarpanel. Andernfalls kann die Fahrzeugsicherung durchbrennen oder der Ladevorgang fehlschlagen.</p></li>
@@ -360,7 +360,7 @@ Dieses Produkt kann mit einem 12-V-Autoladegerät aufgeladen werden. Stellen Sie
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>VORSICHT</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>VORSICHT</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">WARNUNG</span><span class="manual-callout-label-sizer" aria-hidden="true">VORSICHT</span><span class="manual-callout-label-sizer" aria-hidden="true">HINWEIS</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>Bitte starten Sie das Fahrzeug, bevor Sie Ihre Powerstation laden.</p></li>
 <li><p>Wenn das Fahrzeug auf unebenen Straßen fährt, darf das Autoladegerät nicht verwendet werden, da dies zu einem nicht standardmäßigen Betrieb führen kann. Das Unternehmen übernimmt keine Verantwortung für Verluste, die durch einen nicht standardmäßigen Betrieb entstehen.</p></li>
 <li><p>Das Laden über das Fahrzeug ist nur für Fahrzeuge mit 12 V DC geeignet, nicht für 24 V DC. Bitte laden Sie dieses Produkt nicht in einem 24-V-Fahrzeug, um Personen- und Sachschäden zu vermeiden.</p></li>
@@ -606,7 +606,7 @@ Suchen Sie im Google Play Store oder im App Store nach \"Jackery\", um die App z
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>HINWEIS</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Wenn während des Kopplungsvorgangs „das Gerät wurde bereits gekoppelt“ angezeigt wird, können die folgenden zwei Möglichkeiten für die Kopplung verwendet werden:</p>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>HINWEIS</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">WARNUNG</span><span class="manual-callout-label-sizer" aria-hidden="true">VORSICHT</span><span class="manual-callout-label-sizer" aria-hidden="true">HINWEIS</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Wenn während des Kopplungsvorgangs „das Gerät wurde bereits gekoppelt“ angezeigt wird, können die folgenden zwei Möglichkeiten für die Kopplung verwendet werden:</p>
 <ul class="simple">
 <li><p>Der Besitzer des Geräts teilt dieses Gerät über die App mit anderen Benutzern.</p></li>
 <li><p>Halten Sie Haupt-POWER-Taste + DC / USB-Einschalttaste 3 Sekunden lang gedrückt, um WLAN und Bluetooth des Geräts zurückzusetzen, und koppeln Sie das Gerät anschließend erneut.</p></li>
@@ -619,7 +619,7 @@ Suchen Sie im Google Play Store oder im App Store nach \"Jackery\", um die App z
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>HINWEIS</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>HINWEIS</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">WARNUNG</span><span class="manual-callout-label-sizer" aria-hidden="true">VORSICHT</span><span class="manual-callout-label-sizer" aria-hidden="true">HINWEIS</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>Bitte wählen Sie ein WLAN-Netzwerk im 2,4-GHz-Band aus. Das Gerät unterstützt kein WLAN-Netzwerk im 5-GHz-Band.</p></li>
 </ul>
 </td></tr></tbody></table>
@@ -634,7 +634,7 @@ Die oben gezeigten Screenshots dienen nur als Referenz.
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>VORSICHT</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Die Jackery-App kann jeweils nur mit einer Powerstation gleichzeitig per Bluetooth verbunden sein. Wenn Sie zur Geräteliste zurückkehren, wird Bluetooth automatisch getrennt. Tippen Sie die Powerstation in der Liste erneut an, um die Verbindung automatisch wiederherzustellen.</p></td></tr></tbody></table>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>VORSICHT</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">WARNUNG</span><span class="manual-callout-label-sizer" aria-hidden="true">VORSICHT</span><span class="manual-callout-label-sizer" aria-hidden="true">HINWEIS</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Die Jackery-App kann jeweils nur mit einer Powerstation gleichzeitig per Bluetooth verbunden sein. Wenn Sie zur Geräteliste zurückkehren, wird Bluetooth automatisch getrennt. Tippen Sie die Powerstation in der Liste erneut an, um die Verbindung automatisch wiederherzustellen.</p></td></tr></tbody></table>
 
 
 

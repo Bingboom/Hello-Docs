@@ -2,7 +2,7 @@
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ПОПЕРЕДЖЕННЯ</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>ІНСТРУКЦІЇ З БЕЗПЕКИ ДЛЯ ЗАПОБІГАННЯ ПОЖЕЖІ, УРАЖЕННЮ ЕЛЕКТРИЧНИМ СТРУМОМ АБО ТРАВМАМ</p></td></tr></tbody></table>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ПОПЕРЕДЖЕННЯ</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">ПОПЕРЕДЖЕННЯ</span><span class="manual-callout-label-sizer" aria-hidden="true">УВАГА</span><span class="manual-callout-label-sizer" aria-hidden="true">ПРИМІТКА</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>ІНСТРУКЦІЇ З БЕЗПЕКИ ДЛЯ ЗАПОБІГАННЯ ПОЖЕЖІ, УРАЖЕННЮ ЕЛЕКТРИЧНИМ СТРУМОМ АБО ТРАВМАМ</p></td></tr></tbody></table>
 
 
 
@@ -156,7 +156,7 @@
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>УВАГА</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>УВАГА</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">ПОПЕРЕДЖЕННЯ</span><span class="manual-callout-label-sizer" aria-hidden="true">УВАГА</span><span class="manual-callout-label-sizer" aria-hidden="true">ПРИМІТКА</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p><strong>USB-C 140 Вт є високопотужним вихідним портом USB-PD Power Source 3 (PS3).</strong> Якщо підключений пристрій користувача або аксесуар не відповідає вимогам безпеки, існує ризик пожежі. Перед використанням цих портів переконайтеся, що підключений пристрій або аксесуар має захист від пожежі.</p></li>
 <li><p>Підключайте Jackery Explorer 2000 Plus лише до пристроїв або аксесуарів, що відповідають пунктам 6.3, 6.4 і 6.5 IEC/EN/UL 62368-1 (або іншим еквівалентним стандартам).</p></li>
 <li><p>Щоб отримати максимальну вихідну потужність, використовуйте кабель USB-C до USB-C 5 A (28 В DC/5 A, 140 Вт).</p></li>
@@ -169,7 +169,7 @@
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>УВАГА</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>УВАГА</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">ПОПЕРЕДЖЕННЯ</span><span class="manual-callout-label-sizer" aria-hidden="true">УВАГА</span><span class="manual-callout-label-sizer" aria-hidden="true">ПРИМІТКА</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>Порт DC 12 В сумісний лише з автомобільними акумуляторами 12 В і не підходить для систем 24 В.</p></li>
 <li><p>Не запускайте автомобіль, поки пристрій заряджає автомобільний акумулятор через вихідний порт DC 12 В, оскільки це може пошкодити пристрій.</p></li>
 <li><p>Ця функція призначена лише для екстреного використання і не може зарядити повністю розряджений або пошкоджений автомобільний акумулятор.</p></li>
@@ -184,7 +184,7 @@
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ПРИМІТКА</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Після ввімкнення пристрій відновлює попередній стан режиму енергозбереження. Для зміни режиму потрібне ручне перемикання.</p></td></tr></tbody></table>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ПРИМІТКА</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">ПОПЕРЕДЖЕННЯ</span><span class="manual-callout-label-sizer" aria-hidden="true">УВАГА</span><span class="manual-callout-label-sizer" aria-hidden="true">ПРИМІТКА</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Після ввімкнення пристрій відновлює попередній стан режиму енергозбереження. Для зміни режиму потрібне ручне перемикання.</p></td></tr></tbody></table>
 
 
 
@@ -276,7 +276,7 @@
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>УВАГА</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>УВАГА</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">ПОПЕРЕДЖЕННЯ</span><span class="manual-callout-label-sizer" aria-hidden="true">УВАГА</span><span class="manual-callout-label-sizer" aria-hidden="true">ПРИМІТКА</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>Цей пристрій не підтримує перемикання 0 мс. Не підключайте його до обладнання, яке потребує джерела живлення з перемиканням 0 мс, наприклад до серверів даних або робочих станцій.</p></li>
 <li><p>Перед використанням кілька разів перевірте сумісність із вашим пристроєм.</p></li>
 <li><p>Не підключайте навантаження, що перевищують максимальну вихідну потужність виробу. Інакше спрацює захист від перевантаження.</p></li>
@@ -295,7 +295,7 @@
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>УВАГА</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>УВАГА</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">ПОПЕРЕДЖЕННЯ</span><span class="manual-callout-label-sizer" aria-hidden="true">УВАГА</span><span class="manual-callout-label-sizer" aria-hidden="true">ПРИМІТКА</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>Перед підключенням Jackery Explorer 2000 Plus до Jackery Battery Pack 2000 переконайтеся, що всі вироби вимкнені.</p></li>
 <li><p>Щоб забезпечити належну роботу пристрою, переконайтеся, що вентиляційні отвори для забору та викиду повітря з обох боків не перекриті. Залиште щонайменше 200 мм простору між отворами та будь-якими об'єктами для належного відведення тепла.</p></li>
 <li><p>Коли пристрій використовується з підключеними батарейними модулями, стандартна максимальна кількість модулів у стеку становить 3, і пристрій потрібно розмістити на рівній, стійкій поверхні з достатньою несучою здатністю.</p></li>
@@ -315,7 +315,7 @@
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ПРИМІТКА</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ПРИМІТКА</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">ПОПЕРЕДЖЕННЯ</span><span class="manual-callout-label-sizer" aria-hidden="true">УВАГА</span><span class="manual-callout-label-sizer" aria-hidden="true">ПРИМІТКА</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>Рекомендований діапазон температури заряджання для пристрою становить від -10 °C до 45 °C, а діапазон температури розряджання - від -10 °C до 45 °C.</p></li>
 <li><p>Робота пристрою поза цим температурним діапазоном може обмежити його можливості заряджання та розряджання або навіть унеможливити заряджання чи розряджання.</p></li>
 <li><p>Потужність заряджання та ємність батареї пристрою можуть змінюватися через коливання температури.</p></li>
@@ -330,7 +330,7 @@
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>УВАГА</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Переконайтеся, що кабель для заряджання AC повністю та надійно вставлений у вхід AC. Неповне підключення може спричинити нестабільний струм, перегрів, поганий контакт або несправність пристрою.</p></td></tr></tbody></table>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>УВАГА</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">ПОПЕРЕДЖЕННЯ</span><span class="manual-callout-label-sizer" aria-hidden="true">УВАГА</span><span class="manual-callout-label-sizer" aria-hidden="true">ПРИМІТКА</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Переконайтеся, що кабель для заряджання AC повністю та надійно вставлений у вхід AC. Неповне підключення може спричинити нестабільний струм, перегрів, поганий контакт або несправність пристрою.</p></td></tr></tbody></table>
 
 
 
@@ -350,13 +350,13 @@ Jackery Explorer 2000 Plus має два вхідні порти DC8020 і су�
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>УВАГА</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>До одного входу DC8020 можна підключити не більше двох сонячних панелей.</p></td></tr></tbody></table>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>УВАГА</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">ПОПЕРЕДЖЕННЯ</span><span class="manual-callout-label-sizer" aria-hidden="true">УВАГА</span><span class="manual-callout-label-sizer" aria-hidden="true">ПРИМІТКА</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>До одного входу DC8020 можна підключити не більше двох сонячних панелей.</p></td></tr></tbody></table>
 
 
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>УВАГА</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Переконайтеся, що вхідна напруга для обох портів DC однакова. Інакше можна пошкодити пристрій. Наприклад:</p>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>УВАГА</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">ПОПЕРЕДЖЕННЯ</span><span class="manual-callout-label-sizer" aria-hidden="true">УВАГА</span><span class="manual-callout-label-sizer" aria-hidden="true">ПРИМІТКА</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Переконайтеся, що вхідна напруга для обох портів DC однакова. Інакше можна пошкодити пристрій. Наприклад:</p>
 <ul class="simple">
 <li><p>Використовуйте сонячні панелі Jackery однієї моделі та однакову кількість панелей, якщо підключаєте сонячні панелі до обох входів DC8020.</p></li>
 <li><p>Не заряджайте пристрій одночасно від автомобільного зарядного пристрою та сонячної панелі. Це може призвести до перегорання автомобільного запобіжника або до збою заряджання.</p></li>
@@ -375,7 +375,7 @@ Jackery Explorer 2000 Plus має два вхідні порти DC8020 і су�
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>УВАГА</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>УВАГА</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">ПОПЕРЕДЖЕННЯ</span><span class="manual-callout-label-sizer" aria-hidden="true">УВАГА</span><span class="manual-callout-label-sizer" aria-hidden="true">ПРИМІТКА</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>Перед заряджанням електростанції обов'язково запустіть транспортний засіб.</p></li>
 <li><p>Якщо транспортний засіб рухається нерівними дорогами, використовувати автомобільний зарядний пристрій заборонено, оскільки це може спричинити нестандартну роботу. Компанія не несе відповідальності за будь-які втрати, спричинені нестандартною роботою.</p></li>
 <li><p>Автомобільне заряджання застосовується лише для транспортних засобів із 12 В DC, але не для 24 В DC. Будь ласка, не заряджайте цей пристрій у транспортному засобі з 24 В, щоб уникнути травмування людей і матеріальних збитків.</p></li>
@@ -629,7 +629,7 @@ Jackery Explorer 2000 Plus має два вхідні порти DC8020 і су�
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ПРИМІТКА</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Якщо під час процесу прив'язування з'являється повідомлення "<strong>пристрій уже прив'язано</strong>", для підключення можна скористатися одним із двох способів:</p>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ПРИМІТКА</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">ПОПЕРЕДЖЕННЯ</span><span class="manual-callout-label-sizer" aria-hidden="true">УВАГА</span><span class="manual-callout-label-sizer" aria-hidden="true">ПРИМІТКА</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Якщо під час процесу прив'язування з'являється повідомлення "<strong>пристрій уже прив'язано</strong>", для підключення можна скористатися одним із двох способів:</p>
 <ul class="simple">
 <li><p>Власник пристрою поділиться цим пристроєм з іншими користувачами через додаток.</p></li>
 <li><p>Натисніть і утримуйте головну кнопку POWER + кнопку DC / USB протягом 3 секунд, щоб скинути Wi-Fi та Bluetooth пристрою, а потім знову прив'яжіть пристрій.</p></li>
@@ -642,7 +642,7 @@ Jackery Explorer 2000 Plus має два вхідні порти DC8020 і су�
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ПРИМІТКА</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ПРИМІТКА</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">ПОПЕРЕДЖЕННЯ</span><span class="manual-callout-label-sizer" aria-hidden="true">УВАГА</span><span class="manual-callout-label-sizer" aria-hidden="true">ПРИМІТКА</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>Будь ласка, вибирайте мережу Wi-Fi у діапазоні 2,4 ГГц. Пристрій не підтримує мережі Wi-Fi у діапазоні 5 ГГц.</p></li>
 </ul>
 </td></tr></tbody></table>
@@ -657,7 +657,7 @@ Jackery Explorer 2000 Plus має два вхідні порти DC8020 і су�
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>УВАГА</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Додаток Jackery може одночасно підключатися лише до однієї електростанції через Bluetooth. Повернення до списку пристроїв автоматично відключає Bluetooth. Щоб знову підключитися автоматично, торкніться електростанції у списку ще раз.</p></td></tr></tbody></table>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>УВАГА</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">ПОПЕРЕДЖЕННЯ</span><span class="manual-callout-label-sizer" aria-hidden="true">УВАГА</span><span class="manual-callout-label-sizer" aria-hidden="true">ПРИМІТКА</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Додаток Jackery може одночасно підключатися лише до однієї електростанції через Bluetooth. Повернення до списку пристроїв автоматично відключає Bluetooth. Щоб знову підключитися автоматично, торкніться електростанції у списку ще раз.</p></td></tr></tbody></table>
 
 
 
