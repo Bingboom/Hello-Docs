@@ -94,7 +94,7 @@
     ],
     "sha256": "9dba812ea835828506f4b90fd85d550c5cf57abee3bcf878ffbfafbdc21db9e4"
   },
-  "git_ref": "b8c88cdedb96be191482317fe76661dde469a033",
+  "git_ref": "e26274d911be03de9d7df148a879df75142e5960",
   "html": {
     "files": [
       {
@@ -1825,12 +1825,12 @@
       },
       {
         "path": "manual_je2000e_eu_it.md",
-        "sha256": "4438adfffda1a0bc661ef7d6f91f3bfb032bda6cc9ddc4efa3d359b9d404f2e5",
-        "size": 73323
+        "sha256": "68fbfe5e633aa70df777279dca11188fd0fa722409c5c09ff04cee988aaa90ab",
+        "size": 76473
       }
     ],
     "manual": "manual_je2000e_eu_it.md",
-    "sha256": "700f6ba8273c091bc68039158f469b1267473d0a883c35ad41409f92aa733670"
+    "sha256": "3149c3733f1401b1c4f935e6e405c3c4807708e2c3d24cfe40c9f3c190207c41"
   },
   "model": "JE-2000E",
   "projection_manifest": {
@@ -1839,5 +1839,5 @@
   },
   "region": "EU",
   "schema_version": "auto-manual-web-language-release-evidence/v1",
-  "version": "2.4"
+  "version": "2.5"
 }
