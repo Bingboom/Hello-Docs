@@ -59,7 +59,7 @@ Per assistenza, contatta il servizio clienti Jackery.</p></div></div></figure>
 
 ## VISTA FRONTALE
 
-<img src="../../../../_static/manual-assets/_pool/80/80dd8b7e26c7e8966c06c32eeba21c8d404a7596b933dc5af8720e80460a6b0a.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_it/overview_front.png" data-web-finished-panel-sha256="80dd8b7e26c7e8966c06c32eeba21c8d404a7596b933dc5af8720e80460a6b0a" alt="Pulsante POWER principale LCD Porta 12 V CC 12 V⎓10 A max. Pulsante luce LED Pulsante DC / USB Luce LED Uscita USB-C 30 W 30 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓2,5 A, 15 V⎓2 A, 20 V⎓1,5 A Pulsante CA1 Uscita USB-C da 140 W 140 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓3 A, 15 V⎓3 A, 20 V⎓5 A, 28 V⎓5 A Pulsante CA2 Uscita USB-A 18 W 18 W max., 5-6 V⎓3 A, 6-9 V⎓2 A, 9-12 V⎓1,5 A Uscita CA 230 V~ 50 Hz, 10 A max., 2400 W nominali；Uscita totale 2400 W nominali, 4800 W di picco" />
+<img src="../../../../_static/manual-assets/_pool/80/80dd8b7e26c7e8966c06c32eeba21c8d404a7596b933dc5af8720e80460a6b0a.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_it/overview_front.png" data-web-finished-panel-sha256="80dd8b7e26c7e8966c06c32eeba21c8d404a7596b933dc5af8720e80460a6b0a" alt="Pulsante POWER principale LCD Porta 12 V CC 12 V⎓10 A max. Pulsante luce LED Pulsante CC / USB Luce LED Uscita USB-C 30 W 30 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓2,5 A, 15 V⎓2 A, 20 V⎓1,5 A Pulsante CA1 Uscita USB-C da 140 W 140 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓3 A, 15 V⎓3 A, 20 V⎓5 A, 28 V⎓5 A Pulsante CA2 Uscita USB-A 18 W 18 W max., 5-6 V⎓3 A, 6-9 V⎓2 A, 9-12 V⎓1,5 A Uscita CA 230 V~ 50 Hz, 10 A max., 2400 W nominali；Uscita totale 2400 W nominali, 4800 W di picco" />
 
 ## VISTE LATERALI SINISTRA E DESTRA
 
@@ -117,7 +117,7 @@ Per assistenza, contatta il servizio clienti Jackery.</p></div></div></figure>
 <div class="line"><strong>Spento:</strong> Non è impostato alcun timer di scarica.</div>
 <div class="line">Abilita/disabilita questa funzione nell’App Jackery. L’impostazione non viene mantenuta allo spegnimento del dispositivo.</div>
 </div></td></tr><tr><td class="hb-lcd-number"><p>21</p></td><td class="hb-lcd-icon"><img alt="Batterie collegate" class="hb-lcd-icon-art" src="../../../../_static/manual-assets/_pool/b4/b4744a483fa95db386bbb269f277a53f678279c7eda8f8cbf24a78f2b426f2a7.png"/></td><td class="hb-lcd-name"><p>Batterie collegate</p></td><td class="hb-lcd-description"><p>Visualizza il numero di pacchi batteria, se collegati.</p></td></tr><tr><td class="hb-lcd-number"><p>22</p></td><td class="hb-lcd-icon"><img alt="Modalità di risparmio energetico" class="hb-lcd-icon-art" src="../../../../_static/manual-assets/_pool/c4/c4b830c769a3de7f9effaee82466752f5706a0741ba29675cce45633c1cd8222.png"/></td><td class="hb-lcd-name"><p>Modalità di risparmio energetico</p></td><td class="hb-lcd-description"><div class="line-block">
-<div class="line">Quando l'uscita CA o CC viene attivata premendo il pulsante CA o DC/USB:</div>
+<div class="line">Quando l'uscita CA o CC viene attivata premendo il pulsante CA o CC/USB:</div>
 <div class="line"><strong>Acceso:</strong> La Modalità di risparmio energetico è abilitata.</div>
 <div class="line"><strong>Spento:</strong> La Modalità di risparmio energetico è disabilitata.</div>
 <div class="line">L'impostazione viene mantenuta quando il dispositivo viene spento.</div>
@@ -235,11 +235,11 @@ Puoi anche impostare la modalità di visualizzazione dello schermo nell\'App Jac
 <td class="hb-key-operation"><p>Tieni premuti entrambi per 3 s</p></td>
 <td class="hb-key-function"><p>Attiva/disattiva la Modalità risparmio energetico</p></td>
 </tr>
-<tr><td class="hb-key-buttons"><p>Pulsante POWER principale + Pulsante DC/USB</p></td>
+<tr><td class="hb-key-buttons"><p>Pulsante POWER principale + Pulsante CC/USB</p></td>
 <td class="hb-key-operation"><p>Tieni premuti entrambi per 3 s</p></td>
 <td class="hb-key-function"><p>Ripristina Wi-Fi e Bluetooth</p></td>
 </tr>
-<tr><td class="hb-key-buttons"><p>Pulsante DC/USB + Pulsante CA1</p></td>
+<tr><td class="hb-key-buttons"><p>Pulsante CC/USB + Pulsante CA1</p></td>
 <td class="hb-key-operation"><p>Tieni premuti entrambi per 1 s</p></td>
 <td class="hb-key-function"><p>Attiva/disattiva Wi-Fi e Bluetooth</p></td>
 </tr>
@@ -603,7 +603,7 @@ Cerca \"Jackery\" su Google Play o nell\'App Store per installare l\'app. Dopodi
 
 2.2 Premi il pulsante POWER principale sul dispositivo per accenderlo; le icone Wi-Fi e Bluetooth sul dispositivo lampeggiano per indicare che il dispositivo è entrato nella modalità di configurazione di rete. Fai clic sul pulsante \"**Icon Flashed**\" (icona lampeggiante) e consenti all\'app di connettersi ai dispositivi vicini e di aprire le autorizzazioni Bluetooth.
 
-<img src="../../../../_static/manual-assets/_pool/a8/a8fa59e49182bb667d5bf6cb996df768a041e3f0be8fe9c19e80eb6cd7ad748e.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-add-device" data-web-finished-panel-path="assets/je2000e_eu_it/app_add_device_panel.png" data-web-finished-panel-sha256="a8fa59e49182bb667d5bf6cb996df768a041e3f0be8fe9c19e80eb6cd7ad748e" alt="Pulsante POWER principale Pulsante CA1 Pulsante CA2 Pulsante DC / USB" />
+<img src="../../../../_static/manual-assets/_pool/a8/a8fa59e49182bb667d5bf6cb996df768a041e3f0be8fe9c19e80eb6cd7ad748e.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-add-device" data-web-finished-panel-path="assets/je2000e_eu_it/app_add_device_panel.png" data-web-finished-panel-sha256="a8fa59e49182bb667d5bf6cb996df768a041e3f0be8fe9c19e80eb6cd7ad748e" alt="Pulsante POWER principale Pulsante CA1 Pulsante CA2 Pulsante CC / USB" />
 
 2.3 Dopo aver toccato l\'icona del dispositivo trovato, l\'app si connette automaticamente al dispositivo tramite Bluetooth.
 
@@ -612,7 +612,7 @@ Cerca \"Jackery\" su Google Play o nell\'App Store per installare l\'app. Dopodi
 <table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>NOTA</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">AVVERTENZA</span><span class="manual-callout-label-sizer" aria-hidden="true">ATTENZIONE</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTA</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Se durante la procedura di associazione viene visualizzato il messaggio "<strong>il dispositivo è già stato associato</strong>", puoi usare i due metodi seguenti per la connessione:</p>
 <ul class="simple">
 <li><p>Il proprietario del dispositivo condividerà questo dispositivo con altri utenti tramite l'app.</p></li>
-<li><p>Tieni premuti pulsante POWER principale + pulsante DC / USB per 3 secondi per ripristinare il Wi-Fi e il Bluetooth del dispositivo, quindi associa nuovamente il dispositivo.</p></li>
+<li><p>Tieni premuti pulsante POWER principale + pulsante CC / USB per 3 secondi per ripristinare il Wi-Fi e il Bluetooth del dispositivo, quindi associa nuovamente il dispositivo.</p></li>
 </ul>
 </td></tr></tbody></table>
 
@@ -651,12 +651,12 @@ Fai clic sull\'icona **Impostazioni** nell\'angolo in alto a destra dell\'interf
 
 - Wi-Fi e Bluetooth si attivano automaticamente dopo l\'accensione del dispositivo e le icone Wi-Fi e Bluetooth sullo schermo si illuminano.
 
-- Tieni premuti contemporaneamente pulsante DC / USB + pulsante CA1 finché le icone Wi-Fi e Bluetooth sullo schermo si illuminano.
+- Tieni premuti contemporaneamente pulsante CC / USB + pulsante CA1 finché le icone Wi-Fi e Bluetooth sullo schermo si illuminano.
 
 ### 4.2 Per disattivare Wi-Fi e Bluetooth
 
-Tieni premuti contemporaneamente pulsante DC / USB + pulsante CA1 finché le icone Wi-Fi e Bluetooth sullo schermo si spengono.
+Tieni premuti contemporaneamente pulsante CC / USB + pulsante CA1 finché le icone Wi-Fi e Bluetooth sullo schermo si spengono.
 
 ### 4.3 Per ripristinare Wi-Fi e Bluetooth
 
-Tieni premuti contemporaneamente pulsante POWER principale + pulsante DC / USB per 3 secondi per ripristinare Wi-Fi e Bluetooth alle impostazioni di fabbrica. L\'account dell\'app collegato verrà disassociato.
+Tieni premuti contemporaneamente pulsante POWER principale + pulsante CC / USB per 3 secondi per ripristinare Wi-Fi e Bluetooth alle impostazioni di fabbrica. L\'account dell\'app collegato verrà disassociato.

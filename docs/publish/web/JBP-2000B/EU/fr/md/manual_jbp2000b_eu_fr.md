@@ -10,7 +10,7 @@ Veuillez noter qu\'aucune autre notification ne sera faite en cas de mise à jou
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>REMARQUE</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Cette batterie d'extension est compatible avec le Jackery E2000 Plus V2 et le Jackery E1000 Plus V2. Dans le présent manuel, « la station d'énergie portable » désigne l'un ou l'autre modèle, sauf indication contraire.</p></td></tr></tbody></table>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>REMARQUE</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">REMARQUE</span><span class="manual-callout-label-sizer" aria-hidden="true">AVERTISSEMENT</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Cette batterie d'extension est compatible avec le Jackery E2000 Plus V2 et le Jackery E1000 Plus V2. Dans le présent manuel, « la station d'énergie portable » désigne l'un ou l'autre modèle, sauf indication contraire.</p></td></tr></tbody></table>
 
 
 
@@ -127,7 +127,7 @@ Appuyez et maintenez pendant 3 secondes
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>REMARQUE</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Lorsque le Battery Pack 2000 est utilisé avec la station d'énergie portable, son état d'alimentation peut être contrôlé à l'aide du bouton POWER principal de la station d'énergie portable.</p>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>REMARQUE</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">REMARQUE</span><span class="manual-callout-label-sizer" aria-hidden="true">AVERTISSEMENT</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Lorsque le Battery Pack 2000 est utilisé avec la station d'énergie portable, son état d'alimentation peut être contrôlé à l'aide du bouton POWER principal de la station d'énergie portable.</p>
 <p>Le produit s'éteint automatiquement lorsqu'il n'est pas en charge et qu'aucune charge n'est connectée pendant 2 heures.</p>
 </td></tr></tbody></table>
 
@@ -199,7 +199,7 @@ En cas de charge murale, ce dispositif doit être utilisé avec la station d\'é
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>AVERTISSEMENT</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Assurez-vous que tous les produits sont éteints avant de connecter la station d'énergie portable au(x) Battery Pack 2000.</p></td></tr></tbody></table>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>AVERTISSEMENT</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">REMARQUE</span><span class="manual-callout-label-sizer" aria-hidden="true">AVERTISSEMENT</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Assurez-vous que tous les produits sont éteints avant de connecter la station d'énergie portable au(x) Battery Pack 2000.</p></td></tr></tbody></table>
 
 
 
@@ -374,7 +374,7 @@ Jackery se réserve le droit d\'interpréter de manière définitive la politiqu
 
 ## RED DECLARATION OF CONFORMITY
 
-Shenzhen Hello Tech Energy Co., Ltd. hereby declares that the Jackery Battery Pack 2000 with Bluetooth and Wi-Fi, model JBP-2000B, complies with the essential requirements and other relevant provisions of RED Directive 2014/53/EU. The full text of the EU declaration of conformity is available at:
+Shenzhen Hello Tech Energy Co., Ltd. hereby declares that this Jackery Battery Pack 2000 with Bluetooth and Wi-Fi JBP-2000B is in compliance with the essential requirements and other relevant provisions of the RED Directive 2014/53/EU. The full text of the EU declaration of conformity is available at the following internet address:
 
 <a href="https://de.jackery.com/pages/user-guides" class="reference external">https://de.jackery.com/pages/user-guides</a>
 
@@ -382,7 +382,7 @@ Shenzhen Hello Tech Energy Co., Ltd. hereby declares that the Jackery Battery Pa
 
 SHENZHEN HELLO TECH ENERGY CO., LTD.
 
-F2-3, Bldg. 7, Jiaanda Science and Technology Industrial Park Factory, east side of Huafan Road, Tongsheng Community, Dalang Street, Longhua District, Shenzhen, Guangdong, China
+Address: F2-3, Bldg. 7, Jiaanda Science and technology industrial park factory, the east side of Huafan Road, Tongsheng Community, Dalang Street, Longhua District, Shenzhen, Guangdong, China
 
 +86 400 668 9293
 

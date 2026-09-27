@@ -2,7 +2,7 @@
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>AVVERTENZA</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>ISTRUZIONI RELATIVE AI RISCHI DI INCENDIO, SCOSSA ELETTRICA O LESIONI ALLE PERSONE</p></td></tr></tbody></table>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>AVVERTENZA</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">AVVERTENZA</span><span class="manual-callout-label-sizer" aria-hidden="true">ATTENZIONE</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTA</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>ISTRUZIONI RELATIVE AI RISCHI DI INCENDIO, SCOSSA ELETTRICA O LESIONI ALLE PERSONE</p></td></tr></tbody></table>
 
 
 
@@ -56,11 +56,11 @@ Per assistenza, contatta il servizio clienti Jackery.</p></div></div></figure>
 
 ## VISTA FRONTALE
 
-<img src="assets/ir/dce1dd9ae22bc57d6822f8f5bb96646795cb8aa2794341016497f257d40f3a90/overview_front.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_it/overview_front.png" data-web-finished-panel-sha256="dce1dd9ae22bc57d6822f8f5bb96646795cb8aa2794341016497f257d40f3a90" alt="Pulsante di alimentazione principale LCD Presa da 12V CC 12 V 10 A max Pulsante luce LED Pulsante Alimentazione DC/USB Luce LED Uscita USB-C 30W 30 W max, 5 V 3 A, 9 V 3 A, 12 V 2,5 A, 15 V 2 A, 20 V 1,5A Pulsante AC 1/2 Uscita USB-C 140W 140 W max, 5 V 3 A, 9 V 3 A, 12 V 3 A, 15 V 3 A, 20 V 5 A, 28 V 5 A Uscita USB-A 18W 18 W max, 5-6 V 3 A, 6-9 V 2 A, 9-12 V 1,5 A Uscita CA 230V~ 50Hz, 7,83A, 1800W nomi；Uscita totale 1800 W nominali, 3600 W di picco" />
+<img src="assets/ir/dce1dd9ae22bc57d6822f8f5bb96646795cb8aa2794341016497f257d40f3a90/overview_front.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_it/overview_front.png" data-web-finished-panel-sha256="dce1dd9ae22bc57d6822f8f5bb96646795cb8aa2794341016497f257d40f3a90" alt="Pulsante di alimentazione principale LCD Presa da 12V CC 12 V⎓10 A max. Pulsante luce LED Pulsante Alimentazione DC/USB Luce LED Uscita USB-C 30W 30 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓2,5 A, 15 V⎓2 A, 20 V⎓1,5 A Pulsante AC 1/2 Uscita USB-C 140W 140 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓3 A, 15 V⎓3 A, 20 V⎓5 A, 28 V⎓5 A Uscita USB-A 18W 18 W max., 5-6 V⎓3 A, 6-9 V⎓2 A, 9-12 V⎓1,5 A Uscita CA 230 V~ 50 Hz, 7,83 A, 1800 W nominali；Uscita totale 1800 W nominali, 3600 W di picco" />
 
 ## VISTA LATO DESTRO
 
-<img src="assets/ir/9f6c2998269cf98bf2879e7a13025ec030cd7843a7ad0a3ce0cff61a70debbf3/overview_side.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_it/overview_side.png" data-web-finished-panel-sha256="9f6c2998269cf98bf2879e7a13025ec030cd7843a7ad0a3ce0cff61a70debbf3" alt="Maniglia Ingresso CA 220 V-240 V~50 Hz, 10 A max Ingresso DC (2×porte DC8020) 16 V-60 V 12 A, raddoppia ﬁno a 21 A / 400 W Max 11 V-16 V 8 A max, raddoppia ﬁno a 8 A" />
+<img src="assets/ir/9f6c2998269cf98bf2879e7a13025ec030cd7843a7ad0a3ce0cff61a70debbf3/overview_side.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_it/overview_side.png" data-web-finished-panel-sha256="9f6c2998269cf98bf2879e7a13025ec030cd7843a7ad0a3ce0cff61a70debbf3" alt="Maniglia Ingresso CA 220 V-240 V~ 50 Hz, 10 A max. Ingresso DC (2×porte DC8020) FV: 16-60 V⎓12 A, raddoppiabile fino a 21 A max./ 400 W max. Auto: 11-16 V⎓8 A max., raddoppiabile fino a 8 A max." />
 
 # DISPLAY LCD
 
@@ -273,7 +273,7 @@ Questa funzione può essere attivata o disattivata tramite l'app Jackery. L'impo
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENZIONE</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENZIONE</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">AVVERTENZA</span><span class="manual-callout-label-sizer" aria-hidden="true">ATTENZIONE</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTA</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p><strong>USB-C 100W è una porta di uscita ad alta potenza USB-PD Power Source 3 (PS3).</strong> Se il dispositivo o l'accessorio collegato non soddisfa i requisiti di sicurezza, potrebbe esserci un rischio di incendio. Prima di utilizzare queste porte, assicurarsi che il dispositivo o l'accessorio collegato sia dotato di protezione antincendio.</p></li>
 <li><p>Collega Jackery Explorer 1000 Plus solo a dispositivi o accessori conformi alle clausole 6.3, 6.4 e 6.5 della norma IEC/EN/UL 62368-1 (o di altri standard equivalenti).</p></li>
 <li><p>Per ottenere la massima potenza di uscita, usa il cavo da USB-C a USB-C da 5 A (20 V CC/5 A, 100 W).</p></li>
@@ -286,7 +286,7 @@ Il prodotto può ricaricare la batteria dell\'auto utilizzando il cavo Jackery p
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENZIONE</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENZIONE</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">AVVERTENZA</span><span class="manual-callout-label-sizer" aria-hidden="true">ATTENZIONE</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTA</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>La porta CC 12 V è compatibile solo con batterie per auto da 12 V e non è adatta a sistemi da 24 V.</p></li>
 <li><p>Non avviare l'auto mentre il prodotto sta ricaricando la batteria dell'auto tramite la porta di uscita CC da 12 V, poiché ciò potrebbe danneggiare il prodotto.</p></li>
 <li><p>Questa funzione è destinata solo all'uso di emergenza e non può ricaricare una batteria dell'auto completamente scarica o danneggiata.</p></li>
@@ -305,7 +305,7 @@ Quando si alimentano dispositivi a basso consumo (CA \<= 25 W oppure DC/USB \<= 
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>NOTA</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>La Modalità risparmio energetico riprende il suo stato precedente dopo l'accensione. Per cambiare modalità è necessario un intervento manuale.</p></td></tr></tbody></table>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>NOTA</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">AVVERTENZA</span><span class="manual-callout-label-sizer" aria-hidden="true">ATTENZIONE</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTA</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>La Modalità risparmio energetico riprende il suo stato precedente dopo l'accensione. Per cambiare modalità è necessario un intervento manuale.</p></td></tr></tbody></table>
 
 
 
@@ -401,7 +401,7 @@ la potenza di uscita effettiva in questa modalità è inferiore alla potenza nom
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENZIONE</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENZIONE</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">AVVERTENZA</span><span class="manual-callout-label-sizer" aria-hidden="true">ATTENZIONE</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTA</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>Questo prodotto non supporta la commutazione a 0 ms. Non collegarlo ad apparecchiature che richiedono un'alimentazione con commutazione a 0 ms, come server di dati o workstation.</p></li>
 <li><p>Prima dell'uso, verifica più volte la compatibilità con il tuo dispositivo.</p></li>
 <li><p>Non collegare carichi che superano la potenza massima di uscita del prodotto. In caso contrario, verrà attivata la protezione da sovraccarico.</p></li>
@@ -418,7 +418,7 @@ Questo prodotto può supportare fino a 5 pacchi batteria per soddisfare l\'esige
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENZIONE</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENZIONE</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">AVVERTENZA</span><span class="manual-callout-label-sizer" aria-hidden="true">ATTENZIONE</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTA</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>Assicurarsi che tutti i prodotti siano spenti prima di collegare l'Jackery Explorer 1000 Plus al Jackery Battery Pack 2000.</p></li>
 <li><p>Per garantire il corretto funzionamento del prodotto, assicurarsi che le prese d'aria di aspirazione e bocchette di scarico su entrambi i lati non siano ostruite. Lasciare almeno 200 mm di spazio tra le prese d'aria e qualsiasi oggetto per consentire un'adeguata dissipazione del calore.</p></li>
 <li><p>Quando il prodotto viene utilizzato con pacchi batteria collegati, il numero massimo predefinito di pacchi batteria impilabili è 3 e il prodotto deve essere posizionato su una superficie piana e stabile, con adeguata capacità di carico.</p></li>
@@ -440,7 +440,7 @@ Questo prodotto può supportare fino a 5 pacchi batteria per soddisfare l\'esige
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>NOTA</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>NOTA</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">AVVERTENZA</span><span class="manual-callout-label-sizer" aria-hidden="true">ATTENZIONE</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTA</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>La temperatura di ricarica consigliata per il prodotto varia nell'intervallo tra -10 °C e 45 °C e la temperatura di scarica varia nell'intervallo tra -10 °C e 45 °C.</p></li>
 <li><p>L'utilizzo del prodotto al di fuori di questo intervallo di temperatura può limitarne le capacità di carica e scarica, o addirittura impedirne la carica o la scarica.</p></li>
 <li><p>La potenza di ricarica e la capacità della batteria del prodotto possono variare a causa delle fluttuazioni di temperatura.</p></li>
@@ -455,7 +455,7 @@ Questo prodotto può supportare fino a 5 pacchi batteria per soddisfare l\'esige
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENZIONE</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Assicurarsi che il cavo di ricarica CA sia inserito completamente e saldamente nella porta di ingresso CA. Un collegamento incompleto può causare corrente instabile, surriscaldamento, cattivo contatto o malfunzionamento del dispositivo.</p></td></tr></tbody></table>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENZIONE</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">AVVERTENZA</span><span class="manual-callout-label-sizer" aria-hidden="true">ATTENZIONE</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTA</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Assicurarsi che il cavo di ricarica CA sia inserito completamente e saldamente nella porta di ingresso CA. Un collegamento incompleto può causare corrente instabile, surriscaldamento, cattivo contatto o malfunzionamento del dispositivo.</p></td></tr></tbody></table>
 
 
 
@@ -477,13 +477,13 @@ Se una porta di ingresso DC8020 deve collegare contemporaneamente due pannelli s
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENZIONE</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Una porta di ingresso DC8020 può essere collegata al massimo a due pannelli solari.</p></td></tr></tbody></table>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENZIONE</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">AVVERTENZA</span><span class="manual-callout-label-sizer" aria-hidden="true">ATTENZIONE</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTA</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Una porta di ingresso DC8020 può essere collegata al massimo a due pannelli solari.</p></td></tr></tbody></table>
 
 
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENZIONE</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Assicurarsi che la tensione di ingresso di entrambe le porte di ingresso CC sia la stessa. In caso contrario, il prodotto potrebbe danneggiarsi. Ad esempio:</p>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENZIONE</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">AVVERTENZA</span><span class="manual-callout-label-sizer" aria-hidden="true">ATTENZIONE</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTA</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Assicurarsi che la tensione di ingresso di entrambe le porte di ingresso CC sia la stessa. In caso contrario, il prodotto potrebbe danneggiarsi. Ad esempio:</p>
 <ul class="simple">
 <li><p>Utilizzare lo stesso modello di pannelli solari Jackery e lo stesso numero di pannelli quando si collegano pannelli solari a entrambe le porte di ingresso DC8020.</p></li>
 <li><p>Non caricare il prodotto utilizzando contemporaneamente un caricatore per auto e un pannello solare. In caso contrario, il fusibile dell'auto potrebbe saltare oppure la ricarica potrebbe non riuscire.</p></li>
@@ -502,7 +502,7 @@ Questo prodotto può essere caricato con un caricabatterie per auto da 12 V. Ass
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENZIONE</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENZIONE</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">AVVERTENZA</span><span class="manual-callout-label-sizer" aria-hidden="true">ATTENZIONE</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTA</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>Avviare il veicolo prima di caricare la power station.</p></li>
 <li><p>Se il veicolo percorre strade sconnesse, è vietato utilizzare il caricatore per auto poiché ciò potrebbe causare un funzionamento non conforme. L'Azienda non sarà responsabile di eventuali perdite causate da un funzionamento non conforme.</p></li>
 <li><p>La ricarica tramite veicolo è applicabile solo ai veicoli con 12V CC, non a 24V CC. Non caricare questo prodotto in un veicolo da 24V per evitare lesioni personali e danni materiali.</p></li>
@@ -666,7 +666,7 @@ Se viene visualizzato uno dei seguenti codici di errore, segui le azioni corrett
 
 
 
-※ USB Type-C® und USB-C® sono marchi registrati di USB Implementers Forum.
+※ USB Type-C® e USB-C® sono marchi registrati di USB Implementers Forum.
 
 ① Il prodotto può caricare la batteria dalla presa a muro CA mentre fornisce energia tramite le porte di uscita CA.
 
@@ -753,7 +753,7 @@ Per stabilire la data di inizio del periodo di garanzia è necessaria la ricevut
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>NOTA</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Se durante la procedura di associazione viene visualizzato il messaggio "<strong>il dispositivo è già stato associato</strong>", puoi usare i due metodi seguenti per la connessione:</p>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>NOTA</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">AVVERTENZA</span><span class="manual-callout-label-sizer" aria-hidden="true">ATTENZIONE</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTA</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Se durante la procedura di associazione viene visualizzato il messaggio "<strong>il dispositivo è già stato associato</strong>", puoi usare i due metodi seguenti per la connessione:</p>
 <ul class="simple">
 <li><p>Il proprietario del dispositivo condividerà questo dispositivo con altri utenti tramite l'app.</p></li>
 <li><p>Tieni premuti pulsante di alimentazione principale + pulsante alimentazione DC/USB per 3 secondi per ripristinare il Wi-Fi e il Bluetooth del dispositivo, quindi associa nuovamente il dispositivo.</p></li>
@@ -766,7 +766,7 @@ Per stabilire la data di inizio del periodo di garanzia è necessaria la ricevut
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>NOTA</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>NOTA</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">AVVERTENZA</span><span class="manual-callout-label-sizer" aria-hidden="true">ATTENZIONE</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTA</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>Seleziona una rete Wi-Fi nella banda da 2,4 GHz. Il dispositivo non supporta reti Wi-Fi nella banda da 5 GHz.</p></li>
 </ul>
 </td></tr></tbody></table>
@@ -781,7 +781,7 @@ Le schermate sopra sono solo a scopo illustrativo.
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENZIONE</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>L'app Jackery può connettersi a una sola stazione di alimentazione tramite Bluetooth alla volta. Tornando all'elenco dei dispositivi, il Bluetooth si disconnette automaticamente. Tocca di nuovo la stazione di alimentazione nell'elenco per riconnetterti automaticamente.</p></td></tr></tbody></table>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENZIONE</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">AVVERTENZA</span><span class="manual-callout-label-sizer" aria-hidden="true">ATTENZIONE</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTA</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>L'app Jackery può connettersi a una sola stazione di alimentazione tramite Bluetooth alla volta. Tornando all'elenco dei dispositivi, il Bluetooth si disconnette automaticamente. Tocca di nuovo la stazione di alimentazione nell'elenco per riconnetterti automaticamente.</p></td></tr></tbody></table>
 
 
 

@@ -59,7 +59,7 @@ Bei Fragen wenden Sie sich bitte an den Jackery-Kundendienst.</p></div></div></f
 
 ## VORDERANSICHT
 
-<img src="../../../../_static/manual-assets/_pool/f4/f4c9f42371c39cb54f5b7b7a338d874238f5c715f43d993ca9799f7c6169f4a6.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_de/overview_front.png" data-web-finished-panel-sha256="f4c9f42371c39cb54f5b7b7a338d874238f5c715f43d993ca9799f7c6169f4a6" alt="Haupt-POWER-Taste LCD 12-V-DC-Anschluss 12 V⎓10 A max. LED-Lichttaste DC / USB-Einschalttaste LED-Licht USB-C 30 W-Ausgang 30 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓2,5 A, 15 V⎓2 A, 20 V⎓1,5 A AC1-Einschalttaste USB-C 140 W-Ausgang 140 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓3 A, 15 V⎓3 A, 20 V⎓5 A, 28 V⎓5 A AC2-Einschalttaste USB-A 18 W-Ausgang 18 W max., 5-6 V⎓3 A, 6-9 V⎓2 A, 9-12 V⎓1,5 A AC-Ausgang 230 V~ 50 Hz, 10 A max., 2400 W Nennleistung；Gesamtausgang 2400 W Nennleistung, 4800 W Spitzenleistung (Surge)" />
+<img src="../../../../_static/manual-assets/_pool/f4/f4c9f42371c39cb54f5b7b7a338d874238f5c715f43d993ca9799f7c6169f4a6.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_de/overview_front.png" data-web-finished-panel-sha256="f4c9f42371c39cb54f5b7b7a338d874238f5c715f43d993ca9799f7c6169f4a6" alt="POWER-Taste LCD 12-V-DC-Anschluss 12 V⎓10 A max. LED-Lichttaste DC / USB-Einschalttaste LED-Licht USB-C 30 W-Ausgang 30 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓2,5 A, 15 V⎓2 A, 20 V⎓1,5 A AC1-Einschalttaste USB-C 140 W-Ausgang 140 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓3 A, 15 V⎓3 A, 20 V⎓5 A, 28 V⎓5 A AC2-Einschalttaste USB-A 18 W-Ausgang 18 W max., 5-6 V⎓3 A, 6-9 V⎓2 A, 9-12 V⎓1,5 A AC-Ausgang 230 V~ 50 Hz, 10 A max., 2400 W Nennleistung；Gesamtausgang 2400 W Nennleistung, 4800 W Spitzenleistung (Surge)" />
 
 ## LINKE UND RECHTE SEITENANSICHT
 
@@ -165,7 +165,7 @@ Das Produkt kann Ihre Fahrzeugbatterie mit dem Jackery 12-V-Autobatterie-Ladekab
 
 ## ENERGIESPARMODUS
 
-<img src="../../../../_static/manual-assets/_pool/db/db2aac5744b79ea573606bd54aa904f653f6a945f1b1cf3d7c4999961256d162.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_de/operation_energy.png" data-web-finished-panel-sha256="db2aac5744b79ea573606bd54aa904f653f6a945f1b1cf3d7c4999961256d162" alt="Um zu verhindern, dass die Batterie unnötig entladen wird, wenn das Ausschalten des Ausgangs vergessen wird, ist der Energiesparmodus standardmäßig aktiviert. Wenn der AC- oder DC/USB-Ausgang eingeschaltet wird, wird das Energiesparmodus-Symbol auf dem LCD angezeigt. In diesem Modus schaltet sich der entsprechende Ausgang nach der eingestellten Zeit automatisch aus, wenn kein Gerät angeschlossen ist oder die Leistungsaufnahme des angeschlossenen Geräts unter einem bestimmten Schwellenwert liegt (25 W beim AC-Ausgang oder 2 W beim DC/USB-Ausgang). Die Standardeinstellung ist 12 Stunden. Die Dauer des Energiesparmodus kann in der Jackery-App auf 1 H, 2 H, 8 H, 12 H oder 24 H eingestellt werden. Wenn &quot;Nie ausschalten&quot; eingestellt ist, wird der Energiesparmodus deaktiviert.；Um den Energiesparmodus zu deaktivieren, halten Sie sowohl die AC1-Einschalttaste als auch die Haupt-POWER-Taste länger als 3 Sekunden gedrückt. Sobald der Energiesparmodus deaktiviert ist, wird das Symbol nicht mehr auf dem LCD angezeigt, und das Produkt schaltet den AC- oder DC/USB-Ausgang nicht mehr automatisch aus.；Wenn Sie Geräte mit geringem Stromverbrauch betreiben (AC &lt;= 25 W oder DC/USB &lt;= 2 W), deaktivieren Sie den Energiesparmodus, damit der Ausgang während des Betriebs nicht automatisch ausgeschaltet wird.；Halten Sie beide Tasten länger als 3 Sekunden gedrückt." />
+<img src="../../../../_static/manual-assets/_pool/db/db2aac5744b79ea573606bd54aa904f653f6a945f1b1cf3d7c4999961256d162.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_de/operation_energy.png" data-web-finished-panel-sha256="db2aac5744b79ea573606bd54aa904f653f6a945f1b1cf3d7c4999961256d162" alt="Um zu verhindern, dass die Batterie unnötig entladen wird, wenn das Ausschalten des Ausgangs vergessen wird, ist der Energiesparmodus standardmäßig aktiviert. Wenn der AC- oder DC/USB-Ausgang eingeschaltet wird, wird das Energiesparmodus-Symbol auf dem LCD angezeigt. In diesem Modus schaltet sich der entsprechende Ausgang nach der eingestellten Zeit automatisch aus, wenn kein Gerät angeschlossen ist oder die Leistungsaufnahme des angeschlossenen Geräts unter einem bestimmten Schwellenwert liegt (25 W beim AC-Ausgang oder 2 W beim DC/USB-Ausgang). Die Standardeinstellung ist 12 Stunden. Die Dauer des Energiesparmodus kann in der Jackery-App auf 1 H, 2 H, 8 H, 12 H oder 24 H eingestellt werden. Wenn &quot;Nie ausschalten&quot; eingestellt ist, wird der Energiesparmodus deaktiviert.；Um den Energiesparmodus zu deaktivieren, halten Sie sowohl die AC1-Einschalttaste als auch die POWER-Taste länger als 3 Sekunden gedrückt. Sobald der Energiesparmodus deaktiviert ist, wird das Symbol nicht mehr auf dem LCD angezeigt, und das Produkt schaltet den AC- oder DC/USB-Ausgang nicht mehr automatisch aus.；Wenn Sie Geräte mit geringem Stromverbrauch betreiben (AC &lt;= 25 W oder DC/USB &lt;= 2 W), deaktivieren Sie den Energiesparmodus, damit der Ausgang während des Betriebs nicht automatisch ausgeschaltet wird.；Halten Sie beide Tasten länger als 3 Sekunden gedrückt." />
 
 
 
@@ -210,7 +210,7 @@ Die Wiederaufnahmefunktion für AC- und DC-Ausgänge ist standardmäßig deaktiv
 
 
 
-<figure aria-label="Platzhalter für den LCD-Anzeigemodus." class="hb-lcd-mode-composition" data-component-id="HB-TABLE-LCD-MODE"><div class="hb-lcd-mode-art-panel"><img alt="Platzhalter für den LCD-Anzeigemodus." class="hb-lcd-mode-art" src="../../../../_static/manual-assets/_pool/71/71f85bd15d966cb3b856e158091d58f181a6fe4991bd96459ff08e3f9964161f.png"/></div><div class="hb-lcd-mode-table-panel"><table class="hb-lcd-mode-table"><colgroup><col class="hb-lcd-mode-col-state"/><col class="hb-lcd-mode-col-action"/><col class="hb-lcd-mode-col-copy"/></colgroup><tbody><tr><td class="hb-lcd-mode-state" rowspan="3">Kurzzeitig an</td><td class="hb-lcd-mode-action">Ein</td><td class="hb-lcd-mode-copy">Drücken Sie die Haupt-POWER-Taste oder während das Produkt geladen wird.</td></tr><tr><td class="hb-lcd-mode-action">Aus</td><td class="hb-lcd-mode-copy">Drücken Sie die Haupt-POWER-Taste.</td></tr><tr><td class="hb-lcd-mode-action">Autom. aus</td><td class="hb-lcd-mode-copy">Die LCD-Anzeige schaltet sich nach 2 Minuten Inaktivität automatisch aus und wechselt in den Schlafmodus.</td></tr><tr><td class="hb-lcd-mode-state" rowspan="3">Dauerhaft an (beim Laden oder Entladen)</td><td class="hb-lcd-mode-action">Ein</td><td class="hb-lcd-mode-copy">Drücken Sie die Haupt-POWER-Taste zweimal, wenn das Produkt eingeschaltet ist.</td></tr><tr><td class="hb-lcd-mode-action">Aus</td><td class="hb-lcd-mode-copy">Drücken Sie die Haupt-POWER-Taste.</td></tr><tr><td class="hb-lcd-mode-action">Autom. aus</td><td class="hb-lcd-mode-copy">Die LCD-Anzeige schaltet sich nach 2 Stunden Inaktivität automatisch aus.</td></tr></tbody></table></div></figure>
+<figure aria-label="Platzhalter für den LCD-Anzeigemodus." class="hb-lcd-mode-composition" data-component-id="HB-TABLE-LCD-MODE"><div class="hb-lcd-mode-art-panel"><img alt="Platzhalter für den LCD-Anzeigemodus." class="hb-lcd-mode-art" src="../../../../_static/manual-assets/_pool/71/71f85bd15d966cb3b856e158091d58f181a6fe4991bd96459ff08e3f9964161f.png"/></div><div class="hb-lcd-mode-table-panel"><table class="hb-lcd-mode-table"><colgroup><col class="hb-lcd-mode-col-state"/><col class="hb-lcd-mode-col-action"/><col class="hb-lcd-mode-col-copy"/></colgroup><tbody><tr><td class="hb-lcd-mode-state" rowspan="3">Kurzzeitig an</td><td class="hb-lcd-mode-action">Ein</td><td class="hb-lcd-mode-copy">Drücken Sie die POWER-Taste oder während das Produkt geladen wird.</td></tr><tr><td class="hb-lcd-mode-action">Aus</td><td class="hb-lcd-mode-copy">Drücken Sie die POWER-Taste.</td></tr><tr><td class="hb-lcd-mode-action">Autom. aus</td><td class="hb-lcd-mode-copy">Die LCD-Anzeige schaltet sich nach 2 Minuten Inaktivität automatisch aus und wechselt in den Schlafmodus.</td></tr><tr><td class="hb-lcd-mode-state" rowspan="3">Dauerhaft an (beim Laden oder Entladen)</td><td class="hb-lcd-mode-action">Ein</td><td class="hb-lcd-mode-copy">Drücken Sie die POWER-Taste zweimal, wenn das Produkt eingeschaltet ist.</td></tr><tr><td class="hb-lcd-mode-action">Aus</td><td class="hb-lcd-mode-copy">Drücken Sie die POWER-Taste.</td></tr><tr><td class="hb-lcd-mode-action">Autom. aus</td><td class="hb-lcd-mode-copy">Die LCD-Anzeige schaltet sich nach 2 Stunden Inaktivität automatisch aus.</td></tr></tbody></table></div></figure>
 
 
 
@@ -228,11 +228,11 @@ Sie können den Bildschirm-Anzeigemodus auch in der Jackery-App einstellen.
 </tr>
 </thead>
 <tbody>
-<tr><td class="hb-key-buttons"><p>Haupt-POWER-Taste + AC1-Einschalttaste</p></td>
+<tr><td class="hb-key-buttons"><p>POWER-Taste + AC1-Einschalttaste</p></td>
 <td class="hb-key-operation"><p>Beide 3 s lang gedrückt halten</p></td>
 <td class="hb-key-function"><p>Energiesparmodus ein-/ausschalten</p></td>
 </tr>
-<tr><td class="hb-key-buttons"><p>Haupt-POWER-Taste + DC/USB-Einschalttaste</p></td>
+<tr><td class="hb-key-buttons"><p>POWER-Taste + DC/USB-Einschalttaste</p></td>
 <td class="hb-key-operation"><p>Beide 3 s lang gedrückt halten</p></td>
 <td class="hb-key-function"><p>WLAN und Bluetooth zurücksetzen</p></td>
 </tr>
@@ -240,7 +240,7 @@ Sie können den Bildschirm-Anzeigemodus auch in der Jackery-App einstellen.
 <td class="hb-key-operation"><p>Beide 1 s lang gedrückt halten</p></td>
 <td class="hb-key-function"><p>WLAN und Bluetooth ein-/ausschalten</p></td>
 </tr>
-<tr><td class="hb-key-buttons"><p>Haupt-POWER-Taste + LED-Lichttaste</p></td>
+<tr><td class="hb-key-buttons"><p>POWER-Taste + LED-Lichttaste</p></td>
 <td class="hb-key-operation"><p>Beide 1 s lang gedrückt halten</p></td>
 <td class="hb-key-function"><p>Notfall-Lademodus ein-/ausschalten</p></td>
 </tr>
@@ -598,9 +598,9 @@ Suchen Sie im Google Play Store oder im App Store nach \"Jackery\", um die App z
 
 2.1 Klicken Sie auf die Schaltfläche **+**, um Ihr Gerät hinzuzufügen.
 
-2.2 Drücken Sie die Haupt-POWER-Taste am Gerät, um es einzuschalten. Die WLAN- und Bluetooth-Symbole auf dem Gerät blinken, um anzuzeigen, dass das Gerät in den Netzwerkkonfigurationsmodus gewechselt ist. Tippen Sie auf die Schaltfläche \"**Symbol blinkt**\" und erlauben Sie der App, sich mit Geräten in der Nähe zu verbinden und auf Bluetooth zuzugreifen.
+2.2 Drücken Sie die POWER-Taste am Gerät, um es einzuschalten. Die WLAN- und Bluetooth-Symbole auf dem Gerät blinken, um anzuzeigen, dass das Gerät in den Netzwerkkonfigurationsmodus gewechselt ist. Tippen Sie auf die Schaltfläche \"**Symbol blinkt**\" und erlauben Sie der App, sich mit Geräten in der Nähe zu verbinden und auf Bluetooth zuzugreifen.
 
-<img src="../../../../_static/manual-assets/_pool/ef/ef9a7f55a2d60bd75276c25497bbf63d7653bdeac2e290e1b89f46488a8ae581.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-add-device" data-web-finished-panel-path="assets/je2000e_eu_de/app_add_device_panel.png" data-web-finished-panel-sha256="ef9a7f55a2d60bd75276c25497bbf63d7653bdeac2e290e1b89f46488a8ae581" alt="Haupt-POWER-Taste AC1-Einschalttaste AC2-Einschalttaste DC / USB-Einschalttaste" />
+<img src="../../../../_static/manual-assets/_pool/ef/ef9a7f55a2d60bd75276c25497bbf63d7653bdeac2e290e1b89f46488a8ae581.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-add-device" data-web-finished-panel-path="assets/je2000e_eu_de/app_add_device_panel.png" data-web-finished-panel-sha256="ef9a7f55a2d60bd75276c25497bbf63d7653bdeac2e290e1b89f46488a8ae581" alt="POWER-Taste AC1-Einschalttaste AC2-Einschalttaste DC / USB-Einschalttaste" />
 
 2.3 Nachdem Sie auf das gefundene Gerätesymbol getippt haben, koppelt sich die App automatisch per Bluetooth mit dem Gerät.
 
@@ -609,7 +609,7 @@ Suchen Sie im Google Play Store oder im App Store nach \"Jackery\", um die App z
 <table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>HINWEIS</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">WARNUNG</span><span class="manual-callout-label-sizer" aria-hidden="true">VORSICHT</span><span class="manual-callout-label-sizer" aria-hidden="true">HINWEIS</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Wenn während des Kopplungsvorgangs „das Gerät wurde bereits gekoppelt“ angezeigt wird, können die folgenden zwei Möglichkeiten für die Kopplung verwendet werden:</p>
 <ul class="simple">
 <li><p>Der Besitzer des Geräts teilt dieses Gerät über die App mit anderen Benutzern.</p></li>
-<li><p>Halten Sie Haupt-POWER-Taste + DC / USB-Einschalttaste 3 Sekunden lang gedrückt, um WLAN und Bluetooth des Geräts zurückzusetzen, und koppeln Sie das Gerät anschließend erneut.</p></li>
+<li><p>Halten Sie POWER-Taste + DC / USB-Einschalttaste 3 Sekunden lang gedrückt, um WLAN und Bluetooth des Geräts zurückzusetzen, und koppeln Sie das Gerät anschließend erneut.</p></li>
 </ul>
 </td></tr></tbody></table>
 
@@ -656,4 +656,4 @@ Halten Sie DC / USB-Einschalttaste + AC1-Einschalttaste gleichzeitig gedrückt, 
 
 ### 4.3 WLAN und Bluetooth zurücksetzen
 
-Halten Sie Haupt-POWER-Taste + DC / USB-Einschalttaste gleichzeitig 3 Sekunden lang gedrückt, um WLAN und Bluetooth auf die Werkseinstellungen zurückzusetzen. Das verbundene App-Konto wird entkoppelt.
+Halten Sie POWER-Taste + DC / USB-Einschalttaste gleichzeitig 3 Sekunden lang gedrückt, um WLAN und Bluetooth auf die Werkseinstellungen zurückzusetzen. Das verbundene App-Konto wird entkoppelt.

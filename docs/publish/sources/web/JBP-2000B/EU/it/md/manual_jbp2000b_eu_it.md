@@ -10,7 +10,7 @@ Si prega di notare che non verranno fornite ulteriori notifiche in caso di aggio
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>NOTA</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Questo pacco batteria è compatibile sia con Jackery E2000 Plus V2 sia con Jackery E1000 Plus V2. Nel presente manuale, «la power station portatile» si riferisce a uno dei due modelli, salvo diversa indicazione.</p></td></tr></tbody></table>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>NOTA</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">NOTA</span><span class="manual-callout-label-sizer" aria-hidden="true">ATTENZIONE</span><span class="manual-callout-label-sizer" aria-hidden="true">AVVERTENZA</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Questo pacco batteria è compatibile sia con Jackery E2000 Plus V2 sia con Jackery E1000 Plus V2. Nel presente manuale, «la power station portatile» si riferisce a uno dei due modelli, salvo diversa indicazione.</p></td></tr></tbody></table>
 
 
 
@@ -146,7 +146,7 @@ Tenere premuto per 3 secondi
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>NOTA</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Quando viene utilizzato con la power station portatile, Jackery Battery Pack 2000 può essere acceso o spento tramite il pulsante Power principale della power station portatile.</p>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>NOTA</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">NOTA</span><span class="manual-callout-label-sizer" aria-hidden="true">ATTENZIONE</span><span class="manual-callout-label-sizer" aria-hidden="true">AVVERTENZA</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Quando viene utilizzato con la power station portatile, Jackery Battery Pack 2000 può essere acceso o spento tramite il pulsante Power principale della power station portatile.</p>
 <p>Se non c'è un'uscita di scarica o un ingresso di carica, il prodotto si spegnerà automaticamente dopo 2 ore.</p>
 </td></tr></tbody></table>
 
@@ -166,7 +166,7 @@ La power station portatile può essere utilizzato insieme a un massimo di 5 set 
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENZIONE</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENZIONE</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">NOTA</span><span class="manual-callout-label-sizer" aria-hidden="true">ATTENZIONE</span><span class="manual-callout-label-sizer" aria-hidden="true">AVVERTENZA</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>Assicurarsi che tutti i prodotti siano spenti prima di collegare la power station portatile al Jackery Battery Pack 2000.</p></li>
 <li><p>Per garantire il corretto funzionamento del prodotto, assicurarsi che le griglie di aspirazione e scarico dell'aria su entrambi i lati non siano ostruite. Lasciare almeno 200 mm di spazio tra le griglie di ventilazione e qualsiasi oggetto per consentire un'adeguata dissipazione del calore.</p></li>
 </ul>
@@ -176,7 +176,7 @@ La power station portatile può essere utilizzato insieme a un massimo di 5 set 
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>NOTA</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>NOTA</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">NOTA</span><span class="manual-callout-label-sizer" aria-hidden="true">ATTENZIONE</span><span class="manual-callout-label-sizer" aria-hidden="true">AVVERTENZA</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>La visualizzazione dell'icona di collegamento sullo schermo LCD (la power station portatile) indica che il collegamento tra il pacco batteria e la power station portatile è stato effettuato correttamente.</p></li>
 <li><p>Durante l'uso del prodotto, non impilare più di tre pacchi batterie in una torre per evitare che cadano e provochino lesioni.</p></li>
 <li><p>Si prega di non impilare il prodotto sulla parte superiore della power station portatile.</p></li>
@@ -205,7 +205,7 @@ Quando si carica dalla parete, questo prodotto deve essere utilizzato con la pow
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>AVVERTENZA</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Prima di collegare la power station portatile a Jackery Battery Pack 2000, assicurarsi che tutti i prodotti siano spenti.</p></td></tr></tbody></table>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>AVVERTENZA</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">NOTA</span><span class="manual-callout-label-sizer" aria-hidden="true">ATTENZIONE</span><span class="manual-callout-label-sizer" aria-hidden="true">AVVERTENZA</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Prima di collegare la power station portatile a Jackery Battery Pack 2000, assicurarsi che tutti i prodotti siano spenti.</p></td></tr></tbody></table>
 
 
 
@@ -376,7 +376,7 @@ Jackery si riserva il diritto di interpretazione finale della politica post-vend
 
 ## RED DECLARATION OF CONFORMITY
 
-Shenzhen Hello Tech Energy Co., Ltd. hereby declares that the Jackery Battery Pack 2000 with Bluetooth and Wi-Fi, model JBP-2000B, complies with the essential requirements and other relevant provisions of RED Directive 2014/53/EU. The full text of the EU declaration of conformity is available at:
+Shenzhen Hello Tech Energy Co., Ltd. hereby declares that this Jackery Battery Pack 2000 with Bluetooth and Wi-Fi JBP-2000B is in compliance with the essential requirements and other relevant provisions of the RED Directive 2014/53/EU. The full text of the EU declaration of conformity is available at the following internet address:
 
 <a href="https://de.jackery.com/pages/user-guides" class="reference external">https://de.jackery.com/pages/user-guides</a>
 
@@ -384,7 +384,7 @@ Shenzhen Hello Tech Energy Co., Ltd. hereby declares that the Jackery Battery Pa
 
 SHENZHEN HELLO TECH ENERGY CO., LTD.
 
-F2-3, Bldg. 7, Jiaanda Science and Technology Industrial Park Factory, east side of Huafan Road, Tongsheng Community, Dalang Street, Longhua District, Shenzhen, Guangdong, China
+Address: F2-3, Bldg. 7, Jiaanda Science and technology industrial park factory, the east side of Huafan Road, Tongsheng Community, Dalang Street, Longhua District, Shenzhen, Guangdong, China
 
 +86 400 668 9293
 

@@ -109,7 +109,7 @@ When the system fails, it will display the corresponding fault code F0-FF. If th
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>NOTE</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>When using with Jackery Explorer 3600 Plus, you can control the power status (on or off) of Jackery Battery Pack 3600 through the main POWER button of Jackery Explorer 3600 Plus.</p>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>NOTE</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">NOTE</span><span class="manual-callout-label-sizer" aria-hidden="true">CAUTION</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTES</span><span class="manual-callout-label-sizer" aria-hidden="true">WARNING</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>When using with Jackery Explorer 3600 Plus, you can control the power status (on or off) of Jackery Battery Pack 3600 through the main POWER button of Jackery Explorer 3600 Plus.</p>
 <p>The product will automatically shut down if it is not charged or no loads are connected for 2 hours.</p>
 </td></tr></tbody></table>
 
@@ -127,7 +127,7 @@ Up to 5 sets of these products can be used along with Jackery Explorer 3600 Plus
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>CAUTION</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Ensure all products are powered off before connecting Explorer 3600 Plus to Jackery Battery Pack 3600.</p>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>CAUTION</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">NOTE</span><span class="manual-callout-label-sizer" aria-hidden="true">CAUTION</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTES</span><span class="manual-callout-label-sizer" aria-hidden="true">WARNING</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Ensure all products are powered off before connecting Explorer 3600 Plus to Jackery Battery Pack 3600.</p>
 <p>To ensure proper operation of the product, make sure the air intake and exhaust vents on both sides are unobstructed. Leave at least 0.66 ft (200 mm) of space between the vents and any objects to allow for proper heat dissipation.</p>
 </td></tr></tbody></table>
 
@@ -137,7 +137,7 @@ Up to 5 sets of these products can be used along with Jackery Explorer 3600 Plus
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>NOTES</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>The display of the connection icon on the LCD screen (Jackery Explorer 3600 Plus) signifies a successful connection between the battery pack and Jackery Explorer 3600 Plus.</p>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>NOTES</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">NOTE</span><span class="manual-callout-label-sizer" aria-hidden="true">CAUTION</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTES</span><span class="manual-callout-label-sizer" aria-hidden="true">WARNING</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>The display of the connection icon on the LCD screen (Jackery Explorer 3600 Plus) signifies a successful connection between the battery pack and Jackery Explorer 3600 Plus.</p>
 <p>When using the product, do not stack more than three battery packs in one tower to prevent it from falling and causing injury.</p>
 <p>Please do not stack the product on the top of Jackery Explorer 3600 Plus.</p>
 </td></tr></tbody></table>
@@ -164,7 +164,7 @@ When charging from the wall, this product must be used with Jackery Explorer 360
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>WARNING</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Ensure all products are powered off before connecting Explorer 3600 Plus to Jackery Battery Pack 3600.</p></td></tr></tbody></table>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>WARNING</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">NOTE</span><span class="manual-callout-label-sizer" aria-hidden="true">CAUTION</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTES</span><span class="manual-callout-label-sizer" aria-hidden="true">WARNING</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Ensure all products are powered off before connecting Explorer 3600 Plus to Jackery Battery Pack 3600.</p></td></tr></tbody></table>
 
 
 
@@ -347,7 +347,7 @@ If this product is stored for a long period of time (3 months - 6 months) with t
 
 ## RED DECLARATION OF CONFORMITY
 
-Shenzhen Hello Tech Energy Co., Ltd. hereby declares that Jackery Battery Pack 3600 with Bluetooth and Wi-Fi, model JBP-3600A, complies with the essential requirements and other relevant provisions of RED Directive 2014/53/EU. The full text of the EU declaration of conformity is available at:
+Shenzhen Hello Tech Energy Co., Ltd. hereby declares that this Jackery Battery Pack 3600 with Bluetooth and Wi-Fi JBP-3600A is in compliance with the essential requirements and other relevant provisions of the RED Directive 2014/53/EU. The full text of the EU declaration of conformity is available at the following internet address:
 
 <a href="https://de.jackery.com/pages/user-guides" class="reference external">https://de.jackery.com/pages/user-guides</a>
 
@@ -355,7 +355,7 @@ Shenzhen Hello Tech Energy Co., Ltd. hereby declares that Jackery Battery Pack 3
 
 SHENZHEN HELLO TECH ENERGY CO., LTD.
 
-F2-3, Bldg. 7, Jiaanda Science and Technology Industrial Park Factory, east side of Huafan Road, Tongsheng Community, Dalang Street, Longhua District, Shenzhen, Guangdong, China
+Address: F2-3, Bldg. 7, Jiaanda Science and technology industrial park factory, the east side of Huafan Road, Tongsheng Community, Dalang Street, Longhua District, Shenzhen, Guangdong, China
 
 +86 400 668 9293
 

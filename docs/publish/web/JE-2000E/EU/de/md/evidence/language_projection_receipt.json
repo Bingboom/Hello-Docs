@@ -1,8 +1,8 @@
 {
   "actions": {
-    "check": "6e8eff9211acaf7b9b18f5ceac5e781f6edc133069d2939f67069408a43e52c1",
-    "html": "6e8eff9211acaf7b9b18f5ceac5e781f6edc133069d2939f67069408a43e52c1",
-    "md": "6e8eff9211acaf7b9b18f5ceac5e781f6edc133069d2939f67069408a43e52c1"
+    "check": "452ad099514514f53e9ce8c76ba15a5af08dba63bb4b8519195ed6850df504f9",
+    "html": "452ad099514514f53e9ce8c76ba15a5af08dba63bb4b8519195ed6850df504f9",
+    "md": "452ad099514514f53e9ce8c76ba15a5af08dba63bb4b8519195ed6850df504f9"
   },
   "canonical_source": {
     "files": [
@@ -23,13 +23,13 @@
       },
       {
         "path": "page/03_product_overview_je2000e.rst",
-        "sha256": "57084d3271df4c68a97ecd11bb33010523f13841fe5141de72a4d25d4b81cbcb",
-        "size": 3267
+        "sha256": "cb76e2215d26c4de4ef026d4364437753d62f22d49a333a1f665c9c590956621",
+        "size": 3255
       },
       {
         "path": "page/05_operation_guide_je2000e.rst",
-        "sha256": "3ec9343041fed5cd010c4e5174c646652fd741976194cfbd56794048ea51ce40",
-        "size": 10912
+        "sha256": "ab5541ca15ea48fe4a804ba06cb89aa0168ceb764ab4b790e61f613a54f6be07",
+        "size": 10840
       },
       {
         "path": "page/06_ups_mode.rst",
@@ -58,8 +58,8 @@
       },
       {
         "path": "page/12_app_setup_je2000e.rst",
-        "sha256": "2c4603f6b2db6515f061a98c5d4cd2addbf245f9569d1e02681d74f30d6d5433",
-        "size": 4188
+        "sha256": "fd437aa79c81bc9c410a5931447748c33b835d2c25523cb5f6602edf43004109",
+        "size": 4164
       },
       {
         "path": "page/charging.rst",
@@ -92,9 +92,9 @@
         "size": 2015
       }
     ],
-    "sha256": "4602215a6f77a083cd5b7a6c30ce23be9c1858b2960ebf94a27c903197b52f1f"
+    "sha256": "26ea8f6146cd34df85e99ee44886ec5ec1fd9f0a1744074fb1deaaaa442404b6"
   },
-  "git_ref": "5e480b229ae579de494395cd9594a76461cef5cf",
+  "git_ref": "ad437f1cb0af97fa6da324042348c7c233ffb79d",
   "html": {
     "files": [
       {
@@ -704,8 +704,8 @@
       },
       {
         "path": "index.html",
-        "sha256": "ecebd624207126dbf769471355d86f84d91940e887619cddacbf6cfa37ec5976",
-        "size": 85858
+        "sha256": "f371dac585f04c8932bd05bb14cf33a4501e3bab40b6a522eb4f237de1434696",
+        "size": 85780
       },
       {
         "path": "jbp2000b_ac_charging.pdf",
@@ -1499,8 +1499,8 @@
       },
       {
         "path": "searchindex.js",
-        "sha256": "e70db18397f795e1382957b052a82560f7e17efa9afc42ede70c6b566a22b974",
-        "size": 17760
+        "sha256": "59e0bec7ae7f787f0d3c234e7bf280d40b3bd761681d51333c2ed9fba2467a58",
+        "size": 17750
       },
       {
         "path": "solar_adapter.pdf",
@@ -1528,7 +1528,7 @@
         "size": 316221
       }
     ],
-    "sha256": "202dffebd3d69642f67fa5742551915bb701461125eeb33442588e7c6f9787fe"
+    "sha256": "6464aa99c477eb944ce7612463237349e2f7944698741c2c076ba8046e8380ac"
   },
   "language": "de",
   "markdown": {
@@ -1825,19 +1825,19 @@
       },
       {
         "path": "manual_je2000e_eu_de.md",
-        "sha256": "669aaab12db7955204670ce305e4246858b7e763fc177537320bcb9b6268a672",
-        "size": 76250
+        "sha256": "07599efd129abbddeb39128e3fd62c4ab4b228001f5dee993c425604496ce024",
+        "size": 76172
       }
     ],
     "manual": "manual_je2000e_eu_de.md",
-    "sha256": "7b6c1e60eeace9ef94926c43ebfc998bf5bfe8393a2b771915c6d05c0b84e8d0"
+    "sha256": "0c29dafc66312e1f8964e21e24843108792e61c1843444534ee71fd8df9a8feb"
   },
   "model": "JE-2000E",
   "projection_manifest": {
     "path": "projection_bundle_manifest.json",
-    "sha256": "b0cd736e50fe0251770083c19041bf4fe77462002a54d3968f83e272f2ff5392"
+    "sha256": "11289f3891ee5907653adf382b0d832554dce173ef1f457f573a205ae45a89d3"
   },
   "region": "EU",
   "schema_version": "auto-manual-web-language-release-evidence/v1",
-  "version": "2.6"
+  "version": "2.7"
 }
