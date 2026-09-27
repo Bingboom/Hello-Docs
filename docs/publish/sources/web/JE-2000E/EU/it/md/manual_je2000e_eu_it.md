@@ -44,11 +44,11 @@ Per favore, restituisci le batterie e gli accumulatori usati a un punto di racco
 
 
 
-<figure aria-label="CONTENUTO DELLA CONFEZIONE" class="hb-inbox-composition" data-card-count="3" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="three-card-responsive"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Segnaposto immagine della stazione di alimentazione." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je2000e_eu_it/inbox_main.png" data-web-finished-panel-sha256="0a9c016c2dfcdaba1081654fc09f60856416a4383d7a652a45093c8fb132bada" src="assets/ir/0a9c016c2dfcdaba1081654fc09f60856416a4383d7a652a45093c8fb132bada/inbox_main.png"/><div class="hb-inbox-label">
+<figure aria-label="CONTENUTO DELLA CONFEZIONE" class="hb-inbox-composition" data-card-count="3" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="three-card-responsive"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Immagine della stazione di alimentazione." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je2000e_eu_it/inbox_main.png" data-web-finished-panel-sha256="0a9c016c2dfcdaba1081654fc09f60856416a4383d7a652a45093c8fb132bada" src="assets/ir/0a9c016c2dfcdaba1081654fc09f60856416a4383d7a652a45093c8fb132bada/inbox_main.png"/><div class="hb-inbox-label">
 <p><strong>Jackery Explorer 2000 Plus</strong></p>
-</div></li><li class="hb-inbox-card" data-item-number="2"><img alt="Segnaposto immagine del cavo di ricarica CA." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je2000e_eu_it/inbox_cable.png" data-web-finished-panel-sha256="9c526f2917e4483af821a37a78898f9add0aa6f7538ac83fd2ff232755e3d28b" src="assets/ir/9c526f2917e4483af821a37a78898f9add0aa6f7538ac83fd2ff232755e3d28b/inbox_cable.png"/><div class="hb-inbox-label">
+</div></li><li class="hb-inbox-card" data-item-number="2"><img alt="Immagine del cavo di ricarica CA." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je2000e_eu_it/inbox_cable.png" data-web-finished-panel-sha256="9c526f2917e4483af821a37a78898f9add0aa6f7538ac83fd2ff232755e3d28b" src="assets/ir/9c526f2917e4483af821a37a78898f9add0aa6f7538ac83fd2ff232755e3d28b/inbox_cable.png"/><div class="hb-inbox-label">
 <p><strong>Cavo di ricarica CA</strong></p>
-</div></li><li class="hb-inbox-card" data-item-number="3"><img alt="Segnaposto immagine del manuale utente." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je2000e_eu_it/inbox_manual.png" data-web-finished-panel-sha256="fbf65a42e2126aea6d62845b86edfbb5f7466e07930f88111fef916a90217f50" src="assets/ir/fbf65a42e2126aea6d62845b86edfbb5f7466e07930f88111fef916a90217f50/inbox_manual.png"/><div class="hb-inbox-label">
+</div></li><li class="hb-inbox-card" data-item-number="3"><img alt="Immagine del manuale utente." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je2000e_eu_it/inbox_manual.png" data-web-finished-panel-sha256="fbf65a42e2126aea6d62845b86edfbb5f7466e07930f88111fef916a90217f50" src="assets/ir/fbf65a42e2126aea6d62845b86edfbb5f7466e07930f88111fef916a90217f50/inbox_manual.png"/><div class="hb-inbox-label">
 <p>Manuale utente</p>
 </div></li></ol><div class="hb-inbox-tip" role="note"><div class="hb-inbox-tip-label"><p><strong>SUGGERIMENTO</strong></p></div><div class="hb-inbox-tip-body"><p>Il cavo di ricarica per auto non è incluso, ma è disponibile per l'acquisto separato sul nostro sito web.
 Per assistenza, contatta il servizio clienti Jackery.</p></div></div></figure>
@@ -213,7 +213,7 @@ La funzione di ripristino delle uscite CA e CC è disattivata per impostazione p
 
 
 
-<figure aria-label="Segnaposto modalità display LCD." class="hb-lcd-mode-composition" data-component-id="HB-TABLE-LCD-MODE"><div class="hb-lcd-mode-art-panel"><img alt="Segnaposto modalità display LCD." class="hb-lcd-mode-art" src="assets/ir/71f85bd15d966cb3b856e158091d58f181a6fe4991bd96459ff08e3f9964161f/operation_lcd.png"/></div><div class="hb-lcd-mode-table-panel"><table class="hb-lcd-mode-table"><colgroup><col class="hb-lcd-mode-col-state"/><col class="hb-lcd-mode-col-action"/><col class="hb-lcd-mode-col-copy"/></colgroup><tbody><tr><td class="hb-lcd-mode-state" rowspan="3">Acceso brevemente</td><td class="hb-lcd-mode-action">Accendi</td><td class="hb-lcd-mode-copy">Premi il pulsante POWER principale oppure quando il prodotto è in carica.</td></tr><tr><td class="hb-lcd-mode-action">Spegni</td><td class="hb-lcd-mode-copy">Premi il pulsante POWER principale.</td></tr><tr><td class="hb-lcd-mode-action">Spegnimento automatico</td><td class="hb-lcd-mode-copy">Lo schermo LCD si spegne automaticamente ed entra in modalità sleep dopo 2 minuti di inattività.</td></tr><tr><td class="hb-lcd-mode-state" rowspan="3">Acceso fisso (in carica o in scarica)</td><td class="hb-lcd-mode-action">Accendi</td><td class="hb-lcd-mode-copy">Premi due volte il pulsante POWER principale quando il prodotto è acceso.</td></tr><tr><td class="hb-lcd-mode-action">Spegni</td><td class="hb-lcd-mode-copy">Premi il pulsante POWER principale.</td></tr><tr><td class="hb-lcd-mode-action">Spegnimento automatico</td><td class="hb-lcd-mode-copy">Lo schermo LCD si spegne automaticamente dopo 2 ore di inattività.</td></tr></tbody></table></div></figure>
+<figure aria-label="Modalità display LCD." class="hb-lcd-mode-composition" data-component-id="HB-TABLE-LCD-MODE"><div class="hb-lcd-mode-art-panel"><img alt="Modalità display LCD." class="hb-lcd-mode-art" src="assets/ir/71f85bd15d966cb3b856e158091d58f181a6fe4991bd96459ff08e3f9964161f/operation_lcd.png"/></div><div class="hb-lcd-mode-table-panel"><table class="hb-lcd-mode-table"><colgroup><col class="hb-lcd-mode-col-state"/><col class="hb-lcd-mode-col-action"/><col class="hb-lcd-mode-col-copy"/></colgroup><tbody><tr><td class="hb-lcd-mode-state" rowspan="3">Acceso brevemente</td><td class="hb-lcd-mode-action">Accendi</td><td class="hb-lcd-mode-copy">Premi il pulsante POWER principale oppure quando il prodotto è in carica.</td></tr><tr><td class="hb-lcd-mode-action">Spegni</td><td class="hb-lcd-mode-copy">Premi il pulsante POWER principale.</td></tr><tr><td class="hb-lcd-mode-action">Spegnimento automatico</td><td class="hb-lcd-mode-copy">Lo schermo LCD si spegne automaticamente ed entra in modalità sleep dopo 2 minuti di inattività.</td></tr><tr><td class="hb-lcd-mode-state" rowspan="3">Acceso fisso (in carica o in scarica)</td><td class="hb-lcd-mode-action">Accendi</td><td class="hb-lcd-mode-copy">Premi due volte il pulsante POWER principale quando il prodotto è acceso.</td></tr><tr><td class="hb-lcd-mode-action">Spegni</td><td class="hb-lcd-mode-copy">Premi il pulsante POWER principale.</td></tr><tr><td class="hb-lcd-mode-action">Spegnimento automatico</td><td class="hb-lcd-mode-copy">Lo schermo LCD si spegne automaticamente dopo 2 ore di inattività.</td></tr></tbody></table></div></figure>
 
 
 
@@ -279,7 +279,7 @@ la potenza di uscita effettiva in questa modalità è inferiore alla potenza nom
 
 Questo prodotto può supportare fino a 5 battery pack per soddisfare le esigenze di grande capacità energetica. Per i dettagli sull\'utilizzo, fare riferimento al *Manuale utente di Jackery Battery Pack 2000*.
 
-<img src="assets/ir/71c2640879dfc04adc93621859b3713abf0af483f8d6b2ba452b13f854187c0b/extra_battery.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_it/extra_battery.png" data-web-finished-panel-sha256="71c2640879dfc04adc93621859b3713abf0af483f8d6b2ba452b13f854187c0b" alt="Segnaposto diagramma di collegamento al battery pack." />
+<img src="assets/ir/71c2640879dfc04adc93621859b3713abf0af483f8d6b2ba452b13f854187c0b/extra_battery.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_it/extra_battery.png" data-web-finished-panel-sha256="71c2640879dfc04adc93621859b3713abf0af483f8d6b2ba452b13f854187c0b" alt="Diagramma di collegamento al battery pack." />
 
 
 
@@ -332,7 +332,7 @@ In questa modalità, è possibile ricaricare rapidamente la power station portat
 
 Jackery Explorer 2000 Plus dispone di due porte di ingresso DC8020 ed è compatibile con i pannelli solari Jackery.
 
-<img src="assets/ir/ed5ffb54a716fbef7b3500e06c20ac30e6924d138292a1179f34e95c26496931/charging_solar.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_it/charging_solar.png" data-web-finished-panel-sha256="ed5ffb54a716fbef7b3500e06c20ac30e6924d138292a1179f34e95c26496931" alt="Segnaposto diagramma di collegamento per la ricarica solare 1." />
+<img src="assets/ir/ed5ffb54a716fbef7b3500e06c20ac30e6924d138292a1179f34e95c26496931/charging_solar.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_it/charging_solar.png" data-web-finished-panel-sha256="ed5ffb54a716fbef7b3500e06c20ac30e6924d138292a1179f34e95c26496931" alt="Diagramma di collegamento per la ricarica solare (1)." />
 
 Se una porta di ingresso DC8020 deve collegare contemporaneamente due pannelli solari, fare riferimento alla figura seguente per la ricarica tramite il connettore per pannelli solari (venduto separatamente, non incluso di serie).
 
@@ -593,7 +593,7 @@ Per stabilire la data di inizio del periodo di garanzia è necessaria la ricevut
 
 ## 1. Per scaricare l\'app e accedere
 
-<img src="assets/ir/37bf4f4918f338372737a22a6a43c72d1610cae96e063cc66201f9f529701c24/download.png" style="width: 320px;" width="320" height="65" alt="Segnaposto QR di download dell&#39;app e marketplace." />
+<img src="assets/ir/37bf4f4918f338372737a22a6a43c72d1610cae96e063cc66201f9f529701c24/download.png" style="width: 320px;" width="320" height="65" alt="QR di download dell&#39;app e marketplace." />
 
 Cerca \"Jackery\" su Google Play o nell\'App Store per installare l\'app. Dopodiché, puoi registrarti e accedere. In alternativa, scansiona il codice QR qui sotto per scaricare e installare l\'app.
 
@@ -631,7 +631,7 @@ Cerca \"Jackery\" su Google Play o nell\'App Store per installare l\'app. Dopodi
 
 Dopo che il dispositivo è stato aggiunto con successo all\'app, l\'icona Wi-Fi sul dispositivo resterà sempre accesa.
 
-<img src="assets/ir/efa9084d8a028e9781cd16eed9cbe71fe281efed640f4e436a1345f956814baf/app_connect_result.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-connect-result" data-web-finished-panel-path="assets/je2000e_eu_shared/app_connect_result.png" data-web-finished-panel-sha256="efa9084d8a028e9781cd16eed9cbe71fe281efed640f4e436a1345f956814baf" alt="Segnaposto schermata di risultato configurazione app." />
+<img src="assets/ir/efa9084d8a028e9781cd16eed9cbe71fe281efed640f4e436a1345f956814baf/app_connect_result.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-connect-result" data-web-finished-panel-path="assets/je2000e_eu_shared/app_connect_result.png" data-web-finished-panel-sha256="efa9084d8a028e9781cd16eed9cbe71fe281efed640f4e436a1345f956814baf" alt="Schermata di risultato configurazione app." />
 
 Le schermate sopra sono solo a scopo illustrativo.
 

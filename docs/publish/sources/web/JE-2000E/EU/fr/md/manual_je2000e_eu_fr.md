@@ -585,7 +585,7 @@ Si l\'un des codes d\'erreur suivants apparaît, suivez les actions correctives 
 
 ## 1. Télécharger l\'application et se connecter
 
-<img src="assets/ir/37bf4f4918f338372737a22a6a43c72d1610cae96e063cc66201f9f529701c24/download.png" style="width: 320px;" width="320" height="65" alt="Code QR de téléchargement de l&#39;application et emplacement réservé aux boutiques." />
+<img src="assets/ir/37bf4f4918f338372737a22a6a43c72d1610cae96e063cc66201f9f529701c24/download.png" style="width: 320px;" width="320" height="65" alt="Code QR de téléchargement de l&#39;application et boutiques d&#39;applications." />
 
 Recherchez \"Jackery\" dans Google Play ou dans l\'App Store pour installer l\'application. Une fois que c\'est fait, vous pouvez vous inscrire et vous connecter.
 
@@ -625,7 +625,7 @@ Vous pouvez également scanner le code QR ci-dessous pour télécharger et insta
 
 Une fois l\'appareil ajouté à la page d\'accueil, l\'icône Wi-Fi de l\'appareil restera allumée.
 
-<img src="assets/ir/efa9084d8a028e9781cd16eed9cbe71fe281efed640f4e436a1345f956814baf/app_connect_result.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-connect-result" data-web-finished-panel-path="assets/je2000e_eu_shared/app_connect_result.png" data-web-finished-panel-sha256="efa9084d8a028e9781cd16eed9cbe71fe281efed640f4e436a1345f956814baf" alt="Emplacement réservé à l&#39;écran de résultat de connexion dans l&#39;application." />
+<img src="assets/ir/efa9084d8a028e9781cd16eed9cbe71fe281efed640f4e436a1345f956814baf/app_connect_result.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-connect-result" data-web-finished-panel-path="assets/je2000e_eu_shared/app_connect_result.png" data-web-finished-panel-sha256="efa9084d8a028e9781cd16eed9cbe71fe281efed640f4e436a1345f956814baf" alt="Écran de résultat de connexion dans l&#39;application." />
 
 Les captures d\'écran ci-dessus sont fournies à titre indicatif.
 

@@ -44,11 +44,11 @@
 
 
 
-<figure aria-label="ЩО В КОРОБЦІ" class="hb-inbox-composition" data-card-count="3" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="three-card-responsive"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Заглушка зображення електростанції." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je2000e_eu_uk/inbox_main.png" data-web-finished-panel-sha256="0a9c016c2dfcdaba1081654fc09f60856416a4383d7a652a45093c8fb132bada" src="../../../../_static/manual-assets/_pool/0a/0a9c016c2dfcdaba1081654fc09f60856416a4383d7a652a45093c8fb132bada.png"/><div class="hb-inbox-label">
+<figure aria-label="ЩО В КОРОБЦІ" class="hb-inbox-composition" data-card-count="3" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="three-card-responsive"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Зображення електростанції." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je2000e_eu_uk/inbox_main.png" data-web-finished-panel-sha256="0a9c016c2dfcdaba1081654fc09f60856416a4383d7a652a45093c8fb132bada" src="../../../../_static/manual-assets/_pool/0a/0a9c016c2dfcdaba1081654fc09f60856416a4383d7a652a45093c8fb132bada.png"/><div class="hb-inbox-label">
 <p><strong>Jackery Explorer 2000 Plus</strong></p>
-</div></li><li class="hb-inbox-card" data-item-number="2"><img alt="Заглушка зображення кабелю для заряджання AC." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je2000e_eu_uk/inbox_cable.png" data-web-finished-panel-sha256="9c526f2917e4483af821a37a78898f9add0aa6f7538ac83fd2ff232755e3d28b" src="../../../../_static/manual-assets/_pool/9c/9c526f2917e4483af821a37a78898f9add0aa6f7538ac83fd2ff232755e3d28b.png"/><div class="hb-inbox-label">
+</div></li><li class="hb-inbox-card" data-item-number="2"><img alt="Зображення кабелю для заряджання AC." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je2000e_eu_uk/inbox_cable.png" data-web-finished-panel-sha256="9c526f2917e4483af821a37a78898f9add0aa6f7538ac83fd2ff232755e3d28b" src="../../../../_static/manual-assets/_pool/9c/9c526f2917e4483af821a37a78898f9add0aa6f7538ac83fd2ff232755e3d28b.png"/><div class="hb-inbox-label">
 <p><strong>Кабель для заряджання AC</strong></p>
-</div></li><li class="hb-inbox-card" data-item-number="3"><img alt="Заглушка зображення посібника користувача." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je2000e_eu_uk/inbox_manual.png" data-web-finished-panel-sha256="be87c3e284d6896cc21d53e24244568ba9d2039f53640167c826a12c965bc09c" src="../../../../_static/manual-assets/_pool/be/be87c3e284d6896cc21d53e24244568ba9d2039f53640167c826a12c965bc09c.png"/><div class="hb-inbox-label">
+</div></li><li class="hb-inbox-card" data-item-number="3"><img alt="Зображення посібника користувача." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je2000e_eu_uk/inbox_manual.png" data-web-finished-panel-sha256="be87c3e284d6896cc21d53e24244568ba9d2039f53640167c826a12c965bc09c" src="../../../../_static/manual-assets/_pool/be/be87c3e284d6896cc21d53e24244568ba9d2039f53640167c826a12c965bc09c.png"/><div class="hb-inbox-label">
 <p>Посібник користувача</p>
 </div></li></ol><div class="hb-inbox-tip" role="note"><div class="hb-inbox-tip-label"><p><strong>ПОРАДИ</strong></p></div><div class="hb-inbox-tip-body"><p>Кабель для заряджання від автомобіля не входить до комплекту, але його можна придбати окремо на нашому вебсайті.
 Для отримання допомоги зверніться до служби підтримки Jackery.</p></div></div></figure>
@@ -225,7 +225,7 @@
 
 
 
-<figure aria-label="Заглушка режиму дисплея LCD." class="hb-lcd-mode-composition" data-component-id="HB-TABLE-LCD-MODE"><div class="hb-lcd-mode-art-panel"><img alt="Заглушка режиму дисплея LCD." class="hb-lcd-mode-art" src="../../../../_static/manual-assets/_pool/71/71f85bd15d966cb3b856e158091d58f181a6fe4991bd96459ff08e3f9964161f.png"/></div><div class="hb-lcd-mode-table-panel"><table class="hb-lcd-mode-table"><colgroup><col class="hb-lcd-mode-col-state"/><col class="hb-lcd-mode-col-action"/><col class="hb-lcd-mode-col-copy"/></colgroup><tbody><tr><td class="hb-lcd-mode-state" rowspan="3">Короткочасне увімкнення</td><td class="hb-lcd-mode-action">Увімкнути</td><td class="hb-lcd-mode-copy">Натисніть кнопку POWER або коли пристрій заряджається.</td></tr><tr><td class="hb-lcd-mode-action">Вимкнути</td><td class="hb-lcd-mode-copy">Натисніть кнопку POWER.</td></tr><tr><td class="hb-lcd-mode-action">Автовимкнення</td><td class="hb-lcd-mode-copy">LCD автоматично вимикається та переходить у режим сну після 2 хвилин бездіяльності.</td></tr><tr><td class="hb-lcd-mode-state" rowspan="3">Постійно увімкнено (під час заряджання або розряджання)</td><td class="hb-lcd-mode-action">Увімкнути</td><td class="hb-lcd-mode-copy">Натисніть кнопку POWER двічі, коли пристрій увімкнено.</td></tr><tr><td class="hb-lcd-mode-action">Вимкнути</td><td class="hb-lcd-mode-copy">Натисніть кнопку POWER.</td></tr><tr><td class="hb-lcd-mode-action">Автовимкнення</td><td class="hb-lcd-mode-copy">LCD автоматично вимикається після 2 годин бездіяльності.</td></tr></tbody></table></div></figure>
+<figure aria-label="Режим дисплея LCD." class="hb-lcd-mode-composition" data-component-id="HB-TABLE-LCD-MODE"><div class="hb-lcd-mode-art-panel"><img alt="Режим дисплея LCD." class="hb-lcd-mode-art" src="../../../../_static/manual-assets/_pool/71/71f85bd15d966cb3b856e158091d58f181a6fe4991bd96459ff08e3f9964161f.png"/></div><div class="hb-lcd-mode-table-panel"><table class="hb-lcd-mode-table"><colgroup><col class="hb-lcd-mode-col-state"/><col class="hb-lcd-mode-col-action"/><col class="hb-lcd-mode-col-copy"/></colgroup><tbody><tr><td class="hb-lcd-mode-state" rowspan="3">Короткочасне увімкнення</td><td class="hb-lcd-mode-action">Увімкнути</td><td class="hb-lcd-mode-copy">Натисніть кнопку POWER або коли пристрій заряджається.</td></tr><tr><td class="hb-lcd-mode-action">Вимкнути</td><td class="hb-lcd-mode-copy">Натисніть кнопку POWER.</td></tr><tr><td class="hb-lcd-mode-action">Автовимкнення</td><td class="hb-lcd-mode-copy">LCD автоматично вимикається та переходить у режим сну після 2 хвилин бездіяльності.</td></tr><tr><td class="hb-lcd-mode-state" rowspan="3">Постійно увімкнено (під час заряджання або розряджання)</td><td class="hb-lcd-mode-action">Увімкнути</td><td class="hb-lcd-mode-copy">Натисніть кнопку POWER двічі, коли пристрій увімкнено.</td></tr><tr><td class="hb-lcd-mode-action">Вимкнути</td><td class="hb-lcd-mode-copy">Натисніть кнопку POWER.</td></tr><tr><td class="hb-lcd-mode-action">Автовимкнення</td><td class="hb-lcd-mode-copy">LCD автоматично вимикається після 2 годин бездіяльності.</td></tr></tbody></table></div></figure>
 
 
 
@@ -291,7 +291,7 @@
 
 Цей пристрій підтримує до 5 батарейних модулів, щоб задовольнити потребу у великій ємності накопичення енергії. Докладніше про використання див. у *Посібнику користувача Jackery Battery Pack 2000*.
 
-<img src="../../../../_static/manual-assets/_pool/71/71c2640879dfc04adc93621859b3713abf0af483f8d6b2ba452b13f854187c0b.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_uk/extra_battery.png" data-web-finished-panel-sha256="71c2640879dfc04adc93621859b3713abf0af483f8d6b2ba452b13f854187c0b" alt="Заглушка схеми підключення батарейного модуля." />
+<img src="../../../../_static/manual-assets/_pool/71/71c2640879dfc04adc93621859b3713abf0af483f8d6b2ba452b13f854187c0b.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_uk/extra_battery.png" data-web-finished-panel-sha256="71c2640879dfc04adc93621859b3713abf0af483f8d6b2ba452b13f854187c0b" alt="Схема підключення батарейного модуля." />
 
 
 
@@ -344,7 +344,7 @@
 
 Jackery Explorer 2000 Plus має два вхідні порти DC8020 і сумісний із сонячними панелями Jackery.
 
-<img src="../../../../_static/manual-assets/_pool/bb/bb18f58f6e6578e3f92c682435a0d1ee37d6039bdb9f1fe98d3a3b0d63e6e37c.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_uk/charging_solar.png" data-web-finished-panel-sha256="bb18f58f6e6578e3f92c682435a0d1ee37d6039bdb9f1fe98d3a3b0d63e6e37c" alt="Заглушка схеми підключення для сонячного заряджання 1." />
+<img src="../../../../_static/manual-assets/_pool/bb/bb18f58f6e6578e3f92c682435a0d1ee37d6039bdb9f1fe98d3a3b0d63e6e37c.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_uk/charging_solar.png" data-web-finished-panel-sha256="bb18f58f6e6578e3f92c682435a0d1ee37d6039bdb9f1fe98d3a3b0d63e6e37c" alt="Схема підключення для сонячного заряджання (1)." />
 
 Якщо до одного входу DC8020 потрібно одночасно підключити дві сонячні панелі, зверніться до наведеної нижче схеми заряджання через з\'єднувач сонячних панелей (продається окремо, до стандартної комплектації не входить).
 
@@ -605,7 +605,7 @@ Jackery Explorer 2000 Plus має два вхідні порти DC8020 і су�
 
 ## 1. Завантажте додаток і увійдіть
 
-<img src="../../../../_static/manual-assets/_pool/37/37bf4f4918f338372737a22a6a43c72d1610cae96e063cc66201f9f529701c24.png" style="width: 320px;" width="320" height="65" alt="Заглушка QR-коду для завантаження додатка та магазину застосунків." />
+<img src="../../../../_static/manual-assets/_pool/37/37bf4f4918f338372737a22a6a43c72d1610cae96e063cc66201f9f529701c24.png" style="width: 320px;" width="320" height="65" alt="QR-код для завантаження додатка та магазин застосунків." />
 
 Знайдіть \"Jackery\" у Google Play або App Store, щоб установити додаток. Після цього ви можете зареєструватися та увійти. Або відскануйте QR-код нижче, щоб завантажити та встановити додаток.
 
@@ -643,7 +643,7 @@ Jackery Explorer 2000 Plus має два вхідні порти DC8020 і су�
 
 Після успішного додавання пристрою до додатка значок Wi-Fi на пристрої буде постійно увімкнений.
 
-<img src="../../../../_static/manual-assets/_pool/ef/efa9084d8a028e9781cd16eed9cbe71fe281efed640f4e436a1345f956814baf.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-connect-result" data-web-finished-panel-path="assets/je2000e_eu_shared/app_connect_result.png" data-web-finished-panel-sha256="efa9084d8a028e9781cd16eed9cbe71fe281efed640f4e436a1345f956814baf" alt="Заглушка екрана результату налаштування додатка." />
+<img src="../../../../_static/manual-assets/_pool/ef/efa9084d8a028e9781cd16eed9cbe71fe281efed640f4e436a1345f956814baf.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-connect-result" data-web-finished-panel-path="assets/je2000e_eu_shared/app_connect_result.png" data-web-finished-panel-sha256="efa9084d8a028e9781cd16eed9cbe71fe281efed640f4e436a1345f956814baf" alt="Екран результату налаштування додатка." />
 
 Наведені вище знімки екрана наведено лише для довідки.
 
