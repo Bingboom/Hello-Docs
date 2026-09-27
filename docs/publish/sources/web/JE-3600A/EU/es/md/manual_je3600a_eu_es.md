@@ -490,7 +490,7 @@ Si aparece alguno de los siguientes códigos de fallo, siga las acciones correct
 <tbody>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">1 × Entrada CA</th>
-<td class="hb-spec-value manual-spec-value">Modo de carga: 220-240 V~ 50 Hz, 10 A máx.<br/>Modo bypass: 220-240 V~ 50 Hz, 10 A máx.<sup class="hb-spec-reference">①</sup></td>
+<td class="hb-spec-value manual-spec-value">Modo de carga: 220-240 V~ 50 Hz, 10 A máx.<br/>Modo bypass<sup class="hb-spec-reference">①</sup>: 220-240 V~ 50 Hz, 10 A máx.</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">2 × Puertos DC8020</th>
@@ -516,11 +516,11 @@ Si aparece alguno de los siguientes códigos de fallo, siga las acciones correct
 <td class="hb-spec-value manual-spec-value">230 V~ 50 Hz, 3600 W</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">CA Salida total</th>
-<td class="hb-spec-value manual-spec-value">3600 W nominales, 7200 W pico de sobretensión<sup class="hb-spec-reference">②</sup></td>
+<th class="hb-spec-label manual-spec-label" scope="row">CA Salida total<sup class="hb-spec-reference">②</sup></th>
+<td class="hb-spec-value manual-spec-value">3600 W nominales, 7200 W pico de sobretensión</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Salida de CA en modo bypass</th>
+<th class="hb-spec-label manual-spec-label" scope="row">Salida de CA en modo bypass<sup class="hb-spec-reference">①</sup></th>
 <td class="hb-spec-value manual-spec-value">220-240 V~ 50 Hz, 10 A máx.</td>
 </tr>
 <tr>

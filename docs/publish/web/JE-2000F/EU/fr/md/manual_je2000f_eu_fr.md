@@ -397,7 +397,7 @@ Si l\'un des codes d\'erreur suivants apparaît, suivez les actions correctives 
 <td class="hb-spec-value manual-spec-value">Jackery Explorer 2000</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">N° de modèle</th>
+<th class="hb-spec-label manual-spec-label" scope="row">N° modèle</th>
 <td class="hb-spec-value manual-spec-value">JE-2000F</td>
 </tr>
 <tr>
@@ -418,7 +418,7 @@ Si l\'un des codes d\'erreur suivants apparaît, suivez les actions correctives 
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Durée de vie</th>
-<td class="hb-spec-value manual-spec-value">Capacité de 6000 cycles à 70 % ou plus</td>
+<td class="hb-spec-value manual-spec-value">Capacité de 4000 cycles à 70 % ou plus</td>
 </tr>
 </tbody>
 </table></figure>
@@ -451,12 +451,12 @@ Si l\'un des codes d\'erreur suivants apparaît, suivez les actions correctives 
 <figure aria-label="PORTS DE SORTIE" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">3 × Sorties CA</th>
-<td class="hb-spec-value manual-spec-value">230 V~ 50 Hz, 10 A max., 2200 W nominal au total, 4400 W pointe de surtension</td>
+<th class="hb-spec-label manual-spec-label" scope="row">3 × Sortie CA</th>
+<td class="hb-spec-value manual-spec-value">230 V~ 50 Hz, 2200 W nominal au total, 4400 W pointe de surtension</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Sortie CA en mode bypass<sup class="hb-spec-reference">①</sup></th>
-<td class="hb-spec-value manual-spec-value">220 V-240 V~ 50 Hz, 10 A max.</td>
+<td class="hb-spec-value manual-spec-value">220 V-240 V~ 50 Hz, 2200 W max.</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Sortie USB-C 30 W</th>
@@ -498,9 +498,9 @@ Si l\'un des codes d\'erreur suivants apparaît, suivez les actions correctives 
 
 
 
-※ USB Type-C® et USB-C® sont des marques déposées de USB Implementers Forum.
-
 ① Le produit peut charger la batterie à partir d\'une prise murale CA tout en fournissant de l\'énergie via les ports de sortie CA.
+
+※ USB Type-C® et USB-C® sont des marques déposées de USB Implementers Forum.
 
 # GARANTIE
 

@@ -225,37 +225,26 @@ If this product is stored for a long period of time (3 months - 6 months) with t
 <td class="hb-spec-value manual-spec-value">6000 cycles to 70%+ capacity</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Secondary Li-ion Battery</th>
-<td class="hb-spec-value manual-spec-value">IEC: IFpR41/136[14S4P]M/-20+40/90</td>
+<th class="hb-spec-label manual-spec-label" scope="row">IEC Code</th>
+<td class="hb-spec-value manual-spec-value">IFpR41/136[14S4P]M/-20+40/90</td>
 </tr>
 </tbody>
 </table></figure>
 
 
 
-## INPUT PORTS
+## INPUT/OUTPUT PORTS
 
 
 
-<figure aria-label="INPUT PORTS" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
+<figure aria-label="INPUT/OUTPUT PORTS" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">DC Input</th>
+<th class="hb-spec-label manual-spec-label" scope="row">DC Expansion Port (Input)</th>
 <td class="hb-spec-value manual-spec-value">36.4V-50.4V⎓60A Max</td>
 </tr>
-</tbody>
-</table></figure>
-
-
-
-## OUTPUT PORTS
-
-
-
-<figure aria-label="OUTPUT PORTS" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
-<tbody>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">DC Output</th>
+<th class="hb-spec-label manual-spec-label" scope="row">DC Expansion Port (Output)</th>
 <td class="hb-spec-value manual-spec-value">36.4V-50.4V⎓100A Max</td>
 </tr>
 </tbody>

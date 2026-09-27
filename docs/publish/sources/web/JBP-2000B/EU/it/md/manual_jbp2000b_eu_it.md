@@ -229,13 +229,13 @@ Conservare il prodotto in un luogo pulito e asciutto, con una ventilazione adegu
 
 Se il prodotto viene conservato a lungo termine (da 3 a 6 mesi) con la batteria scarica, potrebbe non essere più possibile ricaricarlo. Per evitarlo e mantenere la salute della batteria, si consiglia di controllare e ricaricare il prodotto ogni tre mesi e di eseguire almeno un ciclo completo di carica e scarica ogni 6-12 mesi.
 
-# SPECIFICHE
+# SPECIFICHE TECNICHE
 
-## INFO GENERALI
+## INFORMAZIONI GENERALI
 
 
 
-<figure aria-label="INFO GENERALI" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
+<figure aria-label="INFORMAZIONI GENERALI" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Nome del prodotto</th>
@@ -263,34 +263,23 @@ Se il prodotto viene conservato a lungo termine (da 3 a 6 mesi) con la batteria 
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Durata del ciclo</th>
-<td class="hb-spec-value manual-spec-value">6000 cycles to 70%+ capacity</td>
+<td class="hb-spec-value manual-spec-value">6000 cicli fino al 70% di capacità</td>
 </tr>
 </tbody>
 </table></figure>
 
 
 
-## PORTE DI INPUT
+## PORTE DI INGRESSO/USCITA
 
 
 
-<figure aria-label="PORTE DI INPUT" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
+<figure aria-label="PORTE DI INGRESSO/USCITA" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Porta di espansione CC (Ingresso)</th>
 <td class="hb-spec-value manual-spec-value">36,8 V-57,6 V⎓75 A max.</td>
 </tr>
-</tbody>
-</table></figure>
-
-
-
-## PORTE DI USCITA
-
-
-
-<figure aria-label="PORTE DI USCITA" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
-<tbody>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Porta di espansione CC (Uscita)</th>
 <td class="hb-spec-value manual-spec-value">36,8 V-57,6 V⎓75 A max.</td>

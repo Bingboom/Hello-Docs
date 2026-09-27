@@ -132,7 +132,7 @@ Use the multifunctional adapter\'s USB-C, LED and USB-A interfaces to power a ce
 
 - Insert the rubber plug when USB ports are not in use to prevent dust.
 
-# SPECIFICATIONS
+# TECHNICAL PARAMETERS
 
 ## BASIC INFORMATION
 

@@ -411,7 +411,7 @@ Si l\'un des codes d\'erreur suivants apparaît, suivez les actions correctives 
 <td class="hb-spec-value manual-spec-value">Jackery Explorer 2000 Plus</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">N° de modèle</th>
+<th class="hb-spec-label manual-spec-label" scope="row">N° modèle</th>
 <td class="hb-spec-value manual-spec-value">JE-2000E</td>
 </tr>
 <tr>
@@ -424,7 +424,7 @@ Si l\'un des codes d\'erreur suivants apparaît, suivez les actions correctives 
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Poids</th>
-<td class="hb-spec-value manual-spec-value">Environ 18,8 kg</td>
+<td class="hb-spec-value manual-spec-value">Environ 19,1 kg</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Dimensions</th>
@@ -447,15 +447,15 @@ Si l\'un des codes d\'erreur suivants apparaît, suivez les actions correctives 
 <tbody>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">1 × Entrée CA</th>
-<td class="hb-spec-value manual-spec-value">Mode de charge: 220 V-240 V~ 50 Hz, 10 A max.<br/>Mode bypass<sup class="hb-spec-reference">①</sup>: 220 V-240 V~ 50 Hz, 10 A max.</td>
+<td class="hb-spec-value manual-spec-value">Mode charge: 220 V-240 V~ 50 Hz, 10 A max.<br/>Mode dérivation<sup class="hb-spec-reference">①</sup>: 220 V-240 V~ 50 Hz, 10 A max.</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">2 × Ports DC8020</th>
-<td class="hb-spec-value manual-spec-value">PV: 11 V-16 V⎓8 A max., Double à 8 A max.<br/>Car: 16 V-60 V⎓12 A, Double à 21 A / 800 W max.</td>
+<td class="hb-spec-value manual-spec-value">PV: 16 V-60 V⎓12 A max., Double à 21 A / 800 W max.<br/>Voiture: 11 V-16 V⎓8 A max., Double à 8 A max.</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">1 × Port d’extension CC</th>
-<td class="hb-spec-value manual-spec-value">36.8 V-57.6 V⎓75 A max.</td>
+<td class="hb-spec-value manual-spec-value">36,8 V-57,6 V⎓75 A max.</td>
 </tr>
 </tbody>
 </table></figure>
@@ -481,8 +481,12 @@ Si l\'un des codes d\'erreur suivants apparaît, suivez les actions correctives 
 <td class="hb-spec-value manual-spec-value">18 W max., 5-6 V⎓3 A, 6-9 V⎓2 A, 9-12 V⎓1,5 A</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">2 × Sortie USB-C</th>
-<td class="hb-spec-value manual-spec-value">30 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓2,5 A, 15 V⎓2 A, 20 V⎓1,5 A<br/>140 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓3 A, 15 V⎓3 A, 20 V⎓5 A, 28 V⎓5 A</td>
+<th class="hb-spec-label manual-spec-label" scope="row">1 × Sortie USB-C 30 W</th>
+<td class="hb-spec-value manual-spec-value">30 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓2,5 A, 15 V⎓2 A, 20 V⎓1,5 A</td>
+</tr>
+<tr>
+<th class="hb-spec-label manual-spec-label" scope="row">1 × Sortie USB-C 140 W</th>
+<td class="hb-spec-value manual-spec-value">140 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓3 A, 15 V⎓3 A, 20 V⎓5 A, 28 V⎓5 A</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">1 × Port CC 12 V</th>
@@ -490,7 +494,7 @@ Si l\'un des codes d\'erreur suivants apparaît, suivez les actions correctives 
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">1 × Port d’extension CC</th>
-<td class="hb-spec-value manual-spec-value">36.8 V-57.6 V⎓55 A max.</td>
+<td class="hb-spec-value manual-spec-value">36,8 V-57,6 V⎓55 A max.</td>
 </tr>
 </tbody>
 </table></figure>

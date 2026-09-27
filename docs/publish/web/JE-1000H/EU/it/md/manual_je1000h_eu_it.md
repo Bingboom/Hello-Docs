@@ -593,7 +593,7 @@ Se viene visualizzato uno dei seguenti codici di errore, segui le azioni corrett
 <tbody>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">1 × Ingresso CA</th>
-<td class="hb-spec-value manual-spec-value">Modalità di ricarica: 220 V-240 V~ 50 Hz, 10 A max.<br/>Modalità bypass<sup class="hb-spec-reference">①</sup>: 220 V-240 V~ 50 Hz, 7,83 A</td>
+<td class="hb-spec-value manual-spec-value">220 V-240 V~ 50 Hz, 10 A max.<br/>AC modalità bypass<sup class="hb-spec-reference">①</sup>: 220 V-240 V~ 50 Hz, 7,83 A</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">2 × Porte DC8020</th>
@@ -666,11 +666,11 @@ Se viene visualizzato uno dei seguenti codici di errore, segui le azioni corrett
 
 
 
-※ USB Type-C® e USB-C® sono marchi registrati di USB Implementers Forum.
-
 ① Il prodotto può caricare la batteria dalla presa a muro CA mentre fornisce energia tramite le porte di uscita CA.
 
 ② Indica che due o più porte di uscita CA funzionano insieme.
+
+※ USB Type-C® e USB-C® sono marchi registrati di USB Implementers Forum.
 
 # GARANZIA
 

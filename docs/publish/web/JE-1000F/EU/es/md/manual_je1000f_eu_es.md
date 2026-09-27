@@ -465,10 +465,10 @@ Si aparece alguno de los siguientes códigos de fallo, siga las acciones correct
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Capacidad</th>
-<td class="hb-spec-value manual-spec-value">1024 Wh (20 Ah / 51,2 V CC)</td>
+<td class="hb-spec-value manual-spec-value">1024 Wh (20 Ah / 51,2 V DC)</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Química Celular</th>
+<th class="hb-spec-label manual-spec-label" scope="row">Química de las celdas</th>
 <td class="hb-spec-value manual-spec-value">LiFePO₄</td>
 </tr>
 <tr>
@@ -480,8 +480,8 @@ Si aparece alguno de los siguientes códigos de fallo, siga las acciones correct
 <td class="hb-spec-value manual-spec-value">31,4 x 20,1 x 23,4 cm</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Ciclo de vida</th>
-<td class="hb-spec-value manual-spec-value">4000 ciclos de carga hasta 70 % + de capacidad</td>
+<th class="hb-spec-label manual-spec-label" scope="row">Vida útil en ciclos</th>
+<td class="hb-spec-value manual-spec-value">4000 ciclos hasta conservar más del 70 % de capacidad</td>
 </tr>
 </tbody>
 </table></figure>
@@ -500,7 +500,7 @@ Si aparece alguno de los siguientes códigos de fallo, siga las acciones correct
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">2 × Puertos DC8020</th>
-<td class="hb-spec-value manual-spec-value">11 V-16 V⎓8 A máx., Doble a 8 A máx.<br/>16 V-60 V⎓12 A, Doble hasta 21 A / 400 W máx.</td>
+<td class="hb-spec-value manual-spec-value">11 V-16 V⎓8 A máx., Doble a 8 A máx.<br/>16 V-60 V⎓12 A máx., Doble hasta 21 A / 400 W máx.</td>
 </tr>
 </tbody>
 </table></figure>
@@ -518,19 +518,23 @@ Si aparece alguno de los siguientes códigos de fallo, siga las acciones correct
 <td class="hb-spec-value manual-spec-value">230 V~ 50 Hz, 6,5 A máx., 1500 W Nominal por puerto, 1500 W en Total, 3000 W Pico de sobrecarga</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Salida de CA en modo bypass</th>
+<th class="hb-spec-label manual-spec-label" scope="row">Salida de CA en modo bypass<sup class="hb-spec-reference">①</sup></th>
 <td class="hb-spec-value manual-spec-value">220 V-240 V~ 50 Hz, 1500 W</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">2 × Salidas USB-C</th>
-<td class="hb-spec-value manual-spec-value">30 W máx., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓2,5 A, 15 V⎓2 A, 20 V⎓1,5 A<br/>100 W máx., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓3 A, 15 V⎓3 A, 20 V⎓5 A</td>
+<th class="hb-spec-label manual-spec-label" scope="row">Salida USB-C 30 W</th>
+<td class="hb-spec-value manual-spec-value">30 W máx., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓2,5 A, 15 V⎓2 A, 20 V⎓1,5 A</td>
+</tr>
+<tr>
+<th class="hb-spec-label manual-spec-label" scope="row">Salida USB-C 100 W</th>
+<td class="hb-spec-value manual-spec-value">100 W máx., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓3 A, 15 V⎓3 A, 20 V⎓5 A</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">1 × Salida USB-A</th>
 <td class="hb-spec-value manual-spec-value">18 W máx., 5-6 V⎓3 A, 6-9 V⎓2 A, 9-12 V⎓1,5 A</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">1 × Puerto DC 12 V</th>
+<th class="hb-spec-label manual-spec-label" scope="row">1 × Puerto CC 12 V</th>
 <td class="hb-spec-value manual-spec-value">12 V⎓10 A máx.</td>
 </tr>
 </tbody>
@@ -556,6 +560,8 @@ Si aparece alguno de los siguientes códigos de fallo, siga las acciones correct
 </table></figure>
 
 
+
+① El producto puede cargar la batería desde una toma de corriente CA mientras suministra energía a través de los puertos de salida CA.
 
 ※ USB Type-C® y USB-C® son marcas registradas de USB Implementers Forum.
 

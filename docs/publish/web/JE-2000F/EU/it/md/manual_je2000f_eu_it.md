@@ -408,7 +408,7 @@ Se viene visualizzato uno dei seguenti codici di errore, segui le azioni corrett
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Capacità</th>
-<td class="hb-spec-value manual-spec-value">40 Ah / 51,2 V ⎓ (2048 Wh)</td>
+<td class="hb-spec-value manual-spec-value">2048 Wh (40 Ah / 51,2 V ⎓)</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Chimica delle celle</th>
@@ -424,7 +424,7 @@ Se viene visualizzato uno dei seguenti codici di errore, segui le azioni corrett
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Durata del ciclo</th>
-<td class="hb-spec-value manual-spec-value">6000 cicli con capacità residua superiore al 70%</td>
+<td class="hb-spec-value manual-spec-value">4000 cicli con capacità residua superiore al 70%</td>
 </tr>
 </tbody>
 </table></figure>
@@ -458,11 +458,11 @@ Se viene visualizzato uno dei seguenti codici di errore, segui le azioni corrett
 <tbody>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">3 × uscite CA</th>
-<td class="hb-spec-value manual-spec-value">230 V~ 50 Hz, 10 A max., 2200 W nominali totali, 4400 W di picco</td>
+<td class="hb-spec-value manual-spec-value">230 V~ 50 Hz, 2200 W nominali totali, 4400 W di picco</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Uscita CA in modalità bypass<sup class="hb-spec-reference">①</sup></th>
-<td class="hb-spec-value manual-spec-value">220 V-240 V~ 50 Hz, 10 A max.</td>
+<td class="hb-spec-value manual-spec-value">220 V-240 V~ 50 Hz, 2200 W max.</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">1 × Uscita USB-C 30 W</th>
@@ -496,7 +496,7 @@ Se viene visualizzato uno dei seguenti codici di errore, segui le azioni corrett
 <td class="hb-spec-value manual-spec-value">da 0 °C a 45 °C</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Temperatura di scarico</th>
+<th class="hb-spec-label manual-spec-label" scope="row">Temperatura di scarica</th>
 <td class="hb-spec-value manual-spec-value">da -10 °C a 45 °C</td>
 </tr>
 </tbody>
@@ -504,9 +504,9 @@ Se viene visualizzato uno dei seguenti codici di errore, segui le azioni corrett
 
 
 
-※ USB Type-C® e USB-C® sono marchi registrati di USB Implementers Forum.
-
 ① Il prodotto può caricare la batteria dalla presa a muro CA mentre fornisce energia tramite le porte di uscita CA.
+
+※ USB Type-C® e USB-C® sono marchi registrati di USB Implementers Forum.
 
 # GARANZIA
 

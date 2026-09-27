@@ -608,14 +608,14 @@ If any of the following fault codes appear, follow the listed corrective actions
 <tbody>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">1 × AC Input</th>
-<td class="hb-spec-value manual-spec-value">Charge Mode: 220V-240V~50Hz, 10A Max<br/>Bypass Mode<sup class="hb-spec-reference">①</sup>: 220V-240V~50Hz, 7.83A</td>
+<td class="hb-spec-value manual-spec-value">220V-240V~50Hz, 10A Max<br/>Bypass Mode<sup class="hb-spec-reference">①</sup>: 220V-240V~50Hz, 7.83A</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">2 × DC8020 Ports</th>
 <td class="hb-spec-value manual-spec-value">Car: 11V-16V⎓8A Max, Double to 8A Max<br/>PV: 16V-60V⎓12A, Double to 21A Max/400W Max</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">1 × DC Expansion Input</th>
+<th class="hb-spec-label manual-spec-label" scope="row">1 × DC Expansion Port</th>
 <td class="hb-spec-value manual-spec-value">36.8V-56V⎓59A Max</td>
 </tr>
 </tbody>
@@ -654,7 +654,7 @@ If any of the following fault codes appear, follow the listed corrective actions
 <td class="hb-spec-value manual-spec-value">12V⎓10A Max</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">1 × DC Expansion Output</th>
+<th class="hb-spec-label manual-spec-label" scope="row">1 × DC Expansion Port</th>
 <td class="hb-spec-value manual-spec-value">36.8V-56V⎓36A Max</td>
 </tr>
 </tbody>
@@ -681,11 +681,11 @@ If any of the following fault codes appear, follow the listed corrective actions
 
 
 
-※ USB Type-C® and USB-C® are registered trademarks of USB Implementers Forum.
-
 ① The product can charge the battery from the AC wall outlet while delivering power through the AC output ports.
 
 ② Indicates that two or more AC output ports work together.
+
+※ USB Type-C® and USB-C® are registered trademarks of USB Implementers Forum.
 
 # WARRANTY
 

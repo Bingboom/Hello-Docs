@@ -1,8 +1,8 @@
 {
   "actions": {
-    "check": "25e8eb07537c8f45bf624d1932e1b6f47baa04c5fe0947fee4aacc55cb57947a",
-    "html": "25e8eb07537c8f45bf624d1932e1b6f47baa04c5fe0947fee4aacc55cb57947a",
-    "md": "25e8eb07537c8f45bf624d1932e1b6f47baa04c5fe0947fee4aacc55cb57947a"
+    "check": "92150ddbfde25bbf3503a7c53eb42e76433b0d5318e58539149dc6d2559cb56e",
+    "html": "92150ddbfde25bbf3503a7c53eb42e76433b0d5318e58539149dc6d2559cb56e",
+    "md": "92150ddbfde25bbf3503a7c53eb42e76433b0d5318e58539149dc6d2559cb56e"
   },
   "canonical_source": {
     "files": [
@@ -78,8 +78,8 @@
       },
       {
         "path": "page/spec_uk.rst",
-        "sha256": "09a405eba3f98c0972f6c7dc1da94f9c2e8df95915d69384884e803c026d74e2",
-        "size": 11118
+        "sha256": "7a4373436b68f7f0efdfc758eb7ae85c40dd30f7ebd79cf40d4c3b7b3e513603",
+        "size": 11281
       },
       {
         "path": "page/symbols_uk.rst",
@@ -92,9 +92,9 @@
         "size": 3559
       }
     ],
-    "sha256": "9296096ae817b1ca63763a0c6e56e8ac8b1a97a7f42535e5e8f923705b70d1ea"
+    "sha256": "286c7a6de0132e89c1232e44263c872f935dbd3c213bf2c63c3ea5acb06c0091"
   },
-  "git_ref": "54a4cd242af48314738ce326a24904a3d20bdcd3",
+  "git_ref": "424983ad878c7a00a5dadbdd015b4180d8b12cdf",
   "html": {
     "files": [
       {
@@ -559,8 +559,8 @@
       },
       {
         "path": "index.html",
-        "sha256": "8c180e84c7ee9e5151328bdec769d7bfcf2792773335434e746065cd7dee3521",
-        "size": 98621
+        "sha256": "3047d4cceda5d580e256da32bf5e8cb3ce18b424998ce86678bba8ad24d56aea",
+        "size": 98725
       },
       {
         "path": "jbp2000b_ac_charging.pdf",
@@ -1354,8 +1354,8 @@
       },
       {
         "path": "searchindex.js",
-        "sha256": "8797cf35101936be7eddb57c861e1cf8f570f410818b936f5a64ab85874b3436",
-        "size": 67741
+        "sha256": "878f1eb43243761a7de86d341b7ada75577e6cc2db577fc8794cbdc977067883",
+        "size": 67732
       },
       {
         "path": "solar_adapter.pdf",
@@ -1383,7 +1383,7 @@
         "size": 316221
       }
     ],
-    "sha256": "1009b5682e1a0d09a6631d33524ad6c9f2d7e3138545b27938cb9953fe88ed4e"
+    "sha256": "043be605fc8ed78c811f359df1bf7f4e2347966bd478feae4b63eb4d072981e8"
   },
   "language": "uk",
   "markdown": {
@@ -1540,19 +1540,19 @@
       },
       {
         "path": "manual_je1000h_eu_uk.md",
-        "sha256": "d050a4ffa87e49c010ec8c340fcfece18d1c6168fc82d2d7eff5b9c88a5a0b9e",
-        "size": 88914
+        "sha256": "290e02610961539429bd742576b23989132bad9c9240f27122c2b6a608ad5dba",
+        "size": 89034
       }
     ],
     "manual": "manual_je1000h_eu_uk.md",
-    "sha256": "cfd38935b07e268d56902e43ae0fd1e1db19a39d8a418c9cf04f9f5a2fcd8e7d"
+    "sha256": "9a7da903b32237b45943582c588fdd02eaca37ceb1fec95de0388572e82db288"
   },
   "model": "JE-1000H",
   "projection_manifest": {
     "path": "projection_bundle_manifest.json",
-    "sha256": "57c10ffc00a2283b55178df3ebf7d4223fbdc9b01b2fd89c2c53494110b35aa8"
+    "sha256": "95f0359e76424565d21ae9595ac29f75dbb8a2cb55a509f082e8fa2e81fdbbab"
   },
   "region": "EU",
   "schema_version": "auto-manual-web-language-release-evidence/v1",
-  "version": "2.0-20260927"
+  "version": "2.0-20260927.1"
 }

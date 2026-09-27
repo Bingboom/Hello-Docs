@@ -264,27 +264,16 @@ Si ce produit est stocké pendant une longue période (3 à 6 mois) avec la batt
 
 
 
-## PORTS D'ENTRÉE
+## PORTS D'ENTRÉE/SORTIE
 
 
 
-<figure aria-label="PORTS D’ENTRÉE" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
+<figure aria-label="PORTS D’ENTRÉE/SORTIE" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Port d’extension CC (Entrée)</th>
 <td class="hb-spec-value manual-spec-value">36,8V-57,6V⎓75A max.</td>
 </tr>
-</tbody>
-</table></figure>
-
-
-
-## PORTS DE SORTIE
-
-
-
-<figure aria-label="PORTS DE SORTIE" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
-<tbody>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Port d’extension CC (Sortie)</th>
 <td class="hb-spec-value manual-spec-value">36,8V-57,6V⎓75A max.</td>

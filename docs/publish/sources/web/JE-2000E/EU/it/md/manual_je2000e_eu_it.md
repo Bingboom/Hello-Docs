@@ -404,20 +404,20 @@ Se viene visualizzato uno dei seguenti codici di errore, segui le azioni corrett
 
 
 
-# SPECIFICHE
+# SPECIFICHE TECNICHE
 
-## INFO GENERALI
+## INFORMAZIONI GENERALI
 
 
 
-<figure aria-label="INFO GENERALI" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
+<figure aria-label="INFORMAZIONI GENERALI" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Nome del prodotto</th>
 <td class="hb-spec-value manual-spec-value">Jackery Explorer 2000 Plus</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Numero di modello</th>
+<th class="hb-spec-label manual-spec-label" scope="row">Modello n.</th>
 <td class="hb-spec-value manual-spec-value">JE-2000E</td>
 </tr>
 <tr>
@@ -430,7 +430,7 @@ Se viene visualizzato uno dei seguenti codici di errore, segui le azioni corrett
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Peso</th>
-<td class="hb-spec-value manual-spec-value">Circa 18,8 kg</td>
+<td class="hb-spec-value manual-spec-value">Circa 19,1 kg</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Dimensioni</th>
@@ -445,11 +445,11 @@ Se viene visualizzato uno dei seguenti codici di errore, segui le azioni corrett
 
 
 
-## PORTE DI INPUT
+## PORTE IN INGRESSO
 
 
 
-<figure aria-label="PORTE DI INPUT" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
+<figure aria-label="PORTE IN INGRESSO" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">1 × Ingresso CA</th>
@@ -457,25 +457,25 @@ Se viene visualizzato uno dei seguenti codici di errore, segui le azioni corrett
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">2 porte DC8020</th>
-<td class="hb-spec-value manual-spec-value">PV: 11 V-16 V⎓8 A max., fino a 8 A max. con doppio ingresso<br/>Car: 16 V-60 V⎓12 A, fino a 21 A / 800 W max. con doppio ingresso</td>
+<td class="hb-spec-value manual-spec-value">Auto: 11 V-16 V⎓8 A max., fino a 8 A max. con doppio ingresso<br/>FV: 16 V-60 V⎓12 A, fino a 21 A / 800 W max. con doppio ingresso</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">1 × Porta di Espansione CC</th>
-<td class="hb-spec-value manual-spec-value">36.8 V-57.6 V⎓75 A max.</td>
+<td class="hb-spec-value manual-spec-value">36,8 V-57,6 V⎓75 A max.</td>
 </tr>
 </tbody>
 </table></figure>
 
 
 
-## PORTE DI USCITA
+## PORTE IN USCITA
 
 
 
-<figure aria-label="PORTE DI USCITA" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
+<figure aria-label="PORTE IN USCITA" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">2 × uscite CA</th>
+<th class="hb-spec-label manual-spec-label" scope="row">3 × Uscita CA</th>
 <td class="hb-spec-value manual-spec-value">230 V~ 50 Hz, 10 A max., 2400 W nominali totali, 4800 W di picco</td>
 </tr>
 <tr>
@@ -487,16 +487,20 @@ Se viene visualizzato uno dei seguenti codici di errore, segui le azioni corrett
 <td class="hb-spec-value manual-spec-value">18 W max., 5-6 V⎓3 A, 6-9 V⎓2 A, 9-12 V⎓1,5 A</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">2 × Uscita USB-C</th>
-<td class="hb-spec-value manual-spec-value">30 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓2,5 A, 15 V⎓2 A, 20 V⎓1,5 A<br/>140 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓3 A, 15 V⎓3 A, 20 V⎓5 A, 28 V⎓5 A</td>
+<th class="hb-spec-label manual-spec-label" scope="row">1 × Uscita USB-C 30 W</th>
+<td class="hb-spec-value manual-spec-value">30 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓2,5 A, 15 V⎓2 A, 20 V⎓1,5 A</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">1 × Porta CC 12 V</th>
+<th class="hb-spec-label manual-spec-label" scope="row">1 × Uscita USB-C 140 W</th>
+<td class="hb-spec-value manual-spec-value">140 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓3 A, 15 V⎓3 A, 20 V⎓5 A, 28 V⎓5 A</td>
+</tr>
+<tr>
+<th class="hb-spec-label manual-spec-label" scope="row">1 × Presa da 12 V CC</th>
 <td class="hb-spec-value manual-spec-value">12 V⎓10 A max.</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">1 × Porta di Espansione CC</th>
-<td class="hb-spec-value manual-spec-value">36.8 V-57.6 V⎓55 A max.</td>
+<td class="hb-spec-value manual-spec-value">36,8 V-57,6 V⎓55 A max.</td>
 </tr>
 </tbody>
 </table></figure>
@@ -510,11 +514,11 @@ Se viene visualizzato uno dei seguenti codici di errore, segui le azioni corrett
 <figure aria-label="TEMPERATURA OPERATIVA AMBIENTALE" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Temperatura di ricarica</th>
+<th class="hb-spec-label manual-spec-label" scope="row">Temperatura di carica</th>
 <td class="hb-spec-value manual-spec-value">da -10 °C a 45 °C</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Temperatura di scarico</th>
+<th class="hb-spec-label manual-spec-label" scope="row">Temperatura di scarica</th>
 <td class="hb-spec-value manual-spec-value">da -10 °C a 45 °C</td>
 </tr>
 </tbody>
