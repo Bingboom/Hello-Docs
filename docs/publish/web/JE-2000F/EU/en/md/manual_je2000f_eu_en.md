@@ -68,7 +68,7 @@ For assistance, please contact Jackery customer service.</p></div></div></figure
 
 ## FRONT VIEW
 
-<img src="../../../../_static/manual-assets/_pool/0c/0c21f8cfd3c86a1eaf0e42e0a199df4b71f832f24d0a24adbd11998d230e5243.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000f_eu_en/overview_front.png" data-web-finished-panel-sha256="0c21f8cfd3c86a1eaf0e42e0a199df4b71f832f24d0a24adbd11998d230e5243" alt="Main POWER Button LCD DC 12 V Port 12 V⎓10 A max. LED Light Button DC / USB Power Button LED Light USB-C 30 W Output 30 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓2.5 A, 15 V⎓2 A, 20 V⎓1.5 A AC Power Button USB-C 100 W Output 100 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓3 A, 15 V⎓3 A, 20 V⎓5 A USB-A 18 W Output 18 W max., 5-6 V⎓3 A, 6-9 V⎓2 A, 9-12 V⎓1.5 A AC Output 230 V~ 50 Hz, 10 A max., 2200 W rated in total, 4400 W surge peak；Total Output 2200 W Rated, 4400 W Surge Peak" />
+<img src="../../../../_static/manual-assets/_pool/0c/0c21f8cfd3c86a1eaf0e42e0a199df4b71f832f24d0a24adbd11998d230e5243.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000f_eu_en/overview_front.png" data-web-finished-panel-sha256="0c21f8cfd3c86a1eaf0e42e0a199df4b71f832f24d0a24adbd11998d230e5243" alt="Main POWER Button LCD DC 12 V Port 12 V⎓10 A max. LED Light Button DC / USB Power Button LED Light USB-C 30 W Output 30 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓2.5 A, 15 V⎓2 A, 20 V⎓1.5 A AC Power Button USB-C 100 W Output 100 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓3 A, 15 V⎓3 A, 20 V⎓5 A USB-A 18 W Output 18 W max., 5-6 V⎓3 A, 6-9 V⎓2 A, 9-12 V⎓1.5 A AC Output 230 V~ 50 Hz, 2200 W Rated；Total Output 2200 W Rated, 4400 W Surge Peak" />
 
 ## RIGHT SIDE VIEW
 
