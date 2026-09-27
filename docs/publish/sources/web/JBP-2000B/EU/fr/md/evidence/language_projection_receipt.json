@@ -1,8 +1,8 @@
 {
   "actions": {
-    "check": "fa5ca35b773925f359053dcca15452b3759515e46e91cb12a28d87764b251f18",
-    "html": "fa5ca35b773925f359053dcca15452b3759515e46e91cb12a28d87764b251f18",
-    "md": "fa5ca35b773925f359053dcca15452b3759515e46e91cb12a28d87764b251f18"
+    "check": "dac86db42d703ff53d49b8d02424fb68668f9a26d2d0a904e10554c2f2b29d4b",
+    "html": "dac86db42d703ff53d49b8d02424fb68668f9a26d2d0a904e10554c2f2b29d4b",
+    "md": "dac86db42d703ff53d49b8d02424fb68668f9a26d2d0a904e10554c2f2b29d4b"
   },
   "canonical_source": {
     "files": [
@@ -48,8 +48,8 @@
       },
       {
         "path": "page/regulatory_compliance.rst",
-        "sha256": "1aa70b5c1f3b340adcb926b82893aaa52217ed9ddb7d2e20c057c759a5c318ba",
-        "size": 777
+        "sha256": "cff6f894e279dd135a0084bc3974406d7aa89d5e469b7a42cd150fb1c5debce5",
+        "size": 826
       },
       {
         "path": "page/safety_info_fr.rst",
@@ -87,9 +87,9 @@
         "size": 4365
       }
     ],
-    "sha256": "364e3c6c6827e21831def97e95379bd2d01e853f788a0e34c959801409ff7655"
+    "sha256": "5095b7f09257edda33b3a794c0b09b8c79e6dd2d94cefcab4f9123a67930ad1a"
   },
-  "git_ref": "a36438cbc55550c1ec498432e6da49c374aac6b3",
+  "git_ref": "ad437f1cb0af97fa6da324042348c7c233ffb79d",
   "html": {
     "files": [
       {
@@ -514,8 +514,8 @@
       },
       {
         "path": "index.html",
-        "sha256": "96a84d9494403505c32519df71411069b0f4ab9a95134f7664e562ba9efea2af",
-        "size": 45339
+        "sha256": "ea642637ad8bf533eac77e1b8cead0e8cb0ddd8d7722c74227440bd876c61bcb",
+        "size": 45388
       },
       {
         "path": "jbp2000b_ac_charging.pdf",
@@ -1098,6 +1098,26 @@
         "size": 92895
       },
       {
+        "path": "main_unit1_je1000f_eu.pdf",
+        "sha256": "b1472dac6955372450fce508559be90ef6adf27eb55b17847b2233da1c5d4c1c",
+        "size": 65654
+      },
+      {
+        "path": "main_unit1_je1000f_eu.png",
+        "sha256": "69d662ff672f120bf00c12810f3834b258beefd129df6f064fdce8b0546a2279",
+        "size": 16294
+      },
+      {
+        "path": "main_unit1_je1000f_eu_en.pdf",
+        "sha256": "11cab390f787f949451de2fe531a5792c0f0d1050baefcd37cb819c3f7d9d221",
+        "size": 64703
+      },
+      {
+        "path": "main_unit1_je1000f_eu_en.png",
+        "sha256": "1bf7bbbd178ee212414bfb070d89eee8e384e9d1c20652f1a379bdb536e2e4b4",
+        "size": 15495
+      },
+      {
         "path": "manual_meta.json",
         "sha256": "efe3703226e9bd255180330dd38eb345b7ac9a53440d81cf1dece56cfb298226",
         "size": 182
@@ -1148,6 +1168,26 @@
         "size": 49487
       },
       {
+        "path": "op_lcd_mode_je1000f_eu.pdf",
+        "sha256": "d509b0067e8c8f1c56ba3881f886df3ed846fe6b500e1d543a00be70d352971a",
+        "size": 51090
+      },
+      {
+        "path": "op_lcd_mode_je1000f_eu.png",
+        "sha256": "ca843c0a7850b98fd78f5b0f692ac59c68c59ec1c92b3f1d61681332c746cdad",
+        "size": 47158
+      },
+      {
+        "path": "op_lcd_mode_je1000f_eu_en.pdf",
+        "sha256": "05899d2489f10db16941e201246dfe33b0c44647d41bc8ddc3db5e19f70a9bb7",
+        "size": 50848
+      },
+      {
+        "path": "op_lcd_mode_je1000f_eu_en.png",
+        "sha256": "f9ed0c8d1dc17b00daad2ba6a13053a2b45527527b15c41d83d353df890740bb",
+        "size": 46884
+      },
+      {
         "path": "op_led_light.pdf",
         "sha256": "68e2407169b1ad1be263d731b3956aa5d61b44a1d32964997ef3282ed37a33c9",
         "size": 78950
@@ -1156,6 +1196,46 @@
         "path": "op_led_light.png",
         "sha256": "bf4fce34dd33d44a77c7a96dd6aff81ccd76bdc5f6ba34cf59d69f95d021cdd3",
         "size": 55120
+      },
+      {
+        "path": "op_led_light_je1000f_eu.pdf",
+        "sha256": "673aaf0f3172c7fe530d7c41b0abdd68ff88cac6a4582d2d183f7bf6ab94d0ac",
+        "size": 86285
+      },
+      {
+        "path": "op_led_light_je1000f_eu.png",
+        "sha256": "95e50a6dd12c5b15aadae9ecebf6d7afc187116c197c3905d83c48ccbd2072ae",
+        "size": 58980
+      },
+      {
+        "path": "op_led_light_je1000f_eu_en.pdf",
+        "sha256": "4cf3bbe867ce02fc55b343bdf47dba2a537bfb362ee330af363e6a2d1062f571",
+        "size": 85133
+      },
+      {
+        "path": "op_led_light_je1000f_eu_en.png",
+        "sha256": "bd1e161e77343ed2e9cd99ea4ccdea96f4caa184102714f4ea48135583ea04b2",
+        "size": 59862
+      },
+      {
+        "path": "op_led_light_je1000f_jp.pdf",
+        "sha256": "0ce448a42a4b61f4f72a5b8bc3749aad06e9136b57b435de16917b2f831628ca",
+        "size": 390039
+      },
+      {
+        "path": "op_led_light_je1000f_jp.png",
+        "sha256": "099fd6defbf232560f23e6c7b3f6ab1acd7977b3835ae4adeff4eca8b4294128",
+        "size": 58121
+      },
+      {
+        "path": "op_led_light_je1000f_us.pdf",
+        "sha256": "4425605f9fe43cee58c9478cf2b3b373be3ea7e1f6a21781ef34cb638fcd24db",
+        "size": 86171
+      },
+      {
+        "path": "op_led_light_je1000f_us.png",
+        "sha256": "483c0dcfcfd6c0f8c460a32d9e320f07c3b7571cc1af80b1ac9d5b8f235430cc",
+        "size": 61759
       },
       {
         "path": "op_main_power.pdf",
@@ -1176,6 +1256,26 @@
         "path": "op_ups_mode.png",
         "sha256": "e8803f665abb9353460c3800cf37eacc22ab9d0799b604fb467990303aacac55",
         "size": 88997
+      },
+      {
+        "path": "op_ups_mode_je1000f_eu.pdf",
+        "sha256": "34f2d3e6c5997a9d08feec253dbbd060faa424be19ed840d09064cd2e1e63b0a",
+        "size": 64969
+      },
+      {
+        "path": "op_ups_mode_je1000f_eu.png",
+        "sha256": "db5996a79e2f0ecf3bbd0d04fc7788c10adffd7914d0fe6770b9817e909eabf3",
+        "size": 90865
+      },
+      {
+        "path": "op_ups_mode_je1000f_eu_en.pdf",
+        "sha256": "46f1cbbc9450461dbf73ed5c218e21df1bb000a1221427db8e759f3184aea103",
+        "size": 63979
+      },
+      {
+        "path": "op_ups_mode_je1000f_eu_en.png",
+        "sha256": "9aa0c1668423a77e9c63fd3d4731d38420fc2283bec8fda769269fa081a72da0",
+        "size": 89235
       },
       {
         "path": "product_overview-en.pdf",
@@ -1209,8 +1309,8 @@
       },
       {
         "path": "searchindex.js",
-        "sha256": "623fdaa2ab6eb0fa19311716a5515aea461d3ba8a839657021576ac1c6fef70b",
-        "size": 9643
+        "sha256": "d341edfab92b988351e62cc48f57cf11ec9c6fc70c0ea0899d4e1d412384286a",
+        "size": 9680
       },
       {
         "path": "solar_adapter.pdf",
@@ -1238,7 +1338,7 @@
         "size": 316221
       }
     ],
-    "sha256": "7ce55a1fa5010de627a559eb15c2b12ead589b9ab22071abb67fded984495a32"
+    "sha256": "32290d3ece8ec948d3d1a19c866ea267100001aff1f23214d2efbee4f9754c1c"
   },
   "language": "fr",
   "markdown": {
@@ -1355,19 +1455,19 @@
       },
       {
         "path": "manual_jbp2000b_eu_fr.md",
-        "sha256": "30b846d88fbf4e7d35e4c688c7afaa9c3d9ae3acfcde5922b784687e40cd1670",
-        "size": 24752
+        "sha256": "17c1c52eece9b07e7a494133555eb15ec750f331ab02511eef8f8500099bdb93",
+        "size": 25266
       }
     ],
     "manual": "manual_jbp2000b_eu_fr.md",
-    "sha256": "6ac43bdfc6e8628681113a7cdd3d37985523cd0d7a4af0b10486dc0eda1ae6b5"
+    "sha256": "f2ca7a980dee947f74e8a18104955f79ea5fedbe5d6013940b0d69bac23d3409"
   },
   "model": "JBP-2000B",
   "projection_manifest": {
     "path": "projection_bundle_manifest.json",
-    "sha256": "8d09ffab668a97fef2b15615da90b98de4c3cc8a64e72a48c606d6da869b3701"
+    "sha256": "24e1a5e6bf4e9d17c2dcb067bf9d2d6f3c2b6c5f086926c12fb0dc74460462c8"
   },
   "region": "EU",
   "schema_version": "auto-manual-web-language-release-evidence/v1",
-  "version": "2.0"
+  "version": "2.0-20260926"
 }

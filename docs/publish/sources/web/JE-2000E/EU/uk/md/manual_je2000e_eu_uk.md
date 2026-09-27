@@ -59,7 +59,7 @@
 
 ## ВИГЛЯД СПЕРЕДУ
 
-<img src="assets/ir/7d68b6cff1963a2b0062c2d863c1a15b0cba1fdf5006162c17647fb00ed7b9c7/overview_front.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_uk/overview_front.png" data-web-finished-panel-sha256="7d68b6cff1963a2b0062c2d863c1a15b0cba1fdf5006162c17647fb00ed7b9c7" alt="Головна кнопка POWER LCD Порт DC 12 В 12 В⎓10 А макс. Кнопка LED-світла Кнопка POWER DC / USB LED-світло Вихід USB-C 30 Вт 30 Вт макс., 5 В⎓3 A, 9 В⎓3 A, 12 В⎓2,5 A, 15 В⎓2 A, 20 В⎓1,5 A Кнопка AC1 Вихід USB-C 140 Вт 140 Вт макс., 5 В⎓3 A, 9 В⎓3 A, 12 В⎓3 A, 15 В⎓3 A, 20 В⎓5 A, 28 В⎓5 A Кнопка AC2 Вихід USB-A 18 Вт 18 Вт макс., 5-6 В⎓3 A, 6-9 В⎓2 A, 9-12 В⎓1,5 A Вихід змінного струму 230 В~ 50 Гц, 10 A макс., 2400 Вт ном. потужності；Загальна вихідна потужність Номінальна потужність 2400 Вт, пікова потужність 4800 Вт" />
+<img src="assets/ir/7d68b6cff1963a2b0062c2d863c1a15b0cba1fdf5006162c17647fb00ed7b9c7/overview_front.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_uk/overview_front.png" data-web-finished-panel-sha256="7d68b6cff1963a2b0062c2d863c1a15b0cba1fdf5006162c17647fb00ed7b9c7" alt="Головна кнопка POWER LCD Порт DC 12 В 12 В⎓10 А макс. Кнопка LED-світла Кнопка DC / USB LED-світло Вихід USB-C 30 Вт 30 Вт макс., 5 В⎓3 A, 9 В⎓3 A, 12 В⎓2,5 A, 15 В⎓2 A, 20 В⎓1,5 A Кнопка AC1 Вихід USB-C 140 Вт 140 Вт макс., 5 В⎓3 A, 9 В⎓3 A, 12 В⎓3 A, 15 В⎓3 A, 20 В⎓5 A, 28 В⎓5 A Кнопка AC2 Вихід USB-A 18 Вт 18 Вт макс., 5-6 В⎓3 A, 6-9 В⎓2 A, 9-12 В⎓1,5 A Вихід змінного струму 230 В~ 50 Гц, 10 A макс., 2400 Вт ном. потужності；Загальна вихідна потужність Номінальна потужність 2400 Вт, пікова потужність 4800 Вт" />
 
 ## ВИГЛЯД З ЛІВОГО ТА ПРАВОГО БОКІВ
 
@@ -615,15 +615,7 @@ Jackery Explorer 2000 Plus має два вхідні порти DC8020 і су�
 
 2.2 Натисніть головну кнопку POWER на пристрої, щоб увімкнути його; значки Wi-Fi та Bluetooth на пристрої блимають, що означає перехід пристрою в режим налаштування мережі, торкніться кнопки \"**Значок блимає**\" і дозвольте додатку підключитися до найближчих пристроїв та надати дозвіл Bluetooth.
 
-<img src="assets/ir/662646752f7e432edae4e01fc78e9ae9f7a6045f231a62fafb76308c8e96a302/app_add_device.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-add-device" data-web-finished-panel-path="assets/je2000e_eu_shared/app_add_device.png" data-web-finished-panel-sha256="662646752f7e432edae4e01fc78e9ae9f7a6045f231a62fafb76308c8e96a302" alt="Заглушка кроку додавання пристрою в додатку." />
-
-Головна кнопка POWER
-
-Кнопка AC1
-
-Кнопка AC2
-
-Кнопка POWER DC / USB
+<img src="assets/ir/ce5ffc5a0ae089bec38cfd27b225d95a5eef903b0f5edacfccefd4867a23f04f/app_add_device_panel.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-add-device" data-web-finished-panel-path="assets/je2000e_eu_uk/app_add_device_panel.png" data-web-finished-panel-sha256="ce5ffc5a0ae089bec38cfd27b225d95a5eef903b0f5edacfccefd4867a23f04f" alt="Головна кнопка POWER Кнопка AC1 Кнопка AC2 Кнопка DC / USB" />
 
 2.3 Після натискання на значок знайденого пристрою додаток автоматично підключить пристрій через Bluetooth.
 
@@ -671,11 +663,11 @@ Jackery Explorer 2000 Plus має два вхідні порти DC8020 і су�
 
 - Wi-Fi та Bluetooth автоматично вмикаються після увімкнення пристрою, а значки Wi-Fi та Bluetooth на екрані загоряються.
 
-- Одночасно натисніть і утримуйте кнопку DC / USB + кнопку AC, доки значки Wi-Fi та Bluetooth на екрані не загоряться.
+- Одночасно натисніть і утримуйте кнопку DC / USB + кнопку AC1, доки значки Wi-Fi та Bluetooth на екрані не загоряться.
 
 ### 4.2 Щоб вимкнути Wi-Fi та Bluetooth
 
-Одночасно натисніть і утримуйте кнопку DC / USB + кнопку AC, доки значки Wi-Fi та Bluetooth на екрані не згаснуть.
+Одночасно натисніть і утримуйте кнопку DC / USB + кнопку AC1, доки значки Wi-Fi та Bluetooth на екрані не згаснуть.
 
 ### 4.3 Щоб скинути Wi-Fi та Bluetooth
 

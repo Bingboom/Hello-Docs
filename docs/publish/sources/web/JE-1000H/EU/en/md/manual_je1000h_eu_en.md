@@ -12,7 +12,7 @@ Please note that no further notifications will be given in case of any update, r
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>WARNING</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>INSTRUCTIONS PERTAINING TO RISK OF FIRE, ELECTRIC SHOCK, OR INJURY TO PERSONS</p></td></tr></tbody></table>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>WARNING</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">WARNING</span><span class="manual-callout-label-sizer" aria-hidden="true">CAUTION</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTE</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>INSTRUCTIONS PERTAINING TO RISK OF FIRE, ELECTRIC SHOCK, OR INJURY TO PERSONS</p></td></tr></tbody></table>
 
 
 
@@ -288,7 +288,7 @@ Enable/disable this feature in the Jackery App. The setting is not retained when
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>CAUTION</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>CAUTION</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">WARNING</span><span class="manual-callout-label-sizer" aria-hidden="true">CAUTION</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTE</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p><strong>USB-C 140W is a USB-PD Power Source 3 (PS3) high-power output port.</strong> If the connected user device or accessory does not meet safety requirements, there may be a fire risk. Before using these ports, ensure that the connected device or accessory has fire safety protection.</p></li>
 <li><p>Only connect Jackery Explorer 1000 Plus to devices or accessories that comply with clauses 6.3, 6.4, and 6.5 of IEC/EN/UL 62368-1 (or other equivalent standards).</p></li>
 <li><p>To obtain maximum output power, use the USB-C to USB-C 5A cable (20V DC/5A, 100W; 28V DC/5A, 140W).</p></li>
@@ -301,7 +301,7 @@ The product can charge your car battery using the Jackery 12V automobile battery
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>CAUTION</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>CAUTION</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">WARNING</span><span class="manual-callout-label-sizer" aria-hidden="true">CAUTION</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTE</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>The DC 12V port is only compatible with 12V car batteries and not suitable for 24V systems.</p></li>
 <li><p>Do not start the car while the product is charging the car battery through the 12V DC output port, as this may damage the product.</p></li>
 <li><p>This feature is intended for emergency use only and cannot charge a dead or damaged car battery.</p></li>
@@ -318,7 +318,7 @@ To prevent unnecessary battery consumption from forgetting to turn off the outpu
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>NOTE</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Energy Saving Mode resumes its previous state after powering on. Manual switching is required for mode changes.</p></td></tr></tbody></table>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>NOTE</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">WARNING</span><span class="manual-callout-label-sizer" aria-hidden="true">CAUTION</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTE</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Energy Saving Mode resumes its previous state after powering on. Manual switching is required for mode changes.</p></td></tr></tbody></table>
 
 
 
@@ -417,7 +417,7 @@ the actual output power is lower than the rated output power in this mode but re
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>CAUTION</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>CAUTION</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">WARNING</span><span class="manual-callout-label-sizer" aria-hidden="true">CAUTION</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTE</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>This product does not support 0 ms switching. Do not connect it to equipment that requires a 0 ms switching power supply, such as data servers or workstations.</p></li>
 <li><p>Before use, please test compatibility with your device multiple times.</p></li>
 <li><p>Do not connect loads exceeding the maximum output power of the product. Otherwise, overload protection will be triggered.</p></li>
@@ -434,7 +434,7 @@ This product can support up to 5 battery packs to meet the need for large power 
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>CAUTION</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>CAUTION</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">WARNING</span><span class="manual-callout-label-sizer" aria-hidden="true">CAUTION</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTE</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>Ensure all products are powered off before connecting the Jackery Battery Pack 2000 to Jackery Explorer 1000 Plus.</p></li>
 <li><p>To ensure proper operation of the product, make sure the air intake and exhaust vents on both sides are unobstructed. Leave at least 200 mm of space between the vents and any objects to allow for proper heat dissipation.</p></li>
 <li><p>When the product is used with connected battery packs, the default maximum number of stacked battery packs is 3, and the product must be placed on a flat, stable surface with sufficient load-bearing capacity.</p></li>
@@ -456,7 +456,7 @@ This product can support up to 5 battery packs to meet the need for large power 
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>NOTE</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>NOTE</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">WARNING</span><span class="manual-callout-label-sizer" aria-hidden="true">CAUTION</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTE</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>The recommended charging temperature for the product ranges from -10°C to 45°C, and the discharging temperature ranges from -10°C to 45°C.</p></li>
 <li><p>Operating the product beyond this temperature range may restrict its charging and discharging capabilities, or even prevent it from charging or discharging.</p></li>
 <li><p>The charging power and battery capacity of the product may vary due to temperature fluctuations.</p></li>
@@ -471,7 +471,7 @@ This product can support up to 5 battery packs to meet the need for large power 
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>CAUTION</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Make sure the AC charging cable is fully and securely plugged into the AC input port. An incomplete connection may cause unstable current, overheating, poor contact, or device malfunction.</p></td></tr></tbody></table>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>CAUTION</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">WARNING</span><span class="manual-callout-label-sizer" aria-hidden="true">CAUTION</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTE</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Make sure the AC charging cable is fully and securely plugged into the AC input port. An incomplete connection may cause unstable current, overheating, poor contact, or device malfunction.</p></td></tr></tbody></table>
 
 
 
@@ -493,13 +493,13 @@ If one DC8020 input port needs to connect two solar panels simultaneously, pleas
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>CAUTION</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>One DC8020 input port can be connected to at most two solar panels.</p></td></tr></tbody></table>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>CAUTION</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">WARNING</span><span class="manual-callout-label-sizer" aria-hidden="true">CAUTION</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTE</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>One DC8020 input port can be connected to at most two solar panels.</p></td></tr></tbody></table>
 
 
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>CAUTION</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Ensure that the input voltage for both DC input ports is the same. Failure to do so may damage the product. For example:</p>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>CAUTION</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">WARNING</span><span class="manual-callout-label-sizer" aria-hidden="true">CAUTION</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTE</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Ensure that the input voltage for both DC input ports is the same. Failure to do so may damage the product. For example:</p>
 <ul class="simple">
 <li><p>Use the same model of Jackery solar panels and the same number of panels when connecting solar panels to both DC8020 Input ports.</p></li>
 <li><p>Do not charge the product using both a car charger and a solar panel simultaneously. Doing so may blow the car fuse or result in charging failure.</p></li>
@@ -518,7 +518,7 @@ This product can be charged using a 12V car charger. Ensure that the car charger
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>CAUTION</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>CAUTION</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">WARNING</span><span class="manual-callout-label-sizer" aria-hidden="true">CAUTION</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTE</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>Please start the vehicle before charging your power station.</p></li>
 <li><p>If the vehicle is running on bumpy roads, it is forbidden to use the car charger in case it causes non-standard operation. The Company will not be responsible for any loss caused by non-standard operation.</p></li>
 <li><p>Vehicle charging is only applicable to vehicles with 12V DC, not 24V DC. Please do not charge this product in a 24V vehicle to avoid personal injury and property loss.</p></li>
@@ -768,7 +768,7 @@ The sales receipt from the first consumer purchaser, or other reasonable documen
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>NOTE</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>If "<strong>the device has been bound</strong>" is prompted during the binding process, the following two ways can be used for connection:</p>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>NOTE</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">WARNING</span><span class="manual-callout-label-sizer" aria-hidden="true">CAUTION</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTE</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>If "<strong>the device has been bound</strong>" is prompted during the binding process, the following two ways can be used for connection:</p>
 <ul class="simple">
 <li><p>The device owner will share this device with other users through the App.</p></li>
 <li><p>Press and hold power button + DC / USB power button for 3 seconds to reset the device's Wi-Fi and Bluetooth, and then re-bind the device.</p></li>
@@ -781,7 +781,7 @@ The sales receipt from the first consumer purchaser, or other reasonable documen
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>NOTE</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>NOTE</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">WARNING</span><span class="manual-callout-label-sizer" aria-hidden="true">CAUTION</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTE</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>Please select a Wi-Fi network in the 2.4 GHz band. The device does not support a Wi-Fi network in the 5 GHz band.</p></li>
 </ul>
 </td></tr></tbody></table>
@@ -796,7 +796,7 @@ The above screenshots are for reference only.
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>CAUTION</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>The Jackery App can connect to only one power station via Bluetooth at a time. Returning to the device list automatically disconnects Bluetooth. Tap the power station in the list again to reconnect automatically.</p></td></tr></tbody></table>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>CAUTION</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">WARNING</span><span class="manual-callout-label-sizer" aria-hidden="true">CAUTION</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTE</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>The Jackery App can connect to only one power station via Bluetooth at a time. Returning to the device list automatically disconnects Bluetooth. Tap the power station in the list again to reconnect automatically.</p></td></tr></tbody></table>
 
 
 
