@@ -178,76 +178,73 @@ Le produit peut charger la batterie de votre voiture à l\'aide du câble de cha
 
 La fonction de reprise de la sortie CA/CC est désactivée par défaut. Activez cette fonction dans l'application afin que l'appareil mémorise l'état de sortie CA/CC et reprenne automatiquement les sorties CA et CC dans les conditions définies.
 
-<table>
+
+
+<figure aria-label="Conditions de reprise automatique / Conditions sans reprise automatique" class="hb-auto-resume-composition"><table class="hb-auto-resume-table"><colgroup><col class="hb-auto-resume-col"/><col class="hb-auto-resume-col"/></colgroup>
 <thead>
-<tr>
-<th class="head"><p>Conditions de reprise automatique</p></th>
-<th class="head"><p>Conditions sans reprise automatique</p></th>
+<tr><th class="head hb-auto-resume-left" scope="col"><p>Conditions de reprise automatique</p></th>
+<th class="head hb-auto-resume-right" scope="col"><p>Conditions sans reprise automatique</p></th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><p>Mise sous tension/redémarrage après arrêt ou redémarrage</p></td>
-<td><p>Sortie désactivée manuellement (bouton/App)</p></td>
+<tr><td class="hb-auto-resume-left"><p>Mise sous tension/redémarrage après arrêt ou redémarrage</p></td>
+<td class="hb-auto-resume-right"><p>Sortie désactivée manuellement (bouton/App)</p></td>
 </tr>
-<tr>
-<td rowspan="2"><p>SOC de la batterie ≥ limite de décharge +10 % une fois la limite atteinte</p></td>
-<td><p>Sortie désactivée en mode économie d’énergie</p></td>
+<tr><td class="hb-auto-resume-left" rowspan="2"><p>SOC de la batterie ≥ limite de décharge +10 % une fois la limite atteinte</p></td>
+<td class="hb-auto-resume-right"><p>Sortie désactivée en mode économie d’énergie</p></td>
 </tr>
-<tr>
-<td><p>Sortie désactivée suite à un déclenchement de protection</p></td>
+<tr><td class="hb-auto-resume-right"><p>Sortie désactivée suite à un déclenchement de protection</p></td>
 </tr>
-<tr>
-<td><p>Mise à niveau OTA terminée</p></td>
-<td><p>Sortie désactivée par le minuteur de décharge</p></td>
+<tr><td class="hb-auto-resume-left"><p>Mise à niveau OTA terminée</p></td>
+<td class="hb-auto-resume-right"><p>Sortie désactivée par le minuteur de décharge</p></td>
 </tr>
 </tbody>
-</table>
+</table></figure>
+
+
 
 ## AFFICHAGE LCD
 
-<table style="width:100%; border-collapse:collapse; margin:0.75rem 0 0.5rem 0;">
-<tbody>
-<tr>
-<td rowspan="6" style="text-align: center; width: 24%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top;"><img src="assets/ir/5ad760a312744579dfde8a81c4b34a35cee8d0881e9f416fcccc7b314043e30c/operation_lcd.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_fr/operation_lcd.png" data-web-finished-panel-sha256="5ad760a312744579dfde8a81c4b34a35cee8d0881e9f416fcccc7b314043e30c" alt="Mode d&#39;affichage LCD." /></td>
-<td rowspan="3" style="width: 18%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Allumer en discontinu</td>
-<td style="width: 12%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Allumer</td>
-<td style="width: 46%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Appuyez sur le bouton POWER principal ou lorsque le produit est en charge.</td>
-</tr>
-<tr>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Éteindre</td>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Appuyez sur le bouton POWER principal.</td>
-</tr>
-<tr>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Arrêt automatique</td>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">L'écran LCD s'éteint automatiquement et entre en mode veille après 2 minutes d'inactivité.</td>
-</tr>
-<tr>
-<td rowspan="3" style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Allumer en continu (en cours de charge ou de décharge)</td>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Allumer</td>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Appuyez deux fois sur le bouton POWER principal lorsque le produit est allumé.</td>
-</tr>
-<tr>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Éteindre</td>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Appuyez sur le bouton POWER principal.</td>
-</tr>
-<tr>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Arrêt automatique</td>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">L'écran LCD s'éteint automatiquement après 2 heures d'inactivité.</td>
-</tr>
-</tbody>
-</table>
+
+
+<figure aria-label="Mode d'affichage LCD." class="hb-lcd-mode-composition" data-component-id="HB-TABLE-LCD-MODE"><div class="hb-lcd-mode-art-panel"><img alt="Mode d'affichage LCD." class="hb-lcd-mode-art" src="assets/ir/5ad760a312744579dfde8a81c4b34a35cee8d0881e9f416fcccc7b314043e30c/operation_lcd.png"/></div><div class="hb-lcd-mode-table-panel"><table class="hb-lcd-mode-table"><colgroup><col class="hb-lcd-mode-col-state"/><col class="hb-lcd-mode-col-action"/><col class="hb-lcd-mode-col-copy"/></colgroup><tbody><tr><td class="hb-lcd-mode-state" rowspan="3">Allumer en discontinu</td><td class="hb-lcd-mode-action">Allumer</td><td class="hb-lcd-mode-copy">Appuyez sur le bouton POWER principal ou lorsque le produit est en charge.</td></tr><tr><td class="hb-lcd-mode-action">Éteindre</td><td class="hb-lcd-mode-copy">Appuyez sur le bouton POWER principal.</td></tr><tr><td class="hb-lcd-mode-action">Arrêt automatique</td><td class="hb-lcd-mode-copy">L'écran LCD s'éteint automatiquement et entre en mode veille après 2 minutes d'inactivité.</td></tr><tr><td class="hb-lcd-mode-state" rowspan="3">Allumer en continu (en cours de charge ou de décharge)</td><td class="hb-lcd-mode-action">Allumer</td><td class="hb-lcd-mode-copy">Appuyez deux fois sur le bouton POWER principal lorsque le produit est allumé.</td></tr><tr><td class="hb-lcd-mode-action">Éteindre</td><td class="hb-lcd-mode-copy">Appuyez sur le bouton POWER principal.</td></tr><tr><td class="hb-lcd-mode-action">Arrêt automatique</td><td class="hb-lcd-mode-copy">L'écran LCD s'éteint automatiquement après 2 heures d'inactivité.</td></tr></tbody></table></div></figure>
+
+
 
 Vous pouvez également définir le mode d\'affichage de l\'écran dans l\'application Jackery.
 
 ## FONCTIONNEMENT DES BOUTONS
 
-| Boutons | Utilisation | Fonction |
-|----|----|----|
-| Bouton POWER principal + Bouton CA1 | Appuyer 3 secondes sur les deux | Activer/désactiver le mode économie d\'énergie |
-| Bouton POWER principal + Bouton **CC/USB** | Appuyer 3 secondes sur les deux | Réinitialiser le Wi-Fi et le Bluetooth |
-| Bouton **CC/USB** + Bouton CA1 | Appuyer 1 seconde sur les deux | Activer/désactiver le Wi-Fi et le Bluetooth |
-| Bouton POWER principal + Bouton d\'éclairage LED | Appuyer 1 seconde sur les deux | Activer/désactiver le mode de charge d\'urgence |
+
+
+<figure aria-label="Boutons / Utilisation / Fonction" class="hb-key-combination-composition" tabindex="0"><table class="hb-key-combination-table"><colgroup><col class="hb-key-col-buttons"/><col class="hb-key-col-operation"/><col class="hb-key-col-function"/></colgroup>
+<thead>
+<tr><th class="head hb-key-buttons" scope="col"><p>Boutons</p></th>
+<th class="head hb-key-operation" scope="col"><p>Utilisation</p></th>
+<th class="head hb-key-function" scope="col"><p>Fonction</p></th>
+</tr>
+</thead>
+<tbody>
+<tr><td class="hb-key-buttons"><p>Bouton POWER principal + Bouton CA1</p></td>
+<td class="hb-key-operation"><p>Appuyer 3 secondes sur les deux</p></td>
+<td class="hb-key-function"><p>Activer/désactiver le mode économie d'énergie</p></td>
+</tr>
+<tr><td class="hb-key-buttons"><p>Bouton POWER principal + Bouton <strong>CC/USB</strong></p></td>
+<td class="hb-key-operation"><p>Appuyer 3 secondes sur les deux</p></td>
+<td class="hb-key-function"><p>Réinitialiser le Wi-Fi et le Bluetooth</p></td>
+</tr>
+<tr><td class="hb-key-buttons"><p>Bouton <strong>CC/USB</strong> + Bouton CA1</p></td>
+<td class="hb-key-operation"><p>Appuyer 1 seconde sur les deux</p></td>
+<td class="hb-key-function"><p>Activer/désactiver le Wi-Fi et le Bluetooth</p></td>
+</tr>
+<tr><td class="hb-key-buttons"><p>Bouton POWER principal + Bouton d'éclairage LED</p></td>
+<td class="hb-key-operation"><p>Appuyer 1 seconde sur les deux</p></td>
+<td class="hb-key-function"><p>Activer/désactiver le mode de charge d'urgence</p></td>
+</tr>
+</tbody>
+</table></figure>
+
+
 
 # ALIMENTATION SANS INTERRUPTION (ASI)
 
@@ -288,9 +285,7 @@ Ce produit peut prendre en charge jusqu\'à 5 packs batterie pour répondre aux 
 
 
 
-|  |  |  |
-|----|----|----|
-| **Jackery Battery Pack 2000** | **Câble de rallonge** | **Manuel d'utilisation** |
+<img src="assets/ir/19c2003d531888e872ee7017a6b4d14e8177b3452233ab84d87d00518f316c22/battery_pack_kit.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_fr/battery_pack_kit.png" data-web-finished-panel-sha256="19c2003d531888e872ee7017a6b4d14e8177b3452233ab84d87d00518f316c22" alt="Jackery Battery Pack 2000, Câble de rallonge, Manuel d’utilisation (vendu séparément)" />
 
 ## CHARGE
 
