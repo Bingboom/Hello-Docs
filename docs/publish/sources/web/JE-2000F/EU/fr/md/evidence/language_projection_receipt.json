@@ -1,8 +1,8 @@
 {
   "actions": {
-    "check": "cba561bb5442ce63972efc2ae2105feea8eaab61409b46857ecf018472214d8c",
-    "html": "cba561bb5442ce63972efc2ae2105feea8eaab61409b46857ecf018472214d8c",
-    "md": "cba561bb5442ce63972efc2ae2105feea8eaab61409b46857ecf018472214d8c"
+    "check": "c30daf44ba274687337296976c17c528652d0b1a29fe5fb15dbe3b70016d8217",
+    "html": "c30daf44ba274687337296976c17c528652d0b1a29fe5fb15dbe3b70016d8217",
+    "md": "c30daf44ba274687337296976c17c528652d0b1a29fe5fb15dbe3b70016d8217"
   },
   "canonical_source": {
     "files": [
@@ -28,8 +28,8 @@
       },
       {
         "path": "page/05_operation_guide_placeholder.rst",
-        "sha256": "508f6d7f7af9af77fca01ac9d12a4e8f7d484e16109df2422f698fcd9b6b1855",
-        "size": 10921
+        "sha256": "5afb46e4b8bb7fb4132fe0fd024f6b57adf7071354a4bef537d311561a253ae5",
+        "size": 11999
       },
       {
         "path": "page/06_ups_mode.rst",
@@ -53,13 +53,13 @@
       },
       {
         "path": "page/12_app_setup_placeholder.rst",
-        "sha256": "d510ca450af2e7323c3e8c4dde887a1a7f7db91e03376372876694a85e824803",
-        "size": 4295
+        "sha256": "29fd72def78f1fd74f32a9e632150191127816c6f1bec87fd94fd020050cc90b",
+        "size": 4230
       },
       {
         "path": "page/charging.rst",
-        "sha256": "98ccda0dc1211d443c770b7dbd78b81713ef4f30c2bcab5d121da6ed45ca767d",
-        "size": 5490
+        "sha256": "b329cdd2d62cd2e533f9632a72df1a748579a770225afbcc4e359e19c1b3b24b",
+        "size": 5479
       },
       {
         "path": "page/lcd_icons_fr.rst",
@@ -87,9 +87,9 @@
         "size": 1853
       }
     ],
-    "sha256": "e695384c5a5fdf919f1adaf8abb2e322c8e6434ddb92dd5f8e84abec33ae7513"
+    "sha256": "bb7c552fac5ea2d773672b8c7c3a0895f1d4f8e70e7249302b3bed5c1910ed6b"
   },
-  "git_ref": "77fe0bd5f856df73ccb885def18efbadc8946ee7",
+  "git_ref": "54a4cd242af48314738ce326a24904a3d20bdcd3",
   "html": {
     "files": [
       {
@@ -684,8 +684,8 @@
       },
       {
         "path": "index.html",
-        "sha256": "b14dc61787e316dc53961176ba2ed5f6db8710845e07e4f5e7d80614735d561d",
-        "size": 84124
+        "sha256": "d910f6e5b6256e44fe51d7d305581799735f7fc6626857fbb89fc46948b0e8cb",
+        "size": 84059
       },
       {
         "path": "jbp2000b_ac_charging.pdf",
@@ -1268,6 +1268,26 @@
         "size": 92895
       },
       {
+        "path": "main_unit1_je1000f_eu.pdf",
+        "sha256": "b1472dac6955372450fce508559be90ef6adf27eb55b17847b2233da1c5d4c1c",
+        "size": 65654
+      },
+      {
+        "path": "main_unit1_je1000f_eu.png",
+        "sha256": "69d662ff672f120bf00c12810f3834b258beefd129df6f064fdce8b0546a2279",
+        "size": 16294
+      },
+      {
+        "path": "main_unit1_je1000f_eu_en.pdf",
+        "sha256": "11cab390f787f949451de2fe531a5792c0f0d1050baefcd37cb819c3f7d9d221",
+        "size": 64703
+      },
+      {
+        "path": "main_unit1_je1000f_eu_en.png",
+        "sha256": "1bf7bbbd178ee212414bfb070d89eee8e384e9d1c20652f1a379bdb536e2e4b4",
+        "size": 15495
+      },
+      {
         "path": "manual_meta.json",
         "sha256": "b016e5978ef88e0e56337585daed9b587e650d05f115099336f90813c7be2ff4",
         "size": 185
@@ -1316,6 +1336,26 @@
         "path": "op_lcd_mode.png",
         "sha256": "7a44a5af8097bdf8c18b1faea682bc78cf8f1495f4b4d4d523466d4807be1244",
         "size": 49487
+      },
+      {
+        "path": "op_lcd_mode_je1000f_eu.pdf",
+        "sha256": "d509b0067e8c8f1c56ba3881f886df3ed846fe6b500e1d543a00be70d352971a",
+        "size": 51090
+      },
+      {
+        "path": "op_lcd_mode_je1000f_eu.png",
+        "sha256": "ca843c0a7850b98fd78f5b0f692ac59c68c59ec1c92b3f1d61681332c746cdad",
+        "size": 47158
+      },
+      {
+        "path": "op_lcd_mode_je1000f_eu_en.pdf",
+        "sha256": "05899d2489f10db16941e201246dfe33b0c44647d41bc8ddc3db5e19f70a9bb7",
+        "size": 50848
+      },
+      {
+        "path": "op_lcd_mode_je1000f_eu_en.png",
+        "sha256": "f9ed0c8d1dc17b00daad2ba6a13053a2b45527527b15c41d83d353df890740bb",
+        "size": 46884
       },
       {
         "path": "op_led_light.pdf",
@@ -1388,6 +1428,26 @@
         "size": 88997
       },
       {
+        "path": "op_ups_mode_je1000f_eu.pdf",
+        "sha256": "34f2d3e6c5997a9d08feec253dbbd060faa424be19ed840d09064cd2e1e63b0a",
+        "size": 64969
+      },
+      {
+        "path": "op_ups_mode_je1000f_eu.png",
+        "sha256": "db5996a79e2f0ecf3bbd0d04fc7788c10adffd7914d0fe6770b9817e909eabf3",
+        "size": 90865
+      },
+      {
+        "path": "op_ups_mode_je1000f_eu_en.pdf",
+        "sha256": "46f1cbbc9450461dbf73ed5c218e21df1bb000a1221427db8e759f3184aea103",
+        "size": 63979
+      },
+      {
+        "path": "op_ups_mode_je1000f_eu_en.png",
+        "sha256": "9aa0c1668423a77e9c63fd3d4731d38420fc2283bec8fda769269fa081a72da0",
+        "size": 89235
+      },
+      {
         "path": "product_overview-en.pdf",
         "sha256": "bb3ca33f3a54b42533182725c54837098af25f85d2ded25b89a1c30a2387da54",
         "size": 74054
@@ -1448,7 +1508,7 @@
         "size": 316221
       }
     ],
-    "sha256": "a6a1d71b395a7c03c39ba536a54503d6d8da08604d15111d50913e1830d0a072"
+    "sha256": "2e1d3a0b2c26dc1cde6e06fd4343218f45ed189a661ae7b642773bfe3b44a0a2"
   },
   "language": "fr",
   "markdown": {
@@ -1735,19 +1795,19 @@
       },
       {
         "path": "manual_je2000f_eu_fr.md",
-        "sha256": "1798f66199066b64a86f22cd027da9f416136e19e66ed1d9333e1b9276aba8e7",
-        "size": 70980
+        "sha256": "5732edaaa096ff602290ccc8a5f20a7cb8afb859c5e4ad57a46f316f0c2cf822",
+        "size": 73945
       }
     ],
     "manual": "manual_je2000f_eu_fr.md",
-    "sha256": "97bb4edff181bdf681cd4f782e88c6b206261c1c80b72302263b2c297a759153"
+    "sha256": "2725b54dcfdf61ab8aef54c812333239600d52839a39cbb279a0827dbf90c0ea"
   },
   "model": "JE-2000F",
   "projection_manifest": {
     "path": "projection_bundle_manifest.json",
-    "sha256": "1a9baa6ea481814da3e45431fc22019964f6cf02e13393e89874102d410b3166"
+    "sha256": "9782fde072f32f5c12d5802d6ca4d00081652b4fff145e2d1dc64f086f222c54"
   },
   "region": "EU",
   "schema_version": "auto-manual-web-language-release-evidence/v1",
-  "version": "2.2"
+  "version": "2.3"
 }

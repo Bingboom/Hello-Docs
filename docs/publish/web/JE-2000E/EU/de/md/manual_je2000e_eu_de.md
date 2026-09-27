@@ -44,11 +44,11 @@ Bitte geben Sie gebrauchte Batterien und Akkumulatoren an einer örtlichen Samme
 
 
 
-<figure aria-label="LIEFERUMFANG" class="hb-inbox-composition" data-card-count="3" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="three-card-responsive"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Abbildung der Powerstation als Platzhalter." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je2000e_eu_de/inbox_main.png" data-web-finished-panel-sha256="0a9c016c2dfcdaba1081654fc09f60856416a4383d7a652a45093c8fb132bada" src="../../../../_static/manual-assets/_pool/0a/0a9c016c2dfcdaba1081654fc09f60856416a4383d7a652a45093c8fb132bada.png"/><div class="hb-inbox-label">
+<figure aria-label="LIEFERUMFANG" class="hb-inbox-composition" data-card-count="3" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="three-card-responsive"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Abbildung der Powerstation." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je2000e_eu_de/inbox_main.png" data-web-finished-panel-sha256="0a9c016c2dfcdaba1081654fc09f60856416a4383d7a652a45093c8fb132bada" src="../../../../_static/manual-assets/_pool/0a/0a9c016c2dfcdaba1081654fc09f60856416a4383d7a652a45093c8fb132bada.png"/><div class="hb-inbox-label">
 <p><strong>Jackery Explorer 2000 Plus</strong></p>
-</div></li><li class="hb-inbox-card" data-item-number="2"><img alt="Abbildung des AC-Ladekabels als Platzhalter." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je2000e_eu_de/inbox_cable.png" data-web-finished-panel-sha256="9c526f2917e4483af821a37a78898f9add0aa6f7538ac83fd2ff232755e3d28b" src="../../../../_static/manual-assets/_pool/9c/9c526f2917e4483af821a37a78898f9add0aa6f7538ac83fd2ff232755e3d28b.png"/><div class="hb-inbox-label">
+</div></li><li class="hb-inbox-card" data-item-number="2"><img alt="Abbildung des AC-Ladekabels." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je2000e_eu_de/inbox_cable.png" data-web-finished-panel-sha256="9c526f2917e4483af821a37a78898f9add0aa6f7538ac83fd2ff232755e3d28b" src="../../../../_static/manual-assets/_pool/9c/9c526f2917e4483af821a37a78898f9add0aa6f7538ac83fd2ff232755e3d28b.png"/><div class="hb-inbox-label">
 <p><strong>AC-Ladekabel</strong></p>
-</div></li><li class="hb-inbox-card" data-item-number="3"><img alt="Abbildung des Benutzerhandbuchs als Platzhalter." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je2000e_eu_de/inbox_manual.png" data-web-finished-panel-sha256="cf4e7b489c4476aca921d1c85136012d814fdbe1074ae3bbedd5e4750e80f9d5" src="../../../../_static/manual-assets/_pool/cf/cf4e7b489c4476aca921d1c85136012d814fdbe1074ae3bbedd5e4750e80f9d5.png"/><div class="hb-inbox-label">
+</div></li><li class="hb-inbox-card" data-item-number="3"><img alt="Abbildung des Benutzerhandbuchs." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je2000e_eu_de/inbox_manual.png" data-web-finished-panel-sha256="cf4e7b489c4476aca921d1c85136012d814fdbe1074ae3bbedd5e4750e80f9d5" src="../../../../_static/manual-assets/_pool/cf/cf4e7b489c4476aca921d1c85136012d814fdbe1074ae3bbedd5e4750e80f9d5.png"/><div class="hb-inbox-label">
 <p>Benutzerhandbuch</p>
 </div></li></ol><div class="hb-inbox-tip" role="note"><div class="hb-inbox-tip-label"><p><strong>TIPP</strong></p></div><div class="hb-inbox-tip-body"><p>Das Autoladekabel ist nicht im Lieferumfang enthalten, kann jedoch separat auf unserer Website erworben werden.
 Bei Fragen wenden Sie sich bitte an den Jackery-Kundendienst.</p></div></div></figure>
@@ -155,7 +155,7 @@ Das Produkt kann Ihre Fahrzeugbatterie mit dem Jackery 12-V-Autobatterie-Ladekab
 
 
 <table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>VORSICHT</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">WARNUNG</span><span class="manual-callout-label-sizer" aria-hidden="true">VORSICHT</span><span class="manual-callout-label-sizer" aria-hidden="true">HINWEIS</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
-<li><p>Der DC-12-V-Anschluss ist nur mit 12-V-Autobatterien kompatibel und nicht für 24-V-Systeme geeignet.</p></li>
+<li><p>Die DC-12V-Buchse ist nur mit 12-V-Autobatterien kompatibel und nicht für 24-V-Systeme geeignet.</p></li>
 <li><p>Starten Sie das Fahrzeug nicht, während das Produkt die Fahrzeugbatterie über den 12-V-DC-Ausgang lädt, da dies das Produkt beschädigen kann.</p></li>
 <li><p>Diese Funktion ist nur für den Notfall vorgesehen und kann eine leere oder beschädigte Fahrzeugbatterie nicht aufladen.</p></li>
 </ul>
@@ -210,7 +210,7 @@ Die Wiederaufnahmefunktion für AC- und DC-Ausgänge ist standardmäßig deaktiv
 
 
 
-<figure aria-label="Platzhalter für den LCD-Anzeigemodus." class="hb-lcd-mode-composition" data-component-id="HB-TABLE-LCD-MODE"><div class="hb-lcd-mode-art-panel"><img alt="Platzhalter für den LCD-Anzeigemodus." class="hb-lcd-mode-art" src="../../../../_static/manual-assets/_pool/71/71f85bd15d966cb3b856e158091d58f181a6fe4991bd96459ff08e3f9964161f.png"/></div><div class="hb-lcd-mode-table-panel"><table class="hb-lcd-mode-table"><colgroup><col class="hb-lcd-mode-col-state"/><col class="hb-lcd-mode-col-action"/><col class="hb-lcd-mode-col-copy"/></colgroup><tbody><tr><td class="hb-lcd-mode-state" rowspan="3">Kurzzeitig an</td><td class="hb-lcd-mode-action">Ein</td><td class="hb-lcd-mode-copy">Drücken Sie die POWER-Taste oder während das Produkt geladen wird.</td></tr><tr><td class="hb-lcd-mode-action">Aus</td><td class="hb-lcd-mode-copy">Drücken Sie die POWER-Taste.</td></tr><tr><td class="hb-lcd-mode-action">Autom. aus</td><td class="hb-lcd-mode-copy">Die LCD-Anzeige schaltet sich nach 2 Minuten Inaktivität automatisch aus und wechselt in den Schlafmodus.</td></tr><tr><td class="hb-lcd-mode-state" rowspan="3">Dauerhaft an (beim Laden oder Entladen)</td><td class="hb-lcd-mode-action">Ein</td><td class="hb-lcd-mode-copy">Drücken Sie die POWER-Taste zweimal, wenn das Produkt eingeschaltet ist.</td></tr><tr><td class="hb-lcd-mode-action">Aus</td><td class="hb-lcd-mode-copy">Drücken Sie die POWER-Taste.</td></tr><tr><td class="hb-lcd-mode-action">Autom. aus</td><td class="hb-lcd-mode-copy">Die LCD-Anzeige schaltet sich nach 2 Stunden Inaktivität automatisch aus.</td></tr></tbody></table></div></figure>
+<figure aria-label="LCD-Anzeigemodus." class="hb-lcd-mode-composition" data-component-id="HB-TABLE-LCD-MODE"><div class="hb-lcd-mode-art-panel"><img alt="LCD-Anzeigemodus." class="hb-lcd-mode-art" src="../../../../_static/manual-assets/_pool/71/71f85bd15d966cb3b856e158091d58f181a6fe4991bd96459ff08e3f9964161f.png"/></div><div class="hb-lcd-mode-table-panel"><table class="hb-lcd-mode-table"><colgroup><col class="hb-lcd-mode-col-state"/><col class="hb-lcd-mode-col-action"/><col class="hb-lcd-mode-col-copy"/></colgroup><tbody><tr><td class="hb-lcd-mode-state" rowspan="3">Kurzzeitig an</td><td class="hb-lcd-mode-action">Ein</td><td class="hb-lcd-mode-copy">Drücken Sie die POWER-Taste oder während das Produkt geladen wird.</td></tr><tr><td class="hb-lcd-mode-action">Aus</td><td class="hb-lcd-mode-copy">Drücken Sie die POWER-Taste.</td></tr><tr><td class="hb-lcd-mode-action">Autom. aus</td><td class="hb-lcd-mode-copy">Die LCD-Anzeige schaltet sich nach 2 Minuten Inaktivität automatisch aus und wechselt in den Schlafmodus.</td></tr><tr><td class="hb-lcd-mode-state" rowspan="3">Dauerhaft an (beim Laden oder Entladen)</td><td class="hb-lcd-mode-action">Ein</td><td class="hb-lcd-mode-copy">Drücken Sie die POWER-Taste zweimal, wenn das Produkt eingeschaltet ist.</td></tr><tr><td class="hb-lcd-mode-action">Aus</td><td class="hb-lcd-mode-copy">Drücken Sie die POWER-Taste.</td></tr><tr><td class="hb-lcd-mode-action">Autom. aus</td><td class="hb-lcd-mode-copy">Die LCD-Anzeige schaltet sich nach 2 Stunden Inaktivität automatisch aus.</td></tr></tbody></table></div></figure>
 
 
 
@@ -276,7 +276,7 @@ liegt die tatsächliche Ausgangsleistung in diesem Modus unter der Nennleistung;
 
 Dieses Produkt unterstützt bis zu 5 Batteriepacks, um den Bedarf an großer Energiekapazität zu decken. Weitere Informationen zur Verwendung finden Sie im *Jackery Battery Pack 2000 Benutzerhandbuch*.
 
-<img src="../../../../_static/manual-assets/_pool/71/71c2640879dfc04adc93621859b3713abf0af483f8d6b2ba452b13f854187c0b.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_de/extra_battery.png" data-web-finished-panel-sha256="71c2640879dfc04adc93621859b3713abf0af483f8d6b2ba452b13f854187c0b" alt="Abbildung der Batteriepack-Verbindung als Platzhalter." />
+<img src="../../../../_static/manual-assets/_pool/71/71c2640879dfc04adc93621859b3713abf0af483f8d6b2ba452b13f854187c0b.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_de/extra_battery.png" data-web-finished-panel-sha256="71c2640879dfc04adc93621859b3713abf0af483f8d6b2ba452b13f854187c0b" alt="Abbildung der Batteriepack-Verbindung." />
 
 
 
@@ -329,7 +329,7 @@ In diesem Modus können Sie die tragbare Powerstation mit der AC-Lademethode sch
 
 Jackery Explorer 2000 Plus verfügt über zwei DC8020-Eingangsanschlüsse und ist mit den Jackery-Solarmodulen kompatibel.
 
-<img src="../../../../_static/manual-assets/_pool/fe/fe154a059060bfc0bf2ada7d8564665ad7cb433e945f46515b7b6fe102c747ed.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_de/charging_solar.png" data-web-finished-panel-sha256="fe154a059060bfc0bf2ada7d8564665ad7cb433e945f46515b7b6fe102c747ed" alt="Abbildung der Solarladeverbindung als Platzhalter 1." />
+<img src="../../../../_static/manual-assets/_pool/fe/fe154a059060bfc0bf2ada7d8564665ad7cb433e945f46515b7b6fe102c747ed.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_de/charging_solar.png" data-web-finished-panel-sha256="fe154a059060bfc0bf2ada7d8564665ad7cb433e945f46515b7b6fe102c747ed" alt="Abbildung der Solarladeverbindung (1)." />
 
 Wenn ein DC8020-Eingangsanschluss zwei Solarmodule gleichzeitig anschließen muss, beziehen Sie sich bitte auf die folgende Abbildung zum Aufladen über den Solarpanel-Anschluss (separat erhältlich, nicht im Lieferumfang enthalten).
 
@@ -590,7 +590,7 @@ Die Kaufquittung des ersten Käufers oder ein anderer angemessener schriftlicher
 
 ## 1. Laden Sie die App herunter und melden Sie sich an
 
-<img src="../../../../_static/manual-assets/_pool/37/37bf4f4918f338372737a22a6a43c72d1610cae96e063cc66201f9f529701c24.png" style="width: 320px;" width="320" height="65" alt="Platzhalter für QR-Code und App-Store-Download." />
+<img src="../../../../_static/manual-assets/_pool/37/37bf4f4918f338372737a22a6a43c72d1610cae96e063cc66201f9f529701c24.png" style="width: 320px;" width="320" height="65" alt="QR-Code und App-Store-Download." />
 
 Suchen Sie im Google Play Store oder im App Store nach \"Jackery\", um die App zu installieren. Danach können Sie sich registrieren und anmelden. Alternativ können Sie den folgenden QR-Code scannen, um die App herunterzuladen und zu installieren.
 
@@ -628,7 +628,7 @@ Suchen Sie im Google Play Store oder im App Store nach \"Jackery\", um die App z
 
 Nachdem das Gerät erfolgreich zur App hinzugefügt wurde, leuchtet das WLAN-Symbol am Gerät dauerhaft.
 
-<img src="../../../../_static/manual-assets/_pool/ef/efa9084d8a028e9781cd16eed9cbe71fe281efed640f4e436a1345f956814baf.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-connect-result" data-web-finished-panel-path="assets/je2000e_eu_shared/app_connect_result.png" data-web-finished-panel-sha256="efa9084d8a028e9781cd16eed9cbe71fe281efed640f4e436a1345f956814baf" alt="Platzhalter für das Ergebnis der App-Einrichtung." />
+<img src="../../../../_static/manual-assets/_pool/ef/efa9084d8a028e9781cd16eed9cbe71fe281efed640f4e436a1345f956814baf.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-connect-result" data-web-finished-panel-path="assets/je2000e_eu_shared/app_connect_result.png" data-web-finished-panel-sha256="efa9084d8a028e9781cd16eed9cbe71fe281efed640f4e436a1345f956814baf" alt="Ergebnis der App-Einrichtung." />
 
 Die oben gezeigten Screenshots dienen nur als Referenz.
 

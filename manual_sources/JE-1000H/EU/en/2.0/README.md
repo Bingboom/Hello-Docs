@@ -50,3 +50,13 @@ change with it. The German 12 V port label takes the reviewed
 (`DC-12V-Ausgangstaste`), and the figure stays as printed. In
 `phase2/Spec_Notes.csv`, the it/uk trademark note replaces the printed German
 `und` with the reviewed `e` / `та`. `source_manifest.json` re-locks both files.
+
+Ukrainian warning label (2026-09-27): the uk symbols table prints the Italian
+`AVVERTENZA` (PDF page 91). The uk WARNING label now reads `ПОПЕРЕДЖЕННЯ`, as
+the same page prints it on its safety callout, in `phase2/Localized_Copy.csv`
+and `phase2/symbols_blocks.csv`. `source_manifest.json` re-locks both files.
+The de/it temperature heading, which the print sets in English (PDF pages
+70/87), now uses the reviewed `UMGEBUNGSTEMPERATUR IM BETRIEB` /
+`TEMPERATURA OPERATIVA AMBIENTALE` in `phase2/spec_titles.csv` and
+`phase2/Localized_Copy.csv` (operator ruling 2026-09-27); `source_manifest.json`
+re-locks both files.

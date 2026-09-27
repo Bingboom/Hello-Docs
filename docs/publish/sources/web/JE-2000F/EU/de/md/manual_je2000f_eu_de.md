@@ -2,7 +2,7 @@
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>WARNUNG</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>SICHERHEITSHINWEISE ZUR VERMEIDUNG VON BRANDGEFAHR, STROMSCHLAG ODER VERLETZUNGEN</p></td></tr></tbody></table>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>WARNUNG</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">WARNUNG</span><span class="manual-callout-label-sizer" aria-hidden="true">VORSICHT</span><span class="manual-callout-label-sizer" aria-hidden="true">HINWEIS</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>SICHERHEITSHINWEISE ZUR VERMEIDUNG VON BRANDGEFAHR, STROMSCHLAG ODER VERLETZUNGEN</p></td></tr></tbody></table>
 
 
 
@@ -44,11 +44,11 @@ Bitte geben Sie gebrauchte Batterien und Akkumulatoren an einer örtlichen Samme
 
 
 
-<figure aria-label="LIEFERUMFANG" class="hb-inbox-composition" data-card-count="3" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="three-card-responsive"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Abbildung der Powerstation als Platzhalter." class="hb-inbox-art" src="assets/ir/6c7f1deea2f6211ba3ed3273900aa7595234d3b8fe5a67830defa4cf13ee6fe6/main_unit1.png"/><div class="hb-inbox-label">
+<figure aria-label="LIEFERUMFANG" class="hb-inbox-composition" data-card-count="3" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="three-card-responsive"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Abbildung der Powerstation." class="hb-inbox-art" src="assets/ir/6c7f1deea2f6211ba3ed3273900aa7595234d3b8fe5a67830defa4cf13ee6fe6/main_unit1.png"/><div class="hb-inbox-label">
 <p><strong>Jackery Explorer 2000</strong></p>
-</div></li><li class="hb-inbox-card" data-item-number="2"><img alt="Abbildung des AC-Ladekabels als Platzhalter." class="hb-inbox-art" src="assets/ir/287650f3a89ae520e32f0d75df8401151b808004ee50075b96aff70af04ca4ef/ac_charging_cable.png"/><div class="hb-inbox-label">
+</div></li><li class="hb-inbox-card" data-item-number="2"><img alt="Abbildung des AC-Ladekabels." class="hb-inbox-art" src="assets/ir/287650f3a89ae520e32f0d75df8401151b808004ee50075b96aff70af04ca4ef/ac_charging_cable.png"/><div class="hb-inbox-label">
 <p><strong>AC-Ladekabel</strong></p>
-</div></li><li class="hb-inbox-card" data-item-number="3"><img alt="Abbildung des Benutzerhandbuchs als Platzhalter." class="hb-inbox-art" src="assets/ir/87ac44e52863324b761a672089e6b0497e40fdf48432f698fccf30508060c60a/manual_icon1.png"/><div class="hb-inbox-label">
+</div></li><li class="hb-inbox-card" data-item-number="3"><img alt="Abbildung des Benutzerhandbuchs." class="hb-inbox-art" src="assets/ir/87ac44e52863324b761a672089e6b0497e40fdf48432f698fccf30508060c60a/manual_icon1.png"/><div class="hb-inbox-label">
 <p>Benutzerhandbuch</p>
 </div></li></ol><div class="hb-inbox-tip" role="note"><div class="hb-inbox-tip-label"><p><strong>TIPP</strong></p></div><div class="hb-inbox-tip-body"><p>Das Autoladekabel ist nicht im Lieferumfang enthalten, kann jedoch separat auf unserer Website erworben werden.
 Bei Fragen wenden Sie sich bitte an den Jackery-Kundendienst.</p></div></div></figure>
@@ -141,7 +141,7 @@ Bei Fragen wenden Sie sich bitte an den Jackery-Kundendienst.</p></div></div></f
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>VORSICHT</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>VORSICHT</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">WARNUNG</span><span class="manual-callout-label-sizer" aria-hidden="true">VORSICHT</span><span class="manual-callout-label-sizer" aria-hidden="true">HINWEIS</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p><strong>Der USB-C-100-W-Anschluss ist ein Hochleistungs-Ausgangsanschluss des USB-PD-Typs Power Source 3 (PS3).</strong> Wenn das angeschlossene Benutzergerät oder Zubehör die Sicherheitsanforderungen nicht erfüllt, kann Brandgefahr bestehen. Stellen Sie vor der Verwendung dieses Anschlusses sicher, dass das angeschlossene Gerät oder Zubehör über Brandschutz verfügt.</p></li>
 <li><p>Schließen Sie Jackery Explorer 2000 nur an Geräte oder Zubehör an, die den Abschnitten 6.3, 6.4 und 6.5 der IEC/EN/UL 62368-1 (oder anderen gleichwertigen Normen) entsprechen.</p></li>
 <li><p>Verwenden Sie für die maximale Ausgangsleistung das USB-C-auf-USB-C-5 A-Kabel (20 V DC/5 A, 100 W).</p></li>
@@ -154,7 +154,7 @@ Das Produkt kann Ihre Fahrzeugbatterie mit dem Jackery 12-V-Autobatterie-Ladekab
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>VORSICHT</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>VORSICHT</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">WARNUNG</span><span class="manual-callout-label-sizer" aria-hidden="true">VORSICHT</span><span class="manual-callout-label-sizer" aria-hidden="true">HINWEIS</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>Der DC-12-V-Anschluss ist nur mit 12-V-Autobatterien kompatibel und nicht für 24-V-Systeme geeignet.</p></li>
 <li><p>Starten Sie das Fahrzeug nicht, während das Produkt die Fahrzeugbatterie über den 12-V-DC-Ausgang lädt, da dies das Produkt beschädigen kann.</p></li>
 <li><p>Diese Funktion ist nur für den Notfall vorgesehen und kann eine leere oder beschädigte Fahrzeugbatterie nicht aufladen.</p></li>
@@ -171,7 +171,7 @@ Um zu verhindern, dass die Batterie unnötig entladen wird, wenn das Ausschalten
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>HINWEIS</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Der Energiesparmodus kehrt nach dem Einschalten in seinen vorherigen Zustand zurück. Für einen Moduswechsel ist ein manuelles Umschalten erforderlich.</p></td></tr></tbody></table>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>HINWEIS</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">WARNUNG</span><span class="manual-callout-label-sizer" aria-hidden="true">VORSICHT</span><span class="manual-callout-label-sizer" aria-hidden="true">HINWEIS</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Der Energiesparmodus kehrt nach dem Einschalten in seinen vorherigen Zustand zurück. Für einen Moduswechsel ist ein manuelles Umschalten erforderlich.</p></td></tr></tbody></table>
 
 
 
@@ -212,7 +212,7 @@ Die Wiederaufnahmefunktion für AC- und DC-Ausgänge ist standardmäßig deaktiv
 
 
 
-<figure aria-label="Platzhalter für den LCD-Anzeigemodus." class="hb-lcd-mode-composition" data-component-id="HB-TABLE-LCD-MODE"><div class="hb-lcd-mode-art-panel"><img alt="Platzhalter für den LCD-Anzeigemodus." class="hb-lcd-mode-art" src="assets/ir/d670fe5398d496c3acd79a32a97f96f3c4ae94e2666e6e4e4960d806f0fa26a1/operation_lcd.png"/></div><div class="hb-lcd-mode-table-panel"><table class="hb-lcd-mode-table"><colgroup><col class="hb-lcd-mode-col-state"/><col class="hb-lcd-mode-col-action"/><col class="hb-lcd-mode-col-copy"/></colgroup><tbody><tr><td class="hb-lcd-mode-state" rowspan="3">Kurzzeitig an</td><td class="hb-lcd-mode-action">Ein</td><td class="hb-lcd-mode-copy">Drücken Sie die Haupt-POWER-Taste oder während das Produkt geladen wird.</td></tr><tr><td class="hb-lcd-mode-action">Aus</td><td class="hb-lcd-mode-copy">Drücken Sie die Haupt-POWER-Taste.</td></tr><tr><td class="hb-lcd-mode-action">Autom. aus</td><td class="hb-lcd-mode-copy">Die LCD-Anzeige schaltet sich nach 2 Minuten Inaktivität automatisch aus und wechselt in den Schlafmodus.</td></tr><tr><td class="hb-lcd-mode-state" rowspan="3">Dauerhaft an (beim Laden oder Entladen)</td><td class="hb-lcd-mode-action">Ein</td><td class="hb-lcd-mode-copy">Drücken Sie die Haupt-POWER-Taste zweimal, wenn das Produkt eingeschaltet ist.</td></tr><tr><td class="hb-lcd-mode-action">Aus</td><td class="hb-lcd-mode-copy">Drücken Sie die Haupt-POWER-Taste.</td></tr><tr><td class="hb-lcd-mode-action">Autom. aus</td><td class="hb-lcd-mode-copy">Die LCD-Anzeige schaltet sich nach 2 Stunden Inaktivität automatisch aus.</td></tr></tbody></table></div></figure>
+<figure aria-label="LCD-Anzeigemodus." class="hb-lcd-mode-composition" data-component-id="HB-TABLE-LCD-MODE"><div class="hb-lcd-mode-art-panel"><img alt="LCD-Anzeigemodus." class="hb-lcd-mode-art" src="assets/ir/d670fe5398d496c3acd79a32a97f96f3c4ae94e2666e6e4e4960d806f0fa26a1/operation_lcd.png"/></div><div class="hb-lcd-mode-table-panel"><table class="hb-lcd-mode-table"><colgroup><col class="hb-lcd-mode-col-state"/><col class="hb-lcd-mode-col-action"/><col class="hb-lcd-mode-col-copy"/></colgroup><tbody><tr><td class="hb-lcd-mode-state" rowspan="3">Kurzzeitig an</td><td class="hb-lcd-mode-action">Ein</td><td class="hb-lcd-mode-copy">Drücken Sie die Haupt-POWER-Taste oder während das Produkt geladen wird.</td></tr><tr><td class="hb-lcd-mode-action">Aus</td><td class="hb-lcd-mode-copy">Drücken Sie die Haupt-POWER-Taste.</td></tr><tr><td class="hb-lcd-mode-action">Autom. aus</td><td class="hb-lcd-mode-copy">Die LCD-Anzeige schaltet sich nach 2 Minuten Inaktivität automatisch aus und wechselt in den Schlafmodus.</td></tr><tr><td class="hb-lcd-mode-state" rowspan="3">Dauerhaft an (beim Laden oder Entladen)</td><td class="hb-lcd-mode-action">Ein</td><td class="hb-lcd-mode-copy">Drücken Sie die Haupt-POWER-Taste zweimal, wenn das Produkt eingeschaltet ist.</td></tr><tr><td class="hb-lcd-mode-action">Aus</td><td class="hb-lcd-mode-copy">Drücken Sie die Haupt-POWER-Taste.</td></tr><tr><td class="hb-lcd-mode-action">Autom. aus</td><td class="hb-lcd-mode-copy">Die LCD-Anzeige schaltet sich nach 2 Stunden Inaktivität automatisch aus.</td></tr></tbody></table></div></figure>
 
 
 
@@ -255,7 +255,7 @@ Sie können den Bildschirm-Anzeigemodus auch in der Jackery-App einstellen.
 
 Schließen Sie das Produkt mit dem AC-Ladekabel an eine Steckdose an und drücken Sie anschließend die AC-Einschalttaste, um Ihre Geräte gleichzeitig zu versorgen.
 
-<img src="assets/ir/0c64da83ffb591ad8c4d9c372eb0ff99a1b120cf58206c603c78050c66fe91d8/ups.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000f_eu_de/ups.png" data-web-finished-panel-sha256="0c64da83ffb591ad8c4d9c372eb0ff99a1b120cf58206c603c78050c66fe91d8" alt="Abbildung der UPS-Verbindung als Platzhalter." />
+<img src="assets/ir/0c64da83ffb591ad8c4d9c372eb0ff99a1b120cf58206c603c78050c66fe91d8/ups.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000f_eu_de/ups.png" data-web-finished-panel-sha256="0c64da83ffb591ad8c4d9c372eb0ff99a1b120cf58206c603c78050c66fe91d8" alt="Abbildung der UPS-Verbindung." />
 
 Eine unterbrechungsfreie Stromversorgung (UPS) ist ein kontinuierliches Stromversorgungssystem, das bei einem Ausfall der Netzstromversorgung automatisch Backup-Strom für angeschlossene Geräte bereitstellt.
 
@@ -267,7 +267,7 @@ liegt die tatsächliche Ausgangsleistung in diesem Modus unter der Nennleistung;
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>VORSICHT</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>VORSICHT</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">WARNUNG</span><span class="manual-callout-label-sizer" aria-hidden="true">VORSICHT</span><span class="manual-callout-label-sizer" aria-hidden="true">HINWEIS</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>Dieses Produkt unterstützt kein Umschalten mit 0 ms. Schließen Sie es nicht an Geräte an, die eine Stromversorgung mit 0-ms-Umschaltung erfordern, wie z. B. Datenserver oder Workstations.</p></li>
 <li><p>Testen Sie vor der Verwendung die Kompatibilität mit Ihrem Gerät mehrmals.</p></li>
 <li><p>Schließen Sie keine Lasten an, die die maximale Ausgangsleistung des Produkts überschreiten. Andernfalls wird der Überlastschutz ausgelöst.</p></li>
@@ -284,7 +284,7 @@ liegt die tatsächliche Ausgangsleistung in diesem Modus unter der Nennleistung;
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>HINWEIS</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>HINWEIS</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">WARNUNG</span><span class="manual-callout-label-sizer" aria-hidden="true">VORSICHT</span><span class="manual-callout-label-sizer" aria-hidden="true">HINWEIS</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>Die empfohlene Ladetemperatur für das Produkt liegt bei von 0 °C bis 45 °C, und die Entladetemperatur liegt bei von -10 °C bis 45 °C.</p></li>
 <li><p>Der Betrieb des Produkts außerhalb dieses Temperaturbereichs kann die Lade- und Entladefähigkeit einschränken oder sogar verhindern, dass das Produkt lädt oder entlädt.</p></li>
 <li><p>Ladeleistung und Batteriekapazität des Produkts können sich aufgrund von Temperaturschwankungen ändern.</p></li>
@@ -299,7 +299,7 @@ liegt die tatsächliche Ausgangsleistung in diesem Modus unter der Nennleistung;
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>VORSICHT</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Stellen Sie sicher, dass das AC-Ladekabel vollständig und sicher in den AC-Eingangsanschluss eingesteckt ist. Eine unvollständige Verbindung kann zu instabilem Strom, Überhitzung, schlechtem Kontakt oder Fehlfunktionen des Geräts führen.</p></td></tr></tbody></table>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>VORSICHT</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">WARNUNG</span><span class="manual-callout-label-sizer" aria-hidden="true">VORSICHT</span><span class="manual-callout-label-sizer" aria-hidden="true">HINWEIS</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Stellen Sie sicher, dass das AC-Ladekabel vollständig und sicher in den AC-Eingangsanschluss eingesteckt ist. Eine unvollständige Verbindung kann zu instabilem Strom, Überhitzung, schlechtem Kontakt oder Fehlfunktionen des Geräts führen.</p></td></tr></tbody></table>
 
 
 
@@ -313,21 +313,21 @@ In diesem Modus können Sie die tragbare Powerstation mit der AC-Lademethode sch
 
 Jackery Explorer 2000 verfügt über zwei DC8020-Eingangsanschlüsse und ist mit den Jackery-Solarmodulen kompatibel.
 
-<img src="assets/ir/8a9b8005fd296f7c32760adea80e0a5e4a4c6549bd43b1050e0ab2371ba19e53/charging_solar_direct.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000f_eu_de/charging_solar_direct.png" data-web-finished-panel-sha256="8a9b8005fd296f7c32760adea80e0a5e4a4c6549bd43b1050e0ab2371ba19e53" alt="Abbildung der Solarladeverbindung als Platzhalter 1." />
+<img src="assets/ir/8a9b8005fd296f7c32760adea80e0a5e4a4c6549bd43b1050e0ab2371ba19e53/charging_solar_direct.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000f_eu_de/charging_solar_direct.png" data-web-finished-panel-sha256="8a9b8005fd296f7c32760adea80e0a5e4a4c6549bd43b1050e0ab2371ba19e53" alt="Abbildung der Solarladeverbindung (1)." />
 
 Wenn ein DC8020-Eingangsanschluss zwei Solarmodule gleichzeitig anschließen muss, beziehen Sie sich bitte auf die folgende Abbildung zum Aufladen über den Solarpanel-Anschluss (separat erhältlich, nicht im Lieferumfang enthalten).
 
-<img src="assets/ir/5e344ad0df88ab0f2473f56d1340ecaa802eaa2a7644904f800ca1b879881eef/charging_solar_adapter.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000f_eu_de/charging_solar_adapter.png" data-web-finished-panel-sha256="5e344ad0df88ab0f2473f56d1340ecaa802eaa2a7644904f800ca1b879881eef" alt="Abbildung der Solarladeverbindung als Platzhalter 2." />
+<img src="assets/ir/5e344ad0df88ab0f2473f56d1340ecaa802eaa2a7644904f800ca1b879881eef/charging_solar_adapter.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000f_eu_de/charging_solar_adapter.png" data-web-finished-panel-sha256="5e344ad0df88ab0f2473f56d1340ecaa802eaa2a7644904f800ca1b879881eef" alt="Abbildung der Solarladeverbindung (2)." />
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>VORSICHT</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>An einen DC8020-Eingangsanschluss können höchstens zwei Solarmodule angeschlossen werden.</p></td></tr></tbody></table>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>VORSICHT</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">WARNUNG</span><span class="manual-callout-label-sizer" aria-hidden="true">VORSICHT</span><span class="manual-callout-label-sizer" aria-hidden="true">HINWEIS</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>An einen DC8020-Eingangsanschluss können höchstens zwei Solarmodule angeschlossen werden.</p></td></tr></tbody></table>
 
 
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>VORSICHT</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>VORSICHT</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">WARNUNG</span><span class="manual-callout-label-sizer" aria-hidden="true">VORSICHT</span><span class="manual-callout-label-sizer" aria-hidden="true">HINWEIS</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>Stellen Sie sicher, dass die Eingangsspannung an beiden DC-Eingangsanschlüssen gleich ist. Andernfalls kann das Produkt beschädigt werden. Zum Beispiel:</p></li>
 <li><p>Verwenden Sie beim Anschluss von Solarmodulen an beide DC8020-Eingangsanschlüsse das gleiche Jackery-Solarmodell und die gleiche Anzahl an Modulen.</p></li>
 <li><p>Laden Sie das Produkt nicht gleichzeitig mit einem Autoladegerät und einem Solarpanel. Andernfalls kann die Fahrzeugsicherung durchbrennen oder der Ladevorgang fehlschlagen.</p></li>
@@ -346,7 +346,7 @@ Dieses Produkt kann mit einem 12-V-Autoladegerät aufgeladen werden. Stellen Sie
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>VORSICHT</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>VORSICHT</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">WARNUNG</span><span class="manual-callout-label-sizer" aria-hidden="true">VORSICHT</span><span class="manual-callout-label-sizer" aria-hidden="true">HINWEIS</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>Bitte starten Sie das Fahrzeug, bevor Sie Ihre Powerstation laden.</p></li>
 <li><p>Wenn das Fahrzeug auf unebenen Straßen fährt, darf das Autoladegerät nicht verwendet werden, da dies zu einem nicht standardmäßigen Betrieb führen kann. Das Unternehmen übernimmt keine Verantwortung für Verluste, die durch einen nicht standardmäßigen Betrieb entstehen.</p></li>
 <li><p>Das Laden über das Fahrzeug ist nur für Fahrzeuge mit 12 V DC geeignet, nicht für 24 V DC. Bitte laden Sie dieses Produkt nicht in einem 24-V-Fahrzeug, um Personen- und Sachschäden zu vermeiden.</p></li>
@@ -572,7 +572,7 @@ Die Kaufquittung des ersten Käufers oder ein anderer angemessener schriftlicher
 
 ## 1. Laden Sie die App herunter und melden Sie sich an
 
-<img src="assets/ir/37bf4f4918f338372737a22a6a43c72d1610cae96e063cc66201f9f529701c24/download.png" style="width: 320px;" width="320" height="65" alt="Platzhalter für QR-Code und App-Store-Download." />
+<img src="assets/ir/37bf4f4918f338372737a22a6a43c72d1610cae96e063cc66201f9f529701c24/download.png" style="width: 320px;" width="320" height="65" alt="QR-Code und App-Store-Download." />
 
 Suchen Sie im Google Play Store oder im App Store nach \"Jackery\", um die App zu installieren. Danach können Sie sich registrieren und anmelden. Alternativ können Sie den folgenden QR-Code scannen, um die App herunterzuladen und zu installieren.
 
@@ -588,7 +588,7 @@ Suchen Sie im Google Play Store oder im App Store nach \"Jackery\", um die App z
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>HINWEIS</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Wenn während des Kopplungsvorgangs „das Gerät wurde bereits gekoppelt“ angezeigt wird, können die folgenden zwei Möglichkeiten für die Kopplung verwendet werden:</p>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>HINWEIS</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">WARNUNG</span><span class="manual-callout-label-sizer" aria-hidden="true">VORSICHT</span><span class="manual-callout-label-sizer" aria-hidden="true">HINWEIS</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Wenn während des Kopplungsvorgangs „das Gerät wurde bereits gekoppelt“ angezeigt wird, können die folgenden zwei Möglichkeiten für die Kopplung verwendet werden:</p>
 <ul class="simple">
 <li><p>Der Besitzer des Geräts teilt dieses Gerät über die App mit anderen Benutzern.</p></li>
 <li><p>Halten Sie Haupt-POWER-Taste + DC/USB-Einschalttaste 3 Sekunden lang gedrückt, um WLAN und Bluetooth des Geräts zurückzusetzen, und koppeln Sie das Gerät anschließend erneut.</p></li>
@@ -601,7 +601,7 @@ Suchen Sie im Google Play Store oder im App Store nach \"Jackery\", um die App z
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>HINWEIS</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>HINWEIS</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">WARNUNG</span><span class="manual-callout-label-sizer" aria-hidden="true">VORSICHT</span><span class="manual-callout-label-sizer" aria-hidden="true">HINWEIS</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>Bitte wählen Sie ein WLAN-Netzwerk im 2,4-GHz-Band aus. Das Gerät unterstützt kein WLAN-Netzwerk im 5-GHz-Band.</p></li>
 </ul>
 </td></tr></tbody></table>
@@ -610,13 +610,13 @@ Suchen Sie im Google Play Store oder im App Store nach \"Jackery\", um die App z
 
 Nachdem das Gerät erfolgreich zur App hinzugefügt wurde, leuchtet das WLAN-Symbol am Gerät dauerhaft.
 
-<img src="assets/ir/6797b35ec9237f51288866c2a4b16a2a98052341c3692d7978883fd15fe3a842/app_connect_result.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-connect-result" data-web-finished-panel-path="assets/je2000f_eu_shared/app_connect_result.png" data-web-finished-panel-sha256="6797b35ec9237f51288866c2a4b16a2a98052341c3692d7978883fd15fe3a842" alt="Platzhalter für das Ergebnis der App-Einrichtung." />
+<img src="assets/ir/6797b35ec9237f51288866c2a4b16a2a98052341c3692d7978883fd15fe3a842/app_connect_result.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-connect-result" data-web-finished-panel-path="assets/je2000f_eu_shared/app_connect_result.png" data-web-finished-panel-sha256="6797b35ec9237f51288866c2a4b16a2a98052341c3692d7978883fd15fe3a842" alt="Ergebnis der App-Einrichtung." />
 
 Die oben gezeigten Screenshots dienen nur als Referenz.
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>VORSICHT</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Die Jackery-App kann jeweils nur mit einer Powerstation gleichzeitig per Bluetooth verbunden sein. Wenn Sie zur Geräteliste zurückkehren, wird Bluetooth automatisch getrennt. Tippen Sie die Powerstation in der Liste erneut an, um die Verbindung automatisch wiederherzustellen.</p></td></tr></tbody></table>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>VORSICHT</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">WARNUNG</span><span class="manual-callout-label-sizer" aria-hidden="true">VORSICHT</span><span class="manual-callout-label-sizer" aria-hidden="true">HINWEIS</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Die Jackery-App kann jeweils nur mit einer Powerstation gleichzeitig per Bluetooth verbunden sein. Wenn Sie zur Geräteliste zurückkehren, wird Bluetooth automatisch getrennt. Tippen Sie die Powerstation in der Liste erneut an, um die Verbindung automatisch wiederherzustellen.</p></td></tr></tbody></table>
 
 
 

@@ -276,9 +276,9 @@ Desactivado: no se ha configurado un temporizador de descarga. Activar/desactiva
 
 
 <table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>PRECAUCIÓN</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">ADVERTENCIA</span><span class="manual-callout-label-sizer" aria-hidden="true">PRECAUCIÓN</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTA</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
-<li><p>El puerto USB‑C de 100 W es una salida de alta potencia de tipo Fuente de Alimentación 3 (PS3) según USB‑PD. Si el dispositivo del usuario o accesorio conectado no cumple con los requisitos de seguridad, puede existir riesgo de incendio. Antes de usar estos puertos, asegúrese de que el dispositivo o accesorio conectado tenga protección contra incendios.</p></li>
+<li><p>El puerto USB‑C de 140 W es una salida de alta potencia de tipo Fuente de Alimentación 3 (PS3) según USB‑PD. Si el dispositivo del usuario o accesorio conectado no cumple con los requisitos de seguridad, puede existir riesgo de incendio. Antes de usar estos puertos, asegúrese de que el dispositivo o accesorio conectado tenga protección contra incendios.</p></li>
 <li><p>Solo conecte el Jackery Explorer 1000 Plus a dispositivos o accesorios que cumplan con las cláusulas 6.3, 6.4 y 6.5 de IEC/EN/UL 62368-1 (u otros estándares equivalentes).</p></li>
-<li><p>Para obtener la potencia máxima de salida, utilice el cable USB-C a USB-C de 5 A (20 V CC/5 A, 100W).</p></li>
+<li><p>Para obtener la potencia máxima de salida, utilice el cable USB-C a USB-C de 5 A (20 V CC/5 A, 100W; 28 V CC/5 A, 140W).</p></li>
 </ul>
 </td></tr></tbody></table>
 
@@ -773,7 +773,7 @@ Si aparece alguno de los siguientes códigos de fallo, siga las acciones correct
 
 Después de agregar exitosamente el dispositivo en la App, el icono del Wi-Fi en el dispositivo permanecerá siempre encendido.
 
-<img src="../../../../_static/manual-assets/_pool/8e/8e58d9aaa612d35d7327acfe5c4754757b4d8d94a1d65c4784ba425c862b094e.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_es/app_connect_result.png" data-web-finished-panel-sha256="8e58d9aaa612d35d7327acfe5c4754757b4d8d94a1d65c4784ba425c862b094e" alt="Marcador de posición de la pantalla de resultado de conexión en la aplicación." />
+<img src="../../../../_static/manual-assets/_pool/8e/8e58d9aaa612d35d7327acfe5c4754757b4d8d94a1d65c4784ba425c862b094e.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_es/app_connect_result.png" data-web-finished-panel-sha256="8e58d9aaa612d35d7327acfe5c4754757b4d8d94a1d65c4784ba425c862b094e" alt="Pantalla de resultado de conexión en la aplicación." />
 
 Las capturas de pantalla anteriores sirven solo de referencia.
 

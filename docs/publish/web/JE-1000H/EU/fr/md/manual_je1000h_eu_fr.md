@@ -274,9 +274,9 @@ température revienne dans la plage de fonctionnement normale.</td>
 
 
 <table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENTION</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">AVERTISSEMENT</span><span class="manual-callout-label-sizer" aria-hidden="true">ATTENTION</span><span class="manual-callout-label-sizer" aria-hidden="true">REMARQUE</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
-<li><p><strong>Les ports USB-C de 100 W sont des ports de sortie haute puissance de type Source d'alimentation 3 (PS3) selon USB-PD.</strong> Si l'appareil utilisateur ou l'accessoire connecté ne répond pas aux exigences de sécurité, il peut présenter un risque d'incendie. Avant d'utiliser ces ports, assurez-vous que l'appareil ou l'accessoire connecté dispose d'une protection contre les incendies.</p></li>
+<li><p><strong>Les ports USB-C de 140 W sont des ports de sortie haute puissance de type Source d'alimentation 3 (PS3) selon USB-PD.</strong> Si l'appareil utilisateur ou l'accessoire connecté ne répond pas aux exigences de sécurité, il peut présenter un risque d'incendie. Avant d'utiliser ces ports, assurez-vous que l'appareil ou l'accessoire connecté dispose d'une protection contre les incendies.</p></li>
 <li><p>Ne connectez Jackery Explorer 1000 Plus qu'à des appareils ou accessoires conformes aux clauses 6.3, 6.4 et 6.5 de la norme IEC/EN/UL 62368-1 (ou autres normes équivalentes).</p></li>
-<li><p>Pour obtenir la puissance de sortie maximale, utilisez le câble USB-C vers USB-C 5 A (20 V CC/5A, 100 W).</p></li>
+<li><p>Pour obtenir la puissance de sortie maximale, utilisez le câble USB-C vers USB-C 5 A (20 V CC/5A, 100 W ; 28 V CC/5A, 140 W).</p></li>
 </ul>
 </td></tr></tbody></table>
 
@@ -777,7 +777,7 @@ Vous pouvez également scanner le code QR ci-dessous pour télécharger et insta
 
 Une fois l\'appareil ajouté à la page d\'accueil, l\'icône Wi-Fi de l\'appareil restera allumée.
 
-<img src="../../../../_static/manual-assets/_pool/07/072945d3757367b5ff82566e159f7883fb71e2e6e3b6f3df60a35b88e86d93db.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_fr/app_connect_result.png" data-web-finished-panel-sha256="072945d3757367b5ff82566e159f7883fb71e2e6e3b6f3df60a35b88e86d93db" alt="Emplacement réservé à l&#39;écran de résultat de connexion dans l&#39;application." />
+<img src="../../../../_static/manual-assets/_pool/07/072945d3757367b5ff82566e159f7883fb71e2e6e3b6f3df60a35b88e86d93db.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_fr/app_connect_result.png" data-web-finished-panel-sha256="072945d3757367b5ff82566e159f7883fb71e2e6e3b6f3df60a35b88e86d93db" alt="Écran de résultat de connexion dans l&#39;application." />
 
 Les captures d\'écran ci-dessus sont fournies à titre indicatif.
 

@@ -2,7 +2,7 @@
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ПОПЕРЕДЖЕННЯ</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>ІНСТРУКЦІЇ З БЕЗПЕКИ ДЛЯ ЗАПОБІГАННЯ ПОЖЕЖІ, УРАЖЕННЮ ЕЛЕКТРИЧНИМ СТРУМОМ АБО ТРАВМАМ</p></td></tr></tbody></table>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ПОПЕРЕДЖЕННЯ</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">ПОПЕРЕДЖЕННЯ</span><span class="manual-callout-label-sizer" aria-hidden="true">УВАГА</span><span class="manual-callout-label-sizer" aria-hidden="true">ПРИМІТКА</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>ІНСТРУКЦІЇ З БЕЗПЕКИ ДЛЯ ЗАПОБІГАННЯ ПОЖЕЖІ, УРАЖЕННЮ ЕЛЕКТРИЧНИМ СТРУМОМ АБО ТРАВМАМ</p></td></tr></tbody></table>
 
 
 
@@ -44,11 +44,11 @@
 
 
 
-<figure aria-label="ЩО В КОРОБЦІ" class="hb-inbox-composition" data-card-count="3" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="three-card-responsive"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Заглушка зображення електростанції." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je3000c_eu_uk/inbox_unit.png" data-web-finished-panel-sha256="04f2cd211a89c461fb6b6a0a25c28884fb8fce19031df682472dac2d30cec548" src="assets/ir/04f2cd211a89c461fb6b6a0a25c28884fb8fce19031df682472dac2d30cec548/inbox_unit.png"/><div class="hb-inbox-label">
+<figure aria-label="ЩО В КОРОБЦІ" class="hb-inbox-composition" data-card-count="3" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="three-card-responsive"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Зображення електростанції." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je3000c_eu_uk/inbox_unit.png" data-web-finished-panel-sha256="04f2cd211a89c461fb6b6a0a25c28884fb8fce19031df682472dac2d30cec548" src="assets/ir/04f2cd211a89c461fb6b6a0a25c28884fb8fce19031df682472dac2d30cec548/inbox_unit.png"/><div class="hb-inbox-label">
 <p><strong>Jackery Explorer 3000</strong></p>
-</div></li><li class="hb-inbox-card" data-item-number="2"><img alt="Заглушка зображення кабелю для заряджання AC." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je3000c_eu_uk/inbox_cable.png" data-web-finished-panel-sha256="59e2fa98eaf11b00969de6439e4b3749baf270b61d83f2a019542927a2454177" src="assets/ir/59e2fa98eaf11b00969de6439e4b3749baf270b61d83f2a019542927a2454177/inbox_cable.png"/><div class="hb-inbox-label">
+</div></li><li class="hb-inbox-card" data-item-number="2"><img alt="Зображення кабелю для заряджання AC." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je3000c_eu_uk/inbox_cable.png" data-web-finished-panel-sha256="59e2fa98eaf11b00969de6439e4b3749baf270b61d83f2a019542927a2454177" src="assets/ir/59e2fa98eaf11b00969de6439e4b3749baf270b61d83f2a019542927a2454177/inbox_cable.png"/><div class="hb-inbox-label">
 <p><strong>Кабель для заряджання AC</strong></p>
-</div></li><li class="hb-inbox-card" data-item-number="3"><img alt="Заглушка зображення посібника користувача." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je3000c_eu_uk/inbox_manual.png" data-web-finished-panel-sha256="0aed07438c0128430a02de93042803cd1e4714ce7dbdcd4f51342a6cef7c31e2" src="assets/ir/0aed07438c0128430a02de93042803cd1e4714ce7dbdcd4f51342a6cef7c31e2/inbox_manual.png"/><div class="hb-inbox-label">
+</div></li><li class="hb-inbox-card" data-item-number="3"><img alt="Зображення посібника користувача." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je3000c_eu_uk/inbox_manual.png" data-web-finished-panel-sha256="0aed07438c0128430a02de93042803cd1e4714ce7dbdcd4f51342a6cef7c31e2" src="assets/ir/0aed07438c0128430a02de93042803cd1e4714ce7dbdcd4f51342a6cef7c31e2/inbox_manual.png"/><div class="hb-inbox-label">
 <p>Посібник користувача</p>
 </div></li></ol><div class="hb-inbox-tip" role="note"><div class="hb-inbox-tip-label"><p><strong>ПОРАДИ</strong></p></div><div class="hb-inbox-tip-body"><p>Кабель для заряджання від автомобіля не входить до комплекту, але його можна придбати окремо на нашому вебсайті.
 Для отримання допомоги зверніться до служби підтримки Jackery.</p></div></div></figure>
@@ -156,7 +156,7 @@
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>УВАГА</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>УВАГА</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">ПОПЕРЕДЖЕННЯ</span><span class="manual-callout-label-sizer" aria-hidden="true">УВАГА</span><span class="manual-callout-label-sizer" aria-hidden="true">ПРИМІТКА</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p><strong>USB-C 100 Вт є високопотужним вихідним портом USB-PD Power Source 3 (PS3).</strong> Якщо підключений пристрій користувача або аксесуар не відповідає вимогам безпеки, існує ризик пожежі. Перед використанням цих портів переконайтеся, що підключений пристрій або аксесуар має захист від пожежі.</p></li>
 <li><p>Підключайте Jackery Explorer 3000 лише до пристроїв або аксесуарів, що відповідають пунктам 6.3, 6.4 і 6.5 IEC/EN/UL 62368-1 (або іншим еквівалентним стандартам).</p></li>
 <li><p>Щоб отримати максимальну вихідну потужність, використовуйте кабель USB-C до USB-C 5 A (20 В DC/5 A, 100 Вт).</p></li>
@@ -169,7 +169,7 @@
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>УВАГА</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>УВАГА</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">ПОПЕРЕДЖЕННЯ</span><span class="manual-callout-label-sizer" aria-hidden="true">УВАГА</span><span class="manual-callout-label-sizer" aria-hidden="true">ПРИМІТКА</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>Порт DC 12 В сумісний лише з автомобільними акумуляторами 12 В і не підходить для систем 24 В.</p></li>
 <li><p>Не запускайте автомобіль, поки пристрій заряджає автомобільний акумулятор через вихідний порт DC 12 В, оскільки це може пошкодити пристрій.</p></li>
 <li><p>Ця функція призначена лише для екстреного використання і не може зарядити повністю розряджений або пошкоджений автомобільний акумулятор.</p></li>
@@ -223,7 +223,7 @@
 <table style="width:100%; border-collapse:collapse; margin:0.75rem 0 0.5rem 0;">
 <tbody>
 <tr>
-<td rowspan="6" style="text-align: center; width: 24%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top;"><img src="assets/ir/3a5279b872814f9c8b0a070a3f4c8a19ed434feac942771e9891401e4e495fee/operation_lcd.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3000c_eu_uk/operation_lcd.png" data-web-finished-panel-sha256="3a5279b872814f9c8b0a070a3f4c8a19ed434feac942771e9891401e4e495fee" alt="Заглушка режиму дисплея LCD." /></td>
+<td rowspan="6" style="text-align: center; width: 24%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top;"><img src="assets/ir/3a5279b872814f9c8b0a070a3f4c8a19ed434feac942771e9891401e4e495fee/operation_lcd.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3000c_eu_uk/operation_lcd.png" data-web-finished-panel-sha256="3a5279b872814f9c8b0a070a3f4c8a19ed434feac942771e9891401e4e495fee" alt="Режим дисплея LCD." /></td>
 <td rowspan="3" style="width: 18%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Короткочасне увімкнення</td>
 <td style="width: 12%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Увімкнути</td>
 <td style="width: 46%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Натисніть кнопку POWER або коли пристрій заряджається.</td>
@@ -278,7 +278,7 @@
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>УВАГА</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>УВАГА</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">ПОПЕРЕДЖЕННЯ</span><span class="manual-callout-label-sizer" aria-hidden="true">УВАГА</span><span class="manual-callout-label-sizer" aria-hidden="true">ПРИМІТКА</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>Цей пристрій не підтримує перемикання 0 мс. Не підключайте його до обладнання, яке потребує джерела живлення з перемиканням 0 мс, наприклад до серверів даних або робочих станцій.</p></li>
 <li><p>Перед використанням кілька разів перевірте сумісність із вашим пристроєм.</p></li>
 <li><p>Не підключайте навантаження, що перевищують максимальну вихідну потужність виробу. Інакше спрацює захист від перевантаження.</p></li>
@@ -295,7 +295,7 @@
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ПРИМІТКА</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ПРИМІТКА</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">ПОПЕРЕДЖЕННЯ</span><span class="manual-callout-label-sizer" aria-hidden="true">УВАГА</span><span class="manual-callout-label-sizer" aria-hidden="true">ПРИМІТКА</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>Рекомендований діапазон температури заряджання для пристрою становить від 0 °C до 45 °C, а діапазон температури розряджання - від -10 °C до 45 °C.</p></li>
 <li><p>Робота пристрою поза цим температурним діапазоном може обмежити його можливості заряджання та розряджання або навіть унеможливити заряджання чи розряджання.</p></li>
 <li><p>Потужність заряджання та ємність батареї пристрою можуть змінюватися через коливання температури.</p></li>
@@ -308,11 +308,11 @@
 
 Підключіть кабель для заряджання AC до входу AC пристрою та до настінної розетки.
 
-<img src="assets/ir/b5896a2fc92c9ba998362121453314f17480d43f7623cbe608c07606be47040e/charging_ac.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3000c_eu_uk/charging_ac.png" data-web-finished-panel-sha256="b5896a2fc92c9ba998362121453314f17480d43f7623cbe608c07606be47040e" alt="Заглушка схеми заряджання від настінної розетки AC." />
+<img src="assets/ir/b5896a2fc92c9ba998362121453314f17480d43f7623cbe608c07606be47040e/charging_ac.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3000c_eu_uk/charging_ac.png" data-web-finished-panel-sha256="b5896a2fc92c9ba998362121453314f17480d43f7623cbe608c07606be47040e" alt="Схема заряджання від настінної розетки AC." />
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>УВАГА</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Переконайтеся, що кабель для заряджання AC повністю та надійно вставлений у вхід AC. Неповне підключення може спричинити нестабільний струм, перегрів, поганий контакт або несправність пристрою.</p></td></tr></tbody></table>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>УВАГА</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">ПОПЕРЕДЖЕННЯ</span><span class="manual-callout-label-sizer" aria-hidden="true">УВАГА</span><span class="manual-callout-label-sizer" aria-hidden="true">ПРИМІТКА</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Переконайтеся, що кабель для заряджання AC повністю та надійно вставлений у вхід AC. Неповне підключення може спричинити нестабільний струм, перегрів, поганий контакт або несправність пристрою.</p></td></tr></tbody></table>
 
 
 
@@ -320,19 +320,19 @@
 
 Jackery Explorer 3000 має два вхідні порти DC8020 і сумісний із сонячними панелями Jackery.
 
-<img src="assets/ir/c465d070c3e8dd1d3747aa5fc2f4ed573fa9ec8dde0f9483cc4072b480c39b3a/charging_solar.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3000c_eu_uk/charging_solar.png" data-web-finished-panel-sha256="c465d070c3e8dd1d3747aa5fc2f4ed573fa9ec8dde0f9483cc4072b480c39b3a" alt="Заглушка схеми підключення для сонячного заряджання 1." />
+<img src="assets/ir/c465d070c3e8dd1d3747aa5fc2f4ed573fa9ec8dde0f9483cc4072b480c39b3a/charging_solar.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3000c_eu_uk/charging_solar.png" data-web-finished-panel-sha256="c465d070c3e8dd1d3747aa5fc2f4ed573fa9ec8dde0f9483cc4072b480c39b3a" alt="Схема підключення для сонячного заряджання (1)." />
 
 Якщо до одного входу DC8020 потрібно одночасно підключити дві сонячні панелі, зверніться до наведеної нижче схеми заряджання через з\'єднувач сонячних панелей (продається окремо, до стандартної комплектації не входить).
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>УВАГА</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>До одного входу DC8020 можна підключити не більше двох сонячних панелей.</p></td></tr></tbody></table>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>УВАГА</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">ПОПЕРЕДЖЕННЯ</span><span class="manual-callout-label-sizer" aria-hidden="true">УВАГА</span><span class="manual-callout-label-sizer" aria-hidden="true">ПРИМІТКА</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>До одного входу DC8020 можна підключити не більше двох сонячних панелей.</p></td></tr></tbody></table>
 
 
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>УВАГА</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Переконайтеся, що вхідна напруга для обох портів DC однакова. Інакше можна пошкодити пристрій. Наприклад:</p>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>УВАГА</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">ПОПЕРЕДЖЕННЯ</span><span class="manual-callout-label-sizer" aria-hidden="true">УВАГА</span><span class="manual-callout-label-sizer" aria-hidden="true">ПРИМІТКА</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Переконайтеся, що вхідна напруга для обох портів DC однакова. Інакше можна пошкодити пристрій. Наприклад:</p>
 <ul class="simple">
 <li><p>Використовуйте сонячні панелі Jackery однієї моделі та однакову кількість панелей, якщо підключаєте сонячні панелі до обох входів DC8020.</p></li>
 <li><p>Не заряджайте пристрій одночасно від автомобільного зарядного пристрою та сонячної панелі. Це може призвести до перегорання автомобільного запобіжника або до збою заряджання.</p></li>
@@ -351,7 +351,7 @@ Jackery Explorer 3000 має два вхідні порти DC8020 і суміс
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>УВАГА</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>УВАГА</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">ПОПЕРЕДЖЕННЯ</span><span class="manual-callout-label-sizer" aria-hidden="true">УВАГА</span><span class="manual-callout-label-sizer" aria-hidden="true">ПРИМІТКА</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>Перед заряджанням електростанції обов'язково запустіть транспортний засіб.</p></li>
 <li><p>Якщо транспортний засіб рухається нерівними дорогами, використовувати автомобільний зарядний пристрій заборонено, оскільки це може спричинити нестандартну роботу. Компанія не несе відповідальності за будь-які втрати, спричинені нестандартною роботою.</p></li>
 <li><p>Автомобільне заряджання застосовується лише для транспортних засобів із 12 В DC, але не для 24 В DC. Будь ласка, не заряджайте цей пристрій у транспортному засобі з 24 В, щоб уникнути травмування людей і матеріальних збитків.</p></li>
@@ -579,7 +579,7 @@ Jackery Explorer 3000 має два вхідні порти DC8020 і суміс
 
 ## 1. Завантажте додаток і увійдіть
 
-<img src="assets/ir/37bf4f4918f338372737a22a6a43c72d1610cae96e063cc66201f9f529701c24/download.png" style="width: 320px;" width="320" height="65" alt="Заглушка QR-коду для завантаження додатка та магазину застосунків." />
+<img src="assets/ir/37bf4f4918f338372737a22a6a43c72d1610cae96e063cc66201f9f529701c24/download.png" style="width: 320px;" width="320" height="65" alt="QR-код для завантаження додатка та магазин застосунків." />
 
 Знайдіть \"Jackery\" у Google Play або App Store, щоб установити додаток. Після цього ви можете зареєструватися та увійти. Або відскануйте QR-код нижче, щоб завантажити та встановити додаток.
 
@@ -595,7 +595,7 @@ Jackery Explorer 3000 має два вхідні порти DC8020 і суміс
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ПРИМІТКА</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Якщо під час процесу прив'язування з'являється повідомлення "<strong>пристрій уже прив'язано</strong>", для підключення можна скористатися одним із двох способів:</p>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ПРИМІТКА</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">ПОПЕРЕДЖЕННЯ</span><span class="manual-callout-label-sizer" aria-hidden="true">УВАГА</span><span class="manual-callout-label-sizer" aria-hidden="true">ПРИМІТКА</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Якщо під час процесу прив'язування з'являється повідомлення "<strong>пристрій уже прив'язано</strong>", для підключення можна скористатися одним із двох способів:</p>
 <ul class="simple">
 <li><p>Власник пристрою поділиться цим пристроєм з іншими користувачами через додаток.</p></li>
 <li><p>Натисніть і утримуйте головну кнопку POWER + кнопку DC / USB протягом 3 секунд, щоб скинути Wi-Fi та Bluetooth пристрою, а потім знову прив'яжіть пристрій.</p></li>
@@ -608,7 +608,7 @@ Jackery Explorer 3000 має два вхідні порти DC8020 і суміс
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ПРИМІТКА</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ПРИМІТКА</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">ПОПЕРЕДЖЕННЯ</span><span class="manual-callout-label-sizer" aria-hidden="true">УВАГА</span><span class="manual-callout-label-sizer" aria-hidden="true">ПРИМІТКА</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>Будь ласка, вибирайте мережу Wi-Fi у діапазоні 2,4 ГГц. Пристрій не підтримує мережі Wi-Fi у діапазоні 5 ГГц.</p></li>
 </ul>
 </td></tr></tbody></table>
@@ -617,13 +617,13 @@ Jackery Explorer 3000 має два вхідні порти DC8020 і суміс
 
 Після успішного додавання пристрою до додатка значок Wi-Fi на пристрої буде постійно увімкнений.
 
-<img src="assets/ir/0dfd46ee1d5825b432ebffc3f560e7a50f7beb6ed43d208130e268f923b7e1b6/app_connect_result.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-connect-result" data-web-finished-panel-path="assets/je3000c_eu_shared/app_connect_result.png" data-web-finished-panel-sha256="0dfd46ee1d5825b432ebffc3f560e7a50f7beb6ed43d208130e268f923b7e1b6" alt="Заглушка екрана результату налаштування додатка." />
+<img src="assets/ir/0dfd46ee1d5825b432ebffc3f560e7a50f7beb6ed43d208130e268f923b7e1b6/app_connect_result.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-connect-result" data-web-finished-panel-path="assets/je3000c_eu_shared/app_connect_result.png" data-web-finished-panel-sha256="0dfd46ee1d5825b432ebffc3f560e7a50f7beb6ed43d208130e268f923b7e1b6" alt="Екран результату налаштування додатка." />
 
 Наведені вище знімки екрана наведено лише для довідки.
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>УВАГА</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Додаток Jackery може одночасно підключатися лише до однієї електростанції через Bluetooth. Повернення до списку пристроїв автоматично відключає Bluetooth. Щоб знову підключитися автоматично, торкніться електростанції у списку ще раз.</p></td></tr></tbody></table>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>УВАГА</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">ПОПЕРЕДЖЕННЯ</span><span class="manual-callout-label-sizer" aria-hidden="true">УВАГА</span><span class="manual-callout-label-sizer" aria-hidden="true">ПРИМІТКА</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Додаток Jackery може одночасно підключатися лише до однієї електростанції через Bluetooth. Повернення до списку пристроїв автоматично відключає Bluetooth. Щоб знову підключитися автоматично, торкніться електростанції у списку ще раз.</p></td></tr></tbody></table>
 
 
 

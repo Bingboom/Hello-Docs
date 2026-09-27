@@ -439,5 +439,105 @@ class Je1000hEuOverviewSlotTests(unittest.TestCase):
                          (ROOT / "docs/renderers/web/je1000h_eu_de_illustrations.json").read_text(encoding="utf-8"))
 
 
+DISPLAYED_SIGNALS = ("warning", "caution", "note", "tips")
+# 德/意语块印刷把温度小节标题印成英文（PDF 第 70/87 页），属印刷漏译；操作者 2026-09-27 裁定按审核译文翻译
+PRINTED_IN_ENGLISH: set[tuple[str, str]] = set()
+REVIEWED_HEADING = {"de": "UMGEBUNGSTEMPERATUR IM BETRIEB", "it": "TEMPERATURA OPERATIVA AMBIENTALE"}
+
+
+class Je1000hEuResidualCopyTests(unittest.TestCase):
+    """fr–uk signal labels and headings are never English or another block's language.
+
+    The uk symbols table prints the Italian ``AVVERTENZA`` (PDF page 91); the same
+    page prints the uk WARNING callout as ``ПОПЕРЕДЖЕННЯ``. The de/it blocks print the
+    temperature heading in English (PDF pages 70/87); the operator ruled on 2026-09-27
+    to use the reviewed translation, as JE-2000F prints it.
+    """
+
+    @staticmethod
+    def _rows(name: str) -> list[dict[str, str]]:
+        with (FORMAL_DATA_ROOT / name).open(encoding="utf-8", newline="") as handle:
+            return list(csv.DictReader(handle))
+
+    def test_signal_labels_and_headings_stay_in_their_block_language(self) -> None:
+        # 乌语符号表把 WARNING 印成意大利语 AVVERTENZA：同页安全须知印的是 ПОПЕРЕДЖЕННЯ
+        from tools.localized_copy import LocalizedCopyResolver
+
+        with self.subTest(signal="warning", lang="uk"):
+            copy = LocalizedCopyResolver.from_csv(FORMAL_DATA_ROOT / "Localized_Copy.csv")
+            self.assertEqual("ПОПЕРЕДЖЕННЯ", copy.resolve("symbols.signal.warning.label",
+                                                          lang="uk", model="JE-1000H", region="EU"))
+            warning, = [row for row in self._rows("symbols_blocks.csv") if row["symbol_key"] == "warning"]
+            self.assertEqual(("ПОПЕРЕДЖЕННЯ", "ПОПЕРЕДЖЕННЯ"), (warning["label_uk"], warning["aliases_uk"]))
+
+        titles = {row["title_en"]: row for row in self._rows("spec_titles.csv")}
+        section_copy = {row["text_en"]: row for row in self._rows("Localized_Copy.csv")
+                        if row["copy_type"] in ("page_title", "section_title")}
+        signals = {row["copy_key"]: row for row in self._rows("Localized_Copy.csv")
+                   if row["copy_type"] == "signal_label"}
+        blocks = {row["symbol_key"]: row for row in self._rows("symbols_blocks.csv")
+                  if row["block_type"] == "signal_row"}
+        for lang in TRANSLATED_LOCALES:
+            for english, row in titles.items():
+                with self.subTest(table="spec_titles", title=english, lang=lang):
+                    self.assertTrue(row[f"title_{lang}"])
+                    if (english, lang) not in PRINTED_IN_ENGLISH:
+                        self.assertNotEqual(english, row[f"title_{lang}"])
+            for english, row in section_copy.items():
+                with self.subTest(table="Localized_Copy", title=english, lang=lang):
+                    self.assertTrue(row[f"text_{lang}"])
+                    if (english, lang) not in PRINTED_IN_ENGLISH:
+                        self.assertNotEqual(english, row[f"text_{lang}"])
+            for key in DISPLAYED_SIGNALS:
+                label = signals[f"symbols.signal.{key}.label"][f"text_{lang}"]
+                with self.subTest(signal=key, lang=lang):
+                    self.assertTrue(label)
+                    self.assertEqual(label, blocks[key][f"label_{lang}"])
+                    self.assertEqual(label, blocks[key][f"aliases_{lang}"])
+                    if lang == "uk":
+                        self.assertRegex(label, r"^[А-ЯҐЄІЇ’ʼ -]+$")
+                    else:
+                        self.assertRegex(label, r"^[A-ZÀ-ÖØ-Þ -]+$")
+                    # es/it 都写 NOTA 是各自正确的译法；其余语种之间不得互相借用
+                    borrowed = {other for other in MANUAL_LOCALES if other != lang and label
+                                == signals[f"symbols.signal.{key}.label"][f"text_{other}"]}
+                    shared = {"es", "it"} - {lang} if key == "note" and lang in ("es", "it") else set()
+                    self.assertEqual(shared, borrowed)
+
+
+    def test_temperature_heading_uses_the_reviewed_translation(self) -> None:
+        titles = {row["title_en"]: row for row in self._rows("spec_titles.csv")}
+        copy = {row["copy_key"]: row for row in self._rows("Localized_Copy.csv")}
+        for lang, heading in REVIEWED_HEADING.items():
+            with self.subTest(lang=lang):
+                self.assertEqual(heading, titles["ENVIRONMENTAL OPERATING TEMPERATURE"][f"title_{lang}"])
+                self.assertEqual(heading, copy["spec.section.environmental_operating_temperature"][f"text_{lang}"])
+
+
+class Je1000hEuUsbCCautionTests(unittest.TestCase):
+    """JE-1000H's print rates the high-power USB-C port at 140 W (fr/es/de/it/uk PDF pages 29/46/63/80/97).
+
+    The shared EU operation carrier keeps the other models' 100 W text; JE-1000H gets its own
+    ``.. only:: model_je_1000h`` branch with the printed wattage and the added 28 V/5 A rating.
+    """
+
+    def test_je1000h_branch_carries_the_printed_rating_and_others_keep_100w(self) -> None:
+        import re
+
+        for lang in ("fr", "es", "de", "it", "uk"):
+            text = (ROOT / f"docs/templates/page_eu-{lang}/05_operation_guide_placeholder.rst").read_text(encoding="utf-8")
+            je1000h = text.split(".. only:: model_je_1000h", 1)[1].split(".. only:: not model_je_1000h", 1)[0]
+            others = text.split(".. only:: not model_je_1000h", 1)[1]
+            with self.subTest(lang=lang):
+                usb_c = [line for line in je1000h.splitlines() if "PS3" in line]
+                self.assertEqual(1, len(usb_c))
+                self.assertIn("140", usb_c[0])
+                self.assertNotIn("100", usb_c[0])
+                self.assertRegex(je1000h, r"\(20\s?(V|В)[^)]*100\s?(W|Вт)\s?; 28\s?(V|В)[^)]*140\s?(W|Вт)\)")
+                other_usb_c = [line for line in others.splitlines() if "PS3" in line]
+                self.assertEqual(1, len(other_usb_c))
+                self.assertIn("100", other_usb_c[0])
+                self.assertNotRegex(others.split("PS3", 1)[1].split("\n\n", 1)[0], r"28\s?(V|В)")
+
 if __name__ == "__main__":
     unittest.main()

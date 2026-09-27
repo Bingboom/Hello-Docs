@@ -586,7 +586,7 @@ Si aparece alguno de los siguientes códigos de fallo, siga las acciones correct
 
 ## 1. Descargar la aplicación e iniciar sesión
 
-<img src="assets/ir/37bf4f4918f338372737a22a6a43c72d1610cae96e063cc66201f9f529701c24/download.png" style="width: 320px;" width="320" height="65" alt="Código QR de descarga de la aplicación y marcador de tienda." />
+<img src="assets/ir/37bf4f4918f338372737a22a6a43c72d1610cae96e063cc66201f9f529701c24/download.png" style="width: 320px;" width="320" height="65" alt="Código QR de descarga de la aplicación y tiendas de aplicaciones." />
 
 Buscar \"Jackery\" en Google Play o en la App Store para instalar la aplicación. Después, podrá registrarse e iniciar sesión. Alternativamente, escanee el código QR a continuación para descargar e instalar la app.
 
@@ -621,7 +621,7 @@ Buscar \"Jackery\" en Google Play o en la App Store para instalar la aplicación
 
 Después de agregar exitosamente el dispositivo en la App, el icono del Wi-Fi en el dispositivo permanecerá siempre encendido.
 
-<img src="assets/ir/efa9084d8a028e9781cd16eed9cbe71fe281efed640f4e436a1345f956814baf/app_connect_result.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-connect-result" data-web-finished-panel-path="assets/je2000e_eu_shared/app_connect_result.png" data-web-finished-panel-sha256="efa9084d8a028e9781cd16eed9cbe71fe281efed640f4e436a1345f956814baf" alt="Marcador de posición de la pantalla de resultado de conexión en la aplicación." />
+<img src="assets/ir/efa9084d8a028e9781cd16eed9cbe71fe281efed640f4e436a1345f956814baf/app_connect_result.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-connect-result" data-web-finished-panel-path="assets/je2000e_eu_shared/app_connect_result.png" data-web-finished-panel-sha256="efa9084d8a028e9781cd16eed9cbe71fe281efed640f4e436a1345f956814baf" alt="Pantalla de resultado de conexión en la aplicación." />
 
 Las capturas de pantalla anteriores sirven solo de referencia.
 

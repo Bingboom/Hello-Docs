@@ -1,8 +1,8 @@
 {
   "actions": {
-    "check": "3a18af9bf358bf129126214c8c66f0e034a59a7bb454a7d229cee713cca7ccec",
-    "html": "3a18af9bf358bf129126214c8c66f0e034a59a7bb454a7d229cee713cca7ccec",
-    "md": "3a18af9bf358bf129126214c8c66f0e034a59a7bb454a7d229cee713cca7ccec"
+    "check": "3d1d8ea26d8f70e68b76c3fd2f9750fee81ad51bad30c698ea57a1e18919bb7f",
+    "html": "3d1d8ea26d8f70e68b76c3fd2f9750fee81ad51bad30c698ea57a1e18919bb7f",
+    "md": "3d1d8ea26d8f70e68b76c3fd2f9750fee81ad51bad30c698ea57a1e18919bb7f"
   },
   "canonical_source": {
     "files": [
@@ -23,28 +23,28 @@
       },
       {
         "path": "page/02_whats_in_the_box.rst",
-        "sha256": "99d8b6e64adecd18ac8b587657ab51a48120e6fa58a29c9474b0af801b14f953",
-        "size": 2632
+        "sha256": "5afb027a01f38f9bfd1232b3aa924f6d6f1e44fc15bb4d966cda22d8b3576a9e",
+        "size": 2524
       },
       {
         "path": "page/03_product_overview_placeholder.rst",
-        "sha256": "5f59c0585689fe57338de7db7c503f0d633a2b7d4f65eb9017e17e306f1026f6",
-        "size": 2703
+        "sha256": "c6446be79aeacabedbeeb58e0de76fa5b00e6dc05ca1c5c89795f35b65dd4259",
+        "size": 2679
       },
       {
         "path": "page/05_operation_guide_placeholder.rst",
-        "sha256": "b2104f63b839f1ccc8eadb63b0795ea18aeb3d0e041ca0c1d940e648a82c8bcd",
-        "size": 9536
+        "sha256": "be445c248cb2b8891a46e69ee632a645f0cca37683a013909f70a2e80a780b1c",
+        "size": 9464
       },
       {
         "path": "page/06_ups_mode.rst",
-        "sha256": "6d0b43dc6746763661d29dd57ddcc163f6603e4abaa1a5a979609312af5521bd",
-        "size": 1424
+        "sha256": "76f448bbef69dbbc6597aaef6656f26cee92e77614472ba2da9b1de2c9cb4d34",
+        "size": 1412
       },
       {
         "path": "page/08_charging_methods.rst",
-        "sha256": "4f12df57daea6129824be27f22acb92ae33f50265762f1cc64e4839d8b0bc799",
-        "size": 2709
+        "sha256": "422322d5fec1a99167e7e6048f6d9a24d6fe4e8b4a1a91ca279a8d33942e93ef",
+        "size": 2677
       },
       {
         "path": "page/09_storage_and_maintenance.rst",
@@ -58,13 +58,13 @@
       },
       {
         "path": "page/12_app_setup_placeholder.rst",
-        "sha256": "906b5326492759012874083618942f9541cd0ed17dd74d835e502d10abb4dbee",
-        "size": 3515
+        "sha256": "4cfa6f1550947c783e217231805c0b064b5dfc4b0f9f4fa28a945914744af753",
+        "size": 3483
       },
       {
         "path": "page/charging.rst",
-        "sha256": "d9c99cf1ffc5b9aff9a07370221a46da7a149573657b102697c071a513ab8655",
-        "size": 4771
+        "sha256": "5fd12d2404f7d147aa92da90cb8e52925376b75a6741581d01f9fe612e3a8955",
+        "size": 4747
       },
       {
         "path": "page/lcd_icons_en.rst",
@@ -92,9 +92,9 @@
         "size": 1710
       }
     ],
-    "sha256": "65670b9ad234bc54285274e241ed8b90df5ab9e4ff8b9d921dd3fd8f4d3176af"
+    "sha256": "2b904ea3ca4c6ba134c6b213913257a7f0f375c2856f2656460329716b8b1341"
   },
-  "git_ref": "94032b73173f875e6209fa91dce7723f80e77c5d",
+  "git_ref": "54a4cd242af48314738ce326a24904a3d20bdcd3",
   "html": {
     "files": [
       {
@@ -679,8 +679,8 @@
       },
       {
         "path": "index.html",
-        "sha256": "822cfe87a1e58d3714f9be0a8029ee4a17ab3f56ce935a19d09991cc4eb2eabb",
-        "size": 78446
+        "sha256": "4cb9da7ae736ebe97373e082b30c0e7eb68ba6595748dc6b64f322735f534bd8",
+        "size": 78208
       },
       {
         "path": "jbp2000b_ac_charging.pdf",
@@ -1508,7 +1508,7 @@
         "size": 316221
       }
     ],
-    "sha256": "16a2edbe8e7aeb15b0bccae34e2f8b2e201de798aa28a7736bae5212fc2050ca"
+    "sha256": "f06b314b9f67878902c10048d870edcc35ca4b2a101f0386de8910d09e260801"
   },
   "language": "en",
   "markdown": {
@@ -2125,19 +2125,19 @@
       },
       {
         "path": "manual_je1000f_eu_en.md",
-        "sha256": "852ebd7b5a2f0119ee4354e8ebad7e2daa49c6fbf3fdcaa577c111969f3f230a",
-        "size": 82182
+        "sha256": "5dd07a02b18e437754a33beb4f42a8429146a3443fef305d07db24e680564426",
+        "size": 84779
       }
     ],
     "manual": "manual_je1000f_eu_en.md",
-    "sha256": "9a2fd2534773af965d56364092d28d3196964da63d56294e6905713eccb6aefe"
+    "sha256": "4e251e03b73b073c834673dccdd88d14197d8f2dc1ea26f4ed8f7b3fee5d4b3b"
   },
   "model": "JE-1000F",
   "projection_manifest": {
     "path": "projection_bundle_manifest.json",
-    "sha256": "d5180c5a5a8a11c4e4209f4bf58bbb098124d714190c224881dbbc32ad59cd20"
+    "sha256": "c5b1e6db4778ccc011fc8fcc783aba5165c8d15d99aa0219e29baa1bb3e4edc8"
   },
   "region": "EU",
   "schema_version": "auto-manual-web-language-release-evidence/v1",
-  "version": "2.4"
+  "version": "2.5"
 }

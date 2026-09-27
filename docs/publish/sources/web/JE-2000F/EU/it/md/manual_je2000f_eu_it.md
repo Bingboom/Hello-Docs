@@ -2,7 +2,7 @@
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>AVVERTENZA</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>ISTRUZIONI RELATIVE AI RISCHI DI INCENDIO, SCOSSA ELETTRICA O LESIONI ALLE PERSONE</p></td></tr></tbody></table>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>AVVERTENZA</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">AVVERTENZA</span><span class="manual-callout-label-sizer" aria-hidden="true">ATTENZIONE</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTA</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>ISTRUZIONI RELATIVE AI RISCHI DI INCENDIO, SCOSSA ELETTRICA O LESIONI ALLE PERSONE</p></td></tr></tbody></table>
 
 
 
@@ -44,11 +44,11 @@ Per favore, restituisci le batterie e gli accumulatori usati a un punto di racco
 
 
 
-<figure aria-label="CONTENUTO DELLA CONFEZIONE" class="hb-inbox-composition" data-card-count="3" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="three-card-responsive"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Segnaposto immagine della stazione di alimentazione." class="hb-inbox-art" src="assets/ir/6c7f1deea2f6211ba3ed3273900aa7595234d3b8fe5a67830defa4cf13ee6fe6/main_unit1.png"/><div class="hb-inbox-label">
+<figure aria-label="CONTENUTO DELLA CONFEZIONE" class="hb-inbox-composition" data-card-count="3" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="three-card-responsive"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Immagine della stazione di alimentazione." class="hb-inbox-art" src="assets/ir/6c7f1deea2f6211ba3ed3273900aa7595234d3b8fe5a67830defa4cf13ee6fe6/main_unit1.png"/><div class="hb-inbox-label">
 <p><strong>Jackery Explorer 2000</strong></p>
-</div></li><li class="hb-inbox-card" data-item-number="2"><img alt="Segnaposto immagine del cavo di ricarica CA." class="hb-inbox-art" src="assets/ir/287650f3a89ae520e32f0d75df8401151b808004ee50075b96aff70af04ca4ef/ac_charging_cable.png"/><div class="hb-inbox-label">
+</div></li><li class="hb-inbox-card" data-item-number="2"><img alt="Immagine del cavo di ricarica CA." class="hb-inbox-art" src="assets/ir/287650f3a89ae520e32f0d75df8401151b808004ee50075b96aff70af04ca4ef/ac_charging_cable.png"/><div class="hb-inbox-label">
 <p><strong>Cavo di ricarica CA</strong></p>
-</div></li><li class="hb-inbox-card" data-item-number="3"><img alt="Segnaposto immagine del manuale utente." class="hb-inbox-art" src="assets/ir/87ac44e52863324b761a672089e6b0497e40fdf48432f698fccf30508060c60a/manual_icon1.png"/><div class="hb-inbox-label">
+</div></li><li class="hb-inbox-card" data-item-number="3"><img alt="Immagine del manuale utente." class="hb-inbox-art" src="assets/ir/87ac44e52863324b761a672089e6b0497e40fdf48432f698fccf30508060c60a/manual_icon1.png"/><div class="hb-inbox-label">
 <p>Manuale utente</p>
 </div></li></ol><div class="hb-inbox-tip" role="note"><div class="hb-inbox-tip-label"><p><strong>SUGGERIMENTO</strong></p></div><div class="hb-inbox-tip-body"><p>Il cavo di ricarica per auto non è incluso, ma è disponibile per l'acquisto separato sul nostro sito web.
 Per assistenza, contatta il servizio clienti Jackery.</p></div></div></figure>
@@ -144,7 +144,7 @@ Per assistenza, contatta il servizio clienti Jackery.</p></div></div></figure>
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENZIONE</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENZIONE</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">AVVERTENZA</span><span class="manual-callout-label-sizer" aria-hidden="true">ATTENZIONE</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTA</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p><strong>USB-C 100W è una porta di uscita ad alta potenza USB-PD Power Source 3 (PS3).</strong> Se il dispositivo o l'accessorio collegato non soddisfa i requisiti di sicurezza, potrebbe esserci un rischio di incendio. Prima di utilizzare queste porte, assicurarsi che il dispositivo o l'accessorio collegato sia dotato di protezione antincendio.</p></li>
 <li><p>Collega Jackery Explorer 2000 solo a dispositivi o accessori conformi alle clausole 6.3, 6.4 e 6.5 della norma IEC/EN/UL 62368-1 (o di altri standard equivalenti).</p></li>
 <li><p>Per ottenere la massima potenza di uscita, usa il cavo da USB-C a USB-C da 5 A (20 V CC/5 A, 100 W).</p></li>
@@ -157,7 +157,7 @@ Il prodotto può ricaricare la batteria dell\'auto utilizzando il cavo Jackery p
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENZIONE</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENZIONE</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">AVVERTENZA</span><span class="manual-callout-label-sizer" aria-hidden="true">ATTENZIONE</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTA</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>La porta CC 12 V è compatibile solo con batterie per auto da 12 V e non è adatta a sistemi da 24 V.</p></li>
 <li><p>Non avviare l'auto mentre il prodotto sta ricaricando la batteria dell'auto tramite la porta di uscita CC da 12 V, poiché ciò potrebbe danneggiare il prodotto.</p></li>
 <li><p>Questa funzione è destinata solo all'uso di emergenza e non può ricaricare una batteria dell'auto completamente scarica o danneggiata.</p></li>
@@ -174,7 +174,7 @@ Per evitare un consumo inutile della batteria dovuto al mancato spegnimento dell
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>NOTA</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>La Modalità risparmio energetico riprende il suo stato precedente dopo l'accensione. Per cambiare modalità è necessario un intervento manuale.</p></td></tr></tbody></table>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>NOTA</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">AVVERTENZA</span><span class="manual-callout-label-sizer" aria-hidden="true">ATTENZIONE</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTA</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>La Modalità risparmio energetico riprende il suo stato precedente dopo l'accensione. Per cambiare modalità è necessario un intervento manuale.</p></td></tr></tbody></table>
 
 
 
@@ -215,7 +215,7 @@ La funzione di ripristino delle uscite CA e CC è disattivata per impostazione p
 
 
 
-<figure aria-label="Segnaposto modalità display LCD." class="hb-lcd-mode-composition" data-component-id="HB-TABLE-LCD-MODE"><div class="hb-lcd-mode-art-panel"><img alt="Segnaposto modalità display LCD." class="hb-lcd-mode-art" src="assets/ir/f6d46590571e1cfb7735f58999e1db957c67c067ccc55ada45676ed7b62ecb68/operation_lcd.png"/></div><div class="hb-lcd-mode-table-panel"><table class="hb-lcd-mode-table"><colgroup><col class="hb-lcd-mode-col-state"/><col class="hb-lcd-mode-col-action"/><col class="hb-lcd-mode-col-copy"/></colgroup><tbody><tr><td class="hb-lcd-mode-state" rowspan="3">Acceso brevemente</td><td class="hb-lcd-mode-action">Accendi</td><td class="hb-lcd-mode-copy">Premi il pulsante POWER principale oppure quando il prodotto è in carica.</td></tr><tr><td class="hb-lcd-mode-action">Spegni</td><td class="hb-lcd-mode-copy">Premi il pulsante POWER principale.</td></tr><tr><td class="hb-lcd-mode-action">Spegnimento automatico</td><td class="hb-lcd-mode-copy">Lo schermo LCD si spegne automaticamente ed entra in modalità sleep dopo 2 minuti di inattività.</td></tr><tr><td class="hb-lcd-mode-state" rowspan="3">Acceso fisso (in carica o in scarica)</td><td class="hb-lcd-mode-action">Accendi</td><td class="hb-lcd-mode-copy">Premi due volte il pulsante POWER principale quando il prodotto è acceso.</td></tr><tr><td class="hb-lcd-mode-action">Spegni</td><td class="hb-lcd-mode-copy">Premi il pulsante POWER principale.</td></tr><tr><td class="hb-lcd-mode-action">Spegnimento automatico</td><td class="hb-lcd-mode-copy">Lo schermo LCD si spegne automaticamente dopo 2 ore di inattività.</td></tr></tbody></table></div></figure>
+<figure aria-label="Modalità display LCD." class="hb-lcd-mode-composition" data-component-id="HB-TABLE-LCD-MODE"><div class="hb-lcd-mode-art-panel"><img alt="Modalità display LCD." class="hb-lcd-mode-art" src="assets/ir/f6d46590571e1cfb7735f58999e1db957c67c067ccc55ada45676ed7b62ecb68/operation_lcd.png"/></div><div class="hb-lcd-mode-table-panel"><table class="hb-lcd-mode-table"><colgroup><col class="hb-lcd-mode-col-state"/><col class="hb-lcd-mode-col-action"/><col class="hb-lcd-mode-col-copy"/></colgroup><tbody><tr><td class="hb-lcd-mode-state" rowspan="3">Acceso brevemente</td><td class="hb-lcd-mode-action">Accendi</td><td class="hb-lcd-mode-copy">Premi il pulsante POWER principale oppure quando il prodotto è in carica.</td></tr><tr><td class="hb-lcd-mode-action">Spegni</td><td class="hb-lcd-mode-copy">Premi il pulsante POWER principale.</td></tr><tr><td class="hb-lcd-mode-action">Spegnimento automatico</td><td class="hb-lcd-mode-copy">Lo schermo LCD si spegne automaticamente ed entra in modalità sleep dopo 2 minuti di inattività.</td></tr><tr><td class="hb-lcd-mode-state" rowspan="3">Acceso fisso (in carica o in scarica)</td><td class="hb-lcd-mode-action">Accendi</td><td class="hb-lcd-mode-copy">Premi due volte il pulsante POWER principale quando il prodotto è acceso.</td></tr><tr><td class="hb-lcd-mode-action">Spegni</td><td class="hb-lcd-mode-copy">Premi il pulsante POWER principale.</td></tr><tr><td class="hb-lcd-mode-action">Spegnimento automatico</td><td class="hb-lcd-mode-copy">Lo schermo LCD si spegne automaticamente dopo 2 ore di inattività.</td></tr></tbody></table></div></figure>
 
 
 
@@ -258,7 +258,7 @@ Puoi anche impostare la modalità di visualizzazione dello schermo nell\'App Jac
 
 Collega il prodotto a una presa a muro con il cavo di ricarica CA, quindi premi il pulsante CA e alimenta contemporaneamente i tuoi apparecchi.
 
-<img src="assets/ir/3217397cd5ee07d6a35ddce30e439688b85a3fccb2cba4ef4684086df431f842/ups.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000f_eu_it/ups.png" data-web-finished-panel-sha256="3217397cd5ee07d6a35ddce30e439688b85a3fccb2cba4ef4684086df431f842" alt="Segnaposto diagramma di connessione UPS." />
+<img src="assets/ir/3217397cd5ee07d6a35ddce30e439688b85a3fccb2cba4ef4684086df431f842/ups.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000f_eu_it/ups.png" data-web-finished-panel-sha256="3217397cd5ee07d6a35ddce30e439688b85a3fccb2cba4ef4684086df431f842" alt="Diagramma di connessione UPS." />
 
 Un gruppo di continuità (UPS) è un sistema di alimentazione continua che fornisce automaticamente energia di riserva a un carico quando viene a mancare l\'alimentazione della rete elettrica.
 
@@ -270,7 +270,7 @@ la potenza di uscita effettiva in questa modalità è inferiore alla potenza nom
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENZIONE</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENZIONE</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">AVVERTENZA</span><span class="manual-callout-label-sizer" aria-hidden="true">ATTENZIONE</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTA</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>Questo prodotto non supporta la commutazione a 0 ms. Non collegarlo ad apparecchiature che richiedono un'alimentazione con commutazione a 0 ms, come server di dati o workstation.</p></li>
 <li><p>Prima dell'uso, verifica più volte la compatibilità con il tuo dispositivo.</p></li>
 <li><p>Non collegare carichi che superano la potenza massima di uscita del prodotto. In caso contrario, verrà attivata la protezione da sovraccarico.</p></li>
@@ -287,7 +287,7 @@ la potenza di uscita effettiva in questa modalità è inferiore alla potenza nom
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>NOTA</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>NOTA</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">AVVERTENZA</span><span class="manual-callout-label-sizer" aria-hidden="true">ATTENZIONE</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTA</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>La temperatura di ricarica consigliata per il prodotto varia nell'intervallo da 0 °C a 45 °C e la temperatura di scarica varia nell'intervallo da -10 °C a 45 °C.</p></li>
 <li><p>L'utilizzo del prodotto al di fuori di questo intervallo di temperatura può limitarne le capacità di carica e scarica, o addirittura impedirne la carica o la scarica.</p></li>
 <li><p>La potenza di ricarica e la capacità della batteria del prodotto possono variare a causa delle fluttuazioni di temperatura.</p></li>
@@ -302,7 +302,7 @@ la potenza di uscita effettiva in questa modalità è inferiore alla potenza nom
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENZIONE</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Assicurarsi che il cavo di ricarica CA sia inserito completamente e saldamente nella porta di ingresso CA. Un collegamento incompleto può causare corrente instabile, surriscaldamento, cattivo contatto o malfunzionamento del dispositivo.</p></td></tr></tbody></table>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENZIONE</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">AVVERTENZA</span><span class="manual-callout-label-sizer" aria-hidden="true">ATTENZIONE</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTA</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Assicurarsi che il cavo di ricarica CA sia inserito completamente e saldamente nella porta di ingresso CA. Un collegamento incompleto può causare corrente instabile, surriscaldamento, cattivo contatto o malfunzionamento del dispositivo.</p></td></tr></tbody></table>
 
 
 
@@ -316,21 +316,21 @@ In questa modalità, è possibile ricaricare rapidamente la power station portat
 
 Jackery Explorer 2000 dispone di due porte di ingresso DC8020 ed è compatibile con i pannelli solari Jackery.
 
-<img src="assets/ir/52d6c529f846bc514ba3c846873d697006ad3dad3a80e6812f8018777b999a64/charging_solar_direct.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000f_eu_it/charging_solar_direct.png" data-web-finished-panel-sha256="52d6c529f846bc514ba3c846873d697006ad3dad3a80e6812f8018777b999a64" alt="Segnaposto diagramma di collegamento per la ricarica solare 1." />
+<img src="assets/ir/52d6c529f846bc514ba3c846873d697006ad3dad3a80e6812f8018777b999a64/charging_solar_direct.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000f_eu_it/charging_solar_direct.png" data-web-finished-panel-sha256="52d6c529f846bc514ba3c846873d697006ad3dad3a80e6812f8018777b999a64" alt="Diagramma di collegamento per la ricarica solare (1)." />
 
 Se una porta di ingresso DC8020 deve collegare contemporaneamente due pannelli solari, fare riferimento alla figura seguente per la ricarica tramite il connettore per pannelli solari (venduto separatamente, non incluso di serie).
 
-<img src="assets/ir/dd456e465afec66719fc6c7088bb66b9321419049bbc51aac58fb879bc9abbac/charging_solar_adapter.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000f_eu_it/charging_solar_adapter.png" data-web-finished-panel-sha256="dd456e465afec66719fc6c7088bb66b9321419049bbc51aac58fb879bc9abbac" alt="Segnaposto diagramma di collegamento per la ricarica solare 2." />
+<img src="assets/ir/dd456e465afec66719fc6c7088bb66b9321419049bbc51aac58fb879bc9abbac/charging_solar_adapter.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000f_eu_it/charging_solar_adapter.png" data-web-finished-panel-sha256="dd456e465afec66719fc6c7088bb66b9321419049bbc51aac58fb879bc9abbac" alt="Diagramma di collegamento per la ricarica solare (2)." />
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENZIONE</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Una porta di ingresso DC8020 può essere collegata al massimo a due pannelli solari.</p></td></tr></tbody></table>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENZIONE</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">AVVERTENZA</span><span class="manual-callout-label-sizer" aria-hidden="true">ATTENZIONE</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTA</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Una porta di ingresso DC8020 può essere collegata al massimo a due pannelli solari.</p></td></tr></tbody></table>
 
 
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENZIONE</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Assicurarsi che la tensione di ingresso di entrambe le porte di ingresso CC sia la stessa. In caso contrario, il prodotto potrebbe danneggiarsi. Ad esempio:</p>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENZIONE</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">AVVERTENZA</span><span class="manual-callout-label-sizer" aria-hidden="true">ATTENZIONE</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTA</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Assicurarsi che la tensione di ingresso di entrambe le porte di ingresso CC sia la stessa. In caso contrario, il prodotto potrebbe danneggiarsi. Ad esempio:</p>
 <ul class="simple">
 <li><p>Utilizzare lo stesso modello di pannelli solari Jackery e lo stesso numero di pannelli quando si collegano pannelli solari a entrambe le porte di ingresso DC8020.</p></li>
 <li><p>Non caricare il prodotto utilizzando contemporaneamente un caricatore per auto e un pannello solare. In caso contrario, il fusibile dell'auto potrebbe saltare oppure la ricarica potrebbe non riuscire.</p></li>
@@ -349,7 +349,7 @@ Questo prodotto può essere caricato con un caricabatterie per auto da 12 V. Ass
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENZIONE</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENZIONE</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">AVVERTENZA</span><span class="manual-callout-label-sizer" aria-hidden="true">ATTENZIONE</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTA</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>Avviare il veicolo prima di caricare la power station.</p></li>
 <li><p>Se il veicolo percorre strade sconnesse, è vietato utilizzare il caricatore per auto poiché ciò potrebbe causare un funzionamento non conforme. L'Azienda non sarà responsabile di eventuali perdite causate da un funzionamento non conforme.</p></li>
 <li><p>La ricarica tramite veicolo è applicabile solo ai veicoli con 12V CC, non a 24V CC. Non caricare questo prodotto in un veicolo da 24V per evitare lesioni personali e danni materiali.</p></li>
@@ -575,7 +575,7 @@ Per stabilire la data di inizio del periodo di garanzia è necessaria la ricevut
 
 ## 1. Per scaricare l\'app e accedere
 
-<img src="assets/ir/37bf4f4918f338372737a22a6a43c72d1610cae96e063cc66201f9f529701c24/download.png" style="width: 320px;" width="320" height="65" alt="Segnaposto QR di download dell&#39;app e marketplace." />
+<img src="assets/ir/37bf4f4918f338372737a22a6a43c72d1610cae96e063cc66201f9f529701c24/download.png" style="width: 320px;" width="320" height="65" alt="QR di download dell&#39;app e marketplace." />
 
 Cerca \"Jackery\" su Google Play o nell\'App Store per installare l\'app. Dopodiché, puoi registrarti e accedere. In alternativa, scansiona il codice QR qui sotto per scaricare e installare l\'app.
 
@@ -591,7 +591,7 @@ Cerca \"Jackery\" su Google Play o nell\'App Store per installare l\'app. Dopodi
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>NOTA</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Se durante la procedura di associazione viene visualizzato il messaggio "<strong>il dispositivo è già stato associato</strong>", puoi usare i due metodi seguenti per la connessione:</p>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>NOTA</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">AVVERTENZA</span><span class="manual-callout-label-sizer" aria-hidden="true">ATTENZIONE</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTA</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Se durante la procedura di associazione viene visualizzato il messaggio "<strong>il dispositivo è già stato associato</strong>", puoi usare i due metodi seguenti per la connessione:</p>
 <ul class="simple">
 <li><p>Il proprietario del dispositivo condividerà questo dispositivo con altri utenti tramite l'app.</p></li>
 <li><p>Tieni premuti pulsante POWER principale + pulsante DC / USB per 3 secondi per ripristinare il Wi-Fi e il Bluetooth del dispositivo, quindi associa nuovamente il dispositivo.</p></li>
@@ -604,7 +604,7 @@ Cerca \"Jackery\" su Google Play o nell\'App Store per installare l\'app. Dopodi
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>NOTA</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>NOTA</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">AVVERTENZA</span><span class="manual-callout-label-sizer" aria-hidden="true">ATTENZIONE</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTA</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>Seleziona una rete Wi-Fi nella banda da 2,4 GHz. Il dispositivo non supporta reti Wi-Fi nella banda da 5 GHz.</p></li>
 </ul>
 </td></tr></tbody></table>
@@ -613,13 +613,13 @@ Cerca \"Jackery\" su Google Play o nell\'App Store per installare l\'app. Dopodi
 
 Dopo che il dispositivo è stato aggiunto con successo all\'app, l\'icona Wi-Fi sul dispositivo resterà sempre accesa.
 
-<img src="assets/ir/6797b35ec9237f51288866c2a4b16a2a98052341c3692d7978883fd15fe3a842/app_connect_result.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-connect-result" data-web-finished-panel-path="assets/je2000f_eu_shared/app_connect_result.png" data-web-finished-panel-sha256="6797b35ec9237f51288866c2a4b16a2a98052341c3692d7978883fd15fe3a842" alt="Segnaposto schermata di risultato configurazione app." />
+<img src="assets/ir/6797b35ec9237f51288866c2a4b16a2a98052341c3692d7978883fd15fe3a842/app_connect_result.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-reference-id="app-connect-result" data-web-finished-panel-path="assets/je2000f_eu_shared/app_connect_result.png" data-web-finished-panel-sha256="6797b35ec9237f51288866c2a4b16a2a98052341c3692d7978883fd15fe3a842" alt="Schermata di risultato configurazione app." />
 
 Le schermate sopra sono solo a scopo illustrativo.
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENZIONE</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>L'app Jackery può connettersi a una sola stazione di alimentazione tramite Bluetooth alla volta. Tornando all'elenco dei dispositivi, il Bluetooth si disconnette automaticamente. Tocca di nuovo la stazione di alimentazione nell'elenco per riconnetterti automaticamente.</p></td></tr></tbody></table>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENZIONE</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">AVVERTENZA</span><span class="manual-callout-label-sizer" aria-hidden="true">ATTENZIONE</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTA</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>L'app Jackery può connettersi a una sola stazione di alimentazione tramite Bluetooth alla volta. Tornando all'elenco dei dispositivi, il Bluetooth si disconnette automaticamente. Tocca di nuovo la stazione di alimentazione nell'elenco per riconnetterti automaticamente.</p></td></tr></tbody></table>
 
 
 

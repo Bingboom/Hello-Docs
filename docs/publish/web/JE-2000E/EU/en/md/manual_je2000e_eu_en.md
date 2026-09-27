@@ -53,11 +53,11 @@ Please return used batteries and accumulators to a local collection point, recyc
 
 
 
-<figure aria-label="WHAT'S IN THE BOX" class="hb-inbox-composition" data-card-count="3" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="three-card-responsive"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Power station image placeholder." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je2000e_eu_en/inbox_main.png" data-web-finished-panel-sha256="48f36d3f9743b72050fe218c72ddcefad0dcbf513ff72877d3e951bb1ad235ab" src="../../../../_static/manual-assets/_pool/48/48f36d3f9743b72050fe218c72ddcefad0dcbf513ff72877d3e951bb1ad235ab.png"/><div class="hb-inbox-label">
+<figure aria-label="WHAT'S IN THE BOX" class="hb-inbox-composition" data-card-count="3" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="three-card-responsive"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Power station." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je2000e_eu_en/inbox_main.png" data-web-finished-panel-sha256="48f36d3f9743b72050fe218c72ddcefad0dcbf513ff72877d3e951bb1ad235ab" src="../../../../_static/manual-assets/_pool/48/48f36d3f9743b72050fe218c72ddcefad0dcbf513ff72877d3e951bb1ad235ab.png"/><div class="hb-inbox-label">
 <p><strong>Jackery Explorer 2000 Plus</strong></p>
-</div></li><li class="hb-inbox-card" data-item-number="2"><img alt="AC charging cable image placeholder." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je2000e_eu_en/inbox_cable.png" data-web-finished-panel-sha256="c6cdf9a78185cd034e0032fa427477c576c80d88ef28f90c0b887a4fc0fa4539" src="../../../../_static/manual-assets/_pool/c6/c6cdf9a78185cd034e0032fa427477c576c80d88ef28f90c0b887a4fc0fa4539.png"/><div class="hb-inbox-label">
+</div></li><li class="hb-inbox-card" data-item-number="2"><img alt="AC charging cable." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je2000e_eu_en/inbox_cable.png" data-web-finished-panel-sha256="c6cdf9a78185cd034e0032fa427477c576c80d88ef28f90c0b887a4fc0fa4539" src="../../../../_static/manual-assets/_pool/c6/c6cdf9a78185cd034e0032fa427477c576c80d88ef28f90c0b887a4fc0fa4539.png"/><div class="hb-inbox-label">
 <p><strong>AC Charging Cable</strong></p>
-</div></li><li class="hb-inbox-card" data-item-number="3"><img alt="User manual image placeholder." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je2000e_eu_en/inbox_manual.png" data-web-finished-panel-sha256="212dc1705383bf23f618d42aed0f210026edf755f9417a9435b08f35c4614dc7" src="../../../../_static/manual-assets/_pool/21/212dc1705383bf23f618d42aed0f210026edf755f9417a9435b08f35c4614dc7.png"/><div class="hb-inbox-label">
+</div></li><li class="hb-inbox-card" data-item-number="3"><img alt="User manual." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je2000e_eu_en/inbox_manual.png" data-web-finished-panel-sha256="212dc1705383bf23f618d42aed0f210026edf755f9417a9435b08f35c4614dc7" src="../../../../_static/manual-assets/_pool/21/212dc1705383bf23f618d42aed0f210026edf755f9417a9435b08f35c4614dc7.png"/><div class="hb-inbox-label">
 <p>User Manual</p>
 </div></li></ol><div class="hb-inbox-tip" role="note"><div class="hb-inbox-tip-label"><p><strong>TIP</strong></p></div><div class="hb-inbox-tip-body"><p>The car charging cable is not included but is available for purchase separately on our website.
 For assistance, please contact Jackery customer service.</p></div></div></figure>
@@ -219,7 +219,7 @@ The AC/DC Output Resume Function is disabled by default. Enable this function in
 
 
 
-<figure aria-label="LCD display mode placeholder." class="hb-lcd-mode-composition" data-component-id="HB-TABLE-LCD-MODE"><div class="hb-lcd-mode-art-panel"><img alt="LCD display mode placeholder." class="hb-lcd-mode-art" src="../../../../_static/manual-assets/_pool/f5/f5de755e22e9db47eb56bc21e17a4070307430758d0b19b1bf6be0ee466aa2fc.png"/></div><div class="hb-lcd-mode-table-panel"><table class="hb-lcd-mode-table"><colgroup><col class="hb-lcd-mode-col-state"/><col class="hb-lcd-mode-col-action"/><col class="hb-lcd-mode-col-copy"/></colgroup><tbody><tr><td class="hb-lcd-mode-state" rowspan="3">Shortly On</td><td class="hb-lcd-mode-action">Turn on</td><td class="hb-lcd-mode-copy">Press the POWER button or when the product is charging.</td></tr><tr><td class="hb-lcd-mode-action">Turn off</td><td class="hb-lcd-mode-copy">Press the POWER button.</td></tr><tr><td class="hb-lcd-mode-action">Auto-off</td><td class="hb-lcd-mode-copy">The LCD turns off automatically and enters sleep mode after 2 minutes of inactivity.</td></tr><tr><td class="hb-lcd-mode-state" rowspan="3">Steady On (in charging or discharging state)</td><td class="hb-lcd-mode-action">Turn on</td><td class="hb-lcd-mode-copy">Press the POWER button twice when the product is powered on.</td></tr><tr><td class="hb-lcd-mode-action">Turn off</td><td class="hb-lcd-mode-copy">Press the POWER button.</td></tr><tr><td class="hb-lcd-mode-action">Auto-off</td><td class="hb-lcd-mode-copy">The LCD turns off automatically after 2 hours of inactivity.</td></tr></tbody></table></div></figure>
+<figure aria-label="LCD display mode." class="hb-lcd-mode-composition" data-component-id="HB-TABLE-LCD-MODE"><div class="hb-lcd-mode-art-panel"><img alt="LCD display mode." class="hb-lcd-mode-art" src="../../../../_static/manual-assets/_pool/f5/f5de755e22e9db47eb56bc21e17a4070307430758d0b19b1bf6be0ee466aa2fc.png"/></div><div class="hb-lcd-mode-table-panel"><table class="hb-lcd-mode-table"><colgroup><col class="hb-lcd-mode-col-state"/><col class="hb-lcd-mode-col-action"/><col class="hb-lcd-mode-col-copy"/></colgroup><tbody><tr><td class="hb-lcd-mode-state" rowspan="3">Shortly On</td><td class="hb-lcd-mode-action">Turn on</td><td class="hb-lcd-mode-copy">Press the POWER button or when the product is charging.</td></tr><tr><td class="hb-lcd-mode-action">Turn off</td><td class="hb-lcd-mode-copy">Press the POWER button.</td></tr><tr><td class="hb-lcd-mode-action">Auto-off</td><td class="hb-lcd-mode-copy">The LCD turns off automatically and enters sleep mode after 2 minutes of inactivity.</td></tr><tr><td class="hb-lcd-mode-state" rowspan="3">Steady On (in charging or discharging state)</td><td class="hb-lcd-mode-action">Turn on</td><td class="hb-lcd-mode-copy">Press the POWER button twice when the product is powered on.</td></tr><tr><td class="hb-lcd-mode-action">Turn off</td><td class="hb-lcd-mode-copy">Press the POWER button.</td></tr><tr><td class="hb-lcd-mode-action">Auto-off</td><td class="hb-lcd-mode-copy">The LCD turns off automatically after 2 hours of inactivity.</td></tr></tbody></table></div></figure>
 
 
 
@@ -285,7 +285,7 @@ the actual output power is lower than the rated output power in this mode but re
 
 This product can support up to 5 battery packs to meet the need for large power capacity. For details on how to use it, please refer to the *Jackery Battery Pack 2000 User Manual*.
 
-<img src="../../../../_static/manual-assets/_pool/91/912717e8dbc1034ab12ee149a1677b45daafebdd3ffc457159e35bf018b2247f.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_en/extra_battery.png" data-web-finished-panel-sha256="912717e8dbc1034ab12ee149a1677b45daafebdd3ffc457159e35bf018b2247f" alt="Battery pack connection diagram placeholder." />
+<img src="../../../../_static/manual-assets/_pool/91/912717e8dbc1034ab12ee149a1677b45daafebdd3ffc457159e35bf018b2247f.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_en/extra_battery.png" data-web-finished-panel-sha256="912717e8dbc1034ab12ee149a1677b45daafebdd3ffc457159e35bf018b2247f" alt="Battery pack connection diagram." />
 
 
 
@@ -338,7 +338,7 @@ Under this mode, you can rapidly power up the portable power station using the A
 
 Jackery Explorer 2000 Plus has two DC8020 input ports and is compatible with the Jackery solar panels.
 
-<img src="../../../../_static/manual-assets/_pool/fe/fe0e666aca3be3cb7b71ea7a40b4c1669d5b43dfe816666e5a94bbcae3b788ca.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_en/charging_solar.png" data-web-finished-panel-sha256="fe0e666aca3be3cb7b71ea7a40b4c1669d5b43dfe816666e5a94bbcae3b788ca" alt="Solar charging connection diagram placeholder 1." />
+<img src="../../../../_static/manual-assets/_pool/fe/fe0e666aca3be3cb7b71ea7a40b4c1669d5b43dfe816666e5a94bbcae3b788ca.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je2000e_eu_en/charging_solar.png" data-web-finished-panel-sha256="fe0e666aca3be3cb7b71ea7a40b4c1669d5b43dfe816666e5a94bbcae3b788ca" alt="Solar charging connection diagram (1)." />
 
 If one DC8020 input port needs to connect two solar panels simultaneously, please refer to the figure below for charging through the solar panel connector (sold separately, not included as standard).
 
@@ -603,7 +603,7 @@ The sales receipt from the first consumer purchaser, or other reasonable documen
 
 ## 1. Download the App and log in
 
-<img src="../../../../_static/manual-assets/_pool/37/37bf4f4918f338372737a22a6a43c72d1610cae96e063cc66201f9f529701c24.png" style="width: 320px;" width="320" height="65" alt="App download QR and marketplace placeholder." />
+<img src="../../../../_static/manual-assets/_pool/37/37bf4f4918f338372737a22a6a43c72d1610cae96e063cc66201f9f529701c24.png" style="width: 320px;" width="320" height="65" alt="App download QR code and app stores." />
 
 Search for \"Jackery\" in Google Play or App Store to install the App. After that, you can register and log in. Alternatively, scan the QR code below to download and install the App.
 

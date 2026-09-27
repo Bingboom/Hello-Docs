@@ -51,11 +51,11 @@ During the lifecycle of energy storage products, a certain degree of capacity an
 
 
 
-<figure aria-label="WHAT'S IN THE BOX" class="hb-inbox-composition" data-card-count="3" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="three-card-responsive"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Power station image placeholder." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je1000h_eu_en/inbox_unit.png" data-web-finished-panel-sha256="dc09eaa794864eafeec98eb19993c71dc3a5118f6f802e63a6e01caffe29c449" src="assets/ir/dc09eaa794864eafeec98eb19993c71dc3a5118f6f802e63a6e01caffe29c449/inbox_unit.png"/><div class="hb-inbox-label">
+<figure aria-label="WHAT'S IN THE BOX" class="hb-inbox-composition" data-card-count="3" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="three-card-responsive"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Power station." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je1000h_eu_en/inbox_unit.png" data-web-finished-panel-sha256="dc09eaa794864eafeec98eb19993c71dc3a5118f6f802e63a6e01caffe29c449" src="assets/ir/dc09eaa794864eafeec98eb19993c71dc3a5118f6f802e63a6e01caffe29c449/inbox_unit.png"/><div class="hb-inbox-label">
 <p><strong>Jackery Explorer 1000 Plus</strong></p>
-</div></li><li class="hb-inbox-card" data-item-number="2"><img alt="AC charging cable image placeholder." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je1000h_eu_en/inbox_cable.png" data-web-finished-panel-sha256="27863daeaf7fdbcf0c8d5ac89097b8b635594dc38922e40e0e3690971792c3cb" src="assets/ir/27863daeaf7fdbcf0c8d5ac89097b8b635594dc38922e40e0e3690971792c3cb/inbox_cable.png"/><div class="hb-inbox-label">
+</div></li><li class="hb-inbox-card" data-item-number="2"><img alt="AC charging cable." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je1000h_eu_en/inbox_cable.png" data-web-finished-panel-sha256="27863daeaf7fdbcf0c8d5ac89097b8b635594dc38922e40e0e3690971792c3cb" src="assets/ir/27863daeaf7fdbcf0c8d5ac89097b8b635594dc38922e40e0e3690971792c3cb/inbox_cable.png"/><div class="hb-inbox-label">
 <p><strong>AC Charging Cable</strong></p>
-</div></li><li class="hb-inbox-card" data-item-number="3"><img alt="User manual image placeholder." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je1000h_eu_en/inbox_documents.png" data-web-finished-panel-sha256="bb0f2d7007bcc3a67f1400cb2c8bab5c800eafcf98fe85c91a13ff78ef06a29d" src="assets/ir/bb0f2d7007bcc3a67f1400cb2c8bab5c800eafcf98fe85c91a13ff78ef06a29d/inbox_documents.png"/><div class="hb-inbox-label">
+</div></li><li class="hb-inbox-card" data-item-number="3"><img alt="User manual." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/je1000h_eu_en/inbox_documents.png" data-web-finished-panel-sha256="bb0f2d7007bcc3a67f1400cb2c8bab5c800eafcf98fe85c91a13ff78ef06a29d" src="assets/ir/bb0f2d7007bcc3a67f1400cb2c8bab5c800eafcf98fe85c91a13ff78ef06a29d/inbox_documents.png"/><div class="hb-inbox-label">
 <p>User Manual</p>
 </div></li></ol><div class="hb-inbox-tip" role="note"><div class="hb-inbox-tip-label"><p><strong>TIP</strong></p></div><div class="hb-inbox-tip-body"><p>The car charging cable is not included but is available for purchase separately on our website.
 For assistance, please contact Jackery customer service.</p></div></div></figure>
@@ -361,7 +361,7 @@ This function memorizes the output status and automatically resumes AC and DC ou
 <table style="width:100%; border-collapse:collapse; margin:0.75rem 0 0.5rem 0;">
 <tbody>
 <tr>
-<td rowspan="6" style="text-align: center; width: 24%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top;"><img src="assets/ir/66d66b71f0911fe49e8d9aa245e2a7a97d22981a420b1ae2b998cb978594722b/operation_lcd.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_en/operation_lcd.png" data-web-finished-panel-sha256="66d66b71f0911fe49e8d9aa245e2a7a97d22981a420b1ae2b998cb978594722b" alt="LCD display mode placeholder." /></td>
+<td rowspan="6" style="text-align: center; width: 24%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top;"><img src="assets/ir/66d66b71f0911fe49e8d9aa245e2a7a97d22981a420b1ae2b998cb978594722b/operation_lcd.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_en/operation_lcd.png" data-web-finished-panel-sha256="66d66b71f0911fe49e8d9aa245e2a7a97d22981a420b1ae2b998cb978594722b" alt="LCD display mode." /></td>
 <td rowspan="3" style="width: 18%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Shortly On</td>
 <td style="width: 12%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Turn on</td>
 <td style="width: 46%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Press the POWER button or when the product is charging.</td>
@@ -405,7 +405,7 @@ You can also set the screen display mode in the Jackery App.
 
 Connect the product to a wall outlet with the AC charging cable, then press the AC1/AC2 power button and power your appliances at the same time.
 
-<img src="assets/ir/16e6693e75c6359f3392bdd4a5068f516a11106aa5be6c89adcc107ce359f4e1/ups.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_en/ups.png" data-web-finished-panel-sha256="16e6693e75c6359f3392bdd4a5068f516a11106aa5be6c89adcc107ce359f4e1" alt="UPS connection diagram placeholder." />
+<img src="assets/ir/16e6693e75c6359f3392bdd4a5068f516a11106aa5be6c89adcc107ce359f4e1/ups.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_en/ups.png" data-web-finished-panel-sha256="16e6693e75c6359f3392bdd4a5068f516a11106aa5be6c89adcc107ce359f4e1" alt="UPS connection diagram." />
 
 An uninterruptible power supply (UPS) is a type of continual power system that provides automated backup electric power to a load when the mains grid power fails.
 
@@ -485,11 +485,11 @@ Under this mode, you can rapidly power up the portable power station using the A
 
 Jackery Explorer 1000 Plus has two DC8020 input ports and is compatible with the Jackery solar panels.
 
-<img src="assets/ir/a8f1bf85e46fc0be2e3920f280502bb1916942ae114d5090ed476dbcfb440bb8/charging_solar.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_en/charging_solar.png" data-web-finished-panel-sha256="a8f1bf85e46fc0be2e3920f280502bb1916942ae114d5090ed476dbcfb440bb8" alt="Solar charging connection diagram placeholder 1." />
+<img src="assets/ir/a8f1bf85e46fc0be2e3920f280502bb1916942ae114d5090ed476dbcfb440bb8/charging_solar.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_en/charging_solar.png" data-web-finished-panel-sha256="a8f1bf85e46fc0be2e3920f280502bb1916942ae114d5090ed476dbcfb440bb8" alt="Solar charging connection diagram (1)." />
 
 If one DC8020 input port needs to connect two solar panels simultaneously, please refer to the figure below for charging through the solar panel connector (sold separately, not included as standard).
 
-<img src="assets/ir/0934d106ad41c9b4bcf4057b81c3895ae54c1702e127d569986eead92237d914/charging_solar_adapter.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_en/charging_solar_adapter.png" data-web-finished-panel-sha256="0934d106ad41c9b4bcf4057b81c3895ae54c1702e127d569986eead92237d914" alt="Solar charging connection diagram placeholder 2." />
+<img src="assets/ir/0934d106ad41c9b4bcf4057b81c3895ae54c1702e127d569986eead92237d914/charging_solar_adapter.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_en/charging_solar_adapter.png" data-web-finished-panel-sha256="0934d106ad41c9b4bcf4057b81c3895ae54c1702e127d569986eead92237d914" alt="Solar charging connection diagram (2)." />
 
 
 
@@ -790,7 +790,7 @@ The sales receipt from the first consumer purchaser, or other reasonable documen
 
 After the device is successfully added to the App, the Wi-Fi icon on the device will always be on.
 
-<img src="assets/ir/5a5a8acac5dfab8922c6bec40cdbfcdc2c380c24ee29f824980badd114df84a7/app_connect_result.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_en/app_connect_result.png" data-web-finished-panel-sha256="5a5a8acac5dfab8922c6bec40cdbfcdc2c380c24ee29f824980badd114df84a7" alt="App setup result screen placeholder." />
+<img src="assets/ir/5a5a8acac5dfab8922c6bec40cdbfcdc2c380c24ee29f824980badd114df84a7/app_connect_result.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_en/app_connect_result.png" data-web-finished-panel-sha256="5a5a8acac5dfab8922c6bec40cdbfcdc2c380c24ee29f824980badd114df84a7" alt="App setup result screen." />
 
 The above screenshots are for reference only.
 
