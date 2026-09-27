@@ -1,8 +1,8 @@
 {
   "actions": {
-    "check": "5f029f1c74ba2cd457a585c671228b13226fc61faad179fc6769e868951586d6",
-    "html": "5f029f1c74ba2cd457a585c671228b13226fc61faad179fc6769e868951586d6",
-    "md": "5f029f1c74ba2cd457a585c671228b13226fc61faad179fc6769e868951586d6"
+    "check": "1492bd8db2df40fd257075a715b0378b794e63a4c03c3a9cd6accc0aad71d753",
+    "html": "1492bd8db2df40fd257075a715b0378b794e63a4c03c3a9cd6accc0aad71d753",
+    "md": "1492bd8db2df40fd257075a715b0378b794e63a4c03c3a9cd6accc0aad71d753"
   },
   "canonical_source": {
     "files": [
@@ -58,8 +58,8 @@
       },
       {
         "path": "page/specifications_en.rst",
-        "sha256": "93de8d495902c3a09d52725e258c60c9840171a4f75d5ee03e72d51ddf247908",
-        "size": 4609
+        "sha256": "29a51af007e9a4221ea9217bf1bb3b4fde11c2c98bcbce201dbf3953f5e647bb",
+        "size": 4276
       },
       {
         "path": "page/storage_en.rst",
@@ -87,9 +87,9 @@
         "size": 2964
       }
     ],
-    "sha256": "eb67c8edbcd8e1cb119a6a2eab1027aa4488a14ea5e2a6cfeac22feeabe76d65"
+    "sha256": "73b2fc2207b1c6551dab244422f6ee3fa66d0dcd5d887fb645c475161d30d04d"
   },
-  "git_ref": "ad437f1cb0af97fa6da324042348c7c233ffb79d",
+  "git_ref": "424983ad878c7a00a5dadbdd015b4180d8b12cdf",
   "html": {
     "files": [
       {
@@ -514,8 +514,8 @@
       },
       {
         "path": "index.html",
-        "sha256": "32dd2273470f2d6bd525f72273889e79528045fc45fb994027be027778428a9c",
-        "size": 42717
+        "sha256": "70a8774c4aef28d0e95672e7e02049b6420ac14cebf1addc491ec0dfb98519b9",
+        "size": 42515
       },
       {
         "path": "jbp2000b_ac_charging.pdf",
@@ -1338,7 +1338,7 @@
         "size": 316221
       }
     ],
-    "sha256": "8a822f805befa44faa37c9433aebc4430285241c72cff8d2ae94e6b3caf30ec1"
+    "sha256": "fe7389e5f5d2ce7ed4c2496733b8fb6c118bd82fab9447a86b25eda8d0c1f2fb"
   },
   "language": "en",
   "markdown": {
@@ -1450,19 +1450,19 @@
       },
       {
         "path": "manual_jbp2000b_eu.md",
-        "sha256": "e19671f641dacfc5f66dd6f5bc9062bf981aa60dd02cf89a0c1ea4bcd9082358",
-        "size": 27623
+        "sha256": "842749032204c1d47bd01303a98622615dfcc2060d8a5ea6f671511d3f57c070",
+        "size": 27366
       }
     ],
     "manual": "manual_jbp2000b_eu.md",
-    "sha256": "43b145d9afd57f57561d0dcaec70c653801774452c0fb66108580add3d53d634"
+    "sha256": "fe9e611a78be9decaa71f2564924d99cebe33c5dbc697cc4804c99c2248f7a90"
   },
   "model": "JBP-2000B",
   "projection_manifest": {
     "path": "projection_bundle_manifest.json",
-    "sha256": "6d7a9723715d5ffb1d69312d51d66c296a5998f0be4bf7015fd99e45996813c6"
+    "sha256": "ddee013dc7131ed06eaa21184114b9a6751ca18b411c6f06fb6cf6ea8ad2e2ac"
   },
   "region": "EU",
   "schema_version": "auto-manual-web-language-release-evidence/v1",
-  "version": "2.0-20260926"
+  "version": "2.0-20260927"
 }

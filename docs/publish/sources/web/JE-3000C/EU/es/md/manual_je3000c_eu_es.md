@@ -393,7 +393,7 @@ Si aparece alguno de los siguientes códigos de fallo, siga las acciones correct
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Capacidad</th>
-<td class="hb-spec-value manual-spec-value">3072 Wh (60 Ah/51,2 V CC)</td>
+<td class="hb-spec-value manual-spec-value">3072 Wh (60 Ah/51,2 V DC)</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Química Celular</th>
@@ -424,7 +424,7 @@ Si aparece alguno de los siguientes códigos de fallo, siga las acciones correct
 <tbody>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">1 × Entrada CA</th>
-<td class="hb-spec-value manual-spec-value">Modo de carga: 220-240 V~ 50 Hz, 10 A máx.<br/>Modo de derivación<sup class="hb-spec-reference">①</sup>: 220-240 V~ 50 Hz, 10 A máx.</td>
+<td class="hb-spec-value manual-spec-value">220-240 V~ 50 Hz, 10 A máx.<br/>Modo de derivación<sup class="hb-spec-reference">①</sup>: 220-240 V~ 50 Hz, 10 A máx.</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">2 × Puertos DC8020</th>
@@ -489,11 +489,11 @@ Si aparece alguno de los siguientes códigos de fallo, siga las acciones correct
 
 
 
-※ USB Type-C® y USB-C® son marcas registradas de USB Implementers Forum.
-
 ① El producto puede cargar la batería desde una toma de corriente CA mientras suministra energía a través de los puertos de salida CA.
 
 ② Indica que dos o más puertos de salida CA trabajan en conjunto.
+
+※ USB Type-C® y USB-C® son marcas registradas de USB Implementers Forum.
 
 # GARANTÍA
 

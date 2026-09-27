@@ -596,7 +596,7 @@ Wenn einer der folgenden Fehlercodes angezeigt wird, befolgen Sie die aufgeführ
 <tbody>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">1 × AC-Eingang</th>
-<td class="hb-spec-value manual-spec-value">Lademodus: 220 V-240 V~ 50 Hz, 10 A max.<br/>Bypassmodus<sup class="hb-spec-reference">①</sup>: 220 V-240 V~ 50 Hz, 7,83 A</td>
+<td class="hb-spec-value manual-spec-value">220 V-240 V~ 50 Hz, 10 A max.<br/>Bypassmodus<sup class="hb-spec-reference">①</sup>: 220 V-240 V~ 50 Hz, 7,83 A</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">2 × DC8020-Anschlüsse</th>
@@ -669,11 +669,11 @@ Wenn einer der folgenden Fehlercodes angezeigt wird, befolgen Sie die aufgeführ
 
 
 
-※ USB Type-C® und USB-C® sind eingetragene Marken des USB Implementers Forum.
-
 ① Das Produkt kann den Akku über die Steckdose aufladen und gleichzeitig Strom über die AC-Ausgangsports liefern.
 
 ② Zeigt an, dass zwei oder mehr AC-Ausgangsanschlüsse gemeinsam arbeiten.
+
+※ USB Type-C® und USB-C® sind eingetragene Marken des USB Implementers Forum.
 
 # GARANTIE
 

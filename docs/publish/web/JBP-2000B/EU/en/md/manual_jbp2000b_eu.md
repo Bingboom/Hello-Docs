@@ -234,27 +234,16 @@ If this product is stored for a long period of time (3 months - 6 months) with t
 
 
 
-## INPUT PORTS
+## INPUT/OUTPUT PORTS
 
 
 
-<figure aria-label="INPUT PORTS" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
+<figure aria-label="INPUT/OUTPUT PORTS" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">DC Expansion Port (Input)</th>
 <td class="hb-spec-value manual-spec-value">36.8V-57.6V⎓75A Max</td>
 </tr>
-</tbody>
-</table></figure>
-
-
-
-## OUTPUT PORTS
-
-
-
-<figure aria-label="OUTPUT PORTS" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
-<tbody>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">DC Expansion Port (Output)</th>
 <td class="hb-spec-value manual-spec-value">36.8V-57.6V⎓75A Max</td>

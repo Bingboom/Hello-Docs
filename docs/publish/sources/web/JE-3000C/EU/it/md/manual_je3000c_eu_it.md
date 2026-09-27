@@ -380,13 +380,13 @@ Se viene visualizzato uno dei seguenti codici di errore, segui le azioni corrett
 
 
 
-# SPECIFICHE
+# SPECIFICHE TECNICHE
 
-## INFO GENERALI
+## INFORMAZIONI GENERALI
 
 
 
-<figure aria-label="INFO GENERALI" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
+<figure aria-label="INFORMAZIONI GENERALI" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Nome del prodotto</th>
@@ -414,22 +414,22 @@ Se viene visualizzato uno dei seguenti codici di errore, segui le azioni corrett
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Durata del ciclo</th>
-<td class="hb-spec-value manual-spec-value">4000 cicli fino all' 70% di capacità</td>
+<td class="hb-spec-value manual-spec-value">4000 cicli fino al 70% di capacità</td>
 </tr>
 </tbody>
 </table></figure>
 
 
 
-## PORTE DI INPUT
+## PORTE IN INGRESSO
 
 
 
-<figure aria-label="PORTE DI INPUT" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
+<figure aria-label="PORTE IN INGRESSO" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">1 × Ingresso CA</th>
-<td class="hb-spec-value manual-spec-value">Modalità di ricarica: 220-240 V~ 50 Hz, 10 A max.<br/>Modalità bypass<sup class="hb-spec-reference">①</sup>: 220-240 V~ 50 Hz, 10 A max.</td>
+<td class="hb-spec-value manual-spec-value">220-240 V~ 50 Hz, 10 A max.<br/>Modalità bypass<sup class="hb-spec-reference">①</sup>: 220-240 V~ 50 Hz, 10 A max.</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">2 × Porte DC8020</th>
@@ -440,11 +440,11 @@ Se viene visualizzato uno dei seguenti codici di errore, segui le azioni corrett
 
 
 
-## PORTE DI USCITA
+## PORTE IN USCITA
 
 
 
-<figure aria-label="PORTE DI USCITA" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
+<figure aria-label="PORTE IN USCITA" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">3 × Uscita CA</th>
@@ -494,11 +494,11 @@ Se viene visualizzato uno dei seguenti codici di errore, segui le azioni corrett
 
 
 
-※ USB Type-C® e USB-C® sono marchi registrati di USB Implementers Forum.
-
 ① Il prodotto può caricare la batteria dalla presa a muro CA mentre fornisce energia tramite le porte di uscita CA.
 
 ② Indica che due o più porte di uscita CA funzionano insieme.
+
+※ USB Type-C® e USB-C® sono marchi registrati di USB Implementers Forum.
 
 # GARANZIA
 

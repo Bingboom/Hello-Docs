@@ -410,7 +410,7 @@ Si l\'un des codes d\'erreur suivants apparaît, suivez les actions correctives 
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Capacité</th>
-<td class="hb-spec-value manual-spec-value">3072 Wh (60 Ah/51,2 V CC)</td>
+<td class="hb-spec-value manual-spec-value">3072 Wh (60 Ah/51,2 V DC)</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Cellule Chimique</th>
@@ -441,7 +441,7 @@ Si l\'un des codes d\'erreur suivants apparaît, suivez les actions correctives 
 <tbody>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">1 × Entrée CA</th>
-<td class="hb-spec-value manual-spec-value">Mode de charge: 220-240 V~ 50 Hz, 10 A max.<br/>Mode dérivation<sup class="hb-spec-reference">①</sup>: 220 V-240 V~ 50 Hz, 10 A max.</td>
+<td class="hb-spec-value manual-spec-value">220-240 V~ 50 Hz, 10 A max.<br/>Mode dérivation<sup class="hb-spec-reference">①</sup>: 220 V-240 V~ 50 Hz, 10 A max.</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">2 × Ports DC8020</th>
@@ -506,11 +506,11 @@ Si l\'un des codes d\'erreur suivants apparaît, suivez les actions correctives 
 
 
 
-※ USB Type-C® et USB-C® sont des marques déposées de USB Implementers Forum.
-
 ① Le produit peut charger la batterie à partir d\'une prise murale CA tout en fournissant de l\'énergie via les ports de sortie CA.
 
 ② Indique que deux ports de sortie CA ou plus fonctionnent ensemble.
+
+※ USB Type-C® et USB-C® sont des marques déposées de USB Implementers Forum.
 
 # GARANTIE
 

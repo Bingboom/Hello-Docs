@@ -457,12 +457,12 @@ Si l\'un des codes d\'erreur suivants apparaît, suivez les actions correctives 
 <td class="hb-spec-value manual-spec-value">Jackery Explorer 1000</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">N° de modèle</th>
+<th class="hb-spec-label manual-spec-label" scope="row">N° modèle</th>
 <td class="hb-spec-value manual-spec-value">JE-1000F</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Capacité</th>
-<td class="hb-spec-value manual-spec-value">1024 Wh (20 Ah / 51,2 V CC)</td>
+<td class="hb-spec-value manual-spec-value">1024 Wh (20 Ah / 51,2 V DC)</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Cellule Chimique</th>
@@ -558,9 +558,9 @@ Si l\'un des codes d\'erreur suivants apparaît, suivez les actions correctives 
 
 
 
-※ USB Type-C® et USB-C® sont des marques déposées de USB Implementers Forum.
-
 ① Le produit peut charger la batterie à partir d\'une prise murale CA tout en fournissant de l\'énergie via les ports de sortie CA.
+
+※ USB Type-C® et USB-C® sont des marques déposées de USB Implementers Forum.
 
 # GARANTIE
 

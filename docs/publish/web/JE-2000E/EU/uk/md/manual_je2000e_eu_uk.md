@@ -416,7 +416,7 @@ Jackery Explorer 2000 Plus має два вхідні порти DC8020 і су�
 
 
 
-# Специфікації
+# ТЕХНІЧНІ ХАРАКТЕРИСТИКИ
 
 ## ЗАГАЛЬНА ІНФОРМАЦІЯ
 
@@ -442,7 +442,7 @@ Jackery Explorer 2000 Plus має два вхідні порти DC8020 і су�
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Вага</th>
-<td class="hb-spec-value manual-spec-value">Близько 18,8 кг</td>
+<td class="hb-spec-value manual-spec-value">Близько 19,1 кг</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Розміри</th>
@@ -465,15 +465,15 @@ Jackery Explorer 2000 Plus має два вхідні порти DC8020 і су�
 <tbody>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">1 вхід змінного струму</th>
-<td class="hb-spec-value manual-spec-value">Режим заряджання: 220 В-240 В~ 50 Гц, 10 A макс.<br/>Режим байпасу<sup class="hb-spec-reference">①</sup>: 220 В-240 В~ 50 Гц, 10 A макс.</td>
+<td class="hb-spec-value manual-spec-value">Режим заряджання: 220 В-240 В~ 50 Гц, 10 A макс.<br/>Байпасний режим<sup class="hb-spec-reference">①</sup>: 220 В-240 В~ 50 Гц, 10 A макс.</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">2 порти DC8020</th>
-<td class="hb-spec-value manual-spec-value">PV: 11–16 В⎓8 А макс., до 8 А макс. при використанні двох входів<br/>Car: 16–60 В⎓12 А, до 21 А / 800 Вт макс. при використанні двох входів</td>
+<td class="hb-spec-value manual-spec-value">Автомобіль: 11–16 В⎓8 А макс., до 8 А макс. при використанні двох входів<br/>PV: 16–60 В⎓12 А, до 21 А / 800 Вт макс. при використанні двох входів</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">1 порт розширення постійного струму</th>
-<td class="hb-spec-value manual-spec-value">36.8 V-57.6 V⎓75 A max.</td>
+<td class="hb-spec-value manual-spec-value">36,8 В-57,6 В⎓75 A макс.</td>
 </tr>
 </tbody>
 </table></figure>
@@ -487,7 +487,7 @@ Jackery Explorer 2000 Plus має два вхідні порти DC8020 і су�
 <figure aria-label="ВИХІДНІ ПОРТИ" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">2 виходи змінного струму</th>
+<th class="hb-spec-label manual-spec-label" scope="row">3 виходи змінного струму</th>
 <td class="hb-spec-value manual-spec-value">230 В~ 50 Гц, 10 A макс., номінальна потужність 2400 Вт загалом, пікова потужність 4800 Вт</td>
 </tr>
 <tr>
@@ -495,20 +495,24 @@ Jackery Explorer 2000 Plus має два вхідні порти DC8020 і су�
 <td class="hb-spec-value manual-spec-value">230 В~ 50 Гц, 10 A макс.</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">1 вихід USB-A</th>
+<th class="hb-spec-label manual-spec-label" scope="row">1 вихід USB-A 18 Вт</th>
 <td class="hb-spec-value manual-spec-value">18 Вт макс., 5-6 В⎓3 A, 6-9 В⎓2 A, 9-12 В⎓1,5 A</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">2 виходи USB-C</th>
-<td class="hb-spec-value manual-spec-value">30 Вт макс., 5 В⎓3 A, 9 В⎓3 A, 12 В⎓2,5 A, 15 В⎓2 A, 20 В⎓1,5 A<br/>140 Вт макс., 5 В⎓3 A, 9 В⎓3 A, 12 В⎓3 A, 15 В⎓3 A, 20 В⎓5 A, 28 В⎓5 A</td>
+<th class="hb-spec-label manual-spec-label" scope="row">Вихід USB-C 30 Вт</th>
+<td class="hb-spec-value manual-spec-value">30 Вт макс., 5 В⎓3 A, 9 В⎓3 A, 12 В⎓2,5 A, 15 В⎓2 A, 20 В⎓1,5 A</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">1 × порт DC 12 В</th>
+<th class="hb-spec-label manual-spec-label" scope="row">Вихід USB-C 140 Вт</th>
+<td class="hb-spec-value manual-spec-value">140 Вт макс., 5 В⎓3 A, 9 В⎓3 A, 12 В⎓3 A, 15 В⎓3 A, 20 В⎓5 A, 28 В⎓5 A</td>
+</tr>
+<tr>
+<th class="hb-spec-label manual-spec-label" scope="row">Порт постійного струму 12 В</th>
 <td class="hb-spec-value manual-spec-value">12 В⎓10 А макс.</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">1 порт розширення постійного струму</th>
-<td class="hb-spec-value manual-spec-value">36.8 V-57.6 V⎓55 A max.</td>
+<td class="hb-spec-value manual-spec-value">36,8 В-57,6 В⎓55 A макс.</td>
 </tr>
 </tbody>
 </table></figure>
@@ -526,7 +530,7 @@ Jackery Explorer 2000 Plus має два вхідні порти DC8020 і су�
 <td class="hb-spec-value manual-spec-value">від -10 °C до 45 °C</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Температура розряду</th>
+<th class="hb-spec-label manual-spec-label" scope="row">Температура розряджання</th>
 <td class="hb-spec-value manual-spec-value">від -10 °C до 45 °C</td>
 </tr>
 </tbody>

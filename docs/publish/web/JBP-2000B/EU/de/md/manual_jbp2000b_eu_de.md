@@ -242,7 +242,7 @@ Bewahren Sie das Produkt an einem trockenen, sauberen Ort mit ausreichender Bel�
 
 Wenn dieses Produkt über einen längeren Zeitraum (3 bis 6 Monate) mit entladener Batterie gelagert wird, kann es sein, dass es danach nicht mehr aufgeladen werden kann. Um dies zu verhindern und die Batterielebensdauer zu erhalten, wird empfohlen, das Produkt alle drei Monate zu überprüfen und aufzuladen sowie mindestens einmal alle 6 bis 12 Monate einen vollständigen Lade- und Entladezyklus durchzuführen.
 
-# Spezifikationen
+# TECHNISCHE DATEN
 
 ## ALLGEMEINE INFORMATIONEN
 
@@ -283,27 +283,16 @@ Wenn dieses Produkt über einen längeren Zeitraum (3 bis 6 Monate) mit entladen
 
 
 
-## EINGANGSPORTS
+## EINGANGS-/AUSGANGSANSCHLÜSSE
 
 
 
-<figure aria-label="EINGANGSPORTS" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
+<figure aria-label="EINGANGS-/AUSGANGSANSCHLÜSSE" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">DC-Erweiterungsanschluss (Eingang)</th>
 <td class="hb-spec-value manual-spec-value">36,8 V - 57,6 V ⎓ 75 A max.</td>
 </tr>
-</tbody>
-</table></figure>
-
-
-
-## AUSGANGSPORTE
-
-
-
-<figure aria-label="AUSGANGSPORTE" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
-<tbody>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">DC-Erweiterungsanschluss (Ausgang)</th>
 <td class="hb-spec-value manual-spec-value">36,8 V - 57,6 V ⎓ 75 A max.</td>
@@ -321,11 +310,11 @@ Wenn dieses Produkt über einen längeren Zeitraum (3 bis 6 Monate) mit entladen
 <tbody>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Ladetemperatur</th>
-<td class="hb-spec-value manual-spec-value">-10°C und 45°C</td>
+<td class="hb-spec-value manual-spec-value">-10°C bis 45°C</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Entladetemperatur</th>
-<td class="hb-spec-value manual-spec-value">-10°C und 45°C</td>
+<td class="hb-spec-value manual-spec-value">-10°C bis 45°C</td>
 </tr>
 </tbody>
 </table></figure>

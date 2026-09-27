@@ -416,7 +416,7 @@ Wenn einer der folgenden Fehlercodes angezeigt wird, befolgen Sie die aufgeführ
 
 
 
-# Spezifikationen
+# TECHNISCHE DATEN
 
 ## ALLGEMEINE INFORMATIONEN
 
@@ -457,15 +457,15 @@ Wenn einer der folgenden Fehlercodes angezeigt wird, befolgen Sie die aufgeführ
 
 
 
-## EINGANGSPORTS
+## EINGANGSANSCHLÜSSE
 
 
 
-<figure aria-label="EINGANGSPORTS" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
+<figure aria-label="EINGANGSANSCHLÜSSE" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">1 × AC-Eingang</th>
-<td class="hb-spec-value manual-spec-value">Lademodus: 220-240 V~ 50 Hz, 10 A max.<br/>Bypassmodus<sup class="hb-spec-reference">①</sup>: 220 V-240 V~ 50 Hz, 10 A max.</td>
+<td class="hb-spec-value manual-spec-value">220-240 V~ 50 Hz, 10 A max.<br/>Bypassmodus<sup class="hb-spec-reference">①</sup>: 220 V-240 V~ 50 Hz, 10 A max.</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">2 × DC8020-Anschlüsse</th>
@@ -476,11 +476,11 @@ Wenn einer der folgenden Fehlercodes angezeigt wird, befolgen Sie die aufgeführ
 
 
 
-## AUSGANGSPORTE
+## AUSGANGSANSCHLÜSSE
 
 
 
-<figure aria-label="AUSGANGSPORTE" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
+<figure aria-label="AUSGANGSANSCHLÜSSE" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">3 × AC-Ausgang</th>
@@ -530,11 +530,11 @@ Wenn einer der folgenden Fehlercodes angezeigt wird, befolgen Sie die aufgeführ
 
 
 
-※ USB Type-C® und USB-C® sind eingetragene Marken des USB Implementers Forum.
-
-① Das Produkt kann den Akku über die Steckdose aufladen und gleichzeitig Strom über die AC-Ausgänge liefern.
+① Das Produkt kann den Akku über die Steckdose aufladen und gleichzeitig Strom über die AC-Ausgangsports liefern.
 
 ② Zeigt an, dass zwei oder mehr AC-Ausgangsanschlüsse gemeinsam arbeiten.
+
+※ USB Type-C® und USB-C® sind eingetragene Marken des USB Implementers Forum.
 
 # GARANTIE
 

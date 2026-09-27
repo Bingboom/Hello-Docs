@@ -421,18 +421,18 @@ Wenn einer der folgenden Fehlercodes angezeigt wird, befolgen Sie die aufgeführ
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Zykluslebensdauer</th>
-<td class="hb-spec-value manual-spec-value">6000 Zyklen bei über 70 % Restkapazität</td>
+<td class="hb-spec-value manual-spec-value">4000 Zyklen bei über 70 % Restkapazität</td>
 </tr>
 </tbody>
 </table></figure>
 
 
 
-## EINGANGSPORTS
+## EINGANGSANSCHLÜSSE
 
 
 
-<figure aria-label="EINGANGSPORTS" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
+<figure aria-label="EINGANGSANSCHLÜSSE" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">1 × AC-Eingang</th>
@@ -447,19 +447,19 @@ Wenn einer der folgenden Fehlercodes angezeigt wird, befolgen Sie die aufgeführ
 
 
 
-## AUSGANGSPORTE
+## AUSGANGSANSCHLÜSSE
 
 
 
-<figure aria-label="AUSGANGSPORTE" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
+<figure aria-label="AUSGANGSANSCHLÜSSE" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">3 × AC-Ausgänge</th>
-<td class="hb-spec-value manual-spec-value">230 V~ 50 Hz, 10 A max., 2200 W Nennleistung insgesamt, 4400 W Spitzenleistung</td>
+<td class="hb-spec-value manual-spec-value">230 V~ 50 Hz, 2200 W Nennleistung insgesamt, 4400 W Spitzenleistung</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">AC-Ausgang im Bypass-Modus<sup class="hb-spec-reference">①</sup></th>
-<td class="hb-spec-value manual-spec-value">220 V-240 V~ 50 Hz, 10 A max.</td>
+<td class="hb-spec-value manual-spec-value">220 V-240 V~ 50 Hz, 2200 W max.</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">1 × USB-C-Ausgang 30 W</th>
@@ -489,7 +489,7 @@ Wenn einer der folgenden Fehlercodes angezeigt wird, befolgen Sie die aufgeführ
 <figure aria-label="UMGEBUNGSTEMPERATUR IM BETRIEB" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Ladtemperatur</th>
+<th class="hb-spec-label manual-spec-label" scope="row">Ladetemperatur</th>
 <td class="hb-spec-value manual-spec-value">von 0 °C bis 45 °C</td>
 </tr>
 <tr>
@@ -501,9 +501,9 @@ Wenn einer der folgenden Fehlercodes angezeigt wird, befolgen Sie die aufgeführ
 
 
 
-※ USB Type-C® und USB-C® sind eingetragene Marken des USB Implementers Forum.
-
 ① Das Produkt kann den Akku über die Steckdose aufladen und gleichzeitig Strom über die AC-Ausgänge liefern.
+
+※ USB Type-C® und USB-C® sind eingetragene Marken des USB Implementers Forum.
 
 # GARANTIE
 

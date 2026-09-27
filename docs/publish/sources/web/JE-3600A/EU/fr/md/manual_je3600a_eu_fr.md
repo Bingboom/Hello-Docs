@@ -492,7 +492,7 @@ Si l\'un des codes d\'erreur suivants apparaît, suivez les actions correctives 
 <tbody>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">1 × Entrée CA</th>
-<td class="hb-spec-value manual-spec-value">Mode charge: 220-240 V~ 50 Hz, 10 A max.<br/>Mode dérivation: 220-240 V~ 50 Hz, 10 A max.<sup class="hb-spec-reference">①</sup></td>
+<td class="hb-spec-value manual-spec-value">Mode charge: 220-240 V~ 50 Hz, 10 A max.<br/>Mode dérivation<sup class="hb-spec-reference">①</sup>: 220-240 V~ 50 Hz, 10 A max.</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">2 × Ports DC8020</th>
@@ -518,11 +518,11 @@ Si l\'un des codes d\'erreur suivants apparaît, suivez les actions correctives 
 <td class="hb-spec-value manual-spec-value">230 V~ 50 Hz, 3600 W</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Sortie totale CA</th>
-<td class="hb-spec-value manual-spec-value">3600 W nominal, 7200 W crête<sup class="hb-spec-reference">②</sup></td>
+<th class="hb-spec-label manual-spec-label" scope="row">Sortie totale CA<sup class="hb-spec-reference">②</sup></th>
+<td class="hb-spec-value manual-spec-value">3600 W nominal, 7200 W crête</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Sortie CA en mode dérivation</th>
+<th class="hb-spec-label manual-spec-label" scope="row">Sortie CA en mode dérivation<sup class="hb-spec-reference">①</sup></th>
 <td class="hb-spec-value manual-spec-value">220-240 V~ 50 Hz, 10 A max.</td>
 </tr>
 <tr>

@@ -22,7 +22,7 @@ Please note that the following are not covered under warranty:
 
 - Incidents of personal injury, fire, equipment failure, or other adverse consequences caused by using this product in atomic energy, aviation, medical, or other safety-critical fields.
 
-# SPECIFICATIONS
+# TECHNICAL SPECIFICATIONS
 
 ## GENERAL
 
@@ -432,3 +432,5 @@ This device complies with Part 15 of the FCC Rules. Operation is subject to the 
 
 
 <figure aria-label="Interpretation Rights" class="hb-warranty-card" data-component-id="HB-WARRANTY-SECTION" data-warranty-card-index="6"><p>The warranty on Jackery's product is limited to the original consumer purchaser and is not transferable to any subsequent owner.</p></figure>
+
+

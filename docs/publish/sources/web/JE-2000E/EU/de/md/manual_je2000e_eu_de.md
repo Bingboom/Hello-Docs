@@ -427,7 +427,7 @@ Wenn einer der folgenden Fehlercodes angezeigt wird, befolgen Sie die aufgeführ
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Gewicht</th>
-<td class="hb-spec-value manual-spec-value">Etwa 18,8 kg</td>
+<td class="hb-spec-value manual-spec-value">Etwa 19,1 kg</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Abmessungen</th>
@@ -442,11 +442,11 @@ Wenn einer der folgenden Fehlercodes angezeigt wird, befolgen Sie die aufgeführ
 
 
 
-## EINGANGSPORTS
+## EINGANGSANSCHLÜSSE
 
 
 
-<figure aria-label="EINGANGSPORTS" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
+<figure aria-label="EINGANGSANSCHLÜSSE" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">1 × AC-Eingang</th>
@@ -454,25 +454,25 @@ Wenn einer der folgenden Fehlercodes angezeigt wird, befolgen Sie die aufgeführ
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">2 × DC8020-Anschlüsse</th>
-<td class="hb-spec-value manual-spec-value">PV: 11–16 V⎓8 A max., bei Verwendung beider Eingänge bis zu 8 A max.<br/>Car: 16–60 V⎓12 A, bei Verwendung beider Eingänge bis zu 21 A / 800 W max.</td>
+<td class="hb-spec-value manual-spec-value">Auto: 11–16 V⎓8 A max., bei Verwendung beider Eingänge bis zu 8 A max.<br/>PV: 16–60 V⎓12 A, bei Verwendung beider Eingänge bis zu 21 A / 800 W max.</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">1 × DC-Erweiterungsanschluss</th>
-<td class="hb-spec-value manual-spec-value">36.8 V-57.6 V⎓75 A max.</td>
+<td class="hb-spec-value manual-spec-value">36,8 V-57,6 V⎓75 A max.</td>
 </tr>
 </tbody>
 </table></figure>
 
 
 
-## AUSGANGSPORTE
+## AUSGANGSANSCHLÜSSE
 
 
 
-<figure aria-label="AUSGANGSPORTE" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
+<figure aria-label="AUSGANGSANSCHLÜSSE" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">2 × AC-Ausgänge</th>
+<th class="hb-spec-label manual-spec-label" scope="row">3 × AC-Ausgänge</th>
 <td class="hb-spec-value manual-spec-value">230 V~ 50 Hz, 10 A max., 2400 W Nennleistung insgesamt, 4800 W Spitzenleistung</td>
 </tr>
 <tr>
@@ -484,8 +484,12 @@ Wenn einer der folgenden Fehlercodes angezeigt wird, befolgen Sie die aufgeführ
 <td class="hb-spec-value manual-spec-value">18 W max., 5-6 V⎓3 A, 6-9 V⎓2 A, 9-12 V⎓1,5 A</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">2 × USB-C-Ausgang</th>
-<td class="hb-spec-value manual-spec-value">30 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓2,5 A, 15 V⎓2 A, 20 V⎓1,5 A<br/>140 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓3 A, 15 V⎓3 A, 20 V⎓5 A, 28 V⎓5 A</td>
+<th class="hb-spec-label manual-spec-label" scope="row">1 × USB-C-Ausgang 30 W</th>
+<td class="hb-spec-value manual-spec-value">30 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓2,5 A, 15 V⎓2 A, 20 V⎓1,5 A</td>
+</tr>
+<tr>
+<th class="hb-spec-label manual-spec-label" scope="row">1 × USB-C-Ausgang 140 W</th>
+<td class="hb-spec-value manual-spec-value">140 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓3 A, 15 V⎓3 A, 20 V⎓5 A, 28 V⎓5 A</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">1 × DC 12 V-Anschluss</th>
@@ -493,7 +497,7 @@ Wenn einer der folgenden Fehlercodes angezeigt wird, befolgen Sie die aufgeführ
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">1 × DC-Erweiterungsanschluss</th>
-<td class="hb-spec-value manual-spec-value">36.8 V-57.6 V⎓55 A max.</td>
+<td class="hb-spec-value manual-spec-value">36,8 V-57,6 V⎓55 A max.</td>
 </tr>
 </tbody>
 </table></figure>
@@ -507,7 +511,7 @@ Wenn einer der folgenden Fehlercodes angezeigt wird, befolgen Sie die aufgeführ
 <figure aria-label="UMGEBUNGSTEMPERATUR IM BETRIEB" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Ladtemperatur</th>
+<th class="hb-spec-label manual-spec-label" scope="row">Ladetemperatur</th>
 <td class="hb-spec-value manual-spec-value">von -10 °C bis 45 °C</td>
 </tr>
 <tr>
@@ -521,7 +525,7 @@ Wenn einer der folgenden Fehlercodes angezeigt wird, befolgen Sie die aufgeführ
 
 ※ USB Type-C® und USB-C® sind eingetragene Marken des USB Implementers Forum.
 
-① Das Produkt kann den Akku über die Steckdose aufladen und gleichzeitig Strom über die AC-Ausgänge liefern.
+① Das Produkt kann den Akku über die Steckdose aufladen und gleichzeitig Strom über die AC-Ausgangsanschlüsse liefern.
 
 # GARANTIE
 

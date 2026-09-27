@@ -258,27 +258,16 @@ Si este producto se almacena durante un período prolongado (de 3 a 6 meses) con
 
 
 
-## PUERTOS DE ENTRADA
+## PUERTOS DE ENTRADA/SALIDA
 
 
 
-<figure aria-label="PUERTOS DE ENTRADA" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
+<figure aria-label="PUERTOS DE ENTRADA/SALIDA" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Puerto de Expansión de CC (Entrada)</th>
 <td class="hb-spec-value manual-spec-value">36,8 V-57,6 V⎓75 A Máx.</td>
 </tr>
-</tbody>
-</table></figure>
-
-
-
-## PUERTOS DE SALIDA
-
-
-
-<figure aria-label="PUERTOS DE SALIDA" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
-<tbody>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Puerto de Expansión de CC (Salida)</th>
 <td class="hb-spec-value manual-spec-value">36,8 V-57,6 V⎓75 A Máx.</td>

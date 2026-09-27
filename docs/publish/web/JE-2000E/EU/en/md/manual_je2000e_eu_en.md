@@ -520,11 +520,11 @@ If any of the following fault codes appear, follow the listed corrective actions
 <figure aria-label="ENVIRONMENTAL OPERATING TEMPERATURE" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Charging Temperature</th>
+<th class="hb-spec-label manual-spec-label" scope="row">Charge Temperature</th>
 <td class="hb-spec-value manual-spec-value">-10 °C to 45 °C</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Discharging Temperature</th>
+<th class="hb-spec-label manual-spec-label" scope="row">Discharge Temperature</th>
 <td class="hb-spec-value manual-spec-value">-10 °C to 45 °C</td>
 </tr>
 </tbody>

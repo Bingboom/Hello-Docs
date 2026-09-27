@@ -436,7 +436,7 @@ Jackery Explorer 2000 має два вхідні порти DC8020 і суміс
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Ресурс циклів</th>
-<td class="hb-spec-value manual-spec-value">6000 циклів до 70%+ ємності</td>
+<td class="hb-spec-value manual-spec-value">4000 циклів до 70%+ ємності</td>
 </tr>
 </tbody>
 </table></figure>
@@ -470,11 +470,11 @@ Jackery Explorer 2000 має два вхідні порти DC8020 і суміс
 <tbody>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">3 виходи AC</th>
-<td class="hb-spec-value manual-spec-value">230 В~ 50 Гц, 10 А макс., номінальна потужність 2200 Вт загалом, пікова потужність 4400 Вт</td>
+<td class="hb-spec-value manual-spec-value">230 В~ 50 Гц, номінальна потужність 2200 Вт загалом, пікова потужність 4400 Вт</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Вихід AC у режимі байпасу<sup class="hb-spec-reference">①</sup></th>
-<td class="hb-spec-value manual-spec-value">220 В-240 В~ 50 Гц, 10 А макс.</td>
+<td class="hb-spec-value manual-spec-value">220 В-240 В~ 50 Гц, 2200 Вт макс.</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Вихід USB-C 30 Вт</th>
@@ -516,9 +516,9 @@ Jackery Explorer 2000 має два вхідні порти DC8020 і суміс
 
 
 
-※ USB Type-C® та USB-C® є зареєстрованими торговельними марками USB Implementers Forum.
-
 ① Продукт може заряджати акумулятор від мережевої розетки змінного струму, одночасно подаючи живлення через вихідні порти змінного струму.
+
+※ USB Type-C® та USB-C® є зареєстрованими торговельними марками USB Implementers Forum.
 
 # ГАРАНТІЯ
 

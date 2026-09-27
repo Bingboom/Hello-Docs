@@ -470,7 +470,7 @@ Se viene visualizzato uno dei seguenti codici di errore, segui le azioni corrett
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Capacità</th>
-<td class="hb-spec-value manual-spec-value">20 Ah / 51,2 V DC (1024 Wh)</td>
+<td class="hb-spec-value manual-spec-value">1024 Wh (20 Ah / 51,2 V DC)</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Chimica delle celle</th>
@@ -485,7 +485,7 @@ Se viene visualizzato uno dei seguenti codici di errore, segui le azioni corrett
 <td class="hb-spec-value manual-spec-value">31,4 x 20,1 x 23,4 cm</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Durata del ciclo</th>
+<th class="hb-spec-label manual-spec-label" scope="row">Vita ciclica</th>
 <td class="hb-spec-value manual-spec-value">4000 cicli con capacità residua superiore al 70%</td>
 </tr>
 </tbody>
@@ -493,11 +493,11 @@ Se viene visualizzato uno dei seguenti codici di errore, segui le azioni corrett
 
 
 
-## PORTE DI INPUT
+## PORTE IN INGRESSO
 
 
 
-<figure aria-label="PORTE DI INPUT" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
+<figure aria-label="PORTE IN INGRESSO" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">1 × Ingresso CA</th>
@@ -512,26 +512,30 @@ Se viene visualizzato uno dei seguenti codici di errore, segui le azioni corrett
 
 
 
-## PORTE DI USCITA
+## PORTE IN USCITA
 
 
 
-<figure aria-label="PORTE DI USCITA" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
+<figure aria-label="PORTE IN USCITA" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">2 × uscite CA</th>
 <td class="hb-spec-value manual-spec-value">230 V~ 50 Hz, 6,5 A max., 1500 W nominali per porta, 1500 W totali, 3000 W di picco</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Uscita CA in modalità bypass</th>
+<th class="hb-spec-label manual-spec-label" scope="row">Uscita CA in modalità bypass<sup class="hb-spec-reference">①</sup></th>
 <td class="hb-spec-value manual-spec-value">220 V-240 V~ 50 Hz, 1500 W</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">2 × Uscita USB-C</th>
-<td class="hb-spec-value manual-spec-value">30 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓2,5 A, 15 V⎓2 A, 20 V⎓1,5 A<br/>100 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓3 A, 15 V⎓3 A, 20 V⎓5 A (da -10 °C a 45 °C)</td>
+<th class="hb-spec-label manual-spec-label" scope="row">1 × Uscita USB-C 30 W</th>
+<td class="hb-spec-value manual-spec-value">30 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓2,5 A, 15 V⎓2 A, 20 V⎓1,5 A</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">1 × Uscita USB-A</th>
+<th class="hb-spec-label manual-spec-label" scope="row">1 × Uscita USB-C 100 W</th>
+<td class="hb-spec-value manual-spec-value">100 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓3 A, 15 V⎓3 A, 20 V⎓5 A</td>
+</tr>
+<tr>
+<th class="hb-spec-label manual-spec-label" scope="row">1 × USB-A</th>
 <td class="hb-spec-value manual-spec-value">18 W max., 5-6 V⎓3 A, 6-9 V⎓2 A, 9-12 V⎓1,5 A</td>
 </tr>
 <tr>
@@ -554,13 +558,15 @@ Se viene visualizzato uno dei seguenti codici di errore, segui le azioni corrett
 <td class="hb-spec-value manual-spec-value">da 0 °C a 45 °C</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Temperatura di scarico</th>
+<th class="hb-spec-label manual-spec-label" scope="row">Temperatura di scarica</th>
 <td class="hb-spec-value manual-spec-value">da -10 °C a 45 °C</td>
 </tr>
 </tbody>
 </table></figure>
 
 
+
+① Il prodotto può caricare la batteria dalla presa a muro CA mentre fornisce energia tramite le porte di uscita CA.
 
 ※ USB Type-C® e USB-C® sono marchi registrati di USB Implementers Forum.
 

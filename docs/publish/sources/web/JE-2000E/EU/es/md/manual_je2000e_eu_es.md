@@ -425,7 +425,7 @@ Si aparece alguno de los siguientes códigos de fallo, siga las acciones correct
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Peso</th>
-<td class="hb-spec-value manual-spec-value">Aproximadamente 18,8 kg</td>
+<td class="hb-spec-value manual-spec-value">Aproximadamente 19,1 kg</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Dimensiones</th>
@@ -452,11 +452,11 @@ Si aparece alguno de los siguientes códigos de fallo, siga las acciones correct
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">2 × Puertos DC8020</th>
-<td class="hb-spec-value manual-spec-value">PV: 11 V-16 V⎓8 A máx., Doble a 8 A máx.<br/>Car: 16 V-60 V⎓12 A, Doble hasta 21 A / 800 W máx.</td>
+<td class="hb-spec-value manual-spec-value">Coche: 11 V-16 V⎓8 A máx., Doble a 8 A máx.<br/>PV: 16 V-60 V⎓12 A, Doble hasta 21 A / 800 W máx.</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">1 × Puerto de expansión CC</th>
-<td class="hb-spec-value manual-spec-value">36.8 V-57.6 V⎓75 A max.</td>
+<td class="hb-spec-value manual-spec-value">36,8 V-57,6 V⎓75 A máx.</td>
 </tr>
 </tbody>
 </table></figure>
@@ -470,7 +470,7 @@ Si aparece alguno de los siguientes códigos de fallo, siga las acciones correct
 <figure aria-label="PUERTOS DE SALIDA" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">2 × Salidas CA</th>
+<th class="hb-spec-label manual-spec-label" scope="row">3 × Salidas CA</th>
 <td class="hb-spec-value manual-spec-value">230 V~ 50 Hz, 10 A máx., 2400 W nominal total, 4800 W pico de sobrecarga</td>
 </tr>
 <tr>
@@ -482,16 +482,20 @@ Si aparece alguno de los siguientes códigos de fallo, siga las acciones correct
 <td class="hb-spec-value manual-spec-value">18 W máx., 5-6 V⎓3 A, 6-9 V⎓2 A, 9-12 V⎓1,5 A</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">2 × Salidas USB-C</th>
-<td class="hb-spec-value manual-spec-value">30 W máx., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓2,5 A, 15 V⎓2 A, 20 V⎓1,5 A<br/>140 W máx., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓3 A, 15 V⎓3 A, 20 V⎓5 A, 28 V⎓5 A</td>
+<th class="hb-spec-label manual-spec-label" scope="row">1 × Salida USB-C 30 W</th>
+<td class="hb-spec-value manual-spec-value">30 W máx., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓2,5 A, 15 V⎓2 A, 20 V⎓1,5 A</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">1 × Puerto CC 12 V</th>
+<th class="hb-spec-label manual-spec-label" scope="row">1 × Salida USB-C 140 W</th>
+<td class="hb-spec-value manual-spec-value">140 W máx., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓3 A, 15 V⎓3 A, 20 V⎓5 A, 28 V⎓5 A</td>
+</tr>
+<tr>
+<th class="hb-spec-label manual-spec-label" scope="row">1 × Puerto DC 12 V</th>
 <td class="hb-spec-value manual-spec-value">12 V⎓10 A máx.</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">1 × Puerto de expansión CC</th>
-<td class="hb-spec-value manual-spec-value">36.8 V-57.6 V⎓55 A max.</td>
+<td class="hb-spec-value manual-spec-value">36,8 V-57,6 V⎓55 A máx.</td>
 </tr>
 </tbody>
 </table></figure>

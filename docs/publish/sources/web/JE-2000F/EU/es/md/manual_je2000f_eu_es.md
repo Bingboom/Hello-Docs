@@ -423,7 +423,7 @@ Si aparece alguno de los siguientes códigos de fallo, siga las acciones correct
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Ciclo de vida</th>
-<td class="hb-spec-value manual-spec-value">6000 ciclos de carga hasta 70 % + de capacidad</td>
+<td class="hb-spec-value manual-spec-value">4000 ciclos de carga hasta 70 % + de capacidad</td>
 </tr>
 </tbody>
 </table></figure>
@@ -457,11 +457,11 @@ Si aparece alguno de los siguientes códigos de fallo, siga las acciones correct
 <tbody>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">3 × Salidas CA</th>
-<td class="hb-spec-value manual-spec-value">230 V~ 50 Hz, 10 A máx., 2200 W Nominal en Total, 4400 W Pico de sobrecarga</td>
+<td class="hb-spec-value manual-spec-value">230 V~ 50 Hz, 2200 W Nominal en Total, 4400 W Pico de sobrecarga</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Salida de CA en modo bypass<sup class="hb-spec-reference">①</sup></th>
-<td class="hb-spec-value manual-spec-value">220 V-240 V~ 50 Hz, 10 A máx.</td>
+<td class="hb-spec-value manual-spec-value">220 V-240 V~ 50 Hz, 2200 W máx.</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">Salida USB-C 30W</th>
@@ -503,9 +503,9 @@ Si aparece alguno de los siguientes códigos de fallo, siga las acciones correct
 
 
 
-※ USB Type-C® y USB-C® son marcas registradas de USB Implementers Forum.
-
 ① El producto puede cargar la batería desde una toma de corriente CA mientras suministra energía a través de los puertos de salida CA.
+
+※ USB Type-C® y USB-C® son marcas registradas de USB Implementers Forum.
 
 # GARANTÍA
 

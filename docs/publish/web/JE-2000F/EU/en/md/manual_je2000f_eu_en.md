@@ -449,7 +449,7 @@ If any of the following fault codes appear, follow the listed corrective actions
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">2 × DC8020 Ports</th>
-<td class="hb-spec-value manual-spec-value">Vehicle: 11 V-16 V⎓8 A max., Double to 8 A max.<br/>PV: 16 V-60 V⎓12 A, Double to 21 A max. / 400 W max.</td>
+<td class="hb-spec-value manual-spec-value">Car: 11 V-16 V⎓8 A max., Double to 8 A max.<br/>PV: 16 V-60 V⎓12 A, Double to 21 A max. / 400 W max.</td>
 </tr>
 </tbody>
 </table></figure>
@@ -510,9 +510,9 @@ If any of the following fault codes appear, follow the listed corrective actions
 
 
 
-※ USB Type-C® and USB-C® are registered trademarks of USB Implementers Forum.
-
 ① The product can charge the battery from the AC wall outlet while delivering power through the AC output ports.
+
+※ USB Type-C® and USB-C® are registered trademarks of USB Implementers Forum.
 
 # WARRANTY
 

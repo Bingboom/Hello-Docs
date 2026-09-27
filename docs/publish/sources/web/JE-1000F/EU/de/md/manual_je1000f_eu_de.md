@@ -490,18 +490,18 @@ Wenn einer der folgenden Fehlercodes angezeigt wird, befolgen Sie die aufgeführ
 
 
 
-## EINGANGSPORTS
+## EINGANGSANSCHLÜSSE
 
 
 
-<figure aria-label="EINGANGSPORTS" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
+<figure aria-label="EINGANGSANSCHLÜSSE" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">1 × AC-Eingang</th>
 <td class="hb-spec-value manual-spec-value">Lademodus: 220-240 V~ 50 Hz, 10 A max.</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">2 × DC8020-Anschlüsse</th>
+<th class="hb-spec-label manual-spec-label" scope="row">2 × DC8020-Ports</th>
 <td class="hb-spec-value manual-spec-value">11–16 V⎓8 A max., bei Verwendung beider Eingänge bis zu 8 A max.<br/>16–60 V⎓12 A max., bei Verwendung beider Eingänge bis zu 21 A / 400 W max.</td>
 </tr>
 </tbody>
@@ -509,26 +509,30 @@ Wenn einer der folgenden Fehlercodes angezeigt wird, befolgen Sie die aufgeführ
 
 
 
-## AUSGANGSPORTE
+## AUSGANGSANSCHLÜSSE
 
 
 
-<figure aria-label="AUSGANGSPORTE" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
+<figure aria-label="AUSGANGSANSCHLÜSSE" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">2 × AC-Ausgänge</th>
 <td class="hb-spec-value manual-spec-value">230 V~ 50 Hz, 6,5 A max., 1500 W Nennleistung pro Port, 1500 W insgesamt, 3000 W Spitzenleistung</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">AC-Ausgang im Bypass-Modus</th>
+<th class="hb-spec-label manual-spec-label" scope="row">AC-Ausgang im Bypass-Modus<sup class="hb-spec-reference">①</sup></th>
 <td class="hb-spec-value manual-spec-value">220 V-240 V~ 50 Hz, 1500 W</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">2 × USB-C-Ausgang</th>
-<td class="hb-spec-value manual-spec-value">30 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓2,5 A, 15 V⎓2 A, 20 V⎓1,5 A<br/>100 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓3 A, 15 V⎓3 A, 20 V⎓5 A (-10°C bis 45°C)</td>
+<th class="hb-spec-label manual-spec-label" scope="row">1 × USB-C-Ausgang 30 W</th>
+<td class="hb-spec-value manual-spec-value">30 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓2,5 A, 15 V⎓2 A, 20 V⎓1,5 A</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">1 × USB-A-Ausgang</th>
+<th class="hb-spec-label manual-spec-label" scope="row">1 × USB-C-Ausgang 100 W</th>
+<td class="hb-spec-value manual-spec-value">100 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓3 A, 15 V⎓3 A, 20 V⎓5 A</td>
+</tr>
+<tr>
+<th class="hb-spec-label manual-spec-label" scope="row">1 × USB-A</th>
 <td class="hb-spec-value manual-spec-value">18 W max., 5-6 V⎓3 A, 6-9 V⎓2 A, 9-12 V⎓1,5 A</td>
 </tr>
 <tr>
@@ -547,7 +551,7 @@ Wenn einer der folgenden Fehlercodes angezeigt wird, befolgen Sie die aufgeführ
 <figure aria-label="UMGEBUNGSBETRIEBSTEMPERATUR" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Ladtemperatur</th>
+<th class="hb-spec-label manual-spec-label" scope="row">Ladetemperatur</th>
 <td class="hb-spec-value manual-spec-value">von 0 °C bis 45 °C</td>
 </tr>
 <tr>
@@ -558,6 +562,8 @@ Wenn einer der folgenden Fehlercodes angezeigt wird, befolgen Sie die aufgeführ
 </table></figure>
 
 
+
+① Das Produkt kann den Akku über die Steckdose aufladen und gleichzeitig Strom über die AC-Ausgangsanschlüsse liefern.
 
 ※ USB Type-C® und USB-C® sind eingetragene Marken des USB Implementers Forum.
 

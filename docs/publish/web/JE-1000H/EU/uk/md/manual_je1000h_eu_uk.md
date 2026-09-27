@@ -632,8 +632,12 @@ Jackery Explorer 1000 Plus має два вхідні порти DC8020 і су�
 <td class="hb-spec-value manual-spec-value">220 В-240 В~ 50 Гц, 7,83 A</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">2 виходи USB-C</th>
-<td class="hb-spec-value manual-spec-value">USB-C 30W: 30 Вт макс., 5 В⎓3 A, 9 В⎓3 A, 12 В⎓2,5 A, 15 В⎓2 A, 20 В⎓1,5 A<br/>USB-C 140W: 140 Вт макс., 5 В⎓3 A, 9 В⎓3 A, 12 В⎓3 A, 15 В⎓3 A, 20 В⎓5 A, 28 В⎓5 A</td>
+<th class="hb-spec-label manual-spec-label" scope="row">виходи USB-C 30W</th>
+<td class="hb-spec-value manual-spec-value">30 Вт макс., 5 В⎓3 A, 9 В⎓3 A, 12 В⎓2,5 A, 15 В⎓2 A, 20 В⎓1,5 A</td>
+</tr>
+<tr>
+<th class="hb-spec-label manual-spec-label" scope="row">виходи USB-C 140W</th>
+<td class="hb-spec-value manual-spec-value">140 Вт макс., 5 В⎓3 A, 9 В⎓3 A, 12 В⎓3 A, 15 В⎓3 A, 20 В⎓5 A, 28 В⎓5 A</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">1 вихід USB-A 18W</th>
@@ -671,11 +675,11 @@ Jackery Explorer 1000 Plus має два вхідні порти DC8020 і су�
 
 
 
-※ USB Type-C® та USB-C® є зареєстрованими торговельними марками USB Implementers Forum.
-
 ① Продукт може заряджати акумулятор від мережевої розетки змінного струму або ATS, одночасно подаючи живлення через вихідні порти змінного струму.
 
 ② Вказує, що два або більше вихідних портів змінного струму працюють разом.
+
+※ USB Type-C® та USB-C® є зареєстрованими торговельними марками USB Implementers Forum.
 
 # ГАРАНТІЯ
 

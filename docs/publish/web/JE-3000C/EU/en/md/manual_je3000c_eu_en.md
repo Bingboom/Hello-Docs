@@ -426,11 +426,11 @@ If any of the following fault codes appear, follow the listed corrective actions
 <tbody>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">1 × AC Input</th>
-<td class="hb-spec-value manual-spec-value">Charge Mode: 220 V-240 V~ 50 Hz, 10 A max.<br/>Bypass Mode<sup class="hb-spec-reference">①</sup>: 220 V-240 V~ 50 Hz, 10 A max.</td>
+<td class="hb-spec-value manual-spec-value">220 V-240 V~ 50 Hz, 10 A max.<br/>Bypass Mode<sup class="hb-spec-reference">①</sup>: 220 V-240 V~ 50 Hz, 10 A max.</td>
 </tr>
 <tr>
 <th class="hb-spec-label manual-spec-label" scope="row">2 × DC8020 Ports</th>
-<td class="hb-spec-value manual-spec-value">Vehicle: 12 V-16 V⎓8 A max., Double to 8 A max.<br/>PV: 16 V-60 V⎓12 A max., Double to 24 A / 1000 W max.</td>
+<td class="hb-spec-value manual-spec-value">Car: 12 V-16 V⎓8 A max., Double to 8 A max.<br/>PV: 16 V-60 V⎓12 A max., Double to 24 A / 1000 W max.</td>
 </tr>
 </tbody>
 </table></figure>
@@ -456,11 +456,11 @@ If any of the following fault codes appear, follow the listed corrective actions
 <td class="hb-spec-value manual-spec-value">220 V-240 V~ 50 Hz, 10 A max.</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">2 × USB-C</th>
+<th class="hb-spec-label manual-spec-label" scope="row">2 × USB-C 100 W max.</th>
 <td class="hb-spec-value manual-spec-value">100 W max., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓3 A, 15 V⎓3 A, 20 V⎓5 A</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">2 × USB-A</th>
+<th class="hb-spec-label manual-spec-label" scope="row">2 × USB-A 18 W max.</th>
 <td class="hb-spec-value manual-spec-value">18 W max., 5-6 V⎓3 A, 6-9 V⎓2 A, 9-12 V⎓1.5 A</td>
 </tr>
 <tr>
@@ -479,11 +479,11 @@ If any of the following fault codes appear, follow the listed corrective actions
 <figure aria-label="ENVIRONMENTAL OPERATING TEMPERATURE" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Charging Temperature</th>
+<th class="hb-spec-label manual-spec-label" scope="row">Charge Temperature</th>
 <td class="hb-spec-value manual-spec-value">0°C to 45°C</td>
 </tr>
 <tr>
-<th class="hb-spec-label manual-spec-label" scope="row">Discharging Temperature</th>
+<th class="hb-spec-label manual-spec-label" scope="row">Discharge Temperature</th>
 <td class="hb-spec-value manual-spec-value">-10°C to 45°C</td>
 </tr>
 </tbody>
@@ -491,11 +491,11 @@ If any of the following fault codes appear, follow the listed corrective actions
 
 
 
-※ USB Type-C® and USB-C® are registered trademarks of USB Implementers Forum.
-
 ① The product can charge the battery from the AC wall outlet or ATS while delivering power through the AC output ports.
 
 ② Indicates that two or more AC output ports work together.
+
+※ USB Type-C® and USB-C® are registered trademarks of USB Implementers Forum.
 
 # WARRANTY
 
