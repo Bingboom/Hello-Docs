@@ -182,9 +182,9 @@ Le produit peut charger la batterie de votre voiture à l\'aide du câble de cha
 
 ## MODE D\'ÉCONOMIE D\'ÉNERGIE
 
-Pour désactiver le mode d\'économie d\'énergie, appuyez simultanément sur le bouton d\'alimentation CA et sur le bouton d\'alimentation principal pendant plus de 3 secondes. Une fois le mode d\'économie d\'énergie désactivé, l\'icône ne s\'affichera plus sur l\'écran LCD et le produit n\'éteindra pas automatiquement la sortie CA ou CC/USB.
+Pour éviter une consommation inutile de la batterie due à l'oubli de désactiver la sortie, le produit active par défaut le Mode d'Économie d'Énergie. Lorsque la sortie CA ou CC/USB est activée, l\'icône du mode Économie d\'énergie s\'affichera sur l\'écran LCD. Si aucun appareil n'est connecté ou si la consommation de l'appareil connecté est inférieure à un certain seuil (Sortie CA de 25 W ou sortie CC/USB de 2 W) pendant 12 heures, l'appareil désactivera automatiquement toutes les sorties. Veuillez configurer la durée du mode Économie d\'énergie dans l\'application Jackery.
 
-Lors de l\'alimentation d\'appareils à faible puissance (CA ≤ 25 W ou CC/USB ≤ 2 W), désactivez le mode d\'économie d\'énergie afin d\'éviter l\'arrêt automatique de la sortie pendant le fonctionnement.
+Pour désactiver le mode d\'économie d\'énergie, appuyez et maintenez enfoncé à la fois le bouton d\'alimentation CA et le bouton d\'alimentation principal pendant plus de 3 secondes. Le produit n\'éteindra pas automatiquement la sortie CA ou CC/USB.
 
 <img src="../../../../_static/manual-assets/_pool/48/48d9f2ba58336aabe08491c911bb5090609436cea7712969378d239896b9e80c.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3000c_eu_fr/operation_energy.png" data-web-finished-panel-sha256="48d9f2ba58336aabe08491c911bb5090609436cea7712969378d239896b9e80c" alt="Maintenez les deux boutons enfoncés pendant plus de 3 secondes.；REMARQUE Le mode d&#39;économie d&#39;énergie reprend l&#39;état précédent après l&#39;allumage. Toute modification du mode doit être effectuée manuellement." />
 
@@ -193,36 +193,6 @@ Lors de l\'alimentation d\'appareils à faible puissance (CA ≤ 25 W ou CC/USB 
 <table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>AVERTISSEMENT</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">AVERTISSEMENT</span><span class="manual-callout-label-sizer" aria-hidden="true">ATTENTION</span><span class="manual-callout-label-sizer" aria-hidden="true">REMARQUE</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Lorsque le mode d'économie d'énergie est activé, le produit coupe automatiquement la sortie CA si la consommation de l'appareil connecté reste faible pendant la durée définie. Lorsque vous alimentez des appareils nécessitant une alimentation continue, tels qu'un réfrigérateur, un routeur, une caméra de surveillance ou une pompe à air pour aquarium, il est recommandé de désactiver le mode d'économie d'énergie afin d'éviter qu'une coupure inattendue n'interrompe leur fonctionnement.</p></td></tr></tbody></table>
 
 
-
-## Fonction de reprise de Sortie CA et CC
-
-La fonction de reprise de la sortie CA/CC est désactivée par défaut. Activez cette fonction dans l'application afin que l'appareil mémorise l'état de sortie CA/CC et reprenne automatiquement les sorties CA et CC dans les conditions définies.
-
-<table>
-<thead>
-<tr>
-<th class="head"><p>Conditions de reprise automatique</p></th>
-<th class="head"><p>Conditions sans reprise automatique</p></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><p>Mise sous tension/redémarrage après arrêt ou redémarrage</p></td>
-<td><p>Sortie désactivée manuellement (bouton/App)</p></td>
-</tr>
-<tr>
-<td rowspan="2"><p>SOC de la batterie ≥ limite de décharge +10 % une fois la limite atteinte</p></td>
-<td><p>Sortie désactivée en mode économie d’énergie</p></td>
-</tr>
-<tr>
-<td><p>Sortie désactivée suite à un déclenchement de protection</p></td>
-</tr>
-<tr>
-<td><p>Mise à niveau OTA terminée</p></td>
-<td><p>Sortie désactivée par le minuteur de décharge</p></td>
-</tr>
-</tbody>
-</table>
 
 ## AFFICHAGE LCD
 
@@ -260,6 +230,36 @@ La fonction de reprise de la sortie CA/CC est désactivée par défaut. Activez 
 
 Vous pouvez également définir le mode d\'affichage de l\'écran dans l\'application Jackery.
 
+## Fonction de reprise de Sortie CA et CC
+
+Cette fonction mémorise l'état de la sortie et reprend automatiquement les sorties CA et CC sous certaines conditions définies.
+
+<table>
+<thead>
+<tr>
+<th class="head"><p>Conditions de reprise automatique</p></th>
+<th class="head"><p>Conditions sans reprise automatique</p></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><p>Mise sous tension/redémarrage après arrêt ou redémarrage</p></td>
+<td><p>Sortie désactivée manuellement (bouton/App)</p></td>
+</tr>
+<tr>
+<td rowspan="2"><p>SOC de la batterie ≥ limite de décharge +10 % après avoir atteint la limite</p></td>
+<td><p>Sortie désactivée en mode économie d’énergie</p></td>
+</tr>
+<tr>
+<td><p>Sortie désactivée suite à un déclenchement de protection</p></td>
+</tr>
+<tr>
+<td><p>Mise à niveau OTA terminée</p></td>
+<td><p>Sortie désactivée par le minuteur de décharge</p></td>
+</tr>
+</tbody>
+</table>
+
 ## FONCTIONNEMENT DES BOUTONS
 
 | Boutons | Utilisation | Fonction |
@@ -270,15 +270,15 @@ Vous pouvez également définir le mode d\'affichage de l\'écran dans l\'applic
 
 # ALIMENTATION SANS INTERRUPTION (ASI)
 
-Connectez le produit à une prise murale à l\'aide du câble de charge CA, puis appuyez sur le bouton d'alimentation CA pour alimenter vos appareils en même temps.
+Connectez le produit à une prise murale à l'aide du câble de charge CA, puis appuyez sur le bouton d\'alimentation CA pour alimenter vos appareils en même temps.
+
+Une alimentation sans interruption (ASI) est un système d'alimentation continue qui fournit automatiquement une alimentation électrique de secours à une charge lorsque l'alimentation du réseau principal est interrompue.
+
+En cas de perte soudaine de l'alimentation du réseau, le Jackery Explorer 3000 basculera automatiquement sur l'alimentation stockée en moins de 10 ms pour maintenir vos appareils en fonctionnement.
+
+En mode ASI, la puissance de crête de sortie de l'appareil atteint 12 A avant les coupures de courant. Comme la charge et la décharge simultanées sont activées en mode dérivation, la puissance de sortie réelle est inférieure à la puissance nominale en mode dérivation, mais revient à la puissance nominale lors des coupures.
 
 <img src="../../../../_static/manual-assets/_pool/7a/7ab195f9c3a8c9f32f935b4d308bd9e3718da40f7f8bf765af9d528e01d80ac7.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3000c_eu_fr/ups.png" data-web-finished-panel-sha256="7ab195f9c3a8c9f32f935b4d308bd9e3718da40f7f8bf765af9d528e01d80ac7" alt="Schéma de connexion ASI." />
-
-Une alimentation sans coupure (UPS) est un système d\'alimentation continue qui fournit automatiquement une alimentation électrique de secours à une charge lorsque l\'alimentation du réseau principal est interrompue.
-
-En cas de perte soudaine de l\'alimentation du réseau, le Jackery Explorer 3000 basculera automatiquement sur l\'alimentation stockée en moins de 10 ms pour maintenir vos appareils en fonctionnement.
-
-En mode UPS, la puissance de crête de sortie de l\'appareil atteint 12 A avant les coupures de courant. Comme la charge et la décharge simultanées sont activées en mode bypass, la puissance de sortie réelle est inférieure à la puissance nominale en mode bypass, mais revient à la puissance nominale lors des coupures.
 
 
 

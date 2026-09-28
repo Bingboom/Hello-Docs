@@ -163,9 +163,9 @@ El producto puede cargar la batería de su vehículo utilizando el cable de carg
 
 ## MODO DE AHORRO DE ENERGÍA
 
-Para desactivar el modo de ahorro de energía, mantenga pulsados simultáneamente el botón de energía CA y el botón de encendido principal durante más de 3 segundos. Una vez desactivado el modo de ahorro de energía, el icono dejará de mostrarse en la pantalla LCD y el producto no apagará automáticamente la salida de CA o CC/USB.
+Para evitar el consumo innecesario de batería al olvidar apagar la salida, el producto activa por defecto el Modo de Ahorro de Energía. Cuando la salida de CA o CC/USB está encendida, el ícono del modo de Ahorro de Energía se mostrará en la pantalla LCD. Si no hay ningún dispositivo conectado o si el consumo del dispositivo conectado está por debajo de un cierto umbral (salida de CA de 25 W o salida CC/USB de 2 W) durante 12 horas, el dispositivo apagará automáticamente todas las salidas. Configure la duración del modo de Ahorro de Energía en la aplicación Jackery.
 
-Cuando alimente dispositivos de baja potencia (CA ≤ 25 W o CC/USB ≤ 2 W), desactive el modo de ahorro de energía para evitar que la salida se apague automáticamente durante el funcionamiento.
+Para desactivar el modo de ahorro de energía, presione y mantenga presionados el botón de energía CA y el botón de encendido principal durante más de 3 segundos. El producto no apagará automáticamente la salida CA o CC.
 
 <img src="../../../../_static/manual-assets/_pool/df/dffc0ed2975e7c0396e75cdf00cbbe3bbf7d8a6f65a186ab2401f70f2421ee64.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3000c_eu_es/operation_energy.png" data-web-finished-panel-sha256="dffc0ed2975e7c0396e75cdf00cbbe3bbf7d8a6f65a186ab2401f70f2421ee64" alt="Mantenga pulsados ambos botones durante 3 segundos.；NOTA El modo de ahorro de energía reanuda el estado anterior después de encender. Se requiere un cambio manual para modificar el modo." />
 
@@ -174,36 +174,6 @@ Cuando alimente dispositivos de baja potencia (CA ≤ 25 W o CC/USB ≤ 2 W), de
 <table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ADVERTENCIA</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">ADVERTENCIA</span><span class="manual-callout-label-sizer" aria-hidden="true">PRECAUCIÓN</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTA</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Cuando el modo de Ahorro de Energía está activado, el producto apaga automáticamente la salida de CA si el consumo del dispositivo conectado se mantiene bajo durante el período establecido. Al alimentar dispositivos que requieren suministro eléctrico continuo, como frigoríficos, routers, cámaras de seguridad o bombas de aire para acuarios, se recomienda desactivar el modo de Ahorro de Energía para evitar que una interrupción inesperada afecte a su funcionamiento.</p></td></tr></tbody></table>
 
 
-
-## Función de reanudación de Salida de CA y CC
-
-La función de reanudación de salida de CA/CC está desactivada de forma predeterminada. Active esta función en la aplicación para que el dispositivo memorice el estado de salida de CA/CC y reanude automáticamente las salidas de CA y CC en las condiciones definidas.
-
-<table>
-<thead>
-<tr>
-<th class="head"><p>Condiciones de reanudación automática</p></th>
-<th class="head"><p>Condiciones sin reanudación automática</p></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><p>Encendido/Reiniciar después de apagado o reinicio</p></td>
-<td><p>Apagado manual de la salida (botón/App)</p></td>
-</tr>
-<tr>
-<td rowspan="2"><p>SOC de la batería ≥ límite de descarga +10 % tras alcanzar el límite</p></td>
-<td><p>Apagado de salida en modo de ahorro de energía</p></td>
-</tr>
-<tr>
-<td><p>Apagado de salida activado por protección</p></td>
-</tr>
-<tr>
-<td><p>Actualización OTA completada</p></td>
-<td><p>Apagado de salida activado por temporizador de descarga</p></td>
-</tr>
-</tbody>
-</table>
 
 ## PANTALLA LCD
 
@@ -241,6 +211,36 @@ La función de reanudación de salida de CA/CC está desactivada de forma predet
 
 También puede configurar el modo de visualización de la pantalla en la aplicación Jackery.
 
+## Función de reanudación de Salida de CA y CC
+
+Esta función memoriza el estado de la salida y reanuda automáticamente las salidas de CA y CC bajo condiciones definidas.
+
+<table>
+<thead>
+<tr>
+<th class="head"><p>Condiciones de reanudación automática</p></th>
+<th class="head"><p>Condiciones sin reanudación automática</p></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><p>Encendido/Reiniciar después de apagado o reinicio</p></td>
+<td><p>Apagado manual de la salida (botón/App)</p></td>
+</tr>
+<tr>
+<td rowspan="2"><p>SOC de la batería ≥ límite de descarga +10 % después de alcanzar el límite</p></td>
+<td><p>Apagado de salida en modo de ahorro de energía</p></td>
+</tr>
+<tr>
+<td><p>Apagado de salida activado por protección</p></td>
+</tr>
+<tr>
+<td><p>Actualización OTA completada</p></td>
+<td><p>Apagado de salida activado por temporizador de descarga</p></td>
+</tr>
+</tbody>
+</table>
+
 ## COMBINACIONES DE TECLAS
 
 | Botones | Operación | Función |
@@ -253,8 +253,6 @@ También puede configurar el modo de visualización de la pantalla en la aplicac
 
 Conecte el producto a una toma de corriente con el cable de carga de CA, luego presione el botón de energía CA y alimente sus electrodomésticos al mismo tiempo.
 
-<img src="../../../../_static/manual-assets/_pool/09/09b73aa495c4a52f3851afc48e8dfabca5170727215af16bbafac5b098092ea0.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3000c_eu_es/ups.png" data-web-finished-panel-sha256="09b73aa495c4a52f3851afc48e8dfabca5170727215af16bbafac5b098092ea0" alt="Diagrama de conexión UPS." />
-
 Un sistema de alimentación ininterrumpida (UPS) es un tipo de sistema de energía continua que proporciona energía eléctrica de respaldo automática a una carga cuando falla la energía de la red principal.
 
 En caso de una pérdida repentina de energía de la red, Jackery Explorer 3000 cambiará automáticamente a la energía almacenada en menos de 10 ms para mantener sus electrodomésticos en funcionamiento.
@@ -262,6 +260,8 @@ En caso de una pérdida repentina de energía de la red, Jackery Explorer 3000 c
 En modo UPS, la potencia máxima de salida de la unidad alcanza 12 A antes de los cortes de energía. Como la carga y descarga simultáneas están habilitadas en modo bypass,
 
 la potencia de salida real es inferior a la potencia nominal en este modo, pero vuelve a la potencia nominal durante los cortes.
+
+<img src="../../../../_static/manual-assets/_pool/09/09b73aa495c4a52f3851afc48e8dfabca5170727215af16bbafac5b098092ea0.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3000c_eu_es/ups.png" data-web-finished-panel-sha256="09b73aa495c4a52f3851afc48e8dfabca5170727215af16bbafac5b098092ea0" alt="Diagrama de conexión UPS." />
 
 
 
