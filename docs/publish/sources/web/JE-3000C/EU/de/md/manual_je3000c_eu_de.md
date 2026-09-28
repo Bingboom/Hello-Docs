@@ -59,7 +59,7 @@ Bei Fragen wenden Sie sich bitte an den Jackery-Kundendienst.</p></div></div></f
 
 ## VORDERANSICHT
 
-<img src="assets/ir/81ee2a583672151b4c10c66f7533997adf0e3bc9ba264a141541fa724ef753a5/overview_front.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3000c_eu_de/overview_front.png" data-web-finished-panel-sha256="81ee2a583672151b4c10c66f7533997adf0e3bc9ba264a141541fa724ef753a5" alt="Abbildung der Vorderansicht." />
+<img src="assets/ir/69f7bf15ea0707c93b3209e12590f6d4b6368fde25d90dcf96736840bab1deae/overview_front.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3000c_eu_de_20260915/overview_front.png" data-web-finished-panel-sha256="69f7bf15ea0707c93b3209e12590f6d4b6368fde25d90dcf96736840bab1deae" alt="Abbildung der Vorderansicht." />
 
 <table>
 <colgroup>
@@ -212,6 +212,12 @@ Wenn Sie Geräte mit geringem Stromverbrauch betreiben (AC \<= 25 W oder DC/USB 
 
 <img src="assets/ir/256f0b08488cbbaf11278ea7afd4d66e0239f1bc187f48c7089f6b77868fc2c8/operation_energy.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3000c_eu_de/operation_energy.png" data-web-finished-panel-sha256="256f0b08488cbbaf11278ea7afd4d66e0239f1bc187f48c7089f6b77868fc2c8" alt="Halten Sie beide Tasten länger als 3 Sekunden gedrückt.；HINWEIS Der Energiesparmodus kehrt nach dem Einschalten in seinen vorherigen Zustand zurück. Für einen Moduswechsel ist ein manuelles Umschalten erforderlich." />
 
+
+
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>WARNUNG</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">WARNUNG</span><span class="manual-callout-label-sizer" aria-hidden="true">VORSICHT</span><span class="manual-callout-label-sizer" aria-hidden="true">HINWEIS</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Wenn der Energiesparmodus aktiviert ist, schaltet das Produkt den AC-Ausgang automatisch ab, wenn die Leistungsaufnahme des angeschlossenen Geräts über den eingestellten Zeitraum hinweg niedrig bleibt. Bei der Stromversorgung von Geräten, die eine kontinuierliche Stromversorgung benötigen, z. B. Kühlschränken, Routern, Überwachungskameras oder Aquarium-Luftpumpen, wird empfohlen, den Energiesparmodus auszuschalten, damit der Betrieb der Geräte nicht durch eine unerwartete Stromunterbrechung beeinträchtigt wird.</p></td></tr></tbody></table>
+
+
+
 ## Wiederaufnahmefunktion für AC- und DC-Ausgänge
 
 Die Wiederaufnahmefunktion für AC- und DC-Ausgänge ist standardmäßig deaktiviert. Aktivieren Sie diese Funktion in der Jackery-App, damit das Gerät den Status der AC- und DC-Ausgänge speichert und die AC- und DC-Ausgänge unter festgelegten Bedingungen automatisch wiederherstellt.
@@ -302,10 +308,25 @@ liegt die tatsächliche Ausgangsleistung in diesem Modus unter der Nennleistung;
 
 
 
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>WARNUNG</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">WARNUNG</span><span class="manual-callout-label-sizer" aria-hidden="true">VORSICHT</span><span class="manual-callout-label-sizer" aria-hidden="true">HINWEIS</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Verwenden Sie dieses Produkt nicht für Anwendungen wie Datenserver oder medizinische Geräte, bei denen eine Fehlfunktion lebensgefährlich sein oder erhebliche Sachschäden verursachen kann.</p>
+<p>Bei den folgenden Geräten kann ein Ausfall der Stromversorgung während des Betriebs zu schweren Personenschäden oder erheblichen Sachschäden führen:</p>
+<ul class="simple">
+<li><p>Medizinische Geräte und andere Geräte, die unmittelbar der Sicherheit von Menschen dienen.</p></li>
+<li><p>Kritische Einrichtungen wie Infrastruktur und öffentliche Versorgung.</p></li>
+<li><p>Geschäftskritische Unternehmenssysteme usw.</p></li>
+</ul>
+<p>Personen mit einem Herzschrittmacher (Schrittmacherträger) dürfen dieses Produkt nicht verwenden.</p>
+</td></tr></tbody></table>
+
+
+
+
+
 <table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>VORSICHT</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">WARNUNG</span><span class="manual-callout-label-sizer" aria-hidden="true">VORSICHT</span><span class="manual-callout-label-sizer" aria-hidden="true">HINWEIS</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>Dieses Produkt unterstützt kein Umschalten mit 0 ms. Schließen Sie es nicht an Geräte an, die eine Stromversorgung mit 0-ms-Umschaltung erfordern, wie z. B. Datenserver oder Workstations.</p></li>
 <li><p>Testen Sie vor der Verwendung die Kompatibilität mit Ihrem Gerät mehrmals.</p></li>
 <li><p>Schließen Sie keine Lasten an, die die maximale Ausgangsleistung des Produkts überschreiten. Andernfalls wird der Überlastschutz ausgelöst.</p></li>
+<li><p>Die UPS-Funktion funktioniert nur, wenn ein einzelnes Gerät direkt an eine Netzsteckdose angeschlossen ist. Schließen Sie nicht mehrere tragbare Power Stations in Reihe (Kaskadenschaltung) an. In einer Kaskadenschaltung funktioniert die UPS-Funktion nicht: Das Gerät kann bei einem Stromausfall möglicherweise nicht umschalten, wodurch angeschlossene Geräte ausfallen.</p></li>
 </ul>
 </td></tr></tbody></table>
 

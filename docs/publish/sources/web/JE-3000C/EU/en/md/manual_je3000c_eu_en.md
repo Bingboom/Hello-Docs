@@ -179,6 +179,12 @@ To disable the energy saving mode, press and hold both the AC power button and t
 
 <img src="assets/ir/44f4aaf70604a44ea0b75659978a12d2463f3bb53b2ce15cf8d1198162c77b4b/operation_energy.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3000c_eu_en/operation_energy.png" data-web-finished-panel-sha256="44f4aaf70604a44ea0b75659978a12d2463f3bb53b2ce15cf8d1198162c77b4b" alt="Press and hold both buttons for more than 3 seconds.；NOTE Energy Saving Mode resumes its previous state after powering on. Manual switching is required for mode changes." />
 
+
+
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>WARNING</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">WARNING</span><span class="manual-callout-label-sizer" aria-hidden="true">CAUTION</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTE</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>When Energy Saving Mode is enabled, the product automatically turns off the AC output if the connected device’s power consumption remains low for the configured period. When powering devices that require continuous power, such as refrigerators, routers, security cameras, or aquarium air pumps, we recommend turning off Energy Saving Mode to prevent unexpected power loss from interrupting their operation.</p></td></tr></tbody></table>
+
+
+
 ## LCD SCREEN
 
 
@@ -263,10 +269,25 @@ the actual output power is lower than the rated output power in this mode but re
 
 
 
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>WARNING</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">WARNING</span><span class="manual-callout-label-sizer" aria-hidden="true">CAUTION</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTE</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Do not use this product for applications such as data servers or medical devices, where a malfunction could endanger life or cause significant property damage.</p>
+<p>For the following equipment, a loss of power supply during use could cause serious harm to personal safety or property:</p>
+<ul class="simple">
+<li><p>Medical devices and other equipment closely related to life safety.</p></li>
+<li><p>Critical equipment such as social infrastructure and public services.</p></li>
+<li><p>Business-critical enterprise equipment, etc.</p></li>
+</ul>
+<p>Individuals who wear a cardiac pacemaker (pacemaker implant recipients) must not use this product.</p>
+</td></tr></tbody></table>
+
+
+
+
+
 <table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>CAUTION</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">WARNING</span><span class="manual-callout-label-sizer" aria-hidden="true">CAUTION</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTE</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>This product does not support 0 ms switching. Do not connect it to equipment that requires a 0 ms switching power supply, such as data servers or workstations.</p></li>
 <li><p>Before use, please test compatibility with your device multiple times.</p></li>
 <li><p>Do not connect loads exceeding the maximum output power of the product. Otherwise, overload protection will be triggered.</p></li>
+<li><p>The UPS function works only when a single unit is connected directly to a wall outlet. Do not connect multiple portable power stations in series (cascade connection). In a cascaded setup, the UPS function will not operate: the unit may fail to switch over during a power outage, causing connected devices to shut down.</p></li>
 </ul>
 </td></tr></tbody></table>
 

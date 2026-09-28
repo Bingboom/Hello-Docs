@@ -169,6 +169,12 @@ Cuando alimente dispositivos de baja potencia (CA ≤ 25 W o CC/USB ≤ 2 W), de
 
 <img src="../../../../_static/manual-assets/_pool/df/dffc0ed2975e7c0396e75cdf00cbbe3bbf7d8a6f65a186ab2401f70f2421ee64.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3000c_eu_es/operation_energy.png" data-web-finished-panel-sha256="dffc0ed2975e7c0396e75cdf00cbbe3bbf7d8a6f65a186ab2401f70f2421ee64" alt="Mantenga pulsados ambos botones durante 3 segundos.；NOTA El modo de ahorro de energía reanuda el estado anterior después de encender. Se requiere un cambio manual para modificar el modo." />
 
+
+
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ADVERTENCIA</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">ADVERTENCIA</span><span class="manual-callout-label-sizer" aria-hidden="true">PRECAUCIÓN</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTA</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Cuando el modo de Ahorro de Energía está activado, el producto apaga automáticamente la salida de CA si el consumo del dispositivo conectado se mantiene bajo durante el período establecido. Al alimentar dispositivos que requieren suministro eléctrico continuo, como frigoríficos, routers, cámaras de seguridad o bombas de aire para acuarios, se recomienda desactivar el modo de Ahorro de Energía para evitar que una interrupción inesperada afecte a su funcionamiento.</p></td></tr></tbody></table>
+
+
+
 ## Función de reanudación de Salida de CA y CC
 
 La función de reanudación de salida de CA/CC está desactivada de forma predeterminada. Active esta función en la aplicación para que el dispositivo memorice el estado de salida de CA/CC y reanude automáticamente las salidas de CA y CC en las condiciones definidas.
@@ -259,10 +265,25 @@ la potencia de salida real es inferior a la potencia nominal en este modo, pero 
 
 
 
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ADVERTENCIA</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">ADVERTENCIA</span><span class="manual-callout-label-sizer" aria-hidden="true">PRECAUCIÓN</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTA</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>No utilice este producto en aplicaciones como servidores de datos o dispositivos médicos, donde un fallo podría poner en peligro la vida o causar daños materiales significativos.</p>
+<p>Para los siguientes equipos, una pérdida de suministro eléctrico durante el uso podría causar graves daños a las personas o a la propiedad:</p>
+<ul class="simple">
+<li><p>Dispositivos médicos y otros equipos estrechamente relacionados con la seguridad de las personas.</p></li>
+<li><p>Equipos críticos como infraestructuras sociales y servicios públicos.</p></li>
+<li><p>Equipos empresariales críticos para el negocio, etc.</p></li>
+</ul>
+<p>Las personas que lleven un marcapasos cardíaco (portadores de marcapasos implantado) no deben usar este producto.</p>
+</td></tr></tbody></table>
+
+
+
+
+
 <table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>PRECAUCIÓN</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">ADVERTENCIA</span><span class="manual-callout-label-sizer" aria-hidden="true">PRECAUCIÓN</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTA</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>Este producto no admite conmutación de 0 ms. No lo conecte a equipos que requieran una fuente de alimentación con conmutación de 0 ms, como servidores de datos o estaciones de trabajo.</p></li>
 <li><p>Antes de usar, pruebe la compatibilidad con su dispositivo varias veces.</p></li>
 <li><p>No conectes cargas que excedan la potencia máxima de salida del producto. De lo contrario, se activará la protección contra sobrecarga.</p></li>
+<li><p>La función UPS solo funciona cuando una única unidad está conectada directamente a una toma de pared. No conecte varias estaciones de energía portátiles en serie (conexión en cascada). En una configuración en cascada, la función UPS no funcionará: es posible que la unidad no conmute durante un corte de suministro eléctrico, lo que provocaría que los dispositivos conectados se apaguen.</p></li>
 </ul>
 </td></tr></tbody></table>
 

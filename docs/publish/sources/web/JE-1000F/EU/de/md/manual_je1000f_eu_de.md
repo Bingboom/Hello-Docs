@@ -310,10 +310,25 @@ liegt die tatsächliche Ausgangsleistung in diesem Modus unter der Nennleistung;
 
 
 
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>WARNUNG</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">WARNUNG</span><span class="manual-callout-label-sizer" aria-hidden="true">VORSICHT</span><span class="manual-callout-label-sizer" aria-hidden="true">HINWEIS</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Verwenden Sie dieses Produkt nicht für Anwendungen wie Datenserver oder medizinische Geräte, bei denen eine Fehlfunktion lebensgefährlich sein oder erhebliche Sachschäden verursachen kann.</p>
+<p>Bei den folgenden Geräten kann ein Ausfall der Stromversorgung während des Betriebs zu schweren Personenschäden oder erheblichen Sachschäden führen:</p>
+<ul class="simple">
+<li><p>Medizinische Geräte und andere Geräte, die unmittelbar der Sicherheit von Menschen dienen.</p></li>
+<li><p>Kritische Einrichtungen wie Infrastruktur und öffentliche Versorgung.</p></li>
+<li><p>Geschäftskritische Unternehmenssysteme usw.</p></li>
+</ul>
+<p>Personen mit einem Herzschrittmacher (Schrittmacherträger) dürfen dieses Produkt nicht verwenden.</p>
+</td></tr></tbody></table>
+
+
+
+
+
 <table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>VORSICHT</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">WARNUNG</span><span class="manual-callout-label-sizer" aria-hidden="true">VORSICHT</span><span class="manual-callout-label-sizer" aria-hidden="true">HINWEIS</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>Dieses Produkt unterstützt kein Umschalten mit 0 ms. Schließen Sie es nicht an Geräte an, die eine Stromversorgung mit 0-ms-Umschaltung erfordern, wie z. B. Datenserver oder Workstations.</p></li>
 <li><p>Testen Sie vor der Verwendung die Kompatibilität mit Ihrem Gerät mehrmals.</p></li>
 <li><p>Schließen Sie keine Lasten an, die die maximale Ausgangsleistung des Produkts überschreiten. Andernfalls wird der Überlastschutz ausgelöst.</p></li>
+<li><p>Die UPS-Funktion funktioniert nur, wenn ein einzelnes Gerät direkt an eine Netzsteckdose angeschlossen ist. Schließen Sie nicht mehrere tragbare Power Stations in Reihe (Kaskadenschaltung) an. In einer Kaskadenschaltung funktioniert die UPS-Funktion nicht: Das Gerät kann bei einem Stromausfall möglicherweise nicht umschalten, wodurch angeschlossene Geräte ausfallen.</p></li>
 </ul>
 </td></tr></tbody></table>
 

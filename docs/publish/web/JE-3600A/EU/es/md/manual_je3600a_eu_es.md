@@ -299,10 +299,25 @@ la potencia de salida real es inferior a la potencia nominal en este modo, pero 
 
 
 
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ADVERTENCIA</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">ADVERTENCIA</span><span class="manual-callout-label-sizer" aria-hidden="true">PRECAUCIÓN</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTA</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>No utilice este producto en aplicaciones como servidores de datos o dispositivos médicos, donde un fallo podría poner en peligro la vida o causar daños materiales significativos.</p>
+<p>Para los siguientes equipos, una pérdida de suministro eléctrico durante el uso podría causar graves daños a las personas o a la propiedad:</p>
+<ul class="simple">
+<li><p>Dispositivos médicos y otros equipos estrechamente relacionados con la seguridad de las personas.</p></li>
+<li><p>Equipos críticos como infraestructuras sociales y servicios públicos.</p></li>
+<li><p>Equipos empresariales críticos para el negocio, etc.</p></li>
+</ul>
+<p>Las personas que lleven un marcapasos cardíaco (portadores de marcapasos implantado) no deben usar este producto.</p>
+</td></tr></tbody></table>
+
+
+
+
+
 <table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>PRECAUCIÓN</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">ADVERTENCIA</span><span class="manual-callout-label-sizer" aria-hidden="true">PRECAUCIÓN</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTA</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>Este producto no admite conmutación de 0 ms. No lo conecte a equipos que requieran una fuente de alimentación con conmutación de 0 ms, como servidores de datos o estaciones de trabajo.</p></li>
 <li><p>Antes de usar, pruebe la compatibilidad con su dispositivo varias veces.</p></li>
 <li><p>No conectes cargas que excedan la potencia máxima de salida del producto. De lo contrario, se activará la protección contra sobrecarga.</p></li>
+<li><p>La función UPS solo funciona cuando una única unidad está conectada directamente a una toma de pared. No conecte varias estaciones de energía portátiles en serie (conexión en cascada). En una configuración en cascada, la función UPS no funcionará: es posible que la unidad no conmute durante un corte de suministro eléctrico, lo que provocaría que los dispositivos conectados se apaguen.</p></li>
 </ul>
 </td></tr></tbody></table>
 
