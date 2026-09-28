@@ -270,10 +270,25 @@ la potenza di uscita effettiva in questa modalità è inferiore alla potenza nom
 
 
 
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>AVVERTENZA</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">AVVERTENZA</span><span class="manual-callout-label-sizer" aria-hidden="true">ATTENZIONE</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTA</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Non utilizzare questo prodotto per applicazioni quali server di dati o dispositivi medici, in cui un malfunzionamento potrebbe mettere in pericolo la vita o causare ingenti danni materiali.</p>
+<p>Per le seguenti apparecchiature, una perdita dell'alimentazione elettrica durante l'uso potrebbe causare gravi rischi per la sicurezza delle persone o gravi danni materiali:</p>
+<ul class="simple">
+<li><p>Dispositivi medici e altre apparecchiature strettamente correlate alla sicurezza della vita.</p></li>
+<li><p>Apparecchiature critiche, come infrastrutture sociali e servizi pubblici essenziali.</p></li>
+<li><p>Apparecchiature aziendali critiche, ecc.</p></li>
+</ul>
+<p>Le persone portatrici di un pacemaker cardiaco (destinatari di un impianto di pacemaker) non devono utilizzare questo prodotto.</p>
+</td></tr></tbody></table>
+
+
+
+
+
 <table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENZIONE</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">AVVERTENZA</span><span class="manual-callout-label-sizer" aria-hidden="true">ATTENZIONE</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTA</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>Questo prodotto non supporta la commutazione a 0 ms. Non collegarlo ad apparecchiature che richiedono un'alimentazione con commutazione a 0 ms, come server di dati o workstation.</p></li>
 <li><p>Prima dell'uso, verifica più volte la compatibilità con il tuo dispositivo.</p></li>
 <li><p>Non collegare carichi che superano la potenza massima di uscita del prodotto. In caso contrario, verrà attivata la protezione da sovraccarico.</p></li>
+<li><p>La funzione UPS è disponibile solo quando una singola unità è collegata direttamente a una presa a muro. Non collegare più power station portatili in serie (collegamento in cascata). In una configurazione in cascata la funzione UPS non funziona: l'unità potrebbe non commutare durante un'interruzione di corrente, causando lo spegnimento dei dispositivi collegati.</p></li>
 </ul>
 </td></tr></tbody></table>
 

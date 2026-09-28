@@ -1,8 +1,8 @@
 {
   "actions": {
-    "check": "15016fbdb38cfd866c46a1d3299df47bec8e184f08d56b687328289dd646fb02",
-    "html": "15016fbdb38cfd866c46a1d3299df47bec8e184f08d56b687328289dd646fb02",
-    "md": "15016fbdb38cfd866c46a1d3299df47bec8e184f08d56b687328289dd646fb02"
+    "check": "35df0a77ce8c752e8ad68c46ce7fb93cf5fc3095cbd02e66c8a40b3a474db437",
+    "html": "35df0a77ce8c752e8ad68c46ce7fb93cf5fc3095cbd02e66c8a40b3a474db437",
+    "md": "35df0a77ce8c752e8ad68c46ce7fb93cf5fc3095cbd02e66c8a40b3a474db437"
   },
   "canonical_source": {
     "files": [
@@ -28,13 +28,13 @@
       },
       {
         "path": "page/05_operation_guide_it.rst",
-        "sha256": "2675562c24cdee266ea4329498b4d1e0ca937088b492ea4361b0add9b602a767",
-        "size": 9434
+        "sha256": "f2b72e49bea84858271cadb78b1eba2d88edf920033462a723982a10b1dfda4d",
+        "size": 10053
       },
       {
         "path": "page/06_ups_mode.rst",
-        "sha256": "852ea144cd2ecd651df3df0e45ca44f068a1537c6250fc2c090c41ea8d55eee6",
-        "size": 1616
+        "sha256": "e3c05a06ce849b4cb48a6cad89963896d4e88803c11a4f23744cb4d5a5cda0b6",
+        "size": 3465
       },
       {
         "path": "page/08_charging_methods.rst",
@@ -87,9 +87,9 @@
         "size": 1857
       }
     ],
-    "sha256": "8f996fbd545f7ca38b6b9e236cf5267bf2723d1f03e98965c815ce80f6586cc9"
+    "sha256": "2bc59609715cca43fe2c598f6d434d82bee88eb5609858106b7505487b087be2"
   },
-  "git_ref": "424983ad878c7a00a5dadbdd015b4180d8b12cdf",
+  "git_ref": "138c965413ef8b4a14f536bb2b5672dd9274b131",
   "html": {
     "files": [
       {
@@ -679,8 +679,8 @@
       },
       {
         "path": "index.html",
-        "sha256": "974dca1fdfd6d2ba9a41c38c768b6130dba40efec583a0a1b39bf6d208655eee",
-        "size": 80121
+        "sha256": "eb0b4f9be6dc9902e48f070c069c0d541317bf1e763ef2448a1dcc05329c319a",
+        "size": 82424
       },
       {
         "path": "jbp2000b_ac_charging.pdf",
@@ -1474,8 +1474,8 @@
       },
       {
         "path": "searchindex.js",
-        "sha256": "41c3544f015e56cd9a9fec76d944707b17957a115528978dd6d87f67666533f3",
-        "size": 14934
+        "sha256": "fb3efe2387c22671e45b385fdcb9210ac587a673aa3026170051fc1f2781ef9e",
+        "size": 15395
       },
       {
         "path": "solar_adapter.pdf",
@@ -1503,7 +1503,7 @@
         "size": 316221
       }
     ],
-    "sha256": "5510527a7fa259d0fafffb181e882074bf4d1cda85fcc0804c117582fac9c874"
+    "sha256": "807aa782274a51983ad6775ed0be3fe7f290f4768585b095cae21aa0137d59a8"
   },
   "language": "it",
   "markdown": {
@@ -1780,19 +1780,19 @@
       },
       {
         "path": "manual_je3000c_eu_it.md",
-        "sha256": "97c6cbea2fbda88289e25c440c6c9f7c2a2159d9ecdd0d904e80b5dfc10d3214",
-        "size": 69080
+        "sha256": "0883d6b4d5e19b7888446527fa05d465e63fe9f206738e7901425fed2fb85ccc",
+        "size": 72017
       }
     ],
     "manual": "manual_je3000c_eu_it.md",
-    "sha256": "06d82fdcafaf41ddaed1553b11982d70b60cf854d80bfaf2c9ed1e82163c3eff"
+    "sha256": "c54b937ae1cd491f58db16915c56a2fb5a3468f89e5b0fe36a2c24bac19f3461"
   },
   "model": "JE-3000C",
   "projection_manifest": {
     "path": "projection_bundle_manifest.json",
-    "sha256": "cf3a33f6f1fe7bc0905c4eeb02e0aa807480c8b8a891ddc804422c171a5492c1"
+    "sha256": "7581c5437ec53bd52a51d6d4521e9989226f55a6fc74e42b9671541cdb382c00"
   },
   "region": "EU",
   "schema_version": "auto-manual-web-language-release-evidence/v1",
-  "version": "2.8"
+  "version": "2.9"
 }

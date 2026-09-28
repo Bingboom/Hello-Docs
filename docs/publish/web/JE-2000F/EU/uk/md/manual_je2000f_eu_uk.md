@@ -282,10 +282,25 @@
 
 
 
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ПОПЕРЕДЖЕННЯ</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">ПОПЕРЕДЖЕННЯ</span><span class="manual-callout-label-sizer" aria-hidden="true">УВАГА</span><span class="manual-callout-label-sizer" aria-hidden="true">ПРИМІТКА</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Не використовуйте цей продукт у таких сферах застосування, як сервери обробки даних або медичні пристрої, де збій може загрожувати життю або спричинити значну майнову шкоду.</p>
+<p>Для наведеного нижче обладнання втрата живлення під час використання може становити серйозну загрозу для життя або майна:</p>
+<ul class="simple">
+<li><p>Медичні пристрої та інше обладнання, безпосередньо пов’язане з безпекою життя.</p></li>
+<li><p>Критично важливе обладнання, таке як об’єкти соціальної інфраструктури та громадські служби.</p></li>
+<li><p>Критично важливе для бізнесу обладнання тощо.</p></li>
+</ul>
+<p>Особи з імплантованим кардіостимулятором не повинні використовувати цей продукт.</p>
+</td></tr></tbody></table>
+
+
+
+
+
 <table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>УВАГА</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">ПОПЕРЕДЖЕННЯ</span><span class="manual-callout-label-sizer" aria-hidden="true">УВАГА</span><span class="manual-callout-label-sizer" aria-hidden="true">ПРИМІТКА</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>Цей пристрій не підтримує перемикання 0 мс. Не підключайте його до обладнання, яке потребує джерела живлення з перемиканням 0 мс, наприклад до серверів даних або робочих станцій.</p></li>
 <li><p>Перед використанням кілька разів перевірте сумісність із вашим пристроєм.</p></li>
 <li><p>Не підключайте навантаження, що перевищують максимальну вихідну потужність виробу. Інакше спрацює захист від перевантаження.</p></li>
+<li><p>Функція UPS працює лише тоді, коли один пристрій підключено безпосередньо до розетки. Не підключайте кілька портативних зарядних станцій послідовно (каскадне підключення). У каскадній схемі функція UPS не працює: пристрій може не перемкнутися під час відключення електроенергії, через що підключені пристрої вимкнуться.</p></li>
 </ul>
 </td></tr></tbody></table>
 

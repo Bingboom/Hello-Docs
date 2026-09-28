@@ -319,10 +319,25 @@ the actual output power is lower than the rated output power in this mode but re
 
 
 
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>WARNING</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">WARNING</span><span class="manual-callout-label-sizer" aria-hidden="true">CAUTION</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTE</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Do not use this product for applications such as data servers or medical devices, where a malfunction could endanger life or cause significant property damage.</p>
+<p>For the following equipment, a loss of power supply during use could cause serious harm to personal safety or property:</p>
+<ul class="simple">
+<li><p>Medical devices and other equipment closely related to life safety.</p></li>
+<li><p>Critical equipment such as social infrastructure and public services.</p></li>
+<li><p>Business-critical enterprise equipment, etc.</p></li>
+</ul>
+<p>Individuals who wear a cardiac pacemaker (pacemaker implant recipients) must not use this product.</p>
+</td></tr></tbody></table>
+
+
+
+
+
 <table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>CAUTION</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">WARNING</span><span class="manual-callout-label-sizer" aria-hidden="true">CAUTION</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTE</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>This product does not support 0 ms switching. Do not connect it to equipment that requires a 0 ms switching power supply, such as data servers or workstations.</p></li>
 <li><p>Before use, please test compatibility with your device multiple times.</p></li>
 <li><p>Do not connect loads exceeding the maximum output power of the product. Otherwise, overload protection will be triggered.</p></li>
+<li><p>The UPS function works only when a single unit is connected directly to a wall outlet. Do not connect multiple portable power stations in series (cascade connection). In a cascaded setup, the UPS function will not operate: the unit may fail to switch over during a power outage, causing connected devices to shut down.</p></li>
 </ul>
 </td></tr></tbody></table>
 

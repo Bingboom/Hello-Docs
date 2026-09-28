@@ -399,10 +399,25 @@ En mode UPS, la puissance de crête de sortie de l\'appareil atteint 10 A avant 
 
 
 
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>AVERTISSEMENT</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">AVERTISSEMENT</span><span class="manual-callout-label-sizer" aria-hidden="true">ATTENTION</span><span class="manual-callout-label-sizer" aria-hidden="true">REMARQUE</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>N’utilisez pas ce produit dans des applications telles que des serveurs de données ou des dispositifs médicaux, où un dysfonctionnement pourrait mettre la vie en danger ou entraîner des dommages matériels importants.</p>
+<p>Pour les équipements suivants, une perte d’alimentation pendant l’utilisation pourrait entraîner de graves atteintes à la sécurité des personnes ou des biens :</p>
+<ul class="simple">
+<li><p>Dispositifs médicaux et autres équipements étroitement liés à la sécurité des personnes.</p></li>
+<li><p>Équipements essentiels tels que les infrastructures publiques et les services publics.</p></li>
+<li><p>Équipements essentiels aux activités de l’entreprise, etc.</p></li>
+</ul>
+<p>Les personnes portant un stimulateur cardiaque (pacemaker) ne doivent pas utiliser ce produit.</p>
+</td></tr></tbody></table>
+
+
+
+
+
 <table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ATTENTION</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">AVERTISSEMENT</span><span class="manual-callout-label-sizer" aria-hidden="true">ATTENTION</span><span class="manual-callout-label-sizer" aria-hidden="true">REMARQUE</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
 <li><p>Ce produit ne prend pas en charge un basculement instantané (0 ms). Ne le connectez pas à des équipements nécessitant une alimentation avec commutation en 0 ms, tels que des serveurs de données ou des stations de travail.</p></li>
 <li><p>Avant toute utilisation, testez plusieurs fois la compatibilité avec votre appareil.</p></li>
 <li><p>Ne connectez pas de charges dépassant la puissance maximale de sortie du produit. Sinon, la protection contre les surcharges sera déclenchée.</p></li>
+<li><p>La fonction UPS ne fonctionne que lorsqu'un seul appareil est raccordé directement à une prise murale. Ne raccordez pas plusieurs stations d'énergie portables en série (montage en cascade). Dans une configuration en cascade, la fonction UPS ne fonctionne pas : l'appareil peut ne pas basculer lors d'une coupure de courant, ce qui entraîne l'arrêt des appareils connectés.</p></li>
 </ul>
 </td></tr></tbody></table>
 
