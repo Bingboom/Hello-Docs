@@ -1,4 +1,4 @@
-# Jackery Explorer 1000 — Nederlands
+# Jackery Explorer 1000 — nl
 
 ```{toctree}
 :maxdepth: 2

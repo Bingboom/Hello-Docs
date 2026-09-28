@@ -3,209 +3,204 @@
   "model": "JE-1000F",
   "region": "EU",
   "language": "pl",
-  "version": "git-20260927-c38415f5",
-  "git_ref": "b84239b3e0e248a081967e23ccd15b710c466611",
+  "version": "git-20260928-c38415f5-native-ir",
+  "git_ref": "99edfd22a9a515d2079366146d356637e60da7b9",
   "source_manifest": {
     "path": "frozen_source_manifest.json",
-    "sha256": "914c5002d3b387494527958a3c2559b0a5d419ffd651f2f34f78aa365c458766"
+    "sha256": "3c16f58fa673d90c38355afc49839f5230edacee5538906d5aa640725994e62a"
   },
   "markdown": {
     "manual": "manual_je1000f_eu_pl.md",
     "files": [
       {
         "path": "_static/web_manual.css",
-        "size": 42987,
-        "sha256": "6bfcbbc6caa804e6ab4384727345599af89ff30622fd1ab3fd24e74cc9eb38e7"
+        "size": 78043,
+        "sha256": "f2bb6b07a29915a14261fbd953c450fd4e985846e3494b819b11f046946c7f66"
       },
       {
-        "path": "assets/p144_symbol_chart.png",
-        "size": 51449,
-        "sha256": "d3099368ce33b6a224919cccaa45ce7177799b64cdc0084438232aaed8a4c641"
+        "path": "assets/02f840f1341d_02f840f1341d_add_device_je1000f_eu.png",
+        "size": 111772,
+        "sha256": "02f840f1341d94d08478c84ea4ae88280ef2806d618484596885efbe4debafe0"
       },
       {
-        "path": "assets/p145_icon_do_not_disassemble.png",
-        "size": 3266,
-        "sha256": "92a684936dd0014939f1b022bde383194922f6429031f1929969d0375b7f4e9a"
+        "path": "assets/0b0fe146874a_0b0fe146874a_dc-usb-output.png",
+        "size": 95364,
+        "sha256": "0b0fe146874a37caced9288228328c4931859e12b27a56ec9896881c4c8a6698"
       },
       {
-        "path": "assets/p145_icon_general_warning.png",
-        "size": 2473,
-        "sha256": "4d7258bc4ee0d300cc9163edb97147b47a4ba397343dc9efb1625b33ae3ffd6f"
+        "path": "assets/114690be6f4d_114690be6f4d_keep_away_from_children.png",
+        "size": 7645,
+        "sha256": "114690be6f4d77ceaebe2ed44641ba2735873d3d6415ae04738dc241392096b7"
       },
       {
-        "path": "assets/p145_icon_keep_away_from_children.png",
-        "size": 3624,
-        "sha256": "38508be0e898050c780030286e709a3d059aa900a5ddb43d981fa693948741f3"
+        "path": "assets/1bf7bbbd178e_1bf7bbbd178e_main_unit1_je1000f_eu_en.png",
+        "size": 15495,
+        "sha256": "1bf7bbbd178ee212414bfb070d89eee8e384e9d1c20652f1a379bdb536e2e4b4"
       },
       {
-        "path": "assets/p145_icon_keep_away_from_fire.png",
-        "size": 4161,
-        "sha256": "2430fffe9653c7bbe210a5ddc5a5cf681a2b68c2c380b30967e35eea13ee9f41"
+        "path": "assets/1c7bfea9e26b_1c7bfea9e26b_app_store_badges.png",
+        "size": 25764,
+        "sha256": "1c7bfea9e26bbb00aff9c48d34a7742cd15ff3f0d998f32486c7248a19c9b84d"
       },
       {
-        "path": "assets/p145_icon_lithium_battery.png",
-        "size": 4114,
-        "sha256": "0101111b5a79604a9c4be2531a5655b33d3b5dd52426a5b4d23fa214ed2e683c"
+        "path": "assets/23cde742b301_23cde742b301_connect_result_je1000f_eu.png",
+        "size": 84390,
+        "sha256": "23cde742b3012b96fce07f9efe3475ee2e75230f2b2d39311291a33d4cf51f69"
       },
       {
-        "path": "assets/p145_icon_read_manual.png",
-        "size": 1992,
-        "sha256": "a87437f4331135fed6de5ccd4439e46be786a622c91d0a0ff426b4a990b96b91"
+        "path": "assets/287650f3a89a_287650f3a89a_ac_charging_cable.png",
+        "size": 4023,
+        "sha256": "287650f3a89ae520e32f0d75df8401151b808004ee50075b96aff70af04ca4ef"
       },
       {
-        "path": "assets/p145_icon_separate_collection.png",
-        "size": 3437,
-        "sha256": "3ce86abf9a39c853c0794ee58662fe6db13c4c7b88290ad29396930411615a8c"
+        "path": "assets/2a61fc0919cf_2a61fc0919cf_li_ion.png",
+        "size": 7367,
+        "sha256": "2a61fc0919cfeca43a4dd3e9bcf3a4310314d7543f77e6af9c10f1717360eea7"
       },
       {
-        "path": "assets/p145_in_box_cards.png",
-        "size": 45953,
-        "sha256": "55265f7ff34dc5c8a76ea69205c2abcfdf8f9d51291834047e74cb30e22a4df0"
+        "path": "assets/3bafcc34c487_3bafcc34c487_app.control.png",
+        "size": 14930,
+        "sha256": "3bafcc34c487826771aec91e5d8ad3246bf8ee1bde8aa3ee46ff0e483d077c2c"
       },
       {
-        "path": "assets/p145_symbol_pictograms.png",
-        "size": 91316,
-        "sha256": "c5e2e14291fb582e052795f24bef1b3d689f26c4ba73ab6cc673d0ad5af63630"
+        "path": "assets/3bd7d59dde7d_3bd7d59dde7d_reference.ac-wall.png",
+        "size": 71112,
+        "sha256": "3bd7d59dde7d8fa343a01d14f6291d1fd46c0acc9adc4fd3ea3a616d52c0a062"
       },
       {
-        "path": "assets/p146_front_view.png",
-        "size": 93419,
-        "sha256": "5d68d8009562f392cefd656b9b2c48491598b69a6a62317c8247713ceaddf177"
+        "path": "assets/401376e7e34a_401376e7e34a_main-power.png",
+        "size": 68090,
+        "sha256": "401376e7e34a5aee30352e7a351998c0acf0dfdf6c8e817bc849914db88cfbda"
       },
       {
-        "path": "assets/p146_right_view.png",
-        "size": 48126,
-        "sha256": "d3b7e43d523f59ea739e23b2558019b1d5ccaf59e0557f3bcc85554424690159"
+        "path": "assets/58138a11bdcb_58138a11bdcb_overview-front.png",
+        "size": 58814,
+        "sha256": "58138a11bdcb513337870c37bd0b661c43c7f391565797cad45463ffe2d01895"
       },
       {
-        "path": "assets/p147_lcd_display.png",
-        "size": 72175,
-        "sha256": "bc11b487a838b1ef77874465ff93c11454eb7a6f11f968e0acf06cb2baf5de8a"
+        "path": "assets/5f2a58121306_5f2a58121306_app_download_qr.png",
+        "size": 130235,
+        "sha256": "5f2a58121306f87b6a627309f264ada87ac4778b3338cfc464ff656013ac3c65"
       },
       {
-        "path": "assets/p149_ac_output.png",
-        "size": 72001,
-        "sha256": "17cf83ccde0869cbe389ff9cbb88e7c089275c0874eab80a65e9f716dae303a2"
+        "path": "assets/6749bd38fdd0_6749bd38fdd0_warning_triangle.png",
+        "size": 4482,
+        "sha256": "6749bd38fdd0b85af591d65d0d81ae591590aa5c35c7b0f72767057a953c5c67"
       },
       {
-        "path": "assets/p149_main_power.png",
-        "size": 69477,
-        "sha256": "fdd3164f388fb5d061a2e241fe1a9ca80843d99df62b82abb21311d6f3e49f02"
+        "path": "assets/76085a1e7008_76085a1e7008_do_not_dismantle.png",
+        "size": 6737,
+        "sha256": "76085a1e70083ecdcecb41bf2591353c3bced2b9385662329ab3a76c48446b7b"
       },
       {
-        "path": "assets/p150_dc_usb_output.png",
-        "size": 74297,
-        "sha256": "58da646542ad01b9edb04b44b906b020dbdadba8bd83411cb978eb90c0f4f26e"
+        "path": "assets/7e4de290ea13_7e4de290ea13_weee.png",
+        "size": 2150,
+        "sha256": "7e4de290ea13b86bd50fbb209b4510116116d4fb403b7ef4f83cf1c1db873989"
       },
       {
-        "path": "assets/p151_energy_saving.png",
-        "size": 53669,
-        "sha256": "94580d573845a2a251409cb41417cfac91d61df207cbafdb5bcf818ebc710f0d"
+        "path": "assets/7f14d14b1364_7f14d14b1364_solar-single.png",
+        "size": 154357,
+        "sha256": "7f14d14b136430e54003e4624bbfe7c1aaaac6a9622ae422e515275ebaef6e33"
       },
       {
-        "path": "assets/p151_lcd_mode_art.png",
-        "size": 31333,
-        "sha256": "01290ba0c711b5edd4a66b4faadc694d12c13629c9d09a887bf674e230c594bb"
+        "path": "assets/82c9cafc5d55_82c9cafc5d55_solar-four.png",
+        "size": 249974,
+        "sha256": "82c9cafc5d553d37c0e17944ad730f27e830ae525a5896df2eb509b0cc3cd00e"
       },
       {
-        "path": "assets/p151_led_light.png",
-        "size": 79229,
-        "sha256": "f7dd21b13659e1e3ee2b45a390784d5fb09c174bc9f634a526b2695a42324423"
+        "path": "assets/87ac44e52863_87ac44e52863_manual_icon1.png",
+        "size": 1614,
+        "sha256": "87ac44e52863324b761a672089e6b0497e40fdf48432f698fccf30508060c60a"
       },
       {
-        "path": "assets/p153_ups_connection.png",
-        "size": 60533,
-        "sha256": "61d1fb93dc8367612e726d70137d386193b5ee606f252316c176976ffa68f78e"
+        "path": "assets/89dae4b809de_89dae4b809de_read_manual.png",
+        "size": 3794,
+        "sha256": "89dae4b809de62e67e42949d33826c6e05b147b57e94b3e9c42f4bfff9af591a"
       },
       {
-        "path": "assets/p154_ac_wall_charging.png",
-        "size": 43568,
-        "sha256": "372e5d5cee9f41608972b7a617a4c1db46bec94d4998648d461bfe4e4ce0a399"
+        "path": "assets/9aa0c1668423_9aa0c1668423_op_ups_mode_je1000f_eu_en.png",
+        "size": 89235,
+        "sha256": "9aa0c1668423a77e9c63fd3d4731d38420fc2283bec8fda769269fa081a72da0"
       },
       {
-        "path": "assets/p154_solar_single.png",
-        "size": 104254,
-        "sha256": "6517d09c91e131a51f7bec6a4cee21895ee5e419f1b3d9b98041127ed7b9a5df"
+        "path": "assets/a8a846e9767a_a8a846e9767a_no_open_flame.png",
+        "size": 8901,
+        "sha256": "a8a846e9767ac618760e6a9ac65d826fb2c092ad7450014fa30ae0894746450a"
       },
       {
-        "path": "assets/p155_car_charging.png",
-        "size": 76288,
-        "sha256": "eb6d8f45861e8d80a30413490be352e29564013da7234d9dd4daf3e0b97f4807"
+        "path": "assets/b276ee48728d_b276ee48728d_car-charging.png",
+        "size": 112280,
+        "sha256": "b276ee48728db4e72e21d7fde456e91017e3e4f5335209b1d5476f6c7af1f0f4"
       },
       {
-        "path": "assets/p155_solar_four.png",
-        "size": 165470,
-        "sha256": "c4864360376196662255310cb0af6b1ac6db27460509726625cbbeb709ea3530"
+        "path": "assets/bd1e161e7734_bd1e161e7734_op_led_light_je1000f_eu_en.png",
+        "size": 59862,
+        "sha256": "bd1e161e77343ed2e9cd99ea4ccdea96f4caa184102714f4ea48135583ea04b2"
       },
       {
-        "path": "assets/p159_app_add_device.png",
-        "size": 62497,
-        "sha256": "124650ed9a98fcb0f1386683edafc7fdb246c9f69975254776c6744fd7256b7a"
+        "path": "assets/c15858544727_c15858544727_ac-output.png",
+        "size": 89605,
+        "sha256": "c1585854472793648b149b4989391de27a3ea460482d286583277df451862895"
       },
       {
-        "path": "assets/p159_app_control.png",
-        "size": 16006,
-        "sha256": "1c0b93ffaf6228146ed35a05e88d4baab4e4f0f8bd2de206f7047a9734089bdc"
+        "path": "assets/d042326898a2_d042326898a2_energy-saving.png",
+        "size": 64361,
+        "sha256": "d042326898a2450ebee6e356886e7403fe0a33b6a2d4a12266454205093a1218"
       },
       {
-        "path": "assets/p159_app_qr_and_badges.png",
-        "size": 32459,
-        "sha256": "08edb54acf23e1643ef73807fb107826f13d933fa1b5bf2241349f1cfe5ec2dd"
+        "path": "assets/d64001a4609c_d64001a4609c_overview-right.png",
+        "size": 33174,
+        "sha256": "d64001a4609cb82a03e7cb551a9a6c52adcc6b9a7b7cdb247d9ccd8d06aa8509"
       },
       {
-        "path": "assets/p160_app_pairing.png",
-        "size": 51385,
-        "sha256": "7fa317eac181e130f7a3c76ac795247af8371f41dfe7291665e296973124b77f"
+        "path": "assets/f82efe218bc0_f82efe218bc0_lcd_map.png",
+        "size": 92895,
+        "sha256": "f82efe218bc0b63cb953aced0c85f7c9553935e68d5cf70a3577df9212f550ce"
+      },
+      {
+        "path": "assets/f9ed0c8d1dc1_f9ed0c8d1dc1_op_lcd_mode_je1000f_eu_en.png",
+        "size": 46884,
+        "sha256": "f9ed0c8d1dc17b00daad2ba6a13053a2b45527527b15c41d83d353df890740bb"
       },
       {
         "path": "conf.py",
-        "size": 491,
-        "sha256": "a26d6c8861b71a9fdd9756f6514482aa445d7b7aaae552d33ed5b0e933ab5e78"
+        "size": 823,
+        "sha256": "e6dee94ee0c8c931f4e1f8681e60bd021c8ab48599a1a3c1df4be24526481aa0"
       },
       {
         "path": "index.md",
-        "size": 88,
-        "sha256": "62372dfcc5352ddc7585409a62666bbbb9ee1ec893cf37fe0faaea39d34a08aa"
+        "size": 84,
+        "sha256": "27b6a815cc28894e0e9a109b5c79e50272ddfb8bdd85b7cff940ba877a4c8e90"
+      },
+      {
+        "path": "manual.ir.json",
+        "size": 550263,
+        "sha256": "2584ee2f74aced5956b10c433499c7c26eb60217c11dd23096c122ea051dd169"
       },
       {
         "path": "manual_je1000f_eu_pl.md",
-        "size": 46654,
-        "sha256": "90aaeecc4a0ae99336ad56df52e09c2dd9abcb8e2e7a38fd10117a8bcb356b1e"
+        "size": 71411,
+        "sha256": "f7e3e7afe64d3ac9f4dbdeed5d3fdf1fa8d70670a06ce6a193b3611a1fed5858"
       }
     ],
-    "sha256": "de4f9ee375d76bc227a3fc218f67c67ee6d7b05e6790157181671a9769549bc7"
+    "sha256": "687a9af771ad714ad3aaa28fad00429beab1eba17d1fb1cd7fddefa34414251b"
   },
   "html": {
     "files": [
       {
         "path": ".buildinfo",
         "size": 231,
-        "sha256": "f8bc4141303d3b075dc358dbc094eceb21e40f6187e018902f587644b345ebe4"
-      },
-      {
-        "path": ".doctrees/environment.pickle",
-        "size": 22573,
-        "sha256": "f787d70474e7f8a5c4c6391dbb1c283b0ba7db17917dcf0c19149b744895c1e9"
-      },
-      {
-        "path": ".doctrees/index.doctree",
-        "size": 3279,
-        "sha256": "56a0926e91349ee618bc47ba5f741457bb122d71149fd11c6feaef93eb864666"
-      },
-      {
-        "path": ".doctrees/manual_je1000f_eu_pl.doctree",
-        "size": 119986,
-        "sha256": "fc838f4f3161f4f84e990d3e69375e15c7bfe6e8844dc309e28a67350930f3ea"
+        "sha256": "34dc58fc82dce6fddebaee217296ef3042e28f7928105121b9e2f3d47e4e34cf"
       },
       {
         "path": "_sources/index.md.txt",
-        "size": 88,
-        "sha256": "62372dfcc5352ddc7585409a62666bbbb9ee1ec893cf37fe0faaea39d34a08aa"
+        "size": 84,
+        "sha256": "27b6a815cc28894e0e9a109b5c79e50272ddfb8bdd85b7cff940ba877a4c8e90"
       },
       {
         "path": "_sources/manual_je1000f_eu_pl.md.txt",
-        "size": 46654,
-        "sha256": "90aaeecc4a0ae99336ad56df52e09c2dd9abcb8e2e7a38fd10117a8bcb356b1e"
+        "size": 71411,
+        "sha256": "f7e3e7afe64d3ac9f4dbdeed5d3fdf1fa8d70670a06ce6a193b3611a1fed5858"
       },
       {
         "path": "_static/basic.css",
@@ -314,180 +309,185 @@
       },
       {
         "path": "_static/web_manual.css",
-        "size": 42987,
-        "sha256": "6bfcbbc6caa804e6ab4384727345599af89ff30622fd1ab3fd24e74cc9eb38e7"
+        "size": 78043,
+        "sha256": "f2bb6b07a29915a14261fbd953c450fd4e985846e3494b819b11f046946c7f66"
       },
       {
-        "path": "assets/p144_symbol_chart.png",
-        "size": 51449,
-        "sha256": "d3099368ce33b6a224919cccaa45ce7177799b64cdc0084438232aaed8a4c641"
+        "path": "assets/02f840f1341d_02f840f1341d_add_device_je1000f_eu.png",
+        "size": 111772,
+        "sha256": "02f840f1341d94d08478c84ea4ae88280ef2806d618484596885efbe4debafe0"
       },
       {
-        "path": "assets/p145_icon_do_not_disassemble.png",
-        "size": 3266,
-        "sha256": "92a684936dd0014939f1b022bde383194922f6429031f1929969d0375b7f4e9a"
+        "path": "assets/0b0fe146874a_0b0fe146874a_dc-usb-output.png",
+        "size": 95364,
+        "sha256": "0b0fe146874a37caced9288228328c4931859e12b27a56ec9896881c4c8a6698"
       },
       {
-        "path": "assets/p145_icon_general_warning.png",
-        "size": 2473,
-        "sha256": "4d7258bc4ee0d300cc9163edb97147b47a4ba397343dc9efb1625b33ae3ffd6f"
+        "path": "assets/114690be6f4d_114690be6f4d_keep_away_from_children.png",
+        "size": 7645,
+        "sha256": "114690be6f4d77ceaebe2ed44641ba2735873d3d6415ae04738dc241392096b7"
       },
       {
-        "path": "assets/p145_icon_keep_away_from_children.png",
-        "size": 3624,
-        "sha256": "38508be0e898050c780030286e709a3d059aa900a5ddb43d981fa693948741f3"
+        "path": "assets/1bf7bbbd178e_1bf7bbbd178e_main_unit1_je1000f_eu_en.png",
+        "size": 15495,
+        "sha256": "1bf7bbbd178ee212414bfb070d89eee8e384e9d1c20652f1a379bdb536e2e4b4"
       },
       {
-        "path": "assets/p145_icon_keep_away_from_fire.png",
-        "size": 4161,
-        "sha256": "2430fffe9653c7bbe210a5ddc5a5cf681a2b68c2c380b30967e35eea13ee9f41"
+        "path": "assets/1c7bfea9e26b_1c7bfea9e26b_app_store_badges.png",
+        "size": 25764,
+        "sha256": "1c7bfea9e26bbb00aff9c48d34a7742cd15ff3f0d998f32486c7248a19c9b84d"
       },
       {
-        "path": "assets/p145_icon_lithium_battery.png",
-        "size": 4114,
-        "sha256": "0101111b5a79604a9c4be2531a5655b33d3b5dd52426a5b4d23fa214ed2e683c"
+        "path": "assets/23cde742b301_23cde742b301_connect_result_je1000f_eu.png",
+        "size": 84390,
+        "sha256": "23cde742b3012b96fce07f9efe3475ee2e75230f2b2d39311291a33d4cf51f69"
       },
       {
-        "path": "assets/p145_icon_read_manual.png",
-        "size": 1992,
-        "sha256": "a87437f4331135fed6de5ccd4439e46be786a622c91d0a0ff426b4a990b96b91"
+        "path": "assets/287650f3a89a_287650f3a89a_ac_charging_cable.png",
+        "size": 4023,
+        "sha256": "287650f3a89ae520e32f0d75df8401151b808004ee50075b96aff70af04ca4ef"
       },
       {
-        "path": "assets/p145_icon_separate_collection.png",
-        "size": 3437,
-        "sha256": "3ce86abf9a39c853c0794ee58662fe6db13c4c7b88290ad29396930411615a8c"
+        "path": "assets/2a61fc0919cf_2a61fc0919cf_li_ion.png",
+        "size": 7367,
+        "sha256": "2a61fc0919cfeca43a4dd3e9bcf3a4310314d7543f77e6af9c10f1717360eea7"
       },
       {
-        "path": "assets/p145_in_box_cards.png",
-        "size": 45953,
-        "sha256": "55265f7ff34dc5c8a76ea69205c2abcfdf8f9d51291834047e74cb30e22a4df0"
+        "path": "assets/3bafcc34c487_3bafcc34c487_app.control.png",
+        "size": 14930,
+        "sha256": "3bafcc34c487826771aec91e5d8ad3246bf8ee1bde8aa3ee46ff0e483d077c2c"
       },
       {
-        "path": "assets/p145_symbol_pictograms.png",
-        "size": 91316,
-        "sha256": "c5e2e14291fb582e052795f24bef1b3d689f26c4ba73ab6cc673d0ad5af63630"
+        "path": "assets/3bd7d59dde7d_3bd7d59dde7d_reference.ac-wall.png",
+        "size": 71112,
+        "sha256": "3bd7d59dde7d8fa343a01d14f6291d1fd46c0acc9adc4fd3ea3a616d52c0a062"
       },
       {
-        "path": "assets/p146_front_view.png",
-        "size": 93419,
-        "sha256": "5d68d8009562f392cefd656b9b2c48491598b69a6a62317c8247713ceaddf177"
+        "path": "assets/401376e7e34a_401376e7e34a_main-power.png",
+        "size": 68090,
+        "sha256": "401376e7e34a5aee30352e7a351998c0acf0dfdf6c8e817bc849914db88cfbda"
       },
       {
-        "path": "assets/p146_right_view.png",
-        "size": 48126,
-        "sha256": "d3b7e43d523f59ea739e23b2558019b1d5ccaf59e0557f3bcc85554424690159"
+        "path": "assets/58138a11bdcb_58138a11bdcb_overview-front.png",
+        "size": 58814,
+        "sha256": "58138a11bdcb513337870c37bd0b661c43c7f391565797cad45463ffe2d01895"
       },
       {
-        "path": "assets/p147_lcd_display.png",
-        "size": 72175,
-        "sha256": "bc11b487a838b1ef77874465ff93c11454eb7a6f11f968e0acf06cb2baf5de8a"
+        "path": "assets/5f2a58121306_5f2a58121306_app_download_qr.png",
+        "size": 130235,
+        "sha256": "5f2a58121306f87b6a627309f264ada87ac4778b3338cfc464ff656013ac3c65"
       },
       {
-        "path": "assets/p149_ac_output.png",
-        "size": 72001,
-        "sha256": "17cf83ccde0869cbe389ff9cbb88e7c089275c0874eab80a65e9f716dae303a2"
+        "path": "assets/6749bd38fdd0_6749bd38fdd0_warning_triangle.png",
+        "size": 4482,
+        "sha256": "6749bd38fdd0b85af591d65d0d81ae591590aa5c35c7b0f72767057a953c5c67"
       },
       {
-        "path": "assets/p149_main_power.png",
-        "size": 69477,
-        "sha256": "fdd3164f388fb5d061a2e241fe1a9ca80843d99df62b82abb21311d6f3e49f02"
+        "path": "assets/76085a1e7008_76085a1e7008_do_not_dismantle.png",
+        "size": 6737,
+        "sha256": "76085a1e70083ecdcecb41bf2591353c3bced2b9385662329ab3a76c48446b7b"
       },
       {
-        "path": "assets/p150_dc_usb_output.png",
-        "size": 74297,
-        "sha256": "58da646542ad01b9edb04b44b906b020dbdadba8bd83411cb978eb90c0f4f26e"
+        "path": "assets/7e4de290ea13_7e4de290ea13_weee.png",
+        "size": 2150,
+        "sha256": "7e4de290ea13b86bd50fbb209b4510116116d4fb403b7ef4f83cf1c1db873989"
       },
       {
-        "path": "assets/p151_energy_saving.png",
-        "size": 53669,
-        "sha256": "94580d573845a2a251409cb41417cfac91d61df207cbafdb5bcf818ebc710f0d"
+        "path": "assets/7f14d14b1364_7f14d14b1364_solar-single.png",
+        "size": 154357,
+        "sha256": "7f14d14b136430e54003e4624bbfe7c1aaaac6a9622ae422e515275ebaef6e33"
       },
       {
-        "path": "assets/p151_lcd_mode_art.png",
-        "size": 31333,
-        "sha256": "01290ba0c711b5edd4a66b4faadc694d12c13629c9d09a887bf674e230c594bb"
+        "path": "assets/82c9cafc5d55_82c9cafc5d55_solar-four.png",
+        "size": 249974,
+        "sha256": "82c9cafc5d553d37c0e17944ad730f27e830ae525a5896df2eb509b0cc3cd00e"
       },
       {
-        "path": "assets/p151_led_light.png",
-        "size": 79229,
-        "sha256": "f7dd21b13659e1e3ee2b45a390784d5fb09c174bc9f634a526b2695a42324423"
+        "path": "assets/87ac44e52863_87ac44e52863_manual_icon1.png",
+        "size": 1614,
+        "sha256": "87ac44e52863324b761a672089e6b0497e40fdf48432f698fccf30508060c60a"
       },
       {
-        "path": "assets/p153_ups_connection.png",
-        "size": 60533,
-        "sha256": "61d1fb93dc8367612e726d70137d386193b5ee606f252316c176976ffa68f78e"
+        "path": "assets/89dae4b809de_89dae4b809de_read_manual.png",
+        "size": 3794,
+        "sha256": "89dae4b809de62e67e42949d33826c6e05b147b57e94b3e9c42f4bfff9af591a"
       },
       {
-        "path": "assets/p154_ac_wall_charging.png",
-        "size": 43568,
-        "sha256": "372e5d5cee9f41608972b7a617a4c1db46bec94d4998648d461bfe4e4ce0a399"
+        "path": "assets/9aa0c1668423_9aa0c1668423_op_ups_mode_je1000f_eu_en.png",
+        "size": 89235,
+        "sha256": "9aa0c1668423a77e9c63fd3d4731d38420fc2283bec8fda769269fa081a72da0"
       },
       {
-        "path": "assets/p154_solar_single.png",
-        "size": 104254,
-        "sha256": "6517d09c91e131a51f7bec6a4cee21895ee5e419f1b3d9b98041127ed7b9a5df"
+        "path": "assets/a8a846e9767a_a8a846e9767a_no_open_flame.png",
+        "size": 8901,
+        "sha256": "a8a846e9767ac618760e6a9ac65d826fb2c092ad7450014fa30ae0894746450a"
       },
       {
-        "path": "assets/p155_car_charging.png",
-        "size": 76288,
-        "sha256": "eb6d8f45861e8d80a30413490be352e29564013da7234d9dd4daf3e0b97f4807"
+        "path": "assets/b276ee48728d_b276ee48728d_car-charging.png",
+        "size": 112280,
+        "sha256": "b276ee48728db4e72e21d7fde456e91017e3e4f5335209b1d5476f6c7af1f0f4"
       },
       {
-        "path": "assets/p155_solar_four.png",
-        "size": 165470,
-        "sha256": "c4864360376196662255310cb0af6b1ac6db27460509726625cbbeb709ea3530"
+        "path": "assets/bd1e161e7734_bd1e161e7734_op_led_light_je1000f_eu_en.png",
+        "size": 59862,
+        "sha256": "bd1e161e77343ed2e9cd99ea4ccdea96f4caa184102714f4ea48135583ea04b2"
       },
       {
-        "path": "assets/p159_app_add_device.png",
-        "size": 62497,
-        "sha256": "124650ed9a98fcb0f1386683edafc7fdb246c9f69975254776c6744fd7256b7a"
+        "path": "assets/c15858544727_c15858544727_ac-output.png",
+        "size": 89605,
+        "sha256": "c1585854472793648b149b4989391de27a3ea460482d286583277df451862895"
       },
       {
-        "path": "assets/p159_app_control.png",
-        "size": 16006,
-        "sha256": "1c0b93ffaf6228146ed35a05e88d4baab4e4f0f8bd2de206f7047a9734089bdc"
+        "path": "assets/d042326898a2_d042326898a2_energy-saving.png",
+        "size": 64361,
+        "sha256": "d042326898a2450ebee6e356886e7403fe0a33b6a2d4a12266454205093a1218"
       },
       {
-        "path": "assets/p159_app_qr_and_badges.png",
-        "size": 32459,
-        "sha256": "08edb54acf23e1643ef73807fb107826f13d933fa1b5bf2241349f1cfe5ec2dd"
+        "path": "assets/d64001a4609c_d64001a4609c_overview-right.png",
+        "size": 33174,
+        "sha256": "d64001a4609cb82a03e7cb551a9a6c52adcc6b9a7b7cdb247d9ccd8d06aa8509"
       },
       {
-        "path": "assets/p160_app_pairing.png",
-        "size": 51385,
-        "sha256": "7fa317eac181e130f7a3c76ac795247af8371f41dfe7291665e296973124b77f"
+        "path": "assets/f82efe218bc0_f82efe218bc0_lcd_map.png",
+        "size": 92895,
+        "sha256": "f82efe218bc0b63cb953aced0c85f7c9553935e68d5cf70a3577df9212f550ce"
+      },
+      {
+        "path": "assets/f9ed0c8d1dc1_f9ed0c8d1dc1_op_lcd_mode_je1000f_eu_en.png",
+        "size": 46884,
+        "sha256": "f9ed0c8d1dc17b00daad2ba6a13053a2b45527527b15c41d83d353df890740bb"
       },
       {
         "path": "genindex.html",
-        "size": 12487,
-        "sha256": "f2dcc1d8ad881d8db455492a39859ba5149d754e2a9022fafc8cd3e4ae35ba57"
+        "size": 12457,
+        "sha256": "c7479b06097bf716cbf303573729b63cd5d835c3e9caa509ad3abb24cd1aa608"
       },
       {
         "path": "index.html",
-        "size": 15671,
-        "sha256": "1f2dbec0dd25f453b94a907c62f28b453e6702ef990529cb7bb09fb6045a7eef"
+        "size": 15930,
+        "sha256": "678dfb3e2ee17e5bd752d414bd6f3b2a4a2ba76d50b5ecaf37d2597a13e2d022"
       },
       {
         "path": "manual_je1000f_eu_pl.html",
-        "size": 63943,
-        "sha256": "ce0d5639184a6f90e23c49518e33cde5bd546e1c235f12e850209c8f519529bd"
+        "size": 96347,
+        "sha256": "f3ba2c5d6b10dbd94397e989ec4bf9cfaaf53659358cc1490116f2442a41c0de"
       },
       {
         "path": "objects.inv",
-        "size": 301,
-        "sha256": "ed31b7c326e96fa17f07b01c3b9d6bdd9bf2b27813896a631fcc7a77bcbc9ae3"
+        "size": 304,
+        "sha256": "7868f187c2925900a9fd462491121b6d9891a6c6bc66335671e329c1091dfec1"
       },
       {
         "path": "search.html",
-        "size": 12758,
-        "sha256": "5c7a70c94c1639c79da384302120fca818121c04ec67c2ff4845f89de0ad5768"
+        "size": 12727,
+        "sha256": "6a62fc8a061c3092955050935804df27ab55f39fbb278244d46e8a82d8aaf8e2"
       },
       {
         "path": "searchindex.js",
-        "size": 25100,
-        "sha256": "f38646b742fa65c10165479d24a2a70e7088b444a353a2612d416cd3744075ef"
+        "size": 27765,
+        "sha256": "2149e7d7c95b2fb8715452aa9fb8d7e4a5a0bbec24ddcd6bad7f99a455ab7df2"
       }
     ],
-    "sha256": "0694867269e96e1e2a67a849ad0ccc4a0cafadfaa46ca0861299fdd8f8c3d234"
+    "sha256": "c471f55eebd1cdb61d417a2e5134e58909aaf5ca5a68fe7319ee77952d2b8a3d"
   }
 }
