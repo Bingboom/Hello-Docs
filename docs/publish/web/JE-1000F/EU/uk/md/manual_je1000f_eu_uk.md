@@ -1,52 +1,28 @@
-# Jackery Explorer 1000 — Українська
+# Jackery Explorer 1000 — uk
 
-Model: JE-1000F · hello.eu@jackery.com
-
-## Introduction
-
-<p>Вітаємо вас з новим Jackery Explorer 1000. Будь ласка, уважно прочитайте це керівництво перед використанням продукту, особливо відповідні застереження для забезпечення правильного використання. Зберігайте це керівництво у доступному місці для подальшого використання.</p>
-<p>Відповідно до законів і нормативних актів, право остаточного тлумачення цього документа та всіх пов’язаних документів цього продукту належить Компанії. Хоча було докладено всіх зусиль для забезпечення точності цього керівництва, Jackery не несе відповідальності за можливі помилки.</p>
-<p>Зверніть увагу, що у разі будь-яких оновлень, змін або припинення дії додаткові повідомлення не надаватимуться. Щоб отримати найновішу версію керівництв, відвідайте support.jackery.com.</p>
-<p>* Зображення наведені лише для довідки. Будь ласка, орієнтуйтеся на фактичний продукт.</p>
-
-## Contents
-
-<nav aria-label="Chapters"><ul><li><a href="#safety">ВАЖЛИВА ІНФОРМАЦІЯ З БЕЗПЕКИ</a></li><li><a href="#symbols">ЗНАЧЕННЯ СИМВОЛІВ</a></li><li><a href="#in_the_box">КОМПЛЕКТАЦІЯ</a></li><li><a href="#product_overview">ОГЛЯД ПРОДУКТУ</a></li><li><a href="#lcd_display">РК-ДИСПЛЕЙ</a></li><li><a href="#operations">ОПЕРАЦІЇ</a></li><li><a href="#ups">ДЖЕРЕЛО БЕЗПЕРЕБІЙНОГО ЖИВЛЕННЯ (ДБЖ)</a></li><li><a href="#charging">ЗАРЯДЖАННЯ</a></li><li><a href="#storage">ЗБЕРІГАННЯ</a></li><li><a href="#troubleshooting">УСУНЕННЯ НЕСПРАВНОСТЕЙ</a></li><li><a href="#specifications">ТЕХНІЧНІ ХАРАКТЕРИСТИКИ</a></li><li><a href="#warranty">ГАРАНТІЯ</a></li><li><a href="#app_setup">НАЛАШТУВАННЯ ДОДАТКА</a></li></ul></nav>
+<p>Вітаємо вас з новим Jackery Explorer 1000. Будь ласка, уважно прочитайте це керівництво перед використанням продукту, особливо відповідні застереження для забезпечення правильного використання. Зберігайте це керівництво у доступному місці для подальшого використання. Відповідно до законів і нормативних актів, право остаточного тлумачення цього документа та всіх пов’язаних документів цього продукту належить Компанії. Хоча було докладено всіх зусиль для забезпечення точності цього керівництва, Jackery не несе відповідальності за можливі помилки. Зверніть увагу, що у разі будь-яких оновлень, змін або припинення дії додаткові повідомлення не надаватимуться. Щоб отримати найновішу версію керівництв, відвідайте support.jackery.com. * Зображення наведені лише для довідки. Будь ласка, орієнтуйтеся на фактичний продукт.</p>
 
 <span id="safety"></span>
+
 ## ВАЖЛИВА ІНФОРМАЦІЯ З БЕЗПЕКИ
 
-<h3>ІНСТРУКЦІЇ ЩОДО РИЗИКУ ПОЖЕЖІ, УРАЖЕННЯ ЕЛЕКТРИЧНИМ СТРУМОМ АБО ТРАВМУВАННЯ ЛЮДЕЙ</h3>
+### ІНСТРУКЦІЇ ЩОДО РИЗИКУ ПОЖЕЖІ, УРАЖЕННЯ ЕЛЕКТРИЧНИМ СТРУМОМ АБО ТРАВМУВАННЯ ЛЮДЕЙ
 
 <p>Завжди дотримуйтеся цих базових заходів безпеки під час використання цього продукту.</p>
 
-<ul>
-<li>Прочитайте всі інструкції перед використанням продукту.</li>
-</ul>
+<ul><li>Прочитайте всі інструкції перед використанням продукту.</li></ul>
 
-<ul>
-<li>Не дозволяйте дітям гратися з продуктом. Необхідний пильний нагляд за дітьми, коли продукт використовується поруч із ними.</li>
-</ul>
+<ul><li>Не дозволяйте дітям гратися з продуктом. Необхідний пильний нагляд за дітьми, коли продукт використовується поруч із ними.</li></ul>
 
-<ul>
-<li>Може виникнути ризик ураження електричним струмом при використанні аксесуарів, які не рекомендовані або не продаються професійними виробниками продукту.</li>
-</ul>
+<ul><li>Може виникнути ризик ураження електричним струмом при використанні аксесуарів, які не рекомендовані або не продаються професійними виробниками продукту.</li></ul>
 
-<ul>
-<li>Коли продукт не використовується, від’єднуйте вилку живлення від розетки продукту.</li>
-</ul>
+<ul><li>Коли продукт не використовується, від’єднуйте вилку живлення від розетки продукту.</li></ul>
 
-<ul>
-<li>Не розбирайте продукт, оскільки це може призвести до непередбачуваних ризиків, таких як пожежа, вибух або ураження електричним струмом.</li>
-</ul>
+<ul><li>Не розбирайте продукт, оскільки це може призвести до непередбачуваних ризиків, таких як пожежа, вибух або ураження електричним струмом.</li></ul>
 
-<ul>
-<li>Не використовуйте продукт із пошкодженими шнурами, вилками або вихідними кабелями, оскільки це може спричинити ураження електричним струмом.</li>
-</ul>
+<ul><li>Не використовуйте продукт із пошкодженими шнурами, вилками або вихідними кабелями, оскільки це може спричинити ураження електричним струмом.</li></ul>
 
-<ul>
-<li>Щоб забезпечити належну циркуляцію повітря, тримайте вентиляційні отвори продукту відкритими. Місце використання продукту повинно мати достатній повітрообмін у прохолодному та сухому середовищі, щоб запобігти перегріванню.</li>
-</ul>
+<ul><li>Щоб забезпечити належну циркуляцію повітря, тримайте вентиляційні отвори продукту відкритими. Місце використання продукту повинно мати достатній повітрообмін у прохолодному та сухому середовищі, щоб запобігти перегріванню.</li></ul>
 
 <p>Заряджання у вологих або погано вентильованих приміщеннях може становити загрозу для безпеки.</p>
 
@@ -54,388 +30,161 @@ Model: JE-1000F · hello.eu@jackery.com
 
 <p>безпеки.</p>
 
-<ul>
-<li>Не піддавайте продукт впливу вогню, високих температур, прямого сонячного світла або середовищ із високою температурою, таких як салон припаркованого автомобіля. Такий вплив може призвести до пожежі або вибуху.</li>
-</ul>
+<ul><li>Не піддавайте продукт впливу вогню, високих температур, прямого сонячного світла або середовищ із високою температурою, таких як салон припаркованого автомобіля. Такий вплив може призвести до пожежі або вибуху.</li></ul>
 
-<h3>ІНСТРУКЦІЇ З ОБСЛУГОВУВАННЯ КОРИСТУВАЧЕМ</h3>
+### ІНСТРУКЦІЇ З ОБСЛУГОВУВАННЯ КОРИСТУВАЧЕМ
 
 <p>Протягом життєвого циклу продуктів накопичення енергії очікується певний ступінь зниження ємності та енергетичних характеристик. Зі збільшенням кількості циклів заряджання та розряджання і тривалості зберігання ця деградація поступово посилюється, що є нормальним явищем і відповідає природному старінню акумуляторних елементів.</p>
 
 <span id="symbols"></span>
+
 ## ЗНАЧЕННЯ СИМВОЛІВ
 
-<div class="manual-table-scroll" style="overflow-x:auto;max-width:100%">
-<table class="manual-table"><thead><tr>
-<th scope="col">Символ</th>
-<th scope="col">Значення</th>
-</tr></thead><tbody>
-<tr><th scope="row">ПОПЕРЕДЖЕННЯ</th><td>Небезпечні практики, які можуть призвести до серйозних травм, смерті та/або майнової шкоди.</td></tr>
-<tr><th scope="row">УВАГА</th><td>Небезпечні дії, які можуть призвести до травм та/або майнової шкоди.</td></tr>
-<tr><th scope="row">ПРИМІТКА</th><td>Небезпечні дії, які можуть призвести до пошкодження обладнання, втрати даних, погіршення продуктивності або непередбачуваних результатів.</td></tr>
-<tr><th scope="row">ПОРАДА</th><td>Доповнює важливу інформацію або операційні підказки в тексті.</td></tr>
-</tbody></table>
-</div>
+<figure aria-label="ЗНАЧЕННЯ СИМВОЛІВ" class="hb-symbol-signal-composition" data-component-id="HB-TABLE-SYMBOL-SIGNAL"><table class="hb-symbol-signal-table"><colgroup><col class="hb-symbol-signal-col-label"/><col class="hb-symbol-signal-col-meaning"/></colgroup><thead><tr><th class="hb-symbol-signal-label-heading" scope="col">Символ</th><th class="hb-symbol-signal-meaning-heading" scope="col">Значення</th></tr></thead><tbody><tr><td class="hb-symbol-signal-label-cell"><span aria-label="ПОПЕРЕДЖЕННЯ" class="hb-signal-badge"><span aria-hidden="true" class="hb-signal-icon">⚠</span><span class="hb-signal-label">ПОПЕРЕДЖЕННЯ</span></span></td><td class="hb-symbol-signal-meaning-cell">Небезпечні практики, які можуть призвести до серйозних травм, смерті та/або майнової шкоди.</td></tr><tr><td class="hb-symbol-signal-label-cell"><span aria-label="УВАГА" class="hb-signal-badge"><span aria-hidden="true" class="hb-signal-icon">⚠</span><span class="hb-signal-label">УВАГА</span></span></td><td class="hb-symbol-signal-meaning-cell">Небезпечні дії, які можуть призвести до травм та/або майнової шкоди.</td></tr><tr><td class="hb-symbol-signal-label-cell"><span aria-label="ПРИМІТКА" class="hb-signal-badge"><span aria-hidden="true" class="hb-signal-icon">⚠</span><span class="hb-signal-label">ПРИМІТКА</span></span></td><td class="hb-symbol-signal-meaning-cell">Небезпечні дії, які можуть призвести до пошкодження обладнання, втрати даних, погіршення продуктивності або непередбачуваних результатів.</td></tr><tr><td class="hb-symbol-signal-label-cell"><span aria-label="ПОРАДА" class="hb-signal-badge"><span aria-hidden="true" class="hb-signal-icon">⚠</span><span class="hb-signal-label">ПОРАДА</span></span></td><td class="hb-symbol-signal-meaning-cell">Доповнює важливу інформацію або операційні підказки в тексті.</td></tr></tbody></table></figure>
 
-<figure><img src="../../../../_static/manual-assets/_pool/5e/5e80f43f2bfc3c55fa0585899a013e47509dd56dbc558bdc2babbb47b218ef63.png" alt="ЗНАЧЕННЯ СИМВОЛІВ: symbol chart" width="942" height="363" loading="lazy" style="max-width:100%;height:auto"></figure>
-
-<figure><img src="../../../../_static/manual-assets/_pool/04/040b911684706e30ab3d38ad5318eaceb52e8692aa06b82474c0dc4f66e5a2be.png" alt="ЗНАЧЕННЯ СИМВОЛІВ: symbol pictograms" width="942" height="450" loading="lazy" style="max-width:100%;height:auto"></figure>
-
-<div class="manual-table-scroll" style="overflow-x:auto;max-width:100%">
-<table class="manual-table"><thead><tr>
-<th scope="col">Символ</th><th scope="col">Значення</th>
-</tr></thead><tbody>
-<tr><th scope="row"><img src="../../../../_static/manual-assets/_pool/4d/4d7258bc4ee0d300cc9163edb97147b47a4ba397343dc9efb1625b33ae3ffd6f.png" alt="" width="156" height="116" style="max-width:48px;height:auto"></th><td>Попереджувальні та застережні символи. Обов’язково прочитайте, щоб попередити користувачів про потенційні небезпеки або ризики.</td></tr>
-<tr><th scope="row"><img src="../../../../_static/manual-assets/_pool/a8/a87437f4331135fed6de5ccd4439e46be786a622c91d0a0ff426b4a990b96b91.png" alt="" width="156" height="116" style="max-width:48px;height:auto"></th><td>Перед використанням прочитайте посібник користувача.</td></tr>
-<tr><th scope="row"><img src="../../../../_static/manual-assets/_pool/92/92a684936dd0014939f1b022bde383194922f6429031f1929969d0375b7f4e9a.png" alt="" width="156" height="120" style="max-width:48px;height:auto"></th><td>Не розбирайте продукт.</td></tr>
-<tr><th scope="row"><img src="../../../../_static/manual-assets/_pool/24/2430fffe9653c7bbe210a5ddc5a5cf681a2b68c2c380b30967e35eea13ee9f41.png" alt="" width="156" height="140" style="max-width:48px;height:auto"></th><td>Тримайте продукт подалі від вогню.</td></tr>
-<tr><th scope="row"><img src="../../../../_static/manual-assets/_pool/38/38508be0e898050c780030286e709a3d059aa900a5ddb43d981fa693948741f3.png" alt="" width="152" height="116" style="max-width:48px;height:auto"></th><td>Тримайте подалі від дітей.</td></tr>
-<tr><th scope="row"><img src="../../../../_static/manual-assets/_pool/01/0101111b5a79604a9c4be2531a5655b33d3b5dd52426a5b4d23fa214ed2e683c.png" alt="" width="152" height="112" style="max-width:48px;height:auto"></th><td>Цей символ вказує, що всередині продукту є літій-іонна (Li-ion) батарея, яку необхідно утилізувати або переробити належним чином.</td></tr>
-<tr><th scope="row"><img src="../../../../_static/manual-assets/_pool/3c/3ce86abf9a39c853c0794ee58662fe6db13c4c7b88290ad29396930411615a8c.png" alt="" width="152" height="272" style="max-width:48px;height:auto"></th><td>Цей символ вказує, що продукт не можна утилізувати разом із побутовими відходами, і його слід передати до спеціалізованого пункту збору для переробки. Правильна утилізація та переробка допомагають захистити довкілля. Для отримання додаткової інформації щодо утилізації та переробки цього продукту зверніться до місцевої громади, служби утилізації або дилера.</td></tr>
-</tbody></table></div>
+<figure aria-label="ЗНАЧЕННЯ СИМВОЛІВ" class="hb-symbol-pair-composition" data-component-id="HB-TABLE-SYMBOL-ICON"><div class="hb-symbol-pair-grid"><div class="hb-symbol-panel hb-symbol-panel-1"><table class="hb-symbol-panel-table"><colgroup><col class="hb-symbol-col-icon"/><col class="hb-symbol-col-meaning"/></colgroup><thead><tr><th class="hb-symbol-icon-heading" scope="col">Символ</th><th class="hb-symbol-meaning-heading" scope="col">Значення</th></tr></thead><tbody><tr><td class="hb-symbol-icon"><img alt="Попереджувальні та застережні символи. Обов’язково прочитайте, щоб попередити користувачів про потенційні небезпеки або ризики." class="hb-symbol-art" src="../../../../_static/manual-assets/_pool/67/6749bd38fdd0b85af591d65d0d81ae591590aa5c35c7b0f72767057a953c5c67.png"/></td><td class="hb-symbol-meaning">Попереджувальні та застережні символи. Обов’язково прочитайте, щоб попередити користувачів про потенційні небезпеки або ризики.</td></tr><tr><td class="hb-symbol-icon"><img alt="Перед використанням прочитайте посібник користувача." class="hb-symbol-art" src="../../../../_static/manual-assets/_pool/89/89dae4b809de62e67e42949d33826c6e05b147b57e94b3e9c42f4bfff9af591a.png"/></td><td class="hb-symbol-meaning">Перед використанням прочитайте посібник користувача.</td></tr><tr><td class="hb-symbol-icon"><img alt="Не розбирайте продукт." class="hb-symbol-art" src="../../../../_static/manual-assets/_pool/76/76085a1e70083ecdcecb41bf2591353c3bced2b9385662329ab3a76c48446b7b.png"/></td><td class="hb-symbol-meaning">Не розбирайте продукт.</td></tr><tr><td class="hb-symbol-icon"><img alt="Тримайте продукт подалі від вогню." class="hb-symbol-art" src="../../../../_static/manual-assets/_pool/a8/a8a846e9767ac618760e6a9ac65d826fb2c092ad7450014fa30ae0894746450a.png"/></td><td class="hb-symbol-meaning">Тримайте продукт подалі від вогню.</td></tr></tbody></table></div><div class="hb-symbol-panel hb-symbol-panel-2"><table class="hb-symbol-panel-table"><colgroup><col class="hb-symbol-col-icon"/><col class="hb-symbol-col-meaning"/></colgroup><thead><tr><th class="hb-symbol-icon-heading" scope="col">Символ</th><th class="hb-symbol-meaning-heading" scope="col">Значення</th></tr></thead><tbody><tr><td class="hb-symbol-icon"><img alt="Тримайте подалі від дітей." class="hb-symbol-art" src="../../../../_static/manual-assets/_pool/11/114690be6f4d77ceaebe2ed44641ba2735873d3d6415ae04738dc241392096b7.png"/></td><td class="hb-symbol-meaning">Тримайте подалі від дітей.</td></tr><tr><td class="hb-symbol-icon"><img alt="Цей символ вказує, що всередині продукту є літій-іонна (Li-ion) батарея, яку необхідно утилізувати або переробити належним чином." class="hb-symbol-art" src="../../../../_static/manual-assets/_pool/2a/2a61fc0919cfeca43a4dd3e9bcf3a4310314d7543f77e6af9c10f1717360eea7.png"/></td><td class="hb-symbol-meaning">Цей символ вказує, що всередині продукту є літій-іонна (Li-ion) батарея, яку необхідно утилізувати або переробити належним чином.</td></tr><tr><td class="hb-symbol-icon"><img alt="Цей символ вказує, що продукт не можна утилізувати разом із побутовими відходами, і його слід передати до спеціалізованого пункту збору для переробки. Правильна утилізація та переробка допомагають захистити довкілля. Для отримання додаткової інформації щодо утилізації та переробки цього продукту зверніться до місцевої громади, служби утилізації або дилера." class="hb-symbol-art" src="../../../../_static/manual-assets/_pool/7e/7e4de290ea13b86bd50fbb209b4510116116d4fb403b7ef4f83cf1c1db873989.png"/></td><td class="hb-symbol-meaning">Цей символ вказує, що продукт не можна утилізувати разом із побутовими відходами, і його слід передати до спеціалізованого пункту збору для переробки. Правильна утилізація та переробка допомагають захистити довкілля. Для отримання додаткової інформації щодо утилізації та переробки цього продукту зверніться до місцевої громади, служби утилізації або дилера.</td></tr></tbody></table></div></div></figure>
 
 <span id="in_the_box"></span>
+
 ## КОМПЛЕКТАЦІЯ
 
-<figure><img src="../../../../_static/manual-assets/_pool/45/45f694f21a583fe9ee7aa79b998f82e69dadeb2841ce0d5d1771580fd6e00690.png" alt="КОМПЛЕКТАЦІЯ: in box cards" width="990" height="795" loading="lazy" style="max-width:100%;height:auto"></figure>
-
-<p>2 3</p>
-
-
-<p>Керівництво користувача</p>
-
-<p>Кабель заряджання</p>
-
-<p>Jackery Explorer 1000</p>
-
-<p>від змінного струму</p>
-
-<p>Автомобільний зарядний кабель не входить до комплекту, але його можна придбати окремо на нашому вебсайті. Для отримання допомоги, будь ласка, звертайтеся до служби підтримки Jackery.</p>
-
-<h3>ПОРАДИ</h3>
-
+<figure aria-label="КОМПЛЕКТАЦІЯ" class="hb-inbox-composition" data-card-count="3" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="three-card-responsive"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Jackery Explorer 1000" class="hb-inbox-art" src="../../../../_static/manual-assets/_pool/1b/1bf7bbbd178ee212414bfb070d89eee8e384e9d1c20652f1a379bdb536e2e4b4.png"/><div class="hb-inbox-label"><p>Jackery Explorer 1000</p></div></li><li class="hb-inbox-card" data-item-number="2"><img alt="Кабель заряджання від змінного струму" class="hb-inbox-art" src="../../../../_static/manual-assets/_pool/28/287650f3a89ae520e32f0d75df8401151b808004ee50075b96aff70af04ca4ef.png"/><div class="hb-inbox-label"><p>Кабель заряджання від змінного струму</p></div></li><li class="hb-inbox-card" data-item-number="3"><img alt="Керівництво користувача" class="hb-inbox-art" src="../../../../_static/manual-assets/_pool/87/87ac44e52863324b761a672089e6b0497e40fdf48432f698fccf30508060c60a.png"/><div class="hb-inbox-label"><p>Керівництво користувача</p></div></li></ol><div class="hb-inbox-tip" role="note"><div class="hb-inbox-tip-label"><p>ПОРАДИ</p></div><div class="hb-inbox-tip-body"><p>Автомобільний зарядний кабель не входить до комплекту, але його можна придбати окремо на нашому вебсайті. Для отримання допомоги, будь ласка, звертайтеся до служби підтримки Jackery.</p></div></div></figure>
 
 <span id="product_overview"></span>
+
 ## ОГЛЯД ПРОДУКТУ
 
-<figure><img src="../../../../_static/manual-assets/_pool/b7/b77f660236c22280171a990a9f885350cdcd0835a7b849ebf06cd7f1d2fed9b9.png" alt="ОГЛЯД ПРОДУКТУ: front view" width="1002" height="750" loading="lazy" style="max-width:100%;height:auto"></figure>
+<section><h2>ВИГЛЯД СПЕРЕДУ</h2><figure class="hb-annotated-figure" data-figure-id="product-overview-front" data-source-fragment-sha256="554e9a01de8fb9eaaab28da4e7478093720a5323c171190c7ea670ba717cf3e4" data-web-replace-key="product-overview.front"><div class="hb-annotated-stage" style="--hb-aspect-ratio:0.834211"><img alt="ВИГЛЯД СПЕРЕДУ" class="hb-annotated-art" src="../../../../_static/manual-assets/_pool/58/58138a11bdcb513337870c37bd0b661c43c7f391565797cad45463ffe2d01895.png"/><svg aria-hidden="true" class="hb-leader-layer" focusable="false" preserveaspectratio="none" viewbox="0 0 100 100"><polyline class="hb-leader" data-callout-id="overview.front.power" points="0.524765,10 40.5929,10 40.5929,42.4785"></polyline><polyline class="hb-leader" data-callout-id="overview.front.lcd" points="98.4298,9.47368 50.4642,9.47368 50.4642,42.5425"></polyline><polyline class="hb-leader" data-callout-id="overview.front.dc12" points="0.524858,24.4737 35.5267,24.4737 35.5267,41.914"></polyline><polyline class="hb-leader" data-callout-id="overview.front.led_button" points="98.4299,24.4737 58.4665,24.4737 58.4665,42.2151"></polyline><polyline class="hb-leader" data-callout-id="overview.front.usb_c_30" points="0.524858,43.9474 29.0693,43.9474 29.0693,50.377 33.8615,50.377"></polyline><polyline class="hb-leader" data-callout-id="overview.front.led" points="98.8133,37.1053 66.3701,37.1053 66.3701,44.2169"></polyline><polyline class="hb-leader" data-callout-id="overview.front.usb_c_100" points="0.910347,61.8421 32.7703,61.8421 32.7703,52.4546 33.7772,52.4546"></polyline><polyline class="hb-leader" data-callout-id="overview.front.ac_power" points="98.2675,53.1579 46.4179,53.1579 46.4179,51.8275"></polyline><polyline class="hb-leader" data-callout-id="overview.front.usb_a" points="0.548488,78.4211 35.2113,78.4211 35.2113,56.6294"></polyline><polyline class="hb-leader" data-callout-id="overview.front.ac_output" points="98.4299,76.8421 62.2573,76.8421 62.2573,56.0823"></polyline><polyline class="hb-leader" data-callout-id="overview.front.dc_usb" points="0.650347,88.4211 40.2898,88.4211 40.2898,54.5065"></polyline><polyline class="hb-leader" data-callout-id="overview.front.total" points="98.8133,96.3158 68.237,96.3158 68.237,72.9378"></polyline><polyline class="hb-leader-decoration" data-decoration-id="overview.front.decoration-1" points="58.0685,68.4045 58.0685,56.0798"></polyline></svg><div class="hb-figure-callout hb-align-left" data-callout-id="overview.front.power" style="--hb-x:0.52829%;--hb-y:2.10526%;--hb-width:23.5%;--hb-height:8.94737%;--hb-align:left"><p><strong>Кнопка POWER</strong></p></div><div class="hb-figure-callout hb-align-right" data-callout-id="overview.front.lcd" style="--hb-x:75.7653%;--hb-y:2.10526%;--hb-width:22.471%;--hb-height:8.42105%;--hb-align:right"><p><strong>ЖК-дисплей</strong></p></div><div class="hb-figure-callout hb-align-left" data-callout-id="overview.front.dc12" style="--hb-x:0.52829%;--hb-y:14.4737%;--hb-width:23.5%;--hb-height:11.0526%;--hb-align:left"><p><strong>Порт постійного струму 12 В</strong></p>
+<p>12 В⎓10 А макс.</p></div><div class="hb-figure-callout hb-align-right" data-callout-id="overview.front.led_button" style="--hb-x:75.5%;--hb-y:14.4737%;--hb-width:23.115%;--hb-height:11.0526%;--hb-align:right"><p><strong>Кнопка LED-ліхтаря</strong></p></div><div class="hb-figure-callout hb-align-left" data-callout-id="overview.front.usb_c_30" style="--hb-x:0.52829%;--hb-y:28.4211%;--hb-width:23.5%;--hb-height:16.5789%;--hb-align:left"><p><strong>Вихід USB-C 30 Вт</strong></p>
+<p>30 Вт макс., 5 В⎓3 A, 9 В⎓3 A, 12 В⎓2,5 A, 15 В⎓2 A, 20 В⎓1,5 A</p></div><div class="hb-figure-callout hb-align-right" data-callout-id="overview.front.led" style="--hb-x:77.6573%;--hb-y:27.6316%;--hb-width:21.068%;--hb-height:10.5263%;--hb-align:right"><p><strong>LED LIGHT</strong></p></div><div class="hb-figure-callout hb-align-left" data-callout-id="overview.front.usb_c_100" style="--hb-x:0.52829%;--hb-y:46.3158%;--hb-width:23.5%;--hb-height:16.5789%;--hb-align:left"><p><strong>Вихід USB-C 100 Вт</strong></p>
+<p>100 Вт макс., 5 В⎓3 A, 9 В⎓3 A, 12 В⎓3 A, 15 В⎓3 A, 20 В⎓5 A</p></div><div class="hb-figure-callout hb-align-right" data-callout-id="overview.front.ac_power" style="--hb-x:75.5%;--hb-y:41.0526%;--hb-width:23.5%;--hb-height:13.1579%;--hb-align:right"><p><strong>Кнопка живлення змінного струму</strong></p></div><div class="hb-figure-callout hb-align-left" data-callout-id="overview.front.usb_a" style="--hb-x:0.52829%;--hb-y:64.2105%;--hb-width:23.5%;--hb-height:15.2632%;--hb-align:left"><p><strong>Вихід USB-A 18 Вт</strong></p>
+<p>18Вт макс., 5-6 В⎓3 A, 6-9 В⎓2 A, 9-12 В⎓1,5 A</p></div><div class="hb-figure-callout hb-align-right" data-callout-id="overview.front.ac_output" style="--hb-x:77.0273%;--hb-y:55.7895%;--hb-width:21.09%;--hb-height:22.1053%;--hb-align:right"><p><strong>Вихід змінного струму</strong></p>
+<p>230 В~ 50 Гц, 6,5 А макс., 1500 Вт номінальна</p></div><div class="hb-figure-callout hb-align-left" data-callout-id="overview.front.dc_usb" style="--hb-x:0.52829%;--hb-y:81.0526%;--hb-width:23.5%;--hb-height:8.42105%;--hb-align:left"><p><strong>Кнопка живлення DC/USB</strong></p></div><div class="hb-figure-callout hb-align-right" data-callout-id="overview.front.total" style="--hb-x:75.5%;--hb-y:81.0526%;--hb-width:23.5%;--hb-height:16.3158%;--hb-align:right"><p><strong>Загальна вихідна потужність</strong></p>
+<p>1500 Вт номінальна, 3000 Вт пікова</p></div></div></figure></section>
 
-<h3>ВИГЛЯД СПЕРЕДУ</h3>
-
-<p>Кнопка POWER</p>
-
-<p>ЖК-дисплей</p>
-
-<p>Порт постійного струму 12 В</p>
-
-<p>Кнопка LED-ліхтаря</p>
-
-<p>12 В⎓10 А макс.</p>
-
-<p>Вихід USB-C 30 Вт</p>
-
-<h3>LED LIGHT</h3>
-
-<p>30 Вт макс., 5 В⎓3 A, 9 В⎓3 A, 12 В⎓2,5 A, 15 В⎓2 A, 20 В⎓1,5 A</p>
-
-<p>Кнопка живлення</p>
-
-<p>змінного струму</p>
-
-<p>Вихід USB-C 100 Вт</p>
-
-<p>100 Вт макс., 5 В⎓3 A, 9 В⎓3 A, 12 В⎓3 A, 15 В⎓3 A, 20 В⎓5 A</p>
-
-<p>Вихід змінного струму</p>
-
-<p>230 В~ 50 Гц, 6,5 А макс., 1500 Вт номінальна</p>
-
-<p>Вихід USB-A 18 Вт</p>
-
-<p>18Вт макс., 5-6 В⎓3 A, 6-9 В⎓2 A, 9-12 В⎓1,5 A</p>
-
-<p>Загальна вихідна потужність</p>
-
-<p>Кнопка живлення DC/USB</p>
-
-<p>1500 Вт номінальна, 3000 Вт пікова</p>
-
-<figure><img src="../../../../_static/manual-assets/_pool/31/31d711b04d44f7bebf86eb261e419fce84e26796197390172de01c83ce762984.png" alt="ОГЛЯД ПРОДУКТУ: right view" width="1002" height="570" loading="lazy" style="max-width:100%;height:auto"></figure>
-
-<h3>ВИГЛЯД СПРАВА</h3>
-
-<p>Ручка</p>
-
-<p>Вхід постійного струму (2 порти DC8020)</p>
-
-<p>ФЕ: 16-60 В ⎓ 12 А макс., при подвійному вході — до 21 А / 400 Вт макс. Автомобіль: 11-16 В ⎓ 8 А макс., при подвійному вході — до 8 А макс.</p>
-
-<p>Вхід змінного струму</p>
-
-<p>220-240 В~ 50 Гц, 10 А макс.</p>
-
+<section><h2>ВИГЛЯД СПРАВА</h2><figure class="hb-annotated-figure" data-figure-id="product-overview-right" data-source-fragment-sha256="e00f738389f60618d28b27f8d380fbefca45e15b0ad7038661873c8b9ce4bbfd" data-web-replace-key="product-overview.right"><div class="hb-annotated-stage" style="--hb-aspect-ratio:2.00637"><img alt="ВИГЛЯД СПРАВА" class="hb-annotated-art" src="../../../../_static/manual-assets/_pool/d6/d64001a4609cb82a03e7cb551a9a6c52adcc6b9a7b7cdb247d9ccd8d06aa8509.png"/><svg aria-hidden="true" class="hb-leader-layer" focusable="false" preserveaspectratio="none" viewbox="0 0 100 100"><polyline class="hb-leader" data-callout-id="overview.right.handle" points="0.83698,9.83381 54.4659,9.83381 54.4659,18.3077"></polyline><polyline class="hb-leader" data-callout-id="overview.right.dc_input" points="43.1728,41.9889 0.83689,41.9889"></polyline><polyline class="hb-leader" data-callout-id="overview.right.ac_input" points="98.2336,40.4828 56.2945,40.4828"></polyline></svg><div class="hb-figure-callout hb-align-left" data-callout-id="overview.right.handle" style="--hb-x:0.84963%;--hb-y:3.35%;--hb-width:34.921%;--hb-height:8.917%;--hb-align:left"><p><strong>Ручка</strong></p></div><div class="hb-figure-callout hb-align-left" data-callout-id="overview.right.dc_input" style="--hb-x:1.06163%;--hb-y:22.045%;--hb-width:28.571%;--hb-height:25.478%;--hb-align:left"><p><strong>Вхід постійного струму (2 порти DC8020)</strong></p>
+<p>ФЕ: 16-60 В ⎓ 12 А макс., при подвійному вході — до 21 А / 400 Вт макс. Автомобіль: 11-16 В ⎓ 8 А макс., при подвійному вході — до 8 А макс.</p></div><div class="hb-figure-callout hb-align-right" data-callout-id="overview.right.ac_input" style="--hb-x:76.8806%;--hb-y:29.745%;--hb-width:20.984%;--hb-height:17.834%;--hb-align:right"><p><strong>Вхід змінного струму</strong></p>
+<p>220-240 В~ 50 Гц, 10 А макс.</p></div></div></figure></section>
 
 <span id="lcd_display"></span>
+
 ## РК-ДИСПЛЕЙ
 
-<figure><img src="../../../../_static/manual-assets/_pool/f6/f6bab538f0e19fd3da44968ae999bccca5e609e34ef02f0880c6efd661d5ffd8.png" alt="РК-ДИСПЛЕЙ" width="960" height="555" loading="lazy" style="max-width:100%;height:auto"></figure>
-<div class="manual-table-scroll" style="overflow-x:auto;max-width:100%"><table class="manual-table"><tbody>
-<tr><th scope="row">1</th><td><strong>Wi-Fi</strong><br>Увімкнення: Wi-Fi підключено. Блимає: Готово до підключення до Wi-Fi. Вимкнення: Wi-Fi відключено.</td></tr>
-<tr><th scope="row">2</th><td><strong>Bluetooth</strong><br>Увімкнення: Bluetooth підключено. Блимає: Готово до підключення до Bluetooth. Вимкнення: Bluetooth відключено.</td></tr>
-<tr><th scope="row">3</th><td><strong>Тихий режим заряджання</strong><br>Увімкнення: Шум під час заряджання значно зменшується, при цьому потужність заряджання знижується, а швидкість заряджання сповільнюється. Вимкнення: Тихий режим заряджання вимкнено. Увімкніть/вимкніть цю функцію в Jackery App. Налаштування зберігається після вимкнення пристрою.</td></tr>
-<tr><th scope="row">4</th><td><strong>План заряджання</strong><br>Налаштовує час заряджання Jackery Explorer 1000. Підходить для умов із коливаннями цін на електроенергію; дозволяє створювати плани заряджання на основі пікових і непікових періодів, зменшуючи витрати на електроенергію. Увімкніть/вимкніть цю функцію в Jackery App. Налаштування зберігається після вимкнення пристрою.</td></tr>
-<tr><th scope="row">5</th><td><strong>Режим самозабезпечення</strong><br>Максимізує використання сонячної енергії та зменшує залежність від електромережі, віддаючи пріоритет накопиченій сонячній енергії, що знижує витрати на електроенергію. Електростанцію необхідно одночасно підключити до сонячних панелей і електромережі, при цьому потужність навантаження обмежується байпасною потужністю. Увімкніть/вимкніть цю функцію в Jackery App. Налаштування зберігається після вимкнення пристрою.</td></tr>
-<tr><th scope="row">6</th><td><strong>Режим TOU</strong><br>Увімкнення: Режим TOU увімкнено (стандартний резервний SOC: 60%). У пікові періоди продукт надає пріоритет розряджанню батареї для зменшення витрат на електроенергію, коли накопичена енергія перевищує резервний SOC. У непікові періоди продукт заряджає батарею від електромережі для зрізання піків і заповнення провалів. Вимкнення: Режим TOU вимкнено. Продукт не дотримується стратегії TOU (time of use) і працює за стандартною логікою живлення та заряджання. Увімкніть/вимкніть цю функцію в Jackery App. Налаштування зберігається після вимкнення пристрою.</td></tr>
-<tr><th scope="row">7</th><td><strong>UPS</strong><br>Увімкнення: Продукт перебуває в режимі байпасу. Навантаження, підключені до портів змінного струму, споживають електроенергію з мережі, а не від станції. Якщо електромережа раптово зникає, продукт автоматично перемикається на живлення від акумулятора протягом 10 мс. Вимкнення: Продукт не перебуває в режимі байпасу. Навантаження, підключені до портів змінного струму, живляться від внутрішнього акумулятора станції.</td></tr>
-<tr><th scope="row">8</th><td><strong>Індикатор живлення змінного струму</strong><br>Вихід змінного струму (чиста синусоїда) увімкнено.</td></tr>
-<tr><th scope="row">9</th><td><strong>Вихідна напруга та частота</strong><br>Відображає вихідну напругу та частоту, коли вихід змінного струму увімкнено.</td></tr>
-<tr><th scope="row">10</th><td><strong>Вхідна потужність</strong><br>Відображає вхідну потужність у ватах.</td></tr>
-<tr><th scope="row">11</th><td><strong>Час, що залишився до повного заряджання</strong><br>Відображає залишковий час заряджання.</td></tr>
-<tr><th scope="row">12</th><td><strong>Індикатор заряджання від мережі змінного струму</strong><br>Пристрій заряджається через вхід змінного струму від електромережі.</td></tr>
-<tr><th scope="row">13</th><td><strong>Індикатор заряджання від автомобіля</strong><br>Пристрій заряджається через вхід постійного струму (DC8020) із використанням 12 В постійного струму (автомобільне заряджання).</td></tr>
-<tr><th scope="row">14</th><td><strong>Індикатор заряджання від сонячної панелі</strong><br>Пристрій заряджається через вхід постійного струму (DC8020) із використанням сонячної(-их) панелі(-ей).</td></tr>
-<tr><th scope="row">15</th><td><strong>Режим енергозбереження акумулятора</strong><br>Увімкнення: Режим енергозбереження акумулятора ввімкнено. Обмеження заряду та розряду застосовуються для подовження терміну служби акумулятора. Вимкнення: Режим енергозбереження акумулятора вимкнено. Увімкніть/вимкніть цю функцію в Jackery App. Налаштування зберігається після вимкнення пристрою. Коли ця функція активована, пристрій періодично виконує повний цикл заряджання та розряджання для калібрування SOC (рівня заряду).</td></tr>
-<tr><th scope="row">16</th><td><strong>Обмеження потужності заряджання</strong><br>Увімкнення: Обмеження потужності заряджання активовано в Jackery App. Вимкнення: Обмеження потужності заряджання вимкнено в Jackery App. Налаштування зберігається після вимкнення пристрою.</td></tr>
-<tr><th scope="row">17</th><td><strong>Індикатор заряду акумулятора</strong><br>Коли пристрій заряджається, помаранчеве коло навколо відсотка заряду акумулятора почергово засвічуватиметься. Під час заряджання інших пристроїв помаранчеве коло світитиметься постійно.</td></tr>
-<tr><th scope="row">18</th><td><strong>Індикатор низького заряду батареї</strong><br>Увімкнення: Рівень заряду батареї нижче 20%. Блимає: Рівень заряду батареї нижче 5%. Вимкнення: Рівень заряду батареї вище 20% або пристрій заряджається.</td></tr>
-<tr><th scope="row">19</th><td><strong>Залишковий відсоток заряду батареї</strong><br>Відображає відсоток заряду акумулятора, що залишився.</td></tr>
-<tr><th scope="row">20</th><td><strong>Таймер розряджання</strong><br>Увімкнення: Таймер розряджання встановлено. Вимкнення: Таймер розряджання не встановлено. Увімкніть/вимкніть цю функцію в Jackery App. Налаштування не зберігається після вимкнення пристрою.</td></tr>
-<tr><th scope="row">21</th><td><strong>РЕЖИМ ЕНЕРГОЗБЕРЕЖЕННЯ</strong><br>Коли вихід AC або DC увімкнено натисканням кнопки живлення AC або DC/USB: Увімкнення: Режим енергозбереження увімкнено. Вимкнення: Режим енергозбереження вимкнено.</td></tr>
-<tr><th scope="row">22</th><td><strong>Індикатор високої температури</strong><br>Активовано захист від високої температури. Продукт може припинити роботу, доки його температура не повернеться до нормального робочого діапазону.</td></tr>
-<tr><th scope="row">22</th><td><strong>Індикатор низької температури</strong><br>Активовано захист від низької температури. Продукт може припинити роботу, доки його температура не повернеться до нормального робочого діапазону.</td></tr>
-<tr><th scope="row">23</th><td><strong>Код помилки</strong><br>Сталася помилка продукту. Будь ласка, зверніться до розділу «Усунення несправностей» для отримання детальної інформації.</td></tr>
-<tr><th scope="row">24</th><td><strong>Вихідна потужність</strong><br>Відображає вихідну потужність у ватах.</td></tr>
-<tr><th scope="row">25</th><td><strong>Час, що залишився до розряджання</strong><br>Відображає залишковий час розряджання.</td></tr>
-</tbody></table></div>
+<figure class="hb-reference-figure" data-component-id="HB-SPECIAL-REFERENCE-FIGURE" data-reference-id="lcd-map" data-source-fragment-sha256="bbaa1be4e3820e16eb4a845ffcf982220bf4cf19df21f03f74473d8b56820afc"><div class="hb-reference-semantic" data-reference-id="lcd-map.semantic"><img alt="lcd-map" class="hb-reference-art hb-composite-art" src="../../../../_static/manual-assets/_pool/f8/f82efe218bc0b63cb953aced0c85f7c9553935e68d5cf70a3577df9212f550ce.png"/></div></figure>
+
+<div class="table-wrapper docutils container"><table class="manual-table"><tbody><tr><th>1</th><td><strong>Wi-Fi</strong><br/>Увімкнення: Wi-Fi підключено. Блимає: Готово до підключення до Wi-Fi. Вимкнення: Wi-Fi відключено.</td></tr><tr><th>2</th><td><strong>Bluetooth</strong><br/>Увімкнення: Bluetooth підключено. Блимає: Готово до підключення до Bluetooth. Вимкнення: Bluetooth відключено.</td></tr><tr><th>3</th><td><strong>Тихий режим заряджання</strong><br/>Увімкнення: Шум під час заряджання значно зменшується, при цьому потужність заряджання знижується, а швидкість заряджання сповільнюється. Вимкнення: Тихий режим заряджання вимкнено. Увімкніть/вимкніть цю функцію в Jackery App. Налаштування зберігається після вимкнення пристрою.</td></tr><tr><th>4</th><td><strong>План заряджання</strong><br/>Налаштовує час заряджання Jackery Explorer 1000. Підходить для умов із коливаннями цін на електроенергію; дозволяє створювати плани заряджання на основі пікових і непікових періодів, зменшуючи витрати на електроенергію. Увімкніть/вимкніть цю функцію в Jackery App. Налаштування зберігається після вимкнення пристрою.</td></tr><tr><th>5</th><td><strong>Режим самозабезпечення</strong><br/>Максимізує використання сонячної енергії та зменшує залежність від електромережі, віддаючи пріоритет накопиченій сонячній енергії, що знижує витрати на електроенергію. Електростанцію необхідно одночасно підключити до сонячних панелей і електромережі, при цьому потужність навантаження обмежується байпасною потужністю. Увімкніть/вимкніть цю функцію в Jackery App. Налаштування зберігається після вимкнення пристрою.</td></tr><tr><th>6</th><td><strong>Режим TOU</strong><br/>Увімкнення: Режим TOU увімкнено (стандартний резервний SOC: 60%). У пікові періоди продукт надає пріоритет розряджанню батареї для зменшення витрат на електроенергію, коли накопичена енергія перевищує резервний SOC. У непікові періоди продукт заряджає батарею від електромережі для зрізання піків і заповнення провалів. Вимкнення: Режим TOU вимкнено. Продукт не дотримується стратегії TOU (time of use) і працює за стандартною логікою живлення та заряджання. Увімкніть/вимкніть цю функцію в Jackery App. Налаштування зберігається після вимкнення пристрою.</td></tr><tr><th>7</th><td><strong>UPS</strong><br/>Увімкнення: Продукт перебуває в режимі байпасу. Навантаження, підключені до портів змінного струму, споживають електроенергію з мережі, а не від станції. Якщо електромережа раптово зникає, продукт автоматично перемикається на живлення від акумулятора протягом 10 мс. Вимкнення: Продукт не перебуває в режимі байпасу. Навантаження, підключені до портів змінного струму, живляться від внутрішнього акумулятора станції.</td></tr><tr><th>8</th><td><strong>Індикатор живлення змінного струму</strong><br/>Вихід змінного струму (чиста синусоїда) увімкнено.</td></tr><tr><th>9</th><td><strong>Вихідна напруга та частота</strong><br/>Відображає вихідну напругу та частоту, коли вихід змінного струму увімкнено.</td></tr><tr><th>10</th><td><strong>Вхідна потужність</strong><br/>Відображає вхідну потужність у ватах.</td></tr><tr><th>11</th><td><strong>Час, що залишився до повного заряджання</strong><br/>Відображає залишковий час заряджання.</td></tr><tr><th>12</th><td><strong>Індикатор заряджання від мережі змінного струму</strong><br/>Пристрій заряджається через вхід змінного струму від електромережі.</td></tr><tr><th>13</th><td><strong>Індикатор заряджання від автомобіля</strong><br/>Пристрій заряджається через вхід постійного струму (DC8020) із використанням 12 В постійного струму (автомобільне заряджання).</td></tr><tr><th>14</th><td><strong>Індикатор заряджання від сонячної панелі</strong><br/>Пристрій заряджається через вхід постійного струму (DC8020) із використанням сонячної(-их) панелі(-ей).</td></tr><tr><th>15</th><td><strong>Режим енергозбереження акумулятора</strong><br/>Увімкнення: Режим енергозбереження акумулятора ввімкнено. Обмеження заряду та розряду застосовуються для подовження терміну служби акумулятора. Вимкнення: Режим енергозбереження акумулятора вимкнено. Увімкніть/вимкніть цю функцію в Jackery App. Налаштування зберігається після вимкнення пристрою. Коли ця функція активована, пристрій періодично виконує повний цикл заряджання та розряджання для калібрування SOC (рівня заряду).</td></tr><tr><th>16</th><td><strong>Обмеження потужності заряджання</strong><br/>Увімкнення: Обмеження потужності заряджання активовано в Jackery App. Вимкнення: Обмеження потужності заряджання вимкнено в Jackery App. Налаштування зберігається після вимкнення пристрою.</td></tr><tr><th>17</th><td><strong>Індикатор заряду акумулятора</strong><br/>Коли пристрій заряджається, помаранчеве коло навколо відсотка заряду акумулятора почергово засвічуватиметься. Під час заряджання інших пристроїв помаранчеве коло світитиметься постійно.</td></tr><tr><th>18</th><td><strong>Індикатор низького заряду батареї</strong><br/>Увімкнення: Рівень заряду батареї нижче 20%. Блимає: Рівень заряду батареї нижче 5%. Вимкнення: Рівень заряду батареї вище 20% або пристрій заряджається.</td></tr><tr><th>19</th><td><strong>Залишковий відсоток заряду батареї</strong><br/>Відображає відсоток заряду акумулятора, що залишився.</td></tr><tr><th>20</th><td><strong>Таймер розряджання</strong><br/>Увімкнення: Таймер розряджання встановлено. Вимкнення: Таймер розряджання не встановлено. Увімкніть/вимкніть цю функцію в Jackery App. Налаштування не зберігається після вимкнення пристрою.</td></tr><tr><th>21</th><td><strong>РЕЖИМ ЕНЕРГОЗБЕРЕЖЕННЯ</strong><br/>Коли вихід AC або DC увімкнено натисканням кнопки живлення AC або DC/USB: Увімкнення: Режим енергозбереження увімкнено. Вимкнення: Режим енергозбереження вимкнено.</td></tr><tr><th>22</th><td><strong>Індикатор високої температури</strong><br/>Активовано захист від високої температури. Продукт може припинити роботу, доки його температура не повернеться до нормального робочого діапазону.</td></tr><tr><th>22</th><td><strong>Індикатор низької температури</strong><br/>Активовано захист від низької температури. Продукт може припинити роботу, доки його температура не повернеться до нормального робочого діапазону.</td></tr><tr><th>23</th><td><strong>Код помилки</strong><br/>Сталася помилка продукту. Будь ласка, зверніться до розділу «Усунення несправностей» для отримання детальної інформації.</td></tr><tr><th>24</th><td><strong>Вихідна потужність</strong><br/>Відображає вихідну потужність у ватах.</td></tr><tr><th>25</th><td><strong>Час, що залишився до розряджання</strong><br/>Відображає залишковий час розряджання.</td></tr></tbody></table></div>
 
 <span id="operations"></span>
+
 ## ОПЕРАЦІЇ
 
-<h3>УВІМКНЕННЯ/ВИМКНЕННЯ</h3>
+### УВІМКНЕННЯ/ВИМКНЕННЯ
 
-<figure><img src="../../../../_static/manual-assets/_pool/8b/8b37cfb159f98a2efa8e55ae8ac824256222be170af12248d1dabebcddc64e3a.png" alt="ОПЕРАЦІЇ: main power" width="942" height="381" loading="lazy" style="max-width:100%;height:auto"></figure>
-
-<p>Увімкнено</p>
-
-<p>Натисніть один раз</p>
-
-<p>Вимкнено</p>
-
-<p>Натисніть і утримуйте протягом 3 с</p>
-
-<p>3 с</p>
-
-<p>Стандартний час очікування: 2 години Пристрій автоматично вимкнеться після 2 годин бездіяльності без заряджання або розряджання. Час очікування можна налаштувати в Jackery App.</p>
+<figure class="hb-operation-figure hb-operation-layout-status-right hb-base-art-live-copy" data-component-id="HB-SPECIAL-OPERATION" data-operation-id="main-power" data-source-fragment-sha256="2e74566aeb900fdf57f4428d0e689d47f27dcd5e4a2aced8940851081ecbf1ce" data-web-base-art-ref="operation/main_power" data-web-presentation-mode="base-art-live-copy" data-web-replace-key="operation.main-power"><div class="hb-operation-stage"><div class="hb-operation-canvas"><div class="hb-operation-art-box"><img alt="" class="hb-operation-art" src="../../../../_static/manual-assets/_pool/40/401376e7e34a5aee30352e7a351998c0acf0dfdf6c8e817bc849914db88cfbda.png"/><div aria-hidden="true" class="hb-operation-duration" style="--hb-x:81.49%;--hb-y:64.08%">3s</div></div><div class="line-block hb-operation-steps" data-callout-id="operation.main-power.steps"><div class="hb-operation-step" data-callout-id="operation.main-power.on" data-step-id="on" style="--hb-step-x:77.03%;--hb-step-y:17.34%;--hb-step-width:22.5%"><div class="line hb-operation-step-label" data-step-id="on" data-step-part="label"><strong>Увімкнено</strong></div><div class="line hb-operation-step-instruction" data-step-id="on" data-step-part="instruction">Натисніть один раз</div></div><div class="hb-operation-step" data-callout-id="operation.main-power.off" data-step-id="off" style="--hb-step-x:77.03%;--hb-step-y:44.18%;--hb-step-width:22.5%"><div class="line hb-operation-step-label" data-step-id="off" data-step-part="label"><strong>Вимкнено</strong></div><div class="line hb-operation-step-instruction" data-step-id="off" data-step-part="instruction">Натисніть і утримуйте протягом 3 с</div></div></div></div><div class="hb-operation-supporting-copy" data-callout-id="operation.main-power.supporting-copy"><div class="line">Стандартний час очікування: 2 години</div><div class="line">Пристрій автоматично вимкнеться після 2 годин бездіяльності без заряджання або розряджання.</div><div class="line">Час очікування можна налаштувати в Jackery App.</div></div></div></figure>
 
 <p>Коли режим енергозбереження увімкнено, пристрій автоматично вимкнеться через 12 годин, якщо кнопку живлення AC або DC/USB увімкнено, але пристрій не заряджається і не розряджається.</p>
 
-<h3>ВИХІД ЗМІННОГО СТРУМУ УВІМК./ВИМК.</h3>
+### ВИХІД ЗМІННОГО СТРУМУ УВІМК./ВИМК.
 
-<figure><img src="../../../../_static/manual-assets/_pool/13/132cd58c936c0d3ab083714e7a47e66e182e5e54498d6e7de6d1bb7c0b619cff.png" alt="ОПЕРАЦІЇ: ac output" width="942" height="669" loading="lazy" style="max-width:100%;height:auto"></figure>
+<figure class="hb-operation-figure hb-operation-layout-status-right hb-base-art-live-copy" data-component-id="HB-SPECIAL-OPERATION" data-operation-id="ac-output" data-source-fragment-sha256="41de86792619bfc571dbf3097e6386ef4e3753cdfbe05ca2851f9c075043460b" data-web-base-art-ref="operation/ac_output" data-web-presentation-mode="base-art-live-copy" data-web-replace-key="operation.ac-output"><div class="hb-operation-stage"><div class="hb-operation-canvas"><div class="hb-operation-art-box"><img alt="" class="hb-operation-art" src="../../../../_static/manual-assets/_pool/c1/c1585854472793648b149b4989391de27a3ea460482d286583277df451862895.png"/><div class="hb-operation-prerequisite" data-callout-id="operation.ac-output.prerequisite" style="--hb-x:0.334%;--hb-y:0.414%;--hb-width:52.719%;--hb-height:7.322%;--hb-max-width:57%;--hb-fill:#f7f7f8"><p>Передумова: Пристрій увімкнено.</p></div></div><div class="line-block hb-operation-steps" data-callout-id="operation.ac-output.steps"><div class="hb-operation-step" data-callout-id="operation.ac-output.on" data-step-id="on" style="--hb-step-x:84.21%;--hb-step-y:28.81%;--hb-step-width:15.29%"><div class="line hb-operation-step-label" data-step-id="on" data-step-part="label"><strong>Увімкнено</strong></div><div class="line hb-operation-step-instruction" data-step-id="on" data-step-part="instruction">Натисніть один раз</div></div><div class="hb-operation-step" data-callout-id="operation.ac-output.off" data-step-id="off" style="--hb-step-x:84.21%;--hb-step-y:40.87%;--hb-step-width:15.29%"><div class="line hb-operation-step-label" data-step-id="off" data-step-part="label"><strong>Вимкнено</strong></div><div class="line hb-operation-step-instruction" data-step-id="off" data-step-part="instruction">Натисніть один раз</div></div></div></div></div></figure>
 
-<p>Передумова: Пристрій увімкнено.</p>
+### ВИХІД ПОСТІЙНОГО СТРУМУ/USB УВІМК./ВИМК.
 
-<p>Увімкнено</p>
+<figure class="hb-operation-figure hb-operation-layout-status-right hb-base-art-live-copy" data-component-id="HB-SPECIAL-OPERATION" data-operation-id="dc-usb-output" data-source-fragment-sha256="eeeccd13e5b0217c4e386beed8d715fb319f315d8325c447a61408d1f33d2a48" data-web-base-art-ref="operation/dc_usb_output" data-web-presentation-mode="base-art-live-copy" data-web-replace-key="operation.dc-usb-output"><div class="hb-operation-stage"><div class="hb-operation-canvas"><div class="hb-operation-art-box"><img alt="" class="hb-operation-art" src="../../../../_static/manual-assets/_pool/0b/0b0fe146874a37caced9288228328c4931859e12b27a56ec9896881c4c8a6698.png"/><div class="hb-operation-prerequisite" data-callout-id="operation.dc-usb-output.prerequisite" style="--hb-x:0.563%;--hb-y:1.074%;--hb-width:54.398%;--hb-height:7.87%;--hb-max-width:58%;--hb-fill:#e6e7e8"><p>Передумова: Пристрій увімкнено.</p></div></div><div class="line-block hb-operation-steps" data-callout-id="operation.dc-usb-output.steps"><div class="hb-operation-step" data-callout-id="operation.dc-usb-output.on" data-step-id="on" style="--hb-step-x:87%;--hb-step-y:19.7%;--hb-step-width:12.5%"><div class="line hb-operation-step-label" data-step-id="on" data-step-part="label"><strong>Увімкнено</strong></div><div class="line hb-operation-step-instruction" data-step-id="on" data-step-part="instruction">Натисніть один раз</div></div><div class="hb-operation-step" data-callout-id="operation.dc-usb-output.off" data-step-id="off" style="--hb-step-x:87%;--hb-step-y:31.26%;--hb-step-width:12.5%"><div class="line hb-operation-step-label" data-step-id="off" data-step-part="label"><strong>Вимкнено</strong></div><div class="line hb-operation-step-instruction" data-step-id="off" data-step-part="instruction">Натисніть один раз</div></div></div></div></div></figure>
 
-<p>Натисніть один раз</p>
-
-<p>Вимкнено</p>
-
-<p>Натисніть один раз</p>
-
-
-<h3>ВИХІД ПОСТІЙНОГО СТРУМУ/USB УВІМК./ВИМК.</h3>
-
-<figure><img src="../../../../_static/manual-assets/_pool/89/896423e2a6f4c997626137f93867d7342ae69d8fc87b7bdb6825d212153c0da8.png" alt="ОПЕРАЦІЇ: dc usb output" width="942" height="561" loading="lazy" style="max-width:100%;height:auto"></figure>
-
-<p>Передумова: Пристрій увімкнено.</p>
-
-<p>Увімкнено</p>
-
-<p>Натисніть один раз</p>
-
-<p>Вимкнено</p>
-
-<p>Натисніть один раз</p>
-
-<ul>
-<li>USB-C 100 Вт є високопотужним вихідним портом USB-PD Power Source 3 (PS3). Якщо підключений пристрій або аксесуар не відповідає вимогам безпеки, може виникнути ризик пожежі. Перед використанням цих портів переконайтеся, що підключений пристрій або аксесуар має захист від пожежі.</li>
-<li>Підключайте Jackery Explorer 1000 лише до пристроїв або аксесуарів, що відповідають пунктам 6.3, 6.4 та 6.5 стандарту IEC/EN/UL 62368-1 (або іншим еквівалентним стандартам).</li>
-<li>Щоб отримати максимальну вихідну потужність, використовуйте кабель USB-C до USB-C 5 A (20 В DC/5 A, 100 Вт).</li>
-</ul>
-
-<h3>УВАГА</h3>
+<table class="manual-callout-table manual-callout-table"><tbody><tr><td class="manual-callout-label">УВАГА</td><td class="manual-callout-body"><ul><li>USB-C 100 Вт є високопотужним вихідним портом USB-PD Power Source 3 (PS3). Якщо підключений пристрій або аксесуар не відповідає вимогам безпеки, може виникнути ризик пожежі. Перед використанням цих портів переконайтеся, що підключений пристрій або аксесуар має захист від пожежі.</li><li>Підключайте Jackery Explorer 1000 лише до пристроїв або аксесуарів, що відповідають пунктам 6.3, 6.4 та 6.5 стандарту IEC/EN/UL 62368-1 (або іншим еквівалентним стандартам).</li><li>Щоб отримати максимальну вихідну потужність, використовуйте кабель USB-C до USB-C 5 A (20 В DC/5 A, 100 Вт).</li></ul></td></tr></tbody></table>
 
 <p>Продукт може заряджати акумулятор вашого автомобіля за допомогою кабелю Jackery 12 В для заряджання автомобільних акумуляторів, який продається окремо та доступний на нашому вебсайті.</p>
 
-<ul>
-<li>Порт постійного струму 12 В сумісний лише з автомобільними акумуляторами 12 В і не підходить для систем 24 В.</li>
-<li>Не запускайте автомобіль, поки продукт заряджає акумулятор через вихідний порт 12 В постійного струму, оскільки це може пошкодити продукт.</li>
-<li>Ця функція призначена лише для аварійного використання і не може зарядити повністю розряджений або пошкоджений автомобільний акумулятор.</li>
-</ul>
+<table class="manual-callout-table manual-callout-table"><tbody><tr><td class="manual-callout-label">УВАГА</td><td class="manual-callout-body"><ul><li>Порт постійного струму 12 В сумісний лише з автомобільними акумуляторами 12 В і не підходить для систем 24 В.</li><li>Не запускайте автомобіль, поки продукт заряджає акумулятор через вихідний порт 12 В постійного струму, оскільки це може пошкодити продукт.</li><li>Ця функція призначена лише для аварійного використання і не може зарядити повністю розряджений або пошкоджений автомобільний акумулятор.</li></ul></td></tr></tbody></table>
 
-<h3>УВАГА</h3>
+### РЕЖИМ ЕНЕРГОЗБЕРЕЖЕННЯ
 
-<h3>РЕЖИМ ЕНЕРГОЗБЕРЕЖЕННЯ</h3>
-
-<p>Щоб запобігти зайвому споживанню заряду через забуте вимкнення виходу, за замовчуванням увімкнено режим енергозбереження. Коли вихід AC або DC/USB увімкнено, на РК-екрані відображатиметься значок режиму енергозбереження. У цьому режимі, якщо не підключено жодного пристрою або споживана потужність підключеного пристрою нижча за певний поріг (25 Вт для виходу AC або 2 Вт для виходу DC/USB), відповідний вихід автоматично вимикається після заданого часу. Значення за замовчуванням становить 12 годин. Тривалість режиму енергозбереження можна налаштувати в застосунку Jackery на 1H, 2H, 8H, 12H або 24H. Якщо встановлено значення &quot;Never Off&quot;, режим енергозбереження буде вимкнено.</p>
+<p>Щоб запобігти зайвому споживанню заряду через забуте вимкнення виходу, за замовчуванням увімкнено режим енергозбереження. Коли вихід AC або DC/USB увімкнено, на РК-екрані відображатиметься значок режиму енергозбереження. У цьому режимі, якщо не підключено жодного пристрою або споживана потужність підключеного пристрою нижча за певний поріг (25 Вт для виходу AC або 2 Вт для виходу DC/USB), відповідний вихід автоматично вимикається після заданого часу. Значення за замовчуванням становить 12 годин. Тривалість режиму енергозбереження можна налаштувати в застосунку Jackery на 1H, 2H, 8H, 12H або 24H. Якщо встановлено значення "Never Off", режим енергозбереження буде вимкнено.</p>
 
 <p>Щоб вимкнути режим енергозбереження, натисніть і утримуйте одночасно кнопку живлення AC та основну кнопку POWER понад 3 секунди. Після вимкнення режиму енергозбереження значок більше не з’являтиметься на РК-екрані, а виріб не вимикатиме автоматично вихід AC або USB. При живленні малопотужних пристроїв (AC ≤ 25 Вт або DC/USB ≤ 2 Вт) вимкніть режим енергозбереження, щоб запобігти автоматичному вимкненню виходу під час роботи.</p>
 
+<figure class="hb-operation-figure hb-operation-layout-footer-overlay hb-base-art-live-copy" data-component-id="HB-SPECIAL-OPERATION" data-operation-id="energy-saving" data-source-fragment-sha256="fd3edfe610e1633d6284c25da03586b63c41a17c2c28c7e22ea22afc956df9f1" data-web-base-art-ref="operation/energy_saving" data-web-presentation-mode="base-art-live-copy" data-web-replace-key="operation.energy-saving"><div class="hb-operation-stage"><div class="hb-operation-canvas"><div class="hb-operation-art-box"><img alt="" class="hb-operation-art" src="../../../../_static/manual-assets/_pool/d0/d042326898a2450ebee6e356886e7403fe0a33b6a2d4a12266454205093a1218.png"/></div></div><div class="hb-operation-footer" style="--hb-footer-x:72%"><div aria-hidden="true" class="hb-operation-duration">3s</div><div class="hb-operation-footer-copy"><div class="hb-operation-mode-label">Увімкнення/вимкнення</div><div class="line-block hb-operation-steps" data-callout-id="operation.energy-saving.steps"><div class="hb-operation-step" data-callout-id="operation.energy-saving.toggle" data-step-id="toggle"><div class="line hb-operation-step-label" data-step-id="toggle" data-step-part="label"><strong>Змінний струм</strong></div><div class="line hb-operation-step-instruction" data-step-id="toggle" data-step-part="instruction">Натисніть і утримуйте обидві кнопки більше ніж 3 секунди</div></div></div></div></div></div></figure>
 
-<figure><img src="../../../../_static/manual-assets/_pool/41/416a22e2992d3720b870229880b820df63920eb5acaf05bcb6a98fcd2949e593.png" alt="ОПЕРАЦІЇ: energy saving" width="951" height="345" loading="lazy" style="max-width:100%;height:auto"></figure>
+<table class="manual-callout-table manual-callout-table"><tbody><tr><td class="manual-callout-label">ПРИМІТКА</td><td class="manual-callout-body"><p>Режим енергозбереження відновлює свій попередній стан після увімкнення. Для зміни режиму потрібне ручне перемикання.</p></td></tr></tbody></table>
 
-<p>Змінний струм</p>
+### LED LIGHT УВІМК./ВИМК.
 
-<p>3 с Натисніть і утримуйте обидві кнопки більше ніж 3 секунди Увімкнення/вимкнення</p>
+<figure class="hb-operation-figure hb-operation-layout-footer-panel hb-base-art-live-copy" data-component-id="HB-SPECIAL-OPERATION" data-operation-id="led-light" data-source-fragment-sha256="80a90b628fdf470145d271b3f73a22396b34b0b62311db6fe9f5bf172893d561" data-web-base-art-ref="operation/led_light" data-web-presentation-mode="base-art-live-copy" data-web-replace-key="operation.led-light"><div class="hb-operation-stage"><div class="hb-operation-prerequisite hb-operation-lead" data-callout-id="operation.led-light.prerequisite"><p><strong>Світлодіод має два режими:</strong> Режим освітлення та режим SOS. У будь-якому режимі натисніть і утримуйте кнопку LED LIGHT, щоб вимкнути світло.</p></div><div class="hb-operation-panel" style="--hb-art-width:56.8%"><div class="hb-operation-canvas"><div class="hb-operation-art-box"><img alt="" class="hb-operation-art" src="../../../../_static/manual-assets/_pool/bd/bd1e161e77343ed2e9cd99ea4ccdea96f4caa184102714f4ea48135583ea04b2.png"/></div></div><div class="line-block hb-operation-steps" data-callout-id="operation.led-light.steps"><div class="hb-operation-step" data-callout-id="operation.led-light.light" data-step-id="light"><span aria-hidden="true" class="hb-operation-step-marker hb-operation-marker-bulb-lit"></span><div class="line" data-step-id="light" data-step-part="summary"><span class="hb-operation-step-label">СВІТЛО</span><span class="hb-operation-step-instruction">Натисніть кнопку LED LIGHT один раз, щоб увімкнути світло.</span></div></div><div class="hb-operation-step" data-callout-id="operation.led-light.sos" data-step-id="sos"><span aria-hidden="true" class="hb-operation-step-marker hb-operation-marker-sos">SOS</span><div class="line" data-step-id="sos" data-step-part="summary"><span class="hb-operation-step-instruction">Натисніть її ще раз, щоб перейти в режим SOS.</span></div></div><div class="hb-operation-step" data-callout-id="operation.led-light.off" data-step-id="off"><span aria-hidden="true" class="hb-operation-step-marker hb-operation-marker-bulb-off"></span><div class="line" data-step-id="off" data-step-part="summary"><span class="hb-operation-step-instruction">Натисніть втретє, щоб вимкнути світло.</span></div></div></div></div></div></figure>
 
-<p>Режим енергозбереження відновлює свій попередній стан після увімкнення. Для зміни режиму потрібне ручне перемикання.</p>
+### РК-ЕКРАН
 
-<h3>ПРИМІТКА</h3>
-
-<h3>LED LIGHT УВІМК./ВИМК.</h3>
-
-<p>Світлодіод має два режими: Режим освітлення та режим SOS. У будь-якому режимі</p>
-
-<figure><img src="../../../../_static/manual-assets/_pool/d9/d95fb8d2adc294602fd986766e064f037a5e81c67300db6a7fe2d2212ae52cc3.png" alt="ОПЕРАЦІЇ: led light" width="954" height="405" loading="lazy" style="max-width:100%;height:auto"></figure>
-
-<p>натисніть і утримуйте кнопку LED LIGHT, щоб вимкнути світло.</p>
-
-<p>Натисніть кнопку LED LIGHT один раз, щоб увімкнути світло.</p>
-
-
-<h3>СВІТЛО</h3>
-
-<p>Натисніть її ще раз, щоб перейти в режим SOS.</p>
-
-<h3>2 SOS</h3>
-
-<p>Натисніть втретє, щоб вимкнути світло.</p>
-
-
-<h3>РК-ЕКРАН</h3>
-
-<figure><img src="../../../../_static/manual-assets/_pool/01/01290ba0c711b5edd4a66b4faadc694d12c13629c9d09a887bf674e230c594bb.png" alt="ОПЕРАЦІЇ: lcd mode art" width="429" height="336" loading="lazy" style="max-width:100%;height:auto"></figure>
-
-<div class="manual-table-scroll" style="overflow-x:auto;max-width:100%"><table class="manual-table"><tbody>
-<tr><th scope="row">Короткочасне увімкнення</th><td><strong>Увімкнення</strong><br>Натисніть кнопку POWER або коли продукт заряджається.</td></tr>
-<tr><th scope="row">Короткочасне увімкнення</th><td><strong>Вимкнення</strong><br>Натисніть кнопку POWER.</td></tr>
-<tr><th scope="row">Короткочасне увімкнення</th><td><strong>Авто- вимкнення</strong><br>ЖК-екран автоматично вимикається та переходить у сплячий режим після 2 хвилин бездіяльності.</td></tr>
-<tr><th scope="row">Постійно увімкнено (під час заряджання або розряджання)</th><td><strong>Увімкнення</strong><br>Двічі натисніть кнопку POWER, коли продукт увімкнено.</td></tr>
-<tr><th scope="row">Постійно увімкнено (під час заряджання або розряджання)</th><td><strong>Вимкнення</strong><br>Натисніть кнопку POWER.</td></tr>
-<tr><th scope="row">Постійно увімкнено (під час заряджання або розряджання)</th><td><strong>Авто- вимкнення</strong><br>ЖК-екран автоматично вимикається після 2 годин бездіяльності.</td></tr>
-</tbody></table></div>
+<figure aria-label="РК-ДИСПЛЕЙ" class="hb-lcd-mode-composition" data-component-id="HB-TABLE-LCD-MODE"><div class="hb-lcd-mode-art-panel"><img alt="РК-ДИСПЛЕЙ" class="hb-lcd-mode-art" src="../../../../_static/manual-assets/_pool/f9/f9ed0c8d1dc17b00daad2ba6a13053a2b45527527b15c41d83d353df890740bb.png"/></div><div class="hb-lcd-mode-table-panel"><table class="hb-lcd-mode-table"><colgroup><col class="hb-lcd-mode-col-state"/><col class="hb-lcd-mode-col-action"/><col class="hb-lcd-mode-col-copy"/></colgroup><tbody><tr><td class="hb-lcd-mode-state" rowspan="3">Короткочасне увімкнення</td><td class="hb-lcd-mode-action">Увімкнення</td><td class="hb-lcd-mode-copy">Натисніть кнопку POWER або коли продукт заряджається.</td></tr><tr><td class="hb-lcd-mode-action">Вимкнення</td><td class="hb-lcd-mode-copy">Натисніть кнопку POWER.</td></tr><tr><td class="hb-lcd-mode-action">Авто- вимкнення</td><td class="hb-lcd-mode-copy">ЖК-екран автоматично вимикається та переходить у сплячий режим після 2 хвилин бездіяльності.</td></tr><tr><td class="hb-lcd-mode-state" rowspan="3">Постійно увімкнено (під час заряджання або розряджання)</td><td class="hb-lcd-mode-action">Увімкнення</td><td class="hb-lcd-mode-copy">Двічі натисніть кнопку POWER, коли продукт увімкнено.</td></tr><tr><td class="hb-lcd-mode-action">Вимкнення</td><td class="hb-lcd-mode-copy">Натисніть кнопку POWER.</td></tr><tr><td class="hb-lcd-mode-action">Авто- вимкнення</td><td class="hb-lcd-mode-copy">ЖК-екран автоматично вимикається після 2 годин бездіяльності.</td></tr></tbody></table></div></figure>
 
 <p>Ви також можете встановити режим відображення екрана в Jackery App.</p>
 
+### ФУНКЦІЯ ВІДНОВЛЕННЯ ВИХОДУ AC ТА DC
 
-<h3>ФУНКЦІЯ ВІДНОВЛЕННЯ ВИХОДУ AC ТА DC</h3>
 <p>Ця функція запам’ятовує стан виходу та автоматично відновлює виходи AC і DC за визначених умов.</p>
-<h4>Умови автоматичного відновлення</h4>
-<ul>
-<li>Увімкнення/перезапуск після вимкнення або перезапуску</li>
-<li>Рівень заряду батареї ≥ межа розряду +10% після досягнення межі</li>
-<li>Завершено OTA-оновлення</li>
-</ul>
-<h4>Умови без автоматичного відновлення</h4>
-<ul>
-<li>Ручне вимкнення виходу (кнопка/додаток)</li>
-<li>Вимкнення виходу в режимі енергозбереження</li>
-<li>Вимкнення виходу через спрацювання захисту</li>
-<li>Вимкнення виходу за таймером розряду</li>
-</ul>
 
-<h3>КОМБІНАЦІЇ КЛАВІШ</h3>
-<div class="manual-table-scroll" style="overflow-x:auto;max-width:100%"><table class="manual-table"><thead><tr>
-<th scope="col">Кнопки</th>
-<th scope="col">Робота</th>
-<th scope="col">Функція</th>
-</tr></thead><tbody>
-<tr><th scope="row">Кнопка POWER + Кнопка живлення AC</th><td>Натисніть і утримуйте обидві (3 с)</td><td>Увімкнення/вимкнення режиму енергозбереження</td></tr>
-<tr><th scope="row">Кнопка POWER + Кнопка живлення DC/USB</th><td>Натисніть і утримуйте обидві (3 с)</td><td>Скидання Wi-Fi та Bluetooth</td></tr>
-<tr><th scope="row">Кнопка живлення AC + Кнопка живлення DC/USB</th><td>Натисніть і утримуйте обидві (1 с)</td><td>Увімкнення/вимкнення Wi-Fi та Bluetooth</td></tr>
-<tr><th scope="row">Кнопка POWER + Кнопка світлодіодного ліхтаря</th><td>Натисніть і утримуйте обидві (1 с)</td><td>Увімкнення/вимкнення режиму аварійного заряджання</td></tr>
-</tbody></table></div>
+#### Умови автоматичного відновлення
+
+<ul><li>Увімкнення/перезапуск після вимкнення або перезапуску</li><li>Рівень заряду батареї ≥ межа розряду +10% після досягнення межі</li><li>Завершено OTA-оновлення</li></ul>
+
+#### Умови без автоматичного відновлення
+
+<ul><li>Ручне вимкнення виходу (кнопка/додаток)</li><li>Вимкнення виходу в режимі енергозбереження</li><li>Вимкнення виходу через спрацювання захисту</li><li>Вимкнення виходу за таймером розряду</li></ul>
+
+### КОМБІНАЦІЇ КЛАВІШ
+
+<div class="table-wrapper docutils container"><table class="manual-table"><tbody><tr><th>Кнопки</th><th>Робота</th><th>Функція</th></tr><tr><th>Кнопка POWER + Кнопка живлення AC</th><td>3 с Натисніть і утримуйте обидві 3 с</td><td>Увімкнення/вимкнення режиму енергозбереження</td></tr><tr><th>Кнопка POWER + Кнопка живлення DC/USB</th><td>3 с Натисніть і утримуйте обидві 3 с</td><td>Скидання Wi-Fi та Bluetooth</td></tr><tr><th>Кнопка живлення AC + Кнопка живлення DC/USB</th><td>1 с Натисніть і утримуйте обидві 1 с</td><td>Увімкнення/вимкнення Wi-Fi та Bluetooth</td></tr><tr><th>Кнопка POWER + Кнопка світлодіодного ліхтаря</th><td>1 с Натисніть і утримуйте обидві 1 с</td><td>Увімкнення/вимкнення режиму аварійного заряджання</td></tr></tbody></table></div>
 
 <span id="ups"></span>
+
 ## ДЖЕРЕЛО БЕЗПЕРЕБІЙНОГО ЖИВЛЕННЯ (ДБЖ)
 
 <p>Підключіть продукт до настінної розетки за допомогою мережевого кабелю для заряджання, потім натисніть кнопку живлення AC, щоб одночасно живити ваші прилади.</p>
 
 <p>Джерело безперебійного живлення (UPS) — це тип системи безперервного живлення, яка автоматично подає резервне електроживлення на навантаження у разі зникнення мережевого живлення. У разі раптового зникнення мережевого живлення Jackery Explorer 1000 автоматично перемкнеться на накопичену енергію протягом 10 мс, щоб ваші прилади продовжували працювати. У режимі UPS пікова вихідна потужність пристрою досягає 1500W до відключення електроенергії. Оскільки в режимі обходу (Bypass Mode) увімкнено одночасне заряджання/розряджання, фактична вихідна потужність у цьому режимі нижча за номінальну вихідну потужність, але під час відключень електроенергії вона повертається до номінальної вихідної потужності.</p>
 
+<figure class="hb-reference-figure" data-component-id="HB-SPECIAL-REFERENCE-FIGURE" data-reference-id="ups_connection" data-source-fragment-sha256="317117bc28293f776ecc9858e450efeadf1268b6b028c42fc29e9cc0b47576e2"><div class="hb-reference-semantic" data-reference-id="ups_connection.semantic"><img alt="ups_connection" class="hb-reference-art hb-composite-art" src="../../../../_static/manual-assets/_pool/9a/9aa0c1668423a77e9c63fd3d4731d38420fc2283bec8fda769269fa081a72da0.png"/></div></figure>
 
-<figure><img src="../../../../_static/manual-assets/_pool/61/61d1fb93dc8367612e726d70137d386193b5ee606f252316c176976ffa68f78e.png" alt="ДЖЕРЕЛО БЕЗПЕРЕБІЙНОГО ЖИВЛЕННЯ (ДБЖ): ups connection" width="942" height="525" loading="lazy" style="max-width:100%;height:auto"></figure>
+<table class="manual-callout-table manual-callout-table"><tbody><tr><td class="manual-callout-label">УВАГА</td><td class="manual-callout-body"><ul><li>Цей продукт не підтримує перемикання за 0 мс. Не підключайте його до обладнання, яке потребує джерела живлення з перемиканням 0 мс, наприклад серверів даних або робочих станцій.</li><li>Перед використанням кілька разів перевірте сумісність із вашим пристроєм.</li><li>Не підключайте навантаження, що перевищують максимальну вихідну потужність продукту. Інакше спрацює захист від перевантаження.</li></ul></td></tr></tbody></table>
 
-<ul>
-<li>Цей продукт не підтримує перемикання за 0 мс. Не підключайте його до обладнання, яке потребує джерела живлення з перемиканням 0 мс, наприклад серверів даних або робочих станцій.</li>
-<li>Перед використанням кілька разів перевірте сумісність із вашим пристроєм.</li>
-<li>Не підключайте навантаження, що перевищують максимальну вихідну потужність продукту. Інакше спрацює захист від перевантаження.</li>
-</ul>
-
-<h3>УВАГА</h3>
-
-<p>Не використовуйте цей продукт у таких сферах застосування, як сервери обробки даних або медичні пристрої, де збій може загрожувати життю або спричинити значну майнову шкоду. Для наведеного нижче обладнання втрата живлення під час використання може становити серйозну загрозу для життя або майна:</p>
-<ul>
-<li>Медичні пристрої та інше обладнання, безпосередньо пов’язане з безпекою життя.</li>
-<li>Критично важливе обладнання, таке як об’єкти соціальної інфраструктури та громадські служби.</li>
-<li>Критично важливе для бізнесу обладнання тощо. Особи з імплантованим кардіостимулятором не повинні використовувати цей продукт.</li>
-</ul>
-
-<h3>ПОПЕРЕДЖЕННЯ</h3>
+<table class="manual-callout-table manual-callout-table"><tbody><tr><td class="manual-callout-label">ПОПЕРЕДЖЕННЯ</td><td class="manual-callout-body"><p>Не використовуйте цей продукт у таких сферах застосування, як сервери обробки даних або медичні пристрої, де збій може загрожувати життю або спричинити значну майнову шкоду. Для наведеного нижче обладнання втрата живлення під час використання може становити серйозну загрозу для життя або майна:</p><ul><li>Медичні пристрої та інше обладнання, безпосередньо пов’язане з безпекою життя.</li><li>Критично важливе обладнання, таке як об’єкти соціальної інфраструктури та громадські служби.</li><li>Критично важливе для бізнесу обладнання тощо. Особи з імплантованим кардіостимулятором не повинні використовувати цей продукт.</li></ul></td></tr></tbody></table>
 
 <span id="charging"></span>
+
 ## ЗАРЯДЖАННЯ
 
 <p>Зелена енергія передусім: Ми є прихильниками зеленої енергії передусім. Цей продукт підтримує одночасно два режими заряджання: заряджання від сонця та заряджання від мережі змінного струму. Коли заряджання від мережі змінного струму та від сонячних панелей увімкнені одночасно, продукт надає пріоритет сонячному заряджанню, і обидва методи використовуються для заряджання акумулятора з максимально допустимою потужністю.</p>
 
 <p>Повністю зарядіть продукт перед першим використанням.</p>
 
-<ul>
-<li>Рекомендована температура заряджання продукту становить від 0°C до 45°C, а температура розряджання – від -10°C до 45°C.</li>
-<li>Експлуатація продукту за межами цього діапазону температур може обмежити його здатність до заряджання та розряджання або навіть унеможливити заряджання чи розряджання.</li>
-<li>Потужність заряджання та ємність акумулятора продукту можуть змінюватися через коливання температури.</li>
-</ul>
+<table class="manual-callout-table manual-callout-table"><tbody><tr><td class="manual-callout-label">ПРИМІТКА</td><td class="manual-callout-body"><ul><li>Рекомендована температура заряджання продукту становить від 0°C до 45°C, а температура розряджання – від -10°C до 45°C.</li><li>Експлуатація продукту за межами цього діапазону температур може обмежити його здатність до заряджання та розряджання або навіть унеможливити заряджання чи розряджання.</li><li>Потужність заряджання та ємність акумулятора продукту можуть змінюватися через коливання температури.</li></ul></td></tr></tbody></table>
 
-<h3>ПРИМІТКА</h3>
+### ЗАРЯДЖАННЯ ВІД МЕРЕЖІ ЗМІННОГО СТРУМУ
 
-
-<h3>ЗАРЯДЖАННЯ ВІД МЕРЕЖІ ЗМІННОГО СТРУМУ</h3>
-
-<figure><img src="../../../../_static/manual-assets/_pool/37/372e5d5cee9f41608972b7a617a4c1db46bec94d4998648d461bfe4e4ce0a399.png" alt="ЗАРЯДЖАННЯ: ac wall charging" width="942" height="228" loading="lazy" style="max-width:100%;height:auto"></figure>
+<figure class="hb-reference-figure" data-component-id="HB-SPECIAL-REFERENCE-FIGURE" data-reference-id="ac_wall_charging" data-source-fragment-sha256="3caa75267caa4363fdb363b52db4220fdab64ca6652cfe046ff553cadc1caf58"><div class="hb-reference-semantic" data-reference-id="ac_wall_charging.semantic"><img alt="ac_wall_charging" class="hb-reference-art hb-composite-art" src="../../../../_static/manual-assets/_pool/3b/3bd7d59dde7d8fa343a01d14f6291d1fd46c0acc9adc4fd3ea3a616d52c0a062.png"/></div></figure>
 
 <p>Підключіть кабель заряджання змінного струму до вхідного порту змінного струму продукту та до розетки.</p>
 
-<p>Переконайтеся, що кабель заряджання змінного струму повністю та надійно підключений до вхідного порту змінного струму. Неповне підключення може спричинити нестабільний струм, перегрів, поганий контакт або несправність пристрою. УВАГА</p>
+<table class="manual-callout-table manual-callout-table"><tbody><tr><td class="manual-callout-label">УВАГА</td><td class="manual-callout-body"><p>Переконайтеся, що кабель заряджання змінного струму повністю та надійно підключений до вхідного порту змінного струму. Неповне підключення може спричинити нестабільний струм, перегрів, поганий контакт або несправність пристрою.</p></td></tr></tbody></table>
 
 <p>Режим аварійного заряджання У цьому режимі ви можете швидко зарядити портативну станцію живлення за допомогою заряджання від мережі змінного струму. Цю функцію аварійного заряджання можна активувати або деактивувати через Jackery App. В аварійному режимі заряджання круглий індикатор стану заряду (SOC) блиматиме швидше. * Щоб максимально продовжити термін служби батареї, найкраще заряджати на звичайній швидкості. Використовуйте режим аварійного заряджання лише за потреби. Не рекомендується для регулярного тривалого використання.</p>
 
-<h3>ЗАРЯДЖАННЯ ВІД СОНЯЧНИХ ПАНЕЛЕЙ (ПРОДАЮТЬСЯ ОКРЕМО)</h3>
+### ЗАРЯДЖАННЯ ВІД СОНЯЧНИХ ПАНЕЛЕЙ (ПРОДАЮТЬСЯ ОКРЕМО)
 
 <p>Jackery Explorer 1000 має два вхідні порти DC8020 і сумісний із сонячними панелями Jackery.</p>
 
-<figure><img src="../../../../_static/manual-assets/_pool/05/051edf9ad4d7407289890af573f397560298c087ffd9df51719df55dd993da92.png" alt="ЗАРЯДЖАННЯ: solar single" width="942" height="468" loading="lazy" style="max-width:100%;height:auto"></figure>
+<figure class="hb-reference-figure" data-component-id="HB-SPECIAL-REFERENCE-FIGURE" data-reference-id="solar_single" data-source-fragment-sha256="7eeb87919f40fc330367d3c9e6e75787d9dcbc0443705534feb27f0a1090c866"><div class="hb-reference-semantic" data-reference-id="solar_single.semantic"><img alt="solar_single" class="hb-reference-art hb-composite-art" src="../../../../_static/manual-assets/_pool/7f/7f14d14b136430e54003e4624bbfe7c1aaaac6a9622ae422e515275ebaef6e33.png"/></div></figure>
 
 <p>SolarSaga 200 × 2</p>
 
 <p>Якщо потрібно підключити дві сонячні панелі до одного вхідного порту DC8020 одночасно, зверніться до рисунка нижче для заряджання через з’єднувач сонячної панелі (продається окремо, не входить до стандартної комплектації).</p>
 
-
-<figure><img src="../../../../_static/manual-assets/_pool/68/68cf1b08eff113c41d6bc3c83f8a22468280d0fb481d8e6a86ed0dcbbaf0c1be.png" alt="ЗАРЯДЖАННЯ: solar four" width="939" height="432" loading="lazy" style="max-width:100%;height:auto"></figure>
+<figure class="hb-reference-figure" data-component-id="HB-SPECIAL-REFERENCE-FIGURE" data-reference-id="solar_four" data-source-fragment-sha256="2a76cbd8056fedbc7f652ca9eb3d3d48c1f65e15f00da4d6283881b1a5ea3e9e"><div class="hb-reference-semantic" data-reference-id="solar_four.semantic"><img alt="solar_four" class="hb-reference-art hb-composite-art" src="../../../../_static/manual-assets/_pool/82/82c9cafc5d553d37c0e17944ad730f27e830ae525a5896df2eb509b0cc3cd00e.png"/></div></figure>
 
 <p>SolarSaga 100 Air × 4</p>
 
-<h3>УВАГА</h3>
+<table class="manual-callout-table manual-callout-table"><tbody><tr><td class="manual-callout-label">УВАГА</td><td class="manual-callout-body"><p>Один вхідний порт DC8020 може бути підключений максимум до двох сонячних панелей.</p></td></tr></tbody></table>
 
-<p>Один вхідний порт DC8020 може бути підключений максимум до двох сонячних панелей.</p>
-
-<p>Переконайтеся, що вхідна напруга для обох вхідних портів постійного струму однакова. Недотримання цієї вимоги може пошкодити продукт. Наприклад:</p>
-<ul>
-<li>Використовуйте сонячні панелі Jackery однієї моделі та однакову їх кількість при підключенні до обох вхідних портів DC8020.</li>
-<li>Не заряджайте продукт одночасно за допомогою автомобільного зарядного пристрою та сонячної панелі. Це може призвести до перегорання автомобільного запобіжника або збою заряджання.</li>
-</ul>
-
-<h3>УВАГА</h3>
+<table class="manual-callout-table manual-callout-table"><tbody><tr><td class="manual-callout-label">УВАГА</td><td class="manual-callout-body"><p>Переконайтеся, що вхідна напруга для обох вхідних портів постійного струму однакова. Недотримання цієї вимоги може пошкодити продукт. Наприклад:</p><ul><li>Використовуйте сонячні панелі Jackery однієї моделі та однакову їх кількість при підключенні до обох вхідних портів DC8020.</li><li>Не заряджайте продукт одночасно за допомогою автомобільного зарядного пристрою та сонячної панелі. Це може призвести до перегорання автомобільного запобіжника або збою заряджання.</li></ul></td></tr></tbody></table>
 
 <p>Рекомендується використовувати сонячні панелі Jackery для заряджання продукту. Переконайтеся, що напруга холостого ходу (Voc) сонячної панелі знаходиться в межах діапазону вхідної напруги постійного струму (16 В - 60 В) пристрою Jackery Explorer 1000. Jackery не несе відповідальності за будь-які пошкодження або збитки, спричинені використанням сторонніх сонячних панелей.</p>
 
@@ -443,173 +192,141 @@ Model: JE-1000F · hello.eu@jackery.com
 
 <p>*Кабель автомобільного заряджання продається окремо.</p>
 
-<figure><img src="../../../../_static/manual-assets/_pool/d3/d3897622d0e3ba245aafdaf372b87e7434e71197cc7d54b9f1312ba012df4f31.png" alt="ЗАРЯДЖАННЯ: car charging" width="936" height="336" loading="lazy" style="max-width:100%;height:auto"></figure>
+<figure class="hb-reference-figure" data-component-id="HB-SPECIAL-REFERENCE-FIGURE" data-reference-id="car_charging" data-source-fragment-sha256="bd59f99be89d18d724fbcd9386ddb085f218b92b969b17134f179102dbda24dc"><div class="hb-reference-semantic" data-reference-id="car_charging.semantic"><img alt="car_charging" class="hb-reference-art hb-composite-art" src="../../../../_static/manual-assets/_pool/b2/b276ee48728db4e72e21d7fde456e91017e3e4f5335209b1d5476f6c7af1f0f4.png"/></div></figure>
 
 <p>Автомобіль</p>
 
+<ul><li>Запустіть двигун автомобіля перед заряджанням вашої портативної електростанції.</li></ul>
 
-<ul>
-<li>Запустіть двигун автомобіля перед заряджанням вашої портативної електростанції.</li>
-</ul>
+<ul><li>Якщо автомобіль рухається нерівною дорогою, заборонено використовувати автомобільний зарядний</li></ul>
 
-<ul>
-<li>Якщо автомобіль рухається нерівною дорогою, заборонено використовувати автомобільний зарядний</li>
-</ul>
-
-<p>пристрій, оскільки це може призвести до неналежної роботи. Компанія не несе відповідальності за</p>
-
-<h3>УВАГА</h3>
-
-<p>будь-які збитки, спричинені неналежною експлуатацією.</p>
-
-<ul>
-<li>Заряджання від автомобіля застосовується лише для автомобілів із постійною напругою 12 В, а не 24 В.</li>
-</ul>
-
-<p>Не заряджайте цей продукт в автомобілі з напругою 24 В, щоб уникнути травм і матеріальних збитків.</p>
+<table class="manual-callout-table manual-callout-table"><tbody><tr><td class="manual-callout-label">УВАГА</td><td class="manual-callout-body"><p>пристрій, оскільки це може призвести до неналежної роботи. Компанія не несе відповідальності за</p><p>будь-які збитки, спричинені неналежною експлуатацією.</p><ul><li>Заряджання від автомобіля застосовується лише для автомобілів із постійною напругою 12 В, а не 24 В.</li></ul><p>Не заряджайте цей продукт в автомобілі з напругою 24 В, щоб уникнути травм і матеріальних збитків.</p></td></tr></tbody></table>
 
 <span id="storage"></span>
+
 ## ЗБЕРІГАННЯ
 
 <p>Зберігайте продукт у сухому, чистому місці з належною вентиляцією. Температура та вологість зберігання:</p>
 
-<ul>
-<li>1 місяць: від -20°C до 45°C (0-60%відносної вологості)</li>
-</ul>
+<ul><li>1 місяць: від -20°C до 45°C (0-60%відносної вологості)</li></ul>
 
-<ul>
-<li>3 місяці: від 0°C до 45°C (0-60%відносної вологості)</li>
-</ul>
+<ul><li>3 місяці: від 0°C до 45°C (0-60%відносної вологості)</li></ul>
 
-<ul>
-<li>12 місяці: від 0°C до 25°C (0-60%відносної вологості)</li>
-</ul>
+<ul><li>12 місяці: від 0°C до 25°C (0-60%відносної вологості)</li></ul>
 
 <p>Якщо цей продукт зберігається протягом тривалого часу (3 місяці — 6 місяців) із розрядженим акумулятором, він може втратити здатність до заряджання. Щоб запобігти цьому та підтримувати стан акумулятора, рекомендується перевіряти та підзаряджати продукт кожні три місяці, а також виконувати повний цикл заряджання та розряджання щонайменше один раз на 6–12 місяців.</p>
 
 <span id="troubleshooting"></span>
+
 ## УСУНЕННЯ НЕСПРАВНОСТЕЙ
 
 <p>Якщо з’являється будь-який із наведених нижче кодів помилок, дотримуйтесь зазначених коригувальних дій для усунення проблеми. Якщо несправність не зникає, зверніться до служби підтримки клієнтів Jackery.</p>
 
-<div class="manual-table-scroll" style="overflow-x:auto;max-width:100%">
-<table class="manual-table"><thead><tr>
-<th scope="col">Код помилки</th>
-<th scope="col">Коригувальні заходи</th>
-</tr></thead><tbody>
-<tr><th scope="row">F0</th><td>Перезапустіть продукт.</td></tr>
-<tr><th scope="row">F1</th><td>Перезапустіть продукт.</td></tr>
-<tr><th scope="row">F2</th><td>Перезапустіть продукт.</td></tr>
-<tr><th scope="row">F3</th><td>Перезапустіть продукт.</td></tr>
-<tr><th scope="row">F4</th><td>Підключіть продукт до навантаження, щоб розрядити його акумулятор, доки несправність не зникне.</td></tr>
-<tr><th scope="row">F5</th><td>Заряджайте пристрій через сонячні панелі або розетку змінного струму, доки несправність не зникне.</td></tr>
-<tr><th scope="row">F6</th><td>1. Зачекайте, поки мережа нормалізується, перш ніж заряджати виріб через розетку змінного струму. 2. Перевірте, чи не заблоковані вентиляційні отвори для подачі та витяжки повітря; забезпечте зазор 0,66 фута (20 см) з обох боків виробу. 3. Розмістіть продукт у місці, яке не піддається прямому сонячному світлу або високим температурам навколишнього середовища. 4. Від&#x27;єднайте всі навантаження від виробу. Залиште продукт у стані спокою та зачекайте, поки несправність зникне. 5. Перезапустіть продукт.</td></tr>
-<tr><th scope="row">F7</th><td>1. Від&#x27;єднайте всі входи постійного струму від продукту. 2. Якщо ви заряджаєте виріб за допомогою сонячної панелі, перевірте напругу холостого ходу (VOC) підключеної сонячної панелі. Продукт дозволяє максимальну вхідну напругу постійного струму 60 В. 3. Перезапустіть продукт і залиште його в режимі очікування. Зачекайте, поки несправність не зникне.</td></tr>
-<tr><th scope="row">F8</th><td>Зверніться до служби підтримки клієнтів Jackery.</td></tr>
-<tr><th scope="row">F9</th><td>Від&#x27;єднайте навантаження, підключене до USB-портів продукту. Зачекайте, поки несправність не зникне.</td></tr>
-<tr><th scope="row">FE</th><td>Зверніться до служби підтримки клієнтів Jackery.</td></tr>
-</tbody></table>
-</div>
+<figure aria-label="Код помилки / Коригувальні заходи" class="hb-troubleshooting-composition" data-component-id="HB-TABLE-TROUBLESHOOTING" tabindex="0"><table class="hb-troubleshooting-table"><colgroup><col class="hb-troubleshooting-col-code"/><col class="hb-troubleshooting-col-measures"/></colgroup><thead><tr><th class="hb-troubleshooting-code" scope="col">Код помилки</th><th class="hb-troubleshooting-measures" scope="col">Коригувальні заходи</th></tr></thead><tbody><tr><td class="hb-troubleshooting-code">F0</td><td class="hb-troubleshooting-measures">Перезапустіть продукт.</td></tr><tr><td class="hb-troubleshooting-code">F1</td><td class="hb-troubleshooting-measures">Перезапустіть продукт.</td></tr><tr><td class="hb-troubleshooting-code">F2</td><td class="hb-troubleshooting-measures">Перезапустіть продукт.</td></tr><tr><td class="hb-troubleshooting-code">F3</td><td class="hb-troubleshooting-measures">Перезапустіть продукт.</td></tr><tr><td class="hb-troubleshooting-code">F4</td><td class="hb-troubleshooting-measures">Підключіть продукт до навантаження, щоб розрядити його акумулятор, доки несправність не зникне.</td></tr><tr><td class="hb-troubleshooting-code">F5</td><td class="hb-troubleshooting-measures">Заряджайте пристрій через сонячні панелі або розетку змінного струму, доки несправність не зникне.</td></tr><tr><td class="hb-troubleshooting-code">F6</td><td class="hb-troubleshooting-measures">1. Зачекайте, поки мережа нормалізується, перш ніж заряджати виріб через розетку змінного струму. 2. Перевірте, чи не заблоковані вентиляційні отвори для подачі та витяжки повітря; забезпечте зазор 0,66 фута (20 см) з обох боків виробу. 3. Розмістіть продукт у місці, яке не піддається прямому сонячному світлу або високим температурам навколишнього середовища. 4. Від'єднайте всі навантаження від виробу. Залиште продукт у стані спокою та зачекайте, поки несправність зникне. 5. Перезапустіть продукт.</td></tr><tr><td class="hb-troubleshooting-code">F7</td><td class="hb-troubleshooting-measures">1. Від'єднайте всі входи постійного струму від продукту. 2. Якщо ви заряджаєте виріб за допомогою сонячної панелі, перевірте напругу холостого ходу (VOC) підключеної сонячної панелі. Продукт дозволяє максимальну вхідну напругу постійного струму 60 В. 3. Перезапустіть продукт і залиште його в режимі очікування. Зачекайте, поки несправність не зникне.</td></tr><tr><td class="hb-troubleshooting-code">F8</td><td class="hb-troubleshooting-measures">Зверніться до служби підтримки клієнтів Jackery.</td></tr><tr><td class="hb-troubleshooting-code">F9</td><td class="hb-troubleshooting-measures">Від'єднайте навантаження, підключене до USB-портів продукту. Зачекайте, поки несправність не зникне.</td></tr><tr><td class="hb-troubleshooting-code">FE</td><td class="hb-troubleshooting-measures">Зверніться до служби підтримки клієнтів Jackery.</td></tr></tbody></table></figure>
 
 <span id="specifications"></span>
+
 ## ТЕХНІЧНІ ХАРАКТЕРИСТИКИ
 
-<div class="manual-table-scroll" style="overflow-x:auto;max-width:100%"><table class="manual-table"><tbody>
-<tr><th colspan="2" scope="colgroup">ЗАГАЛЬНА ІНФОРМАЦІЯ</th></tr>
-<tr><th scope="row">Назва продукту</th><td>Jackery Explorer 1000</td></tr>
-<tr><th scope="row">Номер моделі</th><td>JE-1000F</td></tr>
-<tr><th scope="row">Ємність</th><td>1024 Вт-год (20 A-год/51,2 В постійного струму)</td></tr>
-<tr><th scope="row">Хімічний склад елементів</th><td>LiFePO₄</td></tr>
-<tr><th scope="row">Вага</th><td>Близько 10,6 кг</td></tr>
-<tr><th scope="row">Розміри</th><td>31,4 × 20,1 × 23,4 см</td></tr>
-<tr><th scope="row">Ресурс циклів</th><td>4000 циклів до збереження 70%+ ємності</td></tr>
-<tr><th colspan="2" scope="colgroup">ВХІДНІ ПОРТИ</th></tr>
-<tr><th scope="row">1 вхід змінного струму</th><td>Режим заряджання: 220 В-240 В~50 Гц, 10 A макс.</td></tr>
-<tr><th scope="row">2 порти DC8020</th><td>11 В-16 В⎓8 A макс., при подвійному вході — до 8 A макс. 16 В-60 В⎓12 A макс., при подвійному вході — до 21 A/400 Вт макс.</td></tr>
-<tr><th colspan="2" scope="colgroup">ВИХІДНІ ПОРТИ</th></tr>
-<tr><th scope="row">2 × AC</th><td>230 В~ 50 Гц, макс. 6,5 А, номінальна потужність 1500 Вт на порт, 1500 Вт загалом, пікова потужність 3000 Вт</td></tr>
-<tr><th scope="row">Вихід змінного струму у байпасному режимі①</th><td>220-240 В~ 50 Гц, 1500 Вт</td></tr>
-<tr><th scope="row">1 × USB-C 30 Вт</th><td>30 Вт макс., 5 В⎓3 A, 9 В⎓3 A, 12 В⎓2,5 A, 15 В⎓2 A, 20 В⎓1,5 A</td></tr>
-<tr><th scope="row">1 × USB-C 100 Вт</th><td>100 Вт макс., 5 В⎓3 A, 9 В⎓3 A, 12 В⎓3 A, 15 В⎓3 A, 20 В⎓5 A</td></tr>
-<tr><th scope="row">1 вихід USB-A</th><td>18 Вт макс., 5-6 В⎓3 A, 6-9 В⎓2 A, 9-12 В⎓1,5 A</td></tr>
-<tr><th scope="row">1 порт DC 12 В</th><td>12 В⎓10 А макс.</td></tr>
-<tr><th colspan="2" scope="colgroup">РОБОЧА ТЕМПЕРАТУРА НАВКОЛИШНЬОГО СЕРЕДОВИЩА</th></tr>
-<tr><th scope="row">Температура заряджання</th><td>від 0 °C до 45 °C</td></tr>
-<tr><th scope="row">Температура розряду</th><td>від -10 °C до 45 °C</td></tr>
-</tbody></table></div>
+## ЗАГАЛЬНА ІНФОРМАЦІЯ
+
+<figure aria-label="ЗАГАЛЬНА ІНФОРМАЦІЯ" class="hb-spec-table-composition"><table class="manual-table manual-spec-table hb-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup><tbody><tr><th class="manual-spec-label hb-spec-label" scope="row">Назва продукту</th><td class="manual-spec-value hb-spec-value">Jackery Explorer 1000</td></tr><tr><th class="manual-spec-label hb-spec-label" scope="row">Номер моделі</th><td class="manual-spec-value hb-spec-value">JE-1000F</td></tr><tr><th class="manual-spec-label hb-spec-label" scope="row">Ємність</th><td class="manual-spec-value hb-spec-value">1024 Вт-год (20 A-год/51,2 В постійного струму)</td></tr><tr><th class="manual-spec-label hb-spec-label" scope="row">Хімічний склад елементів</th><td class="manual-spec-value hb-spec-value">LiFePO4</td></tr><tr><th class="manual-spec-label hb-spec-label" scope="row">Вага</th><td class="manual-spec-value hb-spec-value">Близько 10,6 кг</td></tr><tr><th class="manual-spec-label hb-spec-label" scope="row">Розміри</th><td class="manual-spec-value hb-spec-value">31,4 × 20,1 × 23,4 см</td></tr><tr><th class="manual-spec-label hb-spec-label" scope="row">Ресурс циклів</th><td class="manual-spec-value hb-spec-value">4000 циклів до збереження 70%+ ємності</td></tr></tbody></table></figure>
+
+## ВХІДНІ ПОРТИ
+
+<figure aria-label="ВХІДНІ ПОРТИ" class="hb-spec-table-composition"><table class="manual-table manual-spec-table hb-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup><tbody><tr><th class="manual-spec-label hb-spec-label" scope="row">1 вхід змінного струму</th><td class="manual-spec-value hb-spec-value">Режим заряджання: 220 В-240 В~50 Гц, 10 A макс.</td></tr><tr><th class="manual-spec-label hb-spec-label" scope="row">2 порти DC8020</th><td class="manual-spec-value hb-spec-value">11 В-16 В⎓8 A макс., при подвійному вході — до 8 A макс. 16 В-60 В⎓12 A макс., при подвійному вході — до 21 A/400 Вт макс.</td></tr></tbody></table></figure>
+
+## ВИХІДНІ ПОРТИ
+
+<figure aria-label="ВИХІДНІ ПОРТИ" class="hb-spec-table-composition"><table class="manual-table manual-spec-table hb-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup><tbody><tr><th class="manual-spec-label hb-spec-label" scope="row">2 × AC</th><td class="manual-spec-value hb-spec-value">230 В~ 50 Гц, макс. 6,5 А, номінальна потужність 1500 Вт на порт, 1500 Вт загалом, пікова потужність 3000 Вт</td></tr><tr><th class="manual-spec-label hb-spec-label" scope="row">Вихід змінного струму у байпасному режимі<sup class="hb-spec-reference">①</sup></th><td class="manual-spec-value hb-spec-value">220-240 В~ 50 Гц, 1500 Вт</td></tr><tr><th class="manual-spec-label hb-spec-label" scope="row">1 × USB-C 30 Вт</th><td class="manual-spec-value hb-spec-value">30 Вт макс., 5 В⎓3 A, 9 В⎓3 A, 12 В⎓2,5 A, 15 В⎓2 A, 20 В⎓1,5 A</td></tr><tr><th class="manual-spec-label hb-spec-label" scope="row">1 × USB-C 100 Вт</th><td class="manual-spec-value hb-spec-value">100 Вт макс., 5 В⎓3 A, 9 В⎓3 A, 12 В⎓3 A, 15 В⎓3 A, 20 В⎓5 A</td></tr><tr><th class="manual-spec-label hb-spec-label" scope="row">1 вихід USB-A</th><td class="manual-spec-value hb-spec-value">18 Вт макс., 5-6 В⎓3 A, 6-9 В⎓2 A, 9-12 В⎓1,5 A</td></tr><tr><th class="manual-spec-label hb-spec-label" scope="row">1 порт DC 12 В</th><td class="manual-spec-value hb-spec-value">12 В⎓10 А макс.</td></tr></tbody></table></figure>
+
+## РОБОЧА ТЕМПЕРАТУРА НАВКОЛИШНЬОГО СЕРЕДОВИЩА
+
+<figure aria-label="РОБОЧА ТЕМПЕРАТУРА НАВКОЛИШНЬОГО СЕРЕДОВИЩА" class="hb-spec-table-composition"><table class="manual-table manual-spec-table hb-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup><tbody><tr><th class="manual-spec-label hb-spec-label" scope="row">Температура заряджання</th><td class="manual-spec-value hb-spec-value">від 0 °C до 45 °C</td></tr><tr><th class="manual-spec-label hb-spec-label" scope="row">Температура розряду</th><td class="manual-spec-value hb-spec-value">від -10 °C до 45 °C</td></tr></tbody></table></figure>
+
 <p>※ USB Type-C® і USB-C® є зареєстрованими торговельними марками USB Implementers Forum.</p>
+
 <p>①. Продукт може заряджати батарею від настінної розетки змінного струму, одночасно подаючи живлення через виходи змінного струму.</p>
 
 <span id="warranty"></span>
+
 ## ГАРАНТІЯ
 
-<p>Ця гарантія поширюється лише на клієнтів, які придбали продукт на офіційному веб-сайті Jackery, на фірмових сторонніх платформах Jackery або у місцевих авторизованих дилерів.</p>
-<p>*Гарантійний період і деталі можуть відрізнятися залежно від місцевих законів, нормативних актів і авторизованих дилерів.</p>
-<h3>Обмежена гарантія</h3>
-<p>Jackery гарантує первинному кінцевому покупцеві, що продукт Jackery не матиме дефектів матеріалів і виготовлення за умов нормального споживчого використання протягом відповідного гарантійного періоду, визначеного в розділі «Гарантійний період» нижче, з урахуванням наведених нижче виключень. Ця гарантійна заява визначає повний і виключний обсяг гарантійних зобов’язань Jackery. Ми не беремо на себе і не уповноважуємо будь-яку особу брати на себе від нашого імені будь-які інші зобов’язання у зв’язку з продажем нашої продукції.</p>
-<h3>Гарантійний період</h3>
-<h3>3 РОКИ — Стандартна гарантія</h3>
-<p>Стандартний гарантійний період для Jackery Explorer 1000 становить 36 місяців. У кожному випадку гарантійний період обчислюється з дати покупки первинним споживачем-покупцем. Для визначення дати початку гарантійного періоду необхідний касовий чек від першого споживача-покупця або інший належний документальний доказ.</p>
-<h3>2 РОКИ — Розширена гарантія</h3>
-<p>Щоб активувати подовження гарантії, ви повинні зареєструвати свій продукт онлайн або звернутися до нашої служби підтримки за адресою hello.eu@jackery.com, щоб подовжити стандартний гарантійний термін.</p>
-<h3>Обмін</h3>
-<p>Jackery замінить (за рахунок Jackery) будь-який продукт Jackery, який не працює протягом відповідного гарантійного періоду через дефект матеріалів або виготовлення. Заміна отримує залишок гарантійного терміну оригінального продукту.</p>
-<h3>Обмеження для первинного споживача-покупця</h3>
-<p>Гарантія на продукт Jackery обмежується первинним споживачем-покупцем і не підлягає передачі будь-якому наступному власнику.</p>
-<h3>Виключення</h3>
-<p>Гарантія Jackery не поширюється на:</p>
-<ul>
-<li>Будь-який продукт, який використовувався неналежним чином, зазнавав зловживання, був модифікований, випадково пошкоджений або використовувався не для звичайного споживчого використання, дозволеного чинною документацією Jackery.</li>
-<li>Спроби ремонту будь-ким, окрім авторизованого сервісного центру.</li>
-<li>Будь-який продукт, придбаний через онлайн-аукціон.</li>
-<li>Гарантія Jackery не поширюється на акумуляторний елемент, якщо він не був повністю заряджений вами протягом семи днів після покупки продукту та щонайменше один раз кожні 6 місяців після цього.</li>
-</ul>
-<h3>Право тлумачення</h3>
-<p>Jackery залишає за собою право остаточного тлумачення вищезазначеної післяпродажної політики.</p>
+<figure aria-label="ГАРАНТІЯ" class="hb-warranty-intro-composition" data-component-id="HB-WARRANTY-LEAD"><div class="hb-warranty-intro-panel"><p>Ця гарантія поширюється лише на клієнтів, які придбали продукт на офіційному веб-сайті Jackery, на фірмових сторонніх платформах Jackery або у місцевих авторизованих дилерів.</p></div><div class="hb-warranty-local-note"><p>*Гарантійний період і деталі можуть відрізнятися залежно від місцевих законів, нормативних актів і авторизованих дилерів.</p></div></figure>
+
+### Обмежена гарантія
+
+<figure aria-label="Обмежена гарантія" class="hb-warranty-card" data-component-id="HB-WARRANTY-SECTION" data-warranty-card-index="1"><p>Jackery гарантує первинному кінцевому покупцеві, що продукт Jackery не матиме дефектів матеріалів і виготовлення за умов нормального споживчого використання протягом відповідного гарантійного періоду, визначеного в розділі «Гарантійний період» нижче, з урахуванням наведених нижче виключень. Ця гарантійна заява визначає повний і виключний обсяг гарантійних зобов’язань Jackery. Ми не беремо на себе і не уповноважуємо будь-яку особу брати на себе від нашого імені будь-які інші зобов’язання у зв’язку з продажем нашої продукції.</p></figure>
+
+### Гарантійний період
+
+<figure aria-label="Гарантійний період" class="hb-warranty-period-card" data-component-id="HB-WARRANTY-YEARS"><div class="hb-warranty-period-grid"><div aria-label="3 РОКИ Стандартна гарантія" class="hb-warranty-period-item"><div class="hb-warranty-period-heading"><span class="hb-warranty-year-badge">3</span><div class="hb-warranty-period-title"><strong class="hb-warranty-years-unit">РОКИ</strong><strong class="hb-warranty-period-label">Стандартна гарантія</strong></div></div><div class="hb-warranty-period-copy"><p>Стандартний гарантійний період для Jackery Explorer 1000 становить 36 місяців. У кожному випадку гарантійний період обчислюється з дати покупки первинним споживачем-покупцем. Для визначення дати початку гарантійного періоду необхідний касовий чек від першого споживача-покупця або інший належний документальний доказ.</p></div></div><div aria-label="2 РОКИ Розширена гарантія" class="hb-warranty-period-item"><div class="hb-warranty-period-heading"><span class="hb-warranty-year-badge">2</span><div class="hb-warranty-period-title"><strong class="hb-warranty-years-unit">РОКИ</strong><strong class="hb-warranty-period-label">Розширена гарантія</strong></div></div><div class="hb-warranty-period-copy"><p>Щоб активувати подовження гарантії, ви повинні зареєструвати свій продукт онлайн або звернутися до нашої служби підтримки за адресою hello.eu@jackery.com, щоб подовжити стандартний гарантійний термін.</p></div></div></div></figure>
+
+### Обмін
+
+<figure aria-label="Обмін" class="hb-warranty-card" data-component-id="HB-WARRANTY-SECTION" data-warranty-card-index="2"><p>Jackery замінить (за рахунок Jackery) будь-який продукт Jackery, який не працює протягом відповідного гарантійного періоду через дефект матеріалів або виготовлення. Заміна отримує залишок гарантійного терміну оригінального продукту.</p></figure>
+
+### Обмеження для первинного споживача-покупця
+
+<figure aria-label="Обмеження для первинного споживача-покупця" class="hb-warranty-card" data-component-id="HB-WARRANTY-SECTION" data-warranty-card-index="3"><p>Гарантія на продукт Jackery обмежується первинним споживачем-покупцем і не підлягає передачі будь-якому наступному власнику.</p></figure>
+
+### Виключення
+
+<figure aria-label="Виключення" class="hb-warranty-card" data-component-id="HB-WARRANTY-SECTION" data-warranty-card-index="4"><p>Гарантія Jackery не поширюється на:</p><ul><li>Будь-який продукт, який використовувався неналежним чином, зазнавав зловживання, був модифікований, випадково пошкоджений або використовувався не для звичайного споживчого використання, дозволеного чинною документацією Jackery.</li><li>Спроби ремонту будь-ким, окрім авторизованого сервісного центру.</li><li>Будь-який продукт, придбаний через онлайн-аукціон.</li><li>Гарантія Jackery не поширюється на акумуляторний елемент, якщо він не був повністю заряджений вами протягом семи днів після покупки продукту та щонайменше один раз кожні 6 місяців після цього.</li></ul></figure>
+
+### Право тлумачення
+
+<figure aria-label="Право тлумачення" class="hb-warranty-card" data-component-id="HB-WARRANTY-SECTION" data-warranty-card-index="5"><p>Jackery залишає за собою право остаточного тлумачення вищезазначеної післяпродажної політики.</p></figure>
 
 <span id="app_setup"></span>
+
 ## НАЛАШТУВАННЯ ДОДАТКА
 
-<h3>1. Завантажте додаток і увійдіть</h3>
-<p>Знайдіть &quot;Jackery&quot; у Google Play або App Store, щоб встановити додаток. Після цього ви можете зареєструватися та увійти.</p>
-<p>Або відскануйте QR-код нижче, щоб завантажити та встановити додаток.</p>
-<figure><img src="../../../../_static/manual-assets/_pool/44/44529437d7401f406bebc1729c14306f8942d19c93aa759ce39e6b6c00027073.png" alt="НАЛАШТУВАННЯ ДОДАТКА: app qr and badges" width="612" height="159" loading="lazy" style="max-width:100%;height:auto"></figure>
-<h3>2. Додати пристрій</h3>
-<p>2.1 Натисніть кнопку + , щоб додати свій пристрій;</p>
-<p>2.2 Натисніть кнопку POWER, щоб увімкнути пристрій. Значки Wi-Fi та Bluetooth блиматимуть, що вказує на вхід у режим налаштування мережі. Торкніться кнопки &quot;Icon Flashed&quot; та дозвольте застосунку підключатися до найближчих пристроїв, а також надайте доступ до Bluetooth.</p>
-<figure><img src="../../../../_static/manual-assets/_pool/1b/1b22f8965b3b2b29dde520e30aacac341be7992246ea317a1affc432ae707746.png" alt="НАЛАШТУВАННЯ ДОДАТКА: app add device" width="513" height="456" loading="lazy" style="max-width:100%;height:auto"></figure>
-<figure><img src="../../../../_static/manual-assets/_pool/2a/2aebc90b42552c6dfa46ea53cf066e4f72b077bafd0b07a1684e542aacdcfecb.png" alt="НАЛАШТУВАННЯ ДОДАТКА: app control" width="906" height="198" loading="lazy" style="max-width:100%;height:auto"></figure>
+### 1. Завантажте додаток і увійдіть
+
+<figure aria-label="1. Завантажте додаток і увійдіть" class="hb-app-download-composition" data-component-id="HB-SPECIAL-APP"><div class="hb-app-download-grid"><div class="hb-app-download-column hb-app-download-column-store"><div class="hb-app-download-art-frame"><img alt="" aria-hidden="true" class="hb-app-download-art hb-app-download-art-store" loading="lazy" src="../../../../_static/manual-assets/_pool/1c/1c7bfea9e26bbb00aff9c48d34a7742cd15ff3f0d998f32486c7248a19c9b84d.png"/></div><div class="hb-app-download-copy hb-app-download-copy-store"><p>Знайдіть "Jackery" у Google Play або App Store, щоб встановити додаток. Після цього ви можете зареєструватися та увійти.</p></div></div><div class="hb-app-download-column hb-app-download-column-qr"><div class="hb-app-download-art-frame"><img alt="" aria-hidden="true" class="hb-app-download-art hb-app-download-art-qr" loading="lazy" src="../../../../_static/manual-assets/_pool/5f/5f2a58121306f87b6a627309f264ada87ac4778b3338cfc464ff656013ac3c65.png"/></div><div class="hb-app-download-copy hb-app-download-copy-qr"><p>Або відскануйте QR-код нижче, щоб завантажити та встановити додаток.</p></div></div></div><div class="hb-app-download-semantic"><img alt="1. Завантажте додаток і увійдіть" class="hb-app-download-semantic-art" src="../../../../_static/manual-assets/_pool/5f/5f2a58121306f87b6a627309f264ada87ac4778b3338cfc464ff656013ac3c65.png"/></div></figure>
+
+### 2. Додати пристрій
+
+<p>2.1 Натисніть кнопку <span aria-label="+" class="hb-inline-add-device-icon" data-component-id="HB-SPECIAL-APP" role="img">+</span> , щоб додати свій пристрій;</p>
+
+<p>2.2 Натисніть кнопку POWER, щоб увімкнути пристрій. Значки Wi-Fi та Bluetooth блиматимуть, що вказує на вхід у режим налаштування мережі. Торкніться кнопки "Icon Flashed" та дозвольте застосунку підключатися до найближчих пристроїв, а також надайте доступ до Bluetooth.</p>
+
+<figure class="hb-app-add-device-composition" data-component-id="HB-SPECIAL-APP" data-reference-id="app-add-device" data-step-captions="embedded"><div class="hb-app-add-device-phone-stage"><img alt="2. Додати пристрій" class="hb-app-add-device-phone-art" src="../../../../_static/manual-assets/_pool/02/02f840f1341d94d08478c84ea4ae88280ef2806d618484596885efbe4debafe0.png"/></div><div class="hb-app-add-device-control-panel"><img alt="" aria-hidden="true" class="hb-app-add-device-control-art" loading="lazy" src="../../../../_static/manual-assets/_pool/3b/3bafcc34c487826771aec91e5d8ad3246bf8ee1bde8aa3ee46ff0e483d077c2c.png"/><span class="hb-app-add-device-live-label hb-app-add-device-live-label-main-power">Кнопка POWER</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-dc-usb">Кнопка живлення DC/USB</span><span class="hb-app-add-device-live-label hb-app-add-device-live-label-ac-power">Кнопка живлення AC</span></div></figure>
+
 <p>2.3 Після натискання на знайдену іконку пристрою додаток автоматично підключає пристрій через Bluetooth.</p>
-<h3>ПРИМІТКА</h3>
-<p>Якщо під час процесу прив’язки з’являється повідомлення «пристрій уже прив’язаний», можна скористатися такими двома способами підключення:</p>
-<ul>
-<li>Власник пристрою може поділитися цим пристроєм з іншими користувачами через додаток.</li>
-<li>Натисніть і утримуйте кнопку POWER і кнопку живлення DC/USB протягом 3 секунд, щоб скинути Wi-Fi і Bluetooth пристрою, а потім повторно прив’яжіть пристрій.</li>
-</ul>
+
+<table class="manual-callout-table manual-callout-table"><tbody><tr><td class="manual-callout-label">ПРИМІТКА</td><td class="manual-callout-body"><p>Якщо під час процесу прив’язки з’являється повідомлення «пристрій уже прив’язаний», можна скористатися такими двома способами підключення:</p><ul><li>Власник пристрою може поділитися цим пристроєм з іншими користувачами через додаток.</li><li>Натисніть і утримуйте кнопку POWER і кнопку живлення DC/USB протягом 3 секунд, щоб скинути Wi-Fi і Bluetooth пристрою, а потім повторно прив’яжіть пристрій.</li></ul></td></tr></tbody></table>
+
 <p>2.4 Після успішного підключення пристрою введіть пароль Wi-Fi і натисніть кнопку OK.</p>
-<h3>ПРИМІТКА</h3>
-<p>Будь ласка, оберіть мережу Wi-Fi у діапазоні 2,4 ГГц. Пристрій не підтримує мережі Wi-Fi у діапазоні 5 ГГц.</p>
+
+<table class="manual-callout-table manual-callout-table"><tbody><tr><td class="manual-callout-label">ПРИМІТКА</td><td class="manual-callout-body"><p>Будь ласка, оберіть мережу Wi-Fi у діапазоні 2,4 ГГц. Пристрій не підтримує мережі Wi-Fi у діапазоні 5 ГГц.</p></td></tr></tbody></table>
+
 <p>2.5 Після успішного додавання пристрою до застосунку значок Wi-Fi на пристрої буде завжди увімкнений.</p>
-<figure><img src="../../../../_static/manual-assets/_pool/7f/7fa317eac181e130f7a3c76ac795247af8371f41dfe7291665e296973124b77f.png" alt="НАЛАШТУВАННЯ ДОДАТКА: app pairing" width="786" height="444" loading="lazy" style="max-width:100%;height:auto"></figure>
+
+<img alt="Наведені вище скріншоти призначені лише для довідки." src="../../../../_static/manual-assets/_pool/23/23cde742b3012b96fce07f9efe3475ee2e75230f2b2d39311291a33d4cf51f69.png"/>
+
 <p>Наведені вище скріншоти призначені лише для довідки.</p>
-<h3>УВАГА</h3>
-<p>Додаток Jackery може одночасно підключатися через Bluetooth лише до однієї електростанції. Повернення до списку пристроїв автоматично відключає Bluetooth. Натисніть електростанцію у списку ще раз, щоб автоматично перепідключитися.</p>
-<h3>3. Відв’язати пристрій</h3>
+
+<table class="manual-callout-table manual-callout-table"><tbody><tr><td class="manual-callout-label">УВАГА</td><td class="manual-callout-body"><p>Додаток Jackery може одночасно підключатися через Bluetooth лише до однієї електростанції. Повернення до списку пристроїв автоматично відключає Bluetooth. Натисніть електростанцію у списку ще раз, щоб автоматично перепідключитися.</p></td></tr></tbody></table>
+
+### 3. Відв’язати пристрій
+
 <p>Натисніть значок Налаштування у верхньому правому куті головного інтерфейсу пристрою, щоб перейти на сторінку налаштувань, і натисніть кнопку Відв’язати внизу сторінки, щоб відв’язати пристрій.</p>
-<h3>4. ПРИМІТКИ</h3>
-<p>4.1 Увімкнення Wi-Fi та Bluetooth:</p>
-<ul>
-<li>Wi-Fi та Bluetooth автоматично вмикаються після ввімкнення пристрою, а значки Wi-Fi та Bluetooth на екрані загоряються.</li>
-<li>Одночасно утримуйте кнопку живлення DC/USB та кнопку живлення AC, доки на екрані не загоряться значки Wi-Fi та Bluetooth.</li>
-</ul>
-<p>4.2 Вимкнення Wi-Fi і Bluetooth</p>
-<ul>
-<li>Одночасно утримуйте кнопку живлення DC/USB та кнопку живлення AC, доки значки Wi-Fi та Bluetooth на екрані не згаснуть.</li>
-</ul>
-<p>4.3 Скидання Wi-Fi і Bluetooth</p>
-<ul>
-<li>Одночасно утримуйте кнопку POWER та кнопку живлення DC/USB протягом 3 секунд, щоб скинути Wi-Fi та Bluetooth до заводських налаштувань. Підключений обліковий запис застосунку буде відв&#x27;язано.</li>
-</ul>
+
+### 4. ПРИМІТКИ
+
+#### 4.1 Увімкнення Wi-Fi та Bluetooth:
+
+<ul><li>Wi-Fi та Bluetooth автоматично вмикаються після ввімкнення пристрою, а значки Wi-Fi та Bluetooth на екрані загоряються.</li><li>Одночасно утримуйте кнопку живлення DC/USB та кнопку живлення AC, доки на екрані не загоряться значки Wi-Fi та Bluetooth.</li></ul>
+
+#### 4.2 Вимкнення Wi-Fi і Bluetooth
+
+<ul><li>Одночасно утримуйте кнопку живлення DC/USB та кнопку живлення AC, доки значки Wi-Fi та Bluetooth на екрані не згаснуть.</li></ul>
+
+#### 4.3 Скидання Wi-Fi і Bluetooth
+
+<ul><li>Одночасно утримуйте кнопку POWER та кнопку живлення DC/USB протягом 3 секунд, щоб скинути Wi-Fi та Bluetooth до заводських налаштувань. Підключений обліковий запис застосунку буде відв'язано.</li></ul>
 
 ## EU declaration and manufacturer
 

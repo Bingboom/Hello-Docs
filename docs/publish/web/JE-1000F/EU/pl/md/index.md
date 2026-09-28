@@ -1,4 +1,4 @@
-# Jackery Explorer 1000 — Polski
+# Jackery Explorer 1000 — pl
 
 ```{toctree}
 :maxdepth: 2
