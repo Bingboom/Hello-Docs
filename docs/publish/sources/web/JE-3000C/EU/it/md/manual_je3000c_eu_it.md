@@ -168,9 +168,9 @@ Il prodotto può ricaricare la batteria dell\'auto utilizzando il cavo Jackery p
 
 ## MODALITÀ RISPARMIO ENERGETICO
 
-Per disattivare la Modalità risparmio energetico, tieni premuti per più di 3 secondi sia il pulsante CA sia il pulsante POWER principale. Una volta disattivata la Modalità risparmio energetico, l\'icona non comparirà più sullo schermo LCD e il prodotto non spegnerà automaticamente l\'uscita CA o DC/USB.
+Per prevenire un consumo inutile della batteria dimenticando di spegnere l\'uscita, il prodotto attiva la Modalità di risparmio energetico per impostazione predefinita. Quando il pulsante di alimentazione CA è acceso, l'icona della MODALITÀ DI RISPARMIO ENERGETICO verrà visualizzata sullo schermo LCD. Se non è collegato alcun dispositivo o il consumo del dispositivo collegato è inferiore a una determinata soglia (uscita AC ≤ 25 W oppure uscita USB-C ≤ 2 W), il dispositivo spegne automaticamente tutte le uscite dopo 12 ore.
 
-Quando si alimentano dispositivi a basso consumo (CA \<= 25 W oppure DC/USB \<= 2 W), disattiva la Modalità risparmio energetico per evitare che l\'uscita si spenga automaticamente durante il funzionamento.
+Per disattivare la Modalità risparmio energetico, tenere premuti entrambi i pulsanti di accensione AC e POWER per più di 3 secondi. Il prodotto non disattiva automaticamente l'uscita CA o l'uscita CC/USB.
 
 <img src="assets/ir/03cb595b062a2dd8ce573c4d9096e2b24121e5da2dc54d7bf36003ea0edabe53/operation_energy.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3000c_eu_it/operation_energy.png" data-web-finished-panel-sha256="03cb595b062a2dd8ce573c4d9096e2b24121e5da2dc54d7bf36003ea0edabe53" alt="NOTA La Modalità risparmio energetico riprende il suo stato precedente dopo l&#39;accensione. Per cambiare modalità è necessario un intervento manuale." />
 
@@ -181,36 +181,6 @@ Tieni premuti entrambi i pulsanti per più di 3 secondi.
 <table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>AVVERTENZA</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">AVVERTENZA</span><span class="manual-callout-label-sizer" aria-hidden="true">ATTENZIONE</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTA</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Quando la Modalità di risparmio energetico è attiva, il prodotto disattiva automaticamente l'uscita CA se il consumo energetico del dispositivo collegato rimane basso per il periodo di tempo impostato. Quando si alimentano dispositivi che richiedono un'alimentazione continua, come frigoriferi, router, telecamere di sicurezza o pompe ad aria per acquari, si consiglia di disattivare la Modalità di risparmio energetico per evitare che un'interruzione imprevista ne comprometta il funzionamento.</p></td></tr></tbody></table>
 
 
-
-## Funzione di ripristino delle uscite CA e CC
-
-La funzione di ripristino delle uscite CA e CC è disattivata per impostazione predefinita. Attivare questa funzione nell'App Jackery per consentire al dispositivo di memorizzare lo stato delle uscite CA e CC e ripristinare automaticamente le uscite CA e CC in condizioni definite.
-
-<table>
-<thead>
-<tr>
-<th class="head"><p>Condizioni di ripristino automatico</p></th>
-<th class="head"><p>Condizioni senza ripristino automatico</p></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><p>Accensione/Riavvio dopo lo spegnimento o il riavvio</p></td>
-<td><p>Spegnimento manuale delle uscite (pulsante/App)</p></td>
-</tr>
-<tr>
-<td rowspan="2"><p>SOC batteria ≥ limite di scarica +10% al raggiungimento del limite</p></td>
-<td><p>Spegnimento delle uscite in modalità risparmio energetico</p></td>
-</tr>
-<tr>
-<td><p>Spegnimento delle uscite attivato da protezione</p></td>
-</tr>
-<tr>
-<td><p>Aggiornamento OTA completato</p></td>
-<td><p>Spegnimento delle uscite attivato dal timer di scarica</p></td>
-</tr>
-</tbody>
-</table>
 
 ## SCHERMO LCD
 
@@ -248,6 +218,36 @@ La funzione di ripristino delle uscite CA e CC è disattivata per impostazione p
 
 Puoi anche impostare la modalità di visualizzazione dello schermo nell\'App Jackery.
 
+## Funzione di ripristino delle uscite CA e CC
+
+Questa funzione memorizza lo stato delle uscite e ripristina automaticamente le uscite CA e CC in determinate condizioni.
+
+<table>
+<thead>
+<tr>
+<th class="head"><p>Condizioni di ripristino automatico</p></th>
+<th class="head"><p>Condizioni senza ripristino automatico</p></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><p>Accensione/Riavvio dopo lo spegnimento o il riavvio</p></td>
+<td><p>Spegnimento manuale delle uscite (pulsante/App)</p></td>
+</tr>
+<tr>
+<td rowspan="2"><p>SOC della batteria ≥ limite di scarica +10% dopo aver raggiunto il limite</p></td>
+<td><p>Spegnimento delle uscite in modalità risparmio energetico</p></td>
+</tr>
+<tr>
+<td><p>Spegnimento delle uscite attivato da protezione</p></td>
+</tr>
+<tr>
+<td><p>Aggiornamento OTA completato</p></td>
+<td><p>Spegnimento delle uscite attivato dal timer di scarica</p></td>
+</tr>
+</tbody>
+</table>
+
 ## COMBINAZIONI DI TASTI
 
 | Pulsanti | Operazione | Funzione |
@@ -258,17 +258,17 @@ Puoi anche impostare la modalità di visualizzazione dello schermo nell\'App Jac
 
 # GRUPPO DI CONTINUITÀ (UPS)
 
-Collega il prodotto a una presa a muro con il cavo di ricarica CA, quindi premi il pulsante AC e alimenta contemporaneamente i tuoi apparecchi.
+Collega il prodotto a una presa a muro utilizzando il cavo di ricarica AC, quindi premi il pulsante di uscita AC per alimentare contemporaneamente i tuoi dispositivi.
+
+Condizione: assicurarsi che il prodotto sia acceso.
+
+Un gruppo di continuità (UPS) è un tipo di sistema di alimentazione continua che fornisce automaticamente energia elettrica di backup a un carico quando l\'alimentazione dalla rete elettrica viene a mancare.
+
+In caso di improvvisa interruzione della corrente di rete, Jackery Explorer 3000 passerà automaticamente all'energia immagazzinata entro 10 ms per mantenere in funzione i dispositivi collegati.
+
+In modalità UPS, la potenza di picco dell\'unità raggiunge i 12 A prima dell\'interruzione di corrente. Poiché la modalità Bypass consente la ricarica/scarica simultanea, la potenza di uscita effettiva è inferiore alla potenza di uscita nominale in questa modalità, ma torna alla potenza di uscita nominale durante le interruzioni di corrente.
 
 <img src="assets/ir/67ad1e3f1b4baf798c0dde84ee89ecc701f50273dc17ce4fff8e256c1088dd75/ups.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3000c_eu_it/ups.png" data-web-finished-panel-sha256="67ad1e3f1b4baf798c0dde84ee89ecc701f50273dc17ce4fff8e256c1088dd75" alt="Diagramma di connessione UPS." />
-
-Un gruppo di continuità (UPS) è un sistema di alimentazione continua che fornisce automaticamente energia di riserva a un carico quando viene a mancare l\'alimentazione della rete elettrica.
-
-In caso di improvvisa interruzione dell\'alimentazione di rete, Jackery Explorer 3000 passerà automaticamente all\'alimentazione accumulata entro 10 ms per mantenere in funzione i tuoi apparecchi.
-
-In modalità UPS, la potenza di picco dell\'unità raggiunge 12 A prima dei interruzioni di corrente. Poiché in modalità bypass sono abilitati la carica e la scarica simultanee,
-
-la potenza di uscita effettiva in questa modalità è inferiore alla potenza nominale, ma torna alla potenza nominale durante i interruzioni di corrente.
 
 
 

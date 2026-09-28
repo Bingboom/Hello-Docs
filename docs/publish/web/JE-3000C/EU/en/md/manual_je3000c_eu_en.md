@@ -257,8 +257,6 @@ This function memorizes the output status and automatically resumes AC and DC ou
 
 Connect the product to a wall outlet with the AC charging cable, then press the AC power button and power your appliances at the same time.
 
-<img src="../../../../_static/manual-assets/_pool/c9/c9915b21215a57d5072ee9bfcd2ae3067dfffd78adb00a1dcc15ed6449b8a133.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3000c_eu_en/ups.png" data-web-finished-panel-sha256="c9915b21215a57d5072ee9bfcd2ae3067dfffd78adb00a1dcc15ed6449b8a133" alt="UPS connection diagram." />
-
 An uninterruptible power supply (UPS) is a type of continual power system that provides automated backup electric power to a load when the mains grid power fails.
 
 In the event of a sudden loss of grid power, Jackery Explorer 3000 will automatically switch to stored power within 10 ms to keep your appliances running.
@@ -266,6 +264,8 @@ In the event of a sudden loss of grid power, Jackery Explorer 3000 will automati
 In UPS mode, the unit\'s peak output reaches 12 A before power outages. As simultaneous charging/discharging is enabled in Bypass Mode,
 
 the actual output power is lower than the rated output power in this mode but returns to rated output power during outages.
+
+<img src="../../../../_static/manual-assets/_pool/c9/c9915b21215a57d5072ee9bfcd2ae3067dfffd78adb00a1dcc15ed6449b8a133.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3000c_eu_en/ups.png" data-web-finished-panel-sha256="c9915b21215a57d5072ee9bfcd2ae3067dfffd78adb00a1dcc15ed6449b8a133" alt="UPS connection diagram." />
 
 
 

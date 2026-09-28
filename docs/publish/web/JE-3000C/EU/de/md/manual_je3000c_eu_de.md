@@ -206,9 +206,9 @@ Das Produkt kann Ihre Fahrzeugbatterie mit dem Jackery 12-V-Autobatterie-Ladekab
 
 ## ENERGIESPARMODUS
 
-Um den Energiesparmodus zu deaktivieren, halten Sie sowohl die AC-Einschalttaste als auch die Haupt-POWER-Taste länger als 3 Sekunden gedrückt. Sobald der Energiesparmodus deaktiviert ist, wird das Symbol nicht mehr auf dem LCD angezeigt, und das Produkt schaltet den AC- oder DC/USB-Ausgang nicht mehr automatisch aus.
+Um unnötigen Batterieverbrauch durch das Vergessen des Ausschaltens des Ausgangs zu verhindern, ist der Energiesparmodus standardmäßig aktiviert. Wenn kein Gerät angeschlossen ist oder der Stromverbrauch des angeschlossenen Geräts unter einem bestimmten Schwellenwert liegt (AC-Ausgang ≤ 25 W oder USB-Ausgang ≤ 2 W), werden alle Ausgänge nach 12 Stunden automatisch abgeschaltet.
 
-Wenn Sie Geräte mit geringem Stromverbrauch betreiben (AC \<= 25 W oder DC/USB \<= 2 W), deaktivieren Sie den Energiesparmodus, damit der Ausgang während des Betriebs nicht automatisch ausgeschaltet wird.
+Um den Energiesparmodus zu deaktivieren, halten Sie die AC-Stromtaste und die POWER-Taste gleichzeitig länger als 3 Sekunden gedrückt. Das Gerät schaltet den AC- oder DC-Ausgang nicht automatisch ab.
 
 <img src="../../../../_static/manual-assets/_pool/25/256f0b08488cbbaf11278ea7afd4d66e0239f1bc187f48c7089f6b77868fc2c8.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3000c_eu_de/operation_energy.png" data-web-finished-panel-sha256="256f0b08488cbbaf11278ea7afd4d66e0239f1bc187f48c7089f6b77868fc2c8" alt="Halten Sie beide Tasten länger als 3 Sekunden gedrückt.；HINWEIS Der Energiesparmodus kehrt nach dem Einschalten in seinen vorherigen Zustand zurück. Für einen Moduswechsel ist ein manuelles Umschalten erforderlich." />
 
@@ -217,36 +217,6 @@ Wenn Sie Geräte mit geringem Stromverbrauch betreiben (AC \<= 25 W oder DC/USB 
 <table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>WARNUNG</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">WARNUNG</span><span class="manual-callout-label-sizer" aria-hidden="true">VORSICHT</span><span class="manual-callout-label-sizer" aria-hidden="true">HINWEIS</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Wenn der Energiesparmodus aktiviert ist, schaltet das Produkt den AC-Ausgang automatisch ab, wenn die Leistungsaufnahme des angeschlossenen Geräts über den eingestellten Zeitraum hinweg niedrig bleibt. Bei der Stromversorgung von Geräten, die eine kontinuierliche Stromversorgung benötigen, z. B. Kühlschränken, Routern, Überwachungskameras oder Aquarium-Luftpumpen, wird empfohlen, den Energiesparmodus auszuschalten, damit der Betrieb der Geräte nicht durch eine unerwartete Stromunterbrechung beeinträchtigt wird.</p></td></tr></tbody></table>
 
 
-
-## Wiederaufnahmefunktion für AC- und DC-Ausgänge
-
-Die Wiederaufnahmefunktion für AC- und DC-Ausgänge ist standardmäßig deaktiviert. Aktivieren Sie diese Funktion in der Jackery-App, damit das Gerät den Status der AC- und DC-Ausgänge speichert und die AC- und DC-Ausgänge unter festgelegten Bedingungen automatisch wiederherstellt.
-
-<table>
-<thead>
-<tr>
-<th class="head"><p>Bedingungen für automatische Wiederherstellung</p></th>
-<th class="head"><p>Bedingungen ohne automatische Wiederherstellung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><p>Einschalten/Neustart nach Abschalten oder Neustart</p></td>
-<td><p>Manuelles Ausschalten der Ausgänge (Taste/App)</p></td>
-</tr>
-<tr>
-<td rowspan="2"><p>Batterie-SOC ≥ Entladegrenze +10% nach Erreichen der Grenze</p></td>
-<td><p>Ausgang im Energiesparmodus deaktiviert</p></td>
-</tr>
-<tr>
-<td><p>Schutzbedingter Ausgang deaktiviert</p></td>
-</tr>
-<tr>
-<td><p>OTA-Update abgeschlossen</p></td>
-<td><p>Durch Entlade-Timer gesteuerter Ausgang deaktiviert</p></td>
-</tr>
-</tbody>
-</table>
 
 ## LCD-ANZEIGE
 
@@ -284,6 +254,36 @@ Die Wiederaufnahmefunktion für AC- und DC-Ausgänge ist standardmäßig deaktiv
 
 Sie können den Bildschirm-Anzeigemodus auch in der Jackery-App einstellen.
 
+## Wiederaufnahmefunktion für AC- und DC-Ausgänge
+
+Diese Funktion speichert den Ausgangszustand und stellt die AC- und DC-Ausgänge unter bestimmten Bedingungen automatisch wieder her.
+
+<table>
+<thead>
+<tr>
+<th class="head"><p>Bedingungen für automatische Wiederherstellung</p></th>
+<th class="head"><p>Bedingungen ohne automatische Wiederherstellung</p></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><p>Einschalten/Neustart nach Abschalten oder Neustart</p></td>
+<td><p>Manuelles Ausschalten der Ausgänge (Taste/App)</p></td>
+</tr>
+<tr>
+<td rowspan="2"><p>Batterie-SOC ≥ Entladegrenze +10% nach Erreichen der Grenze</p></td>
+<td><p>Ausgang im Energiesparmodus deaktiviert</p></td>
+</tr>
+<tr>
+<td><p>Schutzbedingter Ausgang deaktiviert</p></td>
+</tr>
+<tr>
+<td><p>OTA-Update abgeschlossen</p></td>
+<td><p>Durch Entlade-Timer gesteuerter Ausgang deaktiviert</p></td>
+</tr>
+</tbody>
+</table>
+
 ## TASTENKOMBINATION
 
 | Tasten | Bedienung | Funktion |
@@ -294,17 +294,17 @@ Sie können den Bildschirm-Anzeigemodus auch in der Jackery-App einstellen.
 
 # UNTERBRECHUNGSFREIE STROMVERSORGUNG (UPS)
 
-Schließen Sie das Produkt mit dem AC-Ladekabel an eine Steckdose an und drücken Sie anschließend die AC-Ausgangstaste, um Ihre Geräte gleichzeitig zu versorgen.
-
-<img src="../../../../_static/manual-assets/_pool/41/41189bca047827b6c753dbf0ba019112645f3176f1fde6033814c55dae1536ab.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3000c_eu_de/ups.png" data-web-finished-panel-sha256="41189bca047827b6c753dbf0ba019112645f3176f1fde6033814c55dae1536ab" alt="Abbildung der UPS-Verbindung." />
+Schließen Sie das Produkt mit dem AC-Ladekabel an eine Steckdose an, drücken Sie dann die AC-Ausgangstaste, und versorgen Sie gleichzeitig Ihre Geräte mit Strom.
 
 Eine unterbrechungsfreie Stromversorgung (UPS) ist ein kontinuierliches Stromversorgungssystem, das bei einem Ausfall der Netzstromversorgung automatisch Backup-Strom für angeschlossene Geräte bereitstellt.
 
-Bei einem plötzlichen Ausfall der Netzstromversorgung schaltet Jackery Explorer 3000 innerhalb von 10 ms automatisch auf gespeicherte Energie um, damit Ihre Geräte weiterlaufen.
+Im Falle eines plötzlichen Stromausfalls schaltet der Jackery Explorer 3000 automatisch innerhalb von 10 ms auf die gespeicherte Energie um, damit Ihre Geräte weiterhin betrieben werden können.
 
-Im USV-Modus erreicht das Gerät vor Stromausfällen eine Spitzenleistung von 12 A. Da im Bypass-Modus gleichzeitiges Laden und Entladen möglich ist,
+Voraussetzung: Das Produkt ist eingeschaltet.
 
-liegt die tatsächliche Ausgangsleistung in diesem Modus unter der Nennleistung; bei Stromausfällen wird jedoch wieder die Nennleistung erreicht.
+Im USV-Modus erreicht das Gerät vor Stromausfällen eine Spitzenausgangsstromstärke von 12 A. Da im Bypass-Modus gleichzeitiges Laden und Entladen möglich ist, liegt die tatsächliche Ausgangsleistung in diesem Modus unter der Nennleistung; bei Stromausfällen wird jedoch wieder die Nennleistung erreicht.
+
+<img src="../../../../_static/manual-assets/_pool/41/41189bca047827b6c753dbf0ba019112645f3176f1fde6033814c55dae1536ab.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3000c_eu_de/ups.png" data-web-finished-panel-sha256="41189bca047827b6c753dbf0ba019112645f3176f1fde6033814c55dae1536ab" alt="Abbildung der UPS-Verbindung." />
 
 
 
