@@ -9,7 +9,7 @@
       "nl",
       "pl"
     ],
-    "technical_version": "git-20260928-c38415f5-lcd-status",
+    "technical_version": "git-20260929-c38415f5-overview-headings",
     "printed_manual_version": null
   },
   "original_source": {
@@ -36,8 +36,8 @@
   "inputs": [
     {
       "path": "README.md",
-      "sha256": "389b2af976c4d7069d2a82bef0ac36d3fcbd1f0751ec850172f17c5d101d41b4",
-      "size": 1580
+      "sha256": "dcf50e469d9228e54c8b796097bb17601ac9909b53373ed2514675fc151d01a0",
+      "size": 2073
     },
     {
       "path": "artwork/02f840f1341d_02f840f1341d_add_device_je1000f_eu.png",
@@ -90,11 +90,6 @@
       "size": 7367
     },
     {
-      "path": "artwork/31d711b04d44_uk-overview-right.png",
-      "sha256": "31d711b04d44f7bebf86eb261e419fce84e26796197390172de01c83ce762984",
-      "size": 46175
-    },
-    {
       "path": "artwork/3bafcc34c487_3bafcc34c487_app.control.png",
       "sha256": "3bafcc34c487826771aec91e5d8ad3246bf8ee1bde8aa3ee46ff0e483d077c2c",
       "size": 14930
@@ -118,11 +113,6 @@
       "path": "artwork/58c1d3604ca7_58c1d3604ca7_26_Output_Power_PviebR618oofvKxcKVRcHLlInqd.png",
       "sha256": "58c1d3604ca7b9774b069c6928775a13465ccb9477f477e9e4d4b30e7f75b88d",
       "size": 6085
-    },
-    {
-      "path": "artwork/5d68d8009562_pl-overview-front.png",
-      "sha256": "5d68d8009562f392cefd656b9b2c48491598b69a6a62317c8247713ceaddf177",
-      "size": 93419
     },
     {
       "path": "artwork/5f2a58121306_5f2a58121306_app_download_qr.png",
@@ -163,11 +153,6 @@
       "path": "artwork/7623ef10e229_7623ef10e229_9_Output_Voltage_and_Frequency_Jh3JbmBDBoKlmOxaRJDcIMJAn6b.png",
       "sha256": "7623ef10e229bcfe66c872f3733d26b86c97d703ed30012188a88bb4a168e6df",
       "size": 3553
-    },
-    {
-      "path": "artwork/79d1c219ead9_pt-overview-right.png",
-      "sha256": "79d1c219ead911fa501e5838af96c43f9921a61c9a2987414fe6278ab04c3f79",
-      "size": 44369
     },
     {
       "path": "artwork/7e1392ba6a45_7e1392ba6a45_2_Bluetooth_HVgvbJhq5o4EDKxhm7McCF4FnjB.png",
@@ -220,16 +205,6 @@
       "size": 3059
     },
     {
-      "path": "artwork/9566cd4abeee_pt-overview-front.png",
-      "sha256": "9566cd4abeee8c86be9fd5af2a191646885587ac76b90a6f5cf6adee402d97d0",
-      "size": 90104
-    },
-    {
-      "path": "artwork/95bb08a64864_nl-overview-front.png",
-      "sha256": "95bb08a6486409717d9ccea5dcaf1f3c54285ce881e70de2a0f6d700a3bdb7de",
-      "size": 90868
-    },
-    {
       "path": "artwork/9aa0c1668423_9aa0c1668423_op_ups_mode_je1000f_eu_en.png",
       "sha256": "9aa0c1668423a77e9c63fd3d4731d38420fc2283bec8fda769269fa081a72da0",
       "size": 89235
@@ -245,19 +220,9 @@
       "size": 8901
     },
     {
-      "path": "artwork/ad4e1a4faf31_nl-overview-right.png",
-      "sha256": "ad4e1a4faf31a39a2de836ca6adfc0ca01e2cf9408df50ee9e8487cee1692654",
-      "size": 44498
-    },
-    {
       "path": "artwork/b276ee48728d_b276ee48728d_car-charging.png",
       "sha256": "b276ee48728db4e72e21d7fde456e91017e3e4f5335209b1d5476f6c7af1f0f4",
       "size": 112280
-    },
-    {
-      "path": "artwork/b77f660236c2_uk-overview-front.png",
-      "sha256": "b77f660236c22280171a990a9f885350cdcd0835a7b849ebf06cd7f1d2fed9b9",
-      "size": 92466
     },
     {
       "path": "artwork/bd1e161e7734_bd1e161e7734_op_led_light_je1000f_eu_en.png",
@@ -298,11 +263,6 @@
       "path": "artwork/d042326898a2_d042326898a2_energy-saving.png",
       "sha256": "d042326898a2450ebee6e356886e7403fe0a33b6a2d4a12266454205093a1218",
       "size": 64361
-    },
-    {
-      "path": "artwork/d3b7e43d523f_pl-overview-right.png",
-      "sha256": "d3b7e43d523f59ea739e23b2558019b1d5ccaf59e0557f3bcc85554424690159",
-      "size": 48126
     },
     {
       "path": "artwork/d5100a538e96_d5100a538e96_10_Input_Power_LOAZbnxfqoHFwIxx2Myc532jnzb.png",
@@ -355,9 +315,49 @@
       "size": 1814
     },
     {
+      "path": "artwork/nl-overview-front-no-heading.png",
+      "sha256": "669e984a741222ddb52062affb36d80d61cf2c199868bbf3cae6d085fba3b8c9",
+      "size": 87526
+    },
+    {
+      "path": "artwork/nl-overview-right-no-heading.png",
+      "sha256": "c9a6e9b4b31f32d8682aa7381b3a67712c493dd2e16ef1555ede5b796aa08d45",
+      "size": 41102
+    },
+    {
+      "path": "artwork/pl-overview-front-no-heading.png",
+      "sha256": "2fcc304ec9b83893c5fe819e4632bd03a3703878cbfd187c882392c5926d9b0c",
+      "size": 89906
+    },
+    {
+      "path": "artwork/pl-overview-right-no-heading.png",
+      "sha256": "faadda716e35ab4f1874396d6293197579251bcf1f9542f74f95cabb20a27827",
+      "size": 43762
+    },
+    {
+      "path": "artwork/pt-overview-front-no-heading.png",
+      "sha256": "4b8beece81163c3a2db0704299361f75fd1c075d3b69c1c82e5abae9b521f54e",
+      "size": 86575
+    },
+    {
+      "path": "artwork/pt-overview-right-no-heading.png",
+      "sha256": "7b75e299d332e61ddf84ffe77f4d69613b2ebe77006ab1f1a38761c7a95d04e6",
+      "size": 40997
+    },
+    {
+      "path": "artwork/uk-overview-front-no-heading.png",
+      "sha256": "c1221434eb451168f9d540593e2ff8c72a2e95d18d55f4bdaeabf3d72b03d8c2",
+      "size": 89136
+    },
+    {
+      "path": "artwork/uk-overview-right-no-heading.png",
+      "sha256": "689d83ca9c9774844e527224ff3efe44c07e2e284133f9bce04a61df4fa854d7",
+      "size": 43275
+    },
+    {
       "path": "artwork_bindings.json",
-      "sha256": "f14994a1449bfaaf149b501439760dbf53fba1e129aa610a8dfabc84b495d473",
-      "size": 66707
+      "sha256": "8ac0ddaa9753eaf676b3141c0747cc4b3ec167dd27ccdec4bd52a344de8e6ea5",
+      "size": 67929
     },
     {
       "path": "extraction_recipes/manual_je1000f_eu_four_native_operations.json",
@@ -373,6 +373,11 @@
       "path": "extraction_recipes/manual_je1000f_eu_four_native_references.json",
       "sha256": "7e0801b202e2d18b5c9f78c15e7e3d58c4db6d3ad2da00d67a931393ac0a7bf5",
       "size": 54923
+    },
+    {
+      "path": "extraction_recipes/overview_headings.json",
+      "sha256": "2a8b12ecbac580576e3d4ae8803c19a5e81e3e2c729f8c0c60c0716feca36c5e",
+      "size": 4532
     },
     {
       "path": "source/approved_errata.json",
@@ -485,6 +490,11 @@
       "size": 130235
     },
     {
+      "path": "web/nl/assets/669e984a7412_nl-overview-front-no-heading.png",
+      "sha256": "669e984a741222ddb52062affb36d80d61cf2c199868bbf3cae6d085fba3b8c9",
+      "size": 87526
+    },
+    {
       "path": "web/nl/assets/6749bd38fdd0_6749bd38fdd0_6749bd38fdd0_warning_triangle.png",
       "sha256": "6749bd38fdd0b85af591d65d0d81ae591590aa5c35c7b0f72767057a953c5c67",
       "size": 4482
@@ -570,11 +580,6 @@
       "size": 3059
     },
     {
-      "path": "web/nl/assets/95bb08a64864_95bb08a64864_nl-overview-front.png",
-      "sha256": "95bb08a6486409717d9ccea5dcaf1f3c54285ce881e70de2a0f6d700a3bdb7de",
-      "size": 90868
-    },
-    {
       "path": "web/nl/assets/9aa0c1668423_9aa0c1668423_9aa0c1668423_op_ups_mode_je1000f_eu_en.png",
       "sha256": "9aa0c1668423a77e9c63fd3d4731d38420fc2283bec8fda769269fa081a72da0",
       "size": 89235
@@ -588,11 +593,6 @@
       "path": "web/nl/assets/a8a846e9767a_a8a846e9767a_a8a846e9767a_no_open_flame.png",
       "sha256": "a8a846e9767ac618760e6a9ac65d826fb2c092ad7450014fa30ae0894746450a",
       "size": 8901
-    },
-    {
-      "path": "web/nl/assets/ad4e1a4faf31_ad4e1a4faf31_nl-overview-right.png",
-      "sha256": "ad4e1a4faf31a39a2de836ca6adfc0ca01e2cf9408df50ee9e8487cee1692654",
-      "size": 44498
     },
     {
       "path": "web/nl/assets/b276ee48728d_b276ee48728d_b276ee48728d_car-charging.png",
@@ -623,6 +623,11 @@
       "path": "web/nl/assets/c7862a87e742_c7862a87e742_c7862a87e742_19_Low_Battery_Indicator_KDk9bhs8poHUBdx96PLckPganhd.png",
       "sha256": "c7862a87e742d6927b4e1d63a8d0ccb09fbcf980ae662ff94b9134e256e56889",
       "size": 1293
+    },
+    {
+      "path": "web/nl/assets/c9a6e9b4b31f_nl-overview-right-no-heading.png",
+      "sha256": "c9a6e9b4b31f32d8682aa7381b3a67712c493dd2e16ef1555ede5b796aa08d45",
+      "size": 41102
     },
     {
       "path": "web/nl/assets/ce913ebfc775_ce913ebfc775_ce913ebfc775_25_Fault_code_Oz87bX3BGo8H7Zxe0XvcTd7FnJL.png",
@@ -701,13 +706,13 @@
     },
     {
       "path": "web/nl/manual.ir.json",
-      "sha256": "1737cf002e78b785333cd0b829da79c639b9017421a91bb3bc3c465375bba0cf",
-      "size": 574443
+      "sha256": "8d9a9025e637cc095cd6720504c0748ab3c635e96fc763ad9c3861220a4f066e",
+      "size": 573896
     },
     {
       "path": "web/nl/manual_je1000f_eu_nl.md",
-      "sha256": "1a713539b99486950ddd1c1a04ce646e240c67e4ccc4c09d1945027c6cbf671d",
-      "size": 79930
+      "sha256": "5b9731893aa887042b46d0f3b665944575551bf1a814ea47b1daad54dbd0a600",
+      "size": 79864
     },
     {
       "path": "web/pl/_static/web_manual.css",
@@ -765,6 +770,11 @@
       "size": 7367
     },
     {
+      "path": "web/pl/assets/2fcc304ec9b8_pl-overview-front-no-heading.png",
+      "sha256": "2fcc304ec9b83893c5fe819e4632bd03a3703878cbfd187c882392c5926d9b0c",
+      "size": 89906
+    },
+    {
       "path": "web/pl/assets/3bafcc34c487_3bafcc34c487_3bafcc34c487_app.control.png",
       "sha256": "3bafcc34c487826771aec91e5d8ad3246bf8ee1bde8aa3ee46ff0e483d077c2c",
       "size": 14930
@@ -788,11 +798,6 @@
       "path": "web/pl/assets/58c1d3604ca7_58c1d3604ca7_58c1d3604ca7_26_Output_Power_PviebR618oofvKxcKVRcHLlInqd.png",
       "sha256": "58c1d3604ca7b9774b069c6928775a13465ccb9477f477e9e4d4b30e7f75b88d",
       "size": 6085
-    },
-    {
-      "path": "web/pl/assets/5d68d8009562_5d68d8009562_pl-overview-front.png",
-      "sha256": "5d68d8009562f392cefd656b9b2c48491598b69a6a62317c8247713ceaddf177",
-      "size": 93419
     },
     {
       "path": "web/pl/assets/5f2a58121306_5f2a58121306_5f2a58121306_app_download_qr.png",
@@ -945,11 +950,6 @@
       "size": 64361
     },
     {
-      "path": "web/pl/assets/d3b7e43d523f_d3b7e43d523f_pl-overview-right.png",
-      "sha256": "d3b7e43d523f59ea739e23b2558019b1d5ccaf59e0557f3bcc85554424690159",
-      "size": 48126
-    },
-    {
       "path": "web/pl/assets/d5100a538e96_d5100a538e96_d5100a538e96_10_Input_Power_LOAZbnxfqoHFwIxx2Myc532jnzb.png",
       "sha256": "d5100a538e964da13e04241a98134e6aeaa36af8991aceeecac3c5d063b6968b",
       "size": 4730
@@ -995,6 +995,11 @@
       "size": 46884
     },
     {
+      "path": "web/pl/assets/faadda716e35_pl-overview-right-no-heading.png",
+      "sha256": "faadda716e35ab4f1874396d6293197579251bcf1f9542f74f95cabb20a27827",
+      "size": 43762
+    },
+    {
       "path": "web/pl/assets/fc4cc02b42ef_fc4cc02b42ef_fc4cc02b42ef_1_Wi-Fi_KCcAbdDk7o4RjKx82micuKJ5nyf.png",
       "sha256": "fc4cc02b42efc31a32429ada2b78c4480a2fcbca647406da29b2ce75a8a8c1dc",
       "size": 1814
@@ -1011,13 +1016,13 @@
     },
     {
       "path": "web/pl/manual.ir.json",
-      "sha256": "4c5cb644859a5f70fdc7bb752d59a960b4714744d55acf867c9495436208e944",
-      "size": 576744
+      "sha256": "0dcad711297b00ee254788a827bc24890f7691b6aa32d276f30481f2705b5365",
+      "size": 576197
     },
     {
       "path": "web/pl/manual_je1000f_eu_pl.md",
-      "sha256": "5660b1146373e08ed3c4f69813a20242ca515ee9dff6ae5d0eb427b390e17db1",
-      "size": 82666
+      "sha256": "76cc15972cac15adcb70c9be69882d8f4b4d6dc92be55a648203e0471232d3ef",
+      "size": 82600
     },
     {
       "path": "web/pt/_static/web_manual.css",
@@ -1090,6 +1095,11 @@
       "size": 68090
     },
     {
+      "path": "web/pt/assets/4b8beece8116_pt-overview-front-no-heading.png",
+      "sha256": "4b8beece81163c3a2db0704299361f75fd1c075d3b69c1c82e5abae9b521f54e",
+      "size": 86575
+    },
+    {
       "path": "web/pt/assets/58138a11bdcb_58138a11bdcb_58138a11bdcb_overview-front.png",
       "sha256": "58138a11bdcb513337870c37bd0b661c43c7f391565797cad45463ffe2d01895",
       "size": 58814
@@ -1140,9 +1150,9 @@
       "size": 3553
     },
     {
-      "path": "web/pt/assets/79d1c219ead9_79d1c219ead9_pt-overview-right.png",
-      "sha256": "79d1c219ead911fa501e5838af96c43f9921a61c9a2987414fe6278ab04c3f79",
-      "size": 44369
+      "path": "web/pt/assets/7b75e299d332_pt-overview-right-no-heading.png",
+      "sha256": "7b75e299d332e61ddf84ffe77f4d69613b2ebe77006ab1f1a38761c7a95d04e6",
+      "size": 40997
     },
     {
       "path": "web/pt/assets/7e1392ba6a45_7e1392ba6a45_7e1392ba6a45_2_Bluetooth_HVgvbJhq5o4EDKxhm7McCF4FnjB.png",
@@ -1193,11 +1203,6 @@
       "path": "web/pt/assets/91cec82eeaa5_91cec82eeaa5_91cec82eeaa5_14_Solar_Charging_Indicator_RgAUbPXNWoRxiHxKNgkc2gqDnEb.png",
       "sha256": "91cec82eeaa553477868d38789d68a4937cb11c5c4d794de74db1edddb3aeea4",
       "size": 3059
-    },
-    {
-      "path": "web/pt/assets/9566cd4abeee_9566cd4abeee_pt-overview-front.png",
-      "sha256": "9566cd4abeee8c86be9fd5af2a191646885587ac76b90a6f5cf6adee402d97d0",
-      "size": 90104
     },
     {
       "path": "web/pt/assets/9aa0c1668423_9aa0c1668423_9aa0c1668423_op_ups_mode_je1000f_eu_en.png",
@@ -1321,13 +1326,13 @@
     },
     {
       "path": "web/pt/manual.ir.json",
-      "sha256": "8640d0bf48476c59775a974fc5666383769d33d2b6423674d19a2377229b6c1d",
-      "size": 575072
+      "sha256": "02704858ba6bcd061eeeb0030ae88e730ca3572871f5d42c4026075f00efba37",
+      "size": 574525
     },
     {
       "path": "web/pt/manual_je1000f_eu_pt.md",
-      "sha256": "cac74033605553f29339e7de99a37cad8438b6e52a07ad2ea7755c3fa216232b",
-      "size": 80605
+      "sha256": "4dd5f60297187ab031474f3043bdc024c4d1cfee7d9b4494e299c694555c7bae",
+      "size": 80539
     },
     {
       "path": "web/uk/_static/web_manual.css",
@@ -1385,11 +1390,6 @@
       "size": 7367
     },
     {
-      "path": "web/uk/assets/31d711b04d44_31d711b04d44_uk-overview-right.png",
-      "sha256": "31d711b04d44f7bebf86eb261e419fce84e26796197390172de01c83ce762984",
-      "size": 46175
-    },
-    {
       "path": "web/uk/assets/3bafcc34c487_3bafcc34c487_3bafcc34c487_app.control.png",
       "sha256": "3bafcc34c487826771aec91e5d8ad3246bf8ee1bde8aa3ee46ff0e483d077c2c",
       "size": 14930
@@ -1423,6 +1423,11 @@
       "path": "web/uk/assets/6749bd38fdd0_6749bd38fdd0_6749bd38fdd0_warning_triangle.png",
       "sha256": "6749bd38fdd0b85af591d65d0d81ae591590aa5c35c7b0f72767057a953c5c67",
       "size": 4482
+    },
+    {
+      "path": "web/uk/assets/689d83ca9c97_uk-overview-right-no-heading.png",
+      "sha256": "689d83ca9c9774844e527224ff3efe44c07e2e284133f9bce04a61df4fa854d7",
+      "size": 43275
     },
     {
       "path": "web/uk/assets/6aab9a14900a_6aab9a14900a_6aab9a14900a_20_Discharge_Timer_DHPMbkjSWoiuALxJyJ8cWyQOn0e.png",
@@ -1525,11 +1530,6 @@
       "size": 112280
     },
     {
-      "path": "web/uk/assets/b77f660236c2_b77f660236c2_uk-overview-front.png",
-      "sha256": "b77f660236c22280171a990a9f885350cdcd0835a7b849ebf06cd7f1d2fed9b9",
-      "size": 92466
-    },
-    {
       "path": "web/uk/assets/bd1e161e7734_bd1e161e7734_bd1e161e7734_op_led_light_je1000f_eu_en.png",
       "sha256": "bd1e161e77343ed2e9cd99ea4ccdea96f4caa184102714f4ea48135583ea04b2",
       "size": 59862
@@ -1538,6 +1538,11 @@
       "path": "web/uk/assets/bdbf602db74a_bdbf602db74a_bdbf602db74a_24_Low_Temperature_Indicator_JDMEbD96noSbyWxbOnVcgip1nab.png",
       "sha256": "bdbf602db74ade39a2a162209c0ff535315dee5e27e4832b2e6a201764b6941a",
       "size": 2206
+    },
+    {
+      "path": "web/uk/assets/c1221434eb45_uk-overview-front-no-heading.png",
+      "sha256": "c1221434eb451168f9d540593e2ff8c72a2e95d18d55f4bdaeabf3d72b03d8c2",
+      "size": 89136
     },
     {
       "path": "web/uk/assets/c15858544727_c15858544727_c15858544727_ac-output.png",
@@ -1631,13 +1636,13 @@
     },
     {
       "path": "web/uk/manual.ir.json",
-      "sha256": "9fd14ca686cfd8e31595c0bcdf9c2551f5b5b421f9b6fbab1cb6ed8a746a7764",
-      "size": 616963
+      "sha256": "802fdf38f8646851414ed389597d153b049868e97290199ed883801da15b7d29",
+      "size": 616416
     },
     {
       "path": "web/uk/manual_je1000f_eu_uk.md",
-      "sha256": "26b4345d7ba5280efd7d4c7169ae6a57e50a19c0272f7cb714d6e1d1191f1596",
-      "size": 104608
+      "sha256": "5f7ac9dcbe76832b8e4975ca1b87c9aeffc568df1c51e6f1e924ae9e1a017f00",
+      "size": 104542
     }
   ]
 }
