@@ -3,11 +3,11 @@
   "model": "JE-1000F",
   "region": "EU",
   "language": "uk",
-  "version": "git-20260929-c38415f5-overview-headings",
-  "git_ref": "c691d87c33b690df5f0013a55c4e8149e6be2fc7",
+  "version": "git-20260929-c38415f5-auto-resume",
+  "git_ref": "643b67e3a100a699ca80080a0954468e544bb860",
   "source_manifest": {
     "path": "frozen_source_manifest.json",
-    "sha256": "3ccda35dfb1ae9ed694239b1e5cdab54d819f113def34fb10d597ef870f9d341"
+    "sha256": "f53fa0c2173d1aa8438e20128773bfe867b33ca42364cb6c3fa24b0a2ccad054"
   },
   "markdown": {
     "manual": "manual_je1000f_eu_uk.md",
@@ -314,16 +314,16 @@
       },
       {
         "path": "manual.ir.json",
-        "size": 616416,
-        "sha256": "802fdf38f8646851414ed389597d153b049868e97290199ed883801da15b7d29"
+        "size": 616041,
+        "sha256": "149d83db0a25da6dc24f4acd012dd1ff126e475f1ad45d346f0918cada9a657d"
       },
       {
         "path": "manual_je1000f_eu_uk.md",
-        "size": 104542,
-        "sha256": "5f7ac9dcbe76832b8e4975ca1b87c9aeffc568df1c51e6f1e924ae9e1a017f00"
+        "size": 105277,
+        "sha256": "c0db41969a958df633da5b9fb5a7fde61c9da518cd9a9dbef42ca6324c55095f"
       }
     ],
-    "sha256": "b1f1d2e5528aa1d417913c0ce4a95681c88c88ae97afec9a3f50909112d26e74"
+    "sha256": "e35364ba363869f01d9ae316ac76ddef8dac17aed98999b2feae38f881cc29f1"
   },
   "html": {
     "files": [
@@ -339,8 +339,8 @@
       },
       {
         "path": "_sources/manual_je1000f_eu_uk.md.txt",
-        "size": 104542,
-        "sha256": "5f7ac9dcbe76832b8e4975ca1b87c9aeffc568df1c51e6f1e924ae9e1a017f00"
+        "size": 105277,
+        "sha256": "c0db41969a958df633da5b9fb5a7fde61c9da518cd9a9dbef42ca6324c55095f"
       },
       {
         "path": "_static/basic.css",
@@ -735,17 +735,17 @@
       {
         "path": "genindex.html",
         "size": 14363,
-        "sha256": "24131c4e8e6c2cefa7786ad215da74d6dda9809e178a1a428986535a733a519c"
+        "sha256": "e478b7a6ffe29e1891277c710e5b4b21d3d3cebcc8338e4bb5fb87ebaf04d908"
       },
       {
         "path": "index.html",
         "size": 20874,
-        "sha256": "52c3c1b24238a9118a5594b1ac80271dbb4f24dcdbc82ea26ece0788ba710fbc"
+        "sha256": "4834f9be2b499e4716603738b0058df9171a41dff084621789f348da68dc6c4e"
       },
       {
         "path": "manual_je1000f_eu_uk.html",
-        "size": 124005,
-        "sha256": "10e251ff3856986f43942fe43317cf6247297e8489eab7f84e9f78f60d2ca6a0"
+        "size": 124531,
+        "sha256": "1556bd4972e5ce12c7f0aff7412f24c6a5c9ba434008eb6e4dfbf243e042db6d"
       },
       {
         "path": "objects.inv",
@@ -755,14 +755,14 @@
       {
         "path": "search.html",
         "size": 14633,
-        "sha256": "6653335ae6e631c046009dd2090167642a8e508acc6f439ea0996e137eb425e9"
+        "sha256": "216cb2067959870b195869cb6ef5f7b565d1f1f15bf9a72739fa6df171ccc5ba"
       },
       {
         "path": "searchindex.js",
-        "size": 84127,
-        "sha256": "e42534a7c658a9684aa66dc0ca6e5d5a4542860ab96648424e93c63359fa5b13"
+        "size": 84004,
+        "sha256": "7a5128c465a0ee2bf52bb7fb364c3d4686b0d7f3d4ad79bd261d2146fdeb1352"
       }
     ],
-    "sha256": "5b660a63478edfecd3c1277900c26b92bcc70459fe07c500ae8410c3e124d4cc"
+    "sha256": "e09397787fd67294b9b37d14ea53ac50f11e01c1edfcefc5aab88aaa8522b433"
   }
 }

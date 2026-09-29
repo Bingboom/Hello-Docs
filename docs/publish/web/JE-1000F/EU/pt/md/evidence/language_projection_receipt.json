@@ -3,11 +3,11 @@
   "model": "JE-1000F",
   "region": "EU",
   "language": "pt",
-  "version": "git-20260929-c38415f5-overview-headings",
-  "git_ref": "c691d87c33b690df5f0013a55c4e8149e6be2fc7",
+  "version": "git-20260929-c38415f5-auto-resume",
+  "git_ref": "643b67e3a100a699ca80080a0954468e544bb860",
   "source_manifest": {
     "path": "frozen_source_manifest.json",
-    "sha256": "3ccda35dfb1ae9ed694239b1e5cdab54d819f113def34fb10d597ef870f9d341"
+    "sha256": "f53fa0c2173d1aa8438e20128773bfe867b33ca42364cb6c3fa24b0a2ccad054"
   },
   "markdown": {
     "manual": "manual_je1000f_eu_pt.md",
@@ -314,16 +314,16 @@
       },
       {
         "path": "manual.ir.json",
-        "size": 574525,
-        "sha256": "02704858ba6bcd061eeeb0030ae88e730ca3572871f5d42c4026075f00efba37"
+        "size": 574150,
+        "sha256": "163468147c61d0b9e5fcd35603b365110f4d14bc16b19f5415c9ca7bb40483e1"
       },
       {
         "path": "manual_je1000f_eu_pt.md",
-        "size": 80539,
-        "sha256": "4dd5f60297187ab031474f3043bdc024c4d1cfee7d9b4494e299c694555c7bae"
+        "size": 81222,
+        "sha256": "fda61376d8d7f5f4c3cc22b127612281ece266f491f32b266a5af0bc14d121b6"
       }
     ],
-    "sha256": "34844421386d73b3d7ba99b7d50543111f419c73702ec19073f6b94a560795f1"
+    "sha256": "3880ae7d2f3d1f5e420d5a0f251abc3f39faeda0395991c96ccaeb376086b5d4"
   },
   "html": {
     "files": [
@@ -339,8 +339,8 @@
       },
       {
         "path": "_sources/manual_je1000f_eu_pt.md.txt",
-        "size": 80539,
-        "sha256": "4dd5f60297187ab031474f3043bdc024c4d1cfee7d9b4494e299c694555c7bae"
+        "size": 81222,
+        "sha256": "fda61376d8d7f5f4c3cc22b127612281ece266f491f32b266a5af0bc14d121b6"
       },
       {
         "path": "_static/base-stemmer.js",
@@ -759,8 +759,8 @@
       },
       {
         "path": "manual_je1000f_eu_pt.html",
-        "size": 101930,
-        "sha256": "dd83503dc9e7c6a02748291f5e58dd3c6978b17d84ee7825b7cab2037b349586"
+        "size": 102284,
+        "sha256": "54a2db60fa936a567d13ffb7107b3e430c2b76130b19adb45cbf7286700e6d67"
       },
       {
         "path": "objects.inv",
@@ -774,10 +774,10 @@
       },
       {
         "path": "searchindex.js",
-        "size": 16011,
-        "sha256": "7ea36981ade8b2d6f52d837391d23984f6146682dca64de7470227f25daf0f53"
+        "size": 15848,
+        "sha256": "a3bc8aabd2d9ea17733a0db9a7dd03dbee96bcdedb2e1a6bc63cbf3958583761"
       }
     ],
-    "sha256": "90986e5f3cfb0607a373b7785e07b06328d3a60d2144732e0281cfee5ccda177"
+    "sha256": "39d704437b7014e05bd1bb5fccc68db7fd8e611fd08efaeee026b1f9381cd153"
   }
 }

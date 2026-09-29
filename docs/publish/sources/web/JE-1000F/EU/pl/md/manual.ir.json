@@ -57,8 +57,8 @@
     "assets/23cde742b301_23cde742b301_23cde742b301_connect_result_je1000f_eu.png"
   ],
   "bundle_root": "frozen-source",
-  "bundle_sha256": "3f957ba462f65b512978b020a475c34f41799aa70d6d3b3db78864d601ab7d7e",
-  "content_sha256": "4a8a33d39d858c07650dd6e302d8a4b9bf4eba94c1dfff63ccd7f00374bc0f7e",
+  "bundle_sha256": "fc7a68905b801eb6f01d305bb8e028a66bbf437c14ec340f7fd5df4a86abf714",
+  "content_sha256": "08776dec51353e80614e26800f39aa2c58b49f66d87681e845a625e0091b115d",
   "language": "pl",
   "layout_params_sha256": "f5ae099abc1a82ffda3abcc5a13725aca3c201e720a0374d88d1643f9773f279",
   "metadata": {
@@ -121,7 +121,7 @@
       "assets/faadda716e35_pl-overview-right-no-heading.png": "faadda716e35ab4f1874396d6293197579251bcf1f9542f74f95cabb20a27827",
       "assets/fc4cc02b42ef_fc4cc02b42ef_fc4cc02b42ef_1_Wi-Fi_KCcAbdDk7o4RjKx82micuKJ5nyf.png": "fc4cc02b42efc31a32429ada2b78c4480a2fcbca647406da29b2ce75a8a8c1dc"
     },
-    "block_count": 134,
+    "block_count": 131,
     "component_inventory": {
       "HB-CALLOUT-STRIP": 14,
       "HB-SPECIAL-APP": 3,
@@ -129,6 +129,7 @@
       "HB-SPECIAL-OPERATION": 5,
       "HB-SPECIAL-OVERVIEW": 1,
       "HB-SPECIAL-REFERENCE-FIGURE": 7,
+      "HB-TABLE-AUTO-RESUME": 1,
       "HB-TABLE-LCD-ICON": 1,
       "HB-TABLE-LCD-MODE": 1,
       "HB-TABLE-SPEC": 4,
@@ -704,6 +705,51 @@
             "approved-composite"
           ]
         },
+        "HB-TABLE-AUTO-RESUME": {
+          "adapters": {
+            "idml": {
+              "capability": "projection-only",
+              "key": "idml_auto_resume"
+            },
+            "latex": {
+              "capability": "projection-only",
+              "key": "hb_latex_auto_resume"
+            },
+            "web": {
+              "capability": "rendered",
+              "key": "hb_auto_resume"
+            },
+            "word": {
+              "capability": "projection-only",
+              "key": "word_auto_resume"
+            }
+          },
+          "asset_roles": {},
+          "slots": {
+            "conditions": {
+              "content_kinds": [
+                "ordered_columns"
+              ],
+              "required": true
+            },
+            "headers": {
+              "content_kinds": [
+                "ordered_headers"
+              ],
+              "required": true
+            }
+          },
+          "source_kinds": [
+            "table_auto_resume"
+          ],
+          "style_id": "HB-TABLE-AUTO-RESUME",
+          "token_roles": [
+            "component.table.auto-resume"
+          ],
+          "variants": [
+            "two-column-middle-span"
+          ]
+        },
         "HB-TABLE-LCD-ICON": {
           "adapters": {
             "idml": {
@@ -1167,7 +1213,7 @@
       "registry_id": "hb-component-registry",
       "schema_version": "component-registry/v1"
     },
-    "component_registry_sha256": "a7dde24cc246291946d935526a6f9d4bffd20e0c8c44464a06bf075f0bcd15e9",
+    "component_registry_sha256": "6f0ad07bc59ffd39d3add687055dc2d6ff3106a83a973422b70a84fbd21cf47a",
     "composites": [
       {
         "asset_key": "overview.finished.pl.front",
@@ -1255,7 +1301,7 @@
       }
     ],
     "frozen_source_manifest": {
-      "artwork_manifest_sha256": "8ac0ddaa9753eaf676b3141c0747cc4b3ec167dd27ccdec4bd52a344de8e6ea5",
+      "artwork_manifest_sha256": "25b4a659c18a2d73cd4b283352d9db9d7c45282f415f866c339e78fc7e5a2fff",
       "geometry_recipe_sha256": "914c5002d3b387494527958a3c2559b0a5d419ffd651f2f34f78aa365c458766",
       "intake_method": "fresh-native-pdf-text",
       "original_source": {
@@ -1276,7 +1322,7 @@
         "model": "JE-1000F",
         "printed_manual_version": null,
         "region": "EU",
-        "technical_version": "git-20260929-c38415f5-overview-headings"
+        "technical_version": "git-20260929-c38415f5-auto-resume"
       },
       "text_source": {
         "filename": "HTE153-nine-language-native-text-check.pdf",
@@ -1370,6 +1416,20 @@
             "surface.paper",
             "border.strong",
             "radius.panel",
+            "type.table.value",
+            "width.component-band"
+          ]
+        },
+        "component.table.auto-resume": {
+          "component_ids": [
+            "HB-TABLE-AUTO-RESUME"
+          ],
+          "theme_roles": [
+            "surface.paper",
+            "surface.muted",
+            "border.strong",
+            "radius.panel",
+            "type.table.label",
             "type.table.value",
             "width.component-band"
           ]
@@ -1820,7 +1880,7 @@
       "schema_version": "manual-theme/v1",
       "theme_id": "hb-manual-default"
     },
-    "manual_theme_sha256": "c5f1c0fd1f1a0ff96711b5983147b766d7fb4fe1043c22217aa27d29046e69cf",
+    "manual_theme_sha256": "e9cf0ac664bf94941f89735e5294796d8eb4ec8c96b81dd83a506e5e3de17e53",
     "markdown_filename": "manual_je1000f_eu_pl.md",
     "overview_instance": {
       "component_id": "HB-SPECIAL-OVERVIEW",
@@ -11050,17 +11110,49 @@
         {
           "asset_refs": [],
           "block_id": "operations:block-0024",
-          "content_sha256": "f65485daebbf9c9182cd91c0c9eeaa447626c5ab6874ca2ceb266c40eb7f4e3d",
+          "content_sha256": "56a1e1f9c3be9d1473f313afdb098514368f53539530c9f9bbd4c9fe88bc7a42",
           "kind": "flow",
           "payload": {
-            "children": [
-              {
-                "kind": "text",
-                "text": "Warunki automatycznego wznawiania"
-              }
-            ],
-            "kind": "heading",
-            "level": 3,
+            "component_spec": {
+              "assets": [],
+              "component_id": "HB-TABLE-AUTO-RESUME",
+              "language": "pl",
+              "metadata": {},
+              "schema_version": "component-spec/v1",
+              "slots": [
+                {
+                  "content": [
+                    "Warunki automatycznego wznawiania",
+                    "Warunki braku automatycznego wznawiania"
+                  ],
+                  "content_kind": "ordered_headers",
+                  "role": "headers"
+                },
+                {
+                  "content": [
+                    [
+                      "Włączenie/ponowne uruchomienie po wyłączeniu lub restarcie",
+                      "Poziom naładowania baterii (SOC) ≥ limit rozładowania +10% po osiągnięciu limitu",
+                      "Zakończenie aktualizacji oprogramowania układowego"
+                    ],
+                    [
+                      "Ręczne wyłączenie wyjścia (przyciskiem lub w aplikacji)",
+                      "Wyłączenie wyjścia przez tryb oszczędzania energii",
+                      "Wyłączenie wyjścia w wyniku zadziałania zabezpieczenia",
+                      "Wyłączenie wyjścia przez licznik czasu rozładowania"
+                    ]
+                  ],
+                  "content_kind": "ordered_columns",
+                  "role": "conditions"
+                }
+              ],
+              "source_ref": "pl/operations/restore",
+              "token_roles": [
+                "component.table.auto-resume"
+              ],
+              "variant": "two-column-middle-span"
+            },
+            "kind": "component",
             "schema_version": "manual-flow/v2"
           },
           "source_ref": "pl/operations#block-24"
@@ -11068,115 +11160,6 @@
         {
           "asset_refs": [],
           "block_id": "operations:block-0025",
-          "content_sha256": "ffd29605e69feae723a972d055d37b3762c7ca64470cc63cad65cd9cd0b457f9",
-          "kind": "flow",
-          "payload": {
-            "children": [
-              {
-                "children": [
-                  {
-                    "kind": "text",
-                    "text": "Włączenie/ponowne uruchomienie po wyłączeniu lub restarcie"
-                  }
-                ],
-                "kind": "list_item"
-              },
-              {
-                "children": [
-                  {
-                    "kind": "text",
-                    "text": "Poziom naładowania baterii (SOC) ≥ limit rozładowania +10% po osiągnięciu limitu"
-                  }
-                ],
-                "kind": "list_item"
-              },
-              {
-                "children": [
-                  {
-                    "kind": "text",
-                    "text": "Zakończenie aktualizacji oprogramowania układowego"
-                  }
-                ],
-                "kind": "list_item"
-              }
-            ],
-            "kind": "list",
-            "ordered": false,
-            "schema_version": "manual-flow/v2"
-          },
-          "source_ref": "pl/operations#block-25"
-        },
-        {
-          "asset_refs": [],
-          "block_id": "operations:block-0026",
-          "content_sha256": "bd2d1d2ed1d4af086de6f788a9c863d1450f3e044c3dd8c296243afd4f22e9a3",
-          "kind": "flow",
-          "payload": {
-            "children": [
-              {
-                "kind": "text",
-                "text": "Warunki braku automatycznego wznawiania"
-              }
-            ],
-            "kind": "heading",
-            "level": 3,
-            "schema_version": "manual-flow/v2"
-          },
-          "source_ref": "pl/operations#block-26"
-        },
-        {
-          "asset_refs": [],
-          "block_id": "operations:block-0027",
-          "content_sha256": "28938061a78956bc21897d791cb4e804111d78da12bab0d4bbb2ee1c278b962c",
-          "kind": "flow",
-          "payload": {
-            "children": [
-              {
-                "children": [
-                  {
-                    "kind": "text",
-                    "text": "Ręczne wyłączenie wyjścia (przyciskiem lub w aplikacji)"
-                  }
-                ],
-                "kind": "list_item"
-              },
-              {
-                "children": [
-                  {
-                    "kind": "text",
-                    "text": "Wyłączenie wyjścia przez tryb oszczędzania energii"
-                  }
-                ],
-                "kind": "list_item"
-              },
-              {
-                "children": [
-                  {
-                    "kind": "text",
-                    "text": "Wyłączenie wyjścia w wyniku zadziałania zabezpieczenia"
-                  }
-                ],
-                "kind": "list_item"
-              },
-              {
-                "children": [
-                  {
-                    "kind": "text",
-                    "text": "Wyłączenie wyjścia przez licznik czasu rozładowania"
-                  }
-                ],
-                "kind": "list_item"
-              }
-            ],
-            "kind": "list",
-            "ordered": false,
-            "schema_version": "manual-flow/v2"
-          },
-          "source_ref": "pl/operations#block-27"
-        },
-        {
-          "asset_refs": [],
-          "block_id": "operations:block-0028",
           "content_sha256": "f5b31e54d7bab0eaf3264e4bbac976bee9d5463ed8aa255825a34a824d56e7d2",
           "kind": "flow",
           "payload": {
@@ -11190,11 +11173,11 @@
             "level": 2,
             "schema_version": "manual-flow/v2"
           },
-          "source_ref": "pl/operations#block-28"
+          "source_ref": "pl/operations#block-25"
         },
         {
           "asset_refs": [],
-          "block_id": "operations:block-0029",
+          "block_id": "operations:block-0026",
           "content_sha256": "8c30e0d9570106f0da5680a39d535dfe68f56e905f152ba865be2a01c9f8e90d",
           "kind": "flow",
           "payload": {
@@ -11403,7 +11386,7 @@
             "role": "container",
             "schema_version": "manual-flow/v2"
           },
-          "source_ref": "pl/operations#block-29"
+          "source_ref": "pl/operations#block-26"
         }
       ],
       "language": "pl",

@@ -108,13 +108,7 @@
 
 <p>Ця функція запам’ятовує стан виходу та автоматично відновлює виходи AC і DC за визначених умов.</p>
 
-### Умови автоматичного відновлення
-
-<ul><li>Увімкнення/перезапуск після вимкнення або перезапуску</li><li>Рівень заряду батареї ≥ межа розряду +10% після досягнення межі</li><li>Завершено OTA-оновлення</li></ul>
-
-### Умови без автоматичного відновлення
-
-<ul><li>Ручне вимкнення виходу (кнопка/додаток)</li><li>Вимкнення виходу в режимі енергозбереження</li><li>Вимкнення виходу через спрацювання захисту</li><li>Вимкнення виходу за таймером розряду</li></ul>
+<figure aria-label="Умови автоматичного відновлення / Умови без автоматичного відновлення" class="hb-auto-resume-composition" data-component-id="HB-TABLE-AUTO-RESUME" tabindex="0"><table class="hb-auto-resume-table"><colgroup><col class="hb-auto-resume-col"/><col class="hb-auto-resume-col"/></colgroup><thead><tr><th class="hb-auto-resume-left" scope="col">Умови автоматичного відновлення</th><th class="hb-auto-resume-right" scope="col">Умови без автоматичного відновлення</th></tr></thead><tbody><tr><td class="hb-auto-resume-left">Увімкнення/перезапуск після вимкнення або перезапуску</td><td class="hb-auto-resume-right">Ручне вимкнення виходу (кнопка/додаток)</td></tr><tr><td class="hb-auto-resume-left" rowspan="2">Рівень заряду батареї ≥ межа розряду +10% після досягнення межі</td><td class="hb-auto-resume-right">Вимкнення виходу в режимі енергозбереження</td></tr><tr><td class="hb-auto-resume-right">Вимкнення виходу через спрацювання захисту</td></tr><tr><td class="hb-auto-resume-left">Завершено OTA-оновлення</td><td class="hb-auto-resume-right">Вимкнення виходу за таймером розряду</td></tr></tbody></table></figure>
 
 ## КОМБІНАЦІЇ КЛАВІШ
 

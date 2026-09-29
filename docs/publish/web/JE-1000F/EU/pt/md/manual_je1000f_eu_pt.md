@@ -108,13 +108,7 @@
 
 <p>Esta função memoriza o estado das saídas e retoma automaticamente as saídas CA e CC sob condições definidas.</p>
 
-### Condições de retomada automática
-
-<ul><li>Ligação/reinicialização após desligamento ou reinício</li><li>SOC da bateria ≥ limite de descarga + 10% após atingir o limite</li><li>Atualização OTA concluída</li></ul>
-
-### Condições de não retomada automática
-
-<ul><li>Desligamento manual da saída (botão/App)</li><li>Desligamento da saída no modo de economia de energia</li><li>Desligamento da saída acionado pela proteção</li><li>Saída desligada pelo temporizador de descarga</li></ul>
+<figure aria-label="Condições de retomada automática / Condições de não retomada automática" class="hb-auto-resume-composition" data-component-id="HB-TABLE-AUTO-RESUME" tabindex="0"><table class="hb-auto-resume-table"><colgroup><col class="hb-auto-resume-col"/><col class="hb-auto-resume-col"/></colgroup><thead><tr><th class="hb-auto-resume-left" scope="col">Condições de retomada automática</th><th class="hb-auto-resume-right" scope="col">Condições de não retomada automática</th></tr></thead><tbody><tr><td class="hb-auto-resume-left">Ligação/reinicialização após desligamento ou reinício</td><td class="hb-auto-resume-right">Desligamento manual da saída (botão/App)</td></tr><tr><td class="hb-auto-resume-left" rowspan="2">SOC da bateria ≥ limite de descarga + 10% após atingir o limite</td><td class="hb-auto-resume-right">Desligamento da saída no modo de economia de energia</td></tr><tr><td class="hb-auto-resume-right">Desligamento da saída acionado pela proteção</td></tr><tr><td class="hb-auto-resume-left">Atualização OTA concluída</td><td class="hb-auto-resume-right">Saída desligada pelo temporizador de descarga</td></tr></tbody></table></figure>
 
 ## COMBINAÇÕES DE TECLAS
 
