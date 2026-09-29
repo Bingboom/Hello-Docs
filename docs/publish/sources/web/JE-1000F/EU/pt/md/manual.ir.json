@@ -57,8 +57,8 @@
     "assets/23cde742b301_23cde742b301_23cde742b301_connect_result_je1000f_eu.png"
   ],
   "bundle_root": "frozen-source",
-  "bundle_sha256": "3cda3e4dfd808f4849242b6d05f86a4cbc34735c44ed48cabe48f5c5c507acfb",
-  "content_sha256": "bb9dfbed3ceb424521a4fc11a8be4b54eb92cdf757270c7dc0a3d42f6777e5be",
+  "bundle_sha256": "77ad44fa960d62875749d5032c23059c16e4f8a28b542c0ada8e2897d288f81a",
+  "content_sha256": "48f7957b2b710c9ff147ad01309826f945d5958f1c62306e68379415522f0ecb",
   "language": "pt",
   "layout_params_sha256": "f5ae099abc1a82ffda3abcc5a13725aca3c201e720a0374d88d1643f9773f279",
   "metadata": {
@@ -121,7 +121,7 @@
       "assets/f9ed0c8d1dc1_f9ed0c8d1dc1_f9ed0c8d1dc1_op_lcd_mode_je1000f_eu_en.png": "f9ed0c8d1dc17b00daad2ba6a13053a2b45527527b15c41d83d353df890740bb",
       "assets/fc4cc02b42ef_fc4cc02b42ef_fc4cc02b42ef_1_Wi-Fi_KCcAbdDk7o4RjKx82micuKJ5nyf.png": "fc4cc02b42efc31a32429ada2b78c4480a2fcbca647406da29b2ce75a8a8c1dc"
     },
-    "block_count": 138,
+    "block_count": 135,
     "component_inventory": {
       "HB-CALLOUT-STRIP": 14,
       "HB-SPECIAL-APP": 3,
@@ -129,6 +129,7 @@
       "HB-SPECIAL-OPERATION": 5,
       "HB-SPECIAL-OVERVIEW": 1,
       "HB-SPECIAL-REFERENCE-FIGURE": 7,
+      "HB-TABLE-AUTO-RESUME": 1,
       "HB-TABLE-LCD-ICON": 1,
       "HB-TABLE-LCD-MODE": 1,
       "HB-TABLE-SPEC": 4,
@@ -704,6 +705,51 @@
             "approved-composite"
           ]
         },
+        "HB-TABLE-AUTO-RESUME": {
+          "adapters": {
+            "idml": {
+              "capability": "projection-only",
+              "key": "idml_auto_resume"
+            },
+            "latex": {
+              "capability": "projection-only",
+              "key": "hb_latex_auto_resume"
+            },
+            "web": {
+              "capability": "rendered",
+              "key": "hb_auto_resume"
+            },
+            "word": {
+              "capability": "projection-only",
+              "key": "word_auto_resume"
+            }
+          },
+          "asset_roles": {},
+          "slots": {
+            "conditions": {
+              "content_kinds": [
+                "ordered_columns"
+              ],
+              "required": true
+            },
+            "headers": {
+              "content_kinds": [
+                "ordered_headers"
+              ],
+              "required": true
+            }
+          },
+          "source_kinds": [
+            "table_auto_resume"
+          ],
+          "style_id": "HB-TABLE-AUTO-RESUME",
+          "token_roles": [
+            "component.table.auto-resume"
+          ],
+          "variants": [
+            "two-column-middle-span"
+          ]
+        },
         "HB-TABLE-LCD-ICON": {
           "adapters": {
             "idml": {
@@ -1167,7 +1213,7 @@
       "registry_id": "hb-component-registry",
       "schema_version": "component-registry/v1"
     },
-    "component_registry_sha256": "a7dde24cc246291946d935526a6f9d4bffd20e0c8c44464a06bf075f0bcd15e9",
+    "component_registry_sha256": "6f0ad07bc59ffd39d3add687055dc2d6ff3106a83a973422b70a84fbd21cf47a",
     "composites": [
       {
         "asset_key": "overview.finished.pt.front",
@@ -1255,7 +1301,7 @@
       }
     ],
     "frozen_source_manifest": {
-      "artwork_manifest_sha256": "8ac0ddaa9753eaf676b3141c0747cc4b3ec167dd27ccdec4bd52a344de8e6ea5",
+      "artwork_manifest_sha256": "25b4a659c18a2d73cd4b283352d9db9d7c45282f415f866c339e78fc7e5a2fff",
       "geometry_recipe_sha256": "914c5002d3b387494527958a3c2559b0a5d419ffd651f2f34f78aa365c458766",
       "intake_method": "fresh-native-pdf-text",
       "original_source": {
@@ -1276,7 +1322,7 @@
         "model": "JE-1000F",
         "printed_manual_version": null,
         "region": "EU",
-        "technical_version": "git-20260929-c38415f5-overview-headings"
+        "technical_version": "git-20260929-c38415f5-auto-resume"
       },
       "text_source": {
         "filename": "HTE153-nine-language-native-text-check.pdf",
@@ -1370,6 +1416,20 @@
             "surface.paper",
             "border.strong",
             "radius.panel",
+            "type.table.value",
+            "width.component-band"
+          ]
+        },
+        "component.table.auto-resume": {
+          "component_ids": [
+            "HB-TABLE-AUTO-RESUME"
+          ],
+          "theme_roles": [
+            "surface.paper",
+            "surface.muted",
+            "border.strong",
+            "radius.panel",
+            "type.table.label",
             "type.table.value",
             "width.component-band"
           ]
@@ -1820,7 +1880,7 @@
       "schema_version": "manual-theme/v1",
       "theme_id": "hb-manual-default"
     },
-    "manual_theme_sha256": "c5f1c0fd1f1a0ff96711b5983147b766d7fb4fe1043c22217aa27d29046e69cf",
+    "manual_theme_sha256": "e9cf0ac664bf94941f89735e5294796d8eb4ec8c96b81dd83a506e5e3de17e53",
     "markdown_filename": "manual_je1000f_eu_pt.md",
     "overview_instance": {
       "component_id": "HB-SPECIAL-OVERVIEW",
@@ -11056,17 +11116,49 @@
         {
           "asset_refs": [],
           "block_id": "operations:block-0024",
-          "content_sha256": "662112f0eb88275985798131c9781e0ab33c70f28830a010ab30afac035695dc",
+          "content_sha256": "c9c29cebbc69610707b8a63b9ddf02a2b2b117b864f9e5902e534967166bdad3",
           "kind": "flow",
           "payload": {
-            "children": [
-              {
-                "kind": "text",
-                "text": "Condições de retomada automática"
-              }
-            ],
-            "kind": "heading",
-            "level": 3,
+            "component_spec": {
+              "assets": [],
+              "component_id": "HB-TABLE-AUTO-RESUME",
+              "language": "pt",
+              "metadata": {},
+              "schema_version": "component-spec/v1",
+              "slots": [
+                {
+                  "content": [
+                    "Condições de retomada automática",
+                    "Condições de não retomada automática"
+                  ],
+                  "content_kind": "ordered_headers",
+                  "role": "headers"
+                },
+                {
+                  "content": [
+                    [
+                      "Ligação/reinicialização após desligamento ou reinício",
+                      "SOC da bateria ≥ limite de descarga + 10% após atingir o limite",
+                      "Atualização OTA concluída"
+                    ],
+                    [
+                      "Desligamento manual da saída (botão/App)",
+                      "Desligamento da saída no modo de economia de energia",
+                      "Desligamento da saída acionado pela proteção",
+                      "Saída desligada pelo temporizador de descarga"
+                    ]
+                  ],
+                  "content_kind": "ordered_columns",
+                  "role": "conditions"
+                }
+              ],
+              "source_ref": "pt/operations/restore",
+              "token_roles": [
+                "component.table.auto-resume"
+              ],
+              "variant": "two-column-middle-span"
+            },
+            "kind": "component",
             "schema_version": "manual-flow/v2"
           },
           "source_ref": "pt/operations#block-24"
@@ -11074,115 +11166,6 @@
         {
           "asset_refs": [],
           "block_id": "operations:block-0025",
-          "content_sha256": "f2e3cde0413f1acda8a08df5019d98b3ae5ae491ca5d35feeb8d2572afb7b453",
-          "kind": "flow",
-          "payload": {
-            "children": [
-              {
-                "children": [
-                  {
-                    "kind": "text",
-                    "text": "Ligação/reinicialização após desligamento ou reinício"
-                  }
-                ],
-                "kind": "list_item"
-              },
-              {
-                "children": [
-                  {
-                    "kind": "text",
-                    "text": "SOC da bateria ≥ limite de descarga + 10% após atingir o limite"
-                  }
-                ],
-                "kind": "list_item"
-              },
-              {
-                "children": [
-                  {
-                    "kind": "text",
-                    "text": "Atualização OTA concluída"
-                  }
-                ],
-                "kind": "list_item"
-              }
-            ],
-            "kind": "list",
-            "ordered": false,
-            "schema_version": "manual-flow/v2"
-          },
-          "source_ref": "pt/operations#block-25"
-        },
-        {
-          "asset_refs": [],
-          "block_id": "operations:block-0026",
-          "content_sha256": "2143c3a805e5262a4cdba3efd2a55f2f7e152485873dfb8b1790559cad4c6fdd",
-          "kind": "flow",
-          "payload": {
-            "children": [
-              {
-                "kind": "text",
-                "text": "Condições de não retomada automática"
-              }
-            ],
-            "kind": "heading",
-            "level": 3,
-            "schema_version": "manual-flow/v2"
-          },
-          "source_ref": "pt/operations#block-26"
-        },
-        {
-          "asset_refs": [],
-          "block_id": "operations:block-0027",
-          "content_sha256": "d9b7ab1e780d0636e7486a233e3b3dad3b84bd433cb8bebb7cc253ac6c69ed97",
-          "kind": "flow",
-          "payload": {
-            "children": [
-              {
-                "children": [
-                  {
-                    "kind": "text",
-                    "text": "Desligamento manual da saída (botão/App)"
-                  }
-                ],
-                "kind": "list_item"
-              },
-              {
-                "children": [
-                  {
-                    "kind": "text",
-                    "text": "Desligamento da saída no modo de economia de energia"
-                  }
-                ],
-                "kind": "list_item"
-              },
-              {
-                "children": [
-                  {
-                    "kind": "text",
-                    "text": "Desligamento da saída acionado pela proteção"
-                  }
-                ],
-                "kind": "list_item"
-              },
-              {
-                "children": [
-                  {
-                    "kind": "text",
-                    "text": "Saída desligada pelo temporizador de descarga"
-                  }
-                ],
-                "kind": "list_item"
-              }
-            ],
-            "kind": "list",
-            "ordered": false,
-            "schema_version": "manual-flow/v2"
-          },
-          "source_ref": "pt/operations#block-27"
-        },
-        {
-          "asset_refs": [],
-          "block_id": "operations:block-0028",
           "content_sha256": "08a3889f6a83ac08bf7d4c85cad40075df06ff1764b7c9188f63d56976060211",
           "kind": "flow",
           "payload": {
@@ -11196,11 +11179,11 @@
             "level": 2,
             "schema_version": "manual-flow/v2"
           },
-          "source_ref": "pt/operations#block-28"
+          "source_ref": "pt/operations#block-25"
         },
         {
           "asset_refs": [],
-          "block_id": "operations:block-0029",
+          "block_id": "operations:block-0026",
           "content_sha256": "9900933aea56f7dcf5ed5aeef9dc9f41c05c5253c0f31214ac7396a5302dba85",
           "kind": "flow",
           "payload": {
@@ -11409,7 +11392,7 @@
             "role": "container",
             "schema_version": "manual-flow/v2"
           },
-          "source_ref": "pt/operations#block-29"
+          "source_ref": "pt/operations#block-26"
         }
       ],
       "language": "pt",

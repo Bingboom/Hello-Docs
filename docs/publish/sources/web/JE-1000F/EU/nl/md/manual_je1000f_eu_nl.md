@@ -110,13 +110,7 @@
 
 <p>Deze functie onthoudt de uitgangsstatus en hervat automatisch de AC- en DC-uitgangen onder gedefinieerde voorwaarden.</p>
 
-### Voorwaarden voor automatisch hervatten
-
-<ul><li>Inschakelen/herstarten na uitschakelen of herstarten</li><li>Batterij-SOC ≥ ontlaadlimiet +10% na het bereiken van de limiet</li><li>OTA-upgrade voltooid</li></ul>
-
-### Voorwaarden voor niet-automatisch hervatten
-
-<ul><li>Handmatige uitvoer uitschakelen (knop/App)</li><li>Uitschakeling van de uitgang door Energiebesparingsmodus</li><li>Uitschakeling van de uitgang door geactiveerde beveiliging</li><li>Uitschakeling van de uitgang door de ontladingstimer</li></ul>
+<figure aria-label="Voorwaarden voor automatisch hervatten / Voorwaarden voor niet-automatisch hervatten" class="hb-auto-resume-composition" data-component-id="HB-TABLE-AUTO-RESUME" tabindex="0"><table class="hb-auto-resume-table"><colgroup><col class="hb-auto-resume-col"/><col class="hb-auto-resume-col"/></colgroup><thead><tr><th class="hb-auto-resume-left" scope="col">Voorwaarden voor automatisch hervatten</th><th class="hb-auto-resume-right" scope="col">Voorwaarden voor niet-automatisch hervatten</th></tr></thead><tbody><tr><td class="hb-auto-resume-left">Inschakelen/herstarten na uitschakelen of herstarten</td><td class="hb-auto-resume-right">Handmatige uitvoer uitschakelen (knop/App)</td></tr><tr><td class="hb-auto-resume-left" rowspan="2">Batterij-SOC ≥ ontlaadlimiet +10% na het bereiken van de limiet</td><td class="hb-auto-resume-right">Uitschakeling van de uitgang door Energiebesparingsmodus</td></tr><tr><td class="hb-auto-resume-right">Uitschakeling van de uitgang door geactiveerde beveiliging</td></tr><tr><td class="hb-auto-resume-left">OTA-upgrade voltooid</td><td class="hb-auto-resume-right">Uitschakeling van de uitgang door de ontladingstimer</td></tr></tbody></table></figure>
 
 ## TOETSCOMBINATIES
 

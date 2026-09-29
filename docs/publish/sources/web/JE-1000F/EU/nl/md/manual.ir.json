@@ -57,8 +57,8 @@
     "assets/23cde742b301_23cde742b301_23cde742b301_connect_result_je1000f_eu.png"
   ],
   "bundle_root": "frozen-source",
-  "bundle_sha256": "eef89c1230cac6417d8eacf2bd7f7b4ba96ba745a1ad37c8b7f560f56030116e",
-  "content_sha256": "4501690bccb98c3928b91f5c6e4394bed6e5e860297e85ad191c3352daf5adff",
+  "bundle_sha256": "3fc3310ce81be2b6496f50ff21c96339c74d8f654b349ef22ad42bd3f277db7c",
+  "content_sha256": "062c2e4a45dab64bac6b16ef0abe4fdffb26850c16744f760042c642092764fd",
   "language": "nl",
   "layout_params_sha256": "f5ae099abc1a82ffda3abcc5a13725aca3c201e720a0374d88d1643f9773f279",
   "metadata": {
@@ -121,7 +121,7 @@
       "assets/f9ed0c8d1dc1_f9ed0c8d1dc1_f9ed0c8d1dc1_op_lcd_mode_je1000f_eu_en.png": "f9ed0c8d1dc17b00daad2ba6a13053a2b45527527b15c41d83d353df890740bb",
       "assets/fc4cc02b42ef_fc4cc02b42ef_fc4cc02b42ef_1_Wi-Fi_KCcAbdDk7o4RjKx82micuKJ5nyf.png": "fc4cc02b42efc31a32429ada2b78c4480a2fcbca647406da29b2ce75a8a8c1dc"
     },
-    "block_count": 136,
+    "block_count": 133,
     "component_inventory": {
       "HB-CALLOUT-STRIP": 14,
       "HB-SPECIAL-APP": 3,
@@ -129,6 +129,7 @@
       "HB-SPECIAL-OPERATION": 5,
       "HB-SPECIAL-OVERVIEW": 1,
       "HB-SPECIAL-REFERENCE-FIGURE": 7,
+      "HB-TABLE-AUTO-RESUME": 1,
       "HB-TABLE-LCD-ICON": 1,
       "HB-TABLE-LCD-MODE": 1,
       "HB-TABLE-SPEC": 4,
@@ -704,6 +705,51 @@
             "approved-composite"
           ]
         },
+        "HB-TABLE-AUTO-RESUME": {
+          "adapters": {
+            "idml": {
+              "capability": "projection-only",
+              "key": "idml_auto_resume"
+            },
+            "latex": {
+              "capability": "projection-only",
+              "key": "hb_latex_auto_resume"
+            },
+            "web": {
+              "capability": "rendered",
+              "key": "hb_auto_resume"
+            },
+            "word": {
+              "capability": "projection-only",
+              "key": "word_auto_resume"
+            }
+          },
+          "asset_roles": {},
+          "slots": {
+            "conditions": {
+              "content_kinds": [
+                "ordered_columns"
+              ],
+              "required": true
+            },
+            "headers": {
+              "content_kinds": [
+                "ordered_headers"
+              ],
+              "required": true
+            }
+          },
+          "source_kinds": [
+            "table_auto_resume"
+          ],
+          "style_id": "HB-TABLE-AUTO-RESUME",
+          "token_roles": [
+            "component.table.auto-resume"
+          ],
+          "variants": [
+            "two-column-middle-span"
+          ]
+        },
         "HB-TABLE-LCD-ICON": {
           "adapters": {
             "idml": {
@@ -1167,7 +1213,7 @@
       "registry_id": "hb-component-registry",
       "schema_version": "component-registry/v1"
     },
-    "component_registry_sha256": "a7dde24cc246291946d935526a6f9d4bffd20e0c8c44464a06bf075f0bcd15e9",
+    "component_registry_sha256": "6f0ad07bc59ffd39d3add687055dc2d6ff3106a83a973422b70a84fbd21cf47a",
     "composites": [
       {
         "asset_key": "overview.finished.nl.front",
@@ -1255,7 +1301,7 @@
       }
     ],
     "frozen_source_manifest": {
-      "artwork_manifest_sha256": "8ac0ddaa9753eaf676b3141c0747cc4b3ec167dd27ccdec4bd52a344de8e6ea5",
+      "artwork_manifest_sha256": "25b4a659c18a2d73cd4b283352d9db9d7c45282f415f866c339e78fc7e5a2fff",
       "geometry_recipe_sha256": "914c5002d3b387494527958a3c2559b0a5d419ffd651f2f34f78aa365c458766",
       "intake_method": "fresh-native-pdf-text",
       "original_source": {
@@ -1276,7 +1322,7 @@
         "model": "JE-1000F",
         "printed_manual_version": null,
         "region": "EU",
-        "technical_version": "git-20260929-c38415f5-overview-headings"
+        "technical_version": "git-20260929-c38415f5-auto-resume"
       },
       "text_source": {
         "filename": "HTE153-nine-language-native-text-check.pdf",
@@ -1370,6 +1416,20 @@
             "surface.paper",
             "border.strong",
             "radius.panel",
+            "type.table.value",
+            "width.component-band"
+          ]
+        },
+        "component.table.auto-resume": {
+          "component_ids": [
+            "HB-TABLE-AUTO-RESUME"
+          ],
+          "theme_roles": [
+            "surface.paper",
+            "surface.muted",
+            "border.strong",
+            "radius.panel",
+            "type.table.label",
             "type.table.value",
             "width.component-band"
           ]
@@ -1820,7 +1880,7 @@
       "schema_version": "manual-theme/v1",
       "theme_id": "hb-manual-default"
     },
-    "manual_theme_sha256": "c5f1c0fd1f1a0ff96711b5983147b766d7fb4fe1043c22217aa27d29046e69cf",
+    "manual_theme_sha256": "e9cf0ac664bf94941f89735e5294796d8eb4ec8c96b81dd83a506e5e3de17e53",
     "markdown_filename": "manual_je1000f_eu_nl.md",
     "overview_instance": {
       "component_id": "HB-SPECIAL-OVERVIEW",
@@ -11125,17 +11185,49 @@
         {
           "asset_refs": [],
           "block_id": "operations:block-0024",
-          "content_sha256": "42d94c37ebb247834ab17fefb5c441f9d4aa213bd20d22f032d0d7ca3de8c0b9",
+          "content_sha256": "4b7f6551e9ed6cd5f3c41812a213f53221f4190572364623aefa3058797dc9ba",
           "kind": "flow",
           "payload": {
-            "children": [
-              {
-                "kind": "text",
-                "text": "Voorwaarden voor automatisch hervatten"
-              }
-            ],
-            "kind": "heading",
-            "level": 3,
+            "component_spec": {
+              "assets": [],
+              "component_id": "HB-TABLE-AUTO-RESUME",
+              "language": "nl",
+              "metadata": {},
+              "schema_version": "component-spec/v1",
+              "slots": [
+                {
+                  "content": [
+                    "Voorwaarden voor automatisch hervatten",
+                    "Voorwaarden voor niet-automatisch hervatten"
+                  ],
+                  "content_kind": "ordered_headers",
+                  "role": "headers"
+                },
+                {
+                  "content": [
+                    [
+                      "Inschakelen/herstarten na uitschakelen of herstarten",
+                      "Batterij-SOC ≥ ontlaadlimiet +10% na het bereiken van de limiet",
+                      "OTA-upgrade voltooid"
+                    ],
+                    [
+                      "Handmatige uitvoer uitschakelen (knop/App)",
+                      "Uitschakeling van de uitgang door Energiebesparingsmodus",
+                      "Uitschakeling van de uitgang door geactiveerde beveiliging",
+                      "Uitschakeling van de uitgang door de ontladingstimer"
+                    ]
+                  ],
+                  "content_kind": "ordered_columns",
+                  "role": "conditions"
+                }
+              ],
+              "source_ref": "nl/operations/restore",
+              "token_roles": [
+                "component.table.auto-resume"
+              ],
+              "variant": "two-column-middle-span"
+            },
+            "kind": "component",
             "schema_version": "manual-flow/v2"
           },
           "source_ref": "nl/operations#block-24"
@@ -11143,115 +11235,6 @@
         {
           "asset_refs": [],
           "block_id": "operations:block-0025",
-          "content_sha256": "c4c47cece36aaae9ef650d4b041ad9cc0fe577ad1359db277df008c6a4401807",
-          "kind": "flow",
-          "payload": {
-            "children": [
-              {
-                "children": [
-                  {
-                    "kind": "text",
-                    "text": "Inschakelen/herstarten na uitschakelen of herstarten"
-                  }
-                ],
-                "kind": "list_item"
-              },
-              {
-                "children": [
-                  {
-                    "kind": "text",
-                    "text": "Batterij-SOC ≥ ontlaadlimiet +10% na het bereiken van de limiet"
-                  }
-                ],
-                "kind": "list_item"
-              },
-              {
-                "children": [
-                  {
-                    "kind": "text",
-                    "text": "OTA-upgrade voltooid"
-                  }
-                ],
-                "kind": "list_item"
-              }
-            ],
-            "kind": "list",
-            "ordered": false,
-            "schema_version": "manual-flow/v2"
-          },
-          "source_ref": "nl/operations#block-25"
-        },
-        {
-          "asset_refs": [],
-          "block_id": "operations:block-0026",
-          "content_sha256": "1bd82a77bb451a56b0173e6ceefadf0f5130dcaa89bcf60a343bf8cc01612399",
-          "kind": "flow",
-          "payload": {
-            "children": [
-              {
-                "kind": "text",
-                "text": "Voorwaarden voor niet-automatisch hervatten"
-              }
-            ],
-            "kind": "heading",
-            "level": 3,
-            "schema_version": "manual-flow/v2"
-          },
-          "source_ref": "nl/operations#block-26"
-        },
-        {
-          "asset_refs": [],
-          "block_id": "operations:block-0027",
-          "content_sha256": "bad09ab28cd8f68bfd2e33b51e85003bd12654ec62d1e2301b2dbb1807d682c2",
-          "kind": "flow",
-          "payload": {
-            "children": [
-              {
-                "children": [
-                  {
-                    "kind": "text",
-                    "text": "Handmatige uitvoer uitschakelen (knop/App)"
-                  }
-                ],
-                "kind": "list_item"
-              },
-              {
-                "children": [
-                  {
-                    "kind": "text",
-                    "text": "Uitschakeling van de uitgang door Energiebesparingsmodus"
-                  }
-                ],
-                "kind": "list_item"
-              },
-              {
-                "children": [
-                  {
-                    "kind": "text",
-                    "text": "Uitschakeling van de uitgang door geactiveerde beveiliging"
-                  }
-                ],
-                "kind": "list_item"
-              },
-              {
-                "children": [
-                  {
-                    "kind": "text",
-                    "text": "Uitschakeling van de uitgang door de ontladingstimer"
-                  }
-                ],
-                "kind": "list_item"
-              }
-            ],
-            "kind": "list",
-            "ordered": false,
-            "schema_version": "manual-flow/v2"
-          },
-          "source_ref": "nl/operations#block-27"
-        },
-        {
-          "asset_refs": [],
-          "block_id": "operations:block-0028",
           "content_sha256": "a73e5be246555dd67a354a300036190bd18736fb0a9c038b850da9009ec152aa",
           "kind": "flow",
           "payload": {
@@ -11265,11 +11248,11 @@
             "level": 2,
             "schema_version": "manual-flow/v2"
           },
-          "source_ref": "nl/operations#block-28"
+          "source_ref": "nl/operations#block-25"
         },
         {
           "asset_refs": [],
-          "block_id": "operations:block-0029",
+          "block_id": "operations:block-0026",
           "content_sha256": "efe5a32eb03d0bf3db507c181a054cf8b7b58557f5d6594f6904dbcc3900cb7c",
           "kind": "flow",
           "payload": {
@@ -11478,7 +11461,7 @@
             "role": "container",
             "schema_version": "manual-flow/v2"
           },
-          "source_ref": "nl/operations#block-29"
+          "source_ref": "nl/operations#block-26"
         }
       ],
       "language": "nl",

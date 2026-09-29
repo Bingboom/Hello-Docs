@@ -1,6 +1,6 @@
 {
   "schema_version": "auto-manual-web-publish-branch/v2",
-  "built_at": "2026-09-29T11:39:16.250522+00:00",
+  "built_at": "2026-09-29T12:42:47.906030+00:00",
   "targets": [
     {
       "schema_version": "auto-manual-web-publish-target/v2",
@@ -288,14 +288,14 @@
       "model": "JE-1000F",
       "region": "EU",
       "lang": "nl",
-      "version": "git-20260929-c38415f5-overview-headings",
-      "built_at": "2026-09-29T11:39:16.250522+00:00",
-      "git_ref": "c691d87c33b690df5f0013a55c4e8149e6be2fc7",
+      "version": "git-20260929-c38415f5-auto-resume",
+      "built_at": "2026-09-29T12:42:47.906030+00:00",
+      "git_ref": "643b67e3a100a699ca80080a0954468e544bb860",
       "route": "JE-1000F/EU/nl/md",
       "manual": "manual_je1000f_eu_nl.md",
       "language_scope": "single",
       "language_projection_evidence_path": "evidence/language_projection_receipt.json",
-      "language_projection_evidence_sha256": "81bcdde5e2e76ec9768a1e1b5c81be4d929fe90906bdf8cc96971d58d6e5e389",
+      "language_projection_evidence_sha256": "3546fd39f4037db0c3e82529e6ee04d62d61a6caded3a9c809bde237bea0051e",
       "legacy_default": false
     },
     {
@@ -303,14 +303,14 @@
       "model": "JE-1000F",
       "region": "EU",
       "lang": "pl",
-      "version": "git-20260929-c38415f5-overview-headings",
-      "built_at": "2026-09-29T11:39:16.250522+00:00",
-      "git_ref": "c691d87c33b690df5f0013a55c4e8149e6be2fc7",
+      "version": "git-20260929-c38415f5-auto-resume",
+      "built_at": "2026-09-29T12:42:47.906030+00:00",
+      "git_ref": "643b67e3a100a699ca80080a0954468e544bb860",
       "route": "JE-1000F/EU/pl/md",
       "manual": "manual_je1000f_eu_pl.md",
       "language_scope": "single",
       "language_projection_evidence_path": "evidence/language_projection_receipt.json",
-      "language_projection_evidence_sha256": "5495a1b3c53f1b422f1f085f1a8b85cd4fbcc681ab24531465a414046a60722d",
+      "language_projection_evidence_sha256": "3cbeb1042135df435c20ec2b4eab0f968716dce6858936cb8ed88d8b411181cb",
       "legacy_default": false
     },
     {
@@ -318,14 +318,14 @@
       "model": "JE-1000F",
       "region": "EU",
       "lang": "pt",
-      "version": "git-20260929-c38415f5-overview-headings",
-      "built_at": "2026-09-29T11:39:16.250522+00:00",
-      "git_ref": "c691d87c33b690df5f0013a55c4e8149e6be2fc7",
+      "version": "git-20260929-c38415f5-auto-resume",
+      "built_at": "2026-09-29T12:42:47.906030+00:00",
+      "git_ref": "643b67e3a100a699ca80080a0954468e544bb860",
       "route": "JE-1000F/EU/pt/md",
       "manual": "manual_je1000f_eu_pt.md",
       "language_scope": "single",
       "language_projection_evidence_path": "evidence/language_projection_receipt.json",
-      "language_projection_evidence_sha256": "5cdb05dde1709300320627f31eab86410ea746745e86660e19305ef819d53130",
+      "language_projection_evidence_sha256": "d10e61da74ca6fe1ee2c68771a560a422ca6ab804b57644d081ce2b1ea8c5ab0",
       "legacy_default": false
     },
     {
@@ -333,14 +333,14 @@
       "model": "JE-1000F",
       "region": "EU",
       "lang": "uk",
-      "version": "git-20260929-c38415f5-overview-headings",
-      "built_at": "2026-09-29T11:39:16.250522+00:00",
-      "git_ref": "c691d87c33b690df5f0013a55c4e8149e6be2fc7",
+      "version": "git-20260929-c38415f5-auto-resume",
+      "built_at": "2026-09-29T12:42:47.906030+00:00",
+      "git_ref": "643b67e3a100a699ca80080a0954468e544bb860",
       "route": "JE-1000F/EU/uk/md",
       "manual": "manual_je1000f_eu_uk.md",
       "language_scope": "single",
       "language_projection_evidence_path": "evidence/language_projection_receipt.json",
-      "language_projection_evidence_sha256": "cf7754b741ae35498e28014b44ea1e7c258939e7fe3b87edb173f2d525ea0ff4",
+      "language_projection_evidence_sha256": "5056723c36baa0c243c527997216bf6a440ba731268ff7191d7aeace8b44eb2f",
       "legacy_default": false
     },
     {
@@ -5593,13 +5593,13 @@
     },
     {
       "path": "sources/web/JE-1000F/EU/nl/md/evidence/frozen_source_manifest.json",
-      "size": 69050,
-      "sha256": "3ccda35dfb1ae9ed694239b1e5cdab54d819f113def34fb10d597ef870f9d341"
+      "size": 69044,
+      "sha256": "f53fa0c2173d1aa8438e20128773bfe867b33ca42364cb6c3fa24b0a2ccad054"
     },
     {
       "path": "sources/web/JE-1000F/EU/nl/md/evidence/language_projection_receipt.json",
-      "size": 32535,
-      "sha256": "81bcdde5e2e76ec9768a1e1b5c81be4d929fe90906bdf8cc96971d58d6e5e389"
+      "size": 32529,
+      "sha256": "3546fd39f4037db0c3e82529e6ee04d62d61a6caded3a9c809bde237bea0051e"
     },
     {
       "path": "sources/web/JE-1000F/EU/nl/md/index.md",
@@ -5608,18 +5608,18 @@
     },
     {
       "path": "sources/web/JE-1000F/EU/nl/md/manual.ir.json",
-      "size": 573896,
-      "sha256": "8d9a9025e637cc095cd6720504c0748ab3c635e96fc763ad9c3861220a4f066e"
+      "size": 573521,
+      "sha256": "8fcaaeccee9e87992727c08e0d13b689283e051831198aee9e96eee31928e7c5"
     },
     {
       "path": "sources/web/JE-1000F/EU/nl/md/manual_je1000f_eu_nl.md",
-      "size": 79864,
-      "sha256": "5b9731893aa887042b46d0f3b665944575551bf1a814ea47b1daad54dbd0a600"
+      "size": 80553,
+      "sha256": "536bb200c9ec200c7333446e3cd53fd7fc274fe5c6565cf581f8ad89ffccf6a8"
     },
     {
       "path": "sources/web/JE-1000F/EU/nl/md/publish_meta.json",
-      "size": 601,
-      "sha256": "ff1c987851ded27bd0467e8c34beca11d12d0e3840969d5c3074da3b00304139"
+      "size": 595,
+      "sha256": "00b4a1375e8338c67d45f6f63d6c2819ab506746d3bab4f8d0d15b978aa4fba0"
     },
     {
       "path": "sources/web/JE-1000F/EU/pl/md/_static/web_manual.css",
@@ -5918,13 +5918,13 @@
     },
     {
       "path": "sources/web/JE-1000F/EU/pl/md/evidence/frozen_source_manifest.json",
-      "size": 69050,
-      "sha256": "3ccda35dfb1ae9ed694239b1e5cdab54d819f113def34fb10d597ef870f9d341"
+      "size": 69044,
+      "sha256": "f53fa0c2173d1aa8438e20128773bfe867b33ca42364cb6c3fa24b0a2ccad054"
     },
     {
       "path": "sources/web/JE-1000F/EU/pl/md/evidence/language_projection_receipt.json",
-      "size": 32198,
-      "sha256": "5495a1b3c53f1b422f1f085f1a8b85cd4fbcc681ab24531465a414046a60722d"
+      "size": 32192,
+      "sha256": "3cbeb1042135df435c20ec2b4eab0f968716dce6858936cb8ed88d8b411181cb"
     },
     {
       "path": "sources/web/JE-1000F/EU/pl/md/index.md",
@@ -5933,18 +5933,18 @@
     },
     {
       "path": "sources/web/JE-1000F/EU/pl/md/manual.ir.json",
-      "size": 576197,
-      "sha256": "0dcad711297b00ee254788a827bc24890f7691b6aa32d276f30481f2705b5365"
+      "size": 575822,
+      "sha256": "048f7102f9c44d2015c6391702679ec52ff4ef0a07e3f54b49a273df8bd3edea"
     },
     {
       "path": "sources/web/JE-1000F/EU/pl/md/manual_je1000f_eu_pl.md",
-      "size": 82600,
-      "sha256": "76cc15972cac15adcb70c9be69882d8f4b4d6dc92be55a648203e0471232d3ef"
+      "size": 83280,
+      "sha256": "65260f8c35b451545fc5b1ee645f83ca28dc1bcf05402a784359313ec56ffd3e"
     },
     {
       "path": "sources/web/JE-1000F/EU/pl/md/publish_meta.json",
-      "size": 601,
-      "sha256": "1955cdee53b05266f02b4fd015fb501972ec1da76dd1475cfa68d0c071950697"
+      "size": 595,
+      "sha256": "2014420778d4a8be52710b437ce5f7eb81b425f67eb52d41e21b391f723cca00"
     },
     {
       "path": "sources/web/JE-1000F/EU/pt/md/_static/web_manual.css",
@@ -6243,13 +6243,13 @@
     },
     {
       "path": "sources/web/JE-1000F/EU/pt/md/evidence/frozen_source_manifest.json",
-      "size": 69050,
-      "sha256": "3ccda35dfb1ae9ed694239b1e5cdab54d819f113def34fb10d597ef870f9d341"
+      "size": 69044,
+      "sha256": "f53fa0c2173d1aa8438e20128773bfe867b33ca42364cb6c3fa24b0a2ccad054"
     },
     {
       "path": "sources/web/JE-1000F/EU/pt/md/evidence/language_projection_receipt.json",
-      "size": 32540,
-      "sha256": "5cdb05dde1709300320627f31eab86410ea746745e86660e19305ef819d53130"
+      "size": 32534,
+      "sha256": "d10e61da74ca6fe1ee2c68771a560a422ca6ab804b57644d081ce2b1ea8c5ab0"
     },
     {
       "path": "sources/web/JE-1000F/EU/pt/md/index.md",
@@ -6258,18 +6258,18 @@
     },
     {
       "path": "sources/web/JE-1000F/EU/pt/md/manual.ir.json",
-      "size": 574525,
-      "sha256": "02704858ba6bcd061eeeb0030ae88e730ca3572871f5d42c4026075f00efba37"
+      "size": 574150,
+      "sha256": "163468147c61d0b9e5fcd35603b365110f4d14bc16b19f5415c9ca7bb40483e1"
     },
     {
       "path": "sources/web/JE-1000F/EU/pt/md/manual_je1000f_eu_pt.md",
-      "size": 80539,
-      "sha256": "4dd5f60297187ab031474f3043bdc024c4d1cfee7d9b4494e299c694555c7bae"
+      "size": 81222,
+      "sha256": "fda61376d8d7f5f4c3cc22b127612281ece266f491f32b266a5af0bc14d121b6"
     },
     {
       "path": "sources/web/JE-1000F/EU/pt/md/publish_meta.json",
-      "size": 601,
-      "sha256": "a3ce0dfa8dc87f271086b318d036945d72c5c1065e8f1f712d9817a78fc3a352"
+      "size": 595,
+      "sha256": "ddd10f13104e1bb2c7f53685f666f499c237e74c4a4be9f447f87b91e04f6f96"
     },
     {
       "path": "sources/web/JE-1000F/EU/uk/md/_static/web_manual.css",
@@ -6568,13 +6568,13 @@
     },
     {
       "path": "sources/web/JE-1000F/EU/uk/md/evidence/frozen_source_manifest.json",
-      "size": 69050,
-      "sha256": "3ccda35dfb1ae9ed694239b1e5cdab54d819f113def34fb10d597ef870f9d341"
+      "size": 69044,
+      "sha256": "f53fa0c2173d1aa8438e20128773bfe867b33ca42364cb6c3fa24b0a2ccad054"
     },
     {
       "path": "sources/web/JE-1000F/EU/uk/md/evidence/language_projection_receipt.json",
-      "size": 32033,
-      "sha256": "cf7754b741ae35498e28014b44ea1e7c258939e7fe3b87edb173f2d525ea0ff4"
+      "size": 32027,
+      "sha256": "5056723c36baa0c243c527997216bf6a440ba731268ff7191d7aeace8b44eb2f"
     },
     {
       "path": "sources/web/JE-1000F/EU/uk/md/index.md",
@@ -6583,18 +6583,18 @@
     },
     {
       "path": "sources/web/JE-1000F/EU/uk/md/manual.ir.json",
-      "size": 616416,
-      "sha256": "802fdf38f8646851414ed389597d153b049868e97290199ed883801da15b7d29"
+      "size": 616041,
+      "sha256": "149d83db0a25da6dc24f4acd012dd1ff126e475f1ad45d346f0918cada9a657d"
     },
     {
       "path": "sources/web/JE-1000F/EU/uk/md/manual_je1000f_eu_uk.md",
-      "size": 104542,
-      "sha256": "5f7ac9dcbe76832b8e4975ca1b87c9aeffc568df1c51e6f1e924ae9e1a017f00"
+      "size": 105277,
+      "sha256": "c0db41969a958df633da5b9fb5a7fde61c9da518cd9a9dbef42ca6324c55095f"
     },
     {
       "path": "sources/web/JE-1000F/EU/uk/md/publish_meta.json",
-      "size": 601,
-      "sha256": "910ba4dc2ad84b753b88c51a76a3bcbcd63ab9565e44c15838a1660aeecca930"
+      "size": 595,
+      "sha256": "5c191169654cd42a7dc2758298695254fbef461a6be0c0984582ab6222c9b4c6"
     },
     {
       "path": "sources/web/JE-1000F/US/en/md/assets/app_add_device_steps_9b7e0cf44d0f.png",
@@ -15988,13 +15988,13 @@
     },
     {
       "path": "web/JE-1000F/EU/nl/md/evidence/frozen_source_manifest.json",
-      "size": 69050,
-      "sha256": "3ccda35dfb1ae9ed694239b1e5cdab54d819f113def34fb10d597ef870f9d341"
+      "size": 69044,
+      "sha256": "f53fa0c2173d1aa8438e20128773bfe867b33ca42364cb6c3fa24b0a2ccad054"
     },
     {
       "path": "web/JE-1000F/EU/nl/md/evidence/language_projection_receipt.json",
-      "size": 32535,
-      "sha256": "81bcdde5e2e76ec9768a1e1b5c81be4d929fe90906bdf8cc96971d58d6e5e389"
+      "size": 32529,
+      "sha256": "3546fd39f4037db0c3e82529e6ee04d62d61a6caded3a9c809bde237bea0051e"
     },
     {
       "path": "web/JE-1000F/EU/nl/md/index.md",
@@ -16003,13 +16003,13 @@
     },
     {
       "path": "web/JE-1000F/EU/nl/md/manual.ir.json",
-      "size": 573896,
-      "sha256": "8d9a9025e637cc095cd6720504c0748ab3c635e96fc763ad9c3861220a4f066e"
+      "size": 573521,
+      "sha256": "8fcaaeccee9e87992727c08e0d13b689283e051831198aee9e96eee31928e7c5"
     },
     {
       "path": "web/JE-1000F/EU/nl/md/manual_je1000f_eu_nl.md",
-      "size": 81729,
-      "sha256": "36a335493a5744c0fa67fb381d90e5dc112941facaa1dd359b939d1aeb1adff5"
+      "size": 82418,
+      "sha256": "63663fdebae21a1b13751f2bcca4f3dd1d8f0d429525804436a43892ab615408"
     },
     {
       "path": "web/JE-1000F/EU/pl/md/_static/web_manual.css",
@@ -16018,13 +16018,13 @@
     },
     {
       "path": "web/JE-1000F/EU/pl/md/evidence/frozen_source_manifest.json",
-      "size": 69050,
-      "sha256": "3ccda35dfb1ae9ed694239b1e5cdab54d819f113def34fb10d597ef870f9d341"
+      "size": 69044,
+      "sha256": "f53fa0c2173d1aa8438e20128773bfe867b33ca42364cb6c3fa24b0a2ccad054"
     },
     {
       "path": "web/JE-1000F/EU/pl/md/evidence/language_projection_receipt.json",
-      "size": 32198,
-      "sha256": "5495a1b3c53f1b422f1f085f1a8b85cd4fbcc681ab24531465a414046a60722d"
+      "size": 32192,
+      "sha256": "3cbeb1042135df435c20ec2b4eab0f968716dce6858936cb8ed88d8b411181cb"
     },
     {
       "path": "web/JE-1000F/EU/pl/md/index.md",
@@ -16033,13 +16033,13 @@
     },
     {
       "path": "web/JE-1000F/EU/pl/md/manual.ir.json",
-      "size": 576197,
-      "sha256": "0dcad711297b00ee254788a827bc24890f7691b6aa32d276f30481f2705b5365"
+      "size": 575822,
+      "sha256": "048f7102f9c44d2015c6391702679ec52ff4ef0a07e3f54b49a273df8bd3edea"
     },
     {
       "path": "web/JE-1000F/EU/pl/md/manual_je1000f_eu_pl.md",
-      "size": 84465,
-      "sha256": "1eb6d159a19b02286f9b15b18133cde577302316df98a11bd0c6c87fac5c51a2"
+      "size": 85145,
+      "sha256": "eed932c1a03f8c2e61294de6c0ca3647756fa04931fe26f972e3a282ac56595f"
     },
     {
       "path": "web/JE-1000F/EU/pt/md/_static/web_manual.css",
@@ -16048,13 +16048,13 @@
     },
     {
       "path": "web/JE-1000F/EU/pt/md/evidence/frozen_source_manifest.json",
-      "size": 69050,
-      "sha256": "3ccda35dfb1ae9ed694239b1e5cdab54d819f113def34fb10d597ef870f9d341"
+      "size": 69044,
+      "sha256": "f53fa0c2173d1aa8438e20128773bfe867b33ca42364cb6c3fa24b0a2ccad054"
     },
     {
       "path": "web/JE-1000F/EU/pt/md/evidence/language_projection_receipt.json",
-      "size": 32540,
-      "sha256": "5cdb05dde1709300320627f31eab86410ea746745e86660e19305ef819d53130"
+      "size": 32534,
+      "sha256": "d10e61da74ca6fe1ee2c68771a560a422ca6ab804b57644d081ce2b1ea8c5ab0"
     },
     {
       "path": "web/JE-1000F/EU/pt/md/index.md",
@@ -16063,13 +16063,13 @@
     },
     {
       "path": "web/JE-1000F/EU/pt/md/manual.ir.json",
-      "size": 574525,
-      "sha256": "02704858ba6bcd061eeeb0030ae88e730ca3572871f5d42c4026075f00efba37"
+      "size": 574150,
+      "sha256": "163468147c61d0b9e5fcd35603b365110f4d14bc16b19f5415c9ca7bb40483e1"
     },
     {
       "path": "web/JE-1000F/EU/pt/md/manual_je1000f_eu_pt.md",
-      "size": 82404,
-      "sha256": "c46318da00afecce69ae41572af243cc788e1c3229268a71d6e416f39c0ccb36"
+      "size": 83087,
+      "sha256": "625f9e7f7ce21e2a500dcaab87f91c014cbd9b0e136f92480e7de00e5de4a76b"
     },
     {
       "path": "web/JE-1000F/EU/uk/md/_static/web_manual.css",
@@ -16078,13 +16078,13 @@
     },
     {
       "path": "web/JE-1000F/EU/uk/md/evidence/frozen_source_manifest.json",
-      "size": 69050,
-      "sha256": "3ccda35dfb1ae9ed694239b1e5cdab54d819f113def34fb10d597ef870f9d341"
+      "size": 69044,
+      "sha256": "f53fa0c2173d1aa8438e20128773bfe867b33ca42364cb6c3fa24b0a2ccad054"
     },
     {
       "path": "web/JE-1000F/EU/uk/md/evidence/language_projection_receipt.json",
-      "size": 32033,
-      "sha256": "cf7754b741ae35498e28014b44ea1e7c258939e7fe3b87edb173f2d525ea0ff4"
+      "size": 32027,
+      "sha256": "5056723c36baa0c243c527997216bf6a440ba731268ff7191d7aeace8b44eb2f"
     },
     {
       "path": "web/JE-1000F/EU/uk/md/index.md",
@@ -16093,13 +16093,13 @@
     },
     {
       "path": "web/JE-1000F/EU/uk/md/manual.ir.json",
-      "size": 616416,
-      "sha256": "802fdf38f8646851414ed389597d153b049868e97290199ed883801da15b7d29"
+      "size": 616041,
+      "sha256": "149d83db0a25da6dc24f4acd012dd1ff126e475f1ad45d346f0918cada9a657d"
     },
     {
       "path": "web/JE-1000F/EU/uk/md/manual_je1000f_eu_uk.md",
-      "size": 106407,
-      "sha256": "2bce3e296f65ae8c654c5593b5c59a53fb1c93a2303395a3f3903babdae4ed39"
+      "size": 107142,
+      "sha256": "6560e5376bfc2d3e28153a07aeda511ae74110b3334cf7d14159c7eb0d87a35c"
     },
     {
       "path": "web/JE-1000F/US/en/md/evidence/language_projection_receipt.json",

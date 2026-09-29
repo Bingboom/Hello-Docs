@@ -57,8 +57,8 @@
     "assets/23cde742b301_23cde742b301_23cde742b301_connect_result_je1000f_eu.png"
   ],
   "bundle_root": "frozen-source",
-  "bundle_sha256": "061119f87ddcc4f0e6038c71a9d79442bfaea2203957e782870d4a3e81bbb194",
-  "content_sha256": "0d073001daf57f42beac8eb17e001a867cc35f042eaa9b340839fa8db679903a",
+  "bundle_sha256": "5af082f67234f865bb9128efcf98139e3fd64bdbae59cb053172ec3971bb531b",
+  "content_sha256": "7edf192e586cf9352224d8cfe7b5a9f8329d3ce8eacb75c61262735ec7235c8e",
   "language": "uk",
   "layout_params_sha256": "f5ae099abc1a82ffda3abcc5a13725aca3c201e720a0374d88d1643f9773f279",
   "metadata": {
@@ -121,7 +121,7 @@
       "assets/f9ed0c8d1dc1_f9ed0c8d1dc1_f9ed0c8d1dc1_op_lcd_mode_je1000f_eu_en.png": "f9ed0c8d1dc17b00daad2ba6a13053a2b45527527b15c41d83d353df890740bb",
       "assets/fc4cc02b42ef_fc4cc02b42ef_fc4cc02b42ef_1_Wi-Fi_KCcAbdDk7o4RjKx82micuKJ5nyf.png": "fc4cc02b42efc31a32429ada2b78c4480a2fcbca647406da29b2ce75a8a8c1dc"
     },
-    "block_count": 138,
+    "block_count": 135,
     "component_inventory": {
       "HB-CALLOUT-STRIP": 14,
       "HB-SPECIAL-APP": 3,
@@ -129,6 +129,7 @@
       "HB-SPECIAL-OPERATION": 5,
       "HB-SPECIAL-OVERVIEW": 1,
       "HB-SPECIAL-REFERENCE-FIGURE": 7,
+      "HB-TABLE-AUTO-RESUME": 1,
       "HB-TABLE-LCD-ICON": 1,
       "HB-TABLE-LCD-MODE": 1,
       "HB-TABLE-SPEC": 4,
@@ -704,6 +705,51 @@
             "approved-composite"
           ]
         },
+        "HB-TABLE-AUTO-RESUME": {
+          "adapters": {
+            "idml": {
+              "capability": "projection-only",
+              "key": "idml_auto_resume"
+            },
+            "latex": {
+              "capability": "projection-only",
+              "key": "hb_latex_auto_resume"
+            },
+            "web": {
+              "capability": "rendered",
+              "key": "hb_auto_resume"
+            },
+            "word": {
+              "capability": "projection-only",
+              "key": "word_auto_resume"
+            }
+          },
+          "asset_roles": {},
+          "slots": {
+            "conditions": {
+              "content_kinds": [
+                "ordered_columns"
+              ],
+              "required": true
+            },
+            "headers": {
+              "content_kinds": [
+                "ordered_headers"
+              ],
+              "required": true
+            }
+          },
+          "source_kinds": [
+            "table_auto_resume"
+          ],
+          "style_id": "HB-TABLE-AUTO-RESUME",
+          "token_roles": [
+            "component.table.auto-resume"
+          ],
+          "variants": [
+            "two-column-middle-span"
+          ]
+        },
         "HB-TABLE-LCD-ICON": {
           "adapters": {
             "idml": {
@@ -1167,7 +1213,7 @@
       "registry_id": "hb-component-registry",
       "schema_version": "component-registry/v1"
     },
-    "component_registry_sha256": "a7dde24cc246291946d935526a6f9d4bffd20e0c8c44464a06bf075f0bcd15e9",
+    "component_registry_sha256": "6f0ad07bc59ffd39d3add687055dc2d6ff3106a83a973422b70a84fbd21cf47a",
     "composites": [
       {
         "asset_key": "overview.finished.uk.front",
@@ -1255,7 +1301,7 @@
       }
     ],
     "frozen_source_manifest": {
-      "artwork_manifest_sha256": "8ac0ddaa9753eaf676b3141c0747cc4b3ec167dd27ccdec4bd52a344de8e6ea5",
+      "artwork_manifest_sha256": "25b4a659c18a2d73cd4b283352d9db9d7c45282f415f866c339e78fc7e5a2fff",
       "geometry_recipe_sha256": "914c5002d3b387494527958a3c2559b0a5d419ffd651f2f34f78aa365c458766",
       "intake_method": "fresh-native-pdf-text",
       "original_source": {
@@ -1276,7 +1322,7 @@
         "model": "JE-1000F",
         "printed_manual_version": null,
         "region": "EU",
-        "technical_version": "git-20260929-c38415f5-overview-headings"
+        "technical_version": "git-20260929-c38415f5-auto-resume"
       },
       "text_source": {
         "filename": "HTE153-nine-language-native-text-check.pdf",
@@ -1370,6 +1416,20 @@
             "surface.paper",
             "border.strong",
             "radius.panel",
+            "type.table.value",
+            "width.component-band"
+          ]
+        },
+        "component.table.auto-resume": {
+          "component_ids": [
+            "HB-TABLE-AUTO-RESUME"
+          ],
+          "theme_roles": [
+            "surface.paper",
+            "surface.muted",
+            "border.strong",
+            "radius.panel",
+            "type.table.label",
             "type.table.value",
             "width.component-band"
           ]
@@ -1820,7 +1880,7 @@
       "schema_version": "manual-theme/v1",
       "theme_id": "hb-manual-default"
     },
-    "manual_theme_sha256": "c5f1c0fd1f1a0ff96711b5983147b766d7fb4fe1043c22217aa27d29046e69cf",
+    "manual_theme_sha256": "e9cf0ac664bf94941f89735e5294796d8eb4ec8c96b81dd83a506e5e3de17e53",
     "markdown_filename": "manual_je1000f_eu_uk.md",
     "overview_instance": {
       "component_id": "HB-SPECIAL-OVERVIEW",
@@ -11069,17 +11129,49 @@
         {
           "asset_refs": [],
           "block_id": "operations:block-0024",
-          "content_sha256": "08cc79e9205a8dc4a2f3b17db842041d93f9b11cdc3c48770f9e8d85e71c2e9c",
+          "content_sha256": "04adedb21d0b9230f66361787eabdd1449e0644bbb59062a73b6a5dfccb0e60c",
           "kind": "flow",
           "payload": {
-            "children": [
-              {
-                "kind": "text",
-                "text": "Умови автоматичного відновлення"
-              }
-            ],
-            "kind": "heading",
-            "level": 3,
+            "component_spec": {
+              "assets": [],
+              "component_id": "HB-TABLE-AUTO-RESUME",
+              "language": "uk",
+              "metadata": {},
+              "schema_version": "component-spec/v1",
+              "slots": [
+                {
+                  "content": [
+                    "Умови автоматичного відновлення",
+                    "Умови без автоматичного відновлення"
+                  ],
+                  "content_kind": "ordered_headers",
+                  "role": "headers"
+                },
+                {
+                  "content": [
+                    [
+                      "Увімкнення/перезапуск після вимкнення або перезапуску",
+                      "Рівень заряду батареї ≥ межа розряду +10% після досягнення межі",
+                      "Завершено OTA-оновлення"
+                    ],
+                    [
+                      "Ручне вимкнення виходу (кнопка/додаток)",
+                      "Вимкнення виходу в режимі енергозбереження",
+                      "Вимкнення виходу через спрацювання захисту",
+                      "Вимкнення виходу за таймером розряду"
+                    ]
+                  ],
+                  "content_kind": "ordered_columns",
+                  "role": "conditions"
+                }
+              ],
+              "source_ref": "uk/operations/restore",
+              "token_roles": [
+                "component.table.auto-resume"
+              ],
+              "variant": "two-column-middle-span"
+            },
+            "kind": "component",
             "schema_version": "manual-flow/v2"
           },
           "source_ref": "uk/operations#block-24"
@@ -11087,115 +11179,6 @@
         {
           "asset_refs": [],
           "block_id": "operations:block-0025",
-          "content_sha256": "d1bf48b591336e4ab6f6584987a30e1dc46ae0b0701b0c3b73be13933da2c002",
-          "kind": "flow",
-          "payload": {
-            "children": [
-              {
-                "children": [
-                  {
-                    "kind": "text",
-                    "text": "Увімкнення/перезапуск після вимкнення або перезапуску"
-                  }
-                ],
-                "kind": "list_item"
-              },
-              {
-                "children": [
-                  {
-                    "kind": "text",
-                    "text": "Рівень заряду батареї ≥ межа розряду +10% після досягнення межі"
-                  }
-                ],
-                "kind": "list_item"
-              },
-              {
-                "children": [
-                  {
-                    "kind": "text",
-                    "text": "Завершено OTA-оновлення"
-                  }
-                ],
-                "kind": "list_item"
-              }
-            ],
-            "kind": "list",
-            "ordered": false,
-            "schema_version": "manual-flow/v2"
-          },
-          "source_ref": "uk/operations#block-25"
-        },
-        {
-          "asset_refs": [],
-          "block_id": "operations:block-0026",
-          "content_sha256": "cb187210af9a0b7bb47ce632086dfd83caf8f7fae0abe37010c37defd67933e5",
-          "kind": "flow",
-          "payload": {
-            "children": [
-              {
-                "kind": "text",
-                "text": "Умови без автоматичного відновлення"
-              }
-            ],
-            "kind": "heading",
-            "level": 3,
-            "schema_version": "manual-flow/v2"
-          },
-          "source_ref": "uk/operations#block-26"
-        },
-        {
-          "asset_refs": [],
-          "block_id": "operations:block-0027",
-          "content_sha256": "8d299af12a0423e9a8cd846aee488bd8b22768eec26c05a94d01085200a9dcb6",
-          "kind": "flow",
-          "payload": {
-            "children": [
-              {
-                "children": [
-                  {
-                    "kind": "text",
-                    "text": "Ручне вимкнення виходу (кнопка/додаток)"
-                  }
-                ],
-                "kind": "list_item"
-              },
-              {
-                "children": [
-                  {
-                    "kind": "text",
-                    "text": "Вимкнення виходу в режимі енергозбереження"
-                  }
-                ],
-                "kind": "list_item"
-              },
-              {
-                "children": [
-                  {
-                    "kind": "text",
-                    "text": "Вимкнення виходу через спрацювання захисту"
-                  }
-                ],
-                "kind": "list_item"
-              },
-              {
-                "children": [
-                  {
-                    "kind": "text",
-                    "text": "Вимкнення виходу за таймером розряду"
-                  }
-                ],
-                "kind": "list_item"
-              }
-            ],
-            "kind": "list",
-            "ordered": false,
-            "schema_version": "manual-flow/v2"
-          },
-          "source_ref": "uk/operations#block-27"
-        },
-        {
-          "asset_refs": [],
-          "block_id": "operations:block-0028",
           "content_sha256": "11838f072cdf9bfb76b1824045b8482130fb796b8e7a81c5e7d0010c91c6a12f",
           "kind": "flow",
           "payload": {
@@ -11209,11 +11192,11 @@
             "level": 2,
             "schema_version": "manual-flow/v2"
           },
-          "source_ref": "uk/operations#block-28"
+          "source_ref": "uk/operations#block-25"
         },
         {
           "asset_refs": [],
-          "block_id": "operations:block-0029",
+          "block_id": "operations:block-0026",
           "content_sha256": "f4d7f90859645cd9a96c59fa16b8670ce8999bcf4e67ea6e01af15fd38813ca8",
           "kind": "flow",
           "payload": {
@@ -11422,7 +11405,7 @@
             "role": "container",
             "schema_version": "manual-flow/v2"
           },
-          "source_ref": "uk/operations#block-29"
+          "source_ref": "uk/operations#block-26"
         }
       ],
       "language": "uk",

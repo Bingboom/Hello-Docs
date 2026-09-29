@@ -108,13 +108,7 @@
 
 <p>Ta funkcja zapamiętuje stan wyjść i automatycznie wznawia zasilanie na wyjściach AC i DC w określonych warunkach.</p>
 
-### Warunki automatycznego wznawiania
-
-<ul><li>Włączenie/ponowne uruchomienie po wyłączeniu lub restarcie</li><li>Poziom naładowania baterii (SOC) ≥ limit rozładowania +10% po osiągnięciu limitu</li><li>Zakończenie aktualizacji oprogramowania układowego</li></ul>
-
-### Warunki braku automatycznego wznawiania
-
-<ul><li>Ręczne wyłączenie wyjścia (przyciskiem lub w aplikacji)</li><li>Wyłączenie wyjścia przez tryb oszczędzania energii</li><li>Wyłączenie wyjścia w wyniku zadziałania zabezpieczenia</li><li>Wyłączenie wyjścia przez licznik czasu rozładowania</li></ul>
+<figure aria-label="Warunki automatycznego wznawiania / Warunki braku automatycznego wznawiania" class="hb-auto-resume-composition" data-component-id="HB-TABLE-AUTO-RESUME" tabindex="0"><table class="hb-auto-resume-table"><colgroup><col class="hb-auto-resume-col"/><col class="hb-auto-resume-col"/></colgroup><thead><tr><th class="hb-auto-resume-left" scope="col">Warunki automatycznego wznawiania</th><th class="hb-auto-resume-right" scope="col">Warunki braku automatycznego wznawiania</th></tr></thead><tbody><tr><td class="hb-auto-resume-left">Włączenie/ponowne uruchomienie po wyłączeniu lub restarcie</td><td class="hb-auto-resume-right">Ręczne wyłączenie wyjścia (przyciskiem lub w aplikacji)</td></tr><tr><td class="hb-auto-resume-left" rowspan="2">Poziom naładowania baterii (SOC) ≥ limit rozładowania +10% po osiągnięciu limitu</td><td class="hb-auto-resume-right">Wyłączenie wyjścia przez tryb oszczędzania energii</td></tr><tr><td class="hb-auto-resume-right">Wyłączenie wyjścia w wyniku zadziałania zabezpieczenia</td></tr><tr><td class="hb-auto-resume-left">Zakończenie aktualizacji oprogramowania układowego</td><td class="hb-auto-resume-right">Wyłączenie wyjścia przez licznik czasu rozładowania</td></tr></tbody></table></figure>
 
 ## KOMBINACJE KLAWISZY
 
