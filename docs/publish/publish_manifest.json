@@ -1,6 +1,6 @@
 {
   "schema_version": "auto-manual-web-publish-branch/v2",
-  "built_at": "2026-09-29T01:52:51.718623+00:00",
+  "built_at": "2026-09-29T11:39:16.250522+00:00",
   "targets": [
     {
       "schema_version": "auto-manual-web-publish-target/v2",
@@ -288,14 +288,14 @@
       "model": "JE-1000F",
       "region": "EU",
       "lang": "nl",
-      "version": "git-20260928-c38415f5-lcd-status",
-      "built_at": "2026-09-29T01:52:51.718623+00:00",
-      "git_ref": "79e337ec7e452e9701b762c243d3b77f0a24706a",
+      "version": "git-20260929-c38415f5-overview-headings",
+      "built_at": "2026-09-29T11:39:16.250522+00:00",
+      "git_ref": "c691d87c33b690df5f0013a55c4e8149e6be2fc7",
       "route": "JE-1000F/EU/nl/md",
       "manual": "manual_je1000f_eu_nl.md",
       "language_scope": "single",
       "language_projection_evidence_path": "evidence/language_projection_receipt.json",
-      "language_projection_evidence_sha256": "d7c0cd5b3aca89418cce19febe60314659e7034ba8beab11ac6a665aa8ca04ee",
+      "language_projection_evidence_sha256": "81bcdde5e2e76ec9768a1e1b5c81be4d929fe90906bdf8cc96971d58d6e5e389",
       "legacy_default": false
     },
     {
@@ -303,14 +303,14 @@
       "model": "JE-1000F",
       "region": "EU",
       "lang": "pl",
-      "version": "git-20260928-c38415f5-lcd-status",
-      "built_at": "2026-09-29T01:52:51.718623+00:00",
-      "git_ref": "79e337ec7e452e9701b762c243d3b77f0a24706a",
+      "version": "git-20260929-c38415f5-overview-headings",
+      "built_at": "2026-09-29T11:39:16.250522+00:00",
+      "git_ref": "c691d87c33b690df5f0013a55c4e8149e6be2fc7",
       "route": "JE-1000F/EU/pl/md",
       "manual": "manual_je1000f_eu_pl.md",
       "language_scope": "single",
       "language_projection_evidence_path": "evidence/language_projection_receipt.json",
-      "language_projection_evidence_sha256": "abe3f5c6b1e486e08d39aba6a5df4ed097707441a4ba65f06c0401ca2b0d0ec8",
+      "language_projection_evidence_sha256": "5495a1b3c53f1b422f1f085f1a8b85cd4fbcc681ab24531465a414046a60722d",
       "legacy_default": false
     },
     {
@@ -318,14 +318,14 @@
       "model": "JE-1000F",
       "region": "EU",
       "lang": "pt",
-      "version": "git-20260928-c38415f5-lcd-status",
-      "built_at": "2026-09-29T01:52:51.718623+00:00",
-      "git_ref": "79e337ec7e452e9701b762c243d3b77f0a24706a",
+      "version": "git-20260929-c38415f5-overview-headings",
+      "built_at": "2026-09-29T11:39:16.250522+00:00",
+      "git_ref": "c691d87c33b690df5f0013a55c4e8149e6be2fc7",
       "route": "JE-1000F/EU/pt/md",
       "manual": "manual_je1000f_eu_pt.md",
       "language_scope": "single",
       "language_projection_evidence_path": "evidence/language_projection_receipt.json",
-      "language_projection_evidence_sha256": "1e7c37fc4e6cc829f5129bb2f79eb6d5b014ce634fe8bd718ef63f7cf450107c",
+      "language_projection_evidence_sha256": "5cdb05dde1709300320627f31eab86410ea746745e86660e19305ef819d53130",
       "legacy_default": false
     },
     {
@@ -333,14 +333,14 @@
       "model": "JE-1000F",
       "region": "EU",
       "lang": "uk",
-      "version": "git-20260928-c38415f5-lcd-status",
-      "built_at": "2026-09-29T01:52:51.718623+00:00",
-      "git_ref": "79e337ec7e452e9701b762c243d3b77f0a24706a",
+      "version": "git-20260929-c38415f5-overview-headings",
+      "built_at": "2026-09-29T11:39:16.250522+00:00",
+      "git_ref": "c691d87c33b690df5f0013a55c4e8149e6be2fc7",
       "route": "JE-1000F/EU/uk/md",
       "manual": "manual_je1000f_eu_uk.md",
       "language_scope": "single",
       "language_projection_evidence_path": "evidence/language_projection_receipt.json",
-      "language_projection_evidence_sha256": "bbb5e578069e6093488a044095080240cbf560e1954646de377e71b8e6e7b42e",
+      "language_projection_evidence_sha256": "cf7754b741ae35498e28014b44ea1e7c258939e7fe3b87edb173f2d525ea0ff4",
       "legacy_default": false
     },
     {
@@ -5382,6 +5382,11 @@
       "sha256": "5f2a58121306f87b6a627309f264ada87ac4778b3338cfc464ff656013ac3c65"
     },
     {
+      "path": "sources/web/JE-1000F/EU/nl/md/assets/669e984a7412_nl-overview-front-no-heading.png",
+      "size": 87526,
+      "sha256": "669e984a741222ddb52062affb36d80d61cf2c199868bbf3cae6d085fba3b8c9"
+    },
+    {
       "path": "sources/web/JE-1000F/EU/nl/md/assets/6749bd38fdd0_6749bd38fdd0_6749bd38fdd0_warning_triangle.png",
       "size": 4482,
       "sha256": "6749bd38fdd0b85af591d65d0d81ae591590aa5c35c7b0f72767057a953c5c67"
@@ -5467,11 +5472,6 @@
       "sha256": "91cec82eeaa553477868d38789d68a4937cb11c5c4d794de74db1edddb3aeea4"
     },
     {
-      "path": "sources/web/JE-1000F/EU/nl/md/assets/95bb08a64864_95bb08a64864_nl-overview-front.png",
-      "size": 90868,
-      "sha256": "95bb08a6486409717d9ccea5dcaf1f3c54285ce881e70de2a0f6d700a3bdb7de"
-    },
-    {
       "path": "sources/web/JE-1000F/EU/nl/md/assets/9aa0c1668423_9aa0c1668423_9aa0c1668423_op_ups_mode_je1000f_eu_en.png",
       "size": 89235,
       "sha256": "9aa0c1668423a77e9c63fd3d4731d38420fc2283bec8fda769269fa081a72da0"
@@ -5485,11 +5485,6 @@
       "path": "sources/web/JE-1000F/EU/nl/md/assets/a8a846e9767a_a8a846e9767a_a8a846e9767a_no_open_flame.png",
       "size": 8901,
       "sha256": "a8a846e9767ac618760e6a9ac65d826fb2c092ad7450014fa30ae0894746450a"
-    },
-    {
-      "path": "sources/web/JE-1000F/EU/nl/md/assets/ad4e1a4faf31_ad4e1a4faf31_nl-overview-right.png",
-      "size": 44498,
-      "sha256": "ad4e1a4faf31a39a2de836ca6adfc0ca01e2cf9408df50ee9e8487cee1692654"
     },
     {
       "path": "sources/web/JE-1000F/EU/nl/md/assets/b276ee48728d_b276ee48728d_b276ee48728d_car-charging.png",
@@ -5520,6 +5515,11 @@
       "path": "sources/web/JE-1000F/EU/nl/md/assets/c7862a87e742_c7862a87e742_c7862a87e742_19_Low_Battery_Indicator_KDk9bhs8poHUBdx96PLckPganhd.png",
       "size": 1293,
       "sha256": "c7862a87e742d6927b4e1d63a8d0ccb09fbcf980ae662ff94b9134e256e56889"
+    },
+    {
+      "path": "sources/web/JE-1000F/EU/nl/md/assets/c9a6e9b4b31f_nl-overview-right-no-heading.png",
+      "size": 41102,
+      "sha256": "c9a6e9b4b31f32d8682aa7381b3a67712c493dd2e16ef1555ede5b796aa08d45"
     },
     {
       "path": "sources/web/JE-1000F/EU/nl/md/assets/ce913ebfc775_ce913ebfc775_ce913ebfc775_25_Fault_code_Oz87bX3BGo8H7Zxe0XvcTd7FnJL.png",
@@ -5593,13 +5593,13 @@
     },
     {
       "path": "sources/web/JE-1000F/EU/nl/md/evidence/frozen_source_manifest.json",
-      "size": 68900,
-      "sha256": "7a08aa9a6cf55f1029ef44afde6f316b0e3ef87cffaa5a339be8517ad127e88c"
+      "size": 69050,
+      "sha256": "3ccda35dfb1ae9ed694239b1e5cdab54d819f113def34fb10d597ef870f9d341"
     },
     {
       "path": "sources/web/JE-1000F/EU/nl/md/evidence/language_projection_receipt.json",
-      "size": 32536,
-      "sha256": "d7c0cd5b3aca89418cce19febe60314659e7034ba8beab11ac6a665aa8ca04ee"
+      "size": 32535,
+      "sha256": "81bcdde5e2e76ec9768a1e1b5c81be4d929fe90906bdf8cc96971d58d6e5e389"
     },
     {
       "path": "sources/web/JE-1000F/EU/nl/md/index.md",
@@ -5608,18 +5608,18 @@
     },
     {
       "path": "sources/web/JE-1000F/EU/nl/md/manual.ir.json",
-      "size": 574443,
-      "sha256": "1737cf002e78b785333cd0b829da79c639b9017421a91bb3bc3c465375bba0cf"
+      "size": 573896,
+      "sha256": "8d9a9025e637cc095cd6720504c0748ab3c635e96fc763ad9c3861220a4f066e"
     },
     {
       "path": "sources/web/JE-1000F/EU/nl/md/manual_je1000f_eu_nl.md",
-      "size": 79930,
-      "sha256": "1a713539b99486950ddd1c1a04ce646e240c67e4ccc4c09d1945027c6cbf671d"
+      "size": 79864,
+      "sha256": "5b9731893aa887042b46d0f3b665944575551bf1a814ea47b1daad54dbd0a600"
     },
     {
       "path": "sources/web/JE-1000F/EU/nl/md/publish_meta.json",
-      "size": 594,
-      "sha256": "442dd8f334ca9a75c45d8a92565fd132fd5c287dd3535c0e2026f2d37c8091c6"
+      "size": 601,
+      "sha256": "ff1c987851ded27bd0467e8c34beca11d12d0e3840969d5c3074da3b00304139"
     },
     {
       "path": "sources/web/JE-1000F/EU/pl/md/_static/web_manual.css",
@@ -5677,6 +5677,11 @@
       "sha256": "2a61fc0919cfeca43a4dd3e9bcf3a4310314d7543f77e6af9c10f1717360eea7"
     },
     {
+      "path": "sources/web/JE-1000F/EU/pl/md/assets/2fcc304ec9b8_pl-overview-front-no-heading.png",
+      "size": 89906,
+      "sha256": "2fcc304ec9b83893c5fe819e4632bd03a3703878cbfd187c882392c5926d9b0c"
+    },
+    {
       "path": "sources/web/JE-1000F/EU/pl/md/assets/3bafcc34c487_3bafcc34c487_3bafcc34c487_app.control.png",
       "size": 14930,
       "sha256": "3bafcc34c487826771aec91e5d8ad3246bf8ee1bde8aa3ee46ff0e483d077c2c"
@@ -5700,11 +5705,6 @@
       "path": "sources/web/JE-1000F/EU/pl/md/assets/58c1d3604ca7_58c1d3604ca7_58c1d3604ca7_26_Output_Power_PviebR618oofvKxcKVRcHLlInqd.png",
       "size": 6085,
       "sha256": "58c1d3604ca7b9774b069c6928775a13465ccb9477f477e9e4d4b30e7f75b88d"
-    },
-    {
-      "path": "sources/web/JE-1000F/EU/pl/md/assets/5d68d8009562_5d68d8009562_pl-overview-front.png",
-      "size": 93419,
-      "sha256": "5d68d8009562f392cefd656b9b2c48491598b69a6a62317c8247713ceaddf177"
     },
     {
       "path": "sources/web/JE-1000F/EU/pl/md/assets/5f2a58121306_5f2a58121306_5f2a58121306_app_download_qr.png",
@@ -5857,11 +5857,6 @@
       "sha256": "d042326898a2450ebee6e356886e7403fe0a33b6a2d4a12266454205093a1218"
     },
     {
-      "path": "sources/web/JE-1000F/EU/pl/md/assets/d3b7e43d523f_d3b7e43d523f_pl-overview-right.png",
-      "size": 48126,
-      "sha256": "d3b7e43d523f59ea739e23b2558019b1d5ccaf59e0557f3bcc85554424690159"
-    },
-    {
       "path": "sources/web/JE-1000F/EU/pl/md/assets/d5100a538e96_d5100a538e96_d5100a538e96_10_Input_Power_LOAZbnxfqoHFwIxx2Myc532jnzb.png",
       "size": 4730,
       "sha256": "d5100a538e964da13e04241a98134e6aeaa36af8991aceeecac3c5d063b6968b"
@@ -5907,6 +5902,11 @@
       "sha256": "f9ed0c8d1dc17b00daad2ba6a13053a2b45527527b15c41d83d353df890740bb"
     },
     {
+      "path": "sources/web/JE-1000F/EU/pl/md/assets/faadda716e35_pl-overview-right-no-heading.png",
+      "size": 43762,
+      "sha256": "faadda716e35ab4f1874396d6293197579251bcf1f9542f74f95cabb20a27827"
+    },
+    {
       "path": "sources/web/JE-1000F/EU/pl/md/assets/fc4cc02b42ef_fc4cc02b42ef_fc4cc02b42ef_1_Wi-Fi_KCcAbdDk7o4RjKx82micuKJ5nyf.png",
       "size": 1814,
       "sha256": "fc4cc02b42efc31a32429ada2b78c4480a2fcbca647406da29b2ce75a8a8c1dc"
@@ -5918,13 +5918,13 @@
     },
     {
       "path": "sources/web/JE-1000F/EU/pl/md/evidence/frozen_source_manifest.json",
-      "size": 68900,
-      "sha256": "7a08aa9a6cf55f1029ef44afde6f316b0e3ef87cffaa5a339be8517ad127e88c"
+      "size": 69050,
+      "sha256": "3ccda35dfb1ae9ed694239b1e5cdab54d819f113def34fb10d597ef870f9d341"
     },
     {
       "path": "sources/web/JE-1000F/EU/pl/md/evidence/language_projection_receipt.json",
-      "size": 32199,
-      "sha256": "abe3f5c6b1e486e08d39aba6a5df4ed097707441a4ba65f06c0401ca2b0d0ec8"
+      "size": 32198,
+      "sha256": "5495a1b3c53f1b422f1f085f1a8b85cd4fbcc681ab24531465a414046a60722d"
     },
     {
       "path": "sources/web/JE-1000F/EU/pl/md/index.md",
@@ -5933,18 +5933,18 @@
     },
     {
       "path": "sources/web/JE-1000F/EU/pl/md/manual.ir.json",
-      "size": 576744,
-      "sha256": "4c5cb644859a5f70fdc7bb752d59a960b4714744d55acf867c9495436208e944"
+      "size": 576197,
+      "sha256": "0dcad711297b00ee254788a827bc24890f7691b6aa32d276f30481f2705b5365"
     },
     {
       "path": "sources/web/JE-1000F/EU/pl/md/manual_je1000f_eu_pl.md",
-      "size": 82666,
-      "sha256": "5660b1146373e08ed3c4f69813a20242ca515ee9dff6ae5d0eb427b390e17db1"
+      "size": 82600,
+      "sha256": "76cc15972cac15adcb70c9be69882d8f4b4d6dc92be55a648203e0471232d3ef"
     },
     {
       "path": "sources/web/JE-1000F/EU/pl/md/publish_meta.json",
-      "size": 594,
-      "sha256": "897cc6a3ff1d14a272f559f135aad33dca8ad1fba344e23177a1d53b4ecd0116"
+      "size": 601,
+      "sha256": "1955cdee53b05266f02b4fd015fb501972ec1da76dd1475cfa68d0c071950697"
     },
     {
       "path": "sources/web/JE-1000F/EU/pt/md/_static/web_manual.css",
@@ -6017,6 +6017,11 @@
       "sha256": "401376e7e34a5aee30352e7a351998c0acf0dfdf6c8e817bc849914db88cfbda"
     },
     {
+      "path": "sources/web/JE-1000F/EU/pt/md/assets/4b8beece8116_pt-overview-front-no-heading.png",
+      "size": 86575,
+      "sha256": "4b8beece81163c3a2db0704299361f75fd1c075d3b69c1c82e5abae9b521f54e"
+    },
+    {
       "path": "sources/web/JE-1000F/EU/pt/md/assets/58138a11bdcb_58138a11bdcb_58138a11bdcb_overview-front.png",
       "size": 58814,
       "sha256": "58138a11bdcb513337870c37bd0b661c43c7f391565797cad45463ffe2d01895"
@@ -6067,9 +6072,9 @@
       "sha256": "7623ef10e229bcfe66c872f3733d26b86c97d703ed30012188a88bb4a168e6df"
     },
     {
-      "path": "sources/web/JE-1000F/EU/pt/md/assets/79d1c219ead9_79d1c219ead9_pt-overview-right.png",
-      "size": 44369,
-      "sha256": "79d1c219ead911fa501e5838af96c43f9921a61c9a2987414fe6278ab04c3f79"
+      "path": "sources/web/JE-1000F/EU/pt/md/assets/7b75e299d332_pt-overview-right-no-heading.png",
+      "size": 40997,
+      "sha256": "7b75e299d332e61ddf84ffe77f4d69613b2ebe77006ab1f1a38761c7a95d04e6"
     },
     {
       "path": "sources/web/JE-1000F/EU/pt/md/assets/7e1392ba6a45_7e1392ba6a45_7e1392ba6a45_2_Bluetooth_HVgvbJhq5o4EDKxhm7McCF4FnjB.png",
@@ -6120,11 +6125,6 @@
       "path": "sources/web/JE-1000F/EU/pt/md/assets/91cec82eeaa5_91cec82eeaa5_91cec82eeaa5_14_Solar_Charging_Indicator_RgAUbPXNWoRxiHxKNgkc2gqDnEb.png",
       "size": 3059,
       "sha256": "91cec82eeaa553477868d38789d68a4937cb11c5c4d794de74db1edddb3aeea4"
-    },
-    {
-      "path": "sources/web/JE-1000F/EU/pt/md/assets/9566cd4abeee_9566cd4abeee_pt-overview-front.png",
-      "size": 90104,
-      "sha256": "9566cd4abeee8c86be9fd5af2a191646885587ac76b90a6f5cf6adee402d97d0"
     },
     {
       "path": "sources/web/JE-1000F/EU/pt/md/assets/9aa0c1668423_9aa0c1668423_9aa0c1668423_op_ups_mode_je1000f_eu_en.png",
@@ -6243,13 +6243,13 @@
     },
     {
       "path": "sources/web/JE-1000F/EU/pt/md/evidence/frozen_source_manifest.json",
-      "size": 68900,
-      "sha256": "7a08aa9a6cf55f1029ef44afde6f316b0e3ef87cffaa5a339be8517ad127e88c"
+      "size": 69050,
+      "sha256": "3ccda35dfb1ae9ed694239b1e5cdab54d819f113def34fb10d597ef870f9d341"
     },
     {
       "path": "sources/web/JE-1000F/EU/pt/md/evidence/language_projection_receipt.json",
-      "size": 32541,
-      "sha256": "1e7c37fc4e6cc829f5129bb2f79eb6d5b014ce634fe8bd718ef63f7cf450107c"
+      "size": 32540,
+      "sha256": "5cdb05dde1709300320627f31eab86410ea746745e86660e19305ef819d53130"
     },
     {
       "path": "sources/web/JE-1000F/EU/pt/md/index.md",
@@ -6258,18 +6258,18 @@
     },
     {
       "path": "sources/web/JE-1000F/EU/pt/md/manual.ir.json",
-      "size": 575072,
-      "sha256": "8640d0bf48476c59775a974fc5666383769d33d2b6423674d19a2377229b6c1d"
+      "size": 574525,
+      "sha256": "02704858ba6bcd061eeeb0030ae88e730ca3572871f5d42c4026075f00efba37"
     },
     {
       "path": "sources/web/JE-1000F/EU/pt/md/manual_je1000f_eu_pt.md",
-      "size": 80605,
-      "sha256": "cac74033605553f29339e7de99a37cad8438b6e52a07ad2ea7755c3fa216232b"
+      "size": 80539,
+      "sha256": "4dd5f60297187ab031474f3043bdc024c4d1cfee7d9b4494e299c694555c7bae"
     },
     {
       "path": "sources/web/JE-1000F/EU/pt/md/publish_meta.json",
-      "size": 594,
-      "sha256": "52b37b9c62c76d07a8ee1a586d520b3b0ca53f7f011f59f21275dc4272f01869"
+      "size": 601,
+      "sha256": "a3ce0dfa8dc87f271086b318d036945d72c5c1065e8f1f712d9817a78fc3a352"
     },
     {
       "path": "sources/web/JE-1000F/EU/uk/md/_static/web_manual.css",
@@ -6327,11 +6327,6 @@
       "sha256": "2a61fc0919cfeca43a4dd3e9bcf3a4310314d7543f77e6af9c10f1717360eea7"
     },
     {
-      "path": "sources/web/JE-1000F/EU/uk/md/assets/31d711b04d44_31d711b04d44_uk-overview-right.png",
-      "size": 46175,
-      "sha256": "31d711b04d44f7bebf86eb261e419fce84e26796197390172de01c83ce762984"
-    },
-    {
       "path": "sources/web/JE-1000F/EU/uk/md/assets/3bafcc34c487_3bafcc34c487_3bafcc34c487_app.control.png",
       "size": 14930,
       "sha256": "3bafcc34c487826771aec91e5d8ad3246bf8ee1bde8aa3ee46ff0e483d077c2c"
@@ -6365,6 +6360,11 @@
       "path": "sources/web/JE-1000F/EU/uk/md/assets/6749bd38fdd0_6749bd38fdd0_6749bd38fdd0_warning_triangle.png",
       "size": 4482,
       "sha256": "6749bd38fdd0b85af591d65d0d81ae591590aa5c35c7b0f72767057a953c5c67"
+    },
+    {
+      "path": "sources/web/JE-1000F/EU/uk/md/assets/689d83ca9c97_uk-overview-right-no-heading.png",
+      "size": 43275,
+      "sha256": "689d83ca9c9774844e527224ff3efe44c07e2e284133f9bce04a61df4fa854d7"
     },
     {
       "path": "sources/web/JE-1000F/EU/uk/md/assets/6aab9a14900a_6aab9a14900a_6aab9a14900a_20_Discharge_Timer_DHPMbkjSWoiuALxJyJ8cWyQOn0e.png",
@@ -6467,11 +6467,6 @@
       "sha256": "b276ee48728db4e72e21d7fde456e91017e3e4f5335209b1d5476f6c7af1f0f4"
     },
     {
-      "path": "sources/web/JE-1000F/EU/uk/md/assets/b77f660236c2_b77f660236c2_uk-overview-front.png",
-      "size": 92466,
-      "sha256": "b77f660236c22280171a990a9f885350cdcd0835a7b849ebf06cd7f1d2fed9b9"
-    },
-    {
       "path": "sources/web/JE-1000F/EU/uk/md/assets/bd1e161e7734_bd1e161e7734_bd1e161e7734_op_led_light_je1000f_eu_en.png",
       "size": 59862,
       "sha256": "bd1e161e77343ed2e9cd99ea4ccdea96f4caa184102714f4ea48135583ea04b2"
@@ -6480,6 +6475,11 @@
       "path": "sources/web/JE-1000F/EU/uk/md/assets/bdbf602db74a_bdbf602db74a_bdbf602db74a_24_Low_Temperature_Indicator_JDMEbD96noSbyWxbOnVcgip1nab.png",
       "size": 2206,
       "sha256": "bdbf602db74ade39a2a162209c0ff535315dee5e27e4832b2e6a201764b6941a"
+    },
+    {
+      "path": "sources/web/JE-1000F/EU/uk/md/assets/c1221434eb45_uk-overview-front-no-heading.png",
+      "size": 89136,
+      "sha256": "c1221434eb451168f9d540593e2ff8c72a2e95d18d55f4bdaeabf3d72b03d8c2"
     },
     {
       "path": "sources/web/JE-1000F/EU/uk/md/assets/c15858544727_c15858544727_c15858544727_ac-output.png",
@@ -6568,13 +6568,13 @@
     },
     {
       "path": "sources/web/JE-1000F/EU/uk/md/evidence/frozen_source_manifest.json",
-      "size": 68900,
-      "sha256": "7a08aa9a6cf55f1029ef44afde6f316b0e3ef87cffaa5a339be8517ad127e88c"
+      "size": 69050,
+      "sha256": "3ccda35dfb1ae9ed694239b1e5cdab54d819f113def34fb10d597ef870f9d341"
     },
     {
       "path": "sources/web/JE-1000F/EU/uk/md/evidence/language_projection_receipt.json",
-      "size": 32034,
-      "sha256": "bbb5e578069e6093488a044095080240cbf560e1954646de377e71b8e6e7b42e"
+      "size": 32033,
+      "sha256": "cf7754b741ae35498e28014b44ea1e7c258939e7fe3b87edb173f2d525ea0ff4"
     },
     {
       "path": "sources/web/JE-1000F/EU/uk/md/index.md",
@@ -6583,18 +6583,18 @@
     },
     {
       "path": "sources/web/JE-1000F/EU/uk/md/manual.ir.json",
-      "size": 616963,
-      "sha256": "9fd14ca686cfd8e31595c0bcdf9c2551f5b5b421f9b6fbab1cb6ed8a746a7764"
+      "size": 616416,
+      "sha256": "802fdf38f8646851414ed389597d153b049868e97290199ed883801da15b7d29"
     },
     {
       "path": "sources/web/JE-1000F/EU/uk/md/manual_je1000f_eu_uk.md",
-      "size": 104608,
-      "sha256": "26b4345d7ba5280efd7d4c7169ae6a57e50a19c0272f7cb714d6e1d1191f1596"
+      "size": 104542,
+      "sha256": "5f7ac9dcbe76832b8e4975ca1b87c9aeffc568df1c51e6f1e924ae9e1a017f00"
     },
     {
       "path": "sources/web/JE-1000F/EU/uk/md/publish_meta.json",
-      "size": 594,
-      "sha256": "d0b861d20683bd20bda33939e2aaddcd07d599bc5cecac013f0ecbf62b3160ab"
+      "size": 601,
+      "sha256": "910ba4dc2ad84b753b88c51a76a3bcbcd63ab9565e44c15838a1660aeecca930"
     },
     {
       "path": "sources/web/JE-1000F/US/en/md/assets/app_add_device_steps_9b7e0cf44d0f.png",
@@ -15988,13 +15988,13 @@
     },
     {
       "path": "web/JE-1000F/EU/nl/md/evidence/frozen_source_manifest.json",
-      "size": 68900,
-      "sha256": "7a08aa9a6cf55f1029ef44afde6f316b0e3ef87cffaa5a339be8517ad127e88c"
+      "size": 69050,
+      "sha256": "3ccda35dfb1ae9ed694239b1e5cdab54d819f113def34fb10d597ef870f9d341"
     },
     {
       "path": "web/JE-1000F/EU/nl/md/evidence/language_projection_receipt.json",
-      "size": 32536,
-      "sha256": "d7c0cd5b3aca89418cce19febe60314659e7034ba8beab11ac6a665aa8ca04ee"
+      "size": 32535,
+      "sha256": "81bcdde5e2e76ec9768a1e1b5c81be4d929fe90906bdf8cc96971d58d6e5e389"
     },
     {
       "path": "web/JE-1000F/EU/nl/md/index.md",
@@ -16003,13 +16003,13 @@
     },
     {
       "path": "web/JE-1000F/EU/nl/md/manual.ir.json",
-      "size": 574443,
-      "sha256": "1737cf002e78b785333cd0b829da79c639b9017421a91bb3bc3c465375bba0cf"
+      "size": 573896,
+      "sha256": "8d9a9025e637cc095cd6720504c0748ab3c635e96fc763ad9c3861220a4f066e"
     },
     {
       "path": "web/JE-1000F/EU/nl/md/manual_je1000f_eu_nl.md",
-      "size": 81791,
-      "sha256": "111e9b69ad186430e91f3e94833ab5a36dba062b0f96afce9f42eda07f939b73"
+      "size": 81729,
+      "sha256": "36a335493a5744c0fa67fb381d90e5dc112941facaa1dd359b939d1aeb1adff5"
     },
     {
       "path": "web/JE-1000F/EU/pl/md/_static/web_manual.css",
@@ -16018,13 +16018,13 @@
     },
     {
       "path": "web/JE-1000F/EU/pl/md/evidence/frozen_source_manifest.json",
-      "size": 68900,
-      "sha256": "7a08aa9a6cf55f1029ef44afde6f316b0e3ef87cffaa5a339be8517ad127e88c"
+      "size": 69050,
+      "sha256": "3ccda35dfb1ae9ed694239b1e5cdab54d819f113def34fb10d597ef870f9d341"
     },
     {
       "path": "web/JE-1000F/EU/pl/md/evidence/language_projection_receipt.json",
-      "size": 32199,
-      "sha256": "abe3f5c6b1e486e08d39aba6a5df4ed097707441a4ba65f06c0401ca2b0d0ec8"
+      "size": 32198,
+      "sha256": "5495a1b3c53f1b422f1f085f1a8b85cd4fbcc681ab24531465a414046a60722d"
     },
     {
       "path": "web/JE-1000F/EU/pl/md/index.md",
@@ -16033,13 +16033,13 @@
     },
     {
       "path": "web/JE-1000F/EU/pl/md/manual.ir.json",
-      "size": 576744,
-      "sha256": "4c5cb644859a5f70fdc7bb752d59a960b4714744d55acf867c9495436208e944"
+      "size": 576197,
+      "sha256": "0dcad711297b00ee254788a827bc24890f7691b6aa32d276f30481f2705b5365"
     },
     {
       "path": "web/JE-1000F/EU/pl/md/manual_je1000f_eu_pl.md",
-      "size": 84527,
-      "sha256": "34d5da67107c1fa1aba28f9ad1861287c5e9681e07fa25b04773c70a2120f439"
+      "size": 84465,
+      "sha256": "1eb6d159a19b02286f9b15b18133cde577302316df98a11bd0c6c87fac5c51a2"
     },
     {
       "path": "web/JE-1000F/EU/pt/md/_static/web_manual.css",
@@ -16048,13 +16048,13 @@
     },
     {
       "path": "web/JE-1000F/EU/pt/md/evidence/frozen_source_manifest.json",
-      "size": 68900,
-      "sha256": "7a08aa9a6cf55f1029ef44afde6f316b0e3ef87cffaa5a339be8517ad127e88c"
+      "size": 69050,
+      "sha256": "3ccda35dfb1ae9ed694239b1e5cdab54d819f113def34fb10d597ef870f9d341"
     },
     {
       "path": "web/JE-1000F/EU/pt/md/evidence/language_projection_receipt.json",
-      "size": 32541,
-      "sha256": "1e7c37fc4e6cc829f5129bb2f79eb6d5b014ce634fe8bd718ef63f7cf450107c"
+      "size": 32540,
+      "sha256": "5cdb05dde1709300320627f31eab86410ea746745e86660e19305ef819d53130"
     },
     {
       "path": "web/JE-1000F/EU/pt/md/index.md",
@@ -16063,13 +16063,13 @@
     },
     {
       "path": "web/JE-1000F/EU/pt/md/manual.ir.json",
-      "size": 575072,
-      "sha256": "8640d0bf48476c59775a974fc5666383769d33d2b6423674d19a2377229b6c1d"
+      "size": 574525,
+      "sha256": "02704858ba6bcd061eeeb0030ae88e730ca3572871f5d42c4026075f00efba37"
     },
     {
       "path": "web/JE-1000F/EU/pt/md/manual_je1000f_eu_pt.md",
-      "size": 82466,
-      "sha256": "6e215fb487a8abe32729bd701fad50c67fa4d3826c801d09962cd64b5c9bff6d"
+      "size": 82404,
+      "sha256": "c46318da00afecce69ae41572af243cc788e1c3229268a71d6e416f39c0ccb36"
     },
     {
       "path": "web/JE-1000F/EU/uk/md/_static/web_manual.css",
@@ -16078,13 +16078,13 @@
     },
     {
       "path": "web/JE-1000F/EU/uk/md/evidence/frozen_source_manifest.json",
-      "size": 68900,
-      "sha256": "7a08aa9a6cf55f1029ef44afde6f316b0e3ef87cffaa5a339be8517ad127e88c"
+      "size": 69050,
+      "sha256": "3ccda35dfb1ae9ed694239b1e5cdab54d819f113def34fb10d597ef870f9d341"
     },
     {
       "path": "web/JE-1000F/EU/uk/md/evidence/language_projection_receipt.json",
-      "size": 32034,
-      "sha256": "bbb5e578069e6093488a044095080240cbf560e1954646de377e71b8e6e7b42e"
+      "size": 32033,
+      "sha256": "cf7754b741ae35498e28014b44ea1e7c258939e7fe3b87edb173f2d525ea0ff4"
     },
     {
       "path": "web/JE-1000F/EU/uk/md/index.md",
@@ -16093,13 +16093,13 @@
     },
     {
       "path": "web/JE-1000F/EU/uk/md/manual.ir.json",
-      "size": 616963,
-      "sha256": "9fd14ca686cfd8e31595c0bcdf9c2551f5b5b421f9b6fbab1cb6ed8a746a7764"
+      "size": 616416,
+      "sha256": "802fdf38f8646851414ed389597d153b049868e97290199ed883801da15b7d29"
     },
     {
       "path": "web/JE-1000F/EU/uk/md/manual_je1000f_eu_uk.md",
-      "size": 106469,
-      "sha256": "e8485043ad3d383704a1e683204f2db84252bda3a889b40680ea46c41c0d9b4c"
+      "size": 106407,
+      "sha256": "2bce3e296f65ae8c654c5593b5c59a53fb1c93a2303395a3f3903babdae4ed39"
     },
     {
       "path": "web/JE-1000F/US/en/md/evidence/language_projection_receipt.json",
@@ -17662,6 +17662,11 @@
       "sha256": "2f6216b28c08a64de215bcbae3c62e2c90219a0aa93d53ed77ee365fd21b11fc"
     },
     {
+      "path": "web/_static/manual-assets/_pool/2f/2fcc304ec9b83893c5fe819e4632bd03a3703878cbfd187c882392c5926d9b0c.png",
+      "size": 89906,
+      "sha256": "2fcc304ec9b83893c5fe819e4632bd03a3703878cbfd187c882392c5926d9b0c"
+    },
+    {
       "path": "web/_static/manual-assets/_pool/30/3083826c7c0ed4795dede769a9304c9f2984787543127c1295f32e1e9c797cda.png",
       "size": 287854,
       "sha256": "3083826c7c0ed4795dede769a9304c9f2984787543127c1295f32e1e9c797cda"
@@ -17670,11 +17675,6 @@
       "path": "web/_static/manual-assets/_pool/30/308fa25f0968c416b27103966c6d13b9a6518184fce83824c751c2278f4f3953.png",
       "size": 28486,
       "sha256": "308fa25f0968c416b27103966c6d13b9a6518184fce83824c751c2278f4f3953"
-    },
-    {
-      "path": "web/_static/manual-assets/_pool/31/31d711b04d44f7bebf86eb261e419fce84e26796197390172de01c83ce762984.png",
-      "size": 46175,
-      "sha256": "31d711b04d44f7bebf86eb261e419fce84e26796197390172de01c83ce762984"
     },
     {
       "path": "web/_static/manual-assets/_pool/32/3217397cd5ee07d6a35ddce30e439688b85a3fccb2cba4ef4684086df431f842.png",
@@ -18077,6 +18077,11 @@
       "sha256": "4b86f595de899ab4c7ca078ca22c86fb18fd975e054fdbd5ce50faa3c12e653a"
     },
     {
+      "path": "web/_static/manual-assets/_pool/4b/4b8beece81163c3a2db0704299361f75fd1c075d3b69c1c82e5abae9b521f54e.png",
+      "size": 86575,
+      "sha256": "4b8beece81163c3a2db0704299361f75fd1c075d3b69c1c82e5abae9b521f54e"
+    },
+    {
       "path": "web/_static/manual-assets/_pool/4b/4bc3bcff974abdb7b589806d27e89f1cce8f68e61ba901768222400a9425afe5.png",
       "size": 391431,
       "sha256": "4bc3bcff974abdb7b589806d27e89f1cce8f68e61ba901768222400a9425afe5"
@@ -18397,11 +18402,6 @@
       "sha256": "5d2e8a3b784b67b4b423ee6dfdf6ad2672c0b53f775eb83d3e1951d98281f9aa"
     },
     {
-      "path": "web/_static/manual-assets/_pool/5d/5d68d8009562f392cefd656b9b2c48491598b69a6a62317c8247713ceaddf177.png",
-      "size": 93419,
-      "sha256": "5d68d8009562f392cefd656b9b2c48491598b69a6a62317c8247713ceaddf177"
-    },
-    {
       "path": "web/_static/manual-assets/_pool/5e/5e344ad0df88ab0f2473f56d1340ecaa802eaa2a7644904f800ca1b879881eef.png",
       "size": 234054,
       "sha256": "5e344ad0df88ab0f2473f56d1340ecaa802eaa2a7644904f800ca1b879881eef"
@@ -18542,6 +18542,11 @@
       "sha256": "6687da516a486f620499e1fbd3459c4df350b5cbc1a345b79acb4e9a6fd327c3"
     },
     {
+      "path": "web/_static/manual-assets/_pool/66/669e984a741222ddb52062affb36d80d61cf2c199868bbf3cae6d085fba3b8c9.png",
+      "size": 87526,
+      "sha256": "669e984a741222ddb52062affb36d80d61cf2c199868bbf3cae6d085fba3b8c9"
+    },
+    {
       "path": "web/_static/manual-assets/_pool/66/66c3df77e4f84cccad4b9f162798b181c007e89d3f0e9dd4fdf52c392827cbab.png",
       "size": 1580,
       "sha256": "66c3df77e4f84cccad4b9f162798b181c007e89d3f0e9dd4fdf52c392827cbab"
@@ -18595,6 +18600,11 @@
       "path": "web/_static/manual-assets/_pool/68/68839eb0e574ba3c5a64ad1402486ae92a85fa26b9dcfd4e5beffc7b89bc2d1b.png",
       "size": 78755,
       "sha256": "68839eb0e574ba3c5a64ad1402486ae92a85fa26b9dcfd4e5beffc7b89bc2d1b"
+    },
+    {
+      "path": "web/_static/manual-assets/_pool/68/689d83ca9c9774844e527224ff3efe44c07e2e284133f9bce04a61df4fa854d7.png",
+      "size": 43275,
+      "sha256": "689d83ca9c9774844e527224ff3efe44c07e2e284133f9bce04a61df4fa854d7"
     },
     {
       "path": "web/_static/manual-assets/_pool/69/6942c72cac464da264cf3e381358e572145de843cefb307c4f79be56b7fb8004.png",
@@ -18872,11 +18882,6 @@
       "sha256": "79ba6a0ff316fa7efeedeff8de15cc59225add6a8119a34bd9f57c618d53c66f"
     },
     {
-      "path": "web/_static/manual-assets/_pool/79/79d1c219ead911fa501e5838af96c43f9921a61c9a2987414fe6278ab04c3f79.png",
-      "size": 44369,
-      "sha256": "79d1c219ead911fa501e5838af96c43f9921a61c9a2987414fe6278ab04c3f79"
-    },
-    {
       "path": "web/_static/manual-assets/_pool/7a/7a44a5af8097bdf8c18b1faea682bc78cf8f1495f4b4d4d523466d4807be1244.png",
       "size": 49487,
       "sha256": "7a44a5af8097bdf8c18b1faea682bc78cf8f1495f4b4d4d523466d4807be1244"
@@ -18905,6 +18910,11 @@
       "path": "web/_static/manual-assets/_pool/7b/7b6b8e0b937950dd39a211f0d364451db720e799d6c6b06c5a0ff6a41c977e81.png",
       "size": 106977,
       "sha256": "7b6b8e0b937950dd39a211f0d364451db720e799d6c6b06c5a0ff6a41c977e81"
+    },
+    {
+      "path": "web/_static/manual-assets/_pool/7b/7b75e299d332e61ddf84ffe77f4d69613b2ebe77006ab1f1a38761c7a95d04e6.png",
+      "size": 40997,
+      "sha256": "7b75e299d332e61ddf84ffe77f4d69613b2ebe77006ab1f1a38761c7a95d04e6"
     },
     {
       "path": "web/_static/manual-assets/_pool/7c/7c6f0c093e39638f92f43fff239f08f06a0d4e81fe29f7f2a5dfd326ebd40ef5.png",
@@ -19287,16 +19297,6 @@
       "sha256": "9560b32723845be2f789dba22e08b3e64cb37e75c003b32c90473256583d4dce"
     },
     {
-      "path": "web/_static/manual-assets/_pool/95/9566cd4abeee8c86be9fd5af2a191646885587ac76b90a6f5cf6adee402d97d0.png",
-      "size": 90104,
-      "sha256": "9566cd4abeee8c86be9fd5af2a191646885587ac76b90a6f5cf6adee402d97d0"
-    },
-    {
-      "path": "web/_static/manual-assets/_pool/95/95bb08a6486409717d9ccea5dcaf1f3c54285ce881e70de2a0f6d700a3bdb7de.png",
-      "size": 90868,
-      "sha256": "95bb08a6486409717d9ccea5dcaf1f3c54285ce881e70de2a0f6d700a3bdb7de"
-    },
-    {
       "path": "web/_static/manual-assets/_pool/95/95f5fd32f3794460712e348645fbec266fa94ab2cbd6dd90dc7620c44a519b07.png",
       "size": 435969,
       "sha256": "95f5fd32f3794460712e348645fbec266fa94ab2cbd6dd90dc7620c44a519b07"
@@ -19642,11 +19642,6 @@
       "sha256": "ad4a3f6c7140f14222b620191aed30bf8fcc230c8e16a10d86d9f4c7ef27353b"
     },
     {
-      "path": "web/_static/manual-assets/_pool/ad/ad4e1a4faf31a39a2de836ca6adfc0ca01e2cf9408df50ee9e8487cee1692654.png",
-      "size": 44498,
-      "sha256": "ad4e1a4faf31a39a2de836ca6adfc0ca01e2cf9408df50ee9e8487cee1692654"
-    },
-    {
       "path": "web/_static/manual-assets/_pool/ad/ad699d0134c2e359976f83ed63b2caa8b24dd7c27dc56188f41070ee77c94c7d.png",
       "size": 35883,
       "sha256": "ad699d0134c2e359976f83ed63b2caa8b24dd7c27dc56188f41070ee77c94c7d"
@@ -19812,11 +19807,6 @@
       "sha256": "b76180e69336a68d2cf888f9fa7ee7117c538fad461c2e75f024221b2e5e5936"
     },
     {
-      "path": "web/_static/manual-assets/_pool/b7/b77f660236c22280171a990a9f885350cdcd0835a7b849ebf06cd7f1d2fed9b9.png",
-      "size": 92466,
-      "sha256": "b77f660236c22280171a990a9f885350cdcd0835a7b849ebf06cd7f1d2fed9b9"
-    },
-    {
       "path": "web/_static/manual-assets/_pool/b7/b79505e80e2d003044270282dadf86dd55d5245bd658c8441556a855b0314e66.png",
       "size": 51495,
       "sha256": "b79505e80e2d003044270282dadf86dd55d5245bd658c8441556a855b0314e66"
@@ -19945,6 +19935,11 @@
       "path": "web/_static/manual-assets/_pool/c0/c0e6712d6df6ae0ae40bf5e070d847bfe20bd6acd1d9d0520ca58104e9d77d41.png",
       "size": 11547,
       "sha256": "c0e6712d6df6ae0ae40bf5e070d847bfe20bd6acd1d9d0520ca58104e9d77d41"
+    },
+    {
+      "path": "web/_static/manual-assets/_pool/c1/c1221434eb451168f9d540593e2ff8c72a2e95d18d55f4bdaeabf3d72b03d8c2.png",
+      "size": 89136,
+      "sha256": "c1221434eb451168f9d540593e2ff8c72a2e95d18d55f4bdaeabf3d72b03d8c2"
     },
     {
       "path": "web/_static/manual-assets/_pool/c1/c13fbd36ae27d5e1b8c4986c58aeb39a49b08470c7574a219f232c5665ecefcf.png",
@@ -20095,6 +20090,11 @@
       "path": "web/_static/manual-assets/_pool/c9/c9915b21215a57d5072ee9bfcd2ae3067dfffd78adb00a1dcc15ed6449b8a133.png",
       "size": 315066,
       "sha256": "c9915b21215a57d5072ee9bfcd2ae3067dfffd78adb00a1dcc15ed6449b8a133"
+    },
+    {
+      "path": "web/_static/manual-assets/_pool/c9/c9a6e9b4b31f32d8682aa7381b3a67712c493dd2e16ef1555ede5b796aa08d45.png",
+      "size": 41102,
+      "sha256": "c9a6e9b4b31f32d8682aa7381b3a67712c493dd2e16ef1555ede5b796aa08d45"
     },
     {
       "path": "web/_static/manual-assets/_pool/c9/c9db12ac863e6890df811ab7a4d0ea100b89a9067e4ab688945ea265980f405a.png",
@@ -20265,11 +20265,6 @@
       "path": "web/_static/manual-assets/_pool/d3/d34e621c3b7b7b3a1acd57c293e5beee9227f9d8b9fb4161efa07a1d39cd2ef4.png",
       "size": 326197,
       "sha256": "d34e621c3b7b7b3a1acd57c293e5beee9227f9d8b9fb4161efa07a1d39cd2ef4"
-    },
-    {
-      "path": "web/_static/manual-assets/_pool/d3/d3b7e43d523f59ea739e23b2558019b1d5ccaf59e0557f3bcc85554424690159.png",
-      "size": 48126,
-      "sha256": "d3b7e43d523f59ea739e23b2558019b1d5ccaf59e0557f3bcc85554424690159"
     },
     {
       "path": "web/_static/manual-assets/_pool/d3/d3e74810c6c056db09af82c642f0034a4114eebca4e5720d6fc79a922b56878b.png",
@@ -20875,6 +20870,11 @@
       "path": "web/_static/manual-assets/_pool/fa/fa7439b76ce6ba16ebf93453ab6f567aec264aa794cd4bf98c5a17630d249985.png",
       "size": 82574,
       "sha256": "fa7439b76ce6ba16ebf93453ab6f567aec264aa794cd4bf98c5a17630d249985"
+    },
+    {
+      "path": "web/_static/manual-assets/_pool/fa/faadda716e35ab4f1874396d6293197579251bcf1f9542f74f95cabb20a27827.png",
+      "size": 43762,
+      "sha256": "faadda716e35ab4f1874396d6293197579251bcf1f9542f74f95cabb20a27827"
     },
     {
       "path": "web/_static/manual-assets/_pool/fa/fab3f07d629ad6e06e7142b235b59b1f65c842a21b4cec93464386a34a3a2647.png",

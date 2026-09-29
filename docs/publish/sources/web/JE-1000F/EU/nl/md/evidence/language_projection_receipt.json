@@ -3,11 +3,11 @@
   "model": "JE-1000F",
   "region": "EU",
   "language": "nl",
-  "version": "git-20260928-c38415f5-lcd-status",
-  "git_ref": "79e337ec7e452e9701b762c243d3b77f0a24706a",
+  "version": "git-20260929-c38415f5-overview-headings",
+  "git_ref": "c691d87c33b690df5f0013a55c4e8149e6be2fc7",
   "source_manifest": {
     "path": "frozen_source_manifest.json",
-    "sha256": "7a08aa9a6cf55f1029ef44afde6f316b0e3ef87cffaa5a339be8517ad127e88c"
+    "sha256": "3ccda35dfb1ae9ed694239b1e5cdab54d819f113def34fb10d597ef870f9d341"
   },
   "markdown": {
     "manual": "manual_je1000f_eu_nl.md",
@@ -98,6 +98,11 @@
         "sha256": "5f2a58121306f87b6a627309f264ada87ac4778b3338cfc464ff656013ac3c65"
       },
       {
+        "path": "assets/669e984a7412_nl-overview-front-no-heading.png",
+        "size": 87526,
+        "sha256": "669e984a741222ddb52062affb36d80d61cf2c199868bbf3cae6d085fba3b8c9"
+      },
+      {
         "path": "assets/6749bd38fdd0_6749bd38fdd0_6749bd38fdd0_warning_triangle.png",
         "size": 4482,
         "sha256": "6749bd38fdd0b85af591d65d0d81ae591590aa5c35c7b0f72767057a953c5c67"
@@ -183,11 +188,6 @@
         "sha256": "91cec82eeaa553477868d38789d68a4937cb11c5c4d794de74db1edddb3aeea4"
       },
       {
-        "path": "assets/95bb08a64864_95bb08a64864_nl-overview-front.png",
-        "size": 90868,
-        "sha256": "95bb08a6486409717d9ccea5dcaf1f3c54285ce881e70de2a0f6d700a3bdb7de"
-      },
-      {
         "path": "assets/9aa0c1668423_9aa0c1668423_9aa0c1668423_op_ups_mode_je1000f_eu_en.png",
         "size": 89235,
         "sha256": "9aa0c1668423a77e9c63fd3d4731d38420fc2283bec8fda769269fa081a72da0"
@@ -201,11 +201,6 @@
         "path": "assets/a8a846e9767a_a8a846e9767a_a8a846e9767a_no_open_flame.png",
         "size": 8901,
         "sha256": "a8a846e9767ac618760e6a9ac65d826fb2c092ad7450014fa30ae0894746450a"
-      },
-      {
-        "path": "assets/ad4e1a4faf31_ad4e1a4faf31_nl-overview-right.png",
-        "size": 44498,
-        "sha256": "ad4e1a4faf31a39a2de836ca6adfc0ca01e2cf9408df50ee9e8487cee1692654"
       },
       {
         "path": "assets/b276ee48728d_b276ee48728d_b276ee48728d_car-charging.png",
@@ -236,6 +231,11 @@
         "path": "assets/c7862a87e742_c7862a87e742_c7862a87e742_19_Low_Battery_Indicator_KDk9bhs8poHUBdx96PLckPganhd.png",
         "size": 1293,
         "sha256": "c7862a87e742d6927b4e1d63a8d0ccb09fbcf980ae662ff94b9134e256e56889"
+      },
+      {
+        "path": "assets/c9a6e9b4b31f_nl-overview-right-no-heading.png",
+        "size": 41102,
+        "sha256": "c9a6e9b4b31f32d8682aa7381b3a67712c493dd2e16ef1555ede5b796aa08d45"
       },
       {
         "path": "assets/ce913ebfc775_ce913ebfc775_ce913ebfc775_25_Fault_code_Oz87bX3BGo8H7Zxe0XvcTd7FnJL.png",
@@ -314,16 +314,16 @@
       },
       {
         "path": "manual.ir.json",
-        "size": 574443,
-        "sha256": "1737cf002e78b785333cd0b829da79c639b9017421a91bb3bc3c465375bba0cf"
+        "size": 573896,
+        "sha256": "8d9a9025e637cc095cd6720504c0748ab3c635e96fc763ad9c3861220a4f066e"
       },
       {
         "path": "manual_je1000f_eu_nl.md",
-        "size": 79930,
-        "sha256": "1a713539b99486950ddd1c1a04ce646e240c67e4ccc4c09d1945027c6cbf671d"
+        "size": 79864,
+        "sha256": "5b9731893aa887042b46d0f3b665944575551bf1a814ea47b1daad54dbd0a600"
       }
     ],
-    "sha256": "6eac2855e78bafcad0c124e3cfe425f0059bdaafd8ed0e769b47c441078b1756"
+    "sha256": "8920fa0a864989f3d3e315c2d3bf3d68b4634f6fd520b03353be93b5f6ad9697"
   },
   "html": {
     "files": [
@@ -339,8 +339,8 @@
       },
       {
         "path": "_sources/manual_je1000f_eu_nl.md.txt",
-        "size": 79930,
-        "sha256": "1a713539b99486950ddd1c1a04ce646e240c67e4ccc4c09d1945027c6cbf671d"
+        "size": 79864,
+        "sha256": "5b9731893aa887042b46d0f3b665944575551bf1a814ea47b1daad54dbd0a600"
       },
       {
         "path": "_static/base-stemmer.js",
@@ -543,6 +543,11 @@
         "sha256": "5f2a58121306f87b6a627309f264ada87ac4778b3338cfc464ff656013ac3c65"
       },
       {
+        "path": "assets/669e984a7412_nl-overview-front-no-heading.png",
+        "size": 87526,
+        "sha256": "669e984a741222ddb52062affb36d80d61cf2c199868bbf3cae6d085fba3b8c9"
+      },
+      {
         "path": "assets/6749bd38fdd0_6749bd38fdd0_6749bd38fdd0_warning_triangle.png",
         "size": 4482,
         "sha256": "6749bd38fdd0b85af591d65d0d81ae591590aa5c35c7b0f72767057a953c5c67"
@@ -628,11 +633,6 @@
         "sha256": "91cec82eeaa553477868d38789d68a4937cb11c5c4d794de74db1edddb3aeea4"
       },
       {
-        "path": "assets/95bb08a64864_95bb08a64864_nl-overview-front.png",
-        "size": 90868,
-        "sha256": "95bb08a6486409717d9ccea5dcaf1f3c54285ce881e70de2a0f6d700a3bdb7de"
-      },
-      {
         "path": "assets/9aa0c1668423_9aa0c1668423_9aa0c1668423_op_ups_mode_je1000f_eu_en.png",
         "size": 89235,
         "sha256": "9aa0c1668423a77e9c63fd3d4731d38420fc2283bec8fda769269fa081a72da0"
@@ -646,11 +646,6 @@
         "path": "assets/a8a846e9767a_a8a846e9767a_a8a846e9767a_no_open_flame.png",
         "size": 8901,
         "sha256": "a8a846e9767ac618760e6a9ac65d826fb2c092ad7450014fa30ae0894746450a"
-      },
-      {
-        "path": "assets/ad4e1a4faf31_ad4e1a4faf31_nl-overview-right.png",
-        "size": 44498,
-        "sha256": "ad4e1a4faf31a39a2de836ca6adfc0ca01e2cf9408df50ee9e8487cee1692654"
       },
       {
         "path": "assets/b276ee48728d_b276ee48728d_b276ee48728d_car-charging.png",
@@ -681,6 +676,11 @@
         "path": "assets/c7862a87e742_c7862a87e742_c7862a87e742_19_Low_Battery_Indicator_KDk9bhs8poHUBdx96PLckPganhd.png",
         "size": 1293,
         "sha256": "c7862a87e742d6927b4e1d63a8d0ccb09fbcf980ae662ff94b9134e256e56889"
+      },
+      {
+        "path": "assets/c9a6e9b4b31f_nl-overview-right-no-heading.png",
+        "size": 41102,
+        "sha256": "c9a6e9b4b31f32d8682aa7381b3a67712c493dd2e16ef1555ede5b796aa08d45"
       },
       {
         "path": "assets/ce913ebfc775_ce913ebfc775_ce913ebfc775_25_Fault_code_Oz87bX3BGo8H7Zxe0XvcTd7FnJL.png",
@@ -759,8 +759,8 @@
       },
       {
         "path": "manual_je1000f_eu_nl.html",
-        "size": 100984,
-        "sha256": "0a470f160edd7feaad49e21b844904eb33dd4afca7c45945b30baa9252976642"
+        "size": 100918,
+        "sha256": "766596aefccda3cdfcd38ebfa9ad348d462494bb0bc55104eeb3af406573efaa"
       },
       {
         "path": "objects.inv",
@@ -778,6 +778,6 @@
         "sha256": "4dedb4ee56ec4b9b1a4aee7e6f08b21cde1f3cdc1a14f960999dfec7dfd4d561"
       }
     ],
-    "sha256": "1bd95033a361d75e1b23af90836a7ee64b2f287c5b00d3d888419c4ac4bbbd22"
+    "sha256": "51b522e016ba173ab15c61b48edb5e9a85b9e9d0dba17b9d757603cb56f12904"
   }
 }
