@@ -3,11 +3,11 @@
   "model": "JE-1000F",
   "region": "EU",
   "language": "nl",
-  "version": "git-20260929-c38415f5-auto-resume",
-  "git_ref": "643b67e3a100a699ca80080a0954468e544bb860",
+  "version": "git-20260929-c38415f5-ac-wall-complete",
+  "git_ref": "8c09299fc2d756064a8672f835bbba58384238d7",
   "source_manifest": {
     "path": "frozen_source_manifest.json",
-    "sha256": "f53fa0c2173d1aa8438e20128773bfe867b33ca42364cb6c3fa24b0a2ccad054"
+    "sha256": "97fdefe5d750c6a3b2f945ea9012eee66c8cb658ea35582935471750deac056c"
   },
   "markdown": {
     "manual": "manual_je1000f_eu_nl.md",
@@ -71,11 +71,6 @@
         "path": "assets/3bafcc34c487_3bafcc34c487_3bafcc34c487_app.control.png",
         "size": 14930,
         "sha256": "3bafcc34c487826771aec91e5d8ad3246bf8ee1bde8aa3ee46ff0e483d077c2c"
-      },
-      {
-        "path": "assets/3bd7d59dde7d_3bd7d59dde7d_3bd7d59dde7d_reference.ac-wall.png",
-        "size": 71112,
-        "sha256": "3bd7d59dde7d8fa343a01d14f6291d1fd46c0acc9adc4fd3ea3a616d52c0a062"
       },
       {
         "path": "assets/401376e7e34a_401376e7e34a_401376e7e34a_main-power.png",
@@ -208,6 +203,11 @@
         "sha256": "b276ee48728db4e72e21d7fde456e91017e3e4f5335209b1d5476f6c7af1f0f4"
       },
       {
+        "path": "assets/b5775705d054_reference.ac-wall-complete.png",
+        "size": 72511,
+        "sha256": "b5775705d0545cc1a95826ff21841bc57ebd27617cdcbafbb0fa07e395bef276"
+      },
+      {
         "path": "assets/bd1e161e7734_bd1e161e7734_bd1e161e7734_op_led_light_je1000f_eu_en.png",
         "size": 59862,
         "sha256": "bd1e161e77343ed2e9cd99ea4ccdea96f4caa184102714f4ea48135583ea04b2"
@@ -314,16 +314,16 @@
       },
       {
         "path": "manual.ir.json",
-        "size": 573521,
-        "sha256": "8fcaaeccee9e87992727c08e0d13b689283e051831198aee9e96eee31928e7c5"
+        "size": 573352,
+        "sha256": "3998c836d1cac2003755e953794b500e7c6daf94416375cc046b450251becd91"
       },
       {
         "path": "manual_je1000f_eu_nl.md",
-        "size": 80553,
-        "sha256": "536bb200c9ec200c7333446e3cd53fd7fc274fe5c6565cf581f8ad89ffccf6a8"
+        "size": 80536,
+        "sha256": "eb394a1ec40a8d2a1d2b9c552774ad0492022a76d058b60dc4431fe71281e027"
       }
     ],
-    "sha256": "738bec9d6454abd0a38dd74095408b5389e6a8398a42ff09ff4393efbc8d8e8c"
+    "sha256": "f558188d7ad039daa4c7edcb0353c661e541a19bec815b106e0632935607319c"
   },
   "html": {
     "files": [
@@ -339,8 +339,8 @@
       },
       {
         "path": "_sources/manual_je1000f_eu_nl.md.txt",
-        "size": 80553,
-        "sha256": "536bb200c9ec200c7333446e3cd53fd7fc274fe5c6565cf581f8ad89ffccf6a8"
+        "size": 80536,
+        "sha256": "eb394a1ec40a8d2a1d2b9c552774ad0492022a76d058b60dc4431fe71281e027"
       },
       {
         "path": "_static/base-stemmer.js",
@@ -518,11 +518,6 @@
         "sha256": "3bafcc34c487826771aec91e5d8ad3246bf8ee1bde8aa3ee46ff0e483d077c2c"
       },
       {
-        "path": "assets/3bd7d59dde7d_3bd7d59dde7d_3bd7d59dde7d_reference.ac-wall.png",
-        "size": 71112,
-        "sha256": "3bd7d59dde7d8fa343a01d14f6291d1fd46c0acc9adc4fd3ea3a616d52c0a062"
-      },
-      {
         "path": "assets/401376e7e34a_401376e7e34a_401376e7e34a_main-power.png",
         "size": 68090,
         "sha256": "401376e7e34a5aee30352e7a351998c0acf0dfdf6c8e817bc849914db88cfbda"
@@ -653,6 +648,11 @@
         "sha256": "b276ee48728db4e72e21d7fde456e91017e3e4f5335209b1d5476f6c7af1f0f4"
       },
       {
+        "path": "assets/b5775705d054_reference.ac-wall-complete.png",
+        "size": 72511,
+        "sha256": "b5775705d0545cc1a95826ff21841bc57ebd27617cdcbafbb0fa07e395bef276"
+      },
+      {
         "path": "assets/bd1e161e7734_bd1e161e7734_bd1e161e7734_op_led_light_je1000f_eu_en.png",
         "size": 59862,
         "sha256": "bd1e161e77343ed2e9cd99ea4ccdea96f4caa184102714f4ea48135583ea04b2"
@@ -759,8 +759,8 @@
       },
       {
         "path": "manual_je1000f_eu_nl.html",
-        "size": 101252,
-        "sha256": "10d145d7c3ca0e2b8a6bab024190f3ea50ea24e2cfe65b1d8c63bc9dbfb95a32"
+        "size": 101235,
+        "sha256": "a1e7a4ad44d95c3b5f14786a82558ce1fbc36b0173b15e696aee1bd7c1dc6f2e"
       },
       {
         "path": "objects.inv",
@@ -778,6 +778,6 @@
         "sha256": "5861675214103db2a7ba9a7dd65b938346f677c34820c98eb89666e304772703"
       }
     ],
-    "sha256": "8b0a571edf5e36e803dec4278f445e3a6eab3e9c78d5f6d7b3d7e95736abc6a0"
+    "sha256": "c2e5aff816387b41a4ede91d7846fcf2e9c81f565077bee9ed1b9be132482394"
   }
 }

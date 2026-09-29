@@ -46,7 +46,7 @@
     "assets/bd1e161e7734_bd1e161e7734_bd1e161e7734_op_led_light_je1000f_eu_en.png",
     "assets/f9ed0c8d1dc1_f9ed0c8d1dc1_f9ed0c8d1dc1_op_lcd_mode_je1000f_eu_en.png",
     "assets/9aa0c1668423_9aa0c1668423_9aa0c1668423_op_ups_mode_je1000f_eu_en.png",
-    "assets/3bd7d59dde7d_3bd7d59dde7d_3bd7d59dde7d_reference.ac-wall.png",
+    "assets/b5775705d054_reference.ac-wall-complete.png",
     "assets/7f14d14b1364_7f14d14b1364_7f14d14b1364_solar-single.png",
     "assets/82c9cafc5d55_82c9cafc5d55_82c9cafc5d55_solar-four.png",
     "assets/b276ee48728d_b276ee48728d_b276ee48728d_car-charging.png",
@@ -57,8 +57,8 @@
     "assets/23cde742b301_23cde742b301_23cde742b301_connect_result_je1000f_eu.png"
   ],
   "bundle_root": "frozen-source",
-  "bundle_sha256": "3fc3310ce81be2b6496f50ff21c96339c74d8f654b349ef22ad42bd3f277db7c",
-  "content_sha256": "062c2e4a45dab64bac6b16ef0abe4fdffb26850c16744f760042c642092764fd",
+  "bundle_sha256": "d624b31b20dc768b107be812531314c5f67c13e0b7977b60b46c2a75332a6fae",
+  "content_sha256": "73f0b24ce1c3fa8923f50945f378639059fef59785fe2a3f2d5e5fefe4b491e7",
   "language": "nl",
   "layout_params_sha256": "f5ae099abc1a82ffda3abcc5a13725aca3c201e720a0374d88d1643f9773f279",
   "metadata": {
@@ -74,7 +74,6 @@
       "assets/28f3cad42ae3_28f3cad42ae3_28f3cad42ae3_12_AC_Wall_Charging_Indicator_ZpOmbCjx8oYUTVxyl4JcvcTanPe.png": "28f3cad42ae32e9e895abfd7cdb16a21b99dfa822c57d542f0e3f59a4b452c6c",
       "assets/2a61fc0919cf_2a61fc0919cf_2a61fc0919cf_li_ion.png": "2a61fc0919cfeca43a4dd3e9bcf3a4310314d7543f77e6af9c10f1717360eea7",
       "assets/3bafcc34c487_3bafcc34c487_3bafcc34c487_app.control.png": "3bafcc34c487826771aec91e5d8ad3246bf8ee1bde8aa3ee46ff0e483d077c2c",
-      "assets/3bd7d59dde7d_3bd7d59dde7d_3bd7d59dde7d_reference.ac-wall.png": "3bd7d59dde7d8fa343a01d14f6291d1fd46c0acc9adc4fd3ea3a616d52c0a062",
       "assets/401376e7e34a_401376e7e34a_401376e7e34a_main-power.png": "401376e7e34a5aee30352e7a351998c0acf0dfdf6c8e817bc849914db88cfbda",
       "assets/58138a11bdcb_58138a11bdcb_58138a11bdcb_overview-front.png": "58138a11bdcb513337870c37bd0b661c43c7f391565797cad45463ffe2d01895",
       "assets/58c1d3604ca7_58c1d3604ca7_58c1d3604ca7_26_Output_Power_PviebR618oofvKxcKVRcHLlInqd.png": "58c1d3604ca7b9774b069c6928775a13465ccb9477f477e9e4d4b30e7f75b88d",
@@ -101,6 +100,7 @@
       "assets/9b148ea95d3a_9b148ea95d3a_9b148ea95d3a_27_Remaining_Discharge_Time_JEpobf59DoBV4dxWlnxcNtIinke.png": "9b148ea95d3a3450591c7220908b0913048f2cdea1e61d200534181c52b47cab",
       "assets/a8a846e9767a_a8a846e9767a_a8a846e9767a_no_open_flame.png": "a8a846e9767ac618760e6a9ac65d826fb2c092ad7450014fa30ae0894746450a",
       "assets/b276ee48728d_b276ee48728d_b276ee48728d_car-charging.png": "b276ee48728db4e72e21d7fde456e91017e3e4f5335209b1d5476f6c7af1f0f4",
+      "assets/b5775705d054_reference.ac-wall-complete.png": "b5775705d0545cc1a95826ff21841bc57ebd27617cdcbafbb0fa07e395bef276",
       "assets/bd1e161e7734_bd1e161e7734_bd1e161e7734_op_led_light_je1000f_eu_en.png": "bd1e161e77343ed2e9cd99ea4ccdea96f4caa184102714f4ea48135583ea04b2",
       "assets/bdbf602db74a_bdbf602db74a_bdbf602db74a_24_Low_Temperature_Indicator_JDMEbD96noSbyWxbOnVcgip1nab.png": "bdbf602db74ade39a2a162209c0ff535315dee5e27e4832b2e6a201764b6941a",
       "assets/c15858544727_c15858544727_c15858544727_ac-output.png": "c1585854472793648b149b4989391de27a3ea460482d286583277df451862895",
@@ -1256,14 +1256,14 @@
         "slug": "ups_connection"
       },
       {
-        "asset_ref": "assets/3bd7d59dde7d_3bd7d59dde7d_3bd7d59dde7d_reference.ac-wall.png",
+        "asset_ref": "assets/b5775705d054_reference.ac-wall-complete.png",
         "content_mode": "fixed-product-markings",
-        "origin": "Native PDF independent graphic; data/asset_recipes/manual_je1000f_eu_four_native_references.json; physical pages 146,154,155,159; source SHA256 39f90f96c5825e835358a82329b8e36a40e6f9b59fccde9bb46f4ba81fe5b469",
-        "path": "artwork/3bd7d59dde7d_3bd7d59dde7d_reference.ac-wall.png",
+        "origin": "Native PDF page 154; complete frame clip [26,52,340,153]; data/asset_recipes/manual_je1000f_eu_ac_wall_complete.json; caption retained as native Web text",
+        "path": "artwork/reference.ac-wall-complete.png",
         "physical_page": 137,
         "presentation": "textless-shared-art",
         "section": "charging",
-        "sha256": "3bd7d59dde7d8fa343a01d14f6291d1fd46c0acc9adc4fd3ea3a616d52c0a062",
+        "sha256": "b5775705d0545cc1a95826ff21841bc57ebd27617cdcbafbb0fa07e395bef276",
         "slug": "ac_wall_charging"
       },
       {
@@ -1301,7 +1301,7 @@
       }
     ],
     "frozen_source_manifest": {
-      "artwork_manifest_sha256": "25b4a659c18a2d73cd4b283352d9db9d7c45282f415f866c339e78fc7e5a2fff",
+      "artwork_manifest_sha256": "8b3e780c811410fe2724f4ed9292d447666db41643476adedf03fd1c1f3a54db",
       "geometry_recipe_sha256": "914c5002d3b387494527958a3c2559b0a5d419ffd651f2f34f78aa365c458766",
       "intake_method": "fresh-native-pdf-text",
       "original_source": {
@@ -1322,7 +1322,7 @@
         "model": "JE-1000F",
         "printed_manual_version": null,
         "region": "EU",
-        "technical_version": "git-20260929-c38415f5-auto-resume"
+        "technical_version": "git-20260929-c38415f5-ac-wall-complete"
       },
       "text_source": {
         "filename": "HTE153-nine-language-native-text-check.pdf",
@@ -12087,23 +12087,23 @@
         },
         {
           "asset_refs": [
-            "assets/3bd7d59dde7d_3bd7d59dde7d_3bd7d59dde7d_reference.ac-wall.png"
+            "assets/b5775705d054_reference.ac-wall-complete.png"
           ],
           "block_id": "charging:block-0006",
-          "content_sha256": "a6d5c52500eb564c558889f3838639f6d13dcd56e6537dbf93e3e47986db8cf0",
+          "content_sha256": "57c9b4a4ae4d89c20f6f2e0822bfa5bb1a7c6b0edcbaf980587b4c4e905107db",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
               {
                 "alt": "ac_wall_charging",
                 "kind": "image",
-                "source": "assets/3bd7d59dde7d_3bd7d59dde7d_3bd7d59dde7d_reference.ac-wall.png"
+                "source": "assets/b5775705d054_reference.ac-wall-complete.png"
               }
             ],
             "component_spec": {
               "assets": [
                 {
-                  "asset_ref": "assets/3bd7d59dde7d_3bd7d59dde7d_3bd7d59dde7d_reference.ac-wall.png",
+                  "asset_ref": "assets/b5775705d054_reference.ac-wall-complete.png",
                   "locale_policy": "shared",
                   "role": "source_art"
                 }
@@ -12360,7 +12360,7 @@
             "assets/7f14d14b1364_7f14d14b1364_7f14d14b1364_solar-single.png"
           ],
           "block_id": "charging:block-0014",
-          "content_sha256": "8df7babf3c71b1992035c6538609674eca12efdbece0a2262743560b78393a2a",
+          "content_sha256": "48dbc1f9d06392f7d04f7eef44ba8a5ff7c156a7add4b56d122f8ee932f56cb9",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -12424,7 +12424,7 @@
                       ]
                     }
                   ],
-                  "panel_fill": "#ebecec",
+                  "panel_fill": "#ffffff",
                   "panel_top": 0
                 },
                 "captions_embedded": false,

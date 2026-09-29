@@ -140,7 +140,7 @@
 
 ## ŁADOWANIE Z SIECIOWEGO GNIAZDKA ŚCIENNEGO AC
 
-<figure class="hb-reference-figure" data-component-id="HB-SPECIAL-REFERENCE-FIGURE" data-reference-id="ac_wall_charging" data-source-fragment-sha256="3caa75267caa4363fdb363b52db4220fdab64ca6652cfe046ff553cadc1caf58"><div class="hb-reference-semantic" data-reference-id="ac_wall_charging.semantic"><img alt="ac_wall_charging" class="hb-reference-art hb-composite-art" src="assets/3bd7d59dde7d_3bd7d59dde7d_3bd7d59dde7d_reference.ac-wall.png"/></div></figure>
+<figure class="hb-reference-figure" data-component-id="HB-SPECIAL-REFERENCE-FIGURE" data-reference-id="ac_wall_charging" data-source-fragment-sha256="3caa75267caa4363fdb363b52db4220fdab64ca6652cfe046ff553cadc1caf58"><div class="hb-reference-semantic" data-reference-id="ac_wall_charging.semantic"><img alt="ac_wall_charging" class="hb-reference-art hb-composite-art" src="assets/b5775705d054_reference.ac-wall-complete.png"/></div></figure>
 
 <p>Podłącz przewód sieciowy do ładowania AC do portu wejściowego AC produktu i do gniazdka ściennego.</p>
 
@@ -156,7 +156,7 @@
 
 <p>Stacja Jackery Explorer 1000 ma dwa porty wejściowe DC8020 i jest kompatybilna z panelami słonecznymi Jackery.</p>
 
-<figure class="hb-reference-figure hb-base-art-live-copy" data-component-id="HB-SPECIAL-REFERENCE-FIGURE" data-reference-id="solar_single" data-source-fragment-sha256="5308751309d378452c559cbba1c9159a07f60fa618069516b1f67ccec5e15a8d" data-web-base-art-ref="solar_single" data-web-presentation-mode="base-art-live-copy"><div class="hb-reference-semantic" data-reference-id="solar_single.semantic"><div class="hb-reference-art-panel" style="--hb-panel-top:0%;--hb-panel-fill:#ebecec"><img alt="" class="hb-reference-art hb-composite-art" src="assets/7f14d14b1364_7f14d14b1364_7f14d14b1364_solar-single.png"/><span class="hb-reference-live-label" data-source-line="0" style="--hb-x:73.49%;--hb-y:89.23%;--hb-width:25%;--hb-height:5.5%">SolarSaga 200 × 2</span></div></div></figure>
+<figure class="hb-reference-figure hb-base-art-live-copy" data-component-id="HB-SPECIAL-REFERENCE-FIGURE" data-reference-id="solar_single" data-source-fragment-sha256="5308751309d378452c559cbba1c9159a07f60fa618069516b1f67ccec5e15a8d" data-web-base-art-ref="solar_single" data-web-presentation-mode="base-art-live-copy"><div class="hb-reference-semantic" data-reference-id="solar_single.semantic"><div class="hb-reference-art-panel" style="--hb-panel-top:0%;--hb-panel-fill:#ffffff"><img alt="" class="hb-reference-art hb-composite-art" src="assets/7f14d14b1364_7f14d14b1364_7f14d14b1364_solar-single.png"/><span class="hb-reference-live-label" data-source-line="0" style="--hb-x:73.49%;--hb-y:89.23%;--hb-width:25%;--hb-height:5.5%">SolarSaga 200 × 2</span></div></div></figure>
 
 <p>Jeśli do jednego portu wejściowego DC8020 trzeba podłączyć jednocześnie dwa panele słoneczne, należy skorzystać z poniższego rysunku ilustrującego ładowanie przez łącznik paneli słonecznych (sprzedawany oddzielnie, nie wchodzi w skład standardowego wyposażenia).</p>
 
