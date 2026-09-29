@@ -140,7 +140,7 @@
 
 ## CARREGAMENTO POR MEIO DE TOMADA CA
 
-<figure class="hb-reference-figure" data-component-id="HB-SPECIAL-REFERENCE-FIGURE" data-reference-id="ac_wall_charging" data-source-fragment-sha256="3caa75267caa4363fdb363b52db4220fdab64ca6652cfe046ff553cadc1caf58"><div class="hb-reference-semantic" data-reference-id="ac_wall_charging.semantic"><img alt="ac_wall_charging" class="hb-reference-art hb-composite-art" src="../../../../_static/manual-assets/_pool/3b/3bd7d59dde7d8fa343a01d14f6291d1fd46c0acc9adc4fd3ea3a616d52c0a062.png"/></div></figure>
+<figure class="hb-reference-figure" data-component-id="HB-SPECIAL-REFERENCE-FIGURE" data-reference-id="ac_wall_charging" data-source-fragment-sha256="3caa75267caa4363fdb363b52db4220fdab64ca6652cfe046ff553cadc1caf58"><div class="hb-reference-semantic" data-reference-id="ac_wall_charging.semantic"><img alt="ac_wall_charging" class="hb-reference-art hb-composite-art" src="../../../../_static/manual-assets/_pool/b5/b5775705d0545cc1a95826ff21841bc57ebd27617cdcbafbb0fa07e395bef276.png"/></div></figure>
 
 <p>Conecte o cabo de carregamento CA à porta de entrada CA do produto e a uma tomada da rede elétrica.</p>
 
@@ -156,7 +156,7 @@
 
 <p>O Jackery Explorer 1000 possui duas portas de entrada DC8020 e é compatível com os painéis solares da Jackery.</p>
 
-<figure class="hb-reference-figure hb-base-art-live-copy" data-component-id="HB-SPECIAL-REFERENCE-FIGURE" data-reference-id="solar_single" data-source-fragment-sha256="5308751309d378452c559cbba1c9159a07f60fa618069516b1f67ccec5e15a8d" data-web-base-art-ref="solar_single" data-web-presentation-mode="base-art-live-copy"><div class="hb-reference-semantic" data-reference-id="solar_single.semantic"><div class="hb-reference-art-panel" style="--hb-panel-top:0%;--hb-panel-fill:#ebecec"><img alt="" class="hb-reference-art hb-composite-art" src="../../../../_static/manual-assets/_pool/7f/7f14d14b136430e54003e4624bbfe7c1aaaac6a9622ae422e515275ebaef6e33.png"/><span class="hb-reference-live-label" data-source-line="0" style="--hb-x:73.49%;--hb-y:89.23%;--hb-width:25%;--hb-height:5.5%">SolarSaga 200 × 2</span></div></div></figure>
+<figure class="hb-reference-figure hb-base-art-live-copy" data-component-id="HB-SPECIAL-REFERENCE-FIGURE" data-reference-id="solar_single" data-source-fragment-sha256="5308751309d378452c559cbba1c9159a07f60fa618069516b1f67ccec5e15a8d" data-web-base-art-ref="solar_single" data-web-presentation-mode="base-art-live-copy"><div class="hb-reference-semantic" data-reference-id="solar_single.semantic"><div class="hb-reference-art-panel" style="--hb-panel-top:0%;--hb-panel-fill:#ffffff"><img alt="" class="hb-reference-art hb-composite-art" src="../../../../_static/manual-assets/_pool/7f/7f14d14b136430e54003e4624bbfe7c1aaaac6a9622ae422e515275ebaef6e33.png"/><span class="hb-reference-live-label" data-source-line="0" style="--hb-x:73.49%;--hb-y:89.23%;--hb-width:25%;--hb-height:5.5%">SolarSaga 200 × 2</span></div></div></figure>
 
 <p>Se for necessário conectar dois painéis solares a uma única porta de entrada DC8020, consulte a figura abaixo para carregar por meio do conector para painel solar (vendido separadamente, não incluso no pacote padrão).</p>
 
