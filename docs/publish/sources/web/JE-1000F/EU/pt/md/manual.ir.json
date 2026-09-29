@@ -57,8 +57,8 @@
     "assets/23cde742b301_23cde742b301_23cde742b301_connect_result_je1000f_eu.png"
   ],
   "bundle_root": "frozen-source",
-  "bundle_sha256": "5cf388a264e444a3e03a6a6aa16148998d98ff11a5f4976bf6ab83ebfc7faa74",
-  "content_sha256": "6b1e6c7884a02eae86cd24e4daff4111fddb4a38bd86b32f86f631b97a30d0bf",
+  "bundle_sha256": "b967dc58898efacd5dd03df9a9444a483cf26124d95974cf0a5d5251b38e324c",
+  "content_sha256": "a9024e23968ef06198f30d0bd32c4593577f6460a47597ee30abad98c7f37b04",
   "language": "pt",
   "layout_params_sha256": "f5ae099abc1a82ffda3abcc5a13725aca3c201e720a0374d88d1643f9773f279",
   "metadata": {
@@ -1255,7 +1255,7 @@
       }
     ],
     "frozen_source_manifest": {
-      "artwork_manifest_sha256": "549ced6e97abe642e7fe7e941131f2ea9861b0fd7848f0d2102c216eb02a2562",
+      "artwork_manifest_sha256": "f14994a1449bfaaf149b501439760dbf53fba1e129aa610a8dfabc84b495d473",
       "geometry_recipe_sha256": "914c5002d3b387494527958a3c2559b0a5d419ffd651f2f34f78aa365c458766",
       "intake_method": "fresh-native-pdf-text",
       "original_source": {
@@ -1276,7 +1276,7 @@
         "model": "JE-1000F",
         "printed_manual_version": null,
         "region": "EU",
-        "technical_version": "git-20260928-c38415f5-layout-fixes"
+        "technical_version": "git-20260928-c38415f5-lcd-status"
       },
       "text_source": {
         "filename": "HTE153-nine-language-native-text-check.pdf",
@@ -8580,7 +8580,7 @@
             "assets/9b148ea95d3a_9b148ea95d3a_9b148ea95d3a_27_Remaining_Discharge_Time_JEpobf59DoBV4dxWlnxcNtIinke.png"
           ],
           "block_id": "lcd_display:block-0003",
-          "content_sha256": "97dfe5b250d75911340fd6ad692ed46c2a250752a00f3f3b690b2f6be9bc8d64",
+          "content_sha256": "a9783c617503291204a5344fde36f309825801001344ad360cec1e76f06edd62",
           "kind": "flow",
           "payload": {
             "component_spec": {
@@ -9176,7 +9176,7 @@
                   "content": [
                     {
                       "asset_index": 0,
-                      "description_html": "<p>Ligado: Wi-Fi conectado. Pisca: Pronto para conectar ao Wi-Fi. Desligado: Wi-Fi desconectado.</p>",
+                      "description_html": "<p><strong>Ligado:</strong> Wi-Fi conectado.<br /><strong>Pisca:</strong> Pronto para conectar ao Wi-Fi.<br /><strong>Desligado:</strong> Wi-Fi desconectado.</p>",
                       "description_text": "Ligado: Wi-Fi conectado. Pisca: Pronto para conectar ao Wi-Fi. Desligado: Wi-Fi desconectado.",
                       "icon_alt": "Wi-Fi",
                       "name_html": "<p>Wi-Fi</p>",
@@ -9186,7 +9186,7 @@
                     },
                     {
                       "asset_index": 1,
-                      "description_html": "<p>Ligado: Bluetooth conectado. Pisca: Pronto para conectar ao Bluetooth. Desligado: Bluetooth desconectado.</p>",
+                      "description_html": "<p><strong>Ligado:</strong> Bluetooth conectado.<br /><strong>Pisca:</strong> Pronto para conectar ao Bluetooth.<br /><strong>Desligado:</strong> Bluetooth desconectado.</p>",
                       "description_text": "Ligado: Bluetooth conectado. Pisca: Pronto para conectar ao Bluetooth. Desligado: Bluetooth desconectado.",
                       "icon_alt": "Bluetooth",
                       "name_html": "<p>Bluetooth</p>",
@@ -9196,7 +9196,7 @@
                     },
                     {
                       "asset_index": 2,
-                      "description_html": "<p>Ligado: O ruído durante o carregamento é significativamente reduzido, enquanto a potência de carregamento é reduzida e a velocidade de carregamento diminui. Desligado: Modo de carregamento silencioso desativado. Ative/desative este recurso no aplicativo Jackery. A configuração é mantida quando o dispositivo é desligado.</p>",
+                      "description_html": "<p><strong>Ligado:</strong> O ruído durante o carregamento é significativamente reduzido, enquanto a potência de carregamento é reduzida e a velocidade de carregamento diminui.<br /><strong>Desligado:</strong> Modo de carregamento silencioso desativado.<br />Ative/desative este recurso no aplicativo Jackery.<br />A configuração é mantida quando o dispositivo é desligado.</p>",
                       "description_text": "Ligado: O ruído durante o carregamento é significativamente reduzido, enquanto a potência de carregamento é reduzida e a velocidade de carregamento diminui. Desligado: Modo de carregamento silencioso desativado. Ative/desative este recurso no aplicativo Jackery. A configuração é mantida quando o dispositivo é desligado.",
                       "icon_alt": "Modo de carregamento silencioso",
                       "name_html": "<p>Modo de carregamento silencioso</p>",
@@ -9206,7 +9206,7 @@
                     },
                     {
                       "asset_index": 3,
-                      "description_html": "<p>Personaliza o tempo de carregamento do Jackery Explorer 1000. Adequado para situações com tarifas de energia elétrica variáveis, permite programar o carregamento de acordo com os horários de pico e fora de pico, reduzindo os custos com energia elétrica. Ative/desative este recurso no aplicativo da Jackery. A configuração é mantida quando o dispositivo é desligado.</p>",
+                      "description_html": "<p>Personaliza o tempo de carregamento do Jackery Explorer 1000. Adequado para situações com tarifas de energia elétrica variáveis, permite programar o carregamento de acordo com os horários de pico e fora de pico, reduzindo os custos com energia elétrica.<br />Ative/desative este recurso no aplicativo da Jackery.<br />A configuração é mantida quando o dispositivo é desligado.</p>",
                       "description_text": "Personaliza o tempo de carregamento do Jackery Explorer 1000. Adequado para situações com tarifas de energia elétrica variáveis, permite programar o carregamento de acordo com os horários de pico e fora de pico, reduzindo os custos com energia elétrica. Ative/desative este recurso no aplicativo da Jackery. A configuração é mantida quando o dispositivo é desligado.",
                       "icon_alt": "Plano de carregamento",
                       "name_html": "<p>Plano de carregamento</p>",
@@ -9216,7 +9216,7 @@
                     },
                     {
                       "asset_index": 4,
-                      "description_html": "<p>Maximiza o uso da energia solar e reduz a dependência da rede elétrica ao priorizar a energia solar armazenada, reduzindo os custos de energia. A estação de energia deve estar conectada simultaneamente aos painéis solares e à rede; a potência da carga é limitada pela potência de bypass. Ative/desative este recurso no aplicativo da Jackery. A configuração é mantida quando o dispositivo é desligado.</p>",
+                      "description_html": "<p>Maximiza o uso da energia solar e reduz a dependência da rede elétrica ao priorizar a energia solar armazenada, reduzindo os custos de energia. A estação de energia deve estar conectada simultaneamente aos painéis solares e à rede; a potência da carga é limitada pela potência de bypass.<br />Ative/desative este recurso no aplicativo da Jackery.<br />A configuração é mantida quando o dispositivo é desligado.</p>",
                       "description_text": "Maximiza o uso da energia solar e reduz a dependência da rede elétrica ao priorizar a energia solar armazenada, reduzindo os custos de energia. A estação de energia deve estar conectada simultaneamente aos painéis solares e à rede; a potência da carga é limitada pela potência de bypass. Ative/desative este recurso no aplicativo da Jackery. A configuração é mantida quando o dispositivo é desligado.",
                       "icon_alt": "Modo de autoalimentação",
                       "name_html": "<p>Modo de autoalimentação</p>",
@@ -9226,7 +9226,7 @@
                     },
                     {
                       "asset_index": 5,
-                      "description_html": "<p>Ligado: O modo TOU está ativado (SOC de reserva padrão: 60%). Durante os horários de pico, o produto prioriza a descarga da bateria para reduzir os custos de energia quando a energia armazenada excede o SOC de reserva. Durante os horários fora de pico, o produto carrega a bateria a partir da rede elétrica para reduzir o consumo nos horários de pico e aproveitar os períodos de menor demanda. Desligado: O modo TOU está desabilitado. O produto não segue a estratégia de TOU (tarifa por tempo de uso) e opera de acordo com a lógica padrão de fornecimento de energia e carregamento. Ative/desative este recurso no aplicativo da Jackery. A configuração é mantida quando o dispositivo é desligado.</p>",
+                      "description_html": "<p><strong>Ligado:</strong> O modo TOU está ativado (SOC de reserva padrão: 60%). Durante os horários de pico, o produto prioriza a descarga da bateria para reduzir os custos de energia quando a energia armazenada excede o SOC de reserva. Durante os horários fora de pico, o produto carrega a bateria a partir da rede elétrica para reduzir o consumo nos horários de pico e aproveitar os períodos de menor demanda.<br /><strong>Desligado:</strong> O modo TOU está desabilitado. O produto não segue a estratégia de TOU (tarifa por tempo de uso) e opera de acordo com a lógica padrão de fornecimento de energia e carregamento.<br />Ative/desative este recurso no aplicativo da Jackery.<br />A configuração é mantida quando o dispositivo é desligado.</p>",
                       "description_text": "Ligado: O modo TOU está ativado (SOC de reserva padrão: 60%). Durante os horários de pico, o produto prioriza a descarga da bateria para reduzir os custos de energia quando a energia armazenada excede o SOC de reserva. Durante os horários fora de pico, o produto carrega a bateria a partir da rede elétrica para reduzir o consumo nos horários de pico e aproveitar os períodos de menor demanda. Desligado: O modo TOU está desabilitado. O produto não segue a estratégia de TOU (tarifa por tempo de uso) e opera de acordo com a lógica padrão de fornecimento de energia e carregamento. Ative/desative este recurso no aplicativo da Jackery. A configuração é mantida quando o dispositivo é desligado.",
                       "icon_alt": "Modo TOU",
                       "name_html": "<p>Modo TOU</p>",
@@ -9236,7 +9236,7 @@
                     },
                     {
                       "asset_index": 6,
-                      "description_html": "<p>Ligado: O produto está operando no modo de bypass. As cargas conectadas às portas CA consomem energia da rede em vez da estação de energia. Se a rede elétrica falhar repentinamente, o produto alterna automaticamente para a energia da bateria em 10 ms. Desligado: O produto não está no Modo de bypass. As cargas conectadas às portas CA são alimentadas pela bateria interna da estação de energia.</p>",
+                      "description_html": "<p><strong>Ligado:</strong> O produto está operando no modo de bypass. As cargas conectadas às portas CA consomem energia da rede em vez da estação de energia. Se a rede elétrica falhar repentinamente, o produto alterna automaticamente para a energia da bateria em 10 ms.<br /><strong>Desligado:</strong> O produto não está no Modo de bypass. As cargas conectadas às portas CA são alimentadas pela bateria interna da estação de energia.</p>",
                       "description_text": "Ligado: O produto está operando no modo de bypass. As cargas conectadas às portas CA consomem energia da rede em vez da estação de energia. Se a rede elétrica falhar repentinamente, o produto alterna automaticamente para a energia da bateria em 10 ms. Desligado: O produto não está no Modo de bypass. As cargas conectadas às portas CA são alimentadas pela bateria interna da estação de energia.",
                       "icon_alt": "UPS",
                       "name_html": "<p>UPS</p>",
@@ -9316,7 +9316,7 @@
                     },
                     {
                       "asset_index": 14,
-                      "description_html": "<p>Ligado: Modo de economia de bateria ativado. Limites de carga e descarga são aplicados para ajudar a prolongar a vida útil da bateria. Desligado: Modo de economia de bateria desativado. Ative/desative este recurso no aplicativo da Jackery. A configuração é mantida quando o dispositivo é desligado. Quando esse recurso está ativado, o produto ocasionalmente realiza um ciclo completo de carga e descarga para calibrar o SOC.</p>",
+                      "description_html": "<p><strong>Ligado:</strong> Modo de economia de bateria ativado. Limites de carga e descarga são aplicados para ajudar a prolongar a vida útil da bateria.<br /><strong>Desligado:</strong> Modo de economia de bateria desativado.<br />Ative/desative este recurso no aplicativo da Jackery.<br />A configuração é mantida quando o dispositivo é desligado.<br />Quando esse recurso está ativado, o produto ocasionalmente realiza um ciclo completo de carga e descarga para calibrar o SOC.</p>",
                       "description_text": "Ligado: Modo de economia de bateria ativado. Limites de carga e descarga são aplicados para ajudar a prolongar a vida útil da bateria. Desligado: Modo de economia de bateria desativado. Ative/desative este recurso no aplicativo da Jackery. A configuração é mantida quando o dispositivo é desligado. Quando esse recurso está ativado, o produto ocasionalmente realiza um ciclo completo de carga e descarga para calibrar o SOC.",
                       "icon_alt": "Modo de economia de bateria",
                       "name_html": "<p>Modo de economia de bateria</p>",
@@ -9326,7 +9326,7 @@
                     },
                     {
                       "asset_index": 15,
-                      "description_html": "<p>Ligado: O limite de potência de carregamento está ativado no aplicativo Jackery. Desligado: O limite de potência de carregamento está desativado no aplicativo Jackery. A configuração é mantida quando o dispositivo é desligado.</p>",
+                      "description_html": "<p><strong>Ligado:</strong> O limite de potência de carregamento está ativado no aplicativo Jackery.<br /><strong>Desligado:</strong> O limite de potência de carregamento está desativado no aplicativo Jackery.<br />A configuração é mantida quando o dispositivo é desligado.</p>",
                       "description_text": "Ligado: O limite de potência de carregamento está ativado no aplicativo Jackery. Desligado: O limite de potência de carregamento está desativado no aplicativo Jackery. A configuração é mantida quando o dispositivo é desligado.",
                       "icon_alt": "Limite de potência de carregamento",
                       "name_html": "<p>Limite de potência de carregamento</p>",
@@ -9346,7 +9346,7 @@
                     },
                     {
                       "asset_index": 17,
-                      "description_html": "<p>Ligado: O nível da bateria está abaixo de 20%. Pisca: O nível da bateria está abaixo de 5%. Desligado: O nível da bateria está acima de 20% ou o produto está carregando.</p>",
+                      "description_html": "<p><strong>Ligado:</strong> O nível da bateria está abaixo de 20%.<br /><strong>Pisca:</strong> O nível da bateria está abaixo de 5%.<br /><strong>Desligado:</strong> O nível da bateria está acima de 20% ou o produto está carregando.</p>",
                       "description_text": "Ligado: O nível da bateria está abaixo de 20%. Pisca: O nível da bateria está abaixo de 5%. Desligado: O nível da bateria está acima de 20% ou o produto está carregando.",
                       "icon_alt": "Indicador de bateria fraca",
                       "name_html": "<p>Indicador de bateria fraca</p>",
@@ -9366,7 +9366,7 @@
                     },
                     {
                       "asset_index": 19,
-                      "description_html": "<p>Ligado: Um temporizador de descarga está definido. Desligado: Nenhum temporizador de descarga está definido. Ative/desative este recurso no aplicativo da Jackery. A configuração não é mantida quando o dispositivo é desligado.</p>",
+                      "description_html": "<p><strong>Ligado:</strong> Um temporizador de descarga está definido.<br /><strong>Desligado:</strong> Nenhum temporizador de descarga está definido.<br />Ative/desative este recurso no aplicativo da Jackery.<br />A configuração não é mantida quando o dispositivo é desligado.</p>",
                       "description_text": "Ligado: Um temporizador de descarga está definido. Desligado: Nenhum temporizador de descarga está definido. Ative/desative este recurso no aplicativo da Jackery. A configuração não é mantida quando o dispositivo é desligado.",
                       "icon_alt": "Temporizador de descarga",
                       "name_html": "<p>Temporizador de descarga</p>",
@@ -9376,7 +9376,7 @@
                     },
                     {
                       "asset_index": 20,
-                      "description_html": "<p>Quando a saída CA ou CC for ativada pressionando o botão POWER CA ou o botão POWER CC/USB: Ligado: O Modo de economia de energia está ativado. Desligado: O Modo de economia de energia está desativado.</p>",
+                      "description_html": "<p>Quando a saída CA ou CC for ativada pressionando o botão POWER CA ou o botão POWER CC/USB:<br /><strong>Ligado:</strong> O Modo de economia de energia está ativado.<br /><strong>Desligado:</strong> O Modo de economia de energia está desativado.</p>",
                       "description_text": "Quando a saída CA ou CC for ativada pressionando o botão POWER CA ou o botão POWER CC/USB: Ligado: O Modo de economia de energia está ativado. Desligado: O Modo de economia de energia está desativado.",
                       "icon_alt": "Modo de economia de energia",
                       "name_html": "<p>Modo de economia de energia</p>",
@@ -12219,13 +12219,18 @@
         {
           "asset_refs": [],
           "block_id": "charging:block-0009",
-          "content_sha256": "82be60b89cb691ad7f60b2ad65a8b539cdac67b514b005e060bdccf41972544b",
+          "content_sha256": "3ad3b4a078283af67e417c7c33ac1eccb9a645c8e3beb04815e95a9f3e5f583f",
           "kind": "flow",
           "payload": {
             "children": [
               {
-                "kind": "text",
-                "text": "Modo de carregamento de emergência"
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "Modo de carregamento de emergência"
+                  }
+                ],
+                "kind": "strong"
               }
             ],
             "kind": "paragraph",
@@ -13303,7 +13308,7 @@
         {
           "asset_refs": [],
           "block_id": "troubleshooting:block-0003",
-          "content_sha256": "468da551cc0f185f6da6c1523a154d3fe815dbb63c696c381d0ff56dcb898699",
+          "content_sha256": "9ed69abb6581019515471fb353ff075f21654baa5cfec07247d7b3f19aecf1cd",
           "kind": "flow",
           "payload": {
             "component_spec": {
@@ -13368,13 +13373,13 @@
                     {
                       "code_html": "F6",
                       "code_text": "F6",
-                      "measures_html": "1. Aguarde a normalização da rede elétrica antes de carregar o produto por meio de uma tomada CA. 2. Verifique se as aberturas de entrada e saída de ar estão bloqueadas; certifique-se de manter uma distância de 0,66 ft (20 cm) em ambos os lados do produto. 3. Coloque o produto em um local que não esteja exposto à luz solar direta ou a altas temperaturas ambientais. 4. Desconecte todas as cargas do produto. Mantenha o produto ocioso e aguarde até que a falha desapareça. 5. Reinicie o produto.",
+                      "measures_html": "1. Aguarde a normalização da rede elétrica antes de carregar o produto por meio de uma tomada CA.<br />2. Verifique se as aberturas de entrada e saída de ar estão bloqueadas; certifique-se de manter uma distância de 0,66 ft (20 cm) em ambos os lados do produto.<br />3. Coloque o produto em um local que não esteja exposto à luz solar direta ou a altas temperaturas ambientais.<br />4. Desconecte todas as cargas do produto. Mantenha o produto ocioso e aguarde até que a falha desapareça.<br />5. Reinicie o produto.",
                       "measures_text": "1. Aguarde a normalização da rede elétrica antes de carregar o produto por meio de uma tomada CA. 2. Verifique se as aberturas de entrada e saída de ar estão bloqueadas; certifique-se de manter uma distância de 0,66 ft (20 cm) em ambos os lados do produto. 3. Coloque o produto em um local que não esteja exposto à luz solar direta ou a altas temperaturas ambientais. 4. Desconecte todas as cargas do produto. Mantenha o produto ocioso e aguarde até que a falha desapareça. 5. Reinicie o produto."
                     },
                     {
                       "code_html": "F7",
                       "code_text": "F7",
-                      "measures_html": "1. Remova todas as entradas CC do produto. 2. Se você carregar o produto com um painel solar, verifique a tensão de circuito aberto (VOC) do painel solar conectado. O produto permite uma tensão máxima de entrada CC de 60 V. 3. Reinicie o produto e mantenha-o inativo. Aguarde até que a falha desapareça.",
+                      "measures_html": "1. Remova todas as entradas CC do produto.<br />2. Se você carregar o produto com um painel solar, verifique a tensão de circuito aberto (VOC) do painel solar conectado. O produto permite uma tensão máxima de entrada CC de 60 V.<br />3. Reinicie o produto e mantenha-o inativo. Aguarde até que a falha desapareça.",
                       "measures_text": "1. Remova todas as entradas CC do produto. 2. Se você carregar o produto com um painel solar, verifique a tensão de circuito aberto (VOC) do painel solar conectado. O produto permite uma tensão máxima de entrada CC de 60 V. 3. Reinicie o produto e mantenha-o inativo. Aguarde até que a falha desapareça."
                     },
                     {
