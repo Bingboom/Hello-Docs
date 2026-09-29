@@ -57,8 +57,8 @@
     "assets/23cde742b301_23cde742b301_23cde742b301_connect_result_je1000f_eu.png"
   ],
   "bundle_root": "frozen-source",
-  "bundle_sha256": "123ce5f348896880ce96400adf00752dc7f859bf1ebbc0bb8b6317d8f421a156",
-  "content_sha256": "e71b9c2f97e3e58729b9fb54300066103d18668e9e4a9f72669c71d0bceff1e1",
+  "bundle_sha256": "1e70564f1d73805b5d8a8a785708251b63d2de7946d45e4ac9a7beebf8b60085",
+  "content_sha256": "c20e546c89f4e03ed347fe93f8eacc172f0382877c6d6f66c24d563bc6378469",
   "language": "nl",
   "layout_params_sha256": "f5ae099abc1a82ffda3abcc5a13725aca3c201e720a0374d88d1643f9773f279",
   "metadata": {
@@ -1255,7 +1255,7 @@
       }
     ],
     "frozen_source_manifest": {
-      "artwork_manifest_sha256": "549ced6e97abe642e7fe7e941131f2ea9861b0fd7848f0d2102c216eb02a2562",
+      "artwork_manifest_sha256": "f14994a1449bfaaf149b501439760dbf53fba1e129aa610a8dfabc84b495d473",
       "geometry_recipe_sha256": "914c5002d3b387494527958a3c2559b0a5d419ffd651f2f34f78aa365c458766",
       "intake_method": "fresh-native-pdf-text",
       "original_source": {
@@ -1276,7 +1276,7 @@
         "model": "JE-1000F",
         "printed_manual_version": null,
         "region": "EU",
-        "technical_version": "git-20260928-c38415f5-layout-fixes"
+        "technical_version": "git-20260928-c38415f5-lcd-status"
       },
       "text_source": {
         "filename": "HTE153-nine-language-native-text-check.pdf",
@@ -8649,7 +8649,7 @@
             "assets/9b148ea95d3a_9b148ea95d3a_9b148ea95d3a_27_Remaining_Discharge_Time_JEpobf59DoBV4dxWlnxcNtIinke.png"
           ],
           "block_id": "lcd_display:block-0003",
-          "content_sha256": "9c5282b9e0de7a7c07ffc6d3282199558819a81851905f42bb799d428639c933",
+          "content_sha256": "d20623555594179f5acf08952a000d72658523204d30130765c20a54d28663e0",
           "kind": "flow",
           "payload": {
             "component_spec": {
@@ -9245,7 +9245,7 @@
                   "content": [
                     {
                       "asset_index": 0,
-                      "description_html": "<p>Aan: Wifi is verbonden. Knipperend: Klaar om met wifi te verbinden. Uit: Wifi is niet verbonden.</p>",
+                      "description_html": "<p><strong>Aan:</strong> Wifi is verbonden.<br /><strong>Knipperend:</strong> Klaar om met wifi te verbinden.<br /><strong>Uit:</strong> Wifi is niet verbonden.</p>",
                       "description_text": "Aan: Wifi is verbonden. Knipperend: Klaar om met wifi te verbinden. Uit: Wifi is niet verbonden.",
                       "icon_alt": "Wifi",
                       "name_html": "<p>Wifi</p>",
@@ -9255,7 +9255,7 @@
                     },
                     {
                       "asset_index": 1,
-                      "description_html": "<p>Aan: Bluetooth is verbonden. Knipperend: Klaar om met Bluetooth te verbinden. Uit: Bluetooth is niet verbonden.</p>",
+                      "description_html": "<p><strong>Aan:</strong> Bluetooth is verbonden.<br /><strong>Knipperend:</strong> Klaar om met Bluetooth te verbinden.<br /><strong>Uit:</strong> Bluetooth is niet verbonden.</p>",
                       "description_text": "Aan: Bluetooth is verbonden. Knipperend: Klaar om met Bluetooth te verbinden. Uit: Bluetooth is niet verbonden.",
                       "icon_alt": "Bluetooth",
                       "name_html": "<p>Bluetooth</p>",
@@ -9265,7 +9265,7 @@
                     },
                     {
                       "asset_index": 2,
-                      "description_html": "<p>Aan: Het geluid tijdens het opladen wordt aanzienlijk verminderd, terwijl het oplaadvermogen wordt verlaagd en de oplaadsnelheid afneemt. Uit: De stille oplaadmodus is uitgeschakeld. Schakel deze functie in of uit in de Jackery-app. De instelling blijft behouden wanneer het apparaat wordt uitgeschakeld.</p>",
+                      "description_html": "<p><strong>Aan:</strong> Het geluid tijdens het opladen wordt aanzienlijk verminderd, terwijl het oplaadvermogen wordt verlaagd en de oplaadsnelheid afneemt.<br /><strong>Uit:</strong> De stille oplaadmodus is uitgeschakeld.<br />Schakel deze functie in of uit in de Jackery-app.<br />De instelling blijft behouden wanneer het apparaat wordt uitgeschakeld.</p>",
                       "description_text": "Aan: Het geluid tijdens het opladen wordt aanzienlijk verminderd, terwijl het oplaadvermogen wordt verlaagd en de oplaadsnelheid afneemt. Uit: De stille oplaadmodus is uitgeschakeld. Schakel deze functie in of uit in de Jackery-app. De instelling blijft behouden wanneer het apparaat wordt uitgeschakeld.",
                       "icon_alt": "Stille oplaadmodus",
                       "name_html": "<p>Stille oplaadmodus</p>",
@@ -9275,7 +9275,7 @@
                     },
                     {
                       "asset_index": 3,
-                      "description_html": "<p>Hiermee wordt de oplaadtijd van de Jackery Explorer 1000 aangepast. Geschikt voor situaties met fluctuerende elektriciteitsprijzen en maakt het mogelijk om oplaadplannen te maken op basis van piek- en daluren, waardoor de elektriciteitskosten worden verlaagd. Schakel deze functie in of uit in de Jackery-app. De instelling blijft behouden wanneer het apparaat wordt uitgeschakeld.</p>",
+                      "description_html": "<p>Hiermee wordt de oplaadtijd van de Jackery Explorer 1000 aangepast. Geschikt voor situaties met fluctuerende elektriciteitsprijzen en maakt het mogelijk om oplaadplannen te maken op basis van piek- en daluren, waardoor de elektriciteitskosten worden verlaagd.<br />Schakel deze functie in of uit in de Jackery-app.<br />De instelling blijft behouden wanneer het apparaat wordt uitgeschakeld.</p>",
                       "description_text": "Hiermee wordt de oplaadtijd van de Jackery Explorer 1000 aangepast. Geschikt voor situaties met fluctuerende elektriciteitsprijzen en maakt het mogelijk om oplaadplannen te maken op basis van piek- en daluren, waardoor de elektriciteitskosten worden verlaagd. Schakel deze functie in of uit in de Jackery-app. De instelling blijft behouden wanneer het apparaat wordt uitgeschakeld.",
                       "icon_alt": "Oplaadplan",
                       "name_html": "<p>Oplaadplan</p>",
@@ -9285,7 +9285,7 @@
                     },
                     {
                       "asset_index": 4,
-                      "description_html": "<p>Maximaliseert het gebruik van zonne-energie en vermindert de afhankelijkheid van het net door opgeslagen zonne-energie voorrang te geven, waardoor de elektriciteitskosten dalen. Het powerstation moet tegelijkertijd op zowel zonnepanelen als op het net worden aangesloten, waarbij het belastingsvermogen wordt beperkt door het bypass-vermogen. Schakel deze functie in of uit in de Jackery-app. De instelling blijft behouden wanneer het apparaat wordt uitgeschakeld.</p>",
+                      "description_html": "<p>Maximaliseert het gebruik van zonne-energie en vermindert de afhankelijkheid van het net door opgeslagen zonne-energie voorrang te geven, waardoor de elektriciteitskosten dalen. Het powerstation moet tegelijkertijd op zowel zonnepanelen als op het net worden aangesloten, waarbij het belastingsvermogen wordt beperkt door het bypass-vermogen.<br />Schakel deze functie in of uit in de Jackery-app.<br />De instelling blijft behouden wanneer het apparaat wordt uitgeschakeld.</p>",
                       "description_text": "Maximaliseert het gebruik van zonne-energie en vermindert de afhankelijkheid van het net door opgeslagen zonne-energie voorrang te geven, waardoor de elektriciteitskosten dalen. Het powerstation moet tegelijkertijd op zowel zonnepanelen als op het net worden aangesloten, waarbij het belastingsvermogen wordt beperkt door het bypass-vermogen. Schakel deze functie in of uit in de Jackery-app. De instelling blijft behouden wanneer het apparaat wordt uitgeschakeld.",
                       "icon_alt": "Zelfvoorzienende modus",
                       "name_html": "<p>Zelfvoorzienende modus</p>",
@@ -9295,7 +9295,7 @@
                     },
                     {
                       "asset_index": 5,
-                      "description_html": "<p>Aan: De TOU-modus is ingeschakeld (standaard back-up SOC: 60%). Tijdens piekperiodes geeft het product prioriteit aan het ontladen van de batterij om piekstroomkosten te verlagen wanneer de opgeslagen energie de back-up SOC overschrijdt. Tijdens dalperiodes laadt het product de batterij op vanuit het net om piekshaving en dalvulling te bereiken. Uit: De TOU-modus is uitgeschakeld. Het product volgt de gebruiksduurstrategie (TOU) niet en werkt volgens de standaardlogica voor stroomvoorziening en opladen. Schakel deze functie in of uit in de Jackery-app. De instelling blijft behouden wanneer het apparaat wordt uitgeschakeld.</p>",
+                      "description_html": "<p><strong>Aan:</strong> De TOU-modus is ingeschakeld (standaard back-up SOC: 60%). Tijdens piekperiodes geeft het product prioriteit aan het ontladen van de batterij om piekstroomkosten te verlagen wanneer de opgeslagen energie de back-up SOC overschrijdt. Tijdens dalperiodes laadt het product de batterij op vanuit het net om piekshaving en dalvulling te bereiken.<br /><strong>Uit:</strong> De TOU-modus is uitgeschakeld. Het product volgt de gebruiksduurstrategie (TOU) niet en werkt volgens de standaardlogica voor stroomvoorziening en opladen.<br />Schakel deze functie in of uit in de Jackery-app.<br />De instelling blijft behouden wanneer het apparaat wordt uitgeschakeld.</p>",
                       "description_text": "Aan: De TOU-modus is ingeschakeld (standaard back-up SOC: 60%). Tijdens piekperiodes geeft het product prioriteit aan het ontladen van de batterij om piekstroomkosten te verlagen wanneer de opgeslagen energie de back-up SOC overschrijdt. Tijdens dalperiodes laadt het product de batterij op vanuit het net om piekshaving en dalvulling te bereiken. Uit: De TOU-modus is uitgeschakeld. Het product volgt de gebruiksduurstrategie (TOU) niet en werkt volgens de standaardlogica voor stroomvoorziening en opladen. Schakel deze functie in of uit in de Jackery-app. De instelling blijft behouden wanneer het apparaat wordt uitgeschakeld.",
                       "icon_alt": "TOU-modus",
                       "name_html": "<p>TOU-modus</p>",
@@ -9305,7 +9305,7 @@
                     },
                     {
                       "asset_index": 6,
-                      "description_html": "<p>Aan: Het product werkt in de bypassmodus. De belastingen die zijn aangesloten op de AC-poorten verbruiken stroom van het net in plaats van van het powerstation. Als het net plotseling uitvalt, schakelt het product automatisch binnen 10 ms over op de batterijstroom. Uit: Het product is niet in de bypassmodus. De belastingen die zijn aangesloten op de AC-poorten worden gevoed door de interne batterij van het powerstation.</p>",
+                      "description_html": "<p><strong>Aan:</strong> Het product werkt in de bypassmodus. De belastingen die zijn aangesloten op de AC-poorten verbruiken stroom van het net in plaats van van het powerstation. Als het net plotseling uitvalt, schakelt het product automatisch binnen 10 ms over op de batterijstroom.<br /><strong>Uit:</strong> Het product is niet in de bypassmodus. De belastingen die zijn aangesloten op de AC-poorten worden gevoed door de interne batterij van het powerstation.</p>",
                       "description_text": "Aan: Het product werkt in de bypassmodus. De belastingen die zijn aangesloten op de AC-poorten verbruiken stroom van het net in plaats van van het powerstation. Als het net plotseling uitvalt, schakelt het product automatisch binnen 10 ms over op de batterijstroom. Uit: Het product is niet in de bypassmodus. De belastingen die zijn aangesloten op de AC-poorten worden gevoed door de interne batterij van het powerstation.",
                       "icon_alt": "UPS",
                       "name_html": "<p>UPS</p>",
@@ -9385,7 +9385,7 @@
                     },
                     {
                       "asset_index": 14,
-                      "description_html": "<p>Aan: De Batterijbesparingsmodus is ingeschakeld. Er worden laad- en ontlaadlimieten toegepast om de levensduur van de batterij te verlengen. Uit: De Batterijbesparingsmodus is uitgeschakeld. Schakel deze functie in of uit in de Jackery-app. De instelling blijft behouden wanneer het apparaat wordt uitgeschakeld. Wanneer deze functie is ingeschakeld, voert het product af en toe een volledige laad- en ontlaadcyclus uit om de SOC te kalibreren.</p>",
+                      "description_html": "<p><strong>Aan:</strong> De Batterijbesparingsmodus is ingeschakeld. Er worden laad- en ontlaadlimieten toegepast om de levensduur van de batterij te verlengen.<br /><strong>Uit:</strong> De Batterijbesparingsmodus is uitgeschakeld.<br />Schakel deze functie in of uit in de Jackery-app.<br />De instelling blijft behouden wanneer het apparaat wordt uitgeschakeld.<br />Wanneer deze functie is ingeschakeld, voert het product af en toe een volledige laad- en ontlaadcyclus uit om de SOC te kalibreren.</p>",
                       "description_text": "Aan: De Batterijbesparingsmodus is ingeschakeld. Er worden laad- en ontlaadlimieten toegepast om de levensduur van de batterij te verlengen. Uit: De Batterijbesparingsmodus is uitgeschakeld. Schakel deze functie in of uit in de Jackery-app. De instelling blijft behouden wanneer het apparaat wordt uitgeschakeld. Wanneer deze functie is ingeschakeld, voert het product af en toe een volledige laad- en ontlaadcyclus uit om de SOC te kalibreren.",
                       "icon_alt": "Batterijbesparingsmodus",
                       "name_html": "<p>Batterijbesparingsmodus</p>",
@@ -9395,7 +9395,7 @@
                     },
                     {
                       "asset_index": 15,
-                      "description_html": "<p>Aan: Het maximale laadvermogen is ingeschakeld in de Jackery-app. Uit: Het maximale laadvermogen is uitgeschakeld in de Jackery-app. De instelling blijft behouden wanneer het apparaat wordt uitgeschakeld.</p>",
+                      "description_html": "<p><strong>Aan:</strong> Het maximale laadvermogen is ingeschakeld in de Jackery-app.<br /><strong>Uit:</strong> Het maximale laadvermogen is uitgeschakeld in de Jackery-app.<br />De instelling blijft behouden wanneer het apparaat wordt uitgeschakeld.</p>",
                       "description_text": "Aan: Het maximale laadvermogen is ingeschakeld in de Jackery-app. Uit: Het maximale laadvermogen is uitgeschakeld in de Jackery-app. De instelling blijft behouden wanneer het apparaat wordt uitgeschakeld.",
                       "icon_alt": "Maximale laadvermogen",
                       "name_html": "<p>Maximale laadvermogen</p>",
@@ -9415,7 +9415,7 @@
                     },
                     {
                       "asset_index": 17,
-                      "description_html": "<p>Aan: Het batterijniveau is lager dan 20%. Knipperend: Het batterijniveau is lager dan 5%. Uit: Het batterijniveau is hoger dan 20% of het product wordt opgeladen.</p>",
+                      "description_html": "<p><strong>Aan:</strong> Het batterijniveau is lager dan 20%.<br /><strong>Knipperend:</strong> Het batterijniveau is lager dan 5%.<br /><strong>Uit:</strong> Het batterijniveau is hoger dan 20% of het product wordt opgeladen.</p>",
                       "description_text": "Aan: Het batterijniveau is lager dan 20%. Knipperend: Het batterijniveau is lager dan 5%. Uit: Het batterijniveau is hoger dan 20% of het product wordt opgeladen.",
                       "icon_alt": "Indicator voor laag batterijniveau",
                       "name_html": "<p>Indicator voor laag batterijniveau</p>",
@@ -9435,7 +9435,7 @@
                     },
                     {
                       "asset_index": 19,
-                      "description_html": "<p>Aan: Er is een ontladingstimer ingesteld. Uit: Er is geen ontladingstimer ingesteld. Schakel deze functie in of uit in de Jackery-app. De instelling blijft niet behouden wanneer het apparaat wordt uitgeschakeld.</p>",
+                      "description_html": "<p><strong>Aan:</strong> Er is een ontladingstimer ingesteld.<br /><strong>Uit:</strong> Er is geen ontladingstimer ingesteld.<br />Schakel deze functie in of uit in de Jackery-app.<br />De instelling blijft niet behouden wanneer het apparaat wordt uitgeschakeld.</p>",
                       "description_text": "Aan: Er is een ontladingstimer ingesteld. Uit: Er is geen ontladingstimer ingesteld. Schakel deze functie in of uit in de Jackery-app. De instelling blijft niet behouden wanneer het apparaat wordt uitgeschakeld.",
                       "icon_alt": "Ontladingstimer",
                       "name_html": "<p>Ontladingstimer</p>",
@@ -9445,7 +9445,7 @@
                     },
                     {
                       "asset_index": 20,
-                      "description_html": "<p>Wanneer de AC- of DC-uitgang wordt ingeschakeld door op de Aan/uit-knop voor AC of DC/USB te drukken: Aan: De Energiebesparingsmodus is ingeschakeld. Uit: De Energiebesparingsmodus is uitgeschakeld.</p>",
+                      "description_html": "<p>Wanneer de AC- of DC-uitgang wordt ingeschakeld door op de Aan/uit-knop voor AC of DC/USB te drukken:<br /><strong>Aan:</strong> De Energiebesparingsmodus is ingeschakeld.<br /><strong>Uit:</strong> De Energiebesparingsmodus is uitgeschakeld.</p>",
                       "description_text": "Wanneer de AC- of DC-uitgang wordt ingeschakeld door op de Aan/uit-knop voor AC of DC/USB te drukken: Aan: De Energiebesparingsmodus is ingeschakeld. Uit: De Energiebesparingsmodus is uitgeschakeld.",
                       "icon_alt": "Energiebesparingsmodus",
                       "name_html": "<p>Energiebesparingsmodus</p>",
@@ -12300,13 +12300,18 @@
         {
           "asset_refs": [],
           "block_id": "charging:block-0009",
-          "content_sha256": "bfe1203e674eca2225fffc17f6f6117d6409ceaec5873184ce5e6f45790964ab",
+          "content_sha256": "2f3c806e0dfdcfb6eaa7f4f4ef8f1ca9e9dbb0d3a6c7f9e221d89fd612e7e7c4",
           "kind": "flow",
           "payload": {
             "children": [
               {
-                "kind": "text",
-                "text": "Noodoplaadmodus"
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "Noodoplaadmodus"
+                  }
+                ],
+                "kind": "strong"
               }
             ],
             "kind": "paragraph",
@@ -13339,7 +13344,7 @@
         {
           "asset_refs": [],
           "block_id": "troubleshooting:block-0003",
-          "content_sha256": "7f4cdcd4cfcbf02793d06a8bbdce2011ae6183da33568dfde7a699bff8fc283e",
+          "content_sha256": "c749d4f1e75016a06dde8ffc6ffc6dea90e1377548a9a2164a734db92fdcaa15",
           "kind": "flow",
           "payload": {
             "component_spec": {
@@ -13404,13 +13409,13 @@
                     {
                       "code_html": "F6",
                       "code_text": "F6",
-                      "measures_html": "1. Wacht tot het net genormaliseerd is voordat u het product via een AC-stopcontact oplaadt. 2. Controleer of de luchtinlaat- en uitlaatopeningen geblokkeerd zijn; zorg voor 0,66 ft (20 cm) ruimte aan beide zijden van het product. 3. Plaats het product op een locatie die niet wordt blootgesteld aan direct zonlicht of hoge omgevingstemperaturen. 4. Koppel alle belastingen van het product los. Laat het product inactief en wacht tot de fout verdwijnt. 5. Herstart het product.",
+                      "measures_html": "1. Wacht tot het net genormaliseerd is voordat u het product via een AC-stopcontact oplaadt.<br />2. Controleer of de luchtinlaat- en uitlaatopeningen geblokkeerd zijn; zorg voor 0,66 ft (20 cm) ruimte aan beide zijden van het product.<br />3. Plaats het product op een locatie die niet wordt blootgesteld aan direct zonlicht of hoge omgevingstemperaturen.<br />4. Koppel alle belastingen van het product los. Laat het product inactief en wacht tot de fout verdwijnt.<br />5. Herstart het product.",
                       "measures_text": "1. Wacht tot het net genormaliseerd is voordat u het product via een AC-stopcontact oplaadt. 2. Controleer of de luchtinlaat- en uitlaatopeningen geblokkeerd zijn; zorg voor 0,66 ft (20 cm) ruimte aan beide zijden van het product. 3. Plaats het product op een locatie die niet wordt blootgesteld aan direct zonlicht of hoge omgevingstemperaturen. 4. Koppel alle belastingen van het product los. Laat het product inactief en wacht tot de fout verdwijnt. 5. Herstart het product."
                     },
                     {
                       "code_html": "F7",
                       "code_text": "F7",
-                      "measures_html": "1. Koppel alle DC-ingangen los van het product. 2. Als u het product via een zonnepaneel oplaadt, controleer dan de open-klemspanning (VOC) van het aangesloten zonnepaneel. Het product staat een maximale DC-ingangsspanning van 60 V toe. 3. Start het product opnieuw op en houd het inactief. Wacht tot de fout verdwijnt.",
+                      "measures_html": "1. Koppel alle DC-ingangen los van het product.<br />2. Als u het product via een zonnepaneel oplaadt, controleer dan de open-klemspanning (VOC) van het aangesloten zonnepaneel. Het product staat een maximale DC-ingangsspanning van 60 V toe.<br />3. Start het product opnieuw op en houd het inactief. Wacht tot de fout verdwijnt.",
                       "measures_text": "1. Koppel alle DC-ingangen los van het product. 2. Als u het product via een zonnepaneel oplaadt, controleer dan de open-klemspanning (VOC) van het aangesloten zonnepaneel. Het product staat een maximale DC-ingangsspanning van 60 V toe. 3. Start het product opnieuw op en houd het inactief. Wacht tot de fout verdwijnt."
                     },
                     {

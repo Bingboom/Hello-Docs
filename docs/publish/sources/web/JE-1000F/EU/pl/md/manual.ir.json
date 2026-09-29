@@ -57,8 +57,8 @@
     "assets/23cde742b301_23cde742b301_23cde742b301_connect_result_je1000f_eu.png"
   ],
   "bundle_root": "frozen-source",
-  "bundle_sha256": "918d32c443ce0ffaaf002a5f9617c98cf5df6137e31d25c8d83c33d56988b3d2",
-  "content_sha256": "ee1a11d6aa05a3cfc320c314ef6a083284fa850c13c954c8a18975d6d9aaced7",
+  "bundle_sha256": "fb9ea5663d438ed6b39f2eb0cb83014578621da93c0d134eebfc1116e53ef74e",
+  "content_sha256": "72222c8132125a7e42b60d5e88111a4272763d976636b9bc9125e2202fcd5657",
   "language": "pl",
   "layout_params_sha256": "f5ae099abc1a82ffda3abcc5a13725aca3c201e720a0374d88d1643f9773f279",
   "metadata": {
@@ -1255,7 +1255,7 @@
       }
     ],
     "frozen_source_manifest": {
-      "artwork_manifest_sha256": "549ced6e97abe642e7fe7e941131f2ea9861b0fd7848f0d2102c216eb02a2562",
+      "artwork_manifest_sha256": "f14994a1449bfaaf149b501439760dbf53fba1e129aa610a8dfabc84b495d473",
       "geometry_recipe_sha256": "914c5002d3b387494527958a3c2559b0a5d419ffd651f2f34f78aa365c458766",
       "intake_method": "fresh-native-pdf-text",
       "original_source": {
@@ -1276,7 +1276,7 @@
         "model": "JE-1000F",
         "printed_manual_version": null,
         "region": "EU",
-        "technical_version": "git-20260928-c38415f5-layout-fixes"
+        "technical_version": "git-20260928-c38415f5-lcd-status"
       },
       "text_source": {
         "filename": "HTE153-nine-language-native-text-check.pdf",
@@ -8574,7 +8574,7 @@
             "assets/9b148ea95d3a_9b148ea95d3a_9b148ea95d3a_27_Remaining_Discharge_Time_JEpobf59DoBV4dxWlnxcNtIinke.png"
           ],
           "block_id": "lcd_display:block-0003",
-          "content_sha256": "65ca8616673ec4e34e661262a81e38081c061c2cd1a396b0e92c84fd50b5af13",
+          "content_sha256": "25b25829efcfc36038a0e898f95571ceef8845b9b42ec15487a5296697a2cc7b",
           "kind": "flow",
           "payload": {
             "component_spec": {
@@ -9170,7 +9170,7 @@
                   "content": [
                     {
                       "asset_index": 0,
-                      "description_html": "<p>Wł.: Połączono z Wi-Fi. Miga: Gotowość do połączenia z Wi-Fi. Wył.: Rozłączono z Wi-Fi.</p>",
+                      "description_html": "<p><strong>Wł.:</strong> Połączono z Wi-Fi.<br /><strong>Miga:</strong> Gotowość do połączenia z Wi-Fi.<br /><strong>Wył.:</strong> Rozłączono z Wi-Fi.</p>",
                       "description_text": "Wł.: Połączono z Wi-Fi. Miga: Gotowość do połączenia z Wi-Fi. Wył.: Rozłączono z Wi-Fi.",
                       "icon_alt": "Wi-Fi",
                       "name_html": "<p>Wi-Fi</p>",
@@ -9180,7 +9180,7 @@
                     },
                     {
                       "asset_index": 1,
-                      "description_html": "<p>Wł.: Połączono z Bluetooth. Miga: Gotowość do połączenia z Bluetooth. Wył.: Rozłączono z Bluetooth.</p>",
+                      "description_html": "<p><strong>Wł.:</strong> Połączono z Bluetooth.<br /><strong>Miga:</strong> Gotowość do połączenia z Bluetooth.<br /><strong>Wył.:</strong> Rozłączono z Bluetooth.</p>",
                       "description_text": "Wł.: Połączono z Bluetooth. Miga: Gotowość do połączenia z Bluetooth. Wył.: Rozłączono z Bluetooth.",
                       "icon_alt": "Bluetooth",
                       "name_html": "<p>Bluetooth</p>",
@@ -9190,7 +9190,7 @@
                     },
                     {
                       "asset_index": 2,
-                      "description_html": "<p>Wł.: Hałas podczas ładowania jest znacznie zminimalizowany, przy czym moc ładowania jest zmniejszona, a prędkość ładowania maleje. Wył.: Tryb cichego ładowania jest wyłączony. Tę funkcję można włączyć lub wyłączyć w aplikacji Jackery. Ustawienie jest zapamiętywane po wyłączeniu urządzenia.</p>",
+                      "description_html": "<p><strong>Wł.:</strong> Hałas podczas ładowania jest znacznie zminimalizowany, przy czym moc ładowania jest zmniejszona, a prędkość ładowania maleje.<br /><strong>Wył.:</strong> Tryb cichego ładowania jest wyłączony.<br />Tę funkcję można włączyć lub wyłączyć w aplikacji Jackery.<br />Ustawienie jest zapamiętywane po wyłączeniu urządzenia.</p>",
                       "description_text": "Wł.: Hałas podczas ładowania jest znacznie zminimalizowany, przy czym moc ładowania jest zmniejszona, a prędkość ładowania maleje. Wył.: Tryb cichego ładowania jest wyłączony. Tę funkcję można włączyć lub wyłączyć w aplikacji Jackery. Ustawienie jest zapamiętywane po wyłączeniu urządzenia.",
                       "icon_alt": "Tryb cichego ładowania",
                       "name_html": "<p>Tryb cichego ładowania</p>",
@@ -9200,7 +9200,7 @@
                     },
                     {
                       "asset_index": 3,
-                      "description_html": "<p>Dostosowuje czas ładowania urządzenia Jackery Explorer 1000. W sytuacjach, gdy ceny energii elektrycznej są zmienne, pozwala planować ładowanie w godzinach szczytu i poza szczytem, co obniża koszty energii elektrycznej. Tę funkcję można włączyć lub wyłączyć w aplikacji Jackery. Ustawienie jest zapamiętywane po wyłączeniu urządzenia.</p>",
+                      "description_html": "<p>Dostosowuje czas ładowania urządzenia Jackery Explorer 1000. W sytuacjach, gdy ceny energii elektrycznej są zmienne, pozwala planować ładowanie w godzinach szczytu i poza szczytem, co obniża koszty energii elektrycznej.<br />Tę funkcję można włączyć lub wyłączyć w aplikacji Jackery.<br />Ustawienie jest zapamiętywane po wyłączeniu urządzenia.</p>",
                       "description_text": "Dostosowuje czas ładowania urządzenia Jackery Explorer 1000. W sytuacjach, gdy ceny energii elektrycznej są zmienne, pozwala planować ładowanie w godzinach szczytu i poza szczytem, co obniża koszty energii elektrycznej. Tę funkcję można włączyć lub wyłączyć w aplikacji Jackery. Ustawienie jest zapamiętywane po wyłączeniu urządzenia.",
                       "icon_alt": "Plan ładowania",
                       "name_html": "<p>Plan ładowania</p>",
@@ -9210,7 +9210,7 @@
                     },
                     {
                       "asset_index": 4,
-                      "description_html": "<p>Maksymalizuje wykorzystanie energii słonecznej i zmniejsza zależność od energii elektrycznej z sieci, dając pierwszeństwo zmagazynowanej energii słonecznej, co obniża koszty energii elektrycznej. Stacja zasilająca musi być jednocześnie podłączona do paneli słonecznych i sieci energetycznej, a moc urządzeń odbiorczych jest ograniczona przez moc obejściową. Tę funkcję można włączyć lub wyłączyć w aplikacji Jackery. Ustawienie jest zapamiętywane po wyłączeniu urządzenia.</p>",
+                      "description_html": "<p>Maksymalizuje wykorzystanie energii słonecznej i zmniejsza zależność od energii elektrycznej z sieci, dając pierwszeństwo zmagazynowanej energii słonecznej, co obniża koszty energii elektrycznej. Stacja zasilająca musi być jednocześnie podłączona do paneli słonecznych i sieci energetycznej, a moc urządzeń odbiorczych jest ograniczona przez moc obejściową.<br />Tę funkcję można włączyć lub wyłączyć w aplikacji Jackery.<br />Ustawienie jest zapamiętywane po wyłączeniu urządzenia.</p>",
                       "description_text": "Maksymalizuje wykorzystanie energii słonecznej i zmniejsza zależność od energii elektrycznej z sieci, dając pierwszeństwo zmagazynowanej energii słonecznej, co obniża koszty energii elektrycznej. Stacja zasilająca musi być jednocześnie podłączona do paneli słonecznych i sieci energetycznej, a moc urządzeń odbiorczych jest ograniczona przez moc obejściową. Tę funkcję można włączyć lub wyłączyć w aplikacji Jackery. Ustawienie jest zapamiętywane po wyłączeniu urządzenia.",
                       "icon_alt": "Tryb samozasilania",
                       "name_html": "<p>Tryb samozasilania</p>",
@@ -9220,7 +9220,7 @@
                     },
                     {
                       "asset_index": 5,
-                      "description_html": "<p>Wł.: Tryb taryfy czasowej (TOU) jest włączony (domyślna rezerwa – stan naładowania SOC: 60%). W okresach szczytu produkt priorytetowo rozładowuje akumulator, aby obniżyć szczytowe koszty energii elektrycznej, gdy poziom naładowania przekracza rezerwę SOC. W okresach poza szczytem produkt ładuje akumulator z sieci, aby spłaszczyć szczyty i wypełnić dołki. Wył.: Tryb taryfy czasowej (TOU) jest wyłączony. Produkt nie stosuje strategii taryfy czasowej i działa zgodnie z domyślną logiką zasilania i ładowania. Tę funkcję można włączyć lub wyłączyć w aplikacji Jackery. Ustawienie jest zapamiętywane po wyłączeniu urządzenia.</p>",
+                      "description_html": "<p><strong>Wł.:</strong> Tryb taryfy czasowej (TOU) jest włączony (domyślna rezerwa – stan naładowania SOC: 60%). W okresach szczytu produkt priorytetowo rozładowuje akumulator, aby obniżyć szczytowe koszty energii elektrycznej, gdy poziom naładowania przekracza rezerwę SOC. W okresach poza szczytem produkt ładuje akumulator z sieci, aby spłaszczyć szczyty i wypełnić dołki.<br /><strong>Wył.:</strong> Tryb taryfy czasowej (TOU) jest wyłączony. Produkt nie stosuje strategii taryfy czasowej i działa zgodnie z domyślną logiką zasilania i ładowania.<br />Tę funkcję można włączyć lub wyłączyć w aplikacji Jackery.<br />Ustawienie jest zapamiętywane po wyłączeniu urządzenia.</p>",
                       "description_text": "Wł.: Tryb taryfy czasowej (TOU) jest włączony (domyślna rezerwa – stan naładowania SOC: 60%). W okresach szczytu produkt priorytetowo rozładowuje akumulator, aby obniżyć szczytowe koszty energii elektrycznej, gdy poziom naładowania przekracza rezerwę SOC. W okresach poza szczytem produkt ładuje akumulator z sieci, aby spłaszczyć szczyty i wypełnić dołki. Wył.: Tryb taryfy czasowej (TOU) jest wyłączony. Produkt nie stosuje strategii taryfy czasowej i działa zgodnie z domyślną logiką zasilania i ładowania. Tę funkcję można włączyć lub wyłączyć w aplikacji Jackery. Ustawienie jest zapamiętywane po wyłączeniu urządzenia.",
                       "icon_alt": "Tryb taryfy czasowej (TOU)",
                       "name_html": "<p>Tryb taryfy czasowej (TOU)</p>",
@@ -9230,7 +9230,7 @@
                     },
                     {
                       "asset_index": 6,
-                      "description_html": "<p>Wł.: Produkt działa w trybie obejściowym. Urządzenia odbiorcze podłączone do portów AC pobierają energię z sieci zamiast ze stacji zasilającej. W przypadku nagłej awarii sieci produkt automatycznie przełącza się na zasilanie bateryjne w ciągu 10 ms. Wył.: Produkt nie pracuje w trybie obejściowym. Urządzenia odbiorcze podłączone do portów AC są zasilane z wewnętrznej baterii stacji zasilającej.</p>",
+                      "description_html": "<p><strong>Wł.:</strong> Produkt działa w trybie obejściowym. Urządzenia odbiorcze podłączone do portów AC pobierają energię z sieci zamiast ze stacji zasilającej. W przypadku nagłej awarii sieci produkt automatycznie przełącza się na zasilanie bateryjne w ciągu 10 ms.<br /><strong>Wył.:</strong> Produkt nie pracuje w trybie obejściowym. Urządzenia odbiorcze podłączone do portów AC są zasilane z wewnętrznej baterii stacji zasilającej.</p>",
                       "description_text": "Wł.: Produkt działa w trybie obejściowym. Urządzenia odbiorcze podłączone do portów AC pobierają energię z sieci zamiast ze stacji zasilającej. W przypadku nagłej awarii sieci produkt automatycznie przełącza się na zasilanie bateryjne w ciągu 10 ms. Wył.: Produkt nie pracuje w trybie obejściowym. Urządzenia odbiorcze podłączone do portów AC są zasilane z wewnętrznej baterii stacji zasilającej.",
                       "icon_alt": "UPS",
                       "name_html": "<p>UPS</p>",
@@ -9310,7 +9310,7 @@
                     },
                     {
                       "asset_index": 14,
-                      "description_html": "<p>Wł.: Tryb oszczędzania baterii jest włączony. Zastosowano limity ładowania i rozładowywania, aby wydłużyć żywotność baterii. Wył.: Tryb oszczędzania baterii jest wyłączony. Tę funkcję można włączyć lub wyłączyć w aplikacji Jackery. Ustawienie jest zapamiętywane po wyłączeniu urządzenia. Gdy ta funkcja jest włączona, produkt od czasu do czasu wykonuje pełny cykl ładowania i rozładowania, aby skalibrować stan naładowania (SOC).</p>",
+                      "description_html": "<p><strong>Wł.:</strong> Tryb oszczędzania baterii jest włączony. Zastosowano limity ładowania i rozładowywania, aby wydłużyć żywotność baterii.<br /><strong>Wył.:</strong> Tryb oszczędzania baterii jest wyłączony.<br />Tę funkcję można włączyć lub wyłączyć w aplikacji Jackery.<br />Ustawienie jest zapamiętywane po wyłączeniu urządzenia.<br />Gdy ta funkcja jest włączona, produkt od czasu do czasu wykonuje pełny cykl ładowania i rozładowania, aby skalibrować stan naładowania (SOC).</p>",
                       "description_text": "Wł.: Tryb oszczędzania baterii jest włączony. Zastosowano limity ładowania i rozładowywania, aby wydłużyć żywotność baterii. Wył.: Tryb oszczędzania baterii jest wyłączony. Tę funkcję można włączyć lub wyłączyć w aplikacji Jackery. Ustawienie jest zapamiętywane po wyłączeniu urządzenia. Gdy ta funkcja jest włączona, produkt od czasu do czasu wykonuje pełny cykl ładowania i rozładowania, aby skalibrować stan naładowania (SOC).",
                       "icon_alt": "Tryb oszczędzania baterii",
                       "name_html": "<p>Tryb oszczędzania baterii</p>",
@@ -9320,7 +9320,7 @@
                     },
                     {
                       "asset_index": 15,
-                      "description_html": "<p>Wł.: Limit mocy ładowania jest włączony w aplikacji Jackery. Wył.: Limit mocy ładowania jest wyłączony w aplikacji Jackery. Ustawienie jest zapamiętywane po wyłączeniu urządzenia.</p>",
+                      "description_html": "<p><strong>Wł.:</strong> Limit mocy ładowania jest włączony w aplikacji Jackery.<br /><strong>Wył.:</strong> Limit mocy ładowania jest wyłączony w aplikacji Jackery.<br />Ustawienie jest zapamiętywane po wyłączeniu urządzenia.</p>",
                       "description_text": "Wł.: Limit mocy ładowania jest włączony w aplikacji Jackery. Wył.: Limit mocy ładowania jest wyłączony w aplikacji Jackery. Ustawienie jest zapamiętywane po wyłączeniu urządzenia.",
                       "icon_alt": "Limit mocy ładowania",
                       "name_html": "<p>Limit mocy ładowania</p>",
@@ -9340,7 +9340,7 @@
                     },
                     {
                       "asset_index": 17,
-                      "description_html": "<p>Wł.: Poziom naładowania baterii jest niższy niż 20%. Miga: Poziom naładowania baterii jest niższy niż 5%. Wył.: Poziom naładowania baterii wynosi ponad 20% lub produkt jest ładowany.</p>",
+                      "description_html": "<p><strong>Wł.:</strong> Poziom naładowania baterii jest niższy niż 20%.<br /><strong>Miga:</strong> Poziom naładowania baterii jest niższy niż 5%.<br /><strong>Wył.:</strong> Poziom naładowania baterii wynosi ponad 20% lub produkt jest ładowany.</p>",
                       "description_text": "Wł.: Poziom naładowania baterii jest niższy niż 20%. Miga: Poziom naładowania baterii jest niższy niż 5%. Wył.: Poziom naładowania baterii wynosi ponad 20% lub produkt jest ładowany.",
                       "icon_alt": "Wskaźnik niskiego poziomu baterii",
                       "name_html": "<p>Wskaźnik niskiego poziomu baterii</p>",
@@ -9360,7 +9360,7 @@
                     },
                     {
                       "asset_index": 19,
-                      "description_html": "<p>Wł.: Ustawiono licznik czasu rozładowania. Wył.: Nie ustawiono licznika czasu rozładowania. Tę funkcję można włączyć lub wyłączyć w aplikacji Jackery. Ustawienie nie jest zapamiętywane po wyłączeniu urządzenia.</p>",
+                      "description_html": "<p><strong>Wł.:</strong> Ustawiono licznik czasu rozładowania.<br /><strong>Wył.:</strong> Nie ustawiono licznika czasu rozładowania.<br />Tę funkcję można włączyć lub wyłączyć w aplikacji Jackery.<br />Ustawienie nie jest zapamiętywane po wyłączeniu urządzenia.</p>",
                       "description_text": "Wł.: Ustawiono licznik czasu rozładowania. Wył.: Nie ustawiono licznika czasu rozładowania. Tę funkcję można włączyć lub wyłączyć w aplikacji Jackery. Ustawienie nie jest zapamiętywane po wyłączeniu urządzenia.",
                       "icon_alt": "Licznik czasu rozładowania",
                       "name_html": "<p>Licznik czasu rozładowania</p>",
@@ -9370,7 +9370,7 @@
                     },
                     {
                       "asset_index": 20,
-                      "description_html": "<p>Gdy wyjście AC lub DC zostanie włączone przez naciśnięcie przycisku zasilania AC lub DC/USB: Wł.: Tryb oszczędzania energii jest włączony. Wył.: Tryb oszczędzania energii jest wyłączony.</p>",
+                      "description_html": "<p>Gdy wyjście AC lub DC zostanie włączone przez naciśnięcie przycisku zasilania AC lub DC/USB:<br /><strong>Wł.:</strong> Tryb oszczędzania energii jest włączony.<br /><strong>Wył.:</strong> Tryb oszczędzania energii jest wyłączony.</p>",
                       "description_text": "Gdy wyjście AC lub DC zostanie włączone przez naciśnięcie przycisku zasilania AC lub DC/USB: Wł.: Tryb oszczędzania energii jest włączony. Wył.: Tryb oszczędzania energii jest wyłączony.",
                       "icon_alt": "Tryb oszczędzania energii",
                       "name_html": "<p>Tryb oszczędzania energii</p>",
@@ -12213,13 +12213,18 @@
         {
           "asset_refs": [],
           "block_id": "charging:block-0009",
-          "content_sha256": "9bb8e5ad7fefeae6b90bc569db75482d728c80cdb8e644e7142bb19456558f12",
+          "content_sha256": "0ddc9c87fd31426c47a1745e5bd19cbace6ca9d31a33e4703f033394bf246df2",
           "kind": "flow",
           "payload": {
             "children": [
               {
-                "kind": "text",
-                "text": "Tryb ładowania awaryjnego"
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "Tryb ładowania awaryjnego"
+                  }
+                ],
+                "kind": "strong"
               }
             ],
             "kind": "paragraph",
@@ -13234,7 +13239,7 @@
         {
           "asset_refs": [],
           "block_id": "troubleshooting:block-0003",
-          "content_sha256": "b50cf27f6696a73b511254e343239749f1ac7d28d88f956945d82d24b96bcb27",
+          "content_sha256": "780091ad6f17fc11a4ceebba78aab0187fd5f293e90eca85a14537a8a8e73d99",
           "kind": "flow",
           "payload": {
             "component_spec": {
@@ -13299,13 +13304,13 @@
                     {
                       "code_html": "F6",
                       "code_text": "F6",
-                      "measures_html": "1. Przed przystąpieniem do ładowania produktu z gniazdka ściennego AC poczekaj, aż napięcie w sieci się ustabilizuje. 2. Sprawdź, czy wlotowe i wylotowe otwory wentylacyjne nie są zablokowane. Pozostaw 0,66 ft (20 cm) odstępu po obu stronach produktu. 3. Trzymaj produkt w miejscu nienarażonym na bezpośrednie działanie promieni słonecznych ani na wysokie temperatury otoczenia. 4. Odłącz wszystkie urządzenia odbiorcze od produktu. Pozostaw produkt w stanie bezczynności i poczekaj, aż usterka zniknie. 5. Uruchom produkt ponownie.",
+                      "measures_html": "1. Przed przystąpieniem do ładowania produktu z gniazdka ściennego AC poczekaj, aż napięcie w sieci się ustabilizuje.<br />2. Sprawdź, czy wlotowe i wylotowe otwory wentylacyjne nie są zablokowane. Pozostaw 0,66 ft (20 cm) odstępu po obu stronach produktu.<br />3. Trzymaj produkt w miejscu nienarażonym na bezpośrednie działanie promieni słonecznych ani na wysokie temperatury otoczenia.<br />4. Odłącz wszystkie urządzenia odbiorcze od produktu. Pozostaw produkt w stanie bezczynności i poczekaj, aż usterka zniknie.<br />5. Uruchom produkt ponownie.",
                       "measures_text": "1. Przed przystąpieniem do ładowania produktu z gniazdka ściennego AC poczekaj, aż napięcie w sieci się ustabilizuje. 2. Sprawdź, czy wlotowe i wylotowe otwory wentylacyjne nie są zablokowane. Pozostaw 0,66 ft (20 cm) odstępu po obu stronach produktu. 3. Trzymaj produkt w miejscu nienarażonym na bezpośrednie działanie promieni słonecznych ani na wysokie temperatury otoczenia. 4. Odłącz wszystkie urządzenia odbiorcze od produktu. Pozostaw produkt w stanie bezczynności i poczekaj, aż usterka zniknie. 5. Uruchom produkt ponownie."
                     },
                     {
                       "code_html": "F7",
                       "code_text": "F7",
-                      "measures_html": "1. Odłącz wszystkie wtyki DC podłączone do produktu. 2. Jeśli ładujesz produkt za pomocą panelu słonecznego, sprawdź napięcie obwodu otwartego (VOC) podłączonego panelu słonecznego. Produkt dopuszcza maksymalne napięcie wejściowe DC wynoszące 60 V. 3. Zrestartuj produkt i pozostaw go w stanie bezczynności. Poczekaj, aż usterka zniknie.",
+                      "measures_html": "1. Odłącz wszystkie wtyki DC podłączone do produktu.<br />2. Jeśli ładujesz produkt za pomocą panelu słonecznego, sprawdź napięcie obwodu otwartego (VOC) podłączonego panelu słonecznego. Produkt dopuszcza maksymalne napięcie wejściowe DC wynoszące 60 V.<br />3. Zrestartuj produkt i pozostaw go w stanie bezczynności. Poczekaj, aż usterka zniknie.",
                       "measures_text": "1. Odłącz wszystkie wtyki DC podłączone do produktu. 2. Jeśli ładujesz produkt za pomocą panelu słonecznego, sprawdź napięcie obwodu otwartego (VOC) podłączonego panelu słonecznego. Produkt dopuszcza maksymalne napięcie wejściowe DC wynoszące 60 V. 3. Zrestartuj produkt i pozostaw go w stanie bezczynności. Poczekaj, aż usterka zniknie."
                     },
                     {
