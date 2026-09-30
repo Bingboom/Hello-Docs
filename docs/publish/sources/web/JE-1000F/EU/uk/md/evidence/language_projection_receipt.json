@@ -3,11 +3,11 @@
   "model": "JE-1000F",
   "region": "EU",
   "language": "uk",
-  "version": "git-20260929-c38415f5-ac-wall-complete",
-  "git_ref": "8c09299fc2d756064a8672f835bbba58384238d7",
+  "version": "git-20260930-c38415f5-shared-keys",
+  "git_ref": "d97c310d538812fe050d3401d84ee3d4a260f580",
   "source_manifest": {
     "path": "frozen_source_manifest.json",
-    "sha256": "97fdefe5d750c6a3b2f945ea9012eee66c8cb658ea35582935471750deac056c"
+    "sha256": "9300af6e1df91f67570097c7dd26e1f2934e48c33fad86e1312343dbf888a3ea"
   },
   "markdown": {
     "manual": "manual_je1000f_eu_uk.md",
@@ -314,16 +314,16 @@
       },
       {
         "path": "manual.ir.json",
-        "size": 615872,
-        "sha256": "221e97d55b6cc90be2ebdde29a6b0107d87eb42345d39047859929634cefd681"
+        "size": 612011,
+        "sha256": "437c3f17b3f55a5045ab0ead1e4b24af2d46a1a97f8884db5f222ccba3bab559"
       },
       {
         "path": "manual_je1000f_eu_uk.md",
-        "size": 105260,
-        "sha256": "79c39e2a9f6d006bf327c554439c5ab15eed70230b4135c10a5631279bf789ff"
+        "size": 105927,
+        "sha256": "b8164632d419c57a7fd47f84e66db286216145324f41ea97359fa152a4935df9"
       }
     ],
-    "sha256": "83d10176849455f286a7238fcd4dd1fa5d4b3a7efd5f8f8133a817818d025338"
+    "sha256": "2c6819466eb63bf6c7f56a5716130c3b3c1eb0181e144230076bf1a45b8cfbea"
   },
   "html": {
     "files": [
@@ -339,8 +339,8 @@
       },
       {
         "path": "_sources/manual_je1000f_eu_uk.md.txt",
-        "size": 105260,
-        "sha256": "79c39e2a9f6d006bf327c554439c5ab15eed70230b4135c10a5631279bf789ff"
+        "size": 105927,
+        "sha256": "b8164632d419c57a7fd47f84e66db286216145324f41ea97359fa152a4935df9"
       },
       {
         "path": "_static/basic.css",
@@ -744,8 +744,8 @@
       },
       {
         "path": "manual_je1000f_eu_uk.html",
-        "size": 124514,
-        "sha256": "95ac3feff7e24ba795ed740a9dae44f1b453f3543c22993f0bdd248ac5b6e525"
+        "size": 125181,
+        "sha256": "1cfba615e2edd42e3dd4f299b849fe18054b07991f6befa4e4395b9f02c33617"
       },
       {
         "path": "objects.inv",
@@ -763,6 +763,6 @@
         "sha256": "7a5128c465a0ee2bf52bb7fb364c3d4686b0d7f3d4ad79bd261d2146fdeb1352"
       }
     ],
-    "sha256": "22e44769d6a960554b6d7e94b37fb3b978ab45b31a73d60d6b694139d3d6584c"
+    "sha256": "bc5bdd06b84be728c1d88457604d7e752d26b5f53867e93744ea5a1af5188298"
   }
 }
