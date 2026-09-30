@@ -220,37 +220,11 @@ Um den Energiesparmodus zu deaktivieren, halten Sie die AC-Stromtaste und die PO
 
 ## LCD-ANZEIGE
 
-<table style="width:100%; border-collapse:collapse; margin:0.75rem 0 0.5rem 0;">
-<tbody>
-<tr>
-<td rowspan="6" style="text-align: center; width: 24%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top;"><img src="../../../../_static/manual-assets/_pool/39/3954b26c4bdd7270751e917c1e9067b74ce3d750791558daabad7a334a5eac6e.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3000c_eu_de/operation_lcd.png" data-web-finished-panel-sha256="3954b26c4bdd7270751e917c1e9067b74ce3d750791558daabad7a334a5eac6e" alt="LCD-Anzeigemodus." /></td>
-<td rowspan="3" style="width: 18%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Kurzzeitig an</td>
-<td style="width: 12%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Ein</td>
-<td style="width: 46%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Drücken Sie die Haupt-POWER-Taste oder während das Produkt geladen wird.</td>
-</tr>
-<tr>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Aus</td>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Drücken Sie die Haupt-POWER-Taste.</td>
-</tr>
-<tr>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Autom. aus</td>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Die LCD-Anzeige schaltet sich nach 2 Minuten Inaktivität automatisch aus und wechselt in den Schlafmodus.</td>
-</tr>
-<tr>
-<td rowspan="3" style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Dauerhaft an (beim Laden oder Entladen)</td>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Ein</td>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Drücken Sie die Haupt-POWER-Taste zweimal, wenn das Produkt eingeschaltet ist.</td>
-</tr>
-<tr>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Aus</td>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Drücken Sie die Haupt-POWER-Taste.</td>
-</tr>
-<tr>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Autom. aus</td>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Die LCD-Anzeige schaltet sich nach 2 Stunden Inaktivität automatisch aus.</td>
-</tr>
-</tbody>
-</table>
+
+
+<figure aria-label="LCD-Anzeigemodus." class="hb-lcd-mode-composition" data-component-id="HB-TABLE-LCD-MODE"><div class="hb-lcd-mode-art-panel"><img alt="LCD-Anzeigemodus." class="hb-lcd-mode-art manual-finished-illustration" data-web-finished-panel-path="assets/je3000c_eu_de/operation_lcd.png" data-web-finished-panel-sha256="3954b26c4bdd7270751e917c1e9067b74ce3d750791558daabad7a334a5eac6e" src="../../../../_static/manual-assets/_pool/39/3954b26c4bdd7270751e917c1e9067b74ce3d750791558daabad7a334a5eac6e.png"/></div><div class="hb-lcd-mode-table-panel"><table class="hb-lcd-mode-table"><colgroup><col class="hb-lcd-mode-col-state"/><col class="hb-lcd-mode-col-action"/><col class="hb-lcd-mode-col-copy"/></colgroup><tbody><tr><td class="hb-lcd-mode-state" rowspan="3">Kurzzeitig an</td><td class="hb-lcd-mode-action">Ein</td><td class="hb-lcd-mode-copy">Drücken Sie die Haupt-POWER-Taste oder während das Produkt geladen wird.</td></tr><tr><td class="hb-lcd-mode-action">Aus</td><td class="hb-lcd-mode-copy">Drücken Sie die Haupt-POWER-Taste.</td></tr><tr><td class="hb-lcd-mode-action">Autom. aus</td><td class="hb-lcd-mode-copy">Die LCD-Anzeige schaltet sich nach 2 Minuten Inaktivität automatisch aus und wechselt in den Schlafmodus.</td></tr><tr><td class="hb-lcd-mode-state" rowspan="3">Dauerhaft an (beim Laden oder Entladen)</td><td class="hb-lcd-mode-action">Ein</td><td class="hb-lcd-mode-copy">Drücken Sie die Haupt-POWER-Taste zweimal, wenn das Produkt eingeschaltet ist.</td></tr><tr><td class="hb-lcd-mode-action">Aus</td><td class="hb-lcd-mode-copy">Drücken Sie die Haupt-POWER-Taste.</td></tr><tr><td class="hb-lcd-mode-action">Autom. aus</td><td class="hb-lcd-mode-copy">Die LCD-Anzeige schaltet sich nach 2 Stunden Inaktivität automatisch aus.</td></tr></tbody></table></div></figure>
+
+
 
 Sie können den Bildschirm-Anzeigemodus auch in der Jackery-App einstellen.
 
@@ -258,39 +232,19 @@ Sie können den Bildschirm-Anzeigemodus auch in der Jackery-App einstellen.
 
 Diese Funktion speichert den Ausgangszustand und stellt die AC- und DC-Ausgänge unter bestimmten Bedingungen automatisch wieder her.
 
-<table>
-<thead>
-<tr>
-<th class="head"><p>Bedingungen für automatische Wiederherstellung</p></th>
-<th class="head"><p>Bedingungen ohne automatische Wiederherstellung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><p>Einschalten/Neustart nach Abschalten oder Neustart</p></td>
-<td><p>Manuelles Ausschalten der Ausgänge (Taste/App)</p></td>
-</tr>
-<tr>
-<td rowspan="2"><p>Batterie-SOC ≥ Entladegrenze +10% nach Erreichen der Grenze</p></td>
-<td><p>Ausgang im Energiesparmodus deaktiviert</p></td>
-</tr>
-<tr>
-<td><p>Schutzbedingter Ausgang deaktiviert</p></td>
-</tr>
-<tr>
-<td><p>OTA-Update abgeschlossen</p></td>
-<td><p>Durch Entlade-Timer gesteuerter Ausgang deaktiviert</p></td>
-</tr>
-</tbody>
-</table>
+
+
+<figure aria-label="Bedingungen für automatische Wiederherstellung / Bedingungen ohne automatische Wiederherstellung" class="hb-auto-resume-composition" data-component-id="HB-TABLE-AUTO-RESUME" tabindex="0"><table class="hb-auto-resume-table"><colgroup><col class="hb-auto-resume-col"/><col class="hb-auto-resume-col"/></colgroup><thead><tr><th class="hb-auto-resume-left" scope="col">Bedingungen für automatische Wiederherstellung</th><th class="hb-auto-resume-right" scope="col">Bedingungen ohne automatische Wiederherstellung</th></tr></thead><tbody><tr><td class="hb-auto-resume-left">Einschalten/Neustart nach Abschalten oder Neustart</td><td class="hb-auto-resume-right">Manuelles Ausschalten der Ausgänge (Taste/App)</td></tr><tr><td class="hb-auto-resume-left" rowspan="2">Batterie-SOC ≥ Entladegrenze +10% nach Erreichen der Grenze</td><td class="hb-auto-resume-right">Ausgang im Energiesparmodus deaktiviert</td></tr><tr><td class="hb-auto-resume-right">Schutzbedingter Ausgang deaktiviert</td></tr><tr><td class="hb-auto-resume-left">OTA-Update abgeschlossen</td><td class="hb-auto-resume-right">Durch Entlade-Timer gesteuerter Ausgang deaktiviert</td></tr></tbody></table></figure>
+
+
 
 ## TASTENKOMBINATION
 
-| Tasten | Bedienung | Funktion |
-|----|----|----|
-| Haupt-POWER-Taste + AC-Einschalttaste | Beide 3 s lang gedrückt halten | Energiesparmodus ein-/ausschalten |
-| Haupt-POWER-Taste + DC/USB-Einschalttaste | Beide 3 s lang gedrückt halten | WLAN und Bluetooth zurücksetzen |
-| DC/USB-Einschalttaste + AC-Einschalttaste | Beide 1 s lang gedrückt halten | WLAN und Bluetooth ein-/ausschalten |
+
+
+<figure aria-label="Tasten / Bedienung / Funktion" class="hb-key-combination-composition" data-component-id="HB-TABLE-KEY-COMBINATIONS" tabindex="0"><table class="hb-key-combination-table"><colgroup><col class="hb-key-col-buttons"/><col class="hb-key-col-operation"/><col class="hb-key-col-function"/></colgroup><thead><tr><th class="hb-key-buttons" scope="col"><p>Tasten</p></th><th class="hb-key-operation" scope="col"><p>Bedienung</p></th><th class="hb-key-function" scope="col"><p>Funktion</p></th></tr></thead><tbody><tr><td class="hb-key-buttons"><p>Haupt-POWER-Taste + AC-Einschalttaste</p></td><td class="hb-key-operation"><p>Beide 3 s lang gedrückt halten</p></td><td class="hb-key-function"><p>Energiesparmodus ein-/ausschalten</p></td></tr><tr><td class="hb-key-buttons"><p>Haupt-POWER-Taste + DC/USB-Einschalttaste</p></td><td class="hb-key-operation"><p>Beide 3 s lang gedrückt halten</p></td><td class="hb-key-function"><p>WLAN und Bluetooth zurücksetzen</p></td></tr><tr><td class="hb-key-buttons"><p>DC/USB-Einschalttaste + AC-Einschalttaste</p></td><td class="hb-key-operation"><p>Beide 1 s lang gedrückt halten</p></td><td class="hb-key-function"><p>WLAN und Bluetooth ein-/ausschalten</p></td></tr></tbody></table></figure>
+
+
 
 # UNTERBRECHUNGSFREIE STROMVERSORGUNG (UPS)
 

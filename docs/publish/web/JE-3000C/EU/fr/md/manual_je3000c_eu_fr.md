@@ -196,37 +196,11 @@ Pour désactiver le mode d\'économie d\'énergie, appuyez et maintenez enfoncé
 
 ## AFFICHAGE LCD
 
-<table style="width:100%; border-collapse:collapse; margin:0.75rem 0 0.5rem 0;">
-<tbody>
-<tr>
-<td rowspan="6" style="text-align: center; width: 24%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top;"><img src="../../../../_static/manual-assets/_pool/97/974ebc5f6fbf636175670014e3a18ae973ccea78b3bdf915fb7a0f045446d5e4.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3000c_eu_fr/operation_lcd.png" data-web-finished-panel-sha256="974ebc5f6fbf636175670014e3a18ae973ccea78b3bdf915fb7a0f045446d5e4" alt="Mode d&#39;affichage LCD." /></td>
-<td rowspan="3" style="width: 18%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Allumer en discontinu</td>
-<td style="width: 12%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Allumer</td>
-<td style="width: 46%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Appuyez sur le bouton POWER principal ou lorsque le produit est en charge.</td>
-</tr>
-<tr>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Éteindre</td>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Appuyez sur le bouton POWER principal.</td>
-</tr>
-<tr>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Arrêt automatique</td>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">L'écran LCD s'éteint automatiquement et entre en mode veille après 2 minutes d'inactivité.</td>
-</tr>
-<tr>
-<td rowspan="3" style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Allumer en continu (en cours de charge ou de décharge)</td>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Allumer</td>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Appuyez deux fois sur le bouton POWER principal lorsque le produit est allumé.</td>
-</tr>
-<tr>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Éteindre</td>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Appuyez sur le bouton POWER principal.</td>
-</tr>
-<tr>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Arrêt automatique</td>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">L'écran LCD s'éteint automatiquement après 2 heures d'inactivité.</td>
-</tr>
-</tbody>
-</table>
+
+
+<figure aria-label="Mode d'affichage LCD." class="hb-lcd-mode-composition" data-component-id="HB-TABLE-LCD-MODE"><div class="hb-lcd-mode-art-panel"><img alt="Mode d'affichage LCD." class="hb-lcd-mode-art manual-finished-illustration" data-web-finished-panel-path="assets/je3000c_eu_fr/operation_lcd.png" data-web-finished-panel-sha256="974ebc5f6fbf636175670014e3a18ae973ccea78b3bdf915fb7a0f045446d5e4" src="../../../../_static/manual-assets/_pool/97/974ebc5f6fbf636175670014e3a18ae973ccea78b3bdf915fb7a0f045446d5e4.png"/></div><div class="hb-lcd-mode-table-panel"><table class="hb-lcd-mode-table"><colgroup><col class="hb-lcd-mode-col-state"/><col class="hb-lcd-mode-col-action"/><col class="hb-lcd-mode-col-copy"/></colgroup><tbody><tr><td class="hb-lcd-mode-state" rowspan="3">Allumer en discontinu</td><td class="hb-lcd-mode-action">Allumer</td><td class="hb-lcd-mode-copy">Appuyez sur le bouton POWER principal ou lorsque le produit est en charge.</td></tr><tr><td class="hb-lcd-mode-action">Éteindre</td><td class="hb-lcd-mode-copy">Appuyez sur le bouton POWER principal.</td></tr><tr><td class="hb-lcd-mode-action">Arrêt automatique</td><td class="hb-lcd-mode-copy">L'écran LCD s'éteint automatiquement et entre en mode veille après 2 minutes d'inactivité.</td></tr><tr><td class="hb-lcd-mode-state" rowspan="3">Allumer en continu (en cours de charge ou de décharge)</td><td class="hb-lcd-mode-action">Allumer</td><td class="hb-lcd-mode-copy">Appuyez deux fois sur le bouton POWER principal lorsque le produit est allumé.</td></tr><tr><td class="hb-lcd-mode-action">Éteindre</td><td class="hb-lcd-mode-copy">Appuyez sur le bouton POWER principal.</td></tr><tr><td class="hb-lcd-mode-action">Arrêt automatique</td><td class="hb-lcd-mode-copy">L'écran LCD s'éteint automatiquement après 2 heures d'inactivité.</td></tr></tbody></table></div></figure>
+
+
 
 Vous pouvez également définir le mode d\'affichage de l\'écran dans l\'application Jackery.
 
@@ -234,39 +208,19 @@ Vous pouvez également définir le mode d\'affichage de l\'écran dans l\'applic
 
 Cette fonction mémorise l'état de la sortie et reprend automatiquement les sorties CA et CC sous certaines conditions définies.
 
-<table>
-<thead>
-<tr>
-<th class="head"><p>Conditions de reprise automatique</p></th>
-<th class="head"><p>Conditions sans reprise automatique</p></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><p>Mise sous tension/redémarrage après arrêt ou redémarrage</p></td>
-<td><p>Sortie désactivée manuellement (bouton/App)</p></td>
-</tr>
-<tr>
-<td rowspan="2"><p>SOC de la batterie ≥ limite de décharge +10 % après avoir atteint la limite</p></td>
-<td><p>Sortie désactivée en mode économie d’énergie</p></td>
-</tr>
-<tr>
-<td><p>Sortie désactivée suite à un déclenchement de protection</p></td>
-</tr>
-<tr>
-<td><p>Mise à niveau OTA terminée</p></td>
-<td><p>Sortie désactivée par le minuteur de décharge</p></td>
-</tr>
-</tbody>
-</table>
+
+
+<figure aria-label="Conditions de reprise automatique / Conditions sans reprise automatique" class="hb-auto-resume-composition" data-component-id="HB-TABLE-AUTO-RESUME" tabindex="0"><table class="hb-auto-resume-table"><colgroup><col class="hb-auto-resume-col"/><col class="hb-auto-resume-col"/></colgroup><thead><tr><th class="hb-auto-resume-left" scope="col">Conditions de reprise automatique</th><th class="hb-auto-resume-right" scope="col">Conditions sans reprise automatique</th></tr></thead><tbody><tr><td class="hb-auto-resume-left">Mise sous tension/redémarrage après arrêt ou redémarrage</td><td class="hb-auto-resume-right">Sortie désactivée manuellement (bouton/App)</td></tr><tr><td class="hb-auto-resume-left" rowspan="2">SOC de la batterie ≥ limite de décharge +10 % après avoir atteint la limite</td><td class="hb-auto-resume-right">Sortie désactivée en mode économie d’énergie</td></tr><tr><td class="hb-auto-resume-right">Sortie désactivée suite à un déclenchement de protection</td></tr><tr><td class="hb-auto-resume-left">Mise à niveau OTA terminée</td><td class="hb-auto-resume-right">Sortie désactivée par le minuteur de décharge</td></tr></tbody></table></figure>
+
+
 
 ## FONCTIONNEMENT DES BOUTONS
 
-| Boutons | Utilisation | Fonction |
-|----|----|----|
-| Bouton POWER principal + Bouton CA | Appuyer 3 secondes sur les deux | Activer/désactiver le mode économie d\'énergie |
-| Bouton POWER principal + Bouton **CC/USB** | Appuyer 3 secondes sur les deux | Réinitialiser le Wi-Fi et le Bluetooth |
-| Bouton **CC/USB** + Bouton CA | Appuyer 1 seconde sur les deux | Activer/désactiver le Wi-Fi et le Bluetooth |
+
+
+<figure aria-label="Boutons / Utilisation / Fonction" class="hb-key-combination-composition" data-component-id="HB-TABLE-KEY-COMBINATIONS" tabindex="0"><table class="hb-key-combination-table"><colgroup><col class="hb-key-col-buttons"/><col class="hb-key-col-operation"/><col class="hb-key-col-function"/></colgroup><thead><tr><th class="hb-key-buttons" scope="col"><p>Boutons</p></th><th class="hb-key-operation" scope="col"><p>Utilisation</p></th><th class="hb-key-function" scope="col"><p>Fonction</p></th></tr></thead><tbody><tr><td class="hb-key-buttons"><p>Bouton POWER principal + Bouton CA</p></td><td class="hb-key-operation"><p>Appuyer 3 secondes sur les deux</p></td><td class="hb-key-function"><p>Activer/désactiver le mode économie d'énergie</p></td></tr><tr><td class="hb-key-buttons"><p>Bouton POWER principal + Bouton <strong>CC/USB</strong></p></td><td class="hb-key-operation"><p>Appuyer 3 secondes sur les deux</p></td><td class="hb-key-function"><p>Réinitialiser le Wi-Fi et le Bluetooth</p></td></tr><tr><td class="hb-key-buttons"><p>Bouton <strong>CC/USB</strong> + Bouton CA</p></td><td class="hb-key-operation"><p>Appuyer 1 seconde sur les deux</p></td><td class="hb-key-function"><p>Activer/désactiver le Wi-Fi et le Bluetooth</p></td></tr></tbody></table></figure>
+
+
 
 # ALIMENTATION SANS INTERRUPTION (ASI)
 

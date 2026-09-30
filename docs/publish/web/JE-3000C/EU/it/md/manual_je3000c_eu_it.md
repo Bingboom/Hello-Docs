@@ -184,37 +184,11 @@ Tieni premuti entrambi i pulsanti per più di 3 secondi.
 
 ## SCHERMO LCD
 
-<table style="width:100%; border-collapse:collapse; margin:0.75rem 0 0.5rem 0;">
-<tbody>
-<tr>
-<td rowspan="6" style="text-align: center; width: 24%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top;"><img src="../../../../_static/manual-assets/_pool/a9/a9f5957b765c2477710792ee295242b91a1430e80c858b7b978c7f9757a4d608.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3000c_eu_it/operation_lcd.png" data-web-finished-panel-sha256="a9f5957b765c2477710792ee295242b91a1430e80c858b7b978c7f9757a4d608" alt="Modalità display LCD." /></td>
-<td rowspan="3" style="width: 18%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Acceso brevemente</td>
-<td style="width: 12%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Accendi</td>
-<td style="width: 46%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Premi il pulsante POWER principale oppure quando il prodotto è in carica.</td>
-</tr>
-<tr>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Spegni</td>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Premi il pulsante POWER principale.</td>
-</tr>
-<tr>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Spegnimento automatico</td>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Lo schermo LCD si spegne automaticamente ed entra in modalità sleep dopo 2 minuti di inattività.</td>
-</tr>
-<tr>
-<td rowspan="3" style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Acceso fisso (in carica o in scarica)</td>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Accendi</td>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Premi due volte il pulsante POWER principale quando il prodotto è acceso.</td>
-</tr>
-<tr>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Spegni</td>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Premi il pulsante POWER principale.</td>
-</tr>
-<tr>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Spegnimento automatico</td>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Lo schermo LCD si spegne automaticamente dopo 2 ore di inattività.</td>
-</tr>
-</tbody>
-</table>
+
+
+<figure aria-label="Modalità display LCD." class="hb-lcd-mode-composition" data-component-id="HB-TABLE-LCD-MODE"><div class="hb-lcd-mode-art-panel"><img alt="Modalità display LCD." class="hb-lcd-mode-art manual-finished-illustration" data-web-finished-panel-path="assets/je3000c_eu_it/operation_lcd.png" data-web-finished-panel-sha256="a9f5957b765c2477710792ee295242b91a1430e80c858b7b978c7f9757a4d608" src="../../../../_static/manual-assets/_pool/a9/a9f5957b765c2477710792ee295242b91a1430e80c858b7b978c7f9757a4d608.png"/></div><div class="hb-lcd-mode-table-panel"><table class="hb-lcd-mode-table"><colgroup><col class="hb-lcd-mode-col-state"/><col class="hb-lcd-mode-col-action"/><col class="hb-lcd-mode-col-copy"/></colgroup><tbody><tr><td class="hb-lcd-mode-state" rowspan="3">Acceso brevemente</td><td class="hb-lcd-mode-action">Accendi</td><td class="hb-lcd-mode-copy">Premi il pulsante POWER principale oppure quando il prodotto è in carica.</td></tr><tr><td class="hb-lcd-mode-action">Spegni</td><td class="hb-lcd-mode-copy">Premi il pulsante POWER principale.</td></tr><tr><td class="hb-lcd-mode-action">Spegnimento automatico</td><td class="hb-lcd-mode-copy">Lo schermo LCD si spegne automaticamente ed entra in modalità sleep dopo 2 minuti di inattività.</td></tr><tr><td class="hb-lcd-mode-state" rowspan="3">Acceso fisso (in carica o in scarica)</td><td class="hb-lcd-mode-action">Accendi</td><td class="hb-lcd-mode-copy">Premi due volte il pulsante POWER principale quando il prodotto è acceso.</td></tr><tr><td class="hb-lcd-mode-action">Spegni</td><td class="hb-lcd-mode-copy">Premi il pulsante POWER principale.</td></tr><tr><td class="hb-lcd-mode-action">Spegnimento automatico</td><td class="hb-lcd-mode-copy">Lo schermo LCD si spegne automaticamente dopo 2 ore di inattività.</td></tr></tbody></table></div></figure>
+
+
 
 Puoi anche impostare la modalità di visualizzazione dello schermo nell\'App Jackery.
 
@@ -222,39 +196,19 @@ Puoi anche impostare la modalità di visualizzazione dello schermo nell\'App Jac
 
 Questa funzione memorizza lo stato delle uscite e ripristina automaticamente le uscite CA e CC in determinate condizioni.
 
-<table>
-<thead>
-<tr>
-<th class="head"><p>Condizioni di ripristino automatico</p></th>
-<th class="head"><p>Condizioni senza ripristino automatico</p></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><p>Accensione/Riavvio dopo lo spegnimento o il riavvio</p></td>
-<td><p>Spegnimento manuale delle uscite (pulsante/App)</p></td>
-</tr>
-<tr>
-<td rowspan="2"><p>SOC della batteria ≥ limite di scarica +10% dopo aver raggiunto il limite</p></td>
-<td><p>Spegnimento delle uscite in modalità risparmio energetico</p></td>
-</tr>
-<tr>
-<td><p>Spegnimento delle uscite attivato da protezione</p></td>
-</tr>
-<tr>
-<td><p>Aggiornamento OTA completato</p></td>
-<td><p>Spegnimento delle uscite attivato dal timer di scarica</p></td>
-</tr>
-</tbody>
-</table>
+
+
+<figure aria-label="Condizioni di ripristino automatico / Condizioni senza ripristino automatico" class="hb-auto-resume-composition" data-component-id="HB-TABLE-AUTO-RESUME" tabindex="0"><table class="hb-auto-resume-table"><colgroup><col class="hb-auto-resume-col"/><col class="hb-auto-resume-col"/></colgroup><thead><tr><th class="hb-auto-resume-left" scope="col">Condizioni di ripristino automatico</th><th class="hb-auto-resume-right" scope="col">Condizioni senza ripristino automatico</th></tr></thead><tbody><tr><td class="hb-auto-resume-left">Accensione/Riavvio dopo lo spegnimento o il riavvio</td><td class="hb-auto-resume-right">Spegnimento manuale delle uscite (pulsante/App)</td></tr><tr><td class="hb-auto-resume-left" rowspan="2">SOC della batteria ≥ limite di scarica +10% dopo aver raggiunto il limite</td><td class="hb-auto-resume-right">Spegnimento delle uscite in modalità risparmio energetico</td></tr><tr><td class="hb-auto-resume-right">Spegnimento delle uscite attivato da protezione</td></tr><tr><td class="hb-auto-resume-left">Aggiornamento OTA completato</td><td class="hb-auto-resume-right">Spegnimento delle uscite attivato dal timer di scarica</td></tr></tbody></table></figure>
+
+
 
 ## COMBINAZIONI DI TASTI
 
-| Pulsanti | Operazione | Funzione |
-|----|----|----|
-| Pulsante POWER principale + Pulsante CA | Tieni premuti entrambi per 3 s | Attiva/disattiva la Modalità risparmio energetico |
-| Pulsante POWER principale + Pulsante DC/USB | Tieni premuti entrambi per 3 s | Ripristina Wi-Fi e Bluetooth |
-| Pulsante DC/USB + Pulsante CA | Tieni premuti entrambi per 1 s | Attiva/disattiva Wi-Fi e Bluetooth |
+
+
+<figure aria-label="Pulsanti / Operazione / Funzione" class="hb-key-combination-composition" data-component-id="HB-TABLE-KEY-COMBINATIONS" tabindex="0"><table class="hb-key-combination-table"><colgroup><col class="hb-key-col-buttons"/><col class="hb-key-col-operation"/><col class="hb-key-col-function"/></colgroup><thead><tr><th class="hb-key-buttons" scope="col"><p>Pulsanti</p></th><th class="hb-key-operation" scope="col"><p>Operazione</p></th><th class="hb-key-function" scope="col"><p>Funzione</p></th></tr></thead><tbody><tr><td class="hb-key-buttons"><p>Pulsante POWER principale + Pulsante CA</p></td><td class="hb-key-operation"><p>Tieni premuti entrambi per 3 s</p></td><td class="hb-key-function"><p>Attiva/disattiva la Modalità risparmio energetico</p></td></tr><tr><td class="hb-key-buttons"><p>Pulsante POWER principale + Pulsante DC/USB</p></td><td class="hb-key-operation"><p>Tieni premuti entrambi per 3 s</p></td><td class="hb-key-function"><p>Ripristina Wi-Fi e Bluetooth</p></td></tr><tr><td class="hb-key-buttons"><p>Pulsante DC/USB + Pulsante CA</p></td><td class="hb-key-operation"><p>Tieni premuti entrambi per 1 s</p></td><td class="hb-key-function"><p>Attiva/disattiva Wi-Fi e Bluetooth</p></td></tr></tbody></table></figure>
+
+
 
 # GRUPPO DI CONTINUITÀ (UPS)
 

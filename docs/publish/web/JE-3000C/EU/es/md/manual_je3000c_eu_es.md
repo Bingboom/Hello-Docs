@@ -177,37 +177,11 @@ Para desactivar el modo de ahorro de energía, presione y mantenga presionados e
 
 ## PANTALLA LCD
 
-<table style="width:100%; border-collapse:collapse; margin:0.75rem 0 0.5rem 0;">
-<tbody>
-<tr>
-<td rowspan="6" style="text-align: center; width: 24%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top;"><img src="../../../../_static/manual-assets/_pool/3a/3a9033c4a9575f02a97d2b9024ad75d0a40e66d70d9571f4f2f17f874dc42d5f.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3000c_eu_es/operation_lcd.png" data-web-finished-panel-sha256="3a9033c4a9575f02a97d2b9024ad75d0a40e66d70d9571f4f2f17f874dc42d5f" alt="Modo de pantalla LCD." /></td>
-<td rowspan="3" style="width: 18%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Encendido breve</td>
-<td style="width: 12%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Encender</td>
-<td style="width: 46%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Presione el botón POWER principal o cuando el producto se esté cargando.</td>
-</tr>
-<tr>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Apagar</td>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Presione el botón POWER principal.</td>
-</tr>
-<tr>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Apagado automático</td>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">La pantalla LCD se apaga automáticamente y entra en modo de suspensión después de 2 minutos de inactividad.</td>
-</tr>
-<tr>
-<td rowspan="3" style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Estable en (durante el estado de carga o descarga)</td>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Encender</td>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Presione dos veces el botón POWER principal cuando el producto esté encendido.</td>
-</tr>
-<tr>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Apagar</td>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Presione el botón POWER principal.</td>
-</tr>
-<tr>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Apagado automático</td>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">La pantalla LCD se apaga automáticamente después de 2 horas de inactividad.</td>
-</tr>
-</tbody>
-</table>
+
+
+<figure aria-label="Modo de pantalla LCD." class="hb-lcd-mode-composition" data-component-id="HB-TABLE-LCD-MODE"><div class="hb-lcd-mode-art-panel"><img alt="Modo de pantalla LCD." class="hb-lcd-mode-art manual-finished-illustration" data-web-finished-panel-path="assets/je3000c_eu_es/operation_lcd.png" data-web-finished-panel-sha256="3a9033c4a9575f02a97d2b9024ad75d0a40e66d70d9571f4f2f17f874dc42d5f" src="../../../../_static/manual-assets/_pool/3a/3a9033c4a9575f02a97d2b9024ad75d0a40e66d70d9571f4f2f17f874dc42d5f.png"/></div><div class="hb-lcd-mode-table-panel"><table class="hb-lcd-mode-table"><colgroup><col class="hb-lcd-mode-col-state"/><col class="hb-lcd-mode-col-action"/><col class="hb-lcd-mode-col-copy"/></colgroup><tbody><tr><td class="hb-lcd-mode-state" rowspan="3">Encendido breve</td><td class="hb-lcd-mode-action">Encender</td><td class="hb-lcd-mode-copy">Presione el botón POWER principal o cuando el producto se esté cargando.</td></tr><tr><td class="hb-lcd-mode-action">Apagar</td><td class="hb-lcd-mode-copy">Presione el botón POWER principal.</td></tr><tr><td class="hb-lcd-mode-action">Apagado automático</td><td class="hb-lcd-mode-copy">La pantalla LCD se apaga automáticamente y entra en modo de suspensión después de 2 minutos de inactividad.</td></tr><tr><td class="hb-lcd-mode-state" rowspan="3">Estable en (durante el estado de carga o descarga)</td><td class="hb-lcd-mode-action">Encender</td><td class="hb-lcd-mode-copy">Presione dos veces el botón POWER principal cuando el producto esté encendido.</td></tr><tr><td class="hb-lcd-mode-action">Apagar</td><td class="hb-lcd-mode-copy">Presione el botón POWER principal.</td></tr><tr><td class="hb-lcd-mode-action">Apagado automático</td><td class="hb-lcd-mode-copy">La pantalla LCD se apaga automáticamente después de 2 horas de inactividad.</td></tr></tbody></table></div></figure>
+
+
 
 También puede configurar el modo de visualización de la pantalla en la aplicación Jackery.
 
@@ -215,39 +189,19 @@ También puede configurar el modo de visualización de la pantalla en la aplicac
 
 Esta función memoriza el estado de la salida y reanuda automáticamente las salidas de CA y CC bajo condiciones definidas.
 
-<table>
-<thead>
-<tr>
-<th class="head"><p>Condiciones de reanudación automática</p></th>
-<th class="head"><p>Condiciones sin reanudación automática</p></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><p>Encendido/Reiniciar después de apagado o reinicio</p></td>
-<td><p>Apagado manual de la salida (botón/App)</p></td>
-</tr>
-<tr>
-<td rowspan="2"><p>SOC de la batería ≥ límite de descarga +10 % después de alcanzar el límite</p></td>
-<td><p>Apagado de salida en modo de ahorro de energía</p></td>
-</tr>
-<tr>
-<td><p>Apagado de salida activado por protección</p></td>
-</tr>
-<tr>
-<td><p>Actualización OTA completada</p></td>
-<td><p>Apagado de salida activado por temporizador de descarga</p></td>
-</tr>
-</tbody>
-</table>
+
+
+<figure aria-label="Condiciones de reanudación automática / Condiciones sin reanudación automática" class="hb-auto-resume-composition" data-component-id="HB-TABLE-AUTO-RESUME" tabindex="0"><table class="hb-auto-resume-table"><colgroup><col class="hb-auto-resume-col"/><col class="hb-auto-resume-col"/></colgroup><thead><tr><th class="hb-auto-resume-left" scope="col">Condiciones de reanudación automática</th><th class="hb-auto-resume-right" scope="col">Condiciones sin reanudación automática</th></tr></thead><tbody><tr><td class="hb-auto-resume-left">Encendido/Reiniciar después de apagado o reinicio</td><td class="hb-auto-resume-right">Apagado manual de la salida (botón/App)</td></tr><tr><td class="hb-auto-resume-left" rowspan="2">SOC de la batería ≥ límite de descarga +10 % después de alcanzar el límite</td><td class="hb-auto-resume-right">Apagado de salida en modo de ahorro de energía</td></tr><tr><td class="hb-auto-resume-right">Apagado de salida activado por protección</td></tr><tr><td class="hb-auto-resume-left">Actualización OTA completada</td><td class="hb-auto-resume-right">Apagado de salida activado por temporizador de descarga</td></tr></tbody></table></figure>
+
+
 
 ## COMBINACIONES DE TECLAS
 
-| Botones | Operación | Función |
-|----|----|----|
-| Botón POWER principal + Botón CA | Mantenga pulsados ambos botones durante 3 segundos | Encender/apagar el modo de ahorro de energía |
-| Botón POWER principal + botón CC/USB | Mantenga pulsados ambos botones durante 3 segundos | Restablecer Wi-Fi y Bluetooth |
-| Botón CC/USB + Botón CA | Mantenga pulsados ambos botones durante 1 segundo | Encender/apagar Wi-Fi y Bluetooth |
+
+
+<figure aria-label="Botones / Operación / Función" class="hb-key-combination-composition" data-component-id="HB-TABLE-KEY-COMBINATIONS" tabindex="0"><table class="hb-key-combination-table"><colgroup><col class="hb-key-col-buttons"/><col class="hb-key-col-operation"/><col class="hb-key-col-function"/></colgroup><thead><tr><th class="hb-key-buttons" scope="col"><p>Botones</p></th><th class="hb-key-operation" scope="col"><p>Operación</p></th><th class="hb-key-function" scope="col"><p>Función</p></th></tr></thead><tbody><tr><td class="hb-key-buttons"><p>Botón POWER principal + Botón CA</p></td><td class="hb-key-operation"><p>Mantenga pulsados ambos botones durante 3 segundos</p></td><td class="hb-key-function"><p>Encender/apagar el modo de ahorro de energía</p></td></tr><tr><td class="hb-key-buttons"><p>Botón POWER principal + botón CC/USB</p></td><td class="hb-key-operation"><p>Mantenga pulsados ambos botones durante 3 segundos</p></td><td class="hb-key-function"><p>Restablecer Wi-Fi y Bluetooth</p></td></tr><tr><td class="hb-key-buttons"><p>Botón CC/USB + Botón CA</p></td><td class="hb-key-operation"><p>Mantenga pulsados ambos botones durante 1 segundo</p></td><td class="hb-key-function"><p>Encender/apagar Wi-Fi y Bluetooth</p></td></tr></tbody></table></figure>
+
+
 
 # FUENTE DE ALIMENTACIÓN ININTERRUMPIDA (UPS)
 

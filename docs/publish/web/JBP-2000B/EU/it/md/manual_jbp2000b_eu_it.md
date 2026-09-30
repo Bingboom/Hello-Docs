@@ -40,20 +40,19 @@ Seguire sempre queste precauzioni di base durante l\'utilizzo di questo prodotto
 
 # SIGNIFICATO DEI SIMBOLI
 
-| Simbolo | Significato |
-|----|----|
-| ⚠AVVERTENZA | Pratiche pericolose che possono causare lesioni gravi, morte e/o danni materiali. |
-| ⚠ATTENZIONE | Pratiche pericolose che possono causare lesioni personali e/o danni materiali. |
-| ⚠NOTA | Pratiche che possono causare danni all\'apparecchiatura, perdita di dati, deterioramento delle prestazioni o risultati imprevisti. |
-| ⚠SUGGERIMENTO | Integra le informazioni importanti o i consigli operativi nel testo. |
 
-|  |  |  |  |
-|----|----|----|----|
-| **Simbolo** | **Significato** | **Simbolo** | **Significato** |
-| <img src="../../../../_static/manual-assets/_pool/1c/1c272a00fbd28d6562d4126040ba43e5747f6a6550878c4b13e05a5c28014577.png" style="width: 40px;" width="40" height="35" alt="warning_triangle" /> | Simboli di avvertenza e attenzione. Leggere per essere informati su possibili pericoli o rischi. | <img src="../../../../_static/manual-assets/_pool/e3/e345b3278827691751b6beac9c8343c75ac7a98100618fbef1db73a27329b99d.png" style="width: 40px;" width="40" height="33" alt="keep_away_from_children" /> | Tenere lontano dalla portata dei bambini. |
-| <img src="../../../../_static/manual-assets/_pool/d1/d14506fa5a9d449039887db61a259f1841f1826de2f190f54063f96195b955f5.png" style="width: 40px;" width="40" height="26" alt="read_manual" /> | Prima dell\'utilizzo, leggere il manuale d\'istruzioni. | <img src="../../../../_static/manual-assets/_pool/ea/ea7766d417e962cf711bccf3de79d6f639602848ace780353cb329329d13cc91.png" style="width: 40px;" width="40" height="47" alt="li_ion" /> | Questo simbolo indica che nel prodotto è presente una batteria agli ioni di litio (Li-ion), che deve essere smaltita o riciclata correttamente. |
-| <img src="../../../../_static/manual-assets/_pool/66/66c3df77e4f84cccad4b9f162798b181c007e89d3f0e9dd4fdf52c392827cbab.png" style="width: 40px;" width="40" height="34" alt="do_not_dismantle" /> | Non smontare il prodotto. | <img src="../../../../_static/manual-assets/_pool/eb/eb094578bf165fa39399de1d957cc71a92191f2b0e7ed0a620885065ebedf8a3.png" style="width: 40px;" width="40" height="51" alt="weee" /> | Questo simbolo indica che il prodotto non deve essere smaltito insieme ai rifiuti domestici, ma deve essere conferito a un centro di raccolta designato per il riciclo. Lo smaltimento e il riciclo corretti contribuiscono a proteggere l\'ambiente. Per ulteriori informazioni sullo smaltimento e sul riciclo di questo prodotto, contattare la comunità locale, il servizio di smaltimento o il rivenditore. |
-| <img src="../../../../_static/manual-assets/_pool/42/422379347e71e7827c3da380e421f2cb106da5d2f74781fc45782a2f86d493d2.png" style="width: 40px;" width="40" height="37" alt="no_open_flame" /> | Non fumare né utilizzare fiamme libere. | <img src="../../../../_static/manual-assets/_pool/7f/7fb57972ebd1fb8bf82abc75d0d320ecaa9abc6544020f2374da2f1272a46171.png" style="width: 40px;" width="40" height="32" alt="weee2" /> | Le batterie e gli accumulatori non devono essere smaltiti insieme ai rifiuti domestici. Come consumatore, sei legalmente obbligato a smaltire tutte le batterie e gli accumulatori nei punti di raccolta designati, indipendentemente dal fatto che contengano sostanze pericolose. Per favore, restituisci le batterie e gli accumulatori usati a un punto di raccolta locale, a un centro di riciclo o al rivenditore presso cui sono stati acquistati. Un corretto smaltimento garantisce un riciclo responsabile per l\'ambiente e previene potenziali danni alla salute umana e all\'ambiente. |
+
+<figure aria-label="Simbolo / Significato" class="hb-symbol-signal-composition" data-component-id="HB-TABLE-SYMBOL-SIGNAL"><table class="hb-symbol-signal-table"><colgroup><col class="hb-symbol-signal-col-label"/><col class="hb-symbol-signal-col-meaning"/></colgroup><thead><tr><th class="hb-symbol-signal-label-heading" scope="col"><p>Simbolo</p></th><th class="hb-symbol-signal-meaning-heading" scope="col"><p>Significato</p></th></tr></thead><tbody><tr><td class="hb-symbol-signal-label-cell"><span aria-label="AVVERTENZA" class="hb-signal-badge"><span aria-hidden="true" class="hb-signal-icon">⚠</span><span class="hb-signal-label">AVVERTENZA</span></span></td><td class="hb-symbol-signal-meaning-cell"><p>Pratiche pericolose che possono causare lesioni gravi, morte e/o danni materiali.</p></td></tr><tr><td class="hb-symbol-signal-label-cell"><span aria-label="ATTENZIONE" class="hb-signal-badge"><span aria-hidden="true" class="hb-signal-icon">⚠</span><span class="hb-signal-label">ATTENZIONE</span></span></td><td class="hb-symbol-signal-meaning-cell"><p>Pratiche pericolose che possono causare lesioni personali e/o danni materiali.</p></td></tr><tr><td class="hb-symbol-signal-label-cell"><span aria-label="NOTA" class="hb-signal-badge"><span aria-hidden="true" class="hb-signal-icon">⚠</span><span class="hb-signal-label">NOTA</span></span></td><td class="hb-symbol-signal-meaning-cell"><p>Pratiche che possono causare danni all'apparecchiatura, perdita di dati, deterioramento delle prestazioni o risultati imprevisti.</p></td></tr><tr><td class="hb-symbol-signal-label-cell"><span aria-label="SUGGERIMENTO" class="hb-signal-badge"><span aria-hidden="true" class="hb-signal-icon">⚠</span><span class="hb-signal-label">SUGGERIMENTO</span></span></td><td class="hb-symbol-signal-meaning-cell"><p>Integra le informazioni importanti o i consigli operativi nel testo.</p></td></tr></tbody></table></figure>
+
+
+
+
+
+<figure aria-label="Simbolo / Significato" class="hb-symbol-pair-composition" data-component-id="HB-TABLE-SYMBOL-ICON"><div class="hb-symbol-pair-grid"><div class="hb-symbol-panel hb-symbol-panel-1"><table class="hb-symbol-panel-table"><colgroup><col class="hb-symbol-col-icon"/><col class="hb-symbol-col-meaning"/></colgroup><thead><tr><th class="hb-symbol-icon-heading" scope="col"><p><strong>Simbolo</strong></p></th><th class="hb-symbol-meaning-heading" scope="col"><p><strong>Significato</strong></p></th></tr></thead><tbody><tr><td class="hb-symbol-icon"><img alt="warning_triangle" class="hb-symbol-art" src="../../../../_static/manual-assets/_pool/1c/1c272a00fbd28d6562d4126040ba43e5747f6a6550878c4b13e05a5c28014577.png"/></td><td class="hb-symbol-meaning"><p>Simboli di avvertenza e attenzione. Leggere per essere informati su possibili pericoli o rischi.</p></td></tr><tr><td class="hb-symbol-icon"><img alt="read_manual" class="hb-symbol-art" src="../../../../_static/manual-assets/_pool/d1/d14506fa5a9d449039887db61a259f1841f1826de2f190f54063f96195b955f5.png"/></td><td class="hb-symbol-meaning"><p>Prima dell'utilizzo, leggere il manuale d'istruzioni.</p></td></tr><tr><td class="hb-symbol-icon"><img alt="do_not_dismantle" class="hb-symbol-art" src="../../../../_static/manual-assets/_pool/66/66c3df77e4f84cccad4b9f162798b181c007e89d3f0e9dd4fdf52c392827cbab.png"/></td><td class="hb-symbol-meaning"><p>Non smontare il prodotto.</p></td></tr><tr><td class="hb-symbol-icon"><img alt="no_open_flame" class="hb-symbol-art" src="../../../../_static/manual-assets/_pool/42/422379347e71e7827c3da380e421f2cb106da5d2f74781fc45782a2f86d493d2.png"/></td><td class="hb-symbol-meaning"><p>Non fumare né utilizzare fiamme libere.</p></td></tr></tbody></table></div><div class="hb-symbol-panel hb-symbol-panel-2"><table class="hb-symbol-panel-table"><colgroup><col class="hb-symbol-col-icon"/><col class="hb-symbol-col-meaning"/></colgroup><thead><tr><th class="hb-symbol-icon-heading" scope="col"><p><strong>Simbolo</strong></p></th><th class="hb-symbol-meaning-heading" scope="col"><p><strong>Significato</strong></p></th></tr></thead><tbody><tr><td class="hb-symbol-icon"><img alt="keep_away_from_children" class="hb-symbol-art" src="../../../../_static/manual-assets/_pool/e3/e345b3278827691751b6beac9c8343c75ac7a98100618fbef1db73a27329b99d.png"/></td><td class="hb-symbol-meaning"><p>Tenere lontano dalla portata dei bambini.</p></td></tr><tr><td class="hb-symbol-icon"><img alt="li_ion" class="hb-symbol-art" src="../../../../_static/manual-assets/_pool/ea/ea7766d417e962cf711bccf3de79d6f639602848ace780353cb329329d13cc91.png"/></td><td class="hb-symbol-meaning"><p>Questo simbolo indica che nel prodotto è presente una batteria agli ioni di litio (Li-ion), che deve essere smaltita o riciclata correttamente.</p></td></tr><tr><td class="hb-symbol-icon"><img alt="weee" class="hb-symbol-art" src="../../../../_static/manual-assets/_pool/eb/eb094578bf165fa39399de1d957cc71a92191f2b0e7ed0a620885065ebedf8a3.png"/></td><td class="hb-symbol-meaning"><p>Questo simbolo indica che il prodotto non deve essere smaltito insieme ai rifiuti domestici, ma deve essere conferito a un centro di raccolta designato per il riciclo. Lo smaltimento e il riciclo corretti contribuiscono a proteggere l'ambiente. Per ulteriori informazioni sullo smaltimento e sul riciclo di questo prodotto, contattare la comunità locale, il servizio di smaltimento o il rivenditore.</p></td></tr><tr><td class="hb-symbol-icon"><img alt="weee2" class="hb-symbol-art" src="../../../../_static/manual-assets/_pool/7f/7fb57972ebd1fb8bf82abc75d0d320ecaa9abc6544020f2374da2f1272a46171.png"/></td><td class="hb-symbol-meaning"><p>Le batterie e gli accumulatori non devono essere smaltiti insieme ai rifiuti domestici.
+Come consumatore, sei legalmente obbligato a smaltire tutte le batterie e gli accumulatori nei punti di raccolta designati, indipendentemente dal fatto che contengano sostanze pericolose.
+Per favore, restituisci le batterie e gli accumulatori usati a un punto di raccolta locale, a un centro di riciclo o al rivenditore presso cui sono stati acquistati. Un corretto smaltimento garantisce un riciclo responsabile per l'ambiente e previene potenziali danni alla salute umana e all'ambiente.</p></td></tr></tbody></table></div></div></figure>
+
+
 
 # CONTENUTO DELLA CONFEZIONE
 
@@ -310,56 +309,64 @@ Se il prodotto viene conservato a lungo termine (da 3 a 6 mesi) con la batteria 
 
 # GARANZIA
 
-**Forniamo la nostra garanzia solo ai clienti che acquistano dal sito web ufficiale di Jackery, dalle piattaforme di terze parti con marchio Jackery o dai rivenditori autorizzati locali.**
 
-\* Il periodo e i dettagli della garanzia possono variare in base alle leggi locali, ai regolamenti e ai rivenditori autorizzati.
+
+<figure aria-label="GARANZIA" class="hb-warranty-intro-composition" data-component-id="HB-WARRANTY-LEAD"><div class="hb-warranty-intro-panel"><p><strong>Forniamo la nostra garanzia solo ai clienti che acquistano dal sito web ufficiale di Jackery, dalle piattaforme di terze parti con marchio Jackery o dai rivenditori autorizzati locali.</strong></p></div><div class="hb-warranty-local-note"><p>* Il periodo e i dettagli della garanzia possono variare in base alle leggi locali, ai regolamenti e ai rivenditori autorizzati.</p></div></figure>
+
+
 
 ## Garanzia limitata
 
-Jackery garantisce all\'acquirente originale che il prodotto Jackery sarà esente da difetti di fabbricazione e materiali in condizioni di normale utilizzo da parte dell\'acquirente durante il periodo di garanzia applicabile identificato nella sezione \"Periodo di garanzia\" di seguito, fatte salve le esclusioni indicate di seguito.
 
-Questa dichiarazione di garanzia stabilisce l\'obbligo di garanzia totale ed esclusivo di Jackery. Non ci assumeremo, né autorizzeremo alcuna persona ad assumersi per noi, qualsiasi altra responsabilità in relazione alla vendita dei nostri prodotti.
+
+<figure aria-label="Garanzia limitata" class="hb-warranty-card" data-component-id="HB-WARRANTY-SECTION" data-warranty-card-index="1"><p>Jackery garantisce all'acquirente originale che il prodotto Jackery sarà esente da difetti di fabbricazione e materiali in condizioni di normale utilizzo da parte dell'acquirente durante il periodo di garanzia applicabile identificato nella sezione "Periodo di garanzia" di seguito, fatte salve le esclusioni indicate di seguito.</p><p>Questa dichiarazione di garanzia stabilisce l'obbligo di garanzia totale ed esclusivo di Jackery. Non ci assumeremo, né autorizzeremo alcuna persona ad assumersi per noi, qualsiasi altra responsabilità in relazione alla vendita dei nostri prodotti.</p></figure>
+
+
 
 ## Periodo di garanzia
 
-<table>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
-<tbody>
-<tr>
-<td><p><strong>3 ANNI — Garanzia standard</strong></p>
-<p>Il periodo di garanzia standard per Jackery Battery Pack 2000 è di 36 mesi ed è misurato a partire dalla data di acquisto da parte dell'acquirente consumatore originario. Per stabilire la data di inizio del periodo di garanzia è necessaria la ricevuta del primo acquisto da parte del consumatore, o altra prova documentale ragionevole.</p></td>
-<td><p><strong>2 ANNI — Garanzia estesa</strong></p>
-<p>Per attivare l'estensione della garanzia, è necessario registrare il prodotto online oppure contattare il nostro servizio clienti all'indirizzo <a href="mailto:hello.eu@jackery.com" class="reference external">hello.eu@jackery.com</a> per estendere il periodo di garanzia standard.</p></td>
-</tr>
-</tbody>
-</table>
+
+
+<figure aria-label="Periodo di garanzia" class="hb-warranty-period-card" data-component-id="HB-WARRANTY-YEARS"><div class="hb-warranty-period-grid"><div aria-label="3 ANNI — Garanzia standard" class="hb-warranty-period-item"><div class="hb-warranty-period-heading"><span class="hb-warranty-year-badge">3</span><div class="hb-warranty-period-title"><strong class="hb-warranty-years-unit">ANNI</strong><strong class="hb-warranty-period-label">— Garanzia standard</strong></div></div><div class="hb-warranty-period-copy"><p>Il periodo di garanzia standard per Jackery Battery Pack 2000 è di 36 mesi ed è misurato a partire dalla data di acquisto da parte dell'acquirente consumatore originario. Per stabilire la data di inizio del periodo di garanzia è necessaria la ricevuta del primo acquisto da parte del consumatore, o altra prova documentale ragionevole.</p></div></div><div aria-label="2 ANNI — Garanzia estesa" class="hb-warranty-period-item"><div class="hb-warranty-period-heading"><span class="hb-warranty-year-badge">2</span><div class="hb-warranty-period-title"><strong class="hb-warranty-years-unit">ANNI</strong><strong class="hb-warranty-period-label">— Garanzia estesa</strong></div></div><div class="hb-warranty-period-copy"><p>Per attivare l'estensione della garanzia, è necessario registrare il prodotto online oppure contattare il nostro servizio clienti all'indirizzo <a class="reference external" href="mailto:hello.eu@jackery.com">hello.eu@jackery.com</a> per estendere il periodo di garanzia standard.</p></div></div></div></figure>
+
+
 
 ## Sostituzione
 
-Jackery sostituirà (a spese di Jackery) qualsiasi prodotto Jackery mal funzionante durante il periodo di garanzia applicabile a causa di difetti di fabbricazione o materiali. Un prodotto sostitutivo assume la garanzia residua del prodotto originale.
+
+
+<figure aria-label="Sostituzione" class="hb-warranty-card" data-component-id="HB-WARRANTY-SECTION" data-warranty-card-index="3"><p>Jackery sostituirà (a spese di Jackery) qualsiasi prodotto Jackery mal funzionante durante il periodo di garanzia applicabile a causa di difetti di fabbricazione o materiali. Un prodotto sostitutivo assume la garanzia residua del prodotto originale.</p></figure>
+
+
 
 ## Limitato all\'acquirente consumatore originale
 
-La garanzia sul prodotto Jackery è limitata all\'acquirente originale e non è trasferibile a nessun proprietario successivo.
+
+
+<figure aria-label="Limitato all'acquirente consumatore originale" class="hb-warranty-card" data-component-id="HB-WARRANTY-SECTION" data-warranty-card-index="4"><p>La garanzia sul prodotto Jackery è limitata all'acquirente originale e non è trasferibile a nessun proprietario successivo.</p></figure>
+
+
 
 ## Esclusioni
 
-La garanzia di Jackery non si applica a:
 
-- Uso improprio, abuso, modifica, danneggiamento accidentale o utilizzo diverso dal normale uso da parte del consumatore, come autorizzato nella documentazione di questo prodotto Jackery.
 
-- Tentativi di riparazione da parte di persone diverse da quelle autorizzate.
+<figure aria-label="Esclusioni" class="hb-warranty-card" data-component-id="HB-WARRANTY-SECTION" data-warranty-card-index="5"><p>La garanzia di Jackery non si applica a:</p><ul class="simple">
+<li><p>Uso improprio, abuso, modifica, danneggiamento accidentale o utilizzo diverso dal normale uso da parte del consumatore, come autorizzato nella documentazione di questo prodotto Jackery.</p></li>
+<li><p>Tentativi di riparazione da parte di persone diverse da quelle autorizzate.</p></li>
+<li><p>Qualsiasi prodotto acquistato tramite una casa d'aste online.</p></li>
+<li><p>La garanzia di Jackery non si applica alla batteria, a meno che questa non venga caricata completamente dall'utente entro sette giorni dall'acquisto del prodotto, e successivamente almeno una volta ogni 6 mesi.</p></li>
+</ul></figure>
 
-- Qualsiasi prodotto acquistato tramite una casa d\'aste online.
 
-- La garanzia di Jackery non si applica alla batteria, a meno che questa non venga caricata completamente dall\'utente entro sette giorni dall\'acquisto del prodotto, e successivamente almeno una volta ogni 6 mesi.
 
 ## Diritti di interpretazione
 
-Jackery si riserva il diritto di interpretazione finale della politica post-vendita sopra descritta.
+
+
+<figure aria-label="Diritti di interpretazione" class="hb-warranty-card" data-component-id="HB-WARRANTY-SECTION" data-warranty-card-index="6"><p>Jackery si riserva il diritto di interpretazione finale della politica post-vendita sopra descritta.</p></figure>
+
+
 
 # EU REGULATIONS
 

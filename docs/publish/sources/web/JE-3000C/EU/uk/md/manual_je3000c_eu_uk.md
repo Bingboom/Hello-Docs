@@ -196,37 +196,11 @@
 
 ## ЕКРАН LCD
 
-<table style="width:100%; border-collapse:collapse; margin:0.75rem 0 0.5rem 0;">
-<tbody>
-<tr>
-<td rowspan="6" style="text-align: center; width: 24%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top;"><img src="assets/ir/3a5279b872814f9c8b0a070a3f4c8a19ed434feac942771e9891401e4e495fee/operation_lcd.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je3000c_eu_uk/operation_lcd.png" data-web-finished-panel-sha256="3a5279b872814f9c8b0a070a3f4c8a19ed434feac942771e9891401e4e495fee" alt="Режим дисплея LCD." /></td>
-<td rowspan="3" style="width: 18%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Короткочасне увімкнення</td>
-<td style="width: 12%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Увімкнути</td>
-<td style="width: 46%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Натисніть кнопку POWER або коли пристрій заряджається.</td>
-</tr>
-<tr>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Вимкнути</td>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Натисніть кнопку POWER.</td>
-</tr>
-<tr>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Автовимкнення</td>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">LCD автоматично вимикається та переходить у режим сну після 2 хвилин бездіяльності.</td>
-</tr>
-<tr>
-<td rowspan="3" style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Постійно увімкнено (під час заряджання або розряджання)</td>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Увімкнути</td>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Натисніть кнопку POWER двічі, коли пристрій увімкнено.</td>
-</tr>
-<tr>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Вимкнути</td>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Натисніть кнопку POWER.</td>
-</tr>
-<tr>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Автовимкнення</td>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">LCD автоматично вимикається після 2 годин бездіяльності.</td>
-</tr>
-</tbody>
-</table>
+
+
+<figure aria-label="Режим дисплея LCD." class="hb-lcd-mode-composition" data-component-id="HB-TABLE-LCD-MODE"><div class="hb-lcd-mode-art-panel"><img alt="Режим дисплея LCD." class="hb-lcd-mode-art manual-finished-illustration" data-web-finished-panel-path="assets/je3000c_eu_uk/operation_lcd.png" data-web-finished-panel-sha256="3a5279b872814f9c8b0a070a3f4c8a19ed434feac942771e9891401e4e495fee" src="assets/ir/3a5279b872814f9c8b0a070a3f4c8a19ed434feac942771e9891401e4e495fee/operation_lcd.png"/></div><div class="hb-lcd-mode-table-panel"><table class="hb-lcd-mode-table"><colgroup><col class="hb-lcd-mode-col-state"/><col class="hb-lcd-mode-col-action"/><col class="hb-lcd-mode-col-copy"/></colgroup><tbody><tr><td class="hb-lcd-mode-state" rowspan="3">Короткочасне увімкнення</td><td class="hb-lcd-mode-action">Увімкнути</td><td class="hb-lcd-mode-copy">Натисніть кнопку POWER або коли пристрій заряджається.</td></tr><tr><td class="hb-lcd-mode-action">Вимкнути</td><td class="hb-lcd-mode-copy">Натисніть кнопку POWER.</td></tr><tr><td class="hb-lcd-mode-action">Автовимкнення</td><td class="hb-lcd-mode-copy">LCD автоматично вимикається та переходить у режим сну після 2 хвилин бездіяльності.</td></tr><tr><td class="hb-lcd-mode-state" rowspan="3">Постійно увімкнено (під час заряджання або розряджання)</td><td class="hb-lcd-mode-action">Увімкнути</td><td class="hb-lcd-mode-copy">Натисніть кнопку POWER двічі, коли пристрій увімкнено.</td></tr><tr><td class="hb-lcd-mode-action">Вимкнути</td><td class="hb-lcd-mode-copy">Натисніть кнопку POWER.</td></tr><tr><td class="hb-lcd-mode-action">Автовимкнення</td><td class="hb-lcd-mode-copy">LCD автоматично вимикається після 2 годин бездіяльності.</td></tr></tbody></table></div></figure>
+
+
 
 Ви також можете встановити режим відображення екрана в Додатку Jackery.
 
@@ -234,39 +208,19 @@
 
 Ця функція запам'ятовує стан виходу та автоматично відновлює виходи AC і DC за визначених умов.
 
-<table>
-<thead>
-<tr>
-<th class="head"><p>Умови автоматичного відновлення</p></th>
-<th class="head"><p>Умови без автоматичного відновлення</p></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><p>Увімкнення/перезапуск після вимкнення або перезапуску</p></td>
-<td><p>Ручне вимкнення виходу (кнопка/додаток)</p></td>
-</tr>
-<tr>
-<td rowspan="2"><p>Рівень заряду батареї ≥ межа розряду +10% після досягнення межі</p></td>
-<td><p>Вимкнення виходу в режимі енергозбереження</p></td>
-</tr>
-<tr>
-<td><p>Вимкнення виходу через спрацювання захисту</p></td>
-</tr>
-<tr>
-<td><p>Завершено OTA-оновлення</p></td>
-<td><p>Вимкнення виходу за таймером розряду</p></td>
-</tr>
-</tbody>
-</table>
+
+
+<figure aria-label="Умови автоматичного відновлення / Умови без автоматичного відновлення" class="hb-auto-resume-composition" data-component-id="HB-TABLE-AUTO-RESUME" tabindex="0"><table class="hb-auto-resume-table"><colgroup><col class="hb-auto-resume-col"/><col class="hb-auto-resume-col"/></colgroup><thead><tr><th class="hb-auto-resume-left" scope="col">Умови автоматичного відновлення</th><th class="hb-auto-resume-right" scope="col">Умови без автоматичного відновлення</th></tr></thead><tbody><tr><td class="hb-auto-resume-left">Увімкнення/перезапуск після вимкнення або перезапуску</td><td class="hb-auto-resume-right">Ручне вимкнення виходу (кнопка/додаток)</td></tr><tr><td class="hb-auto-resume-left" rowspan="2">Рівень заряду батареї ≥ межа розряду +10% після досягнення межі</td><td class="hb-auto-resume-right">Вимкнення виходу в режимі енергозбереження</td></tr><tr><td class="hb-auto-resume-right">Вимкнення виходу через спрацювання захисту</td></tr><tr><td class="hb-auto-resume-left">Завершено OTA-оновлення</td><td class="hb-auto-resume-right">Вимкнення виходу за таймером розряду</td></tr></tbody></table></figure>
+
+
 
 ## КОМБІНАЦІЯ КНОПОК
 
-| Кнопки | Дія | Функція |
-|----|----|----|
-| Головна кнопка POWER + Кнопка AC | Натисніть і утримуйте обидві протягом 3 с | Увімк./вимк. режим енергозбереження |
-| Головна кнопка POWER + кнопка DC / USB | Натисніть і утримуйте обидві протягом 3 с | Скинути Wi-Fi та Bluetooth |
-| кнопка DC / USB + Кнопка AC | Натисніть і утримуйте обидві протягом 1 с | Увімк./вимк. Wi-Fi та Bluetooth |
+
+
+<figure aria-label="Кнопки / Дія / Функція" class="hb-key-combination-composition" data-component-id="HB-TABLE-KEY-COMBINATIONS" tabindex="0"><table class="hb-key-combination-table"><colgroup><col class="hb-key-col-buttons"/><col class="hb-key-col-operation"/><col class="hb-key-col-function"/></colgroup><thead><tr><th class="hb-key-buttons" scope="col"><p>Кнопки</p></th><th class="hb-key-operation" scope="col"><p>Дія</p></th><th class="hb-key-function" scope="col"><p>Функція</p></th></tr></thead><tbody><tr><td class="hb-key-buttons"><p>Головна кнопка POWER + Кнопка AC</p></td><td class="hb-key-operation"><p>Натисніть і утримуйте обидві протягом 3 с</p></td><td class="hb-key-function"><p>Увімк./вимк. режим енергозбереження</p></td></tr><tr><td class="hb-key-buttons"><p>Головна кнопка POWER + кнопка DC / USB</p></td><td class="hb-key-operation"><p>Натисніть і утримуйте обидві протягом 3 с</p></td><td class="hb-key-function"><p>Скинути Wi-Fi та Bluetooth</p></td></tr><tr><td class="hb-key-buttons"><p>кнопка DC / USB + Кнопка AC</p></td><td class="hb-key-operation"><p>Натисніть і утримуйте обидві протягом 1 с</p></td><td class="hb-key-function"><p>Увімк./вимк. Wi-Fi та Bluetooth</p></td></tr></tbody></table></figure>
+
+
 
 # ДЖЕРЕЛО БЕЗПЕРЕБІЙНОГО ЖИВЛЕННЯ (UPS)
 

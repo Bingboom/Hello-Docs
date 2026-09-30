@@ -38,12 +38,19 @@ During the lifecycle of energy storage products, a certain degree of capacity an
 
 # MEANING OF SYMBOLS
 
-| Symbol | Meaning |
-|----|----|
-| ⚠WARNING | Hazardous practices that may result in severe injury, death, and/or property damage. |
-| ⚠CAUTION | Hazardous practices that may result in personal injury and/or property damage. |
-| ⚠NOTE | Hazardous practices that may result in equipment damage, data loss, performance deterioration, or unanticipated results. |
-| ⚠TIP | Supplements the important information or operation tips in the text. |
+
+
+<figure aria-label="MEANING OF SYMBOLS" class="hb-symbol-signal-composition" data-component-id="HB-TABLE-SYMBOL-SIGNAL"><table class="hb-symbol-signal-table"><colgroup><col class="hb-symbol-signal-col-label"/><col class="hb-symbol-signal-col-meaning"/></colgroup><thead><tr><th class="hb-symbol-signal-label-heading" scope="col"><p>Symbol</p></th><th class="hb-symbol-signal-meaning-heading" scope="col"><p>Meaning</p></th></tr></thead><tbody><tr><td class="hb-symbol-signal-label-cell"><span aria-label="⚠
+WARNING" class="hb-signal-badge"><span aria-hidden="true" class="hb-signal-icon">⚠</span><span class="hb-signal-label">⚠
+WARNING</span></span></td><td class="hb-symbol-signal-meaning-cell"><p>Hazardous practices that may result in severe injury, death, and/or property damage.</p></td></tr><tr><td class="hb-symbol-signal-label-cell"><span aria-label="⚠
+CAUTION" class="hb-signal-badge"><span aria-hidden="true" class="hb-signal-icon">⚠</span><span class="hb-signal-label">⚠
+CAUTION</span></span></td><td class="hb-symbol-signal-meaning-cell"><p>Hazardous practices that may result in personal injury and/or property damage.</p></td></tr><tr><td class="hb-symbol-signal-label-cell"><span aria-label="⚠
+NOTE" class="hb-signal-badge"><span aria-hidden="true" class="hb-signal-icon">⚠</span><span class="hb-signal-label">⚠
+NOTE</span></span></td><td class="hb-symbol-signal-meaning-cell"><p>Hazardous practices that may result in equipment damage, data loss, performance deterioration, or unanticipated results.</p></td></tr><tr><td class="hb-symbol-signal-label-cell"><span aria-label="⚠
+TIP" class="hb-signal-badge"><span aria-hidden="true" class="hb-signal-icon">⚠</span><span class="hb-signal-label">⚠
+TIP</span></span></td><td class="hb-symbol-signal-meaning-cell"><p>Supplements the important information or operation tips in the text.</p></td></tr></tbody></table></figure>
+
+
 
 # WHAT\'S IN THE BOX
 
@@ -71,22 +78,89 @@ The car charging cable is not included but is available for purchase separately 
 
 <img src="../../../../_static/manual-assets/_pool/12/122991a64cd306c82e70b0279024fa0bcad517e9fe0bfd8a30d6a81f0c46de99.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je500a_eu_en/lcd_map.png" data-web-finished-panel-sha256="122991a64cd306c82e70b0279024fa0bcad517e9fe0bfd8a30d6a81f0c46de99" alt="Jackery Explorer 500 numbered LCD display" />
 
-| No. | Indicator | Description |
-|----|----|----|
-| 1 | UPS | **On:** The product is in bypass mode, during which the switchover time from grid power to battery power is 10 ms. **Off:** The product is not in bypass mode. |
-| 2 | AC Power Indicator | The AC output (pure sine wave) is on. |
-| 3 | Output Voltage and Frequency | Displays the output voltage and frequency. |
-| 4 | Input Power | Displays the input power in watts. |
-| 5 | Output Power | Displays the output power in watts. |
-| 6 | AC Wall Charging Indicator | The product is charged via the AC Input using grid power. |
-| 7 | Car Charging Indicator | The product is charged via the DC Input (DC8020) using DC 12V (car charging). |
-| 8 | Solar Charging Indicator | The product is charged via the DC Input (DC8020) using solar panel(s). |
-| 9 | Battery Power Indicator | When the product is being charged, the orange circle around the battery percentage will light up in sequence. When charging other devices, the orange circle will stay on. |
-| 10 | Remaining Battery Percentage | Displays the remaining battery percentage. |
-| 11 | Fault Code | A product error has occurred. Please refer to the Troubleshooting section for details. |
-| 12 | High Temperature Indicator | High temperature protection is triggered. The product may stop functioning until its temperature returns to the normal operating range. |
-| 12 | Low Temperature Indicator | Low temperature protection is triggered. The product may stop functioning until its temperature returns to the normal operating range. |
-| 13 | Energy Saving Mode | **On:** The Energy Saving Mode is enabled. **Off:** The Energy Saving Mode is disabled. |
+<figure class="hb-reference-composition hb-reference-lcd-legend" aria-label="LCD DISPLAY" data-component-id="HB-TABLE-REFERENCE" data-component-variant="lcd-legend" tabindex="0">
+<table class="hb-reference-table">
+<thead>
+<tr>
+<th scope="col"><p>No.</p></th>
+<th scope="col"><p>Indicator</p></th>
+<th scope="col"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><p>1</p></td>
+<td><p>UPS</p></td>
+<td><p><strong>On:</strong> The product is in bypass mode, during which the switchover time from grid power to battery power is 10 ms. <strong>Off:</strong> The product is not in bypass mode.</p></td>
+</tr>
+<tr>
+<td><p>2</p></td>
+<td><p>AC Power Indicator</p></td>
+<td><p>The AC output (pure sine wave) is on.</p></td>
+</tr>
+<tr>
+<td><p>3</p></td>
+<td><p>Output Voltage and Frequency</p></td>
+<td><p>Displays the output voltage and frequency.</p></td>
+</tr>
+<tr>
+<td><p>4</p></td>
+<td><p>Input Power</p></td>
+<td><p>Displays the input power in watts.</p></td>
+</tr>
+<tr>
+<td><p>5</p></td>
+<td><p>Output Power</p></td>
+<td><p>Displays the output power in watts.</p></td>
+</tr>
+<tr>
+<td><p>6</p></td>
+<td><p>AC Wall Charging Indicator</p></td>
+<td><p>The product is charged via the AC Input using grid power.</p></td>
+</tr>
+<tr>
+<td><p>7</p></td>
+<td><p>Car Charging Indicator</p></td>
+<td><p>The product is charged via the DC Input (DC8020) using DC 12V (car charging).</p></td>
+</tr>
+<tr>
+<td><p>8</p></td>
+<td><p>Solar Charging Indicator</p></td>
+<td><p>The product is charged via the DC Input (DC8020) using solar panel(s).</p></td>
+</tr>
+<tr>
+<td><p>9</p></td>
+<td><p>Battery Power Indicator</p></td>
+<td><p>When the product is being charged, the orange circle around the battery percentage will light up in sequence. When charging other devices, the orange circle will stay on.</p></td>
+</tr>
+<tr>
+<td><p>10</p></td>
+<td><p>Remaining Battery Percentage</p></td>
+<td><p>Displays the remaining battery percentage.</p></td>
+</tr>
+<tr>
+<td><p>11</p></td>
+<td><p>Fault Code</p></td>
+<td><p>A product error has occurred. Please refer to the Troubleshooting section for details.</p></td>
+</tr>
+<tr>
+<td><p>12</p></td>
+<td><p>High Temperature Indicator</p></td>
+<td><p>High temperature protection is triggered. The product may stop functioning until its temperature returns to the normal operating range.</p></td>
+</tr>
+<tr>
+<td><p>12</p></td>
+<td><p>Low Temperature Indicator</p></td>
+<td><p>Low temperature protection is triggered. The product may stop functioning until its temperature returns to the normal operating range.</p></td>
+</tr>
+<tr>
+<td><p>13</p></td>
+<td><p>Energy Saving Mode</p></td>
+<td><p><strong>On:</strong> The Energy Saving Mode is enabled. <strong>Off:</strong> The Energy Saving Mode is disabled.</p></td>
+</tr>
+</tbody>
+</table>
+</figure>
 
 # OPERATIONS
 
@@ -126,14 +200,49 @@ Caution!
 
 <img src="../../../../_static/manual-assets/_pool/46/465a2cdaea0b3fd712b43e7b54d7401f9960ecff6ba6b28330baa17761e8ddba.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je500a_eu_en/operation_lcd_device.png" data-web-finished-panel-sha256="465a2cdaea0b3fd712b43e7b54d7401f9960ecff6ba6b28330baa17761e8ddba" alt="Main Power Button device illustration for LCD control" />
 
-| Mode | Action | Result |
-|----|----|----|
-| LCD Screen | Turn on | Press the Main Power Button, or the screen turns on when the product is charging. |
-| LCD Screen | Turn off | Press the Main Power Button. |
-| LCD Screen | Auto-off | The LCD turns off automatically and enters sleep mode after 2 minutes of inactivity. |
-| Always-on Display Mode (under charging or discharging state) | Turn on | Double-click the Main Power Button when the LCD screen is ON. |
-| Always-on Display Mode (under charging or discharging state) | Turn off | Press the Main Power Button. |
-| Always-on Display Mode (under charging or discharging state) | Auto-off | The Always-on Display Mode turns off automatically after 2 hours of inactivity. |
+<figure class="hb-reference-composition hb-reference-lcd-actions" aria-label="LCD SCREEN ON/OFF" data-component-id="HB-TABLE-REFERENCE" data-component-variant="lcd-actions" tabindex="0">
+<table class="hb-reference-table">
+<thead>
+<tr>
+<th scope="col"><p>Mode</p></th>
+<th scope="col"><p>Action</p></th>
+<th scope="col"><p>Result</p></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><p>LCD Screen</p></td>
+<td><p>Turn on</p></td>
+<td><p>Press the Main Power Button, or the screen turns on when the product is charging.</p></td>
+</tr>
+<tr>
+<td><p>LCD Screen</p></td>
+<td><p>Turn off</p></td>
+<td><p>Press the Main Power Button.</p></td>
+</tr>
+<tr>
+<td><p>LCD Screen</p></td>
+<td><p>Auto-off</p></td>
+<td><p>The LCD turns off automatically and enters sleep mode after 2 minutes of inactivity.</p></td>
+</tr>
+<tr>
+<td><p>Always-on Display Mode (under charging or discharging state)</p></td>
+<td><p>Turn on</p></td>
+<td><p>Double-click the Main Power Button when the LCD screen is ON.</p></td>
+</tr>
+<tr>
+<td><p>Always-on Display Mode (under charging or discharging state)</p></td>
+<td><p>Turn off</p></td>
+<td><p>Press the Main Power Button.</p></td>
+</tr>
+<tr>
+<td><p>Always-on Display Mode (under charging or discharging state)</p></td>
+<td><p>Auto-off</p></td>
+<td><p>The Always-on Display Mode turns off automatically after 2 hours of inactivity.</p></td>
+</tr>
+</tbody>
+</table>
+</figure>
 
 # UNINTERRUPTIBLE POWER SUPPLY (UPS)
 
@@ -237,112 +346,128 @@ If this product is stored for a long period of time (3 months - 6 months) with t
 
 If any of the following fault codes appear, follow the listed corrective actions to resolve the issue. If the fault persists, please contact Jackery Customer Support.
 
-<table>
-<colgroup>
-<col style="width: 18%" />
-<col style="width: 82%" />
-</colgroup>
-<thead>
-<tr>
-<th class="head"><p>Error Code</p></th>
-<th class="head"><p>Corrective Action</p></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><p>F0 / F1 / F2 / F3</p></td>
-<td><p>Restart the product.</p></td>
-</tr>
-<tr>
-<td><p>F4</p></td>
-<td><p>Connect the product to loads to discharge its battery until the fault disappears.</p></td>
-</tr>
-<tr>
-<td><p>F5</p></td>
-<td><p>Charge the product via solar panels or AC wall outlet until the fault disappears.</p></td>
-</tr>
-<tr>
-<td><p>F6</p></td>
-<td><ol>
+
+
+<figure aria-label="Error Code / Corrective Action" class="hb-troubleshooting-composition" data-component-id="HB-TABLE-TROUBLESHOOTING" tabindex="0"><table class="hb-troubleshooting-table"><colgroup><col class="hb-troubleshooting-col-code"/><col class="hb-troubleshooting-col-measures"/></colgroup><thead><tr><th class="hb-troubleshooting-code" scope="col"><p>Error Code</p></th><th class="hb-troubleshooting-measures" scope="col"><p>Corrective Action</p></th></tr></thead><tbody><tr><td class="hb-troubleshooting-code"><p>F0 / F1 / F2 / F3</p></td><td class="hb-troubleshooting-measures"><p>Restart the product.</p></td></tr><tr><td class="hb-troubleshooting-code"><p>F4</p></td><td class="hb-troubleshooting-measures"><p>Connect the product to loads to discharge its battery until the fault disappears.</p></td></tr><tr><td class="hb-troubleshooting-code"><p>F5</p></td><td class="hb-troubleshooting-measures"><p>Charge the product via solar panels or AC wall outlet until the fault disappears.</p></td></tr><tr><td class="hb-troubleshooting-code"><p>F6</p></td><td class="hb-troubleshooting-measures"><ol class="arabic simple">
 <li><p>Wait for the grid to normalize before charging the product via AC wall outlet.</p></li>
 <li><p>Check whether the air intake and exhaust vents are blocked; ensure 30 cm clearance on both sides of the product.</p></li>
 <li><p>Place the product in a shaded, well-ventilated area where the ambient temperature is below 45°C.</p></li>
 <li><p>Disconnect all loads from the product, keep it idle, and wait until the fault disappears.</p></li>
 <li><p>Restart the product.</p></li>
-</ol></td>
-</tr>
-<tr>
-<td><p>F7</p></td>
-<td><ol>
+</ol></td></tr><tr><td class="hb-troubleshooting-code"><p>F7</p></td><td class="hb-troubleshooting-measures"><ol class="arabic simple">
 <li><p>Remove all DC inputs from the product.</p></li>
 <li><p>If you charge the product via a solar panel, check the open-circuit voltage (Voc) of the connected solar panel.</p></li>
 <li><p>The product allows a maximum DC input voltage of 60V.</p></li>
 <li><p>Restart the product and keep it idle. Wait until the fault disappears.</p></li>
-</ol></td>
-</tr>
-<tr>
-<td><p>F8</p></td>
-<td><p>Contact Jackery Customer Support.</p></td>
-</tr>
-<tr>
-<td><p>F9</p></td>
-<td><p>Remove the load connected to the DC 12V/USB ports of the product. Wait until the fault disappears.</p></td>
-</tr>
-</tbody>
-</table>
+</ol></td></tr><tr><td class="hb-troubleshooting-code"><p>F8</p></td><td class="hb-troubleshooting-measures"><p>Contact Jackery Customer Support.</p></td></tr><tr><td class="hb-troubleshooting-code"><p>F9</p></td><td class="hb-troubleshooting-measures"><p>Remove the load connected to the DC 12V/USB ports of the product. Wait until the fault disappears.</p></td></tr></tbody></table></figure>
+
+
 
 # SPECIFICATIONS
 
 ## GENERAL INFO
 
-|                |                              |
-|----------------|------------------------------|
-| Product Name   | Jackery Explorer 500         |
-| Model No.      | JE-500A                      |
-| Capacity       | 20Ah/25.6V DC (512 Wh)       |
-| Cell Chemistry | LiFePO4                      |
-| Weight         | About 12.57 lbs/5.7kg        |
-| Dimensions     | 31.1×20.5×15.7 cm            |
-| Cycle Life     | 6000 cycles to 70%+ capacity |
+
+
+<figure aria-label="GENERAL INFO" class="hb-spec-table-composition"><table class="hb-source-specification hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
+
+<tbody>
+<tr><th class="manual-spec-label hb-spec-label" scope="row"><p>Product Name</p></th>
+<td class="manual-spec-value hb-spec-value"><p>Jackery Explorer 500</p></td>
+</tr>
+<tr><th class="manual-spec-label hb-spec-label" scope="row"><p>Model No.</p></th>
+<td class="manual-spec-value hb-spec-value"><p>JE-500A</p></td>
+</tr>
+<tr><th class="manual-spec-label hb-spec-label" scope="row"><p>Capacity</p></th>
+<td class="manual-spec-value hb-spec-value"><p>20Ah/25.6V DC (512 Wh)</p></td>
+</tr>
+<tr><th class="manual-spec-label hb-spec-label" scope="row"><p>Cell Chemistry</p></th>
+<td class="manual-spec-value hb-spec-value"><p>LiFePO4</p></td>
+</tr>
+<tr><th class="manual-spec-label hb-spec-label" scope="row"><p>Weight</p></th>
+<td class="manual-spec-value hb-spec-value"><p>About 12.57 lbs/5.7kg</p></td>
+</tr>
+<tr><th class="manual-spec-label hb-spec-label" scope="row"><p>Dimensions</p></th>
+<td class="manual-spec-value hb-spec-value"><p>31.1×20.5×15.7 cm</p></td>
+</tr>
+<tr><th class="manual-spec-label hb-spec-label" scope="row"><p>Cycle Life</p></th>
+<td class="manual-spec-value hb-spec-value"><p>6000 cycles to 70%+ capacity</p></td>
+</tr>
+</tbody>
+</table></figure>
+
+
 
 ## INPUT PORTS
 
-<table>
-<colgroup>
-<col style="width: 40%" />
-<col style="width: 60%" />
-</colgroup>
+
+
+<figure aria-label="INPUT PORTS" class="hb-spec-table-composition"><table class="hb-source-specification hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
+
 <tbody>
-<tr>
-<td><p>Charge Mode AC Input</p></td>
-<td><p>220-240V~ 50Hz, 10A Max</p></td>
+<tr><th class="manual-spec-label hb-spec-label" scope="row"><p>Charge Mode AC Input</p></th>
+<td class="manual-spec-value hb-spec-value"><p>220-240V~ 50Hz, 10A Max</p></td>
 </tr>
-<tr>
-<td><p>1 × DC8020 Port</p></td>
-<td><p>11V-16V⎓8A Max</p>
-<p>16V-60V⎓10.5A, 200W Max</p></td>
+<tr><th class="manual-spec-label hb-spec-label" scope="row"><p>1 × DC8020 Port</p></th>
+<td class="manual-spec-value hb-spec-value"><p>11V-16V⎓8A Max</p>
+<p>16V-60V⎓10.5A, 200W Max</p>
+</td>
 </tr>
 </tbody>
-</table>
+</table></figure>
+
+
 
 ## OUTPUT PORTS
 
-|  |  |
-|----|----|
-| 2 × AC Output | 230V\~ 50Hz, 2.18A |
-| AC Total Output | 500W Rated, 1000W Surge peak |
-| AC Output in Bypass Mode (1) | 230V\~ 50Hz, 500W |
-| 1 × USB-C1 Output | 100W Max, 5V⎓3A, 9V⎓3A, 12V⎓3A, 15V⎓3A, 20V⎓5A |
-| 1 × USB-C2 Output | 30W Max, 5V⎓3A, 9V⎓3A, 12V⎓2.5A, 15V⎓2A, 20V⎓1.5A |
-| 1 × USB-A Output | 18W Max, 5-6V⎓3A, 6-9V⎓2A, 9-12V⎓1.5A |
-| Cigarette Lighter Port | 12V⎓10A Max |
+
+
+<figure aria-label="OUTPUT PORTS" class="hb-spec-table-composition"><table class="hb-source-specification hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
+
+<tbody>
+<tr><th class="manual-spec-label hb-spec-label" scope="row"><p>2 × AC Output</p></th>
+<td class="manual-spec-value hb-spec-value"><p>230V~ 50Hz, 2.18A</p></td>
+</tr>
+<tr><th class="manual-spec-label hb-spec-label" scope="row"><p>AC Total Output</p></th>
+<td class="manual-spec-value hb-spec-value"><p>500W Rated, 1000W Surge peak</p></td>
+</tr>
+<tr><th class="manual-spec-label hb-spec-label" scope="row"><p>AC Output in Bypass Mode (1)</p></th>
+<td class="manual-spec-value hb-spec-value"><p>230V~ 50Hz, 500W</p></td>
+</tr>
+<tr><th class="manual-spec-label hb-spec-label" scope="row"><p>1 × USB-C1 Output</p></th>
+<td class="manual-spec-value hb-spec-value"><p>100W Max, 5V⎓3A, 9V⎓3A, 12V⎓3A, 15V⎓3A, 20V⎓5A</p></td>
+</tr>
+<tr><th class="manual-spec-label hb-spec-label" scope="row"><p>1 × USB-C2 Output</p></th>
+<td class="manual-spec-value hb-spec-value"><p>30W Max, 5V⎓3A, 9V⎓3A, 12V⎓2.5A, 15V⎓2A, 20V⎓1.5A</p></td>
+</tr>
+<tr><th class="manual-spec-label hb-spec-label" scope="row"><p>1 × USB-A Output</p></th>
+<td class="manual-spec-value hb-spec-value"><p>18W Max, 5-6V⎓3A, 6-9V⎓2A, 9-12V⎓1.5A</p></td>
+</tr>
+<tr><th class="manual-spec-label hb-spec-label" scope="row"><p>Cigarette Lighter Port</p></th>
+<td class="manual-spec-value hb-spec-value"><p>12V⎓10A Max</p></td>
+</tr>
+</tbody>
+</table></figure>
+
+
 
 ## ENVIRONMENTAL OPERATING TEMPERATURE
 
-|                       |               |
-|-----------------------|---------------|
-| Charge Temperature    | -20°C to 45°C |
-| Discharge Temperature | -20°C to 45°C |
+
+
+<figure aria-label="ENVIRONMENTAL OPERATING TEMPERATURE" class="hb-spec-table-composition"><table class="hb-source-specification hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
+
+<tbody>
+<tr><th class="manual-spec-label hb-spec-label" scope="row"><p>Charge Temperature</p></th>
+<td class="manual-spec-value hb-spec-value"><p>-20°C to 45°C</p></td>
+</tr>
+<tr><th class="manual-spec-label hb-spec-label" scope="row"><p>Discharge Temperature</p></th>
+<td class="manual-spec-value hb-spec-value"><p>-20°C to 45°C</p></td>
+</tr>
+</tbody>
+</table></figure>
+
+
 
 ※ USB Type-C® and USB-C® are registered trademarks of USB Implementers Forum.
 
