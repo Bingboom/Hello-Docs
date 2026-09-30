@@ -330,76 +330,29 @@ To prevent unnecessary battery consumption from forgetting to turn off the outpu
 
 This function memorizes the output status and automatically resumes AC and DC outputs under defined conditions.
 
-<table>
-<thead>
-<tr>
-<th class="head"><p>Auto Resume Conditions</p></th>
-<th class="head"><p>Not Auto Resume Conditions</p></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><p>Power-on/Restart after shutdown or restart</p></td>
-<td><p>Manual output off (button/App)</p></td>
-</tr>
-<tr>
-<td rowspan="2"><p>Battery SOC ≥ discharge limit +10% after reaching limit</p></td>
-<td><p>Energy Saving mode output off</p></td>
-</tr>
-<tr>
-<td><p>Protection-triggered output off</p></td>
-</tr>
-<tr>
-<td><p>OTA upgrade completed</p></td>
-<td><p>Discharge timer-triggered output off</p></td>
-</tr>
-</tbody>
-</table>
+
+
+<figure aria-label="Auto Resume Conditions / Not Auto Resume Conditions" class="hb-auto-resume-composition" data-component-id="HB-TABLE-AUTO-RESUME" tabindex="0"><table class="hb-auto-resume-table"><colgroup><col class="hb-auto-resume-col"/><col class="hb-auto-resume-col"/></colgroup><thead><tr><th class="hb-auto-resume-left" scope="col">Auto Resume Conditions</th><th class="hb-auto-resume-right" scope="col">Not Auto Resume Conditions</th></tr></thead><tbody><tr><td class="hb-auto-resume-left">Power-on/Restart after shutdown or restart</td><td class="hb-auto-resume-right">Manual output off (button/App)</td></tr><tr><td class="hb-auto-resume-left" rowspan="2">Battery SOC ≥ discharge limit +10% after reaching limit</td><td class="hb-auto-resume-right">Energy Saving mode output off</td></tr><tr><td class="hb-auto-resume-right">Protection-triggered output off</td></tr><tr><td class="hb-auto-resume-left">OTA upgrade completed</td><td class="hb-auto-resume-right">Discharge timer-triggered output off</td></tr></tbody></table></figure>
+
+
 
 ## LCD SCREEN
 
-<table style="width:100%; border-collapse:collapse; margin:0.75rem 0 0.5rem 0;">
-<tbody>
-<tr>
-<td rowspan="6" style="text-align: center; width: 24%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top;"><img src="../../../../_static/manual-assets/_pool/66/66d66b71f0911fe49e8d9aa245e2a7a97d22981a420b1ae2b998cb978594722b.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_en/operation_lcd.png" data-web-finished-panel-sha256="66d66b71f0911fe49e8d9aa245e2a7a97d22981a420b1ae2b998cb978594722b" alt="LCD display mode." /></td>
-<td rowspan="3" style="width: 18%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Shortly On</td>
-<td style="width: 12%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Turn on</td>
-<td style="width: 46%; border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Press the POWER button or when the product is charging.</td>
-</tr>
-<tr>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Turn off</td>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Press the POWER button.</td>
-</tr>
-<tr>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Auto-off</td>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">The LCD turns off automatically and enters sleep mode after 2 minutes of inactivity.</td>
-</tr>
-<tr>
-<td rowspan="3" style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Steady On (in charging or discharging state)</td>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Turn on</td>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Press the POWER button twice when the product is powered on.</td>
-</tr>
-<tr>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Turn off</td>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Press the POWER button.</td>
-</tr>
-<tr>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">Auto-off</td>
-<td style="border: 1px solid #cfcfcf; padding: 8px; vertical-align: top">The LCD turns off automatically after 2 hours of inactivity.</td>
-</tr>
-</tbody>
-</table>
+
+
+<figure aria-label="LCD display mode." class="hb-lcd-mode-composition" data-component-id="HB-TABLE-LCD-MODE"><div class="hb-lcd-mode-art-panel"><img alt="LCD display mode." class="hb-lcd-mode-art manual-finished-illustration" data-web-finished-panel-path="assets/je1000h_eu_en/operation_lcd.png" data-web-finished-panel-sha256="66d66b71f0911fe49e8d9aa245e2a7a97d22981a420b1ae2b998cb978594722b" src="../../../../_static/manual-assets/_pool/66/66d66b71f0911fe49e8d9aa245e2a7a97d22981a420b1ae2b998cb978594722b.png"/></div><div class="hb-lcd-mode-table-panel"><table class="hb-lcd-mode-table"><colgroup><col class="hb-lcd-mode-col-state"/><col class="hb-lcd-mode-col-action"/><col class="hb-lcd-mode-col-copy"/></colgroup><tbody><tr><td class="hb-lcd-mode-state" rowspan="3">Shortly On</td><td class="hb-lcd-mode-action">Turn on</td><td class="hb-lcd-mode-copy">Press the POWER button or when the product is charging.</td></tr><tr><td class="hb-lcd-mode-action">Turn off</td><td class="hb-lcd-mode-copy">Press the POWER button.</td></tr><tr><td class="hb-lcd-mode-action">Auto-off</td><td class="hb-lcd-mode-copy">The LCD turns off automatically and enters sleep mode after 2 minutes of inactivity.</td></tr><tr><td class="hb-lcd-mode-state" rowspan="3">Steady On (in charging or discharging state)</td><td class="hb-lcd-mode-action">Turn on</td><td class="hb-lcd-mode-copy">Press the POWER button twice when the product is powered on.</td></tr><tr><td class="hb-lcd-mode-action">Turn off</td><td class="hb-lcd-mode-copy">Press the POWER button.</td></tr><tr><td class="hb-lcd-mode-action">Auto-off</td><td class="hb-lcd-mode-copy">The LCD turns off automatically after 2 hours of inactivity.</td></tr></tbody></table></div></figure>
+
+
 
 You can also set the screen display mode in the Jackery App.
 
 ## KEY COMBINATION
 
-| Buttons | Operation | Function |
-|----|----|----|
-| POWER button + AC1 Power Button | Press and hold both for 3s | Turn on/off the Energy Saving Mode |
-| POWER button + DC/USB Power Button | Press and hold both for 3s | Reset Wi-Fi and Bluetooth |
-| DC/USB Power Button + AC1 Power Button | Press and hold both for 1s | Turn on/off Wi-Fi and Bluetooth |
-| POWER button + LED Light button | Press and hold both for 1s | Turn on/off Emergency Charging Mode |
+
+
+<figure aria-label="Buttons / Operation / Function" class="hb-key-combination-composition" data-component-id="HB-TABLE-KEY-COMBINATIONS" tabindex="0"><table class="hb-key-combination-table"><colgroup><col class="hb-key-col-buttons"/><col class="hb-key-col-operation"/><col class="hb-key-col-function"/></colgroup><thead><tr><th class="hb-key-buttons" scope="col"><p>Buttons</p></th><th class="hb-key-operation" scope="col"><p>Operation</p></th><th class="hb-key-function" scope="col"><p>Function</p></th></tr></thead><tbody><tr><td class="hb-key-buttons"><p>POWER button + AC1 Power Button</p></td><td class="hb-key-operation"><p>Press and hold both for 3s</p></td><td class="hb-key-function"><p>Turn on/off the Energy Saving Mode</p></td></tr><tr><td class="hb-key-buttons"><p>POWER button + DC/USB Power Button</p></td><td class="hb-key-operation"><p>Press and hold both for 3s</p></td><td class="hb-key-function"><p>Reset Wi-Fi and Bluetooth</p></td></tr><tr><td class="hb-key-buttons"><p>DC/USB Power Button + AC1 Power Button</p></td><td class="hb-key-operation"><p>Press and hold both for 1s</p></td><td class="hb-key-function"><p>Turn on/off Wi-Fi and Bluetooth</p></td></tr><tr><td class="hb-key-buttons"><p>POWER button + LED Light button</p></td><td class="hb-key-operation"><p>Press and hold both for 1s</p></td><td class="hb-key-function"><p>Turn on/off Emergency Charging Mode</p></td></tr></tbody></table></figure>
+
+
 
 # UNINTERRUPTIBLE POWER SUPPLY (UPS)
 

@@ -32,19 +32,34 @@ During the lifecycle of energy storage products, a certain degree of capacity an
 
 # MEANING OF SYMBOLS
 
-| Signal word | Meaning |
-|----|----|
-| **WARNING** | Hazardous practices that may result in severe injury, death, and/or property damage. |
-| **CAUTION** | Hazardous practices that may result in personal injury and/or property damage. |
-| **NOTE** | Hazardous practices that may result in equipment damage, data loss, performance deterioration, or unanticipated results. |
-| **TIP** | Supplements the important information or operation tips in the text. |
 
-|  |  |
-|----|----|
-| Warning and Caution Symbols. Must read to alert individuals to potential hazards or risks. | Do not dismantle the product. |
-| Read the user manual before operation. | Keep the product away from fire. |
-| This symbol indicates that the product shall not be disposed of as household waste, and should be delivered to a designated collection facility for recycling. Proper disposal and recycling can help protect the environment. For more information about the disposal and recycling of this product, contact your local community, disposal service, or dealer. | Keep away from children. |
-|  | This symbol indicates that a lithium-ion (Li-ion) battery is inside the product and should be disposed of or recycled properly. |
+
+<figure aria-label="MEANING OF SYMBOLS" class="hb-symbol-signal-composition" data-component-id="HB-TABLE-SYMBOL-SIGNAL"><table class="hb-symbol-signal-table"><colgroup><col class="hb-symbol-signal-col-label"/><col class="hb-symbol-signal-col-meaning"/></colgroup><thead><tr><th class="hb-symbol-signal-label-heading" scope="col"><p>Signal word</p></th><th class="hb-symbol-signal-meaning-heading" scope="col"><p>Meaning</p></th></tr></thead><tbody><tr><td class="hb-symbol-signal-label-cell"><span aria-label="WARNING" class="hb-signal-badge"><span aria-hidden="true" class="hb-signal-icon">⚠</span><span class="hb-signal-label">WARNING</span></span></td><td class="hb-symbol-signal-meaning-cell"><p>Hazardous practices that may result in severe injury, death, and/or property damage.</p></td></tr><tr><td class="hb-symbol-signal-label-cell"><span aria-label="CAUTION" class="hb-signal-badge"><span aria-hidden="true" class="hb-signal-icon">⚠</span><span class="hb-signal-label">CAUTION</span></span></td><td class="hb-symbol-signal-meaning-cell"><p>Hazardous practices that may result in personal injury and/or property damage.</p></td></tr><tr><td class="hb-symbol-signal-label-cell"><span aria-label="NOTE" class="hb-signal-badge"><span aria-hidden="true" class="hb-signal-icon">⚠</span><span class="hb-signal-label">NOTE</span></span></td><td class="hb-symbol-signal-meaning-cell"><p>Hazardous practices that may result in equipment damage, data loss, performance deterioration, or unanticipated results.</p></td></tr><tr><td class="hb-symbol-signal-label-cell"><span aria-label="TIP" class="hb-signal-badge"><span aria-hidden="true" class="hb-signal-icon">⚠</span><span class="hb-signal-label">TIP</span></span></td><td class="hb-symbol-signal-meaning-cell"><p>Supplements the important information or operation tips in the text.</p></td></tr></tbody></table></figure>
+
+
+
+<figure class="hb-reference-composition hb-reference-symbol-meanings" aria-label="MEANING OF SYMBOLS" data-component-id="HB-TABLE-REFERENCE" data-component-variant="symbol-meanings" tabindex="0">
+<table class="hb-reference-table">
+<tbody>
+<tr>
+<td><p>Warning and Caution Symbols. Must read to alert individuals to potential hazards or risks.</p></td>
+<td><p>Do not dismantle the product.</p></td>
+</tr>
+<tr>
+<td><p>Read the user manual before operation.</p></td>
+<td><p>Keep the product away from fire.</p></td>
+</tr>
+<tr>
+<td><p>This symbol indicates that the product shall not be disposed of as household waste, and should be delivered to a designated collection facility for recycling. Proper disposal and recycling can help protect the environment. For more information about the disposal and recycling of this product, contact your local community, disposal service, or dealer.</p></td>
+<td><p>Keep away from children.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><p>This symbol indicates that a lithium-ion (Li-ion) battery is inside the product and should be disposed of or recycled properly.</p></td>
+</tr>
+</tbody>
+</table>
+</figure>
 
 # WHAT\'S IN THE BOX
 
@@ -74,40 +89,145 @@ Additional straps can be purchased and attached to the sides of the product.
 
 <img src="assets/ir/523ab4c85b2e737b9d22510fa91ae6a3d7382e842bcc2171c11e563ee4c9fa85/lcd_interface_1.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je100c_eu_en/lcd_interface_1.png" data-web-finished-panel-sha256="523ab4c85b2e737b9d22510fa91ae6a3d7382e842bcc2171c11e563ee4c9fa85" alt="LCD interface 1 device display" />
 
-| No. | Indicator | Description |
-|----|----|----|
-| 1 | Input Power | Displays the input power in watts. |
-| 2 | Remaining Charging Time | Displays the remaining charging time. |
-| 3 | Steady-on Mode | On: Steady-on Mode is enabled. Off: Steady-on Mode is disabled. |
-| 4 | Thermal Power Limiting | On: The battery temperature is high. Discharging Power Limit is enabled. Off: Discharging Power Limit is disabled. |
-| 5 | Energy Saving Mode | On: Energy Saving Mode is enabled. Off: Energy Saving Mode is disabled. |
-| 6 | Battery Power Indicator | When the product is being charged, the orange circle around the battery percentage will light up in sequence. When charging other devices, the orange circle will stay on. |
-| 7 | Battery Power Indicator | On: The battery level is below 20%. Blink: The battery level is below 5%. Off: The battery level is not below 20% or the product is charging. |
-| 8 | Remaining Battery Percentage | Displays the remaining battery percentage. |
-| 9 | Remaining Discharge Time | Displays the remaining discharging time. |
-| 10 | Output Power | Displays the output power in watts. |
-|  | Fault code | Remove the load or unplug the charging plug. If the problem cannot be resolved, please contact the Jackery Customer Support. |
-|  | High Temperature Indicator | High temperature protection is triggered. The product may stop functioning until its temperature returns to the normal operating range. |
-|  | Low Temperature Indicator | Low temperature protection is triggered. The product may stop functioning until its temperature returns to the normal operating range. |
+<figure class="hb-reference-composition hb-reference-lcd-legend" aria-label="INTERFACE 1" data-component-id="HB-TABLE-REFERENCE" data-component-variant="lcd-legend" tabindex="0">
+<table class="hb-reference-table">
+<thead>
+<tr>
+<th scope="col"><p>No.</p></th>
+<th scope="col"><p>Indicator</p></th>
+<th scope="col"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><p>1</p></td>
+<td><p>Input Power</p></td>
+<td><p>Displays the input power in watts.</p></td>
+</tr>
+<tr>
+<td><p>2</p></td>
+<td><p>Remaining Charging Time</p></td>
+<td><p>Displays the remaining charging time.</p></td>
+</tr>
+<tr>
+<td><p>3</p></td>
+<td><p>Steady-on Mode</p></td>
+<td><p>On: Steady-on Mode is enabled. Off: Steady-on Mode is disabled.</p></td>
+</tr>
+<tr>
+<td><p>4</p></td>
+<td><p>Thermal Power Limiting</p></td>
+<td><p>On: The battery temperature is high. Discharging Power Limit is enabled. Off: Discharging Power Limit is disabled.</p></td>
+</tr>
+<tr>
+<td><p>5</p></td>
+<td><p>Energy Saving Mode</p></td>
+<td><p>On: Energy Saving Mode is enabled. Off: Energy Saving Mode is disabled.</p></td>
+</tr>
+<tr>
+<td><p>6</p></td>
+<td><p>Battery Power Indicator</p></td>
+<td><p>When the product is being charged, the orange circle around the battery percentage will light up in sequence. When charging other devices, the orange circle will stay on.</p></td>
+</tr>
+<tr>
+<td><p>7</p></td>
+<td><p>Battery Power Indicator</p></td>
+<td><p>On: The battery level is below 20%. Blink: The battery level is below 5%. Off: The battery level is not below 20% or the product is charging.</p></td>
+</tr>
+<tr>
+<td><p>8</p></td>
+<td><p>Remaining Battery Percentage</p></td>
+<td><p>Displays the remaining battery percentage.</p></td>
+</tr>
+<tr>
+<td><p>9</p></td>
+<td><p>Remaining Discharge Time</p></td>
+<td><p>Displays the remaining discharging time.</p></td>
+</tr>
+<tr>
+<td><p>10</p></td>
+<td><p>Output Power</p></td>
+<td><p>Displays the output power in watts.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><p>Fault code</p></td>
+<td><p>Remove the load or unplug the charging plug. If the problem cannot be resolved, please contact the Jackery Customer Support.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><p>High Temperature Indicator</p></td>
+<td><p>High temperature protection is triggered. The product may stop functioning until its temperature returns to the normal operating range.</p></td>
+</tr>
+<tr>
+<td></td>
+<td><p>Low Temperature Indicator</p></td>
+<td><p>Low temperature protection is triggered. The product may stop functioning until its temperature returns to the normal operating range.</p></td>
+</tr>
+</tbody>
+</table>
+</figure>
 
 ## INTERFACE 2
 
 <img src="assets/ir/fc613c38fa55870a9f3bbde3c09e3967755da14b86de1b22bfef42c0bfa761ef/lcd_interface_2.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je100c_eu_en/lcd_interface_2.png" data-web-finished-panel-sha256="fc613c38fa55870a9f3bbde3c09e3967755da14b86de1b22bfef42c0bfa761ef" alt="LCD interface 2 device display" />
 
-| No. | Indicator | Description |
-|----|----|----|
-| 1 | Discharging Indicator | This USB port is discharging. |
-| 2 | Charging Indicator | This USB port is charging. |
-| 3 | Charging or Discharging Power | Displays charging or discharging power of the corresponding port. |
+<figure class="hb-reference-composition hb-reference-lcd-legend" aria-label="INTERFACE 2" data-component-id="HB-TABLE-REFERENCE" data-component-variant="lcd-legend" tabindex="0">
+<table class="hb-reference-table">
+<thead>
+<tr>
+<th scope="col"><p>No.</p></th>
+<th scope="col"><p>Indicator</p></th>
+<th scope="col"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><p>1</p></td>
+<td><p>Discharging Indicator</p></td>
+<td><p>This USB port is discharging.</p></td>
+</tr>
+<tr>
+<td><p>2</p></td>
+<td><p>Charging Indicator</p></td>
+<td><p>This USB port is charging.</p></td>
+</tr>
+<tr>
+<td><p>3</p></td>
+<td><p>Charging or Discharging Power</p></td>
+<td><p>Displays charging or discharging power of the corresponding port.</p></td>
+</tr>
+</tbody>
+</table>
+</figure>
 
 ## INTERFACE 3
 
 <img src="assets/ir/7282f47a25d4216f3306267313b027a3a0a7133f62cf66d7b3dc516aa038b539/lcd_interface_3.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je100c_eu_en/lcd_interface_3.png" data-web-finished-panel-sha256="7282f47a25d4216f3306267313b027a3a0a7133f62cf66d7b3dc516aa038b539" alt="LCD interface 3 device display" />
 
-| No. | Indicator | Description |
-|----|----|----|
-| 1 | Battery Health and Cycle Count | Displays the current battery health percentage and the number of charge/discharge cycles. Green: Battery health is high. Yellow: Battery health is moderate. Red: Battery health is low. |
-| 2 | Battery Temperature | Displays the current battery temperature. |
+<figure class="hb-reference-composition hb-reference-lcd-legend" aria-label="INTERFACE 3" data-component-id="HB-TABLE-REFERENCE" data-component-variant="lcd-legend" tabindex="0">
+<table class="hb-reference-table">
+<thead>
+<tr>
+<th scope="col"><p>No.</p></th>
+<th scope="col"><p>Indicator</p></th>
+<th scope="col"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><p>1</p></td>
+<td><p>Battery Health and Cycle Count</p></td>
+<td><p>Displays the current battery health percentage and the number of charge/discharge cycles. Green: Battery health is high. Yellow: Battery health is moderate. Red: Battery health is low.</p></td>
+</tr>
+<tr>
+<td><p>2</p></td>
+<td><p>Battery Temperature</p></td>
+<td><p>Displays the current battery temperature.</p></td>
+</tr>
+</tbody>
+</table>
+</figure>
 
 # OPERATIONS
 
@@ -139,13 +259,38 @@ Energy Saving Mode resumes its previous state after powering on. Manual switchin
 
 <img src="assets/ir/d33d3830b8f36e02a0a32f6ffa57d3d6dfbeab7980c1285e77316089590dd957/operation_lcd.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je100c_eu_en/operation_lcd.png" data-web-finished-panel-sha256="d33d3830b8f36e02a0a32f6ffa57d3d6dfbeab7980c1285e77316089590dd957" alt="DISPLAY button device art" />
 
-| Function | Description |
-|----|----|
-| Screen Wake-Up | Lights up when the DISPLAY button is briefly pressed, or automatically during charging or discharging. |
-| Screen Always On | While the screen is lit, double-press the DISPLAY button. |
-| Screen Switching | After the screen lights up, briefly press the DISPLAY button to switch pages. |
-| Turn Off Screen Always-On | Double-press the DISPLAY button again. |
-| Auto Screen Off | 10 seconds after lighting up with no operation, or 2 hours after entering always-on mode. |
+<figure class="hb-reference-composition hb-reference-lcd-actions-compact" aria-label="LCD SCREEN" data-component-id="HB-TABLE-REFERENCE" data-component-variant="lcd-actions-compact" tabindex="0">
+<table class="hb-reference-table">
+<thead>
+<tr>
+<th scope="col"><p>Function</p></th>
+<th scope="col"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><p>Screen Wake-Up</p></td>
+<td><p>Lights up when the DISPLAY button is briefly pressed, or automatically during charging or discharging.</p></td>
+</tr>
+<tr>
+<td><p>Screen Always On</p></td>
+<td><p>While the screen is lit, double-press the DISPLAY button.</p></td>
+</tr>
+<tr>
+<td><p>Screen Switching</p></td>
+<td><p>After the screen lights up, briefly press the DISPLAY button to switch pages.</p></td>
+</tr>
+<tr>
+<td><p>Turn Off Screen Always-On</p></td>
+<td><p>Double-press the DISPLAY button again.</p></td>
+</tr>
+<tr>
+<td><p>Auto Screen Off</p></td>
+<td><p>10 seconds after lighting up with no operation, or 2 hours after entering always-on mode.</p></td>
+</tr>
+</tbody>
+</table>
+</figure>
 
 # CHARGING
 
@@ -207,53 +352,108 @@ If this product is stored for a long period of time (3 months - 6 months) with t
 
 ## GENERAL INFO
 
-|                |                                               |
-|----------------|-----------------------------------------------|
-| Product Name   | Jackery Explorer 100D                         |
-| Model No.      | JE-100C                                       |
-| Capacity       | 96Wh (5Ah/19.2V DC)                           |
-| Cell Chemistry | LiFePO4                                       |
-| Weight         | 855 g ± 10 g                                  |
-| Dimensions     | (118.7 ± 1) × (82.6 ± 0.5) × (85.68 ± 0.8) mm |
+
+
+<figure aria-label="GENERAL INFO" class="hb-spec-table-composition"><table class="hb-source-specification hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
+
+<tbody>
+<tr><th class="manual-spec-label hb-spec-label" scope="row"><p>Product Name</p></th>
+<td class="manual-spec-value hb-spec-value"><p>Jackery Explorer 100D</p></td>
+</tr>
+<tr><th class="manual-spec-label hb-spec-label" scope="row"><p>Model No.</p></th>
+<td class="manual-spec-value hb-spec-value"><p>JE-100C</p></td>
+</tr>
+<tr><th class="manual-spec-label hb-spec-label" scope="row"><p>Capacity</p></th>
+<td class="manual-spec-value hb-spec-value"><p>96Wh (5Ah/19.2V DC)</p></td>
+</tr>
+<tr><th class="manual-spec-label hb-spec-label" scope="row"><p>Cell Chemistry</p></th>
+<td class="manual-spec-value hb-spec-value"><p>LiFePO4</p></td>
+</tr>
+<tr><th class="manual-spec-label hb-spec-label" scope="row"><p>Weight</p></th>
+<td class="manual-spec-value hb-spec-value"><p>855 g ± 10 g</p></td>
+</tr>
+<tr><th class="manual-spec-label hb-spec-label" scope="row"><p>Dimensions</p></th>
+<td class="manual-spec-value hb-spec-value"><p>(118.7 ± 1) × (82.6 ± 0.5) × (85.68 ± 0.8) mm</p></td>
+</tr>
+</tbody>
+</table></figure>
+
+
 
 ## INPUT PORTS
 
-<table>
-<colgroup>
-<col style="width: 34%" />
-<col style="width: 66%" />
-</colgroup>
+
+
+<figure aria-label="INPUT PORTS" class="hb-spec-table-composition"><table class="hb-source-specification hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
+
 <tbody>
-<tr>
-<td><p>1 × USB-C 140W MAX IN/OUT</p></td>
-<td><p>Charger: 5V⎓3A, 9V⎓3A, 12V⎓3A, 15V⎓3A, 20V⎓5A, 28V⎓5A, 140W Max</p>
+<tr><th class="manual-spec-label hb-spec-label" scope="row"><p>1 × USB-C 140W MAX IN/OUT</p></th>
+<td class="manual-spec-value hb-spec-value"><p>Charger: 5V⎓3A, 9V⎓3A, 12V⎓3A, 15V⎓3A, 20V⎓5A, 28V⎓5A, 140W Max</p>
 <p>Vehicle: 12V⎓5A Max, 24V⎓5A Max</p>
-<p>PV: 10V-30V, 100W Max</p></td>
+<p>PV: 10V-30V, 100W Max</p>
+</td>
 </tr>
 </tbody>
-</table>
+</table></figure>
+
+
 
 ## OUTPUT PORTS
 
-|                    |                                                        |
-|--------------------|--------------------------------------------------------|
-| 1 × USB-A 18W MAX  | 5V⎓2A, 9V⎓2A, 12V⎓1.5A, 18W Max                        |
-| 2 × USB-C 140W MAX | 5V⎓3A, 9V⎓3A, 12V⎓3A, 15V⎓3A, 20V⎓5A, 28V⎓5A, 140W Max |
+
+
+<figure aria-label="OUTPUT PORTS" class="hb-spec-table-composition"><table class="hb-source-specification hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
+
+<tbody>
+<tr><th class="manual-spec-label hb-spec-label" scope="row"><p>1 × USB-A 18W MAX</p></th>
+<td class="manual-spec-value hb-spec-value"><p>5V⎓2A, 9V⎓2A, 12V⎓1.5A, 18W Max</p></td>
+</tr>
+<tr><th class="manual-spec-label hb-spec-label" scope="row"><p>2 × USB-C 140W MAX</p></th>
+<td class="manual-spec-value hb-spec-value"><p>5V⎓3A, 9V⎓3A, 12V⎓3A, 15V⎓3A, 20V⎓5A, 28V⎓5A, 140W Max</p></td>
+</tr>
+</tbody>
+</table></figure>
+
+
 
 ## TOTAL OUTPUT
 
-|                       |                       |
-|-----------------------|-----------------------|
-| USB-C + USB-C         | (70W + 70W) Max       |
-| USB-C + USB-A         | (140W + 18W) Max      |
-| USB-C + USB-C + USB-A | (70W + 70W + 18W) Max |
+
+
+<figure aria-label="TOTAL OUTPUT" class="hb-spec-table-composition"><table class="hb-source-specification hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
+
+<tbody>
+<tr><th class="manual-spec-label hb-spec-label" scope="row"><p>USB-C + USB-C</p></th>
+<td class="manual-spec-value hb-spec-value"><p>(70W + 70W) Max</p></td>
+</tr>
+<tr><th class="manual-spec-label hb-spec-label" scope="row"><p>USB-C + USB-A</p></th>
+<td class="manual-spec-value hb-spec-value"><p>(140W + 18W) Max</p></td>
+</tr>
+<tr><th class="manual-spec-label hb-spec-label" scope="row"><p>USB-C + USB-C + USB-A</p></th>
+<td class="manual-spec-value hb-spec-value"><p>(70W + 70W + 18W) Max</p></td>
+</tr>
+</tbody>
+</table></figure>
+
+
 
 ## ENVIRONMENTAL OPERATING TEMPERATURE
 
-|                       |               |
-|-----------------------|---------------|
-| Charge Temperature    | 0°C to 45°C   |
-| Discharge Temperature | -20°C to 45°C |
+
+
+<figure aria-label="ENVIRONMENTAL OPERATING TEMPERATURE" class="hb-spec-table-composition"><table class="hb-source-specification hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
+
+<tbody>
+<tr><th class="manual-spec-label hb-spec-label" scope="row"><p>Charge Temperature</p></th>
+<td class="manual-spec-value hb-spec-value"><p>0°C to 45°C</p></td>
+</tr>
+<tr><th class="manual-spec-label hb-spec-label" scope="row"><p>Discharge Temperature</p></th>
+<td class="manual-spec-value hb-spec-value"><p>-20°C to 45°C</p></td>
+</tr>
+</tbody>
+</table></figure>
+
+
 
 ※ USB Type-C® and USB-C® are registered trademarks of USB Implementers Forum.
 

@@ -12,6 +12,7 @@ from typing import Any, Iterable
 
 from tools.lang_registry import canonical_language
 from tools.safe_copy import assert_source_tree_no_symlinks
+from tools.web_component_admission import require_fresh_component_admission
 from tools.utils.path_utils import PathSegments
 
 
@@ -27,11 +28,20 @@ _INCLUDE_RE = re.compile(
 
 
 def require_publishable_manual_ir(markdown_dir: Path) -> None:
-    """Reject a frozen manual candidate with unresolved source review at seal."""
+    """Reject unresolved review or missing native shared components at seal."""
     ir_path = Path(markdown_dir) / PathSegments.MANUAL_IR_JSON
     if not ir_path.is_file():
         return  # Existing projection releases do not carry a manual IR sidecar.
     payload = _load_object(ir_path, label="manual IR")
+    from tools.frozen_web_component_coverage import NATIVE_SOURCES, require_frozen_component_coverage
+
+    if payload.get("source") in NATIVE_SOURCES:
+        from tools.manual_ir import read_manual_ir
+
+        try:
+            require_frozen_component_coverage(read_manual_ir(ir_path).to_dict())
+        except ValueError as exc:
+            raise RuntimeError(str(exc)) from exc
     metadata = payload.get("metadata")
     if not isinstance(metadata, dict):
         return  # Historical projection sidecars predate source-review metadata.
@@ -329,6 +339,9 @@ def seal_release_evidence(
     require_publishable_manual_ir(markdown_dir)
     checked = require_consistent_captures(captures)
     final = checked[-1]
+    require_fresh_component_admission(
+        markdown_dir, model=final.model, region=final.region, language=final.language,
+    )
     recaptured = capture_projection(
         final.manifest_path,
         action="html",
@@ -521,6 +534,10 @@ def verify_release_evidence(
         raise RuntimeError(f"Web language release HTML digest mismatch: {receipt_path}")
     if html_dir is not None and _file_inventory(html_dir) != recorded_html:
         raise RuntimeError(f"Web language release HTML files differ from evidence: {html_dir}")
+    require_publishable_manual_ir(markdown_dir)
+    require_fresh_component_admission(
+        markdown_dir, model=model, region=region, language=language, stored=stored,
+    )
     return VerifiedLanguageReleaseEvidence(
         path=receipt_path,
         sha256=receipt_sha256,
