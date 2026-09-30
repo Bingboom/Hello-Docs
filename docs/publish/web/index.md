@@ -21,6 +21,7 @@
 - [JE-1000F / EU / pl - Jackery Explorer 1000 — pl](JE-1000F/EU/pl/md/manual_je1000f_eu_pl.md)
 - [JE-1000F / EU / pt - Jackery Explorer 1000 — pt](JE-1000F/EU/pt/md/manual_je1000f_eu_pt.md)
 - [JE-1000F / EU / uk - Jackery Explorer 1000 — uk](JE-1000F/EU/uk/md/manual_je1000f_eu_uk.md)
+- [JE-1000F / JP / ja - Jackery ポータブル電源 1000 New 取扱説明書](JE-1000F/JP/ja/md/manual_je1000f_jp.md)
 - [JE-1000F / US / en - Jackery Explorer 1000 User Manual](JE-1000F/US/en/md/manual_je1000f_us.md)
 - [JE-1000F / US / es - Jackery Explorer 1000 Manual de usuario](JE-1000F/US/es/md/manual_je1000f_us_es.md)
 - [JE-1000F / US / fr - Jackery Explorer 1000 Manuel d'utilisation](JE-1000F/US/fr/md/manual_je1000f_us_fr.md)
