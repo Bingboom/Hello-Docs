@@ -58,7 +58,7 @@
   ],
   "bundle_root": "frozen-source",
   "bundle_sha256": "410bbad5ebee16be0d9b7f21da5fc7f4d8bb64b91da1e6c85d262012339fea9f",
-  "content_sha256": "55620d48f64bfb085a65fae61af0d6f75dc0644317f2ffbbcb32f29488aaab46",
+  "content_sha256": "1e89adfab5d3cf33a6caac528dd2339fb5d592a397a4b3dbdc17aa1160b5b366",
   "language": "pt",
   "layout_params_sha256": "f5ae099abc1a82ffda3abcc5a13725aca3c201e720a0374d88d1643f9773f279",
   "metadata": {
@@ -130,6 +130,7 @@
       "HB-SPECIAL-OVERVIEW": 1,
       "HB-SPECIAL-REFERENCE-FIGURE": 7,
       "HB-TABLE-AUTO-RESUME": 1,
+      "HB-TABLE-KEY-COMBINATIONS": 1,
       "HB-TABLE-LCD-ICON": 1,
       "HB-TABLE-LCD-MODE": 1,
       "HB-TABLE-SPEC": 4,
@@ -750,6 +751,51 @@
             "two-column-middle-span"
           ]
         },
+        "HB-TABLE-KEY-COMBINATIONS": {
+          "adapters": {
+            "idml": {
+              "capability": "projection-only",
+              "key": "idml_key_combinations"
+            },
+            "latex": {
+              "capability": "projection-only",
+              "key": "hb_latex_key_combinations"
+            },
+            "web": {
+              "capability": "rendered",
+              "key": "hb_key_combinations"
+            },
+            "word": {
+              "capability": "projection-only",
+              "key": "word_key_combinations"
+            }
+          },
+          "asset_roles": {},
+          "slots": {
+            "headers": {
+              "content_kinds": [
+                "ordered_headers"
+              ],
+              "required": true
+            },
+            "rows": {
+              "content_kinds": [
+                "ordered_rows"
+              ],
+              "required": true
+            }
+          },
+          "source_kinds": [
+            "table_key_combinations"
+          ],
+          "style_id": "HB-TABLE-KEY-COMBINATIONS",
+          "token_roles": [
+            "component.table.key-combinations"
+          ],
+          "variants": [
+            "three-column"
+          ]
+        },
         "HB-TABLE-LCD-ICON": {
           "adapters": {
             "idml": {
@@ -1213,7 +1259,7 @@
       "registry_id": "hb-component-registry",
       "schema_version": "component-registry/v1"
     },
-    "component_registry_sha256": "6f0ad07bc59ffd39d3add687055dc2d6ff3106a83a973422b70a84fbd21cf47a",
+    "component_registry_sha256": "6415681a9e2c54e3a42514372c81c44b548731c1a2fffad1015ac7e4e512327e",
     "composites": [
       {
         "asset_key": "overview.finished.pt.front",
@@ -1423,6 +1469,20 @@
         "component.table.auto-resume": {
           "component_ids": [
             "HB-TABLE-AUTO-RESUME"
+          ],
+          "theme_roles": [
+            "surface.paper",
+            "surface.muted",
+            "border.strong",
+            "radius.panel",
+            "type.table.label",
+            "type.table.value",
+            "width.component-band"
+          ]
+        },
+        "component.table.key-combinations": {
+          "component_ids": [
+            "HB-TABLE-KEY-COMBINATIONS"
           ],
           "theme_roles": [
             "surface.paper",
@@ -1880,7 +1940,7 @@
       "schema_version": "manual-theme/v1",
       "theme_id": "hb-manual-default"
     },
-    "manual_theme_sha256": "e9cf0ac664bf94941f89735e5294796d8eb4ec8c96b81dd83a506e5e3de17e53",
+    "manual_theme_sha256": "65e756b33e1a70be684c192c6cda3209dcdcfd130bd2a5da67f77b12b9ac0833",
     "markdown_filename": "manual_je1000f_eu_pt.md",
     "overview_instance": {
       "component_id": "HB-SPECIAL-OVERVIEW",
@@ -6063,6 +6123,12 @@
     },
     "projection": "whole-document-components/v1",
     "rendered_source_figure_count": 5,
+    "shared_keys_migration": {
+      "component_id": "HB-TABLE-KEY-COMBINATIONS",
+      "previous_ir_sha256": "7bd53213607db6f0f1c58227847866b40fdeb2207da966b0169a21ef78101ef9",
+      "source_ref": "pt/operations#block-26",
+      "text_preserved": true
+    },
     "skipped_raw": 0,
     "source_errata": {
       "approval": {
@@ -11184,212 +11250,59 @@
         {
           "asset_refs": [],
           "block_id": "operations:block-0026",
-          "content_sha256": "9900933aea56f7dcf5ed5aeef9dc9f41c05c5253c0f31214ac7396a5302dba85",
+          "content_sha256": "34a8c8d0eb5304c5709b0b3b52fe8fc2473b4c6610ea32887986624a4fb01d9b",
           "kind": "flow",
           "payload": {
-            "children": [
-              {
-                "children": [
-                  {
-                    "children": [
-                      {
-                        "children": [
-                          {
-                            "children": [
-                              {
-                                "kind": "text",
-                                "text": "Botões"
-                              }
-                            ],
-                            "header": true,
-                            "kind": "table_cell"
-                          },
-                          {
-                            "children": [
-                              {
-                                "kind": "text",
-                                "text": "Operação"
-                              }
-                            ],
-                            "header": true,
-                            "kind": "table_cell"
-                          },
-                          {
-                            "children": [
-                              {
-                                "kind": "text",
-                                "text": "Função"
-                              }
-                            ],
-                            "header": true,
-                            "kind": "table_cell"
-                          }
-                        ],
-                        "kind": "table_row"
-                      },
-                      {
-                        "children": [
-                          {
-                            "children": [
-                              {
-                                "kind": "text",
-                                "text": "Botão liga/desliga + Botão Power CA"
-                              }
-                            ],
-                            "header": true,
-                            "kind": "table_cell"
-                          },
-                          {
-                            "children": [
-                              {
-                                "kind": "text",
-                                "text": "3s Pressione e segure ambos por 3 s"
-                              }
-                            ],
-                            "header": false,
-                            "kind": "table_cell"
-                          },
-                          {
-                            "children": [
-                              {
-                                "kind": "text",
-                                "text": "Ligar/Desligar o Modo de Economia de Energia"
-                              }
-                            ],
-                            "header": false,
-                            "kind": "table_cell"
-                          }
-                        ],
-                        "kind": "table_row"
-                      },
-                      {
-                        "children": [
-                          {
-                            "children": [
-                              {
-                                "kind": "text",
-                                "text": "Botão liga/desliga + Botão de energia CC/USB"
-                              }
-                            ],
-                            "header": true,
-                            "kind": "table_cell"
-                          },
-                          {
-                            "children": [
-                              {
-                                "kind": "text",
-                                "text": "3s Pressione e segure ambos por 3 s"
-                              }
-                            ],
-                            "header": false,
-                            "kind": "table_cell"
-                          },
-                          {
-                            "children": [
-                              {
-                                "kind": "text",
-                                "text": "Redefinir o Wi-Fi e o Bluetooth"
-                              }
-                            ],
-                            "header": false,
-                            "kind": "table_cell"
-                          }
-                        ],
-                        "kind": "table_row"
-                      },
-                      {
-                        "children": [
-                          {
-                            "children": [
-                              {
-                                "kind": "text",
-                                "text": "Botão Power CA + Botão de energia CC/USB"
-                              }
-                            ],
-                            "header": true,
-                            "kind": "table_cell"
-                          },
-                          {
-                            "children": [
-                              {
-                                "kind": "text",
-                                "text": "1 s Pressione e segure ambos por 1 s"
-                              }
-                            ],
-                            "header": false,
-                            "kind": "table_cell"
-                          },
-                          {
-                            "children": [
-                              {
-                                "kind": "text",
-                                "text": "Ligar/Desligar Wi-Fi e Bluetooth"
-                              }
-                            ],
-                            "header": false,
-                            "kind": "table_cell"
-                          }
-                        ],
-                        "kind": "table_row"
-                      },
-                      {
-                        "children": [
-                          {
-                            "children": [
-                              {
-                                "kind": "text",
-                                "text": "Botão liga/desliga + Botão de luz LED"
-                              }
-                            ],
-                            "header": true,
-                            "kind": "table_cell"
-                          },
-                          {
-                            "children": [
-                              {
-                                "kind": "text",
-                                "text": "1 s Pressione e segure ambos por 1 s"
-                              }
-                            ],
-                            "header": false,
-                            "kind": "table_cell"
-                          },
-                          {
-                            "children": [
-                              {
-                                "kind": "text",
-                                "text": "Ligar/Desligar o modo de carregamento de emergência"
-                              }
-                            ],
-                            "header": false,
-                            "kind": "table_cell"
-                          }
-                        ],
-                        "kind": "table_row"
-                      }
+            "component_spec": {
+              "assets": [],
+              "component_id": "HB-TABLE-KEY-COMBINATIONS",
+              "language": "pt",
+              "metadata": {},
+              "schema_version": "component-spec/v1",
+              "slots": [
+                {
+                  "content": [
+                    "Botões",
+                    "Operação",
+                    "Função"
+                  ],
+                  "content_kind": "ordered_headers",
+                  "role": "headers"
+                },
+                {
+                  "content": [
+                    [
+                      "Botão liga/desliga + Botão Power CA",
+                      "3s Pressione e segure ambos por 3 s",
+                      "Ligar/Desligar o Modo de Economia de Energia"
                     ],
-                    "kind": "table_body"
-                  }
-                ],
-                "kind": "table",
-                "presentation": {
-                  "html": {
-                    "attributes": {
-                      "class": "manual-table"
-                    }
-                  }
+                    [
+                      "Botão liga/desliga + Botão de energia CC/USB",
+                      "3s Pressione e segure ambos por 3 s",
+                      "Redefinir o Wi-Fi e o Bluetooth"
+                    ],
+                    [
+                      "Botão Power CA + Botão de energia CC/USB",
+                      "1 s Pressione e segure ambos por 1 s",
+                      "Ligar/Desligar Wi-Fi e Bluetooth"
+                    ],
+                    [
+                      "Botão liga/desliga + Botão de luz LED",
+                      "1 s Pressione e segure ambos por 1 s",
+                      "Ligar/Desligar o modo de carregamento de emergência"
+                    ]
+                  ],
+                  "content_kind": "ordered_rows",
+                  "role": "rows"
                 }
-              }
-            ],
-            "kind": "group",
-            "presentation": {
-              "html": {
-                "attributes": {
-                  "class": "table-wrapper docutils container"
-                }
-              }
+              ],
+              "source_ref": "pt/operations/shortcuts",
+              "token_roles": [
+                "component.table.key-combinations"
+              ],
+              "variant": "three-column"
             },
-            "role": "container",
+            "kind": "component",
             "schema_version": "manual-flow/v2"
           },
           "source_ref": "pt/operations#block-26"

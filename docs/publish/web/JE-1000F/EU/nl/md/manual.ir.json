@@ -58,7 +58,7 @@
   ],
   "bundle_root": "frozen-source",
   "bundle_sha256": "d624b31b20dc768b107be812531314c5f67c13e0b7977b60b46c2a75332a6fae",
-  "content_sha256": "73f0b24ce1c3fa8923f50945f378639059fef59785fe2a3f2d5e5fefe4b491e7",
+  "content_sha256": "f4549ae58cd6f12400268ba8b4a2f5253a024332fb27503e973093854386c8eb",
   "language": "nl",
   "layout_params_sha256": "f5ae099abc1a82ffda3abcc5a13725aca3c201e720a0374d88d1643f9773f279",
   "metadata": {
@@ -130,6 +130,7 @@
       "HB-SPECIAL-OVERVIEW": 1,
       "HB-SPECIAL-REFERENCE-FIGURE": 7,
       "HB-TABLE-AUTO-RESUME": 1,
+      "HB-TABLE-KEY-COMBINATIONS": 1,
       "HB-TABLE-LCD-ICON": 1,
       "HB-TABLE-LCD-MODE": 1,
       "HB-TABLE-SPEC": 4,
@@ -750,6 +751,51 @@
             "two-column-middle-span"
           ]
         },
+        "HB-TABLE-KEY-COMBINATIONS": {
+          "adapters": {
+            "idml": {
+              "capability": "projection-only",
+              "key": "idml_key_combinations"
+            },
+            "latex": {
+              "capability": "projection-only",
+              "key": "hb_latex_key_combinations"
+            },
+            "web": {
+              "capability": "rendered",
+              "key": "hb_key_combinations"
+            },
+            "word": {
+              "capability": "projection-only",
+              "key": "word_key_combinations"
+            }
+          },
+          "asset_roles": {},
+          "slots": {
+            "headers": {
+              "content_kinds": [
+                "ordered_headers"
+              ],
+              "required": true
+            },
+            "rows": {
+              "content_kinds": [
+                "ordered_rows"
+              ],
+              "required": true
+            }
+          },
+          "source_kinds": [
+            "table_key_combinations"
+          ],
+          "style_id": "HB-TABLE-KEY-COMBINATIONS",
+          "token_roles": [
+            "component.table.key-combinations"
+          ],
+          "variants": [
+            "three-column"
+          ]
+        },
         "HB-TABLE-LCD-ICON": {
           "adapters": {
             "idml": {
@@ -1213,7 +1259,7 @@
       "registry_id": "hb-component-registry",
       "schema_version": "component-registry/v1"
     },
-    "component_registry_sha256": "6f0ad07bc59ffd39d3add687055dc2d6ff3106a83a973422b70a84fbd21cf47a",
+    "component_registry_sha256": "6415681a9e2c54e3a42514372c81c44b548731c1a2fffad1015ac7e4e512327e",
     "composites": [
       {
         "asset_key": "overview.finished.nl.front",
@@ -1423,6 +1469,20 @@
         "component.table.auto-resume": {
           "component_ids": [
             "HB-TABLE-AUTO-RESUME"
+          ],
+          "theme_roles": [
+            "surface.paper",
+            "surface.muted",
+            "border.strong",
+            "radius.panel",
+            "type.table.label",
+            "type.table.value",
+            "width.component-band"
+          ]
+        },
+        "component.table.key-combinations": {
+          "component_ids": [
+            "HB-TABLE-KEY-COMBINATIONS"
           ],
           "theme_roles": [
             "surface.paper",
@@ -1880,7 +1940,7 @@
       "schema_version": "manual-theme/v1",
       "theme_id": "hb-manual-default"
     },
-    "manual_theme_sha256": "e9cf0ac664bf94941f89735e5294796d8eb4ec8c96b81dd83a506e5e3de17e53",
+    "manual_theme_sha256": "65e756b33e1a70be684c192c6cda3209dcdcfd130bd2a5da67f77b12b9ac0833",
     "markdown_filename": "manual_je1000f_eu_nl.md",
     "overview_instance": {
       "component_id": "HB-SPECIAL-OVERVIEW",
@@ -6115,6 +6175,12 @@
     },
     "projection": "whole-document-components/v1",
     "rendered_source_figure_count": 5,
+    "shared_keys_migration": {
+      "component_id": "HB-TABLE-KEY-COMBINATIONS",
+      "previous_ir_sha256": "3998c836d1cac2003755e953794b500e7c6daf94416375cc046b450251becd91",
+      "source_ref": "nl/operations#block-26",
+      "text_preserved": true
+    },
     "skipped_raw": 0,
     "source_errata": {
       "approval": {
@@ -11253,212 +11319,59 @@
         {
           "asset_refs": [],
           "block_id": "operations:block-0026",
-          "content_sha256": "efe5a32eb03d0bf3db507c181a054cf8b7b58557f5d6594f6904dbcc3900cb7c",
+          "content_sha256": "edff841ee0f0e5f1ff6b1ce6a01dfe94fb76eb4af16fc7799ac913e64f38cdd3",
           "kind": "flow",
           "payload": {
-            "children": [
-              {
-                "children": [
-                  {
-                    "children": [
-                      {
-                        "children": [
-                          {
-                            "children": [
-                              {
-                                "kind": "text",
-                                "text": "Knoppen"
-                              }
-                            ],
-                            "header": true,
-                            "kind": "table_cell"
-                          },
-                          {
-                            "children": [
-                              {
-                                "kind": "text",
-                                "text": "BEDIENING"
-                              }
-                            ],
-                            "header": true,
-                            "kind": "table_cell"
-                          },
-                          {
-                            "children": [
-                              {
-                                "kind": "text",
-                                "text": "Functie"
-                              }
-                            ],
-                            "header": true,
-                            "kind": "table_cell"
-                          }
-                        ],
-                        "kind": "table_row"
-                      },
-                      {
-                        "children": [
-                          {
-                            "children": [
-                              {
-                                "kind": "text",
-                                "text": "Aan/Uit-knop + Aan/uit-knop voor AC"
-                              }
-                            ],
-                            "header": true,
-                            "kind": "table_cell"
-                          },
-                          {
-                            "children": [
-                              {
-                                "kind": "text",
-                                "text": "3s Houd beide knoppen 3 seconden ingedrukt"
-                              }
-                            ],
-                            "header": false,
-                            "kind": "table_cell"
-                          },
-                          {
-                            "children": [
-                              {
-                                "kind": "text",
-                                "text": "De Energiebesparingsmodus in-/uitschakelen"
-                              }
-                            ],
-                            "header": false,
-                            "kind": "table_cell"
-                          }
-                        ],
-                        "kind": "table_row"
-                      },
-                      {
-                        "children": [
-                          {
-                            "children": [
-                              {
-                                "kind": "text",
-                                "text": "Aan/Uit-knop + Aan/uit-knop voor DC/USB"
-                              }
-                            ],
-                            "header": true,
-                            "kind": "table_cell"
-                          },
-                          {
-                            "children": [
-                              {
-                                "kind": "text",
-                                "text": "3s Houd beide knoppen 3 seconden ingedrukt"
-                              }
-                            ],
-                            "header": false,
-                            "kind": "table_cell"
-                          },
-                          {
-                            "children": [
-                              {
-                                "kind": "text",
-                                "text": "Reset wifi en Bluetooth"
-                              }
-                            ],
-                            "header": false,
-                            "kind": "table_cell"
-                          }
-                        ],
-                        "kind": "table_row"
-                      },
-                      {
-                        "children": [
-                          {
-                            "children": [
-                              {
-                                "kind": "text",
-                                "text": "Aan/uit-knop voor AC + Aan/uit-knop voor DC/USB"
-                              }
-                            ],
-                            "header": true,
-                            "kind": "table_cell"
-                          },
-                          {
-                            "children": [
-                              {
-                                "kind": "text",
-                                "text": "1 seconde Houd beide knoppen 1 seconde ingedrukt"
-                              }
-                            ],
-                            "header": false,
-                            "kind": "table_cell"
-                          },
-                          {
-                            "children": [
-                              {
-                                "kind": "text",
-                                "text": "Wifi en Bluetooth in-/uitschakelen"
-                              }
-                            ],
-                            "header": false,
-                            "kind": "table_cell"
-                          }
-                        ],
-                        "kind": "table_row"
-                      },
-                      {
-                        "children": [
-                          {
-                            "children": [
-                              {
-                                "kind": "text",
-                                "text": "Aan/Uit-knop + LED-lampknop"
-                              }
-                            ],
-                            "header": true,
-                            "kind": "table_cell"
-                          },
-                          {
-                            "children": [
-                              {
-                                "kind": "text",
-                                "text": "1 seconde Houd beide knoppen 1 seconde ingedrukt"
-                              }
-                            ],
-                            "header": false,
-                            "kind": "table_cell"
-                          },
-                          {
-                            "children": [
-                              {
-                                "kind": "text",
-                                "text": "De Noodoplaadmodus in-/uitschakelen"
-                              }
-                            ],
-                            "header": false,
-                            "kind": "table_cell"
-                          }
-                        ],
-                        "kind": "table_row"
-                      }
+            "component_spec": {
+              "assets": [],
+              "component_id": "HB-TABLE-KEY-COMBINATIONS",
+              "language": "nl",
+              "metadata": {},
+              "schema_version": "component-spec/v1",
+              "slots": [
+                {
+                  "content": [
+                    "Knoppen",
+                    "BEDIENING",
+                    "Functie"
+                  ],
+                  "content_kind": "ordered_headers",
+                  "role": "headers"
+                },
+                {
+                  "content": [
+                    [
+                      "Aan/Uit-knop + Aan/uit-knop voor AC",
+                      "3s Houd beide knoppen 3 seconden ingedrukt",
+                      "De Energiebesparingsmodus in-/uitschakelen"
                     ],
-                    "kind": "table_body"
-                  }
-                ],
-                "kind": "table",
-                "presentation": {
-                  "html": {
-                    "attributes": {
-                      "class": "manual-table"
-                    }
-                  }
+                    [
+                      "Aan/Uit-knop + Aan/uit-knop voor DC/USB",
+                      "3s Houd beide knoppen 3 seconden ingedrukt",
+                      "Reset wifi en Bluetooth"
+                    ],
+                    [
+                      "Aan/uit-knop voor AC + Aan/uit-knop voor DC/USB",
+                      "1 seconde Houd beide knoppen 1 seconde ingedrukt",
+                      "Wifi en Bluetooth in-/uitschakelen"
+                    ],
+                    [
+                      "Aan/Uit-knop + LED-lampknop",
+                      "1 seconde Houd beide knoppen 1 seconde ingedrukt",
+                      "De Noodoplaadmodus in-/uitschakelen"
+                    ]
+                  ],
+                  "content_kind": "ordered_rows",
+                  "role": "rows"
                 }
-              }
-            ],
-            "kind": "group",
-            "presentation": {
-              "html": {
-                "attributes": {
-                  "class": "table-wrapper docutils container"
-                }
-              }
+              ],
+              "source_ref": "nl/operations/shortcuts",
+              "token_roles": [
+                "component.table.key-combinations"
+              ],
+              "variant": "three-column"
             },
-            "role": "container",
+            "kind": "component",
             "schema_version": "manual-flow/v2"
           },
           "source_ref": "nl/operations#block-26"
