@@ -66,198 +66,53 @@ Bei Fragen wenden Sie sich bitte an den Jackery-Kundendienst.</p></div></div></f
 
 <img src="../../../../_static/manual-assets/_pool/84/845184de0a6f88c796255c21fd5415a078d9092db302975be4067de9ab10cde7.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_de/lcd_map.png" data-web-finished-panel-sha256="845184de0a6f88c796255c21fd5415a078d9092db302975be4067de9ab10cde7" alt="LCD-ANZEIGE" />
 
-<table class="longtable lcd-text-only">
-<colgroup>
-<col style="width: 8%" />
-<col style="width: 12%" />
-<col style="width: 28%" />
-<col style="width: 52%" />
-</colgroup>
-<tbody>
-<tr>
-<td><p>1</p></td>
-<td></td>
-<td><p>WLAN</p></td>
-<td><strong>Ein:</strong> WLAN verbunden.
-Blinkt: Bereit für die WLAN-Verbindung.
-<strong>Aus:</strong> WLAN getrennt.</td>
-</tr>
-<tr>
-<td><p>2</p></td>
-<td></td>
-<td><p>Bluetooth</p></td>
-<td><strong>Ein:</strong> Bluetooth verbunden.
-Blinkt: Bereit für die Bluetooth-Verbindung.
-<strong>Aus:</strong> Bluetooth getrennt.</td>
-</tr>
-<tr>
-<td><p>3</p></td>
-<td></td>
-<td><p>Leiser Lademodus</p></td>
-<td><strong>Ein:</strong> Das Rauschen beim Laden wird deutlich minimiert, während die Ladeleistung reduziert und die Ladegeschwindigkeit verlangsamt wird.
-<strong>Aus:</strong> Der leise Lademodus ist deaktiviert.
-Diese Funktion kann in der Jackery-App aktiviert oder deaktiviert werden.</td>
-</tr>
-<tr>
-<td><p>4</p></td>
-<td></td>
-<td><p>Ladeplan Plan</p></td>
-<td>Customizes the charging time of the Jackery Explorer 1000 Plus. Suitable for situations with fluctuating electricity prices, it allows for charging plans based on peak and off-peak electricity times, reducing electricity costs.
-Enable/disable this feature in the Jackery App. The setting is retained when the device is powered off.</td>
-</tr>
-<tr>
-<td><p>5</p></td>
-<td></td>
-<td><p>Selbstversorgungsmodus</p></td>
-<td><p>Maximiert die Nutzung von Solarenergie und reduziert die Abhängigkeit vom Netzstrom, indem gespeicherte Solarenergie priorisiert wird, wodurch die Stromkosten gesenkt werden (bitte aktivieren/deaktivieren Sie diese Funktion in der App). Die Power Station muss gleichzeitig mit beiden Solarmodulen und dem Netz verbunden sein, wobei die Lastleistung durch die Bypass-Leistung begrenzt werden muss.</p></td>
-</tr>
-<tr>
-<td><p>6</p></td>
-<td></td>
-<td><p>TOU-Modus</p></td>
-<td><strong>Ein:</strong> Der TOU-Modus (Time-of-Use) ist aktiviert (Standard-Backup-SOC: 60 %). Während Spitzenlastzeiten entlädt das Produkt bevorzugt die Batterie, sobald die gespeicherte Energie den Backup-SOC überschreitet, um Stromkosten zu reduzieren. Während der Niedriglastzeiten lädt das System die Batterie aus dem Netz, um Spitzenlasten zu reduzieren und Lasttäler auszugleichen.
-<strong>Aus:</strong> Der Tarifzeitmodus (TOU-Modus) ist deaktiviert. Das Gerät folgt keiner Tarifzeitmodus(TOU-Modus)-Strategie und arbeitet gemäß der standardmäßigen Stromversorgungs- und Ladelogik. Aktivieren oder deaktivieren Sie diesen Modus in der Jackery App. Die Einstellung bleibt auch nach dem Ausschalten des Geräts erhalten.</td>
-</tr>
-<tr>
-<td><p>7</p></td>
-<td></td>
-<td><p>USV</p></td>
-<td><strong>Ein:</strong> Das Produkt befindet sich im Bypass-Modus, und die Umschaltzeit vom Netzstrom auf die interne Batterie beträgt 10 ms.
-<strong>Aus:</strong> Das Produkt befindet sich nicht im Bypass-Modus.</td>
-</tr>
-<tr>
-<td><p>8</p></td>
-<td></td>
-<td><p>AC-Stromanzeige</p></td>
-<td><p>Der AC-Ausgang (reine Sinuswelle) ist eingeschaltet.</p></td>
-</tr>
-<tr>
-<td><p>9</p></td>
-<td></td>
-<td><p>Ausgangsspannung und -frequenz</p></td>
-<td><p>Zeigt die Ausgangsspannung und -frequenz an, wenn der AC-Ausgang eingeschaltet ist.</p></td>
-</tr>
-<tr>
-<td><p>10</p></td>
-<td></td>
-<td><p>Eingangsleistung</p></td>
-<td><p>Zeigt die Eingangsleistung in Watt an.</p></td>
-</tr>
-<tr>
-<td><p>11</p></td>
-<td></td>
-<td><p>Verbleibende Aufladezeit</p></td>
-<td><p>Anzeige der verbleibenden Ladezeit.</p></td>
-</tr>
-<tr>
-<td><p>12</p></td>
-<td></td>
-<td><p>AC-Netzladeanzeige</p></td>
-<td><p>Das Produkt wird über den AC-Eingang mit Netzstrom geladen.</p></td>
-</tr>
-<tr>
-<td><p>13</p></td>
-<td></td>
-<td><p>Autoladeanzeige</p></td>
-<td><p>Das Produkt wird über den DC-Eingang (DC8020) mit 12V Gleichstrom (Autoladung) geladen.</p></td>
-</tr>
-<tr>
-<td><p>14</p></td>
-<td></td>
-<td><p>Solar-Ladeanzeige</p></td>
-<td><p>Das Produkt wird über den DC-Eingang (DC8020) mit Solarpanel(s) geladen.</p></td>
-</tr>
-<tr>
-<td><p>15</p></td>
-<td></td>
-<td><p>Batteriesparmodus</p></td>
-<td><strong>Ein:</strong> Begrenzt die maximal nutzbare Batteriekapazität, um die Lebensdauer der Batterie zu verlängern.
-<strong>Aus:</strong> Der Batteriesparmodus ist deaktiviert.
-Diese Funktion kann in der Jackery-App aktiviert oder deaktiviert werden. Die Einstellung bleibt auch nach dem Ausschalten des Geräts erhalten.
-Hinweis 1: Diese Funktion ist nicht verfügbar, wenn das Produkt mit Batteriepacks verbunden ist.
-Hinweis 2: Ist diese Funktion aktiviert, führt das Produkt gelegentlich einen vollständigen Lade-/Entladezyklus zur Kalibrierung des SOC durch.</td>
-</tr>
-<tr>
-<td><p>16</p></td>
-<td></td>
-<td><p>Begrenzung der Ladeleistung</p></td>
-<td><strong>Ein:</strong> Die Begrenzung der Ladeleistung ist in der Jackery App aktiviert.
-<strong>Aus:</strong> Die Begrenzung der Ladeleistung ist in der Jackery App deaktiviert. Die Einstellung bleibt auch nach dem Ausschalten des Geräts erhalten.</td>
-</tr>
-<tr>
-<td><p>17</p></td>
-<td></td>
-<td><p>Batteriezustandsanzeige</p></td>
-<td><p>Wenn das Produkt geladen wird, leuchtet der orangefarbene Kreis um die Batterieanzeige nacheinander auf. Beim Laden anderer Geräte bleibt der orangefarbene Kreis dauerhaft eingeschaltet.</p></td>
-</tr>
-<tr>
-<td><p>18</p></td>
-<td></td>
-<td><p>Batterietiefstandsanzeige</p></td>
-<td><strong>Ein:</strong> Der Batteriestand liegt unter 20 %.
-Blinkt: Der Batteriestand liegt unter 5 %.
-<strong>Aus:</strong> Der Batteriestand liegt nicht unter 20 % oder das Produkt wird aufgeladen.</td>
-</tr>
-<tr>
-<td><p>19</p></td>
-<td></td>
-<td><p>Verbleibender Batterieprozentsatz</p></td>
-<td><p>Zeigt den verbleibenden Batteriestand an.</p></td>
-</tr>
-<tr>
-<td><p>20</p></td>
-<td></td>
-<td><p>Entlade-Timer</p></td>
-<td><strong>Ein:</strong> Ein Entlade-Timer ist eingestellt.
-<strong>Aus:</strong> Es ist kein Entlade-Timer eingestellt.
-Diese Funktion kann in der Jackery-App aktiviert oder deaktiviert werden. Die Einstellung bleibt nach dem Ausschalten des Geräts nicht gespeichert.</td>
-</tr>
-<tr>
-<td><p>21</p></td>
-<td></td>
-<td><p>Batteriepack-Anzeige und Anzahl der angeschlossenen Batterien</p></td>
-<td><p>Zeigt die Anzahl der angeschlossenen Batteriepacks an, sofern diese angeschlossen sind.</p></td>
-</tr>
-<tr>
-<td><p>22</p></td>
-<td></td>
-<td><p>Energiesparmodus</p></td>
-<td>Wenn der AC- oder USB-Ausgang durch Drücken der AC- oder USB-Stromtaste eingeschaltet wird:
-<strong>Ein:</strong> Der Energiesparmodus ist aktiviert.
-<strong>Aus:</strong> Der Energiesparmodus ist deaktiviert.</td>
-</tr>
-<tr>
-<td><p>23</p></td>
-<td></td>
-<td><p>Warnung vor hoher Temperatur</p></td>
-<td><p>Der Hochtemperaturschutz wurde aktiviert. Das Produkt kann die Funktion einstellen, bis die Temperatur wieder im normalen Betriebsbereich liegt.</p></td>
-</tr>
-<tr>
-<td><p>23</p></td>
-<td></td>
-<td><p>Warnung bei niedriger Temperatur</p></td>
-<td><p>Der Niedrigtemperaturschutz wurde aktiviert. Das Produkt kann die Funktion einstellen, bis die Temperatur wieder im normalen Betriebsbereich liegt.</p></td>
-</tr>
-<tr>
-<td><p>24</p></td>
-<td></td>
-<td><p>Fehlermeldung</p></td>
-<td><p>Ein Produktfehler ist aufgetreten. Bitte lesen Sie den Abschnitt „Fehlerbehebung“ für weitere Informationen.</p></td>
-</tr>
-<tr>
-<td><p>25</p></td>
-<td></td>
-<td><p>Ausgangsleistung</p></td>
-<td><p>Zeigt die Ausgangsleistung in Watt an.</p></td>
-</tr>
-<tr>
-<td><p>26</p></td>
-<td></td>
-<td><p>Verbleibende Entladezeit</p></td>
-<td><p>Anzeige der verbleibenden Entladezeit.</p></td>
-</tr>
-</tbody>
-</table>
+
+
+<figure aria-label="LCD icon meanings" class="hb-lcd-table-composition" data-component-id="HB-TABLE-LCD-ICON" tabindex="0"><table class="hb-lcd-icon-table"><colgroup><col class="hb-lcd-col-number"/><col class="hb-lcd-col-icon"/><col class="hb-lcd-col-name"/><col class="hb-lcd-col-description"/></colgroup><tbody><tr><td class="hb-lcd-number"><p>1</p></td><td class="hb-lcd-icon"><img alt="WLAN" class="hb-lcd-icon-art" src="../../../../_static/manual-assets/_pool/fc/fc4cc02b42efc31a32429ada2b78c4480a2fcbca647406da29b2ce75a8a8c1dc.png"/></td><td class="hb-lcd-name"><p>WLAN</p></td><td class="hb-lcd-description"><div class="line-block">
+<div class="line"><strong>Ein:</strong> WLAN verbunden.</div>
+<div class="line"><strong>Blinkt:</strong> Bereit für die WLAN-Verbindung.</div>
+<div class="line"><strong>Aus:</strong> WLAN getrennt.</div>
+</div></td></tr><tr><td class="hb-lcd-number"><p>2</p></td><td class="hb-lcd-icon"><img alt="Bluetooth" class="hb-lcd-icon-art" src="../../../../_static/manual-assets/_pool/7e/7e1392ba6a45e66a2e7367ae5df737ccc41ad2de46c4ac7d6baf062ff63bb361.png"/></td><td class="hb-lcd-name"><p>Bluetooth</p></td><td class="hb-lcd-description"><div class="line-block">
+<div class="line"><strong>Ein:</strong> Bluetooth verbunden.</div>
+<div class="line"><strong>Blinkt:</strong> Bereit für die Bluetooth-Verbindung.</div>
+<div class="line"><strong>Aus:</strong> Bluetooth getrennt.</div>
+</div></td></tr><tr><td class="hb-lcd-number"><p>3</p></td><td class="hb-lcd-icon"><img alt="Leiser Lademodus" class="hb-lcd-icon-art" src="../../../../_static/manual-assets/_pool/7f/7f743182c0509307793dde001356fff5c3d20dd32b09105b6a1d467af7e7f66d.png"/></td><td class="hb-lcd-name"><p>Leiser Lademodus</p></td><td class="hb-lcd-description"><div class="line-block">
+<div class="line"><strong>Ein:</strong> Das Rauschen beim Laden wird deutlich minimiert, während die Ladeleistung reduziert und die Ladegeschwindigkeit verlangsamt wird.</div>
+<div class="line"><strong>Aus:</strong> Der leise Lademodus ist deaktiviert.</div>
+<div class="line">Diese Funktion kann in der Jackery-App aktiviert oder deaktiviert werden.</div>
+</div></td></tr><tr><td class="hb-lcd-number"><p>4</p></td><td class="hb-lcd-icon"><img alt="Ladeplan Plan" class="hb-lcd-icon-art" src="../../../../_static/manual-assets/_pool/71/71017f43bab44852d5586d1d4f996f3c52d8451bceaa9249e29864652c2f537d.png"/></td><td class="hb-lcd-name"><p>Ladeplan Plan</p></td><td class="hb-lcd-description"><div class="line-block">
+<div class="line">Customizes the charging time of the Jackery Explorer 1000 Plus. Suitable for situations with fluctuating electricity prices, it allows for charging plans based on peak and off-peak electricity times, reducing electricity costs.</div>
+<div class="line">Enable/disable this feature in the Jackery App. The setting is retained when the device is powered off.</div>
+</div></td></tr><tr><td class="hb-lcd-number"><p>5</p></td><td class="hb-lcd-icon"><img alt="Selbstversorgungsmodus" class="hb-lcd-icon-art" src="../../../../_static/manual-assets/_pool/73/73225cf9faa868bbe937df298d55a696828a4156f40e90da5c2a7f0011f0b783.png"/></td><td class="hb-lcd-name"><p>Selbstversorgungsmodus</p></td><td class="hb-lcd-description"><p>Maximiert die Nutzung von Solarenergie und reduziert die Abhängigkeit vom Netzstrom, indem gespeicherte Solarenergie priorisiert wird, wodurch die Stromkosten gesenkt werden (bitte aktivieren/deaktivieren Sie diese Funktion in der App). Die Power Station muss gleichzeitig mit beiden Solarmodulen und dem Netz verbunden sein, wobei die Lastleistung durch die Bypass-Leistung begrenzt werden muss.</p></td></tr><tr><td class="hb-lcd-number"><p>6</p></td><td class="hb-lcd-icon"><img alt="TOU-Modus" class="hb-lcd-icon-art" src="../../../../_static/manual-assets/_pool/f4/f4cdcb5511058eaaf1879a69a429317dd3d98325dd5e19f5dd95b06ea2c965af.png"/></td><td class="hb-lcd-name"><p>TOU-Modus</p></td><td class="hb-lcd-description"><div class="line-block">
+<div class="line"><strong>Ein:</strong> Der TOU-Modus (Time-of-Use) ist aktiviert (Standard-Backup-SOC: 60 %). Während Spitzenlastzeiten entlädt das Produkt bevorzugt die Batterie, sobald die gespeicherte Energie den Backup-SOC überschreitet, um Stromkosten zu reduzieren. Während der Niedriglastzeiten lädt das System die Batterie aus dem Netz, um Spitzenlasten zu reduzieren und Lasttäler auszugleichen.</div>
+<div class="line"><strong>Aus:</strong> Der Tarifzeitmodus (TOU-Modus) ist deaktiviert. Das Gerät folgt keiner Tarifzeitmodus(TOU-Modus)-Strategie und arbeitet gemäß der standardmäßigen Stromversorgungs- und Ladelogik. Aktivieren oder deaktivieren Sie diesen Modus in der Jackery App. Die Einstellung bleibt auch nach dem Ausschalten des Geräts erhalten.</div>
+</div></td></tr><tr><td class="hb-lcd-number"><p>7</p></td><td class="hb-lcd-icon"><img alt="USV" class="hb-lcd-icon-art" src="../../../../_static/manual-assets/_pool/e4/e422a56922eb749ae90802fd964cb451a08d833658c1849abe10a63c60b173cc.png"/></td><td class="hb-lcd-name"><p>USV</p></td><td class="hb-lcd-description"><div class="line-block">
+<div class="line"><strong>Ein:</strong> Das Produkt befindet sich im Bypass-Modus, und die Umschaltzeit vom Netzstrom auf die interne Batterie beträgt 10 ms.</div>
+<div class="line"><strong>Aus:</strong> Das Produkt befindet sich nicht im Bypass-Modus.</div>
+</div></td></tr><tr><td class="hb-lcd-number"><p>8</p></td><td class="hb-lcd-icon"><img alt="AC-Stromanzeige" class="hb-lcd-icon-art" src="../../../../_static/manual-assets/_pool/8b/8be87c5a084994e3b4b6ddff46ce0296207a5c49c732f8ed13adfbcb28a36538.png"/></td><td class="hb-lcd-name"><p>AC-Stromanzeige</p></td><td class="hb-lcd-description"><p>Der AC-Ausgang (reine Sinuswelle) ist eingeschaltet.</p></td></tr><tr><td class="hb-lcd-number"><p>9</p></td><td class="hb-lcd-icon"><img alt="Ausgangsspannung und -frequenz" class="hb-lcd-icon-art" src="../../../../_static/manual-assets/_pool/76/7623ef10e229bcfe66c872f3733d26b86c97d703ed30012188a88bb4a168e6df.png"/></td><td class="hb-lcd-name"><p>Ausgangsspannung und -frequenz</p></td><td class="hb-lcd-description"><p>Zeigt die Ausgangsspannung und -frequenz an, wenn der AC-Ausgang eingeschaltet ist.</p></td></tr><tr><td class="hb-lcd-number"><p>10</p></td><td class="hb-lcd-icon"><img alt="Eingangsleistung" class="hb-lcd-icon-art" src="../../../../_static/manual-assets/_pool/d5/d5100a538e964da13e04241a98134e6aeaa36af8991aceeecac3c5d063b6968b.png"/></td><td class="hb-lcd-name"><p>Eingangsleistung</p></td><td class="hb-lcd-description"><p>Zeigt die Eingangsleistung in Watt an.</p></td></tr><tr><td class="hb-lcd-number"><p>11</p></td><td class="hb-lcd-icon"><img alt="Verbleibende Aufladezeit" class="hb-lcd-icon-art" src="../../../../_static/manual-assets/_pool/cf/cfb69b1ffc0b30c51216fb6b1e00e35b412dd0148b6999d3d40ac90fbfe108cb.png"/></td><td class="hb-lcd-name"><p>Verbleibende Aufladezeit</p></td><td class="hb-lcd-description"><p>Anzeige der verbleibenden Ladezeit.</p></td></tr><tr><td class="hb-lcd-number"><p>12</p></td><td class="hb-lcd-icon"><img alt="AC-Netzladeanzeige" class="hb-lcd-icon-art" src="../../../../_static/manual-assets/_pool/28/28f3cad42ae32e9e895abfd7cdb16a21b99dfa822c57d542f0e3f59a4b452c6c.png"/></td><td class="hb-lcd-name"><p>AC-Netzladeanzeige</p></td><td class="hb-lcd-description"><p>Das Produkt wird über den AC-Eingang mit Netzstrom geladen.</p></td></tr><tr><td class="hb-lcd-number"><p>13</p></td><td class="hb-lcd-icon"><img alt="Autoladeanzeige" class="hb-lcd-icon-art" src="../../../../_static/manual-assets/_pool/ee/eed3299c3f6a15766e433ebbae7a40af8939e6d32489a0aa33a37fe902232a64.png"/></td><td class="hb-lcd-name"><p>Autoladeanzeige</p></td><td class="hb-lcd-description"><p>Das Produkt wird über den DC-Eingang (DC8020) mit 12V Gleichstrom (Autoladung) geladen.</p></td></tr><tr><td class="hb-lcd-number"><p>14</p></td><td class="hb-lcd-icon"><img alt="Solar-Ladeanzeige" class="hb-lcd-icon-art" src="../../../../_static/manual-assets/_pool/91/91cec82eeaa553477868d38789d68a4937cb11c5c4d794de74db1edddb3aeea4.png"/></td><td class="hb-lcd-name"><p>Solar-Ladeanzeige</p></td><td class="hb-lcd-description"><p>Das Produkt wird über den DC-Eingang (DC8020) mit Solarpanel(s) geladen.</p></td></tr><tr><td class="hb-lcd-number"><p>15</p></td><td class="hb-lcd-icon"><img alt="Batteriesparmodus" class="hb-lcd-icon-art" src="../../../../_static/manual-assets/_pool/e3/e32e6ae96321aa47b39c0c65a18a59da6c90cf87a0d7c8d61556ead273789c3a.png"/></td><td class="hb-lcd-name"><p>Batteriesparmodus</p></td><td class="hb-lcd-description"><div class="line-block">
+<div class="line"><strong>Ein:</strong> Begrenzt die maximal nutzbare Batteriekapazität, um die Lebensdauer der Batterie zu verlängern.</div>
+<div class="line"><strong>Aus:</strong> Der Batteriesparmodus ist deaktiviert.</div>
+<div class="line">Diese Funktion kann in der Jackery-App aktiviert oder deaktiviert werden. Die Einstellung bleibt auch nach dem Ausschalten des Geräts erhalten.</div>
+<div class="line">Hinweis 1: Diese Funktion ist nicht verfügbar, wenn das Produkt mit Batteriepacks verbunden ist.</div>
+<div class="line">Hinweis 2: Ist diese Funktion aktiviert, führt das Produkt gelegentlich einen vollständigen Lade-/Entladezyklus zur Kalibrierung des SOC durch.</div>
+</div></td></tr><tr><td class="hb-lcd-number"><p>16</p></td><td class="hb-lcd-icon"><img alt="Begrenzung der Ladeleistung" class="hb-lcd-icon-art" src="../../../../_static/manual-assets/_pool/21/21b5f19ca9a6e39d8bd515128297cc1b99e43fd263e39ffba4fdf102d50a4bad.png"/></td><td class="hb-lcd-name"><p>Begrenzung der Ladeleistung</p></td><td class="hb-lcd-description"><div class="line-block">
+<div class="line"><strong>Ein:</strong> Die Begrenzung der Ladeleistung ist in der Jackery App aktiviert.</div>
+<div class="line"><strong>Aus:</strong> Die Begrenzung der Ladeleistung ist in der Jackery App deaktiviert. Die Einstellung bleibt auch nach dem Ausschalten des Geräts erhalten.</div>
+</div></td></tr><tr><td class="hb-lcd-number"><p>17</p></td><td class="hb-lcd-icon"><img alt="Batteriezustandsanzeige" class="hb-lcd-icon-art" src="../../../../_static/manual-assets/_pool/85/85921a9ad7fbfa58f98ee7bb0dc904377f31fe3dbface4083d2493144b05362f.png"/></td><td class="hb-lcd-name"><p>Batteriezustandsanzeige</p></td><td class="hb-lcd-description"><p>Wenn das Produkt geladen wird, leuchtet der orangefarbene Kreis um die Batterieanzeige nacheinander auf. Beim Laden anderer Geräte bleibt der orangefarbene Kreis dauerhaft eingeschaltet.</p></td></tr><tr><td class="hb-lcd-number"><p>18</p></td><td class="hb-lcd-icon"><img alt="Batterietiefstandsanzeige" class="hb-lcd-icon-art" src="../../../../_static/manual-assets/_pool/c7/c7862a87e742d6927b4e1d63a8d0ccb09fbcf980ae662ff94b9134e256e56889.png"/></td><td class="hb-lcd-name"><p>Batterietiefstandsanzeige</p></td><td class="hb-lcd-description"><div class="line-block">
+<div class="line"><strong>Ein:</strong> Der Batteriestand liegt unter 20 %.</div>
+<div class="line"><strong>Blinkt:</strong> Der Batteriestand liegt unter 5 %.</div>
+<div class="line"><strong>Aus:</strong> Der Batteriestand liegt nicht unter 20 % oder das Produkt wird aufgeladen.</div>
+</div></td></tr><tr><td class="hb-lcd-number"><p>19</p></td><td class="hb-lcd-icon"><img alt="Verbleibender Batterieprozentsatz" class="hb-lcd-icon-art" src="../../../../_static/manual-assets/_pool/74/747147be99d76bb486c858aeca2289d7d05ad3be1f1ea1f0825f54cb29b7fd10.png"/></td><td class="hb-lcd-name"><p>Verbleibender Batterieprozentsatz</p></td><td class="hb-lcd-description"><p>Zeigt den verbleibenden Batteriestand an.</p></td></tr><tr><td class="hb-lcd-number"><p>20</p></td><td class="hb-lcd-icon"><img alt="Entlade-Timer" class="hb-lcd-icon-art" src="../../../../_static/manual-assets/_pool/6a/6aab9a14900a08fcd8f8261e6e36fbb9a1220eb931df94ebd149b23930063723.png"/></td><td class="hb-lcd-name"><p>Entlade-Timer</p></td><td class="hb-lcd-description"><div class="line-block">
+<div class="line"><strong>Ein:</strong> Ein Entlade-Timer ist eingestellt.</div>
+<div class="line"><strong>Aus:</strong> Es ist kein Entlade-Timer eingestellt.</div>
+<div class="line">Diese Funktion kann in der Jackery-App aktiviert oder deaktiviert werden. Die Einstellung bleibt nach dem Ausschalten des Geräts nicht gespeichert.</div>
+</div></td></tr><tr><td class="hb-lcd-number"><p>21</p></td><td class="hb-lcd-icon"><img alt="Batteriepack-Anzeige und Anzahl der angeschlossenen Batterien" class="hb-lcd-icon-art" src="../../../../_static/manual-assets/_pool/b4/b4744a483fa95db386bbb269f277a53f678279c7eda8f8cbf24a78f2b426f2a7.png"/></td><td class="hb-lcd-name"><p>Batteriepack-Anzeige und Anzahl der angeschlossenen Batterien</p></td><td class="hb-lcd-description"><p>Zeigt die Anzahl der angeschlossenen Batteriepacks an, sofern diese angeschlossen sind.</p></td></tr><tr><td class="hb-lcd-number"><p>22</p></td><td class="hb-lcd-icon"><img alt="Energiesparmodus" class="hb-lcd-icon-art" src="../../../../_static/manual-assets/_pool/c4/c4b830c769a3de7f9effaee82466752f5706a0741ba29675cce45633c1cd8222.png"/></td><td class="hb-lcd-name"><p>Energiesparmodus</p></td><td class="hb-lcd-description"><div class="line-block">
+<div class="line">Wenn der AC- oder USB-Ausgang durch Drücken der AC- oder USB-Stromtaste eingeschaltet wird:</div>
+<div class="line"><strong>Ein:</strong> Der Energiesparmodus ist aktiviert.</div>
+<div class="line"><strong>Aus:</strong> Der Energiesparmodus ist deaktiviert.</div>
+</div></td></tr><tr><td class="hb-lcd-number"><p>23</p></td><td class="hb-lcd-icon"><img alt="Warnung vor hoher Temperatur" class="hb-lcd-icon-art" src="../../../../_static/manual-assets/_pool/f5/f548c6504f495da4f208cd8e5fe6eac6076daea05e314115abd26b46a9326ba5.png"/></td><td class="hb-lcd-name"><p>Warnung vor hoher Temperatur</p></td><td class="hb-lcd-description"><p>Der Hochtemperaturschutz wurde aktiviert. Das Produkt kann die Funktion einstellen, bis die Temperatur wieder im normalen Betriebsbereich liegt.</p></td></tr><tr><td class="hb-lcd-number"><p>23</p></td><td class="hb-lcd-icon"><img alt="Warnung bei niedriger Temperatur" class="hb-lcd-icon-art" src="../../../../_static/manual-assets/_pool/bd/bdbf602db74ade39a2a162209c0ff535315dee5e27e4832b2e6a201764b6941a.png"/></td><td class="hb-lcd-name"><p>Warnung bei niedriger Temperatur</p></td><td class="hb-lcd-description"><p>Der Niedrigtemperaturschutz wurde aktiviert. Das Produkt kann die Funktion einstellen, bis die Temperatur wieder im normalen Betriebsbereich liegt.</p></td></tr><tr><td class="hb-lcd-number"><p>24</p></td><td class="hb-lcd-icon"><img alt="Fehlermeldung" class="hb-lcd-icon-art" src="../../../../_static/manual-assets/_pool/ce/ce913ebfc7750764f4206250f5e21aa09bd1cfc074bdee5b0484d61610f1b579.png"/></td><td class="hb-lcd-name"><p>Fehlermeldung</p></td><td class="hb-lcd-description"><p>Ein Produktfehler ist aufgetreten. Bitte lesen Sie den Abschnitt „Fehlerbehebung“ für weitere Informationen.</p></td></tr><tr><td class="hb-lcd-number"><p>25</p></td><td class="hb-lcd-icon"><img alt="Ausgangsleistung" class="hb-lcd-icon-art" src="../../../../_static/manual-assets/_pool/58/58c1d3604ca7b9774b069c6928775a13465ccb9477f477e9e4d4b30e7f75b88d.png"/></td><td class="hb-lcd-name"><p>Ausgangsleistung</p></td><td class="hb-lcd-description"><p>Zeigt die Ausgangsleistung in Watt an.</p></td></tr><tr><td class="hb-lcd-number"><p>26</p></td><td class="hb-lcd-icon"><img alt="Verbleibende Entladezeit" class="hb-lcd-icon-art" src="../../../../_static/manual-assets/_pool/9b/9b148ea95d3a3450591c7220908b0913048f2cdea1e61d200534181c52b47cab.png"/></td><td class="hb-lcd-name"><p>Verbleibende Entladezeit</p></td><td class="hb-lcd-description"><p>Anzeige der verbleibenden Entladezeit.</p></td></tr></tbody></table></figure>
+
+
 
 # GRUNDLEGENDE OPERATIONEN
 
@@ -321,26 +176,7 @@ Die Wiederaufnahmefunktion für AC- und DC-Ausgänge ist standardmäßig deaktiv
 
 
 
-<figure aria-label="Bedingungen für automatische Wiederherstellung / Bedingungen ohne automatische Wiederherstellung" class="hb-auto-resume-composition"><table class="hb-auto-resume-table"><colgroup><col class="hb-auto-resume-col"/><col class="hb-auto-resume-col"/></colgroup>
-<thead>
-<tr><th class="head hb-auto-resume-left" scope="col"><p>Bedingungen für automatische Wiederherstellung</p></th>
-<th class="head hb-auto-resume-right" scope="col"><p>Bedingungen ohne automatische Wiederherstellung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr><td class="hb-auto-resume-left"><p>Einschalten/Neustart nach Abschalten oder Neustart</p></td>
-<td class="hb-auto-resume-right"><p>Manuelles Ausschalten der Ausgänge (Taste/App)</p></td>
-</tr>
-<tr><td class="hb-auto-resume-left" rowspan="2"><p>Batterie-SOC ≥ Entladegrenze +10% nach Erreichen der Grenze</p></td>
-<td class="hb-auto-resume-right"><p>Ausgang im Energiesparmodus deaktiviert</p></td>
-</tr>
-<tr><td class="hb-auto-resume-right"><p>Schutzbedingter Ausgang deaktiviert</p></td>
-</tr>
-<tr><td class="hb-auto-resume-left"><p>OTA-Update abgeschlossen</p></td>
-<td class="hb-auto-resume-right"><p>Durch Entlade-Timer gesteuerter Ausgang deaktiviert</p></td>
-</tr>
-</tbody>
-</table></figure>
+<figure aria-label="Bedingungen für automatische Wiederherstellung / Bedingungen ohne automatische Wiederherstellung" class="hb-auto-resume-composition" data-component-id="HB-TABLE-AUTO-RESUME" tabindex="0"><table class="hb-auto-resume-table"><colgroup><col class="hb-auto-resume-col"/><col class="hb-auto-resume-col"/></colgroup><thead><tr><th class="hb-auto-resume-left" scope="col">Bedingungen für automatische Wiederherstellung</th><th class="hb-auto-resume-right" scope="col">Bedingungen ohne automatische Wiederherstellung</th></tr></thead><tbody><tr><td class="hb-auto-resume-left">Einschalten/Neustart nach Abschalten oder Neustart</td><td class="hb-auto-resume-right">Manuelles Ausschalten der Ausgänge (Taste/App)</td></tr><tr><td class="hb-auto-resume-left" rowspan="2">Batterie-SOC ≥ Entladegrenze +10% nach Erreichen der Grenze</td><td class="hb-auto-resume-right">Ausgang im Energiesparmodus deaktiviert</td></tr><tr><td class="hb-auto-resume-right">Schutzbedingter Ausgang deaktiviert</td></tr><tr><td class="hb-auto-resume-left">OTA-Update abgeschlossen</td><td class="hb-auto-resume-right">Durch Entlade-Timer gesteuerter Ausgang deaktiviert</td></tr></tbody></table></figure>
 
 
 
@@ -348,7 +184,7 @@ Die Wiederaufnahmefunktion für AC- und DC-Ausgänge ist standardmäßig deaktiv
 
 
 
-<figure aria-label="LCD-Anzeigemodus." class="hb-lcd-mode-composition" data-component-id="HB-TABLE-LCD-MODE"><div class="hb-lcd-mode-art-panel"><img alt="LCD-Anzeigemodus." class="hb-lcd-mode-art" src="../../../../_static/manual-assets/_pool/e5/e5464677b66827e24a9f4b9283f98b18d6e888f72d5a2732fc02ca3131c07637.png"/></div><div class="hb-lcd-mode-table-panel"><table class="hb-lcd-mode-table"><colgroup><col class="hb-lcd-mode-col-state"/><col class="hb-lcd-mode-col-action"/><col class="hb-lcd-mode-col-copy"/></colgroup><tbody><tr><td class="hb-lcd-mode-state" rowspan="3">Kurzzeitig an</td><td class="hb-lcd-mode-action">Ein</td><td class="hb-lcd-mode-copy">Drücken Sie die Haupt-POWER-Taste oder während das Produkt geladen wird.</td></tr><tr><td class="hb-lcd-mode-action">Aus</td><td class="hb-lcd-mode-copy">Drücken Sie die Haupt-POWER-Taste.</td></tr><tr><td class="hb-lcd-mode-action">Autom. aus</td><td class="hb-lcd-mode-copy">Die LCD-Anzeige schaltet sich nach 2 Minuten Inaktivität automatisch aus und wechselt in den Schlafmodus.</td></tr><tr><td class="hb-lcd-mode-state" rowspan="3">Dauerhaft an (beim Laden oder Entladen)</td><td class="hb-lcd-mode-action">Ein</td><td class="hb-lcd-mode-copy">Drücken Sie die Haupt-POWER-Taste zweimal, wenn das Produkt eingeschaltet ist.</td></tr><tr><td class="hb-lcd-mode-action">Aus</td><td class="hb-lcd-mode-copy">Drücken Sie die Haupt-POWER-Taste.</td></tr><tr><td class="hb-lcd-mode-action">Autom. aus</td><td class="hb-lcd-mode-copy">Die LCD-Anzeige schaltet sich nach 2 Stunden Inaktivität automatisch aus.</td></tr></tbody></table></div></figure>
+<figure aria-label="LCD-Anzeigemodus." class="hb-lcd-mode-composition" data-component-id="HB-TABLE-LCD-MODE"><div class="hb-lcd-mode-art-panel"><img alt="LCD-Anzeigemodus." class="hb-lcd-mode-art manual-finished-illustration" data-web-finished-panel-path="assets/je1000h_eu_de/operation_lcd.png" data-web-finished-panel-sha256="e5464677b66827e24a9f4b9283f98b18d6e888f72d5a2732fc02ca3131c07637" src="../../../../_static/manual-assets/_pool/e5/e5464677b66827e24a9f4b9283f98b18d6e888f72d5a2732fc02ca3131c07637.png"/></div><div class="hb-lcd-mode-table-panel"><table class="hb-lcd-mode-table"><colgroup><col class="hb-lcd-mode-col-state"/><col class="hb-lcd-mode-col-action"/><col class="hb-lcd-mode-col-copy"/></colgroup><tbody><tr><td class="hb-lcd-mode-state" rowspan="3">Kurzzeitig an</td><td class="hb-lcd-mode-action">Ein</td><td class="hb-lcd-mode-copy">Drücken Sie die Haupt-POWER-Taste oder während das Produkt geladen wird.</td></tr><tr><td class="hb-lcd-mode-action">Aus</td><td class="hb-lcd-mode-copy">Drücken Sie die Haupt-POWER-Taste.</td></tr><tr><td class="hb-lcd-mode-action">Autom. aus</td><td class="hb-lcd-mode-copy">Die LCD-Anzeige schaltet sich nach 2 Minuten Inaktivität automatisch aus und wechselt in den Schlafmodus.</td></tr><tr><td class="hb-lcd-mode-state" rowspan="3">Dauerhaft an (beim Laden oder Entladen)</td><td class="hb-lcd-mode-action">Ein</td><td class="hb-lcd-mode-copy">Drücken Sie die Haupt-POWER-Taste zweimal, wenn das Produkt eingeschaltet ist.</td></tr><tr><td class="hb-lcd-mode-action">Aus</td><td class="hb-lcd-mode-copy">Drücken Sie die Haupt-POWER-Taste.</td></tr><tr><td class="hb-lcd-mode-action">Autom. aus</td><td class="hb-lcd-mode-copy">Die LCD-Anzeige schaltet sich nach 2 Stunden Inaktivität automatisch aus.</td></tr></tbody></table></div></figure>
 
 
 
@@ -358,32 +194,7 @@ Sie können den Bildschirm-Anzeigemodus auch in der Jackery-App einstellen.
 
 
 
-<figure aria-label="Tasten / Bedienung / Funktion" class="hb-key-combination-composition" tabindex="0"><table class="hb-key-combination-table"><colgroup><col class="hb-key-col-buttons"/><col class="hb-key-col-operation"/><col class="hb-key-col-function"/></colgroup>
-<thead>
-<tr><th class="head hb-key-buttons" scope="col"><p>Tasten</p></th>
-<th class="head hb-key-operation" scope="col"><p>Bedienung</p></th>
-<th class="head hb-key-function" scope="col"><p>Funktion</p></th>
-</tr>
-</thead>
-<tbody>
-<tr><td class="hb-key-buttons"><p>Haupt-POWER-Taste + AC-Einschalttaste</p></td>
-<td class="hb-key-operation"><p>Beide 3 s lang gedrückt halten</p></td>
-<td class="hb-key-function"><p>Energiesparmodus ein-/ausschalten</p></td>
-</tr>
-<tr><td class="hb-key-buttons"><p>Haupt-POWER-Taste + DC/USB-Einschalttaste</p></td>
-<td class="hb-key-operation"><p>Beide 3 s lang gedrückt halten</p></td>
-<td class="hb-key-function"><p>WLAN und Bluetooth zurücksetzen</p></td>
-</tr>
-<tr><td class="hb-key-buttons"><p>DC/USB-Einschalttaste + AC-Einschalttaste</p></td>
-<td class="hb-key-operation"><p>Beide 1 s lang gedrückt halten</p></td>
-<td class="hb-key-function"><p>WLAN und Bluetooth ein-/ausschalten</p></td>
-</tr>
-<tr><td class="hb-key-buttons"><p>Haupt-POWER-Taste + LED-Lichttaste</p></td>
-<td class="hb-key-operation"><p>Beide 1 s lang gedrückt halten</p></td>
-<td class="hb-key-function"><p>Notfall-Lademodus ein-/ausschalten</p></td>
-</tr>
-</tbody>
-</table></figure>
+<figure aria-label="Tasten / Bedienung / Funktion" class="hb-key-combination-composition" data-component-id="HB-TABLE-KEY-COMBINATIONS" tabindex="0"><table class="hb-key-combination-table"><colgroup><col class="hb-key-col-buttons"/><col class="hb-key-col-operation"/><col class="hb-key-col-function"/></colgroup><thead><tr><th class="hb-key-buttons" scope="col"><p>Tasten</p></th><th class="hb-key-operation" scope="col"><p>Bedienung</p></th><th class="hb-key-function" scope="col"><p>Funktion</p></th></tr></thead><tbody><tr><td class="hb-key-buttons"><p>Haupt-POWER-Taste + AC-Einschalttaste</p></td><td class="hb-key-operation"><p>Beide 3 s lang gedrückt halten</p></td><td class="hb-key-function"><p>Energiesparmodus ein-/ausschalten</p></td></tr><tr><td class="hb-key-buttons"><p>Haupt-POWER-Taste + DC/USB-Einschalttaste</p></td><td class="hb-key-operation"><p>Beide 3 s lang gedrückt halten</p></td><td class="hb-key-function"><p>WLAN und Bluetooth zurücksetzen</p></td></tr><tr><td class="hb-key-buttons"><p>DC/USB-Einschalttaste + AC-Einschalttaste</p></td><td class="hb-key-operation"><p>Beide 1 s lang gedrückt halten</p></td><td class="hb-key-function"><p>WLAN und Bluetooth ein-/ausschalten</p></td></tr><tr><td class="hb-key-buttons"><p>Haupt-POWER-Taste + LED-Lichttaste</p></td><td class="hb-key-operation"><p>Beide 1 s lang gedrückt halten</p></td><td class="hb-key-function"><p>Notfall-Lademodus ein-/ausschalten</p></td></tr></tbody></table></figure>
 
 
 
