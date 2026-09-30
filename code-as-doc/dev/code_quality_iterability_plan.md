@@ -167,6 +167,9 @@ web、IDML、队列、回写这几块目前最大的代码面。
 - [ ] **CQ-4.4 小批量补齐高价值规则。** `B904`（4）、`PLW1510`（8，`subprocess.run` 显式传
   `check=`）；`B905`（45，给 `zip` 加 `strict=`）要先确认每处长度确实应该相等，再决定是否启用。
   每条规则要么清零后加入 `select`，要么用 `per-file-ignores` 记录基线后加入。
+  - [x] `B904`、`PLW1510` 清零并加入 `select`（2026-09-30）。实际扫描范围含 `tests/`、`scripts/`，
+    共 5 处 `B904`、39 处 `PLW1510`；所有调用都按原行为显式写 `check=False`（默认值不变，零行为变化）。
+  - [ ] `B905` 待逐处确认长度后再决定。
 - [ ] **CQ-4.5 扩大 mypy 严格范围。** 在 `pyproject.toml` 为 `tools.manual_ir.*`、
   `tools.component_specs.*`、`tools.csv_pages.*` 逐个增加严格 override。**CI 命令目前固定为
   `python -m mypy tools/utils`，扩大检查路径需要改 workflow，须操作者确认。**
@@ -193,6 +196,10 @@ stdout 前缀排查问题；75 处 `except Exception` 的处理方式各不相�
   的 `print` 改用 `log`；每个 PR 迁一族，输出文本逐字不变。
   进度：review-start 队列（`process_review_start_queue*.py`，12 处；2 处转发 git 原始输出的保留 `print`）
   随 CQ-5.1 一起迁移（#1330）。
+  构建队列（`process_build_queue_main.py`、`process_build_queue_services.py`、`queue_*.py`，
+  10 个文件 28 处，组件名 `build-queue`，2026-09-30）；保留 `print` 的：转发子进程原始输出的 2 处、
+  写入调用方注入的 `stderr` 参数的 5 处、经门面 `module.sys.stderr` 输出的 1 处。
+  下一族：`cloud_doc_backport_*`。
 - [ ] **CQ-5.3 审计 75 处 `except Exception`。** 分三类：顶层边界（保留，改成 `log.exception`
   以保留堆栈）、可收窄（改成具体异常类型）、吞掉错误（改为重新抛出或记录后报错）。
   在 guardrails 中加计数棘轮，只减不增。
