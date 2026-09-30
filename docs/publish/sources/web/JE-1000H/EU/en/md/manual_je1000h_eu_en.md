@@ -76,201 +76,58 @@ For assistance, please contact Jackery customer service.</p></div></div></figure
 
 <img src="assets/ir/62c22f61874cc9169e878b23fa57d3a248d8f14c32cac757d43fd26a9d9cffc6/lcd_map.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_en/lcd_map.png" data-web-finished-panel-sha256="62c22f61874cc9169e878b23fa57d3a248d8f14c32cac757d43fd26a9d9cffc6" alt="LCD DISPLAY" />
 
-<table class="longtable lcd-text-only">
-<colgroup>
-<col style="width: 8%" />
-<col style="width: 12%" />
-<col style="width: 28%" />
-<col style="width: 52%" />
-</colgroup>
-<tbody>
-<tr>
-<td><p>1</p></td>
-<td></td>
-<td><p>Wi-Fi</p></td>
-<td><strong>On:</strong> Wi-Fi connected.
-<strong>Blink:</strong> Ready to connect to Wi-Fi.
-<strong>Off:</strong> Wi-Fi disconnected.</td>
-</tr>
-<tr>
-<td><p>2</p></td>
-<td></td>
-<td><p>Bluetooth</p></td>
-<td><strong>On:</strong> Bluetooth connected.
-<strong>Blink:</strong> Ready to connect to Bluetooth.
-<strong>Off:</strong> Bluetooth disconnected.</td>
-</tr>
-<tr>
-<td><p>3</p></td>
-<td></td>
-<td><p>Quiet Charging Mode</p></td>
-<td><strong>On:</strong> The noise during charging is significantly minimized, while the charging power is reduced and the charging speed slows down.
-<strong>Off:</strong> Quiet Charging Mode is disabled.
-Enable/disable this feature in the Jackery app. The setting is retained when the device is powered off.</td>
-</tr>
-<tr>
-<td><p>4</p></td>
-<td></td>
-<td><p>Charging Plan</p></td>
-<td>Customizes the charging time of the Jackery Explorer 1000 Plus. Suitable for situations with fluctuating electricity prices, it allows for charging plans based on peak and off-peak electricity times, reducing electricity costs.
-Enable/disable this feature in the Jackery App. The setting is retained when the device is powered off.</td>
-</tr>
-<tr>
-<td><p>5</p></td>
-<td></td>
-<td><p>Self-powered Mode</p></td>
-<td>Maximizes the use of solar energy and reduces reliance on grid electricity by prioritizing stored solar energy, reducing electricity costs. The power station must be connected to both solar panels and the grid simultaneously, with the load power limited by bypass power.
-Enable/disable this feature in the Jackery App. The setting is retained when the device is powered off.</td>
-</tr>
-<tr>
-<td><p>6</p></td>
-<td></td>
-<td><p>TOU Mode</p></td>
-<td><strong>On:</strong> TOU mode is enabled (default backup SOC: 60%). During peak periods, when the stored energy exceeds the backup SOC, the product prioritizes battery discharge to reduce peak electricity costs. During off-peak periods, the product charges the battery from the grid to achieve peak-shaving and valley-filling.
-<strong>Off:</strong> TOU mode is disabled. The product does not follow the TOU (time-of-use) strategy and operates according to the default power supply and charging logic.
-Enable/disable this feature in the Jackery App. The setting is retained when the device is powered off.</td>
-</tr>
-<tr>
-<td><p>7</p></td>
-<td></td>
-<td><p>UPS</p></td>
-<td><strong>On:</strong> The product is in bypass mode, and the switchover time from grid power to the internal battery is 10 ms.
-<strong>Off:</strong> The product is not in bypass mode.</td>
-</tr>
-<tr>
-<td><p>8</p></td>
-<td></td>
-<td><p>AC Power Indicator</p></td>
-<td><p>The AC output (pure sine wave) is on.</p></td>
-</tr>
-<tr>
-<td><p>9</p></td>
-<td></td>
-<td><p>Output Voltage and Frequency</p></td>
-<td><p>Displays the output voltage and frequency when the AC output is turned on.</p></td>
-</tr>
-<tr>
-<td><p>10</p></td>
-<td></td>
-<td><p>Input Power</p></td>
-<td><p>Displays the input power in watts.</p></td>
-</tr>
-<tr>
-<td><p>11</p></td>
-<td></td>
-<td><p>Remaining Charge Time</p></td>
-<td><p>Displays the remaining charging time.</p></td>
-</tr>
-<tr>
-<td><p>12</p></td>
-<td></td>
-<td><p>AC Wall Charging Indicator</p></td>
-<td><p>The product is charged via the AC Input using grid power.</p></td>
-</tr>
-<tr>
-<td><p>13</p></td>
-<td></td>
-<td><p>Car Charging Indicator</p></td>
-<td><p>The product is charged via the DC Input (DC8020) using DC 12V (car charging).</p></td>
-</tr>
-<tr>
-<td><p>14</p></td>
-<td></td>
-<td><p>Solar Charging Indicator</p></td>
-<td><p>The product is charged via the DC Input (DC8020) using solar panel(s).</p></td>
-</tr>
-<tr>
-<td><p>15</p></td>
-<td></td>
-<td><p>Battery Saving Mode</p></td>
-<td><strong>On:</strong> Limits the maximum usable battery capacity to extend battery life.
-<strong>Off:</strong> Battery Saving Mode is disabled.
-Enable/disable this feature in the Jackery App. The setting is retained when the device is powered off.
-Note 1: This feature is not available when the product is connected to battery pack(s).
-Note 2: When this feature is enabled, the product occasionally performs a full charge and discharge cycle to calibrate the SOC.</td>
-</tr>
-<tr>
-<td><p>16</p></td>
-<td></td>
-<td><p>Charging Power Limit</p></td>
-<td><strong>On:</strong> Charging Power limit is enabled in the Jackery app.
-<strong>Off:</strong> Charging Power limit is disabled in the Jackery app.
-The setting is retained when the device is powered off.</td>
-</tr>
-<tr>
-<td><p>17</p></td>
-<td></td>
-<td><p>Battery Power Indicator</p></td>
-<td><p>When the product is being charged, the orange circle around the battery percentage will light up in sequence. When charging other devices, the orange circle will stay on.</p></td>
-</tr>
-<tr>
-<td><p>18</p></td>
-<td></td>
-<td><p>Low Battery Indicator</p></td>
-<td><strong>On:</strong> The battery level is below 20%.
-<strong>Blink:</strong> The battery level is below 5%.
-<strong>Off:</strong> The battery level is not below 20% or the product is charging.</td>
-</tr>
-<tr>
-<td><p>19</p></td>
-<td></td>
-<td><p>Remaining Battery Percentage</p></td>
-<td><p>Displays the remaining battery percentage.</p></td>
-</tr>
-<tr>
-<td><p>20</p></td>
-<td></td>
-<td><p>Discharge Timer</p></td>
-<td><strong>On:</strong> A discharge timer is set.
-<strong>Off:</strong> No discharge timer is set.
-Enable/disable this feature in the Jackery App. The setting is not retained when the device is powered off.</td>
-</tr>
-<tr>
-<td><p>21</p></td>
-<td></td>
-<td><p>Connected Batteries</p></td>
-<td><p>Displays the quantity of battery packs if any are connected.</p></td>
-</tr>
-<tr>
-<td><p>22</p></td>
-<td></td>
-<td><p>Energy Saving Mode</p></td>
-<td>When the AC or DC output is turned on by pressing the AC1/2 or DC/USB power button:
-<strong>On:</strong> Energy Saving Mode is enabled.
-<strong>Off:</strong> Energy Saving Mode is disabled.</td>
-</tr>
-<tr>
-<td><p>23</p></td>
-<td></td>
-<td><p>High Temperature Indicator</p></td>
-<td><p>High temperature protection is triggered. The product may stop functioning until its temperature returns to the normal operating range.</p></td>
-</tr>
-<tr>
-<td><p>23</p></td>
-<td></td>
-<td><p>Low Temperature Indicator</p></td>
-<td><p>Low temperature protection is triggered. The product may stop functioning until its temperature returns to the normal operating range.</p></td>
-</tr>
-<tr>
-<td><p>24</p></td>
-<td></td>
-<td><p>Fault code</p></td>
-<td><p>A product error has occurred. Please refer to the Troubleshooting section for details.</p></td>
-</tr>
-<tr>
-<td><p>25</p></td>
-<td></td>
-<td><p>Output Power</p></td>
-<td><p>Displays the output power in watts.</p></td>
-</tr>
-<tr>
-<td><p>26</p></td>
-<td></td>
-<td><p>Remaining Discharge Time</p></td>
-<td><p>Displays the remaining discharging time.</p></td>
-</tr>
-</tbody>
-</table>
+
+
+<figure aria-label="LCD icon meanings" class="hb-lcd-table-composition" data-component-id="HB-TABLE-LCD-ICON" tabindex="0"><table class="hb-lcd-icon-table"><colgroup><col class="hb-lcd-col-number"/><col class="hb-lcd-col-icon"/><col class="hb-lcd-col-name"/><col class="hb-lcd-col-description"/></colgroup><tbody><tr><td class="hb-lcd-number"><p>1</p></td><td class="hb-lcd-icon"><img alt="Wi-Fi" class="hb-lcd-icon-art" src="assets/ir/fc4cc02b42efc31a32429ada2b78c4480a2fcbca647406da29b2ce75a8a8c1dc/01_wifi.png"/></td><td class="hb-lcd-name"><p>Wi-Fi</p></td><td class="hb-lcd-description"><div class="line-block">
+<div class="line"><strong>On:</strong> Wi-Fi connected.</div>
+<div class="line"><strong>Blink:</strong> Ready to connect to Wi-Fi.</div>
+<div class="line"><strong>Off:</strong> Wi-Fi disconnected.</div>
+</div></td></tr><tr><td class="hb-lcd-number"><p>2</p></td><td class="hb-lcd-icon"><img alt="Bluetooth" class="hb-lcd-icon-art" src="assets/ir/7e1392ba6a45e66a2e7367ae5df737ccc41ad2de46c4ac7d6baf062ff63bb361/02_bluetooth.png"/></td><td class="hb-lcd-name"><p>Bluetooth</p></td><td class="hb-lcd-description"><div class="line-block">
+<div class="line"><strong>On:</strong> Bluetooth connected.</div>
+<div class="line"><strong>Blink:</strong> Ready to connect to Bluetooth.</div>
+<div class="line"><strong>Off:</strong> Bluetooth disconnected.</div>
+</div></td></tr><tr><td class="hb-lcd-number"><p>3</p></td><td class="hb-lcd-icon"><img alt="Quiet Charging Mode" class="hb-lcd-icon-art" src="assets/ir/7f743182c0509307793dde001356fff5c3d20dd32b09105b6a1d467af7e7f66d/03_quiet_charging_mode.png"/></td><td class="hb-lcd-name"><p>Quiet Charging Mode</p></td><td class="hb-lcd-description"><div class="line-block">
+<div class="line"><strong>On:</strong> The noise during charging is significantly minimized, while the charging power is reduced and the charging speed slows down.</div>
+<div class="line"><strong>Off:</strong> Quiet Charging Mode is disabled.</div>
+<div class="line">Enable/disable this feature in the Jackery app. The setting is retained when the device is powered off.</div>
+</div></td></tr><tr><td class="hb-lcd-number"><p>4</p></td><td class="hb-lcd-icon"><img alt="Charging Plan" class="hb-lcd-icon-art" src="assets/ir/71017f43bab44852d5586d1d4f996f3c52d8451bceaa9249e29864652c2f537d/04_charging_plan.png"/></td><td class="hb-lcd-name"><p>Charging Plan</p></td><td class="hb-lcd-description"><div class="line-block">
+<div class="line">Customizes the charging time of the Jackery Explorer 1000 Plus. Suitable for situations with fluctuating electricity prices, it allows for charging plans based on peak and off-peak electricity times, reducing electricity costs.</div>
+<div class="line">Enable/disable this feature in the Jackery App. The setting is retained when the device is powered off.</div>
+</div></td></tr><tr><td class="hb-lcd-number"><p>5</p></td><td class="hb-lcd-icon"><img alt="Self-powered Mode" class="hb-lcd-icon-art" src="assets/ir/73225cf9faa868bbe937df298d55a696828a4156f40e90da5c2a7f0011f0b783/05_self_powered_mode.png"/></td><td class="hb-lcd-name"><p>Self-powered Mode</p></td><td class="hb-lcd-description"><div class="line-block">
+<div class="line">Maximizes the use of solar energy and reduces reliance on grid electricity by prioritizing stored solar energy, reducing electricity costs. The power station must be connected to both solar panels and the grid simultaneously, with the load power limited by bypass power.</div>
+<div class="line">Enable/disable this feature in the Jackery App. The setting is retained when the device is powered off.</div>
+</div></td></tr><tr><td class="hb-lcd-number"><p>6</p></td><td class="hb-lcd-icon"><img alt="TOU Mode" class="hb-lcd-icon-art" src="assets/ir/f4cdcb5511058eaaf1879a69a429317dd3d98325dd5e19f5dd95b06ea2c965af/06_tou_mode.png"/></td><td class="hb-lcd-name"><p>TOU Mode</p></td><td class="hb-lcd-description"><div class="line-block">
+<div class="line"><strong>On:</strong> TOU mode is enabled (default backup SOC: 60%). During peak periods, when the stored energy exceeds the backup SOC, the product prioritizes battery discharge to reduce peak electricity costs. During off-peak periods, the product charges the battery from the grid to achieve peak-shaving and valley-filling.</div>
+<div class="line"><strong>Off:</strong> TOU mode is disabled. The product does not follow the TOU (time-of-use) strategy and operates according to the default power supply and charging logic.</div>
+<div class="line">Enable/disable this feature in the Jackery App. The setting is retained when the device is powered off.</div>
+</div></td></tr><tr><td class="hb-lcd-number"><p>7</p></td><td class="hb-lcd-icon"><img alt="UPS" class="hb-lcd-icon-art" src="assets/ir/e422a56922eb749ae90802fd964cb451a08d833658c1849abe10a63c60b173cc/07_ups.png"/></td><td class="hb-lcd-name"><p>UPS</p></td><td class="hb-lcd-description"><div class="line-block">
+<div class="line"><strong>On:</strong> The product is in bypass mode, and the switchover time from grid power to the internal battery is 10 ms.</div>
+<div class="line"><strong>Off:</strong> The product is not in bypass mode.</div>
+</div></td></tr><tr><td class="hb-lcd-number"><p>8</p></td><td class="hb-lcd-icon"><img alt="AC Power Indicator" class="hb-lcd-icon-art" src="assets/ir/8be87c5a084994e3b4b6ddff46ce0296207a5c49c732f8ed13adfbcb28a36538/08_ac_power_indicator.png"/></td><td class="hb-lcd-name"><p>AC Power Indicator</p></td><td class="hb-lcd-description"><p>The AC output (pure sine wave) is on.</p></td></tr><tr><td class="hb-lcd-number"><p>9</p></td><td class="hb-lcd-icon"><img alt="Output Voltage and Frequency" class="hb-lcd-icon-art" src="assets/ir/7623ef10e229bcfe66c872f3733d26b86c97d703ed30012188a88bb4a168e6df/09_output_voltage_and_frequency.png"/></td><td class="hb-lcd-name"><p>Output Voltage and Frequency</p></td><td class="hb-lcd-description"><p>Displays the output voltage and frequency when the AC output is turned on.</p></td></tr><tr><td class="hb-lcd-number"><p>10</p></td><td class="hb-lcd-icon"><img alt="Input Power" class="hb-lcd-icon-art" src="assets/ir/d5100a538e964da13e04241a98134e6aeaa36af8991aceeecac3c5d063b6968b/10_input_power.png"/></td><td class="hb-lcd-name"><p>Input Power</p></td><td class="hb-lcd-description"><p>Displays the input power in watts.</p></td></tr><tr><td class="hb-lcd-number"><p>11</p></td><td class="hb-lcd-icon"><img alt="Remaining Charge Time" class="hb-lcd-icon-art" src="assets/ir/cfb69b1ffc0b30c51216fb6b1e00e35b412dd0148b6999d3d40ac90fbfe108cb/11_remaining_charge_time.png"/></td><td class="hb-lcd-name"><p>Remaining Charge Time</p></td><td class="hb-lcd-description"><p>Displays the remaining charging time.</p></td></tr><tr><td class="hb-lcd-number"><p>12</p></td><td class="hb-lcd-icon"><img alt="AC Wall Charging Indicator" class="hb-lcd-icon-art" src="assets/ir/28f3cad42ae32e9e895abfd7cdb16a21b99dfa822c57d542f0e3f59a4b452c6c/12_ac_wall_charging_indicator.png"/></td><td class="hb-lcd-name"><p>AC Wall Charging Indicator</p></td><td class="hb-lcd-description"><p>The product is charged via the AC Input using grid power.</p></td></tr><tr><td class="hb-lcd-number"><p>13</p></td><td class="hb-lcd-icon"><img alt="Car Charging Indicator" class="hb-lcd-icon-art" src="assets/ir/eed3299c3f6a15766e433ebbae7a40af8939e6d32489a0aa33a37fe902232a64/13_car_charging_indicator.png"/></td><td class="hb-lcd-name"><p>Car Charging Indicator</p></td><td class="hb-lcd-description"><p>The product is charged via the DC Input (DC8020) using DC 12V (car charging).</p></td></tr><tr><td class="hb-lcd-number"><p>14</p></td><td class="hb-lcd-icon"><img alt="Solar Charging Indicator" class="hb-lcd-icon-art" src="assets/ir/91cec82eeaa553477868d38789d68a4937cb11c5c4d794de74db1edddb3aeea4/14_solar_charging_indicator.png"/></td><td class="hb-lcd-name"><p>Solar Charging Indicator</p></td><td class="hb-lcd-description"><p>The product is charged via the DC Input (DC8020) using solar panel(s).</p></td></tr><tr><td class="hb-lcd-number"><p>15</p></td><td class="hb-lcd-icon"><img alt="Battery Saving Mode" class="hb-lcd-icon-art" src="assets/ir/e32e6ae96321aa47b39c0c65a18a59da6c90cf87a0d7c8d61556ead273789c3a/15_battery_saving_mode.png"/></td><td class="hb-lcd-name"><p>Battery Saving Mode</p></td><td class="hb-lcd-description"><div class="line-block">
+<div class="line"><strong>On:</strong> Limits the maximum usable battery capacity to extend battery life.</div>
+<div class="line"><strong>Off:</strong> Battery Saving Mode is disabled.</div>
+<div class="line">Enable/disable this feature in the Jackery App. The setting is retained when the device is powered off.</div>
+<div class="line">Note 1: This feature is not available when the product is connected to battery pack(s).</div>
+<div class="line">Note 2: When this feature is enabled, the product occasionally performs a full charge and discharge cycle to calibrate the SOC.</div>
+</div></td></tr><tr><td class="hb-lcd-number"><p>16</p></td><td class="hb-lcd-icon"><img alt="Charging Power Limit" class="hb-lcd-icon-art" src="assets/ir/21b5f19ca9a6e39d8bd515128297cc1b99e43fd263e39ffba4fdf102d50a4bad/16_charging_power_limit.png"/></td><td class="hb-lcd-name"><p>Charging Power Limit</p></td><td class="hb-lcd-description"><div class="line-block">
+<div class="line"><strong>On:</strong> Charging Power limit is enabled in the Jackery app.</div>
+<div class="line"><strong>Off:</strong> Charging Power limit is disabled in the Jackery app.</div>
+<div class="line">The setting is retained when the device is powered off.</div>
+</div></td></tr><tr><td class="hb-lcd-number"><p>17</p></td><td class="hb-lcd-icon"><img alt="Battery Power Indicator" class="hb-lcd-icon-art" src="assets/ir/85921a9ad7fbfa58f98ee7bb0dc904377f31fe3dbface4083d2493144b05362f/17_battery_power_indicator.png"/></td><td class="hb-lcd-name"><p>Battery Power Indicator</p></td><td class="hb-lcd-description"><p>When the product is being charged, the orange circle around the battery percentage will light up in sequence. When charging other devices, the orange circle will stay on.</p></td></tr><tr><td class="hb-lcd-number"><p>18</p></td><td class="hb-lcd-icon"><img alt="Low Battery Indicator" class="hb-lcd-icon-art" src="assets/ir/c7862a87e742d6927b4e1d63a8d0ccb09fbcf980ae662ff94b9134e256e56889/18_low_battery_indicator.png"/></td><td class="hb-lcd-name"><p>Low Battery Indicator</p></td><td class="hb-lcd-description"><div class="line-block">
+<div class="line"><strong>On:</strong> The battery level is below 20%.</div>
+<div class="line"><strong>Blink:</strong> The battery level is below 5%.</div>
+<div class="line"><strong>Off:</strong> The battery level is not below 20% or the product is charging.</div>
+</div></td></tr><tr><td class="hb-lcd-number"><p>19</p></td><td class="hb-lcd-icon"><img alt="Remaining Battery Percentage" class="hb-lcd-icon-art" src="assets/ir/747147be99d76bb486c858aeca2289d7d05ad3be1f1ea1f0825f54cb29b7fd10/19_remaining_battery_percentage.png"/></td><td class="hb-lcd-name"><p>Remaining Battery Percentage</p></td><td class="hb-lcd-description"><p>Displays the remaining battery percentage.</p></td></tr><tr><td class="hb-lcd-number"><p>20</p></td><td class="hb-lcd-icon"><img alt="Discharge Timer" class="hb-lcd-icon-art" src="assets/ir/6aab9a14900a08fcd8f8261e6e36fbb9a1220eb931df94ebd149b23930063723/20_discharge_timer.png"/></td><td class="hb-lcd-name"><p>Discharge Timer</p></td><td class="hb-lcd-description"><div class="line-block">
+<div class="line"><strong>On:</strong> A discharge timer is set.</div>
+<div class="line"><strong>Off:</strong> No discharge timer is set.</div>
+<div class="line">Enable/disable this feature in the Jackery App. The setting is not retained when the device is powered off.</div>
+</div></td></tr><tr><td class="hb-lcd-number"><p>21</p></td><td class="hb-lcd-icon"><img alt="Connected Batteries" class="hb-lcd-icon-art" src="assets/ir/b4744a483fa95db386bbb269f277a53f678279c7eda8f8cbf24a78f2b426f2a7/image.png"/></td><td class="hb-lcd-name"><p>Connected Batteries</p></td><td class="hb-lcd-description"><p>Displays the quantity of battery packs if any are connected.</p></td></tr><tr><td class="hb-lcd-number"><p>22</p></td><td class="hb-lcd-icon"><img alt="Energy Saving Mode" class="hb-lcd-icon-art" src="assets/ir/c4b830c769a3de7f9effaee82466752f5706a0741ba29675cce45633c1cd8222/22_energy_saving_mode.png"/></td><td class="hb-lcd-name"><p>Energy Saving Mode</p></td><td class="hb-lcd-description"><div class="line-block">
+<div class="line">When the AC or DC output is turned on by pressing the AC1/2 or DC/USB power button:</div>
+<div class="line"><strong>On:</strong> Energy Saving Mode is enabled.</div>
+<div class="line"><strong>Off:</strong> Energy Saving Mode is disabled.</div>
+</div></td></tr><tr><td class="hb-lcd-number"><p>23</p></td><td class="hb-lcd-icon"><img alt="High Temperature Indicator" class="hb-lcd-icon-art" src="assets/ir/f548c6504f495da4f208cd8e5fe6eac6076daea05e314115abd26b46a9326ba5/23_high_temperature_indicator.png"/></td><td class="hb-lcd-name"><p>High Temperature Indicator</p></td><td class="hb-lcd-description"><p>High temperature protection is triggered. The product may stop functioning until its temperature returns to the normal operating range.</p></td></tr><tr><td class="hb-lcd-number"><p>23</p></td><td class="hb-lcd-icon"><img alt="Low Temperature Indicator" class="hb-lcd-icon-art" src="assets/ir/bdbf602db74ade39a2a162209c0ff535315dee5e27e4832b2e6a201764b6941a/24_low_temperature_indicator.png"/></td><td class="hb-lcd-name"><p>Low Temperature Indicator</p></td><td class="hb-lcd-description"><p>Low temperature protection is triggered. The product may stop functioning until its temperature returns to the normal operating range.</p></td></tr><tr><td class="hb-lcd-number"><p>24</p></td><td class="hb-lcd-icon"><img alt="Fault code" class="hb-lcd-icon-art" src="assets/ir/ce913ebfc7750764f4206250f5e21aa09bd1cfc074bdee5b0484d61610f1b579/25_fault_code.png"/></td><td class="hb-lcd-name"><p>Fault code</p></td><td class="hb-lcd-description"><p>A product error has occurred. Please refer to the Troubleshooting section for details.</p></td></tr><tr><td class="hb-lcd-number"><p>25</p></td><td class="hb-lcd-icon"><img alt="Output Power" class="hb-lcd-icon-art" src="assets/ir/58c1d3604ca7b9774b069c6928775a13465ccb9477f477e9e4d4b30e7f75b88d/26_output_power.png"/></td><td class="hb-lcd-name"><p>Output Power</p></td><td class="hb-lcd-description"><p>Displays the output power in watts.</p></td></tr><tr><td class="hb-lcd-number"><p>26</p></td><td class="hb-lcd-icon"><img alt="Remaining Discharge Time" class="hb-lcd-icon-art" src="assets/ir/9b148ea95d3a3450591c7220908b0913048f2cdea1e61d200534181c52b47cab/27_remaining_discharge_time.png"/></td><td class="hb-lcd-name"><p>Remaining Discharge Time</p></td><td class="hb-lcd-description"><p>Displays the remaining discharging time.</p></td></tr></tbody></table></figure>
+
+
 
 # OPERATIONS
 

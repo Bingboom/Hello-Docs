@@ -66,196 +66,53 @@ Per assistenza, contatta il servizio clienti Jackery.</p></div></div></figure>
 
 <img src="../../../../_static/manual-assets/_pool/70/70d05a78600c7bfe8471aae895b840e0b82bc3aa210f7a8fd596d629abb4cd95.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_it/lcd_map.png" data-web-finished-panel-sha256="70d05a78600c7bfe8471aae895b840e0b82bc3aa210f7a8fd596d629abb4cd95" alt="DISPLAY LCD" />
 
-<table class="longtable lcd-text-only">
-<colgroup>
-<col style="width: 8%" />
-<col style="width: 12%" />
-<col style="width: 28%" />
-<col style="width: 52%" />
-</colgroup>
-<tbody>
-<tr>
-<td><p>1</p></td>
-<td></td>
-<td><p>Wi-Fi</p></td>
-<td><strong>Acceso:</strong> Wi-Fi connesso.
-<strong>Lampeggiante:</strong> pronto per la connessione Wi-Fi.
-<strong>Spento:</strong> Wi-Fi disconnesso.</td>
-</tr>
-<tr>
-<td><p>2</p></td>
-<td></td>
-<td><p>Bluetooth</p></td>
-<td><strong>Acceso:</strong> Bluetooth connesso.
-<strong>Lampeggiante:</strong> pronto per la connessione Bluetooth.
-<strong>Spento:</strong> Bluetooth disconnesso.</td>
-</tr>
-<tr>
-<td><p>3</p></td>
-<td></td>
-<td><p>Modalità di ricarica silenziosa</p></td>
-<td><strong>Acceso:</strong> il rumore durante la ricarica è significativamente ridotto, mentre la potenza e la velocità di ricarica diminuiscono.
-<strong>Spento:</strong> la modalità di ricarica silenziosa è disattivata. Questa funzione può essere attivata o disattivata tramite l'app Jackery.</td>
-</tr>
-<tr>
-<td><p>4</p></td>
-<td></td>
-<td><p>Piano di ricarica</p></td>
-<td>Customizes the charging time of the Jackery Explorer 1000 Plus. Suitable for situations with fluctuating electricity prices, it allows for charging plans based on peak and off-peak electricity times, reducing electricity costs.
-Enable/disable this feature in the Jackery App. The setting is retained when the device is powered off.</td>
-</tr>
-<tr>
-<td><p>5</p></td>
-<td></td>
-<td><p>Modalità autoalimentata</p></td>
-<td>Massimizza l'uso dell'energia solare e riduce la dipendenza dalla rete elettrica, dando priorità all'energia solare immagazzinata e riducendo i costi dell'elettricità (abilitare/disabilitare questa funzione nell'app). La stazione di alimentazione deve essere collegata contemporanea- mente
-sia ai pannelli solari che alla rete elettrica, con la potenza di carico limitata dalla potenza di bypass.</td>
-</tr>
-<tr>
-<td><p>6</p></td>
-<td></td>
-<td><p>Modalità TOU</p></td>
-<td>On: la modalità TOU (time-of-use) è abilitata (SOC di backup predefinito: 60%). Durante i periodi di picco, quando l’energia immagazzinata supera il SOC di backup, il prodotto dà priorità alla scarica della batteria per ridurre i costi dell’elettricità nelle ore di punta. Durante i periodi fuori punta, il sistema carica la batteria dalla rete elettrica per ottenere il livellamento dei picchi e il riempimento delle valli.
-Off: la modalità TOU è disabilitata. Il dispositivo non segue la strategia TOU e funziona secondo la logica predefinita di alimentazione e in carica. Abilita/disabilita questa modalità nell’app Jackery. L’impostazione viene mantenuta quando il dispositivo è spento.</td>
-</tr>
-<tr>
-<td><p>7</p></td>
-<td></td>
-<td><p>UPS</p></td>
-<td>On: il prodotto è in modalità bypass e il tempo di commutazione dalla rete elettrica alla batteria interna è di 10 ms.
-Off: il prodotto non è in modalità bypass.</td>
-</tr>
-<tr>
-<td><p>8</p></td>
-<td></td>
-<td><p>Indicatore di alimentazione CA</p></td>
-<td><p>L’uscita AC (onda sinusoidale pura) è attiva.</p></td>
-</tr>
-<tr>
-<td><p>9</p></td>
-<td></td>
-<td><p>Tensione e frequenza di uscita</p></td>
-<td><p>Visualizza la tensione e la frequenza di uscita.</p></td>
-</tr>
-<tr>
-<td><p>10</p></td>
-<td></td>
-<td><p>Potenza in ingresso</p></td>
-<td><p>Visualizza la potenza di ingresso in watt.</p></td>
-</tr>
-<tr>
-<td><p>11</p></td>
-<td></td>
-<td><p>Verbleibende Aufladezeit</p></td>
-<td><p>Visualizza il tempo residuo di carica.</p></td>
-</tr>
-<tr>
-<td><p>12</p></td>
-<td></td>
-<td><p>Indicatore di ricarica da auto</p></td>
-<td><p>Il prodotto viene ricaricato tramite l’ingresso DC (DC8020) utilizzando 12V DC (ricarica da auto).</p></td>
-</tr>
-<tr>
-<td><p>13</p></td>
-<td></td>
-<td><p>Autoladeanzeige</p></td>
-<td><p>Il prodotto viene ricaricato tramite l’ingresso DC (DC8020) utilizzando uno o più pannelli solari.</p></td>
-</tr>
-<tr>
-<td><p>14</p></td>
-<td></td>
-<td><p>Indicatore di ricarica solare</p></td>
-<td><p>Il prodotto viene ricaricato tramite l’ingresso DC (DC8020) utilizzando uno o più pannelli solari.</p></td>
-</tr>
-<tr>
-<td><p>15</p></td>
-<td></td>
-<td><p>Modalità di risparmio della batteria</p></td>
-<td><strong>Acceso:</strong> limita la capacità massima della batteria utilizzabile per prolungarne la durata.
-<strong>Spento:</strong> la modalità di risparmio batteria è disattivata. Questa funzione può essere attivata o disattivata tramite l'app Jackery. L’impostazione viene mantenuta quando il dispositivo è spento.
-Nota 1: questa funzione non è disponibile quando il prodotto è collegato a uno o più pacchi batteria.
-Nota 2: Quando questa funzione è abilitata, il prodotto esegue occasionalmente un ciclo completo di carica-scarica per calibrare il SOC.</td>
-</tr>
-<tr>
-<td><p>16</p></td>
-<td></td>
-<td><p>Limite di potenza di ricarica</p></td>
-<td>On: il limite di potenza di ricarica è abilitato nell’app Jackery.
-Off: il limite di potenza di ricarica è disabilitato nell’app Jackery. L’impostazione viene mantenuta quando il dispositivo è spento.</td>
-</tr>
-<tr>
-<td><p>17</p></td>
-<td></td>
-<td><p>Indicatore di carica della batteria</p></td>
-<td><p>Quando il prodotto è in carica, il cerchio arancione attorno alla percentuale della batteria si accende in sequenza. Durante la ricarica di altri dispositivi, il cerchio arancione rimarrà acceso.</p></td>
-</tr>
-<tr>
-<td><p>18</p></td>
-<td></td>
-<td><p>Indicatore di batteria scarica</p></td>
-<td><strong>Acceso:</strong> il livello della batteria è inferiore al 20%.
-<strong>Lampeggiante:</strong> il livello della batteria è inferiore al 5%.
-<strong>Spento:</strong> il livello della batteria non è inferiore al 20% oppure il prodotto è in carica.</td>
-</tr>
-<tr>
-<td><p>19</p></td>
-<td></td>
-<td><p>Percentuale di batteria residua</p></td>
-<td><p>Mostra la percentuale residua della batteria.</p></td>
-</tr>
-<tr>
-<td><p>20</p></td>
-<td></td>
-<td><p>Timer di scarica</p></td>
-<td>Attivato: è impostato un timer di scarica.
-Disattivato: non è impostato alcun timer di scarica.
-Questa funzione può essere attivata o disattivata tramite l'app Jackery. L'impostazione non viene mantenuta quando il dispositivo è spento.</td>
-</tr>
-<tr>
-<td><p>21</p></td>
-<td></td>
-<td><p>Indicatore del pacco batteria e numero di batterie collegate</p></td>
-<td><p>Visualizza il numero di pacchi batteria collegati, se presenti.</p></td>
-</tr>
-<tr>
-<td><p>22</p></td>
-<td></td>
-<td><p>Modalità di risparmio energetico</p></td>
-<td>Quando l'uscita AC 1/2 o DC/USB è accesa premendo il rispettivo pulsante di alimentazione:
-<strong>Acceso:</strong> La modalità di risparmio energetico è attivata. Spento: La modalità di risparmio energetico è disattivata.</td>
-</tr>
-<tr>
-<td><p>23</p></td>
-<td></td>
-<td><p>Indicatore di temperatura elevata</p></td>
-<td><p>La protezione da alta temperatura è stata attivata. Il prodotto potrebbe smettere di funzionare finché la temperatura non rientra nel normale intervallo operativo.</p></td>
-</tr>
-<tr>
-<td><p>23</p></td>
-<td></td>
-<td><p>Indicatore di bassa temperatura</p></td>
-<td><p>È stata attivata la protezione da bassa temperatura. Il prodotto potrebbe smettere di funzionare finché la temperatura non rientra nel normale intervallo operativo.</p></td>
-</tr>
-<tr>
-<td><p>24</p></td>
-<td></td>
-<td><p>Codice di errore</p></td>
-<td><p>Si è verificato un errore del prodotto. Per maggiori dettagli, consultare la sezione “Risoluzione dei problemi”.</p></td>
-</tr>
-<tr>
-<td><p>25</p></td>
-<td></td>
-<td><p>Potenza in uscita</p></td>
-<td><p>Visualizza la potenza di uscita in watt.</p></td>
-</tr>
-<tr>
-<td><p>26</p></td>
-<td></td>
-<td><p>Tempo di scarica rimanente</p></td>
-<td><p>Visualizza il tempo residuo di scarica.</p></td>
-</tr>
-</tbody>
-</table>
+
+
+<figure aria-label="LCD icon meanings" class="hb-lcd-table-composition" data-component-id="HB-TABLE-LCD-ICON" tabindex="0"><table class="hb-lcd-icon-table"><colgroup><col class="hb-lcd-col-number"/><col class="hb-lcd-col-icon"/><col class="hb-lcd-col-name"/><col class="hb-lcd-col-description"/></colgroup><tbody><tr><td class="hb-lcd-number"><p>1</p></td><td class="hb-lcd-icon"><img alt="Wi-Fi" class="hb-lcd-icon-art" src="../../../../_static/manual-assets/_pool/fc/fc4cc02b42efc31a32429ada2b78c4480a2fcbca647406da29b2ce75a8a8c1dc.png"/></td><td class="hb-lcd-name"><p>Wi-Fi</p></td><td class="hb-lcd-description"><div class="line-block">
+<div class="line"><strong>Acceso:</strong> Wi-Fi connesso.</div>
+<div class="line"><strong>Lampeggiante:</strong> pronto per la connessione Wi-Fi.</div>
+<div class="line"><strong>Spento:</strong> Wi-Fi disconnesso.</div>
+</div></td></tr><tr><td class="hb-lcd-number"><p>2</p></td><td class="hb-lcd-icon"><img alt="Bluetooth" class="hb-lcd-icon-art" src="../../../../_static/manual-assets/_pool/7e/7e1392ba6a45e66a2e7367ae5df737ccc41ad2de46c4ac7d6baf062ff63bb361.png"/></td><td class="hb-lcd-name"><p>Bluetooth</p></td><td class="hb-lcd-description"><div class="line-block">
+<div class="line"><strong>Acceso:</strong> Bluetooth connesso.</div>
+<div class="line"><strong>Lampeggiante:</strong> pronto per la connessione Bluetooth.</div>
+<div class="line"><strong>Spento:</strong> Bluetooth disconnesso.</div>
+</div></td></tr><tr><td class="hb-lcd-number"><p>3</p></td><td class="hb-lcd-icon"><img alt="Modalità di ricarica silenziosa" class="hb-lcd-icon-art" src="../../../../_static/manual-assets/_pool/7f/7f743182c0509307793dde001356fff5c3d20dd32b09105b6a1d467af7e7f66d.png"/></td><td class="hb-lcd-name"><p>Modalità di ricarica silenziosa</p></td><td class="hb-lcd-description"><div class="line-block">
+<div class="line"><strong>Acceso:</strong> il rumore durante la ricarica è significativamente ridotto, mentre la potenza e la velocità di ricarica diminuiscono.</div>
+<div class="line"><strong>Spento:</strong> la modalità di ricarica silenziosa è disattivata. Questa funzione può essere attivata o disattivata tramite l'app Jackery.</div>
+</div></td></tr><tr><td class="hb-lcd-number"><p>4</p></td><td class="hb-lcd-icon"><img alt="Piano di ricarica" class="hb-lcd-icon-art" src="../../../../_static/manual-assets/_pool/71/71017f43bab44852d5586d1d4f996f3c52d8451bceaa9249e29864652c2f537d.png"/></td><td class="hb-lcd-name"><p>Piano di ricarica</p></td><td class="hb-lcd-description"><div class="line-block">
+<div class="line">Customizes the charging time of the Jackery Explorer 1000 Plus. Suitable for situations with fluctuating electricity prices, it allows for charging plans based on peak and off-peak electricity times, reducing electricity costs.</div>
+<div class="line">Enable/disable this feature in the Jackery App. The setting is retained when the device is powered off.</div>
+</div></td></tr><tr><td class="hb-lcd-number"><p>5</p></td><td class="hb-lcd-icon"><img alt="Modalità autoalimentata" class="hb-lcd-icon-art" src="../../../../_static/manual-assets/_pool/73/73225cf9faa868bbe937df298d55a696828a4156f40e90da5c2a7f0011f0b783.png"/></td><td class="hb-lcd-name"><p>Modalità autoalimentata</p></td><td class="hb-lcd-description"><div class="line-block">
+<div class="line">Massimizza l'uso dell'energia solare e riduce la dipendenza dalla rete elettrica, dando priorità all'energia solare immagazzinata e riducendo i costi dell'elettricità (abilitare/disabilitare questa funzione nell'app). La stazione di alimentazione deve essere collegata contemporanea- mente</div>
+<div class="line">sia ai pannelli solari che alla rete elettrica, con la potenza di carico limitata dalla potenza di bypass.</div>
+</div></td></tr><tr><td class="hb-lcd-number"><p>6</p></td><td class="hb-lcd-icon"><img alt="Modalità TOU" class="hb-lcd-icon-art" src="../../../../_static/manual-assets/_pool/f4/f4cdcb5511058eaaf1879a69a429317dd3d98325dd5e19f5dd95b06ea2c965af.png"/></td><td class="hb-lcd-name"><p>Modalità TOU</p></td><td class="hb-lcd-description"><div class="line-block">
+<div class="line">On: la modalità TOU (time-of-use) è abilitata (SOC di backup predefinito: 60%). Durante i periodi di picco, quando l’energia immagazzinata supera il SOC di backup, il prodotto dà priorità alla scarica della batteria per ridurre i costi dell’elettricità nelle ore di punta. Durante i periodi fuori punta, il sistema carica la batteria dalla rete elettrica per ottenere il livellamento dei picchi e il riempimento delle valli.</div>
+<div class="line">Off: la modalità TOU è disabilitata. Il dispositivo non segue la strategia TOU e funziona secondo la logica predefinita di alimentazione e in carica. Abilita/disabilita questa modalità nell’app Jackery. L’impostazione viene mantenuta quando il dispositivo è spento.</div>
+</div></td></tr><tr><td class="hb-lcd-number"><p>7</p></td><td class="hb-lcd-icon"><img alt="UPS" class="hb-lcd-icon-art" src="../../../../_static/manual-assets/_pool/e4/e422a56922eb749ae90802fd964cb451a08d833658c1849abe10a63c60b173cc.png"/></td><td class="hb-lcd-name"><p>UPS</p></td><td class="hb-lcd-description"><div class="line-block">
+<div class="line">On: il prodotto è in modalità bypass e il tempo di commutazione dalla rete elettrica alla batteria interna è di 10 ms.</div>
+<div class="line">Off: il prodotto non è in modalità bypass.</div>
+</div></td></tr><tr><td class="hb-lcd-number"><p>8</p></td><td class="hb-lcd-icon"><img alt="Indicatore di alimentazione CA" class="hb-lcd-icon-art" src="../../../../_static/manual-assets/_pool/8b/8be87c5a084994e3b4b6ddff46ce0296207a5c49c732f8ed13adfbcb28a36538.png"/></td><td class="hb-lcd-name"><p>Indicatore di alimentazione CA</p></td><td class="hb-lcd-description"><p>L’uscita AC (onda sinusoidale pura) è attiva.</p></td></tr><tr><td class="hb-lcd-number"><p>9</p></td><td class="hb-lcd-icon"><img alt="Tensione e frequenza di uscita" class="hb-lcd-icon-art" src="../../../../_static/manual-assets/_pool/76/7623ef10e229bcfe66c872f3733d26b86c97d703ed30012188a88bb4a168e6df.png"/></td><td class="hb-lcd-name"><p>Tensione e frequenza di uscita</p></td><td class="hb-lcd-description"><p>Visualizza la tensione e la frequenza di uscita.</p></td></tr><tr><td class="hb-lcd-number"><p>10</p></td><td class="hb-lcd-icon"><img alt="Potenza in ingresso" class="hb-lcd-icon-art" src="../../../../_static/manual-assets/_pool/d5/d5100a538e964da13e04241a98134e6aeaa36af8991aceeecac3c5d063b6968b.png"/></td><td class="hb-lcd-name"><p>Potenza in ingresso</p></td><td class="hb-lcd-description"><p>Visualizza la potenza di ingresso in watt.</p></td></tr><tr><td class="hb-lcd-number"><p>11</p></td><td class="hb-lcd-icon"><img alt="Verbleibende Aufladezeit" class="hb-lcd-icon-art" src="../../../../_static/manual-assets/_pool/cf/cfb69b1ffc0b30c51216fb6b1e00e35b412dd0148b6999d3d40ac90fbfe108cb.png"/></td><td class="hb-lcd-name"><p>Verbleibende Aufladezeit</p></td><td class="hb-lcd-description"><p>Visualizza il tempo residuo di carica.</p></td></tr><tr><td class="hb-lcd-number"><p>12</p></td><td class="hb-lcd-icon"><img alt="Indicatore di ricarica da auto" class="hb-lcd-icon-art" src="../../../../_static/manual-assets/_pool/28/28f3cad42ae32e9e895abfd7cdb16a21b99dfa822c57d542f0e3f59a4b452c6c.png"/></td><td class="hb-lcd-name"><p>Indicatore di ricarica da auto</p></td><td class="hb-lcd-description"><p>Il prodotto viene ricaricato tramite l’ingresso DC (DC8020) utilizzando 12V DC (ricarica da auto).</p></td></tr><tr><td class="hb-lcd-number"><p>13</p></td><td class="hb-lcd-icon"><img alt="Autoladeanzeige" class="hb-lcd-icon-art" src="../../../../_static/manual-assets/_pool/ee/eed3299c3f6a15766e433ebbae7a40af8939e6d32489a0aa33a37fe902232a64.png"/></td><td class="hb-lcd-name"><p>Autoladeanzeige</p></td><td class="hb-lcd-description"><p>Il prodotto viene ricaricato tramite l’ingresso DC (DC8020) utilizzando uno o più pannelli solari.</p></td></tr><tr><td class="hb-lcd-number"><p>14</p></td><td class="hb-lcd-icon"><img alt="Indicatore di ricarica solare" class="hb-lcd-icon-art" src="../../../../_static/manual-assets/_pool/91/91cec82eeaa553477868d38789d68a4937cb11c5c4d794de74db1edddb3aeea4.png"/></td><td class="hb-lcd-name"><p>Indicatore di ricarica solare</p></td><td class="hb-lcd-description"><p>Il prodotto viene ricaricato tramite l’ingresso DC (DC8020) utilizzando uno o più pannelli solari.</p></td></tr><tr><td class="hb-lcd-number"><p>15</p></td><td class="hb-lcd-icon"><img alt="Modalità di risparmio della batteria" class="hb-lcd-icon-art" src="../../../../_static/manual-assets/_pool/e3/e32e6ae96321aa47b39c0c65a18a59da6c90cf87a0d7c8d61556ead273789c3a.png"/></td><td class="hb-lcd-name"><p>Modalità di risparmio della batteria</p></td><td class="hb-lcd-description"><div class="line-block">
+<div class="line"><strong>Acceso:</strong> limita la capacità massima della batteria utilizzabile per prolungarne la durata.</div>
+<div class="line"><strong>Spento:</strong> la modalità di risparmio batteria è disattivata. Questa funzione può essere attivata o disattivata tramite l'app Jackery. L’impostazione viene mantenuta quando il dispositivo è spento.</div>
+<div class="line">Nota 1: questa funzione non è disponibile quando il prodotto è collegato a uno o più pacchi batteria.</div>
+<div class="line">Nota 2: Quando questa funzione è abilitata, il prodotto esegue occasionalmente un ciclo completo di carica-scarica per calibrare il SOC.</div>
+</div></td></tr><tr><td class="hb-lcd-number"><p>16</p></td><td class="hb-lcd-icon"><img alt="Limite di potenza di ricarica" class="hb-lcd-icon-art" src="../../../../_static/manual-assets/_pool/21/21b5f19ca9a6e39d8bd515128297cc1b99e43fd263e39ffba4fdf102d50a4bad.png"/></td><td class="hb-lcd-name"><p>Limite di potenza di ricarica</p></td><td class="hb-lcd-description"><div class="line-block">
+<div class="line">On: il limite di potenza di ricarica è abilitato nell’app Jackery.</div>
+<div class="line">Off: il limite di potenza di ricarica è disabilitato nell’app Jackery. L’impostazione viene mantenuta quando il dispositivo è spento.</div>
+</div></td></tr><tr><td class="hb-lcd-number"><p>17</p></td><td class="hb-lcd-icon"><img alt="Indicatore di carica della batteria" class="hb-lcd-icon-art" src="../../../../_static/manual-assets/_pool/85/85921a9ad7fbfa58f98ee7bb0dc904377f31fe3dbface4083d2493144b05362f.png"/></td><td class="hb-lcd-name"><p>Indicatore di carica della batteria</p></td><td class="hb-lcd-description"><p>Quando il prodotto è in carica, il cerchio arancione attorno alla percentuale della batteria si accende in sequenza. Durante la ricarica di altri dispositivi, il cerchio arancione rimarrà acceso.</p></td></tr><tr><td class="hb-lcd-number"><p>18</p></td><td class="hb-lcd-icon"><img alt="Indicatore di batteria scarica" class="hb-lcd-icon-art" src="../../../../_static/manual-assets/_pool/c7/c7862a87e742d6927b4e1d63a8d0ccb09fbcf980ae662ff94b9134e256e56889.png"/></td><td class="hb-lcd-name"><p>Indicatore di batteria scarica</p></td><td class="hb-lcd-description"><div class="line-block">
+<div class="line"><strong>Acceso:</strong> il livello della batteria è inferiore al 20%.</div>
+<div class="line"><strong>Lampeggiante:</strong> il livello della batteria è inferiore al 5%.</div>
+<div class="line"><strong>Spento:</strong> il livello della batteria non è inferiore al 20% oppure il prodotto è in carica.</div>
+</div></td></tr><tr><td class="hb-lcd-number"><p>19</p></td><td class="hb-lcd-icon"><img alt="Percentuale di batteria residua" class="hb-lcd-icon-art" src="../../../../_static/manual-assets/_pool/74/747147be99d76bb486c858aeca2289d7d05ad3be1f1ea1f0825f54cb29b7fd10.png"/></td><td class="hb-lcd-name"><p>Percentuale di batteria residua</p></td><td class="hb-lcd-description"><p>Mostra la percentuale residua della batteria.</p></td></tr><tr><td class="hb-lcd-number"><p>20</p></td><td class="hb-lcd-icon"><img alt="Timer di scarica" class="hb-lcd-icon-art" src="../../../../_static/manual-assets/_pool/6a/6aab9a14900a08fcd8f8261e6e36fbb9a1220eb931df94ebd149b23930063723.png"/></td><td class="hb-lcd-name"><p>Timer di scarica</p></td><td class="hb-lcd-description"><div class="line-block">
+<div class="line">Attivato: è impostato un timer di scarica.</div>
+<div class="line">Disattivato: non è impostato alcun timer di scarica.</div>
+<div class="line">Questa funzione può essere attivata o disattivata tramite l'app Jackery. L'impostazione non viene mantenuta quando il dispositivo è spento.</div>
+</div></td></tr><tr><td class="hb-lcd-number"><p>21</p></td><td class="hb-lcd-icon"><img alt="Indicatore del pacco batteria e numero di batterie collegate" class="hb-lcd-icon-art" src="../../../../_static/manual-assets/_pool/b4/b4744a483fa95db386bbb269f277a53f678279c7eda8f8cbf24a78f2b426f2a7.png"/></td><td class="hb-lcd-name"><p>Indicatore del pacco batteria e numero di batterie collegate</p></td><td class="hb-lcd-description"><p>Visualizza il numero di pacchi batteria collegati, se presenti.</p></td></tr><tr><td class="hb-lcd-number"><p>22</p></td><td class="hb-lcd-icon"><img alt="Modalità di risparmio energetico" class="hb-lcd-icon-art" src="../../../../_static/manual-assets/_pool/c4/c4b830c769a3de7f9effaee82466752f5706a0741ba29675cce45633c1cd8222.png"/></td><td class="hb-lcd-name"><p>Modalità di risparmio energetico</p></td><td class="hb-lcd-description"><div class="line-block">
+<div class="line">Quando l'uscita AC 1/2 o DC/USB è accesa premendo il rispettivo pulsante di alimentazione:</div>
+<div class="line"><strong>Acceso:</strong> La modalità di risparmio energetico è attivata. Spento: La modalità di risparmio energetico è disattivata.</div>
+</div></td></tr><tr><td class="hb-lcd-number"><p>23</p></td><td class="hb-lcd-icon"><img alt="Indicatore di temperatura elevata" class="hb-lcd-icon-art" src="../../../../_static/manual-assets/_pool/f5/f548c6504f495da4f208cd8e5fe6eac6076daea05e314115abd26b46a9326ba5.png"/></td><td class="hb-lcd-name"><p>Indicatore di temperatura elevata</p></td><td class="hb-lcd-description"><p>La protezione da alta temperatura è stata attivata. Il prodotto potrebbe smettere di funzionare finché la temperatura non rientra nel normale intervallo operativo.</p></td></tr><tr><td class="hb-lcd-number"><p>23</p></td><td class="hb-lcd-icon"><img alt="Indicatore di bassa temperatura" class="hb-lcd-icon-art" src="../../../../_static/manual-assets/_pool/bd/bdbf602db74ade39a2a162209c0ff535315dee5e27e4832b2e6a201764b6941a.png"/></td><td class="hb-lcd-name"><p>Indicatore di bassa temperatura</p></td><td class="hb-lcd-description"><p>È stata attivata la protezione da bassa temperatura. Il prodotto potrebbe smettere di funzionare finché la temperatura non rientra nel normale intervallo operativo.</p></td></tr><tr><td class="hb-lcd-number"><p>24</p></td><td class="hb-lcd-icon"><img alt="Codice di errore" class="hb-lcd-icon-art" src="../../../../_static/manual-assets/_pool/ce/ce913ebfc7750764f4206250f5e21aa09bd1cfc074bdee5b0484d61610f1b579.png"/></td><td class="hb-lcd-name"><p>Codice di errore</p></td><td class="hb-lcd-description"><p>Si è verificato un errore del prodotto. Per maggiori dettagli, consultare la sezione “Risoluzione dei problemi”.</p></td></tr><tr><td class="hb-lcd-number"><p>25</p></td><td class="hb-lcd-icon"><img alt="Potenza in uscita" class="hb-lcd-icon-art" src="../../../../_static/manual-assets/_pool/58/58c1d3604ca7b9774b069c6928775a13465ccb9477f477e9e4d4b30e7f75b88d.png"/></td><td class="hb-lcd-name"><p>Potenza in uscita</p></td><td class="hb-lcd-description"><p>Visualizza la potenza di uscita in watt.</p></td></tr><tr><td class="hb-lcd-number"><p>26</p></td><td class="hb-lcd-icon"><img alt="Tempo di scarica rimanente" class="hb-lcd-icon-art" src="../../../../_static/manual-assets/_pool/9b/9b148ea95d3a3450591c7220908b0913048f2cdea1e61d200534181c52b47cab.png"/></td><td class="hb-lcd-name"><p>Tempo di scarica rimanente</p></td><td class="hb-lcd-description"><p>Visualizza il tempo residuo di scarica.</p></td></tr></tbody></table></figure>
+
+
 
 # OPERAZIONI
 
@@ -319,26 +176,7 @@ La funzione di ripristino delle uscite CA e CC è disattivata per impostazione p
 
 
 
-<figure aria-label="Condizioni di ripristino automatico / Condizioni senza ripristino automatico" class="hb-auto-resume-composition"><table class="hb-auto-resume-table"><colgroup><col class="hb-auto-resume-col"/><col class="hb-auto-resume-col"/></colgroup>
-<thead>
-<tr><th class="head hb-auto-resume-left" scope="col"><p>Condizioni di ripristino automatico</p></th>
-<th class="head hb-auto-resume-right" scope="col"><p>Condizioni senza ripristino automatico</p></th>
-</tr>
-</thead>
-<tbody>
-<tr><td class="hb-auto-resume-left"><p>Accensione/Riavvio dopo lo spegnimento o il riavvio</p></td>
-<td class="hb-auto-resume-right"><p>Spegnimento manuale delle uscite (pulsante/App)</p></td>
-</tr>
-<tr><td class="hb-auto-resume-left" rowspan="2"><p>SOC batteria ≥ limite di scarica +10% al raggiungimento del limite</p></td>
-<td class="hb-auto-resume-right"><p>Spegnimento delle uscite in modalità risparmio energetico</p></td>
-</tr>
-<tr><td class="hb-auto-resume-right"><p>Spegnimento delle uscite attivato da protezione</p></td>
-</tr>
-<tr><td class="hb-auto-resume-left"><p>Aggiornamento OTA completato</p></td>
-<td class="hb-auto-resume-right"><p>Spegnimento delle uscite attivato dal timer di scarica</p></td>
-</tr>
-</tbody>
-</table></figure>
+<figure aria-label="Condizioni di ripristino automatico / Condizioni senza ripristino automatico" class="hb-auto-resume-composition" data-component-id="HB-TABLE-AUTO-RESUME" tabindex="0"><table class="hb-auto-resume-table"><colgroup><col class="hb-auto-resume-col"/><col class="hb-auto-resume-col"/></colgroup><thead><tr><th class="hb-auto-resume-left" scope="col">Condizioni di ripristino automatico</th><th class="hb-auto-resume-right" scope="col">Condizioni senza ripristino automatico</th></tr></thead><tbody><tr><td class="hb-auto-resume-left">Accensione/Riavvio dopo lo spegnimento o il riavvio</td><td class="hb-auto-resume-right">Spegnimento manuale delle uscite (pulsante/App)</td></tr><tr><td class="hb-auto-resume-left" rowspan="2">SOC batteria ≥ limite di scarica +10% al raggiungimento del limite</td><td class="hb-auto-resume-right">Spegnimento delle uscite in modalità risparmio energetico</td></tr><tr><td class="hb-auto-resume-right">Spegnimento delle uscite attivato da protezione</td></tr><tr><td class="hb-auto-resume-left">Aggiornamento OTA completato</td><td class="hb-auto-resume-right">Spegnimento delle uscite attivato dal timer di scarica</td></tr></tbody></table></figure>
 
 
 
@@ -346,7 +184,7 @@ La funzione di ripristino delle uscite CA e CC è disattivata per impostazione p
 
 
 
-<figure aria-label="Modalità display LCD." class="hb-lcd-mode-composition" data-component-id="HB-TABLE-LCD-MODE"><div class="hb-lcd-mode-art-panel"><img alt="Modalità display LCD." class="hb-lcd-mode-art" src="../../../../_static/manual-assets/_pool/3c/3ca82a98654ca8850ff447bc3c9868c6d24f9e757b47742dcf2e596c36c077a8.png"/></div><div class="hb-lcd-mode-table-panel"><table class="hb-lcd-mode-table"><colgroup><col class="hb-lcd-mode-col-state"/><col class="hb-lcd-mode-col-action"/><col class="hb-lcd-mode-col-copy"/></colgroup><tbody><tr><td class="hb-lcd-mode-state" rowspan="3">Acceso brevemente</td><td class="hb-lcd-mode-action">Accendi</td><td class="hb-lcd-mode-copy">Premi il pulsante POWER principale oppure quando il prodotto è in carica.</td></tr><tr><td class="hb-lcd-mode-action">Spegni</td><td class="hb-lcd-mode-copy">Premi il pulsante POWER principale.</td></tr><tr><td class="hb-lcd-mode-action">Spegnimento automatico</td><td class="hb-lcd-mode-copy">Lo schermo LCD si spegne automaticamente ed entra in modalità sleep dopo 2 minuti di inattività.</td></tr><tr><td class="hb-lcd-mode-state" rowspan="3">Acceso fisso (in carica o in scarica)</td><td class="hb-lcd-mode-action">Accendi</td><td class="hb-lcd-mode-copy">Premi due volte il pulsante POWER principale quando il prodotto è acceso.</td></tr><tr><td class="hb-lcd-mode-action">Spegni</td><td class="hb-lcd-mode-copy">Premi il pulsante POWER principale.</td></tr><tr><td class="hb-lcd-mode-action">Spegnimento automatico</td><td class="hb-lcd-mode-copy">Lo schermo LCD si spegne automaticamente dopo 2 ore di inattività.</td></tr></tbody></table></div></figure>
+<figure aria-label="Modalità display LCD." class="hb-lcd-mode-composition" data-component-id="HB-TABLE-LCD-MODE"><div class="hb-lcd-mode-art-panel"><img alt="Modalità display LCD." class="hb-lcd-mode-art manual-finished-illustration" data-web-finished-panel-path="assets/je1000h_eu_it/operation_lcd.png" data-web-finished-panel-sha256="3ca82a98654ca8850ff447bc3c9868c6d24f9e757b47742dcf2e596c36c077a8" src="../../../../_static/manual-assets/_pool/3c/3ca82a98654ca8850ff447bc3c9868c6d24f9e757b47742dcf2e596c36c077a8.png"/></div><div class="hb-lcd-mode-table-panel"><table class="hb-lcd-mode-table"><colgroup><col class="hb-lcd-mode-col-state"/><col class="hb-lcd-mode-col-action"/><col class="hb-lcd-mode-col-copy"/></colgroup><tbody><tr><td class="hb-lcd-mode-state" rowspan="3">Acceso brevemente</td><td class="hb-lcd-mode-action">Accendi</td><td class="hb-lcd-mode-copy">Premi il pulsante POWER principale oppure quando il prodotto è in carica.</td></tr><tr><td class="hb-lcd-mode-action">Spegni</td><td class="hb-lcd-mode-copy">Premi il pulsante POWER principale.</td></tr><tr><td class="hb-lcd-mode-action">Spegnimento automatico</td><td class="hb-lcd-mode-copy">Lo schermo LCD si spegne automaticamente ed entra in modalità sleep dopo 2 minuti di inattività.</td></tr><tr><td class="hb-lcd-mode-state" rowspan="3">Acceso fisso (in carica o in scarica)</td><td class="hb-lcd-mode-action">Accendi</td><td class="hb-lcd-mode-copy">Premi due volte il pulsante POWER principale quando il prodotto è acceso.</td></tr><tr><td class="hb-lcd-mode-action">Spegni</td><td class="hb-lcd-mode-copy">Premi il pulsante POWER principale.</td></tr><tr><td class="hb-lcd-mode-action">Spegnimento automatico</td><td class="hb-lcd-mode-copy">Lo schermo LCD si spegne automaticamente dopo 2 ore di inattività.</td></tr></tbody></table></div></figure>
 
 
 
@@ -356,32 +194,7 @@ Puoi anche impostare la modalità di visualizzazione dello schermo nell\'App Jac
 
 
 
-<figure aria-label="Pulsanti / Operazione / Funzione" class="hb-key-combination-composition" tabindex="0"><table class="hb-key-combination-table"><colgroup><col class="hb-key-col-buttons"/><col class="hb-key-col-operation"/><col class="hb-key-col-function"/></colgroup>
-<thead>
-<tr><th class="head hb-key-buttons" scope="col"><p>Pulsanti</p></th>
-<th class="head hb-key-operation" scope="col"><p>Operazione</p></th>
-<th class="head hb-key-function" scope="col"><p>Funzione</p></th>
-</tr>
-</thead>
-<tbody>
-<tr><td class="hb-key-buttons"><p>Pulsante POWER principale + Pulsante CA</p></td>
-<td class="hb-key-operation"><p>Tieni premuti entrambi per 3 s</p></td>
-<td class="hb-key-function"><p>Attiva/disattiva la Modalità risparmio energetico</p></td>
-</tr>
-<tr><td class="hb-key-buttons"><p>Pulsante POWER principale + Pulsante DC/USB</p></td>
-<td class="hb-key-operation"><p>Tieni premuti entrambi per 3 s</p></td>
-<td class="hb-key-function"><p>Ripristina Wi-Fi e Bluetooth</p></td>
-</tr>
-<tr><td class="hb-key-buttons"><p>Pulsante DC/USB + Pulsante CA</p></td>
-<td class="hb-key-operation"><p>Tieni premuti entrambi per 1 s</p></td>
-<td class="hb-key-function"><p>Attiva/disattiva Wi-Fi e Bluetooth</p></td>
-</tr>
-<tr><td class="hb-key-buttons"><p>Pulsante POWER principale + Pulsante luce LED</p></td>
-<td class="hb-key-operation"><p>Tieni premuti entrambi per 1 s</p></td>
-<td class="hb-key-function"><p>Attiva/disattiva la Modalità di ricarica di emergenza</p></td>
-</tr>
-</tbody>
-</table></figure>
+<figure aria-label="Pulsanti / Operazione / Funzione" class="hb-key-combination-composition" data-component-id="HB-TABLE-KEY-COMBINATIONS" tabindex="0"><table class="hb-key-combination-table"><colgroup><col class="hb-key-col-buttons"/><col class="hb-key-col-operation"/><col class="hb-key-col-function"/></colgroup><thead><tr><th class="hb-key-buttons" scope="col"><p>Pulsanti</p></th><th class="hb-key-operation" scope="col"><p>Operazione</p></th><th class="hb-key-function" scope="col"><p>Funzione</p></th></tr></thead><tbody><tr><td class="hb-key-buttons"><p>Pulsante POWER principale + Pulsante CA</p></td><td class="hb-key-operation"><p>Tieni premuti entrambi per 3 s</p></td><td class="hb-key-function"><p>Attiva/disattiva la Modalità risparmio energetico</p></td></tr><tr><td class="hb-key-buttons"><p>Pulsante POWER principale + Pulsante DC/USB</p></td><td class="hb-key-operation"><p>Tieni premuti entrambi per 3 s</p></td><td class="hb-key-function"><p>Ripristina Wi-Fi e Bluetooth</p></td></tr><tr><td class="hb-key-buttons"><p>Pulsante DC/USB + Pulsante CA</p></td><td class="hb-key-operation"><p>Tieni premuti entrambi per 1 s</p></td><td class="hb-key-function"><p>Attiva/disattiva Wi-Fi e Bluetooth</p></td></tr><tr><td class="hb-key-buttons"><p>Pulsante POWER principale + Pulsante luce LED</p></td><td class="hb-key-operation"><p>Tieni premuti entrambi per 1 s</p></td><td class="hb-key-function"><p>Attiva/disattiva la Modalità di ricarica di emergenza</p></td></tr></tbody></table></figure>
 
 
 

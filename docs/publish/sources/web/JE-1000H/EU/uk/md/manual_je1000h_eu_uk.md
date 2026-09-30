@@ -66,199 +66,56 @@
 
 <img src="assets/ir/70d05a78600c7bfe8471aae895b840e0b82bc3aa210f7a8fd596d629abb4cd95/lcd_map.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/je1000h_eu_uk/lcd_map.png" data-web-finished-panel-sha256="70d05a78600c7bfe8471aae895b840e0b82bc3aa210f7a8fd596d629abb4cd95" alt="ЖК-ДИСПЛЕЙ" />
 
-<table class="longtable lcd-text-only">
-<colgroup>
-<col style="width: 8%" />
-<col style="width: 12%" />
-<col style="width: 28%" />
-<col style="width: 52%" />
-</colgroup>
-<tbody>
-<tr>
-<td><p>1</p></td>
-<td></td>
-<td><p>Wi-Fi</p></td>
-<td><strong>Увімкнено:</strong> Wi-Fi підключено.
-<strong>Блимає:</strong> Готово до підключення до Wi-Fi.
-<strong>Вимкнено:</strong> Wi-Fi відключено.</td>
-</tr>
-<tr>
-<td><p>2</p></td>
-<td></td>
-<td><p>Bluetooth</p></td>
-<td><strong>Увімкнено:</strong> Bluetooth підключено.
-<strong>Блимає:</strong> Готово до підключення до Bluetooth.
-<strong>Вимкнено:</strong> Bluetooth відключено.</td>
-</tr>
-<tr>
-<td><p>3</p></td>
-<td></td>
-<td><p>Режим тихої зарядки</p></td>
-<td><strong>Увімкнено:</strong> Рівень шуму під час заряджання значно зменшується, водночас знижується потужність заряджання і сповільнюється швидкість заряджання.
-<strong>Вимкнено:</strong> Тихий режим заряджання вимкнено.
-Увімкніть/вимкніть цю функцію в Jackery App. Налаштування зберігається після вимкнення пристрою.</td>
-</tr>
-<tr>
-<td><p>4</p></td>
-<td></td>
-<td><p>План заряджання</p></td>
-<td>Налаштовує час заряджання Jackery Explorer 1000 Plus. Підходить для умов із коливаннями цін на електроенергію; дозволяє створювати плани заряджання на основі пікових і непікових періодів, зменшуючи витрати на електроенергію.
-Увімкніть/вимкніть цю функцію в Jackery App. Налаштування зберігається після вимкнення пристрою.</td>
-</tr>
-<tr>
-<td><p>5</p></td>
-<td></td>
-<td><p>Режим самозабезпечення</p></td>
-<td>Максимізує використання сонячної енергії та зменшує залежність від електромережі, віддаючи пріоритет накопиченій сонячній енергії, що знижує витрати на електроенергію. Електростанцію необхідно одночасно підключити до сонячних панелей і електромережі, при цьому потужність навантаження обмежується байпасною потужністю.
-Увімкніть/вимкніть цю функцію в Jackery App. Налаштування зберігається після вимкнення пристрою.</td>
-</tr>
-<tr>
-<td><p>6</p></td>
-<td></td>
-<td><p>Режим TOU</p></td>
-<td><strong>Увімкнено:</strong> Режим TOU (розрахунок за часом використання) увімкнено (резервний рівень заряду за замовчуванням: 60%). У пікові періоди, коли накопичена енергія перевищує резервний рівень заряду, пристрій віддає пріоритет розряджанню акумулятора, щоб зменшити витрати на електроенергію в піковий час. У непікові періоди система заряджає акумулятор від електромережі для згладжування пікових навантажень і заповнення провалів.
-<strong>Вимкнено:</strong> Режим TOU вимкнено. Пристрій не дотримується стратегії TOU і працює відповідно до логіки живлення та заряджання за замовчуванням.
-Увімкніть/вимкніть цей режим у Jackery App. Налаштування зберігається після вимкнення пристрою.</td>
-</tr>
-<tr>
-<td><p>7</p></td>
-<td></td>
-<td><p>ДБЖ</p></td>
-<td><strong>Увімкнено:</strong> Пристрій працює в байпасному режимі, час перемикання з електромережі на внутрішній акумулятор становить 10 мс.
-<strong>Вимкнено:</strong> Продукт не працює в байпасному режимі.</td>
-</tr>
-<tr>
-<td><p>8</p></td>
-<td></td>
-<td><p>Індикатор живлення змінного струму</p></td>
-<td><p>Вихід змінного струму (чиста синусоїда) увімкнено.</p></td>
-</tr>
-<tr>
-<td><p>9</p></td>
-<td></td>
-<td><p>Вихідна напруга та частота</p></td>
-<td><p>Відображає вихідну напругу та частоту, коли вихід змінного струму увімкнено.</p></td>
-</tr>
-<tr>
-<td><p>10</p></td>
-<td></td>
-<td><p>Вхідна потужність</p></td>
-<td><p>Відображає вхідну потужність у ватах.</p></td>
-</tr>
-<tr>
-<td><p>11</p></td>
-<td></td>
-<td><p>Час, що залишився до повного заряджання</p></td>
-<td><p>Відображає залишковий час заряджання.</p></td>
-</tr>
-<tr>
-<td><p>12</p></td>
-<td></td>
-<td><p>Індикатор заряджання від мережі змінного струму</p></td>
-<td><p>Пристрій заряджається через вхід змінного струму від електромережі.</p></td>
-</tr>
-<tr>
-<td><p>13</p></td>
-<td></td>
-<td><p>Індикатор заряджання від автомобіля</p></td>
-<td><p>Пристрій заряджається через вхід постійного струму (DC8020) із використанням 12 В постійного струму (автомобільне заряджання).</p></td>
-</tr>
-<tr>
-<td><p>14</p></td>
-<td></td>
-<td><p>Індикатор заряджання від сонячних батарей</p></td>
-<td><p>Пристрій заряджається через вхід постійного струму (DC8020) із використанням сонячної(-их) панелі(-ей).</p></td>
-</tr>
-<tr>
-<td><p>15</p></td>
-<td></td>
-<td><p>Режим енергозбереження акумулятора</p></td>
-<td><strong>Увімкнено:</strong> Обмежує максимальну доступну ємність акумулятора для продовження терміну його служби.
-<strong>Вимкнено:</strong> Режим енергозбереження акумулятора вимкнено. Увімкніть/вимкніть цю функцію в Jackery App. Налаштування зберігається після вимкнення пристрою.
-Примітка 1: Ця функція недоступна, коли пристрій підключено до акумуляторного(-их) блоку(-ів).
-Примітка 2: Коли ця функція активована, пристрій періодично виконує повний цикл заряджання та розряджання для калібрування SOC (рівня заряду).</td>
-</tr>
-<tr>
-<td><p>16</p></td>
-<td></td>
-<td><p>Обмеження потужності заряджання</p></td>
-<td><strong>Увімкнено:</strong> Обмеження потужності заряджання активовано в Jackery App.
-<strong>Вимкнено:</strong> Обмеження потужності заряджання вимкнено в Jackery App.
-Налаштування зберігається після вимкнення пристрою.</td>
-</tr>
-<tr>
-<td><p>17</p></td>
-<td></td>
-<td><p>Індикатор заряду акумулятора</p></td>
-<td><p>Коли пристрій заряджається, помаранчеве коло навколо відсотка заряду акумулятора почергово засвічуватиметься. Під час заряджання інших пристроїв помаранчеве коло світитиметься постійно.</p></td>
-</tr>
-<tr>
-<td><p>18</p></td>
-<td></td>
-<td><p>Індикатор низького заряду батареї</p></td>
-<td><strong>Увімкнено:</strong> Рівень заряду акумулятора нижче 20%.
-<strong>Блимає:</strong> Рівень заряду акумулятора нижче 5%.
-<strong>Вимкнено:</strong> Рівень заряду не нижче 20% або пристрій заряджається.</td>
-</tr>
-<tr>
-<td><p>19</p></td>
-<td></td>
-<td><p>Залишковий відсоток заряду акумулятора</p></td>
-<td><p>Відображає залишковий відсоток заряду акумулятора.</p></td>
-</tr>
-<tr>
-<td><p>20</p></td>
-<td></td>
-<td><p>Таймер розряджання</p></td>
-<td><strong>Увімкнено:</strong> Таймер розряджання встановлено.
-<strong>Вимкнено:</strong> Таймер розряджання не встановлено.
-Увімкніть/вимкніть цю функцію в Jackery App. Налаштування не зберігається після вимкнення пристрою.</td>
-</tr>
-<tr>
-<td><p>21</p></td>
-<td></td>
-<td><p>Підключені акумулятори</p></td>
-<td><p>Відображає кількість акумуляторних блоків, якщо вони підключені.</p></td>
-</tr>
-<tr>
-<td><p>22</p></td>
-<td></td>
-<td><p>Режим енергозбереження</p></td>
-<td>Коли вихід змінного або постійного струму увімкнено натисканням кнопки живлення змінного струму 1/2 або постійного струму/USB:
-<strong>Увімкнено:</strong> Режим енергозбереження увімкнено. Вимкнено: Режим енергозбереження вимкнено.</td>
-</tr>
-<tr>
-<td><p>23</p></td>
-<td></td>
-<td><p>Індикатор високої температури</p></td>
-<td><p>Активовано захист від високої температури. Продукт може припинити роботу, доки його температура не повернеться до нормального робочого діапазону.</p></td>
-</tr>
-<tr>
-<td><p>23</p></td>
-<td></td>
-<td><p>Індикатор низької температури</p></td>
-<td><p>Активовано захист від низької температури. Продукт може припинити роботу, доки його температура не повернеться до нормального робочого діапазону.</p></td>
-</tr>
-<tr>
-<td><p>24</p></td>
-<td></td>
-<td><p>Код помилки</p></td>
-<td><p>Виникла помилка продукту. Детальніше див. у розділі «Усунення несправностей».</p></td>
-</tr>
-<tr>
-<td><p>25</p></td>
-<td></td>
-<td><p>Вихідна потужність</p></td>
-<td><p>Відображає вихідну потужність у ватах.</p></td>
-</tr>
-<tr>
-<td><p>26</p></td>
-<td></td>
-<td><p>Час розряду, що залишився</p></td>
-<td><p>Відображає залишковий час розряджання.</p></td>
-</tr>
-</tbody>
-</table>
+
+
+<figure aria-label="LCD icon meanings" class="hb-lcd-table-composition" data-component-id="HB-TABLE-LCD-ICON" tabindex="0"><table class="hb-lcd-icon-table"><colgroup><col class="hb-lcd-col-number"/><col class="hb-lcd-col-icon"/><col class="hb-lcd-col-name"/><col class="hb-lcd-col-description"/></colgroup><tbody><tr><td class="hb-lcd-number"><p>1</p></td><td class="hb-lcd-icon"><img alt="Wi-Fi" class="hb-lcd-icon-art" src="assets/ir/fc4cc02b42efc31a32429ada2b78c4480a2fcbca647406da29b2ce75a8a8c1dc/01_wifi.png"/></td><td class="hb-lcd-name"><p>Wi-Fi</p></td><td class="hb-lcd-description"><div class="line-block">
+<div class="line"><strong>Увімкнено:</strong> Wi-Fi підключено.</div>
+<div class="line"><strong>Блимає:</strong> Готово до підключення до Wi-Fi.</div>
+<div class="line"><strong>Вимкнено:</strong> Wi-Fi відключено.</div>
+</div></td></tr><tr><td class="hb-lcd-number"><p>2</p></td><td class="hb-lcd-icon"><img alt="Bluetooth" class="hb-lcd-icon-art" src="assets/ir/7e1392ba6a45e66a2e7367ae5df737ccc41ad2de46c4ac7d6baf062ff63bb361/02_bluetooth.png"/></td><td class="hb-lcd-name"><p>Bluetooth</p></td><td class="hb-lcd-description"><div class="line-block">
+<div class="line"><strong>Увімкнено:</strong> Bluetooth підключено.</div>
+<div class="line"><strong>Блимає:</strong> Готово до підключення до Bluetooth.</div>
+<div class="line"><strong>Вимкнено:</strong> Bluetooth відключено.</div>
+</div></td></tr><tr><td class="hb-lcd-number"><p>3</p></td><td class="hb-lcd-icon"><img alt="Режим тихої зарядки" class="hb-lcd-icon-art" src="assets/ir/7f743182c0509307793dde001356fff5c3d20dd32b09105b6a1d467af7e7f66d/03_quiet_charging_mode.png"/></td><td class="hb-lcd-name"><p>Режим тихої зарядки</p></td><td class="hb-lcd-description"><div class="line-block">
+<div class="line"><strong>Увімкнено:</strong> Рівень шуму під час заряджання значно зменшується, водночас знижується потужність заряджання і сповільнюється швидкість заряджання.</div>
+<div class="line"><strong>Вимкнено:</strong> Тихий режим заряджання вимкнено.</div>
+<div class="line">Увімкніть/вимкніть цю функцію в Jackery App. Налаштування зберігається після вимкнення пристрою.</div>
+</div></td></tr><tr><td class="hb-lcd-number"><p>4</p></td><td class="hb-lcd-icon"><img alt="План заряджання" class="hb-lcd-icon-art" src="assets/ir/71017f43bab44852d5586d1d4f996f3c52d8451bceaa9249e29864652c2f537d/04_charging_plan.png"/></td><td class="hb-lcd-name"><p>План заряджання</p></td><td class="hb-lcd-description"><div class="line-block">
+<div class="line">Налаштовує час заряджання Jackery Explorer 1000 Plus. Підходить для умов із коливаннями цін на електроенергію; дозволяє створювати плани заряджання на основі пікових і непікових періодів, зменшуючи витрати на електроенергію.</div>
+<div class="line">Увімкніть/вимкніть цю функцію в Jackery App. Налаштування зберігається після вимкнення пристрою.</div>
+</div></td></tr><tr><td class="hb-lcd-number"><p>5</p></td><td class="hb-lcd-icon"><img alt="Режим самозабезпечення" class="hb-lcd-icon-art" src="assets/ir/73225cf9faa868bbe937df298d55a696828a4156f40e90da5c2a7f0011f0b783/05_self_powered_mode.png"/></td><td class="hb-lcd-name"><p>Режим самозабезпечення</p></td><td class="hb-lcd-description"><div class="line-block">
+<div class="line">Максимізує використання сонячної енергії та зменшує залежність від електромережі, віддаючи пріоритет накопиченій сонячній енергії, що знижує витрати на електроенергію. Електростанцію необхідно одночасно підключити до сонячних панелей і електромережі, при цьому потужність навантаження обмежується байпасною потужністю.</div>
+<div class="line">Увімкніть/вимкніть цю функцію в Jackery App. Налаштування зберігається після вимкнення пристрою.</div>
+</div></td></tr><tr><td class="hb-lcd-number"><p>6</p></td><td class="hb-lcd-icon"><img alt="Режим TOU" class="hb-lcd-icon-art" src="assets/ir/f4cdcb5511058eaaf1879a69a429317dd3d98325dd5e19f5dd95b06ea2c965af/06_tou_mode.png"/></td><td class="hb-lcd-name"><p>Режим TOU</p></td><td class="hb-lcd-description"><div class="line-block">
+<div class="line"><strong>Увімкнено:</strong> Режим TOU (розрахунок за часом використання) увімкнено (резервний рівень заряду за замовчуванням: 60%). У пікові періоди, коли накопичена енергія перевищує резервний рівень заряду, пристрій віддає пріоритет розряджанню акумулятора, щоб зменшити витрати на електроенергію в піковий час. У непікові періоди система заряджає акумулятор від електромережі для згладжування пікових навантажень і заповнення провалів.</div>
+<div class="line"><strong>Вимкнено:</strong> Режим TOU вимкнено. Пристрій не дотримується стратегії TOU і працює відповідно до логіки живлення та заряджання за замовчуванням.</div>
+<div class="line">Увімкніть/вимкніть цей режим у Jackery App. Налаштування зберігається після вимкнення пристрою.</div>
+</div></td></tr><tr><td class="hb-lcd-number"><p>7</p></td><td class="hb-lcd-icon"><img alt="ДБЖ" class="hb-lcd-icon-art" src="assets/ir/e422a56922eb749ae90802fd964cb451a08d833658c1849abe10a63c60b173cc/07_ups.png"/></td><td class="hb-lcd-name"><p>ДБЖ</p></td><td class="hb-lcd-description"><div class="line-block">
+<div class="line"><strong>Увімкнено:</strong> Пристрій працює в байпасному режимі, час перемикання з електромережі на внутрішній акумулятор становить 10 мс.</div>
+<div class="line"><strong>Вимкнено:</strong> Продукт не працює в байпасному режимі.</div>
+</div></td></tr><tr><td class="hb-lcd-number"><p>8</p></td><td class="hb-lcd-icon"><img alt="Індикатор живлення змінного струму" class="hb-lcd-icon-art" src="assets/ir/8be87c5a084994e3b4b6ddff46ce0296207a5c49c732f8ed13adfbcb28a36538/08_ac_power_indicator.png"/></td><td class="hb-lcd-name"><p>Індикатор живлення змінного струму</p></td><td class="hb-lcd-description"><p>Вихід змінного струму (чиста синусоїда) увімкнено.</p></td></tr><tr><td class="hb-lcd-number"><p>9</p></td><td class="hb-lcd-icon"><img alt="Вихідна напруга та частота" class="hb-lcd-icon-art" src="assets/ir/7623ef10e229bcfe66c872f3733d26b86c97d703ed30012188a88bb4a168e6df/09_output_voltage_and_frequency.png"/></td><td class="hb-lcd-name"><p>Вихідна напруга та частота</p></td><td class="hb-lcd-description"><p>Відображає вихідну напругу та частоту, коли вихід змінного струму увімкнено.</p></td></tr><tr><td class="hb-lcd-number"><p>10</p></td><td class="hb-lcd-icon"><img alt="Вхідна потужність" class="hb-lcd-icon-art" src="assets/ir/d5100a538e964da13e04241a98134e6aeaa36af8991aceeecac3c5d063b6968b/10_input_power.png"/></td><td class="hb-lcd-name"><p>Вхідна потужність</p></td><td class="hb-lcd-description"><p>Відображає вхідну потужність у ватах.</p></td></tr><tr><td class="hb-lcd-number"><p>11</p></td><td class="hb-lcd-icon"><img alt="Час, що залишився до повного заряджання" class="hb-lcd-icon-art" src="assets/ir/cfb69b1ffc0b30c51216fb6b1e00e35b412dd0148b6999d3d40ac90fbfe108cb/11_remaining_charge_time.png"/></td><td class="hb-lcd-name"><p>Час, що залишився до повного заряджання</p></td><td class="hb-lcd-description"><p>Відображає залишковий час заряджання.</p></td></tr><tr><td class="hb-lcd-number"><p>12</p></td><td class="hb-lcd-icon"><img alt="Індикатор заряджання від мережі змінного струму" class="hb-lcd-icon-art" src="assets/ir/28f3cad42ae32e9e895abfd7cdb16a21b99dfa822c57d542f0e3f59a4b452c6c/12_ac_wall_charging_indicator.png"/></td><td class="hb-lcd-name"><p>Індикатор заряджання від мережі змінного струму</p></td><td class="hb-lcd-description"><p>Пристрій заряджається через вхід змінного струму від електромережі.</p></td></tr><tr><td class="hb-lcd-number"><p>13</p></td><td class="hb-lcd-icon"><img alt="Індикатор заряджання від автомобіля" class="hb-lcd-icon-art" src="assets/ir/eed3299c3f6a15766e433ebbae7a40af8939e6d32489a0aa33a37fe902232a64/13_car_charging_indicator.png"/></td><td class="hb-lcd-name"><p>Індикатор заряджання від автомобіля</p></td><td class="hb-lcd-description"><p>Пристрій заряджається через вхід постійного струму (DC8020) із використанням 12 В постійного струму (автомобільне заряджання).</p></td></tr><tr><td class="hb-lcd-number"><p>14</p></td><td class="hb-lcd-icon"><img alt="Індикатор заряджання від сонячних батарей" class="hb-lcd-icon-art" src="assets/ir/91cec82eeaa553477868d38789d68a4937cb11c5c4d794de74db1edddb3aeea4/14_solar_charging_indicator.png"/></td><td class="hb-lcd-name"><p>Індикатор заряджання від сонячних батарей</p></td><td class="hb-lcd-description"><p>Пристрій заряджається через вхід постійного струму (DC8020) із використанням сонячної(-их) панелі(-ей).</p></td></tr><tr><td class="hb-lcd-number"><p>15</p></td><td class="hb-lcd-icon"><img alt="Режим енергозбереження акумулятора" class="hb-lcd-icon-art" src="assets/ir/e32e6ae96321aa47b39c0c65a18a59da6c90cf87a0d7c8d61556ead273789c3a/15_battery_saving_mode.png"/></td><td class="hb-lcd-name"><p>Режим енергозбереження акумулятора</p></td><td class="hb-lcd-description"><div class="line-block">
+<div class="line"><strong>Увімкнено:</strong> Обмежує максимальну доступну ємність акумулятора для продовження терміну його служби.</div>
+<div class="line"><strong>Вимкнено:</strong> Режим енергозбереження акумулятора вимкнено. Увімкніть/вимкніть цю функцію в Jackery App. Налаштування зберігається після вимкнення пристрою.</div>
+<div class="line">Примітка 1: Ця функція недоступна, коли пристрій підключено до акумуляторного(-их) блоку(-ів).</div>
+<div class="line">Примітка 2: Коли ця функція активована, пристрій періодично виконує повний цикл заряджання та розряджання для калібрування SOC (рівня заряду).</div>
+</div></td></tr><tr><td class="hb-lcd-number"><p>16</p></td><td class="hb-lcd-icon"><img alt="Обмеження потужності заряджання" class="hb-lcd-icon-art" src="assets/ir/21b5f19ca9a6e39d8bd515128297cc1b99e43fd263e39ffba4fdf102d50a4bad/16_charging_power_limit.png"/></td><td class="hb-lcd-name"><p>Обмеження потужності заряджання</p></td><td class="hb-lcd-description"><div class="line-block">
+<div class="line"><strong>Увімкнено:</strong> Обмеження потужності заряджання активовано в Jackery App.</div>
+<div class="line"><strong>Вимкнено:</strong> Обмеження потужності заряджання вимкнено в Jackery App.</div>
+<div class="line">Налаштування зберігається після вимкнення пристрою.</div>
+</div></td></tr><tr><td class="hb-lcd-number"><p>17</p></td><td class="hb-lcd-icon"><img alt="Індикатор заряду акумулятора" class="hb-lcd-icon-art" src="assets/ir/85921a9ad7fbfa58f98ee7bb0dc904377f31fe3dbface4083d2493144b05362f/17_battery_power_indicator.png"/></td><td class="hb-lcd-name"><p>Індикатор заряду акумулятора</p></td><td class="hb-lcd-description"><p>Коли пристрій заряджається, помаранчеве коло навколо відсотка заряду акумулятора почергово засвічуватиметься. Під час заряджання інших пристроїв помаранчеве коло світитиметься постійно.</p></td></tr><tr><td class="hb-lcd-number"><p>18</p></td><td class="hb-lcd-icon"><img alt="Індикатор низького заряду батареї" class="hb-lcd-icon-art" src="assets/ir/c7862a87e742d6927b4e1d63a8d0ccb09fbcf980ae662ff94b9134e256e56889/18_low_battery_indicator.png"/></td><td class="hb-lcd-name"><p>Індикатор низького заряду батареї</p></td><td class="hb-lcd-description"><div class="line-block">
+<div class="line"><strong>Увімкнено:</strong> Рівень заряду акумулятора нижче 20%.</div>
+<div class="line"><strong>Блимає:</strong> Рівень заряду акумулятора нижче 5%.</div>
+<div class="line"><strong>Вимкнено:</strong> Рівень заряду не нижче 20% або пристрій заряджається.</div>
+</div></td></tr><tr><td class="hb-lcd-number"><p>19</p></td><td class="hb-lcd-icon"><img alt="Залишковий відсоток заряду акумулятора" class="hb-lcd-icon-art" src="assets/ir/747147be99d76bb486c858aeca2289d7d05ad3be1f1ea1f0825f54cb29b7fd10/19_remaining_battery_percentage.png"/></td><td class="hb-lcd-name"><p>Залишковий відсоток заряду акумулятора</p></td><td class="hb-lcd-description"><p>Відображає залишковий відсоток заряду акумулятора.</p></td></tr><tr><td class="hb-lcd-number"><p>20</p></td><td class="hb-lcd-icon"><img alt="Таймер розряджання" class="hb-lcd-icon-art" src="assets/ir/6aab9a14900a08fcd8f8261e6e36fbb9a1220eb931df94ebd149b23930063723/20_discharge_timer.png"/></td><td class="hb-lcd-name"><p>Таймер розряджання</p></td><td class="hb-lcd-description"><div class="line-block">
+<div class="line"><strong>Увімкнено:</strong> Таймер розряджання встановлено.</div>
+<div class="line"><strong>Вимкнено:</strong> Таймер розряджання не встановлено.</div>
+<div class="line">Увімкніть/вимкніть цю функцію в Jackery App. Налаштування не зберігається після вимкнення пристрою.</div>
+</div></td></tr><tr><td class="hb-lcd-number"><p>21</p></td><td class="hb-lcd-icon"><img alt="Підключені акумулятори" class="hb-lcd-icon-art" src="assets/ir/b4744a483fa95db386bbb269f277a53f678279c7eda8f8cbf24a78f2b426f2a7/image.png"/></td><td class="hb-lcd-name"><p>Підключені акумулятори</p></td><td class="hb-lcd-description"><p>Відображає кількість акумуляторних блоків, якщо вони підключені.</p></td></tr><tr><td class="hb-lcd-number"><p>22</p></td><td class="hb-lcd-icon"><img alt="Режим енергозбереження" class="hb-lcd-icon-art" src="assets/ir/c4b830c769a3de7f9effaee82466752f5706a0741ba29675cce45633c1cd8222/22_energy_saving_mode.png"/></td><td class="hb-lcd-name"><p>Режим енергозбереження</p></td><td class="hb-lcd-description"><div class="line-block">
+<div class="line">Коли вихід змінного або постійного струму увімкнено натисканням кнопки живлення змінного струму 1/2 або постійного струму/USB:</div>
+<div class="line"><strong>Увімкнено:</strong> Режим енергозбереження увімкнено. Вимкнено: Режим енергозбереження вимкнено.</div>
+</div></td></tr><tr><td class="hb-lcd-number"><p>23</p></td><td class="hb-lcd-icon"><img alt="Індикатор високої температури" class="hb-lcd-icon-art" src="assets/ir/f548c6504f495da4f208cd8e5fe6eac6076daea05e314115abd26b46a9326ba5/23_high_temperature_indicator.png"/></td><td class="hb-lcd-name"><p>Індикатор високої температури</p></td><td class="hb-lcd-description"><p>Активовано захист від високої температури. Продукт може припинити роботу, доки його температура не повернеться до нормального робочого діапазону.</p></td></tr><tr><td class="hb-lcd-number"><p>23</p></td><td class="hb-lcd-icon"><img alt="Індикатор низької температури" class="hb-lcd-icon-art" src="assets/ir/bdbf602db74ade39a2a162209c0ff535315dee5e27e4832b2e6a201764b6941a/24_low_temperature_indicator.png"/></td><td class="hb-lcd-name"><p>Індикатор низької температури</p></td><td class="hb-lcd-description"><p>Активовано захист від низької температури. Продукт може припинити роботу, доки його температура не повернеться до нормального робочого діапазону.</p></td></tr><tr><td class="hb-lcd-number"><p>24</p></td><td class="hb-lcd-icon"><img alt="Код помилки" class="hb-lcd-icon-art" src="assets/ir/ce913ebfc7750764f4206250f5e21aa09bd1cfc074bdee5b0484d61610f1b579/25_fault_code.png"/></td><td class="hb-lcd-name"><p>Код помилки</p></td><td class="hb-lcd-description"><p>Виникла помилка продукту. Детальніше див. у розділі «Усунення несправностей».</p></td></tr><tr><td class="hb-lcd-number"><p>25</p></td><td class="hb-lcd-icon"><img alt="Вихідна потужність" class="hb-lcd-icon-art" src="assets/ir/58c1d3604ca7b9774b069c6928775a13465ccb9477f477e9e4d4b30e7f75b88d/26_output_power.png"/></td><td class="hb-lcd-name"><p>Вихідна потужність</p></td><td class="hb-lcd-description"><p>Відображає вихідну потужність у ватах.</p></td></tr><tr><td class="hb-lcd-number"><p>26</p></td><td class="hb-lcd-icon"><img alt="Час розряду, що залишився" class="hb-lcd-icon-art" src="assets/ir/9b148ea95d3a3450591c7220908b0913048f2cdea1e61d200534181c52b47cab/27_remaining_discharge_time.png"/></td><td class="hb-lcd-name"><p>Час розряду, що залишився</p></td><td class="hb-lcd-description"><p>Відображає залишковий час розряджання.</p></td></tr></tbody></table></figure>
+
+
 
 # ОПЕРАЦІЇ
 
@@ -322,26 +179,7 @@
 
 
 
-<figure aria-label="Умови автоматичного відновлення / Умови без автоматичного відновлення" class="hb-auto-resume-composition"><table class="hb-auto-resume-table"><colgroup><col class="hb-auto-resume-col"/><col class="hb-auto-resume-col"/></colgroup>
-<thead>
-<tr><th class="head hb-auto-resume-left" scope="col"><p>Умови автоматичного відновлення</p></th>
-<th class="head hb-auto-resume-right" scope="col"><p>Умови без автоматичного відновлення</p></th>
-</tr>
-</thead>
-<tbody>
-<tr><td class="hb-auto-resume-left"><p>Увімкнення/перезапуск після вимкнення або перезапуску</p></td>
-<td class="hb-auto-resume-right"><p>Ручне вимкнення виходу (кнопкою/у Додатку)</p></td>
-</tr>
-<tr><td class="hb-auto-resume-left" rowspan="2"><p>SOC батареї ≥ ліміт розряджання +10% після досягнення ліміту</p></td>
-<td class="hb-auto-resume-right"><p>Вихід вимкнено в режимі енергозбереження</p></td>
-</tr>
-<tr><td class="hb-auto-resume-right"><p>Вихід вимкнено через спрацювання захисту</p></td>
-</tr>
-<tr><td class="hb-auto-resume-left"><p>Оновлення OTA завершено</p></td>
-<td class="hb-auto-resume-right"><p>Вихід вимкнено таймером розряджання</p></td>
-</tr>
-</tbody>
-</table></figure>
+<figure aria-label="Умови автоматичного відновлення / Умови без автоматичного відновлення" class="hb-auto-resume-composition" data-component-id="HB-TABLE-AUTO-RESUME" tabindex="0"><table class="hb-auto-resume-table"><colgroup><col class="hb-auto-resume-col"/><col class="hb-auto-resume-col"/></colgroup><thead><tr><th class="hb-auto-resume-left" scope="col">Умови автоматичного відновлення</th><th class="hb-auto-resume-right" scope="col">Умови без автоматичного відновлення</th></tr></thead><tbody><tr><td class="hb-auto-resume-left">Увімкнення/перезапуск після вимкнення або перезапуску</td><td class="hb-auto-resume-right">Ручне вимкнення виходу (кнопкою/у Додатку)</td></tr><tr><td class="hb-auto-resume-left" rowspan="2">SOC батареї ≥ ліміт розряджання +10% після досягнення ліміту</td><td class="hb-auto-resume-right">Вихід вимкнено в режимі енергозбереження</td></tr><tr><td class="hb-auto-resume-right">Вихід вимкнено через спрацювання захисту</td></tr><tr><td class="hb-auto-resume-left">Оновлення OTA завершено</td><td class="hb-auto-resume-right">Вихід вимкнено таймером розряджання</td></tr></tbody></table></figure>
 
 
 
@@ -349,7 +187,7 @@
 
 
 
-<figure aria-label="Режим дисплея LCD." class="hb-lcd-mode-composition" data-component-id="HB-TABLE-LCD-MODE"><div class="hb-lcd-mode-art-panel"><img alt="Режим дисплея LCD." class="hb-lcd-mode-art" src="assets/ir/211b6d6d4426348d7b1905f6825a5ff271d9c6f49fad8708e969c878a9c3f6b0/operation_lcd.png"/></div><div class="hb-lcd-mode-table-panel"><table class="hb-lcd-mode-table"><colgroup><col class="hb-lcd-mode-col-state"/><col class="hb-lcd-mode-col-action"/><col class="hb-lcd-mode-col-copy"/></colgroup><tbody><tr><td class="hb-lcd-mode-state" rowspan="3">Короткочасне увімкнення</td><td class="hb-lcd-mode-action">Увімкнути</td><td class="hb-lcd-mode-copy">Натисніть кнопку POWER або коли пристрій заряджається.</td></tr><tr><td class="hb-lcd-mode-action">Вимкнути</td><td class="hb-lcd-mode-copy">Натисніть кнопку POWER.</td></tr><tr><td class="hb-lcd-mode-action">Автовимкнення</td><td class="hb-lcd-mode-copy">LCD автоматично вимикається та переходить у режим сну після 2 хвилин бездіяльності.</td></tr><tr><td class="hb-lcd-mode-state" rowspan="3">Постійно увімкнено (під час заряджання або розряджання)</td><td class="hb-lcd-mode-action">Увімкнути</td><td class="hb-lcd-mode-copy">Натисніть кнопку POWER двічі, коли пристрій увімкнено.</td></tr><tr><td class="hb-lcd-mode-action">Вимкнути</td><td class="hb-lcd-mode-copy">Натисніть кнопку POWER.</td></tr><tr><td class="hb-lcd-mode-action">Автовимкнення</td><td class="hb-lcd-mode-copy">LCD автоматично вимикається після 2 годин бездіяльності.</td></tr></tbody></table></div></figure>
+<figure aria-label="Режим дисплея LCD." class="hb-lcd-mode-composition" data-component-id="HB-TABLE-LCD-MODE"><div class="hb-lcd-mode-art-panel"><img alt="Режим дисплея LCD." class="hb-lcd-mode-art manual-finished-illustration" data-web-finished-panel-path="assets/je1000h_eu_uk/operation_lcd.png" data-web-finished-panel-sha256="211b6d6d4426348d7b1905f6825a5ff271d9c6f49fad8708e969c878a9c3f6b0" src="assets/ir/211b6d6d4426348d7b1905f6825a5ff271d9c6f49fad8708e969c878a9c3f6b0/operation_lcd.png"/></div><div class="hb-lcd-mode-table-panel"><table class="hb-lcd-mode-table"><colgroup><col class="hb-lcd-mode-col-state"/><col class="hb-lcd-mode-col-action"/><col class="hb-lcd-mode-col-copy"/></colgroup><tbody><tr><td class="hb-lcd-mode-state" rowspan="3">Короткочасне увімкнення</td><td class="hb-lcd-mode-action">Увімкнути</td><td class="hb-lcd-mode-copy">Натисніть кнопку POWER або коли пристрій заряджається.</td></tr><tr><td class="hb-lcd-mode-action">Вимкнути</td><td class="hb-lcd-mode-copy">Натисніть кнопку POWER.</td></tr><tr><td class="hb-lcd-mode-action">Автовимкнення</td><td class="hb-lcd-mode-copy">LCD автоматично вимикається та переходить у режим сну після 2 хвилин бездіяльності.</td></tr><tr><td class="hb-lcd-mode-state" rowspan="3">Постійно увімкнено (під час заряджання або розряджання)</td><td class="hb-lcd-mode-action">Увімкнути</td><td class="hb-lcd-mode-copy">Натисніть кнопку POWER двічі, коли пристрій увімкнено.</td></tr><tr><td class="hb-lcd-mode-action">Вимкнути</td><td class="hb-lcd-mode-copy">Натисніть кнопку POWER.</td></tr><tr><td class="hb-lcd-mode-action">Автовимкнення</td><td class="hb-lcd-mode-copy">LCD автоматично вимикається після 2 годин бездіяльності.</td></tr></tbody></table></div></figure>
 
 
 
@@ -359,32 +197,7 @@
 
 
 
-<figure aria-label="Кнопки / Дія / Функція" class="hb-key-combination-composition" tabindex="0"><table class="hb-key-combination-table"><colgroup><col class="hb-key-col-buttons"/><col class="hb-key-col-operation"/><col class="hb-key-col-function"/></colgroup>
-<thead>
-<tr><th class="head hb-key-buttons" scope="col"><p>Кнопки</p></th>
-<th class="head hb-key-operation" scope="col"><p>Дія</p></th>
-<th class="head hb-key-function" scope="col"><p>Функція</p></th>
-</tr>
-</thead>
-<tbody>
-<tr><td class="hb-key-buttons"><p>Головна кнопка POWER + Кнопка AC</p></td>
-<td class="hb-key-operation"><p>Натисніть і утримуйте обидві протягом 3 с</p></td>
-<td class="hb-key-function"><p>Увімк./вимк. режим енергозбереження</p></td>
-</tr>
-<tr><td class="hb-key-buttons"><p>Головна кнопка POWER + кнопка DC / USB</p></td>
-<td class="hb-key-operation"><p>Натисніть і утримуйте обидві протягом 3 с</p></td>
-<td class="hb-key-function"><p>Скинути Wi-Fi та Bluetooth</p></td>
-</tr>
-<tr><td class="hb-key-buttons"><p>кнопка DC / USB + Кнопка AC</p></td>
-<td class="hb-key-operation"><p>Натисніть і утримуйте обидві протягом 1 с</p></td>
-<td class="hb-key-function"><p>Увімк./вимк. Wi-Fi та Bluetooth</p></td>
-</tr>
-<tr><td class="hb-key-buttons"><p>Головна кнопка POWER + кнопка LED Light</p></td>
-<td class="hb-key-operation"><p>Натисніть і утримуйте обидві протягом 1 с</p></td>
-<td class="hb-key-function"><p>Увімк./вимк. аварійний режим заряджання</p></td>
-</tr>
-</tbody>
-</table></figure>
+<figure aria-label="Кнопки / Дія / Функція" class="hb-key-combination-composition" data-component-id="HB-TABLE-KEY-COMBINATIONS" tabindex="0"><table class="hb-key-combination-table"><colgroup><col class="hb-key-col-buttons"/><col class="hb-key-col-operation"/><col class="hb-key-col-function"/></colgroup><thead><tr><th class="hb-key-buttons" scope="col"><p>Кнопки</p></th><th class="hb-key-operation" scope="col"><p>Дія</p></th><th class="hb-key-function" scope="col"><p>Функція</p></th></tr></thead><tbody><tr><td class="hb-key-buttons"><p>Головна кнопка POWER + Кнопка AC</p></td><td class="hb-key-operation"><p>Натисніть і утримуйте обидві протягом 3 с</p></td><td class="hb-key-function"><p>Увімк./вимк. режим енергозбереження</p></td></tr><tr><td class="hb-key-buttons"><p>Головна кнопка POWER + кнопка DC / USB</p></td><td class="hb-key-operation"><p>Натисніть і утримуйте обидві протягом 3 с</p></td><td class="hb-key-function"><p>Скинути Wi-Fi та Bluetooth</p></td></tr><tr><td class="hb-key-buttons"><p>кнопка DC / USB + Кнопка AC</p></td><td class="hb-key-operation"><p>Натисніть і утримуйте обидві протягом 1 с</p></td><td class="hb-key-function"><p>Увімк./вимк. Wi-Fi та Bluetooth</p></td></tr><tr><td class="hb-key-buttons"><p>Головна кнопка POWER + кнопка LED Light</p></td><td class="hb-key-operation"><p>Натисніть і утримуйте обидві протягом 1 с</p></td><td class="hb-key-function"><p>Увімк./вимк. аварійний режим заряджання</p></td></tr></tbody></table></figure>
 
 
 
