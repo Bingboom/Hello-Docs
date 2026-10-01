@@ -24,6 +24,21 @@ For Codex-assisted TM-first manual rewrite or translation that must preserve Mar
 
 本节收拢历次发布改动累积下来的现行约定。单个型号的一次性修复记录不进本节，放文末的型号专项或 [`code-as-doc/reviews/`](../code-as-doc/reviews)。
 
+### 网页配图先复用，再提取
+
+每次网页化先盘点目标已有素材、同型号同区域其他语言素材与共享附件，核对图中
+型号、接口、参数、App 界面和语言。内容一致就直接复用；只有外部文字变化时，
+复用底图并调整原生标签。新增语言或新 PDF 不构成重裁理由。
+
+确实缺图、清晰度不足或图形有差异时，先在目标审查记录填写
+[选材记录表](../docs/renderers/contracts/STYLE_DEFINITION.md#共用图标优先web-插图选材规则)，
+说明查过什么以及为何不能复用，再提取。完整大图保留灰底、圆角、外框和引线；
+App 截图保留手机顶部状态栏及四边。透明底要求只用于 LCD／状态图标、独立按钮符号等小图，
+不按显示尺寸判断；完整大图缩小显示也不去底。
+
+交付时核对实际绑定文件的来源与哈希，并检查桌面、手机中的裁切、标签位置及重复
+编号。上述是执行和审查顺序，尚不代表构建程序会自动发现裁切或去底错误。
+
 ### 单语身份、语言切换与手册中心
 
 单语网页顶部通过语言切换栏显示当前语言，正文开头重复的独立语言名称不再显示；冻结源文件不变。
@@ -1256,6 +1271,7 @@ Config scope rule:
 - [`configs/config.eu.yaml`](../configs/config.eu.yaml): shared EU merged template-family config using [`docs/manifests/manual_eu.yaml`](../docs/manifests/manual_eu.yaml)
 - [`configs/config.eu-en.yaml`](../configs/config.eu-en.yaml), [`configs/config.eu-fr.yaml`](../configs/config.eu-fr.yaml), [`configs/config.eu-es.yaml`](../configs/config.eu-es.yaml), [`configs/config.eu-de.yaml`](../configs/config.eu-de.yaml), [`configs/config.eu-it.yaml`](../configs/config.eu-it.yaml), and [`configs/config.eu-uk.yaml`](../configs/config.eu-uk.yaml): explicit EU single-language configs using [`../docs/manifests/manual_eu-en.yaml`](../docs/manifests/manual_eu-en.yaml) plus the corresponding [`../docs/manifests/manual_eu-single-*.yaml`](../docs/manifests) stacks
 - [`configs/config.solar-eu-en.yaml`](../configs/config.solar-eu-en.yaml): exact `JS-100I / EU / en` and `JS-40C / EU / en` Web entrypoint using the reusable [`Solar@INTL` skeleton](../docs/manifests/skeletons/solar-intl/blueprint.yaml). JS-100I uses five Inbox cards plus unfolding/folding; JS-40C uses seven Inbox cards plus Solar Panel Storage. Both use frozen phase2 specifications and target-bound English figures; this config is not a fallback for portable-power-station targets.
+- [`configs/config.solar-eu-multilingual.yaml`](../configs/config.solar-eu-multilingual.yaml): JS-100I / EU 的 `fr/es/de/it/uk/pt/nl/pl` Git 源候选；逐语指定 `--lang` 和匹配的 `added-locales/2026-09-28/phase2/<lang>` 数据目录。沿用太阳能板 RST/CSV、manual-ir/v2 和共用 Web 组件。英语保留原结构数据，操作图拆分为原生透明插图并配可选中文本，手机参数表在容器内换行。荷兰语 `OPMERKING`、波兰语 `Uwaga` 以原文进入共用提示条；各语言发布前必须通过组件适用性及保修原文哈希检查。[来源、勘误与本地验收](../code-as-doc/reviews/js100i_eu_nine_language_2026-09.md) 不代表已发布、已写 Base 或已晋升插图资产。
 - [`configs/config.us-en.yaml`](../configs/config.us-en.yaml), [`configs/config.us-es.yaml`](../configs/config.us-es.yaml), [`configs/config.us-fr.yaml`](../configs/config.us-fr.yaml), and [`configs/config.pt-br.yaml`](../configs/config.pt-br.yaml) now inherit their shared single-language US defaults from [`../configs/config-bases/us-single-language-base.yaml`](../configs/config-bases/us-single-language-base.yaml); keep common single-language build defaults there and keep language-specific page order in [`../docs/manifests/manual_us-single-en.yaml`](../docs/manifests/manual_us-single-en.yaml), [`../docs/manifests/manual_us-single-es.yaml`](../docs/manifests/manual_us-single-es.yaml), [`../docs/manifests/manual_us-single-fr.yaml`](../docs/manifests/manual_us-single-fr.yaml), and [`../docs/manifests/manual_pt-br.yaml`](../docs/manifests/manual_pt-br.yaml)
 - [`configs/config.us-en.yaml`](../configs/config.us-en.yaml) additionally sets `md_output` so its Markdown / Web artefact stays `manual_je1000f_us`, the stem the published `JE-1000F/US/en/md/` page already uses; its Word and PDF artefacts keep the inherited `_en` suffix, and `config.us-fr.yaml` / `config.us-es.yaml` keep the inherited `_fr` / `_es` suffix on every artefact. See [`code-as-doc/dev/web_publish_locale_queue.md`](../code-as-doc/dev/web_publish_locale_queue.md) for why a published locale route cannot be renamed
 - the current maintained baseline target is `JE-1000F` across these active config families, including `JE-1000F / US`, `JE-1000F / EU`, and `JE-1000F / JP`
@@ -1972,6 +1988,14 @@ Charging reference diagrams reuse the shared live-label component: captions occu
 
 新增原生 PDF 语言沿用同一组共享组件；译文、型号参数和对应地区的图片由源稿决定，表格、质保卡片、操作区和 App 的版式由共享组件负责。现在导入/冷重放与发布封存会检查章节所需组件是否真的存在。报错 `shared component coverage failed` 时，根据提示的章节和组件 ID 补绑定，不能用普通表格或截图绕过。密集标注整图保留已批准的引用图方式。
 
+验收新增语言时，逐语检查图内提示框是否遮住按钮圆图或引线，以及手机换行后是否越界。节能图只应有一个时钟，源稿 App 步骤编号若仅在截图下出现，应保留这一结构。修复提取范围和图文绑定后生成新的候选预览；既有语言的冻结版本保持不变。
+
+指定沿用源稿完整配件排版时，应保留虚线框、配件标题与“单独销售”徽标的相对位置，
+不能把徽标文字当成第四个普通标题。对应语言成品参考图保留图内文字，另提供检索和
+读屏文本，不重复显示图外标题；该排图内文字需回源稿修改，不是独立 HTML 文字框。
+充电、UPS、扩容等完整大图也应保留原稿灰底、白色说明区和圆角边框；透明底规则
+仅用于 LCD／状态图标、独立按钮符号等小图，不用于完整面板。
+
 共享代码更新后，旧的冻结手册不会自动迁移。每次修复需列出受影响语言、生成新冻结版本、检查桌面/手机并重新发布；验收应打开正式 RTD 路由。检查通过表示组件覆盖完整，仍需核验译文、参数、地区图片和实际版面。技术边界见[共享组件准入](../code-as-doc/dev/web_publish_pipeline.md#native-multilingual-shared-component-admission)。
 
 JE-1000H EU LCD 图标表（2026-09-30）：六语共用同一组冻结图标引用，并通过
@@ -1986,6 +2010,6 @@ JE-1000F/JP 的 Web 展示契约保留日规质保的 7 个正文章节与原有
 
 中规审核源也支持三项无图项目列表：复用 `plain-inventory` 并保留列表强调和外部备注。独立 LCD 模式图后紧邻的四列表（首列全部为空、三项表头和六行动作）保留原图与表头，映射至 `HB-TABLE-REFERENCE/lcd-actions`；非空占位列或结构变化拒绝导入。显式绑定的 App 双图之间若有一张纯文字备注表，共享面板将其保留在面板后方，备注仍独立进入共享提示组件，不被图片或标签吞掉。
 
-通用 LCD／状态图标及 POWER、AC、DC/USB、LIGHT 按钮图先按功能语义复用现有共用素材（Web 按钮图使用透明 SVG），不从各语言 PDF 重裁带底色的小图；仅在共用素材缺失或有明确机型差异时才提取。提取独立插图默认透明底，不保留灰色面板、表格底色和外围边框；保留产品本身的颜色、阴影、按键面和丝印。普通图采用无字底图加原生文字，表格保持原生 HTML，密集引线图不重复显示图内文字。规则见[共用图标优先](../docs/renderers/contracts/STYLE_DEFINITION.md#共用图标优先web-插图选材规则)。
+通用 LCD／状态图标及 POWER、AC、DC/USB、LIGHT 按钮图先按功能语义复用现有共用素材（Web 按钮图使用透明 SVG），不从各语言 PDF 重裁带底色的小图；仅在共用素材缺失或有明确机型差异时才提取。仅上述 LCD／状态图标、独立按钮符号等小图默认透明底，移除其外围单元格底色和边框；保留符号、按键面和丝印。大图面板保留灰底、圆角、外框和引线，不能套用小图规则。普通图采用无字底图加原生文字，表格保持原生 HTML，密集引线图不重复显示图内文字。规则见[共用图标优先](../docs/renderers/contracts/STYLE_DEFINITION.md#共用图标优先web-插图选材规则)。
 
 JE-2000F/CN 沿用 `configs/config.zh.yaml` 中规共享配置与现有审核源；预览、发布按审核稿原样构建。

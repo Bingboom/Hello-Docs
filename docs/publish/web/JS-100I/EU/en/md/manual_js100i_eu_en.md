@@ -62,25 +62,42 @@ The front view identifies the **Sun Angle Indicator**. The rear view identifies 
 
 # UNFOLDING THE SOLAR PANEL
 
-1.  Take the solar panel out of the storage bag.
+<figure class="manual-step-figure">
+<img src="../../../../_static/manual-assets/_pool/0f/0f4d89c7f408129289be1e345c6ba2cb6454fc6832c194760aca5e3960e08a71.webp" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js100i_eu_shared/unfold_1.webp" data-web-finished-panel-sha256="0f4d89c7f408129289be1e345c6ba2cb6454fc6832c194760aca5e3960e08a71" alt="1. Take the solar panel out of the storage bag." />
+<figcaption aria-hidden="true"><p>1. Take the solar panel out of the storage bag.</p></figcaption>
+</figure>
 
-2.  Unfold the solar panel step by step as shown in the illustration.
+<figure class="manual-step-figure">
+<img src="../../../../_static/manual-assets/_pool/24/242b8980eadbe223778dba581a398aab1a6621291ad8488c5043aa11274a5cd2.webp" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js100i_eu_shared/unfold_2.webp" data-web-finished-panel-sha256="242b8980eadbe223778dba581a398aab1a6621291ad8488c5043aa11274a5cd2" alt="2. Unfold the solar panel step by step as shown in the illustration." />
+<figcaption aria-hidden="true"><p>2. Unfold the solar panel step by step as shown in the illustration.</p></figcaption>
+</figure>
 
-3.  Open the two support stands on the back of the solar panel.
+<figure class="manual-step-figure">
+<img src="../../../../_static/manual-assets/_pool/3c/3c96fec73a8f9ddcf64e38810437627cb1a0f9195c0209a202a6c958e8debcaa.webp" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js100i_eu_shared/unfold_3.webp" data-web-finished-panel-sha256="3c96fec73a8f9ddcf64e38810437627cb1a0f9195c0209a202a6c958e8debcaa" alt="3. Open the two support stands on the back of the solar panel." />
+<figcaption aria-hidden="true"><p>3. Open the two support stands on the back of the solar panel.</p></figcaption>
+</figure>
 
-4.  Adjust the panel to face the sun, then connect it to your portable power station.
-
-<img src="../../../../_static/manual-assets/_pool/73/73e17cf2c009daec15123b51fb4b7db8bfbed043474d5a7e166b61fd62a765e7.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js100i_eu_en/unfold_steps_1_3.png" data-web-finished-panel-sha256="73e17cf2c009daec15123b51fb4b7db8bfbed043474d5a7e166b61fd62a765e7" alt="Steps 1 to 3: remove the panel from the bag, unfold its four sections, and open the two support stands." /> <img src="../../../../_static/manual-assets/_pool/d1/d10b0bff038014a4b0df8c749901c926da47a6171134c472af7cab8244cf93aa.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js100i_eu_en/unfold_step_4.png" data-web-finished-panel-sha256="d10b0bff038014a4b0df8c749901c926da47a6171134c472af7cab8244cf93aa" alt="Step 4: face the unfolded panel toward the sun and connect it to a portable power station." />
+<figure class="manual-step-figure">
+<img src="../../../../_static/manual-assets/_pool/13/13704bc9c2c6b32464c9be9843a9dae885f0f4f4e368f23aa459a8acae1200dc.webp" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js100i_eu_shared/unfold_4.webp" data-web-finished-panel-sha256="13704bc9c2c6b32464c9be9843a9dae885f0f4f4e368f23aa459a8acae1200dc" alt="4. Adjust the panel to face the sun, then connect it to your portable power station." />
+<figcaption aria-hidden="true"><p>4. Adjust the panel to face the sun, then connect it to your portable power station.</p></figcaption>
+</figure>
 
 # FOLDING THE SOLAR PANEL
 
-1.  Unplug the multifunctional charging cable and fold the support stands.
+<figure class="manual-step-figure">
+<img src="../../../../_static/manual-assets/_pool/be/be742038fa9a9ff674b4f611bfb6d49bf7fcadcd81ecd1bacafe1425276c92aa.webp" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js100i_eu_shared/fold_1.webp" data-web-finished-panel-sha256="be742038fa9a9ff674b4f611bfb6d49bf7fcadcd81ecd1bacafe1425276c92aa" alt="1. Unplug the multifunctional charging cable and fold the support stands." />
+<figcaption aria-hidden="true"><p>1. Unplug the multifunctional charging cable and fold the support stands.</p></figcaption>
+</figure>
 
-2.  Fold the solar panel along the creases in order, as shown in the illustration.
+<figure class="manual-step-figure">
+<img src="../../../../_static/manual-assets/_pool/26/26b95182a38ecb9bf511836e2bfd68dd610c7851c72d60ae5a5859592bfb3436.webp" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js100i_eu_shared/fold_2.webp" data-web-finished-panel-sha256="26b95182a38ecb9bf511836e2bfd68dd610c7851c72d60ae5a5859592bfb3436" alt="2. Fold the solar panel along the creases in order, as shown in the illustration." />
+<figcaption aria-hidden="true"><p>2. Fold the solar panel along the creases in order, as shown in the illustration.</p></figcaption>
+</figure>
 
-3.  Place the solar panel back into the storage bag.
-
-<img src="../../../../_static/manual-assets/_pool/57/57cd5b938e761df6af232a5a0ad74d57c33eb2e779ce283e9bb680d684e0a9b0.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js100i_eu_en/fold_steps.png" data-web-finished-panel-sha256="57cd5b938e761df6af232a5a0ad74d57c33eb2e779ce283e9bb680d684e0a9b0" alt="Three illustrated steps for disconnecting, folding, and storing the SolarSaga 100 Air." />
+<figure class="manual-step-figure">
+<img src="../../../../_static/manual-assets/_pool/28/288e5f59b6beefb7e2c1e6909b0ad475097bb4978e979141407f766292312393.webp" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js100i_eu_shared/fold_3.webp" data-web-finished-panel-sha256="288e5f59b6beefb7e2c1e6909b0ad475097bb4978e979141407f766292312393" alt="3. Place the solar panel back into the storage bag." />
+<figcaption aria-hidden="true"><p>3. Place the solar panel back into the storage bag.</p></figcaption>
+</figure>
 
 # CHARGING JACKERY PORTABLE POWER STATION
 
@@ -90,15 +107,28 @@ Connect the charging cable to the solar panel and the DC input port of the porta
 
 Compatible with Jackery portable power stations with DC8020 input port(s). Connect the **DC8020 Male** plug as shown.
 
+<figure class="manual-step-figure">
+<img src="../../../../_static/manual-assets/_pool/a8/a88db73d9e99e88dff32b6b26a379e7d9274aa225a4fe536adce1247ff9dfe3c.webp" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js100i_eu_shared/dc8020.webp" data-web-finished-panel-sha256="a88db73d9e99e88dff32b6b26a379e7d9274aa225a4fe536adce1247ff9dfe3c" alt="DC8020 Male" />
+<figcaption aria-hidden="true"><p>DC8020 Male</p></figcaption>
+</figure>
+
 ## DC8020--DC7909 Adapter
 
 Compatible with Jackery portable power stations with DC7909 input port(s). Fit the **DC8020--DC7909 Adapter** between the solar charging cable and the power station.
 
-<img src="../../../../_static/manual-assets/_pool/eb/eb60e9c4e9ebeb0f3b99f8e1d9d737116bb968d6c4657ad29a990badcf882595.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js100i_eu_en/dc_connections.png" data-web-finished-panel-sha256="eb60e9c4e9ebeb0f3b99f8e1d9d737116bb968d6c4657ad29a990badcf882595" alt="English-labelled DC8020 and DC7909 adapter connection diagrams." />
+<figure class="manual-step-figure">
+<img src="../../../../_static/manual-assets/_pool/a7/a776ae4cd9c75049e1a7c90af46d9f7c516405a22db9673e7d241244c1b6dc54.webp" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js100i_eu_shared/dc7909.webp" data-web-finished-panel-sha256="a776ae4cd9c75049e1a7c90af46d9f7c516405a22db9673e7d241244c1b6dc54" alt="DC8020–DC7909 Adapter" />
+<figcaption aria-hidden="true"><p>DC8020–DC7909 Adapter</p></figcaption>
+</figure>
 
 ## DC8020 to USB-C Adapter Cable (Sold Separately)
 
 Compatible with Jackery portable power stations with USB-C input port(s).
+
+<figure class="manual-step-figure">
+<img src="../../../../_static/manual-assets/_pool/1a/1ac48d98ab994ed7dfdfaa77293a39cb7944cd14274a0621e9edb17302bd823d.webp" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js100i_eu_shared/usbc.webp" data-web-finished-panel-sha256="1ac48d98ab994ed7dfdfaa77293a39cb7944cd14274a0621e9edb17302bd823d" alt="DC8020 to USB-C adapter cable" />
+<figcaption aria-hidden="true"><p>DC8020 to USB-C adapter cable</p></figcaption>
+</figure>
 
 Note
 
@@ -108,7 +138,10 @@ The DC8020 to USB-C Adapter Cable is used to charge Jackery portable power stati
 
 Connect the two solar panels to the solar panel connector respectively and then connect the solar panel connector to the DC input port of the portable power station.
 
-<img src="../../../../_static/manual-assets/_pool/91/9106d5c1b9df86b719139e34173d645c92347a8736df6403bf08368252818fc1.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js100i_eu_en/optional_connections.png" data-web-finished-panel-sha256="9106d5c1b9df86b719139e34173d645c92347a8736df6403bf08368252818fc1" alt="English-labelled USB-C adapter and two-panel connector diagrams." />
+<figure class="manual-step-figure">
+<img src="../../../../_static/manual-assets/_pool/29/2977a072c670a6a493bcdc26a6361550a9cc150d415408b7e8708ed1dbbbe6a6.webp" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js100i_eu_shared/parallel.webp" data-web-finished-panel-sha256="2977a072c670a6a493bcdc26a6361550a9cc150d415408b7e8708ed1dbbbe6a6" alt="DC8020 Male · Solar Panel Connector" />
+<figcaption aria-hidden="true"><p>DC8020 Male · Solar Panel Connector</p></figcaption>
+</figure>
 
 - Ensure that only solar panels of the same model are connected to the input of the connector.
 
@@ -116,9 +149,22 @@ Connect the two solar panels to the solar panel connector respectively and then 
 
 The product has a sun angle indicator. When sunlight hits its surface, a shadow will appear at its bottom.
 
+<figure class="manual-step-figure">
+<img src="../../../../_static/manual-assets/_pool/be/bedd52c58091deb67341f02b59de719cdbe76c05bfa97d0abd3a38d14d1d86ef.webp" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js100i_eu_shared/angle.webp" data-web-finished-panel-sha256="bedd52c58091deb67341f02b59de719cdbe76c05bfa97d0abd3a38d14d1d86ef" alt="Sun Angle Indicator · Indicator point · Shadow" />
+<figcaption aria-hidden="true"><p>Sun Angle Indicator · Indicator point · Shadow</p></figcaption>
+</figure>
+
 If the shadow falls on the white inner circle at its bottom, it means that the solar panel is facing directly towards the sun and you can get optimal power generation; if not, it is suggested to adjust its angle until it does.
 
-<img src="../../../../_static/manual-assets/_pool/4d/4d13eb653050866121bb5de2f823f0309f0fd92156e470a602f63e6ad3c24fe6.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js100i_eu_en/angle_and_device.png" data-web-finished-panel-sha256="4d13eb653050866121bb5de2f823f0309f0fd92156e470a602f63e6ad3c24fe6" alt="English-labelled sun angle indicator guidance and device-powering connection diagram." />
+<figure class="manual-step-figure manual-detail-figure">
+<img src="../../../../_static/manual-assets/_pool/8c/8caee0f50e73788f656225a957b2ba572e70ac7a2596f7a07fcdaf4b9f306cd4.webp" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js100i_eu_shared/angle_choice_1.webp" data-web-finished-panel-sha256="8caee0f50e73788f656225a957b2ba572e70ac7a2596f7a07fcdaf4b9f306cd4" alt="Shadow falls in the white inner circle" />
+<figcaption aria-hidden="true"><p>Shadow falls in the white inner circle</p></figcaption>
+</figure>
+
+<figure class="manual-step-figure manual-detail-figure">
+<img src="../../../../_static/manual-assets/_pool/74/74f035fcc2e1a639e0509050180749e9f96dfbb088c3bc03a44c6d452f4dc300.webp" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js100i_eu_shared/angle_choice_2.webp" data-web-finished-panel-sha256="74f035fcc2e1a639e0509050180749e9f96dfbb088c3bc03a44c6d452f4dc300" alt="Shadow does not fall in the white inner circle" />
+<figcaption aria-hidden="true"><p>Shadow does not fall in the white inner circle</p></figcaption>
+</figure>
 
 Note
 
@@ -128,9 +174,17 @@ To maximize the power generation, adjust the orientation of Jackery SolarSaga 10
 
 Use the multifunctional adapter\'s USB-C, LED and USB-A interfaces to power a cell phone, power bank or tablet as shown.
 
-<img src="../../../../_static/manual-assets/_pool/e2/e2d23601137015dfd900301d9e19ef8a87a46e8a2c3f646a68d79d4715ee3218.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js100i_eu_en/multifunctional_adapter.png" data-web-finished-panel-sha256="e2d23601137015dfd900301d9e19ef8a87a46e8a2c3f646a68d79d4715ee3218" alt="Multifunctional adapter with English-labelled USB-A, USB-C and LED interfaces." />
+<figure class="manual-step-figure">
+<img src="../../../../_static/manual-assets/_pool/0c/0ce34b25f210e2f613d02065d94c38a6da5486c8a2489ff8d56b68a76050f964.webp" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js100i_eu_shared/device.webp" data-web-finished-panel-sha256="0ce34b25f210e2f613d02065d94c38a6da5486c8a2489ff8d56b68a76050f964" alt="Jackery SolarSaga 100 Air and multifunctional adapter ports and device connections." />
+<figcaption><p>Jackery SolarSaga 100 Air · Multifunctional Adapter</p>
+<p>USB-C · LED · USB-A</p>
+<p>Cell Phone · Power Bank · Tablet</p></figcaption>
+</figure>
 
-- Insert the rubber plug when USB ports are not in use to prevent dust.
+<figure class="manual-step-figure">
+<img src="../../../../_static/manual-assets/_pool/09/0997cc2b9e06f3c1918f9642ae4584aa414b048e2390ae60aded8ae9838cb3c0.webp" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/js100i_eu_shared/dust.webp" data-web-finished-panel-sha256="0997cc2b9e06f3c1918f9642ae4584aa414b048e2390ae60aded8ae9838cb3c0" alt="Insert the rubber plug when USB ports are not in use to prevent dust." />
+<figcaption aria-hidden="true"><p>Insert the rubber plug when USB ports are not in use to prevent dust.</p></figcaption>
+</figure>
 
 # TECHNICAL PARAMETERS
 
