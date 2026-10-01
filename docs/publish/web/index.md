@@ -41,6 +41,7 @@
 - [JE-2000E / EU / pl - Jackery Explorer 2000 Plus — pl](JE-2000E/EU/pl/md/manual_je2000e_eu_pl.md)
 - [JE-2000E / EU / pt - Jackery Explorer 2000 Plus — pt](JE-2000E/EU/pt/md/manual_je2000e_eu_pt.md)
 - [JE-2000E / EU / uk - Jackery Explorer 2000 Plus Посібник користувача](JE-2000E/EU/uk/md/manual_je2000e_eu_uk.md)
+- [JE-2000F / CN / zh - 便携式储能电源 用户指南](JE-2000F/CN/zh/md/manual_je2000f_cn.md)
 - [JE-2000F / EU / de - Jackery Explorer 2000 Benutzerhandbuch](JE-2000F/EU/de/md/manual_je2000f_eu_de.md)
 - [JE-2000F / EU / en - Jackery Explorer 2000 User Manual](JE-2000F/EU/en/md/manual_je2000f_eu_en.md)
 - [JE-2000F / EU / es - Jackery Explorer 2000 Manual de usuario](JE-2000F/EU/es/md/manual_je2000f_eu_es.md)
