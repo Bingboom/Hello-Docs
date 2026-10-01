@@ -1,0 +1,11 @@
+\documentclass{article}
+\input{theme.tex}
+\input{components.tex}
+\begin{document}
+\null
+\begin{tikzpicture}[remember picture,overlay]
+\begin{scope}[shift={(current page.north west)},x=1mm,y=-1mm]
+  \input{layout.tex}
+\end{scope}
+\end{tikzpicture}
+\end{document}

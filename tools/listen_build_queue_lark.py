@@ -19,26 +19,20 @@ def run_lark_cli_json(
     resolved_cli_command_parts: Callable[[str], list[str]],
     parse_json_payload: Callable[[str], dict[str, Any]],
 ) -> dict[str, Any]:
-    cmd = [*resolved_cli_command_parts(cli_bin), *args]
-    proc = subprocess.run(
-        cmd,
-        cwd=str(repo_root),
-        check=False,
-        capture_output=True,
-        text=True,
-        encoding="utf-8",
+    from tools.feishu_record_transport import run_lark_cli_json as run_transport_json
+
+    return run_transport_json(
+        cli_bin=cli_bin,
+        args=args,
+        repo_root=repo_root,
+        resolved_cli_command_parts=resolved_cli_command_parts,
+        parse_json_payload=parse_json_payload,
+        format_command=format_command,
+        on_command=lambda _cmd: None,
+        command_failure_message=lambda cmd, stdout, stderr, _returncode: (
+            (stderr or "").strip() or (stdout or "").strip() or f"command failed: {format_command(cmd)}"
+        ),
     )
-    if proc.returncode:
-        stderr = (proc.stderr or "").strip()
-        stdout = (proc.stdout or "").strip()
-        message = stderr or stdout or f"command failed: {format_command(cmd)}"
-        raise RuntimeError(message)
-    payload = parse_json_payload(proc.stdout or proc.stderr or "")
-    code = payload.get("code")
-    if code not in (None, 0):
-        message = str(payload.get("msg") or payload.get("message") or "Lark CLI API request failed")
-        raise RuntimeError(f"Lark CLI API request failed: {message}")
-    return payload
 
 
 def build_event_subscribe_command(
@@ -90,46 +84,55 @@ def fetch_field_id_map(
     identity: str = "user",
     run_lark_cli_json: Callable[..., dict[str, Any]],
 ) -> dict[str, str]:
+    from tools.feishu_record_transport import iter_lark_pages
+
     result: dict[str, str] = {}
-    offset = 0
-    limit = 500
-    while True:
-        payload = run_lark_cli_json(
-            cli_bin=cli_bin,
-            args=[
-                "base",
-                "+field-list",
-                "--as",
-                identity,
-                "--base-token",
-                base_token,
-                "--table-id",
-                table_id,
-                "--format",
-                "json",
-                "--limit",
-                str(limit),
-                "--offset",
-                str(offset),
-            ],
-        )
+    limit = 200  # lark-cli >=1.0.69 caps --limit at 200
+
+    def field_items(payload: dict[str, Any]) -> list[Any]:
         data = payload.get("data")
         if not isinstance(data, dict):
             raise RuntimeError("Lark CLI field list response is missing data payload")
-        items = data.get("items", [])
+        items = data.get("items")
+        if items is None:
+            items = data.get("fields")
         if not isinstance(items, list):
-            raise RuntimeError("Lark CLI field list response has invalid items payload")
+            raise RuntimeError("Lark CLI field list response has invalid items/fields payload")
+        return items
+
+    def fetch_page(offset: int, page_limit: int) -> dict[str, Any]:
+        payload = run_lark_cli_json(
+            cli_bin=cli_bin,
+            args=[
+                "base", "+field-list", "--as", identity,
+                "--base-token", base_token, "--table-id", table_id,
+                "--format", "json", "--limit", str(page_limit), "--offset", str(offset),
+            ],
+        )
+        field_items(payload)
+        return payload
+
+    def page_items(payload: dict[str, Any]) -> list[Any]:
+        return field_items(payload)
+
+    def page_has_more(payload: dict[str, Any], offset: int) -> bool:
+        data = payload["data"]
+        total = int(data.get("total") or offset)
+        return offset < total
+
+    for _payload, items in iter_lark_pages(
+        fetch_page,
+        items_from_payload=page_items,
+        has_more_from_payload=page_has_more,
+        limit=limit,
+    ):
         for item in items:
             if not isinstance(item, dict):
                 continue
-            field_id = str(item.get("field_id") or "").strip()
-            field_name = str(item.get("field_name") or "").strip()
+            field_id = str(item.get("field_id") or item.get("id") or "").strip()
+            field_name = str(item.get("field_name") or item.get("name") or "").strip()
             if field_id and field_name:
                 result[field_name] = field_id
-        total = int(data.get("total") or len(result))
-        offset += len(items)
-        if not items or offset >= total:
-            break
     return result
 
 

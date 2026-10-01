@@ -1,0 +1,19 @@
+{
+  "schema_version": "auto-manual-web-publish-target/v2",
+  "model": "JE-500A",
+  "region": "EU",
+  "lang": "en",
+  "version": "git-20260930-24f51176-shared-components",
+  "built_at": "2026-09-30T13:31:35.625263+00:00",
+  "git_ref": "24f51176daa3e7a9369ce86e2c9ee4d8319b568e",
+  "route": "JE-500A/EU/en/md",
+  "manual": "manual_je500a_eu_en.md",
+  "language_scope": "single",
+  "language_projection_evidence_path": "evidence/language_projection_receipt.json",
+  "language_projection_evidence_sha256": "6dd3459abc142f3ccb30850d60682901ba9f2bce2dfc9a5638784c727aee2052",
+  "legacy_default": true,
+  "legacy_route": "JE-500A/EU/md",
+  "legacy_aliases": [
+    "manual_je500a_eu_en"
+  ]
+}

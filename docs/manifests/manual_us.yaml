@@ -1,10 +1,24 @@
 manifest_id: manual_us_multilang
 pages:
   - type: cover_pdf
-    file: cover-en.pdf
+    file: asset:page/cover
   - type: rst_include
     lang: en
     file: templates/page_shared/en/00_preface.rst
+    # EN/FR/ES blocks in one page: trim to the languages this target ships.
+    # No-op for the trilingual us-merged family; the annotation travels with
+    # the template so a single-language reuse cannot inherit the extra blocks.
+    lang_blocks: true
+  - type: rst_include
+    lang: en
+    file: templates/page_shared/en/00_toc.rst
+    # Print-only page. Was hand-added to the review index and silently lost on
+    # every Start Review reseed (2026-08-13/14 incidents, same-source gate).
+    # Declaring it here makes reseeds regenerate it deterministically; its
+    # page numbers stay operator-curated during review. ordinal_neutral keeps
+    # the tail's pNN_ duplicate names (p22_01_fcc.rst etc.) exactly as the
+    # review branch and the approved layout contract pin them.
+    ordinal_neutral: true
 
   - type: rst_include
     lang: en
@@ -45,6 +59,11 @@ pages:
   - type: rst_include
     lang: en
     file: templates/page_shared/en/06_ups_mode.rst
+    capability: UPS功能
+  - type: rst_include
+    lang: en
+    file: templates/page_shared/en/07_extra_battery.rst
+    capability: 加电包扩容
   - type: rst_include
     lang: en
     file: templates/page_shared/en/charging.rst
@@ -114,6 +133,11 @@ pages:
   - type: rst_include
     lang: fr
     file: templates/page_shared/fr/06_ups_mode.rst
+    capability: UPS功能
+  - type: rst_include
+    lang: fr
+    file: templates/page_shared/fr/07_extra_battery.rst
+    capability: 加电包扩容
   - type: rst_include
     lang: fr
     file: templates/page_shared/fr/charging.rst
@@ -183,6 +207,11 @@ pages:
   - type: rst_include
     lang: es
     file: templates/page_shared/es/06_ups_mode.rst
+    capability: UPS功能
+  - type: rst_include
+    lang: es
+    file: templates/page_shared/es/07_extra_battery.rst
+    capability: 加电包扩容
   - type: rst_include
     lang: es
     file: templates/page_shared/es/charging.rst
@@ -212,3 +241,9 @@ pages:
     template: templates/page_shared/es/12_app_setup_placeholder.rst
     langs: [es]
     include_dir: generated/{model}/draft
+  - type: rst_include
+    lang: en
+    file: templates/page_shared/en/99_back_cover.rst
+    # Print-only page (see the 00_toc entry note): declared here so reseeds
+    # keep the approved 52-page print composition.
+    ordinal_neutral: true

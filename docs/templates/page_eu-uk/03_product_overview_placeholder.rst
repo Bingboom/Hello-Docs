@@ -25,8 +25,8 @@
    ВИГЛЯД СПЕРЕДУ
    -------------
 
-   .. image:: templates/word_template/common_assets/overview/front_product.jpg
-      :alt: Заглушка схеми вигляду спереду.
+   .. image:: asset:overview/front_product
+      :alt: Схема вигляду спереду.
       :width: 420px
 
    .. list-table::
@@ -67,8 +67,8 @@
    ВИГЛЯД ПРАВОГО БОКУ
    ------------------
 
-   .. image:: templates/word_template/common_assets/overview/right_side_ports.png
-      :alt: Заглушка схеми вигляду правого боку.
+   .. image:: asset:overview/right_side_ports
+      :alt: Схема вигляду правого боку.
       :width: 420px
 
    .. list-table::

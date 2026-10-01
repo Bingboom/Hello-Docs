@@ -1,6 +1,6 @@
 # Architecture Documentation Map
 
-Updated: 2026-06-07
+Updated: 2026-07-31
 
 Use this directory for architecture and integration boundaries.
 Not every file here is equally current.
@@ -9,6 +9,9 @@ Not every file here is equally current.
 
 - [`System Evolution Strategy.md`](System%20Evolution%20Strategy.md)
   - long-term strategy and stable architectural principles
+- [`system_evolution_history.md`](system_evolution_history.md)
+  - retrospective narrative of how the system actually evolved (kernel + ten
+    rings, dated); the backward-looking counterpart of the Strategy doc
 - [`Hello_Docs_Architecture.md`](Hello_Docs_Architecture.md)
   - current repository component map and ownership split
 - [`OpenClaw_Control_Layer_Plan.md`](OpenClaw_Control_Layer_Plan.md)
@@ -19,12 +22,31 @@ Not every file here is equally current.
   - future canonical content-model direction
 - [`Long_Form_Content_Block_Design.md`](Long_Form_Content_Block_Design.md)
   - re-launch design for prose page assembly (long-form block schema + block-level review workflow); backs Workstream N
+- [`Product_Skeleton_Library_Design.md`](Product_Skeleton_Library_Design.md)
+  - draft design for first-class per-product manual skeletons (multi-anchor
+    composition, category axis, module layer); superset restatement of
+    Workstream M, pending workstream approval
+- [`product_skeleton_library_requirements.md`](product_skeleton_library_requirements.md)
+  - draft requirements for the skeleton-library program (DITA-model concept
+    mapping, corpus audit → design finalization → retrofit phases, operator
+    inputs and acceptance gates)
+- [`manual_ia_audit_2026-08.md`](manual_ia_audit_2026-08.md)
+  - Phase A information-architecture audit of the shipped manual corpus
+    (56 PDFs): candidate skeleton anchors with reconstruction test, reuse
+    tiers, variance attribution, pipeline coverage, and the data defects to
+    fix before anything is loaded into a skeleton library
 - [`closed_loop_qc_agent_requirements.md`](closed_loop_qc_agent_requirements.md)
   - requirements baseline for the closed-loop QC agent that combines content-lint rules, reviewer diff Word back-porting, and Feishu QC marking
 - [`Feishu_Cloud_Doc_Backport_Design.md`](Feishu_Cloud_Doc_Backport_Design.md)
   - source-of-truth routing design for Feishu cloud document backport flows: in-review final docs and template maintenance docs
+- [`Review_Branch_Propagation_Design.md`](Review_Branch_Propagation_Design.md)
+  - approved K15/Workstream V forward-propagation contract for pinned review derivatives, classify-or-abstain bump PRs, migration, and lag measurement; bounded implementation slices are now registered
 - [`HTML_PDF_Component_Convergence.md`](HTML_PDF_Component_Convergence.md)
-  - output-convergence notes for current rendering work
+  - stable cross-renderer ownership boundary only; the sole human style
+    specification is
+    [`STYLE_DEFINITION.md`](../../docs/renderers/contracts/STYLE_DEFINITION.md),
+    and active migration evidence lives in
+    [`style_component_contract_v2_plan.md`](../dev/style_component_contract_v2_plan.md)
 - [`MyST_Markdown_Feishu_Cloud_Doc_Publish_Plan.md`](MyST_Markdown_Feishu_Cloud_Doc_Publish_Plan.md)
   - target architecture for MyST Markdown publish output, Read the Docs hosting, and Feishu cloud document import
 

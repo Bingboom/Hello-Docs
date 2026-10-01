@@ -3,7 +3,6 @@
 
 from __future__ import annotations
 
-import argparse
 import importlib.util
 import os
 import shutil
@@ -20,7 +19,13 @@ except ImportError:  # pragma: no cover - direct script execution fallback
 ROOT = bootstrap_repo_root(__file__, parent_count=1)
 
 from tools.config_pages import CsvPage
+from tools import lang_registry
 from tools.build_docs_bundle import prepare_manual_bundle as _prepare_manual_bundle_impl
+from tools.build_docs_bundle import prepare_web_language_source_bundle
+from tools.language_block_trim import (
+    trim_bundle_language_blocks,
+    trim_bundle_language_pages,
+)
 from tools.build_docs_cli import parse_args as _parse_args_impl
 from tools.build_docs_entry import run_build as _run_build_impl
 from tools.build_docs_export import build_target as _build_target_impl
@@ -60,6 +65,7 @@ from tools.build_docs_targets import (
     resolve_build_region as _resolve_build_region_impl,
     resolve_build_targets as _resolve_build_targets_impl,
 )
+from tools.bundle_asset_finalize import finalize_materialized_bundle
 from tools.build_docs_theme import (
     body_tag_with_class as _body_tag_with_class_impl,
     effective_variants_for_current as _effective_variants_for_current_impl,
@@ -92,8 +98,7 @@ from tools.build_docs_sphinx import (
 from tools.build_docs_shared import (
     BODY_SWITCHER_CLASS,
     MANUAL_META_FILE_NAME,
-    SWITCHER_BLOCK_END,
-    SWITCHER_BLOCK_START,
+    SWITCHER_BLOCK_START as SWITCHER_BLOCK_START,
     VALID_FORMATS,
     VALID_PDF_MODES,
     VALID_SOURCE_MODES,
@@ -117,6 +122,7 @@ from tools.gen_index_bundle import (
     cleanup_legacy_rst_artifacts,
     materialize_bundle,
 )
+from tools.web_language_bundle import materialize_web_language_projection
 from tools.page_manifest import resolve_config_pages_or_raise
 from tools.review_support import (
     overlay_review_content_onto_bundle,
@@ -146,12 +152,7 @@ from tools.validate_config import validate as validate_cfg
 from tools.validate_layout_params import validate as validate_layout
 
 paths = get_paths()
-LANGUAGE_LABELS = {
-    "en": "English",
-    "es": "Espanol",
-    "fr": "Francais",
-    "ja": "日本語",
-}
+LANGUAGE_LABELS = lang_registry.language_display_labels()
 
 
 load_config = load_config_mapping
@@ -187,6 +188,7 @@ def clean_build_targets(
     *,
     docs_dir: Path | None = None,
     preview_name: str | None = None,
+    output_root: Path | None = None,
 ) -> None:
     return _clean_build_targets_impl(
         targets,
@@ -195,6 +197,7 @@ def clean_build_targets(
         build_root_for_target=build_root_for_target,
         cleanup_legacy_rst_artifacts=cleanup_legacy_rst_artifacts,
         remove_tree_with_retries=remove_tree_with_retries,
+        output_root=output_root,
     )
 
 
@@ -242,7 +245,7 @@ def render_csv_pages(
         resolve_config_pages_or_raise=resolve_config_pages_or_raise,
         resolve_data_snapshot_paths=resolve_data_snapshot_paths,
         run=run,
-        repo_root=paths.root,
+        repo_root=getattr(paths, "root", ROOT),
     )
 
 
@@ -397,11 +400,18 @@ def _resolve_sphinx_build_cmd(builder: str) -> list[str]:
 _normalize_sphinx_tag_value = _normalize_sphinx_tag_value_impl
 
 
-def _sphinx_tag_args(*, model: str | None = None, region: str | None = None, lang: str | None = None) -> list[str]:
+def _sphinx_tag_args(
+    *,
+    model: str | None = None,
+    region: str | None = None,
+    lang: str | None = None,
+    category: str | None = None,
+) -> list[str]:
     return _sphinx_tag_args_impl(
         model=model,
         region=region,
         lang=lang,
+        category=category,
         normalize_sphinx_tag_value=_normalize_sphinx_tag_value,
     )
 
@@ -589,6 +599,7 @@ def sphinx_build(
     model: str | None = None,
     region: str | None = None,
     lang: str | None = None,
+    category: str | None = None,
     minimal_theme: bool = False,
     substitutions: dict[str, str] | None = None,
 ) -> None:
@@ -600,6 +611,7 @@ def sphinx_build(
         model=model,
         region=region,
         lang=lang,
+        category=category,
         minimal_theme=minimal_theme,
         substitutions=substitutions,
         should_use_minimal_html_theme=_should_use_minimal_html_theme,
@@ -608,14 +620,42 @@ def sphinx_build(
         with_rst_epilog=_with_rst_epilog,
         run=run,
         repo_root=paths.root,
+        warning_ratchet_hook=_warning_ratchet_hook,
     )
 
 
-def patch_fonts(patch_fonts_script: str, main_tex: str, *, build_dir: Path) -> None:
+def _warning_ratchet_hook(builder: str, warn_log: Path) -> None:
+    # Staged enforcement (Milestone I2): report by default, strict via env.
+    mode = os.environ.get("AUTO_MANUAL_WARNING_RATCHET", "report").strip().lower()
+    if mode == "off":
+        return
+    from tools.warning_ratchet import check_stream, default_baseline_dir
+
+    log_text = warn_log.read_text(encoding="utf-8") if warn_log.exists() else ""
+    rc = check_stream(
+        stream=f"sphinx-{builder}",
+        log_text=log_text,
+        baseline_dir=default_baseline_dir(paths.root),
+    )
+    if mode == "strict" and rc != 0:
+        raise RuntimeError(
+            f"warning ratchet failed for sphinx-{builder} (rc={rc}); "
+            "register intentional warnings via tools/warning_ratchet.py update"
+        )
+
+
+def patch_fonts(
+    patch_fonts_script: str,
+    main_tex: str,
+    *,
+    build_dir: Path,
+    language: str | None,
+) -> None:
     return _patch_fonts_impl(
         patch_fonts_script,
         main_tex,
         build_dir=build_dir,
+        language=language,
         run=run,
         repo_root=paths.root,
         python_executable=sys.executable,
@@ -713,7 +753,11 @@ def prepare_manual_bundle(
         overlay_review_onto_bundle=overlay_review_onto_bundle,
         review_content_exists=review_content_exists,
         overlay_review_content_onto_bundle=overlay_review_content_onto_bundle,
+        finalize_materialized_bundle=finalize_materialized_bundle,
         docs_dir=paths.docs_dir,
+        repo_root=getattr(paths, "root", ROOT),
+        trim_bundle_language_blocks=trim_bundle_language_blocks,
+        trim_bundle_language_pages=trim_bundle_language_pages,
     )
 
 
@@ -767,6 +811,8 @@ def build_target(
         build_root_for_target=build_root_for_target,
         ensure_target_identity=ensure_target_identity,
         prepare_manual_bundle=prepare_manual_bundle,
+        prepare_web_language_source_bundle=prepare_web_language_source_bundle,
+        materialize_web_language_projection=materialize_web_language_projection,
         render_build_template=render_build_template,
         resolve_output_path=resolve_output_path,
         sphinx_build=sphinx_build,

@@ -1,0 +1,254 @@
+from __future__ import annotations
+
+import re
+import unittest
+from pathlib import Path
+
+import yaml
+
+from tools import lang_registry
+from tools import localized_copy, signal_words
+from tools.manual_copy_source import (
+    LOCALIZED_COPY_COLUMNS,
+    LOCALIZED_COPY_TEXT_COLUMNS,
+    MANUAL_COPY_TAG_FIELD,
+    SPEC_TITLE_COLUMNS,
+    SPEC_TITLE_TEXT_COLUMNS,
+    STATUS_WORD_COLUMNS,
+    STATUS_WORD_MARKER_FIELD,
+    TM_LANGUAGE_FIELDS,
+    TRANSLATION_MEMORY_COLUMNS,
+)
+from tools.sync_data_models import TABLE_SCHEMAS
+
+
+ROOT = Path(__file__).resolve().parents[1]
+
+
+class LanguageRegistryTest(unittest.TestCase):
+    def test_registry_has_unique_codes_aliases_and_complete_metadata(self) -> None:
+        specs = lang_registry.LANGUAGE_REGISTRY
+        codes = [spec.code for spec in specs]
+        aliases = [alias.casefold() for spec in specs for alias in spec.aliases]
+
+        self.assertEqual(len(codes), len(set(codes)))
+        self.assertEqual(len(aliases), len(set(aliases)))
+        self.assertEqual(set(codes), set(lang_registry.LANGUAGE_BY_CODE))
+        self.assertEqual(set(aliases), set(lang_registry.LANGUAGE_BY_ALIAS))
+        self.assertEqual(
+            set(lang_registry.CORE_TABLE_NAMES),
+            {table_name for spec in specs for table_name, _ in spec.table_columns},
+        )
+
+        for spec in specs:
+            with self.subTest(language=spec.code):
+                self.assertTrue(spec.display_name)
+                self.assertTrue(spec.native_name)
+                self.assertTrue(spec.template_directory)
+                self.assertIn(spec.code, spec.aliases)
+                self.assertTrue(spec.column_suffixes)
+                self.assertTrue(spec.tm_column)
+                self.assertTrue(spec.localized_copy_column)
+                self.assertTrue(spec.status_word_column)
+                self.assertIn(spec.separator, (": ", " : ", "："))
+                self.assertIs(lang_registry.language_spec(spec.code), spec)
+                for table_name, columns in spec.table_columns:
+                    self.assertIn(table_name, lang_registry.CORE_TABLE_NAMES)
+                    self.assertTrue(columns)
+                    self.assertEqual(len(columns), len(set(columns)))
+
+        for code, pack in lang_registry.IDML_LANGUAGE_PACKS.items():
+            with self.subTest(native_name=code):
+                self.assertEqual(
+                    lang_registry.LANGUAGE_BY_CODE[code].native_name,
+                    pack.toc_label,
+                )
+
+    def test_table_schema_language_columns_match_registry(self) -> None:
+        language_column_patterns = {
+            "spec_master": re.compile(r"^(?:Row_label|Param|Value)_(?!source$|footnote_refs$).+$"),
+            "spec_footnotes": re.compile(r"^(?:Text_.+|pt-BR)$"),
+            "spec_notes": re.compile(r"^Text_.+$"),
+            "symbols_blocks": re.compile(r"^(?:label|aliases|text)_.+$"),
+            "lcd_icons": re.compile(r"^(?:icon|icon_desc)_.+$"),
+            "troubleshooting": re.compile(r"^corrective_measures_.+$"),
+        }
+
+        for table_name in lang_registry.CORE_TABLE_NAMES:
+            with self.subTest(table=table_name):
+                actual = tuple(
+                    column
+                    for column in TABLE_SCHEMAS[table_name].columns
+                    if language_column_patterns[table_name].match(column)
+                )
+                expected = lang_registry.table_language_columns(table_name)
+                self.assertEqual(set(actual), set(expected))
+                self.assertEqual(len(actual), len(expected))
+                self.assertEqual(actual, expected)
+                for spec in lang_registry.LANGUAGE_REGISTRY:
+                    for column in spec.columns_for_table(table_name):
+                        self.assertIn(column, TABLE_SCHEMAS[table_name].columns)
+
+    def test_required_headers_are_produced_by_table_columns(self) -> None:
+        """A required header the schema never emits is a silent contract break.
+
+        ``Text_ko`` was required by ``spec_footnotes``/``spec_notes`` while the
+        registry produced no Korean column for those tables, so Korean footnote
+        and note text could never reach a build.
+        """
+
+        for logical_name, schema in sorted(TABLE_SCHEMAS.items()):
+            with self.subTest(table=logical_name):
+                missing = tuple(
+                    header
+                    for header in schema.required_headers
+                    if header not in schema.columns
+                )
+                self.assertEqual(
+                    missing,
+                    (),
+                    f"{logical_name} requires header(s) it never emits: "
+                    + ", ".join(missing),
+                )
+
+    def test_manual_copy_source_language_surfaces_match_registry(self) -> None:
+        specs = lang_registry.LANGUAGE_REGISTRY
+        expected_tm = {
+            alias.casefold(): spec.tm_column
+            for spec in specs
+            for alias in spec.aliases
+        }
+        expected_localized = {
+            spec.localized_copy_column: spec.tm_column
+            for spec in specs
+        }
+        expected_status = tuple(spec.status_word_column for spec in specs)
+        expected_titles = tuple(
+            spec.spec_title_column
+            for spec in specs
+            if spec.spec_title_column is not None
+        )
+        expected_title_map = {
+            spec.spec_title_column: spec.tm_column
+            for spec in specs
+            if spec.spec_title_column is not None
+        }
+
+        self.assertEqual(TM_LANGUAGE_FIELDS, expected_tm)
+        self.assertEqual(LOCALIZED_COPY_TEXT_COLUMNS, expected_localized)
+        self.assertEqual(
+            LOCALIZED_COPY_COLUMNS,
+            (
+                "copy_key",
+                "page_id",
+                "copy_type",
+                "Region",
+                "Model",
+                "Source_lang",
+                "Is_Latest",
+                "Version",
+                "text_en",
+                "text_zh",
+                "text_ja",
+                "text_fr",
+                "text_es",
+                "text_pt-BR",
+                "text_de",
+                "text_it",
+                "text_uk",
+                "text_ko",
+                "notes",
+            ),
+        )
+        self.assertEqual(
+            {column for column in LOCALIZED_COPY_COLUMNS if column.startswith("text_")},
+            set(expected_localized),
+        )
+        self.assertEqual(STATUS_WORD_COLUMNS, (*expected_status, STATUS_WORD_MARKER_FIELD))
+        self.assertEqual(
+            TRANSLATION_MEMORY_COLUMNS,
+            (*expected_status, MANUAL_COPY_TAG_FIELD, STATUS_WORD_MARKER_FIELD),
+        )
+        self.assertEqual(
+            SPEC_TITLE_COLUMNS,
+            ("title_en", "section_order", *expected_titles[1:]),
+        )
+        self.assertEqual(SPEC_TITLE_TEXT_COLUMNS, expected_title_map)
+
+    def test_localized_copy_and_signal_word_alias_surfaces_match_registry(self) -> None:
+        expected_text_columns = {
+            alias.casefold(): spec.localized_copy_column
+            for spec in lang_registry.LANGUAGE_REGISTRY
+            for alias in spec.aliases
+        }
+        self.assertEqual(localized_copy._LANG_TEXT_COLUMNS, expected_text_columns)
+        self.assertEqual(
+            signal_words._SUPPORTED_LANGS,
+            set(expected_text_columns),
+        )
+
+        for spec in lang_registry.LANGUAGE_REGISTRY:
+            for alias in spec.aliases:
+                with self.subTest(language=spec.code, alias=alias):
+                    columns = signal_words._label_columns(alias)
+                    suffixes = {
+                        column.rsplit("_", 1)[-1]
+                        for column in columns
+                        if "_" in column
+                    }
+                    self.assertTrue(
+                        set(spec.column_suffixes).intersection(suffixes),
+                        msg=f"signal_words has no label columns for {alias!r}",
+                    )
+
+    def test_alias_resolution_is_explicit_and_non_mutating(self) -> None:
+        for spec in lang_registry.LANGUAGE_REGISTRY:
+            for alias in spec.aliases:
+                with self.subTest(language=spec.code, alias=alias):
+                    self.assertEqual(lang_registry.canonical_language(alias), spec.code)
+                    self.assertIs(lang_registry.language_spec(alias), spec)
+        self.assertIsNone(lang_registry.canonical_language("xx"))
+        self.assertIsNone(lang_registry.language_spec("xx"))
+
+    def test_committed_bundle_languages_are_registered(self) -> None:
+        unknown: list[str] = []
+        for path in sorted((ROOT / "docs" / "manifests").glob("*.yaml")):
+            payload = yaml.safe_load(path.read_text(encoding="utf-8"))
+            pages = payload.get("pages", []) if isinstance(payload, dict) else []
+            for page_index, page in enumerate(pages):
+                if not isinstance(page, dict):
+                    continue
+                raw = page.get("langs", page.get("lang"))
+                values = raw if isinstance(raw, list) else [raw]
+                for value in values:
+                    token = str(value or "").strip()
+                    if (
+                        token
+                        and "{" not in token
+                        and lang_registry.canonical_language(token) is None
+                    ):
+                        unknown.append(f"{path.name}:pages[{page_index}]={token!r}")
+
+        marker = re.compile(r"\\HBApplyLang\{([^}]+)\}")
+        for path in sorted((ROOT / "docs" / "templates").rglob("*.rst")):
+            for token in marker.findall(path.read_text(encoding="utf-8")):
+                token = token.strip()
+                if token and lang_registry.canonical_language(token) is None:
+                    unknown.append(f"{path.relative_to(ROOT)}={token!r}")
+
+        self.assertEqual([], unknown)
+
+    def test_alias_candidates_are_registry_derived_and_rotated(self) -> None:
+        for spec in lang_registry.LANGUAGE_REGISTRY:
+            aliases = tuple(alias.casefold() for alias in spec.aliases)
+            for index, alias in enumerate(aliases):
+                with self.subTest(language=spec.code, alias=alias):
+                    self.assertEqual(
+                        lang_registry.language_alias_candidates(alias),
+                        aliases[index:] + aliases[:index],
+                    )
+        self.assertEqual(lang_registry.language_alias_candidates("xx"), ("xx",))
+
+
+if __name__ == "__main__":
+    unittest.main()

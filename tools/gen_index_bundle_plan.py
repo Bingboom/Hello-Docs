@@ -3,6 +3,9 @@ from __future__ import annotations
 from pathlib import Path
 from typing import Any, Callable
 
+from tools.asset_usage import parse_asset_uri
+from tools.utils.path_utils import Paths
+
 
 def base_file_name_for_plan(
     page: Any,
@@ -19,7 +22,11 @@ def base_file_name_for_plan(
 ) -> str:
     if isinstance(page, cover_pdf_page_cls):
         pdf_path = format_tokenized(page.file, model, region)
-        stem = Path(pdf_path).stem or "cover"
+        asset_key = parse_asset_uri(pdf_path)
+        stem = Path(asset_key).name if asset_key is not None else Path(pdf_path).stem
+        stem = stem or "cover"
+        if asset_key is not None and lang:
+            stem = f"{stem}-{lang}"
         return f"{stem}.rst"
     if isinstance(page, csv_page_cls):
         assert lang is not None
@@ -31,13 +38,39 @@ def base_file_name_for_plan(
     if isinstance(page, pdf_insert_page_cls):
         assert lang is not None
         pdf_path = format_tokenized(page.file_map[lang], model, region)
-        stem = Path(pdf_path).stem or "pdf_insert"
-        return f"{stem}_{lang}.rst"
+        asset_key = parse_asset_uri(pdf_path)
+        stem = Path(asset_key).name if asset_key is not None else Path(pdf_path).stem
+        stem = stem or "pdf_insert"
+        separator = "-" if asset_key is not None else "_"
+        return f"{stem}{separator}{lang}.rst"
     if isinstance(page, rst_include_page_cls):
         rst_path = format_tokenized(page.file, model, region)
         name = Path(rst_path).name
         return name if name.lower().endswith(".rst") else f"{name}.rst"
     raise RuntimeError(f"Unsupported page type: {type(page).__name__}")
+
+
+def materialized_file_name(page: Any, base_name: str, seen: set[str], ordinal: int) -> str:
+    """Slot-bearing entries are named by their stable slot_id; everything else
+    keeps the legacy position-derived path byte-for-byte.
+
+    The legacy ensure_unique_name gives the FIRST occurrence of a base name the
+    bare name and only later duplicates a pNN_ prefix, so a dropped page can
+    silently hand its bare name to the next language block. slot_id naming is a
+    pure function of the manifest entry: drop any page and every other
+    materialized name stays put.
+    """
+
+    slot_id = getattr(page, "slot_id", None)
+    if slot_id:
+        name = f"{slot_id}.rst"
+        if name in seen:
+            raise RuntimeError(
+                f"materialized name collision for slot_id '{slot_id}': {name}"
+            )
+        seen.add(name)
+        return name
+    return ensure_unique_name(base_name, seen, ordinal)
 
 
 def ensure_unique_name(file_name: str, seen: set[str], ordinal: int) -> str:
@@ -80,7 +113,20 @@ def plan_materialized_pages(
     base_file_name_for_plan: Callable[..., str],
     ensure_unique_name: Callable[[str, set[str], int], str],
 ) -> list[Any]:
-    selected_langs = list(langs) if langs is not None else build_langs(cfg)
+    data_dir = Paths(root=root).data_dir
+    # The family config declares the union of its models' languages; narrow it
+    # to what this target actually ships before any page is planned, so the
+    # per-language pages of an unshipped language are never materialized.
+    from tools.model_languages import resolve_target_languages
+    scope = resolve_target_languages(
+        list(langs) if langs is not None else build_langs(cfg),
+        model=model,
+        region=region,
+        data_dir=data_dir,
+    )
+    selected_langs = list(scope.languages)
+    for note in scope.notes():
+        print(f"[bundle-plan] {note}")
     pages = resolve_config_pages_or_raise(
         cfg,
         default_languages=selected_langs,
@@ -90,17 +136,37 @@ def plan_materialized_pages(
         error_prefix="config.pages",
     ).pages
 
+    from tools.capability_pages import filter_pages_by_capability
+    pages, dropped = filter_pages_by_capability(
+        pages, model=model, region=region, data_dir=data_dir)
+    for note in dropped:
+        print(f"[bundle-plan] {note}")
+
     planned: list[Any] = []
     seen_names: set[str] = set()
 
-    for ordinal, page in enumerate(pages, start=1):
+    # The ordinal exists only to disambiguate duplicate materialized names
+    # (pNN_ prefixes). Entries marked ordinal_neutral do not consume a number:
+    # review branches and the approved reference-layout contract pin the
+    # existing pNN_ names, so a mid-manifest print-only insertion (toc, back
+    # cover) must not renumber the tail.
+    ordinal = 0
+    for page in pages:
+        if not getattr(page, "ordinal_neutral", False):
+            ordinal += 1
         if isinstance(page, cover_pdf_page_cls):
-            base_name = base_file_name_for_plan(page, lang=None, model=model, region=region)
+            cover_lang = selected_langs[0] if selected_langs else None
+            base_name = base_file_name_for_plan(
+                page,
+                lang=cover_lang,
+                model=model,
+                region=region,
+            )
             planned.append(
                 planned_page_cls(
                     page=page,
-                    lang=None,
-                    file_name=ensure_unique_name(base_name, seen_names, ordinal),
+                    lang=cover_lang,
+                    file_name=materialized_file_name(page, base_name, seen_names, ordinal),
                 )
             )
             continue
@@ -115,7 +181,7 @@ def plan_materialized_pages(
                     planned_page_cls(
                         page=page,
                         lang=lang,
-                        file_name=ensure_unique_name(base_name, seen_names, ordinal),
+                        file_name=materialized_file_name(page, base_name, seen_names, ordinal),
                     )
                 )
             continue
@@ -130,7 +196,7 @@ def plan_materialized_pages(
                     planned_page_cls(
                         page=page,
                         lang=lang,
-                        file_name=ensure_unique_name(base_name, seen_names, ordinal),
+                        file_name=materialized_file_name(page, base_name, seen_names, ordinal),
                     )
                 )
             continue
@@ -147,7 +213,7 @@ def plan_materialized_pages(
                     planned_page_cls(
                         page=page,
                         lang=lang,
-                        file_name=ensure_unique_name(base_name, seen_names, ordinal),
+                        file_name=materialized_file_name(page, base_name, seen_names, ordinal),
                     )
                 )
             continue
@@ -160,7 +226,7 @@ def plan_materialized_pages(
                 planned_page_cls(
                     page=page,
                     lang=page.lang,
-                    file_name=ensure_unique_name(base_name, seen_names, ordinal),
+                    file_name=materialized_file_name(page, base_name, seen_names, ordinal),
                 )
             )
             continue
@@ -177,6 +243,7 @@ def build_index_from_pages(
     *,
     langs: list[str] | None = None,
     root: Path,
+    planned_pages: list[Any] | tuple[Any, ...] | None = None,
     plan_materialized_pages: Callable[..., list[Any]],
 ) -> str:
     # Sphinx uses the first RST title style it sees to seed the whole
@@ -191,7 +258,12 @@ def build_index_from_pages(
         "   =============",
         "",
     ]
-    for planned in plan_materialized_pages(cfg, model=model, region=region, langs=langs, root=root):
+    selected_pages = (
+        planned_pages
+        if planned_pages is not None
+        else plan_materialized_pages(cfg, model=model, region=region, langs=langs, root=root)
+    )
+    for planned in selected_pages:
         lines.extend([f".. include:: page/{planned.file_name}", ""])
     return "\n".join(lines) + "\n"
 

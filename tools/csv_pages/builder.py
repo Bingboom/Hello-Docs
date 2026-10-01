@@ -24,6 +24,8 @@ except ImportError:  # pragma: no cover - direct script execution fallback
 from tools.utils.spec_master import resolve_product_name_from_spec_master
 from tools.utils.path_utils import Paths
 from tools.data_snapshot import STRUCTURED_DATA_DEFAULT_DIR
+from tools import lang_registry
+from tools.localized_copy import first_text, localized_columns
 
 
 def _read_csv(path: Path) -> list[dict[str, str]]:
@@ -45,7 +47,7 @@ def _parse_langs(value: str) -> list[str]:
 def _parse_order(value: str) -> float:
     try:
         return float((value or "").strip())
-    except Exception:
+    except ValueError:
         return 0.0
 
 
@@ -171,10 +173,9 @@ class CsvPageBuilder:
     @staticmethod
     def _template_lang_dir(lang: str) -> str:
         normalized = (lang or "").strip()
-        if normalized.casefold() in {"ja", "jp"}:
-            return "page_jp"
-        if normalized.casefold() == "zh":
-            return "page_zh"
+        spec = lang_registry.language_spec(normalized)
+        if spec is not None:
+            return spec.template_directory
         return f"page_shared/{normalized}"
 
     @staticmethod
@@ -203,24 +204,29 @@ class CsvPageBuilder:
     @staticmethod
     def _localized_text_value(row: dict[str, str], lang: str) -> str:
         raw = (lang or "").strip()
-        candidates = [
-            f"Text_{raw}",
-            f"text_{raw}",
-            f"Text_{raw.casefold()}",
-            f"text_{raw.casefold()}",
-            f"Text_{raw.replace('-', '_')}",
-            f"text_{raw.replace('-', '_')}",
-            f"Text_{raw.casefold().replace('-', '_')}",
-            f"text_{raw.casefold().replace('-', '_')}",
-        ]
+        spec = lang_registry.language_spec(raw)
+        if spec is not None:
+            candidates: list[str] = list(spec.columns_for_table("spec_footnotes"))
+            aliases = lang_registry.language_alias_candidates(raw)
+        else:
+            aliases = (raw, raw.casefold())
+            candidates = []
+        candidates.extend(localized_columns(("Text", "text"), aliases))
+        if not raw:
+            candidates.extend(("Text_", "text_"))
         if raw.casefold() in {"br", "pt-br", "pt_br"}:
             candidates.extend(["Text_br", "text_br", "Text_pt-BR", "text_pt-BR", "pt-BR", "br"])
-        return next((row.get(key, "") or "" for key in dict.fromkeys(candidates) if row.get(key, "")), "")
+        return first_text(row, candidates, strip=False)
 
     @staticmethod
     def _trailer_text_fields(row: dict[str, str], *, kind: str) -> dict[str, str]:
         fields: dict[str, str] = {}
-        for suffix in ("en", "fr", "es", "ja", "jp", "de", "it", "uk", "pt-BR", "br"):
+        suffixes = tuple(
+            alias
+            for spec in lang_registry.LANGUAGE_REGISTRY
+            for alias in spec.aliases
+        )
+        for suffix in suffixes:
             text = CsvPageBuilder._localized_text_value(row, suffix)
             if not text:
                 continue

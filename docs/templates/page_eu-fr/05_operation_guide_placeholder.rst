@@ -4,7 +4,7 @@ FONCTIONNEMENT
 MARCHE/ARRÊT
 ------------
 
-.. image:: templates/word_template/common_assets/operation/main_power.png
+.. image:: asset:operation/main_power
    :alt: Fonction marche/arrêt.
    :width: 360px
 
@@ -20,7 +20,7 @@ SORTIE CA MARCHE/ARRÊT
 
 **Prérequis :** Le produit est allumé.
 
-.. image:: templates/word_template/common_assets/operation/ac_output.png
+.. image:: asset:operation/ac_output
    :alt: Fonction de sortie CA.
    :width: 360px
 
@@ -34,7 +34,7 @@ SORTIE CC 12V/USB MARCHE/ARRÊT
 
 **Prérequis :** Le produit est allumé.
 
-.. image:: templates/word_template/common_assets/operation/dc_usb_output.png
+.. image:: asset:operation/dc_usb_output
    :alt: Fonction de sortie CC et USB.
    :width: 360px
 
@@ -43,15 +43,33 @@ SORTIE CC 12V/USB MARCHE/ARRÊT
 | **Arrêt** 
 | appuyez une fois
 
-.. list-table::
-   :header-rows: 0
-   :widths: 12 88
+.. The JE-1000H print (EU-UK V2.0-2026-08-03, PDF page 29) rates its high-power
+   USB-C port at 140 W and adds the 28 V/5 A cable rating; each model follows its
+   own print.
 
-   * - **ATTENTION**
-     -
-       - **Les ports USB-C de 100 W sont des ports de sortie haute puissance de type Source d'alimentation 3 (PS3) selon USB-PD.** Si l'appareil utilisateur ou l'accessoire connecté ne répond pas aux exigences de sécurité, il peut présenter un risque d'incendie. Avant d'utiliser ces ports, assurez-vous que l'appareil ou l'accessoire connecté dispose d'une protection contre les incendies.
-       - Ne connectez |PRODUCT_NAME| qu'à des appareils ou accessoires conformes aux clauses 6.3, 6.4 et 6.5 de la norme IEC/EN/UL 62368-1 (ou autres normes équivalentes).
-       - Pour obtenir la puissance de sortie maximale, utilisez le câble USB-C vers USB-C 5 A (20 V CC/5A, 100 W).
+.. only:: model_je_1000h
+
+   .. list-table::
+      :header-rows: 0
+      :widths: 12 88
+
+      * - **ATTENTION**
+        -
+          - **Les ports USB-C de 140 W sont des ports de sortie haute puissance de type Source d'alimentation 3 (PS3) selon USB-PD.** Si l'appareil utilisateur ou l'accessoire connecté ne répond pas aux exigences de sécurité, il peut présenter un risque d'incendie. Avant d'utiliser ces ports, assurez-vous que l'appareil ou l'accessoire connecté dispose d'une protection contre les incendies.
+          - Ne connectez |PRODUCT_NAME| qu'à des appareils ou accessoires conformes aux clauses 6.3, 6.4 et 6.5 de la norme IEC/EN/UL 62368-1 (ou autres normes équivalentes).
+          - Pour obtenir la puissance de sortie maximale, utilisez le câble USB-C vers USB-C 5 A (20 V CC/5A, 100 W ; 28 V CC/5A, 140 W).
+
+.. only:: not model_je_1000h
+
+   .. list-table::
+      :header-rows: 0
+      :widths: 12 88
+
+      * - **ATTENTION**
+        -
+          - **Les ports USB-C de 100 W sont des ports de sortie haute puissance de type Source d'alimentation 3 (PS3) selon USB-PD.** Si l'appareil utilisateur ou l'accessoire connecté ne répond pas aux exigences de sécurité, il peut présenter un risque d'incendie. Avant d'utiliser ces ports, assurez-vous que l'appareil ou l'accessoire connecté dispose d'une protection contre les incendies.
+          - Ne connectez |PRODUCT_NAME| qu'à des appareils ou accessoires conformes aux clauses 6.3, 6.4 et 6.5 de la norme IEC/EN/UL 62368-1 (ou autres normes équivalentes).
+          - Pour obtenir la puissance de sortie maximale, utilisez le câble USB-C vers USB-C 5 A (20 V CC/5A, 100 W).
 
 | Le produit peut charger la batterie de votre voiture à l'aide du câble de charge de batterie automobile Jackery 12V, vendu séparément et disponible sur notre site web.
 
@@ -74,7 +92,7 @@ Pour désactiver le mode d'économie d'énergie, appuyez simultanément sur le |
 
 Lors de l'alimentation d'appareils à faible puissance (CA ≤ |ENERGY_SAVING_AC_THRESHOLD| ou CC/USB ≤ |ENERGY_SAVING_DC_THRESHOLD|), désactivez le mode d'économie d'énergie afin d'éviter l'arrêt automatique de la sortie pendant le fonctionnement.
 
-.. image:: templates/word_template/common_assets/operation/energy_saving.png
+.. image:: asset:operation/energy_saving
    :alt: Fonction du mode d'économie d'énergie.
    :width: 320px
 
@@ -93,7 +111,7 @@ LAMPE LED MARCHE/ARRÊT
 
 La lampe LED dispose de deux modes : mode éclairage et mode SOS. Dans n'importe quel mode, appuyez et maintenez sur le bouton pour éteindre la lumière.
 
-.. image:: templates/word_template/common_assets/operation/led_light.png
+.. image:: asset:operation/led_light
    :alt: Fonction de la lampe LED.
    :width: 360px
 
@@ -101,6 +119,8 @@ La lampe LED dispose de deux modes : mode éclairage et mode SOS. Dans n'importe
 | Appuyez une fois sur le bouton de la lampe LED pour l'allumer.
 | Appuyez de nouveau pour passer en mode SOS.
 | Appuyez une troisième fois pour éteindre la lampe.
+
+.. hb-capability-begin: AC/DC输出记忆恢复
 
 Fonction de reprise de Sortie CA et CC
 ---------------------------------------
@@ -119,6 +139,9 @@ La fonction de reprise de la sortie CA/CC est désactivée par défaut. Activez 
 | Mise à niveau OTA terminée                                                | Sortie désactivée par le minuteur de décharge               |
 +---------------------------------------------------------------------------+-------------------------------------------------------------+
 
+.. hb-capability-end:
+
+
 AFFICHAGE LCD
 -------------
 
@@ -129,7 +152,7 @@ AFFICHAGE LCD
       <table style="width:100%; border-collapse:collapse; margin:0.75rem 0 0.5rem 0;">
         <tr>
           <td rowspan="6" style="width:24%; border:1px solid #cfcfcf; padding:8px; vertical-align:top; text-align:center;">
-            <img src="_assets/templates/word_template/common_assets/operation/lcd_mode.png" alt="Mode d'affichage LCD." style="max-width:140px; width:100%; height:auto; display:block; margin:0 auto;">
+            <img src="asset:operation/lcd_mode" alt="Mode d'affichage LCD." style="max-width:140px; width:100%; height:auto; display:block; margin:0 auto;">
           </td>
           <td rowspan="3" style="width:18%; border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Allumer en discontinu</td>
           <td style="width:12%; border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Allumer</td>
@@ -162,20 +185,10 @@ AFFICHAGE LCD
 
    .. raw:: latex
 
-      \begingroup
-      \renewcommand{\arraystretch}{1.25}
-      \setlength{\tabcolsep}{6pt}
-      \begin{tabular}{|m{0.24\linewidth}|m{0.16\linewidth}|m{0.12\linewidth}|m{0.36\linewidth}|}
-      \hline
-      \multirow{6}{*}{\parbox[c]{0.22\linewidth}{\centering\includegraphics[width=0.20\linewidth]{lcd_mode.png}}}
-      & \multirow{3}{*}{\parbox[t]{0.14\linewidth}{Allumer en discontinu}} & Allumer & Appuyez sur le bouton POWER principal ou lorsque le produit est en charge. \\ \cline{3-4}
-      & & Éteindre & Appuyez sur le bouton POWER principal. \\ \cline{3-4}
-      & & Arrêt automatique & L'écran LCD s'éteint automatiquement et entre en mode veille après 2 minutes d'inactivité. \\ \cline{2-4}
-      & \multirow{3}{*}{\parbox[t]{0.14\linewidth}{Allumer en continu (en cours de charge ou de décharge)}} & Allumer & Appuyez deux fois sur le bouton POWER principal lorsque le produit est allumé. \\ \cline{3-4}
-      & & Éteindre & Appuyez sur le bouton POWER principal. \\ \cline{3-4}
-      & & Arrêt automatique & L'écran LCD s'éteint automatiquement après |DEFAULT_STANDBY_DURATION| d'inactivité. \\ \hline
-      \end{tabular}
-      \endgroup
+      \begin{HBLcdModeTable}{asset:operation/lcd_mode}
+      \HBLcdModeFirstGroup{Allumer en discontinu}{Allumer}{Appuyez sur le bouton POWER principal ou lorsque le produit est en charge.}{Éteindre}{Appuyez sur le bouton POWER principal.}{Arrêt automatique}{L'écran LCD s'éteint automatiquement et entre en mode veille après 2 minutes d'inactivité.}
+      \HBLcdModeSecondGroup{Allumer en continu (en cours de charge ou de décharge)}{Allumer}{Appuyez deux fois sur le bouton POWER principal lorsque le produit est allumé.}{Éteindre}{Appuyez sur le bouton POWER principal.}{Arrêt automatique}{L'écran LCD s'éteint automatiquement après |DEFAULT_STANDBY_DURATION| d'inactivité.}
+      \end{HBLcdModeTable}
 
 Vous pouvez également définir le mode d'affichage de l'écran dans l'application Jackery.
 

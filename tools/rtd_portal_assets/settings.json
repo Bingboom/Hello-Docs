@@ -1,0 +1,30 @@
+{
+  "default_region": "EU",
+  "product_image_fallbacks": {
+    "JA-CA05B/EU": "_static/portal-products/ja-ca05b.png",
+    "JA-CA3SA/EU": "_static/portal-products/ja-ca3sa.png"
+  },
+  "product_image_overrides": {
+    "JBP-3600A/EU": {
+      "src": "_static/portal-products/jbp-3600a.png"
+    },
+    "JS-100F/EU": {
+      "src": "_static/portal-products/js-100f.png",
+      "view_box": "24 27 320 145",
+      "width": 1248,
+      "height": 328
+    }
+  },
+  "analytics_beacon_token": "a15729a9f8e14bfea2bac9ca6a9338de",
+  "site_base_url": "https://ht-doc.readthedocs.io",
+  "rtl_languages": ["he", "ar"],
+  "regions": {"US": "US", "EU": "EU", "UK": "EU", "CN": "CN", "JP": "JP"},
+  "categories": ["Power stations", "Battery packs", "Solar panels", "Accessories"],
+  "category_prefixes": {"JE-": "Power stations", "JBP-": "Battery packs", "JS-": "Solar panels"},
+  "languages": ["English", "Français", "Español", "Deutsch", "Italiano", "Português", "Nederlands", "Polski", "Українська", "Ελληνικά", "עברית", "العربية", "简体中文", "日本語"],
+  "language_labels": {"en": "English", "fr": "Français", "es": "Español", "de": "Deutsch", "it": "Italiano", "pt": "Português", "nl": "Nederlands", "pl": "Polski", "uk": "Українська", "el": "Ελληνικά", "he": "עברית", "ar": "العربية", "zh": "简体中文", "ja": "日本語"},
+  "feedback_channels": [
+    {"label": "Email support (hello@jackery.com)", "url": "mailto:hello@jackery.com"}
+  ],
+  "product_voc_endpoint": ""
+}

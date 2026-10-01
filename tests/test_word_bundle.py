@@ -1,21 +1,232 @@
 ﻿from __future__ import annotations
 
+import hashlib
 import struct
 import tempfile
 import unittest
 from pathlib import Path
+from types import SimpleNamespace
+from unittest import mock
 
+import yaml
+from bs4 import BeautifulSoup
+
+from tools.language_aliases import language_key
 from tools.word_bundle import derive_word_title, render_safety_word_html, render_spec_word_html, resolve_reference_doc
 from tools.word_bundle_html import (
     _build_word_only_tags,
+    build_word_bundle_html,
     _convert_rst_fragment_to_html,
     _inject_img_dimensions,
     _rewrite_word_friendly_fragment,
+    _stage_fragment_assets,
 )
+from tools import word_bundle_html
 from tools.word_bundle_html_rewrite import _extract_spec_word_data
+from tools.web_presentation import load_web_manual_contract
+
+
+ROOT = Path(__file__).resolve().parents[1]
 
 
 class TestWordBundle(unittest.TestCase):
+    def test_document_profile_projects_fcc_as_editable_two_column_html(self) -> None:
+        source = Path("docs/_review/JE-1000F/US/page/01_fcc.rst")
+        with tempfile.TemporaryDirectory() as td:
+            rendered = _convert_rst_fragment_to_html(
+                source.read_text(encoding="utf-8"),
+                source,
+                Path(td),
+            )
+        soup = BeautifulSoup(rendered, "html.parser")
+        table = soup.select_one("table.hb-fcc-word-table")
+        self.assertIsNotNone(table)
+        self.assertEqual("HB-SPECIAL-FCC", table.get("data-component-id") if table else None)
+        self.assertEqual(2, len(table.select("tbody > tr > td")) if table else 0)
+        self.assertEqual(4, len(table.select("li")) if table else 0)
+        self.assertIn("This device complies", table.get_text(" ", strip=True) if table else "")
+        self.assertIn("MODIFICATION:", table.get_text(" ", strip=True) if table else "")
+        self.assertIsNone(soup.select_one(".line-block"))
+
+    def test_remapped_french_fcc_uses_runtime_language_across_profiles(self) -> None:
+        localized_source = Path("docs/_review/JE-1000F/US/page/p22_01_fcc.rst")
+        rst_text = localized_source.read_text(encoding="utf-8")
+
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            runtime_source = (
+                root
+                / "docs"
+                / "_build"
+                / "JE-1000F"
+                / "US"
+                / "fr"
+                / "rst"
+                / "page"
+                / "01_fcc.rst"
+            )
+            runtime_source.parent.mkdir(parents=True)
+            runtime_source.write_text(rst_text, encoding="utf-8")
+
+            for profile, right_selector in (
+                ("document", "td.hb-fcc-word-right"),
+                ("web", ".hb-fcc-column-right"),
+            ):
+                with self.subTest(profile=profile):
+                    rendered = _convert_rst_fragment_to_html(
+                        rst_text,
+                        runtime_source,
+                        root / profile,
+                        active_tags={"region_us"},
+                        presentation_profile=profile,
+                    )
+                    soup = BeautifulSoup(rendered, "html.parser")
+                    right_column = soup.select_one(right_selector)
+                    self.assertIsNotNone(right_column)
+                    self.assertIn(
+                        "Si cet équipement trouble la réception",
+                        right_column.get_text(" ", strip=True) if right_column else "",
+                    )
+
+    def test_all_manifest_fcc_languages_satisfy_renderer_contracts(self) -> None:
+        cases: dict[tuple[str, str], tuple[str, Path]] = {}
+        for manifest_path in sorted((ROOT / "docs" / "manifests").glob("*.yaml")):
+            manifest = yaml.safe_load(manifest_path.read_text(encoding="utf-8")) or {}
+            for page in manifest.get("pages", []):
+                source_ref = str(page.get("file") or "")
+                if page.get("type") != "rst_include" or Path(source_ref).name != "01_fcc.rst":
+                    continue
+                language = str(page.get("lang") or "").strip()
+                self.assertTrue(language, f"FCC manifest entry needs lang: {manifest_path}")
+                cases[(language_key(language), source_ref)] = (
+                    language,
+                    ROOT / "docs" / source_ref,
+                )
+
+        contract = load_web_manual_contract()
+        markers = {
+            language_key(str(rule["language"])): str(rule["marker"])
+            for rule in contract["fcc"]["right_column_markers"]
+        }
+        manifest_languages = {case[0] for case in cases}
+        self.assertEqual(manifest_languages, set(markers))
+
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            for (lang_key, _source_ref), (language, template_path) in sorted(cases.items()):
+                rst_text = template_path.read_text(encoding="utf-8")
+                runtime_source = (
+                    root
+                    / "docs"
+                    / "_build"
+                    / "JE-1000F"
+                    / "US"
+                    / language
+                    / "rst"
+                    / "page"
+                    / "01_fcc.rst"
+                )
+                runtime_source.parent.mkdir(parents=True, exist_ok=True)
+                runtime_source.write_text(rst_text, encoding="utf-8")
+
+                for profile, right_selector in (
+                    ("document", "td.hb-fcc-word-right"),
+                    ("web", ".hb-fcc-column-right"),
+                ):
+                    with self.subTest(language=language, profile=profile):
+                        rendered = _convert_rst_fragment_to_html(
+                            rst_text,
+                            runtime_source,
+                            root / "output" / language / profile,
+                            active_tags={"region_us"},
+                            presentation_profile=profile,
+                            model="JE-1000F",
+                            region="US",
+                            language=language,
+                        )
+                        right_column = BeautifulSoup(rendered, "html.parser").select_one(
+                            right_selector
+                        )
+                        self.assertIsNotNone(right_column)
+                        self.assertIn(
+                            markers[lang_key],
+                            right_column.get_text(" ", strip=True) if right_column else "",
+                        )
+
+    def test_bundle_language_drives_fcc_rule_when_runtime_path_is_generic(self) -> None:
+        source = ROOT / "docs" / "templates" / "page_us-pt-br" / "01_fcc.rst"
+        rst_text = source.read_text(encoding="utf-8")
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            runtime_source = root / "page" / "01_fcc.rst"
+            runtime_source.parent.mkdir(parents=True)
+            runtime_source.write_text(rst_text, encoding="utf-8")
+            bundle = SimpleNamespace(
+                title="Portuguese manual",
+                reference_doc=None,
+                model="JE-1500D",
+                region="pt-BR",
+                lang="pt-BR",
+                page_paths=(runtime_source,),
+            )
+
+            html_path, _reference, _metas = build_word_bundle_html(
+                {},
+                "JE-1500D",
+                "pt-BR",
+                materialized_bundle=bundle,
+                output_dir=root / "output",
+            )
+            rendered = html_path.read_text(encoding="utf-8")
+            self.assertIn("Se este equipamento causar interferência prejudicial", rendered)
+
+    def test_document_profile_projects_inbox_as_editable_cards_and_tip(self) -> None:
+        source = Path("docs/_review/JE-1000F/US/page/02_whats_in_the_box.rst")
+        with tempfile.TemporaryDirectory() as td:
+            rendered = _convert_rst_fragment_to_html(
+                source.read_text(encoding="utf-8"),
+                source,
+                Path(td),
+                active_tags={"region_us"},
+            )
+        soup = BeautifulSoup(rendered, "html.parser")
+        table = soup.select_one("table.hb-inbox-word-table")
+        self.assertIsNotNone(table)
+        self.assertEqual("HB-SPECIAL-INBOX", table.get("data-component-id") if table else None)
+        self.assertEqual(3, len(table.select("td.hb-inbox-word-card")) if table else 0)
+        self.assertEqual(3, len(table.select("img")) if table else 0)
+        self.assertTrue(all(image.get("alt") for image in table.select("img")) if table else False)
+        tip = soup.select_one("table.hb-inbox-word-tip")
+        self.assertIsNotNone(tip)
+        self.assertEqual("TIP", tip.select_one(".hb-inbox-word-tip-label").get_text(strip=True))
+        self.assertIn("car charging cable", tip.get_text(" ", strip=True))
+
+    def test_stage_fragment_assets_should_bind_names_to_content_not_checkout_path(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            expected_digest = hashlib.sha256(b"same-image-bytes").hexdigest()[:12]
+            staged_names: list[str] = []
+            for checkout in (root / "checkout-a", root / "checkout-b"):
+                source_dir = checkout / "page"
+                source_dir.mkdir(parents=True)
+                source_path = source_dir / "manual.rst"
+                source_path.write_text("demo\n", encoding="utf-8")
+                (source_dir / "icon.png").write_bytes(b"same-image-bytes")
+                bundle_dir = checkout / "build"
+
+                rewritten = _stage_fragment_assets(
+                    '<img src="icon.png" />',
+                    source_path,
+                    bundle_dir,
+                )
+
+                staged = next((bundle_dir / "assets").iterdir())
+                staged_names.append(staged.name)
+                self.assertIn(staged.resolve().as_uri(), rewritten)
+
+            self.assertEqual(staged_names[0], staged_names[1])
+            self.assertEqual(f"icon_{expected_digest}.png", staged_names[0])
+
     def _write_alert_labels_symbols_blocks(self, root: Path) -> Path:
         path = root / "symbols_blocks.csv"
         path.write_text(
@@ -49,6 +260,118 @@ class TestWordBundle(unittest.TestCase):
 
             self.assertIn('width="40"', out)
             self.assertIn('height="31"', out)
+
+    def test_web_profile_starts_at_important_and_omits_print_only_pages(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            page_dir = root / "page"
+            page_dir.mkdir()
+            page_specs = (
+                ("cover-en.rst", "PRINT COVER\n===========\n"),
+                ("00_preface.rst", "**IMPORTANT**\n\nWeb landing copy.\n"),
+                ("00_toc.rst", "PRINT TABLE OF CONTENTS\n=======================\n"),
+                ("01_safety.rst", "SAFETY\n======\n\nSafety copy.\n"),
+                ("99_back_cover.rst", "PRINT BACK COVER\n================\n"),
+            )
+            page_paths: list[Path] = []
+            for name, text in page_specs:
+                path = page_dir / name
+                path.write_text(text, encoding="utf-8")
+                page_paths.append(path)
+            bundle = SimpleNamespace(
+                title="Demo",
+                reference_doc=None,
+                model="MODEL",
+                region="US",
+                lang="en",
+                page_paths=tuple(page_paths),
+            )
+
+            web_html, _reference, web_metas = build_word_bundle_html(
+                {},
+                "MODEL",
+                "US",
+                materialized_bundle=bundle,
+                output_dir=root / "web",
+                presentation_profile="web",
+            )
+            document_html, _reference, document_metas = build_word_bundle_html(
+                {},
+                "MODEL",
+                "US",
+                materialized_bundle=bundle,
+                output_dir=root / "document",
+            )
+
+            web_text = web_html.read_text(encoding="utf-8")
+            self.assertIn("IMPORTANT", web_text)
+            self.assertIn("Web landing copy.", web_text)
+            self.assertIn("SAFETY", web_text)
+            self.assertNotIn("PRINT COVER", web_text)
+            self.assertNotIn("PRINT TABLE OF CONTENTS", web_text)
+            self.assertNotIn("PRINT BACK COVER", web_text)
+            self.assertNotIn('<div class="manual-page-break"></div>', web_text)
+            self.assertEqual(
+                ["00_preface.rst", "01_safety.rst"],
+                [meta.source_path.name for meta in web_metas],
+            )
+            self.assertEqual("no-footer", web_metas[0].page_role)
+            self.assertEqual("suppress", web_metas[0].footer_policy)
+            self.assertEqual("standard", web_metas[1].page_role)
+            self.assertEqual("show", web_metas[1].folio_policy)
+            self.assertTrue(
+                all(meta.page_plan_capability == "projection-only" for meta in web_metas)
+            )
+
+            document_text = document_html.read_text(encoding="utf-8")
+            self.assertIn("PRINT COVER", document_text)
+            self.assertIn("PRINT TABLE OF CONTENTS", document_text)
+            self.assertIn("PRINT BACK COVER", document_text)
+            self.assertIn('<div class="manual-page-break"></div>', document_text)
+            self.assertEqual(5, len(document_metas))
+            self.assertEqual(
+                ["front-cover", "no-footer", "toc", "standard", "back-cover"],
+                [meta.page_role for meta in document_metas],
+            )
+
+    def test_web_profile_accepts_only_the_declared_category_entry(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            page_dir = root / "page"
+            page_dir.mkdir()
+            safety = page_dir / "safety_tips_en.rst"
+            safety.write_text("SAFETY TIPS\n===========\n\nStay dry.\n", encoding="utf-8")
+            bundle = SimpleNamespace(
+                title="Solar panel",
+                reference_doc=None,
+                model="JS-100I",
+                region="EU",
+                lang="en",
+                languages=("en",),
+                page_paths=(safety,),
+            )
+            cfg = {"build": {"web_entry_source_patterns": ["safety_tips*"]}}
+
+            output, _reference, metas = build_word_bundle_html(
+                cfg,
+                "JS-100I",
+                "EU",
+                materialized_bundle=bundle,
+                output_dir=root / "web",
+                presentation_profile="web",
+            )
+            self.assertIn("SAFETY TIPS", output.read_text(encoding="utf-8"))
+            self.assertEqual([safety], [meta.source_path for meta in metas])
+
+            with self.assertRaisesRegex(RuntimeError, "governed entry patterns"):
+                build_word_bundle_html(
+                    {"build": {"web_entry_source_patterns": ["00_preface*"]}},
+                    "JS-100I",
+                    "EU",
+                    materialized_bundle=bundle,
+                    output_dir=root / "rejected",
+                    presentation_profile="web",
+                )
 
     def test_resolve_reference_doc_supports_glob(self) -> None:
         with tempfile.TemporaryDirectory() as td:
@@ -185,6 +508,28 @@ class TestWordBundle(unittest.TestCase):
         self.assertIn("manual-two-col-table", html)
         self.assertIn("Always follow these basic precautions.", html)
         self.assertIn("Item 4", html)
+
+    def test_rewrite_should_keep_signal_word_heading_above_table_not_in_callout(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            symbols = self._write_alert_labels_symbols_blocks(Path(td))
+            fragment = (
+                "<h2>警告</h2>"
+                "<table><tbody>"
+                "<tr><td>icon</td><td><strong>火のそばで使用しない</strong></td></tr>"
+                "</tbody></table>"
+                "<p><strong>危险</strong></p>"
+                "<p>この製品は…</p>"
+            )
+            html = _rewrite_word_friendly_fragment(
+                fragment, lang="zh", symbols_blocks_csv=str(symbols)
+            )
+        # the 警告 section heading stays a heading directly above its table,
+        # NOT folded into a [警告 | table] callout
+        self.assertRegex(html, r"<h2>警告</h2>\s*<table")
+        self.assertNotIn("<td>警告</td>", html)
+        self.assertNotIn(">警告</strong>", html)
+        # an inline signal-word label (standalone strong paragraph) still becomes a callout
+        self.assertIn("manual-callout-table", html)
 
     def test_convert_rst_fragment_to_html_should_keep_troubleshooting_steps_plain_in_tables(self) -> None:
         rst = """
@@ -396,6 +741,30 @@ TROUBLESHOOTING
         self.assertIn("Keep html block.", html)
         self.assertNotIn("Drop model mismatch.", html)
 
+    def test_au_whats_in_the_box_should_render_the_eu_layout(self) -> None:
+        page = (
+            Path(__file__).resolve().parents[1]
+            / "docs"
+            / "templates"
+            / "page_shared"
+            / "en"
+            / "02_whats_in_the_box.rst"
+        )
+        rst = page.read_text(encoding="utf-8")
+
+        with tempfile.TemporaryDirectory() as td:
+            html = _convert_rst_fragment_to_html(
+                rst,
+                page,
+                Path(td),
+                active_tags=_build_word_only_tags(model="JE-1000H", region="AU", lang="en"),
+            )
+
+        self.assertIn("WHAT'S IN THE BOX", html)
+        self.assertIn("AC Charging Cable", html)
+        self.assertIn("User Manual", html)
+        self.assertIn("The car charging cable is not included", html)
+
     def test_convert_rst_fragment_to_html_should_keep_heading_after_only_block(self) -> None:
         rst = """
 WARRANTY
@@ -594,6 +963,13 @@ Congratulations on your new manual.
         self.assertIn("Use a compliant cable.", out)
         self.assertNotIn("<colgroup>", out)
 
+    def test_registered_plural_notes_uses_callout_without_signal_snapshot(self) -> None:
+        fragment = '<table><tbody><tr><td><strong>NOTES</strong></td><td><ul><li>Keep all four instructions.</li></ul></td></tr></tbody></table>'
+        out = _rewrite_word_friendly_fragment(fragment)
+        self.assertIn('manual-callout-table', out)
+        self.assertIn('<strong>NOTES</strong>', out)
+        self.assertIn('Keep all four instructions.', out)
+
     def test_rewrite_word_friendly_fragment_should_convert_localized_alert_tables(self) -> None:
         fragment = (
             "<table><tbody><tr>"
@@ -778,6 +1154,28 @@ DC OUTPUT
         self.assertNotIn("warning_bar.png", out)
         self.assertNotIn("<strong>WARNING</strong>", out)
         self.assertNotIn("manual-callout-table", out)
+
+
+class FragmentLanguageInferenceTests(unittest.TestCase):
+    """Path-based language inference must not read the checkout's own directory name."""
+
+    _ROOT = Path("/work/auto-manual-worktrees/terminology-jp-rules")
+
+    def _infer(self, path: Path):
+        with mock.patch.object(word_bundle_html, "paths", SimpleNamespace(root=self._ROOT)):
+            return word_bundle_html._infer_fragment_lang(path)
+
+    def test_checkout_directory_name_is_not_a_language(self) -> None:
+        # A worktree named *-jp-* once made every US review page resolve to ja.
+        page = self._ROOT / "docs/_review/JE-1000F/US/page/03_product_overview_placeholder.rst"
+        self.assertIsNone(self._infer(page))
+
+    def test_repo_directories_still_carry_the_language(self) -> None:
+        self.assertEqual(self._infer(self._ROOT / "docs/templates/page_jp/charging.rst"), "ja")
+        self.assertEqual(self._infer(self._ROOT / "docs/templates/page_shared/fr/charging.rst"), "fr")
+
+    def test_paths_outside_the_repo_keep_every_component(self) -> None:
+        self.assertEqual(self._infer(Path("/elsewhere/bundle/fr/page/11_warranty.rst")), "fr")
 
 
 if __name__ == "__main__":

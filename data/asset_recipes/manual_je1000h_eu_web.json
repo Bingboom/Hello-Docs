@@ -1,0 +1,7670 @@
+{
+  "schema_version": 1,
+  "coordinate_contract": {
+    "page_numbering": "pdf-1-based",
+    "bbox_units": "pt",
+    "bbox_origin": "top-left",
+    "bbox_space": "source-page"
+  },
+  "normalization": {
+    "engine": "pymupdf",
+    "validated_version": "1.28.0",
+    "validated_mupdf_version": "1.29.0",
+    "pdf_save": {
+      "garbage": 4,
+      "clean": true,
+      "deflate": true,
+      "no_new_id": true
+    },
+    "forbidden_pdf_markers": [
+      "AIPrivateData",
+      "PieceInfo",
+      "AIMetaData"
+    ],
+    "max_render_pixels": 40000000
+  },
+  "source": {
+    "source_key": "source/manual_je1000h_eu_uk_20260803",
+    "expected_sha256": "07e9ac4b9faabd0852f61702df06f2837caa952c2fa28151b599ad930b1c0bcc",
+    "expected_page_count": 108
+  },
+  "archive": {
+    "pages": {
+      "first": 1,
+      "last": 108
+    },
+    "pdf": {
+      "path_pattern": "archive/pages/page-{page:04d}.pdf"
+    },
+    "previews": {
+      "path_pattern": "archive/previews/page-{page:04d}.png",
+      "default_scale": 1,
+      "page_scale": {
+        "6": 4,
+        "7": 4,
+        "8": 4,
+        "9": 4,
+        "10": 4,
+        "11": 4,
+        "12": 4,
+        "13": 4,
+        "14": 4,
+        "15": 4,
+        "16": 4,
+        "17": 4,
+        "18": 4,
+        "19": 4,
+        "20": 4,
+        "21": 4,
+        "22": 4,
+        "108": 4
+      }
+    }
+  },
+  "page_catalog": [
+    {
+      "page": 1,
+      "page_key": "page_001",
+      "role": "cover_front",
+      "locale": "mul",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 2,
+      "page_key": "page_002",
+      "role": "manual_page",
+      "locale": "mul",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 3,
+      "page_key": "page_003",
+      "role": "manual_page",
+      "locale": "mul",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 4,
+      "page_key": "page_004",
+      "role": "manual_page",
+      "locale": "mul",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 5,
+      "page_key": "page_005",
+      "role": "manual_page",
+      "locale": "mul",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 6,
+      "page_key": "page_006",
+      "role": "manual_page",
+      "locale": "en",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 7,
+      "page_key": "page_007",
+      "role": "manual_page",
+      "locale": "en",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 8,
+      "page_key": "page_008",
+      "role": "manual_page",
+      "locale": "en",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 9,
+      "page_key": "page_009",
+      "role": "manual_page",
+      "locale": "en",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 10,
+      "page_key": "page_010",
+      "role": "manual_page",
+      "locale": "en",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 11,
+      "page_key": "page_011",
+      "role": "manual_page",
+      "locale": "en",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 12,
+      "page_key": "page_012",
+      "role": "manual_page",
+      "locale": "en",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 13,
+      "page_key": "page_013",
+      "role": "manual_page",
+      "locale": "en",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 14,
+      "page_key": "page_014",
+      "role": "manual_page",
+      "locale": "en",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 15,
+      "page_key": "page_015",
+      "role": "manual_page",
+      "locale": "en",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 16,
+      "page_key": "page_016",
+      "role": "manual_page",
+      "locale": "en",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 17,
+      "page_key": "page_017",
+      "role": "manual_page",
+      "locale": "en",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 18,
+      "page_key": "page_018",
+      "role": "manual_page",
+      "locale": "en",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 19,
+      "page_key": "page_019",
+      "role": "manual_page",
+      "locale": "en",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 20,
+      "page_key": "page_020",
+      "role": "manual_page",
+      "locale": "en",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 21,
+      "page_key": "page_021",
+      "role": "manual_page",
+      "locale": "en",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 22,
+      "page_key": "page_022",
+      "role": "manual_page",
+      "locale": "en",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 23,
+      "page_key": "page_023",
+      "role": "manual_page",
+      "locale": "fr",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 24,
+      "page_key": "page_024",
+      "role": "manual_page",
+      "locale": "fr",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 25,
+      "page_key": "page_025",
+      "role": "manual_page",
+      "locale": "fr",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 26,
+      "page_key": "page_026",
+      "role": "manual_page",
+      "locale": "fr",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 27,
+      "page_key": "page_027",
+      "role": "manual_page",
+      "locale": "fr",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 28,
+      "page_key": "page_028",
+      "role": "manual_page",
+      "locale": "fr",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 29,
+      "page_key": "page_029",
+      "role": "manual_page",
+      "locale": "fr",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 30,
+      "page_key": "page_030",
+      "role": "manual_page",
+      "locale": "fr",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 31,
+      "page_key": "page_031",
+      "role": "manual_page",
+      "locale": "fr",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 32,
+      "page_key": "page_032",
+      "role": "manual_page",
+      "locale": "fr",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 33,
+      "page_key": "page_033",
+      "role": "manual_page",
+      "locale": "fr",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 34,
+      "page_key": "page_034",
+      "role": "manual_page",
+      "locale": "fr",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 35,
+      "page_key": "page_035",
+      "role": "manual_page",
+      "locale": "fr",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 36,
+      "page_key": "page_036",
+      "role": "manual_page",
+      "locale": "fr",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 37,
+      "page_key": "page_037",
+      "role": "manual_page",
+      "locale": "fr",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 38,
+      "page_key": "page_038",
+      "role": "manual_page",
+      "locale": "fr",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 39,
+      "page_key": "page_039",
+      "role": "manual_page",
+      "locale": "fr",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 40,
+      "page_key": "page_040",
+      "role": "manual_page",
+      "locale": "es",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 41,
+      "page_key": "page_041",
+      "role": "manual_page",
+      "locale": "es",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 42,
+      "page_key": "page_042",
+      "role": "manual_page",
+      "locale": "es",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 43,
+      "page_key": "page_043",
+      "role": "manual_page",
+      "locale": "es",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 44,
+      "page_key": "page_044",
+      "role": "manual_page",
+      "locale": "es",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 45,
+      "page_key": "page_045",
+      "role": "manual_page",
+      "locale": "es",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 46,
+      "page_key": "page_046",
+      "role": "manual_page",
+      "locale": "es",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 47,
+      "page_key": "page_047",
+      "role": "manual_page",
+      "locale": "es",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 48,
+      "page_key": "page_048",
+      "role": "manual_page",
+      "locale": "es",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 49,
+      "page_key": "page_049",
+      "role": "manual_page",
+      "locale": "es",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 50,
+      "page_key": "page_050",
+      "role": "manual_page",
+      "locale": "es",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 51,
+      "page_key": "page_051",
+      "role": "manual_page",
+      "locale": "es",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 52,
+      "page_key": "page_052",
+      "role": "manual_page",
+      "locale": "es",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 53,
+      "page_key": "page_053",
+      "role": "manual_page",
+      "locale": "es",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 54,
+      "page_key": "page_054",
+      "role": "manual_page",
+      "locale": "es",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 55,
+      "page_key": "page_055",
+      "role": "manual_page",
+      "locale": "es",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 56,
+      "page_key": "page_056",
+      "role": "manual_page",
+      "locale": "es",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 57,
+      "page_key": "page_057",
+      "role": "manual_page",
+      "locale": "de",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 58,
+      "page_key": "page_058",
+      "role": "manual_page",
+      "locale": "de",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 59,
+      "page_key": "page_059",
+      "role": "manual_page",
+      "locale": "de",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 60,
+      "page_key": "page_060",
+      "role": "manual_page",
+      "locale": "de",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 61,
+      "page_key": "page_061",
+      "role": "manual_page",
+      "locale": "de",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 62,
+      "page_key": "page_062",
+      "role": "manual_page",
+      "locale": "de",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 63,
+      "page_key": "page_063",
+      "role": "manual_page",
+      "locale": "de",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 64,
+      "page_key": "page_064",
+      "role": "manual_page",
+      "locale": "de",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 65,
+      "page_key": "page_065",
+      "role": "manual_page",
+      "locale": "de",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 66,
+      "page_key": "page_066",
+      "role": "manual_page",
+      "locale": "de",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 67,
+      "page_key": "page_067",
+      "role": "manual_page",
+      "locale": "de",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 68,
+      "page_key": "page_068",
+      "role": "manual_page",
+      "locale": "de",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 69,
+      "page_key": "page_069",
+      "role": "manual_page",
+      "locale": "de",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 70,
+      "page_key": "page_070",
+      "role": "manual_page",
+      "locale": "de",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 71,
+      "page_key": "page_071",
+      "role": "manual_page",
+      "locale": "de",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 72,
+      "page_key": "page_072",
+      "role": "manual_page",
+      "locale": "de",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 73,
+      "page_key": "page_073",
+      "role": "manual_page",
+      "locale": "de",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 74,
+      "page_key": "page_074",
+      "role": "manual_page",
+      "locale": "it",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 75,
+      "page_key": "page_075",
+      "role": "manual_page",
+      "locale": "it",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 76,
+      "page_key": "page_076",
+      "role": "manual_page",
+      "locale": "it",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 77,
+      "page_key": "page_077",
+      "role": "manual_page",
+      "locale": "it",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 78,
+      "page_key": "page_078",
+      "role": "manual_page",
+      "locale": "it",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 79,
+      "page_key": "page_079",
+      "role": "manual_page",
+      "locale": "it",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 80,
+      "page_key": "page_080",
+      "role": "manual_page",
+      "locale": "it",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 81,
+      "page_key": "page_081",
+      "role": "manual_page",
+      "locale": "it",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 82,
+      "page_key": "page_082",
+      "role": "manual_page",
+      "locale": "it",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 83,
+      "page_key": "page_083",
+      "role": "manual_page",
+      "locale": "it",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 84,
+      "page_key": "page_084",
+      "role": "manual_page",
+      "locale": "it",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 85,
+      "page_key": "page_085",
+      "role": "manual_page",
+      "locale": "it",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 86,
+      "page_key": "page_086",
+      "role": "manual_page",
+      "locale": "it",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 87,
+      "page_key": "page_087",
+      "role": "manual_page",
+      "locale": "it",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 88,
+      "page_key": "page_088",
+      "role": "manual_page",
+      "locale": "it",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 89,
+      "page_key": "page_089",
+      "role": "manual_page",
+      "locale": "it",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 90,
+      "page_key": "page_090",
+      "role": "manual_page",
+      "locale": "it",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 91,
+      "page_key": "page_091",
+      "role": "manual_page",
+      "locale": "uk",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 92,
+      "page_key": "page_092",
+      "role": "manual_page",
+      "locale": "uk",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 93,
+      "page_key": "page_093",
+      "role": "manual_page",
+      "locale": "uk",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 94,
+      "page_key": "page_094",
+      "role": "manual_page",
+      "locale": "uk",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 95,
+      "page_key": "page_095",
+      "role": "manual_page",
+      "locale": "uk",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 96,
+      "page_key": "page_096",
+      "role": "manual_page",
+      "locale": "uk",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 97,
+      "page_key": "page_097",
+      "role": "manual_page",
+      "locale": "uk",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 98,
+      "page_key": "page_098",
+      "role": "manual_page",
+      "locale": "uk",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 99,
+      "page_key": "page_099",
+      "role": "manual_page",
+      "locale": "uk",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 100,
+      "page_key": "page_100",
+      "role": "manual_page",
+      "locale": "uk",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 101,
+      "page_key": "page_101",
+      "role": "manual_page",
+      "locale": "uk",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 102,
+      "page_key": "page_102",
+      "role": "manual_page",
+      "locale": "uk",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 103,
+      "page_key": "page_103",
+      "role": "manual_page",
+      "locale": "uk",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 104,
+      "page_key": "page_104",
+      "role": "manual_page",
+      "locale": "uk",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 105,
+      "page_key": "page_105",
+      "role": "manual_page",
+      "locale": "uk",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 106,
+      "page_key": "page_106",
+      "role": "manual_page",
+      "locale": "uk",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 107,
+      "page_key": "page_107",
+      "role": "manual_page",
+      "locale": "uk",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    },
+    {
+      "page": 108,
+      "page_key": "page_108",
+      "role": "manual_page",
+      "locale": "mul",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": []
+    }
+  ],
+  "assets": [
+    {
+      "asset_key": "web/je1000h/eu/en/inbox_unit",
+      "page": 7,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "en"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            40,
+            310,
+            112,
+            394
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_en/inbox_unit.png",
+          "scale": 4,
+          "expected_sha256": "dc09eaa794864eafeec98eb19993c71dc3a5118f6f802e63a6e01caffe29c449",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-08 source-matched JE-1000H crop visually verified at 12x; text-bearing frames remain complete and LCD detail remains semantic HTML/CSS."
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/en/inbox_cable",
+      "page": 7,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "en"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            150,
+            315,
+            210,
+            394
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_en/inbox_cable.png",
+          "scale": 4,
+          "expected_sha256": "27863daeaf7fdbcf0c8d5ac89097b8b635594dc38922e40e0e3690971792c3cb",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-08 source-matched JE-1000H crop visually verified at 12x; text-bearing frames remain complete and LCD detail remains semantic HTML/CSS."
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/en/inbox_documents",
+      "page": 7,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "en"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            260,
+            320,
+            315,
+            394
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_en/inbox_documents.png",
+          "scale": 4,
+          "expected_sha256": "bb0f2d7007bcc3a67f1400cb2c8bab5c800eafcf98fe85c91a13ff78ef06a29d",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-08 source-matched JE-1000H crop visually verified at 12x; text-bearing frames remain complete and LCD detail remains semantic HTML/CSS."
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/en/overview_front",
+      "page": 8,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "en"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            28,
+            68,
+            342,
+            245
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_en/overview_front.png",
+          "scale": 4,
+          "expected_sha256": "ef576a42aef2f8955d9c768cc2b905ce9aea3e44897a5a12b5664d54f7d0ede6",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-08 source-matched JE-1000H crop visually verified at 12x; the embedded FRONT VIEW heading is excluded while all diagram labels remain complete."
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/en/overview_side",
+      "page": 8,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "en"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            28,
+            269,
+            342,
+            493
+          ]
+        },
+        {
+          "op": "whiteout",
+          "bbox_pt": [
+            28,
+            369,
+            111,
+            389
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_en/overview_side.png",
+          "scale": 4,
+          "expected_sha256": "322df5017b8cb1cc0c3ff2f293b51372c2eeb2d29dae49d052f0df068f24ee6a",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-08 source-matched JE-1000H crop visually verified at 12x; the embedded LEFT SIDE VIEW and RIGHT SIDE VIEW headings are excluded while all diagram labels remain complete."
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/en/lcd_map",
+      "page": 9,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "en"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            34,
+            55,
+            325,
+            231
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_en/lcd_map.png",
+          "scale": 4,
+          "expected_sha256": "62c22f61874cc9169e878b23fa57d3a248d8f14c32cac757d43fd26a9d9cffc6",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-08 source-matched JE-1000H crop visually verified at 12x; text-bearing frames remain complete and LCD detail remains semantic HTML/CSS."
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/en/operation_power",
+      "page": 11,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "en"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            27,
+            71,
+            342,
+            233
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_en/operation_power.png",
+          "scale": 4,
+          "expected_sha256": "6c10b33c0fb3ceb9cf131b9ad4dfc2fd41d367130fff0b7883f6e0e7a95180b0",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-08 source-matched JE-1000H crop visually verified at 12x; text-bearing frames remain complete and LCD detail remains semantic HTML/CSS."
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/en/operation_ac",
+      "page": 11,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "en"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            27,
+            249,
+            342,
+            495
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_en/operation_ac.png",
+          "scale": 4,
+          "expected_sha256": "d2e36e5df3391568b5140ef68683dbc2d0f58e1cc059f1b5c822005960c55295",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-08 source-matched JE-1000H crop visually verified at 12x; text-bearing frames remain complete and LCD detail remains semantic HTML/CSS."
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/en/operation_dc",
+      "page": 12,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "en"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            27,
+            41,
+            342,
+            212
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_en/operation_dc.png",
+          "scale": 4,
+          "expected_sha256": "9848ad8b517792f9fcf6f8b1289b080debfec6912d111514aad0dfa68ec508ca",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-08 source-matched JE-1000H crop visually verified at 12x; text-bearing frames remain complete and LCD detail remains semantic HTML/CSS."
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/en/operation_led",
+      "page": 12,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "en"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            27,
+            362,
+            342,
+            498
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_en/operation_led.png",
+          "scale": 4,
+          "expected_sha256": "c97f91277befd3fb3d466dd3743a7f69f75712bcc17234f88ce408e3908d2242",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-08 source-matched JE-1000H crop visually verified at 12x; text-bearing frames remain complete and LCD detail remains semantic HTML/CSS."
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/en/operation_lcd",
+      "page": 13,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "en"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            28,
+            40,
+            180,
+            150
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_en/operation_lcd.png",
+          "scale": 4,
+          "expected_sha256": "66d66b71f0911fe49e8d9aa245e2a7a97d22981a420b1ae2b998cb978594722b",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-08 source-matched JE-1000H crop visually verified at 12x; text-bearing frames remain complete and LCD detail remains semantic HTML/CSS."
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/en/operation_energy",
+      "page": 13,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "en"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            27,
+            229,
+            342,
+            374
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_en/operation_energy.png",
+          "scale": 4,
+          "expected_sha256": "520f13f0152c7ccaeec30cc280d89f87f6f524af86c27a9d68752dfbc2409bbd",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-08 source-matched JE-1000H crop visually verified at 12x; text-bearing frames remain complete and LCD detail remains semantic HTML/CSS."
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/en/ups",
+      "page": 14,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "en"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            28,
+            257,
+            342,
+            496
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_en/ups.png",
+          "scale": 4,
+          "expected_sha256": "16e6693e75c6359f3392bdd4a5068f516a11106aa5be6c89adcc107ce359f4e1",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-08 source-matched JE-1000H crop visually verified at 12x; text-bearing frames remain complete and LCD detail remains semantic HTML/CSS."
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/en/battery_pack",
+      "page": 15,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "en"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            28,
+            203,
+            342,
+            410
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_en/battery_pack.png",
+          "scale": 4,
+          "expected_sha256": "090df5c32cf9886aa7a0d4b47d37673c8a8b3a6bbfdf8f832b8a086e6962638c",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-08 source-matched JE-1000H crop visually verified at 12x; text-bearing frames remain complete and LCD detail remains semantic HTML/CSS."
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/en/charging_ac",
+      "page": 16,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "en"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            27,
+            247,
+            342,
+            362
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_en/charging_ac.png",
+          "scale": 4,
+          "expected_sha256": "79ab55e6c8a7ef7c2e460e5fdb47f17b0a3ae41e301e804ee4505dc0f60f86ec",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-08 source-matched JE-1000H crop visually verified at 12x; text-bearing frames remain complete and LCD detail remains semantic HTML/CSS."
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/en/charging_solar",
+      "page": 17,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "en"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            28,
+            31,
+            342,
+            175
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_en/charging_solar.png",
+          "scale": 4,
+          "expected_sha256": "a8f1bf85e46fc0be2e3920f280502bb1916942ae114d5090ed476dbcfb440bb8",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-08 source-matched JE-1000H crop visually verified at 12x; text-bearing frames remain complete and LCD detail remains semantic HTML/CSS."
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/en/charging_solar_adapter",
+      "page": 17,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "en"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            150,
+            31,
+            342,
+            175
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_en/charging_solar_adapter.png",
+          "scale": 4,
+          "expected_sha256": "0934d106ad41c9b4bcf4057b81c3895ae54c1702e127d569986eead92237d914",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-08 source-matched JE-1000H solar connector crop visually verified at 12x."
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/en/charging_car",
+      "page": 17,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "en"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            28,
+            358,
+            342,
+            494
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_en/charging_car.png",
+          "scale": 4,
+          "expected_sha256": "647bd9a42cc1e0b29b31d51a7bd980446268f26b3c045c129988e8c4416df368",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-08 source-matched JE-1000H crop visually verified at 12x; text-bearing frames remain complete and LCD detail remains semantic HTML/CSS."
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/en/download_panel",
+      "page": 21,
+      "build_eligible": false,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "en"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": true,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            45,
+            70,
+            340,
+            151
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_en/app_download.png",
+          "scale": 4,
+          "expected_sha256": "ad699d0134c2e359976f83ed63b2caa8b24dd7c27dc56188f41070ee77c94c7d",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "quarantine",
+        "reasons": [
+          "App UI screenshots with a QR code and store links, so this crop is quarantined under the App/QR/URL/localized-UI recipe gate; it reaches the Web only through its hash-pinned illustration manifest entry. Reclassified 2026-09-25: it had been approved only because neither its key nor its risk tags carried a gate token (operator-approved gate fix; key, output and hash unchanged).",
+          "2026-09-08 source-matched JE-1000H crop visually verified at 12x; text-bearing frames remain complete and LCD detail remains semantic HTML/CSS."
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy",
+        "app-ui",
+        "screenshot",
+        "localized-ui",
+        "qr"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/en/control_panel",
+      "page": 21,
+      "build_eligible": false,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "en"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": true,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            40,
+            400,
+            340,
+            484
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_en/app_control_panel.png",
+          "scale": 4,
+          "expected_sha256": "0c402098d56cffc71f3f565251d2cdb9a1b05ad721dddd34b0559b94f974d93e",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "quarantine",
+        "reasons": [
+          "App UI screenshots, so this crop is quarantined under the App/QR/URL/localized-UI recipe gate; it reaches the Web only through its hash-pinned illustration manifest entry. Reclassified 2026-09-25: it had been approved only because neither its key nor its risk tags carried a gate token (operator-approved gate fix; key, output and hash unchanged).",
+          "2026-09-08 source-matched JE-1000H crop visually verified at 12x; text-bearing frames remain complete and LCD detail remains semantic HTML/CSS."
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy",
+        "app-ui",
+        "screenshot",
+        "localized-ui"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/en/connect_result_panel",
+      "page": 22,
+      "build_eligible": false,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "en"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": true,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            48,
+            141,
+            320,
+            293
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_en/app_connect_result.png",
+          "scale": 4,
+          "expected_sha256": "5a5a8acac5dfab8922c6bec40cdbfcdc2c380c24ee29f824980badd114df84a7",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "quarantine",
+        "reasons": [
+          "App UI screenshots, so this crop is quarantined under the App/QR/URL/localized-UI recipe gate; it reaches the Web only through its hash-pinned illustration manifest entry. Reclassified 2026-09-25: it had been approved only because neither its key nor its risk tags carried a gate token (operator-approved gate fix; key, output and hash unchanged).",
+          "2026-09-08 source-matched JE-1000H crop visually verified at 12x; text-bearing frames remain complete and LCD detail remains semantic HTML/CSS."
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy",
+        "app-ui",
+        "screenshot",
+        "localized-ui"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/fr/inbox_unit",
+      "page": 24,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "fr"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            40,
+            310,
+            112,
+            394
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_fr/inbox_unit.png",
+          "scale": 4,
+          "expected_sha256": "3fd38a3aa92342d9afeb8d674663593e85a884dca9463c7d2e9f5ff7c8d11c34",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 法 语块(24 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/fr/inbox_cable",
+      "page": 24,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "fr"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            150,
+            315,
+            210,
+            394
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_fr/inbox_cable.png",
+          "scale": 4,
+          "expected_sha256": "5659a402e72161244838441af35b02b52f2124ded363c732332af8baf5d013e8",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 法 语块(24 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/fr/inbox_documents",
+      "page": 24,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "fr"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            260,
+            320,
+            315,
+            394
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_fr/inbox_documents.png",
+          "scale": 4,
+          "expected_sha256": "34412c27924ca2770f82649394ce88ba36b4dd692f9e766fd7811d1233a006f9",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 法 语块(24 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/fr/overview_front",
+      "page": 25,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "fr"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            28,
+            68,
+            342,
+            245
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_fr/overview_front.png",
+          "scale": 4,
+          "expected_sha256": "5f99080df173766cb06015db9c5871f46b859ba21e107f40ac75d7a2b4646f4a",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 法 语块(25 页)按英语基准框裁出;图内文字越界已逐行复核为零截断;源文件该行文字本身截断为「1800 W nomina」,按原样入库,已登记设计侧回退。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/fr/overview_side",
+      "page": 25,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "fr"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            28,
+            269,
+            342,
+            493
+          ]
+        },
+        {
+          "op": "whiteout",
+          "bbox_pt": [
+            28,
+            369,
+            130.4,
+            389
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_fr/overview_side.png",
+          "scale": 4,
+          "expected_sha256": "a9d2333f0b735497a1404644e48b550f18275da43f079ebbc96c3902692fba43",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 法 语块(25 页)按英语基准框裁出;图内文字越界已逐行复核为零截断;并按英语基准以 whiteout 抹除图内嵌的「右侧视图」小标题(网页自带标题,避免重复)。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/fr/lcd_map",
+      "page": 26,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "fr"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            34,
+            55,
+            325,
+            223.0
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_fr/lcd_map.png",
+          "scale": 4,
+          "expected_sha256": "b904648b35d52ca62a075fe5bb8ff52a08de5eab82f8111ca7bf19c0324e5f3a",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 法 语块(26 页)按英语基准框裁出;图内文字越界已逐行复核为零截断;裁切框较英语基准调整 bottom-8.0pt 以排除邻接正文/纳入换行的图内文字。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/fr/operation_power",
+      "page": 28,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "fr"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            27,
+            71,
+            342,
+            233
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_fr/operation_power.png",
+          "scale": 4,
+          "expected_sha256": "a2ee34cf24353d29dcb5b7dc9413ca7f4363e3761a11adb425f73877e8669d7a",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 法 语块(28 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/fr/operation_ac",
+      "page": 28,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "fr"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            27,
+            249,
+            342,
+            495
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_fr/operation_ac.png",
+          "scale": 4,
+          "expected_sha256": "22a6c7f1dec79edf795206b7a5b291597246e478a737af39b21eae94f98bf909",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 法 语块(28 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/fr/operation_dc",
+      "page": 29,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "fr"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            27,
+            41,
+            342,
+            212
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_fr/operation_dc.png",
+          "scale": 4,
+          "expected_sha256": "04a7ae8d390b0f1bd22c1542c0e00c68c8c7bfdefca7a8c1508ec4874f4c9365",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 法 语块(29 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/fr/operation_led",
+      "page": 29,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "fr"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            27,
+            362,
+            342,
+            498
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_fr/operation_led.png",
+          "scale": 4,
+          "expected_sha256": "ab273cd8cd37779430c2be5cb2cd889470edea82306f9196e1e8374009b202d1",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 法 语块(29 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/fr/operation_lcd",
+      "page": 30,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "fr"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            28,
+            40,
+            180,
+            150
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_fr/operation_lcd.png",
+          "scale": 4,
+          "expected_sha256": "28e7fd4372b1f6ee2b1a37a6db9e0205c452d3de0ee974527f774a228be99248",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 法 语块(30 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/fr/operation_energy",
+      "page": 30,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "fr"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            27,
+            229,
+            342,
+            374
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_fr/operation_energy.png",
+          "scale": 4,
+          "expected_sha256": "33989b1bd64546d6744cfeae93b14a524392e0136bcb10796eae57b05444f0e4",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 法 语块(30 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/fr/ups",
+      "page": 31,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "fr"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            28,
+            257,
+            342,
+            496
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_fr/ups.png",
+          "scale": 4,
+          "expected_sha256": "c726afd6e7f80dafa5432c90f4dcba8e864435a818cfb8e6edd721a81105a210",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 法 语块(31 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/fr/battery_pack",
+      "page": 32,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "fr"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            28,
+            208.1,
+            342,
+            410
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_fr/battery_pack.png",
+          "scale": 4,
+          "expected_sha256": "aed575a6a240eb2a3a59eee26a19e730fd5186c3310dc2cde5e89038029ae47d",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 法 语块(32 页)按英语基准框裁出;图内文字越界已逐行复核为零截断;裁切框较英语基准调整 top+5.1pt 以排除邻接正文/纳入换行的图内文字。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/fr/charging_ac",
+      "page": 33,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "fr"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            27,
+            247,
+            342,
+            362
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_fr/charging_ac.png",
+          "scale": 4,
+          "expected_sha256": "200cd52148a2598f8da520a5b91190506bda5d06bc6c7240daca06e863f8bc78",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 法 语块(33 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/fr/charging_solar",
+      "page": 34,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "fr"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            28,
+            31,
+            342,
+            175
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_fr/charging_solar.png",
+          "scale": 4,
+          "expected_sha256": "fce6a1bc0403bd8b6a980f05c2f5a27bb68e5cdefb24151f09fcb03c6575f35f",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 法 语块(34 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/fr/charging_solar_adapter",
+      "page": 34,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "fr"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            150,
+            31,
+            342,
+            175
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_fr/charging_solar_adapter.png",
+          "scale": 4,
+          "expected_sha256": "8e8933db821a47ace5843f885838ea393061d04dc7370342f26a5f0929b4ee92",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 法 语块(34 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/fr/charging_car",
+      "page": 34,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "fr"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            28,
+            358,
+            342,
+            494
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_fr/charging_car.png",
+          "scale": 4,
+          "expected_sha256": "02e7039d6f9344247697b0dde2b7a8fca80e3407d93caf60287c5932759dd122",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 法 语块(34 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/fr/download_panel",
+      "page": 38,
+      "build_eligible": false,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "fr"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": true,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            45,
+            70,
+            340,
+            155.7
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_fr/app_download.png",
+          "scale": 4,
+          "expected_sha256": "423d369f25f239050ed7d9440fae729ec1c2c295571b69dd20b09c5101fccd6c",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "quarantine",
+        "reasons": [
+          "App UI screenshots with a QR code and store links, so this crop is quarantined under the App/QR/URL/localized-UI recipe gate; it reaches the Web only through its hash-pinned illustration manifest entry. Reclassified 2026-09-25: it had been approved only because neither its key nor its risk tags carried a gate token (operator-approved gate fix; key, output and hash unchanged).",
+          "2026-09-15 从同一源 PDF 的 法 语块(38 页)按英语基准框裁出;图内文字越界已逐行复核为零截断;裁切框较英语基准调整 bottom+4.7pt 以排除邻接正文/纳入换行的图内文字。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy",
+        "app-ui",
+        "screenshot",
+        "localized-ui",
+        "qr"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/fr/control_panel",
+      "page": 38,
+      "build_eligible": false,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "fr"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": true,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            40,
+            400,
+            340,
+            484
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_fr/app_control_panel.png",
+          "scale": 4,
+          "expected_sha256": "b62efe1ac31f26c742c6b2492adb676b880ff7b177fb72cefa5ec3d5ebdbe67d",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "quarantine",
+        "reasons": [
+          "App UI screenshots, so this crop is quarantined under the App/QR/URL/localized-UI recipe gate; it reaches the Web only through its hash-pinned illustration manifest entry. Reclassified 2026-09-25: it had been approved only because neither its key nor its risk tags carried a gate token (operator-approved gate fix; key, output and hash unchanged).",
+          "2026-09-15 从同一源 PDF 的 法 语块(38 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy",
+        "app-ui",
+        "screenshot",
+        "localized-ui"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/fr/connect_result_panel",
+      "page": 39,
+      "build_eligible": false,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "fr"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": true,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            48,
+            141,
+            320,
+            293
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_fr/app_connect_result.png",
+          "scale": 4,
+          "expected_sha256": "072945d3757367b5ff82566e159f7883fb71e2e6e3b6f3df60a35b88e86d93db",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "quarantine",
+        "reasons": [
+          "App UI screenshots, so this crop is quarantined under the App/QR/URL/localized-UI recipe gate; it reaches the Web only through its hash-pinned illustration manifest entry. Reclassified 2026-09-25: it had been approved only because neither its key nor its risk tags carried a gate token (operator-approved gate fix; key, output and hash unchanged).",
+          "2026-09-15 从同一源 PDF 的 法 语块(39 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy",
+        "app-ui",
+        "screenshot",
+        "localized-ui"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/es/inbox_unit",
+      "page": 41,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "es"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            40,
+            310,
+            112,
+            394
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_es/inbox_unit.png",
+          "scale": 4,
+          "expected_sha256": "bf953f746e50e323129be8ab60ef86f8478d8cbf174790f0949ec13b0de4861e",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 西 语块(41 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/es/inbox_cable",
+      "page": 41,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "es"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            150,
+            315,
+            210,
+            394
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_es/inbox_cable.png",
+          "scale": 4,
+          "expected_sha256": "5ad0104acd6e95438c4c768b711c267f363466cec29459b26b1432979b155dd5",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 西 语块(41 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/es/inbox_documents",
+      "page": 41,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "es"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            260,
+            320,
+            315,
+            394
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_es/inbox_documents.png",
+          "scale": 4,
+          "expected_sha256": "0277f9b8a1a0fe8daf81c2a23e83dc5876b9cf6ad700ab2abdf98f1fc75f1306",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 西 语块(41 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/es/overview_front",
+      "page": 42,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "es"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            25.9,
+            68,
+            342,
+            245
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_es/overview_front.png",
+          "scale": 4,
+          "expected_sha256": "9f7232d8cfa050641537d2b861d1ce0ae51fb01cf1bcbab11d908153c4d39a87",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 西 语块(42 页)按英语基准框裁出;图内文字越界已逐行复核为零截断;裁切框较英语基准调整 left-2.1pt 以排除邻接正文/纳入换行的图内文字。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/es/overview_side",
+      "page": 42,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "es"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            25.6,
+            269,
+            342,
+            493
+          ]
+        },
+        {
+          "op": "whiteout",
+          "bbox_pt": [
+            28,
+            369,
+            139.3,
+            389
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_es/overview_side.png",
+          "scale": 4,
+          "expected_sha256": "eea525c4824ba10bbd91e43544343bedc308d4c4fa665843c94706e8c88b766b",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 西 语块(42 页)按英语基准框裁出;图内文字越界已逐行复核为零截断;裁切框较英语基准调整 left-2.4pt 以排除邻接正文/纳入换行的图内文字;并按英语基准以 whiteout 抹除图内嵌的「右侧视图」小标题(网页自带标题,避免重复)。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/es/lcd_map",
+      "page": 43,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "es"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            34,
+            55,
+            325,
+            218.6
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_es/lcd_map.png",
+          "scale": 4,
+          "expected_sha256": "7a83287d5ce1e62b75586bb342c5b4757da82c12011d280f90956c1fba3c2d25",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 西 语块(43 页)按英语基准框裁出;图内文字越界已逐行复核为零截断;裁切框较英语基准调整 bottom-12.4pt 以排除邻接正文/纳入换行的图内文字。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/es/operation_power",
+      "page": 45,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "es"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            23.5,
+            71,
+            342,
+            233
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_es/operation_power.png",
+          "scale": 4,
+          "expected_sha256": "53115cda877e31feb83ecc7cb74663d5c8af77410a7879233fb09b3def6387e0",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 西 语块(45 页)按英语基准框裁出;图内文字越界已逐行复核为零截断;裁切框较英语基准调整 left-3.5pt 以排除邻接正文/纳入换行的图内文字。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/es/operation_ac",
+      "page": 45,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "es"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            27,
+            249,
+            342,
+            495
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_es/operation_ac.png",
+          "scale": 4,
+          "expected_sha256": "32a9e4f88ca2e3d2f2c15cbd43afe8ad3ffa5a315f2644c5d907d6937821f731",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 西 语块(45 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/es/operation_dc",
+      "page": 46,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "es"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            27,
+            41,
+            342,
+            212
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_es/operation_dc.png",
+          "scale": 4,
+          "expected_sha256": "d1d333b66d900cfaeb4500569d97a60d3bfd162d22d3bd540639657ef76edbba",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 西 语块(46 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/es/operation_led",
+      "page": 46,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "es"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            27,
+            369.4,
+            342,
+            498
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_es/operation_led.png",
+          "scale": 4,
+          "expected_sha256": "331da20821914192b87374ba99e78ddd31f93a374a6909afdb0643b6d3a6c90a",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 西 语块(46 页)按英语基准框裁出;图内文字越界已逐行复核为零截断;裁切框较英语基准调整 top+7.4pt 以排除邻接正文/纳入换行的图内文字。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/es/operation_lcd",
+      "page": 47,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "es"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            28,
+            40,
+            180,
+            150
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_es/operation_lcd.png",
+          "scale": 4,
+          "expected_sha256": "308fa25f0968c416b27103966c6d13b9a6518184fce83824c751c2278f4f3953",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 西 语块(47 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/es/operation_energy",
+      "page": 47,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "es"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            27,
+            229,
+            342,
+            374
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_es/operation_energy.png",
+          "scale": 4,
+          "expected_sha256": "876dca1d76f836bd4b8689ec4370e46bcf11dff67e88f1645aa26db372e5241e",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 西 语块(47 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/es/ups",
+      "page": 48,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "es"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            28,
+            257,
+            342,
+            496
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_es/ups.png",
+          "scale": 4,
+          "expected_sha256": "77258b7285467f9fb2916283f10b5ad255f02a6a37f668d8cc5817b3f4d6d1a1",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 西 语块(48 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/es/battery_pack",
+      "page": 49,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "es"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            28,
+            203,
+            342,
+            410
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_es/battery_pack.png",
+          "scale": 4,
+          "expected_sha256": "88abcc2dc08735411210bf3cbaf5c49d3d71032029a74a9383b2dcb4ff4dfc5a",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 西 语块(49 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/es/charging_ac",
+      "page": 50,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "es"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            27,
+            251.8,
+            342,
+            362
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_es/charging_ac.png",
+          "scale": 4,
+          "expected_sha256": "02c90606932384f18f7134239bfeb4586f354316965fe21223213ca88b47347c",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 西 语块(50 页)按英语基准框裁出;图内文字越界已逐行复核为零截断;裁切框较英语基准调整 top+4.8pt 以排除邻接正文/纳入换行的图内文字。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/es/charging_solar",
+      "page": 51,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "es"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            28,
+            31,
+            342,
+            175
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_es/charging_solar.png",
+          "scale": 4,
+          "expected_sha256": "19d75944909b5b6b9ed160ae9998a3a27a362790218af5ffb8df11c448cd158f",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 西 语块(51 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/es/charging_solar_adapter",
+      "page": 51,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "es"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            150,
+            31,
+            342,
+            175
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_es/charging_solar_adapter.png",
+          "scale": 4,
+          "expected_sha256": "e1e9d26792312f1ed8d6b5db4f2ef2c96e5289b8e502d896a02b3a945f0d5854",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 西 语块(51 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/es/charging_car",
+      "page": 51,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "es"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            28,
+            358,
+            342,
+            494
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_es/charging_car.png",
+          "scale": 4,
+          "expected_sha256": "037e3213bea98297fd0381430797e377e0b0e7cc300389b032ec57563e975996",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 西 语块(51 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/es/download_panel",
+      "page": 55,
+      "build_eligible": false,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "es"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": true,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            40.3,
+            70,
+            340,
+            154.6
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_es/app_download.png",
+          "scale": 4,
+          "expected_sha256": "d7dc7873fbfef3ce196a90a389ba56fb8e40daa825a01d72c25a373fb09733ca",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "quarantine",
+        "reasons": [
+          "App UI screenshots with a QR code and store links, so this crop is quarantined under the App/QR/URL/localized-UI recipe gate; it reaches the Web only through its hash-pinned illustration manifest entry. Reclassified 2026-09-25: it had been approved only because neither its key nor its risk tags carried a gate token (operator-approved gate fix; key, output and hash unchanged).",
+          "2026-09-15 从同一源 PDF 的 西 语块(55 页)按英语基准框裁出;图内文字越界已逐行复核为零截断;裁切框较英语基准调整 left-4.7,bottom+3.6pt 以排除邻接正文/纳入换行的图内文字。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy",
+        "app-ui",
+        "screenshot",
+        "localized-ui",
+        "qr"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/es/control_panel",
+      "page": 55,
+      "build_eligible": false,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "es"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": true,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            40,
+            400,
+            340,
+            484
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_es/app_control_panel.png",
+          "scale": 4,
+          "expected_sha256": "c8be173364381b26386ac1bdd34f098324ee8ff55d59f76e3beaa0d5c9084f91",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "quarantine",
+        "reasons": [
+          "App UI screenshots, so this crop is quarantined under the App/QR/URL/localized-UI recipe gate; it reaches the Web only through its hash-pinned illustration manifest entry. Reclassified 2026-09-25: it had been approved only because neither its key nor its risk tags carried a gate token (operator-approved gate fix; key, output and hash unchanged).",
+          "2026-09-15 从同一源 PDF 的 西 语块(55 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy",
+        "app-ui",
+        "screenshot",
+        "localized-ui"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/es/connect_result_panel",
+      "page": 56,
+      "build_eligible": false,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "es"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": true,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            48,
+            156.6,
+            320,
+            293
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_es/app_connect_result.png",
+          "scale": 4,
+          "expected_sha256": "8e58d9aaa612d35d7327acfe5c4754757b4d8d94a1d65c4784ba425c862b094e",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "quarantine",
+        "reasons": [
+          "App UI screenshots, so this crop is quarantined under the App/QR/URL/localized-UI recipe gate; it reaches the Web only through its hash-pinned illustration manifest entry. Reclassified 2026-09-25: it had been approved only because neither its key nor its risk tags carried a gate token (operator-approved gate fix; key, output and hash unchanged).",
+          "2026-09-15 从同一源 PDF 的 西 语块(56 页)按英语基准框裁出;图内文字越界已逐行复核为零截断;裁切框较英语基准调整 top+15.6pt 以排除邻接正文/纳入换行的图内文字。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy",
+        "app-ui",
+        "screenshot",
+        "localized-ui"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/de/inbox_unit",
+      "page": 58,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "de"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            40,
+            310,
+            112,
+            394
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_de/inbox_unit.png",
+          "scale": 4,
+          "expected_sha256": "fc268673c6c5a2349c19b39d3ef57e7dbcf66ca334b7f68297ac304ef4b97ef9",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 德 语块(58 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/de/inbox_cable",
+      "page": 58,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "de"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            150,
+            315,
+            210,
+            394
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_de/inbox_cable.png",
+          "scale": 4,
+          "expected_sha256": "c235c66f37e7dd8ed202a76f825fa8c7d6b8800284e19d72e2a05a5fe0060686",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 德 语块(58 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/de/inbox_documents",
+      "page": 58,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "de"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            260,
+            320,
+            315,
+            394
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_de/inbox_documents.png",
+          "scale": 4,
+          "expected_sha256": "0e3964401d96c1bf2b1a431da19b0d9af00d7bed461d2b57a4ff77071d1ada0e",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 德 语块(58 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/de/overview_front",
+      "page": 59,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "de"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            28,
+            68,
+            342,
+            245
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_de/overview_front.png",
+          "scale": 4,
+          "expected_sha256": "0e0d05a704860c778a7e3888b0f985f797e5020f62efb583befc2a5f0a273eee",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 德 语块(59 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/de/overview_side",
+      "page": 59,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "de"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            28,
+            269,
+            342,
+            493
+          ]
+        },
+        {
+          "op": "whiteout",
+          "bbox_pt": [
+            28,
+            369,
+            136.8,
+            389
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_de/overview_side.png",
+          "scale": 4,
+          "expected_sha256": "f1f6cd07c33a4ec3e1f95a07a5619c1dc275bf4dfd51eb695a0775a8ddd3fb93",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 德 语块(59 页)按英语基准框裁出;图内文字越界已逐行复核为零截断;并按英语基准以 whiteout 抹除图内嵌的「右侧视图」小标题(网页自带标题,避免重复)。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/de/lcd_map",
+      "page": 60,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "de"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            34,
+            51.5,
+            325,
+            223.0
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_de/lcd_map.png",
+          "scale": 4,
+          "expected_sha256": "845184de0a6f88c796255c21fd5415a078d9092db302975be4067de9ab10cde7",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 德 语块(60 页)按英语基准框裁出;图内文字越界已逐行复核为零截断;裁切框较英语基准调整 top-3.5,bottom-8.0pt 以排除邻接正文/纳入换行的图内文字。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/de/operation_power",
+      "page": 62,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "de"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            27,
+            71,
+            342,
+            233
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_de/operation_power.png",
+          "scale": 4,
+          "expected_sha256": "1fb03a94c8542afd5e7fc284180ea71c6b9b0f52f06a119be6a75c996c6b08d7",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 德 语块(62 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/de/operation_ac",
+      "page": 62,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "de"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            27,
+            249,
+            342,
+            495
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_de/operation_ac.png",
+          "scale": 4,
+          "expected_sha256": "e519003e8066a0434ba5bfc6b37cc660a2f23500453410f7e6e220f8f2d87fe0",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 德 语块(62 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/de/operation_dc",
+      "page": 63,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "de"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            27,
+            41,
+            342,
+            198.4
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_de/operation_dc.png",
+          "scale": 4,
+          "expected_sha256": "b79505e80e2d003044270282dadf86dd55d5245bd658c8441556a855b0314e66",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 德 语块(63 页)按英语基准框裁出;图内文字越界已逐行复核为零截断;裁切框较英语基准调整 bottom-13.6pt 以排除邻接正文/纳入换行的图内文字。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/de/operation_led",
+      "page": 63,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "de"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            27,
+            362,
+            342,
+            498
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_de/operation_led.png",
+          "scale": 4,
+          "expected_sha256": "4fdc5548fc8aec3252599168df25e9490c5225b62564c500879e867cab252d84",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 德 语块(63 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/de/operation_lcd",
+      "page": 64,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "de"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            28,
+            40,
+            176.7,
+            150
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_de/operation_lcd.png",
+          "scale": 4,
+          "expected_sha256": "e5464677b66827e24a9f4b9283f98b18d6e888f72d5a2732fc02ca3131c07637",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 德 语块(64 页)按英语基准框裁出;图内文字越界已逐行复核为零截断;裁切框较英语基准调整 right-3.3pt 以排除邻接正文/纳入换行的图内文字。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/de/operation_energy",
+      "page": 64,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "de"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            27,
+            229,
+            342,
+            374
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_de/operation_energy.png",
+          "scale": 4,
+          "expected_sha256": "716cb664b3654a2cafe8cccbf433d93735d0d3cf5466c562019a13b657a7e62d",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 德 语块(64 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/de/ups",
+      "page": 65,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "de"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            28,
+            257,
+            342,
+            496
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_de/ups.png",
+          "scale": 4,
+          "expected_sha256": "ec7b20037dcac28472e15977cd197ca21eaa3eb0bc2e3c458d4f36b1aded3d12",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 德 语块(65 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/de/battery_pack",
+      "page": 66,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "de"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            28,
+            203,
+            342,
+            410
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_de/battery_pack.png",
+          "scale": 4,
+          "expected_sha256": "292450ab5eaa7bd3cfda084551929411b861c4f5ae245d5f8145ceecb4b7a594",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 德 语块(66 页)按英语基准框裁出;图内文字越界已逐行复核为零截断;德语间距标注为「Mindestens ≈ 200 mm」,与英/西的「200 mm」口径不一,按原样入库。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/de/charging_ac",
+      "page": 67,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "de"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            27,
+            247,
+            342,
+            362
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_de/charging_ac.png",
+          "scale": 4,
+          "expected_sha256": "e3f9fcac9b3d26894a10fc13a0aba32ef027568941f2eb4ca19aabb99cc04c6e",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 德 语块(67 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/de/charging_solar",
+      "page": 68,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "de"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            28,
+            31,
+            342,
+            175
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_de/charging_solar.png",
+          "scale": 4,
+          "expected_sha256": "b70f035b55edfc0b546cb7eec4c0bc11f8a105d0c9e84e52bd4875fd9397e206",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 德 语块(68 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/de/charging_solar_adapter",
+      "page": 68,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "de"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            150,
+            31,
+            342,
+            175
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_de/charging_solar_adapter.png",
+          "scale": 4,
+          "expected_sha256": "d88923ba59009a0ca82c136a418c081ef59df36d261c8cd1ac940996e2cdc7cf",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 德 语块(68 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/de/charging_car",
+      "page": 68,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "de"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            28,
+            358,
+            342,
+            494
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_de/charging_car.png",
+          "scale": 4,
+          "expected_sha256": "6942c72cac464da264cf3e381358e572145de843cefb307c4f79be56b7fb8004",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 德 语块(68 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/de/download_panel",
+      "page": 72,
+      "build_eligible": false,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "de"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": true,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            45,
+            70,
+            340,
+            155.7
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_de/app_download.png",
+          "scale": 4,
+          "expected_sha256": "9b296f0184c0fab0f68297668f6ef34786959141e06bcc14724fe65d98bf1117",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "quarantine",
+        "reasons": [
+          "App UI screenshots with a QR code and store links, so this crop is quarantined under the App/QR/URL/localized-UI recipe gate; it reaches the Web only through its hash-pinned illustration manifest entry. Reclassified 2026-09-25: it had been approved only because neither its key nor its risk tags carried a gate token (operator-approved gate fix; key, output and hash unchanged).",
+          "2026-09-15 从同一源 PDF 的 德 语块(72 页)按英语基准框裁出;图内文字越界已逐行复核为零截断;裁切框较英语基准调整 bottom+4.7pt 以排除邻接正文/纳入换行的图内文字。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy",
+        "app-ui",
+        "screenshot",
+        "localized-ui",
+        "qr"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/de/control_panel",
+      "page": 72,
+      "build_eligible": false,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "de"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": true,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            40,
+            400,
+            340,
+            484
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_de/app_control_panel.png",
+          "scale": 4,
+          "expected_sha256": "32be43d727ee211dbd524928f63b6f303fbfd106fc4692c19cb5cf675c472f5f",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "quarantine",
+        "reasons": [
+          "App UI screenshots, so this crop is quarantined under the App/QR/URL/localized-UI recipe gate; it reaches the Web only through its hash-pinned illustration manifest entry. Reclassified 2026-09-25: it had been approved only because neither its key nor its risk tags carried a gate token (operator-approved gate fix; key, output and hash unchanged).",
+          "2026-09-15 从同一源 PDF 的 德 语块(72 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy",
+        "app-ui",
+        "screenshot",
+        "localized-ui"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/de/connect_result_panel",
+      "page": 73,
+      "build_eligible": false,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "de"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": true,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            48,
+            148.6,
+            320,
+            293
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_de/app_connect_result.png",
+          "scale": 4,
+          "expected_sha256": "e0e36cec969102ba748c3265a32a62d1ed9ab2aab0a9979a4925f153b3a3e1cd",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "quarantine",
+        "reasons": [
+          "App UI screenshots, so this crop is quarantined under the App/QR/URL/localized-UI recipe gate; it reaches the Web only through its hash-pinned illustration manifest entry. Reclassified 2026-09-25: it had been approved only because neither its key nor its risk tags carried a gate token (operator-approved gate fix; key, output and hash unchanged).",
+          "2026-09-15 从同一源 PDF 的 德 语块(73 页)按英语基准框裁出;图内文字越界已逐行复核为零截断;裁切框较英语基准调整 top+7.6pt 以排除邻接正文/纳入换行的图内文字。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy",
+        "app-ui",
+        "screenshot",
+        "localized-ui"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/it/inbox_unit",
+      "page": 75,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "it"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            40,
+            310,
+            112,
+            394
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_it/inbox_unit.png",
+          "scale": 4,
+          "expected_sha256": "fc268673c6c5a2349c19b39d3ef57e7dbcf66ca334b7f68297ac304ef4b97ef9",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 意 语块(75 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/it/inbox_cable",
+      "page": 75,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "it"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            150,
+            315,
+            210,
+            394
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_it/inbox_cable.png",
+          "scale": 4,
+          "expected_sha256": "c235c66f37e7dd8ed202a76f825fa8c7d6b8800284e19d72e2a05a5fe0060686",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 意 语块(75 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/it/inbox_documents",
+      "page": 75,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "it"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            260,
+            320,
+            315,
+            394
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_it/inbox_documents.png",
+          "scale": 4,
+          "expected_sha256": "0e3964401d96c1bf2b1a431da19b0d9af00d7bed461d2b57a4ff77071d1ada0e",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 意 语块(75 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/it/overview_front",
+      "page": 76,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "it"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            28,
+            68,
+            342,
+            245
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_it/overview_front.png",
+          "scale": 4,
+          "expected_sha256": "dce1dd9ae22bc57d6822f8f5bb96646795cb8aa2794341016497f257d40f3a90",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 意 语块(76 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/it/overview_side",
+      "page": 76,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "it"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            28,
+            269,
+            342,
+            493
+          ]
+        },
+        {
+          "op": "whiteout",
+          "bbox_pt": [
+            28,
+            369,
+            138.9,
+            389
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_it/overview_side.png",
+          "scale": 4,
+          "expected_sha256": "9f6c2998269cf98bf2879e7a13025ec030cd7843a7ad0a3ce0cff61a70debbf3",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 意 语块(76 页)按英语基准框裁出;图内文字越界已逐行复核为零截断;并按英语基准以 whiteout 抹除图内嵌的「右侧视图」小标题(网页自带标题,避免重复)。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/it/lcd_map",
+      "page": 77,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "it"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            34,
+            50.9,
+            325,
+            223.0
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_it/lcd_map.png",
+          "scale": 4,
+          "expected_sha256": "70d05a78600c7bfe8471aae895b840e0b82bc3aa210f7a8fd596d629abb4cd95",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 意 语块(77 页)按英语基准框裁出;图内文字越界已逐行复核为零截断;裁切框较英语基准调整 top-4.1,bottom-8.0pt 以排除邻接正文/纳入换行的图内文字。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/it/operation_power",
+      "page": 79,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "it"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            27,
+            71,
+            342,
+            233
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_it/operation_power.png",
+          "scale": 4,
+          "expected_sha256": "e122fa74a7699441f4ccb7ba8bccb78f3dabb2cf5b8d7fd15ba7ed6c45821f29",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 意 语块(79 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/it/operation_ac",
+      "page": 79,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "it"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            27,
+            249,
+            342,
+            495
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_it/operation_ac.png",
+          "scale": 4,
+          "expected_sha256": "43d361a8907a9dddb5bb1af4767d228fe833d33795917fcfdc0f7b8ffd3ecc48",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 意 语块(79 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/it/operation_dc",
+      "page": 80,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "it"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            27,
+            41,
+            342,
+            198.4
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_it/operation_dc.png",
+          "scale": 4,
+          "expected_sha256": "0c565c113463ddf956220ee6a0632f601b5f088a24ae17205a2a2209d836cc44",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 意 语块(80 页)按英语基准框裁出;图内文字越界已逐行复核为零截断;裁切框较英语基准调整 bottom-13.6pt 以排除邻接正文/纳入换行的图内文字。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/it/operation_led",
+      "page": 80,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "it"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            27,
+            362,
+            342,
+            498
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_it/operation_led.png",
+          "scale": 4,
+          "expected_sha256": "c2822ca068f7aa1a2eb19316afd756484b9a65f36a937c9344d021403e9cbed8",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 意 语块(80 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/it/operation_lcd",
+      "page": 81,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "it"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            28,
+            40,
+            180,
+            150
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_it/operation_lcd.png",
+          "scale": 4,
+          "expected_sha256": "3ca82a98654ca8850ff447bc3c9868c6d24f9e757b47742dcf2e596c36c077a8",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 意 语块(81 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/it/operation_energy",
+      "page": 81,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "it"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            27,
+            229,
+            342,
+            374
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_it/operation_energy.png",
+          "scale": 4,
+          "expected_sha256": "612797878c24cb2c564bbda868eba56263aab29c19ea3b9c800e9e11a5d894c5",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 意 语块(81 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/it/ups",
+      "page": 82,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "it"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            28,
+            257,
+            342,
+            496
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_it/ups.png",
+          "scale": 4,
+          "expected_sha256": "ec7b20037dcac28472e15977cd197ca21eaa3eb0bc2e3c458d4f36b1aded3d12",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 意 语块(82 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/it/battery_pack",
+      "page": 83,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "it"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            28,
+            203,
+            342,
+            410
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_it/battery_pack.png",
+          "scale": 4,
+          "expected_sha256": "4b86f595de899ab4c7ca078ca22c86fb18fd975e054fdbd5ce50faa3c12e653a",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 意 语块(83 页)按英语基准框裁出;图内文字越界已逐行复核为零截断;意语间距标注为「Almeno 200 mm」,与英/西的「200 mm」口径不一,按原样入库。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/it/charging_ac",
+      "page": 84,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "it"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            27,
+            247,
+            342,
+            362
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_it/charging_ac.png",
+          "scale": 4,
+          "expected_sha256": "d11bcc52c8b17a5ada2e4a1ea5080b0fb23dac30dc3c5112a9c0d3d77431b6aa",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 意 语块(84 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/it/charging_solar",
+      "page": 85,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "it"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            28,
+            31,
+            342,
+            175
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_it/charging_solar.png",
+          "scale": 4,
+          "expected_sha256": "2de12fb0e1a7100bec8dee8ac5701a54d055986b4e6ef4ebfcc92c527a59cb5a",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 意 语块(85 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/it/charging_solar_adapter",
+      "page": 85,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "it"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            150,
+            31,
+            342,
+            175
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_it/charging_solar_adapter.png",
+          "scale": 4,
+          "expected_sha256": "0ae63e952c783fd27cffebcf948a095b03eade283c96a07aedf3c4b9bf1836bb",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 意 语块(85 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/it/charging_car",
+      "page": 85,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "it"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            28,
+            358,
+            342,
+            494
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_it/charging_car.png",
+          "scale": 4,
+          "expected_sha256": "9233956d503da7561651a6161a569139dec390242189c557ef5ca93fab734dc1",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 意 语块(85 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/it/download_panel",
+      "page": 89,
+      "build_eligible": false,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "it"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": true,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            45,
+            70,
+            340,
+            155.7
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_it/app_download.png",
+          "scale": 4,
+          "expected_sha256": "575e3c5960ec99439414b794186870137f81ace9121955a8e97875a448a9bf67",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "quarantine",
+        "reasons": [
+          "App UI screenshots with a QR code and store links, so this crop is quarantined under the App/QR/URL/localized-UI recipe gate; it reaches the Web only through its hash-pinned illustration manifest entry. Reclassified 2026-09-25: it had been approved only because neither its key nor its risk tags carried a gate token (operator-approved gate fix; key, output and hash unchanged).",
+          "2026-09-15 从同一源 PDF 的 意 语块(89 页)按英语基准框裁出;图内文字越界已逐行复核为零截断;裁切框较英语基准调整 bottom+4.7pt 以排除邻接正文/纳入换行的图内文字。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy",
+        "app-ui",
+        "screenshot",
+        "localized-ui",
+        "qr"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/it/control_panel",
+      "page": 89,
+      "build_eligible": false,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "it"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": true,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            40,
+            400,
+            340,
+            484
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_it/app_control_panel.png",
+          "scale": 4,
+          "expected_sha256": "7357b6540864fa70b9899a972bdaca031d30dcd337248296832d91541b7673e5",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "quarantine",
+        "reasons": [
+          "App UI screenshots, so this crop is quarantined under the App/QR/URL/localized-UI recipe gate; it reaches the Web only through its hash-pinned illustration manifest entry. Reclassified 2026-09-25: it had been approved only because neither its key nor its risk tags carried a gate token (operator-approved gate fix; key, output and hash unchanged).",
+          "2026-09-15 从同一源 PDF 的 意 语块(89 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy",
+        "app-ui",
+        "screenshot",
+        "localized-ui"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/it/connect_result_panel",
+      "page": 90,
+      "build_eligible": false,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "it"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": true,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            48,
+            150.1,
+            320,
+            293
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_it/app_connect_result.png",
+          "scale": 4,
+          "expected_sha256": "543eb7fa576492210ed60a9f1f8719b0496411ca291c613bd1b259d26e63273a",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "quarantine",
+        "reasons": [
+          "App UI screenshots, so this crop is quarantined under the App/QR/URL/localized-UI recipe gate; it reaches the Web only through its hash-pinned illustration manifest entry. Reclassified 2026-09-25: it had been approved only because neither its key nor its risk tags carried a gate token (operator-approved gate fix; key, output and hash unchanged).",
+          "2026-09-15 从同一源 PDF 的 意 语块(90 页)按英语基准框裁出;图内文字越界已逐行复核为零截断;裁切框较英语基准调整 top+9.1pt 以排除邻接正文/纳入换行的图内文字。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy",
+        "app-ui",
+        "screenshot",
+        "localized-ui"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/uk/inbox_unit",
+      "page": 92,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "uk"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            40,
+            310,
+            112,
+            394
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_uk/inbox_unit.png",
+          "scale": 4,
+          "expected_sha256": "fc268673c6c5a2349c19b39d3ef57e7dbcf66ca334b7f68297ac304ef4b97ef9",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 乌 语块(92 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/uk/inbox_cable",
+      "page": 92,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "uk"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            150,
+            315,
+            210,
+            394
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_uk/inbox_cable.png",
+          "scale": 4,
+          "expected_sha256": "c235c66f37e7dd8ed202a76f825fa8c7d6b8800284e19d72e2a05a5fe0060686",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 乌 语块(92 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/uk/inbox_documents",
+      "page": 92,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "uk"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            260,
+            320,
+            315,
+            394
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_uk/inbox_documents.png",
+          "scale": 4,
+          "expected_sha256": "0e3964401d96c1bf2b1a431da19b0d9af00d7bed461d2b57a4ff77071d1ada0e",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 乌 语块(92 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/uk/overview_front",
+      "page": 93,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "uk"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            28,
+            68,
+            342,
+            245
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_uk/overview_front.png",
+          "scale": 4,
+          "expected_sha256": "3cccf60ebd9c4405333c3b2a4bd2c8afc0ec9d5d523390d78426d92cfbc3fb7f",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 乌 语块(93 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/uk/overview_side",
+      "page": 93,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "uk"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            28,
+            269,
+            342,
+            493
+          ]
+        },
+        {
+          "op": "whiteout",
+          "bbox_pt": [
+            28,
+            369,
+            111.3,
+            389
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_uk/overview_side.png",
+          "scale": 4,
+          "expected_sha256": "a8e158867361d7167fda71a0165347f73450682fbb7d1f83b46e859e722fb167",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 乌 语块(93 页)按英语基准框裁出;图内文字越界已逐行复核为零截断;并按英语基准以 whiteout 抹除图内嵌的「右侧视图」小标题(网页自带标题,避免重复)。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/uk/lcd_map",
+      "page": 94,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "uk"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            34,
+            50.9,
+            325,
+            223.0
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_uk/lcd_map.png",
+          "scale": 4,
+          "expected_sha256": "70d05a78600c7bfe8471aae895b840e0b82bc3aa210f7a8fd596d629abb4cd95",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 乌 语块(94 页)按英语基准框裁出;图内文字越界已逐行复核为零截断;裁切框较英语基准调整 top-4.1,bottom-8.0pt 以排除邻接正文/纳入换行的图内文字。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/uk/operation_power",
+      "page": 96,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "uk"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            27,
+            71,
+            342,
+            233
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_uk/operation_power.png",
+          "scale": 4,
+          "expected_sha256": "994de413535584853e46ccc12e2929c2b6955c8e5ccfcd1d01f6795d80f18ab3",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 乌 语块(96 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/uk/operation_ac",
+      "page": 96,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "uk"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            27,
+            249,
+            342,
+            495
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_uk/operation_ac.png",
+          "scale": 4,
+          "expected_sha256": "a218a6d42fa8f4aa5655e171438583971bec33f5e66bbc273c5f4332e85e9a3e",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 乌 语块(96 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/uk/operation_dc",
+      "page": 97,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "uk"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            27,
+            41,
+            342,
+            198.4
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_uk/operation_dc.png",
+          "scale": 4,
+          "expected_sha256": "fe528eabc0732e3a8c4486e854f71e393f3d0100865f7b64a6be51459473f290",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 乌 语块(97 页)按英语基准框裁出;图内文字越界已逐行复核为零截断;裁切框较英语基准调整 bottom-13.6pt 以排除邻接正文/纳入换行的图内文字。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/uk/operation_led",
+      "page": 97,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "uk"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            27,
+            362,
+            342,
+            498
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_uk/operation_led.png",
+          "scale": 4,
+          "expected_sha256": "251f1f2f6bc3150617b5231ccc57dd52be3ce1782d11af4fd313dda4f7085c97",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 乌 语块(97 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/uk/operation_lcd",
+      "page": 98,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "uk"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            28,
+            40,
+            180,
+            150
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_uk/operation_lcd.png",
+          "scale": 4,
+          "expected_sha256": "211b6d6d4426348d7b1905f6825a5ff271d9c6f49fad8708e969c878a9c3f6b0",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 乌 语块(98 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/uk/operation_energy",
+      "page": 98,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "uk"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            27,
+            229,
+            342,
+            374
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_uk/operation_energy.png",
+          "scale": 4,
+          "expected_sha256": "7eb2fb56a201fd9b4d7a1667794a3099a30238c0ebdb5d83f41928288a3a9412",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 乌 语块(98 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/uk/ups",
+      "page": 99,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "uk"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            28,
+            257,
+            342,
+            496
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_uk/ups.png",
+          "scale": 4,
+          "expected_sha256": "ec7b20037dcac28472e15977cd197ca21eaa3eb0bc2e3c458d4f36b1aded3d12",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 乌 语块(99 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/uk/battery_pack",
+      "page": 100,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "uk"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            28,
+            208.1,
+            342,
+            410
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_uk/battery_pack.png",
+          "scale": 4,
+          "expected_sha256": "9ab71a843ba9475a808a86f366beade01f89eae2998a99ab66b6106511f07d75",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 乌 语块(100 页)按英语基准框裁出;图内文字越界已逐行复核为零截断;裁切框较英语基准调整 top+5.1pt 以排除邻接正文/纳入换行的图内文字。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/uk/charging_ac",
+      "page": 101,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "uk"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            27,
+            247,
+            342,
+            362
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_uk/charging_ac.png",
+          "scale": 4,
+          "expected_sha256": "c9db12ac863e6890df811ab7a4d0ea100b89a9067e4ab688945ea265980f405a",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 乌 语块(101 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/uk/charging_solar",
+      "page": 102,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "uk"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            28,
+            31,
+            342,
+            175
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_uk/charging_solar.png",
+          "scale": 4,
+          "expected_sha256": "2de12fb0e1a7100bec8dee8ac5701a54d055986b4e6ef4ebfcc92c527a59cb5a",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 乌 语块(102 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/uk/charging_solar_adapter",
+      "page": 102,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "uk"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            150,
+            31,
+            342,
+            175
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_uk/charging_solar_adapter.png",
+          "scale": 4,
+          "expected_sha256": "0ae63e952c783fd27cffebcf948a095b03eade283c96a07aedf3c4b9bf1836bb",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 乌 语块(102 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/uk/charging_car",
+      "page": 102,
+      "build_eligible": true,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "uk"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": false,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            28,
+            358,
+            342,
+            494
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_uk/charging_car.png",
+          "scale": 4,
+          "expected_sha256": "a99dded3530e91430e34b3027693e066f5899db85b2f1fe4292530a423dcb617",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "approved",
+        "reasons": [
+          "2026-09-15 从同一源 PDF 的 乌 语块(102 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/uk/download_panel",
+      "page": 106,
+      "build_eligible": false,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "uk"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": true,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            45,
+            70,
+            340,
+            155.7
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_uk/app_download.png",
+          "scale": 4,
+          "expected_sha256": "1f45ea8b6064933fdd3cf61c492cbbf0f314d2224f5ec7d22bd1f4448f135acc",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "quarantine",
+        "reasons": [
+          "App UI screenshots with a QR code and store links, so this crop is quarantined under the App/QR/URL/localized-UI recipe gate; it reaches the Web only through its hash-pinned illustration manifest entry. Reclassified 2026-09-25: it had been approved only because neither its key nor its risk tags carried a gate token (operator-approved gate fix; key, output and hash unchanged).",
+          "2026-09-15 从同一源 PDF 的 乌 语块(106 页)按英语基准框裁出;图内文字越界已逐行复核为零截断;裁切框较英语基准调整 bottom+4.7pt 以排除邻接正文/纳入换行的图内文字。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy",
+        "app-ui",
+        "screenshot",
+        "localized-ui",
+        "qr"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/uk/control_panel",
+      "page": 106,
+      "build_eligible": false,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "uk"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": true,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            40,
+            400,
+            340,
+            484
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_uk/app_control_panel.png",
+          "scale": 4,
+          "expected_sha256": "b29bed2f9ab2ee31dcdfecad9c7cf7ecf08f4b6d2dc236c2326c6192d8ee1dcc",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "quarantine",
+        "reasons": [
+          "App UI screenshots, so this crop is quarantined under the App/QR/URL/localized-UI recipe gate; it reaches the Web only through its hash-pinned illustration manifest entry. Reclassified 2026-09-25: it had been approved only because neither its key nor its risk tags carried a gate token (operator-approved gate fix; key, output and hash unchanged).",
+          "2026-09-15 从同一源 PDF 的 乌 语块(106 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy",
+        "app-ui",
+        "screenshot",
+        "localized-ui"
+      ]
+    },
+    {
+      "asset_key": "web/je1000h/eu/uk/connect_result_panel",
+      "page": 107,
+      "build_eligible": false,
+      "scope": {
+        "models": [
+          "JE-1000H"
+        ],
+        "regions": [
+          "EU"
+        ],
+        "locales": [
+          "uk"
+        ]
+      },
+      "text_policy": "localized-full-page",
+      "visual_review_required": true,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            48,
+            141,
+            320,
+            293
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "docs/renderers/web/assets/je1000h_eu_uk/app_connect_result.png",
+          "scale": 4,
+          "expected_sha256": "4e7c4891c252516f180ad63a29e3ea6485a38d5aec204fc4bf73627229dfe91e",
+          "palette_colors": 256
+        }
+      ],
+      "gate": {
+        "status": "quarantine",
+        "reasons": [
+          "App UI screenshots, so this crop is quarantined under the App/QR/URL/localized-UI recipe gate; it reaches the Web only through its hash-pinned illustration manifest entry. Reclassified 2026-09-25: it had been approved only because neither its key nor its risk tags carried a gate token (operator-approved gate fix; key, output and hash unchanged).",
+          "2026-09-15 从同一源 PDF 的 乌 语块(107 页)按英语基准框裁出;图内文字越界已逐行复核为零截断。"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art",
+        "localized-copy",
+        "app-ui",
+        "screenshot",
+        "localized-ui"
+      ]
+    }
+  ]
+}

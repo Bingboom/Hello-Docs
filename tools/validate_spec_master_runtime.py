@@ -619,7 +619,19 @@ def _collect_selector_issues(
 ) -> tuple[list[SpecMasterValidationIssue], list[dict[str, str]]]:
     issues: list[SpecMasterValidationIssue] = []
     matched_latest_rows: list[dict[str, str]] = []
-    target_langs = [target.lang] if (target.lang or "").strip() else langs
+    if (target.lang or "").strip():
+        target_langs = [target.lang]
+    else:
+        from tools.model_languages import resolve_target_languages
+
+        target_langs = list(
+            resolve_target_languages(
+                langs,
+                model=target.model,
+                region=target.region,
+                data_dir=ROOT / "data",
+            ).languages
+        )
     selectors, selector_issues = _collect_target_selectors(cfg, target=target, langs=target_langs)
     issues.extend(selector_issues)
 
@@ -786,10 +798,14 @@ def collect_spec_master_validation_issues(
     source_mode: str = "runtime",
 ) -> list[SpecMasterValidationIssue]:
     normalized_source_mode = (source_mode or "runtime").strip().lower()
-    if normalized_source_mode not in {"auto", "runtime", "review"}:
+    if normalized_source_mode not in {"auto", "runtime", "review", "review-asis"}:
         raise RuntimeError(f"Unsupported validation source mode: {source_mode}")
     if normalized_source_mode == "auto":
         normalized_source_mode = "runtime"
+    elif normalized_source_mode == "review-asis":
+        # Frozen review pages use the same selector scope as review builds;
+        # only their materialization/sync behavior differs.
+        normalized_source_mode = "review"
 
     cfg = load_config(cfg_path)
     snapshot_paths = resolve_data_snapshot_paths(

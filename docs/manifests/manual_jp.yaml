@@ -5,7 +5,7 @@ pages:
     file: templates/page_jp/cover_jp.rst
   - type: rst_include
     lang: ja
-    file: templates/page_jp/safety_ja.rst
+    file: templates/page_jp/toc.rst
   - type: rst_include
     lang: ja
     file: templates/page_jp/01_meaning_of_symbols.rst
@@ -34,6 +34,7 @@ pages:
   - type: rst_include
     lang: ja
     file: templates/page_jp/06_ups_mode.rst
+    capability: UPS功能
   - type: rst_include
     lang: ja
     file: templates/page_jp/charging.rst

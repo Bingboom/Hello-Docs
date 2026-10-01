@@ -60,7 +60,7 @@ def _draft_row(record_id: str = "rec_draft") -> queue_query.QueueQueryRow:
         workflow_action="Build Draft Package",
         normalized_workflow_action="draft",
         git_ref="codex/review-id-recvfw0zg4pzxs",
-        document_link="https://example.com/doc.docx",
+        document_link="",
         document_directory="/tmp/doc.docx",
         result="SUCCESS",
         pr_url="",
@@ -70,6 +70,8 @@ def _draft_row(record_id: str = "rec_draft") -> queue_query.QueueQueryRow:
         immediate_build=True,
         initial_result="",
         remarks="",
+        feishu_cloud_doc="https://example.com/docx/editable",
+        baseline_doc="https://example.com/docx/baseline",
     )
 
 
@@ -85,7 +87,7 @@ def _publish_row(record_id: str = "rec_publish") -> queue_query.QueueQueryRow:
         workflow_action="Publish",
         normalized_workflow_action="publish",
         git_ref="codex/review-id-recvfw0zg4pzxs",
-        document_link="https://example.com/publish.docx",
+        document_link="https://example.com/publish-handoff.zip",
         document_directory="/tmp/publish.docx",
         result="SUCCESS",
         pr_url="",
@@ -95,6 +97,18 @@ def _publish_row(record_id: str = "rec_publish") -> queue_query.QueueQueryRow:
         immediate_build=True,
         initial_result="",
         remarks="",
+    )
+
+
+def _web_publish_row(record_id: str = "rec_web") -> queue_query.QueueQueryRow:
+    return queue_query.QueueQueryRow(
+        **{
+            **_publish_row(record_id).__dict__,
+            "workflow_action": "Web Publish",
+            "normalized_workflow_action": "web_publish",
+            "document_link": "",
+            "html_link": "https://docs.example.com/manual.html",
+        }
     )
 
 
@@ -291,7 +305,15 @@ class TestQueueExecute(unittest.TestCase):
                 "record_id": "rec_draft",
                 "git_ref": "codex/review-id-recvfw0zg4pzxs",
                 "result": "SUCCESS",
-                "document_link": "https://example.com/doc.docx",
+                "idml_file": "",
+                "feishu_cloud_doc": "https://example.com/docx/editable",
+                "baseline_doc": "https://example.com/docx/baseline",
+                "html_link": "",
+                "delivery_kind": "feishu_cloud_doc",
+                "delivery_field": "飞书云文档",
+                "delivery_url": "https://example.com/docx/editable",
+                "delivery_ready": True,
+                "baseline_ready": True,
                 "freshness_status": "not_requested",
             },
             payload,
@@ -465,6 +487,38 @@ class TestQueueExecute(unittest.TestCase):
         # as skipped rather than silently dropped.
         self.assertEqual({"rec_a", "rec_b"}, {r.record_id for r in matched})
 
+    def test_select_queue_rows_keeps_triggered_row_when_latest_collapse_inferred(self) -> None:
+        # Dropping allow_multiple (to bypass the trigger pre-filter) must not
+        # re-enable the latest-per-document-key collapse: the trigger-enabled
+        # older version would vanish behind the already-built newer one.
+        old_triggered = queue_query.QueueQueryRow(
+            **{
+                **_draft_row("rec_old").__dict__,
+                "document_id": "JE-1000F_EU_0.8",
+                "document_key": "JE-1000F_EU",
+                "version": "0.8",
+                "build_trigger_requested": True,
+            }
+        )
+        new_built = queue_query.QueueQueryRow(
+            **{
+                **_draft_row("rec_new").__dict__,
+                "document_id": "JE-1000F_EU_0.9",
+                "document_key": "JE-1000F_EU",
+                "version": "0.9",
+                "build_trigger_requested": False,
+            }
+        )
+        _resolved, matched = queue_execute.select_queue_rows(
+            self._args(
+                query_workflow_action="build-draft-package",
+                allow_multiple=True,
+                latest_per_document_key=True,
+            ),
+            [old_triggered, new_built],
+        )
+        self.assertEqual({"rec_old", "rec_new"}, {r.record_id for r in matched})
+
     def test_dispatch_one_row_skips_untriggered_draft_without_calling_dispatch(self) -> None:
         row = queue_query.QueueQueryRow(**{**_draft_row("rec_us").__dict__, "build_trigger_requested": False})
         with mock.patch.object(queue_execute, "_run_control_layer_cli") as mock_cli:
@@ -486,6 +540,53 @@ class TestQueueExecute(unittest.TestCase):
         self.assertEqual("dispatched", result["status"])
         self.assertTrue(result["dispatched"])
         self.assertEqual("501", result["run_id"])
+
+    def test_dispatch_one_row_confirms_web_publish(self) -> None:
+        with mock.patch.object(
+            queue_execute,
+            "_run_control_layer_cli",
+            return_value={"run_id": "502", "run": "https://example.com/runs/502", "accepted_at": "t1"},
+        ) as mock_cli:
+            result = queue_execute._dispatch_one_row(
+                self._args(confirm_publish=True),
+                _web_publish_row(),
+                repo_root=Path("."),
+                accepted_at="t0",
+            )
+
+        self.assertEqual(
+            ("dispatch", "web-publish", "rec_web", "confirm"),
+            mock_cli.call_args.args[1:],
+        )
+        self.assertEqual("dispatched", result["status"])
+
+    def test_run_queue_execute_confirms_single_web_publish(self) -> None:
+        row = _web_publish_row()
+        stdout = io.StringIO()
+        with mock.patch.object(queue_execute, "load_config", return_value={}), \
+            mock.patch.object(queue_execute, "collect_queue_query_rows", return_value=[row]), \
+            mock.patch.object(queue_execute, "_refresh_queue_row", return_value=row), \
+            mock.patch.object(
+                queue_execute,
+                "_run_control_layer_cli",
+                return_value={"run_id": "503", "run": "https://example.com/runs/503"},
+            ) as mock_cli, \
+            redirect_stdout(stdout):
+            queue_execute.run_queue_execute(
+                self._args(
+                    record_id="rec_web",
+                    queue_scope="document-link",
+                    confirm_publish=True,
+                    wait_for_completion=False,
+                    json=True,
+                ),
+                config_path=Path("config.us.yaml"),
+                repo_root=Path("."),
+            )
+
+        mock_cli.assert_called_once_with(
+            Path("."), "dispatch", "web-publish", "rec_web", "confirm"
+        )
 
     def test_run_queue_execute_batch_dispatches_triggered_and_skips_others(self) -> None:
         triggered = queue_query.QueueQueryRow(
@@ -531,6 +632,72 @@ class TestQueueExecute(unittest.TestCase):
         self.assertEqual("skipped", by_id["rec_us"]["status"])
         self.assertFalse(by_id["rec_us"]["dispatched"])
         self.assertIn("是否触发文档构建", by_id["rec_us"]["reason"])
+
+    def test_run_queue_execute_batch_uses_one_batch_dispatch_for_multiple_rows(self) -> None:
+        rows = [
+            queue_query.QueueQueryRow(
+                **{**_draft_row("rec_en").__dict__, "document_id": "JE-1000F_EU_en_1.0", "build_trigger_requested": True}
+            ),
+            queue_query.QueueQueryRow(
+                **{**_draft_row("rec_fr").__dict__, "document_id": "JE-1000F_EU_fr_1.0", "build_trigger_requested": True}
+            ),
+        ]
+        dispatch_calls = []
+
+        def fake_cli(repo_root, *cli_args):
+            dispatch_calls.append(cli_args)
+            return {"run_id": "777", "run": "https://example.com/runs/777", "accepted_at": "t1"}
+
+        stdout = io.StringIO()
+        with mock.patch.object(queue_execute, "load_config", return_value={}), \
+            mock.patch.object(queue_execute, "collect_queue_query_rows", return_value=rows), \
+            mock.patch.object(queue_execute, "_run_control_layer_cli", side_effect=fake_cli), \
+            redirect_stdout(stdout):
+            queue_execute.run_queue_execute(
+                self._args(
+                    allow_multiple=True,
+                    json=True,
+                    queue_scope="document-link",
+                    query_workflow_action="build-draft-package",
+                    record_ids="rec_en,rec_fr",
+                ),
+                config_path=Path("config.us.yaml"),
+                repo_root=Path("."),
+            )
+
+        payload = json.loads(stdout.getvalue())
+        self.assertEqual(
+            [("dispatch", "build-draft", "batch", "--record-ids=rec_en,rec_fr")],
+            dispatch_calls,
+        )
+        self.assertEqual(2, payload["dispatched_count"])
+        self.assertEqual({"777"}, {row["run_id"] for row in payload["results"]})
+        self.assertTrue(all(row["batch"] for row in payload["results"]))
+
+    def test_run_queue_execute_batch_confirms_web_publish(self) -> None:
+        rows = [_web_publish_row("rec_web_en"), _web_publish_row("rec_web_fr")]
+        stdout = io.StringIO()
+        with mock.patch.object(queue_execute, "_asset_preflight_for_row", return_value=None), \
+            mock.patch.object(
+                queue_execute,
+                "_run_control_layer_cli",
+                return_value={"run_id": "778", "run": "https://example.com/runs/778"},
+            ) as mock_cli, \
+            redirect_stdout(stdout):
+            queue_execute.run_queue_execute_batch(
+                self._args(confirm_publish=True, json=True),
+                rows,
+                repo_root=Path("."),
+            )
+
+        mock_cli.assert_called_once_with(
+            Path("."),
+            "dispatch",
+            "web-publish",
+            "batch",
+            "--record-ids=rec_web_en,rec_web_fr",
+            "confirm",
+        )
 
 
 if __name__ == "__main__":

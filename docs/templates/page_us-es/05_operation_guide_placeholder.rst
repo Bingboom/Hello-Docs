@@ -4,7 +4,7 @@ OPERACIONES
 ENCENDIDO/APAGADO
 -----------------
 
-.. image:: templates/word_template/common_assets/operation/main_power.png
+.. image:: asset:operation/main_power
    :alt: Operación de encendido/apagado.
    :width: 360px
 
@@ -17,14 +17,14 @@ ENCENDIDO/APAGADO
 | **Tiempo de espera predeterminado:** |DEFAULT_STANDBY_DURATION|.
 | El producto se apagará automáticamente después de |DEFAULT_STANDBY_DURATION| de inactividad, sin carga ni descarga.
 | \*El tiempo de espera puede configurarse en la aplicación Jackery.
-| Cuando el modo de ahorro de energía está activado, el producto se apagará automáticamente después de |ENERGY_SAVING_AUTO_OFF_DURATION| si el |AC_POWER_BUTTON_LABEL_LOWER| o el |DC_USB_POWER_BUTTON_LABEL_LOWER| está encendido, pero el producto no está cargando ni descargando.
+| Cuando el modo de ahorro de energía está activado, el producto se apagará automáticamente después de |ENERGY_SAVING_AUTO_OFF_DURATION| si el botón de energía CA o el |DC_USB_POWER_BUTTON_LABEL_LOWER| está encendido, pero el producto no está cargando ni descargando.
 
 ENCENDER/APAGAR SALIDA CA
 --------------------------
 
 **Requisito previo:** el producto está encendido.
 
-.. image:: templates/word_template/common_assets/operation/ac_output.png
+.. image:: asset:operation/ac_output
    :alt: Operación de salida de CA.
    :width: 360px
 
@@ -40,7 +40,7 @@ ENCENDER/APAGAR SALIDA CC 12V/USB
 
 **Requisito previo:** el producto está encendido.
 
-.. image:: templates/word_template/common_assets/operation/dc_usb_output.png
+.. image:: asset:operation/dc_usb_output
    :alt: Operación de salida de CC y USB.
    :width: 360px
 
@@ -76,13 +76,17 @@ ENCENDER/APAGAR SALIDA CC 12V/USB
 MODO DE AHORRO DE ENERGÍA
 -------------------------
 
-Para evitar un consumo innecesario de batería por olvidar apagar la salida, el producto activa por defecto el Modo de Ahorro de Energía. Cuando la salida de CA o CC/USB está encendida, el icono del modo de ahorro de energía se mostrará en la pantalla LCD. En este modo, si no hay ningún dispositivo conectado o si el consumo del dispositivo conectado está por debajo de cierto umbral (|ENERGY_SAVING_AC_THRESHOLD| en salida de CA o |ENERGY_SAVING_DC_THRESHOLD| en salida de CC/USB), la salida correspondiente se apagará automáticamente después del tiempo configurado. La configuración predeterminada es |ENERGY_SAVING_AUTO_OFF_DURATION|. La duración del Modo de Ahorro de Energía puede configurarse en la aplicación Jackery en 1H, 2 H, 8 H, 12 H o 24 H. Si se establece en "Never Off", el Modo de Ahorro de Energía se desactivará.
+Para evitar un consumo innecesario de batería por olvidar apagar la salida, el producto activa por defecto el Modo de Ahorro de Energía. Cuando la salida de CA o CC/USB está encendida, el icono del modo de ahorro de energía se mostrará en la pantalla LCD. En este modo, si no hay ningún dispositivo conectado o si el consumo del dispositivo conectado está por debajo de cierto umbral (|ENERGY_SAVING_AC_THRESHOLD| en salida de CA o |ENERGY_SAVING_DC_THRESHOLD| en salida de CC/USB), la salida correspondiente se apagará automáticamente después del tiempo configurado. La configuración predeterminada es |ENERGY_SAVING_AUTO_OFF_DURATION|. La duración del Modo de Ahorro de Energía puede configurarse en la aplicación Jackery en 1 H, 2 H, 8 H, 12 H o 24 H. Si se establece en "Never Off", el Modo de Ahorro de Energía se desactivará.
 
-Para desactivar el modo de ahorro de energía, mantenga pulsados simultáneamente el |AC_POWER_BUTTON_LABEL_LOWER| y el |MAIN_POWER_BUTTON_LABEL_LOWER| durante más de 3 segundos. Una vez desactivado el modo de ahorro de energía, el icono dejará de mostrarse en la pantalla LCD y el producto no apagará automáticamente la salida de CA o CC/USB.
+Para desactivar el modo de ahorro de energía, mantenga pulsados simultáneamente el botón de energía CA y el botón POWER durante más de 3 segundos. Una vez desactivado el modo de ahorro de energía, el icono dejará de mostrarse en la pantalla LCD y el producto no apagará automáticamente la salida de CA o CC/USB.
 
 Cuando alimente dispositivos de baja potencia (CA ≤ |ENERGY_SAVING_AC_THRESHOLD| o CC/USB ≤ |ENERGY_SAVING_DC_THRESHOLD|), desactive el modo de ahorro de energía para evitar que la salida se apague automáticamente durante el funcionamiento.
 
-.. image:: templates/word_template/common_assets/operation/energy_saving.png
+.. raw:: manual-ir
+
+   {"kind":"operation_panel_copy","layout":"energy_saving","mode_label":"On/Off"}
+
+.. image:: asset:operation/energy_saving
    :alt: Operación del modo de ahorro de energía.
    :width: 320px
 
@@ -100,7 +104,11 @@ ENCENDER/APAGAR LUZ LED
 
 La luz LED tiene dos modos: modo de luz y modo SOS. En cualquier modo, mantenga presionado el botón de luz LED para apagarla.
 
-.. image:: templates/word_template/common_assets/operation/led_light.png
+.. raw:: manual-ir
+
+   {"kind":"operation_panel_copy","layout":"led_light","sos_label":"SOS"}
+
+.. image:: asset:operation/led_light
    :alt: Operación de la luz LED.
    :width: 360px
 
@@ -136,15 +144,15 @@ PANTALLA LCD
       <table style="width:100%; border-collapse:collapse; margin:0.75rem 0 0.5rem 0;">
         <tr>
           <td rowspan="6" style="width:24%; border:1px solid #cfcfcf; padding:8px; vertical-align:top; text-align:center;">
-            <img src="_assets/templates/word_template/common_assets/operation/lcd_mode.png" alt="Modo de pantalla LCD." style="max-width:140px; width:100%; height:auto; display:block; margin:0 auto;">
+            <img src="asset:operation/lcd_mode" alt="Modo de pantalla LCD." style="max-width:140px; width:100%; height:auto; display:block; margin:0 auto;">
           </td>
           <td rowspan="3" style="width:18%; border:1px solid #cfcfcf; padding:8px; vertical-align:top;">En breve</td>
           <td style="width:12%; border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Encender</td>
-          <td style="width:46%; border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Presione el botón de encendido principal o cuando el producto se esté cargando.</td>
+          <td style="width:46%; border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Presione el botón POWER o cuando el producto se esté cargando.</td>
         </tr>
         <tr>
           <td style="border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Apagar</td>
-          <td style="border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Presione el botón de encendido principal.</td>
+          <td style="border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Presione el botón POWER.</td>
         </tr>
         <tr>
           <td style="border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Apagado automático</td>
@@ -153,11 +161,11 @@ PANTALLA LCD
         <tr>
           <td rowspan="3" style="border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Estable en (durante el estado de carga o descarga)</td>
           <td style="border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Encender</td>
-          <td style="border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Presione dos veces el botón de encendido principal cuando el producto esté encendido.</td>
+          <td style="border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Presione dos veces el botón POWER cuando el producto esté encendido.</td>
         </tr>
         <tr>
           <td style="border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Apagar</td>
-          <td style="border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Presione el botón de encendido principal.</td>
+          <td style="border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Presione el botón POWER.</td>
         </tr>
         <tr>
           <td style="border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Apagado automático</td>
@@ -169,20 +177,10 @@ PANTALLA LCD
 
    .. raw:: latex
 
-      \begingroup
-      \renewcommand{\arraystretch}{1.25}
-      \setlength{\tabcolsep}{6pt}
-      \begin{tabular}{|m{0.24\linewidth}|m{0.16\linewidth}|m{0.12\linewidth}|m{0.36\linewidth}|}
-      \hline
-      \multirow{6}{*}{\parbox[c]{0.22\linewidth}{\centering\includegraphics[width=0.20\linewidth]{lcd_mode.png}}}
-      & \multirow{3}{*}{\parbox[t]{0.14\linewidth}{En breve}} & Encender & Presione el botón de encendido principal o cuando el producto se esté cargando. \\ \cline{3-4}
-      & & Apagar & Presione el botón de encendido principal. \\ \cline{3-4}
-      & & Apagado automático & La pantalla LCD se apaga automáticamente y entra en modo de suspensión después de 2 minutos de inactividad. \\ \cline{2-4}
-      & \multirow{3}{*}{\parbox[t]{0.14\linewidth}{Estable en (durante el estado de carga o descarga)}} & Encender & Presione dos veces el botón de encendido principal cuando el producto esté encendido. \\ \cline{3-4}
-      & & Apagar & Presione el botón de encendido principal. \\ \cline{3-4}
-      & & Apagado automático & La pantalla LCD se apaga automáticamente después de |DEFAULT_STANDBY_DURATION| de inactividad. \\ \hline
-      \end{tabular}
-      \endgroup
+      \begin{HBLcdModeTable}{asset:operation/lcd_mode}
+      \HBLcdModeFirstGroup{En breve}{Encender}{Presione el botón POWER o cuando el producto se esté cargando.}{Apagar}{Presione el botón POWER.}{Apagado automático}{La pantalla LCD se apaga automáticamente y entra en modo de suspensión después de 2 minutos de inactividad.}
+      \HBLcdModeSecondGroup{Estable en (durante el estado de carga o descarga)}{Encender}{Presione dos veces el botón POWER cuando el producto esté encendido.}{Apagar}{Presione el botón POWER.}{Apagado automático}{La pantalla LCD se apaga automáticamente después de |DEFAULT_STANDBY_DURATION| de inactividad.}
+      \end{HBLcdModeTable}
 
 También puede configurar el modo de visualización de la pantalla en la aplicación Jackery.
 
@@ -196,15 +194,15 @@ COMBINACIONES DE TECLAS
    * - Botones
      - Operación
      - Función
-   * - Botón de encendido principal + botón de energía de CA
+   * - Botón POWER + botón de energía de CA
      - Mantenga pulsados ambos botones durante 3 segundos
      - Encender/apagar el modo de ahorro de energía
-   * - Botón de encendido principal + botón de energía CC/USB
+   * - Botón POWER + botón de energía CC/USB
      - Mantenga pulsados ambos botones durante 3 segundos
      - Restablecer Wi-Fi y Bluetooth
    * - Botón de energía CC/USB + botón de energía de CA
      - Mantenga pulsados ambos botones durante 1 segundo
      - Encender/apagar Wi-Fi y Bluetooth
-   * - Botón de encendido principal + botón de luz LED
+   * - Botón POWER + botón de luz LED
      - Mantenga pulsados ambos botones durante 1 segundo
      - Activar/desactivar el modo de carga de emergencia

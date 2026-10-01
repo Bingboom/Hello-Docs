@@ -16,18 +16,18 @@
       :header-rows: 0
       :widths: 33 33 34
 
-      * - .. image:: templates/word_template/common_assets/in_the_box/main_unit1.png
-             :alt: Segnaposto immagine della stazione di alimentazione.
+      * - .. image:: asset:in_the_box/main_unit1
+             :alt: Immagine della stazione di alimentazione.
              :width: 120px
 
           |PRODUCT_NAME_BOLD|
-        - .. image:: templates/word_template/common_assets/in_the_box/ac_charging_cable.png
-             :alt: Segnaposto immagine del cavo di ricarica CA.
+        - .. image:: asset:in_the_box/ac_charging_cable
+             :alt: Immagine del cavo di ricarica CA.
              :width: 120px
 
           **Cavo di ricarica CA**
-        - .. image:: templates/word_template/common_assets/in_the_box/manual_icon1.png
-             :alt: Segnaposto immagine del manuale utente.
+        - .. image:: asset:in_the_box/manual_icon1
+             :alt: Immagine del manuale utente.
              :width: 120px
 
           Manuale utente

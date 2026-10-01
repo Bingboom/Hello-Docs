@@ -4,9 +4,7 @@
 from __future__ import annotations
 
 import argparse
-import os
 import shutil
-import sys
 from pathlib import Path
 
 try:
@@ -24,6 +22,10 @@ from tools.config_pages import (
     PdfInsertPage,
     RstIncludePage,
 )
+from tools.bundle_asset_finalize import finalize_materialized_bundle
+from tools.capability_pages import strip_capability_sections
+from tools.contract_assets import ContractAssetResolver
+from tools.data_snapshot import resolve_data_snapshot_paths
 from tools.draft_engine import (
     GeneratedPageRender,
     render_generated_page,
@@ -84,7 +86,7 @@ from tools.gen_index_bundle_paths import (
     latex_cover_block,
     latex_overview_block,
     load_config,
-    read_included_page_paths,
+    read_included_page_paths as read_included_page_paths,
     resolve_build_model,
     resolve_build_region,
     resolve_csv_rst_path as _resolve_csv_rst_path,
@@ -95,8 +97,16 @@ from tools.gen_index_bundle_paths import (
     resolve_spec_master_csv_path as _resolve_spec_master_csv_path,
     source_path_for_contract as _source_path_for_contract,
 )
+from tools.language_block_trim import trim_language_blocks
 from tools.page_manifest import resolve_config_pages_or_raise
-from tools.utils.path_utils import get_paths, word_common_assets_of  # noqa: E402
+from tools.safe_copy import copy_regular_file_no_symlinks, copytree_replace_no_symlinks
+from tools.utils.path_utils import (  # noqa: E402
+    Paths,
+    get_paths,
+    web_composite_manifest_of,
+    word_common_assets_of,
+)
+from tools.web_composite_manifest import stage_web_composite_snapshot
 from tools.utils.targets import (
     resolve_output_lang,
 )
@@ -177,6 +187,7 @@ def build_index_from_pages(
     *,
     langs: list[str] | None = None,
     root: Path | None = None,
+    planned_pages: list[PlannedPage] | tuple[PlannedPage, ...] | None = None,
 ) -> str:
     return _build_index_from_pages_impl(
         cfg,
@@ -184,6 +195,7 @@ def build_index_from_pages(
         region=region,
         langs=langs,
         root=root or paths.root,
+        planned_pages=planned_pages,
         plan_materialized_pages=plan_materialized_pages,
     )
 
@@ -245,10 +257,18 @@ def _render_pdf_insert_page_rst(file_name: str, lang: str) -> str:
     )
 
 
-def _copytree_replace(src: Path, dst: Path) -> None:
-    if dst.exists():
-        shutil.rmtree(dst)
-    shutil.copytree(src, dst)
+def _copytree_replace(
+    src: Path,
+    dst: Path,
+    *,
+    destination_root: Path | None = None,
+) -> None:
+    copytree_replace_no_symlinks(
+        src,
+        dst,
+        destination_root=destination_root or dst.parent,
+        label="bundle support source",
+    )
 
 
 def _render_contract_asset_path(
@@ -296,6 +316,12 @@ def _preflight_contract_assets(
     langs: list[str],
     planned_pages: list[PlannedPage],
 ) -> None:
+    resolver = ContractAssetResolver(
+        docs_dir=docs_dir,
+        repo_root=repo_root,
+        model=model,
+        region=region,
+    )
     return _preflight_contract_assets_impl(
         docs_dir=docs_dir,
         repo_root=repo_root,
@@ -305,7 +331,10 @@ def _preflight_contract_assets(
         planned_pages=planned_pages,
         bundle_dir=bundle_dir_for_target(docs_dir=docs_dir, model=model, region=region),
         source_path_for_contract=_source_path_for_contract,
-        resolve_contract_asset_path=_resolve_contract_asset_path,
+        resolve_contract_asset_path=lambda raw_value, **kwargs: resolver.resolve(
+            raw_value,
+            lang=kwargs.get("lang"),
+        ),
     )
 
 
@@ -319,7 +348,13 @@ def _write_bundle_conf_files(
         cfg=cfg,
         docs_dir=docs_dir,
         bundle_dir=bundle_dir,
-        copy_file=shutil.copy2,
+        copy_file=lambda src, dst: copy_regular_file_no_symlinks(
+            src,
+            dst,
+            source_root=docs_dir,
+            destination_root=bundle_dir,
+            label="bundle config source",
+        ),
     )
 
 
@@ -331,7 +366,11 @@ def _copy_bundle_support_assets(
     return _copy_bundle_support_assets_impl(
         docs_dir=docs_dir,
         bundle_dir=bundle_dir,
-        copytree_replace=_copytree_replace,
+        copytree_replace=lambda src, dst: _copytree_replace(
+            src,
+            dst,
+            destination_root=bundle_dir,
+        ),
     )
 
     # Review overlays can copy page/generated RST that already reference
@@ -344,6 +383,7 @@ def _copy_bundle_support_assets(
         _copytree_replace(
             common_assets_src,
             bundle_dir / "_assets" / "templates" / "word_template" / "common_assets",
+            destination_root=bundle_dir,
         )
 
 
@@ -362,6 +402,7 @@ def _materialize_planned_page(
     title: str,
     model: str | None,
     region: str | None,
+    langs: list[str] | tuple[str, ...] = (),
     draft_placeholders: bool = False,
 ) -> tuple[str, GeneratedPageRender | None]:
     return _materialize_planned_page_impl(
@@ -377,6 +418,7 @@ def _materialize_planned_page(
         title=title,
         model=model,
         region=region,
+        langs=langs,
         draft_placeholders=draft_placeholders,
         cover_pdf_page_cls=CoverPdfPage,
         pdf_insert_page_cls=PdfInsertPage,
@@ -399,10 +441,13 @@ def _materialize_planned_page(
         rewrite_rst_asset_paths=rewrite_rst_asset_paths,
         normalize_rst_empty_line_blocks=normalize_rst_empty_line_blocks,
         prepend_latex_lang=_prepend_latex_lang,
+        strip_capability_sections=strip_capability_sections,
+        capability_data_dir=Paths(root=repo_root).data_dir,
+        trim_language_blocks=trim_language_blocks,
     )
 
 
-def materialize_bundle(
+def _materialize_bundle(
     cfg: dict,
     model: str | None = None,
     region: str | None = None,
@@ -416,18 +461,24 @@ def materialize_bundle(
     bundle_dir_override: Path | None = None,
     write_wrapper_index: bool = True,
     draft_placeholders: bool = False,
+    skeleton_only: bool = False,
+    finalize_assets: bool = True,
+    materialize_all_languages: bool = False,
 ) -> MaterializedBundle:
+    resolved_docs_dir = docs_dir or paths.docs_dir
+    resolved_repo_root = repo_root or paths.root
     context = _resolve_bundle_materialization_context_impl(
         cfg,
         model=model,
         region=region,
         lang=lang,
         data_root=data_root,
-        docs_dir=docs_dir or paths.docs_dir,
-        repo_root=repo_root or paths.root,
+        docs_dir=resolved_docs_dir,
+        repo_root=resolved_repo_root,
         page_selector=page_selector,
         bundle_dir_override=bundle_dir_override,
         draft_placeholders=draft_placeholders,
+        materialize_all_languages=materialize_all_languages,
         resolve_build_model=resolve_build_model,
         resolve_build_region=resolve_build_region,
         build_langs=_build_langs,
@@ -452,7 +503,9 @@ def materialize_bundle(
         context,
         cfg=cfg,
         data_root=data_root,
-        ensure_csv_pages=ensure_csv_pages,
+        # Skeleton-only builds render nothing from data; the committed review
+        # bundle is overlaid afterwards and provides every generated page.
+        ensure_csv_pages=ensure_csv_pages and not skeleton_only,
         bundle_dir_override=bundle_dir_override,
         csv_page_cls=CsvPage,
         cleanup_legacy_rst_artifacts=cleanup_legacy_rst_artifacts,
@@ -463,11 +516,18 @@ def materialize_bundle(
         write_bundle_conf_files=_write_bundle_conf_files,
     )
 
-    page_paths, recipe_ids, snippet_ids = _materialize_bundle_pages_impl(
-        context,
-        cfg=cfg,
-        materialize_planned_page=_materialize_planned_page,
-    )
+    if skeleton_only:
+        # Emit only the conf/asset skeleton; the caller overlays the committed
+        # review bundle (index.rst + page/ + generated/) on top. This lets a
+        # review render succeed for a target whose model is absent from the
+        # build data-root (e.g. the CI review-preview fixtures).
+        page_paths, recipe_ids, snippet_ids = [], [], []
+    else:
+        page_paths, recipe_ids, snippet_ids = _materialize_bundle_pages_impl(
+            context,
+            cfg=cfg,
+            materialize_planned_page=_materialize_planned_page,
+        )
 
     _write_bundle_outputs_impl(
         context,
@@ -483,7 +543,7 @@ def materialize_bundle(
         file_sha256=_file_sha256,
     )
 
-    return _build_materialized_bundle_result_impl(
+    bundle = _build_materialized_bundle_result_impl(
         context,
         conf_path=conf_path,
         conf_base_path=conf_base_path,
@@ -491,6 +551,84 @@ def materialize_bundle(
         recipe_ids=recipe_ids,
         snippet_ids=snippet_ids,
         materialized_bundle_cls=MaterializedBundle,
+    )
+    snapshot_root = resolve_data_snapshot_paths(
+        cfg,
+        repo_root=resolved_repo_root,
+        data_root=data_root,
+        model=context.target_model,
+        region=context.target_region,
+    ).structured_data_dir
+    stage_web_composite_snapshot(
+        source_manifest_path=web_composite_manifest_of(snapshot_root),
+        snapshot_root=snapshot_root,
+        bundle_root=bundle.bundle_dir,
+        model=context.target_model,
+        region=context.target_region,
+    )
+    if not finalize_assets:
+        return bundle
+    return finalize_materialized_bundle(
+        bundle,
+        cfg=cfg,
+        docs_dir=resolved_docs_dir,
+        repo_root=resolved_repo_root,
+    )
+
+
+def materialize_bundle(
+    cfg: dict,
+    model: str | None = None,
+    region: str | None = None,
+    *,
+    lang: str | None = None,
+    data_root: str | None = None,
+    docs_dir: Path | None = None,
+    repo_root: Path | None = None,
+    ensure_csv_pages: bool = True,
+    page_selector: str | None = None,
+    bundle_dir_override: Path | None = None,
+    write_wrapper_index: bool = True,
+    draft_placeholders: bool = False,
+    skeleton_only: bool = False,
+    finalize_assets: bool = True,
+) -> MaterializedBundle:
+    """Materialize the existing artifact language scope unchanged."""
+    return _materialize_bundle(
+        cfg, model, region, lang=lang, data_root=data_root, docs_dir=docs_dir,
+        repo_root=repo_root, ensure_csv_pages=ensure_csv_pages,
+        page_selector=page_selector, bundle_dir_override=bundle_dir_override,
+        write_wrapper_index=write_wrapper_index,
+        draft_placeholders=draft_placeholders, skeleton_only=skeleton_only,
+        finalize_assets=finalize_assets,
+    )
+
+
+def materialize_web_language_source_bundle(
+    cfg: dict,
+    model: str | None = None,
+    region: str | None = None,
+    *,
+    lang: str,
+    data_root: str | None = None,
+    docs_dir: Path | None = None,
+    repo_root: Path | None = None,
+    ensure_csv_pages: bool = True,
+    page_selector: str | None = None,
+    bundle_dir_override: Path | None = None,
+    write_wrapper_index: bool = False,
+    draft_placeholders: bool = False,
+    skeleton_only: bool = False,
+    finalize_assets: bool = True,
+) -> MaterializedBundle:
+    """Freeze all declared page languages while retaining target identity."""
+    return _materialize_bundle(
+        cfg, model, region, lang=lang, data_root=data_root, docs_dir=docs_dir,
+        repo_root=repo_root, ensure_csv_pages=ensure_csv_pages,
+        page_selector=page_selector, bundle_dir_override=bundle_dir_override,
+        write_wrapper_index=write_wrapper_index,
+        draft_placeholders=draft_placeholders, skeleton_only=skeleton_only,
+        finalize_assets=finalize_assets, materialize_all_languages=True,
     )
 
 

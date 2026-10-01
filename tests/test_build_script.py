@@ -10,6 +10,7 @@ from unittest import mock
 
 import build as build_cli
 from tests.test_helpers import patch_module_attrs, temp_test_root, write_text
+from tools import build_docs_io
 from tools.build_runtime import review_sync_target_args as runtime_review_sync_target_args
 from tools.review_support import resolve_existing_review_bundle_dir
 
@@ -131,6 +132,38 @@ class TestBuildScript(unittest.TestCase):
             self.assertEqual(docs_dir / "_build", build_dir)
             self.assertEqual(docs_dir / "renderers" / "latex" / "params.tex", params_tex)
 
+    def test_clean_targets_for_config_should_raise_when_config_unloadable(self) -> None:
+        # A typo'd --config must fail loudly instead of falling back to the
+        # default docs dir and handing `clean` the real docs/_build to delete.
+        with temp_test_root() as root:
+            config_path = root / "config.missing.yaml"
+            with mock.patch.object(build_cli, "load_config", side_effect=RuntimeError("Config not found")):
+                with self.assertRaises(RuntimeError):
+                    build_cli.clean_targets_for_config(config_path)
+
+    def test_clean_build_targets_with_output_root_cleans_exactly_that_dir(self) -> None:
+        # A preview writes into output_root; with a staged output_root the clean
+        # must target that dir, not the repo's default preview dir (nor call the
+        # per-target build-root computation / legacy cleanup).
+        with temp_test_root() as root:
+            output_root = root / "staging" / "docs" / "_build" / "JE-1000F" / "US" / "preview" / "05"
+            output_root.mkdir(parents=True)
+            removed: list[Path] = []
+            build_root_calls: list[object] = []
+            legacy_calls: list[object] = []
+            build_docs_io.clean_build_targets(
+                [SimpleNamespace(model="JE-1000F", region="US", lang="en")],
+                docs_dir=root / "docs",
+                preview_name="05",
+                output_root=output_root,
+                build_root_for_target=lambda *a, **k: build_root_calls.append((a, k)) or Path("/unused"),
+                cleanup_legacy_rst_artifacts=lambda **k: legacy_calls.append(k),
+                remove_tree_with_retries=lambda path: removed.append(path),
+            )
+            self.assertEqual(removed, [output_root])
+            self.assertEqual(build_root_calls, [])  # output_root path bypasses per-target computation
+            self.assertEqual(legacy_calls, [])
+
     def test_collect_legacy_docs_output_dirs_should_find_legacy_generated_and_bundle_dirs(self) -> None:
         with temp_test_root() as root:
             docs_dir = root / "docs"
@@ -166,6 +199,30 @@ class TestBuildScript(unittest.TestCase):
 
         self.assertEqual("doctor", args.action)
         self.assertEqual("configs/config.ja.yaml", args.config)
+
+    def test_parse_args_should_support_asset_intake_contract(self) -> None:
+        args = build_cli.parse_args(
+            [
+                "asset-intake",
+                "--asset-source-key",
+                "source/manual_je1000f_us_master",
+                "--asset-source-file",
+                "/tmp/master.ai",
+                "--asset-recipe",
+                "data/asset_recipes/manual_je1000f_us_master.json",
+                "--asset-output-root",
+                "/tmp/asset-intake/run-01",
+            ]
+        )
+
+        self.assertEqual("asset-intake", args.action)
+        self.assertEqual("source/manual_je1000f_us_master", args.asset_source_key)
+        self.assertEqual(Path("/tmp/master.ai"), args.asset_source_file)
+        self.assertEqual(
+            Path("data/asset_recipes/manual_je1000f_us_master.json"),
+            args.asset_recipe,
+        )
+        self.assertEqual(Path("/tmp/asset-intake/run-01"), args.asset_output_root)
 
     def test_parse_args_should_support_message_control_dry_run(self) -> None:
         args = build_cli.parse_args(
@@ -372,6 +429,23 @@ class TestBuildScript(unittest.TestCase):
         self.assertIn("publish", cmd)
         self.assertNotIn("--doc-phase", cmd)
 
+    def test_process_build_queue_command_should_preserve_web_publish_action(self) -> None:
+        args = build_cli.parse_args(
+            [
+                "process-build-queue",
+                "--workflow-action",
+                "web-publish",
+                "--record-id",
+                "rec_web",
+            ]
+        )
+
+        cmd = build_cli.process_build_queue_command(args)
+
+        action_index = cmd.index("--workflow-action")
+        self.assertEqual("web-publish", cmd[action_index + 1])
+        self.assertIn("rec_web", cmd)
+
     def test_parse_args_should_support_review_and_check_actions(self) -> None:
         review_args = build_cli.parse_args(["review"])
         check_args = build_cli.parse_args(["check", "--config", "configs/config.ja.yaml"])
@@ -382,6 +456,9 @@ class TestBuildScript(unittest.TestCase):
         message_listener_args = build_cli.parse_args(["listen-message-control", "--config", "configs/config.us.yaml"])
         publish_args = build_cli.parse_args(["publish", "--model", "JE-1000F", "--region", "JP"])
         release_args = build_cli.parse_args(["release-manifest", "--model", "JE-1000F", "--region", "JP"])
+        rebuild_args = build_cli.parse_args(
+            ["release-rebuild-verify", "--manifest", "reports/releases/manifest.json"]
+        )
         sync_args = build_cli.parse_args(["sync-review", "--sync-scope", "generated", "--page-file", "03_product_overview_placeholder.rst"])
         sync_data_args = build_cli.parse_args(["sync-data", "--table", "spec_master", "--dry-run"])
         spec_rebuild_args = build_cli.parse_args(
@@ -409,6 +486,8 @@ class TestBuildScript(unittest.TestCase):
         self.assertEqual("JE-1000F", publish_args.model)
         self.assertEqual("JP", publish_args.region)
         self.assertEqual("release-manifest", release_args.action)
+        self.assertEqual("release-rebuild-verify", rebuild_args.action)
+        self.assertEqual("reports/releases/manifest.json", rebuild_args.manifest)
         self.assertEqual("sync-review", sync_args.action)
         self.assertEqual("generated", sync_args.sync_scope)
         self.assertEqual(["03_product_overview_placeholder.rst"], sync_args.page_file)
@@ -503,6 +582,63 @@ class TestBuildScript(unittest.TestCase):
         self.assertIn("--source", seen[2])
         self.assertIn("review", seen[2])
         self.assertEqual(str(build_cli.ROOT / "tools" / "check_docs.py"), seen[3][1])
+
+    def test_run_check_should_not_pre_sync_the_review_surface_by_default(self) -> None:
+        """`check` validates; it must not rewrite tracked review files.
+
+        The default source is "auto", which resolves to the review surface once a
+        review bundle exists on disk. That used to drag sync_review.py into every
+        run of the command AGENTS.md prescribes for pre-PR validation, rewriting
+        tracked files under docs/_review as a side effect of validating.
+        """
+        args = build_cli.parse_args(
+            ["check", "--config", "configs/config.us.yaml", "--model", "JE-1000F", "--region", "US"]
+        )
+        seen: list[list[str]] = []
+        with patch_module_attrs(
+            build_cli,
+            run_validate=lambda *argv, **kwargs: None,
+            run_checked=lambda cmd: seen.append(cmd),
+            _review_sync_target_args=lambda parsed_args: [parsed_args],
+        ):
+            build_cli.run_check(args)
+
+        self.assertEqual(
+            [],
+            [cmd for cmd in seen if str(build_cli.ROOT / "tools" / "sync_review.py") in cmd],
+        )
+        self.assertEqual(2, len(seen))
+        self.assertEqual(str(build_cli.ROOT / "tools" / "build_docs.py"), seen[0][1])
+        self.assertEqual(str(build_cli.ROOT / "tools" / "check_docs.py"), seen[1][1])
+
+    def test_run_check_should_pre_sync_when_refresh_review_is_requested(self) -> None:
+        """--refresh-review is the explicit opt-in for the params refresh."""
+        args = build_cli.parse_args(
+            [
+                "check",
+                "--config",
+                "configs/config.us.yaml",
+                "--model",
+                "JE-1000F",
+                "--region",
+                "US",
+                "--refresh-review",
+            ]
+        )
+        seen: list[list[str]] = []
+        with patch_module_attrs(
+            build_cli,
+            run_validate=lambda *argv, **kwargs: None,
+            run_checked=lambda cmd: seen.append(cmd),
+            _review_sync_target_args=lambda parsed_args: [parsed_args],
+        ):
+            build_cli.run_check(args)
+
+        self.assertEqual(
+            1,
+            len([cmd for cmd in seen if str(build_cli.ROOT / "tools" / "sync_review.py") in cmd]),
+        )
+        self.assertEqual(4, len(seen))
 
     def test_maybe_sync_review_before_build_should_skip_when_no_review_bundle_exists(self) -> None:
         args = build_cli.parse_args(["word", "--config", "configs/config.us.yaml", "--model", "JE-1000F", "--region", "US", "--source", "review"])
@@ -838,13 +974,82 @@ class TestBuildScript(unittest.TestCase):
         with self.assertRaisesRegex(RuntimeError, "publish requires --model and --region"):
             build_cli.run_publish(args)
 
+    def test_versioned_publish_should_enter_clean_commit_environment(self) -> None:
+        args = build_cli.parse_args(
+            [
+                "publish",
+                "--model",
+                "JE-1000F",
+                "--region",
+                "US",
+                "--version",
+                "1.0",
+            ]
+        )
+        run_checked = mock.Mock()
+        with mock.patch("tools.build_publish.deterministic_release_environment") as environment:
+            environment.return_value.__enter__.return_value = 1_785_513_828
+            build_cli._run_publish_impl(
+                args,
+                repo_root=build_cli.ROOT,
+                publish_tracked_root=lambda parsed_args: Path("/tracked"),
+                publish_report_dir=lambda parsed_args: Path("/reports"),
+                resolve_path_from_root=lambda value: Path(value),
+                run_check=mock.Mock(),
+                run_diff_report_with_paths=mock.Mock(),
+                run_checked=run_checked,
+                build_docs_command=lambda *argv, **kwargs: ["build"],
+                release_manifest_command=lambda parsed_args: ["manifest"],
+            )
+
+        environment.assert_called_once_with(repo_root=build_cli.ROOT, require_clean=True)
+        self.assertEqual(4, run_checked.call_count)
+
+    def test_publish_approved_target_should_render_frozen_review_asis(self) -> None:
+        args = build_cli.parse_args([
+            "publish",
+            "--config", "configs/config.us.yaml",
+            "--model", "JE-1000F",
+            "--region", "US",
+        ])
+        seen: list[list[str]] = []
+        original_validate = build_cli.run_validate
+        original_run_checked = build_cli.run_checked
+        original_asset_gate = build_cli._publish_asset_gate
+        try:
+            build_cli.run_validate = lambda *args, **kwargs: None  # type: ignore[assignment]
+            build_cli.run_checked = lambda cmd: seen.append(cmd)  # type: ignore[assignment]
+            build_cli._publish_asset_gate = lambda parsed_args: None  # type: ignore[assignment]
+            build_cli.run_publish(args)
+        finally:
+            build_cli.run_validate = original_validate  # type: ignore[assignment]
+            build_cli.run_checked = original_run_checked  # type: ignore[assignment]
+            build_cli._publish_asset_gate = original_asset_gate  # type: ignore[assignment]
+
+        self.assertFalse(any(Path(command[1]).name == "sync_review.py" for command in seen))
+        build_commands = [
+            command
+            for command in seen
+            if len(command) > 1 and Path(command[1]).name == "build_docs.py"
+        ]
+        self.assertEqual(4, len(build_commands))
+        for command in build_commands:
+            source_index = command.index("--source")
+            self.assertEqual("review-asis", command[source_index + 1])
+
     def test_publish_should_run_check_diff_report_and_word_from_review(self) -> None:
         args = build_cli.parse_args(["publish", "--config", "configs/config.ja.yaml", "--model", "JE-1000F", "--region", "JP"])
         seen: list[list[str]] = []
         original_validate = build_cli.run_validate
         original_run_checked = build_cli.run_checked
         original_review_sync_targets = build_cli._review_sync_target_args
+        original_asset_gate = build_cli._publish_asset_gate
+        gate_at: list[int] = []
         try:
+            # The real gate reads a prepared bundle; these tests stub the
+            # subprocesses, so record only when it runs relative to the
+            # commands already issued.
+            build_cli._publish_asset_gate = lambda parsed_args: gate_at.append(len(seen))  # type: ignore[assignment]
             build_cli.run_validate = lambda *args, **kwargs: None  # type: ignore[assignment]
             build_cli.run_checked = lambda cmd: seen.append(cmd)  # type: ignore[assignment]
             build_cli._review_sync_target_args = lambda parsed_args: [parsed_args]  # type: ignore[assignment]
@@ -853,6 +1058,7 @@ class TestBuildScript(unittest.TestCase):
             build_cli.run_validate = original_validate  # type: ignore[assignment]
             build_cli.run_checked = original_run_checked  # type: ignore[assignment]
             build_cli._review_sync_target_args = original_review_sync_targets  # type: ignore[assignment]
+            build_cli._publish_asset_gate = original_asset_gate  # type: ignore[assignment]
 
         self.assertEqual(9, len(seen))
         self.assertEqual(str(build_cli.ROOT / "tools" / "build_docs.py"), seen[0][1])
@@ -898,6 +1104,11 @@ class TestBuildScript(unittest.TestCase):
         self.assertIn("--region", seen[8])
         self.assertIn("JP", seen[8])
 
+        # The asset gate runs after the last prepare and before the manifest,
+        # so a non-approved asset stops the release instead of being recorded
+        # in its lineage.
+        self.assertEqual([8], gate_at)
+
     def test_release_manifest_command_should_require_explicit_target(self) -> None:
         args = build_cli.parse_args(["release-manifest"])
 
@@ -912,6 +1123,40 @@ class TestBuildScript(unittest.TestCase):
         self.assertIn("--data-root", cmd)
         self.assertIn("data/phase2", cmd)
 
+    def test_release_manifest_command_should_forward_release_version(self) -> None:
+        args = build_cli.parse_args(
+            [
+                "release-manifest",
+                "--model",
+                "JE-1000F",
+                "--region",
+                "JP",
+                "--version",
+                "1.2",
+            ]
+        )
+
+        cmd = build_cli.release_manifest_command(args)
+
+        self.assertEqual("1.2", cmd[cmd.index("--version") + 1])
+
+    def test_release_manifest_command_should_preserve_explicit_empty_version(self) -> None:
+        args = build_cli.parse_args(
+            [
+                "release-manifest",
+                "--model",
+                "JE-1000F",
+                "--region",
+                "JP",
+                "--version",
+                "",
+            ]
+        )
+
+        cmd = build_cli.release_manifest_command(args)
+
+        self.assertEqual("", cmd[cmd.index("--version") + 1])
+
     def test_release_manifest_command_should_forward_staging_roots(self) -> None:
         args = build_cli.parse_args(
             ["release-manifest", "--model", "JE-1000F", "--region", "JP", "--staging-root", ".tmp/staging"]
@@ -923,6 +1168,31 @@ class TestBuildScript(unittest.TestCase):
         self.assertIn(str(build_cli.ROOT / ".tmp" / "staging" / "docs" / "_build"), cmd)
         self.assertIn("--releases-root", cmd)
         self.assertIn(str(build_cli.ROOT / ".tmp" / "staging" / "reports" / "releases"), cmd)
+
+    def test_release_rebuild_command_should_require_and_forward_manifest(self) -> None:
+        missing = build_cli.parse_args(["release-rebuild-verify"])
+        with self.assertRaisesRegex(RuntimeError, "requires --manifest"):
+            build_cli.release_rebuild_command(missing)
+
+        args = build_cli.parse_args(
+            [
+                "release-rebuild-verify",
+                "--manifest",
+                "reports/releases/manifest.json",
+                "--report",
+                "reports/releases/verification.json",
+            ]
+        )
+        cmd = build_cli.release_rebuild_command(args)
+
+        self.assertEqual(
+            str(build_cli.ROOT / "reports" / "releases" / "manifest.json"),
+            cmd[cmd.index("--manifest") + 1],
+        )
+        self.assertEqual(
+            str(build_cli.ROOT / "reports" / "releases" / "verification.json"),
+            cmd[cmd.index("--report") + 1],
+        )
 
     def test_release_manifest_command_should_redirect_outputs_into_staging_root(self) -> None:
         args = build_cli.parse_args(
@@ -951,7 +1221,13 @@ class TestBuildScript(unittest.TestCase):
         original_run_checked = build_cli.run_checked
         original_load_config = build_cli.load_config
         original_review_sync_targets = build_cli._review_sync_target_args
+        original_asset_gate = build_cli._publish_asset_gate
+        gate_at: list[int] = []
         try:
+            # The real gate reads a prepared bundle; these tests stub the
+            # subprocesses, so record only when it runs relative to the
+            # commands already issued.
+            build_cli._publish_asset_gate = lambda parsed_args: gate_at.append(len(seen))  # type: ignore[assignment]
             build_cli.run_validate = lambda *args, **kwargs: None  # type: ignore[assignment]
             build_cli.run_checked = lambda cmd: seen.append(cmd)  # type: ignore[assignment]
             build_cli._review_sync_target_args = lambda parsed_args: [parsed_args]  # type: ignore[assignment]
@@ -967,6 +1243,7 @@ class TestBuildScript(unittest.TestCase):
             build_cli.run_checked = original_run_checked  # type: ignore[assignment]
             build_cli.load_config = original_load_config  # type: ignore[assignment]
             build_cli._review_sync_target_args = original_review_sync_targets  # type: ignore[assignment]
+            build_cli._publish_asset_gate = original_asset_gate  # type: ignore[assignment]
 
         self.assertEqual(9, len(seen))
         self.assertEqual(str(build_cli.ROOT / "tools" / "diff_report.py"), seen[4][1])
@@ -982,7 +1259,13 @@ class TestBuildScript(unittest.TestCase):
         original_validate = build_cli.run_validate
         original_run_checked = build_cli.run_checked
         original_review_sync_targets = build_cli._review_sync_target_args
+        original_asset_gate = build_cli._publish_asset_gate
+        gate_at: list[int] = []
         try:
+            # The real gate reads a prepared bundle; these tests stub the
+            # subprocesses, so record only when it runs relative to the
+            # commands already issued.
+            build_cli._publish_asset_gate = lambda parsed_args: gate_at.append(len(seen))  # type: ignore[assignment]
             build_cli.run_validate = lambda *argv, **kwargs: None  # type: ignore[assignment]
             build_cli.run_checked = lambda cmd: seen.append(cmd)  # type: ignore[assignment]
             build_cli._review_sync_target_args = lambda parsed_args: [parsed_args]  # type: ignore[assignment]
@@ -991,6 +1274,7 @@ class TestBuildScript(unittest.TestCase):
             build_cli.run_validate = original_validate  # type: ignore[assignment]
             build_cli.run_checked = original_run_checked  # type: ignore[assignment]
             build_cli._review_sync_target_args = original_review_sync_targets  # type: ignore[assignment]
+            build_cli._publish_asset_gate = original_asset_gate  # type: ignore[assignment]
 
         self.assertIn(str(build_cli.ROOT / ".tmp" / "staging" / "docs" / "_build"), seen[0])
         self.assertIn(str(build_cli.ROOT / ".tmp" / "staging" / "docs" / "_build"), seen[2])
@@ -1135,3 +1419,25 @@ class TestBuildScript(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class StagingActionGuardTests(unittest.TestCase):
+    def test_idml_refuses_staging_root(self) -> None:
+        # With staging active the rst prepare writes into the staging root while
+        # the exporter reads the repo bundle — refuse instead of silently
+        # exporting stale content (same contract as `review`).
+        args = build_cli.parse_args(["idml", "--staging-root", ".tmp/staging"])
+        with self.assertRaisesRegex(RuntimeError, "idml does not support --staging-root"):
+            build_cli.ensure_supported_staging_action(args)
+
+    def test_idml_without_staging_passes_the_guard(self) -> None:
+        args = build_cli.parse_args(["idml"])
+        build_cli.ensure_supported_staging_action(args)  # must not raise
+
+    def test_idml_mode_defaults_to_production(self) -> None:
+        args = build_cli.parse_args(["idml"])
+        self.assertEqual("production", args.idml_mode)
+
+    def test_idml_mode_accepts_flow_and_both(self) -> None:
+        self.assertEqual("flow", build_cli.parse_args(["idml", "--idml-mode", "flow"]).idml_mode)
+        self.assertEqual("both", build_cli.parse_args(["idml", "--idml-mode", "both"]).idml_mode)

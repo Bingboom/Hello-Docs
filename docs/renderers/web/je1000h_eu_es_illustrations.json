@@ -1,0 +1,423 @@
+{
+  "schema_version": "web-illustrations/v1",
+  "model": "JE-1000H",
+  "region": "EU",
+  "language": "es",
+  "source_pdf_sha256": "07e9ac4b9faabd0852f61702df06f2837caa952c2fa28151b599ad930b1c0bcc",
+  "source_pdf_name": "Jackery Explorer 1000 Plus User Manual (JE-1000H) EUUK V2.0-2026-08-03.pdf",
+  "recipe": "data/asset_recipes/manual_je1000h_eu_web.json",
+  "illustrations": [
+    {
+      "replaces": [
+        "main_unit1.png"
+      ],
+      "path": "assets/je1000h_eu_es/inbox_unit.png",
+      "sha256": "bf953f746e50e323129be8ab60ef86f8478d8cbf174790f0949ec13b0de4861e",
+      "source_page": 41,
+      "bbox_pt": [
+        40,
+        310,
+        112,
+        394
+      ],
+      "recipe": "data/asset_recipes/manual_je1000h_eu_web.json"
+    },
+    {
+      "replaces": [
+        "ac_charging_cable.png"
+      ],
+      "path": "assets/je1000h_eu_es/inbox_cable.png",
+      "sha256": "5ad0104acd6e95438c4c768b711c267f363466cec29459b26b1432979b155dd5",
+      "source_page": 41,
+      "bbox_pt": [
+        150,
+        315,
+        210,
+        394
+      ],
+      "recipe": "data/asset_recipes/manual_je1000h_eu_web.json"
+    },
+    {
+      "replaces": [
+        "manual_icon1.png"
+      ],
+      "path": "assets/je1000h_eu_es/inbox_documents.png",
+      "sha256": "0277f9b8a1a0fe8daf81c2a23e83dc5876b9cf6ad700ab2abdf98f1fc75f1306",
+      "source_page": 41,
+      "bbox_pt": [
+        260,
+        320,
+        315,
+        394
+      ],
+      "recipe": "data/asset_recipes/manual_je1000h_eu_web.json"
+    },
+    {
+      "replaces": [
+        "front_product.jpg"
+      ],
+      "path": "assets/je1000h_eu_es/overview_front.png",
+      "sha256": "9f7232d8cfa050641537d2b861d1ce0ae51fb01cf1bcbab11d908153c4d39a87",
+      "source_page": 42,
+      "bbox_pt": [
+        25.9,
+        68,
+        342,
+        245
+      ],
+      "recipe": "data/asset_recipes/manual_je1000h_eu_web.json",
+      "covered_annotations": [
+        {
+          "selector": "#vista-frontal > table",
+          "text": "Botón de encendido principal LCD Puerto DC 12V 12 V⎓10 A máx. Botón de luz LED Botón de energía CC/USB Luz LED Salida USB-C 30W 30 W máx., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓2,5 A, 15 V⎓2 A, 20 V⎓1,5 A Botón de energía CA 1/2 Salida USB-C 140W 140 W máx., 5 V⎓3 A, 9 V⎓3 A, 12 V⎓3 A, 15 V⎓3 A, 20 V⎓5 A, 28 V⎓5 A Salida USB-A 18W 18 W máx., 5-6 V⎓3 A, 6-9 V⎓2 A, 9-12 V⎓1,5 A Salidas de CA 230 V~ 50 Hz, 7,83 A máx., 1800 W nominales"
+        },
+        {
+          "selector": "#vista-frontal > table",
+          "text": "Salida Total 1800 W de potencia nominal, 3600 W de pico de sobrecarga"
+        }
+      ]
+    },
+    {
+      "replaces": [
+        "right_side_ports.png"
+      ],
+      "path": "assets/je1000h_eu_es/overview_side.png",
+      "sha256": "eea525c4824ba10bbd91e43544343bedc308d4c4fa665843c94706e8c88b766b",
+      "source_page": 42,
+      "bbox_pt": [
+        25.6,
+        269,
+        342,
+        493
+      ],
+      "whiteout_bbox_pt": [
+        28,
+        369,
+        139.3,
+        389
+      ],
+      "recipe": "data/asset_recipes/manual_je1000h_eu_web.json",
+      "covered_annotations": [
+        {
+          "selector": "#vista-lateral-derecha > table",
+          "text": "Asa Entrada de CA 220 V-240 V~ 50 Hz, 10 A máx. Entrada de CC (2 x Puertos DC8020) PV: 16-60 V⎓12 A, Doble a 21 A máx. / 400 W máx. Auto: 11-16 V⎓8 A máx., Doble a 8 A máx."
+        }
+      ]
+    },
+    {
+      "replaces": [
+        "lcd_map.png"
+      ],
+      "path": "assets/je1000h_eu_es/lcd_map.png",
+      "sha256": "7a83287d5ce1e62b75586bb342c5b4757da82c12011d280f90956c1fba3c2d25",
+      "source_page": 43,
+      "bbox_pt": [
+        34,
+        55,
+        325,
+        218.6
+      ],
+      "recipe": "data/asset_recipes/manual_je1000h_eu_web.json"
+    },
+    {
+      "replaces": [
+        "op_main_power.png"
+      ],
+      "path": "assets/je1000h_eu_es/operation_power.png",
+      "sha256": "53115cda877e31feb83ecc7cb74663d5c8af77410a7879233fb09b3def6387e0",
+      "source_page": 45,
+      "bbox_pt": [
+        23.5,
+        71,
+        342,
+        233
+      ],
+      "recipe": "data/asset_recipes/manual_je1000h_eu_web.json",
+      "covered_annotations": [
+        {
+          "selector": "#encendido-apagado > .line-block",
+          "text": "Encendido Presione una vez Apagado Mantenga presionado durante más de 3 segundos"
+        },
+        {
+          "selector": "#encendido-apagado > .line-block",
+          "text": "Tiempo de espera predeterminado: 2 horas. El producto se apagará automáticamente después de 2 horas de inactividad, sin carga ni descarga. *El tiempo de espera puede configurarse en la aplicación Jackery. Cuando el modo de ahorro de energía está activado, el producto se apagará automáticamente después de 12 horas si la salida de CA o la salida CC/USB está activada, pero el producto no está cargando ni descargando."
+        }
+      ]
+    },
+    {
+      "replaces": [
+        "op_ac_output.png"
+      ],
+      "path": "assets/je1000h_eu_es/operation_ac.png",
+      "sha256": "32a9e4f88ca2e3d2f2c15cbd43afe8ad3ffa5a315f2644c5d907d6937821f731",
+      "source_page": 45,
+      "bbox_pt": [
+        27,
+        249,
+        342,
+        495
+      ],
+      "recipe": "data/asset_recipes/manual_je1000h_eu_web.json",
+      "covered_annotations": [
+        {
+          "selector": "#encender-apagar-salida-ca > p",
+          "text": "Requisito previo: el producto está encendido."
+        },
+        {
+          "selector": "#encender-apagar-salida-ca > .line-block",
+          "text": "Encendido Presione una vez Apagado Presione una vez"
+        }
+      ]
+    },
+    {
+      "replaces": [
+        "op_dc_usb_output.png"
+      ],
+      "path": "assets/je1000h_eu_es/operation_dc.png",
+      "sha256": "d1d333b66d900cfaeb4500569d97a60d3bfd162d22d3bd540639657ef76edbba",
+      "source_page": 46,
+      "bbox_pt": [
+        27,
+        41,
+        342,
+        212
+      ],
+      "recipe": "data/asset_recipes/manual_je1000h_eu_web.json",
+      "covered_annotations": [
+        {
+          "selector": "#encender-apagar-salida-cc-12v-usb > p",
+          "text": "Requisito previo: el producto está encendido."
+        },
+        {
+          "selector": "#encender-apagar-salida-cc-12v-usb > .line-block",
+          "text": "Encendido Presione una vez Apagado Presione una vez"
+        }
+      ]
+    },
+    {
+      "replaces": [
+        "led_light.png"
+      ],
+      "path": "assets/je1000h_eu_es/operation_led.png",
+      "sha256": "331da20821914192b87374ba99e78ddd31f93a374a6909afdb0643b6d3a6c90a",
+      "source_page": 46,
+      "bbox_pt": [
+        27,
+        369.4,
+        342,
+        498
+      ],
+      "recipe": "data/asset_recipes/manual_je1000h_eu_web.json",
+      "covered_annotations": [
+        {
+          "selector": "#encender-apagar-luz-led > p",
+          "text": "La luz LED tiene dos modos: modo de luz y modo SOS. En cualquier modo, mantenga presionado el botón de luz LED para apagarla."
+        },
+        {
+          "selector": "#encender-apagar-luz-led > .line-block",
+          "text": "Presione una vez el botón de la luz LED para encenderla. Presiónelo nuevamente para cambiar al modo SOS. Presiónelo una tercera vez para apagar la luz."
+        }
+      ]
+    },
+    {
+      "replaces": [
+        "lcd_mode.png"
+      ],
+      "path": "assets/je1000h_eu_es/operation_lcd.png",
+      "sha256": "308fa25f0968c416b27103966c6d13b9a6518184fce83824c751c2278f4f3953",
+      "source_page": 47,
+      "bbox_pt": [
+        28,
+        40,
+        180,
+        150
+      ],
+      "recipe": "data/asset_recipes/manual_je1000h_eu_web.json"
+    },
+    {
+      "replaces": [
+        "energy_saving.png"
+      ],
+      "path": "assets/je1000h_eu_es/operation_energy.png",
+      "sha256": "876dca1d76f836bd4b8689ec4370e46bcf11dff67e88f1645aa26db372e5241e",
+      "source_page": 47,
+      "bbox_pt": [
+        27,
+        229,
+        342,
+        374
+      ],
+      "recipe": "data/asset_recipes/manual_je1000h_eu_web.json",
+      "covered_annotations": [
+        {
+          "selector": "#modo-de-ahorro-de-energia > p",
+          "text": "Para desactivar el modo de ahorro de energía, mantenga pulsados simultáneamente el botón de energía CA 1/2 y el botón de encendido principal durante más de 3 segundos. Una vez desactivado el modo de ahorro de energía, el icono dejará de mostrarse en la pantalla LCD y el producto no apagará automáticamente la salida de CA o CC/USB."
+        },
+        {
+          "selector": "#modo-de-ahorro-de-energia > .line-block",
+          "text": "Mantenga pulsados ambos botones durante 3 segundos."
+        }
+      ]
+    },
+    {
+      "replaces": [
+        "ups_mode.png"
+      ],
+      "path": "assets/je1000h_eu_es/ups.png",
+      "sha256": "77258b7285467f9fb2916283f10b5ad255f02a6a37f668d8cc5817b3f4d6d1a1",
+      "source_page": 48,
+      "bbox_pt": [
+        28,
+        257,
+        342,
+        496
+      ],
+      "recipe": "data/asset_recipes/manual_je1000h_eu_web.json"
+    },
+    {
+      "replaces": [
+        "ac_wall.png"
+      ],
+      "path": "assets/je1000h_eu_es/charging_ac.png",
+      "sha256": "02c90606932384f18f7134239bfeb4586f354316965fe21223213ca88b47347c",
+      "source_page": 50,
+      "bbox_pt": [
+        27,
+        251.8,
+        342,
+        362
+      ],
+      "recipe": "data/asset_recipes/manual_je1000h_eu_web.json",
+      "covered_annotations": [
+        {
+          "selector": "#carga-mediante-una-toma-de-corriente-de-pared-alterna > p",
+          "text": "Conecte el cable de carga de CA al puerto de entrada de CA del producto y a una toma de corriente."
+        }
+      ]
+    },
+    {
+      "replaces": [
+        "solar_direct.png"
+      ],
+      "path": "assets/je1000h_eu_es/charging_solar.png",
+      "sha256": "19d75944909b5b6b9ed160ae9998a3a27a362790218af5ffb8df11c448cd158f",
+      "source_page": 51,
+      "bbox_pt": [
+        28,
+        31,
+        342,
+        175
+      ],
+      "recipe": "data/asset_recipes/manual_je1000h_eu_web.json"
+    },
+    {
+      "replaces": [
+        "solar_adapter.png"
+      ],
+      "path": "assets/je1000h_eu_es/charging_solar_adapter.png",
+      "sha256": "e1e9d26792312f1ed8d6b5db4f2ef2c96e5289b8e502d896a02b3a945f0d5854",
+      "source_page": 51,
+      "bbox_pt": [
+        150,
+        31,
+        342,
+        175
+      ],
+      "recipe": "data/asset_recipes/manual_je1000h_eu_web.json"
+    },
+    {
+      "replaces": [
+        "car_charge.png"
+      ],
+      "path": "assets/je1000h_eu_es/charging_car.png",
+      "sha256": "037e3213bea98297fd0381430797e377e0b0e7cc300389b032ec57563e975996",
+      "source_page": 51,
+      "bbox_pt": [
+        28,
+        358,
+        342,
+        494
+      ],
+      "recipe": "data/asset_recipes/manual_je1000h_eu_web.json",
+      "covered_annotations": [
+        {
+          "selector": "#carga-con-un-cargador-para-vehiculo-se-vende-por-separado > .line-block",
+          "text": "Vehículo ※El cable de carga para vehículo se vende por separado."
+        }
+      ]
+    },
+    {
+      "replaces": [
+        "download.png"
+      ],
+      "path": "assets/je1000h_eu_es/app_download.png",
+      "sha256": "d7dc7873fbfef3ce196a90a389ba56fb8e40daa825a01d72c25a373fb09733ca",
+      "source_page": 55,
+      "bbox_pt": [
+        40.3,
+        70,
+        340,
+        154.6
+      ],
+      "recipe": "data/asset_recipes/manual_je1000h_eu_web.json",
+      "covered_annotations": [
+        {
+          "selector": "#descargar-la-aplicacion-e-iniciar-sesion > p",
+          "text": "Buscar \"Jackery\" en Google Play o en la App Store para instalar la aplicación. Después, podrá registrarse e iniciar sesión. Alternativamente, escanee el código QR a continuación para descargar e instalar la app."
+        }
+      ]
+    },
+    {
+      "replaces": [
+        "add_device.png"
+      ],
+      "path": "assets/je1000h_eu_es/app_control_panel.png",
+      "sha256": "c8be173364381b26386ac1bdd34f098324ee8ff55d59f76e3beaa0d5c9084f91",
+      "source_page": 55,
+      "bbox_pt": [
+        40,
+        400,
+        340,
+        484
+      ],
+      "reference_id": "app-add-device",
+      "consume_before_presentation": true,
+      "recipe": "data/asset_recipes/manual_je1000h_eu_web.json",
+      "covered_annotations": [
+        {
+          "selector": "#anadir-un-dispositivo > .line-block",
+          "text": "Botón de encendido principal Botón de energía CC/USB Botón de energía CA 1/2"
+        }
+      ]
+    },
+    {
+      "replaces": [
+        "connect_result.png"
+      ],
+      "path": "assets/je1000h_eu_es/app_connect_result.png",
+      "sha256": "8e58d9aaa612d35d7327acfe5c4754757b4d8d94a1d65c4784ba425c862b094e",
+      "source_page": 56,
+      "bbox_pt": [
+        48,
+        156.6,
+        320,
+        293
+      ],
+      "recipe": "data/asset_recipes/manual_je1000h_eu_web.json"
+    },
+    {
+      "replaces": [
+        "battery_pack.png"
+      ],
+      "path": "assets/je1000h_eu_es/battery_pack.png",
+      "sha256": "88abcc2dc08735411210bf3cbaf5c49d3d71032029a74a9383b2dcb4ff4dfc5a",
+      "source_page": 49,
+      "bbox_pt": [
+        28,
+        203,
+        342,
+        410
+      ]
+    }
+  ]
+}

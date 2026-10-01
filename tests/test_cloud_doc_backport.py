@@ -1306,6 +1306,86 @@ class RunReviewBranchGuardTests(unittest.TestCase):
         self.assertNotIn("refusing whole-doc --write", err.getvalue())
 
 
+class RunReviewBranchPageGateTests(unittest.TestCase):
+    """A per-page worker FAIL that is a rebuild+rediff gate failure (corrupted
+    apply) must exclude the page from the backport PR — parity with the baseline
+    path's refusal. A residual-only FAIL (partial apply, gate OK) still ships."""
+
+    def _gate_passed(self, payload) -> bool:
+        from tools.cloud_doc_backport_orchestration import _page_gate_passed
+
+        with tempfile.TemporaryDirectory() as td:
+            page_out = Path(td)
+            if payload is not None:
+                (page_out / "cloud_doc_backport_verify.json").write_text(
+                    json.dumps(payload), encoding="utf-8"
+                )
+            return _page_gate_passed(page_out)
+
+    def test_page_gate_passed_reads_verify_verdict(self) -> None:
+        self.assertTrue(self._gate_passed({"rebuild_rediff": {"passed": True}}))
+        self.assertFalse(self._gate_passed({"rebuild_rediff": {"passed": False}}))
+
+    def test_page_gate_fails_closed_without_verify_report(self) -> None:
+        self.assertFalse(self._gate_passed(None))
+        self.assertFalse(self._gate_passed({"summary": {}}))
+
+    def _run_page_write(self, tmp: str, *, gate_passed: bool) -> dict:
+        import contextlib
+        import io
+
+        page_dir = Path(tmp) / "docs/_review/JE-1000F/US/page"
+        page_dir.mkdir(parents=True, exist_ok=True)
+        (page_dir / "00_preface.rst").write_text("body\n", encoding="utf-8")
+        out_dir = Path(tmp) / "out"
+        page_out = out_dir / "00_preface"
+        page_out.mkdir(parents=True)
+        (page_out / "cloud_doc_backport_report.json").write_text(
+            json.dumps({"section_selection": {"applied": True}, "summary": {"total_deltas": 1}}),
+            encoding="utf-8",
+        )
+        (page_out / "cloud_doc_backport_verify.json").write_text(
+            json.dumps({"rebuild_rediff": {"passed": gate_passed}}), encoding="utf-8"
+        )
+        args = SimpleNamespace(
+            worktrees_root=None, lark_cli="lark-cli", identity="user",
+            doc_name="manual_je1000f_us_en_1.0",
+            cloud_doc="https://test-degwga5x6ex8.feishu.cn/wiki/tok",
+            remote="origin", git_bin="git", full_checkout=False,
+            seed=False, reseed=False, push=False, write=True,
+            page="00_preface.rst", run_id="gate-test", out=str(out_dir),
+            data_root=None, lang=None,
+        )
+        resolved = {"git_ref": "review/JE-1000F-US", "review_dir": "docs/_review/JE-1000F/US", "pr_url": None}
+        worker = SimpleNamespace(returncode=1, stdout="", stderr="")
+        buf, err = io.StringIO(), io.StringIO()
+        with patch("tools.cloud_doc_backport_orchestration._fetch_build_table_records", return_value=[]), \
+             patch("tools.cloud_doc_backport_orchestration.match_review_branch_by_name", return_value=resolved), \
+             patch("tools.cloud_doc_backport_orchestration.ensure_review_worktree", return_value=tmp), \
+             patch("tools.cloud_doc_backport_orchestration.doc_token", return_value="tok"), \
+             patch("tools.cloud_doc_backport_orchestration.fetch_doc_text", return_value="doc text"), \
+             patch("tools.cloud_doc_backport_orchestration.subprocess.run", return_value=worker), \
+             contextlib.redirect_stdout(buf), contextlib.redirect_stderr(err):
+            rc = _run_review_branch(args)
+        payload = json.loads(buf.getvalue().strip().splitlines()[-1])
+        payload["_rc"] = rc
+        payload["_stderr"] = err.getvalue()
+        return payload
+
+    def test_gate_failed_page_is_excluded_and_run_fails(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            payload = self._run_page_write(tmp, gate_passed=False)
+        self.assertEqual(payload["_rc"], 1)
+        self.assertEqual(payload["changed"], [])
+        self.assertIn("GATE FAIL", payload["_stderr"])
+
+    def test_residual_fail_with_clean_gate_still_ships_the_page(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            payload = self._run_page_write(tmp, gate_passed=True)
+        self.assertEqual(payload["changed"], ["docs/_review/JE-1000F/US/page/00_preface.rst"])
+        self.assertNotIn("GATE FAIL", payload["_stderr"])
+
+
 class RunReviewBranchFamilyScopeTests(unittest.TestCase):
     """F3 / Class T: run-review-branch auto-resolves the page_shared/<lang> shared
     templates as family-scope siblings, so a reviewer's shared-template prose delta is
@@ -1659,6 +1739,100 @@ class BaselineDiffTests(unittest.TestCase):
             self.assertEqual(rc, 0)
             # the Class R edit landed in the page RST (guarded apply matched the prose)
             self.assertIn("FR IMPORTANT test", preface.read_text(encoding="utf-8"))
+
+    def test_baseline_write_abstains_on_cross_page_ambiguous_delta(self) -> None:
+        # The reviewer edited ONE instance of a boilerplate paragraph in the cloud
+        # doc. Two _review pages contain the same paragraph; applying the delta to
+        # both would write the edit into a page the reviewer never touched.
+        import contextlib
+        import io
+
+        with tempfile.TemporaryDirectory() as tmp:
+            page_dir = Path(tmp) / "docs/_review/JE-1000F/US/page"
+            page_dir.mkdir(parents=True)
+            shared = "Keep the device away from water.\n"
+            page_a = page_dir / "01_safety.rst"
+            page_b = page_dir / "09_storage.rst"
+            page_a.write_text(shared, encoding="utf-8")
+            page_b.write_text(shared, encoding="utf-8")
+            out_dir = Path(tmp) / "out"
+            args = SimpleNamespace(
+                cloud_doc="https://example.feishu.cn/wiki/doc-xpage", run_id="xpage",
+                out=str(out_dir), lark_cli="lark-cli", write=True, push=False,
+                doc_name="manual_je1000f_us_en_1.0", lang=None, data_root=None,
+                git_bin="git", remote="origin",
+            )
+            edited = "Keep the device far away from water.\n"
+            err = io.StringIO()
+            with patch("tools.cloud_doc_backport_orchestration.fetch_doc_text", return_value=edited), \
+                 contextlib.redirect_stderr(err):
+                rc = _run_review_branch_baseline(
+                    args, resolved={"git_ref": "review/JE-1000F-US", "pr_url": None},
+                    worktree=tmp, review_dir="docs/_review/JE-1000F/US", doc_tok="doc-xpage",
+                    baseline_text=shared,
+                )
+            self.assertEqual(rc, 0)
+            self.assertEqual(page_a.read_text(encoding="utf-8"), shared)
+            self.assertEqual(page_b.read_text(encoding="utf-8"), shared)
+            self.assertIn("cross-page ambiguous", err.getvalue())
+
+    def test_baseline_write_run_stamps_applied_page_into_ledger(self) -> None:
+        # The ledger row must carry the _review page the delta landed on plus the
+        # doc-level lang — a source-less row can never be reconciled (it reads as
+        # source_missing forever) and a lang-less row can never emit TM candidates.
+        # Fresh rows stay pending: their PR has not merged yet.
+        with tempfile.TemporaryDirectory() as tmp:
+            page_dir = Path(tmp) / "docs/_review/JE-1000F/US/page"
+            page_dir.mkdir(parents=True)
+            preface = page_dir / "00_preface.rst"
+            preface.write_text("**FR IMPORTANT**\n\nKeep this manual handy.\n", encoding="utf-8")
+            ledger = Path(tmp) / "ledger.jsonl"
+            out_dir = Path(tmp) / "out"
+            args = SimpleNamespace(
+                cloud_doc="https://example.feishu.cn/wiki/doc-ledger", run_id="ledger-attrib",
+                out=str(out_dir), lark_cli="lark-cli", write=True, push=False,
+                doc_name="manual_je1000f_us_en_1.0", lang=None, data_root=None,
+                git_bin="git", remote="origin",
+            )
+            edited = "**FR IMPORTANT test**\n\nKeep this manual handy.\n"
+            with patch("tools.cloud_doc_backport_orchestration.fetch_doc_text", return_value=edited), \
+                 patch.dict(os.environ, {_LEDGER_ENV: str(ledger)}):
+                rc = _run_review_branch_baseline(
+                    args, resolved={"git_ref": "review/JE-1000F-US", "pr_url": None},
+                    worktree=tmp, review_dir="docs/_review/JE-1000F/US", doc_tok="doc-ledger",
+                    baseline_text="**FR IMPORTANT**\n\nKeep this manual handy.\n",
+                )
+            self.assertEqual(rc, 0)
+            from tools.revision_ledger import load_ledger
+
+            rows = [r for r in load_ledger(ledger) if r["route_class"] == "repo_review_text"]
+            self.assertTrue(rows)
+            self.assertEqual(rows[0]["source_path"], "docs/_review/JE-1000F/US/page/00_preface.rst")
+            self.assertEqual(rows[0]["model"], "JE-1000F")
+            self.assertEqual(rows[0]["region"], "US")
+            self.assertEqual(rows[0]["lang"], "en")
+            self.assertEqual(rows[0]["final_status"], "pending")
+
+    def test_baseline_dry_run_does_not_ingest_into_ledger(self) -> None:
+        # Dry-run rows could never gain a source path, and the row_key dedup would
+        # then block the enriched write-run rows — so only write runs ingest.
+        with tempfile.TemporaryDirectory() as tmp:
+            ledger = Path(tmp) / "ledger.jsonl"
+            out_dir = Path(tmp) / "out"
+            args = SimpleNamespace(
+                cloud_doc="https://example.feishu.cn/wiki/doc-dry", run_id="ledger-dry",
+                out=str(out_dir), lark_cli="lark-cli", write=False, push=False,
+                doc_name="manual_je1000f_us_en_1.0", lang=None, data_root=None,
+            )
+            with patch("tools.cloud_doc_backport_orchestration.fetch_doc_text", return_value="edited text\n"), \
+                 patch.dict(os.environ, {_LEDGER_ENV: str(ledger)}):
+                rc = _run_review_branch_baseline(
+                    args, resolved={"git_ref": "review/JE-1000F-US", "pr_url": None},
+                    worktree=tmp, review_dir="docs/_review/JE-1000F/US", doc_tok="doc-dry",
+                    baseline_text="baseline text\n",
+                )
+            self.assertEqual(rc, 0)
+            self.assertFalse(ledger.exists())
 
     def test_seed_baseline_cursor_advances_on_full_apply(self) -> None:
         # design §6: on a FULL apply (all deltas pure Class R, all applied) against a
@@ -2147,6 +2321,101 @@ class ClassRBlockApplyTests(unittest.TestCase):
             self.assertIn("“12H”", out)  # curly quotes preserved (not flattened to ")
 
 
+class VerifyDeletionAccuracyTests(unittest.TestCase):
+    """A delete's literal 0-count only proves deletion when old_text was literally
+    present; a soft-wrapped paragraph never byte-matches, so a skipped delete must
+    not read as resolved."""
+
+    def _delete_delta(self, *, old_in_baseline: bool) -> dict:
+        return {
+            "route_class": "repo_review_text",
+            "change_type": "delete",
+            "old_text": "Remove me fully.",
+            "new_text": "",
+            "old_normalized": "Remove me fully.",
+            "location": {"kind": "paragraph"},
+            "source_evidence": {"old_text_in_baseline": old_in_baseline},
+        }
+
+    def test_soft_wrapped_delete_not_applied_reads_as_pending(self) -> None:
+        from tools.cloud_doc_backport_reports import _verify_delta
+
+        # old_text never byte-matched (soft-wrapped across two lines), and the
+        # block is still present -> the delete did NOT happen.
+        current = "Remove me\nfully.\n"
+        result = _verify_delta(1, self._delete_delta(old_in_baseline=False), current)
+        self.assertEqual(result["old_matches"], 0)  # literal count is meaningless here
+        self.assertEqual(result["status"], "pending")
+
+    def test_soft_wrapped_delete_actually_gone_reads_as_resolved(self) -> None:
+        from tools.cloud_doc_backport_reports import _verify_delta
+
+        result = _verify_delta(1, self._delete_delta(old_in_baseline=False), "Other content.\n")
+        self.assertEqual(result["status"], "resolved")
+
+    def test_literal_delete_gone_still_resolves(self) -> None:
+        from tools.cloud_doc_backport_reports import _verify_delta
+
+        # old_text WAS literally present (old_text_in_baseline True) and is now
+        # gone -> resolved, the unchanged happy path.
+        result = _verify_delta(1, self._delete_delta(old_in_baseline=True), "Other content.\n")
+        self.assertEqual(result["status"], "resolved")
+
+
+class ApplyEvidenceGateTests(unittest.TestCase):
+    """The per-delta evidence gate must not pre-empt the repo_review_text block
+    fallback (headings / soft-wrapped paragraphs that never byte-match)."""
+
+    def _delta(self, route_class: str) -> dict:
+        return {
+            "route_class": route_class,
+            "change_type": "replace",
+            "old_text": "Add device",
+            "new_text": "Add new device",
+            "source_evidence": {"repo_write_candidate": False},
+        }
+
+    def test_review_delta_not_skipped_by_evidence_gate(self) -> None:
+        from tools.cloud_doc_backport_apply import _apply_skip_reason
+
+        # repo_review_text with repo_write_candidate False must fall through to the
+        # guarded block fallback, not be skipped here.
+        self.assertIsNone(
+            _apply_skip_reason(self._delta("repo_review_text"), route_class="repo_review_text")
+        )
+
+    def test_template_delta_still_gated(self) -> None:
+        from tools.cloud_doc_backport_apply import _apply_skip_reason
+
+        # Other routes have no fallback, so the evidence gate still applies.
+        reason = _apply_skip_reason(self._delta("repo_template_text"), route_class="repo_template_text")
+        self.assertEqual(reason, "delta is not marked as a repo write candidate")
+
+
+class DefaultRunIdTests(unittest.TestCase):
+    """The un-tagged run-review-branch default run id is date-stamped + branch-scoped
+    so each round is a distinct revision-ledger run instead of colliding on one id."""
+
+    def test_date_stamped_and_branch_scoped(self) -> None:
+        from tools.cloud_doc_backport_orchestration import _default_run_id
+
+        rid = _default_run_id("review/JE-1000F-EU")
+        self.assertTrue(rid.startswith("backport-review-JE-1000F-EU-"))
+        self.assertRegex(rid, r"-\d{8}$")  # trailing UTC yyyymmdd
+
+    def test_distinct_across_branches_same_day(self) -> None:
+        from tools.cloud_doc_backport_orchestration import _default_run_id
+
+        self.assertNotEqual(
+            _default_run_id("review/JE-1000F-EU"), _default_run_id("review/JE-2000F-CN")
+        )
+
+    def test_blank_ref_falls_back_to_review(self) -> None:
+        from tools.cloud_doc_backport_orchestration import _default_run_id
+
+        self.assertTrue(_default_run_id("").startswith("backport-review-"))
+
+
 class LedgerIngestHookTests(unittest.TestCase):
     """The review-branch flow feeds the revision ledger best-effort (G0/G1)."""
 
@@ -2183,6 +2452,27 @@ class LedgerIngestHookTests(unittest.TestCase):
             self.assertEqual(len(rows), 1)
             self.assertEqual(rows[0]["delta_hash"], "hook-hash")
 
+    def test_fresh_rows_stay_pending_then_settle_on_the_next_round(self) -> None:
+        # Round N ingests its rows but must not judge them against the same
+        # unmerged tree that produced them; round N+1's piggyback settles them.
+        from tools.cloud_doc_backport_orchestration import _ledger_ingest_best_effort
+        from tools.revision_ledger import load_ledger
+
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            review = root / "docs/_review/JE-1000F/US/en/page/x.rst"
+            review.parent.mkdir(parents=True)
+            review.write_text("new\n", encoding="utf-8")
+            report = self._diff_report()
+            ledger = Path(td) / "ledger.jsonl"
+            with patch.dict(os.environ, {_LEDGER_ENV: str(ledger)}):
+                _ledger_ingest_best_effort(report, root=root)
+                self.assertEqual(load_ledger(ledger)[0]["final_status"], "pending")
+                _ledger_ingest_best_effort(report, root=root)
+                self.assertEqual(
+                    load_ledger(ledger)[0]["final_status"], "accepted_as_proposed"
+                )
+
     def test_env_off_disables_the_hook(self) -> None:
         from tools.cloud_doc_backport_orchestration import _ledger_ingest_best_effort
 
@@ -2205,3 +2495,51 @@ class LedgerIngestHookTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class TestReviewBundlePages(unittest.TestCase):
+    """_review_bundle_pages covers flat and per-lang review bundle layouts."""
+
+    def _touch(self, path: Path) -> None:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text("x\n", encoding="utf-8")
+
+    def test_flat_layout(self) -> None:
+        from tools.cloud_doc_backport_orchestration import _review_bundle_pages
+
+        with tempfile.TemporaryDirectory() as tmp:
+            rd = "docs/_review/JE-2000F/CN"
+            self._touch(Path(tmp) / rd / "page" / "00_preface.rst")
+            self._touch(Path(tmp) / rd / "page" / "01_safety.rst")
+            pages = _review_bundle_pages(tmp, rd)
+        self.assertEqual([p.name for p in pages], ["00_preface.rst", "01_safety.rst"])
+
+    def test_lang_scoped_layout(self) -> None:
+        from tools.cloud_doc_backport_orchestration import _review_bundle_pages
+
+        with tempfile.TemporaryDirectory() as tmp:
+            rd = "docs/_review/JE-1000F/AU"
+            self._touch(Path(tmp) / rd / "en" / "page" / "00_preface.rst")
+            self._touch(Path(tmp) / rd / ".backport" / "doc.baseline.md")
+            pages = _review_bundle_pages(tmp, rd)
+        self.assertEqual(len(pages), 1)
+        self.assertEqual(pages[0].name, "00_preface.rst")
+        self.assertIn("/en/page/", pages[0].as_posix())
+
+    def test_mixed_layout_and_dot_dirs_skipped(self) -> None:
+        from tools.cloud_doc_backport_orchestration import _review_bundle_pages
+
+        with tempfile.TemporaryDirectory() as tmp:
+            rd = "docs/_review/JE-1000F/US"
+            self._touch(Path(tmp) / rd / "page" / "a.rst")
+            self._touch(Path(tmp) / rd / "en" / "page" / "b.rst")
+            self._touch(Path(tmp) / rd / "fr" / "page" / "c.rst")
+            self._touch(Path(tmp) / rd / ".backport" / "page" / "ghost.rst")
+            pages = _review_bundle_pages(tmp, rd)
+        self.assertEqual([p.name for p in pages], ["a.rst", "b.rst", "c.rst"])
+
+    def test_missing_bundle_returns_empty(self) -> None:
+        from tools.cloud_doc_backport_orchestration import _review_bundle_pages
+
+        with tempfile.TemporaryDirectory() as tmp:
+            self.assertEqual(_review_bundle_pages(tmp, "docs/_review/X/Y"), [])

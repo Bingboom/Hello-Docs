@@ -77,6 +77,7 @@ def materialize_planned_page(
     title: str,
     model: str | None,
     region: str | None,
+    langs: list[str] | tuple[str, ...] = (),
     draft_placeholders: bool = False,
     cover_pdf_page_cls: type[Any],
     pdf_insert_page_cls: type[Any],
@@ -99,22 +100,46 @@ def materialize_planned_page(
     rewrite_rst_asset_paths: Callable[..., str],
     normalize_rst_empty_line_blocks: Callable[[str], str],
     prepend_latex_lang: Callable[[str, str | None], str],
+    strip_capability_sections: Callable[..., tuple[str, list[str]]],
+    capability_data_dir: Path,
+    capability_notes: list[str] | None = None,
+    trim_language_blocks: Callable[..., tuple[str, tuple[str, ...]]] | None = None,
 ) -> tuple[str, Any | None]:
     page = planned.page
 
     if isinstance(page, cover_pdf_page_cls):
-        return render_cover_page_rst(title, format_tokenized(page.file, model, region)), None
+        rst_text = render_cover_page_rst(title, format_tokenized(page.file, model, region))
+        rst_text = rewrite_rst_asset_paths(
+            rst_text,
+            source_path=target_path,
+            target_path=target_path,
+            bundle_dir=bundle_dir,
+            docs_dir=docs_dir,
+            repo_root=repo_root,
+            defer_staging=True,
+        )
+        return (
+            normalize_rst_empty_line_blocks(prepend_latex_lang(rst_text, planned.lang)),
+            None,
+        )
 
     if isinstance(page, pdf_insert_page_cls):
         if planned.lang is None:
             raise RuntimeError("pdf_insert planned page is missing lang")
-        return (
-            render_pdf_insert_page_rst(
-                format_tokenized(page.file_map[planned.lang], model, region),
-                planned.lang,
-            ),
-            None,
+        rst_text = render_pdf_insert_page_rst(
+            format_tokenized(page.file_map[planned.lang], model, region),
+            planned.lang,
         )
+        rst_text = rewrite_rst_asset_paths(
+            rst_text,
+            source_path=target_path,
+            target_path=target_path,
+            bundle_dir=bundle_dir,
+            docs_dir=docs_dir,
+            repo_root=repo_root,
+            defer_staging=True,
+        )
+        return normalize_rst_empty_line_blocks(rst_text), None
 
     page_lang = planned.lang or primary_lang
     page_vars = fill_product_name_from_spec_master(
@@ -190,12 +215,73 @@ def materialize_planned_page(
     else:
         raise RuntimeError(f"Unsupported page type: {type(page).__name__}")
 
-    if not source_path.exists():
+    if not isinstance(page, generated_page_cls) and not source_path.exists():
         raise RuntimeError(f"Missing source RST for bundle materialization: {source_path}")
 
     if not isinstance(page, generated_page_cls):
         rst_text = source_path.read_text(encoding="utf-8")
+        # A `lang_blocks` page carries every family language inline; drop the
+        # blocks this target does not ship before anything else reads the text.
+        if (
+            trim_language_blocks is not None
+            and getattr(page, "lang_blocks", False)
+            and langs
+        ):
+            rst_text, dropped_langs = trim_language_blocks(
+                rst_text,
+                languages=list(langs),
+                page_lang=planned.lang,
+            )
+            for dropped_lang in dropped_langs:
+                print(
+                    f"[bundle-page] {source_path.name}: dropped '{dropped_lang}' "
+                    f"language block (target ships {list(langs)})"
+                )
         rst_text = apply_rst_substitutions(rst_text, page_substitutions, page_vars)
+        # Section-module layer for plain include pages. Nearly all shared prose
+        # lives in rst_include templates, so a snippet mechanism that only
+        # reached generated pages could never actually collapse a hand-copied
+        # module — which is why the registry sat empty. The token names the
+        # snippet id directly (no recipe to bind slots through), and a page
+        # carrying no token does zero registry work and keeps its exact bytes.
+        from tools.draft_engine import (
+            SNIPPET_TOKEN_PREFIX,
+            load_snippet_registry,
+            resolve_snippet_tokens,
+        )
+
+        snippet_registry_path = resolve_snippet_registry_path(docs_dir)
+        rst_text, used_include_snippets = resolve_snippet_tokens(
+            rst_text,
+            registry_entries=(
+                load_snippet_registry(snippet_registry_path)
+                if SNIPPET_TOKEN_PREFIX in rst_text
+                else []
+            ),
+            registry_path=snippet_registry_path,
+            docs_dir=docs_dir,
+            lang=planned.lang or (langs[0] if langs else "en"),
+            model=model,
+            region=region,
+            substitutions=page_substitutions,
+            vars_map=page_vars,
+            slot_map=None,
+            label=str(source_path),
+        )
+        for snippet_id in used_include_snippets:
+            print(f"[bundle-page] {source_path.name}: spliced snippet '{snippet_id}'")
+    # Resolve section markers before asset rewriting so a dropped section
+    # never stages its images, and before the empty-line normalizer so the
+    # blank run the removed markers leave behind gets collapsed.
+    rst_text, section_notes = strip_capability_sections(
+        rst_text,
+        model=model,
+        region=region,
+        data_dir=capability_data_dir,
+        label=target_path.name,
+    )
+    if section_notes and capability_notes is not None:
+        capability_notes.extend(section_notes)
     rst_text = rewrite_rst_asset_paths(
         rst_text,
         source_path=source_path,
@@ -203,6 +289,7 @@ def materialize_planned_page(
         bundle_dir=bundle_dir,
         docs_dir=docs_dir,
         repo_root=repo_root,
+        defer_staging=True,
     )
     final_text = normalize_rst_empty_line_blocks(prepend_latex_lang(rst_text, planned.lang))
     if generated_render is not None and generated_render.rendered_source_path is not None:

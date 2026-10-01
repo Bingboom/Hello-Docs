@@ -48,7 +48,7 @@ class TestQueueQuery(unittest.TestCase):
             "workflow_action": "Build Draft Package",
             "normalized_workflow_action": "draft",
             "git_ref": "codex/review",
-            "document_link": "https://example.com/doc.docx",
+            "document_link": "",
             "document_directory": "",
             "result": "SUCCESS",
             "pr_url": "",
@@ -58,6 +58,8 @@ class TestQueueQuery(unittest.TestCase):
             "immediate_build": True,
             "initial_result": "",
             "remarks": "",
+            "feishu_cloud_doc": "https://example.com/docx/editable",
+            "baseline_doc": "https://example.com/docx/baseline",
         }
         payload.update(overrides)
         return queue_query.QueueQueryRow(**payload)
@@ -269,6 +271,15 @@ class TestQueueQuery(unittest.TestCase):
         self.assertEqual("", inferred.document_key)
         self.assertEqual("build-draft-package", inferred.query_workflow_action)
         self.assertEqual("document-link", inferred.queue_scope)
+
+    def test_infer_queue_query_from_text_should_prefer_publish_over_build_verbs(self) -> None:
+        # "触发/发起 … 发布" is a publish ask; the generic build verbs must not
+        # reclassify it into an unrequested draft build.
+        for text in ("触发 JE-1000F_US_0.3 发布", "帮我发起 JE-1000F_US_0.3 的发布"):
+            with self.subTest(text=text):
+                inferred = queue_query.infer_queue_query_from_text(text)
+                self.assertEqual("publish", inferred.query_workflow_action)
+                self.assertEqual("JE-1000F_US_0.3", inferred.document_id)
 
     def test_infer_queue_query_from_text_should_parse_document_key_for_link_queries(self) -> None:
         inferred = queue_query.infer_queue_query_from_text("把 JE-1000F US 最新链接发我")
@@ -534,6 +545,11 @@ class TestQueueQuery(unittest.TestCase):
         self.assertEqual(("en", "fr"), inferred.langs)
         self.assertEqual("build-draft-package", inferred.query_workflow_action)
         self.assertTrue(inferred.allow_multiple)
+
+    def test_language_query_aliases_follow_registry(self) -> None:
+        for alias, expected in (("jp", "ja"), ("ukr", "uk"), ("cn", "zh"), ("pt_br", "pt-BR"), ("韩语", "ko")):
+            with self.subTest(alias=alias):
+                self.assertEqual((expected,), queue_query._normalize_langs(alias))
 
     def test_infer_queue_query_from_text_should_treat_model_copy_as_market_wildcard_batch(self) -> None:
         for query_text in [
@@ -1228,7 +1244,7 @@ class TestQueueQuery(unittest.TestCase):
                 workflow_action="Build Draft Package",
                 normalized_workflow_action="draft",
                 git_ref="codex/review-id-recvfw0zg4pzxs",
-                document_link="https://example.com/doc",
+                document_link="",
                 document_directory="/tmp/doc.docx",
                 result="SUCCESS",
                 pr_url="",
@@ -1238,6 +1254,8 @@ class TestQueueQuery(unittest.TestCase):
                 immediate_build=True,
                 initial_result="",
                 remarks="",
+                feishu_cloud_doc="https://example.com/docx/editable",
+                baseline_doc="https://example.com/docx/baseline",
             )
         ]
 
@@ -1249,6 +1267,66 @@ class TestQueueQuery(unittest.TestCase):
         self.assertEqual(1, payload["matched_count"])
         self.assertFalse(payload["truncated"])
         self.assertEqual("rec_draft", payload["rows"][0]["record_id"])
+        self.assertNotIn("document_link", payload["rows"][0])
+        self.assertEqual("", payload["rows"][0]["idml_file"])
+        self.assertEqual("feishu_cloud_doc", payload["rows"][0]["delivery_kind"])
+        self.assertEqual("https://example.com/docx/editable", payload["rows"][0]["delivery_url"])
+        self.assertTrue(payload["rows"][0]["delivery_ready"])
+        self.assertTrue(payload["rows"][0]["baseline_ready"])
+
+    def test_render_queue_query_rows_should_not_use_idml_file_for_draft_delivery(self) -> None:
+        row = self._row(
+            "rec_draft",
+            document_link="",
+            result="SUCCESS | cloud_doc=ok | baseline_doc=ok",
+            feishu_cloud_doc="https://example.com/wiki/editable",
+            baseline_doc="https://example.com/wiki/baseline",
+        )
+
+        payload = json.loads(queue_query.render_queue_query_rows([row], as_json=True))["rows"][0]
+
+        self.assertEqual("", payload["idml_file"])
+        self.assertEqual("https://example.com/wiki/editable", payload["delivery_url"])
+        self.assertTrue(payload["delivery_ready"])
+        self.assertTrue(payload["baseline_ready"])
+        self.assertNotIn("document_link", payload)
+
+    def test_build_document_link_rows_should_read_active_delivery_fields(self) -> None:
+        source = mock.Mock()
+        source.fetch_records_with_ids.return_value = [
+            {
+                "record_id": "rec_draft",
+                "fields": {
+                    "Document_ID": "JE-1000F_US_fr_1.1",
+                    "Document_Key": "JE-1000F_US",
+                    "Build_family": "us-fr",
+                    "Lang": "fr",
+                    "Version": "1.1",
+                    "Workflow_action": "Build Draft Package",
+                    "Git_ref": "review/JE-1000F-US",
+                    "构建结果": "SUCCESS | cloud_doc=ok | baseline_doc=ok",
+                    "idml_file": "",
+                    "飞书云文档": "https://example.com/wiki/editable",
+                    "基线文档": "https://example.com/wiki/baseline",
+                    "HTML_link": "",
+                },
+            }
+        ]
+
+        with mock.patch.object(queue_query, "collect_queue_preflight_errors", return_value=[]), \
+             mock.patch.object(queue_query, "resolve_document_link_binding", return_value=mock.Mock(base_token="app", table_id="tbl", view_id="vew")), \
+             mock.patch.object(queue_query, "cli_bin", return_value="lark-cli"), \
+             mock.patch.object(queue_query, "phase2_identity", return_value="bot"), \
+             mock.patch.object(queue_query, "LarkCliSource", return_value=source):
+            row = queue_query._build_document_link_rows({})[0]
+
+        payload = json.loads(queue_query.render_queue_query_rows([row], as_json=True))["rows"][0]
+        self.assertEqual("", payload["idml_file"])
+        self.assertEqual("https://example.com/wiki/editable", payload["feishu_cloud_doc"])
+        self.assertEqual("https://example.com/wiki/baseline", payload["baseline_doc"])
+        self.assertEqual("https://example.com/wiki/editable", payload["delivery_url"])
+        self.assertTrue(payload["delivery_ready"])
+        self.assertTrue(payload["baseline_ready"])
 
     def test_query_queue_rows_should_report_truncation_metadata(self) -> None:
         rows = [self._row(f"rec_{index}") for index in range(12)]

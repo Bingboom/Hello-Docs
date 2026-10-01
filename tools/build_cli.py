@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+from pathlib import Path
 
 
 def parse_args(
@@ -18,7 +19,11 @@ def parse_args(
         choices=(
             "validate",
             "doctor",
+            "asset-check",
+            "asset-intake",
+            "new-line",
             *build_actions,
+            "idml",
             "review",
             "check",
             "sync-review",
@@ -36,6 +41,7 @@ def parse_args(
             "clean",
             "diff-report",
             "release-manifest",
+            "release-rebuild-verify",
             "preview",
             "fast",
             "message-control-dry-run",
@@ -58,9 +64,13 @@ def parse_args(
     )
     ap.add_argument(
         "--source",
-        choices=("auto", "runtime", "review"),
+        choices=("auto", "runtime", "review", "review-asis"),
         default="auto",
-        help="Content source for build actions: auto, runtime, or review",
+        help=(
+            "Content source for build actions: auto, runtime, review, or "
+            "review-asis (render the committed review bundle as-is, without "
+            "re-deriving pages from the data-root)"
+        ),
     )
     ap.add_argument(
         "--draft-placeholders",
@@ -72,7 +82,21 @@ def parse_args(
         ),
     )
     ap.add_argument("--data-root", default=None, help="Override structured content snapshot root")
+    ap.add_argument(
+        "--data-plane",
+        action="store_true",
+        help="For doctor: preflight one target's phase2 snapshot and required Spec_Master rows without writing",
+    )
     ap.add_argument("--pdf-mode", choices=("latex", "word"), default=None, help="Override PDF backend")
+    ap.add_argument(
+        "--idml-mode",
+        choices=("production", "flow", "both"),
+        default="production",
+        help=(
+            "For idml: choose production IDML, flow handoff artifacts, or both. "
+            "Default production preserves the historical idml action."
+        ),
+    )
     ap.add_argument("--open", action="store_true", help="Allow opening generated artifacts after build")
     ap.add_argument("--no-clean", action="store_true", help="Skip cleaning current target outputs before build")
     ap.add_argument(
@@ -83,7 +107,11 @@ def parse_args(
     ap.add_argument(
         "--refresh-review",
         action="store_true",
-        help="Refresh an existing review bundle from the runtime template/data output",
+        help=(
+            "Refresh an existing review bundle from the runtime template/data output. "
+            "On check, this is also the explicit opt-in for the parameter pre-sync, "
+            "which check no longer runs by default"
+        ),
     )
     ap.add_argument(
         "--sync-scope",
@@ -118,6 +146,16 @@ def parse_args(
         "--report-dir",
         default=None,
         help="Output directory for diff-report CSV/HTML",
+    )
+    ap.add_argument(
+        "--manifest",
+        default=None,
+        help="Versioned release manifest JSON for release-rebuild-verify",
+    )
+    ap.add_argument(
+        "--report",
+        default=None,
+        help="Optional output JSON path for release-rebuild-verify",
     )
     ap.add_argument("--table", action="append", default=[], help="For sync-data or translation-memory: logical table id")
     ap.add_argument(
@@ -186,7 +224,11 @@ def parse_args(
         help="For queue-query, queue-resolve-action, process-build-queue, or message-control-dry-run: exact Build_family filter or hint",
     )
     ap.add_argument("--git-ref", default=None, help="For message-control-dry-run: explicit Git_ref hint")
-    ap.add_argument("--version", default=None, help="For message-control-dry-run: explicit version hint")
+    ap.add_argument(
+        "--version",
+        default=None,
+        help="Explicit version for message-control-dry-run or versioned publish/release snapshot binding",
+    )
     ap.add_argument("--confirmed", action="store_true", help="For message-control-dry-run: confirm publish intent")
     ap.add_argument(
         "--queue-scope",
@@ -221,7 +263,10 @@ def parse_args(
     ap.add_argument(
         "--query-workflow-action",
         default=None,
-        help="For queue-query or queue-resolve-action: start-review | build-draft-package | publish",
+        help=(
+            "For queue-query or queue-resolve-action: "
+            "start-review | build-draft-package | publish | web-publish"
+        ),
     )
     ap.add_argument("--git-ref-contains", default=None, help="For queue-query or queue-resolve-action: substring match against Git_ref")
     ap.add_argument("--result-contains", default=None, help="For queue-query or queue-resolve-action: substring match against 构建结果")
@@ -234,7 +279,7 @@ def parse_args(
         "--allow-multiple",
         action="store_true",
         help="For queue-resolve-action or queue-execute: allow batch actions across every matching queue row "
-        "(queue-execute dispatches each eligible row in one call and reports a per-record result)",
+        "(queue-execute dispatches one worker run for each action and reports a per-record result)",
     )
     ap.add_argument(
         "--limit",
@@ -242,7 +287,120 @@ def parse_args(
         default=10,
         help="For translation-memory, queue-query, queue-resolve-action, or manual-index-query: maximum rows to return",
     )
-    ap.add_argument("--json", action="store_true", help="For queue-query, queue-resolve-action, or manual-index-query: emit machine-readable JSON")
+    ap.add_argument("--json", action="store_true", help="Emit machine-readable JSON where supported")
+    ap.add_argument(
+        "--plan-output",
+        default=None,
+        help="For new-line: optional JSON plan/report path",
+    )
+    ap.add_argument(
+        "--seed-plan",
+        action="store_true",
+        help=(
+            "For new-line: emit a read-only F6 seed plan for the Document_key row, "
+            "page-placeholder clones, and source-table field creation"
+        ),
+    )
+    ap.add_argument(
+        "--seed-source-document-key",
+        default=None,
+        help=(
+            "For new-line --seed-plan: exact local source document key for "
+            "page-placeholder cloning; omit only when the source is unambiguous"
+        ),
+    )
+    ap.add_argument(
+        "--write",
+        action="store_true",
+        help="For new-line: materialize the named scaffold; for asset-check --refresh: write recomputed hashes",
+    )
+    ap.add_argument(
+        "--output-config",
+        default=None,
+        help="For new-line --write: destination config path inside the repository",
+    )
+    ap.add_argument(
+        "--output-manifest",
+        default=None,
+        help="For new-line --write: destination page-manifest path inside the repository",
+    )
+    ap.add_argument(
+        "--fixture-source-root",
+        default="data/phase2",
+        help="For new-line --write: source snapshot passed to fixture-refresh",
+    )
+    ap.add_argument(
+        "--fixture-root",
+        default="tests/fixtures/phase2",
+        help="For new-line --write: committed fixture snapshot and auto-check data root",
+    )
+    ap.add_argument(
+        "--skip-auto-check",
+        action="store_true",
+        help="For new-line --write: stop after fixture-refresh and skip build.py check",
+    )
+    ap.add_argument(
+        "--force",
+        action="store_true",
+        help="For new-line --write: allow replacing explicitly named scaffold files",
+    )
+    ap.add_argument(
+        "--asset-override-root",
+        default=None,
+        help=(
+            "For new-line --write: optional docs/_review/.../overrides root; "
+            "creates the controlled _assets, _static, and renderers scaffold"
+        ),
+    )
+    ap.add_argument(
+        "--asset-key",
+        action="append",
+        default=[],
+        help="For asset-check: asset key to resolve/check; repeat for multiple keys",
+    )
+    ap.add_argument(
+        "--asset-format",
+        default=None,
+        help="For asset-check: requested export format, such as png, svg, or pdf",
+    )
+    ap.add_argument(
+        "--allow-temporary",
+        action="store_true",
+        help="For asset-check draft resolution: allow a 🔧临时替代 asset",
+    )
+    ap.add_argument(
+        "--publish",
+        action="store_true",
+        help="For asset-check: require every selected asset to be ✅成品",
+    )
+    ap.add_argument(
+        "--refresh",
+        action="store_true",
+        help="For asset-check: recompute materialized registry hashes from export bytes",
+    )
+    ap.add_argument(
+        "--asset-source-key",
+        default=None,
+        help="For asset-intake: stable source key declared by the extraction recipe",
+    )
+    ap.add_argument(
+        "--asset-source-file",
+        type=Path,
+        default=None,
+        help="For asset-intake: local PDF-compatible Illustrator source file",
+    )
+    ap.add_argument(
+        "--asset-recipe",
+        type=Path,
+        default=None,
+        help="For asset-intake: strict versioned extraction recipe JSON",
+    )
+    ap.add_argument(
+        "--asset-output-root",
+        type=Path,
+        default=None,
+        help="For asset-intake: new isolated package directory; it must not already exist",
+    )
     ap.set_defaults(wait_for_completion=True)
     ap.add_argument(
         "--no-wait",
@@ -269,9 +427,12 @@ def parse_args(
     )
     ap.add_argument(
         "--workflow-action",
-        choices=("build-draft-package", "publish"),
+        choices=("build-draft-package", "publish", "web-publish"),
         default=None,
-        help="For process-build-queue: only consume one normalized Workflow_action (Build Draft Package or Publish)",
+        help=(
+            "For process-build-queue: only consume one normalized Workflow_action "
+            "(Build Draft Package, Publish, or Web Publish)"
+        ),
     )
     ap.add_argument(
         "--doc-phase",
@@ -283,6 +444,11 @@ def parse_args(
         "--record-id",
         default=None,
         help="For process-build-queue or process-review-start-queue: only consume one table record_id",
+    )
+    ap.add_argument(
+        "--record-ids",
+        default=None,
+        help="For queue-execute or queue workers: comma-separated table record_ids for one batch run",
     )
     ap.add_argument(
         "--dry-run",

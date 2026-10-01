@@ -1,13 +1,61 @@
 from __future__ import annotations
 
+import csv
+import math
 import tempfile
 import unittest
 from pathlib import Path
 
+from tools import lang_registry
 from tools.csv_pages.builder import BuildPaths, BuildSelector, CsvPageBuilder, PageSpec
 
 
 class TestCsvPageBuilderNormalization(unittest.TestCase):
+    def test_registry_order_parsing_preserves_csv_numeric_boundaries(self) -> None:
+        cases = [
+            ("", 0.0), (" \t\n", 0.0), ("bad", 0.0), ("1 W", 0.0),
+            ("1,000", 0.0), ("1\0", 0.0), ("9" * 100000 + " W", 0.0),
+            (" 1.25 ", 1.25), ("-2.5", -2.5), ("١.٥", 1.5),
+            ("1_000", 1000.0), ("inf", math.inf), ("-inf", -math.inf),
+            ("1e400", math.inf), ("-1e400", -math.inf),
+            ("9" * 100000, math.inf), ("1e" + "9" * 100000, math.inf),
+            ("nan", math.nan),
+        ]
+        with tempfile.TemporaryDirectory() as td:
+            paths = BuildPaths.from_root(Path(td))
+            paths.page_registry.parent.mkdir(parents=True)
+            for value, expected in cases:
+                with self.subTest(value=value[:20], length=len(value)):
+                    with paths.page_registry.open("w", encoding="utf-8", newline="") as stream:
+                        writer = csv.writer(stream)
+                        writer.writerow(["page_id", "order"])
+                        writer.writerow(["spec", value])
+                    pages = CsvPageBuilder(paths)._load_pages()
+                    self.assertEqual(["spec"], [page.page_id for page in pages])
+                    if math.isnan(expected):
+                        self.assertTrue(math.isnan(pages[0].order))
+                    else:
+                        self.assertEqual(expected, pages[0].order)
+
+    def test_build_preserves_default_order_and_skip_results_from_csv(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            paths = BuildPaths.from_root(Path(td))
+            paths.page_registry.parent.mkdir(parents=True)
+            paths.page_registry.write_text(
+                "page_id,page_type,order\n"
+                "last,csv_page,2\n"
+                "invalid,csv_page,1 W\n"
+                "first,csv_page,-1\n"
+                "blank,csv_page,\n",
+                encoding="utf-8",
+            )
+            result = CsvPageBuilder(paths).build(BuildSelector(), strict_renderer=False)
+            self.assertEqual([], result.written_files)
+            self.assertEqual(
+                [f"missing renderer for page_id='{page}'" for page in ("first", "invalid", "blank", "last")],
+                result.skipped_pages,
+            )
+
     def test_build_paths_from_root_should_use_phase2_spec_defaults(self) -> None:
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
@@ -44,6 +92,25 @@ class TestCsvPageBuilderNormalization(unittest.TestCase):
                 root / "docs" / "templates" / "page_zh" / "10_troubleshooting.rst",
                 builder._resolve_template(page, lang="zh"),
             )
+
+    def test_resolve_template_directory_uses_registry_for_all_aliases(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            builder = CsvPageBuilder(BuildPaths.from_root(Path(td)))
+            for spec in lang_registry.LANGUAGE_REGISTRY:
+                for alias in spec.aliases:
+                    with self.subTest(language=spec.code, alias=alias):
+                        self.assertEqual(spec.template_directory, builder._template_lang_dir(alias))
+
+    def test_localized_trailer_text_uses_registered_column_aliases(self) -> None:
+        row = {
+            "Text_ja": "Japanese",
+            "Text_pt-BR": "Portuguese",
+            "Text_ko": "Korean",
+        }
+
+        self.assertEqual("Japanese", CsvPageBuilder._localized_text_value(row, "jp"))
+        self.assertEqual("Portuguese", CsvPageBuilder._localized_text_value(row, "br"))
+        self.assertEqual("Korean", CsvPageBuilder._localized_text_value(row, "ko"))
 
     def test_spec_master_rows_can_be_detected(self) -> None:
         rows = [

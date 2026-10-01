@@ -42,6 +42,26 @@ class ExportTests(unittest.TestCase):
         self.assertEqual(st["options"], ["a", "b"])
         self.assertFalse(st["multiple"])
 
+    def test_export_preserves_complex_field_rebuild_detail(self):
+        def fake(args, lark_cli="lark-cli"):
+            if "+table-list" in args:
+                return {"ok": True, "data": {"tables": [{"id": "tblA", "name": "T1"}]}}
+            return _fields_response([
+                {"name": "Slot_key", "type": "lookup", "id": "fldX",
+                 "from": "02_主数据_Slot", "select": "fldY", "aggregate": "unique"},
+                {"name": "refs", "type": "link", "id": "fldZ",
+                 "link_table": "tblVus", "bidirectional": False},
+                {"name": "Value_source", "type": "text", "id": "fldT"},
+            ])
+
+        with mock.patch.object(bs, "_lark", side_effect=fake):
+            manifest = bs.export("baseX", None, "lark-cli")
+        fields = {f["name"]: f for f in manifest["tables"][0]["fields"]}
+        self.assertEqual(fields["Slot_key"]["detail"]["from"], "02_主数据_Slot")
+        self.assertEqual(fields["refs"]["detail"]["link_table"], "tblVus")
+        self.assertNotIn("detail", fields["Value_source"])
+        self.assertNotIn("id", fields["Slot_key"]["detail"])
+
     def test_export_table_filter(self):
         def fake(args, lark_cli="lark-cli"):
             if "+table-list" in args:
@@ -207,6 +227,42 @@ class ParityTests(unittest.TestCase):
         self.assertFalse(res["in_parity"])
         self.assertEqual(res["missing_tables"], ["T1"])
 
+    def test_parity_accepts_intentional_table_rename(self):
+        fake = self._fake([{"id": "p1", "name": "Renamed"}], [
+            {"name": "Name", "type": "text"},
+            {"name": "St", "type": "select", "multiple": False, "options": [{"name": "a"}]},
+        ])
+        with mock.patch.object(bs, "_lark", side_effect=fake):
+            res = bs.parity("DEV", "PROD", None, "lark-cli", table_aliases={"T1": "Renamed"})
+        self.assertTrue(res["in_parity"])
+        self.assertEqual(res["missing_tables"], [])
+        self.assertNotIn("Renamed", res["extra_tables"])
+
+    def test_parity_reports_missing_alias_target_under_source_name(self):
+        with mock.patch.object(bs, "_lark", side_effect=self._fake([], [])):
+            res = bs.parity("DEV", "PROD", None, "lark-cli", table_aliases={"T1": "Renamed"})
+        self.assertFalse(res["in_parity"])
+        self.assertEqual(res["missing_tables"], ["T1"])
+
+    def test_parity_rejects_alias_source_not_in_source_base(self):
+        with mock.patch.object(bs, "_lark", side_effect=self._fake([], [])):
+            with self.assertRaisesRegex(ValueError, "source not found"):
+                bs.parity("DEV", "PROD", None, "lark-cli", table_aliases={"Unknown": "Renamed"})
+
+    def test_parity_ignores_explicitly_retired_field(self):
+        source = {"schema_version": "bitable-schema/v1", "tables": [{
+            "name": "T1",
+            "fields": [
+                {"name": "Name", "type": "text"},
+                {"name": "Retired", "type": "text"},
+            ],
+        }]}
+        fake = self._fake([{"id": "p1", "name": "T1"}], [{"name": "Name", "type": "text"}])
+        with mock.patch.object(bs, "export", return_value=source), mock.patch.object(bs, "_lark", side_effect=fake):
+            res = bs.parity("DEV", "PROD", None, "lark-cli", ignore_fields=["T1.Retired"])
+        self.assertTrue(res["in_parity"])
+        self.assertEqual(res["missing_fields"], [])
+
     def test_parity_flags_drift(self):
         fake = self._fake([{"id": "p1", "name": "T1"}],
                           [{"name": "Name", "type": "text"},
@@ -368,6 +424,72 @@ class PromoteTests(unittest.TestCase):
             res = bs.promote(manifest, seeds, "PROD", write=True, lark_cli="lark-cli")
         self.assertTrue(res["write"])
         self.assertEqual(res["post_missing"], {"tables": [], "fields": []})  # nothing missing -> clean
+
+
+class ReadRecordsPaginationTests(unittest.TestCase):
+    """_read_records must follow has_more, not silently stop at the first page."""
+
+    def _paged_fake(self, seen_offsets):
+        def fake(args, lark_cli="lark-cli"):
+            if "+field-list" in args:
+                return _fields_response([{"name": "Key", "type": "text"}, {"name": "Val", "type": "text"}])
+            offset = int(args[args.index("--offset") + 1]) if "--offset" in args else 0
+            seen_offsets.append(offset)
+            if offset == 0:
+                return {"ok": True, "data": {
+                    "fields": ["Key", "Val"],
+                    "data": [["k1", "v1"], ["k2", "v2"]],
+                    "record_id_list": ["rec1", "rec2"],
+                    "has_more": True,
+                }}
+            return {"ok": True, "data": {
+                "fields": ["Key", "Val"],
+                "data": [["k3", "v3"]],
+                "record_id_list": ["rec3"],
+                "has_more": False,
+            }}
+        return fake
+
+    def test_read_records_concatenates_all_pages(self):
+        offsets: list[int] = []
+        with mock.patch.object(bs, "_lark", side_effect=self._paged_fake(offsets)):
+            rows, rids = bs._read_records("base", "tbl", "lark-cli")
+        self.assertEqual(rows, [
+            {"Key": "k1", "Val": "v1"},
+            {"Key": "k2", "Val": "v2"},
+            {"Key": "k3", "Val": "v3"},
+        ])
+        self.assertEqual(rids, ["rec1", "rec2", "rec3"])
+        self.assertEqual(offsets, [0, 2])  # second page requested at offset=len(page1)
+
+    def test_read_records_single_page_when_no_has_more(self):
+        def fake(args, lark_cli="lark-cli"):
+            if "+field-list" in args:
+                return _fields_response([{"name": "K", "type": "text"}])
+            return {"ok": True, "data": {"fields": ["K"], "data": [["a"]], "record_id_list": ["r1"]}}
+        with mock.patch.object(bs, "_lark", side_effect=fake):
+            rows, rids = bs._read_records("base", "tbl", "lark-cli")
+        self.assertEqual((rows, rids), ([{"K": "a"}], ["r1"]))
+
+    def test_read_records_keys_rows_by_field_list_name_not_display_name(self):
+        # record-list `fields` (display) diverges from the +field-list name; rows
+        # must be keyed by the authoritative field-list name via field_id_list.
+        def fake(args, lark_cli="lark-cli"):
+            if "+field-list" in args:
+                return {"ok": True, "data": {"fields": [
+                    {"field_id": "fldA", "name": "Row_key", "type": "text"},
+                    {"field_id": "fldB", "name": "取值规则", "type": "text"},
+                ]}}
+            return {"ok": True, "data": {
+                "fields": ["Row key (display)", "取值规则 (显示)"],  # divergent display names
+                "field_id_list": ["fldA", "fldB"],
+                "data": [["r1", "manual"]],
+                "record_id_list": ["rec1"],
+            }}
+        with mock.patch.object(bs, "_lark", side_effect=fake):
+            rows, rids = bs._read_records("base", "tbl", "lark-cli")
+        self.assertEqual(rows, [{"Row_key": "r1", "取值规则": "manual"}])
+        self.assertEqual(rids, ["rec1"])
 
 
 if __name__ == "__main__":

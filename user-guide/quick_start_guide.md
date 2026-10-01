@@ -1,6 +1,6 @@
 # 快速开始指南
 
-Updated: 2026-05-25
+Updated: 2026-08-17
 
 这份指南只讲当前真实可用的工作方式。
 核心规则只有一句：
@@ -53,6 +53,21 @@ python3 tools/source_intake.py verify --candidates reports/source_intake/<run-id
 
 `apply` 默认只做 dry-run 计划；只有人工确认后显式加 `--write --table-binding TABLE=BASE:TABLE_ID`，才会写线上 Feishu 源表。新增行仍先停在候选/人审层，不自动创建线上记录。
 
+如果输入是产品规格书，而且已经有同产品或同区域 sibling，默认走重复入库快速通道，不再手工组装几十行：
+
+```bash
+python3 tools/source_intake.py spec-extract --input <spec.pdf> --rules <rules.json> --document-key <MODEL_REGION> --region <REGION> --reference <sibling-spec.json> --out reports/source_intake/<run-id>
+python3 tools/source_intake.py stage-plan --spec-candidates reports/source_intake/<run-id>/spec_intake_candidates.json --spec-sibling <sibling-spec.json> --placeholder-sibling <sibling-placeholders.json> --overrides <target-differences.json> --document-key <MODEL_REGION> --localized-lang <lang> --out reports/source_intake/<run-id>
+```
+
+`stage-plan` 只克隆 sibling 结构并应用目标差异，输出评审文件和一个 `create_records` 批量 payload，不写飞书。它会拒绝模糊规则匹配、sibling 结构缺行以及未配对的本地化值。输入就绪后，机械步骤目标是 3–5 分钟；后续暂存表回读、人工确认和正式源表写入仍是硬门禁。
+
+JE-2000E 韩规目标复用共享 KR/ko 家族配置；源表确认入库并同步后，用下面的目标命令验收：
+
+```bash
+python3 build.py check --config configs/config.kr.yaml --model JE-2000E --region KR
+```
+
 不要把 [`data/phase2/`](../data/phase2) 当成主编辑面；它是 gitignored 本地 snapshot，每个镜像仓应从自己的 Feishu Base 生成。唯一入库的例外是 [`page_registry.csv`](../data/phase2/page_registry.csv)（仓库维护的页面结构输入，`sync-data` 每次运行都要读取）。
 只有当 `Document_link.是否强制刷新数据 = 勾选` 时，队列才会在这次构建前执行 `sync-data`；不勾时会直接复用当前本地 snapshot。
 
@@ -64,8 +79,9 @@ python3 tools/source_intake.py verify --candidates reports/source_intake/<run-id
 
 - `Document_Key`（必填，例如 `JE-1000F_EU`）
 - `Document_ID`（可选；Start Review 不需要版本号）
-- `Build_family`（可选；填写时作为 config 路由提示）
+- `Build_family`（语言范围，例如 `us-merged`；不填写产品或骨架类型）
 - `Lang`（可选）
+- 语言显示标签和 `queue-query` 的语言别名统一从 `tools/lang_registry.py` 读取；新增语言时只维护注册表及其 aliases，查询仍兼容既有中英文别名。
 - `Version`（可选）
 - `Review_status`
 - `是否进入Review`
@@ -116,8 +132,10 @@ python3 tools/source_intake.py verify --candidates reports/source_intake/<run-id
 - `DingTalk_target_node_url`
 - `operator_union_id`
 - `Document directory`
-- `Document link`
 - `飞书云文档`
+- `基线文档`
+- `idml_file`
+- `HTML_link`
 - `Document link_dd`
 - `data_sync`
 - `构建结果`
@@ -126,11 +144,10 @@ python3 tools/source_intake.py verify --candidates reports/source_intake/<run-id
 
 - `Workflow_action` 是唯一队列语义字段；强制重开 review / 重新 seed 填 `Start Review`，Review 阶段反复构建填 `Build Draft Package`，Publish 阶段填 `Publish`
 - `Doc_phase` 不再参与队列路由，保持留空即可
-- 把结果链接回写到表里
-- `Build Draft Package` 仍把 DOCX 链接回写到 `Document link`
-- `Publish` 会把主交付 PDF 链接回写到 `Document link`，并把 release 留档 DOCX 路径写回 `Document directory`
-- 如果表里存在 `飞书云文档`，队列会同时生成 Markdown，并通过 `lark-cli drive +import --type docx` 导入成飞书云文档后把 URL 写回该字段；Markdown 优先使用 MyST writer，当前 Pandoc 不提供 native MyST 时会输出 MyST-compatible CommonMark
-- 如果当前启用了 DingTalk mirror，且表里存在 `Document link_dd`，队列会把镜像 DingTalk 节点链接写到这个字段；`Document link` 仍保持 Feishu/wiki 主字段
+- 按阶段回写结果链接：Draft=`飞书云文档`，Publish=`idml_file`，Web Publish=`HTML_link`
+- `Build Draft Package` 通过 `lark-cli drive +import --type docx` 导入可编辑飞书云文档并写回 `飞书云文档`；同时把第二份冻结导入写入 `基线文档`，供 backport 对比
+- `Publish` 把设计交付 ZIP 的知识库链接写入 `idml_file`，并把 release 留档 DOCX 路径写回 `Document directory`
+- 如果当前启用了 DingTalk mirror，且表里存在 `Document link_dd`，队列会把镜像 DingTalk 节点链接写到这个字段；它不是主交付判据
 - 如果当前启用了 DingTalk mirror，且表里存在 `是否上传钉钉`，这列就是行级开关：勾选才同步 DingTalk，不勾就只走 Feishu/wiki
 - 如果表里没有 `是否上传钉钉`，worker 就按当前全局模式处理整行：开启 mirror 的 worker 会同步 DingTalk，Feishu-only worker 不会同步
 - 如果当前启用了 DingTalk mirror，且该行还填了 `DingTalk_target_node_url`，worker 会优先同步到这个行级节点；只有该字段为空时，才回退到全局 `DINGTALK_DOCS_TARGET_NODE_URL`
@@ -139,6 +156,51 @@ python3 tools/source_intake.py verify --candidates reports/source_intake/<run-id
 - 如果你在表里填的是 `alice`，那就要在本机或 worker 的 session 目录里准备 `alice.json`；如果缺这个文件且也没有全局 `DINGTALK_DOCS_*`，队列会在 build 前直接失败并把原因写回 `构建结果`
 - 只有当 `是否强制刷新数据 = 勾选` 时，队列才会在这次构建前刷新一次 phase2；否则直接复用当前本地 snapshot
 - `data_sync` 会回写 `refreshed / skipped / failed`
+
+### 1.4 图片资产三张新表与构建引用
+
+图片资产不写进 phase2 内容表。业务 Base
+`LD3lb4G1ua4GOVs1vxAc9W2enje` 的唯一允许合同是另建三张独立新表：
+`04_资产源文件`、`04_资产定义`、`04_资产导出物`。旧插图表只保留历史，
+新链路不读取、不写入，也不在权限失败时回退过去。三张表的真实 table/view/field
+绑定见 [`data/asset_base_bindings.json`](../data/asset_base_bindings.json)；若这些新表
+无权限，归档步骤停止，`source_pointer` 保持为空，也不改走入库 staging 表。
+
+RST 中获批资产可按稳定身份引用：
+
+```rst
+.. image:: asset:operation/ac_output
+```
+
+构建会在 review 覆盖完成后按当前 model/region/language 解析注册表，只接受
+PNG/JPG/JPEG/SVG/PDF 成品；`.ai`、临时、缺失和隔离资产都不会通过 `asset:`
+进入 bundle。
+App/QR 等敏感候选即使已拆图也继续保持隔离。只有 `data/asset_promotions/`
+中的受审契约完整绑定审核人、时间、目标 scope、AI/PDF/recipe/evidence、输入输出
+完整 SHA 和确定性组合规则时，注册表才接受
+`source=reviewed-promotion:<promotion_id>`。目标或任一字节漂移都会硬失败，且不会
+回退到同名共享旧图。
+最终 bundle 写出 `asset_usage_manifest.json`、`asset_registry_snapshot.csv` 和带
+`bundle_sha256` 的 `bundle_manifest.json`。现有旧路径图片仍可构建，但只记为
+`legacy-path`；这表示已记账，不表示已受注册表门控。共享模板已经批量迁移到
+`asset:`。产品/区域专用导出物使用独立 key，并在注册表以
+`override_for=<共享 key>` 声明窄范围覆盖；不要缩窄或替换共享行。
+
+网页版整块图文插入是同三张表上的最后一层，不替换普通 `asset:` 图片链：
+
+1. `04_资产定义` 填稳定 `web_replace_key`，并完成 scope 与审核。
+2. `04_资产导出物` 每个物理文件一行：`artifact_kind=web-composite`，在
+   `export_file` 上传一张图片，选择 `web_locale`，填写 `content_sha256` 和
+   `source_fragment_sha256`，审核通过后勾选 `build_eligible`。
+3. 在获批的 `Document_link` 行选择 `Workflow_action=Web Publish`，保留已审核的 `Git_ref`。独立语言页使用匹配的单语 `Build_family` 和显式 `Lang`（如 `eu-en/en`），每语单独一行；不要使用 merged family 携带 Lang。版本及队列操作确认后才触发独立 Web worker；[队列契约](../code-as-doc/dev/web_publish_locale_queue.md)列出了尚未释放的上线门禁。
+4. Web worker 使用 HT-Docs bot 强制执行 `sync-data`，再按
+   `web_replace_key + model + region + locale` 自动替换整块 figure 与关联文字；章节
+   标题不进入图片。没有合格导出时保留可编辑 HTML，重复匹配或哈希漂移直接失败。
+
+Read the Docs 不在线读取飞书。Web Publish 先把线上审核后的 manifest、附件与 MyST
+冻结到 `Hello-Docs/publish:docs/publish/` 候选目录，自动创建或更新只包含
+`docs/publish/**` 的 `publish -> main` PR；人工审核合入后，RTD 只消费 `main` 快照。
+`review/*` 只提供构建内容，不能整分支合入 `main`。
 
 ## 2. Build Draft Package 和 Publish 的原料分别是什么
 
@@ -180,7 +242,7 @@ Publish 的原料是：
    - 如果要先让 OpenClaw 看结构化 dry-run 结果，再走下一步：`python build.py queue-resolve-action --config configs/config.us.yaml --query-text "发布 JE-1000F_US_0.3" --json`
    - 如果只是查发布文档管理表里的产品说明书链接或总览：`python build.py manual-index-query --config configs/config.us.yaml --query-text "查 JE-2000F 的说明书链接" --json`
 2. 要真正执行时，直接走一条确定性命令：
-   - `python build.py queue-execute --config configs/config.us.yaml --query-text "请帮我构建 JE-1000F_US_en_0.3，并返回 Build Draft Package 记录。只返回 record_id、Git_ref、构建结果、Document link。"`
+   - `python build.py queue-execute --config configs/config.us.yaml --query-text "请帮我构建 JE-1000F_US_en_0.3，并返回 Build Draft Package 记录。只返回 record_id、Git_ref、构建结果和 delivery_url。"`
    - 如果这条命令最终会命中 `Workflow_action = Publish`，要额外带上 `--confirm-publish`
 3. 只有在排查问题或需要人工拆步骤时，再手动触发控制层：
    - `node integrations/openclaw/auto-manual-control-layer/cli.mjs dispatch <start-review|build-draft> <record_id>`
@@ -210,19 +272,19 @@ Publish 的原料是：
 - 如果没说市场，例如 `构建JE-1000F说明书文案`，市场也会通配；解析器会用 `Task_id` 前缀 `JE-1000F_`，拉起所有 `JE-1000F` 且 `是否触发文档构建 = Y` 的 `Build Draft Package` 行
 - 如果要指定版本，可以说 `构建 JE-1000F_EU_1.0 的欧规说明书文案`；解析器会保留 `Task_id` 前缀并加上 `Version=1.0`，而不是去找不存在的单条 `JE-1000F_EU_1.0`
 
-当前 Phase 2 控制层仍然只把下面这个字段当主交付链接：
+Phase 2 控制层使用阶段化交付契约：
 
-- `Document link`
+- `Build Draft Package`：`delivery_kind=feishu_cloud_doc`，`delivery_url` 来自 `飞书云文档`
+- `Publish`：`delivery_kind=idml_file`，`delivery_url` 来自 `idml_file`
+- `Web Publish`：`delivery_kind=html`，`delivery_url` 来自 `HTML_link`
 
-其中 Build Draft Package 场景下这里通常是 DOCX 链接，Publish 场景下这里会回写 PDF 链接。
-
-如果表里有 `飞书云文档`，它是补充云文档链接，不改变 `Document link` 的主交付语义。
+`delivery_ready` 是 Agent 的交付完成判据。`Document link` / `document_link` 已退役，绝不能用它或空的 `idml_file` 判断 Draft 云文档上传失败；`baseline_ready` 只表示 `基线文档`可用于 backport。
 
 如果当前启用了 DingTalk mirror，worker 还会在表里额外写：
 
 - `Document link_dd`
 
-但 `queue-query / queue-execute / OpenClaw` 仍以 `Document link` 为主返回字段；Publish 时也就是返回 PDF URL。
+`Document link_dd` 只作为可选镜像回写，不参与 `delivery_ready` 判定。
 
 ## 3. 场景一：第一次把文档拉进 Review
 
@@ -311,8 +373,8 @@ Publish 的原料是：
    - `构建结果`
    - `data_sync`
    - `Document directory`
-   - `Document link`
-   - `飞书云文档（字段存在时）`
+   - `飞书云文档`
+   - `基线文档`
    - `Document link_dd（仅启用 DingTalk mirror 且字段存在时）`
 
 ### Build Draft Package 最容易配错的地方
@@ -350,17 +412,25 @@ Publish 的原料是：
 1. workflow 可以由默认分支承载
 2. 执行 `process-build-queue --workflow-action publish`
 3. 只有当 `是否强制刷新数据 = 勾选` 时，队列才先执行一次 `sync-data`
-4. 如果 `Document_link.Git_ref` 有值，队列会先 fetch 这条分支，并在临时 worktree 中按这条分支执行 `build.py publish`（内部会跑 `check -> diff-report -> word -> pdf -> md -> release-manifest`）和 `build.py html --source review`
+4. 如果 `Document_link.Git_ref` 有值，队列会先 fetch 这条分支，并在临时 worktree 中按这条分支执行 `build.py publish`（内部会跑 `check -> diff-report -> word -> pdf -> md -> release-manifest`）
 5. 如果当前启用了 DingTalk mirror 且 `是否上传钉钉 = 勾选`，就同步 DingTalk；如果同时填了 `DingTalk_target_node_url`，优先同步到该行节点；否则退回全局默认 DingTalk 节点；未勾选则只保留 Feishu/wiki 上传；如果表里没有 `是否上传钉钉`，则按当前 worker 的全局模式决定是否同步
 6. 回写：
    - `开始构建时间`
    - `构建结果`
    - `data_sync`
    - `Document directory（release 留档 DOCX 路径）`
-   - `Document link（主交付 PDF 链接）`
-   - `飞书云文档（字段存在时；由 Markdown 导入）`
-   - `Document link_dd（仅启用 DingTalk mirror 且字段存在时；镜像同一份 Publish PDF）`
-7. 把最新 publish HTML 刷新到 Vercel；如果 `Document_link` 里有 `HTML_link` 字段，workflow 会把这次 deploy 返回的 Vercel URL 再回写到该字段。GitHub Actions summary 里的 URL 可能会被脱敏打星，原始链接以 `HTML_link`、`publish_meta.json` 和 `openclaw-run-metadata` 为准
+   - `idml_file（设计交付 ZIP 的知识库链接）`
+   - `Document link_dd（仅启用 DingTalk mirror 且字段存在时；镜像同一份设计交付 ZIP）`
+
+印刷 Publish 不再构建或部署网页。网页使用独立的
+[`feishu-web-publish-queue.yml`](../.github/workflows/feishu-web-publish-queue.yml)：
+
+1. 在同一条 `Document_link` 记录选择 `Workflow_action = Web Publish`，保留已审核的 `Git_ref`，并把构建触发改回 `Y`
+2. 在 `04_资产导出物` 确认所需 `export_file` 已选择语言、hash 正确且审核通过
+3. Web worker 强制拉取最新 phase2 和图文资产，按 web profile 执行 `check -> md -> html`
+4. workflow 把冻结 MyST 增量提交到 `Hello-Docs/publish:docs/publish/` 候选目录，范围门禁确认没有其它路径后自动创建或更新 `publish -> main` PR
+5. 审核并合入这个仅含 `docs/publish/**` 的 PR；不要合入 `review/*` 分支。`main` 的 push 才触发 Read the Docs 构建
+6. PR 合入后，[`web-publish-receipt.yml`](../.github/workflows/web-publish-receipt.yml) 等待并核验 RTD 部署（冻结源指纹 + 逐字节 + 项目 slug），核验通过才把嵌套 canonical 页面（例如 `https://ht-doc.readthedocs.io/JE-1000F/US/en/md/manual_je1000f_us.html`）幂等写回 `HTML_link`（写后同记录回读）；根级短地址（例如 `/manual_je1000f_us.html`）仍由发布源自动生成并转向 canonical 页面，留作印刷/QR 入口层，不需要为每个型号手工创建 RTD Redirect。成功验收还要确认 `main` 的 manifest、RTD 构建 commit、`Web Publish Receipt` run 绿和 `HTML_link` 线上页面；登记失败重跑该 workflow，不要重发整本
 
 ### 远端 GitHub worker 想支持 DingTalk 还要配什么
 
@@ -372,6 +442,15 @@ Publish 的原料是：
   - `AUTO_MANUAL_ARTIFACT_MIRROR_PROVIDER = dingtalk_alidocs_session`
 - `DINGTALK_DOCS_TARGET_NODE_URL` 现在只是远端默认节点，可留空
 - 如果这行已经填了 `DingTalk_target_node_url`，远端 worker 会优先用这一行的节点，不依赖默认节点
+
+### 想让产物自动进钉钉交付 outbox 还要配什么
+
+- 只要一个环境变量：`AUTO_MANUAL_DELIVERY_OUTBOX_ROOT`，指向一个 git 之外的目录（仓库已 ignore `/output/`，所以 `output/outbox` 可直接用）。不设这个变量整条链路静默不动，其它 worker 行为完全不变
+- 配好后每次成功 Publish 会在 `<root>/<job_id>/` 落一份产物（PDF / handoff zip / DOCX / Markdown）加一个 `delivery_manifest.json`，交给交付 agent 消费；`latex/`、`html/` 渲染目录不进 outbox
+- `构建结果` 会多一条注记：`delivery_outbox=ok`（附 `delivery_outbox_job=<job id>`）、`delivery_outbox=skipped`（该目标没在 [`../data/dingtalk_delivery_map.csv`](../data/dingtalk_delivery_map.csv) 里，属正常状态）、或 `delivery_outbox=failed`（附原因）。投递侧出问题不会把已经上传成功的构建行判失败
+- 哪些目标会投递看那张映射表：按 `(型号, 区域)` 一行，对应钉钉的项目代码 + 安规 + 该区域整本覆盖的文案语言集合。Publish 行的 `Lang` 必须留空、产出的是一本多语合订本，所以映射按区域而不是按语言
+- 验收单个 drop：`python tools/delivery_outbox.py --manifest <root>/<job_id>/delivery_manifest.json`
+- 已消费的 job 目录不会自动回收（里面是完整 PDF 和 zip），要定期清理；同一目标同一版本同一秒内重复 Publish 会被拒绝而不是覆盖
 
 Publish 不直接复用旧 Build Draft Package 产物，但为了保证正式文档与当前评审内容一致，应继续沿用同一条 review / PR 分支的 `Git_ref`；正式回写给业务侧的主链接是 PDF，DOCX 只保留在 release 目录里做留档。
 
@@ -400,6 +479,22 @@ Publish 不直接复用旧 Build Draft Package 产物，但为了保证正式文
 
 它现在只是构建时使用的本地物化快照；只有你勾了 `是否强制刷新数据`，队列才会先把它刷新到最新。
 不是 Build Draft Package / Publish 的人工主编辑面。
+
+Publish 成功时，实际参与构建的这份快照会随版本归档到
+`reports/releases/<model>/<region>/<lang>/versions/<version>/snapshot/`。
+同一版本只能复用完全相同的快照；不要手改归档，也不要用后来同步的
+`data/phase2` 覆盖它。
+
+版本发布完成后，用清单做一次历史重建验收：
+
+```bash
+python build.py release-rebuild-verify \
+  --manifest reports/releases/<model>/<region>/<lang>/manifests/<timestamp>.json
+```
+
+该命令要求当前工具链与发布清单完全一致，并在临时 worktree 中用清单记录的
+Git SHA 和归档 snapshot 重建 DOCX、Markdown、PDF。三者必须逐字节 SHA-256
+一致；默认报告写到对应 `versions/<version>/rebuild_verification.json`。
 
 ### 本地自测先隔离生成物
 
@@ -480,7 +575,139 @@ Publish 不直接复用旧 Build Draft Package 产物，但为了保证正式文
    - `是否触发文档构建 = Y`
    - `是否立即构建 = 勾选`
    - `是否强制刷新数据 = 只有这次确实要拉最新 phase2 时才勾`
-4. 等队列回写 `Document directory`（DOCX 留档路径）、`Document link`（PDF 链接）和可选的 `飞书云文档`；如果表里有 `HTML_link`，还会看到最新 Vercel HTML 链接，并确认 Vercel 最新页面已刷新
+4. 等队列回写 `Document directory`（DOCX 留档路径）和 `idml_file`（设计交付 ZIP 的知识库链接）
+
+### 如果你要正式 Web Publish
+
+1. 确认当前 review / PR 分支和 `Git_ref` 已准备好
+2. 在 `04_资产导出物` 上传完整图文插图，选择 `web_locale`，填写两个 SHA-256，并完成 `approved + build_eligible` 审核门
+3. 在 `Document_link` 里设：
+   - `Workflow_action = Web Publish`
+   - `是否触发文档构建 = Y`
+   - `是否立即构建 = 勾选`
+4. 运行 `Feishu Web Publish Queue`；它会强制同步资产，所以不依赖 `是否强制刷新数据`
+5. 验收生成的 `publish -> main` PR 只含 `docs/publish/**`，审核合入后再确认 `Hello-Docs/main:docs/publish/publish_manifest.json`、RTD 页面、`Web Publish Receipt` run 绿和它回写的 `HTML_link`（合入并核验部署之后才写）
+
+### 如果你要按方案 2 复刻获批 PDF 为原生 InDesign
+
+1. 冻结当前 review 和 phase2 snapshot，并确认参考文件确实是
+   `Jackery Explorer 1000 User Manual V2.0-2026-06-05.pdf`：58 页、
+   `368.787 × 524.692 pt`，SHA-256 为
+   `e72b1ba01882062e261b17d5ba54a2f7c3099e5ba531a6428be13888641083f2`。
+   本目标必须命中
+   [`reference_layout_registry.json`](../docs/renderers/contracts/reference_layout_registry.json)
+   里的
+   [`je1000f_us_v2_20260605.json`](../docs/renderers/contracts/reference_layout/je1000f_us_v2_20260605.json)；
+   plan 缺失、hash 漂移或页数漂移都要停，不能退回 fuzzy 匹配。
+2. 从冻结来源构建 production IDML：
+
+   ```bash
+   python3 build.py idml \
+     --config configs/config.us.yaml \
+     --model JE-1000F \
+     --region US \
+     --source review-asis \
+     --idml-mode production \
+     --data-root <phase2-snapshot>
+   ```
+
+   已在 reference-layout registry 注册的目标会直接使用批准的物理页合同，
+   `--source auto` 也会自动选择与上面相同的冻结 `review-asis` 装配；显式
+   source 参数不会被改写。入口只准备 RST，不再额外构建一份 LaTeX PDF；
+   未注册目标才默认 runtime 并保留历史的 LaTeX 分页匹配回退。
+
+3. 打开 `docs/_build/JE-1000F/US/idml/manual_je1000f_us.idml`。
+   `manual.ir.json` 是内容身份，`latex_page_plan.json` 只是同源 LaTeX
+   分页 trace，不是这次的视觉验收母版。文字、标题、表格、callout、
+   Product Overview 和封底必须是原生对象；插图必须是获批、scope/hash
+   正确的 linked asset。正文或封底不得靠整页 PDF 充当可见内容，参考
+   PDF 只能放在非打印比较层。内容、法务、规格或资产身份有问题时回源
+   修改后重建，不在 INDD 里另养一份内容。
+4. 在装有 InDesign 的设计 Mac 上关闭旧 INDD，再运行：
+
+   ```bash
+   python3 tools/indesign_finalize.py \
+     --idml docs/_build/JE-1000F/US/idml/manual_je1000f_us.idml \
+     --indd output/indesign/JE-1000F_US_same_source.indd \
+     --pdf output/pdf/JE-1000F_US_indesign.pdf \
+     --report output/indesign/JE-1000F_US_preflight.json \
+     --pdf-preset '[PDF/X-4:2008 (Japan)]' \
+     --output-intent 'Japan Color 2001 Coated' \
+     --output-condition JC200103 \
+     --pdfx PDF/X-4
+   ```
+
+5. 用获批 PDF 做逐页硬门禁。这里 `--latex-pdf` 是历史参数名，传入的
+   必须是获批参考 PDF，不是本次新生成的 LaTeX PDF：
+
+   ```bash
+   python3 tools/idml_pdf_parity.py \
+     --latex-pdf <approved-reference.pdf> \
+     --indesign-pdf output/pdf/JE-1000F_US_indesign.pdf \
+     --preflight output/indesign/JE-1000F_US_preflight.json \
+     --manual-ir docs/_build/JE-1000F/US/idml/manual.ir.json \
+     --reference-layout-plan docs/renderers/contracts/reference_layout/je1000f_us_v2_20260605.json \
+     --idml docs/_build/JE-1000F/US/idml/manual_je1000f_us.idml \
+     --indd output/indesign/JE-1000F_US_same_source.indd \
+     --pages all \
+     --out output/comparison/JE-1000F_US_same_source_parity.json
+   ```
+
+6. 只有以下条件全部满足才交付：58 页及 geometry 通过、overset / missing
+   fonts / missing glyphs / bad links 全为 0、PDF/X-4 与 `Japan Color 2001 Coated` /
+   `JC200103` 正确、52/52 source identity 匹配、所有实际使用资产获批且
+   hash 正确、没有可见正文/封底整页 PDF shortcut、58 页逐页 RGB MAD
+   `≤ 0.008` 且 changed-pixel ratio `≤ 0.040`，最终 parity JSON 的
+   `accepted=true`。写完文档、生成 IDML 或肉眼看起来接近，都不等于已经
+   验收通过。
+
+   `tools/indesign_finalize.py` 会在最终 PDF 上扫描可见 `U+FFFD` 与
+   `.notdef` 字形，因此正文和置入 PDF 中保留的文本都会进入机器闸门；已
+   转曲或纯位图素材仍必须依靠逐页视觉验收。
+
+### 构建尚未晋升的 BP@INTL EU candidate
+
+EU 六语加电包继续复用 `BP@INTL`，不需要复制一套页面 renderer：
+
+```bash
+python3 build.py idml \
+  --config configs/config.bp-eu.yaml \
+  --model JBP-2000B \
+  --region EU \
+  --data-root tests/fixtures/phase2
+```
+
+该目标的 `uk` 是乌克兰语，不代表 UK 市场；配套主机显示名必须是
+`Jackery Explorer 2000 Plus`。命令应得到 54 个物理页、76/76 source binding
+和 `skipped_raw=0`。随后仍须在设计 Mac 上运行 `tools/indesign_finalize.py`，
+要求 overset / missing fonts / missing glyphs / bad links 全为 0，并检查
+PDF/X-4。这里的 assembly 仍是 `candidate` / `production_eligible=false`；
+构建成功不等于已经完成 approved reference-layout 晋升。
+
+### 构建尚未晋升的 BP@JP JP candidate
+
+日规加电包使用独立 `BP@JP` 骨架，但继续复用共享组件和 composition 类型：
+
+```bash
+python3 build.py check \
+  --config configs/config.bp-jp.yaml \
+  --model JBP-2000B \
+  --region JP
+
+python3 build.py idml \
+  --config configs/config.bp-jp.yaml \
+  --model JBP-2000B \
+  --region JP \
+  --no-clean
+```
+
+配套主机显示名必须是 `Jackery ポータブル電源 2000 Plus`。目标应输出
+12 个物理页、13/13 source binding、`skipped_raw=0`；`Connections` 为两页，
+Troubleshooting 与 Specifications 共页。随后在设计 Mac 上运行
+`tools/indesign_finalize.py`，要求保存/重开后 overset、missing fonts、
+missing glyphs、bad links 均为 0，PDF/X-4 通过，并逐页对照冻结参考 PDF。
+该计划仍是 `candidate`，首次出包通过不等于 approved reference-layout
+晋升。
 
 ## 9. 一句话规则
 
@@ -510,11 +737,88 @@ Publish 不直接复用旧 Build Draft Package 产物，但为了保证正式文
 
 ## 10. 2026-04 更新
 
-- `Review Init` 和 `Document_link` 现在都是先按 `Build_family` 路由，再决定是否按 `Document_Key` 合并；像 `us-merged` 这种启用了 `queue_by_document_key` 的 family 会把空 `Lang` 的同一个 `Document_Key` 合成一次 review / build，而 `Build Draft Package` 行只要填写了 `Lang`，就会按 `Document_Key + 规范化 Lang` 拆成独立构建。
+- `Review Init` 和 `Document_link` 都按“`Document_Key` 精确目标 + `Build_family` 语言范围”解析配置，再决定是否按 `Document_Key` 合并；像 `us-merged` 这样的合并语言范围会把空 `Lang` 的同一 `Document_Key` 合成一次 review / build，而 `Build Draft Package` 行只要填写了 `Lang`，就会按 `Document_Key + 规范化 Lang` 拆成独立构建。
 - `Lang=br` / `pt-br` 会规范化为 `pt-BR`；`configs/config.pt-br.yaml` 现在按单语言入口构建巴西葡语文档，队列表用 `Build_family = pt-br` 加 `Lang=br` 或 `Lang=pt-BR`，不要再额外配一条英文对照稿。
 - US 的 `configs/config.us.yaml` 现在是合并多语言入口，会产出一个合并 `en + fr + es` 的 Word：`docs/_build/<model>/US/word/manual_<model>_us.docx`。
-- 队列表建议直接填写 `Build_family`：`us-merged` / `us-en` / `us-es` / `us-fr` / `pt-br` / `jp-ja` / `cn-zh`；`Lang` 现在只保留为兼容字段，不再是主路由字段。
+- 队列表的 `Build_family` 只填写语言范围：`us-merged` / `us-en` / `us-es` / `us-fr` / `pt-br` / `jp-ja` / `cn-zh`；不要填写 BP/MAIN 等产品骨架值。`Lang` 只保留为兼容或单语言收窄字段。
 - 合并 US 流程请填 `Build_family = us-merged`，`Lang` 可以留空；单语言流程请填对应单语言 family，例如 `us-en`、`us-es`、`us-fr` 或 `pt-br`，`Lang` 只填一个语言值即可。
+- JBP 与普通 US 主机在 Base 中都使用 `Build_family = us-merged`；系统根据 `Document_Key` 的精确目标自动选择 BP 或 MAIN 骨架配置。
 - 这条合并 US 流程不再要求法语、西语分别先创一份独立初稿 review bundle。
 - `Spec_Master` 里由 `Source_lang` 定义 source language；`*_source` 内容必须有，其他语言列在 CSV 驱动内容里可以为空，系统会自动回退到 source language 文本。
 - `Spec_Master` 现在是本地读取快照；人工维护规格参数时先改 `规格参数明细` / `页面占位参数`，再用 `sync-data --table spec_master` 或 `spec-master-rebuild` 生成。
+
+
+### 合并配置的 Web 单语本地验收
+
+要从合并 US 配置只验收英语 Web 输入，可显式传入 `--lang en`。
+先准备含已核验附件和 Web composite 合同的本地快照，将下方示例路径替换为它；
+纯仓库 fixture 不包含所有审稿附件，不能单独作为这项审稿构建的完整输入：
+
+```bash
+AUTO_MANUAL_PRESENTATION_PROFILE=web python3 build.py check \
+  --config configs/config.us.yaml \
+  --model JE-1000F --region US --lang en \
+  --source review-asis \
+  --data-root /path/to/approved-local-snapshot \
+  --staging-root .tmp/web-en
+```
+
+完整 EN/FR/ES 源会冻结到
+`.tmp/web-en/docs/_build/JE-1000F/US/en/web/source/rst/`，英语规范投影位于
+`.tmp/web-en/docs/_build/JE-1000F/US/en/rst/`。用相同参数运行 `build.py md` 或
+`build.py html` 时，两者读取同一规范投影。该命令只做本地验收，不构成独立语言发布。
+命令退出码为 0 只表示现有构建与结构门通过，不等于内容已验收；本路径不放宽任何内容门。
+
+### 加电包日语 Web 本地验收
+
+在工程仓库使用现有快照试构建（不写线上 Base、不发布）：
+
+```bash
+AUTO_MANUAL_PRESENTATION_PROFILE=web python build.py md --config configs/config.bp-jp.yaml --model JBP-2000B --region JP --source runtime --data-root tests/fixtures/phase2 --staging-root .tmp/bp-web --no-clean --skip-root-index
+python tools/readthedocs_source.py --build-root .tmp/bp-web/docs/_build --output-dir .tmp/bp-web/docs/_build/rtd
+python -m sphinx -b html .tmp/bp-web/docs/_build/rtd .tmp/bp-web/html
+```
+
+Web 图采用 PDF 带字裁切，正确操作说明以结构源为准。
+IR、源读取退出路径与剩余边界见[完整执行记录](../code-as-doc/dev/ir_document_closeout.md)。
+
+### SolarSaga 100 Air 欧规英语 Web 本地验收
+
+该目标从 Safety Tips 开始，不包含封面、目录或电源产品专属章节。使用提交的
+bootstrap fixture 进行只读本地验收：
+
+```bash
+AUTO_MANUAL_PRESENTATION_PROFILE=web python build.py md \
+  --config configs/config.solar-eu-en.yaml \
+  --model JS-100I --region EU --lang en \
+  --data-root tests/fixtures/js100i_eu_en_phase2 \
+  --staging-root .tmp/js100i-web
+python tools/readthedocs_source.py \
+  --build-root .tmp/js100i-web/docs/_build \
+  --output-dir .tmp/js100i-web/docs/_build/rtd \
+  --title "JS-100I Web Acceptance"
+python -m sphinx -b html \
+  .tmp/js100i-web/docs/_build/rtd .tmp/js100i-web/html
+```
+
+这只是本地 Web 验收。正式发布仍由 `Workflow_action=Web Publish` 冻结审核通过的
+线上快照并创建 Hello-Docs `docs/publish/**` PR；不要把 fixture 当成线上源表，也
+不要直接修改业务镜像工程树。
+
+### SolarSaga 40 Air 欧规英语 Web 本地验收
+
+JS-40C 使用同一 Solar 配置入口，但由独立 Product Manual Plan 解析七项 Inbox、
+充电连接、角度/设备、收纳、规格和保修。只读本地构建命令如下：
+
+```bash
+AUTO_MANUAL_OSS_ARCHIVE_CONFIG=off AUTO_MANUAL_PRESENTATION_PROFILE=web \
+python build.py html \
+  --config configs/config.solar-eu-en.yaml \
+  --model JS-40C --region EU --lang en \
+  --data-root data/manual_sources/JS-40C/EU/en/2026-08-30/phase2
+```
+
+该命令只生成本地验收页面，不写线上 Base、不上传 OSS，也不构成正式发布。
+
+JBP-2000B 欧规英文单语的可执行示例见
+[版本化结构源](../manual_sources/JBP-2000B/EU/en/2.0/README.md)。

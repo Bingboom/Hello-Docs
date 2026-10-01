@@ -52,7 +52,6 @@ Optional:
 - `FEISHU_IM_ENABLE_MESSAGE_REACTIONS` or `FEISHU_IM_ENABLE_REACTIONS`
 - `FEISHU_IM_PUBLISH_CONFIRM_TTL_SECONDS`
 - `FEISHU_IM_CONTEXT_TTL_SECONDS`
-- `FEISHU_IM_BATCH_DISPATCH_DELAY_MS`; defaults to `2000` so batch Draft dispatches do not burst all GitHub workflow requests at once
 - `FEISHU_IM_BATCH_STATUS_TIMEOUT_SECONDS`; defaults to `60` for deployed adapters and controls how long the adapter waits for fresh batch writeback before sending a follow-up status summary
 - `FEISHU_IM_BATCH_STATUS_POLL_SECONDS`; defaults to `5` for batch writeback polling
 - `FEISHU_IM_MANUAL_INDEX_LIMIT`; defaults to `10` rows in manual-index replies
@@ -165,7 +164,7 @@ answer product/manual-link inventory and overview questions, while phrases that
 include build-copy intent such as `输出JE-1000F的所有欧规说明书文案` stay on the
 existing Build Draft queue path.
 For batch status or link replies, the adapter sends one status summary without
-embedded `Document link` URLs, then sends each unique artifact link as its own
+embedded `delivery_url` values, then sends each unique phase-aware delivery link as its own
 follow-up text message. That keeps Feishu's document-link renderer on the same
 path as a human sending one document link per message instead of flattening all
 links into one plain-text block.
@@ -173,26 +172,30 @@ Both `输出JE-1000F的所有欧规说明书文案` and `构建JE-1000F的所有
 are treated as batch draft-build requests.
 That phrase becomes a `Task_id` prefix such as `JE-1000F_EU_`; only rows whose
 `Task_id` maps to `Build Draft Package` and whose `是否触发文档构建` is enabled are
-launched. The adapter dispatches each matched row by `record_id` with
-`queue-execute --no-wait`, throttling each dispatch by `FEISHU_IM_BATCH_DISPATCH_DELAY_MS`,
-then stores a short-lived batch context containing `request_id`, `accepted_at`,
-`action_name`, `queryText`, and the launched rows. Batch status follow-ups such
+launched. The adapter calls `queue-execute --allow-multiple --no-wait` once with
+the exact matched record ids; the control layer dispatches one batch workflow run
+for the action and the worker consumes only that record set. It then stores a
+short-lived batch context containing `request_id`, `accepted_at`, `action_name`,
+`queryText`, and the launched rows. Batch status follow-ups such
 as `这个好了没` or document-link follow-ups such as `发` / `发一下` re-read each
 stored `record_id` with `--fresh-since accepted_at` and classify rows as fresh
 success/failure, stale result, or writeback pending.
 If Feishu no longer returns a remembered `record_id`, the adapter reports that
 row as not found, clears the stale context when no live rows remain, and does not
 replay the old row payload from local memory.
-The GitHub draft workflow scopes its
-concurrency group by `queue_record_id`, so multiple rows from one batch do not
-cancel each other while they are pending.
+The GitHub draft workflow uses the explicit `batch` scope for this run and carries
+the selected ids in `queue_record_ids`, so one pending batch cannot silently lose
+the third row or consume an unrelated pending row.
 `最新` does not collapse batch Draft requests by `Document_Key`; the trigger
 checkbox remains the eligibility gate for each language row.
 `是否强制刷新数据` remains a build-time row input read by `process-build-queue`.
 
 Freshness fields come from `build.py queue-query --fresh-since ...` and are
-included in Document_link JSON rows as `freshness_status`, `result_built_at`,
-`result_is_fresh`, and `build_started_at`. When a previous failed build remains
+included in queue JSON rows as `freshness_status`, `result_built_at`,
+`result_is_fresh`, and `build_started_at`. The same rows expose
+`delivery_kind`, `delivery_url`, and `delivery_ready`; the adapter never treats
+the retired `document_link` name or a blank `idml_file` as evidence that a Draft
+cloud-doc upload failed. When a previous failed build remains
 in `构建结果` after a new dispatch, the adapter reports `stale_result` or
 `writeback_pending` instead of presenting that old failure as the current run.
 The underlying `queue-query --json` response also includes `matched_count`,

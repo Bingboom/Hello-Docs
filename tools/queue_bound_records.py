@@ -23,12 +23,12 @@ from tools.document_link_queue import (
     is_upload_dingtalk_enabled as _is_upload_dingtalk_enabled_impl,
     parse_document_key,
     parse_queue_records as _parse_queue_records_impl,
-    queue_group_build_family,
-    queue_group_dingtalk_target_node_url,
-    queue_group_force_phase2_refresh,
-    queue_group_lang,
-    queue_group_operator_union_id,
-    queue_group_upload_dingtalk,
+    queue_group_build_family as queue_group_build_family,
+    queue_group_dingtalk_target_node_url as queue_group_dingtalk_target_node_url,
+    queue_group_force_phase2_refresh as queue_group_force_phase2_refresh,
+    queue_group_lang as queue_group_lang,
+    queue_group_operator_union_id as queue_group_operator_union_id,
+    queue_group_upload_dingtalk as queue_group_upload_dingtalk,
     queue_record_group_key,
     queue_record_key,
     resolve_target_for_record as _resolve_target_for_record_impl,
@@ -54,6 +54,7 @@ from tools.queue_contract import (
     LEGACY_TRIGGER_FIELDS,
     OPERATOR_UNION_ID_ALIASES,
     OPERATOR_UNION_ID_FIELD,
+    RESULT_FIELD,
     TRIGGER_FIELD,
     TRIGGER_VALUES,
     UPLOAD_DINGTALK_FIELD,
@@ -61,6 +62,7 @@ from tools.queue_contract import (
     WORKFLOW_ACTION_FIELD,
     QueueRecord,
 )
+from tools.queue_transitions import has_active_queue_claim
 from tools.queue_grouping import group_pending_queue_records as _group_pending_queue_records_impl
 
 
@@ -102,6 +104,7 @@ def parse_queue_records(raw_records: list[dict[str, Any]]) -> list[QueueRecord]:
         upload_dingtalk_field=UPLOAD_DINGTALK_FIELD,
         operator_union_id_fields=(OPERATOR_UNION_ID_FIELD, *OPERATOR_UNION_ID_ALIASES),
         dingtalk_target_node_url_fields=(DINGTALK_TARGET_NODE_URL_FIELD, *DINGTALK_TARGET_NODE_URL_ALIASES),
+        result_field=RESULT_FIELD,
     )
 
 
@@ -158,6 +161,8 @@ def select_pending_queue_records(
     workflow_action: str | None = None,
     doc_phase: str | None = None,
     record_id: str | None = None,
+    record_ids: tuple[str, ...] = (),
+    include_active_claims: bool = False,
 ) -> list[QueueRecord]:
     return _select_pending_queue_records_impl(
         raw_records,
@@ -165,11 +170,14 @@ def select_pending_queue_records(
         workflow_action=workflow_action,
         doc_phase=doc_phase,
         record_id=record_id,
+        record_ids=record_ids,
         parse_queue_records=parse_queue_records,
         normalize_cli_queue_action=_normalize_cli_queue_action,
         resolve_queue_workflow_action=resolve_queue_workflow_action,
         is_trigger_requested=is_trigger_requested,
         is_immediate_trigger_enabled=is_immediate_trigger_enabled,
+        has_active_queue_claim=has_active_queue_claim,
+        include_active_claims=include_active_claims,
     )
 
 
@@ -195,6 +203,7 @@ def resolve_target_for_record(record: QueueRecord) -> tuple[str, str]:
 
 def resolve_config_path_for_task(
     *,
+    model: str | None = None,
     region: str,
     lang: str | None,
     build_family: str | None = None,
@@ -202,6 +211,7 @@ def resolve_config_path_for_task(
 ) -> Path:
     return _resolve_config_path_for_task_impl(
         repo_root=_repo_root(),
+        model=model,
         region=region,
         lang=lang,
         build_family=build_family,

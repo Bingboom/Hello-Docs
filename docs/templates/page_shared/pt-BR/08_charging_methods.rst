@@ -1,14 +1,14 @@
 CARREGAMENTO VIA PAINÉIS SOLARES (VENDIDOS SEPARADAMENTE)
 ---------------------------------------------------------
 
-O |PRODUCT_NAME| possui duas portas de entrada DC8020 e é compatível com os painéis solares Jackery. Se uma porta de entrada DC8020 precisar conectar dois painéis solares simultaneamente, consulte a figura abaixo para o carregamento por meio do conector de painel solar (vendido separadamente, não incluído como padrão).
+O |PRODUCT_NAME| possui duas portas de entrada |DC_INPUT_CONNECTOR| e é compatível com os painéis solares Jackery. Se uma porta de entrada |DC_INPUT_CONNECTOR| precisar conectar dois painéis solares simultaneamente, consulte a figura abaixo para o carregamento por meio do conector de painel solar (vendido separadamente, não incluído como padrão).
 
-.. image:: templates/word_template/common_assets/charging/solar_direct.png
+.. image:: asset:charging/solar_direct
    :alt: Diagrama de conexão para carregamento solar 1.
    :width: 360px
 
 
-.. image:: templates/word_template/common_assets/charging/solar_adapter.png
+.. image:: asset:charging/solar_adapter
    :alt: Diagrama de conexão para carregamento solar 2.
    :width: 360px
 
@@ -17,7 +17,7 @@ O |PRODUCT_NAME| possui duas portas de entrada DC8020 e é compatível com os pa
    :widths: 12 88
 
    * - **CUIDADO**
-     - Uma porta de entrada DC8020 pode ser conectada a no máximo dois painéis solares.
+     - Uma porta de entrada |DC_INPUT_CONNECTOR| pode ser conectada a no máximo dois painéis solares.
 
 .. list-table::
    :header-rows: 0
@@ -26,17 +26,17 @@ O |PRODUCT_NAME| possui duas portas de entrada DC8020 e é compatível com os pa
    * - **CUIDADO**
      - Certifique-se de que a tensão de entrada para ambas as portas de entrada CC seja a mesma. Caso contrário, o produto pode ser danificado. Por exemplo:
 
-       - Use o mesmo modelo de painéis solares da Jackery e o mesmo número de painéis ao conectar painéis solares a ambas as portas de entrada DC8020.
+       - Use o mesmo modelo de painéis solares da Jackery e o mesmo número de painéis ao conectar painéis solares a ambas as portas de entrada |DC_INPUT_CONNECTOR|.
        - Não carregue o produto usando simultaneamente um carregador veicular e um painel solar. Isso pode queimar o fusível do carro ou resultar em falha no carregamento.
 
-Recomenda-se usar o painel solar Jackery para carregar o produto. Certifique-se de que a tensão de circuito aberto (V\ :sub:`oc`) do painel solar esteja dentro da faixa de entrada CC (16V-60V) do |PRODUCT_NAME|. A Jackery não se responsabiliza por quaisquer danos ou perdas resultantes do uso de painéis solares de outras marcas.
+Recomenda-se usar o painel solar Jackery para carregar o produto. Certifique-se de que a tensão de circuito aberto (V\ :sub:`oc`) do painel solar esteja dentro da faixa de entrada CC (|PV_INPUT_RANGE|) do |PRODUCT_NAME|. A Jackery não se responsabiliza por quaisquer danos ou perdas resultantes do uso de painéis solares de outras marcas.
 
 CARREGAMENTO COM CARREGADOR VEICULAR (VENDIDO SEPARADAMENTE)
 ------------------------------------------------------------
 
 Este produto pode ser carregado usando um carregador veicular de 12V. Certifique-se de que o carregador veicular e a tomada de 12V do veículo (acendedor de cigarros) estejam bem conectados.
 
-.. image:: templates/word_template/common_assets/charging/car_charge.png
+.. image:: asset:charging/car_charge
    :alt: Diagrama de conexão para carregamento veicular.
    :width: 360px
 

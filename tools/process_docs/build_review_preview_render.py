@@ -3,14 +3,9 @@ from __future__ import annotations
 from datetime import datetime, timezone
 from html import escape
 
+from tools import lang_registry
 
-LANGUAGE_LABELS = {
-    "en": "English",
-    "es": "Spanish",
-    "fr": "French",
-    "ja": "Japanese",
-    "zh": "Chinese",
-}
+LANGUAGE_LABELS = lang_registry.language_display_labels()
 
 
 def display_text(value: object, fallback: str = "Not available") -> str:

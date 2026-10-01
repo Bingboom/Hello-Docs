@@ -1,0 +1,19 @@
+{
+  "schema_version": "auto-manual-web-publish-target/v2",
+  "model": "JE-2000F",
+  "region": "EU",
+  "lang": "en",
+  "version": "2.6",
+  "built_at": "2026-09-27T19:06:11-07:00",
+  "git_ref": "138c965413ef8b4a14f536bb2b5672dd9274b131",
+  "route": "JE-2000F/EU/en/md",
+  "manual": "manual_je2000f_eu_en.md",
+  "language_scope": "single",
+  "language_projection_evidence_path": "evidence/language_projection_receipt.json",
+  "language_projection_evidence_sha256": "f238a7aa25d70e14e1fa91f4579dcd9e893047e8c0bd56b8d86fa47828c09e1b",
+  "legacy_default": true,
+  "legacy_route": "JE-2000F/EU/md",
+  "legacy_aliases": [
+    "manual_je2000f_eu_en"
+  ]
+}

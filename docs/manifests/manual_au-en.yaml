@@ -2,7 +2,7 @@ manifest_id: manual_au_en
 pages:
   - type: rst_include
     lang: en
-    file: templates/page_shared/en/00_preface.rst
+    file: templates/page_shared/en/00_preface_single_language.rst
   - type: rst_include
     lang: en
     file: templates/page_au-en/safety_en.rst
@@ -33,12 +33,13 @@ pages:
     page: 05_operation_guide
     engine: draft_v1
     recipe: templates/recipes/eu-en/05_operation_guide.yaml
-    template: templates/page_eu-en/05_operation_guide_placeholder.rst
+    template: templates/page_au-en/05_operation_guide_placeholder.rst
     langs: [en]
     include_dir: generated/{model}/draft
   - type: rst_include
     lang: en
     file: templates/page_shared/en/06_ups_mode.rst
+    capability: UPS功能
   - type: rst_include
     lang: en
     file: templates/page_shared/en/charging.rst

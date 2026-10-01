@@ -1,10 +1,10 @@
-APERÇU DU PRODUIT
+{{ copy:product_overview.page_title }}
 =================
 
-VUE DE FACE
+{{ copy:product_overview.front_view }}
 -----------
 
-.. image:: templates/word_template/common_assets/overview/front_product.jpg
+.. image:: asset:overview/front_controls
    :alt: Schéma de la vue de face.
    :width: 420px
 
@@ -13,13 +13,13 @@ VUE DE FACE
    :widths: 50 50
 
    * - **|MAIN_POWER_BUTTON_LABEL|**
-     - **LCD**
+     - **{{ copy:product_overview.part.lcd }}**
    * - **|FRONT_DC12_PORT_LABEL|**
 
        |FRONT_DC12_PORT_SPEC|
-     - **Bouton lumière LED**
+     - **{{ copy:product_overview.part.led_light_button }}**
    * - **|DC_USB_POWER_BUTTON_LABEL|**
-     - **Lumière LED**
+     - **{{ copy:product_overview.part.led_light }}**
    * - **|FRONT_USB_C_LOW_LABEL|**
 
        |FRONT_USB_C_LOW_SPEC|
@@ -43,10 +43,10 @@ VUE DE FACE
 
        |FRONT_TOTAL_OUTPUT_SPEC|
 
-VUE LATÉRALE DROITE
+{{ copy:product_overview.right_side_view }}
 -------------------
 
-.. image:: templates/word_template/common_assets/overview/right_side_ports.png
+.. image:: asset:overview/right_side_ports
    :alt: Schéma de la vue latérale droite.
    :width: 420px
 
@@ -54,7 +54,7 @@ VUE LATÉRALE DROITE
    :header-rows: 0
    :widths: 50 50
 
-   * - **Poignée**
+   * - **{{ copy:product_overview.part.handle }}**
      -
    * - **|SIDE_AC_INPUT_LABEL|**
 

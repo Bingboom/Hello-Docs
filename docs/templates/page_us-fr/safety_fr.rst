@@ -10,7 +10,7 @@
 
    .. raw:: latex
 
-      \safetywarning{INSTRUCTIONS CONCERNANT LES RISQUES D’INCENDIE, DE CHOC ÉLECTRIQUE OU DE BLESSURES}
+      \HBSafetyInstruction{INSTRUCTIONS CONCERNANT LES RISQUES D’INCENDIE, DE CHOC ÉLECTRIQUE OU DE BLESSURES}
 
    .. raw:: latex
 
@@ -19,7 +19,7 @@
 
    .. raw:: latex
 
-      \safetylead{Respectez toujours les précautions suivantes lors de l’utilisation du produit.}
+      \HBWarningLeadBlock{AVERTISSEMENT}{Respectez toujours les précautions suivantes lors de l’utilisation du produit.}
 
 
    - Lisez toutes les instructions avant d’utiliser le produit.
@@ -84,13 +84,11 @@
 
    .. raw:: latex
 
-      \safetywarning{AVERTISSEMENT}
-
-   Une connexion incorrecte du conducteur de mise à la terre peut entraîner un risque de choc électrique. Consultez un électricien qualifié si vous avez des doutes quant à la mise à la terre correcte du produit. Ne modifiez pas la fiche fournie avec le produit – si elle ne correspond pas à la prise, faites installer une prise appropriée par un électricien qualifié.
+      \safetywarning[AVERTISSEMENT]{Une connexion incorrecte du conducteur de mise à la terre peut entraîner un risque de choc électrique. Consultez un électricien qualifié si vous avez des doutes quant à la mise à la terre correcte du produit. Ne modifiez pas la fiche fournie avec le produit – si elle ne correspond pas à la prise, faites installer une prise appropriée par un électricien qualifié.}
 
    .. raw:: latex
 
-      \HBNoticeBlock{DANGER}{Cet appareil est destiné à un usage intérieur uniquement (veuillez placer cet appareil dans un environnement intérieur similaire lors de son utilisation à l'extérieur, par exemple, maison, VR, tentes, cabines, etc.).}{※ Cet appareil n'est ni étanche ni résistant à la poussière. Gardez-le à l'abri de la pluie et des environnements humides pendant l'utilisation.}
+      \HBDangerBlock{DANGER}{Cet appareil est destiné à un usage intérieur uniquement (veuillez placer cet appareil dans un environnement intérieur similaire lors de son utilisation à l'extérieur, par exemple, maison, VR, tentes, cabines, etc.).}{※ Cet appareil n'est ni étanche ni résistant à la poussière. Gardez-le à l'abri de la pluie et des environnements humides pendant l'utilisation.}
 
 
 .. only:: html

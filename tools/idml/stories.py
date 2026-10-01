@@ -1,0 +1,259 @@
+"""Story builders whose golden byte-comparison pins IDML equivalence."""
+from __future__ import annotations
+
+from pathlib import Path
+
+from . import components as _components, page_objects as _po, prose_flow as _flow
+from .data_stories import add_lcd_story as add_lcd_story, add_spec_story as add_spec_story, add_symbols_story as add_symbols_story, add_trouble_story as add_trouble_story
+from .params import param_pt
+from .prose_paragraph import build_text_paragraph
+from .character_metrics import with_character_baseline_shift
+from .story_rhythm import apply_default_h2_rhythm, operation_key_visual_raise
+from .story_estimates import StoryHeight, paragraph_estimate
+from .operation_stack import OperationStorySpacing
+from .story_parts import add_story_parts as _add_story_parts
+from .story_parts import add_text_story as add_text_story
+from .story_semantics import image_role, require_all_image_roles, story_language
+
+def add_prose_story(writer, sid: str, title: str, blocks: list[tuple[str, str]],
+                    bundle_root: Path, *,
+                    inline_origin_shift: float = 0.0,
+                    language: str | None = None,
+                    image_roles: tuple[str, ...] = (),
+                    image_callouts: tuple[tuple[dict, ...], ...] = (),
+                    disable_hyphenation: bool = False,
+                    first_h1_space_after: float | None = None, semantic_page_role: str | None = None,
+                    figure_frame_height: float | None = None) -> tuple[str, float]:
+    """Story from extracted prose blocks; returns (sid, est_height_pt)."""
+    parts: list[str] = []
+    img_n = 0
+    image_role_index = 0
+    # A figure whose target declares callouts prints the labels over the art.
+    figure_callouts, consumed_label_tables = _components.plan_figure_callouts(
+        blocks, image_callouts,
+    )
+    is_preface = semantic_page_role == "preface" or (semantic_page_role is None and title == "00_preface")
+    content_indices = [i for i, (kind, _) in enumerate(blocks) if kind != "layout"]
+    last_idx = content_indices[-1] if content_indices else -1
+    in_twocol = False
+    next_h1_page_top: float | None = None
+    next_trouble_h1_language, next_storage_h1_language = None, None
+    has_twocol_layout = any(kind == "layout" for kind, _ in blocks)
+    est = StoryHeight(None if has_twocol_layout else figure_frame_height)
+    page_language = story_language(blocks, language)
+    text_measure = writer.page_w - writer.m_l - writer.m_r
+    if is_preface:
+        text_measure = writer.page_w - param_pt(
+            writer.params, "idml_preface_margin_left", writer.m_l,
+        ) - param_pt(writer.params, "idml_preface_margin_right", writer.m_r)
+    column_measure = (text_measure - 11.0) / 2.0
+    operation_rhythm = OperationStorySpacing(
+        writer, blocks,
+        title=title,
+        language=page_language,
+        bundle_root=bundle_root,
+        inline_origin_shift=inline_origin_shift,
+        text_measure=text_measure,
+    )
+
+    for bi, (kind, text) in enumerate(blocks):
+        if kind == "layout":
+            if text == "twocol_start":
+                in_twocol = True
+            elif text == "twocol_end":
+                in_twocol = False
+            elif text == "page_break" or text.startswith("page_break:"):
+                page_break = writer._psr("HB Body", "")
+                if ":" in text:
+                    space_after = float(text.split(":", 1)[1])
+                    page_break = page_break.replace(
+                        "<ParagraphStyleRange ",
+                        f'<ParagraphStyleRange SpaceAfter="{space_after:g}" ',
+                        1,
+                    )
+                parts.append(_flow.start_next_page(page_break))
+                est.next_frame()
+            elif text.startswith("next_h1_page_top:"):
+                next_h1_page_top = float(text.split(":", 1)[1])
+            elif text.startswith("trouble_h1_before:"):
+                next_trouble_h1_language = text.split(":", 1)[1]
+            elif text.startswith("storage_h1:"):
+                next_storage_h1_language = text.split(":", 1)[1]
+            continue
+        terminal = bi == last_idx
+        if kind == "component":
+            import json as _json
+            spec = _json.loads(text)
+            span_columns = not in_twocol
+            measure_w = column_measure if in_twocol else (text_measure if is_preface else None)
+            xml_part, h = writer._render_component(
+                sid, bi, spec, bundle_root, terminal,
+                span_columns=span_columns, measure_w=measure_w,
+                language=page_language,
+                inline_origin_shift=inline_origin_shift)
+            if xml_part:
+                xml_part, h = operation_rhythm.apply_component(
+                    bi, spec, xml_part, h,
+                )
+                parts.append(xml_part)
+                est.add(h)
+            continue
+        if kind == "table":
+            import json as _json
+            if bi in consumed_label_tables:
+                continue
+            raw_rows = _json.loads(text)
+            img_n += 1
+            xml_part, h = _components.render_table_block(
+                raw_rows,
+                writer._render_context(
+                    bundle_root, language=page_language,
+                    inline_origin_shift=inline_origin_shift,
+                ),
+                tid=f"{sid}_t{img_n}", terminal=terminal,
+                span_columns=not in_twocol,
+                troubleshooting=_flow.table_is_marked_troubleshooting(blocks, bi))
+            xml_part = _flow.align_table_xml(xml_part, blocks, bi)
+            xml_part, h = operation_rhythm.apply_block(bi, xml_part, h)
+            parts.append(xml_part)
+            est.add(h)
+            continue
+        if kind == "image":
+            role = image_role(image_roles, image_role_index, title=title)
+            image_role_index += 1
+            callouts = figure_callouts.get(bi, ())
+            xml_part, h = _components.render_image_block(
+                text,
+                writer._render_context(bundle_root, language=page_language),
+                rect_id=f"{sid}_im{img_n + 1}", terminal=terminal, role=role,
+                spacing_variant=semantic_page_role,
+                callouts=callouts)
+            if xml_part is None:
+                continue
+            img_n += 1
+            xml_part, h = operation_rhythm.apply_block(bi, xml_part, h)
+            parts.append(xml_part)
+            est.add(h, unbreakable=True)
+            continue
+        if kind == "h1":
+            h1_xml = _po.h1_pill_paragraph(writer, text, text_measure)
+            if first_h1_space_after is not None:
+                h1_xml, first_h1_space_after = _flow.apply_first_h1_space_after(
+                    h1_xml, first_h1_space_after,
+                )
+            if next_storage_h1_language is not None:
+                h1_xml = _flow.apply_storage_h1_rhythm(h1_xml, writer.params, next_storage_h1_language)
+                next_storage_h1_language = None
+            if next_trouble_h1_language is not None:
+                h1_xml = _flow.apply_troubleshooting_h1_rhythm(
+                    h1_xml, writer.params, next_trouble_h1_language,
+                )
+                next_trouble_h1_language = None
+            if next_h1_page_top is not None:
+                offset = max(0.0, next_h1_page_top - writer.m_t)
+                h1_xml = h1_xml.replace(
+                    "<ParagraphStyleRange ",
+                    f'<ParagraphStyleRange StartParagraph="NextPage" '
+                    f'SpaceBefore="{offset:g}" ',
+                    1,
+                )
+                next_h1_page_top = None
+                est.next_frame()
+            parts.append(h1_xml)
+            est.add(24.0)
+            continue
+        next_block = blocks[bi + 1] if bi + 1 < len(blocks) else ("", "")
+        paragraph, semantic_kind, is_h2, text = build_text_paragraph(
+            writer,
+            kind=kind,
+            text=text,
+            terminal=terminal,
+            is_preface=is_preface,
+            has_twocol_layout=has_twocol_layout,
+            in_twocol=in_twocol,
+            bundle_root=bundle_root,
+            page_language=page_language,
+            story_id=sid,
+            block_index=bi,
+        )
+        operation_attrs, operation_spacing = operation_rhythm.base_rhythm(
+            kind, next_block, is_h2=is_h2,
+        )
+        if kind == "h2" and operation_attrs is None:
+            paragraph, operation_spacing = apply_default_h2_rhythm(paragraph, writer.params)
+        if kind == "warrantynote":
+            note_scale = param_pt(
+                writer.params,
+                f"lang_{page_language}_idml_warranty_note_horizontal_scale",
+                param_pt(
+                    writer.params,
+                    "idml_warranty_note_horizontal_scale",
+                    100.0,
+                ),
+            )
+            paragraph = paragraph.replace(
+                'AppliedCharacterStyle="CharacterStyle/$ID/[No character style]"',
+                'AppliedCharacterStyle="CharacterStyle/$ID/[No character style]" '
+                f'HorizontalScale="{note_scale:g}"',
+                1,
+            )
+        if kind == "h2_overview_front":
+            paragraph = paragraph.replace(
+                "<ParagraphStyleRange ",
+                '<ParagraphStyleRange SpaceBefore="5.19" SpaceAfter="10.66" '
+                'LeftIndent="0.91" ',
+                1,
+            )
+        elif kind == "h2_overview_right":
+            paragraph = paragraph.replace(
+                "<ParagraphStyleRange ",
+                '<ParagraphStyleRange LeftIndent="0.91" ',
+                1,
+            )
+            paragraph = paragraph.replace(
+                'AppliedCharacterStyle="CharacterStyle/$ID/[No character style]"',
+                'AppliedCharacterStyle="CharacterStyle/$ID/[No character style]" '
+                'BaselineShift="-0.32"',
+                1,
+            )
+            paragraph = _po.vertical_spacer_paragraph(
+                f"spacer_{sid}_overview_right", 0.0) + paragraph
+        elif kind == "h2_charging_car":
+            paragraph = _flow.apply_charging_car_heading_rhythm(
+                paragraph, writer.params, page_language,
+            )
+        if operation_attrs is not None:
+            paragraph = paragraph.replace(
+                "<ParagraphStyleRange ",
+                f"<ParagraphStyleRange {operation_attrs} ",
+                1,
+            )
+        key_visual_raise = operation_key_visual_raise(
+            kind,
+            next_block,
+            page_language,
+            writer.params,
+        )
+        if key_visual_raise:
+            paragraph = with_character_baseline_shift(
+                paragraph,
+                shift=key_visual_raise,
+            )
+        paragraph, operation_spacing = operation_rhythm.apply_paragraph(
+            bi, paragraph, operation_spacing,
+        )
+        parts.append(paragraph)
+        measure = column_measure if in_twocol else text_measure
+        paragraph_height, lines = paragraph_estimate(
+            writer.params, semantic_kind, kind, text, measure,
+            is_preface=is_preface,
+            operation_spacing=operation_spacing,
+        )
+        operation_rhythm.record_estimate(kind, lines)
+        est.add(paragraph_height)
+    require_all_image_roles(image_roles, image_role_index, title=title)
+    operation_rhythm.assert_complete()
+    if disable_hyphenation:
+        parts = _flow.disable_story_hyphenation(parts)
+    _add_story_parts(writer, sid, title, parts)
+    return sid, est.total

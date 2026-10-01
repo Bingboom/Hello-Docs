@@ -1,10 +1,12 @@
 manifest_id: manual_us_en
 pages:
   - type: cover_pdf
-    file: cover-en.pdf
+    file: asset:page/cover
   - type: rst_include
     lang: en
     file: templates/page_shared/en/00_preface.rst
+    # Single-language line: trims the inherited FR/ES blocks.
+    lang_blocks: true
   - type: rst_include
     lang: en
     file: templates/page_us-en/safety_en.rst
@@ -44,6 +46,7 @@ pages:
   - type: rst_include
     lang: en
     file: templates/page_shared/en/06_ups_mode.rst
+    capability: UPS功能
   - type: rst_include
     lang: en
     file: templates/page_shared/en/charging.rst

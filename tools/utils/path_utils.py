@@ -28,26 +28,78 @@ class PathSegments:
     BUILD = "_build"
     REVIEW = "_review"
     STATIC = "_static"
+    BUNDLE_ASSETS = "_assets"
+    ATTACHMENTS = "_attachments"
 
     RENDERERS = "renderers"
     TEMPLATES = "templates"
     LATEX = "latex"
+    ASSETS = "assets"
+    IR = "ir"
     CONTRACTS = "contracts"
     RECIPES = "recipes"
     WORD_TEMPLATE = "word_template"
     COMMON_ASSETS = "common_assets"
+    FONTS = "fonts"
+    IDML_PORTABLE_FONTS = "idml_portable"
+    DOCUMENT_FONTS = "Document fonts"
+    WEB_COMPOSITES = "web_composites"
+    PUBLISH = "publish"
+    WEB = "web"
+    SOURCE = "source"
+    RST = "rst"
+    MD = "md"
+    HTML = "html"
+    EVIDENCE = "evidence"
 
     VERSION_TRACKING = "version_tracking"
     RELEASES = "releases"
+    VERSIONS = "versions"
+    MANIFESTS = "manifests"
+    SKELETONS = "skeletons"
+    AGENTS_DIR = ".agents"
+    CLAUDE_DIR = ".claude"
+    GITHOOKS_DIR = ".githooks"
+    SKILLS = "skills"
+    HOOKS = "hooks"
+    TESTS = "tests"
+    LATEST = "latest"
+    SNAPSHOT = "snapshot"
+    RELEASE_SNAPSHOT_IDENTITY_JSON = "release_snapshot_identity.json"
+    RELEASE_REBUILD_VERIFICATION_JSON = "rebuild_verification.json"
     CONTENT_QC = "content_qc"
     CLOUD_DOC_BACKPORT = "cloud_doc_backport"
     SOURCE_INTAKE = "source_intake"
     REVISION_LEDGER = "revision_ledger"
     TM_HIT_RATE = "tm_hit_rate"
+    PDF_ANNOTATE = "pdf_annotate"
+    FLOW_DASHBOARD = "flow_dashboard"
 
     PARAMS_TEX = "params.tex"
     FONTS_TEX = "fonts.tex"
     LAYOUT_PARAMS_CSV = "layout_params.csv"
+    MANUAL_STYLE_CONTRACT = "manual_style.yaml"
+    MANUAL_THEME_CONTRACT = "manual_theme.yaml"
+    COMPONENT_REGISTRY_CONTRACT = "component_registry.yaml"
+    WEB_PRESENTATION_CONTRACT = "web_manual.json"
+    OVERVIEW_COMPONENT_INSTANCES_JSON = "overview_component_instances.json"
+    MANUAL_IR_JSON = "manual.ir.json"
+    LATEX_PAGE_PLAN_JSON = "latex_page_plan.json"
+    REFERENCE_LAYOUT_DIR = "reference_layout"
+    REFERENCE_LAYOUT_REGISTRY_JSON = "reference_layout_registry.json"
+    REFERENCE_LAYOUT_PLAN_JSON = "reference_layout_plan.json"
+    TARGET_ASSEMBLY_DIR = "target_assembly"
+    TARGET_ASSEMBLY_PLAN_JSON = "target_assembly_plan.json"
+    WEB_COMPOSITE_MANIFEST_JSON = "web_composite_manifest.json"
+    PUBLISH_META_JSON = "publish_meta.json"
+    PUBLISH_MANIFEST_JSON = "publish_manifest.json"
+    SKELETON_BLUEPRINT_YAML = "blueprint.yaml"
+    SKILL_MD = "SKILL.md"
+    AGENTS_MD = "AGENTS.md"
+    README_MD = "README.md"
+    SETTINGS_JSON = "settings.json"
+    PRE_PUSH = "pre-push"
+    OPS_CATALOG_RECONCILE_WHITELIST_JSON = "ops_catalog_reconcile_whitelist.json"
 
     DEFAULT_CONFIG_US = "config.us.yaml"
     DEFAULT_CONFIG_JA = "config.ja.yaml"
@@ -64,6 +116,10 @@ def docs_build_dir_of(docs_dir: Path) -> Path:
     return docs_dir / PathSegments.BUILD
 
 
+def manual_ir_dir_of(bundle_root: Path) -> Path:
+    return bundle_root.parent / PathSegments.IR
+
+
 def review_dir_of(docs_dir: Path) -> Path:
     return docs_dir / PathSegments.REVIEW
 
@@ -74,6 +130,10 @@ def static_dir_of(docs_dir: Path) -> Path:
 
 def latex_renderer_of(docs_dir: Path) -> Path:
     return docs_dir / PathSegments.RENDERERS / PathSegments.LATEX
+
+
+def renderer_contracts_of(docs_dir: Path) -> Path:
+    return docs_dir / PathSegments.RENDERERS / PathSegments.CONTRACTS
 
 
 def contracts_dir_of(docs_dir: Path) -> Path:
@@ -89,12 +149,109 @@ def word_common_assets_of(docs_dir: Path) -> Path:
     )
 
 
+def idml_portable_fonts_of(docs_dir: Path) -> Path:
+    return (
+        word_common_assets_of(docs_dir)
+        / PathSegments.FONTS
+        / PathSegments.IDML_PORTABLE_FONTS
+    )
+
+
+def web_composite_attachments_of(snapshot_root: Path) -> Path:
+    return (
+        snapshot_root
+        / PathSegments.ATTACHMENTS
+        / PathSegments.WEB_COMPOSITES
+    )
+
+
+def web_composite_manifest_of(root: Path) -> Path:
+    return root / PathSegments.WEB_COMPOSITE_MANIFEST_JSON
+
+
+def bundle_web_composite_assets_of(bundle_root: Path) -> Path:
+    return (
+        bundle_root
+        / PathSegments.BUNDLE_ASSETS
+        / PathSegments.WEB_COMPOSITES
+    )
+
+
 def version_tracking_of(base_root: Path) -> Path:
     return base_root / PathSegments.REPORTS / PathSegments.VERSION_TRACKING
 
 
 def releases_of(base_root: Path) -> Path:
     return base_root / PathSegments.REPORTS / PathSegments.RELEASES
+
+
+def docs_publish_of(docs_dir: Path) -> Path:
+    return docs_dir / PathSegments.PUBLISH
+
+
+def docs_publish_web_of(docs_dir: Path) -> Path:
+    return docs_publish_of(docs_dir) / PathSegments.WEB
+
+
+def skeletons_of(base_root: Path) -> Path:
+    """``docs/manifests/skeletons`` of a repo-shaped tree: one directory per skeleton cell."""
+    return base_root / PathSegments.DOCS / PathSegments.MANIFESTS / PathSegments.SKELETONS
+
+
+def codex_skills_of(base_root: Path) -> Path:
+    """``.agents/skills``: Codex/local skills, one directory per skill."""
+    return base_root / PathSegments.AGENTS_DIR / PathSegments.SKILLS
+
+
+def claude_skills_of(base_root: Path) -> Path:
+    """``.claude/skills``: Claude Code project skills, one directory per skill."""
+    return base_root / PathSegments.CLAUDE_DIR / PathSegments.SKILLS
+
+
+def claude_settings_of(base_root: Path) -> Path:
+    """``.claude/settings.json``: the committed Claude Code project settings, hooks included."""
+    return base_root / PathSegments.CLAUDE_DIR / PathSegments.SETTINGS_JSON
+
+
+def githooks_of(base_root: Path) -> Path:
+    """``.githooks``: the repo-managed git hooks (active once ``core.hooksPath`` points here)."""
+    return base_root / PathSegments.GITHOOKS_DIR
+
+
+def web_publish_release_dir_of(release_dir: Path) -> Path:
+    return release_dir / PathSegments.WEB
+
+
+def release_versions_of(release_root: Path) -> Path:
+    return release_root / PathSegments.VERSIONS
+
+
+def release_manifests_of(release_root: Path) -> Path:
+    return release_root / PathSegments.MANIFESTS
+
+
+def release_latest_of(release_root: Path) -> Path:
+    return release_root / PathSegments.LATEST
+
+
+def release_snapshot_of(version_dir: Path) -> Path:
+    return version_dir / PathSegments.SNAPSHOT
+
+
+def release_snapshot_identity_of(snapshot_dir: Path) -> Path:
+    return snapshot_dir / PathSegments.RELEASE_SNAPSHOT_IDENTITY_JSON
+
+
+def release_rebuild_verification_of(version_dir: Path) -> Path:
+    return version_dir / PathSegments.RELEASE_REBUILD_VERIFICATION_JSON
+
+
+def ops_catalog_reconcile_whitelist_of(base_root: Path) -> Path:
+    return (
+        base_root
+        / PathSegments.DATA
+        / PathSegments.OPS_CATALOG_RECONCILE_WHITELIST_JSON
+    )
 
 
 def content_qc_reports_of(base_root: Path) -> Path:
@@ -115,6 +272,14 @@ def revision_ledger_of(base_root: Path) -> Path:
 
 def tm_hit_rate_of(base_root: Path) -> Path:
     return base_root / PathSegments.REPORTS / PathSegments.TM_HIT_RATE
+
+
+def pdf_annotate_reports_of(base_root: Path) -> Path:
+    return base_root / PathSegments.REPORTS / PathSegments.PDF_ANNOTATE
+
+
+def flow_dashboard_reports_of(base_root: Path) -> Path:
+    return base_root / PathSegments.REPORTS / PathSegments.FLOW_DASHBOARD
 
 
 @dataclass(frozen=True)
@@ -157,6 +322,10 @@ class Paths:
     @property
     def latex_renderer_dir(self) -> Path:
         return latex_renderer_of(self.docs_dir)
+
+    @property
+    def renderer_contracts_dir(self) -> Path:
+        return renderer_contracts_of(self.docs_dir)
 
     @property
     def latex_theme_dir(self) -> Path:
@@ -203,12 +372,47 @@ class Paths:
         return self.data_dir / PathSegments.LAYOUT_PARAMS_CSV
 
     @property
+    def manual_style_contract(self) -> Path:
+        return self.renderer_contracts_dir / PathSegments.MANUAL_STYLE_CONTRACT
+
+    @property
+    def manual_theme_contract(self) -> Path:
+        return self.renderer_contracts_dir / PathSegments.MANUAL_THEME_CONTRACT
+
+    @property
+    def component_registry_contract(self) -> Path:
+        return self.renderer_contracts_dir / PathSegments.COMPONENT_REGISTRY_CONTRACT
+
+    @property
+    def overview_component_instances_contract(self) -> Path:
+        return (
+            self.renderer_contracts_dir
+            / PathSegments.OVERVIEW_COMPONENT_INSTANCES_JSON
+        )
+
+    @staticmethod
+    def manual_ir_json_for(bundle_root: Path) -> Path:
+        return manual_ir_dir_of(bundle_root) / PathSegments.MANUAL_IR_JSON
+
+    @property
     def version_tracking_dir(self) -> Path:
         return version_tracking_of(self.root)
 
     @property
     def releases_dir(self) -> Path:
         return releases_of(self.root)
+
+    @property
+    def docs_publish_dir(self) -> Path:
+        return docs_publish_of(self.docs_dir)
+
+    @property
+    def docs_publish_web_dir(self) -> Path:
+        return docs_publish_web_of(self.docs_dir)
+
+    @property
+    def ops_catalog_reconcile_whitelist(self) -> Path:
+        return ops_catalog_reconcile_whitelist_of(self.root)
 
     @property
     def content_qc_reports_dir(self) -> Path:
@@ -229,6 +433,14 @@ class Paths:
     @property
     def tm_hit_rate_dir(self) -> Path:
         return tm_hit_rate_of(self.root)
+
+    @property
+    def pdf_annotate_reports_dir(self) -> Path:
+        return pdf_annotate_reports_of(self.root)
+
+    @property
+    def flow_dashboard_reports_dir(self) -> Path:
+        return flow_dashboard_reports_of(self.root)
 
     def safety_rst(self, lang: str) -> Path:
         return self.docs_dir / f"safety_{lang}.rst"

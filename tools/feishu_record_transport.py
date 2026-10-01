@@ -1,27 +1,182 @@
-"""Live lark-cli transports for F6 / F8 (Milestone F activation enablers).
+"""Shared lark-cli transport boundary for queue operations and F6 / F8.
 
-These wrap the proven `tools/sync_data.LarkCliSource` record primitives — the only
-record verbs in-repo are `+record-upsert` and `+record-list` — so the operator can
-plug a real transport into the source-table-sync (F6) and QC_Report (F8) executors
-without re-writing lark-cli plumbing.
+Queue, listener, spec-master, and schema callers use :func:`run_lark_cli_json`
+for the subprocess and Feishu response boundary. F6 / F8 transports continue to
+wrap the proven `tools/sync_data.LarkCliSource` record primitives.
 
-Construct with a live `LarkCliSource`, e.g.::
+Construct an F6 transport with a live `LarkCliSource`, e.g.::
 
     from tools.sync_data import LarkCliSource
     source = LarkCliSource(cli_bin="lark-cli", identity="bot")
     f6 = SourceTableLarkTransport(source=source, binding_for=lambda t: (BASE, TABLE_IDS[t]))
     apply_change_requests(reqs, approved_hashes=approved, transport=f6, write=True)
 
-All paths reuse `LarkCliSource` primitives: F6 `upsert`/`get` via `+record-upsert`
-/ `+record-list`; F8 `append_row` via `+record-batch-create` (`create_record`) and
-`list_finding_hashes` via `+record-list`. All verbs were verified live against the
-test base on 2026-06-19.
+F6 `upsert`/`get` use `+record-upsert` / `+record-list`; F8 `append_row` uses
+`+record-batch-create` (`create_record`) and `list_finding_hashes` uses
+`+record-list`. Retry/backoff and pagination policy are centralized here;
+snapshot locking remains a separate K8 slice.
 """
 
 from __future__ import annotations
 
 import json
-from typing import Any, Callable, Protocol
+import re
+import subprocess
+import time
+from dataclasses import dataclass
+from pathlib import Path
+from typing import Any, Callable, Iterator, Mapping, Protocol
+
+
+@dataclass(frozen=True)
+class LarkRetryPolicy:
+    """Bounded retry policy for rate-limited lark-cli responses."""
+
+    max_retries: int = 3
+    base_delay_seconds: float = 1.0
+    max_delay_seconds: float = 30.0
+
+    def delay_for(self, attempt: int, retry_after: float | None = None) -> float:
+        delay = min(self.max_delay_seconds, self.base_delay_seconds * (2**attempt))
+        if retry_after is not None:
+            delay = max(delay, min(self.max_delay_seconds, retry_after))
+        return max(0.0, delay)
+
+
+def _retry_after_seconds(payload: dict[str, Any] | None) -> float | None:
+    if not isinstance(payload, dict):
+        return None
+    for key in ("retry_after", "retry_after_seconds", "retryAfter"):
+        value = payload.get(key)
+        try:
+            if value is not None:
+                return max(0.0, float(value))
+        except (TypeError, ValueError):
+            continue
+    return None
+
+
+def _is_rate_limited(payload: dict[str, Any] | None, stdout: str, stderr: str) -> bool:
+    if isinstance(payload, dict):
+        for key in ("code", "status", "status_code", "http_status"):
+            if str(payload.get(key) or "").strip() == "429":
+                return True
+    text = " ".join(part for part in (stdout, stderr) if part)
+    return bool(re.search(r"\b429\b|rate[ -]?limit|too many requests", text, re.IGNORECASE))
+
+
+def iter_lark_pages(
+    fetch_page: Callable[[int, int], dict[str, Any]],
+    *,
+    items_from_payload: Callable[[dict[str, Any]], list[Any]],
+    has_more_from_payload: Callable[[dict[str, Any], int], bool],
+    limit: int = 200,
+) -> Iterator[tuple[dict[str, Any], list[Any]]]:
+    """Yield lark-cli pages with one offset/empty-page policy."""
+    if limit <= 0:
+        raise ValueError("lark-cli page limit must be positive")
+    offset = 0
+    while True:
+        payload = fetch_page(offset, limit)
+        items = items_from_payload(payload)
+        if not isinstance(items, list):
+            raise RuntimeError("Lark CLI pagination payload must provide a list of items")
+        if not items:
+            if has_more_from_payload(payload, offset):
+                raise RuntimeError("Lark CLI pagination signaled more pages but returned no items")
+            yield payload, items
+            return
+        yield payload, items
+        offset += len(items)
+        if not has_more_from_payload(payload, offset):
+            return
+
+
+def _default_command_failure_message(
+    cmd: list[str], stdout: str, stderr: str, returncode: int,
+    format_command: Callable[[list[str]], str] | None = None,
+) -> str:
+    details = []
+    if stdout:
+        details.append(f"stdout={stdout.strip()}")
+    if stderr:
+        details.append(f"stderr={stderr.strip()}")
+    suffix = "; " + "; ".join(details) if details else ""
+    command_text = format_command(cmd) if format_command is not None else " ".join(cmd)
+    return f"Lark CLI command failed with exit code {returncode}: {command_text}{suffix}"
+
+
+def run_lark_cli_json(
+    *,
+    cli_bin: str,
+    args: list[str],
+    repo_root: Path,
+    resolved_cli_command_parts: Callable[[str], list[str]],
+    parse_json_payload: Callable[[str], dict[str, Any]],
+    format_command: Callable[[list[str]], str] | None = None,
+    command_failure_message: Callable[[list[str], str, str, int], str] | None = None,
+    on_command: Callable[[list[str]], None] | None = None,
+    environment: Mapping[str, str] | None = None,
+    parse_process_output: Callable[[str, str], dict[str, Any]] | None = None,
+    retry_policy: LarkRetryPolicy | None = None,
+    sleep: Callable[[float], None] = time.sleep,
+) -> dict[str, Any]:
+    """Run one lark-cli JSON command for queue and listener callers.
+
+    Callers retain dependency injection for tests, command formatting, environment
+    routing, and dual-stream parsing, but subprocess execution and common Feishu
+    response validation live in this module. Rate-limited responses use bounded
+    retry/backoff, and pagination is exposed separately through
+    :func:`iter_lark_pages`.
+    """
+    cmd = [*resolved_cli_command_parts(cli_bin), *args]
+    policy = retry_policy or LarkRetryPolicy()
+    if policy.max_retries < 0:
+        raise ValueError("lark-cli max_retries must be non-negative")
+    for attempt in range(policy.max_retries + 1):
+        if on_command is not None:
+            on_command(cmd)
+        elif format_command is not None:
+            print(f"[build-queue] {format_command(cmd)}")
+        run_kwargs: dict[str, Any] = {
+            "cwd": str(repo_root), "capture_output": True,
+            "text": True, "encoding": "utf-8",
+        }
+        if environment is not None:
+            run_kwargs["env"] = dict(environment)
+        process = subprocess.run(cmd, check=False, **run_kwargs)
+        stdout, stderr = process.stdout or "", process.stderr or ""
+        rate_limited = _is_rate_limited(None, stdout, stderr)
+        payload: dict[str, Any] | None = None
+        if process.returncode == 0:
+            try:
+                payload = (
+                    parse_process_output(stdout, stderr)
+                    if parse_process_output is not None
+                    else parse_json_payload(stdout or stderr)
+                )
+            except (RuntimeError, ValueError):
+                if not rate_limited:
+                    raise
+                payload = {"code": 429}
+            rate_limited = _is_rate_limited(payload, stdout, stderr)
+        if rate_limited and attempt < policy.max_retries:
+            sleep(policy.delay_for(attempt, _retry_after_seconds(payload)))
+            continue
+        if process.returncode:
+            if command_failure_message is not None:
+                message = command_failure_message(cmd, stdout, stderr, process.returncode)
+            else:
+                message = _default_command_failure_message(cmd, stdout, stderr, process.returncode, format_command)
+            raise RuntimeError(message)
+        if payload is None:
+            payload = parse_json_payload(stdout or stderr)
+        code = payload.get("code")
+        if code not in (None, 0):
+            message = str(payload.get("msg") or payload.get("message") or "Lark CLI API request failed")
+            raise RuntimeError(f"Lark CLI API request failed: {message}")
+        return payload
+    raise AssertionError("lark-cli retry loop exited without a result")
 
 
 def _as_cell(value: Any) -> str:

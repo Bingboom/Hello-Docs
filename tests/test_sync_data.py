@@ -3,6 +3,7 @@
 import csv
 import io
 import json
+import os
 import subprocess
 import tempfile
 import unittest
@@ -12,6 +13,8 @@ from unittest import mock
 
 from tools import sync_data
 from tools.source_record_index import SOURCE_RECORD_ID_KEY
+from tools.sync_schema_sensor import missing_schema_columns
+from tools.sync_data_records import phase2_snapshot_write_lock
 
 
 class _FakeSource:
@@ -28,6 +31,21 @@ class _FakeSource:
     ) -> list[dict[str, object]]:
         self.calls.append((base_token, table_id, view_id))
         return list(self.records_by_table[table_id])
+
+
+class _FakeSourceWithFieldNames(_FakeSource):
+    def __init__(
+        self,
+        records_by_table: dict[str, list[dict[str, object]]],
+        field_names_by_table: dict[str, set[str]],
+    ) -> None:
+        super().__init__(records_by_table)
+        self.field_names_by_table = field_names_by_table
+        self.field_name_calls: list[tuple[str, str]] = []
+
+    def field_names(self, *, base_token: str, table_id: str) -> frozenset[str]:
+        self.field_name_calls.append((base_token, table_id))
+        return frozenset(self.field_names_by_table[table_id])
 
 
 class _FakeSourceWithIds(_FakeSource):
@@ -86,6 +104,20 @@ def _write_page_registry(root: Path, relative_path: str = "data/phase2/page_regi
 
 
 class TestSyncData(unittest.TestCase):
+    def test_phase2_snapshot_write_lock_should_reject_a_second_posix_holder(self) -> None:
+        if os.name == "nt":
+            self.skipTest("POSIX flock assertion is not portable to Windows")
+        import fcntl
+
+        with tempfile.TemporaryDirectory() as td:
+            export_root = Path(td) / "data" / "phase2"
+            lock_path = export_root.parent / ".phase2.snapshot.lock"
+            with phase2_snapshot_write_lock(export_root):
+                self.assertTrue(lock_path.exists())
+                with lock_path.open("a+b") as second_handle:
+                    with self.assertRaises(BlockingIOError):
+                        fcntl.flock(second_handle.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+
     def test_phase2_table_schemas_should_include_eu_and_pt_br_columns(self) -> None:
         self.assertEqual(
             (
@@ -127,6 +159,9 @@ class TestSyncData(unittest.TestCase):
                 "Row_label_uk",
                 "Param_uk",
                 "Value_uk",
+                "Row_label_ko",
+                "Param_ko",
+                "Value_ko",
             ),
             sync_data.TABLE_SCHEMAS["spec_master"].columns,
         )
@@ -146,9 +181,11 @@ class TestSyncData(unittest.TestCase):
                 "Text_pt-BR",
                 "pt-BR",
                 "Text_ja",
+                "Text_zh",
                 "Text_de",
                 "Text_it",
                 "Text_uk",
+                "Text_ko",
                 "Enabled",
             ),
             sync_data.TABLE_SCHEMAS["spec_footnotes"].columns,
@@ -168,9 +205,11 @@ class TestSyncData(unittest.TestCase):
                 "Text_es",
                 "Text_pt-BR",
                 "Text_ja",
+                "Text_zh",
                 "Text_de",
                 "Text_it",
                 "Text_uk",
+                "Text_ko",
                 "Enabled",
             ),
             sync_data.TABLE_SCHEMAS["spec_notes"].columns,
@@ -391,6 +430,137 @@ class TestSyncData(unittest.TestCase):
         )
 
         self.assertEqual("Nota em portugues.", rows[0]["Text_pt-BR"])
+
+    def test_missing_column_sensor_should_exempt_pt_br_field_alias(self) -> None:
+        schema = sync_data.TABLE_SCHEMAS["spec_footnotes"]
+        source_fields = set(schema.columns)
+        source_fields.remove("Text_pt-BR")
+
+        self.assertEqual(
+            (),
+            missing_schema_columns("spec_footnotes", schema, source_fields),
+        )
+
+    def test_spec_footnotes_should_alias_lowercase_type_field_name(self) -> None:
+        # The footnote table spells the classification field ``type``; its sibling
+        # spec_notes uses ``Type``. Without the alias the column syncs empty and
+        # csv_pages falls back to its "footnote" default for every row.
+        rows = sync_data.normalize_records(
+            sync_data.TABLE_SCHEMAS["spec_footnotes"],
+            [
+                {
+                    "fields": {
+                        "Footnote_id": "fn1",
+                        "type": "Footnote",
+                        "Text_en": "English footnote.",
+                    }
+                }
+            ],
+        )
+
+        self.assertEqual("Footnote", rows[0]["Type"])
+
+    def test_missing_column_sensor_should_exempt_lowercase_type_alias(self) -> None:
+        schema = sync_data.TABLE_SCHEMAS["spec_footnotes"]
+        source_fields = set(schema.columns)
+        source_fields.discard("Type")
+        source_fields.add("type")
+
+        self.assertEqual(
+            (),
+            missing_schema_columns("spec_footnotes", schema, source_fields),
+        )
+
+    def test_missing_column_sensor_should_exempt_derived_and_legacy_columns(self) -> None:
+        # spec_master derives these while merging the split sources; lcd_icons and
+        # variable_lang_overrides keep legacy columns no live field backs. Reporting
+        # them every run buries a real rename in permanent noise.
+        for logical_name, unbacked in (
+            ("spec_master", ("spec_row_key", "Model", "Region")),
+            ("lcd_icons", ("icon_br", "icon_desc_br", "render_preview_en")),
+            ("variable_lang_overrides", ("from_prefix", "to_prefix")),
+        ):
+            with self.subTest(logical_name=logical_name):
+                schema = sync_data.TABLE_SCHEMAS[logical_name]
+                source_fields = set(schema.columns) - set(unbacked)
+
+                self.assertEqual(
+                    (),
+                    missing_schema_columns(logical_name, schema, source_fields),
+                )
+
+    def test_missing_column_sensor_should_still_report_a_renamed_field(self) -> None:
+        # Guard against the exemptions above turning the sensor into a no-op.
+        schema = sync_data.TABLE_SCHEMAS["spec_master"]
+        source_fields = set(schema.columns) - {"Value_ko"}
+
+        self.assertEqual(
+            ("Value_ko",),
+            missing_schema_columns("spec_master", schema, source_fields),
+        )
+
+    def test_sync_should_report_missing_source_columns_in_manifest_and_cli(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            cfg = {
+                "paths": {
+                    "page_registry_csv": "fixtures/page_registry.csv",
+                },
+                "sync": {
+                    "phase2": {
+                        "provider": "lark_cli",
+                        "base_token_env": "BASE_TOKEN",
+                        "tables": {
+                            "spec_footnotes": {
+                                "table_id_env": "SPEC_FOOTNOTES_TABLE",
+                            },
+                        },
+                    }
+                },
+            }
+            config_path = root / "config.yaml"
+            config_path.write_text("sync: {}\n", encoding="utf-8")
+            _write_page_registry(root, "fixtures/page_registry.csv")
+
+            schema = sync_data.TABLE_SCHEMAS["spec_footnotes"]
+            source = _FakeSourceWithFieldNames(
+                {"tbl_footnotes": [{"fields": {"Footnote_id": "fn1"}}]},
+                {"tbl_footnotes": set(schema.columns) - {"Text_de"}},
+            )
+
+            with mock.patch.dict(
+                "os.environ",
+                {
+                    "BASE_TOKEN": "app_token",
+                    "SPEC_FOOTNOTES_TABLE": "tbl_footnotes",
+                },
+                clear=True,
+            ), mock.patch.object(sync_data, "ROOT", root):
+                result = sync_data.sync_phase2_snapshot(
+                    cfg=cfg,
+                    config_path=config_path,
+                    data_root="data/phase2",
+                    table_names=["spec_footnotes"],
+                    dry_run=False,
+                    source=source,
+                    built_at=datetime(2026, 7, 30, 9, 0, tzinfo=timezone.utc),
+                )
+
+            expected_warning = {
+                "code": "MISSING_COLUMNS",
+                "logical_name": "spec_footnotes",
+                "missing_columns": ["Text_de"],
+            }
+            self.assertEqual([expected_warning], result.manifest["warnings"])
+            manifest = json.loads(
+                (root / "data" / "phase2" / "snapshot_manifest.json").read_text(encoding="utf-8")
+            )
+            self.assertEqual([expected_warning], manifest["warnings"])
+            self.assertIn(
+                "[sync-data] WARNING MISSING_COLUMNS: spec_footnotes missing_columns=Text_de",
+                sync_data.build_sync_run_output_lines(result),
+            )
+            self.assertEqual([("app_token", "tbl_footnotes")], source.field_name_calls)
 
     def test_collect_sync_preflight_errors_should_report_missing_cli_and_envs_together(self) -> None:
         cfg = {
@@ -663,7 +833,7 @@ class TestSyncData(unittest.TestCase):
 
             titles_lines = (root / "data" / "phase2" / "spec_titles.csv").read_text(encoding="utf-8").splitlines()
             self.assertEqual(
-                "title_en,section_order,title_zh,title_jp,title_fr,title_es,title_de,title_it,title_uk",
+                "title_en,section_order,title_zh,title_jp,title_fr,title_es,title_de,title_it,title_uk,title_ko",
                 titles_lines[0],
             )
             self.assertTrue(titles_lines[1].startswith("A,1"))
@@ -671,7 +841,7 @@ class TestSyncData(unittest.TestCase):
 
             master_lines = (root / "data" / "phase2" / "Spec_Master.csv").read_text(encoding="utf-8").splitlines()
             self.assertEqual(
-                "spec_row_key,document_key,Model,Region,Source_lang,Version,Is_Latest,Page,Section,Section_order,Row_order,Row_key,Slot_key,Row_label_source,Row_label_footnote_refs,Line_order,Param_source,Param_footnote_refs,Value_source,Value_footnote_refs,Row_label_fr,Param_fr,Value_fr,Row_label_es,Param_es,Value_es,Row_label_br,Param_br,Value_br,Row_label_de,Param_de,Value_de,Row_label_it,Param_it,Value_it,Row_label_uk,Param_uk,Value_uk",
+                "spec_row_key,document_key,Model,Region,Source_lang,Version,Is_Latest,Page,Section,Section_order,Row_order,Row_key,Slot_key,Row_label_source,Row_label_footnote_refs,Line_order,Param_source,Param_footnote_refs,Value_source,Value_footnote_refs,Row_label_fr,Param_fr,Value_fr,Row_label_es,Param_es,Value_es,Row_label_br,Param_br,Value_br,Row_label_de,Param_de,Value_de,Row_label_it,Param_it,Value_it,Row_label_uk,Param_uk,Value_uk,Row_label_ko,Param_ko,Value_ko",
                 master_lines[0],
             )
             self.assertIn("TRUE", master_lines[1])
@@ -886,6 +1056,84 @@ class TestSyncData(unittest.TestCase):
             self.assertTrue(expected_asset.exists())
 
             with (root / "data" / "phase2" / "lcd_icons_blocks.csv").open(
+                "r",
+                encoding="utf-8-sig",
+                newline="",
+            ) as handle:
+                rows = list(csv.DictReader(handle))
+            self.assertEqual(
+                "data/phase2/_attachments/lcd_icons/1_Wi-Fi_file_token_wifi.png",
+                rows[0]["figure"],
+            )
+
+    def test_sync_phase2_snapshot_should_write_logical_attachment_path_for_custom_data_root(self) -> None:
+        # Queue workers sync into roots like .tmp/review-start/phase2. The CSV
+        # cell must still carry the LOGICAL data/phase2/_attachments/... form —
+        # a physical export-root path is unresolvable for builds running from a
+        # different tree (the Start Review symbols regression).
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            cfg = {
+                "paths": {
+                    "page_registry_csv": "fixtures/page_registry.csv",
+                },
+                "sync": {
+                    "phase2": {
+                        "provider": "lark_cli",
+                        "base_token_env": "BASE_TOKEN",
+                        "tables": {
+                            "lcd_icons": {
+                                "table_id_env": "LCD_TABLE",
+                            },
+                        },
+                    }
+                }
+            }
+            config_path = root / "config.yaml"
+            config_path.write_text("sync: {}\n", encoding="utf-8")
+            _write_page_registry(root, "fixtures/page_registry.csv")
+
+            fake_source = _FakeSourceWithDownloads(
+                {
+                    "tbl_lcd": [
+                        {
+                            "fields": {
+                                "No.": "1",
+                                "Model": "JE-1000F",
+                                "Is_latest": True,
+                                "Version": "V1.0",
+                                "icon_en": "Wi-Fi",
+                                "icon_desc_en": "On: Wi-Fi connected.",
+                                "figure": [{"file_token": "file_token_wifi", "name": "wifi.png"}],
+                            }
+                        }
+                    ],
+                }
+            )
+
+            custom_root = root / ".tmp" / "review-start" / "phase2"
+            with mock.patch.dict(
+                "os.environ",
+                {
+                    "BASE_TOKEN": "app_token",
+                    "LCD_TABLE": "tbl_lcd",
+                },
+                clear=True,
+            ), mock.patch.object(sync_data, "ROOT", root):
+                sync_data.sync_phase2_snapshot(
+                    cfg=cfg,
+                    config_path=config_path,
+                    data_root=str(custom_root),
+                    table_names=["lcd_icons"],
+                    dry_run=False,
+                    source=fake_source,
+                    built_at=datetime(2026, 3, 31, 9, 0, tzinfo=timezone.utc),
+                )
+
+            expected_asset = custom_root / "_attachments" / "lcd_icons" / "1_Wi-Fi_file_token_wifi.png"
+            self.assertTrue(expected_asset.exists())
+
+            with (custom_root / "lcd_icons_blocks.csv").open(
                 "r",
                 encoding="utf-8-sig",
                 newline="",

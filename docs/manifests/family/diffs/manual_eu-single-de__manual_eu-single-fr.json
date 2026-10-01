@@ -1,0 +1,217 @@
+{
+  "base_manifest_id": "manual_eu_single_de",
+  "operations": [
+    {
+      "op": "replace",
+      "path": "/manifest_id",
+      "value": "manual_eu_single_fr"
+    },
+    {
+      "op": "replace",
+      "path": "/pages/0/file",
+      "value": "templates/page_eu-fr/safety_fr.rst"
+    },
+    {
+      "op": "replace",
+      "path": "/pages/0/lang",
+      "value": "fr"
+    },
+    {
+      "op": "replace",
+      "path": "/pages/1/file",
+      "value": "templates/page_shared/fr/01_user_maintenance_instructions.rst"
+    },
+    {
+      "op": "replace",
+      "path": "/pages/1/lang",
+      "value": "fr"
+    },
+    {
+      "op": "replace",
+      "path": "/pages/2/langs/0",
+      "value": "fr"
+    },
+    {
+      "op": "replace",
+      "path": "/pages/3/file",
+      "value": "templates/page_shared/fr/02_whats_in_the_box.rst"
+    },
+    {
+      "op": "replace",
+      "path": "/pages/3/lang",
+      "value": "fr"
+    },
+    {
+      "op": "replace",
+      "path": "/pages/4/langs/0",
+      "value": "fr"
+    },
+    {
+      "op": "replace",
+      "path": "/pages/4/model_overrides/JE-2000E/template",
+      "value": "templates/page_eu-fr/03_product_overview_je2000e.rst"
+    },
+    {
+      "op": "replace",
+      "path": "/pages/4/model_overrides/JE-3000C/template",
+      "value": "templates/targets/je3000c/03_product_overview_fr.rst"
+    },
+    {
+      "op": "replace",
+      "path": "/pages/4/model_overrides/JE-300E/template",
+      "value": "templates/page_eu-fr/03_product_overview_je300e.rst"
+    },
+    {
+      "op": "replace",
+      "path": "/pages/4/model_overrides/JE-3600A/template",
+      "value": "templates/targets/je3600a/03_product_overview_fr.rst"
+    },
+    {
+      "op": "replace",
+      "path": "/pages/4/template",
+      "value": "templates/page_eu-fr/03_product_overview_placeholder.rst"
+    },
+    {
+      "op": "replace",
+      "path": "/pages/5/langs/0",
+      "value": "fr"
+    },
+    {
+      "op": "replace",
+      "path": "/pages/6/langs/0",
+      "value": "fr"
+    },
+    {
+      "op": "replace",
+      "path": "/pages/6/model_overrides/JE-2000E/recipe",
+      "value": "templates/recipes/eu-fr/05_operation_guide.yaml"
+    },
+    {
+      "op": "replace",
+      "path": "/pages/6/model_overrides/JE-2000E/template",
+      "value": "templates/page_eu-fr/05_operation_guide_je2000e.rst"
+    },
+    {
+      "op": "replace",
+      "path": "/pages/6/model_overrides/JE-3000C/template",
+      "value": "templates/targets/je3000c/05_operation_guide_fr.rst"
+    },
+    {
+      "op": "replace",
+      "path": "/pages/6/model_overrides/JE-3600A/template",
+      "value": "templates/targets/je3600a/05_operation_guide_fr.rst"
+    },
+    {
+      "op": "replace",
+      "path": "/pages/6/recipe",
+      "value": "templates/recipes/eu-fr/05_operation_guide.yaml"
+    },
+    {
+      "op": "replace",
+      "path": "/pages/6/template",
+      "value": "templates/page_eu-fr/05_operation_guide_placeholder.rst"
+    },
+    {
+      "op": "replace",
+      "path": "/pages/7/file",
+      "value": "templates/page_shared/fr/06_ups_mode.rst"
+    },
+    {
+      "op": "replace",
+      "path": "/pages/7/lang",
+      "value": "fr"
+    },
+    {
+      "op": "replace",
+      "path": "/pages/8/langs/0",
+      "value": "fr"
+    },
+    {
+      "op": "replace",
+      "path": "/pages/8/model_overrides/JE-1000H/template",
+      "value": "templates/targets/je1000h/07_extra_battery_fr.rst"
+    },
+    {
+      "op": "replace",
+      "path": "/pages/8/model_overrides/JE-3600A/template",
+      "value": "templates/targets/je3600a/07_extra_battery_fr.rst"
+    },
+    {
+      "op": "replace",
+      "path": "/pages/9/file",
+      "value": "templates/page_shared/fr/charging.rst"
+    },
+    {
+      "op": "replace",
+      "path": "/pages/9/lang",
+      "value": "fr"
+    },
+    {
+      "op": "replace",
+      "path": "/pages/10/file",
+      "value": "templates/page_shared/fr/08_charging_methods.rst"
+    },
+    {
+      "op": "replace",
+      "path": "/pages/10/lang",
+      "value": "fr"
+    },
+    {
+      "op": "replace",
+      "path": "/pages/11/file",
+      "value": "templates/page_shared/fr/09_storage_and_maintenance.rst"
+    },
+    {
+      "op": "replace",
+      "path": "/pages/11/lang",
+      "value": "fr"
+    },
+    {
+      "op": "replace",
+      "path": "/pages/12/langs/0",
+      "value": "fr"
+    },
+    {
+      "op": "replace",
+      "path": "/pages/13/langs/0",
+      "value": "fr"
+    },
+    {
+      "op": "replace",
+      "path": "/pages/14/file",
+      "value": "templates/page_shared/fr/11_warranty.rst"
+    },
+    {
+      "op": "replace",
+      "path": "/pages/14/lang",
+      "value": "fr"
+    },
+    {
+      "op": "replace",
+      "path": "/pages/15/langs/0",
+      "value": "fr"
+    },
+    {
+      "op": "replace",
+      "path": "/pages/15/model_overrides/JE-2000E/recipe",
+      "value": "templates/recipes/eu-fr/12_app_setup_je2000e_fr.yaml"
+    },
+    {
+      "op": "replace",
+      "path": "/pages/15/model_overrides/JE-2000E/template",
+      "value": "templates/page_shared/fr/12_app_setup_je2000e.rst"
+    },
+    {
+      "op": "replace",
+      "path": "/pages/15/recipe",
+      "value": "templates/recipes/eu-fr/12_app_setup.yaml"
+    },
+    {
+      "op": "replace",
+      "path": "/pages/15/template",
+      "value": "templates/page_shared/fr/12_app_setup_placeholder.rst"
+    }
+  ],
+  "schema_version": "family-manifest-diff/v1",
+  "target_manifest_id": "manual_eu_single_fr"
+}

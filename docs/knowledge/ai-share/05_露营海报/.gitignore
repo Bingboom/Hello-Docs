@@ -1,0 +1,17 @@
+.runtime/
+__pycache__/
+node_modules
+output/history/
+output/records.csv
+output/status.json
+output/events.jsonl
+output/pdf/
+output/previews/
+output/qa/
+evidence/dingtalk-*.json
+钉钉私有交接.md
+*.zip
+evidence/01-before-local.png
+evidence/02-price-saved-local.png
+evidence/03-after-auto-update-local.png
+evidence/14-share-mobile.png

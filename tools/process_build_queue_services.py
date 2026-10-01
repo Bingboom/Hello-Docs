@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import os
-import sys
 import time
 from datetime import datetime
 from pathlib import Path
@@ -12,6 +11,7 @@ from tools.queue_build_execution import (
     sync_phase2_snapshot_before_queue as _sync_phase2_snapshot_before_queue_impl,
 )
 from tools.queue_dry_run import print_dry_run_groups as _print_dry_run_groups_impl
+from tools.queue_claims import acquire_verified_queue_claim as _acquire_verified_queue_claim_impl
 from tools.queue_group_processing import process_queue_record_group as _process_queue_record_group_impl
 from tools.queue_cloud_doc_finalize import (
     finalize_cloud_doc as _finalize_cloud_doc_impl,
@@ -49,6 +49,9 @@ from tools.queue_writeback import (
     build_started_fields as _build_started_fields_impl,
     build_success_fields as _build_success_fields_impl,
 )
+from tools.utils.log import get_logger
+
+_ERR = get_logger("build-queue", stream="stderr")
 
 
 def upload_word_to_drive(module: Any, *, cli_bin: str, word_output_path: Path, identity: str) -> tuple[str, str]:
@@ -66,16 +69,18 @@ def import_markdown_to_cloud_doc(
     module: Any,
     *,
     cli_bin: str,
-    markdown_output_path: Path,
+    source_path: Path,
     identity: str,
+    doc_name: str | None = None,
 ) -> tuple[str, str]:
     return _import_markdown_to_cloud_doc_impl(
         cli_bin=cli_bin,
-        markdown_output_path=markdown_output_path,
+        source_path=source_path,
         identity=identity,
         repo_root=module.ROOT,
         run_lark_cli_json=module._run_lark_cli_json,
         cli_relative_file_arg=lambda *, repo_root, path: module._cli_relative_file_arg(path),
+        doc_name=doc_name,
     )
 
 
@@ -340,9 +345,8 @@ def publish_word_artifact(
         recovered_message = str(exc).strip()
         if "permission denied" not in recovered_message.lower():
             raise ArtifactPublishError(recovered_message, latest_link_url=drive_url) from exc
-        print(
-            f"[build-queue] WARNING wiki attach failed; using Drive link {drive_url}",
-            file=sys.stderr,
+        _ERR.warning(
+            f"[build-queue] WARNING wiki attach failed; using Drive link {drive_url}"
         )
         result = ArtifactPublishResult(
             provider="lark_drive",
@@ -413,6 +417,8 @@ def build_py_target_command(
     lang: str | None = None,
     source: str | None = None,
     no_clean: bool = False,
+    idml_mode: str | None = None,
+    presentation_profile: str | None = None,
 ) -> list[str]:
     return module._bound_build_py_target_command(
         repo_root=repo_root,
@@ -424,6 +430,8 @@ def build_py_target_command(
         lang=lang,
         source=source,
         no_clean=no_clean,
+        idml_mode=idml_mode,
+        presentation_profile=presentation_profile,
     )
 
 
@@ -483,6 +491,7 @@ def build_document_for_task(
         versioned_md_output_path=module._versioned_md_output_path,
         resolve_html_output_dir_for_target=module.resolve_html_output_dir_for_target,
         stage_publish_assets_to_host_repo=module._stage_publish_assets_to_host_repo,
+        stage_web_publish_assets_to_host_repo=module._stage_web_publish_assets_to_host_repo,
         stage_draft_word_output_to_host_repo=module._stage_draft_word_output_to_host_repo,
         stage_draft_md_output_to_host_repo=module._stage_draft_md_output_to_host_repo,
     )
@@ -492,7 +501,7 @@ def build_success_fields(
     module: Any,
     *,
     version: str,
-    word_output_path: Path,
+    word_output_path: Path | None,
     document_link_url: str,
     built_at: datetime,
     document_link_dd_url: str = "",
@@ -505,6 +514,8 @@ def build_success_fields(
     write_data_sync: bool = True,
     write_document_link_dd: bool = False,
     write_feishu_cloud_doc: bool = False,
+    write_document_directory: bool = True,
+    write_document_link: bool = True,
 ) -> dict[str, Any]:
     return _build_success_fields_impl(
         version=version,
@@ -521,8 +532,8 @@ def build_success_fields(
         normalize_doc_phase=module.normalize_doc_phase,
         workflow_action_label=module.workflow_action_label,
         result_field=module.RESULT_FIELD,
-        document_directory_field=module.DOCUMENT_DIRECTORY_FIELD,
-        document_link_field=module.DOCUMENT_LINK_FIELD,
+        document_directory_field=module.DOCUMENT_DIRECTORY_FIELD if write_document_directory else "",
+        document_link_field=module.DOCUMENT_LINK_FIELD if write_document_link else "",
         document_link_dd_field=module.DOCUMENT_LINK_DD_FIELD if write_document_link_dd else "",
         feishu_cloud_doc_field=module.FEISHU_CLOUD_DOC_FIELD if write_feishu_cloud_doc else "",
         trigger_field=module.TRIGGER_FIELD,
@@ -542,6 +553,9 @@ def build_started_fields(
     workflow_action: str | None = None,
     doc_phase: str | None = None,
     data_sync_status: str = "",
+    claim_token: str = "",
+    claim_expires_at: datetime | None = None,
+    write_started_at: bool = True,
 ) -> dict[str, Any]:
     return _build_started_fields_impl(
         started_at=started_at,
@@ -552,9 +566,11 @@ def build_started_fields(
         normalize_workflow_action=module.normalize_workflow_action,
         normalize_doc_phase=module.normalize_doc_phase,
         workflow_action_label=module.workflow_action_label,
-        build_started_at_field=module.BUILD_STARTED_AT_FIELD,
+        build_started_at_field=module.BUILD_STARTED_AT_FIELD if write_started_at else "",
         result_field=module.RESULT_FIELD,
         running_prefix=module.RUNNING_PREFIX,
+        claim_token=claim_token,
+        claim_expires_at=claim_expires_at,
     )
 
 
@@ -652,6 +668,7 @@ def process_build_queue(
     workflow_action: str | None = None,
     doc_phase: str | None = None,
     record_id: str | None = None,
+    record_ids: tuple[str, ...] = (),
 ) -> int:
     return _process_build_queue_impl(
         cfg=cfg,
@@ -662,6 +679,7 @@ def process_build_queue(
         workflow_action=workflow_action,
         doc_phase=doc_phase,
         record_id=record_id,
+        record_ids=record_ids,
         bootstrap_queue_session=lambda **kwargs: _bootstrap_queue_session(module, **kwargs),
         load_pending_queue_state=_load_pending_queue_state_impl,
         print_no_pending_message=_print_no_pending_message_impl,
@@ -669,6 +687,9 @@ def process_build_queue(
         sync_phase2_snapshot_before_queue=module.sync_phase2_snapshot_before_queue,
         resolve_and_report_wiki_destination=_resolve_and_report_wiki_destination_impl,
         process_queue_record_group=_process_queue_record_group_impl,
+        acquire_queue_claim=_acquire_verified_queue_claim_impl,
+        result_field=module.RESULT_FIELD,
+        queue_claim_ttl_seconds=module.QUEUE_CLAIM_TTL_SECONDS,
         build_started_at_field=module.BUILD_STARTED_AT_FIELD,
         force_phase2_refresh_field=module.FORCE_PHASE2_REFRESH_FIELD,
         data_sync_field=module.DATA_SYNC_FIELD,
@@ -706,6 +727,7 @@ def process_build_queue(
         build_success_fields=module.build_success_fields,
         publish_release_latest_dir_for_target=module._publish_release_latest_dir_for_target,
         write_publish_release_metadata=module.write_publish_release_metadata,
+        write_web_publish_metadata=module.write_web_publish_metadata,
         build_failure_writeback_fields=module.build_failure_writeback_fields,
         best_effort_queue_workflow_action=module.best_effort_queue_workflow_action,
         resolve_queue_workflow_action=module.resolve_queue_workflow_action,

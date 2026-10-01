@@ -66,6 +66,36 @@ test("draft dispatch sends queue_record_id and keeps the requested record in tra
   assert.match(result.text, /run_id: 321/);
 });
 
+test("batch draft dispatch sends no record id and tracks one batch run", async () => {
+  const dispatchCalls = [];
+  const github = {
+    async findActiveBatchRun() {
+      return null;
+    },
+    async dispatchWorkflow(payload) {
+      dispatchCalls.push(payload);
+    },
+    async findDispatchedRun() {
+      return { id: 322, html_url: "https://example.com/runs/322" };
+    },
+  };
+  const savedRecords = [];
+  const stateStore = { async saveRecord(record) { savedRecords.push(record); return record; } };
+  const result = await dispatchCommandFlow({
+    command: sharedDraftCommand,
+    queueRecordId: "",
+    batch: true,
+    github,
+    stateStore,
+    settings,
+  });
+  assert.equal(dispatchCalls.length, 1);
+  assert.equal(dispatchCalls[0].inputs.queue_record_id, "");
+  assert.equal(savedRecords[0].queueRecordId, "");
+  assert.match(result.text, /scope: batch/);
+  assert.match(result.text, /run_id: 322/);
+});
+
 test("start-review dispatch sends queue_record_id so the worker targets one row", async () => {
   const dispatchCalls = [];
   const savedRecords = [];
@@ -331,4 +361,60 @@ test("resolveTrackedRun keeps the run but flags observationError when the artifa
   assert.deepEqual(resolved.artifacts, []);
   assert.match(resolved.observationError, /502/);
   assert.equal(savedRecords.length, 1);
+});
+
+test("resolveTrackedRun observes an explicit run id with no local record (external dispatch)", async () => {
+  // The IM adapters dispatch via `build.py queue-execute`, so the run id is not
+  // in this state store. A status query must still fetch the real state instead
+  // of returning null (which downstream renders as "processing" forever).
+  const savedRecords = [];
+  const github = {
+    async getRun(runId) {
+      assert.equal(runId, "999");
+      return {
+        id: 999,
+        html_url: "https://example.com/runs/999",
+        status: "completed",
+        conclusion: "failure",
+      };
+    },
+    async listArtifacts() {
+      return [];
+    },
+    async readMetadataArtifact() {
+      return null;
+    },
+  };
+  const stateStore = {
+    async getRecordByRunId() {
+      return null; // externally dispatched: nothing tracked here
+    },
+    async saveRecord(record) {
+      savedRecords.push(record);
+      return record;
+    },
+  };
+
+  const resolved = await resolveTrackedRun({ github, stateStore, settings, requestedRunId: "999" });
+  assert.equal(resolved.tracked, null);
+  assert.equal(resolved.run.id, 999);
+  assert.equal(resolved.run.conclusion, "failure");
+  assert.equal(savedRecords.length, 0); // must not fabricate a record it does not own
+});
+
+test("resolveTrackedRun still returns empty when there is no id and no last record", async () => {
+  const github = {
+    async getRun() {
+      throw new Error("getRun should not be called");
+    },
+  };
+  const stateStore = {
+    async getLastRecord() {
+      return null;
+    },
+  };
+
+  const resolved = await resolveTrackedRun({ github, stateStore, settings, requestedRunId: null });
+  assert.equal(resolved.tracked, null);
+  assert.equal(resolved.run, null);
 });

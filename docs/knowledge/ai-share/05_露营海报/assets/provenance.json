@@ -1,0 +1,18 @@
+{
+  "mode": "built-in image_gen",
+  "use": "Fixed Q-style fictional product artwork, not operation screenshots",
+  "prompts": [
+    {
+      "name": "xiaoye-300",
+      "prompt": "Use case: stylized-concept. Asset type: text-free mascot illustration for one of three matching A5 camping product posters. Create a premium cute Q-version 3D clay toy anthropomorphic portable power station, forest-green shell, warm cream front, tiny friendly eyes and smile integrated into the front display, rounded carry handle, subtle output ports, stubby feet. Three-quarter front view, soft studio lighting, matte material, restrained outdoor-shop editorial aesthetic, isolated with generous clear margin, centered complete silhouette. Pure warm-white background (#FAF7EF), no scenery. No text, letters, numbers, prices, logos, watermark, captions, or poster layout. A fictional product, not a real brand. This is the SMALL light-outing member: a compact almost square body with one little forest-green side arm waving, small orange accent on handle."
+    },
+    {
+      "name": "xiaoye-500",
+      "prompt": "Use case: stylized-concept. Asset type: text-free mascot illustration for one of three matching A5 camping product posters. Create a premium cute Q-version 3D clay toy anthropomorphic portable power station, forest-green shell, warm cream front, tiny friendly eyes and smile integrated into the front display, rounded carry handle, subtle output ports, stubby feet. Three-quarter front view, soft studio lighting, matte material, restrained outdoor-shop editorial aesthetic, isolated with generous clear margin, centered complete silhouette. Pure warm-white background (#FAF7EF), no scenery. No text, letters, numbers, prices, logos, watermark, captions, or poster layout. A fictional product, not a real brand. This is the MEDIUM weekend-camping member: a slightly wider rounded rectangular body with relaxed small side arms, small orange accent on handle."
+    },
+    {
+      "name": "xiaoye-1000",
+      "prompt": "Use case: stylized-concept. Asset type: text-free mascot illustration for one of three matching A5 camping product posters. Create a premium cute Q-version 3D clay toy anthropomorphic portable power station, forest-green shell, warm cream front, tiny friendly eyes and smile integrated into the front display, rounded carry handle, subtle output ports, stubby feet. Three-quarter front view, soft studio lighting, matte material, restrained outdoor-shop editorial aesthetic, isolated with generous clear margin, centered complete silhouette. Pure warm-white background (#FAF7EF), no scenery. No text, letters, numbers, prices, logos, watermark, captions, or poster layout. A fictional product, not a real brand. This is the LARGE group-campsite member: a broad sturdy rounded rectangular body with two short confident side arms and a substantial handle, small orange accent on handle."
+    }
+  ]
+}

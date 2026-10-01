@@ -1,0 +1,24 @@
+{
+  "schema_version": "approved-reference-layout-registry/v1",
+  "plans": [
+    {
+      "target": {
+        "model": "JE-1000F",
+        "region": "US",
+        "languages": [
+          "en",
+          "fr",
+          "es"
+        ]
+      },
+      "path": "docs/renderers/contracts/reference_layout/je1000f_us_v2_20260605.json",
+      "component_targets": [
+        {
+          "language": "en",
+          "status": "pilot",
+          "evidence": "v4 native InDesign review of the registered pages 6, 7, 12, 13 and 15; whole-book designer sign-off pending"
+        }
+      ]
+    }
+  ]
+}

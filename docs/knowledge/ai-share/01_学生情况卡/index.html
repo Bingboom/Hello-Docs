@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta name="robots" content="noindex,nofollow">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>家长会 · 学生情况卡</title>
+<style>
+:root{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;color:#223a36;background:#f3f5f1;font-synthesis:none}*{box-sizing:border-box}body{margin:0}button,input{font:inherit}button{cursor:pointer}main{max-width:1360px;padding:40px 36px 30px;margin:auto}.eyebrow{font-size:12px;color:#627770;letter-spacing:2px;font-weight:600}.top{display:flex;justify-content:space-between;align-items:center;gap:24px}h1{font-size:32px;letter-spacing:-1px;margin:10px 0 12px;font-weight:650}.intro{color:#6c7b75;font-size:14px;margin:0;line-height:1.8}.tag{font-size:12px;border:1px solid #d6dfd8;padding:7px 13px;border-radius:20px;white-space:nowrap}.inputs{margin-top:27px;background:#fff;border:1px solid #dfe5df;border-radius:14px;padding:20px 24px}.step{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:600}.num{background:#e9f0e9;color:#4f6d5e;width:23px;height:23px;display:inline-grid;place-items:center;font-size:12px;border-radius:7px}.filegrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:17px 0}.filebox{background:#f8faf7;border:1px solid #e3e9e1;border-radius:9px;padding:12px 14px}.filebox label{display:block;font-size:13px;font-weight:600;margin-bottom:9px}.filebox small{font-size:11px;color:#809086;margin-left:7px;font-weight:400}input[type=file]{width:100%;font-size:12px;color:#6d7c72}input::file-selector-button{border:1px solid #d8e1d7;background:white;color:#3e594a;border-radius:5px;padding:5px 8px;margin-right:8px;cursor:pointer}.action{display:flex;flex-wrap:wrap;align-items:center;gap:16px}.primary{background:#2d5b49;color:white;border:0;border-radius:7px;padding:10px 20px;font-size:13px;font-weight:600}.hint{font-size:12px;color:#879189}.results-head{display:flex;justify-content:space-between;align-items:center;margin:26px 0 17px;gap:12px}h2{margin:0;font-size:18px;display:flex;align-items:center;gap:10px}.count{color:#42624e;background:#e1eade;border-radius:5px;font-size:12px;padding:3px 8px}.sub{font-size:12px;color:#859086;font-weight:400;margin-left:4px}.print{border:1px solid #cdd9ce;color:#3b5b46;background:transparent;padding:9px 14px;border-radius:7px;font-size:12px}.print:disabled{opacity:.4;cursor:default}.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.card{background:#fff;border:1px solid #dde5dd;border-radius:12px;overflow:hidden;box-shadow:0 4px 12px #273d2d04}.card-top{background:#edf3ed;border-bottom:1px solid #e3e9e0;padding:20px 22px;display:flex;align-items:center;gap:12px}.avatar{width:42px;height:42px;border-radius:50%;background:#dce8dc;display:grid;place-items:center;font-size:19px;color:#52704f}.name{font-size:21px;font-weight:600}.student-id{font-size:11px;margin-top:5px;color:#879386;letter-spacing:1px}.type{margin-left:auto;color:#8b9a89;font-size:11px}.card-body{padding:22px}.section-title{font-size:12px;font-weight:600;margin:0 0 13px;color:#597451;display:flex;align-items:center;gap:7px}.section-title:before{content:"";width:3px;height:11px;background:#a8bba0;border-radius:2px}table{width:100%;border-collapse:collapse;font-size:13px;margin-bottom:22px;text-align:left}th{font-weight:400;font-size:11px;color:#95a18e;padding:0 0 10px}td{padding:13px 0;border-top:1px solid #edf0e9}th:last-child,td:last-child{text-align:right}.up,.down,.flat{display:inline-block;font-size:11px;padding:4px 7px;border-radius:5px;white-space:nowrap}.up{color:#467345;background:#eef5e9}.down{color:#a47740;background:#fcf2e5}.flat{color:#748174;background:#f2f4f0}.note{font-size:13px;line-height:1.9;margin:0 0 20px;min-height:50px;color:#586653}.visit{background:#f7f8f4;border-radius:8px;padding:13px 14px;min-height:78px;font-size:12px;line-height:1.9;color:#697461}.missing{color:#9aa28e}.card-bottom{border-top:1px solid #edf0e9;margin-top:19px;padding-top:13px;font-size:10px;color:#a0a995;display:flex;justify-content:space-between}.footer{font-size:11px;color:#919b8a;display:flex;justify-content:space-between;gap:12px;margin-top:21px}.empty{border:1px dashed #ccd7c9;border-radius:12px;padding:50px;text-align:center;color:#8b9783;grid-column:1/-1;font-size:14px}#status{font-size:12px;color:#5d7757;margin-top:10px;line-height:1.7}#status:empty{display:none}#status.error{color:#af493d}
+@media(max-width:850px){main{padding:24px 18px}.cards{grid-template-columns:1fr}.filegrid{grid-template-columns:1fr}.sub{display:none}.top{align-items:flex-start}h1{font-size:26px}}
+@media print{@page{size:A4;margin:18mm}body{background:white}main{padding:0;max-width:none}.top,.inputs,.results-head,.footer{display:none}.cards{display:block}.card{border:0;box-shadow:none;border-radius:0;break-after:page}.card:last-child{break-after:auto}.card-top{padding:20px 0;background:white}.card-body{padding:24px 0}.name{font-size:28px}.section-title{font-size:16px}table,.note{font-size:16px}.visit{font-size:15px}.card-bottom{font-size:11px}tr,.visit,.note{break-inside:avoid}*{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+</style>
+<link rel="stylesheet" href="../阅读样式.css">
+</head>
+<body class="student-demo"><main>
+<header class="top"><div><div class="eyebrow">家长会材料 · 本地小工具</div><h1>每个学生，一张情况卡。</h1><p class="intro">把成绩、课堂表现和家访记录放在一起，自动算好分数变化，统一排好版。</p></div><span class="tag">演示样例 · 虚构数据</span></header>
+<section class="inputs"><div class="step"><span class="num">1</span> 选择三份资料</div><div class="filegrid">
+<div class="filebox"><label for="grades">成绩表 <small>grades.csv</small></label><input id="grades" type="file" accept=".csv"></div>
+<div class="filebox"><label for="notes">课堂表现 <small>class_notes.csv</small></label><input id="notes" type="file" accept=".csv"></div>
+<div class="filebox"><label for="visits">家访记录 <small>visits.csv</small></label><input id="visits" type="file" accept=".csv"></div>
+</div><div class="action"><button class="print" id="sample">载入内置样例</button><button class="primary" id="generate">生成情况卡</button><span class="hint">按学号匹配资料，原文件保持不变</span></div><div id="status" role="status" aria-live="polite"></div></section>
+<section class="results-head"><h2><span class="num">2</span> 学生情况卡 <span class="count" id="count">0 位学生</span><span class="sub">每人一页 · 可打印</span></h2><button class="print" id="print" disabled>打印 / 保存 PDF</button></section>
+<div class="cards" id="cards"><div class="empty">选好三份资料，点击“生成情况卡”，结果会显示在这里。</div></div>
+<footer class="footer"><span>同样的整理步骤，下次换一份资料就能再用。</span><span>文件仅在本地读取</span></footer>
+<p style="text-align:center"><a href="../index.html" style="color:#2d5b49">返回分享稿</a></p></main>
+<script>
+const $=id=>document.getElementById(id);
+const escapeText=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function parseCSV(text){
+  text=text.replace(/^\uFEFF/,'').replace(/\r\n/g,'\n');
+  const rows=[];let row=[],cell='',quoted=false;
+  for(let i=0;i<text.length;i++){
+    const c=text[i];
+    if(c==='"'){if(quoted&&text[i+1]==='"'){cell+='"';i++;}else quoted=!quoted;}
+    else if(c===','&&!quoted){row.push(cell.trim());cell='';}
+    else if(c==='\n'&&!quoted){row.push(cell.trim());if(row.some(Boolean))rows.push(row);row=[];cell='';}
+    else cell+=c;
+  }
+  if(quoted)throw Error('表格里的引号没有配对，请检查 CSV。');
+  row.push(cell.trim());if(row.some(Boolean))rows.push(row);
+  const headers=rows.shift()||[];
+  return {headers,rows:rows.map((cells,i)=>{if(cells.length!==headers.length)throw Error(`第 ${i+2} 行列数不正确，请检查 CSV。`);return Object.fromEntries(headers.map((h,j)=>[h,cells[j]]));})};
+}
+async function read(id,required,label){const file=$(id).files[0];if(!file)throw Error(`请先选择${label}。`);const data=parseCSV(await file.text());const missing=required.filter(h=>!data.headers.includes(h));if(missing.length)throw Error(`${label}缺少列：${missing.join('、')}`);return data.rows;}
+function score(value){if(value==='')return null;const n=Number(value);if(!Number.isFinite(n))throw Error(`成绩“${value}”不是数字。`);return n;}
+function combine(rows,key){const result=new Map();for(const r of rows){if(!r['学号'])throw Error('有记录缺少学号，请补上后再生成。');if(r[key])result.set(r['学号'],[...(result.get(r['学号'])||[]),r[key]]);}return result;}
+$('generate').addEventListener('click',async()=>{
+  $('status').className='';$('status').textContent='正在整理…';$('print').disabled=true;
+  try{
+    const [grades,notes,visits]=await Promise.all([read('grades',['学号','姓名','科目','期中','期末'],'成绩表'),read('notes',['学号','课堂表现'],'课堂表现表'),read('visits',['学号','家访记录'],'家访记录表')]);
+    const noteMap=combine(notes,'课堂表现'),visitMap=combine(visits,'家访记录'),students=new Map();
+    for(const r of grades){
+      if(!r['学号']||!r['姓名']||!r['科目'])throw Error('成绩表有记录缺少学号、姓名或科目。');
+      if(!students.has(r['学号']))students.set(r['学号'],{id:r['学号'],name:r['姓名'],grades:[]});
+      const s=students.get(r['学号']);if(s.name!==r['姓名'])throw Error(`学号 ${s.id} 对应了不同姓名。`);
+      if(s.grades.some(g=>g.subject===r['科目']))throw Error(`${s.name}的${r['科目']}出现了重复记录。`);
+      s.grades.push({subject:r['科目'],mid:score(r['期中']),final:score(r['期末'])});
+    }
+    const cards=[...students.values()].map((s,i)=>{
+      const rows=s.grades.map(g=>{const diff=g.mid===null||g.final===null?null:g.final-g.mid;const label=diff===null?'暂不计算':diff>0?`↑ 提高 ${diff} 分`:diff<0?`↓ 下降 ${Math.abs(diff)} 分`:'持平';return `<tr><td>${escapeText(g.subject)}</td><td>${g.mid??'未填写'}</td><td>${g.final??'未填写'}</td><td><span class="${diff>0?'up':diff<0?'down':'flat'}">${label}</span></td></tr>`;}).join('');
+      const note=noteMap.get(s.id)?.map(escapeText).join('<br>')||'暂无记录',visit=visitMap.get(s.id)?.map(escapeText).join('<br>')||'暂无记录';
+      return `<article class="card"><div class="card-top"><div class="avatar">${escapeText(s.name[0])}</div><div><div class="name">${escapeText(s.name)}</div><div class="student-id">学号 ${escapeText(s.id)}</div></div><span class="type">学生情况卡</span></div><div class="card-body"><h3 class="section-title">成绩变化</h3><table><thead><tr><th>科目</th><th>期中</th><th>期末</th><th>变化</th></tr></thead><tbody>${rows}</tbody></table><h3 class="section-title">课堂表现</h3><p class="note">${note}</p><h3 class="section-title">家访记录</h3><div class="visit ${visit==='暂无记录'?'missing':''}">${visit}</div><div class="card-bottom"><span>依据导入资料整理</span><span>${String(i+1).padStart(2,'0')} / ${String(students.size).padStart(2,'0')}</span></div></div></article>`;
+    });
+    $('cards').innerHTML=cards.join('')||'<div class="empty">成绩表中没有学生记录。</div>';
+    $('count').textContent=`${students.size} 位学生`;
+    $('status').textContent=`已生成 ${students.size} 张情况卡 · 已按学号匹配三份资料`;
+    $('print').disabled=students.size===0;
+  }catch(e){$('cards').innerHTML='<div class="empty">请检查资料后重新生成。</div>';$('count').textContent='0 位学生';$('status').className='error';$('status').textContent=e.message;}
+});
+$('print').addEventListener('click',()=>window.print());
+
+const sampleData = {"grades": "﻿学号,姓名,科目,期中,期末\nS001,张三,语文,80,85\nS001,张三,数学,70,90\nS002,李四,语文,88,90\nS002,李四,数学,92,86\nS003,王五,语文,75,82\nS003,王五,数学,80,78\n", "notes": "﻿学号,课堂表现\nS001,课堂上经常主动举手。作业中偶尔漏写步骤。\nS002,作业完成稳定。小组讨论中发言较少。\nS003,愿意帮助同学。最近两次作业提交较晚。\n", "visits": "﻿学号,家访记录\nS001,家长反映最近开始主动安排作业时间。\nS002,与家长约定每周一起回顾一次错题。\n"};
+function loadSample(){
+ for(const [id,text] of Object.entries(sampleData)){
+  const transfer=new DataTransfer();
+  transfer.items.add(new File([text],id+'.csv',{type:'text/csv'}));
+  document.getElementById(id).files=transfer.files;
+ }
+ document.getElementById('generate').click();
+}
+document.getElementById('sample').addEventListener('click',loadSample);
+loadSample();
+</script></body></html>

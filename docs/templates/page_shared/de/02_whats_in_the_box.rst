@@ -16,18 +16,18 @@
       :header-rows: 0
       :widths: 33 33 34
 
-      * - .. image:: templates/word_template/common_assets/in_the_box/main_unit1.png
-             :alt: Abbildung der Powerstation als Platzhalter.
+      * - .. image:: asset:in_the_box/main_unit1
+             :alt: Abbildung der Powerstation.
              :width: 120px
 
           |PRODUCT_NAME_BOLD|
-        - .. image:: templates/word_template/common_assets/in_the_box/ac_charging_cable.png
-             :alt: Abbildung des AC-Ladekabels als Platzhalter.
+        - .. image:: asset:in_the_box/ac_charging_cable
+             :alt: Abbildung des AC-Ladekabels.
              :width: 120px
 
           **AC-Ladekabel**
-        - .. image:: templates/word_template/common_assets/in_the_box/manual_icon1.png
-             :alt: Abbildung des Benutzerhandbuchs als Platzhalter.
+        - .. image:: asset:in_the_box/manual_icon1
+             :alt: Abbildung des Benutzerhandbuchs.
              :width: 120px
 
           Benutzerhandbuch

@@ -4,7 +4,7 @@ Jackeryアプリ ユーザーマニュアル
 1 アプリをダウンロードしてログインするには
 ------------------------------------------
 
-.. image:: templates/word_template/common_assets/app/download.png
+.. image:: asset:app/download
    :alt: App download QR and marketplace image.
    :width: 320px
 
@@ -17,11 +17,11 @@ Google PlayまたはApp Storeで「Jackery」と検索し、アプリをイン�
 
 2.2 デバイスの|MAIN_POWER_BUTTON_LABEL|を長押しして電源をいれると、ディスプレー画面にWi-FiとBluetoothのアイコンが点滅し、デバイスがネットワーク設定モードに入ったことを示します。アイコン点滅中ボタンをクリックし、アプリが近くのデバイスに接続し、Bluetoothのアクセス許可を開くことを許可します。
 
-.. image:: templates/word_template/common_assets/app/add_device.png
+.. image:: asset:app/add_device
    :alt: App add-device steps.
    :width: 320px
 
-.. image:: templates/word_template/common_assets/overview/front_controls.png
+.. image:: asset:overview/front_controls
    :alt: Front panel button reference.
    :width: 520px
 
@@ -54,11 +54,15 @@ Google PlayまたはApp Storeで「Jackery」と検索し、アプリをイン�
 
 2.5 デバイスのホーム画面でデバイスが正常に追加されると、デバイスのWi-Fiアイコンは常にオンになります。
 
-.. image:: templates/word_template/common_assets/app/connect_result.png
+.. image:: asset:app/connect_result
    :alt: App connection result screens.
    :width: 360px
 
 上記のスクリーンショットはイメージです。
+
+.. list-table::
+   :header-rows: 0
+   :widths: 12 88
 
    * - 備考
      - Jackeryアプリは、一度に1台のポータブル電源としかBluetooth接続できません。デバイスリストに戻ると、自動的にBluetoothが切断されます。リスト内のポータブル電源をもう一度タップすると、自動的に再接続されます。
@@ -68,7 +72,7 @@ Google PlayまたはApp Storeで「Jackery」と検索し、アプリをイン�
 
 デバイスのメインインターフェースの右上隅にある「設定」ボタンをクリックして設定ページに入り、ページの下部にある「バインド解除」ボタンをクリックしてデバイスのバインドを解除します。
 
-4 ご確認Wi-Fi・Bluetoothの設定
+4 Wi-Fi・Bluetoothの設定
 ------------------------------
 
 4.1 Wi-FiとBluetoothをオンにするには（ディスプレーにWi-FiとBluetoothのアイコンが点灯）：

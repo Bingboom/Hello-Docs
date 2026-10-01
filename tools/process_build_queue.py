@@ -48,6 +48,7 @@ from tools.queue_contract import (  # noqa: E402
     LANG_FIELD as _QC_LANG_FIELD,
     LEGACY_TRIGGER_FIELDS as _QC_LEGACY_TRIGGER_FIELDS,
     OPERATOR_UNION_ID_FIELD as _QC_OPERATOR_UNION_ID_FIELD,
+    QUEUE_CLAIM_TTL_SECONDS as _QC_QUEUE_CLAIM_TTL_SECONDS,
     RESULT_FIELD as _QC_RESULT_FIELD,
     RUNNING_PREFIX as _QC_RUNNING_PREFIX,
     SUCCESS_PREFIX as _QC_SUCCESS_PREFIX,
@@ -69,6 +70,7 @@ from tools.document_link_queue import (  # noqa: E402
 from tools.document_link_actions import (  # noqa: E402
     DRAFT_PACKAGE_ACTION_LABEL,
     PUBLISH_ACTION_LABEL,
+    WEB_PUBLISH_ACTION_LABEL,
     best_effort_queue_workflow_action as _best_effort_queue_workflow_action,
     normalize_cli_queue_action as _normalize_cli_queue_action,
     normalize_doc_phase as _normalize_doc_phase,
@@ -130,10 +132,12 @@ from tools.queue_bound_outputs import (  # noqa: E402
     stage_draft_md_output_to_host_repo as _stage_draft_md_output_to_host_repo,
     stage_draft_word_output_to_host_repo as _stage_draft_word_output_to_host_repo,
     stage_publish_assets_to_host_repo as _stage_publish_assets_to_host_repo,
+    stage_web_publish_assets_to_host_repo as _stage_web_publish_assets_to_host_repo,
     versioned_md_output_path as _versioned_md_output_path,
     versioned_pdf_output_path as _versioned_pdf_output_path,
     versioned_word_output_path as _versioned_word_output_path,
     write_publish_release_metadata,
+    write_web_publish_metadata,
 )
 from tools.queue_bound_lark_ops import (  # noqa: E402
     cli_relative_file_arg as _cli_relative_file_arg,
@@ -222,6 +226,7 @@ FORCE_PHASE2_REFRESH_FIELD = _QC_FORCE_PHASE2_REFRESH_FIELD
 UPLOAD_DINGTALK_FIELD = _QC_UPLOAD_DINGTALK_FIELD
 IMMEDIATE_TRIGGER_FIELD = _QC_IMMEDIATE_TRIGGER_FIELD
 OPERATOR_UNION_ID_FIELD = _QC_OPERATOR_UNION_ID_FIELD
+QUEUE_CLAIM_TTL_SECONDS = _QC_QUEUE_CLAIM_TTL_SECONDS
 SUCCESS_PREFIX = _QC_SUCCESS_PREFIX
 RUNNING_PREFIX = _QC_RUNNING_PREFIX
 FAILED_PREFIX = _QC_FAILED_PREFIX
@@ -270,6 +275,8 @@ def _build_py_target_command(
     lang: str | None = None,
     source: str | None = None,
     no_clean: bool = False,
+    idml_mode: str | None = None,
+    presentation_profile: str | None = None,
 ) -> list[str]:
     return _build_py_target_command_service(
         _service_module(),
@@ -282,6 +289,8 @@ def _build_py_target_command(
         lang=lang,
         source=source,
         no_clean=no_clean,
+        idml_mode=idml_mode,
+        presentation_profile=presentation_profile,
     )
 
 
@@ -329,7 +338,7 @@ def build_document_for_task(
 def build_success_fields(
     *,
     version: str,
-    word_output_path: Path,
+    word_output_path: Path | None,
     document_link_url: str,
     built_at: datetime,
     document_link_dd_url: str = "",
@@ -342,6 +351,8 @@ def build_success_fields(
     write_data_sync: bool = True,
     write_document_link_dd: bool = False,
     write_feishu_cloud_doc: bool = False,
+    write_document_directory: bool = True,
+    write_document_link: bool = True,
 ) -> dict[str, Any]:
     return _build_success_fields_service(
         _service_module(),
@@ -359,6 +370,8 @@ def build_success_fields(
         write_data_sync=write_data_sync,
         write_document_link_dd=write_document_link_dd,
         write_feishu_cloud_doc=write_feishu_cloud_doc,
+        write_document_directory=write_document_directory,
+        write_document_link=write_document_link,
     )
 
 
@@ -369,6 +382,9 @@ def build_started_fields(
     workflow_action: str | None = None,
     doc_phase: str | None = None,
     data_sync_status: str = "",
+    claim_token: str = "",
+    claim_expires_at: datetime | None = None,
+    write_started_at: bool = True,
 ) -> dict[str, Any]:
     return _build_started_fields_service(
         _service_module(),
@@ -377,6 +393,9 @@ def build_started_fields(
         workflow_action=workflow_action,
         doc_phase=doc_phase,
         data_sync_status=data_sync_status,
+        claim_token=claim_token,
+        claim_expires_at=claim_expires_at,
+        write_started_at=write_started_at,
     )
 
 
@@ -462,6 +481,7 @@ def process_build_queue(
     workflow_action: str | None = None,
     doc_phase: str | None = None,
     record_id: str | None = None,
+    record_ids: tuple[str, ...] = (),
 ) -> int:
     return _process_build_queue_service(
         _service_module(),
@@ -473,19 +493,27 @@ def process_build_queue(
         workflow_action=workflow_action,
         doc_phase=doc_phase,
         record_id=record_id,
+        record_ids=record_ids,
     )
 
 
 def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
-    ap = argparse.ArgumentParser(description="Consume Document_link build tasks and write draft-package or publish results back to Feishu.")
+    ap = argparse.ArgumentParser(
+        description=(
+            "Consume Document_link build tasks and write Draft, Publish, or Web Publish results back to Feishu."
+        )
+    )
     ap.add_argument("--config", required=True, help="Config YAML path")
     ap.add_argument("--data-root", default=None, help="Override structured content snapshot root")
     ap.add_argument("--dry-run", action="store_true", help="List pending tasks without building or writing back")
     ap.add_argument(
         "--workflow-action",
-        choices=("build-draft-package", "draft", "publish"),
+        choices=("build-draft-package", "draft", "publish", "web-publish"),
         default=None,
-        help="Only consume queue rows for one normalized Workflow_action (Build Draft Package or Publish)",
+        help=(
+            "Only consume queue rows for one normalized Workflow_action "
+            "(Build Draft Package, Publish, or Web Publish)"
+        ),
     )
     ap.add_argument(
         "--doc-phase",
@@ -494,6 +522,11 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
         help="Unsupported legacy filter; use --workflow-action and keep queue rows on Workflow_action only",
     )
     ap.add_argument("--record-id", default=None, help="Only consume one Document_link record_id")
+    ap.add_argument(
+        "--record-ids",
+        default="",
+        help="Only consume these comma-separated Document_link record_ids (batch worker input)",
+    )
     return ap.parse_args(argv)
 
 

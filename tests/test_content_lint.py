@@ -9,7 +9,7 @@ import io
 import json
 import tempfile
 import unittest
-from contextlib import redirect_stdout
+from contextlib import redirect_stderr, redirect_stdout
 from pathlib import Path
 
 from tools.content_lint import (
@@ -135,6 +135,46 @@ class ContentLintTest(unittest.TestCase):
             _write(root, "lcd_icons_blocks.csv", ["icon_en", "icon_desc_it"],
                    [{"icon_en": "TOU", "icon_desc_it": "On: abilitata."}])
             self.assertEqual(main(["--data-root", str(root)]), 1)
+
+    def test_main_rejects_unsupported_lang_cleanly(self) -> None:
+        # Unknown languages must still exit non-zero with a clear message,
+        # rather than crash with a KeyError.
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            _status_words(root)
+            stderr = io.StringIO()
+            with redirect_stderr(stderr):
+                exit_code = main(["--data-root", str(root), "--langs", "xx"])
+            self.assertEqual(exit_code, 2)
+            self.assertIn("unsupported --langs", stderr.getvalue())
+            self.assertIn("xx", stderr.getvalue())
+
+    def test_registered_longtail_language_is_report_only(self) -> None:
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            _write(
+                root,
+                "Status_Words.csv",
+                ["en", "jp", "是否为 status word"],
+                [{"en": "On", "jp": "点灯", "是否为 status word": "Y"}],
+            )
+            _write(
+                root,
+                "lcd_icons_blocks.csv",
+                ["icon_en", "icon_desc_jp"],
+                [{"icon_en": "Power", "icon_desc_jp": "On: connected."}],
+            )
+            stdout = io.StringIO()
+            with redirect_stdout(stdout):
+                exit_code = main(["--data-root", str(root), "--langs", "jp", "--json"])
+
+            self.assertEqual(exit_code, 0)
+            payload = json.loads(stdout.getvalue())
+            self.assertEqual(payload["result"], "OK")
+            self.assertEqual(payload["summary"]["fail"], 0)
+            self.assertEqual(payload["summary"]["info"], 2)
+            self.assertEqual({finding["severity"] for finding in payload["findings"]}, {"INFO"})
+            self.assertEqual({finding["lang"] for finding in payload["findings"]}, {"ja"})
 
     def test_main_json_output_is_machine_readable(self) -> None:
         with tempfile.TemporaryDirectory() as td:

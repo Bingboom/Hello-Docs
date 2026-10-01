@@ -1,10 +1,10 @@
-DESCRIPCIÓN GENERAL DEL PRODUCTO
+{{ copy:product_overview.page_title }}
 ================================
 
-VISTA FRONTAL
+{{ copy:product_overview.front_view }}
 -------------
 
-.. image:: templates/word_template/common_assets/overview/front_product.jpg
+.. image:: asset:overview/front_controls
    :alt: Diagrama de vista frontal.
    :width: 420px
 
@@ -13,27 +13,27 @@ VISTA FRONTAL
    :widths: 50 50
 
    * - **|MAIN_POWER_BUTTON_LABEL|**
-     - **Asa**
+     - **{{ copy:product_overview.part.lcd }}**
    * - **|FRONT_DC12_PORT_LABEL|**
 
        |FRONT_DC12_PORT_SPEC|
-     - **LCD**
+     - **{{ copy:product_overview.part.led_light_button }}**
    * - **|DC_USB_POWER_BUTTON_LABEL|**
-     - **Botón de luz LED**
+     - **{{ copy:product_overview.part.led_light }}**
    * - **|FRONT_USB_C_LOW_LABEL|**
 
        |FRONT_USB_C_LOW_SPEC|
-     - **Luz LED**
+     - **|AC_POWER_BUTTON_LABEL|**
    * - **|FRONT_USB_C_HIGH_LABEL|**
 
        |FRONT_USB_C_HIGH_SPEC|
-     - **|AC_POWER_BUTTON_LABEL|**
-   * - **|FRONT_USB_A_LABEL|**
-
-       |FRONT_USB_A_SPEC|
      - **|FRONT_AC_OUTPUT_LABEL|**
 
        |FRONT_AC_OUTPUT_SPEC|
+   * - **|FRONT_USB_A_LABEL|**
+
+       |FRONT_USB_A_SPEC|
+     -
 
 .. list-table::
    :header-rows: 0
@@ -43,10 +43,10 @@ VISTA FRONTAL
 
        |FRONT_TOTAL_OUTPUT_SPEC|
 
-VISTA LATERAL DERECHA
+{{ copy:product_overview.right_side_view }}
 ---------------------
 
-.. image:: templates/word_template/common_assets/overview/right_side_ports.png
+.. image:: asset:overview/right_side_ports
    :alt: Diagrama de vista lateral derecha.
    :width: 420px
 
@@ -54,6 +54,7 @@ VISTA LATERAL DERECHA
    :header-rows: 0
    :widths: 100
 
+   * - **{{ copy:product_overview.part.handle }}**
    * - **|SIDE_AC_INPUT_LABEL|**
 
        |SIDE_AC_INPUT_SPEC|

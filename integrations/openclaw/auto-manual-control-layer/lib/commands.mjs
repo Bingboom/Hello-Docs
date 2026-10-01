@@ -1,9 +1,17 @@
 const RECORD_ID_PATTERN = /^rec[a-zA-Z0-9]+$/;
 const RUN_ID_PATTERN = /^\d+$/;
 const PUBLISH_CONFIRMATION_TOKENS = new Set(["confirm", "confirmed", "--confirm"]);
+const PUBLISH_COMMANDS = new Set(["publish", "web-publish"]);
 
-function dispatchUsageExample(commandName) {
-  return commandName === "publish" ? "/publish rec_xxx confirm" : `/${commandName || "build-draft"} rec_xxx`;
+function dispatchUsageExample(commandName, { batch = false } = {}) {
+  if (batch) {
+    return PUBLISH_COMMANDS.has(commandName)
+      ? `/${commandName} batch confirm`
+      : `/${commandName || "build-draft"} batch`;
+  }
+  return PUBLISH_COMMANDS.has(commandName)
+    ? `/${commandName} rec_xxx confirm`
+    : `/${commandName || "build-draft"} rec_xxx`;
 }
 
 export function ensureRecordId(rawArgs) {
@@ -30,6 +38,7 @@ export function ensureStatusArg(rawArgs) {
 
 export function ensureDispatchArgs(commandName, rawArgs) {
   const normalizedCommand = String(commandName || "").trim().toLowerCase();
+  const publishLabel = normalizedCommand === "publish" ? "Publish" : "Web Publish";
   const tokens = String(rawArgs || "")
     .trim()
     .split(/\s+/)
@@ -39,32 +48,54 @@ export function ensureDispatchArgs(commandName, rawArgs) {
   }
 
   let queueRecordId = "";
+  let batch = false;
+  let queueRecordIds = [];
   let publishConfirmed = false;
   for (const token of tokens) {
     if (RECORD_ID_PATTERN.test(token)) {
-      if (queueRecordId) {
+      if (queueRecordId || batch) {
         throw new Error("Provide only one record id per dispatch.");
       }
       queueRecordId = token;
       continue;
     }
-    if (normalizedCommand === "publish" && PUBLISH_CONFIRMATION_TOKENS.has(token.toLowerCase())) {
+    if (token.toLowerCase() === "batch") {
+      if (queueRecordId || batch) {
+        throw new Error("Provide either one record id or the batch sentinel, not both.");
+      }
+      batch = true;
+      continue;
+    }
+    if (token.toLowerCase().startsWith("--record-ids=")) {
+      if (!batch) {
+        throw new Error("`--record-ids` is only valid with the `batch` sentinel.");
+      }
+      const rawIds = token.slice("--record-ids=".length).split(",").map((value) => value.trim()).filter(Boolean);
+      if (!rawIds.length || rawIds.some((value) => !RECORD_ID_PATTERN.test(value))) {
+        throw new Error("Batch record ids must be comma-separated ids beginning with `rec`.");
+      }
+      queueRecordIds = [...new Set(rawIds)];
+      continue;
+    }
+    if (PUBLISH_COMMANDS.has(normalizedCommand) && PUBLISH_CONFIRMATION_TOKENS.has(token.toLowerCase())) {
       publishConfirmed = true;
       continue;
     }
-    if (normalizedCommand === "publish") {
-      throw new Error("Publish requires `/publish rec_xxx confirm`.");
+    if (PUBLISH_COMMANDS.has(normalizedCommand)) {
+      throw new Error(`${publishLabel} requires \`/${normalizedCommand} rec_xxx confirm\`.`);
     }
-    throw new Error("Provide one record id, for example `/build-draft rec_xxx`.");
+    throw new Error("Provide one record id or the `batch` sentinel, for example `/build-draft rec_xxx` or `/build-draft batch`.");
   }
 
-  if (!queueRecordId) {
-    throw new Error(`Provide one record id, for example \`${dispatchUsageExample(normalizedCommand)}\`.`);
+  if (!queueRecordId && !batch) {
+    throw new Error(`Provide one record id or the batch sentinel, for example \`${dispatchUsageExample(normalizedCommand)}\`.`);
   }
-  if (normalizedCommand === "publish" && !publishConfirmed) {
-    throw new Error("Publish requires explicit confirmation. Use `/publish rec_xxx confirm`.");
+  if (PUBLISH_COMMANDS.has(normalizedCommand) && !publishConfirmed) {
+    throw new Error(
+      `${publishLabel} requires explicit confirmation. Use \`/${normalizedCommand} rec_xxx confirm\`.`
+    );
   }
-  return { queueRecordId, publishConfirmed };
+  return { queueRecordId, queueRecordIds, publishConfirmed, batch };
 }
 
 export function renderMissingConfig(missingFields) {
@@ -77,7 +108,7 @@ export function renderMissingConfig(missingFields) {
 export function renderDispatchResult({ workflowName, queueRecordId, runId, runUrl, acceptedAt, note }) {
   const lines = [
     `${workflowName}`,
-    `record_id: ${queueRecordId}`,
+    queueRecordId ? `record_id: ${queueRecordId}` : "scope: batch",
   ];
   if (acceptedAt) {
     lines.push(`accepted_at: ${acceptedAt}`);
@@ -213,8 +244,11 @@ export function renderStatusResult({ workflowName, queueRecordId, runId, runUrl,
   if (metadata?.publish_url) {
     lines.push(`publish_url: ${metadata.publish_url}`);
   }
-  if (metadata?.document_link_url) {
-    lines.push(`document_link_url: ${metadata.document_link_url}`);
+  if (metadata?.delivery_kind) {
+    lines.push(`delivery_kind: ${metadata.delivery_kind}`);
+  }
+  if (metadata?.delivery_url) {
+    lines.push(`delivery_url: ${metadata.delivery_url}`);
   }
   if (metadata?.publish_html_index) {
     lines.push(`publish_html_index: ${metadata.publish_html_index}`);

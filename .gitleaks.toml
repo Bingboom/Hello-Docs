@@ -1,0 +1,53 @@
+# Milestone K6 (severable slice): secret-scanning config for the CI gate in
+# manual-validation.yml. Tuned against a full local scan on 2026-07-17: 31
+# findings, all Feishu RESOURCE tokens (base / wiki / table ids) or test
+# fixtures — zero credentials.
+#
+# Policy encoded here (matches user-guide/two_plane_map.md §1.1): Feishu
+# resource tokens are identifiers, deliberately committed — holding one grants
+# nothing without FEISHU_APP_ID/FEISHU_APP_SECRET. Real credential shapes
+# (app secrets, cloud keys, private keys, high-entropy assignments under other
+# keywords) are NOT allowlisted and must keep failing the scan.
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Feishu resource tokens are committed by policy; credentials are not"
+regexTarget = "line"
+regexes = [
+  # env-style / python-constant / doc assignments of Feishu RESOURCE tokens
+  '''(?i)[A-Z_]*(BASE_TOKEN|WIKI_TOKEN|WIKI_NODE|NODE_TOKEN|OBJ_TOKEN)[A-Z_]*\s*[=:]''',
+  # json/yaml resource-token fields (asset_base_bindings.json, lark-cli --params)
+  '''"(base_token|wiki_node_token|wiki_token|obj_token|token)"\s*:\s*"[A-Za-z0-9]{20,32}"''',
+  # domain vocabulary: business keys are identifiers, not credentials.
+  # The optional closing quote matters: without it this rule only ever matched
+  # env / python / doc assignments, never the JSON form ("asset_key": "..."),
+  # so every business key inside data/asset_recipes/*.json was unprotected.
+  # It surfaced when one asset key's own entropy crossed generic-api-key's
+  # threshold. Widening is limited to JSON punctuation around these key
+  # names; no new value shape is exempted.
+  #
+  # record_id is the one key name added since: a Feishu record_id is a
+  # resource identifier of the same class as the base/wiki tokens already
+  # allowlisted above, and the intake reports commit it as
+  # "document_key_record_id". Note the suffix is why record_key did not
+  # cover it — the trailing quote must follow the key name immediately, so
+  # "document_key_record_id" only matches once record_id is itself listed.
+  # That same strictness is what keeps the exemption narrow: a credential
+  # wearing the name ("record_id_secret") still fails the scan.
+  '''(?i)(document_key|row_key|symbol_key|copy_key|asset_key|business_key|page_key|source_key|record_key|record_id)"?\s*[=:]''',
+  # bare 27/28-char Feishu-token fixture assignment (tests)
+  '''(?i)^\s*token\s*=\s*"[A-Za-z0-9]{27,28}"''',
+  # Feishu table identifiers are resource IDs, not credentials.
+  '''(?i)DOCUMENT_KEY_TABLE_ID\s*[=:]''',
+  # Cloudflare Web Analytics beacon token: a PUBLIC site identifier that is
+  # embedded in every published page by design (it appears verbatim in the
+  # rendered HTML). It is not a Cloudflare API credential; holding it grants
+  # nothing. Narrow shape: exact key name + exact 32-hex value.
+  '''"analytics_beacon_token"\s*:\s*"[0-9a-f]{32}"''',
+]
+paths = [
+  # generated diff-report artifacts: links carry resource tokens by design
+  '''reports/version_tracking/.*\.html''',
+]

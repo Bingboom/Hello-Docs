@@ -1,0 +1,84 @@
+"""Four renderer adapters for the Inbox ComponentSpec."""
+from __future__ import annotations
+
+from typing import Any
+
+from tools.component_specs.inbox import inbox_semantic_projection
+from tools.component_specs.model import ComponentSpec, ComponentSpecError
+from tools.component_specs.registry import adapter_binding
+
+
+_EXPECTED_ADAPTER_KEYS = {
+    "web": "hb_inbox",
+    "latex": "hb_latex_inbox",
+    "idml": "idml_inbox",
+    "word": "word_inbox",
+}
+
+
+def _projection(spec: ComponentSpec, renderer: str) -> dict[str, Any]:
+    binding = adapter_binding(spec, renderer)
+    expected = _EXPECTED_ADAPTER_KEYS[renderer]
+    if binding.get("key") != expected:
+        raise ComponentSpecError(
+            f"{spec.component_id}: expected {renderer} adapter {expected!r}; "
+            f"got {binding.get('key')!r}"
+        )
+    if binding.get("capability") != "rendered":
+        raise ComponentSpecError(
+            f"{spec.component_id}: variant {spec.variant!r} is not rendered by "
+            f"the {renderer} adapter ({binding.get('capability')})"
+        )
+    return inbox_semantic_projection(spec)
+
+
+def web_inbox_projection(spec: ComponentSpec) -> dict[str, Any]:
+    return {
+        **_projection(spec, "web"),
+        "composition_class": "hb-inbox-composition",
+        "grid_class": "hb-inbox-grid",
+        "card_class": "hb-inbox-card",
+        "art_class": "hb-inbox-art",
+        "label_class": "hb-inbox-label",
+        "tip_class": "hb-inbox-tip",
+    }
+
+
+def latex_inbox_projection(spec: ComponentSpec) -> dict[str, Any]:
+    projection = _projection(spec, "latex")
+    arguments: list[str] = []
+    for card in projection["cards"]:
+        arguments.extend((str(card["image_ref"]), str(card["label"])))
+    return {**projection, "macro": "HBInBoxThree", "arguments": arguments}
+
+
+def idml_inbox_payload(spec: ComponentSpec) -> dict[str, Any]:
+    _projection(spec, "idml")
+    projection = inbox_semantic_projection(spec)
+    return {
+        "kind": "inbox",
+        "items": [
+            {
+                "img": str(card["image_ref"]),
+                "label": str(card["label"]),
+                "alt": str(card["alt"]),
+            }
+            for card in projection["cards"]
+        ],
+    }
+
+def word_inbox_projection(spec: ComponentSpec) -> dict[str, Any]:
+    return {
+        **_projection(spec, "word"),
+        "table_class": "hb-inbox-word-table",
+        "card_class": "hb-inbox-word-card",
+        "tip_class": "hb-inbox-word-tip",
+    }
+
+
+__all__ = [
+    "idml_inbox_payload",
+    "latex_inbox_projection",
+    "web_inbox_projection",
+    "word_inbox_projection",
+]

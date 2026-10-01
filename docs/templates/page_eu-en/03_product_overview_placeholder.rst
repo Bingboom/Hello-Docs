@@ -25,8 +25,8 @@
    FRONT VIEW
    ----------
 
-   .. image:: templates/word_template/common_assets/overview/front_product.jpg
-      :alt: Front view diagram placeholder.
+   .. image:: asset:overview/front_product
+      :alt: Front view diagram.
       :width: 420px
 
    .. list-table::
@@ -67,8 +67,8 @@
    RIGHT SIDE VIEW
    ---------------
 
-   .. image:: templates/word_template/common_assets/overview/right_side_ports.png
-      :alt: Right side view diagram placeholder.
+   .. image:: asset:overview/right_side_ports
+      :alt: Right side view diagram.
       :width: 420px
 
    .. list-table::

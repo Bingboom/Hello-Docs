@@ -31,6 +31,24 @@ below). The ledger is a local artifact, so this per-round piggyback — not a CI
 workflow — is the merge-time trigger: each backport round settles the previous
 round's rows without a separately remembered step. `--no-reconcile` opts out.
 
+The in-flow hook (`run-review-branch --write`) differs from the manual CLI in
+three ways, all so a row can actually leave `pending`:
+
+- it ingests **after** the guarded apply and stamps each applied delta with the
+  `_review` page it landed on (`applied_source_path`) plus the doc-level
+  language — a source-less row reads as `source_missing` forever and a
+  lang-less row can never emit TM candidates;
+- its piggyback reconcile runs against the **review-branch worktree** (the
+  `_review` sources exist only there) and **excludes the rows it just wrote**:
+  their PR has not merged yet, so they settle on the next round, not against
+  the same unmerged tree that produced them;
+- dry runs do not ingest at all — a dry-run row could never gain a source path,
+  and the `row_key` de-dup would then block the enriched write-run row.
+
+The manual CLI keeps the reconcile-everything behavior: ingesting a report
+after its PR merged (backfill) is exactly the case where fresh rows should
+settle immediately.
+
 ### reconcile
 
 `reconcile` runs after the review PR merges / the source-table sync applies. It
@@ -125,7 +143,12 @@ Properties:
   convention; trivial to load later with pandas/duckdb.
 - **Idempotent**: rows are de-duped by `row_key` (`run_id` + `delta_hash`, or the
   delta index when no hash is present), so re-ingesting the same report is a
-  no-op. The same correction observed in a *later* run is kept as a new row.
+  no-op. The same correction observed in a *later* run is kept as a new row —
+  which only works if each round has a distinct `run_id`. `run-review-branch`'s
+  default `run_id` is therefore date-stamped and branch-scoped
+  (`backport-<review-branch>-<UTC yyyymmdd>`): distinct across days/branches, but
+  stable for same-day re-runs of one round so those stay idempotent. Pass an
+  explicit `--run-id` when a finer round identity is needed.
 - **Read-only on everything else**: it only reads reports and appends to the
   ledger file. It does not touch source tables, templates, the review bundle, or
   backport behaviour.

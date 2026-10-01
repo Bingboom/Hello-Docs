@@ -1,0 +1,198 @@
+<!doctype html><html lang="zh-CN"><head><meta name="robots" content="noindex,nofollow"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>海报生成过程：提示词与结果对照</title><style>
+.learning-figure{margin:28px 0 34px}.learning-figure img{display:block;width:100%;height:auto;border-radius:12px}.learning-figure figcaption{font-size:12px;line-height:1.7;color:var(--muted);margin-top:10px}.learning-figure a{display:block}.learning-figure figcaption a{display:inline}.learning-figure{break-inside:avoid}
+
+:root{--ink:#252d3d;--muted:#69768b;--green:#2563eb;--paper:#ffffff;--line:#e3e9f2;--tint:#eff6ff;--orange:#c65316}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:78px}body{margin:0;background:#f6f8fc;color:var(--ink);font:16px/1.9 -apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif}a{color:var(--green);text-underline-offset:4px;overflow-wrap:anywhere}button{font:inherit;cursor:pointer}.topbar{background:var(--paper);border-bottom:1px solid var(--line);padding:12px 30px;display:flex;justify-content:space-between;align-items:center;gap:20px;position:sticky;top:0;z-index:3}.topbar a{text-decoration:none;font-size:14px;font-weight:650}.topbar small{font-weight:400;color:var(--muted);margin-left:10px}.topbar button,.copy{border:1px solid var(--line);background:white;color:var(--green);border-radius:6px;padding:5px 12px;font-size:12px}.layout{display:grid;grid-template-columns:220px minmax(0,900px);gap:42px;max-width:1270px;margin:auto;padding:40px 30px 80px}aside{position:sticky;top:92px;align-self:start;font-size:13px}.nav-title{font-size:11px;letter-spacing:2px;color:var(--muted);margin:0 0 16px}nav a{display:block;text-decoration:none;color:var(--muted);padding:8px 0 8px 12px;border-left:2px solid var(--line);line-height:1.65}nav a:hover,nav a:focus{color:var(--green);border-color:var(--green)}aside p{font-size:12px;color:var(--muted);margin-top:28px}main{min-width:0;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:42px 48px;box-shadow:0 8px 30px #233b6808}h1{font-size:32px;line-height:1.35;letter-spacing:-.7px;margin:5px 0 24px}h2{font-size:24px;line-height:1.5;margin:58px 0 22px;border-top:1px solid var(--line);padding-top:32px}h3{font-size:19px;line-height:1.6;margin:28px 0 13px}p{margin:14px 0}li{margin:7px 0}ul,ol{padding-left:24px}strong{font-weight:650}blockquote{margin:22px 0;padding:14px 20px;border-left:3px solid #f97316;background:var(--tint);color:#34435d;border-radius:0 8px 8px 0}blockquote p{margin:3px 0}h1+blockquote{background:transparent;border-left:3px solid #fb923c;font-size:18px;margin-bottom:32px}pre{background:#f5f7fb;border:1px solid var(--line);padding:24px 20px 18px;border-radius:8px;font:13px/1.8 ui-monospace,SFMono-Regular,Consolas,monospace;overflow:auto;tab-size:4;position:relative;white-space:pre-wrap;overflow-wrap:anywhere}code{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.88em;background:#edf2fa;padding:2px 5px;border-radius:4px}pre code{padding:0;font-size:inherit;background:transparent}.table-scroll{overflow-x:auto;margin:22px 0}table{border-collapse:collapse;width:100%;font-size:14px;text-align:left}th{background:var(--tint);font-weight:600;color:#315c9c}td,th{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}td:first-child{min-width:125px}img{max-width:100%;height:auto}details{margin:24px 0;border:1px solid #dce5f2;border-radius:8px;padding:0 18px}summary{cursor:pointer;padding:15px 0;color:var(--green);font-weight:600}details pre{margin-top:0}.code-wrap{position:relative}.copy{position:absolute;right:7px;top:7px;z-index:1;line-height:1.3;font-size:11px}.code-wrap pre{padding-top:38px}.page-note{border:1px solid var(--line);background:#fff8ee;border-radius:8px;padding:14px 18px;font-size:14px;margin:22px 0}.cell{margin:24px 0}.cell-label{font-size:11px;color:var(--muted);letter-spacing:1px;margin:0 0 5px}.output{background:white;border-left:3px solid #f59e0b;padding:12px 15px;overflow:auto}.output pre{background:white;border:none;padding:0;margin:0;white-space:pre;font-size:13px}.output img{display:block;max-width:100%;margin:12px auto}.output table{font-size:11px;line-height:1.5}.output td,.output th{padding:7px;min-width:0}.footer{border-top:1px solid var(--line);padding-top:20px;margin-top:50px;font-size:12px;color:var(--muted)}.progress{position:fixed;top:0;left:0;height:3px;background:var(--green);z-index:5;width:0}a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #fb923c;outline-offset:3px}.notice{font-size:13px;color:var(--muted)}
+@media(max-width:900px){.layout{display:block;padding:20px 16px 45px}aside{position:static;margin-bottom:22px}nav{display:flex;flex-wrap:wrap;gap:4px 14px}nav a{padding:4px 8px;max-width:100%;font-size:12px}aside p{display:none}main{padding:25px 22px}h1{font-size:27px}h2{font-size:22px;margin-top:42px}.topbar{padding:10px 16px}.topbar small{display:none}pre{font-size:12px}td,th{padding:9px}}
+@media print{@page{size:A4;margin:16mm}body{background:white;font-size:11pt}.topbar,aside,.copy,.progress{display:none}.layout{display:block;padding:0;max-width:none}main{padding:0;border:0;box-shadow:none}h1{font-size:24pt}h2{font-size:18pt;margin-top:24px;break-after:avoid}h3{break-after:avoid}pre,blockquote,.cell{break-inside:avoid}a{color:inherit}details{border:0;padding:0}summary{display:none}.table-scroll{overflow:visible}.output{overflow:visible}*{print-color-adjust:exact;-webkit-print-color-adjust:exact}}
+
+/* A bright reading theme shared by the guide and reference pages. */
+.topbar{background:rgba(255,255,255,.96)}.topbar>a{color:var(--ink)}
+.topbar button:hover,.copy:hover{background:#eff6ff;border-color:#93b4f5}
+main{border-radius:18px;box-shadow:0 12px 36px #233b6808}
+h1{color:#1d2b45}h2{border-top:0;position:relative;padding-top:28px}
+h2:before{content:"";position:absolute;top:0;left:0;width:36px;height:4px;border-radius:3px;background:#f97316}
+h1+blockquote{background:#fff7ed;border-left:3px solid #f97316;color:#9a4318;font-size:18px}
+nav a:hover,nav a:focus{background:#fff3e8;color:#b94b10;border-color:#f97316;border-radius:0 6px 6px 0}
+blockquote{background:#eff6ff;border-left-color:#60a5fa;color:#334869}
+.learning-figure img{border:1px solid #e7edf6;border-radius:16px}
+.page-note{background:#fff9f0;border-color:#ffe4bf}
+.progress{background:linear-gradient(90deg,#f97316,#fbbf24)}
+@media print{main{box-shadow:none}h2:before{display:none}}
+</style><link rel="stylesheet" href="../阅读样式.css?v=ec6208a0cc2b">
+<script defer data-share-analytics src="../reading-analytics.js?v=154433b2c7ec"></script></head><body class="reading-guide"><div id="progress" class="progress"></div><header class="topbar"><a href="../index.html">← 返回分享稿<small>AI 使用知识分享</small></a><button id="print">打印 / 保存 PDF</button></header><div class="layout"><aside><p class="nav-title">阅读目录</p><nav><a class="toc-level-2" href="#s0">1. 准备插画，做出第一张</a><a class="toc-level-2" href="#s1">2. 补齐另外两款，做出三种排版</a><a class="toc-level-2" href="#s2">3. 把资料留在项目里</a><a class="toc-level-2" href="#s3">4. 做一个能改价的工作台</a><a class="toc-level-2" href="#s4">5. 检查打印，并导出 PDF</a><a class="toc-level-2" href="#s5">6. 留下下次打开的方法</a><a class="toc-level-2" href="#s6">7. 需要在钉钉分享时，再做这一步</a></nav></aside><main><h1 id="海报生成过程提示词与结果对照">海报生成过程：提示词与结果对照</h1>
+<p>按顺序复制提示词，看到这一步的结果，再继续下一步。始终使用同一个项目文件夹，尽量留在同一个对话里。每步保留实际结果截图；中间如果补充了要求或修过问题，也把追加的提示词和修正后的结果一起留下。本页引用的截图、HTML、CSV、PDF、PNG 和使用说明，都是这些提示词实际生成的文件。</p>
+<p><strong>第一次只做第 1 步，再改一处文字并核对，就可以收工。</strong> 第 2–3 步再练三款海报与资料复用，第 4–6 步再做工作台和自动导出，第 7 步是可选的钉钉分享。不是一次就要搭完七步。</p>
+<p>本页统一使用 <strong>HTML + CSS → 浏览器导出 PDF / PNG</strong>。想先体验成品，可下载 <a href="../downloads/xiaoye-poster-workbench.zip">配套工作台</a>，按 <a href="07_工作台使用说明.html">使用说明</a> 检查环境；这是试用入口，不代替从空文件夹制作的过程。<a href="08_工作台验收记录.html">结果与核验边界</a> 单独列出已留下的证据。</p>
+<p><strong>记录进度：</strong> 第 1 步已有 GPT-5.6 Sol（High）的真实生成截图，第 2 步已补齐三款海报实图；第 3 步已补资料表截图，重新生成的核对结果待补；第 4 步已补改价后的工作台和小野 500 海报实图；第 5 步已补自动导出工作台、PDF 与 PNG；第 6 步已补使用说明，并验证重启后保留 899 元；第 7 步已完成真实表格上传与 MCP 回读核对。</p>
+<h2 id="s0">1. 准备插画，做出第一张</h2>
+<p>先确认 Codex 或 Claude Code 已安装、能登录并打开项目文件夹；还没有准备好时，先完成这一步。本轮只生成能在浏览器打开的 HTML，不需要先配置 Python、Node.js 或自动导出工具。</p>
+<p>打开一个空文件夹，先下载小野 300 插画，保留文件名。另两张等做到第 2 步再下载。这次用现成插画，不需要另外生成图片。</p>
+<ul>
+<li><a href="../05_露营海报/assets/xiaoye-300.png" download="xiaoye-300.png">小野 300 插画</a></li>
+<li><a href="../05_露营海报/assets/xiaoye-500.png" download="xiaoye-500.png">小野 500 插画</a></li>
+<li><a href="../05_露营海报/assets/xiaoye-1000.png" download="xiaoye-1000.png">小野 1000 插画</a></li>
+</ul>
+<p>把下面整段发给 Agent：</p>
+<blockquote>
+<p>帮我做一张露营市集的 A5 单页产品海报。下面是完整的教学虚构资料，不是真实销售产品，不需要上网查参数。</p>
+<p>产品名：小野 300；型号：DEMO-300。容量：288 Wh；额定输出：300 W；重量：3.6 kg；教学价：599 元。</p>
+<p>标题：轻装出游的小伙伴。介绍：把周末装进背包。小野 300 以 3.6 kg 的小巧身形，陪你开启轻装出游的想象。</p>
+<p>插画使用当前文件夹里的 xiaoye-300.png。请先确认能读到图片；找不到就告诉我补充，不要猜图片路径。</p>
+<p>用 HTML 和 CSS 排版，奶油色底、森林绿点缀，产品图突出，参数和价格清楚。文字和数字单独排版，方便以后修改；页脚注明“教学虚构资料”。</p>
+<p>把文件保存在当前文件夹，在浏览器里打开给我看。支持 A5 单页打印或保存为 PDF，检查文字、图片没有截断。先做这一张，不要上传钉钉；做好后告诉我下次打开哪个文件、在哪里改文字和价格。</p>
+</blockquote>
+<p>对照这张实际生成的海报：</p>
+<figure class="learning-figure" style="max-width:450px;margin:28px auto 34px">
+<a href="../配图/小野300-Sol-High-实图.png"><img src="../配图/小野300-Sol-High-实图.png" alt="GPT-5.6 Sol（High）生成的小野 300 海报实图"></a>
+<figcaption>
+GPT-5.6 Sol（High）生成，使用配套的小野 300 插画。点击可查看原图。
+</figcaption>
+</figure>
+<p><strong>检查：</strong> 图片能显示，产品名和介绍齐全，参数为 288 Wh、300 W、3.6 kg，价格为 599 元，页脚有“教学虚构资料”。文字可以选中，不是把整张海报当成一张图片。</p>
+<p>同一句提示词再次生成，排版可能不同。如果想贴近这张实图，把上面的海报截图也发给 Agent，再补充：</p>
+<blockquote>
+<p>按我附上的海报截图调整当前 HTML：奶油色底、森林绿文字，左上是两行大标题，中间偏右放大产品插画，右侧加“小野 300”标牌；底部三张参数卡横排，下面是深绿色价格条。尽量贴近截图的比例和留白。文字和数字保留为独立元素，不要直接把截图铺成整张海报；产品数据不变。调整后打开给我看。</p>
+</blockquote>
+<p><strong>本步截图：</strong> 第一张海报的完整画面。上方已放入本次实际结果。</p>
+<p><strong>第一次练习，到这里再做一个小修改就够了：</strong></p>
+<blockquote>
+<p>把标题“轻装出游的小伙伴”改成“周末，轻装出发”。产品参数、价格、图片和布局保持不变，改完重新打开给我看。</p>
+</blockquote>
+<p>亲自确认新标题已出现，599 元和三个参数没变，文字没有挤出页面。能完成这一次“提出要求—看结果—再修改—再检查”，第一次练习就成功了；暂时不做批量、后台和钉钉也完全可以。下面继续记录原始制作过程，实录里的标题保持原样，不把这条练习建议冒充已执行的操作。</p>
+<h2 id="s1">2. 补齐另外两款，做出三种排版</h2>
+<p>第一张满意后，继续发：</p>
+<blockquote>
+<p>保留刚才确认的小野 300 海报。现在增加两款，资料如下，均为教学虚构，不需要上网补充参数。</p>
+<p>小野 500：型号 DEMO-500；容量 512 Wh；额定输出 500 W；重量 5.2 kg；教学价 999 元。标题“周末露营的小帮手”。介绍“找一片树荫，留一点时间。小野 500 的 512 Wh 教学容量，让露营装备介绍一目了然。”图片用当前文件夹里的 xiaoye-500.png。</p>
+<p>小野 1000：型号 DEMO-1000；容量 1024 Wh；额定输出 1000 W；重量 9.8 kg；教学价 1599 元。标题“多人营地的大块头”。介绍“约上朋友，一起去野。小野 1000 以 1000 W 的教学额定输出，演示多人营地的产品故事。”图片用当前文件夹里的 xiaoye-1000.png。</p>
+<p>三款都用 HTML + CSS 制作 A5 竖版单页海报，保留奶油色、森林绿、少量橙色点缀和相同字体风格。小野 300 保留大图主视觉；小野 500 用图片在左、参数在右的分栏；小野 1000 用三张参数卡片突出容量、输出、重量。不要把三张简单复制成一样的排版。每张都注明“教学虚构资料”。</p>
+<p>把共用的颜色、字体和参数卡样式放在一起维护，每款布局分别控制。检查图片和型号一一对应，打开三张结果给我看；先不要做后台或上传。</p>
+</blockquote>
+<p><strong>检查：</strong> 三张价格依次为 599、999、1599 元；每张用自己的插画和参数；颜色与字体一致，布局有区别。文字没有重叠或超出纸张。</p>
+<p><strong>本步实际结果：</strong> 三款海报风格一致，分别采用大图、图文分栏和参数卡片。点击图片可放大查看。</p>
+<div style="display:flex;flex-wrap:wrap;gap:14px;margin:24px 0">
+<figure class="learning-figure" style="flex:1 1 180px;min-width:0;margin:0">
+<a href="../配图/小野300-Sol-High-实图.png"><img src="../配图/小野300-Sol-High-实图.png" alt="小野 300 · 大图主视觉 · 599 元，实际生成截图" loading="lazy"></a>
+<figcaption>
+小野 300 · 大图主视觉 · 599 元
+</figcaption>
+</figure>
+<figure class="learning-figure" style="flex:1 1 180px;min-width:0;margin:0">
+<a href="../配图/小野500-HTML-实图.png"><img src="../配图/小野500-HTML-实图.png" alt="小野 500 · 图文分栏 · 999 元，实际生成截图" loading="lazy"></a>
+<figcaption>
+小野 500 · 图文分栏 · 999 元
+</figcaption>
+</figure>
+<figure class="learning-figure" style="flex:1 1 180px;min-width:0;margin:0">
+<a href="../配图/小野1000-HTML-实图.png"><img src="../配图/小野1000-HTML-实图.png" alt="小野 1000 · 参数卡片 · 1599 元，实际生成截图" loading="lazy"></a>
+<figcaption>
+小野 1000 · 参数卡片 · 1599 元
+</figcaption>
+</figure>
+</div>
+<p>这里保留改价前的结果：小野 500 为 <strong>999 元</strong>；第 4 步展示已记录的 899 元海报，可前后对照。</p>
+<h2 id="s2">3. 把资料留在项目里</h2>
+<p>继续发：</p>
+<blockquote>
+<p>把刚才三款已经确认的资料保存到这个项目中。产品表包含型号、名称、容量、额定输出、重量、教学价、图片文件名；内容表包含型号、标题和介绍模板。用型号关联，不能靠行的位置匹配。</p>
+<p>介绍中出现的产品名称、容量和重量用表格里的值填入。用一个生成入口，读取这两张表和三张插画，生成三张 HTML 海报。现有海报的布局、文案和数据都保持不变。缺字段、缺图片或型号对不上时，指出具体问题，不要猜。</p>
+<p>给我看保存后的两张表，再运行一次生成，逐款核对结果与刚才一致。暂时不要修改价格，也不要连接钉钉。</p>
+</blockquote>
+<p><strong>检查：</strong> 资料已保存为项目文件，重新生成后海报仍正确。小野 500 此时仍为 999 元。</p>
+<p><strong>本步实际资料：</strong> 以下截图读取本次“生成”资料包中的两张 CSV 展示，保留原始字段和值，另加中文列名便于阅读。小野 500 为 999 元。</p>
+<figure class="learning-figure">
+<a href="../配图/项目资料-两张CSV实录.png"><img src="../配图/项目资料-两张CSV实录.png" alt="资料包中产品表与内容表的只读预览截图，三款按型号对应，小野 500 为 999 元"></a>
+<figcaption>
+原始 CSV 的只读预览截图，不是编辑工作台。点击可放大查看。
+</figcaption>
+</figure>
+<p><a href="../07_HTML海报过程/资料表预览.html">打开表格预览</a> · <a href="../07_HTML海报过程/xiaoye-poster-products.csv">产品表 CSV</a> · <a href="../07_HTML海报过程/xiaoye-poster-content.csv">内容表 CSV</a></p>
+<p>资料保存结果已记录；统一生成入口的运行与三款海报核对结果待补。</p>
+<h2 id="s3">4. 做一个能改价的工作台</h2>
+<p>继续发：</p>
+<blockquote>
+<p>为这个项目做一个本地工作台：顶部显示运行状态，中间并排展示三款海报预览，每款旁边能修改教学价，点“保存”后把数据写回本地产品表。每款提供“打开海报”和“打印 / 保存 PDF”入口。</p>
+<p>保存资料后，程序自动更新对应的 HTML 海报，不需要我再发生成指令；只更新有变化的那一款，另外两款的文件、版本和更新时间不变。页面显示每款当前价格、成功版本、最后更新时间和本次改动。</p>
+<p>输入不是数字或价格小于等于零时，提示错误且不保存。生成失败时保留上一次成功的海报，并显示失败原因，不能把“资料保存成功”写成“海报更新成功”。</p>
+<p>由你检查环境、启动服务并在浏览器里打开。需要安装软件时先说明用途。告诉我下次怎样打开、用完怎样停止。先保留手动打印 PDF，不做自动上传。</p>
+</blockquote>
+<p><strong>亲手测试：</strong> 在页面把小野 500 从 999 改为 899，点保存后停止发消息。等页面提示海报更新成功，再打开海报，确认其中也是 899；另外两款仍为 599 和 1599，版本与更新时间不变。不要要求版本号刚好与旧截图一样，运行次数不同，编号也可能不同。</p>
+<p>如果没成功，把你的工作台截图和海报截图一起发给 Agent：</p>
+<blockquote>
+<p>我已保存小野 500 的价格 899，但海报仍显示 999。请检查从保存资料到生成海报的过程，找到原因并修复。不要只改页面显示，也不要直接把海报里的数字写死。修好后先恢复 999，再陪我做一次 999 → 899 的保存测试，确认另外两款不变。</p>
+</blockquote>
+<p><strong>本步实际结果：</strong> 工作台显示三款海报与产品表一致。小野 500 的教学价和成功海报价格均为 899 元，成功版本为 v2，本次改动记录为“教学价：999 → 899 元”；小野 300 和小野 1000 仍为 v1。</p>
+<figure class="learning-figure">
+<a href="../配图/HTML工作台-改价899-实录.png"><img src="../配图/HTML工作台-改价899-实录.png" alt="改价后的真实工作台：小野 500 为 899 元和 v2，另外两款仍为 v1"></a>
+<figcaption>
+改价后的真实工作台。点击可放大查看三款价格、版本、更新时间和本次改动。
+</figcaption>
+</figure>
+<figure class="learning-figure" style="max-width:450px;margin:28px auto 34px">
+<a href="../配图/小野500-改价899-实图.png"><img src="../配图/小野500-改价899-实图.png" alt="小野 500 改价后的 HTML 海报实图，教学价 899 元"></a>
+<figcaption>
+工作台更新后的小野 500 海报，教学价为 899 元。
+</figcaption>
+</figure>
+<p>改价前的 999 元海报保留在第 2 步，可与这里的 899 元结果直接对照。改价前的整页工作台截图尚未记录，因此不补写为已完成。</p>
+<h2 id="s4">5. 检查打印，并导出 PDF</h2>
+<p>继续发：</p>
+<blockquote>
+<p>检查三张海报的打印样式：A5 竖版，每款一页；工作台按钮、输入框和导航不出现在海报里。保留背景色、图片、文字和“教学虚构资料”页脚，不能出现多余空白页或内容截断。不要修改现有产品数据和屏幕版布局。修正后打开海报，告诉我打印时应选的纸张和设置。</p>
+</blockquote>
+<p>在浏览器中打开每款海报的打印预览，选择 A5、关闭页眉页脚，并开启背景图形（如果打印面板提供此选项）。确认每款一页，再保存 PDF。打开保存的 PDF，核对小野 500 为 <strong>899 元</strong>。</p>
+<p>之前保存的 PDF 不会随网页自动变化。需要“改价后 PDF 也自动更新”时，再发下一段：</p>
+<blockquote>
+<p>在已经能自动更新 HTML 海报的基础上，增加自动导出 PDF 和 PNG 预览。沿用现有 HTML 和打印样式，不要另做一套排版。说明所需的浏览器导出工具，安装前等我确认。</p>
+<p>保存某款价格后，只更新这款的 HTML、PDF 和 PNG；三者都核对成功后，再更新这款的成功版本和时间。导出失败时保留旧文件，明确显示哪个步骤失败。工作台增加对应的 PDF 下载入口。</p>
+<p>完成后实际测试小野 500 的 999 → 899，打开生成的 PDF 和 PNG 检查价格；同时确认另外两款文件未变。不能只拿页面里的价格证明导出成功。</p>
+</blockquote>
+<p><strong>本步实际结果：</strong> 工作台已显示“预览、改价与自动导出”，三款均有 PDF 下载和 PNG 入口。小野 500 为 899 元、v4，本次改动仍是“教学价：999 → 899 元”；另外两款仍为 v1。</p>
+<figure class="learning-figure">
+<a href="../配图/HTML工作台2-自动导出-实录.png"><img src="../配图/HTML工作台2-自动导出-实录.png" alt="自动导出版本工作台：三款均有 PDF 和 PNG，小野 500 为 899 元和 v4"></a>
+<figcaption>
+自动导出版本的真实工作台。点击可放大查看 PDF、PNG 入口与版本状态。
+</figcaption>
+</figure>
+<p><a href="../07_HTML海报过程/自动导出/xiaoye-500-poster.png">打开自动导出的 PNG</a> · <a href="../07_HTML海报过程/自动导出/xiaoye-500-poster.pdf">打开自动导出的 PDF</a></p>
+<p>已核对 PDF 为 A5 单页，文本中包含“小野 500”“¥ 899 元”和“教学虚构资料”。自动导出的 PNG 与工作台预览一致。浏览器系统打印预览没有单独截图，因此这里只记录自动导出结果，不把手动打印步骤写成已验证。</p>
+<h2 id="s5">6. 留下下次打开的方法</h2>
+<p>继续发：</p>
+<blockquote>
+<p>把这个项目的用法写成一份简短说明：怎样启动、在哪个页面修改资料、图片放在哪里、如何停止服务、输出文件在哪里，以及出现错误时看什么。说明哪些步骤会自动完成，哪些仍需手动操作。不要把尚未实现的功能写成已经支持。</p>
+<p>帮我检查本轮改动，展示差异。等我确认后，用 Git 保存一个可用版本。先保存在本机；需要多端同步或协作时，再决定是否推送到 GitHub。</p>
+</blockquote>
+<p><strong>检查：</strong> 按说明关闭、重新打开工具，确认 899 元已保存，三款海报和下载入口都能正常使用。</p>
+<p><strong>本步实际结果：</strong> Agent 已生成完整的工作台使用说明，写清了启动命令、操作页面、资料和图片位置、自动导出内容、手动操作、输出位置、排错方法与停止方式。</p>
+<figure class="learning-figure">
+<a href="../配图/工作台使用说明-实录.png"><img src="../配图/工作台使用说明-实录.png" alt="提示词实际生成的工作台使用说明页面截图"></a>
+<figcaption>
+制作当时生成的使用说明实录，保留原样；下载包的当前目录和启动方式以文字版使用说明为准。
+</figcaption>
+</figure>
+<p><a href="07_工作台使用说明.html">打开完整使用说明</a></p>
+<p>随后从“工作台 2.0”目录重新启动服务。工作台仍显示小野 500 为 899 元、v4，三款 HTML、PDF 和 PNG 入口均正常；第 5 步的工作台截图就是这次重启后的页面。使用说明文件已经生成并可从本教程打开；当前工作台页面本身还没有“使用说明”按钮或链接。</p>
+<h2 id="s6">7. 需要在钉钉分享时，再做这一步</h2>
+<p>先按 <a href="05_钉钉MCP.html">钉钉 MCP 连接说明</a> 完成连接，准备自己有权限的测试空间。需要上传的三份 PDF 和 PNG 应先在本地导出、打开并核对。将测试空间链接单独发给 Agent，再发：</p>
+<blockquote>
+<p>请先检查我刚发的钉钉测试空间链接，确认能访问正确位置。为这三款教学产品建立“产品与海报”多维表，保存型号、名称、参数、教学价，以及对应的海报 PNG 和 PDF。</p>
+<p>如果已有同名表或相同型号的记录，先告诉我，不要重复创建或覆盖其他资料。上传后重新读取这三条记录，核对型号、价格和附件是否对应，并给我可以打开的链接。缺权限或工具不支持时，说明卡在哪里，不要声称已经完成。</p>
+</blockquote>
+<p>亲自点开三条记录的附件，确认小野 500 的海报和表格价格都是 899。本步骤是一次上传；在钉钉修改价格后自动生成、自动替换附件，需要另外实现和验证。</p>
+<p><strong>本步实际结果：</strong> “产品与海报”表已建立三条记录。截图中可确认 DEMO-300、DEMO-500、DEMO-1000 的参数和教学价分别对应 599、899、1599 元，每行均有海报 PNG 和海报 PDF 附件。</p>
+<figure class="learning-figure">
+<a href="../配图/钉钉产品与海报-实录.png"><img src="../配图/钉钉产品与海报-实录.png" alt="提示词实际生成并上传的钉钉产品与海报表，包含三款产品的 PNG 和 PDF 附件"></a>
+<figcaption>
+提示词实际生成并上传的“产品与海报”表。点击可放大查看三条记录和附件栏。
+</figcaption>
+</figure>
+<p><a href="https://alidocs.dingtalk.com/i/nodes/jb9Y4gmKWr75RdmdSeQzdAlkVGXn6lpz?utm_scene=person_space&amp;iframeQuery=viewId%3DqvGDAH2%26sheetId%3DhERWDMS">打开钉钉教学表：产品与海报</a></p>
+<p>上传后，Agent 又通过 MCP 重新读取三条记录，核对型号、参数、价格以及 PNG、PDF 附件。第一次回读发现 5 个附件尺寸异常，重新上传并再次核对后才判定完成。</p>
+<figure class="learning-figure" style="max-width:720px;margin:28px auto 34px">
+<a href="../配图/钉钉MCP回读核对-实录.png"><img src="../配图/钉钉MCP回读核对-实录.png" alt="钉钉 MCP 回读核对结果，三条记录和对应 PNG、PDF 均已核对"></a>
+<figcaption>
+真实的 MCP 回读结果：三条记录与对应附件均已核对。
+</figcaption>
+</figure>
+<p>现场分享时，还可以逐一打开 PNG 和 PDF，让大家直接看到型号与价格对应。</p>
+</main></div><script>document.getElementById('print').onclick=()=>window.print();document.querySelectorAll('pre').forEach(p=>{if(p.closest('.output'))return;const w=document.createElement('div');w.className='code-wrap';p.before(w);w.append(p);const b=document.createElement('button');b.className='copy';b.textContent='复制';b.onclick=async()=>{try{if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(p.innerText)}else{const t=document.createElement('textarea');t.value=p.innerText;document.body.append(t);t.select();if(!document.execCommand('copy'))throw Error('copy');t.remove()}b.textContent='已复制'}catch{b.textContent='请选中文字复制'}setTimeout(()=>b.textContent='复制',2200)};w.append(b)});let closed=[];window.addEventListener('beforeprint',()=>{closed=[...document.querySelectorAll('details:not([open])')];closed.forEach(x=>x.open=true)});window.addEventListener('afterprint',()=>closed.forEach(x=>x.open=false));window.addEventListener('scroll',()=>{const h=document.documentElement;document.getElementById('progress').style.width=((h.scrollTop/(h.scrollHeight-h.clientHeight||1))*100)+'%'});</script></body></html>

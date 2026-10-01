@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import re
 import unittest
 from pathlib import Path
 from tempfile import TemporaryDirectory
@@ -20,7 +21,14 @@ class ReadTheDocsSourceTests(unittest.TestCase):
                 source_dir.joinpath("assets").mkdir(parents=True)
                 source_dir.joinpath("conf.py").write_text("project = 'nested'\n", encoding="utf-8")
                 source_dir.joinpath("index.md").write_text(
-                    f"# {title}\n\n```{{toctree}}\n\n{manual_name[:-3]}\n```\n",
+                    (
+                        f"# {title}\n\n"
+                        "```{toctree}\n"
+                        ":maxdepth: 2\n\n"
+                        f"{manual_name[:-3]}\n"
+                        "appendix_not_the_landing_page\n"
+                        "```\n"
+                    ),
                     encoding="utf-8",
                 )
                 image_path = source_dir.joinpath("assets", "demo.png")
@@ -40,34 +48,258 @@ class ReadTheDocsSourceTests(unittest.TestCase):
             self.assertEqual(2, len(manuals))
             index_text = output_dir.joinpath("index.md").read_text(encoding="utf-8")
             self.assertIn("# Manual Library", index_text)
-            self.assertIn("- [JE-1000F / JP - JP Manual](JE-1000F/JP/md/index.md)", index_text)
-            self.assertIn("- [JE-1000F / US - US Manual](JE-1000F/US/md/index.md)", index_text)
+            self.assertIn("- [JE-1000F / JP - JP Manual](JE-1000F/JP/md/manual_jp.md)", index_text)
+            self.assertIn("- [JE-1000F / US - US Manual](JE-1000F/US/md/manual_us.md)", index_text)
+            self.assertNotIn("](JE-1000F/US/md/index.md)", index_text)
             self.assertNotIn("```{toctree}", index_text)
             self.assertNotIn(":hidden:", index_text)
             self.assertNotIn(":maxdepth:", index_text)
             self.assertNotIn(":caption: Manuals", index_text)
+            us_alias = output_dir.joinpath("manual_us.md").read_text(encoding="utf-8")
+            self.assertIn("orphan: true", us_alias)
+            self.assertIn('url=JE-1000F/US/md/manual_us.html', us_alias)
+            self.assertIn('window.location.replace("JE-1000F/US/md/manual_us.html")', us_alias)
+            self.assertTrue(output_dir.joinpath("manual_jp.md").is_file())
             self.assertTrue(output_dir.joinpath("JE-1000F", "US", "md", "manual_us.md").exists())
-            self.assertTrue(output_dir.joinpath("JE-1000F", "US", "md", "assets", "demo.png").exists())
-            self.assertTrue(
-                output_dir.joinpath(
-                    "_static",
-                    "manual-assets",
-                    "JE-1000F",
-                    "US",
-                    "md",
-                    "assets",
-                    "demo.png",
-                ).exists()
+            # Assets are pooled by content: the Markdown-adjacent copy and the
+            # per-manual static copy both collapse into one shared file.
+            self.assertFalse(output_dir.joinpath("JE-1000F", "US", "md", "assets").exists())
+            self.assertFalse(output_dir.joinpath("_static", "manual-assets", "JE-1000F").exists())
+            pooled = sorted(
+                path
+                for path in output_dir.joinpath("_static", "manual-assets", "_pool").rglob("*")
+                if path.is_file()
             )
+            self.assertEqual(1, len(pooled))
+            self.assertEqual(b"png", pooled[0].read_bytes())
             self.assertFalse(output_dir.joinpath("JE-1000F", "US", "md", "conf.py").exists())
             us_manual = output_dir.joinpath("JE-1000F", "US", "md", "manual_us.md").read_text(encoding="utf-8")
-            self.assertIn('src="../../../_static/manual-assets/JE-1000F/US/md/assets/demo.png"', us_manual)
+            us_src = re.search(r'src="([^"]+)"', us_manual).group(1)
+            self.assertIn("_static/manual-assets/_pool/", us_src)
+            self.assertEqual(
+                b"png", (output_dir / "JE-1000F" / "US" / "md" / us_src).resolve().read_bytes()
+            )
             self.assertNotIn("file://", us_manual)
             conf_text = output_dir.joinpath("conf.py").read_text(encoding="utf-8")
             self.assertIn("myst_parser", conf_text)
             self.assertIn('html_static_path = ["_static"]', conf_text)
-            self.assertIn("build-finished", conf_text)
+            self.assertIn('html_css_files = ["web_manual.css"]', conf_text)
+            # Assets reach the output through the pooled _static tree, so the
+            # generated conf.py no longer carries a copy hook of its own.
+            self.assertNotIn("build-finished", conf_text)
+            self.assertNotIn("shutil", conf_text)
             self.assertIn("toc.not_included", conf_text)
+            web_css = output_dir.joinpath("_static", "web_manual.css")
+            self.assertTrue(web_css.exists())
+            css_text = web_css.read_text(encoding="utf-8")
+            self.assertIn(".hb-annotated-figure", css_text)
+            self.assertIn(".hb-operation-figure", css_text)
+            self.assertIn("#furo-main-content .hb-inbox-grid", css_text)
+            self.assertRegex(
+                css_text,
+                r"(?s)#furo-main-content \.hb-inbox-grid\s*\{[^}]*padding:\s*0;",
+            )
+            self.assertIn(".hb-inbox-card::before", css_text)
+            self.assertIn(
+                '.hb-inbox-composition[data-card-count="5"] .hb-inbox-grid',
+                css_text,
+            )
+            self.assertIn(".hb-reference-figure", css_text)
+            self.assertIn(".hb-reference-semantic", css_text)
+            self.assertIn(".hb-app-download-composition", css_text)
+            self.assertIn(".hb-app-download-grid", css_text)
+            self.assertIn(".hb-app-download-art-frame", css_text)
+            self.assertIn(".hb-app-add-device-composition", css_text)
+            self.assertIn(".hb-app-add-device-live-label", css_text)
+            self.assertIn(".hb-language-nav", css_text)
+            self.assertIn("a.hb-language-link", css_text)
+            self.assertIn("overflow-x: auto", css_text)
+            self.assertIn("scroll-snap-type: x proximity", css_text)
+            self.assertIn("max-width: none !important", css_text)
+            self.assertNotIn("hb-app-add-device-live-label-main-power::after", css_text)
+            self.assertIn(".hb-fcc-composition", css_text)
+            self.assertIn(".hb-fcc-grid", css_text)
+            self.assertIn("--hb-fcc-flow-gap", css_text)
+            self.assertIn("#furo-main-content .hb-fcc-column", css_text)
+            self.assertIn("gap: var(--hb-fcc-flow-gap)", css_text)
+            self.assertIn(
+                "section:has(> figure.hb-fcc-composition) > h1:first-child",
+                css_text,
+            )
+            fcc_heading_css = css_text.split(
+                "#furo-main-content section:has(> figure.hb-fcc-composition) > h1:first-child",
+                1,
+            )[1].split("}", 1)[0]
+            self.assertIn("clip-path: inset(50%)", fcc_heading_css)
+            fcc_margin_reset = css_text.split(
+                "#furo-main-content .hb-fcc-opening-copy .line-block,",
+                1,
+            )[1].split("}", 1)[0]
+            self.assertIn("margin: 0 !important;", fcc_margin_reset)
+            self.assertIn(".hb-lcd-table-composition", css_text)
+            self.assertIn("table.hb-lcd-icon-table", css_text)
+            self.assertIn("padding-inline: 0 !important", css_text)
+            self.assertIn("width: 1.4rem", css_text)
+            self.assertIn(".hb-lcd-description .line", css_text)
+            self.assertIn(".hb-auto-resume-composition", css_text)
+            self.assertIn("table.hb-auto-resume-table", css_text)
+            self.assertIn(".hb-lcd-mode-composition", css_text)
+            self.assertIn("table.hb-lcd-mode-table", css_text)
+            self.assertIn(".hb-symbol-pair-composition", css_text)
+            self.assertIn(".hb-symbol-signal-composition", css_text)
+            self.assertIn("table.hb-symbol-signal-table", css_text)
+            self.assertIn(".hb-signal-badge", css_text)
+            self.assertIn(".hb-signal-icon", css_text)
+            # A long localized badge widens its content-sized label column instead of overflowing.
+            signal_table_css = css_text.split(
+                "#furo-main-content table.hb-symbol-signal-table {", 1
+            )[1].split("}", 1)[0]
+            self.assertIn("table-layout: auto", signal_table_css)
+            badge_css = css_text.split("#furo-main-content .hb-signal-badge {", 1)[1].split("}", 1)[0]
+            self.assertIn("min-width: max-content", badge_css)
+            # Component tables fit the desktop reading column; only narrower screens scroll.
+            for selector in (
+                "#furo-main-content table.hb-lcd-icon-table {",
+                "#furo-main-content table:is(.hb-auto-resume-table, .hb-key-combination-table) {",
+            ):
+                self.assertIn("min-width: 40rem", css_text.split(selector, 1)[1].split("}", 1)[0])
+            lcd_mode_table_css = css_text.split(
+                "#furo-main-content table.hb-lcd-mode-table {", 1
+            )[1].split("}", 1)[0]
+            self.assertNotIn("min-width", lcd_mode_table_css)
+            self.assertIn("--hb-component-band-max", css_text)
+            component_band_css = css_text.split(
+                "/* All full-width manual components share one outer-width",
+                1,
+            )[1].split("/* H1 mirrors", 1)[0]
+            self.assertIn(".table-wrapper.docutils", component_band_css)
+            self.assertIn(".hb-symbol-signal-composition", component_band_css)
+            self.assertIn(".hb-fcc-composition", component_band_css)
+            self.assertIn("box-sizing: border-box", component_band_css)
+            self.assertIn("width: 100%", component_band_css)
+            self.assertIn("max-width: var(--hb-component-band-max)", component_band_css)
+            self.assertIn(".hb-symbol-pair-grid", css_text)
+            self.assertIn(".hb-symbol-panel", css_text)
+            self.assertIn("table.hb-symbol-panel-table", css_text)
+            self.assertIn("grid-template-columns: repeat(2, minmax(0, 1fr))", css_text)
+            self.assertIn("align-items: start", css_text)
+            symbol_panel_css = css_text.split(".hb-symbol-panel {", 1)[1].split("}", 1)[0]
+            self.assertIn("display: flex", symbol_panel_css)
+            symbol_table_css = css_text.split(
+                "#furo-main-content table.hb-symbol-panel-table {",
+                1,
+            )[1].split("}", 1)[0]
+            self.assertNotIn("height: 100%", symbol_table_css)
+            self.assertIn(".hb-troubleshooting-composition", css_text)
+            self.assertIn("table.hb-troubleshooting-table", css_text)
+            self.assertIn(".hb-troubleshooting-col-code", css_text)
+            self.assertIn(".hb-troubleshooting-measures .line + .line", css_text)
+            troubleshooting_css = css_text.split(
+                "/* Troubleshooting keeps the PDF's compact code column",
+                1,
+            )[1].split(
+                "/* Specification groups stay searchable",
+                1,
+            )[0]
+            self.assertIn("overflow-x: auto", troubleshooting_css)
+            self.assertIn("min-width: 40rem", troubleshooting_css)
+            # The code header wraps at spaces instead of running past its column.
+            self.assertNotIn("white-space: nowrap", troubleshooting_css)
+            self.assertIn("width: 14%", troubleshooting_css)
+            self.assertIn("width: 86%", troubleshooting_css)
+            self.assertIn("border-right: 1.25px solid var(--hb-brand-dark)", troubleshooting_css)
+            self.assertIn(".hb-spec-table-composition", css_text)
+            self.assertIn("table.hb-spec-table", css_text)
+            self.assertIn(".hb-spec-col-label", css_text)
+            self.assertIn(".hb-spec-reference", css_text)
+            specification_css = css_text.split(
+                "/* Specification groups stay searchable",
+                1,
+            )[1].split(
+                "/* Every WARNING/DANGER/CAUTION/NOTE",
+                1,
+            )[0]
+            self.assertIn("overflow-x: auto", specification_css)
+            self.assertIn("min-width: 40rem", specification_css)
+            self.assertIn("width: 31%", specification_css)
+            self.assertIn("width: 69%", specification_css)
+            self.assertIn("background: var(--hb-surface) !important", specification_css)
+            self.assertIn("font-size: 0.62em", specification_css)
+            self.assertIn("vertical-align: super", specification_css)
+            self.assertIn(".hb-warranty-intro-composition", css_text)
+            self.assertIn(".hb-warranty-intro-panel", css_text)
+            self.assertIn("figure.hb-warranty-card", css_text)
+            self.assertIn("figure.hb-warranty-period-card", css_text)
+            self.assertIn("section:has(> figure.hb-warranty-card)", css_text)
+            self.assertIn(".hb-warranty-period-grid", css_text)
+            self.assertIn("minmax(0, 1.22fr) minmax(0, 0.78fr)", css_text)
+            self.assertIn(".hb-warranty-year-badge", css_text)
+            self.assertIn("border-radius: 50%", css_text)
+            self.assertIn(".hb-inline-add-device-icon", css_text)
+            self.assertIn("#furo-main-content sub", css_text)
+            self.assertIn("#furo-main-content section > img", css_text)
+            standalone_css = css_text.split(
+                "/* Standalone RST artwork fills one shared content width;",
+                1,
+            )[1].split(".hb-inline-add-device-icon", 1)[0]
+            self.assertIn("width: 100% !important", standalone_css)
+            self.assertIn("max-width: var(--hb-reading-width) !important", standalone_css)
+            self.assertIn("object-fit: contain", standalone_css)
+            self.assertIn("#furo-main-content section:target", css_text)
+            self.assertIn(
+                ".hb-has-composite-art > .hb-operation-stage",
+                css_text,
+            )
+            self.assertIn('--hb-font-family: "Gilroy"', css_text)
+            self.assertIn("--hb-brand-dark: #343031", css_text)
+            self.assertIn("#furo-main-content h1", css_text)
+            self.assertIn("table.manual-callout-table", css_text)
+            self.assertIn(".manual-callout-label", css_text)
+            self.assertNotIn("#meaning-of-symbols", css_text)
+            self.assertNotIn("#signification-des-symboles", css_text)
+            self.assertNotIn("#significado-de-los-simbolos", css_text)
+            # Callout label columns size to content; the page-level width references
+            # (tools/web_callout_alignment.py) keep one boundary per page.
+            self.assertIn("table-layout: auto !important", css_text)
+            self.assertIn(".manual-callout-label-sizer", css_text)
+            self.assertIn("width: clamp(7.5rem, 16%, 9.5rem)", css_text)
+            self.assertIn("width: 84%", css_text)
+            self.assertNotIn("h1 + .table-wrapper", css_text)
+            self.assertIn("@media (max-width: 520px)", css_text)
+            narrow_css = css_text.split("@media (max-width: 760px)", 1)[1].split(
+                "@media (max-width: 520px)", 1
+            )[0]
+            self.assertNotIn(".hb-has-composite-art > .hb-operation-stage", narrow_css)
+            self.assertIn(
+                ".hb-annotated-figure.hb-has-composite-art > .hb-composite-stage",
+                narrow_css,
+            )
+            self.assertRegex(
+                narrow_css,
+                r"\.hb-annotated-figure\.hb-has-composite-art > \.hb-composite-stage\s*\{\s*display: block;",
+            )
+            self.assertRegex(
+                narrow_css,
+                r"\.hb-annotated-figure\.hb-has-composite-art > \.hb-annotated-stage\s*\{\s*display: none;",
+            )
+            self.assertIn(".hb-lcd-mode-composition", narrow_css)
+            self.assertIn(".hb-symbol-pair-grid", narrow_css)
+            self.assertIn(".hb-warranty-period-grid", narrow_css)
+            self.assertIn("grid-template-columns: minmax(0, 1fr)", narrow_css)
+            self.assertIn("table.hb-lcd-mode-table", narrow_css)
+            self.assertIn("min-width: 34rem", narrow_css)
+            # Phone table cells keep words whole; only raw tables, which have no scroll
+            # box, fall back to splitting on the narrowest phones.
+            self.assertRegex(
+                narrow_css,
+                r"#furo-main-content :is\(td, th\) \{\s*overflow-wrap: break-word;",
+            )
+            narrowest_css = css_text.split("@media (max-width: 520px)", 1)[1].split("@media print", 1)[0]
+            self.assertRegex(
+                narrowest_css,
+                r"#furo-main-content section > table :is\(td, th\) \{\s*overflow-wrap: anywhere;",
+            )
+            self.assertIn("@media", css_text)
 
     def test_assemble_rtd_source_should_require_output_inside_build_root(self) -> None:
         with TemporaryDirectory() as td:
@@ -76,6 +308,46 @@ class ReadTheDocsSourceTests(unittest.TestCase):
                 readthedocs_source.assemble_rtd_source(
                     build_root=root / "docs" / "_build",
                     output_dir=root / "public",
+                    title="Manual Library",
+                )
+
+    def test_assemble_rtd_source_should_reject_duplicate_short_aliases(self) -> None:
+        with TemporaryDirectory() as td:
+            build_root = Path(td) / "docs" / "_build"
+            for region in ("US", "JP"):
+                source_dir = build_root / "JE-1000F" / region / "md"
+                source_dir.mkdir(parents=True)
+                source_dir.joinpath("conf.py").write_text("project = 'nested'\n", encoding="utf-8")
+                source_dir.joinpath("index.md").write_text(
+                    "# Manual\n\n```{toctree}\n\nmanual_shared\n```\n",
+                    encoding="utf-8",
+                )
+                source_dir.joinpath("manual_shared.md").write_text("# Manual\n", encoding="utf-8")
+
+            with self.assertRaisesRegex(RuntimeError, "duplicate RTD short alias manual_shared"):
+                readthedocs_source.assemble_rtd_source(
+                    build_root=build_root,
+                    output_dir=build_root / "rtd",
+                    title="Manual Library",
+                )
+
+    def test_assemble_rtd_source_should_reject_casefolded_alias_collision(self) -> None:
+        with TemporaryDirectory() as td:
+            build_root = Path(td) / "docs" / "_build"
+            for region, manual in (("US", "manual_shared"), ("JP", "MANUAL_SHARED")):
+                source_dir = build_root / "JE-1000F" / region / "md"
+                source_dir.mkdir(parents=True)
+                source_dir.joinpath("conf.py").write_text("project = 'nested'\n", encoding="utf-8")
+                source_dir.joinpath("index.md").write_text(
+                    f"# Manual\n\n```{{toctree}}\n\n{manual}\n```\n",
+                    encoding="utf-8",
+                )
+                source_dir.joinpath(f"{manual}.md").write_text("# Manual\n", encoding="utf-8")
+
+            with self.assertRaisesRegex(RuntimeError, "duplicate RTD short alias"):
+                readthedocs_source.assemble_rtd_source(
+                    build_root=build_root,
+                    output_dir=build_root / "rtd",
                     title="Manual Library",
                 )
 

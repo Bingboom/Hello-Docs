@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-
 from __future__ import annotations
 
 import argparse
 import json
-import shutil
+import shutil as shutil
 import sys
 from dataclasses import dataclass
 from functools import partial
@@ -37,11 +36,14 @@ from tools.build_entry_commands import (
     process_build_queue_command as _process_build_queue_command_impl,
     process_review_start_queue_command as _process_review_start_queue_command_impl,
     release_manifest_command as _release_manifest_command_impl,
+    release_rebuild_command as _release_rebuild_command_impl,
     review_bundle_command as _review_bundle_command_impl,
     spec_master_rebuild_command as _spec_master_rebuild_command_impl,
     sync_data_command as _sync_data_command_impl,
     sync_review_command as _sync_review_command_impl,
 )
+from tools.asset_commands import run_asset_command as _run_asset_command_impl
+from tools.new_line_scaffold import run_new_line as _run_new_line_impl
 from tools.build_doctor import (
     check_word_com_available as _check_word_com_available_impl,
     collect_doctor_findings as _collect_doctor_findings_impl,
@@ -83,6 +85,7 @@ from tools.build_publish import (
     run_diff_report_with_paths as _run_diff_report_with_paths_impl,
     run_publish as _run_publish_impl,
 )
+from tools.release_asset_lineage import publish_asset_gate_for_target as _asset_gate_impl
 from tools.build_runtime import (
     clean_build_artifacts as _clean_build_artifacts_impl,
     collect_legacy_docs_output_dirs as _collect_legacy_docs_output_dirs_impl,
@@ -208,6 +211,8 @@ def ensure_supported_staging_action(args: argparse.Namespace) -> None:
         return
     if args.action == "review":
         raise RuntimeError("review does not support --staging-root because it seeds docs/_review from the repo runtime bundle")
+    if args.action == "idml":
+        raise RuntimeError("idml does not support --staging-root: the rst prepare would write into the staging root while the exporter reads the repo bundle (run it without staging)")
 
 
 def normalize_cli_build_queue_action(workflow_action: str | None = None, doc_phase: str | None = None) -> str | None:
@@ -336,8 +341,6 @@ def run_translation_memory(args: argparse.Namespace) -> None:
         _emit_text(_payload_to_json_impl(payload))
         return
     _emit_text(_render_translation_memory_payload_impl(payload))
-
-
 def message_control_dry_run_command(args: argparse.Namespace) -> list[str]:
     return _message_control_dry_run_command_impl(
         args,
@@ -377,20 +380,6 @@ def run_queue_execute(args: argparse.Namespace) -> None:
         config_path=resolve_path_from_root(args.config),
         repo_root=ROOT,
     )
-def release_manifest_command(args: argparse.Namespace) -> list[str]:
-    return _release_manifest_command_impl(
-        args,
-        repo_root=ROOT,
-        require_explicit_target=lambda parsed_args, action_name: _require_explicit_target(
-            parsed_args,
-            action_name=action_name,
-        ),
-        resolve_path_from_root=resolve_path_from_root,
-        staging_docs_build_dir=staging_docs_build_dir,
-        staging_releases_root=staging_releases_root,
-    )
-
-
 def process_build_queue_command(args: argparse.Namespace) -> list[str]:
     return _process_build_queue_command_impl(
         args,
@@ -473,7 +462,6 @@ def _check_word_com_available() -> tuple[bool, str]:
 
 def _resolve_doctor_target(cfg: dict, args: argparse.Namespace) -> tuple[str | None, str | None]:
     from tools.utils.targets import resolve_build_model, resolve_build_region
-
     return _resolve_doctor_target_impl(
         cfg,
         args,
@@ -617,6 +605,17 @@ def _require_explicit_target(args: argparse.Namespace, *, action_name: str) -> t
     return _require_explicit_target_impl(model=args.model, region=args.region, action_name=action_name)
 
 
+release_manifest_command = partial(
+    _release_manifest_command_impl,
+    repo_root=ROOT,
+    require_explicit_target=_require_explicit_target,
+    resolve_path_from_root=resolve_path_from_root,
+    staging_docs_build_dir=staging_docs_build_dir,
+    staging_releases_root=staging_releases_root,
+)
+release_rebuild_command = partial(_release_rebuild_command_impl, repo_root=ROOT, resolve_path_from_root=resolve_path_from_root)
+
+
 def _publish_tracked_root(args: argparse.Namespace) -> Path:
     model, region, lang = _publish_target_components(args)
     if args.tracked_root is not None:
@@ -685,16 +684,28 @@ def _resolve_diff_report_targets(args: argparse.Namespace) -> list[tuple[str | N
     )
 
 
+def _publish_asset_gate(args: argparse.Namespace) -> None:
+    """Refuse to release a bundle that consumed a non-approved asset."""
+    _asset_gate_impl(
+        docs_dir=resolve_docs_dir(resolve_path_from_root(args.config)),
+        docs_build_dir=staging_docs_build_dir(args),
+        target=_publish_target_components(args),
+    )
+
+
 def run_publish(args: argparse.Namespace) -> None:
     return _run_publish_impl(
         args,
+        repo_root=ROOT,
         publish_tracked_root=_publish_tracked_root,
         publish_report_dir=_publish_report_dir,
+        resolve_path_from_root=resolve_path_from_root,
         run_check=run_check,
         run_diff_report_with_paths=run_diff_report_with_paths,
         run_checked=run_checked,
         build_docs_command=build_docs_command,
         release_manifest_command=release_manifest_command,
+        run_asset_gate=_publish_asset_gate,
     )
 
 
@@ -738,8 +749,11 @@ def main(argv: list[str] | None = None) -> int:
         run_publish=run_publish,
         run_diff_report=run_diff_report,
         release_manifest_command=release_manifest_command,
+        release_rebuild_command=release_rebuild_command,
         clean_build_artifacts=clean_build_artifacts,
         maybe_sync_review_before_build=maybe_sync_review_before_build,
+        run_asset_command=partial(_run_asset_command_impl, repo_root=ROOT),
+        run_new_line=partial(_run_new_line_impl, repo_root=ROOT),
     )
 
 

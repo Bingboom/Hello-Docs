@@ -64,8 +64,20 @@ def clean_build_targets(
     build_root_for_target: Callable[..., Path],
     cleanup_legacy_rst_artifacts: Callable[..., None],
     remove_tree_with_retries: Callable[[Path], None],
+    output_root: Path | None = None,
     printer: Callable[[str], None] = print,
 ) -> None:
+    # A preview writes straight into output_root, which already encodes the
+    # (possibly staged) docs_build_dir + model/region/preview/page. Clean exactly
+    # that, so a `preview --staging-root` cleans the staged preview dir instead of
+    # the repo's default docs/_build preview dir (and never leaves the staged one
+    # stale).
+    if output_root is not None:
+        if output_root.exists():
+            printer(f"[build] Cleaning preview output: {output_root}")
+            remove_tree_with_retries(output_root)
+        return
+
     actual_docs_build_dir = docs_build_dir_of(docs_dir)
 
     for target in targets:
@@ -97,6 +109,7 @@ def sphinx_build(
     model: str | None = None,
     region: str | None = None,
     lang: str | None = None,
+    category: str | None = None,
     minimal_theme: bool = False,
     substitutions: dict[str, str] | None = None,
     should_use_minimal_html_theme: Callable[[Path, bool], bool],
@@ -106,11 +119,14 @@ def sphinx_build(
     run: Callable[..., None],
     repo_root: Path,
     printer: Callable[[str], None] = print,
+    warning_ratchet_hook: Callable[[str, Path], None] | None = None,
 ) -> None:
     printer(f"[build] Sphinx -> {builder.upper()}")
     out_dir.mkdir(parents=True, exist_ok=True)
     actual_minimal_theme = should_use_minimal_html_theme(conf_dir, minimal_theme) if builder == "html" else False
-    cmd = resolve_sphinx_build_cmd(builder) + sphinx_tag_args(model=model, region=region, lang=lang)
+    cmd = resolve_sphinx_build_cmd(builder) + sphinx_tag_args(
+        model=model, region=region, lang=lang, category=category
+    )
     cmd += [str(src_dir), str(out_dir), "-c", str(conf_dir)]
     if builder == "html" and actual_minimal_theme:
         cmd += [
@@ -118,7 +134,13 @@ def sphinx_build(
             "html_theme=alabaster",
         ]
     cmd = with_rst_epilog(cmd, substitutions)
+    # Warning ratchet (Milestone I2): capture the warning stream to a file so
+    # the post-build hook can diff it against the committed baseline.
+    warn_log = out_dir / "sphinx-warnings.log"
+    cmd += ["-w", str(warn_log)]
     run(cmd, cwd=repo_root)
+    if warning_ratchet_hook is not None:
+        warning_ratchet_hook(builder, warn_log)
 
 
 def patch_fonts(
@@ -126,23 +148,24 @@ def patch_fonts(
     main_tex: str,
     *,
     build_dir: Path,
+    language: str | None,
     run: Callable[..., None],
     repo_root: Path,
     python_executable: str,
     printer: Callable[[str], None] = print,
 ) -> None:
     printer("[build] Patch fonts (inject fonts.tex)")
-    run(
-        [
-            python_executable,
-            patch_fonts_script,
-            "--tex",
-            main_tex,
-            "--build-dir",
-            str(build_dir),
-        ],
-        cwd=repo_root,
-    )
+    command = [
+        python_executable,
+        patch_fonts_script,
+        "--tex",
+        main_tex,
+        "--build-dir",
+        str(build_dir),
+    ]
+    if isinstance(language, str) and language.strip():
+        command += ["--lang", language.strip()]
+    run(command, cwd=repo_root)
 
 
 def export_word_from_latex(
