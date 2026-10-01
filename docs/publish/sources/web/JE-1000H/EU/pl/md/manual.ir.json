@@ -36,7 +36,8 @@
     "assets/6aab9a14900a_lcd-discharge-timer.png",
     "assets/8d7e2187cdbc_lcd-connected-batteries.png",
     "assets/c4b830c769a3_lcd-energy-saving.png",
-    "assets/16f29f08d0fb_lcd-temperature.png",
+    "assets/f548c6504f49_lcd-high-temperature-reused.png",
+    "assets/bdbf602db74a_lcd-low-temperature-reused.png",
     "assets/ce913ebfc775_lcd-fault-code.png",
     "assets/58c1d3604ca7_lcd-output-power.png",
     "assets/9b148ea95d3a_lcd-remaining-discharge-time.png",
@@ -60,15 +61,14 @@
     "assets/5a5a8acac5df_app-result-reused.png"
   ],
   "bundle_root": "frozen-source",
-  "bundle_sha256": "7fd166adaa47686d37cce46077d863ebea758a005832220215a85d3d53138c95",
-  "content_sha256": "1d6afd1d082ffbc1f87d7c969f4e8d84ad0ad70a5e660ec4882952c59bce7e65",
+  "bundle_sha256": "ff13cb704221f7c5d9e8980bb4ed7678a1792a243f5c26b03642624cce805537",
+  "content_sha256": "c20c4101515b44162334684ff2ec26dbf39db7cece94178b551c46f1c420ab0c",
   "language": "pl",
   "layout_params_sha256": "f5ae099abc1a82ffda3abcc5a13725aca3c201e720a0374d88d1643f9773f279",
   "metadata": {
     "asset_sha256": {
       "assets/076f18bc39f9_reference-overview_front_view.png": "076f18bc39f9129abfe51d02629692a5dac13011122da2422287e1ec40f9c12b",
       "assets/11f1a73a4cb5_symbol-lithium_battery.png": "11f1a73a4cb5b6c4ec69a51f71f3f16480fd792c61882135ee77569f78b192b8",
-      "assets/16f29f08d0fb_lcd-temperature.png": "16f29f08d0fbec3ec265d051e4d57e9d7de4d7cdf5029be966884f72e10ddafc",
       "assets/1a75f52019e8_app-store.png": "1a75f52019e85f537b1744e56ddeb81bf35710ebfb8b95766bfd404857d7c60c",
       "assets/21b5f19ca9a6_lcd-charging-power-limit.png": "21b5f19ca9a6e39d8bd515128297cc1b99e43fd263e39ffba4fdf102d50a4bad",
       "assets/28f3cad42ae3_lcd-ac-wall-charging.png": "28f3cad42ae32e9e895abfd7cdb16a21b99dfa822c57d542f0e3f59a4b452c6c",
@@ -105,6 +105,7 @@
       "assets/a9afae3dec9d_operation-led-light.png": "a9afae3dec9d4947f61a339282b5f33d20153c52247ee3f89f88b6d1e7bf1988",
       "assets/ad470a3d232c_reference-battery_items.png": "ad470a3d232cb51b9539507ec173daed5abc05ffa3d557441ff2041b35e06b3e",
       "assets/bccff65eac03_reference-ac_wall_charging.png": "bccff65eac03d21652c88ca96c1a33c7e532b01bd43f4ff78c1606958e859be5",
+      "assets/bdbf602db74a_lcd-low-temperature-reused.png": "bdbf602db74ade39a2a162209c0ff535315dee5e27e4832b2e6a201764b6941a",
       "assets/c4b830c769a3_lcd-energy-saving.png": "c4b830c769a3de7f9effaee82466752f5706a0741ba29675cce45633c1cd8222",
       "assets/c7862a87e742_lcd-low-battery.png": "c7862a87e742d6927b4e1d63a8d0ccb09fbcf980ae662ff94b9134e256e56889",
       "assets/ce913ebfc775_lcd-fault-code.png": "ce913ebfc7750764f4206250f5e21aa09bd1cfc074bdee5b0484d61610f1b579",
@@ -123,6 +124,7 @@
       "assets/f08b8ca8f35c_inbox-main.png": "f08b8ca8f35c85fe5d669ecfd4761e07fe4d9b5b0ca33366297c9dd083a7c90b",
       "assets/f31407026859_reference-overview_left_view.png": "f31407026859d2e465e2b4a8ad2d39991e9d8bc5d0d1d09a009670f3ddd9bc12",
       "assets/f4cdcb551105_lcd-tou.png": "f4cdcb5511058eaaf1879a69a429317dd3d98325dd5e19f5dd95b06ea2c965af",
+      "assets/f548c6504f49_lcd-high-temperature-reused.png": "f548c6504f495da4f208cd8e5fe6eac6076daea05e314115abd26b46a9326ba5",
       "assets/fc4cc02b42ef_lcd-wifi.png": "fc4cc02b42efc31a32429ada2b78c4480a2fcbca647406da29b2ce75a8a8c1dc"
     },
     "block_count": 157,
@@ -1556,8 +1558,8 @@
       }
     ],
     "frozen_source_manifest": {
-      "artwork_manifest_sha256": "333a6c1554039a318e75db800a602771cc3e2a1d75a4e99af2491b6406fda63a",
-      "geometry_recipe_sha256": "e26f50b56b41d614b383b59a33cf7e2648ed182893a950844698413940930e9b",
+      "artwork_manifest_sha256": "c6708a0eba4d142b6f747c895aea40003773fc2663cecee622b435a22b76e2c6",
+      "geometry_recipe_sha256": "c229dcaa9f608463c5fe459aabf5ca85d018d8caec023caa2bc03fe4a4de5185",
       "intake_method": "fresh-native-pdf-text",
       "original_source": {
         "filename": "HTE159-EU-9国说明书-0928(1).ai",
@@ -1566,7 +1568,7 @@
         "size_bytes": 70646547
       },
       "schema_version": "auto-manual-frozen-web-source/v1",
-      "source_records_sha256": "41e8d8cfb55586546f3e108c98e76626d7f40341f7eb1f5de96becc70ffbd4fd",
+      "source_records_sha256": "8a751b20a97b4fe80e4655fd0140101c690bb1994f85111d3715c49621a3878d",
       "target": {
         "languages": [
           "pt",
@@ -1576,7 +1578,7 @@
         "model": "JE-1000H",
         "printed_manual_version": "JAK-UM-V1.0",
         "region": "EU",
-        "technical_version": "git-20260930-8bcb378f-three-locales-web"
+        "technical_version": "git-20261001-8bcb378f-temperature-web"
       },
       "text_source": {
         "filename": "HTE159-EU-9国说明书-0928(1).ai",
@@ -1584,7 +1586,7 @@
         "sha256": "8bcb378fd0505237d91d5aa201d8bc0e84ee392963bfa6a73d32b8ed90b68feb"
       }
     },
-    "frozen_stylesheet_sha256": "2dbe1b08998567f96dca5e1c993f55a27422dc6c43002e5742600d3124a82637",
+    "frozen_stylesheet_sha256": "c1d48fc1292ed7c7ca48ab75cf81f7f96dadbc0b9a4002147672461350222575",
     "manual_theme": {
       "component_roles": {
         "component.callout": {
@@ -2317,7 +2319,7 @@
         }
       ],
       "corrections_applied": [],
-      "geometry_recipe_sha256": "e26f50b56b41d614b383b59a33cf7e2648ed182893a950844698413940930e9b",
+      "geometry_recipe_sha256": "c229dcaa9f608463c5fe459aabf5ca85d018d8caec023caa2bc03fe4a4de5185",
       "image_extraction_performed": false,
       "pdf": {
         "filename": "HTE159-EU-9国说明书-0928(1).ai",
@@ -5972,11 +5974,11 @@
             84,
             403.942,
             160,
-            450.055
+            426.162
           ],
           "field": "lcd/22/label",
           "physical_page": 148,
-          "raw_text_sha256": "3c0f42d2ae101cc9251174b52e63afba9789b9df56e02ce40aca8bc5e2cd7529",
+          "raw_text_sha256": "5b60e88bb83b21d5ddf0169602e95da18235f5482d8a57830f61adfaa6b4bf0e",
           "selection": "pdf-line-majority-overlap",
           "source_bboxes": [
             [
@@ -5990,18 +5992,6 @@
               414.75299072265625,
               129.89480590820312,
               423.41900634765625
-            ],
-            [
-              89.16110229492188,
-              429.1869812011719,
-              143.32643127441406,
-              437.8529968261719
-            ],
-            [
-              89.16110229492188,
-              437.58697509765625,
-              129.89480590820312,
-              446.25299072265625
             ]
           ]
         },
@@ -6010,11 +6000,11 @@
             163,
             403.942,
             341,
-            450.055
+            426.162
           ],
           "field": "lcd/22/meaning",
           "physical_page": 148,
-          "raw_text_sha256": "54460ae1f9f321facb1414fdb4639f1a7732f53fc0cdf1596677b72a32e8dc2d",
+          "raw_text_sha256": "351ac279ef75f09149d47671fd41b48331c9c6678b7d709e021baa5e4a032f43",
           "selection": "pdf-line-majority-overlap",
           "source_bboxes": [
             [
@@ -6034,7 +6024,47 @@
               418.11187744140625,
               297.21929931640625,
               425.3118896484375
+            ]
+          ]
+        },
+        {
+          "bbox": [
+            84,
+            426.162,
+            160,
+            450.055
+          ],
+          "field": "lcd/23/label",
+          "physical_page": 148,
+          "raw_text_sha256": "edcb0f36713dc70a63f3f271a5850ee6aa89542f39b1659ae9d778b6915981f8",
+          "selection": "pdf-line-majority-overlap",
+          "source_bboxes": [
+            [
+              89.16110229492188,
+              429.1869812011719,
+              143.32643127441406,
+              437.8529968261719
             ],
+            [
+              89.16110229492188,
+              437.58697509765625,
+              129.89480590820312,
+              446.25299072265625
+            ]
+          ]
+        },
+        {
+          "bbox": [
+            163,
+            426.162,
+            341,
+            450.055
+          ],
+          "field": "lcd/23/meaning",
+          "physical_page": 148,
+          "raw_text_sha256": "ea9bd61280f82c36b45c47e5b1e671b99b491973e0c46b03afc63b8dc8ee907f",
+          "selection": "pdf-line-majority-overlap",
+          "source_bboxes": [
             [
               165.0225067138672,
               427.015869140625,
@@ -6062,7 +6092,7 @@
             160,
             465.695
           ],
-          "field": "lcd/23/label",
+          "field": "lcd/24/label",
           "physical_page": 148,
           "raw_text_sha256": "63534d23bbabe25321a183ffc957f302166584500465b9bc62b214bb90738edb",
           "selection": "pdf-line-majority-overlap",
@@ -6082,7 +6112,7 @@
             341,
             465.695
           ],
-          "field": "lcd/23/meaning",
+          "field": "lcd/24/meaning",
           "physical_page": 148,
           "raw_text_sha256": "0e05824cb9569ef0e1cc7fe62ba2a32e919fb09be1a4f8f5b8e6d5d6f31cc910",
           "selection": "pdf-line-majority-overlap",
@@ -6108,7 +6138,7 @@
             160,
             482.709
           ],
-          "field": "lcd/24/label",
+          "field": "lcd/25/label",
           "physical_page": 148,
           "raw_text_sha256": "aedc3d12904b30741a6e132e1b192acba7e1b760c862e38f3a84c9ab5384cd61",
           "selection": "pdf-line-majority-overlap",
@@ -6128,7 +6158,7 @@
             341,
             482.709
           ],
-          "field": "lcd/24/meaning",
+          "field": "lcd/25/meaning",
           "physical_page": 148,
           "raw_text_sha256": "763770e2821dc3a829fee7f1c2fb632f174b62a2a5cad7971b8741bd2a3a527a",
           "selection": "pdf-line-majority-overlap",
@@ -6148,7 +6178,7 @@
             160,
             500
           ],
-          "field": "lcd/25/label",
+          "field": "lcd/26/label",
           "physical_page": 148,
           "raw_text_sha256": "6f891b10bac459104f414e722a125b864935a9f73618ff7003de31ccf234aac6",
           "selection": "pdf-line-majority-overlap",
@@ -6174,7 +6204,7 @@
             341,
             500
           ],
-          "field": "lcd/25/meaning",
+          "field": "lcd/26/meaning",
           "physical_page": 148,
           "raw_text_sha256": "1a9ee068f98be6e2c551689cc1bcdd3a61ac5e6cd4e8aa4100fb8c6c2b369905",
           "selection": "pdf-line-majority-overlap",
@@ -11372,13 +11402,14 @@
             "assets/6aab9a14900a_lcd-discharge-timer.png",
             "assets/8d7e2187cdbc_lcd-connected-batteries.png",
             "assets/c4b830c769a3_lcd-energy-saving.png",
-            "assets/16f29f08d0fb_lcd-temperature.png",
+            "assets/f548c6504f49_lcd-high-temperature-reused.png",
+            "assets/bdbf602db74a_lcd-low-temperature-reused.png",
             "assets/ce913ebfc775_lcd-fault-code.png",
             "assets/58c1d3604ca7_lcd-output-power.png",
             "assets/9b148ea95d3a_lcd-remaining-discharge-time.png"
           ],
           "block_id": "lcd_display:block-0003",
-          "content_sha256": "5f00736c2eaf869c7cc82983c7f8e95e6241d09e9dc739f87a2e95f08b5b7b50",
+          "content_sha256": "0c196960fe501c51f3c7308026e161bc43e1d5bd8689e12a8a49eb42ef106fc3",
           "kind": "flow",
           "payload": {
             "component_spec": {
@@ -11494,7 +11525,12 @@
                   "role": "icons"
                 },
                 {
-                  "asset_ref": "assets/16f29f08d0fb_lcd-temperature.png",
+                  "asset_ref": "assets/f548c6504f49_lcd-high-temperature-reused.png",
+                  "locale_policy": "shared",
+                  "role": "icons"
+                },
+                {
+                  "asset_ref": "assets/bdbf602db74a_lcd-low-temperature-reused.png",
                   "locale_policy": "shared",
                   "role": "icons"
                 },
@@ -11517,6 +11553,7 @@
               "component_id": "HB-TABLE-LCD-ICON",
               "language": "pl",
               "metadata": {
+                "number_cell_layout": "span-adjacent-equal",
                 "source_kind": "native-pdf-lcd-copy",
                 "source_rows": [
                   {
@@ -11894,16 +11931,33 @@
                     "physical_page": 148
                   },
                   {
-                    "asset_key": "lcd.icon.temperature",
+                    "asset_key": "lcd.icon.high-temperature",
                     "label_bbox": [
                       84,
                       403.942,
+                      160,
+                      426.162
+                    ],
+                    "meaning_bbox": [
+                      163,
+                      403.942,
+                      341,
+                      426.162
+                    ],
+                    "number": 23,
+                    "physical_page": 148
+                  },
+                  {
+                    "asset_key": "lcd.icon.low-temperature",
+                    "label_bbox": [
+                      84,
+                      426.162,
                       160,
                       450.055
                     ],
                     "meaning_bbox": [
                       163,
-                      403.942,
+                      426.162,
                       341,
                       450.055
                     ],
@@ -12194,16 +12248,26 @@
                     },
                     {
                       "asset_index": 22,
-                      "description_html": "<p>Zadziałało zabezpieczenie przed wysoką temperaturą. Produkt może nie działać do czasu przywrócenia temperatury do normalnego zakresu roboczego. Zadziałało zabezpieczenie przed niską temperaturą. Produkt może nie działać do czasu przywrócenia temperatury do normalnego zakresu roboczego.</p>",
-                      "description_text": "Zadziałało zabezpieczenie przed wysoką temperaturą. Produkt może nie działać do czasu przywrócenia temperatury do normalnego zakresu roboczego. Zadziałało zabezpieczenie przed niską temperaturą. Produkt może nie działać do czasu przywrócenia temperatury do normalnego zakresu roboczego.",
-                      "icon_alt": "Wskaźnik wysokiej temperatury Wskaźnik niskiej temperatury",
-                      "name_html": "<p>Wskaźnik wysokiej temperatury Wskaźnik niskiej temperatury</p>",
-                      "name_text": "Wskaźnik wysokiej temperatury Wskaźnik niskiej temperatury",
+                      "description_html": "<p>Zadziałało zabezpieczenie przed wysoką temperaturą. Produkt może nie działać do czasu przywrócenia temperatury do normalnego zakresu roboczego.</p>",
+                      "description_text": "Zadziałało zabezpieczenie przed wysoką temperaturą. Produkt może nie działać do czasu przywrócenia temperatury do normalnego zakresu roboczego.",
+                      "icon_alt": "Wskaźnik wysokiej temperatury",
+                      "name_html": "<p>Wskaźnik wysokiej temperatury</p>",
+                      "name_text": "Wskaźnik wysokiej temperatury",
                       "number_html": "<p>23</p>",
                       "number_text": "23"
                     },
                     {
                       "asset_index": 23,
+                      "description_html": "<p>Zadziałało zabezpieczenie przed niską temperaturą. Produkt może nie działać do czasu przywrócenia temperatury do normalnego zakresu roboczego.</p>",
+                      "description_text": "Zadziałało zabezpieczenie przed niską temperaturą. Produkt może nie działać do czasu przywrócenia temperatury do normalnego zakresu roboczego.",
+                      "icon_alt": "Wskaźnik niskiej temperatury",
+                      "name_html": "<p>Wskaźnik niskiej temperatury</p>",
+                      "name_text": "Wskaźnik niskiej temperatury",
+                      "number_html": "<p>23</p>",
+                      "number_text": "23"
+                    },
+                    {
+                      "asset_index": 24,
                       "description_html": "<p>Wystąpił błąd produktu. Szczegóły można znaleźć w sekcji Rozwiązywanie problemów.</p>",
                       "description_text": "Wystąpił błąd produktu. Szczegóły można znaleźć w sekcji Rozwiązywanie problemów.",
                       "icon_alt": "Kod błędu",
@@ -12213,7 +12277,7 @@
                       "number_text": "24"
                     },
                     {
-                      "asset_index": 24,
+                      "asset_index": 25,
                       "description_html": "<p>Wyświetla moc wyjściową w watach.</p>",
                       "description_text": "Wyświetla moc wyjściową w watach.",
                       "icon_alt": "Moc wyjściowa",
@@ -12223,7 +12287,7 @@
                       "number_text": "25"
                     },
                     {
-                      "asset_index": 25,
+                      "asset_index": 26,
                       "description_html": "<p>Wyświetla pozostały czas do rozładowania.</p>",
                       "description_text": "Wyświetla pozostały czas do rozładowania.",
                       "icon_alt": "Pozostały czas zasilania urządzeń odbiorczych",

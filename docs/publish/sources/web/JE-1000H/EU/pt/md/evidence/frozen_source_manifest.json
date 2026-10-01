@@ -8,7 +8,7 @@
       "nl",
       "pl"
     ],
-    "technical_version": "git-20261001-8bcb378f-web",
+    "technical_version": "git-20261001-8bcb378f-temperature-web",
     "printed_manual_version": "JAK-UM-V1.0"
   },
   "original_source": {
@@ -20,18 +20,13 @@
   "inputs": [
     {
       "path": "web/nl/_static/web_manual.css",
-      "size": 85959,
-      "sha256": "2dbe1b08998567f96dca5e1c993f55a27422dc6c43002e5742600d3124a82637"
+      "size": 86992,
+      "sha256": "c1d48fc1292ed7c7ca48ab75cf81f7f96dadbc0b9a4002147672461350222575"
     },
     {
       "path": "web/nl/assets/11f1a73a4cb5_symbol-lithium_battery.png",
       "size": 3750,
       "sha256": "11f1a73a4cb5b6c4ec69a51f71f3f16480fd792c61882135ee77569f78b192b8"
-    },
-    {
-      "path": "web/nl/assets/16f29f08d0fb_lcd-temperature.png",
-      "size": 2819,
-      "sha256": "16f29f08d0fbec3ec265d051e4d57e9d7de4d7cdf5029be966884f72e10ddafc"
     },
     {
       "path": "web/nl/assets/1a75f52019e8_app-store.png",
@@ -229,6 +224,11 @@
       "sha256": "b851b78eca55a3f7e38c99ff121ac51520548b104c9ef401c255068594e74e91"
     },
     {
+      "path": "web/nl/assets/bdbf602db74a_lcd-low-temperature-reused.png",
+      "size": 2206,
+      "sha256": "bdbf602db74ade39a2a162209c0ff535315dee5e27e4832b2e6a201764b6941a"
+    },
+    {
       "path": "web/nl/assets/c4b830c769a3_lcd-energy-saving.png",
       "size": 2056,
       "sha256": "c4b830c769a3de7f9effaee82466752f5706a0741ba29675cce45633c1cd8222"
@@ -309,6 +309,11 @@
       "sha256": "f4cdcb5511058eaaf1879a69a429317dd3d98325dd5e19f5dd95b06ea2c965af"
     },
     {
+      "path": "web/nl/assets/f548c6504f49_lcd-high-temperature-reused.png",
+      "size": 2248,
+      "sha256": "f548c6504f495da4f208cd8e5fe6eac6076daea05e314115abd26b46a9326ba5"
+    },
+    {
       "path": "web/nl/assets/fc4cc02b42ef_lcd-wifi.png",
       "size": 1814,
       "sha256": "fc4cc02b42efc31a32429ada2b78c4480a2fcbca647406da29b2ce75a8a8c1dc"
@@ -325,18 +330,18 @@
     },
     {
       "path": "web/nl/manual.ir.json",
-      "size": 643264,
-      "sha256": "a72614c03abd3b6b7dd4e0299b75e2a4885320bca68161eae362e6ef67c7ec4a"
+      "size": 645521,
+      "sha256": "b3d1008702f4ecc95ae6790a77c5d44cdab4a1c4da35da436b02c996c0139738"
     },
     {
       "path": "web/nl/manual_je1000h_eu_nl.md",
-      "size": 74672,
-      "sha256": "1a2182da5d2bea62159c5f1a170cb762e151b763b2f05838167faf6437ee355f"
+      "size": 74904,
+      "sha256": "279d7339a74adf6aefe1a630a4a09556a7e0ab8a970dd506c2faa9e62c58c349"
     },
     {
       "path": "web/pl/_static/web_manual.css",
-      "size": 85959,
-      "sha256": "2dbe1b08998567f96dca5e1c993f55a27422dc6c43002e5742600d3124a82637"
+      "size": 86992,
+      "sha256": "c1d48fc1292ed7c7ca48ab75cf81f7f96dadbc0b9a4002147672461350222575"
     },
     {
       "path": "web/pl/assets/076f18bc39f9_reference-overview_front_view.png",
@@ -347,11 +352,6 @@
       "path": "web/pl/assets/11f1a73a4cb5_symbol-lithium_battery.png",
       "size": 3750,
       "sha256": "11f1a73a4cb5b6c4ec69a51f71f3f16480fd792c61882135ee77569f78b192b8"
-    },
-    {
-      "path": "web/pl/assets/16f29f08d0fb_lcd-temperature.png",
-      "size": 2819,
-      "sha256": "16f29f08d0fbec3ec265d051e4d57e9d7de4d7cdf5029be966884f72e10ddafc"
     },
     {
       "path": "web/pl/assets/1a75f52019e8_app-store.png",
@@ -534,6 +534,11 @@
       "sha256": "bccff65eac03d21652c88ca96c1a33c7e532b01bd43f4ff78c1606958e859be5"
     },
     {
+      "path": "web/pl/assets/bdbf602db74a_lcd-low-temperature-reused.png",
+      "size": 2206,
+      "sha256": "bdbf602db74ade39a2a162209c0ff535315dee5e27e4832b2e6a201764b6941a"
+    },
+    {
       "path": "web/pl/assets/c4b830c769a3_lcd-energy-saving.png",
       "size": 2056,
       "sha256": "c4b830c769a3de7f9effaee82466752f5706a0741ba29675cce45633c1cd8222"
@@ -624,6 +629,11 @@
       "sha256": "f4cdcb5511058eaaf1879a69a429317dd3d98325dd5e19f5dd95b06ea2c965af"
     },
     {
+      "path": "web/pl/assets/f548c6504f49_lcd-high-temperature-reused.png",
+      "size": 2248,
+      "sha256": "f548c6504f495da4f208cd8e5fe6eac6076daea05e314115abd26b46a9326ba5"
+    },
+    {
       "path": "web/pl/assets/fc4cc02b42ef_lcd-wifi.png",
       "size": 1814,
       "sha256": "fc4cc02b42efc31a32429ada2b78c4480a2fcbca647406da29b2ce75a8a8c1dc"
@@ -640,18 +650,18 @@
     },
     {
       "path": "web/pl/manual.ir.json",
-      "size": 648862,
-      "sha256": "bbc343cfa4ce826d27ce9080a279a4ab7cbddc49402df111f3e158b7197a5bfa"
+      "size": 651119,
+      "sha256": "3666ec2c88ac697091a40ea10124cfcde6df495a520628e95e7013fa5faab72e"
     },
     {
       "path": "web/pl/manual_je1000h_eu_pl.md",
-      "size": 77772,
-      "sha256": "0b8d35eb1a4c95828c1e56d9a97a151d873e7e107476070b1808ddbb069bb13d"
+      "size": 78004,
+      "sha256": "bc4ced6ad6e1b717b2da024b3a6db9d5ae6744d4b3b0b7cacd8ec190db6aed17"
     },
     {
       "path": "web/pt/_static/web_manual.css",
-      "size": 85959,
-      "sha256": "2dbe1b08998567f96dca5e1c993f55a27422dc6c43002e5742600d3124a82637"
+      "size": 86992,
+      "sha256": "c1d48fc1292ed7c7ca48ab75cf81f7f96dadbc0b9a4002147672461350222575"
     },
     {
       "path": "web/pt/assets/09fd7606dd10_reference-ups_connection.png",
@@ -662,11 +672,6 @@
       "path": "web/pt/assets/11f1a73a4cb5_symbol-lithium_battery.png",
       "size": 3750,
       "sha256": "11f1a73a4cb5b6c4ec69a51f71f3f16480fd792c61882135ee77569f78b192b8"
-    },
-    {
-      "path": "web/pt/assets/16f29f08d0fb_lcd-temperature.png",
-      "size": 2819,
-      "sha256": "16f29f08d0fbec3ec265d051e4d57e9d7de4d7cdf5029be966884f72e10ddafc"
     },
     {
       "path": "web/pt/assets/1a75f52019e8_app-store.png",
@@ -869,6 +874,11 @@
       "sha256": "b585f42afe3c1938be0c02f8f6bbc887bc51e9aa2061b7bef85097afc21a1cd0"
     },
     {
+      "path": "web/pt/assets/bdbf602db74a_lcd-low-temperature-reused.png",
+      "size": 2206,
+      "sha256": "bdbf602db74ade39a2a162209c0ff535315dee5e27e4832b2e6a201764b6941a"
+    },
+    {
       "path": "web/pt/assets/c4b830c769a3_lcd-energy-saving.png",
       "size": 2056,
       "sha256": "c4b830c769a3de7f9effaee82466752f5706a0741ba29675cce45633c1cd8222"
@@ -939,6 +949,11 @@
       "sha256": "f4cdcb5511058eaaf1879a69a429317dd3d98325dd5e19f5dd95b06ea2c965af"
     },
     {
+      "path": "web/pt/assets/f548c6504f49_lcd-high-temperature-reused.png",
+      "size": 2248,
+      "sha256": "f548c6504f495da4f208cd8e5fe6eac6076daea05e314115abd26b46a9326ba5"
+    },
+    {
       "path": "web/pt/assets/fc4cc02b42ef_lcd-wifi.png",
       "size": 1814,
       "sha256": "fc4cc02b42efc31a32429ada2b78c4480a2fcbca647406da29b2ce75a8a8c1dc"
@@ -955,13 +970,13 @@
     },
     {
       "path": "web/pt/manual.ir.json",
-      "size": 645856,
-      "sha256": "8e6daff2b686351b225665441850745c9c09bb0ad1f4f333c8265d4e3073173d"
+      "size": 648113,
+      "sha256": "07d9be818bbced5244f74d5dec96b4202521f5440d09c302e867a1b3dcbbf66a"
     },
     {
       "path": "web/pt/manual_je1000h_eu_pt.md",
-      "size": 75246,
-      "sha256": "bb0d7af9e3d3fd7c80888e164ffce160eb3ea954d5a727ca19c5c61cbec788a7"
+      "size": 75478,
+      "sha256": "5a5a26a43df34be6f7ab0f9fa283a33624fd12535fe272d11ac0f62677023351"
     }
   ],
   "web_roots": {
@@ -970,9 +985,9 @@
     "pl": "web/pl"
   },
   "release_authority": {
-    "engineering_commit": "34609ca8e1b52e6555d04916bdd46ad4f97c54cc",
+    "engineering_commit": "160c5995adba0cc1dad40fc6e36db548b30c6da8",
     "recipe_root": "manual_sources/JE-1000H/EU/three-language/git-20260930-8bcb378f-intake",
-    "reviewed_candidate": "candidate-24 (main article identical to candidate-23)",
+    "reviewed_candidate": "candidate-26; a single number 23 cell spans the high/low temperature rows, desktop and mobile checked",
     "approval": "发布上线 2026-10-01",
     "native_source_pages_one_based": {
       "pt": [
@@ -989,6 +1004,6 @@
       ]
     },
     "validation_boundary": "Existing phase2 build.py check is repository regression only; these three bodies use the committed native PDF adapter and source-local recipes, strict Sphinx and browser gates.",
-    "review_disposition": "MA-218: approved native PT/NL/PL JAK-UM-V1.0 source and candidate-24; six-language EUUK V2.0 unchanged."
+    "review_disposition": "MA-218: operator screenshot requires one vertically centered number 23 spanning independent high/low icon and copy rows; historical frozen versions without the new layout declaration remain unchanged."
   }
 }
