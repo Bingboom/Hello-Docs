@@ -2608,6 +2608,68 @@ body {
   }
 }
 
+/* QR-only downloads keep the source copy beside a scan-sized code. */
+#furo-main-content .hb-app-download-qr-only {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(6rem, 9rem);
+  align-items: center;
+  gap: 1rem;
+}
+#furo-main-content .hb-app-download-qr-only > .hb-app-download-art-qr {
+  width: 100% !important;
+  max-width: 9rem !important;
+  height: auto !important;
+  margin: 0 !important;
+}
+@media (max-width: 480px) {
+  #furo-main-content .hb-app-download-qr-only {
+    grid-template-columns: minmax(0, 1fr) 6rem;
+    gap: .75rem;
+  }
+}
+
+/* Product-registration panels: authored content preserved through Manual IR. */
+.hb-registration-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 5fr);
+  gap: .55rem;
+  margin: .65rem 0;
+}
+.hb-registration-benefits,
+.hb-registration-steps {
+  border: 1px solid #777;
+  padding: .55rem .7rem;
+  min-width: 0;
+  color: inherit;
+  background: transparent;
+}
+.hb-registration-benefits .line-block,
+.hb-registration-steps ol {
+  margin: 0;
+}
+.hb-registration-steps ol {
+  padding-left: 1.2em;
+}
+.hb-registration-steps li,
+.hb-registration-steps li p {
+  margin: 0 0 .12em;
+}
+.hb-registration-panel img.hb-registration-qr {
+  float: right;
+  width: 6rem;
+  max-width: 30%;
+  height: auto;
+  margin: 0 0 0 .65rem;
+}
+.hb-registration-steps::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+@media (max-width: 40rem) {
+  .hb-registration-panel { grid-template-columns: minmax(0, 1fr); }
+}
+
 /* Base-art operation figures (tools/web_base_art_operation.py).
    Frozen, text-free artwork carries the product drawing; live, searchable copy
    sits on the anchors the target contract declares for that exact art hash.
@@ -3136,4 +3198,33 @@ body {
     max-width: calc(100% - 1.3rem);
     padding: 0.15rem 0.7rem;
   }
+}
+
+/* A declared source frame is part of the approved art and must not be clipped. */
+.hb-reference-figure.hb-base-art-live-copy [data-preserve-art-frame="true"] .hb-reference-art-panel {
+  border-radius: 0;
+  background: transparent;
+  overflow: visible;
+}
+.hb-reference-figure.hb-base-art-live-copy [data-preserve-art-frame="true"] .hb-reference-art-panel > .hb-reference-art {
+  clip-path: none;
+}
+
+/* Explicit source-bound labels remain on the illustration at every width.
+   Other approved layouts retain their readable stacked mobile treatment. */
+.hb-reference-figure.hb-base-art-live-copy [data-mobile-labels="overlay"] .hb-reference-art-panel {
+  padding-top: var(--hb-panel-top);
+  padding-bottom: 0;
+}
+.hb-reference-figure.hb-base-art-live-copy [data-mobile-labels="overlay"] .hb-reference-live-label {
+  position: absolute;
+  display: flex;
+  width: var(--hb-width);
+  min-height: var(--hb-height);
+  margin: 0;
+  font-size: max(.5rem, 1.99cqw);
+}
+.hb-reference-figure.hb-base-art-live-copy [data-mobile-labels="overlay"] .hb-reference-live-pill {
+  max-width: none;
+  padding: 0.3cqw 1.2cqw;
 }
