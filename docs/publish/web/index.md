@@ -59,6 +59,7 @@
 - [JE-3000C / EU / es - Jackery Explorer 3000 Manual de usuario](JE-3000C/EU/es/md/manual_je3000c_eu_es.md)
 - [JE-3000C / EU / fr - Jackery Explorer 3000 Manuel d'utilisation](JE-3000C/EU/fr/md/manual_je3000c_eu_fr.md)
 - [JE-3000C / EU / it - Jackery Explorer 3000 Manuale utente](JE-3000C/EU/it/md/manual_je3000c_eu_it.md)
+- [JE-3000C / EU / nl - Jackery Explorer 3000 — nl](JE-3000C/EU/nl/md/manual_je3000c_eu_nl.md)
 - [JE-3000C / EU / pl - Jackery Explorer 3000 — pl](JE-3000C/EU/pl/md/manual_je3000c_eu_pl.md)
 - [JE-3000C / EU / pt - Jackery Explorer 3000 — pt](JE-3000C/EU/pt/md/manual_je3000c_eu_pt.md)
 - [JE-3000C / EU / uk - Jackery Explorer 3000 Посібник користувача](JE-3000C/EU/uk/md/manual_je3000c_eu_uk.md)
