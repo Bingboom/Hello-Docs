@@ -5,23 +5,23 @@
 APP操作说明书
 =============
 
-下载并登录App
--------------
+1. 下载并登录App
+----------------------
 
-.. image:: _assets/templates/word_template/common_assets/app/download.png
+.. image:: _assets/cn/app/download.png
    :alt: App 下载二维码示意图。
    :width: 320px
 
 在App Store或者国内各大应用市场搜索 “电小二”App安装并注册登录。或扫描以下二维码下载电小二App。
 
-添加设备
---------
+2. 添加设备
+--------------
 
-2.1 在App内点击 添加设备。
+2.1 在App内点击 **+** 添加设备。
 
 2.2 长按设备上的“总电源开关键”开机，设备上的WiFi和蓝牙图标闪烁后表示设备已进入配网模式，在App内点击“图标已快闪”按钮并允许应用连接附近的设备和打开蓝牙权限。
 
-.. image:: _assets/templates/word_template/common_assets/app/add_device.png
+.. image:: _assets/cn/app/add_device.png
    :alt: App 添加设备步骤示意图。
    :width: 320px
 
@@ -32,7 +32,7 @@ APP操作说明书
    * - **备注**
      - 打开设备，如果两小时内未连接到APP，设备会自动关闭Wi-Fi和蓝牙。
 
-.. image:: _assets/templates/word_template/common_assets/overview/front_controls.png
+.. image:: asset:overview/front_controls
    :alt: 前面板按键示意图。
    :width: 520px
 
@@ -63,7 +63,7 @@ APP操作说明书
 
 2.5 设备添加成功后进入设备主页面，设备上的Wi-Fi图标会常亮。
 
-.. image:: _assets/templates/word_template/common_assets/app/connect_result.png
+.. image:: _assets/cn/app/connect_result.png
    :alt: App 连接结果示意图。
    :width: 360px
 
@@ -76,13 +76,13 @@ APP操作说明书
    * - **注意**
      - App 通过蓝牙与储能设备连接，每次仅支持一台设备。连接后返回设备列表时，蓝牙连接将自动断开。再次点击储能设备图标时，App 会自动重新连接。
 
-解绑设备
---------
+3. 解绑设备
+--------------
 
 点击设备主界面右上角的设置按钮进入设置页面，点击页面最下方的解除绑定按钮解绑设备。
 
-其他说明
---------
+4. 其他说明
+--------------
 
 4.1 打开Wi-Fi&蓝牙：
 

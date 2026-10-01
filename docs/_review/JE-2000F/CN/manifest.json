@@ -8,27 +8,27 @@
   "review_dir": "docs/_review/JE-2000F/CN",
   "index_path": "docs/_review/JE-2000F/CN/index.rst",
   "page_files": [
-    "docs/_review/JE-2000F/CN/page/00_preface.rst",
-    "docs/_review/JE-2000F/CN/page/01_meaning_of_symbols.rst",
-    "docs/_review/JE-2000F/CN/page/02_whats_in_the_box.rst",
-    "docs/_review/JE-2000F/CN/page/03_product_overview_placeholder.rst",
-    "docs/_review/JE-2000F/CN/page/05_operation_guide_placeholder.rst",
-    "docs/_review/JE-2000F/CN/page/06_ups_mode.rst",
-    "docs/_review/JE-2000F/CN/page/08_charging_methods.rst",
-    "docs/_review/JE-2000F/CN/page/09_storage_and_maintenance.rst",
-    "docs/_review/JE-2000F/CN/page/12_app_setup_placeholder.rst",
-    "docs/_review/JE-2000F/CN/page/charging.rst",
-    "docs/_review/JE-2000F/CN/page/lcd_icons_zh.rst",
-    "docs/_review/JE-2000F/CN/page/spec_zh.rst",
-    "docs/_review/JE-2000F/CN/page/troubleshooting_zh.rst"
+    "page/00_preface.rst",
+    "page/01_meaning_of_symbols.rst",
+    "page/02_whats_in_the_box.rst",
+    "page/03_product_overview_placeholder.rst",
+    "page/05_operation_guide_placeholder.rst",
+    "page/06_ups_mode.rst",
+    "page/08_charging_methods.rst",
+    "page/09_storage_and_maintenance.rst",
+    "page/12_app_setup_placeholder.rst",
+    "page/charging.rst",
+    "page/lcd_icons_zh.rst",
+    "page/spec_zh.rst",
+    "page/troubleshooting_zh.rst"
   ],
   "generated_files": [
-    "docs/_review/JE-2000F/CN/generated/JE-2000F/draft/03_product_overview_zh.rst",
-    "docs/_review/JE-2000F/CN/generated/JE-2000F/draft/05_operation_guide_zh.rst",
-    "docs/_review/JE-2000F/CN/generated/JE-2000F/draft/12_app_setup_zh.rst",
-    "docs/_review/JE-2000F/CN/generated/JE-2000F/lcd_icons_zh.rst",
-    "docs/_review/JE-2000F/CN/generated/JE-2000F/spec_zh.rst",
-    "docs/_review/JE-2000F/CN/generated/JE-2000F/troubleshooting_zh.rst"
+    "generated/JE-2000F/draft/03_product_overview_zh.rst",
+    "generated/JE-2000F/draft/05_operation_guide_zh.rst",
+    "generated/JE-2000F/draft/12_app_setup_zh.rst",
+    "generated/JE-2000F/lcd_icons_zh.rst",
+    "generated/JE-2000F/spec_zh.rst",
+    "generated/JE-2000F/troubleshooting_zh.rst"
   ],
   "override_files": [
     "docs/_review/JE-2000F/CN/overrides/README.md"
@@ -43,5 +43,23 @@
   "spec_master": {
     "path": "/home/runner/work/Hello-Docs/Hello-Docs/.tmp/review-start/phase2/Spec_Master.csv",
     "sha256": "7fbc8ccbd30d778efc386af569313e3ef678b36ac5c45dde3c4df5cd233ec789"
-  }
+  },
+  "last_synced_at": "2026-09-30T22:32:12.245018+00:00",
+  "last_sync_scope": "params",
+  "last_sync_files": [
+    "generated/JE-2000F/draft/03_product_overview_zh.rst",
+    "generated/JE-2000F/draft/05_operation_guide_zh.rst",
+    "generated/JE-2000F/draft/12_app_setup_zh.rst",
+    "generated/JE-2000F/lcd_icons_zh.rst",
+    "generated/JE-2000F/spec_zh.rst",
+    "generated/JE-2000F/troubleshooting_zh.rst",
+    "page/00_preface.rst",
+    "page/02_whats_in_the_box.rst",
+    "page/03_product_overview_placeholder.rst",
+    "page/charging.rst",
+    "page/lcd_icons_zh.rst",
+    "page/spec_zh.rst",
+    "page/troubleshooting_zh.rst"
+  ],
+  "last_sync_preserved_files": []
 }

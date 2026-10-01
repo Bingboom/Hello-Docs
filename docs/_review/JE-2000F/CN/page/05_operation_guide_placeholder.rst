@@ -8,15 +8,15 @@
 电源开机 / 关机
 ---------------
 
-.. image:: _assets/templates/word_template/common_assets/operation/main_power.png
+.. image:: _assets/cn/operation/main_power.png
    :alt: 电源开关操作示意图。
-   :width: 360px
+   :width: 640px
 
-| 开机
+| **开机**
 | 短按一次
-
-| 关机
+| **关机**
 | 长按3秒
+| 3秒
 
 本产品的默认待机时间为2小时，若产品无任何充电输入或放电输出，2小时后将自动关机，自动关机时间可以在app上设置。
 
@@ -29,14 +29,13 @@ AC输出开/关
 
 AC输出按键统一控制所有AC输出口，短按一次开启，再短按一次关闭。
 
-.. image:: _assets/templates/word_template/common_assets/operation/ac_output.png
+.. image:: _assets/cn/operation/ac_output.png
    :alt: AC 输出开关操作示意图。
-   :width: 360px
+   :width: 640px
 
-| 开启
+| **开启**
 | 短按一次
-
-| 关闭
+| **关闭**
 | 短按一次
 
 DC/USB输出开 / 关
@@ -44,14 +43,13 @@ DC/USB输出开 / 关
 
 确保总电源开关键已打开。
 
-.. image:: _assets/templates/word_template/common_assets/operation/dc_usb_output.png
+.. image:: _assets/cn/operation/dc_usb_output.png
    :alt: DC/USB 输出开关操作示意图。
-   :width: 360px
+   :width: 640px
 
-| 开启
+| **开启**
 | 短按一次
-
-| 关闭
+| **关闭**
 | 短按一次
 
 .. list-table::
@@ -82,9 +80,14 @@ DC/USB输出开 / 关
 
 在 AC 输出按键开启状态下，同时长按 AC 输出按键与总电源开关键，持续按压直至节能图标显示（开启）与隐藏（关闭）状态切换。
 
-.. image:: _assets/templates/word_template/common_assets/operation/energy_saving.png
+.. image:: _assets/cn/operation/energy_saving.png
    :alt: 节能模式按键操作示意图。
-   :width: 320px
+   :width: 640px
+
+| 总电源开关键
+| AC输出按键
+| **开启/关闭**
+| 同时长按3秒
 
 ※ 使用交流 25W 或直流 2W 以下低功耗设备时，请关闭节能模式，以避免输出中途自动关闭。关闭节能模式后，屏幕将不再显示“12H”图标，此时输出不会自动关闭。
 
@@ -100,15 +103,13 @@ LED灯开 / 关
 
 LED灯有两种模式：照明模式和SOS模式，默认设置为照明模式。无论处于何种模式，长按LED灯按钮均可关闭LED灯。
 
-首次按下LED灯按钮可开启照明模式。
-
-再次按下可切换至SOS模式。
-
-第三次按下将关闭灯光。
-
-.. image:: _assets/templates/word_template/common_assets/operation/led_light.png
+.. image:: _assets/cn/operation/led_light.png
    :alt: LED 灯操作示意图。
-   :width: 360px
+   :width: 640px
+
+| 首次按下LED灯按钮可开启照明模式。
+| 再次按下可切换至SOS模式。
+| 第三次按下将关闭灯光。
 
 AC和DC输出恢复功能
 ------------------
@@ -130,7 +131,7 @@ AC/DC输出恢复功能默认关闭。可在 Jackery App 中开启此功能，�
 屏幕显示
 --------
 
-.. image:: _assets/templates/word_template/common_assets/operation/lcd_mode.png
+.. image:: _assets/cn/operation/lcd_mode.png
    :alt: 屏幕显示模式示意图。
    :width: 260px
 

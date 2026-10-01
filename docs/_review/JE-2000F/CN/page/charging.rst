@@ -23,7 +23,7 @@
 
 请使用官方标配的AC电源线。
 
-.. image:: _assets/templates/word_template/common_assets/charging/ac_wall.png
+.. image:: _assets/cn/charging/ac_wall.png
    :alt: 市电充电示意图。
    :width: 360px
 
