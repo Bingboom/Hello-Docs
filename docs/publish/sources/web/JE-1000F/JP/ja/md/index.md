@@ -1,4 +1,4 @@
-# Jackery ポータブル電源 1000 New 取扱説明書
+# Jackery ポータブル電源 1000 New（JE-1000F）取扱説明書
 
 ```{toctree}
 :maxdepth: 2

@@ -3,15 +3,14 @@
   "model": "JE-1000F",
   "region": "JP",
   "lang": "ja",
-  "version": "1.5",
-  "built_at": "2026-09-30T18:26:52+00:00",
-  "git_ref": "review/JE-1000F-JP",
+  "version": "git-20260930-d88b32fe-jp-reviewed",
+  "built_at": "2026-10-01T04:51:58.213642+00:00",
+  "git_ref": "d09a64d5fe81c0665f3b40f6de4c72815d402dc7",
   "route": "JE-1000F/JP/ja/md",
   "manual": "manual_je1000f_jp.md",
-  "language_scope": "legacy_unspecified",
-  "queue_record_ids": [
-    "reczz28Hp3APsj8X"
-  ],
+  "language_scope": "single",
+  "language_projection_evidence_path": "evidence/language_projection_receipt.json",
+  "language_projection_evidence_sha256": "63bb9f7e0ef91d688af7c4ccb567d013dd0840d6191c841ffa182dd4725d4d49",
   "legacy_default": true,
   "legacy_route": "JE-1000F/JP/md",
   "legacy_aliases": [
