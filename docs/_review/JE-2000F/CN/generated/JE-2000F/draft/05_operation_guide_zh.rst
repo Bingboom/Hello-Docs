@@ -8,7 +8,7 @@
 电源开机 / 关机
 ---------------
 
-.. image:: _assets/templates/word_template/common_assets/operation/main_power.png
+.. image:: asset:operation/main_power
    :alt: 电源开关操作示意图。
    :width: 360px
 
@@ -29,7 +29,7 @@ AC输出开/关
 
 AC输出按键统一控制所有AC输出口，短按一次开启，再短按一次关闭。
 
-.. image:: _assets/templates/word_template/common_assets/operation/ac_output.png
+.. image:: asset:operation/ac_output
    :alt: AC 输出开关操作示意图。
    :width: 360px
 
@@ -44,7 +44,7 @@ DC/USB输出开 / 关
 
 确保总电源开关键已打开。
 
-.. image:: _assets/templates/word_template/common_assets/operation/dc_usb_output.png
+.. image:: asset:operation/dc_usb_output
    :alt: DC/USB 输出开关操作示意图。
    :width: 360px
 
@@ -82,7 +82,7 @@ DC/USB输出开 / 关
 
 在 AC 输出按键开启状态下，同时长按 AC 输出按键与总电源开关键，持续按压直至节能图标显示（开启）与隐藏（关闭）状态切换。
 
-.. image:: _assets/templates/word_template/common_assets/operation/energy_saving.png
+.. image:: asset:operation/energy_saving
    :alt: 节能模式按键操作示意图。
    :width: 320px
 
@@ -106,7 +106,7 @@ LED灯有两种模式：照明模式和SOS模式，默认设置为照明模式�
 
 第三次按下将关闭灯光。
 
-.. image:: _assets/templates/word_template/common_assets/operation/led_light.png
+.. image:: asset:operation/led_light
    :alt: LED 灯操作示意图。
    :width: 360px
 
@@ -130,7 +130,7 @@ AC/DC输出恢复功能默认关闭。可在 Jackery App 中开启此功能，�
 屏幕显示
 --------
 
-.. image:: _assets/templates/word_template/common_assets/operation/lcd_mode.png
+.. image:: asset:operation/lcd_mode
    :alt: 屏幕显示模式示意图。
    :width: 260px
 
