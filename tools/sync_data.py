@@ -8,9 +8,8 @@ import os
 import shlex
 import shutil
 import subprocess
-import sys
 import tempfile
-from datetime import datetime, timezone
+from datetime import datetime
 from pathlib import Path
 from typing import Any, Mapping
 
@@ -54,16 +53,16 @@ from tools.sync_data_models import (  # noqa: E402
     TABLE_SCHEMAS,
     RecordSource,
     TableBinding,
-    TableSchema,
     TableSyncResult,
 )
 from tools.sync_data_records import (  # noqa: E402
     _csv_text,
     _dict_rows_csv_text,
-    _normalized_cell,
+    _normalized_cell as _normalized_cell,
     _read_existing_mapping_rows,
     _sha256_file,
     _sha256_text,
+    phase2_snapshot_write_lock,
     _write_atomic_text,
     normalize_records,
 )
@@ -188,11 +187,11 @@ def _parse_json_payload(raw: str) -> dict[str, Any]:
         raise RuntimeError("Lark CLI returned empty output")
     try:
         payload = json.loads(text)
-    except json.JSONDecodeError:
+    except json.JSONDecodeError as exc:
         start = min((idx for idx in (text.find("{"), text.find("[")) if idx != -1), default=-1)
         end = max(text.rfind("}"), text.rfind("]"))
         if start == -1 or end < start:
-            raise RuntimeError("Lark CLI output is not valid JSON")
+            raise RuntimeError("Lark CLI output is not valid JSON") from exc
         payload = json.loads(text[start : end + 1])
     if not isinstance(payload, dict):
         raise RuntimeError("Lark CLI JSON payload must be an object")
@@ -250,7 +249,7 @@ class LarkCliSource:
             return cached
 
         offset = 0
-        limit = 500
+        limit = 200  # lark-cli >=1.0.69 caps --limit at 200
         field_name_map: dict[str, str] = {}
         while True:
             payload = self._run_base_command(
@@ -290,6 +289,10 @@ class LarkCliSource:
 
         self._field_name_cache[cache_key] = field_name_map
         return field_name_map
+
+    def field_names(self, *, base_token: str, table_id: str) -> frozenset[str]:
+        """Return authoritative field names, reusing the field-list cache."""
+        return frozenset(self._field_name_map(base_token=base_token, table_id=table_id).values())
 
     def _run_record_list(
         self,
@@ -380,10 +383,9 @@ class LarkCliSource:
         if not token:
             raise RuntimeError("Drive download requires a non-empty file_token")
         output_path.parent.mkdir(parents=True, exist_ok=True)
-        try:
-            output_arg = output_path.relative_to(ROOT).as_posix()
-        except ValueError:
-            output_arg = output_path.as_posix()
+        # lark-cli >=1.0.69 requires --output to be a relative path inside the
+        # process cwd, so run from the target directory (works for data roots
+        # outside the repo too).
         cmd = [
             *_resolved_cli_command_parts(self.cli_bin),
             "api",
@@ -392,13 +394,13 @@ class LarkCliSource:
             "--as",
             self.identity,
             "--output",
-            output_arg,
+            f"./{output_path.name}",
         ]
         if output_path.exists() and not overwrite:
             return
         subprocess.run(
             cmd,
-            cwd=str(ROOT),
+            cwd=str(output_path.parent),
             check=True,
             capture_output=True,
             text=True,
@@ -588,6 +590,7 @@ def _manifest_payload(
     derived_files: tuple[TableSyncResult, ...],
     built_at: datetime,
     dry_run: bool,
+    warnings: tuple[dict[str, Any], ...] = (),
 ) -> dict[str, Any]:
     return _manifest_payload_impl(
         export_root=export_root,
@@ -600,6 +603,7 @@ def _manifest_payload(
         derived_files=derived_files,
         built_at=built_at,
         dry_run=dry_run,
+        warnings=warnings,
         repo_root=ROOT,
     )
 
@@ -646,6 +650,7 @@ def sync_phase2_snapshot(
             build_row_label_row_key_mapping_rows=build_row_label_row_key_mapping_rows,
             dict_rows_csv_text=_dict_rows_csv_text,
             write_atomic_text=_write_atomic_text,
+            snapshot_write_lock=phase2_snapshot_write_lock,
             table_sync_result_cls=TableSyncResult,
             sync_run_result_cls=SyncRunResult,
         ),

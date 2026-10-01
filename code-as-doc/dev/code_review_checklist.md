@@ -24,6 +24,19 @@ Use this checklist when reviewing changes to code, config, data, or review workf
 - [ ] If a new config was added, is there a real template-family or page-stack reason for it?
 - [ ] Does the config still use `manual_{model_slug}_{region_slug}` style output naming where expected?
 
+## 3a. Inheritance and Override
+
+This repo expresses variation by layering over a common definition, never by
+forking it. See [`layout_params_guide.md` §3](layout_params_guide.md) for the
+layout plane and [`tools/config_loader.py`](../../tools/config_loader.py) for the
+config plane.
+
+- [ ] Is the difference expressed as a **layer over the common**, rather than a new key name, a scope infix, or a parallel file?
+- [ ] Is the common still the thing every target inherits — did we avoid adding a target-specific value to it?
+- [ ] Is a per-language row genuine font or text fitting? Geometry belongs to the category or target layer, not to `lang_<code>_`.
+- [ ] If a new layout override was introduced, was the ratchet in [`tests/test_layout_token_override.py`](../../tests/test_layout_token_override.py) updated deliberately, with the reason?
+- [ ] For a new component default, does the value live in the common CSV rather than only as a literal in Python?
+
 ## 4. Data Contract
 
 - [ ] If [`Spec_Master.csv`](../../data/phase2/Spec_Master.csv) semantics changed, was [`code-as-doc/spec_master_user_guide.md`](../spec_master_user_guide.md) updated?
@@ -47,6 +60,7 @@ Use this checklist when reviewing changes to code, config, data, or review workf
 ## 7. Tests and Verification
 
 - [ ] Was `python -m unittest` run if logic changed?
+- [ ] Do new or changed tests patch the module that looks the name up, not a re-export on a facade (`build_docs`, `process_build_queue`, `process_review_start_queue`, `cloud_doc_backport`)? The facade-patch ratchet (`data/facade_patch_baseline.tsv`) only lets the count fall.
 - [ ] Was at least one relevant smoke build run for the affected family?
 - [ ] If JP review/publish flow changed, was `python build.py publish --config configs/config.ja.yaml --model JE-1000F --region JP` verified or explicitly deferred?
 - [ ] If release traceability changed, was `python build.py release-manifest --config configs/config.ja.yaml --model JE-1000F --region JP` verified or explicitly deferred?

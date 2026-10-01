@@ -1,0 +1,253 @@
+schema_version: manual-theme/v1
+theme_id: hb-manual-default
+
+# Component roles group renderer-neutral visual intent. Concrete units, page
+# coordinates, and target/language geometry remain in renderer adapters and
+# data/layout_params.csv.
+component_roles:
+  component.callout:
+    component_ids: [HB-CALLOUT-STRIP]
+    theme_roles: [surface.brand, surface.paper, border.strong, width.component-band]
+  component.table.spec:
+    component_ids: [HB-TABLE-SPEC]
+    theme_roles:
+      - surface.brand
+      - surface.paper
+      - surface.muted
+      - border.strong
+      - radius.panel
+      - type.table.label
+      - type.table.value
+      - width.component-band
+  component.special.fcc:
+    component_ids: [HB-SPECIAL-FCC]
+    theme_roles:
+      - surface.fcc
+      - radius.fcc
+      - type.fcc.body
+      - width.component-band
+  component.special.inbox:
+    component_ids: [HB-SPECIAL-INBOX]
+    theme_roles:
+      - surface.brand
+      - surface.paper
+      - surface.muted
+      - border.inbox
+      - radius.inbox
+      - type.inbox.label
+      - width.component-band
+  component.special.overview:
+    component_ids: [HB-SPECIAL-OVERVIEW]
+    theme_roles:
+      - surface.paper
+      - line.overview.leader
+      - type.overview.label
+      - width.component-band
+  component.special.operation:
+    component_ids: [HB-SPECIAL-OPERATION]
+    theme_roles:
+      - surface.paper
+      - surface.muted
+      - border.strong
+      - radius.panel
+      - type.table.label
+      - type.table.value
+      - width.component-band
+  component.special.app:
+    component_ids: [HB-SPECIAL-APP]
+    theme_roles:
+      - surface.paper
+      - surface.muted
+      - border.strong
+      - radius.panel
+      - type.table.label
+      - type.table.value
+      - width.component-band
+  component.special.reference-figure:
+    component_ids: [HB-SPECIAL-REFERENCE-FIGURE]
+    theme_roles:
+      - surface.paper
+      - border.strong
+      - radius.panel
+      - type.table.value
+      - width.component-band
+  component.table.auto-resume:
+    component_ids: [HB-TABLE-AUTO-RESUME]
+    theme_roles: [surface.paper, surface.muted, border.strong, radius.panel, type.table.label, type.table.value, width.component-band]
+  component.table.key-combinations:
+    component_ids: [HB-TABLE-KEY-COMBINATIONS]
+    theme_roles: [surface.paper, surface.muted, border.strong, radius.panel, type.table.label, type.table.value, width.component-band]
+  component.table.lcd-mode:
+    component_ids: [HB-TABLE-LCD-MODE]
+    theme_roles:
+      - surface.paper
+      - surface.muted
+      - border.strong
+      - radius.panel
+      - type.table.label
+      - type.table.value
+      - width.component-band
+  component.table.reference:
+    component_ids: [HB-TABLE-REFERENCE]
+    theme_roles: [surface.paper, surface.muted, border.strong, radius.panel, type.table.label, type.table.value, width.component-band]
+  component.table.lcd-icon:
+    component_ids: [HB-TABLE-LCD-ICON]
+    theme_roles:
+      - surface.paper
+      - surface.muted
+      - border.strong
+      - radius.panel
+      - type.table.label
+      - type.table.value
+      - width.component-band
+  component.table.troubleshooting:
+    component_ids: [HB-TABLE-TROUBLESHOOTING]
+    theme_roles:
+      - surface.paper
+      - surface.muted
+      - border.strong
+      - radius.panel
+      - type.table.label
+      - type.table.value
+      - width.component-band
+  component.table.symbol-signal:
+    component_ids: [HB-TABLE-SYMBOL-SIGNAL]
+    theme_roles:
+      - surface.paper
+      - surface.muted
+      - border.strong
+      - radius.panel
+      - type.table.label
+      - type.table.value
+      - width.component-band
+  component.table.symbol-icon:
+    component_ids: [HB-TABLE-SYMBOL-ICON]
+    theme_roles:
+      - surface.paper
+      - border.strong
+      - radius.panel
+      - type.table.label
+      - type.table.value
+      - width.component-band
+  component.warranty.lead:
+    component_ids: [HB-WARRANTY-LEAD]
+    theme_roles:
+      - surface.muted
+      - radius.panel
+      - type.table.value
+      - width.component-band
+  component.warranty.section:
+    component_ids: [HB-WARRANTY-SECTION]
+    theme_roles:
+      - surface.paper
+      - border.strong
+      - radius.panel
+      - type.table.label
+      - type.table.value
+      - width.component-band
+  component.warranty.years:
+    component_ids: [HB-WARRANTY-YEARS]
+    theme_roles:
+      - surface.paper
+      - radius.panel
+      - type.table.label
+      - type.table.value
+      - width.component-band
+
+roles:
+  surface.brand:
+    bindings:
+      web: {kind: css-custom-property, name: --hb-brand-dark}
+      latex: {kind: color, name: HBSharedTableFrameColor}
+      idml: {kind: color, name: Color/HB Brand Dark}
+      word: {kind: property-adapter, name: _set_spec_table_borders}
+  surface.paper:
+    bindings:
+      web: {kind: css-custom-property, name: --hb-paper}
+      latex: {kind: color, name: white}
+      idml: {kind: color, name: Color/Paper}
+      word: {kind: table-style, name: tableHeader}
+  surface.muted:
+    bindings:
+      web: {kind: css-custom-property, name: --hb-surface}
+      latex: {kind: color, name: HBSharedTableLeftBg}
+      idml: {kind: paragraph-style, name: HB Spec Label}
+      word: {kind: html-class, name: manual-spec-label}
+  surface.fcc:
+    bindings:
+      web: {kind: css-custom-property, name: --hb-surface}
+      latex: {kind: color, name: BgK05}
+      idml: {kind: color, name: Color/HB Bg K05}
+      word: {kind: html-class, name: hb-fcc-word-table}
+  border.strong:
+    bindings:
+      web: {kind: css-custom-property, name: --hb-brand-dark}
+      latex: {kind: layout-token, name: comp_table_outer_rule}
+      idml: {kind: layout-token, name: comp_table_outer_rule}
+      word: {kind: property-adapter, name: _set_spec_table_borders}
+  border.inbox:
+    bindings:
+      web: {kind: css-custom-property, name: --hb-line-soft}
+      latex: {kind: layout-token, name: comp_table_outer_rule}
+      idml: {kind: color, name: Color/HB Line K40}
+      word: {kind: html-class, name: hb-inbox-word-card}
+  radius.panel:
+    bindings:
+      web: {kind: css-custom-property, name: --hb-panel-radius}
+      latex: {kind: layout-token, name: comp_table_outer_arc}
+      idml: {kind: object-style, name: HB Rounded Table Outer}
+      word: {kind: property-adapter, name: _set_spec_table_layout}
+  radius.fcc:
+    bindings:
+      web: {kind: css-custom-property, name: --hb-fcc-radius}
+      latex: {kind: layout-token, name: comp_fcc_arc}
+      idml: {kind: layout-token, name: comp_fcc_arc}
+      word: {kind: property-adapter, name: transform_word_fcc_html}
+  radius.inbox:
+    bindings:
+      web: {kind: css-custom-property, name: --hb-inbox-card-radius}
+      latex: {kind: layout-token, name: comp_inbox_card_arc}
+      idml: {kind: object-style, name: HB Inbox Card}
+      word: {kind: property-adapter, name: transform_word_inbox_html}
+  type.table.label:
+    bindings:
+      web: {kind: css-custom-property, name: --hb-font-family}
+      latex: {kind: macro, name: HBTypeSpecLabel}
+      idml: {kind: paragraph-style, name: HB Spec Label}
+      word: {kind: html-class, name: manual-spec-label}
+  type.table.value:
+    bindings:
+      web: {kind: css-custom-property, name: --hb-font-family}
+      latex: {kind: macro, name: HBTypeSpecValue}
+      idml: {kind: paragraph-style, name: HB Spec Value}
+      word: {kind: html-class, name: manual-spec-value}
+  type.fcc.body:
+    bindings:
+      web: {kind: css-custom-property, name: --hb-font-family}
+      latex: {kind: macro, name: HBTypeFccText}
+      idml: {kind: paragraph-style, name: HB FCC Text}
+      word: {kind: html-class, name: hb-fcc-word-table}
+  type.inbox.label:
+    bindings:
+      web: {kind: css-custom-property, name: --hb-font-family}
+      latex: {kind: macro, name: HBtype_inbox_label_font_size}
+      idml: {kind: paragraph-style, name: HB InBox Label}
+      word: {kind: html-class, name: hb-inbox-word-card}
+  line.overview.leader:
+    bindings:
+      web: {kind: css-custom-property, name: --hb-brand-dark}
+      latex: {kind: color, name: HBTextBlack}
+      idml: {kind: color, name: Color/HB Brand Dark}
+      word: {kind: style, name: BodyText}
+  type.overview.label:
+    bindings:
+      web: {kind: css-custom-property, name: --hb-font-family}
+      latex: {kind: macro, name: HBOverviewPanel}
+      idml: {kind: paragraph-style, name: HB Body}
+      word: {kind: style, name: BodyText}
+  width.component-band:
+    bindings:
+      web: {kind: css-custom-property, name: --hb-component-band-max}
+      latex: {kind: macro, name: linewidth}
+      idml: {kind: property-adapter, name: spec_table_body_width}
+      word: {kind: property-adapter, name: _set_spec_table_cell_widths}

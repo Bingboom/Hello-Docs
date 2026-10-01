@@ -118,6 +118,7 @@ git config core.hooksPath .githooks
 ```
 
 After that, [`.githooks/pre-push`](../../.githooks/pre-push) blocks pushes from branches that do not contain the latest `origin/main`.
+Pushes of `review/*` and `backport/*` branches, and pushes to any remote other than `origin` (for example `hello-docs`), are exempt: they start from a review branch or from Hello-Docs `main`, never from auto-manual `main`.
 The managed hook now runs through the shared [`../../scripts/git_branch_guard.py`](../../scripts/git_branch_guard.py) core instead of a bash-only entrypoint, and the repo also ships [`.githooks/pre-push.cmd`](../../.githooks/pre-push.cmd) plus [`.githooks/pre-push.ps1`](../../.githooks/pre-push.ps1) as Windows-native companion launchers.
 Use `git push --no-verify` only when the older base is intentional.
 
@@ -195,6 +196,9 @@ Normal merge rule:
 - use `Squash and merge`
 - delete the head branch after merge
 - do not keep the branch alive as a second working lane after merge
+- agents merge only under a live gate-on-green authorization — see
+  [`merge_authorizations.md`](merge_authorizations.md) for the registry and
+  the all-checks-green protocol (AGENTS.md §8.6 exception)
 
 ## 5. Repo-Specific Content Rules
 

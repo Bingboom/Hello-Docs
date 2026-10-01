@@ -4,8 +4,10 @@
 from __future__ import annotations
 
 import os
+import re
 import subprocess
 import sys
+import tempfile
 import time
 import zipfile
 from pathlib import Path
@@ -14,6 +16,7 @@ from tools.gen_index_bundle import MaterializedBundle
 from tools.word_bundle_common import paths
 from tools.word_bundle_docx_images import embed_external_docx_images as _embed_external_docx_images
 from tools.word_bundle_docx_pandoc import resolve_pandoc_binary
+from tools.word_bundle_docx_reproducible import normalize_docx_for_reproducibility
 from tools.word_bundle_docx_styles import (
     enforce_docx_outline_levels as _enforce_docx_outline_levels,
     remap_reference_doc_styles as _remap_reference_doc_styles,
@@ -23,6 +26,17 @@ from tools.word_bundle_html import build_word_bundle_html
 
 class WordComExportError(RuntimeError):
     """Raised when the Windows Word COM export path fails before producing DOCX."""
+
+
+_MAIN_TAG_RE = re.compile(r"</?main\b[^>]*>", re.IGNORECASE)
+
+
+def normalize_word_bundle_html_for_pandoc(html_text: str) -> str:
+    """Remove Pandoc body-selection wrappers without touching their content."""
+    normalized = _MAIN_TAG_RE.sub("", str(html_text))
+    if _MAIN_TAG_RE.search(normalized):
+        raise RuntimeError("word bundle still contains a <main> wrapper")
+    return normalized
 
 
 def _ps_quote(value: str) -> str:
@@ -83,9 +97,24 @@ def _export_docx_via_pandoc(bundle_html: Path, out_path: Path, reference_doc: Pa
         ]
     )
 
+    source_html = bundle_html.read_text(encoding="utf-8")
+    normalized_html = normalize_word_bundle_html_for_pandoc(source_html)
+    pandoc_input = bundle_html
+    temporary_input: Path | None = None
+    if normalized_html != source_html:
+        descriptor, temporary_name = tempfile.mkstemp(
+            dir=bundle_html.parent,
+            prefix=f".{bundle_html.stem}-pandoc-",
+            suffix=".html",
+        )
+        os.close(descriptor)
+        temporary_input = Path(temporary_name)
+        temporary_input.write_text(normalized_html, encoding="utf-8")
+        pandoc_input = temporary_input
+
     cmd = [
         pandoc,
-        str(bundle_html),
+        str(pandoc_input),
         "--from=html",
         "--to=docx",
         "--metadata",
@@ -98,7 +127,11 @@ def _export_docx_via_pandoc(bundle_html: Path, out_path: Path, reference_doc: Pa
     if reference_doc is not None:
         cmd += ["--reference-doc", str(reference_doc)]
 
-    subprocess.run(cmd, check=True, cwd=str(paths.root))
+    try:
+        subprocess.run(cmd, check=True, cwd=str(paths.root))
+    finally:
+        if temporary_input is not None:
+            temporary_input.unlink(missing_ok=True)
 
 
 def _export_docx_via_word(bundle_html: Path, out_path: Path, reference_doc: Path | None) -> None:
@@ -226,4 +259,5 @@ def export_word_from_bundle(
     _embed_external_docx_images(out_path)
     _remap_reference_doc_styles(out_path, page_metas)
     _enforce_docx_outline_levels(out_path)
+    normalize_docx_for_reproducibility(out_path)
     return out_path

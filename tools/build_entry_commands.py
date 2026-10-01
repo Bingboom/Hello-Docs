@@ -3,7 +3,7 @@ from __future__ import annotations
 import argparse
 import sys
 from pathlib import Path
-from typing import Any, Callable
+from typing import Callable
 
 
 def normalize_cli_build_queue_action(workflow_action: str | None = None, doc_phase: str | None = None) -> str | None:
@@ -11,7 +11,15 @@ def normalize_cli_build_queue_action(workflow_action: str | None = None, doc_pha
     legacy = (doc_phase or "").strip().lower()
     normalized_explicit = None
     if explicit:
-        normalized_explicit = "draft" if explicit == "build-draft-package" else "publish"
+        normalized_explicit = {
+            "build-draft-package": "draft",
+            "publish": "publish",
+            "web-publish": "web_publish",
+        }.get(explicit)
+        if normalized_explicit is None:
+            raise RuntimeError(
+                "--workflow-action must be build-draft-package, publish, or web-publish"
+            )
     if normalized_explicit:
         return normalized_explicit
     if legacy:
@@ -294,7 +302,7 @@ def release_manifest_command(
     staging_docs_build_dir: Callable[[argparse.Namespace], Path | None],
     staging_releases_root: Callable[[argparse.Namespace], Path | None],
 ) -> list[str]:
-    model, region = require_explicit_target(args, "release-manifest")
+    model, region = require_explicit_target(args, action_name="release-manifest")
     config_path = resolve_path_from_root(args.config)
     cmd = [
         sys.executable,
@@ -313,6 +321,36 @@ def release_manifest_command(
         cmd += ["--docs-build-dir", str(staged_docs)]
     if staged_releases is not None:
         cmd += ["--releases-root", str(staged_releases)]
+    if isinstance(args.version, str):
+        cmd += ["--version", args.version.strip()]
+    return cmd
+
+
+def release_rebuild_command(
+    args: argparse.Namespace,
+    *,
+    repo_root: Path,
+    resolve_path_from_root: Callable[[str], Path],
+) -> list[str]:
+    raw_manifest = str(getattr(args, "manifest", None) or "").strip()
+    if not raw_manifest:
+        raise RuntimeError("release-rebuild-verify requires --manifest")
+    if any(
+        str(getattr(args, name, None) or "").strip()
+        for name in ("model", "region", "lang", "data_root", "version")
+    ):
+        raise RuntimeError(
+            "release-rebuild-verify resolves target, version, and snapshot from --manifest"
+        )
+    cmd = [
+        sys.executable,
+        str(repo_root / "tools" / "release_rebuild.py"),
+        "--manifest",
+        str(resolve_path_from_root(raw_manifest)),
+    ]
+    raw_report = str(getattr(args, "report", None) or "").strip()
+    if raw_report:
+        cmd += ["--report", str(resolve_path_from_root(raw_report))]
     return cmd
 
 
@@ -325,7 +363,7 @@ def process_build_queue_command(
 ) -> list[str]:
     if (args.model or "").strip() or (args.region or "").strip():
         raise RuntimeError(
-            "process-build-queue does not accept --model or --region; Build Draft Package / Publish targets come from Document_link rows"
+            "process-build-queue does not accept --model or --region; Build Draft Package / Publish / Web Publish targets come from Document_link rows"
         )
     config_path = resolve_path_from_root(args.config)
     cmd = [
@@ -340,8 +378,12 @@ def process_build_queue_command(
         cmd += ["--workflow-action", "build-draft-package"]
     elif normalized_action == "publish":
         cmd += ["--workflow-action", "publish"]
+    elif normalized_action == "web_publish":
+        cmd += ["--workflow-action", "web-publish"]
     if isinstance(args.record_id, str) and args.record_id.strip():
         cmd += ["--record-id", args.record_id.strip()]
+    if isinstance(getattr(args, "record_ids", None), str) and args.record_ids.strip():
+        cmd += ["--record-ids", args.record_ids.strip()]
     if args.dry_run:
         cmd.append("--dry-run")
     return cmd
@@ -367,6 +409,8 @@ def process_review_start_queue_command(
     append_data_root_arg(cmd, args)
     if isinstance(args.record_id, str) and args.record_id.strip():
         cmd += ["--record-id", args.record_id.strip()]
+    if isinstance(getattr(args, "record_ids", None), str) and args.record_ids.strip():
+        cmd += ["--record-ids", args.record_ids.strip()]
     if args.dry_run:
         cmd.append("--dry-run")
     return cmd

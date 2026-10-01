@@ -8,11 +8,17 @@ from pathlib import Path
 import re
 from typing import cast
 
+from .. import lang_registry
+from tools.utils.spec_footnotes import (
+    append_footnote_markers as _append_footnote_markers,
+    footnote_marker_for_order as _footnote_marker_for_order,
+    parse_footnote_refs as _parse_footnote_refs,
+)
+from ..localized_copy import first_text, localized_columns
 from .renderers_common import _enabled, _scope_allows, apply_vars, rst_escape
 from ..utils.spec_master import (
     canonicalize_model_token,
     collect_matching_footnote_rows,
-    is_page_value_row,
     model_value_matches_target,
     page_value_matches,
     region_value_matches_target,
@@ -41,18 +47,12 @@ def _split_spec_row_text(text: str, block_id: str, line: str) -> tuple[str, str]
 def _to_float(value: str, default: float = 0.0) -> float:
     try:
         return float((value or "").strip())
-    except Exception:
+    except ValueError:
         return default
 
 
 def _first_non_empty(row: dict[str, str], keys: list[str]) -> str:
-    for key in keys:
-        if key not in row:
-            continue
-        value = rst_escape(row.get(key) or "")
-        if value:
-            return value
-    return ""
+    return rst_escape(first_text(row, keys))
 
 
 def _is_enabled_row(row: dict[str, str]) -> bool:
@@ -88,24 +88,10 @@ def _pick_spec_lang_text(
     lang: str,
     default_keys: list[str] | None = None,
 ) -> str:
-    def lang_suffix_candidates(raw_lang: str) -> list[str]:
-        raw = (raw_lang or "").strip()
-        candidates = [
-            raw,
-            raw.casefold(),
-            raw.upper(),
-            raw.replace("-", "_"),
-            raw.casefold().replace("-", "_"),
-        ]
-        if raw.casefold() in {"br", "pt-br", "pt_br"}:
-            candidates.extend(["br", "pt-BR", "pt-br", "pt_BR", "pt_br"])
-        return list(dict.fromkeys(candidate for candidate in candidates if candidate))
-
     def normalized_lang_key(raw_lang: str) -> str:
         raw = (raw_lang or "").strip().casefold()
-        if raw in {"br", "pt-br", "pt_br"}:
-            return "pt-br"
-        return raw
+        canonical = lang_registry.canonical_language(raw_lang)
+        return (canonical or raw).casefold()
 
     source_lang = source_language_for_row(row)
     normalized_lang = normalized_lang_key(lang)
@@ -119,7 +105,7 @@ def _pick_spec_lang_text(
             base,
         ]
     else:
-        keys = [f"{base}_{suffix}" for suffix in lang_suffix_candidates(lang)]
+        keys = list(localized_columns((base,), lang_registry.language_alias_candidates(lang), uppercase=True))
         keys.extend([f"{base}_source", f"{base.lower()}_source", base])
     if default_keys:
         keys.extend(default_keys)
@@ -155,47 +141,12 @@ def _pick_title_lang(lang: str, vars_map: dict[str, str]) -> str:
         return "zh"
     if value in {"br"} or value.startswith("pt"):
         return "pt-BR"
+    if value.startswith("ko"):
+        return "ko"
     return "en"
 
 
-_CIRCLED_NUMBER_MARKERS: dict[int, str] = {
-    1: "\u2460",
-    2: "\u2461",
-    3: "\u2462",
-    4: "\u2463",
-    5: "\u2464",
-    6: "\u2465",
-    7: "\u2466",
-    8: "\u2467",
-    9: "\u2468",
-    10: "\u2469",
-}
 _LEGACY_FOOTNOTE_PREFIX_RE = re.compile(r"^(?:[\u2460-\u2473]|\(\d+\)|\d+\.)\s*")
-
-
-def _footnote_marker_for_order(order: float) -> str:
-    normalized = int(order)
-    if normalized <= 0:
-        return ""
-    return _CIRCLED_NUMBER_MARKERS.get(normalized, f"({normalized})")
-
-
-def _parse_footnote_refs(value: str) -> list[str]:
-    refs: list[str] = []
-    for token in (value or "").split(","):
-        item = token.strip()
-        if item and item not in refs:
-            refs.append(item)
-    return refs
-
-
-def _append_footnote_markers(text: str, refs: list[str], marker_by_id: dict[str, str]) -> str:
-    if not text:
-        return text
-    markers = "".join(marker_by_id.get(ref, "") for ref in refs if marker_by_id.get(ref, ""))
-    if not markers:
-        return text
-    return f"{text}{markers}"
 
 
 def _strip_legacy_footnote_prefix(text: str) -> str:
@@ -400,7 +351,8 @@ def _parse_spec_master_sections(
         row_key = _first_non_empty(row, ["Row_key", "row_key"])
         if not section_key or not row_key:
             continue
-        if is_page_value_row(row) or section_key.strip().lower() == "template vars":
+        usage_type = _first_non_empty(row, ["Usage_type", "usage_type"]).strip().lower()
+        if usage_type == "page_value" or section_key.strip().lower() == "template vars":
             continue
 
         section_title = _pick_spec_lang_text(
@@ -537,6 +489,7 @@ def _parse_spec_master_sections(
         )
 
     section_dict: dict[str, dict[str, object]] = {}
+    group_source_orders: dict[tuple[str, str], int] = {}
     for row in sorted(rows, key=lambda x: (x["section_order"], x["source_order"])):
         section_key = str(row["section_key"])
         section = section_dict.setdefault(
@@ -550,7 +503,12 @@ def _parse_spec_master_sections(
         )
         rows_map = section["rows"]
         assert isinstance(rows_map, dict)
-        row_key = str(row["row_key"])
+        group_source_order = group_source_orders.setdefault(
+            (section_key, str(row["row_key"])), int(row["source_order"])
+        )
+        # A shared semantic key may contain separately labelled ports. Do not
+        # discard their localized labels or attach one port's notes to another.
+        row_key = (str(row["row_key"]), str(row["row_label"]), tuple(row["row_label_refs"]))
         item = rows_map.setdefault(
             row_key,
             {
@@ -558,11 +516,14 @@ def _parse_spec_master_sections(
                 "label_refs": row["row_label_refs"],
                 "order": row["row_order"],
                 "source_order": row["source_order"],
+                "group_source_order": group_source_order,
+                "line_order": row["line_order"],
                 "lines": [],
             },
         )
         lines = item["lines"]
         assert isinstance(lines, list)
+        item["line_order"] = min(float(item["line_order"]), float(row["line_order"]))
         lines.append(
             (
                 float(row["line_order"]),
@@ -586,7 +547,8 @@ def _parse_spec_master_sections(
         out_rows: list[tuple[str, str]] = []
         for row in sorted(
             rows_map.values(),
-            key=lambda x: (float(x["order"]), int(x["source_order"])),
+            key=lambda x: (float(x["order"]), int(x["group_source_order"]),
+                           float(x["line_order"]), int(x["source_order"])),
         ):
             lines = row["lines"]
             assert isinstance(lines, list)

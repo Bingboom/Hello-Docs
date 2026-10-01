@@ -39,6 +39,11 @@ pages:
   - type: rst_include
     lang: ko
     file: templates/page_shared/ko/06_ups_mode.rst
+    capability: UPS功能
+  - type: rst_include
+    lang: ko
+    file: templates/page_shared/ko/07_extra_battery.rst
+    capability: 加电包扩容
   - type: rst_include
     lang: ko
     file: templates/page_shared/ko/charging.rst

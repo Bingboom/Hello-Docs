@@ -5,8 +5,8 @@
 
    This product can support up to 5 battery packs to meet the need for large power capacity. For details on how to use it, please refer to the *Jackery Battery Pack 2000 User Manual*.
 
-   .. image:: templates/word_template/common_assets/in_the_box/main_unit1.png
-      :alt: Battery pack connection diagram placeholder.
+   .. image:: renderers/web/assets/je2000e_eu_en/extra_battery.png
+      :alt: Battery pack connection diagram.
       :width: 360px
 
    .. only:: region_us
@@ -46,13 +46,9 @@
 
    .. only:: region_eu
 
-      .. list-table::
-         :header-rows: 0
-         :widths: 34 33 33
-
-         * - **Jackery Battery Pack 2000**
-           - **Expansion Cable**
-           - **User Manual**
+      .. image:: renderers/web/assets/je2000e_eu_en/battery_pack_kit.png
+         :alt: Jackery Battery Pack 2000, Expansion Cable, User Manual (sold separately)
+         :width: 360px
 
 CHARGING
 ========
@@ -76,8 +72,8 @@ CHARGING VIA AC WALL OUTLET
 
 Connect the AC charging cable to the AC input port of the product and a wall outlet.
 
-.. image:: templates/word_template/common_assets/charging/ac_wall.png
-   :alt: AC wall charging diagram placeholder.
+.. image:: asset:charging/ac_wall
+   :alt: AC wall charging diagram.
    :width: 360px
 
 .. list-table::
@@ -88,7 +84,11 @@ Connect the AC charging cable to the AC input port of the product and a wall out
      - Make sure the AC charging cable is fully and securely plugged into the AC input port. An incomplete connection may cause unstable current, overheating, poor contact, or device malfunction.
 
 
+.. hb-capability-begin: 应急快充模式
+
 **Emergency Charging Mode**
 
 | Under this mode, you can rapidly power up the portable power station using the AC charging method. This emergency charge function can be activated or deactivated through the Jackery App. When in emergency charging mode, the circular light indicating the state of charge (SOC) will blink at an increased pace.
 | \*To maximize battery lifespan, it is best to charge at normal speed. Use emergency charging mode only when necessary. It's not recommended for regular, long-term use.
+
+.. hb-capability-end:

@@ -22,6 +22,7 @@ def parse_args() -> argparse.Namespace:
     ap.add_argument("--workflow-name", required=True, help="Display name of the GitHub workflow.")
     ap.add_argument("--workflow-file", required=True, help="Workflow file path inside the repository.")
     ap.add_argument("--queue-record-id", default="", help="Optional Feishu queue record id.")
+    ap.add_argument("--queue-record-ids", default="", help="Optional comma-separated Feishu queue record ids.")
     ap.add_argument("--trigger-source", default="", help="Optional trigger source label.")
     ap.add_argument("--openclaw-dispatch-nonce", default="", help="Optional OpenClaw dispatch nonce.")
     ap.add_argument("--publish-url", default="", help="Optional publish URL returned by the deploy step.")
@@ -88,7 +89,10 @@ def _publish_meta_sort_key(path: Path) -> tuple[float, str]:
 def latest_publish_metadata(releases_root: Path) -> tuple[Path, dict[str, object]] | None:
     if not releases_root.exists():
         return None
-    candidates = list(releases_root.glob("*/*/*/latest/publish_meta.json"))
+    candidates = [
+        *releases_root.glob("*/*/*/latest/publish_meta.json"),
+        *releases_root.glob("*/*/*/latest/web/publish_meta.json"),
+    ]
     if not candidates:
         return None
     candidates.sort(key=_publish_meta_sort_key, reverse=True)
@@ -116,6 +120,7 @@ def build_metadata(
     workflow_name: str,
     workflow_file: str,
     queue_record_id: str,
+    queue_record_ids: str = "",
     trigger_source: str,
     openclaw_dispatch_nonce: str,
     artifact_names: list[str],
@@ -139,6 +144,7 @@ def build_metadata(
         "workflow_name": workflow_name,
         "workflow_file": workflow_file,
         "queue_record_id": _clean_text(queue_record_id),
+        "queue_record_ids": [item.strip() for item in queue_record_ids.split(",") if item.strip()],
         "trigger_source": _clean_text(trigger_source),
         "openclaw_dispatch_nonce": _clean_text(openclaw_dispatch_nonce),
         "artifact_names": [name.strip() for name in artifact_names if name.strip()],
@@ -162,13 +168,30 @@ def build_metadata(
 
     publish_meta_path, publish_meta_payload = publish_meta
     metadata["publish_metadata_path"] = repo_relative_or_absolute(publish_meta_path)
-    metadata["publish_metadata"] = publish_meta_payload
+    if not metadata["publish_url"]:
+        metadata["publish_url"] = _clean_text(
+            publish_meta_payload.get("publish_url")
+            if isinstance(publish_meta_payload.get("publish_url"), str)
+            else ""
+        )
+    # ``document_link_url`` is an internal legacy key in publish_meta.json.
+    # Never expose that retired name to OpenClaw consumers; a print Publish
+    # artifact is the IDML handoff package represented by the delivery contract.
     document_link_url = publish_meta_payload.get("document_link_url")
+    agent_publish_metadata = dict(publish_meta_payload)
+    agent_publish_metadata.pop("document_link_url", None)
+    if isinstance(document_link_url, str) and document_link_url.strip():
+        agent_publish_metadata["idml_file"] = document_link_url.strip()
+    metadata["publish_metadata"] = agent_publish_metadata
     html_index = publish_meta_payload.get("html_index")
     word_output_path = publish_meta_payload.get("word_output_path")
     pdf_output_path = publish_meta_payload.get("pdf_output_path")
     if isinstance(document_link_url, str) and document_link_url.strip():
-        metadata["document_link_url"] = document_link_url.strip()
+        metadata["delivery_kind"] = "idml_file"
+        metadata["delivery_url"] = document_link_url.strip()
+    elif publish_meta_path.parent.name == "web" and metadata["publish_url"]:
+        metadata["delivery_kind"] = "html"
+        metadata["delivery_url"] = metadata["publish_url"]
     if isinstance(html_index, str) and html_index.strip():
         metadata["publish_html_index"] = html_index.strip()
     if isinstance(word_output_path, str) and word_output_path.strip():
@@ -193,6 +216,7 @@ def main() -> int:
         workflow_name=args.workflow_name,
         workflow_file=args.workflow_file,
         queue_record_id=args.queue_record_id,
+        queue_record_ids=args.queue_record_ids,
         trigger_source=args.trigger_source,
         openclaw_dispatch_nonce=args.openclaw_dispatch_nonce,
         artifact_names=args.artifact_name,

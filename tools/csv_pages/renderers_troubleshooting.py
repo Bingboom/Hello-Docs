@@ -6,6 +6,8 @@ from __future__ import annotations
 import re
 
 from .renderers_common import apply_vars, rst_escape
+from .. import lang_registry
+from ..localized_copy import first_existing_column, first_text, table_localized_columns
 from ..utils.spec_master import canonicalize_model_token
 from ..utils.variable_resolver import parse_model_tokens
 
@@ -14,17 +16,6 @@ PH_TROUBLESHOOTING_ROWS_RST = "{{ troubleshooting_rows_rst }}"
 
 _TRUE_VALUES = {"1", "true", "yes", "y"}
 _FALSE_VALUES = {"0", "false", "no", "n"}
-
-_LANG_SUFFIX = {
-    "ja": "jp",
-    "jp": "jp",
-    "uk": "ukr",
-    "ukr": "ukr",
-    "pt-br": "pt-BR",
-    "pt_br": "pt-BR",
-    "br": "pt-BR",
-}
-
 
 def _truthy(value: str, *, default: bool = True) -> bool:
     raw = (value or "").strip().casefold()
@@ -35,31 +26,6 @@ def _truthy(value: str, *, default: bool = True) -> bool:
     if raw in _FALSE_VALUES:
         return False
     return default
-
-
-def _lang_suffix(lang: str) -> str:
-    raw = (lang or "").strip().casefold()
-    return _LANG_SUFFIX.get(raw, raw)
-
-
-def _lang_suffix_candidates(lang: str) -> list[str]:
-    suffix = _lang_suffix(lang)
-    candidates = [
-        suffix,
-        str(suffix).casefold(),
-        str(suffix).replace("-", "_"),
-        str(suffix).casefold().replace("-", "_"),
-    ]
-    if (lang or "").strip().casefold() in {"br", "pt-br", "pt_br"}:
-        candidates.extend(["br", "pt-BR", "pt-br", "pt_BR", "pt_br"])
-    return list(dict.fromkeys(candidate for candidate in candidates if candidate))
-
-
-def _first_existing(headers: set[str], candidates: list[str]) -> str:
-    for candidate in candidates:
-        if candidate in headers:
-            return candidate
-    return candidates[0]
 
 
 def _pick_target_model(vars_map: dict[str, str]) -> str:
@@ -96,30 +62,33 @@ def _matches_region(row: dict[str, str], *, target_region: str) -> bool:
         return True
     if not target_region:
         return True
-    target = target_region.casefold()
-    if target == "pt-br":
-        target_aliases = {"pt-br", "pt_br", "br"}
-    else:
-        target_aliases = {target}
+    target_aliases = {
+        alias.casefold()
+        for alias in lang_registry.language_alias_candidates(target_region)
+    }
     return any(token.casefold() in target_aliases for token in tokens)
 
 
-def _matches_model(row: dict[str, str], *, target_model: str, target_region: str) -> bool:
+def _model_scope(
+    row: dict[str, str], *, target_model: str, target_region: str,
+) -> str | None:
     model_value = row.get("Model") or row.get("model") or ""
     tokens = parse_model_tokens(model_value)
     if not tokens:
-        return True
-    if any(token.casefold() == "all" for token in tokens):
-        return True
+        return "fallback"
     if not target_model:
-        return False
+        return "fallback" if any(token.casefold() == "all" for token in tokens) else None
     normalized_target = canonicalize_model_token(target_model, region=target_region)
     normalized_tokens = {
         canonicalize_model_token(token, region=target_region).casefold()
         for token in tokens
-        if token
+        if token and token.casefold() != "all"
     }
-    return normalized_target.casefold() in normalized_tokens
+    if normalized_target.casefold() in normalized_tokens:
+        return "specific"
+    if any(token.casefold() == "all" for token in tokens):
+        return "fallback"
+    return None
 
 
 def _sort_key(row: dict[str, str]) -> tuple[int, float | str, str]:
@@ -140,29 +109,35 @@ def _collect_rows(
     if not blocks:
         raise ValueError(f"troubleshooting page has no rows for lang={lang}")
     headers = set(blocks[0].keys())
-    measures_col = _first_existing(
-        headers,
-        [
-            *(f"corrective_measures_{suffix}" for suffix in _lang_suffix_candidates(lang)),
-            "corrective_measures_en",
-        ],
+    measures_col = first_existing_column(
+        headers, table_localized_columns("troubleshooting", "corrective_measures", lang),
+        fallback_columns=("corrective_measures_en",),
     )
     if measures_col not in headers:
         raise ValueError(f"troubleshooting csv missing language corrective-measures column: {measures_col}")
 
     target_model = _pick_target_model(vars_map)
     target_region = _pick_target_region(vars_map)
-    rows: list[dict[str, str]] = []
+    candidates: list[tuple[str, dict[str, str]]] = []
 
     for row in blocks:
         if not _truthy(row.get("Is_latest") or row.get("Is_Latest") or row.get("is_latest"), default=True):
             continue
-        if not _matches_model(row, target_model=target_model, target_region=target_region):
-            continue
         if not _matches_region(row, target_region=target_region):
             continue
+        model_scope = _model_scope(
+            row, target_model=target_model, target_region=target_region,
+        )
+        if model_scope is not None:
+            candidates.append((model_scope, row))
+
+    specific = [row for scope, row in candidates if scope == "specific"]
+    selected = specific or [row for scope, row in candidates if scope == "fallback"]
+    rows: list[dict[str, str]] = []
+
+    for row in selected:
         code = (row.get("error_code") or "").strip()
-        measures = (row.get(measures_col) or row.get("corrective_measures_en") or "").strip()
+        measures = first_text(row, (measures_col,), fallback_columns=("corrective_measures_en",), strip=False).strip()
         if not code or not measures:
             continue
         rows.append(

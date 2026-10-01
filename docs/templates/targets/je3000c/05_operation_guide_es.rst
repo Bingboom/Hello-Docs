@@ -1,0 +1,194 @@
+OPERACIONES
+===========
+
+ENCENDIDO/APAGADO
+-----------------
+
+.. image:: asset:operation/main_power
+   :alt: Operación de encendido/apagado.
+   :width: 360px
+
+|
+| **Encendido**
+| Presione una vez
+| **Apagado**
+| Mantenga presionado durante más de 3 segundos
+|
+| **Tiempo de espera predeterminado:** |DEFAULT_STANDBY_DURATION|.
+| El producto se apagará automáticamente después de |DEFAULT_STANDBY_DURATION| de inactividad, sin carga ni descarga.
+| \*El tiempo de espera puede configurarse en la aplicación Jackery.
+| Cuando el modo de ahorro de energía está activado, el producto se apagará automáticamente después de |ENERGY_SAVING_AUTO_OFF_DURATION| si la salida de CA o la salida CC/USB está activada, pero el producto no está cargando ni descargando.
+
+ENCENDER/APAGAR SALIDA CA
+--------------------------
+
+**Requisito previo:** el producto está encendido.
+
+.. image:: asset:operation/ac_output
+   :alt: Operación de salida de CA.
+   :width: 360px
+
+|
+| **Encendido**
+| Presione una vez
+| **Apagado**
+| Presione una vez
+|
+
+ENCENDER/APAGAR SALIDA CC 12V/USB
+------------------------------------
+
+**Requisito previo:** el producto está encendido.
+
+.. image:: asset:operation/dc_usb_output
+   :alt: Operación de salida de CC y USB.
+   :width: 360px
+
+|
+| **Encendido**
+| Presione una vez
+| **Apagado**
+| Presione una vez
+|
+
+.. list-table::
+   :header-rows: 0
+   :widths: 12 88
+
+   * - **PRECAUCIÓN**
+     -
+       - El puerto USB‑C de 100 W es una salida de alta potencia de tipo Fuente de Alimentación 3 (PS3) según USB‑PD. Si el dispositivo del usuario o accesorio conectado no cumple con los requisitos de seguridad, puede existir riesgo de incendio. Antes de usar estos puertos, asegúrese de que el dispositivo o accesorio conectado tenga protección contra incendios. 
+       - Solo conecte el |PRODUCT_NAME| a dispositivos o accesorios que cumplan con las cláusulas 6.3, 6.4 y 6.5 de IEC/EN/UL 62368-1 (u otros estándares equivalentes).
+       - Para obtener la potencia máxima de salida, utilice el cable USB-C a USB-C de 5 A (20 V CC/5 A, 100W). 
+
+| El producto puede cargar la batería de su vehículo utilizando el cable de carga de batería para vehículo Jackery de 12 V, que se vende por separado y está disponible en nuestro sitio web.
+
+.. list-table::
+   :header-rows: 0
+   :widths: 12 88
+
+   * - **PRECAUCIÓN**
+     -
+       - El puerto CC de 12 V solo es compatible con baterías de vehículo de 12 V y no es adecuado para sistemas de 24 V.
+       - No arranque el vehículo mientras el producto está cargando la batería del vehículo a través del puerto de salida CC de 12V, ya que esto podría dañar el producto.
+       - Esta función está diseñada únicamente para uso de emergencia y no puede cargar una batería de vehículo descargada o dañada.
+
+MODO DE AHORRO DE ENERGÍA
+-------------------------
+
+Para evitar el consumo innecesario de batería al olvidar apagar la salida, el producto activa por defecto el Modo de Ahorro de Energía. Cuando la salida de CA o CC/USB está encendida, el ícono del modo de Ahorro de Energía se mostrará en la pantalla LCD. Si no hay ningún dispositivo conectado o si el consumo del dispositivo conectado está por debajo de un cierto umbral (salida de CA de |ENERGY_SAVING_AC_THRESHOLD| o salida CC/USB de |ENERGY_SAVING_DC_THRESHOLD|) durante |ENERGY_SAVING_AUTO_OFF_DURATION|, el dispositivo apagará automáticamente todas las salidas. Configure la duración del modo de Ahorro de Energía en la aplicación Jackery.
+
+Para desactivar el modo de ahorro de energía, presione y mantenga presionados el |AC_POWER_BUTTON_LABEL_LOWER| y el |MAIN_POWER_BUTTON_LABEL_LOWER| durante más de 3 segundos. El producto no apagará automáticamente la salida CA o CC.
+
+.. image:: asset:operation/energy_saving
+   :alt: Operación del modo de ahorro de energía.
+   :width: 320px
+
+| Mantenga pulsados ambos botones durante 3 segundos.
+
+.. list-table::
+   :header-rows: 0
+   :widths: 12 88
+
+   * - **NOTA**
+     - El modo de ahorro de energía reanuda el estado anterior después de encender. Se requiere un cambio manual para modificar el modo.
+
+.. only:: not latex
+
+   .. list-table::
+      :header-rows: 0
+      :widths: 12 88
+
+      * - **ADVERTENCIA**
+        - Cuando el modo de Ahorro de Energía está activado, el producto apaga automáticamente la salida de CA si el consumo del dispositivo conectado se mantiene bajo durante el período establecido. Al alimentar dispositivos que requieren suministro eléctrico continuo, como frigoríficos, routers, cámaras de seguridad o bombas de aire para acuarios, se recomienda desactivar el modo de Ahorro de Energía para evitar que una interrupción inesperada afecte a su funcionamiento.
+
+PANTALLA LCD
+------------
+
+.. only:: html
+
+   .. raw:: html
+
+      <table style="width:100%; border-collapse:collapse; margin:0.75rem 0 0.5rem 0;">
+        <tr>
+          <td rowspan="6" style="width:24%; border:1px solid #cfcfcf; padding:8px; vertical-align:top; text-align:center;">
+            <img src="asset:operation/lcd_mode" alt="Modo de pantalla LCD." style="max-width:140px; width:100%; height:auto; display:block; margin:0 auto;">
+          </td>
+          <td rowspan="3" style="width:18%; border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Encendido breve</td>
+          <td style="width:12%; border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Encender</td>
+          <td style="width:46%; border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Presione el botón POWER principal o cuando el producto se esté cargando.</td>
+        </tr>
+        <tr>
+          <td style="border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Apagar</td>
+          <td style="border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Presione el botón POWER principal.</td>
+        </tr>
+        <tr>
+          <td style="border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Apagado automático</td>
+          <td style="border:1px solid #cfcfcf; padding:8px; vertical-align:top;">La pantalla LCD se apaga automáticamente y entra en modo de suspensión después de 2 minutos de inactividad.</td>
+        </tr>
+        <tr>
+          <td rowspan="3" style="border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Estable en (durante el estado de carga o descarga)</td>
+          <td style="border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Encender</td>
+          <td style="border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Presione dos veces el botón POWER principal cuando el producto esté encendido.</td>
+        </tr>
+        <tr>
+          <td style="border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Apagar</td>
+          <td style="border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Presione el botón POWER principal.</td>
+        </tr>
+        <tr>
+          <td style="border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Apagado automático</td>
+          <td style="border:1px solid #cfcfcf; padding:8px; vertical-align:top;">La pantalla LCD se apaga automáticamente después de |DEFAULT_STANDBY_DURATION| de inactividad.</td>
+        </tr>
+      </table>
+
+.. only:: latex
+
+   .. raw:: latex
+
+      \begin{HBLcdModeTable}{asset:operation/lcd_mode}
+      \HBLcdModeFirstGroup{Encendido breve}{Encender}{Presione el botón POWER principal o cuando el producto se esté cargando.}{Apagar}{Presione el botón POWER principal.}{Apagado automático}{La pantalla LCD se apaga automáticamente y entra en modo de suspensión después de 2 minutos de inactividad.}
+      \HBLcdModeSecondGroup{Estable en (durante el estado de carga o descarga)}{Encender}{Presione dos veces el botón POWER principal cuando el producto esté encendido.}{Apagar}{Presione el botón POWER principal.}{Apagado automático}{La pantalla LCD se apaga automáticamente después de |DEFAULT_STANDBY_DURATION| de inactividad.}
+      \end{HBLcdModeTable}
+
+También puede configurar el modo de visualización de la pantalla en la aplicación Jackery.
+
+.. hb-capability-begin: AC/DC输出记忆恢复
+
+Función de reanudación de Salida de CA y CC
+----------------------------------------------
+
+Esta función memoriza el estado de la salida y reanuda automáticamente las salidas de CA y CC bajo condiciones definidas.
+
++----------------------------------------------------------------------------+-----------------------------------------------------------+
+| Condiciones de reanudación automática                                      | Condiciones sin reanudación automática                    |
++============================================================================+===========================================================+
+| Encendido/Reiniciar después de apagado o reinicio                          | Apagado manual de la salida (botón/App)                   |
++----------------------------------------------------------------------------+-----------------------------------------------------------+
+| SOC de la batería ≥ límite de descarga +10 % después de alcanzar el límite | Apagado de salida en modo de ahorro de energía            |
+|                                                                            +-----------------------------------------------------------+
+|                                                                            | Apagado de salida activado por protección                 |
++----------------------------------------------------------------------------+-----------------------------------------------------------+
+| Actualización OTA completada                                               | Apagado de salida activado por temporizador de descarga   |
++----------------------------------------------------------------------------+-----------------------------------------------------------+
+
+.. hb-capability-end:
+
+COMBINACIONES DE TECLAS
+-----------------------
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40 25 35
+
+   * - Botones
+     - Operación
+     - Función
+   * - Botón POWER principal + Botón CA
+     - Mantenga pulsados ambos botones durante 3 segundos
+     - Encender/apagar el modo de ahorro de energía
+   * - Botón POWER principal + botón CC/USB
+     - Mantenga pulsados ambos botones durante 3 segundos
+     - Restablecer Wi-Fi y Bluetooth
+   * - Botón CC/USB + Botón CA
+     - Mantenga pulsados ambos botones durante 1 segundo
+     - Encender/apagar Wi-Fi y Bluetooth

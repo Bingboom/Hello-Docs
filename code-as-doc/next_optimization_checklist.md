@@ -1,6 +1,9 @@
 # Next Optimization Checklist
 
-Updated: 2026-06-18
+本轮说明书盘活的 34 项任务在[执行台账](dev/manual_revitalization_execution.md)维护唯一状态，
+以 REV-ID 关联方案、依赖、验收和 PR；本清单保留既有工程工作，不复制该批次勾选项。
+
+Updated: 2026-08-21
 
 This file tracks the next optimization wave after the completed maintainability refactor campaign.
 Use it as the active execution checklist for the upcoming maintainability and stability work.
@@ -428,7 +431,7 @@ The long-form prose assembly re-launch (Workstream N) stays out of this mileston
 gated on the same design.
 
 - [ ] PR E1: Freeze release snapshots (Workstream J)
-  - Status: `pending`
+  - Status: `in_progress` — E1-PR1 freeze/binding implemented; E1-PR2 rebuild-equivalence proof remains
   - Target files:
     - [`../tools/release_manifest.py`](../tools/release_manifest.py)
     - [`../tools/utils/path_utils.py`](../tools/utils/path_utils.py)
@@ -437,6 +440,7 @@ gated on the same design.
     - a timestamped snapshot (source revision, exported files, target matrix) is archived at release time
     - `release-manifest` binds to that frozen snapshot through `path_utils`, not a re-pulled live snapshot
     - rebuilding from the archived snapshot reproduces the release output
+  - E1-PR1 note (2026-07-31): versioned Publish archives exported data and attachments under the approved `versions/<version>/snapshot/` lifetime-retained path, writes an immutable identity, binds JSON/CSV manifests to it, and carries the archive out of temporary queue worktrees. Same-version rebinding and archive drift fail closed.
 
 - [ ] PR E2: QC closed-loop tail — sync-time `record_id` sidecar (Workstream I)
   - Status: `pending`
@@ -789,8 +793,13 @@ stock-manual-onboarding evaluation.
     - the first corpus-driven template fix is applied by a human through the existing Workstream Q runbook
     - the 模板复发修正率 metric is computable
 
-- [ ] PR H3: Three-flow dashboards — ops face + value face (工程 H3, scope expanded 2026-07-03)
-  - Status: `pending`
+- [x] PR H3: Three-flow dashboards — ops face + value face (工程 H3, scope expanded 2026-07-03; done 2026-07-03)
+  - Status: `done` — `tools/flow_dashboard.py report` emits both faces
+    (markdown + json under `reports/flow_dashboard/`) with monthly buckets;
+    `pdf_annotate` appends a run ledger (`--backfill-summary` for history);
+    the two template-flow metrics correctly show `no_data` until H1/H2 land.
+    First real run immediately surfaced an actionable signal: reflow rate 0%
+    because landed deltas were never stamped `accepted` in the ledger.
   - Note: expanded from the original five-metric health report into a
     **two-face dashboard**. Ops face (system health, for the operator):
     reflow rate, TM hit rate, second-revision rate, template recurrence rate,
@@ -818,6 +827,805 @@ Carries its own two metrics: 客服问题命中率 and 带来源答案比例. Na
 downstream of stock-manual onboarding (content must be in the system before it
 can be cited). Size it as its own workstream after Milestone H and the
 stock-onboarding pilot; do not let it slip into an "entry-point polish" PR.
+
+## 6g. Milestone I: Unknown-Unknown Probes + Handover Assurance
+
+Registered 2026-07-12 (operator-approved) from the workspace census ×
+esp-docs comparison (see the espressif/esp-docs defensive-subsystem
+inventory). Theme: auto-manual's defenses concentrate on **content
+correctness**; the blind spots concentrate on **publication
+sustainability** (links, language parity, environment drift, warning
+debt) and **maintainer hand-over**. These are sensors first, fixes
+second — each probe converts an unknown-unknown into a measured known.
+
+- [x] PR I1: Language-tree parity check (探针·跨语言结构漂移; done 2026-07-13, #657)
+  - Status: `done` — `tools/check_docs_lang_parity.py` wired into check:
+    foreign-shell (script ratio), foreign lang-tag blocks, per-lang page-set
+    completeness; known-exceptions CSV keeps pre-existing debt green. All
+    three historical incident classes replicated in tests and tripped.
+    First run caught live debt: the us-en line inherits the trilingual
+    page_shared/en preface — trim decision pending with the operator.
+- [x] PR I2: Build-warning ratchet (探针·警告债棘轮; done 2026-07-13, #658)
+  - Status: `done` — `tools/warning_ratchet.py` + `-w` capture on every
+    Sphinx run; staged enforcement (in-build hook reports by default,
+    `AUTO_MANUAL_WARNING_RATCHET=strict` fails; standalone CLI always
+    strict, missing baseline exits 2). sphinx-html baseline seeded; flip
+    the in-build default to strict after 2–3 stable queue rounds. xelatex /
+    extractor streams reuse the same engine when attached.
+- [x] PR I3: Environment pinning + version provenance (探针·环境漂移; done 2026-07-13, #656; priority raised after #648)
+  - Status: `done` — requirements.lock; `tools/toolchain_provenance.py`
+    single collector (python/packages/xelatex/pandoc/InDesign/lock sha);
+    doctor prints the block; release manifest embeds it (JSON + CSV).
+    Probe caught real drift on day one (venv rebuilt on Python 3.14).
+- [x] PR I4: Printed-URL inventory (探针·印刷外链; done 2026-07-13)
+  - Status: `done` — `tools/printed_url_inventory.py` scan/check/liveness;
+    tracked `data/printed_url_inventory.csv` (first scan: 6 targets — 4
+    warranty mailboxes, jackery.jp, jp mailbox; liveness clean); QR targets
+    register by hand in `data/printed_url_manual_entries.csv`; monthly ops
+    rhythm updated (ops guide §4.8).
+- [x] PR I5: Feishu base rebuild drill (探针·灾备演练; first drill run 2026-07-13)
+  - Status: `done` — drill protocol + first measured run in ops guide §4.7:
+    scratch base + 2 tables + fields + 25 seed rows restored from repo
+    artifacts alone in **86s** (read-back verified). Headline finding: the
+    schema mirror covers only 2/20 business tables — the other 18 tables'
+    field structures live only in Feishu. Follow-up CLOSED same day:
+    whole-base export committed (`bitable_schema/business_base_manifest.json`
+    21 tables/366 fields + `tm_base_manifest.json` 2/58), complex fields
+    carry rebuild detail (lookup source, link target, formula property);
+    re-export rhythm documented in ops guide §4.7.
+- [x] PR I0: ONBOARDING.md + cold-start drill protocol (接手保障)
+  - Status: `done` — repo-root ONBOARDING.md is the single first-hour
+    entrypoint (two-plane map, bus-factor register, golden-path drill);
+    its quality is enforced by the quarterly cold-start drill (§7 of the
+    file): a fresh maintainer or memory-less agent runs the golden path
+    from repo docs alone; every blocker is a doc bug fixed same-day and
+    logged in code_optimization_log.md.
+- [x] PR I6: Repo-health metrics on the ops dashboard (接手保障·复杂度可见; done 2026-07-13)
+  - Status: `done` — `repo_health_metric` on the ops face: worktree count,
+    dirty files, tracked `docs/_build` files, tools module count and the
+    largest module — complexity growth is now a monthly number; a rising
+    trend is the signal to open a simplification workstream.
+
+## 6h. Milestone J: Asset Loop — 图片与 .ai 源的单一真相
+
+Registered 2026-07-13 (operator-approved decisions: .ai lives in the Feishu
+attachment column; existing text-burned illustrations get scheduled textless
+rework; temporary crops/placeholders register as explicit debt when the
+publish gate lands; the maintainer registers on designers' behalf). Extends
+the single-source principle to assets: the .ai file is the source, exports
+are projections, and a textless base image + data-layer text makes an asset
+language-neutral (the LCD-hero precedent).
+
+- [x] PR J0: Asset census + registry (P0; done 2026-07-13)
+  - Status: `done` — the initial Feishu census is retained as historical input,
+    while the build-facing mirror is `data/asset_registry.csv`; the legacy table
+    is not consumed by the new asset pipeline. After the registered vector
+    harvest in the stacked asset PRs, the current mirror is
+    **63 成品 / 3 临时替代 / 4 缺失 / 1 隔离** (the missing list IS the
+    design-side request list); repo mirror `data/asset_registry.csv`;
+    naming contract `<asset_key>[-<lang>].{pdf,png}`; ops guide §4.9.
+- [x] PR J1: Asset resolver + publish gate (P1; done 2026-07-27)
+  - Status: `done` — `build.py asset-check` validates registry exports, final
+    bundle assembly resolves semantic `asset:` references after review overlay
+    with target/status gates, and all 183 template image/figure directives now
+    resolve through `asset:`. Resolution refuses every non-`✅成品` row
+    (verified live: an unregistered key, the `⛔隔离` back cover, and the
+    `🔧临时替代` warning lockup are all rejected), and `--publish` additionally
+    refuses the `--allow-temporary` escape hatch.
+  - The registry mirror joined `sync-data` via `tools/sync_asset_registry.py`
+    (the capability-mirror pattern: pure transform + injected deps + tracked
+    CSV + `derived_files` manifest entry). It is an **overlay, not a replace**:
+    the Feishu `04_资产定义` table owns what an asset is and whether it may
+    build (类别 / 语言维度 / 状态 / 待无字化 / 适用机型 / 适用区域 / 语言变体),
+    while the repo keeps `导出物路径` and `内容哈希` (they describe committed
+    bytes) plus `备注` (maintenance history; the Base's own notes are intake
+    rationale, a different record). Rows are never deleted — a vanished Base
+    row must not drop a registry row templates still resolve through — and the
+    merged CSV is parsed back through the resolver's own loader before it is
+    written, so bad Base data fails the sync instead of landing a registry the
+    build would reject. Table coordinates come from the frozen
+    `data/asset_base_bindings.json`, so no new GitHub secret is required.
+    Live dry run against the Base: 10 managed rows, 82 in / 82 out,
+    byte-identical, and a simulated Base edit propagates while the repo-owned
+    columns survive.
+- [ ] PR J2: .ai sources into the pipeline (P2)
+  - Status: `in progress` — deterministic `asset-intake` now freezes and splits
+    the JE-1000F US PDF-compatible `.ai` master into verified archive/previews,
+    recipe exports, manifest/CSV, and a reproducible ZIP; its full source hash
+    and verified Base record pointer are recorded in `data/asset_sources.csv`.
+    The three dedicated `04_资产*` tables now exist, their live bindings are
+    frozen in `data/asset_base_bindings.json`, and the AI/ZIP/manifest attachment
+    round trip plus 10 definition / 142 export rows have been verified. The
+    registry mirror still needs to join `sync-data`, and later native-artboard
+    automation needs evidence from more than this PDF-compatible master.
+  - Done when: designers' .ai files live in the registry's attachment
+    column with content hashes; the one-page designer workflow (deliver →
+    register → sync) is documented; optional ExtendScript batch export
+    (the indesign_finalize.jsx precedent) evaluated.
+- [ ] PR J3: Publish full assembly (P3)
+  - Status: `in progress` — publish lineage, the publish gate and the QR
+    cross-check landed; the InDesign package leg is still open.
+  - Done: the release manifest gained an `assets` section
+    (`tools/release_asset_lineage.py`, the I3 provenance shape) recording the
+    bundle fingerprint, the registry-snapshot hash, and every registry-backed
+    asset the build actually consumed with its format, content SHA, status and
+    resolution source; the release CSV gained four flattened columns. `publish`
+    gained a gate between the last prepare and the manifest that refuses a
+    bundle which consumed a `🔧临时替代`, `❌缺失` or `⛔隔离` asset, or that
+    carries no frozen lineage at all. QR assets cross-check the printed-URL
+    inventory inside `asset-check` (already a CI job): an approved `二维码` row
+    must declare what it encodes in `data/printed_url_manual_entries.csv`, a
+    non-shippable one may not be a live printed target, and a printed target
+    may not point at an unregistered asset.
+  - Evidence: a real `publish` for JE-1000F/US passes the gate with 20 registry
+    assets and bundle `9f7ede5431b9`, and the manifest carries the same numbers.
+    The gate deliberately does **not** block `legacy-path` images — the real
+    bundle still consumes 50 of them from data-generated pages, so blocking
+    would stop every publish instead of surfacing debt; the count is recorded in
+    the manifest so it can be ratcheted down later. **Ratcheted to zero on
+    2026-07-27:** #726/#730 keyed the review overlay's 13 path references
+    (two of which were stale shared images superseded by target overrides —
+    operator-reviewed before flipping), and the finalizer now attributes the
+    37 synced Feishu attachment images to their `feishu/*_attachments`
+    collection rows as `feishu-attachment` manifest entries (per-file bytes
+    recorded, collection status gates publish, RST keeps path references
+    because file identity is the Feishu token). JE-1000F/US:
+    `legacy_path_count=0`, `registry_asset_count=59`. The back-cover QR was
+    decoded independently rather than trusted from its 备注: the approved AI
+    candidate encodes `160102000404` (the master's own document number, not a
+    URL), while the quarantined frozen reference encodes the older
+    `160102000161`.
+  - Also done: the release manifest gained an `indesign_package` section
+    (`tools/release_indesign_package.py`, same collector shape) recording the
+    IDML, INDD, InDesign PDF, delivery handoff zip (which already carries
+    `Links/` and the font manifest from `tools/idml/delivery.py`) and both the
+    finalize and parity reports with sha256, plus the preflight numbers and the
+    parity verdict; the release CSV gained six columns. Finalize and parity
+    artifacts now have a canonical home beside the production IDML in
+    `docs/_build/<model>/<region>[/<lang>]/idml/`, documented in the ops guide.
+    `publish_meta.json` gained `handoff_package_path`: the queue already copied
+    the handoff zip into the release version directory, but nothing pointed at
+    it. Every part is optional — InDesign finalize and parity run on an
+    operator Mac, not in CI, so an unattended publish records what exists and
+    marks the rest absent instead of failing.
+  - Verified against a real build directory (`auto-manual-codex`): the collector
+    picks up the 741 KB production IDML and the 3.2 MB `1.7_handoff.zip`, hashes
+    both, and reports `complete=false` for the absent INDD and preflight.
+  - Done when: an operator finalize run for JE-1000F/US is captured end to end
+    (`complete=true` with `parity.accepted=true`) — currently blocked, see the
+    reference-layout drift note below.
+- [ ] Open finding (2026-07-27, half resolved): production IDML still cannot be
+  built from a clean checkout — the remaining half needs an **operator decision**
+  - `python build.py idml --idml-mode production --model JE-1000F --region US`
+    fails the same-source contract with
+    `source_identity.snapshot_sha256 does not match the current manual IR;
+    source_identity.layout_params_sha256 does not match the current manual IR`.
+  - **The layout half is fixed.** Root cause reproduced exactly: #720 refreshed
+    `layout_params_sha256` and then took one more correction to
+    `data/layout_params.csv` (`lang_en_idml_ups_caution_space_after`
+    9.9pt -> 15.9pt) without recomputing it — reverting only that value in the
+    committed CSV reproduces the pinned `046f6f5a…`. The pin agreed in #715 and
+    #718, so it was a #720 regression, not a standing condition. The pin now
+    describes the committed file, and `tools/check_reference_layout_pins.py`
+    (its own CI job) fails on this class of drift from now on. **Still owed: the
+    approved reference layout has not been re-validated against 15.9pt by a
+    parity run** — that needs an operator finalize + `idml_pdf_parity.py` pass.
+  - The snapshot half is not reproducible by design: `snapshot_sha256` binds the
+    contract to one phase2 snapshot, and `data/phase2/` is untracked apart from
+    `page_registry.csv`, so no clean checkout can reconstruct it without the
+    operator's local snapshot.
+  - No CI job builds production IDML, which is why nothing caught this for three
+    merges; #720's own post-merge run was additionally cancelled by the merges
+    that followed it. The new pin guard covers the repo-derived pins; the
+    snapshot pins remain unverifiable from a checkout by design.
+  - **Step-by-step procedure:
+    [`dev/reference_layout_rebind_parity_runbook.md`](dev/reference_layout_rebind_parity_runbook.md)**
+    — copy-pasteable, with the release gate on `page_bindings=0` and the
+    verification status of each step stated.
+  - The snapshot half is what still blocks the build; the error is now only
+    `source_identity.snapshot_sha256 does not match the current manual IR`.
+    Note the chicken-and-egg the runbook resolves: rebinding needs a
+    `manual.ir.json`, which the production export writes — but the production
+    export is what the gate refuses. `--idml-mode flow` produces the IR without
+    passing through that gate (verified 2026-07-27). A dry-run of the rebind
+    reports `page_bindings=0 composition_map=unchanged`, so it moves the data
+    snapshot identity only and touches none of the 52 page bindings.
+    `tools/reference_layout_rebind.py --plan … --manual-ir … --write` is the
+    intended repair, but the contract carries an `approval` block, so rebinding
+    it against a freshly synced snapshot is an approval decision.
+  - JP is blocked separately and for a different reason:
+    `page-0002-01_meaning_of_symbols: skipped_raw=1`.
+
+- [ ] **JE-3000C KR 的 13 幅插图没有可复现的提取路径**（2026-08-29 登记）。这
+  条产线的 15 个二进制里，只有 `overview/je3000c_kr/right_art` 有配方
+  (`data/asset_recipes/manual_je3000c_eu_uk_overview.json`)；其余 13 幅（operation
+  ×5、charging ×3、network_pairing_panel、app ×2、overview_front、封面整页）既无
+  `data/asset_recipes` 条目也无 `data/asset_sources.csv` 源行，PR #964 的提交说明
+  也没有记录来源。资产登记行锁住了**已提交的字节**（哈希）与可建状态，但没人能
+  从母版重新裁切这批图。收敛路径：操作者提供 KR 母版 → 登记
+  `data/asset_sources.csv` 源行 → 按 `asset-textless-extraction` skill 为 12 幅
+  矢量图写一份 `data/asset_recipes/manual_je3000c_kr_*.json`。同时这 14 行对飞书
+  `04_资产定义` 镜像而言是 unmanaged（与 `page/jbp2000b_us/cover` 同状态，sync 不
+  删除、原样放行），应在下一轮资产入库时补登。
+
+- [ ] **多语言手册的插图是按区域分版的，不是同图换字**（2026-09-15 登记）。JE-1000H
+  EU 一本 PDF 承载六个语言块，逐张像素比对后确认：**英语块画的是英标三扁脚插座
+  (BS 1363)，fr/es/de/it/uk 画的是欧标圆孔 (Schuko)**；进一步地 de/it/uk 三者字节
+  相同（`inbox_unit`/`inbox_cable`/`inbox_documents`/`ups` 四张），it/uk 另有三张
+  相同（`charging_solar`/`charging_solar_adapter`/`lcd_map`），而 en/fr/es 三者两两
+  互不相同。126 条配方条目只落成 115 张唯一图。
+
+  风险在于这类错误**文本层完全看不出来**：若用英语底图配本地化标注，标注文字全对，
+  印出来却是错的插座制式。现有的 `content_lint`、术语校验、语言纯度门都不覆盖图像
+  内容。
+
+  已有护栏：`tests/test_je1000h_eu_en_web.py::test_every_locale_binds_its_own_finished_panels`
+  断言 JE-1000H 六语各自独立、非英语不得与英语同哈希。全库扫描（按
+  `docs/renderers/web/assets/<model>_<region>_<lang>/` 比对）当前**无任何产线复用英语
+  美术稿**。
+
+  未收敛的部分：
+  1. 该护栏是按产线写死的，只管 JE-1000H。目前有多语言成品整图的只有 `je1000h_eu`
+     与 `je2000f_eu` 两条线；其余欧规多语产线（JE-2000E / JE-3000C / JE-3600A /
+     JBP-2000B）的非英语路线走的是组合图而非成品整图，其底图是否带区域制式、是否
+     与英语共用，尚未逐条核实。
+  2. 资产登记表没有"该图画的是哪种插座制式"这一维度，`语言变体` 只记语言。没有数据
+     层可供闸门判断，只能靠逐产线的哈希互斥测试。
+  3. de=it=uk 的字节相同是**巧合而非规则**（恰好这几张无文字），不得据此把三者合并成
+     一套；一旦某张图后续加了文字就会分叉。
+
+- [ ] **JE-1000H EU 印刷版的六处源内容缺陷**(2026-09-15 登记,随非英语译文入库发现)。把
+  PDF 六个语言块的译文抽进冻结源时逐条比对出来,均属**已印制成品**的问题,需设计/内容侧
+  回退,不是本仓可自行改正的:
+
+  1. **德语块的安全符号与文字对错了**(最严重)。`symbols_blocks` 表中,🚫扳手(禁拆解)图标
+     配的文字是「Vermeiden Sie Hitze.」(避免受热),🚫火焰(禁明火)图标配的是
+     「Demontieren Sie das Produkt nicht.」(请勿拆解)。其余五种语言均正确。入库时已按
+     行键语义(`do_not_dismantle` / `no_open_flame`)对正,**未沿用印刷错配**。
+  2. **德语与意大利语的 LCD「充电计划」整段描述印的是法语**(`lcd_icons_blocks` 第 4 行)。
+     入库时留空该两格,改走 `icon_desc_en` 回落(渲染器有 `fallback_columns`),避免德/意手册
+     里出现整段法语。德语该行名称印作「Ladeplan Plan」(德法混排),按原样入库。
+  3. **`ENVIRONMENTAL OPERATING TEMPERATURE` 在德语和意大利语块未翻译**,印的是英文原文。
+     按原样入库到 `spec_titles.title_de` / `title_it`。
+  4. **意大利语与乌克兰语的商标注记里混着德语 "und"**:「USB Type-C® **und** USB-C® sono
+     marchi registrati…」/「… **und** … є зареєстрованими…」。按原样入库。
+  5. **乌克兰语的 WARNING 标签印成意大利语 `AVVERTENZA`**(`symbols_blocks` signal 行)。
+     按原样入库。
+  6. **法语概览页的额定值文字本身被截断**为「1800 W nomina」(应为 nominal)。属成品图内容,
+     已随 `web/je1000h/eu/fr/overview_front` 原样入库并在配方/登记表备注。
+  7. **德语加电包扩容页的警示词印成法语 `ATTENTION`**(同一页上方 UPS 段落却是正确的
+     `Vorsicht`)。新建的 `targets/je1000h/07_extra_battery_de.rst` 用 `symbols_blocks` 的
+     德语审定词 `VORSICHT`,**未沿用印刷错词**。
+
+  另:乌克兰语「自发自用模式」印作「Режим самозабезпечення」,而本产线其余型号统一用
+  「Автономний режим」,属同产线术语分叉。已按各自印刷原文入库,并在
+  `data/capability_page_rules.csv` 给能力门补了该同义词(放宽,非收紧)。待术语侧统一。
+
+- [x] **JE-1000H 非英语路线的页面模板骨架**(2026-09-15 登记,同日闭合)。当时六语 Web 投影
+  已绿但底层有两类缺口,现均已处理:
+
+  - `03_product_overview` / `05_operation_guide` / `12_app_setup` 的 `_placeholder` 模板里,
+    标注并非硬编码而是 `|MAIN_POWER_BUTTON_LABEL|` 这类取数 token——英文残留的真因是
+    `Spec_Master.csv` 尚有 15 行未填、回落成了英文。补齐后该表 53/53(乌语因一行纯数值单位
+    也补齐),**五语 md 的英文标注残留全部归零(含图片 `alt` 无障碍层)**。标签取值:印在概览页
+    上的 10 个用 PDF 原文(按字体权重区分标注与规格值,左栏 8 项/右栏 7 项六语完全对齐);
+    `total_output` 两行未印在该页,用 JE-2000E 已审定译法与式样代入 JE-1000H 数字;
+    德/意的 `dc_input` 标签在 PDF 里拆两行印,改用 JE-2000E/JE-2000F 一致的合并形态。
+    全表数字序列自校验 0 处不一致。
+  - `07_extra_battery` 原先回退到 `targets/je2000e/07_extra_battery.rst`(仅注释的空载体),
+    页内没有图位。现按 `targets/je3600a/07_extra_battery_<lang>.rst` 先例新建了五个按语言
+    模板,内容从 PDF 该小节抽取(标题/导语/4 条注意事项/3 个物品标签,抽取器先在英语上验证
+    10 项逐字命中模板),五个清单加 `JE-1000H` model_override,并重新绑定 `battery_pack`——
+    非英语成品整图由 19 张增至 20 张。
+
+  遗留一小项:新模板的 `:alt:` 是**沿用 JE-3600A 已审定式样改写**的(印刷版没有 alt 文本),
+  乌语那条按同结构用乌语手册自身词汇撰写,建议随下一轮语言审校一并过目。
+
+## 6i. Milestone K: Enterprise Ops Hardening + Platform Consolidation
+
+Milestone status: `pending`
+Milestone target: `tier-driven, no calendar — Tier 1 = current real execution (4 items); Tier 2 = on business-pain trigger; Tier 3 = requires dedicated capacity`
+Milestone note: registered 2026-07-17 as the PR-level breakdown of Workstreams
+T (Phase 0), U (Phase 1), and the Workstream V design gate (Phase 2) from the
+production-readiness review
+([`reviews/production_readiness_review_2026-07-17.md`](reviews/production_readiness_review_2026-07-17.md)).
+Theme: the review found the code plane enterprise-grade but the operating plane
+not. V implementation is deliberately **not** broken down here — only its
+design doc (K15); implementation PRs get registered after the design is
+approved, mirroring the Workstream N gating. Items touching
+`.github/workflows/**`, `requirements.txt`, git history, or queue semantics are
+operator-gated per `AGENTS.md` §8.7 and are marked below.
+**Execution tiers (operator triage 2026-07-17):** so the list reads as "4 in
+flight", not "15 pending", the items are grouped into three tiers below.
+Tier assignment governs execution order only; the T/U/V phase mapping and each
+item's technical scope are unchanged. Tier 1 items are `pending`; Tier 2/3
+items are `deferred` with an explicit `Trigger:` line and flip to `pending`
+when their trigger fires (per §1 update rules). The operator's triage named 12
+items; **K3, K14 (→ Tier 2) and K6 (→ Tier 3) are provisional placements by
+the same logic — re-tier in review if wrong.**
+
+### Tier 1 — 当前真实执行 (current real execution)
+
+Entry rule: no trigger needed. These are the next platform slices between
+business deliveries, in this order: K4 → K5 → K7 → K1.
+
+- [x] PR K4: Scheduled versioned export of the phase2 source tables + restore runbook (T4)
+  - Status: `done`
+  - Completed: `2026-07-20` (delivery merged 2026-07-17; reopened by the
+    2026-07-19 false-green verification; closed by the first complete
+    business-plane artifact)
+  - Closing verification (2026-07-20, after #684's guard flip + mirror sync):
+    dispatched `Phase2 Content Backup` in Hello-Docs — run
+    [`29715297977`](https://github.com/Bingboom/Hello-Docs/actions/runs/29715297977)
+    green, artifact opened and verified: business **21/21 tables / 1,314
+    rows**, TM **2/2 tables / 888 rows**, `missing_tables` empty on both
+    manifests, every CSV sha256 matches. Exit-code propagation is proven by
+    mechanism (shell simulation in #684) rather than a live red run — the
+    plane fix removed the failing condition before a red could be observed;
+    the next real export failure exercises it end-to-end.
+  - Note: delivered as `tools/bitable_content_backup.py` (export / restore /
+    verify, reusing the `bitable_schema` primitives; restore is dry-run by
+    default, requires an explicit target token, refuses non-empty tables, and
+    never writes formula/lookup/link columns), the nightly
+    `phase2-content-backup.yml` workflow (00:30 UTC + dispatch, 90-day
+    artifact retention, sentinel Issue on failure), the
+    `phase2-content-backup` env preset, and ops guide §4.7b (restore runbook
+    + drill record). **Live drill 2026-07-17:** TM base full export 10s /
+    business base 21 tables 58s; scratch-base restore 888/888 rows verified
+    (~25s). The drill caught real drift on day one: select options added to
+    the live base after the schema snapshot made batch-create reject the
+    whole table (800030005) — restore now pre-syncs missing select options
+    via field-update. Known limitation (recorded in the runbook): multi-select
+    cells restore as one concatenated option; fidelity fix is a follow-up.
+    **First-nightly verification 2026-07-19:** Actions run
+    [`29672759849`](https://github.com/Bingboom/auto-manual/actions/runs/29672759849)
+    was green, and every included CSV passed manifest row-count and SHA-256
+    checks, but the artifact was incomplete: business exported 18 tables /
+    850 rows and missed `01_数据入库`, `02_文档构建`, and
+    `能力→章节映射规则`; TM exported 0 tables and missed
+    `Translation_Memory` and `Terms`. The exporter returns non-zero for
+    missing tables, but the workflow pipes it through `tee` without
+    `pipefail`, so the shell reports `tee`'s zero exit code. K4 is reopened
+    until the workflow failure is propagated and a subsequent artifact
+    contains the complete 21 + 2 table set. The restore scratch Base
+    `演练-K4内容恢复-20260717` was moved to the Feishu recycle bin on
+    2026-07-20 after its exact token and owner were rechecked; an exact-name
+    search then returned no result.
+    **Exit-propagation fix landed 2026-07-20:** both export steps now declare
+    `shell: bash` explicitly (GitHub's DEFAULT run shell is `bash -e {0}`
+    without pipefail; the explicit form is `bash --noprofile --norc -eo
+    pipefail {0}`) — verified by local simulation of both shells (0 vs 1).
+    Review of the false-green run also found it had executed the
+    "Close tracking issue on recovery" step, so a false green would silence
+    an already-open sentinel too.
+    **Root cause proven 2026-07-20 (plane mismatch, NOT bot permissions):**
+    the same bot reads both canonical bases fully from the operator machine;
+    the CI failure signature matches the OLD engineering-plane base exactly
+    (18/21 manifest names present; `数据入库表`/`文档构建表` are the old
+    names of the two missing `0x_` tables; `能力→章节映射规则` absent), and
+    auto-manual's `FEISHU_PHASE2_BASE_TOKEN` secret predates the 06-11 base
+    migration — it is the ENGINEERING-plane binding, correct for
+    parity/promote, wrong for this backup; the TM secret is invalid for the
+    base API (→ 0 tables, mechanism reproduced). Fix: the workflow guard is
+    flipped to run ONLY in Hello-Docs (business plane), whose secrets bind
+    the new bases the manifests describe; sentinel Issues open there (the
+    backport-reminder precedent). Remaining to close K4: one complete 21 + 2
+    artifact from a Hello-Docs run (dispatch once after merge, or wait for
+    the nightly).
+  - Original note: the I5 drill proved schema restore works (86s from repo
+    artifacts) but covers structure only — table CONTENT had no point-in-time
+    backup; a destructive Bitable edit was unrecoverable. Read-only export, no
+    source-table writes.
+  - Target files:
+    - [`../tools/data_snapshot.py`](../tools/data_snapshot.py)
+    - [`../tools/bitable_schema.py`](../tools/bitable_schema.py)
+    - [`../user-guide/closed_loop_ops_guide.md`](../user-guide/closed_loop_ops_guide.md)
+  - Done when:
+    - a scheduled workflow exports full phase2 table content to a dated, retained artifact (retention window recorded)
+    - a written restore runbook extends ops guide §4.7 from schema-rebuild to content-restore
+    - one content-restore drill has been run and timed against a scratch base
+    - one scheduled artifact has been opened and verified to contain all 21 business + 2 TM tables, with a non-zero export exit code reaching the job result
+
+- [x] PR K5: Queue-failure alerting via the sentinel Issue pattern (T5)
+  - Status: `done`
+  - Completed: `2026-07-17`
+  - Note: delivered as the reusable composite action
+    `.github/actions/queue-sentinel-issue/` (open-on-failure / close-on-
+    success via github-script; cancelled runs open nothing) wired as the
+    final `if: always()` step of all three queue workflows with per-workflow
+    labels (`queue-failure-build` / `-draft` / `-start-review`).
+    **Issue titles carry the record_id**, so the open/close lifecycle is
+    per-record: the next successful run of the same record closes its own
+    issue (batch runs use a `batch` title). The failure body names the
+    writeback silent-divergence case (build succeeded, Bitable row stale) —
+    exit-code propagation was verified: writeback failures join the queue
+    runner's `failures` list, so the job fails and the sentinel fires.
+    Wiring is pinned by `tests/test_queue_failure_sentinel.py` (permissions,
+    last-step position, `always()`, distinct labels). Operator-facing doc:
+    ops guide §3b. First live firing will be observed on the next real
+    queue failure — nothing to pre-verify beyond a dispatch test.
+  - Original note: touches `.github/workflows/**` → operator-gated. Today
+    `cred-health-check` / `feishu-schema-parity` / `backport-reminder` open and
+    close Issues, but a failed build-queue run only writes `FAILED …` to the
+    Bitable row and fails the Actions run — nobody is notified unless watching.
+  - Target files:
+    - [`.github/workflows/feishu-build-queue.yml`](../.github/workflows/feishu-build-queue.yml)
+    - [`.github/workflows/feishu-draft-build-queue.yml`](../.github/workflows/feishu-draft-build-queue.yml)
+    - [`.github/workflows/feishu-start-review.yml`](../.github/workflows/feishu-start-review.yml)
+  - Done when:
+    - a failed queue/draft/start-review run opens or updates a tracking Issue (same open/close lifecycle as the sentinels), carrying record_id, target, and the failure summary
+    - the Issue closes when a subsequent run of the same record succeeds
+    - writeback-failure (build succeeded, Bitable write failed) alerts too — it is the silent-divergence case
+
+- [x] PR K7: InDesign finalize — version lock + second host (T7)
+  - Status: `done`
+  - Completed: `2026-07-21` (code/doc legs merged 2026-07-17; version
+    preflight on the second host 2026-07-20; end-to-end verification
+    2026-07-21)
+  - Closing verification: `ArriettyMac-mini.local` finalized the
+    JE-1000F_US 1.6 handoff zip end-to-end; report matched the main-Mac
+    baseline item-for-item (pages=63, story_count=546, fonts=0, links=0,
+    PDF/X-4 + Japan Color 2001 Coated + JC200103 pass, pin=match, and the
+    11 overset story ids/order/frame positions identical; JSON diff zero
+    after excluding local path fields) ⇒ hosts equivalent. Acceptance
+    semantics corrected in the runbook (2026-07-21): known-good means
+    known-BASELINE — overset ⊞ is a designed designer-workflow item
+    (content present, drag to reveal; no overset=0 package has ever
+    existed), so the criterion is baseline parity, not an empty overset
+    list. The 11 oversets belong to the #692 composition-under-fallback
+    issue, owned by the replica line's complete contract re-baseline
+    (#693/#696 standing follow-up). **Tier 1 (K4/K5/K7/K1) is now fully
+    closed.**
+  - Note (2026-07-17 delivery): version pin committed at
+    `tools/idml/indesign_version_pin.json` (seeded live from the operator Mac:
+    `Adobe InDesign 2026 21.0.1.6`); `tools/indesign_finalize.py` now checks
+    the pin at finalize time via the I3 collector — **mismatch refuses to run**
+    (`--allow-version-mismatch` overrides, recorded in the report's
+    `toolchain` block), plus `--check-host` (runbook step) and `--write-pin`
+    (deliberate-upgrade re-seed). Exact-match policy: even patch-level drift
+    makes finalize output non-comparable, so upgrades re-pin instead of
+    loosening. Second-host procedure:
+    [`dev/indesign_second_host_runbook.md`](dev/indesign_second_host_runbook.md)
+    (prereqs incl. fonts from the handoff manifest, five verification steps,
+    upgrade discipline: all hosts together). ONBOARDING §3 register row
+    updated from "无版本锁（已知风险）" to the documented recovery path.
+    `--check-host` verified live on the operator Mac (match). **Second-host
+    preflight 2026-07-20:** `ArriettyMac-mini.local` also reported an exact
+    match for `Adobe InDesign 2026 21.0.1.6`. No known-good IDML was present
+    in the downloaded-main checkout, so finalize steps 3-5 were not run and
+    this is deliberately not recorded as the one-time end-to-end verification.
+    11 unit tests.
+  - Original note: the top delivery SPOF: the IDML→final-PDF leg runs only on
+    the operator's Mac, no CI, no version lock (ONBOARDING §3 known risk). This
+    PR is documentation + provenance binding, not automation.
+  - Target files:
+    - [`../tools/idml/indesign_finalize.jsx`](../tools/idml/indesign_finalize.jsx)
+    - [`../tools/toolchain_provenance.py`](../tools/toolchain_provenance.py)
+    - [`../ONBOARDING.md`](../ONBOARDING.md)
+  - Done when:
+    - the expected InDesign version is pinned in provenance (a mismatch at finalize time warns loudly, reusing the I3 collector)
+    - a second-host setup procedure is documented and verified once end-to-end on a machine that is not the operator's
+    - the bus-factor register entry for this leg is updated from "known risk" to "documented recovery path"
+
+- [x] PR K1: Make `requirements.lock` the CI/RTD install source (T1)
+  - Status: `done`
+  - Completed: `2026-07-17`
+  - Note: all 10 `pip install -r requirements.txt` sites switched to the lock
+    (manual-validation ×7 jobs, review-preview, feishu-common-setup — which
+    also covers the queue/backup/sentinel workflows — and .readthedocs.yaml),
+    plus the pip cache key (`cache-dependency-path`) moved to the lock so
+    caches invalidate on pin changes. Lock coverage of every requirements.txt
+    top-level dep pre-verified; the PR's own CI run is the on-Linux install
+    proof. requirements.lock header now carries the refresh WHEN/HOW
+    (clean 3.12 venv, freeze, commit lock+txt together); requirements.txt
+    header states it is human-facing ranges only and fixes the stale
+    "Python >= 3.9"; ONBOARDING §8 "构建环境未锁定" line corrected.
+    Deliberate cut: the standalone ruff/mypy tool installs in CI stay
+    unpinned (lint toolchain, not build deps).
+    RTD first-build confirmation (2026-07-21, operator screenshot of RTD
+    project `ht-doc` on the Hello-Docs mirror, build #33636549): the install
+    step runs `python -m pip install -r requirements.lock` and passes (22s)
+    — the K1-owned leg works on RTD. That build still failed downstream in
+    `build.py md --source runtime` (bare clone has no phase2 snapshot), a
+    pre-existing RTD-integration gap unrelated to K1, fixed separately by
+    switching `.readthedocs.yaml` to `--source review-asis
+    --data-root tests/fixtures/phase2` scoped to review bundles committed
+    on main (currently JE-1000F/US).
+  - Original note: touches `.github/workflows/**` → operator-gated. The lock
+    exists (Milestone I3) but no workflow installs from it, so CI drifts from
+    the pinned snapshot silently.
+  - Target files:
+    - [`.github/workflows/manual-validation.yml`](../.github/workflows/manual-validation.yml)
+    - [`../.github/actions/feishu-common-setup/action.yml`](../.github/actions/feishu-common-setup/action.yml)
+    - [`../.readthedocs.yaml`](../.readthedocs.yaml)
+    - [`../requirements.txt`](../requirements.txt)
+    - [`../ONBOARDING.md`](../ONBOARDING.md)
+  - Done when:
+    - every CI python-setup path and ReadTheDocs install from `requirements.lock`; `requirements.txt` stays the human-facing range file
+    - a documented lock-refresh procedure exists (when and how to regenerate)
+    - the stale "Python >= 3.9" comment in `requirements.txt` and the stale "no lock file" note in `ONBOARDING.md` §3 are corrected
+
+### Tier 2 — 业务痛点触发后执行 (execute when the business pain fires)
+
+Entry rule: each item starts only when its named trigger is observed in real
+production (the discovery-engine rule, roadmap §5) — then it legitimately
+jumps the queue. Until then it stays `deferred` and exerts no pressure.
+
+- [ ] PR K2: Pin and cache the TeXLive install in queue workflows (T2)
+  - Status: `deferred`
+  - Trigger: queue wall-time or Actions-quota pain observed again (dashboard
+    queue metrics, or a quota warning/bill).
+  - Note: touches `.github/workflows/**` → operator-gated. Today the full TeX
+    stack is apt-installed unpinned on every dispatch (~minutes per run,
+    multiplied by every queue build; the org Actions quota has been exhausted
+    once already).
+  - Target files:
+    - [`.github/workflows/feishu-build-queue.yml`](../.github/workflows/feishu-build-queue.yml)
+    - [`.github/workflows/feishu-draft-build-queue.yml`](../.github/workflows/feishu-draft-build-queue.yml)
+  - Done when:
+    - the TeX package set is version-pinned (or moved into a prebuilt container image) and cached, so a warm run skips the apt install
+    - cold/warm run times are recorded once in the PR body as the baseline
+    - build output is byte-identical before/after (release-manifest sha256 comparison on one target)
+
+- [ ] PR K3: Route new binary artifacts to Git LFS (T3)
+  - Status: `deferred`
+  - Trigger: repo-size / clone-time / CI-checkout pain becomes visible (the
+    repo-health metric on the ops dashboard), or the operator makes the
+    storage-policy call proactively. **Provisional Tier 2 placement** (not in
+    the operator's 2026-07-17 triage): the new-binaries-only half is cheap,
+    but the policy decision and the LFS interaction with the Hello-Docs
+    mirror / CI checkout make it more than a filler slice — re-tier if wrong.
+    Caveat: history grows every week this waits; the trigger should be read
+    generously.
+  - Note: operator-gated twice over — it changes `.gitattributes` storage
+    policy for `docs/_build` (adjacent to Deferred 5, but storage-only: no
+    workflow-semantics change), and the history-rewrite question (pack already
+    ~148 MiB with two 18.9 MB PDFs) is an explicit operator decision this PR
+    only records, never executes. CI runners and contributor docs must gain
+    `git lfs install`.
+  - Target files:
+    - [`../.gitattributes`](../.gitattributes)
+    - [`../ONBOARDING.md`](../ONBOARDING.md)
+  - Done when:
+    - new PNG/PDF/DOCX blobs under `docs/_build/**` and `docs/templates/word_template/**` enter LFS instead of raw history
+    - CI checkout and local onboarding steps handle LFS transparently
+    - the history-rewrite decision (do it / defer it / never) is recorded with the size evidence, as its own operator call
+
+- [ ] PR K8: Single Feishu transport client (U1)
+  - Status: `deferred`
+  - Trigger: a live sync/backport failure attributable to the transport gap —
+    rate-limit (429) errors, a concurrent-sync race on `data/phase2/*.csv`,
+    or another divergence bug between the duplicated runners.
+  - Note: five-plus independent `run_lark_cli_json` implementations exist; the
+    sync path has zero retry/backoff/rate-limit and no file locking. May land
+    in slices (consolidate first, then retry/lock), but one module owns the
+    boundary at the end.
+  - Target files:
+    - [`../tools/feishu_record_transport.py`](../tools/feishu_record_transport.py)
+    - [`../tools/queue_lark_ops.py`](../tools/queue_lark_ops.py)
+    - [`../tools/queue_bound_lark_ops.py`](../tools/queue_bound_lark_ops.py)
+    - [`../tools/listen_build_queue_lark.py`](../tools/listen_build_queue_lark.py)
+    - [`../tools/spec_master_rebuild.py`](../tools/spec_master_rebuild.py)
+    - [`../tools/bitable_schema.py`](../tools/bitable_schema.py)
+  - Done when:
+    - exactly one module builds and runs `lark-cli` invocations, with tested retry/backoff and rate-limit handling (Feishu ~20 QPS, 429 responses)
+    - the listed call sites (plus sync/backport/intake `lark-cli` argv builders) route through it; no independent JSON-runner remains
+    - `data/phase2/*.csv` snapshot writes take a file lock so concurrent syncs cannot interleave
+
+- [ ] PR K11: Structured logging baseline in queue and build orchestration (U4)
+  - Status: `deferred`
+  - Trigger: after K5 alerting lands, the first time diagnosing a queue
+    failure from print output costs real time — the alert tells you THAT it
+    failed; this item fires when finding out WHY hurts.
+  - Note: zero `logging` imports and 423 `print()` calls today. Scope is the
+    baseline, not a repo-wide sweep: queue orchestration and build entry paths
+    first; user-facing CLI output stays `print`.
+  - Target files:
+    - [`../tools/queue_orchestration.py`](../tools/queue_orchestration.py)
+    - [`../tools/build_runtime.py`](../tools/build_runtime.py)
+  - Done when:
+    - queue and build orchestration emit leveled `logging` records (level via env), with run/record correlation ids on queue paths
+    - Actions logs keep at least today's readability; `$GITHUB_STEP_SUMMARY` output is unchanged
+    - a short convention note documents what logs vs what prints, so the sweep can continue incrementally
+
+- [ ] PR K13: Data-driven language onboarding (U6)
+  - Status: `deferred`
+  - Trigger: the next new-language/region onboarding request lands (the
+    natural moment: do K13 first, then onboard the language through the new
+    data-driven path as its live proof).
+  - Note: adding a language today edits four hardcoded Python enumerations
+    plus paired golden-test expectations (`setup-map.md` §code registration) —
+    a data problem solved with code edits, which fails at 50 lines.
+  - Target files:
+    - [`../tools/signal_words.py`](../tools/signal_words.py)
+    - [`../tools/sync_data_models.py`](../tools/sync_data_models.py)
+    - [`../tools/localized_copy.py`](../tools/localized_copy.py)
+    - [`../tools/manual_copy_source.py`](../tools/manual_copy_source.py)
+  - Done when:
+    - language registration is data/config-driven (declared once, consumed by all four surfaces); an unknown language fails with a clear message, not a KeyError
+    - adding a test language in fixtures requires zero Python edits, proven by a test
+    - [`../.agents/skills/new-region-line/SKILL.md`](../.agents/skills/new-region-line/SKILL.md) and its setup-map drop the code-registration step
+
+- [ ] PR K14: Release labeling + rollback runbook (U7)
+  - Status: `operator_drill_pending` — machine scope completed 2026-07-31:
+    versioned manifests and publish metadata carry a deterministic release tag,
+    `tools/release_tag.py` creates/verifies its annotated manifest binding, and
+    the three-path rollback runbook is live. The first real timed drill remains
+    operator-owned and this checkbox stays open until that result is recorded.
+  - Trigger: the first real rollback need (a shipped manual must be reverted
+    or re-delivered from a prior state), or the business asks for turnaround
+    commitments. **Provisional Tier 2 placement** (not in the operator's
+    2026-07-17 triage) — re-tier in review if wrong.
+  - Note: manifests already carry git SHA, toolchain provenance, and per-output
+    sha256 — traceability exists, labeling and the recovery procedure don't.
+    Complements (does not replace) E1 snapshot freezing.
+  - Target files:
+    - [`../tools/release_manifest_service.py`](../tools/release_manifest_service.py)
+    - [`../user-guide/closed_loop_ops_guide.md`](../user-guide/closed_loop_ops_guide.md)
+  - Done when:
+    - each publish gets a stable release identifier (git tag or release record) bound to its manifest
+    - a written rollback runbook covers: re-deploy a prior Vercel build, re-deliver a prior Word/PDF from its manifest, and rebuild from a prior `Git_ref`
+    - one rollback drill has been executed and timed
+
+### Tier 3 — 必须有工程资源或专门窗口 (requires dedicated capacity or a protected window)
+
+Entry rule: do NOT start these as between-delivery filler — each needs either
+a second maintainer, formally allocated platform time, or a consciously shaped
+low-delivery window (the Workstream U/V organizational triggers). Starting
+them without that capacity risks a half-moved subsystem or an unfinished
+semantic change sitting in the tree while business work resumes.
+
+- [ ] PR K9: Package the flat `tools/` namespace, one subsystem per PR (U2)
+  - Status: `deferred`
+  - Trigger: dedicated capacity (second maintainer or allocated platform
+    time). Each subsystem move is individually small, but the wave only pays
+    off completed — partial packaging leaves two import styles coexisting.
+  - Note: consistent with Deferred 3's rationale — this is the gradual
+    boundary cleanup it calls for, explicitly NOT a big-bang rename: one
+    subsystem per PR, behavior-preserving moves, import-compatible facades,
+    guardrail entries updated per move. Queue first (largest family, ~37
+    files), then word / backport / intake / sync / checks, following the
+    proven `tools/idml/` pattern.
+  - Target files:
+    - [`../tools/`](../tools)
+    - [`../tools/check_maintainability_guardrails.py`](../tools/check_maintainability_guardrails.py)
+    - [`dev/orchestration_module_map.md`](dev/orchestration_module_map.md)
+  - Done when:
+    - queue/word/backport/intake/sync/check subsystems live under packages with `__init__` facades keeping existing import paths working
+    - guardrail thresholds move to the new paths in the same PR as each move
+    - the ownership map reflects the package boundaries, and no prefix-family flat modules remain at `tools/` root for the moved subsystems
+
+- [ ] PR K10: Extract target/config resolution out of the `build_docs` facade (U3)
+  - Status: `deferred`
+  - Trigger: dedicated capacity; natural window = alongside or just before
+    the K9 queue-subsystem move (same import surfaces).
+  - Note: 8 non-build modules (including queue code) import the 838-line
+    facade just for `load_config` / `resolve_build_targets` /
+    `build_root_for_target`, dragging Sphinx/export imports into queue and
+    check paths.
+  - Target files:
+    - [`../tools/build_docs.py`](../tools/build_docs.py)
+    - [`../tools/utils/path_utils.py`](../tools/utils/path_utils.py)
+  - Done when:
+    - target/config resolution lives in a lightweight `tools/utils/` module with no Sphinx-side imports
+    - queue/check/sync-review/release importers stop importing `build_docs`; the facade re-exports for compatibility
+    - importing a queue module no longer transitively imports the export stack (guarded by an import-time test, the Milestone A PR 1 pattern)
+
+- [x] PR K12: Atomic queue claim + cross-workflow concurrency contract (U5)
+  - Status: `done` (Workstream W / Stage 4b items 1–2, 2026-07-31)
+  - Trigger: dedicated capacity, or the concurrency assumption breaks (cron
+    re-enabled, a second dispatcher appears, or a double-claim near-miss is
+    observed). Semantic change to the queue contract — needs a protected
+    window and operator attention, not filler time.
+  - Note: operator-gated — touches queue semantics, `.github/workflows/**`,
+    and [`dev/external_table_contracts.md`](dev/external_table_contracts.md) /
+    [`dev/queue_state_model.md`](dev/queue_state_model.md). Today the RUNNING
+    write is a soft claim (no compare-and-swap) and the three queue workflows
+    share no concurrency group — safe only because cron is disabled and
+    dispatch is single-operator. The verified lease and explicit workflow
+    concurrency domains now close this registered slice. The parallel build matrix is a recorded
+    follow-up AFTER the claim lands, not part of this PR.
+  - Target files:
+    - [`../tools/queue_transitions.py`](../tools/queue_transitions.py)
+    - [`../tools/queue_orchestration.py`](../tools/queue_orchestration.py)
+    - [`dev/queue_state_model.md`](dev/queue_state_model.md)
+  - Done when:
+    - claiming a row is atomic (claim token + TTL, or re-read-and-verify CAS) so two concurrent dispatches cannot both process the same record — covered by a fixture test
+    - stale claims (worker died mid-run) expire and become re-claimable, with the expiry documented in the queue state model
+    - the three queue workflows share an explicit concurrency contract, and the external-table contract doc gains the claim fields
+
+- [x] PR K15: Review-branch propagation design doc (V — design gate only)
+  - Status: `done` (operator approved 2026-07-31)
+  - Trigger: dedicated capacity for sustained design + review attention
+    (roadmap Phase 2 entry: Workstream T exit criteria passed). Business pain
+    accelerates it: when the dashboard shows template-fix propagation
+    measurably eating delivery capacity, this jumps the queue.
+  - Note: the frozen-copy review-branch model is the review's #1 scale wall
+    (a shared-template fix reaches zero open branches;
+    [`../tools/check_review_branch_sync.py`](../tools/check_review_branch_sync.py)
+    is advisory by design). Implementation is deliberately not scheduled here:
+    this PR delivers the design doc; implementation PRs get registered only
+    after operator approval — the same gating as Workstream N. Touches
+    `docs/_review` semantics conceptually, which is exactly why Deferred 5
+    applies to the implementation and not to the design.
+  - Target files:
+    - [`architecture/Review_Branch_Propagation_Design.md`](architecture/Review_Branch_Propagation_Design.md)
+  - Done when:
+    - the design covers: per-target-derivative-only review branches, a pinned-but-advanceable shared-template reference, automated per-branch bump PRs showing the rendered diff, authored-edit protection (classify-or-abstain, reusing the `sync-review` merge_params discipline), and migration of the existing open branches
+    - blast radius, failure modes, and the propagation-lag metric are specified
+    - the operator has approved or amended the design, recorded in the doc header
+
+- [ ] PR K6: Governance floor — CODEOWNERS, secret scanning, dependabot (T6)
+  - Status: `deferred` (severable slice delivered 2026-07-17; remainder waits
+    on the trigger below)
+  - Slice delivered (2026-07-17): the pre-authorized secret-scanning +
+    dependabot half. `secret-scan` job in `manual-validation.yml` (gitleaks
+    v8.30.1 pinned + checksum-verified, working-tree scan) with
+    `.gitleaks.toml` encoding the repo policy — Feishu RESOURCE tokens and
+    business-key vocabulary are allowlisted BY LINE SHAPE, credentials are
+    not; tuned against a full local scan (31 findings triaged: all resource
+    tokens/fixtures, zero credentials) and canary-verified both ways (clean
+    tree = 0, planted ghp_/FEISHU_APP_SECRET shapes = caught).
+    `.github/dependabot.yml`: github-actions weekly grouped bumps; pip and
+    npm in security-only mode (routine Python pins go through the K1
+    lock-refresh procedure, not per-package bumps). Remaining for the full
+    K6: CODEOWNERS + server-side branch-protection verification.
+  - Trigger (remainder): a second reviewer/maintainer exists (CODEOWNERS
+    routing is mostly symbolic while one person reviews everything — its
+    value activates with the Workstream U organizational trigger).
+    **Provisional Tier 3 placement** (not in the operator's 2026-07-17
+    triage) — re-tier if wrong.
+  - Note: touches `.github/**` governance surfaces → operator-gated. CODEOWNERS
+    is also the enabler for Workstream V's distributed-review model (K15).
+  - Target files:
+    - `.github/CODEOWNERS` (new)
+    - `.github/dependabot.yml` (new)
+    - [`.github/workflows/manual-validation.yml`](../.github/workflows/manual-validation.yml)
+  - Done when:
+    - CODEOWNERS routes review by area (tools/queue vs docs/templates vs workflows), with the operator as owner of the compliance-sensitive surfaces
+    - a push/PR secret-scanning gate runs in CI; dependabot files version-bump PRs (grouped, low noise)
+    - server-side branch protection settings are verified against `AGENTS.md` §8 and the verification is recorded
+
+## 6j. Milestone L: Product-Line Scaling Execution (Workstream W)
+
+Registered 2026-07-30, operator-approved same day (「按方案来 落PR 让codex开跑」).
+The **authoritative per-PR breakdown lives in
+[`architecture/scaling_execution_plan.md`](architecture/scaling_execution_plan.md) §4**
+(~76 S/M PRs with machine-verifiable done_when each) — this section tracks
+stage-level progress only, to keep the two files from drifting. Execution
+rules (validation ladder, golden-regenerate review exception, gate/stop
+behavior, nightly report format) are the plan's §3 and bind every PR.
+
+Entry rules: stages run in order; a stage's gated items wait for the
+operator picks listed in the plan's §5; behavior-preserving stages (0–4a)
+never require a gate to *start*. Reused item numbers (K2, K8 slices + the
+snapshot file-lock, K13, K14, E1, I2's normalization prerequisite) tick their
+original entries when the matching W-slice lands.
+
+- [x] Stage 0: safety nets + silent-failure sensors (8 PRs, zero behavior)
+- [x] Stage 1: CI/gate auto-scaling with product lines (7 PRs)
+- [x] Stage 2: zero-code language onboarding = K13 (13 PRs; exit = fake-lang zero-Python proof)
+- [x] Stage 3: clone-artifact generation, new region = one command (13 PRs)
+- [x] Stage 4a: run throughput without concurrency-semantics change (18 PRs; incl. K8 all four Done-when items, E1 both slices)
+- [x] Stage 4b: concurrency sub-stage (3 PRs; verified claim lease, per-record workflow domains + Vercel mutex, and bounded selective artifacts complete)
+- [x] Stage 5: behavior close-out + expansion pre-gates (14 PRs; strict flips, placeholder-ization template halves, CJK trio, K14, K15 design doc)
+
+Engineering close-out: all registered Stage 0–5 implementation slices are on
+`main` as of 2026-07-31. The operator released the remaining Stage 4 and Stage
+5 gates with 「814批准：Stage4全部放心；Stage5全量放行」. The F6 production seed
+for `pv_input_range`, `dc_input_connector`, and `ups_transfer_time` is complete
+for the current US/EU/AU/KR/pt-BR document keys; the exact readback and build
+evidence is recorded in
+[`reviews/workstream_w_closeout_2026-07-31.md`](reviews/workstream_w_closeout_2026-07-31.md).
+The first timed K14 rollback drill and the next real product-line ≤2
+operator-day measurement remain operator-owned field evidence, not unfinished
+engineering checkboxes.
+
+Operator gate summary: the plan's §5 (workflow edits, `export_idml --model`,
+Feishu column list, promotion-contract carrier, F6 seeds, queue concurrency
+live test, strict flips, CJK/IDML line decision, K15 approval, and the three
+report-only items: K3 new-binary LFS routing evidence, bus-factor report,
+HTML_link alias semantics).
 
 ## 7. Deferred: Do Not Touch Yet
 
@@ -851,6 +1659,672 @@ stock-onboarding pilot; do not let it slip into an "entry-point polish" PR.
   - Why deferred:
     - these are the most workflow-sensitive surfaces in the repo
     - stability is currently more valuable than surface redesign
+
+- [x] Done: protect hand-curated print-only review pages across reseed (2026-08-14)
+  - Status: `done` — resolved via the second "done when" option: `manual_us.yaml` declares `00_toc.rst` / `99_back_cover.rst` as `rst_include` entries with the new `ordinal_neutral: true` annotation (`tools/config_pages.py` parse, `tools/gen_index_bundle_plan.py` skip), so reseeds regenerate them deterministically while every later duplicate page keeps its pinned positional `pNN_` name (`tests/test_gen_index_bundle_plan.py`)
+  - Incident: the 2026-08-13/14 Start Review reseeds of `JE-1000F/US` regenerated the review index from the manifest and silently dropped the hand-added `00_toc.rst` / `99_back_cover.rst` includes (files kept, references lost); Publish then failed the same-source IDML gate three times (runs 31767694706, 31775580957, 31779053321) — the interim manual index restore (mirror PR #54) was itself wiped by the next reseed, which is what forced the manifest-level fix
+  - Not built (still open as a cheap future guard): a check-stage flag for orphan review page files that exist under `page/` but are absent from the review index
+
+- [ ] Pending: recalibrate the web-presentation suite against the reseeded JE-1000F/US review content
+  - Status: `pending`
+  - Incident: the 2026-08-13 reseed regenerated the review pages from live data, but `tests/test_web_presentation.py` still pins expectations written against main's older committed review copy. The seeded review PR auto-approves its checks (trusted worker), so the drift stayed invisible until an ordinary backport PR against `review/JE-1000F-US` ran the full gate (Hello-Docs PR #54): ~4 failures + ~19 errors across `test_app_add_device*`, `test_auto_resume_table*`, `test_lcd_mode*`, `test_charging_car*`, `test_operation_panels*` in en/fr/es
+  - Operator-confirmed content truth (2026-08-14, 夏冰): JE-1000F's button is named **"POWER Button"** — the current test expectation `Main Power Button` is the outdated side, the review content is correct
+  - Done when:
+    - the suite's hardcoded expectations are updated to the review-content truth **in the same change that lands the review content on main** (the review PR merge), so neither side goes red alone
+    - a decision is recorded for the exemption mechanism: either ordinary PRs against review branches skip content-coupled suites, or reseeds must include a suite recalibration step
+  - Note: unrelated PRs against the review branch may merge past this known-red unit check until recalibration lands (verified pre-existing on the review branch base without the PR's changes)
+
+## 6k. Milestone M: Skeleton Library Expansion (骨架库产线拓展)
+
+Registered 2026-08-21 from the Phase A corpus audit
+([`architecture/manual_ia_audit_2026-08.md`](architecture/manual_ia_audit_2026-08.md)),
+the Phase B design
+([`architecture/Product_Skeleton_Library_Design.md`](architecture/Product_Skeleton_Library_Design.md))
+and the wave plan
+([`dev/skeleton_library_expansion_plan.md`](dev/skeleton_library_expansion_plan.md)).
+This milestone is the **superset execution** of Workstream M (`page_registry`
+becomes the only composition authority) in
+[`optimization_project.md`](optimization_project.md).
+
+Milestone status: `in_progress` — the S1–S6 vertical slice is done: S1 #936 (`1823cc4e`),
+S2 #937 (`eeb8eaa8`), S3 #938 (`71f7c5ec`), S4 #940 (`5e1d0c26`) and
+S5 #939 (`0432e5b7`). Both S4 source-table batches have landed, and #944
+(`baf8b712`) restored the JBP target from CI `SKIP` to `PASS`. S6 closed
+2026-08-30 after the shared-component target assembly, pipeline-side
+reconciliation, native InDesign preflight, 28-page visual comparison,
+self-contained delivery-pack checks and operator ruling were all recorded.
+The milestone remains `in_progress` because the post-slice rollout and the
+remaining milestone exit criteria below are still open.
+Milestone entry gate: operator approves the **vertical slice plan** (the wave
+plan's v2). S1 may start on that approval alone; every later slice item has
+its own gate.
+
+> **This section was rewritten 2026-08-21 after an executability audit.** The
+> first draft was written from the design documents without checking the live
+> repo and carried 19 substantive defects — including one that would have
+> reverted a shipped fix. Every claim below has been re-verified against code.
+> Where a condition is *not* verifiable today, it now says so instead of
+> implying a check exists.
+
+**Baseline being changed** (measured): corpus 58 independent manuals,
+**15 buildable (25.9%)**, SKU coverage 5/22, battery-pack category 0%, JP the
+largest queue at 18 manuals with 1 buildable; reconstruction 47/58 pure
+deletion (81.0%) / 55/58 with ≤1 overlay (94.8%).
+
+**Premise (operator, 2026-08-21):** a shipped book is **pipeline output + an
+InDesign finishing layer**. A template-zero-hit block is hand-placed at layout
+time, not unprintable. Never report a finishing-layer item as a production
+blocker.
+
+### M-pre. Cross-cutting rules — apply to every PR in this milestone
+
+These were the largest gap in the first draft: each was missing from the
+individual items, and each will fail CI or damage a live line if skipped.
+
+1. **Any PR touching `configs/**` or `docs/manifests/**` must regenerate the
+   family diff carriers.** `.github/workflows/manifest-regenerate-diff.yml`
+   runs `python tools/manifest_family.py fold` (no `--write`), and
+   `fold_repository` requires `rebuilt == YAML golden` for every indexed entry.
+   `manual_jp.yaml`, `manual_zh.yaml` and `manual_eu.yaml` all have carriers.
+   - the all-pairs command is **`fold`**, not `roundtrip` — `roundtrip` requires
+     `--base` and `--target` and compares exactly one pair
+   - since S1 (#936) `fold` reports `manifest_count: 18, anchor_count: 3,
+     folded_count: 15, passed: true` (re-measured 2026-08-21); the third
+     anchor is `docs/manifests/manual_bp-us.yaml`
+2. **Any new manifest must be registered in
+   [`../docs/manifests/family/index.yaml`](../docs/manifests/family/index.yaml)
+   in the same PR.** `fold_repository` globs `docs/manifests/*.yaml` and reports
+   `manifest is not in the family index` for orphans, failing the run. The
+   hardcoded counts in
+   [`../tests/test_manifest_family.py`](../tests/test_manifest_family.py) must
+   be updated in the same PR — S1 (#936) already moved them from `17/2/15` to
+   `18/3/15`, so the next new manifest starts from there.
+3. **Any PR that changes materialized page names touches committed review
+   derivatives.** `docs/_review/JE-1000F/US/page/` tracks **52** files on
+   `main`, **22** of them real `pNN_` names, and
+   `docs/renderers/contracts/reference_layout/je1000f_us_v2_20260605.json`
+   (status `approved`) pins names like `p20_01_user_maintenance_instructions`.
+   Live review branches pin more, and they live on the **Hello-Docs mirror
+   remote**, not on this repo's `origin`: `hello-docs/review/JE-300E-EU`
+   carries 185 derivative files — 109 under `JE-300E/EU` and 76 under
+   `JE-1000F/US`, i.e. more JE-1000F pins than `main` itself holds.
+   **AGENTS.md §8.7 requires operator confirmation before deleting or renaming
+   committed `docs/_review/**` files** — so name-changing PRs carry that gate
+   explicitly, and the reference-layout contract pin must be re-approved, not
+   silently updated (the #720/#724 lesson).
+4. **Golden conservation is proven by two detached worktrees at base and head
+   SHA — not by `git stash` and not by `git diff docs/_build`.** Operator
+   review 2026-08-21: `git stash` does not remove *committed* changes and skips
+   untracked files by default, so a stash-based "before" can already contain
+   the very PR under test. And the tracked `docs/_build` snapshot has drifted
+   (234 files, JE-1000F US/JP only; assembly `rmtree`s the tree), so its git
+   diff is noise. Use:
+   ```
+   git worktree add /tmp/m-base <base-sha>
+   git worktree add /tmp/m-head <head-sha>
+   (cd /tmp/m-base && python3 build.py check --config <cfg> --model <M> --region <R> --staging-root /tmp/out-base)
+   (cd /tmp/m-head && python3 build.py check --config <cfg> --model <M> --region <R> --staging-root /tmp/out-head)
+   diff -r /tmp/out-base/docs/_build /tmp/out-head/docs/_build   # must be empty
+   git worktree remove /tmp/m-base && git worktree remove /tmp/m-head
+   ```
+   Each worktree contains exactly its committed tree, so before/after stay
+   unambiguous even with local uncommitted or untracked files present. Three
+   traps measured while actually running this (S1 #936, S5 #939):
+   - a fresh worktree has **no `data/phase2`** (gitignored local mirror), so
+     every build in it dies at identity resolution. `cp -R data/phase2
+     /tmp/m-base/data/` in each worktree before the check
+   - `--staging-root` is for `check` only. `build.py all`'s HTML step runs
+     Sphinx, whose extensions require the owning repository tools package, so
+     a staging root outside the repo fails with `hb_latex_callouts requires
+     the owning repository tools package`. Full-stack builds happen **inside**
+     the worktree
+   - an in-checkout `build.py check` can leave tracked `docs/_review`
+     generated drafts dirty **even with `--staging-root`**; the
+     derived-surface-guard hook catches it. Restore before running
+     content-pinned suites (`test_web_presentation` reads those files)
+5. **New RST templates and fragments need a declared content provenance.** The
+   corpus is PDFs outside the repo
+   (`~/Downloads/信息架构分析/{便携主机,便携加电包}/`); RST needs text. For each
+   new template the PR states: extraction source (which manual, which printed
+   page), who reviews the wording, and — for legal text — who signs off. Do not
+   let an executor invent legal copy.
+6. **Every PR states its rollback.** Follow the design's S0–S4 pattern: prefer
+   changes that are revertible by one `git revert`; for anything that is not
+   (schema changes, file deletions, page renames), name the restore procedure in
+   the PR body before merging.
+7. **Known-red baselines must be recorded, not discovered.** On today's clean
+   tree, `build.py check --config configs/config.zh.yaml --model JE-2000E
+   --region CN` **fails** with `UNUSED_FOOTNOTE … 'ac_bypass'` from
+   `data/phase2/Spec_Footnotes.csv:2` (re-measured 2026-08-21: still exactly
+   1 issue). `us-en/JE-1000F_US`, `ja/JE-1000F_JP`, `eu/JE-1000F_EU`,
+   `eu/JE-300E_EU` and `pt-br/JE-1000F_pt-BR` are all green. The slice adds a
+   second recorded red, and it MOVED once already — record the date with the
+   number or it will mislead. Pre-intake (2026-08-21, #940 tree):
+   `bp-us/JBP-2000B_US` failed with exactly 30 `MISSING_REQUIRED_SPEC_ROW`
+   issues, zero contract and zero template issues. Post-intake (2026-08-22,
+   first batch landed): `validate_spec_master` is **OK**, and the red moves
+   downstream to `symbols page has no matching rows sku= lang=en` — the
+   `csv_page` batch the intake order defers. The `sku=` there is a red
+   herring: `sku` is empty for **every** `--model` build including the
+   JE-1000F/US one that ships today, and an empty `sku` makes `_scope_allows`
+   permissive, so it can never cause a no-match. An executor must never
+   mistake a pre-existing red for their own breakage.
+
+### Milestone M execution mode — vertical slice first (operator, 2026-08-21)
+
+The wave structure below M-pre was **replaced by a vertical slice** on operator
+direction: prove the full chain narrowly (one battery-pack target, one content
+module, all four renderers, one real InDesign finishing round) before any
+horizontal rollout. The audited wave items are preserved as deferred rollout
+stubs at the end of this section; their full text is in git history
+(commit 80321368). M-pre applies to slice and rollout alike.
+
+Slice target (evidence: workflow `wf_72e57478-50e`): **`JBP-2000B_US`**
+(HTP017 美加规, 3 languages, 28 pages, cell `BP@INTL`) — the only battery-pack
+document_key that is **multi-language** (`data/model_capabilities.csv` carries
+three JBP-2000B rows: `_CN`, `_JP`, `_US`, all all-FALSE, but CN and JP are
+single-language) + a fully-specced paired host (`JE-2000E_US`, 50 Spec_Master
+rows, verified) + a shipped book to reconcile against. Its capability row is
+all-FALSE, so the existing gates drop UPS/extra-battery pages with zero work.
+Data intake is **11 spec-detail rows + 9 page-placeholder rows**, all 13
+needed `Row_key`s already present in `02_主数据_参数名` — but *not* zero new
+vocabulary: it also needs 4 new `02_主数据_Slot` records and 1 new
+`Manual_Copy_Source` copy key (see S4).
+Content module: **`battery_long_storage_advisory`** (storage-page tail
+paragraph; 7/7 battery-pack coverage, **9** hand-copied replicas, 0
+placeholders, 0 brand words) — replaces `user_maintenance_instructions`, which
+is 0/7 in battery packs and is demoted to a rollout host-line module. The 9
+are the only `*storage*` templates in the repo:
+`page_shared/{de,en,es,fr,it,ko,pt-BR,uk}/09_storage_and_maintenance.rst` plus
+`page_zh/09_storage_and_maintenance.rst`; every one carries the advisory
+exactly once (the other hits under `docs/` are build output and one review
+derivative, not maintained copies).
+Slice red lines: **no edits to `data/layout_params.csv` or any approved
+reference-layout contract** (the JE-1000F/US plan hashes the entire CSV — one
+added row unpins it, the #720 failure shape); no `figure_targets` whitelist
+expansion; no JE-300E fork reclamation; no authoring flip (the resolver is
+generate-then-verify; YAML stays the source of truth).
+
+- [x] PR S1: Three layers + `BP@INTL` skeleton instance + slot_id guard
+  - Status: `done` (merged 2026-08-21, #936, squash `1823cc4e`; full suite
+    2979 tests OK, ruff clean, guardrails OK, fold 18/3/15, resolver verify
+    green)
+  - Gate: operator approves the slice plan (granted 2026-08-21).
+  - Target files:
+    - `docs/manifests/skeletons/bp-intl/blueprint.yaml` (new — Skeleton
+      Blueprint: ordered `slot_id` list, `requirement` per slot
+      (required/optional/capability:X), `presentation` four states, semantic
+      co-page pairs; no languages, no regions, no file paths)
+    - `tools/skeleton_resolve.py` (new — resolves Blueprint × capability row ×
+      region profile × language set into a Product Manual Plan, and emits the
+      Resolved Manifest; **generate-then-verify**: the emitted YAML must equal
+      the committed manifest byte-for-byte, mirroring the family-diff
+      discipline)
+    - `docs/manifests/manual_bp-us.yaml` (new — the Resolved Manifest,
+      committed; 3-language expansion included, 8-page blocks). Three
+      spellings are load-bearing and none is interchangeable: the **file** is
+      hyphenated `manual_bp-us.yaml`, its internal **`manifest_id`** is
+      `manual_bp_us`, and `config.bp-us.yaml`'s **`build.family_id`** is
+      `bp-us`
+    - `docs/manifests/skeletons/bp-intl/slot_templates.yaml` (new — the
+      slot→carrier mapping: `slot_id` → page_type / template / recipe /
+      csv-page source)
+    - `docs/manifests/region_profiles/us.yaml` (new — language-set reference,
+      compliance mounting rows, cover/TOC/back-cover form, contact params)
+    - `configs/config.bp-us.yaml` (new) — **decision recorded in the PR**:
+      a new config is required because `config.us.yaml`'s `page_manifest` is
+      static and a `{model}` token there would redirect JE-1000F too.
+      Carries a unique `build.family_id: bp-us`.
+    - [`../tools/config_pages.py`](../tools/config_pages.py) — page entries
+      accept an optional `slot_id`; for slot-bearing entries the materialized
+      name derives from `slot_id` and **bypasses `ensure_unique_name`'s
+      first-wins bare-name behavior**; entries without `slot_id` (all 17
+      existing manifests) go through the legacy path byte-identically
+    - [`../docs/manifests/family/index.yaml`](../docs/manifests/family/index.yaml) + [`../tests/test_manifest_family.py`](../tests/test_manifest_family.py) per M-pre.2
+    - three surfaces the plan missed, all found while landing #936:
+      [`../tools/gen_index_bundle_plan.py`](../tools/gen_index_bundle_plan.py)
+      (`slot_id` must survive planning, not only config parsing),
+      [`../tools/process_review_start_queue.py`](../tools/process_review_start_queue.py)
+      (a second region-only resolver — see the queue guard below), and
+      [`../.github/ci_check_targets_skip_baseline.json`](../.github/ci_check_targets_skip_baseline.json)
+      (`skip_count` 4 → 5: the committed fixture snapshot has no
+      `JBP-2000B_US` document_key, so CI reports the new target as **SKIP**,
+      not coverage — S4 must ratchet it back down)
+  - **Queue-routing guard (P0, operator review 2026-08-21; unified
+    2026-08-24):**
+    [`../tools/queue_config_resolution.py`](../tools/queue_config_resolution.py)
+    `config_match_score` adds +1 to **any** filename that is not
+    `config.us.yaml`, so a US 3-language BP config outscores the host config
+    105:104 — a plain US queue record with no `Build_family` would silently
+    build a host manual from the battery-pack manifest. #936 originally
+    guarded this with explicit `Build_family=bp-us`; that interim contract is
+    superseded by the unified target + language resolver:
+    - Base `Build_family` now remains the language range (`us-merged` for both
+      MAIN and BP); `config.bp-us.yaml` keeps its internal `family_id=bp-us`
+      and declares `language_family=us-merged`
+    - `queue_requires_target_match` keeps BP out of every model-less fallback;
+      an exact `Document_Key` model/region match is required before it can win
+    - Start Review, Draft, Publish, and Preview share the same target scorer;
+      JBP + `us-merged` resolves BP, ordinary host + `us-merged` resolves MAIN,
+      and the legacy `bp-us` selector remains temporarily accepted
+    - regression tests in `tests/test_queue_config_resolution.py`,
+      `tests/test_process_review_start_queue.py`, and
+      `tests/test_build_review_preview.py` cover those boundaries
+  - **Resolver contract closure (operator review 2026-08-21):** every slot
+    decision must trace to one of exactly three data carriers —
+    `blueprint.yaml` (slots, requirement, presentation, co-page groups),
+    `slot_templates.yaml` (slot→carrier), `region_profiles/us.yaml`
+    (region parameters). Resolution precedence is fixed and documented:
+    blueprint slots → capability gate (`model_capabilities.csv` row) →
+    region profile → language expansion. `tools/skeleton_resolve.py` may
+    contain **no slot-specific or region-specific literals** — any such
+    literal is the template-clone failure mode reborn as resolver branches,
+    and is a review-rejection criterion for this PR.
+  - Done when:
+    - blueprint slots carry stable `slot_id`s and the **new** manifest's
+      materialized names derive from `slot_id`, not iteration position; the
+      existing manifests' naming path is untouched (zero `pNN_` pin risk)
+    - `python3 -c "import tools.target_defaults"` succeeds with the new config
+      present, **and** `discover_target_defaults()` still resolves the US
+      family default to `config.us.yaml` (guard against the silent-swap
+      failure verified on the JP experiment; both `_family_default_map` and
+      `_language_config_map` paths checked)
+    - both queue-routing regression tests above pass
+    - `manual_bp-us.yaml` is registered as the **third repository anchor**;
+      `python3 tools/manifest_family.py fold` passes with exactly
+      **18 manifests / 3 anchors / 15 folded** (re-measured green 2026-08-21)
+    - the resolver proves emitted == committed bytes. `verify` is a
+      **subcommand, not a flag**, and every argument is required:
+      `python3 tools/skeleton_resolve.py verify --skeleton-dir
+      docs/manifests/skeletons/bp-intl --region-profile
+      docs/manifests/region_profiles/us.yaml --manifest-id manual_bp_us
+      --manifest docs/manifests/manual_bp-us.yaml`. A wrong `--manifest-id`
+      reports MISMATCH on a perfectly healthy tree
+    - blueprint contains no `app_setup` and no `user_maintenance_instructions`
+      slot (0/7 in corpus battery packs); `ups_mode`/`extra_battery` slots are
+      `capability:`-gated and drop via the existing all-FALSE row
+  - Verification: `python3 -m unittest`; fold; import probe; M-pre.4 staging
+    diff on JE-1000F/US and JE-1000F/JP (host lines byte-identical).
+  - Rollback: revert config + manifest + index + blueprint together; resolver
+    is additive.
+
+- [x] PR S2: Minimal contract tiering + BP recipes (mechanism + BP tier only)
+  - Status: `done` (merged 2026-08-21, #937, squash `eeb8eaa8`)
+  - Gate: S1 merged (#936).
+  - **Mechanism correction (P0, operator review 2026-08-21 — verified in
+    code):** the required spec rows come from **`recipe.required_row_keys` and
+    `recipe.field_map`**
+    ([`../tools/validate_spec_master_shared.py`](../tools/validate_spec_master_shared.py)
+    lines 275–288, still accurate), resolved through the manifest's
+    `generated_page` entries — **not** from page contracts. Contracts gate
+    assembly-time placeholders, a different surface. The first draft's claim
+    that editing two contract YAMLs achieves 93 → 11 was wrong, and #937
+    measured that the *attribution* was wrong too: 93 issues appear only under
+    the **host** config (`config.us.yaml --model JBP-2000B`). Under S1's BP
+    manifest the baseline was already **12**, because the blueprint has no app
+    slot and the manifest points at BP recipes — so **S1 did 81 of the
+    reduction** and S2's real job was **12 → 6**. The residual is not 11
+    either: `validate_spec_master` reports per (language × binding), so one
+    data gap surfaces many times. S2's actual exit condition was
+    **`MISSING_RECIPE` == 0**.
+  - Target files:
+    - `docs/templates/recipes/bp-us/03_product_overview.yaml`,
+      `docs/templates/recipes/bp-us/05_operation_guide.yaml` (new — recipes
+      are **per-line by design**, this is not a fork). The 11-row list is the
+      **intake** row set, not the recipes': the seven pure spec-page rows
+      (`capacity`, `cell_chemistry`, `weight`, `dimensions`, `cycle_life`,
+      `charging_temperature`, `discharging_temperature`) reach the book
+      through the `csv_page` spec path and are never named by a recipe. As
+      merged, 03 carries `required_row_keys: [product_name, model_no]` plus a
+      `field_map` over `main_power_button` and `dc_expansion_port`; 05 carries
+      `default_standby_duration` (restored in S4 — S2's empty `field_map` was
+      one row too aggressive)
+    - [`../tools/page_contracts.py`](../tools/page_contracts.py) so the
+      **shared** 03/05 contracts accept BP without a contract fork. As merged
+      the shape is `ContractContext(lang, category, region, capabilities)`
+      with `_TIER_PREFIXES = ("category:", "region:", "capability:")` and
+      **`+`-joined conjunction keys** (`category:MAIN+en`). Real data forced
+      the conjunction: `FRONT_TOTAL_OUTPUT_*` is host-only *and*
+      language-scoped. No `requires_capability` group type shipped, and
+      `region:` was added and was not in the plan. The
+      14 host-specific placeholder groups (`ac_input`, `ac_output`,
+      `ac_power_button`, `dc12_port`, `dc_input`, `dc_usb_power_button`,
+      `default_standby_duration`, `energy_saving_ac_threshold`,
+      `energy_saving_auto_off_duration`, `energy_saving_dc_threshold`,
+      `main_power_button`, `total_output`, `usb_a`, `usb_c`) move behind host
+      tiers
+    - [`../docs/templates/contracts/03_product_overview.yaml`](../docs/templates/contracts/03_product_overview.yaml), `05_operation_guide` contract
+    - [`../tools/validate_spec_master_shared.py`](../tools/validate_spec_master_shared.py)
+      **only if** contract validation needs category/capability context passed
+      through — determine in the PR, with tests either way
+  - Scope guard: **the JE-300E fork is not touched** — reclaiming it is
+    rollout work.
+  - Done when:
+    - `validate_spec_master` for `JBP-2000B_US` reports **`MISSING_RECIPE` ==
+      0** and nothing but genuine missing-data rows, zero contract issues.
+      Measured at merge: **21** issues. Re-measured 2026-08-21 on top of S4's
+      recipe corrections: **30** — 10 requirement bindings over 5 distinct
+      row_keys, × 3 languages. All are closed by the S4 intake
+    - JE-1000F/US builds **byte-identically** (M-pre.4 worktree diff) — the
+      tiering must be a pure no-op for hosts
+  - Guard tests: [`../tests/test_page_contracts.py`](../tests/test_page_contracts.py),
+    [`../tests/test_validate_spec_master.py`](../tests/test_validate_spec_master.py),
+    + a new tier-resolution test.
+  - Rollback: `git revert`.
+
+- [x] PR S3: Extract `battery_long_storage_advisory` as the first real snippet
+  - Status: `done` (merged 2026-08-22, #938, squash `71f7c5ec`; 18/18 checks
+    green on a base refreshed to include S4, the illustration assets and the
+    review-sync fix, after the pre-merge check found its earlier green predated
+    all three)
+  - Gate: S1 merged (#936).
+  - Target files:
+    - `docs/templates/snippets/battery_long_storage_advisory/{en,fr,es}.rst` (new)
+    - [`../docs/templates/snippets/registry.yaml`](../docs/templates/snippets/registry.yaml) — first real entry in the literal `snippets: []`
+    - the BP storage page. As built it is a **plain `rst_include` page**
+      (`docs/templates/page_bp/{en,fr,es}/09_storage.rst`) whose template
+      names the snippet id directly — **not** a `generated_page` + recipe
+      `snippet_slots` slot. That is the finding, not a shortcut: nearly all
+      shared prose lives in `rst_include` templates, so a snippet layer that
+      reached only generated pages could never collapse a hand-copied module,
+      which is why the registry sat empty
+    - `slot_templates.yaml` + `manual_bp-us.yaml` re-point the `storage` slot
+      away from `page_shared`, so #938 is also a manifest PR and carries
+      M-pre.1 and M-pre.2
+  - Scope: the BP book **consumes** the module in all three languages; the 10
+    host-side hand copies are measured but **not collapsed** (rollout work,
+    with byte-diff proof per copy). Module body is the tail paragraph only —
+    verified 0 placeholders (the page's temperature lines above it carry the
+    placeholders; the boundary excludes them).
+  - Done when:
+    - registry non-empty and schema-valid; the snippet splices literally. The
+      splice is `resolve_snippet_tokens` in
+      [`../tools/draft_engine.py`](../tools/draft_engine.py) — do **not** pin
+      a line number (it moved 580 → 529 on the branch) — called from the
+      draft engine for generated pages and from
+      [`../tools/gen_index_bundle_page_render.py`](../tools/gen_index_bundle_page_render.py)
+      for include pages. A page carrying no token does zero registry work and
+      keeps its exact bytes
+    - the module renders in all three language blocks of the BP book
+    - presentation is `untitled_block`, never enters any TOC
+  - Guard tests: `tests/test_snippet_layer.py` (added by #938) (new, 202 lines) — `test_draft_engine.py` is not the carrier.
+  - Rollback: `git revert`; snippet files become orphans.
+
+- [x] S4: Data intake + ten authored templates (operator-gated)
+  - Status: `done` (merged 2026-08-22, #940, squash `5e1d0c26`). Both halves
+    landed: the live source-table intake was executed under operator
+    confirmation (record_id ledger in
+    [`../code-as-doc/reviews/jbp2000b_us_intake_record_ids_2026-08.md`](reviews/jbp2000b_us_intake_record_ids_2026-08.md)),
+    `build.py check --config configs/config.bp-us.yaml --model JBP-2000B
+    --region US` exits 0, and the CI ratchet was reversed in #944
+    (squash `baf8b712`): `tests/fixtures/phase2` now carries the
+    `JBP-2000B_US` rows, `skip_count` is back to 4 and the lane reports the
+    target as PASS (`PASS=12 SKIP=4 FAIL=2`, verified in the CI log, not just
+    locally). The four illustration assets landed separately in #942
+    (squash `c8b83f65`). Original open-PR note follows:
+  - Was: PR #940 open on `feat/skeleton-s4-bp-intake`,
+    17/17 checks green, carrying the **repo-side half only**: the ten BP page
+    templates, `required_copy_keys` tiering in the 03 contract and
+    `required_placeholders` tiering in the 05 contract, corrections to both
+    bp-us recipes, and the intake-order review doc. The **live source-table
+    intake has not happened** — it is blocked on the operator, specified row
+    by row in
+    `code-as-doc/reviews/jbp2000b_us_intake_order_2026-08.md` (added by #940),
+    awaiting per-row / per-batch confirmation.
+  - Gate: S2 merged (#937); operator approves each live-table write (existing
+    spec-intake gate, per-write readback).
+  - Work:
+    - 11 `03_内容源_规格参数明细` rows + 9 `03_内容源_页面占位参数` rows for
+      `JBP-2000B_US` (both land in the local `data/phase2/Spec_Master.csv`
+      mirror). Spec `Row_key`s: `product_name`, `model_no`, `capacity`,
+      `cell_chemistry`, `weight`, `dimensions`, `cycle_life`,
+      `dc_expansion_port` ×2, `charging_temperature`,
+      `discharging_temperature`; all 13 needed keys already exist in
+      `02_主数据_参数名`
+    - **not "via the existing clone-ingest path".** Nothing in that path
+      physically blocks this intake; what is missing is first-class semantics
+      for a **category** clone. (a) `build_staging_plan`'s key-set equality
+      check (`source_intake_staging.py:286-294`) compares two caller-supplied
+      JSON inputs, not the live tables — feeding it the 11-row projection of
+      `JE-2000E_US` as `--spec-sibling` passes and yields a valid 11-row
+      payload. The genuine gap is that a **subset** clone is then
+      indistinguishable from a full one: no field declares the 10 excluded
+      sibling rows, the summary still prints `complete: N rows cover region
+      siblings (N)`, and hand-trimming the sibling export silently defeats the
+      skill's hard gate 2. That argues for an explicit subset/tiering mode
+      with a recorded exclusion list — not for calling the intake
+      inexpressible. (b) The payload carries one localized pair per run and
+      `--localized-lang fr,es` produces one bogus `手册值_fr,es` column — but
+      BP US needs **no** staging localized columns: run `stage-plan` with
+      `--localized-lang` omitted for the English structural layer, since the
+      formal source tables already carry `Value_fr` / `Value_es`. The hard
+      wall is downstream, not in `_STAGING_FIELDS`: the staging→source commit
+      driver reads only `手册值_ko` / `行标签_ko`
+      (`intake_commit_driver.py:399,401`) and explicitly refuses any other
+      `Value_<lang>` (`:431-435`)
+    - 4 new `02_主数据_Slot` records, written **first** because they gate the
+      placeholder payload's `Slot_key_link`: `side.a.label`, `side.a.spec`,
+      `side.b.label`, `side.b.spec`. The shipped overview page prints two
+      physical expansion ports A/B, each a label plus a "connect to expansion
+      cable terminal X" sub-note; none of the 17 existing slots carries an
+      A/B position. `Slot_key` syntax is `placement.variant.role`, isomorphic
+      to the host's `side.pv.spec` / `side.car.spec`
+    - 1 new `Manual_Copy_Source` row (`product_overview.left_side_view`,
+      `copy_type=panel_title`) **and its TM pair in the same batch** — BP
+      prints LEFT SIDE VIEW where the host prints RIGHT SIDE VIEW.
+      `build_spec_title_rows` and copy localization are both
+      `translated or source_text`, so a missing TM entry **fails open**: the
+      fr and es pages print the English panel title and the build stays green
+    - battery-pack troubleshooting codes (8 codes, printed p05/p13/p21) as
+      Model-scoped `troubleshooting_blocks` rows, plus the LCD icon rows
+      (printed p03/p11/p19)
+    - **ten** authored templates, not two. There is **no `installation` slot
+      anywhere in the BP@INTL blueprint** — verified against
+      `blueprint.yaml` and `slot_templates.yaml`: the `page_bp` carriers are
+      `toc` at primary language only, plus `product_overview`, `operation`
+      and `connections` at `{lang}`. So `page_bp/en/00_toc.rst` +
+      `{en,fr,es}` × `03_product_overview_placeholder.rst`,
+      `04_connections.rst`, `05_operation_guide_placeholder.rst`. Provenance
+      per M-pre.5 (HTP017 US shipped book, printed p02-p04 and their fr/es
+      counterparts p10-p12 / p18-p20); operator reviews wording; fr/es copy
+      comes from the shipped book itself — the translations exist in print
+    - **recorded degradation: three illustrations are unregistered** in
+      [`../data/asset_registry.csv`](../data/asset_registry.csv) — the BP
+      front view, the BP left-side view, and the stacking/clearance diagram.
+      The `connections/*` category holds **no assets at all** (the registry's
+      categories are 二维码 / 图文混排 / 图标 / 插图 / 整页PDF / 标记).
+      Text-free extraction needs the `.ai` master; the shipped PDF is not
+      enough. The three templates therefore carry `TODO(资产)` comments naming
+      the source page and deliberately do **not** reference a non-existent
+      asset key, which would hard-fail the build. Asset intake is a separate
+      PR
+  - Done when:
+    - `python3 build.py check --config configs/config.bp-us.yaml --model
+      JBP-2000B --region US` exits 0. Baseline moved twice: pre-intake
+      2026-08-21 on the #940 tree, **FAILED with 30 issue(s)**, every one a
+      `MISSING_REQUIRED_SPEC_ROW`; post-first-batch 2026-08-22,
+      `validate_spec_master` **OK** and the failure moves to the `csv_page`
+      layer (`symbols page has no matching rows`). Both halves of the intake
+      have to land for this to exit 0
+    - the CI ratchet is reversed: `tests/fixtures/phase2` is refreshed to
+      carry the `JBP-2000B_US` document_key and
+      [`../.github/ci_check_targets_skip_baseline.json`](../.github/ci_check_targets_skip_baseline.json)
+      returns to `skip_count: 4` with `configs/config.bp-us.yaml` removed
+      from `skipped_configs`. Without this the BP target stays a permanent
+      `SKIP` and a green local check proves nothing about the CI lane
+  - Rollback: live-table rows are individually deletable (record_ids logged
+    per row at write time); templates, contracts and recipes revert by git.
+
+- [x] S5: Four-renderer acceptance — mechanical criteria harness
+  - Status: `done` (merged 2026-08-22, #939, squash `0432e5b7`; 17/17 checks
+    green on a refreshed base, same pre-merge staleness check as S3). Running
+    the harness against the slice target is S6's first step, not S5's — S5
+    delivers the harness. It is **not** "no new code": it ships
+    `tools/renderer_acceptance.py` (added by #939) (608
+    lines), `tests/test_renderer_acceptance.py`, and
+    `code-as-doc/dev/renderer_acceptance_runbook.md` (added by #939).
+    The harness is mergeable now; the acceptance **run** was subsequently
+    executed during S6 after both S4 intake batches landed.
+  - Gate: the harness merged on S1–S3; the S4 data prerequisite for the run is
+    now satisfied.
+  - Mechanical criteria (each one command + one exit code / grep):
+    - check/unittest/ruff/guardrails all green
+    - **PDF page count == 28 exactly** (`F(L) + L·B + K`, `K = 1`;
+      `F(L) = 1 + 2·⌈L/3⌉`, so `F(3) = 3`). "Zero exceptions on 25 books" was
+      too strong: the formula is pinned against **7** shipped books in
+      `tests/test_renderer_acceptance.py`, and single-language books are a
+      real exception — `F = 2`, because the JP house style folds the preface
+      into the cover. Where the formula does not apply, pin the measured
+      count with `--expect-pages N`. Also: uniform page size, and zero
+      `Undefined control sequence` **and** zero `Missing $` in the xelatex log
+    - HTML: check → md → html all exit 0; each language block has the new
+      pages' `<section>`s; `grep 'hb-[a-z-]*-composition'` on the new
+      target's HTML = **zero hits**. This is a positive requirement, not a
+      tolerance: BP is outside `web_manual.json`'s `figure_targets` whitelist
+      (`[{JE-1000F, US}]`), so `transform_web_fragment` returns the fragment
+      byte-unchanged at `tools/web_presentation.py:1686-1687` and the target
+      is *designed* to emit plain HTML. A hit means someone hand-expanded the
+      whitelist. The overview branch is a **silent soft skip**, not an error —
+      nothing raises, so the criterion has to be the grep, never "did it
+      crash"
+    - HTML: a manual stylesheet exists, and the criterion **reports which
+      channel** produced it — Sphinx emits `hb_manual.css`, `web_publish`
+      emits `web_manual.css`. Asserting a single name reds the other channel
+      for no reason
+    - Word: bundle builds green (reference doc binds at config level — no
+      per-model work expected)
+    - IDML: fallback export produces the `.idml`;
+      `git diff data/layout_params.csv docs/renderers/contracts/reference_layout/`
+      **empty** — the approved JE-1000F/US plan hashes the *entire* CSV, so
+      one added row unpins it (#720's failure shape). Review discipline is not
+      the control; the empty diff is
+    - IDML degradation, widened after refutation — the blocker is **not** the
+      overview geometry registry.
+      `docs/renderers/contracts/reference_layout_registry.json` holds exactly
+      one plan (JE-1000F/US), so `page_plan["plan_source"]` is not
+      `approved-reference` for BP and `tools/export_idml.py:377` never reaches
+      `add_product_overview_page`; the resolver at
+      `tools/idml/page_overview.py:368` is never called and nothing raises.
+      So the **overview page itself** degrades into the generic prose flow
+      alongside every `rst_include` page (`connections`, safety, box contents,
+      charging, storage, warranty) as `UNCLASSIFIED_PROSE`, and prose
+      typesetting runs non-`dense`. Data pages (spec / LCD / troubleshooting)
+      still emit normally, and there is no `installation` page to classify.
+      All of this is the accepted slice degradation (an optional 2-line
+      `page_roles.py` rule if the warning noise matters)
+    - regression: host lines byte-identical across two worktrees at base and
+      head (M-pre.4) on JE-1000F/US and JE-1000F/JP. The LaTeX component
+      library and the layout-params table are global singletons, so the slice
+      cannot claim success without this
+  - **Do not "fix" the overview geometry registry** (after refutation,
+    2026-08-21). `docs/renderers/contracts/overview_component_instances.json`
+    does hold exactly one instance (`je1000f-us-v1` → JE-1000F/US) and
+    `resolve_overview_instance` does raise `ComponentSpecError` on an
+    unmatched model/region — but **neither renderer calls it for BP**, so
+    adding a BP instance changes nothing observable. HTML's call site
+    (`tools/web_presentation.py:273-277`) passes
+    `instance_id="je1000f-us-v1"` from `web_manual.json:81`, and
+    `overview_instance.py:303-307` ignores model/region whenever
+    `instance_id` is set — that path can never raise on a target mismatch; it
+    would apply JE-1000F geometry to any model. Standing up BP overview
+    composition needs, **in this order**: (1) the two missing BP
+    illustrations, (2) a `figure_targets` row in `web_manual.json` for HTML,
+    (3) an approved reference-layout plan + registry row for IDML, and only
+    then (4) a BP instance. Steps 2 and 3 are slice red lines. Were step 3
+    reached today the first hard error would be `page_overview.py:362-363`
+    ("requires one h1, two h2s, and two images"), because the BP template's
+    images are still `TODO(资产)`.
+  - Deliverable: a short pass/fail table per criterion, attached to the PR
+    thread — no prose claims of "works". `tools/renderer_acceptance.py --json`
+    emits it; exit 0 means every selected criterion passed.
+
+- [x] S6: InDesign finishing + page-by-page reconciliation (operator round)
+  - Status: `done` — S5 is green and its S4 data prerequisite is satisfied.
+    #955 (`ad14f261`) landed the JBP shared-component candidate assembly,
+    #959 (`646050aa`) recorded the pipeline-side reconciliation, and #971
+    (`c1d75d62`) closed the portable-font final-assembly defects. Operator
+    closeout was recorded 2026-08-30.
+  - Gate: S5 green — satisfied.
+  - Work: pipeline delivers the handoff zip (existing mechanism: relative
+    Links, fonts opt-in); operator performs one real InDesign finishing pass;
+    the finished book is reconciled page-by-page against the shipped
+    `Jackery Battery Pack 2000 User Manual V2.0-2026-04-27.pdf` (28 pages).
+  - **The reconciliation baseline is not zero** (measured while building S5's
+    harness): `JE-1000F/US`'s *existing* pipeline PDF is **66 pages against a
+    58-page shipped book** at the same trim (368.79×524.69pt). That 8-page
+    divergence predates the slice and is out of S5's scope, but S6 must not
+    assume the pipeline should equal the shipped book page for page.
+  - Deliverable: reconciliation report in `code-as-doc/reviews/`, every
+    difference classified **pipeline-gap / finishing-layer / data-gap /
+    accepted-degradation** with counts. This report re-scopes the rollout.
+  - Evidence already recorded:
+    - [`reviews/jbp2000b_us_s6_reconciliation_2026-08.md`](reviews/jbp2000b_us_s6_reconciliation_2026-08.md):
+      pipeline mechanical acceptance is 11/11, with 28/28 physical pages,
+      43/43 source bindings, `skipped_raw=0`, and 41/41 delivery links
+    - [`reviews/jbp2000b_us_local_validation_2026-08.md`](reviews/jbp2000b_us_local_validation_2026-08.md):
+      InDesign 2026 `21.0.1.6` native finalize produced 28 pages with
+      0 overset, 0 missing fonts, 0 missing glyphs and 0 bad links
+    - the same validation record documents a 28-page source/native side-by-side
+      review and a clean-room ZIP unpack/reopen pass; the unpacked package
+      retained 41/41 links and reproduced all 28 rendered pages
+  - Final reconciliation counts use distinct root-cause families, not repeated
+    language/page instances: `pipeline-gap=0`, `finishing-layer=3` observed / 0
+    open, `data-gap=0`, `accepted-degradation=2` observed / 0 open. The two
+    accepted differences are the current source authority's `EN` versus the
+    historical reference's `US` label and the current source-authority TOC
+    order; neither is a missing-data or layout-pipeline defect.
+  - Operator ruling (2026-08-30): close S6 with zero pipeline gaps and accept
+    those two source-authority differences for this slice. This ruling does
+    **not** approve reference-layout promotion: the target assembly remains
+    `candidate` / `production_eligible=false` until the separate promotion
+    gate is approved.
+  - Slice exit: satisfied — report delivered, counts recorded, and operator
+    ruling recorded.
+
+### Post-S6 rollout backlog (full audited text in commit 80321368)
+
+S6 is accepted. Every item below remains deferred until it is re-scoped against
+the final S6 report and its own M-pre gate is satisfied.
+
+- [ ] M0 ordinal/naming decoupling for **existing** manifests — `deferred`;
+  the slice proves slot_id naming on new manifests only; migrating the pNN_
+  world stays gated on M-pre.3 (committed review derivatives + approved pin).
+- [ ] M1 language-block parameterization of the 17 existing manifests +
+  family index v2 — `deferred`; the slice's resolver is the prototype.
+- [ ] M2 App/联网 capability — `deferred`, **blocked on a design decision**
+  (no blank state exists: writer emits TRUE/FALSE only, empty reads as FALSE
+  and drops the page everywhere).
+- [ ] M3 `MAIN@JP` opening repair — `deferred`; must be an in-place
+  restructure of `01_meaning_of_symbols.rst` (adding `safety_ja.rst` back
+  would revert #607; it is a byte-exact 64-line prefix).
+- [ ] M4 `MAIN@CN` repair + conformity tail slot — `deferred`; note the
+  known-red `JE-2000E/CN` baseline (`ac_bypass` UNUSED_FOOTNOTE).
+- [ ] M5 full BP family (EU 6-language as slice #2, JP cell, A5 dissolution)
+  — `deferred`; both `target_defaults` failure paths must be closed for any
+  JP-family config.
+- [ ] M7 full contract tiering + JE-300E fork reclamation (7 assets, 6
+  manifests' model_overrides, 5 diff carriers, AC presence bits) — `deferred`;
+  gate on M5-equivalent category data and the live `review/JE-300E-EU` branch.
+- [ ] M6 `page_registry` composition authority — `deferred`; hard-gated on
+  truthful manifests (M3/M4) and T-K4.
+- [ ] M8 compliance fragment library + Row_key/Variant_key split — `deferred`;
+  operator compliance decision table signs first; ANATEL is a finishing-layer
+  item, not a blocker.
+- [ ] M9 data-quality closeout + PH line + reverse-gap registration —
+  `deferred`; requires a PH manifest, not just a config; no dependency on M5.
+
+### Milestone M exit criteria (unchanged targets, slice-first path)
+
+- [x] slice S1–S6 accepted, reconciliation report ruled on
+- [ ] rollout re-scoped from the report and executed
+- [ ] all five skeleton cells build at least one target end to end
+- [ ] corpus reconstruction 58/58 (3 outliers registered `legacy`)
+- [ ] **HTE153 regression-baseline reconciliation** (AU/KR/pt-BR pipeline
+      output vs shipped books)
+- [ ] **the Workstream W field test**: next real new line ≤2 operator days
+- [ ] known-red baselines fixed or re-recorded; maintenance record appended to
+      [`code_optimization_log.md`](code_optimization_log.md); Workstream M
+      status updated in [`optimization_project.md`](optimization_project.md)
 
 ## 8. Success Criteria
 

@@ -1,0 +1,34 @@
+# EU English charger/accessory family. Model-specific source carriers are
+# selected by target-resolved manifests and Product Manual Plans.
+extends: config-bases/eu-single-language-base.yaml
+
+build:
+  family_id: charger-eu-en
+  skeleton_family: CHARGER
+  languages: [en]
+  default_model: JA-AD01A
+  default_region: EU
+  targets:
+    - model: JA-AD01A
+      region: EU
+    - model: JA-AD600A
+      region: EU
+    - model: JAAC-WHE-100-EUA1
+      region: EU
+    - model: JA-CA05B
+      region: EU
+    - model: JA-CA3SA
+      region: EU
+    - model: JA-CC30A
+      region: EU
+  web_entry_source_patterns: [box_contents*, disclaimer*, connection_guide*, product_overview*]
+  word_reference_doc: docs/templates/word_template/reference_en.docx
+  word_title: "|PRODUCT_NAME| User Manual"
+  rst_substitutions:
+    MANUAL_LANGUAGE_SCOPE: English
+    WARRANTY_EMAIL: hello.eu@jackery.com
+    LEGAL_COMPANY_NAME: Jackery
+
+paths:
+  page_manifest: docs/manifests/manual_charger-eu-en-{model}.yaml
+  web_illustration_manifest: docs/renderers/web/charger_eu_en_{model}_illustrations.json

@@ -12,13 +12,16 @@ import json
 from pathlib import Path
 import re
 
+from tools.attachment_identity import preserve_frozen_attachment_names
 from tools.gen_index_bundle_assets import rewrite_rst_asset_paths
+from tools.safe_copy import assert_source_tree_no_symlinks, copy_regular_file_no_symlinks
 from tools.utils.path_utils import Paths, review_dir_of
 
 
 ROOT = Path(__file__).resolve().parents[1]
 PLACEHOLDER_RE = re.compile(r"\|([A-Z0-9][A-Z0-9_]+)\|")
 REVIEW_DUPLICATE_PREFIX_RE = re.compile(r"^p\d+_")
+SYNC_PRESERVE_PATHS_KEY = "sync_preserve_paths"
 
 
 @dataclass(frozen=True)
@@ -105,6 +108,33 @@ def _review_manifest(review_dir: Path) -> dict[str, object]:
     return raw if isinstance(raw, dict) else {}
 
 
+def _sync_preserve_paths(manifest: dict[str, object]) -> frozenset[Path]:
+    raw_paths = manifest.get(SYNC_PRESERVE_PATHS_KEY)
+    if raw_paths is None:
+        return frozenset()
+    if not isinstance(raw_paths, list):
+        raise RuntimeError(f"Review manifest field '{SYNC_PRESERVE_PATHS_KEY}' must be a list")
+
+    preserve_paths: set[Path] = set()
+    for raw_path in raw_paths:
+        if not isinstance(raw_path, str) or not raw_path.strip():
+            raise RuntimeError(f"Review manifest field '{SYNC_PRESERVE_PATHS_KEY}' contains an invalid path")
+        relative_path = Path(raw_path.strip())
+        if (
+            relative_path.is_absolute()
+            or ".." in relative_path.parts
+            or len(relative_path.parts) < 2
+            or relative_path.parts[0] not in {"page", "generated"}
+            or relative_path.suffix.lower() != ".rst"
+        ):
+            raise RuntimeError(
+                f"Review manifest field '{SYNC_PRESERVE_PATHS_KEY}' only accepts relative .rst paths "
+                f"under page/ or generated/: {raw_path}"
+            )
+        preserve_paths.add(relative_path)
+    return frozenset(preserve_paths)
+
+
 def _resolve_repo_path(value: object) -> Path | None:
     if not isinstance(value, str) or not value.strip():
         return None
@@ -127,7 +157,12 @@ def _family_page_manifest_path(*, model: str | None, region: str | None) -> tupl
     return resolve_page_manifest_path(cfg, root=ROOT, model=model, region=region), config_path
 
 
-def _target_config_path_for_review_mapping(*, region: str | None, lang: str) -> Path | None:
+def _target_config_path_for_review_mapping(
+    *,
+    model: str | None,
+    region: str | None,
+    lang: str,
+) -> Path | None:
     from tools.config_loader import load_config_mapping
     from tools.queue_config_resolution import resolve_config_path_for_task
 
@@ -137,6 +172,7 @@ def _target_config_path_for_review_mapping(*, region: str | None, lang: str) -> 
         return None
     return resolve_config_path_for_task(
         repo_root=ROOT,
+        model=model,
         region=normalized_region,
         lang=normalized_lang,
         config_loader=load_config_mapping,
@@ -160,21 +196,50 @@ def _shared_review_page_path_pairs(
     family_pages = plan_materialized_pages(family_cfg, model=model, region=region, root=ROOT)
     target_pages = plan_materialized_pages(target_cfg, model=model, region=region, root=ROOT)
 
-    family_by_key: dict[tuple[str, str], list[str]] = {}
-    for planned in family_pages:
-        key = ((planned.lang or "").strip().lower(), _normalized_materialized_page_name(planned.file_name))
-        family_by_key.setdefault(key, []).append(planned.file_name)
+    def _source_file(planned) -> str:
+        return str(getattr(planned.page, "file", "") or "").strip()
+
+    family_records: list[dict] = [
+        {
+            "lang": (planned.lang or "").strip().lower(),
+            "name": _normalized_materialized_page_name(planned.file_name),
+            "source": _source_file(planned),
+            "file_name": planned.file_name,
+            "consumed": False,
+        }
+        for planned in family_pages
+    ]
+
+    def _claim(predicate) -> str | None:
+        for record in family_records:
+            if not record["consumed"] and predicate(record):
+                record["consumed"] = True
+                return record["file_name"]
+        return None
 
     mapped_pairs: list[tuple[str, str]] = []
     for planned in target_pages:
-        key = ((planned.lang or "").strip().lower(), _normalized_materialized_page_name(planned.file_name))
-        shared_names = family_by_key.get(key)
-        if not shared_names:
+        target_lang = (planned.lang or "").strip().lower()
+        target_name = _normalized_materialized_page_name(planned.file_name)
+        target_source = _source_file(planned)
+        shared_name = _claim(
+            lambda record: record["lang"] == target_lang and record["name"] == target_name  # noqa: B023 -- invoked before the loop advances
+        )
+        if shared_name is None and target_source:
+            # A shared page (e.g. the trilingual preface) is declared once in
+            # the merged family manifest under its leading language; a
+            # single-language manifest declares the SAME template under its own
+            # language. Pair them by identical source file + page name so the
+            # review overlay still maps the shared review copy.
+            shared_name = _claim(
+                lambda record: record["source"] == target_source and record["name"] == target_name  # noqa: B023 -- invoked before the loop advances
+            )
+        if shared_name is None:
             continue
         mapped_pairs.append(
             (
                 (Path("page") / planned.file_name).as_posix(),
-                (Path("page") / shared_names.pop(0)).as_posix(),
+                (Path("page") / shared_name).as_posix(),
             )
         )
     return tuple(mapped_pairs)
@@ -203,7 +268,11 @@ def resolve_review_page_path_map(
     if review_manifest_path != family_manifest_path.resolve():
         return {}
 
-    target_config_path = _target_config_path_for_review_mapping(region=region, lang=normalized_target_lang)
+    target_config_path = _target_config_path_for_review_mapping(
+        model=model,
+        region=region,
+        lang=normalized_target_lang,
+    )
     if target_config_path is None:
         return {}
 
@@ -226,13 +295,25 @@ def resolve_review_page_path_map(
     }
 
 
-def _overlay_file_tree(src_dir: Path, dst_dir: Path, pattern: str = "*") -> None:
+def _overlay_file_tree(
+    src_dir: Path,
+    dst_dir: Path,
+    pattern: str = "*",
+    *,
+    destination_root: Path | None = None,
+) -> None:
     if not src_dir.exists():
         return
+    assert_source_tree_no_symlinks(src_dir, label="review overlay source")
     for src_file in sorted(path for path in src_dir.rglob(pattern) if path.is_file()):
         target_path = dst_dir / src_file.relative_to(src_dir)
-        target_path.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(src_file, target_path)
+        copy_regular_file_no_symlinks(
+            src_file,
+            target_path,
+            source_root=src_dir,
+            destination_root=destination_root or dst_dir,
+            label="review overlay source",
+        )
 
 
 def _overlay_selected_relative_files(
@@ -240,6 +321,7 @@ def _overlay_selected_relative_files(
     src_root: Path,
     dst_root: Path,
     relative_path_pairs: tuple[tuple[Path, Path], ...],
+    destination_root: Path | None = None,
 ) -> bool:
     copied = False
     for src_relative_path, dst_relative_path in relative_path_pairs:
@@ -247,8 +329,13 @@ def _overlay_selected_relative_files(
         if not src_path.is_file():
             continue
         target_path = dst_root / dst_relative_path
-        target_path.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(src_path, target_path)
+        copy_regular_file_no_symlinks(
+            src_path,
+            target_path,
+            source_root=src_root,
+            destination_root=destination_root or dst_root,
+            label="review overlay source",
+        )
         copied = True
     return copied
 
@@ -258,7 +345,11 @@ def _overlay_override_assets(overrides_src: Path, bundle_dir: Path) -> None:
         src_dir = overrides_src / allowed_dir
         if not src_dir.exists():
             continue
-        _overlay_file_tree(src_dir, bundle_dir / allowed_dir)
+        _overlay_file_tree(
+            src_dir,
+            bundle_dir / allowed_dir,
+            destination_root=bundle_dir,
+        )
 
 
 def overlay_review_onto_bundle(
@@ -277,19 +368,31 @@ def overlay_review_onto_bundle(
 
     if not review_dir.exists():
         return None
+    assert_source_tree_no_symlinks(review_dir, label="review bundle")
     if not index_src.exists() or not page_src.is_dir():
         raise RuntimeError(f"Review bundle is incomplete: {review_dir}")
 
-    shutil.copy2(index_src, bundle_dir / "index.rst")
+    copy_regular_file_no_symlinks(
+        index_src,
+        bundle_dir / "index.rst",
+        source_root=review_dir,
+        destination_root=bundle_dir,
+        label="review index",
+    )
 
     page_dst = bundle_dir / "page"
     page_dst.mkdir(parents=True, exist_ok=True)
-    _overlay_file_tree(page_src, page_dst, "*.rst")
+    _overlay_file_tree(page_src, page_dst, "*.rst", destination_root=bundle_dir)
 
     generated_dst = bundle_dir / "generated"
     if generated_src.exists():
         generated_dst.mkdir(parents=True, exist_ok=True)
-        _overlay_file_tree(generated_src, generated_dst, "*.rst")
+        _overlay_file_tree(
+            generated_src,
+            generated_dst,
+            "*.rst",
+            destination_root=bundle_dir,
+        )
 
     if overrides_src.exists():
         _overlay_override_assets(overrides_src, bundle_dir)
@@ -311,6 +414,7 @@ def overlay_review_content_onto_bundle(
     review_dir = review_dir_for_target(docs_dir=docs_dir, model=model, region=region, lang=lang)
     if not review_content_exists(docs_dir=docs_dir, model=model, region=region, lang=lang):
         return None
+    assert_source_tree_no_symlinks(review_dir, label="review bundle")
 
     index_src = review_dir / "index.rst"
     page_src = review_dir / "page"
@@ -319,7 +423,13 @@ def overlay_review_content_onto_bundle(
     applied = False
 
     if allow_index and index_src.exists():
-        shutil.copy2(index_src, bundle_dir / "index.rst")
+        copy_regular_file_no_symlinks(
+            index_src,
+            bundle_dir / "index.rst",
+            source_root=review_dir,
+            destination_root=bundle_dir,
+            label="review index",
+        )
         applied = True
 
     page_relative_path_map = (
@@ -341,7 +451,7 @@ def overlay_review_content_onto_bundle(
     if page_src.is_dir():
         page_dst.mkdir(parents=True, exist_ok=True)
         if selected_page_paths is None:
-            _overlay_file_tree(page_src, page_dst, "*.rst")
+            _overlay_file_tree(page_src, page_dst, "*.rst", destination_root=bundle_dir)
             applied = True
         else:
             selected_page_pairs: list[tuple[Path, Path]] = []
@@ -359,6 +469,7 @@ def overlay_review_content_onto_bundle(
                 src_root=page_src,
                 dst_root=page_dst,
                 relative_path_pairs=tuple(selected_page_pairs),
+                destination_root=bundle_dir,
             ):
                 applied = True
 
@@ -375,12 +486,18 @@ def overlay_review_content_onto_bundle(
     if generated_src.is_dir():
         generated_dst.mkdir(parents=True, exist_ok=True)
         if selected_generated_paths is None:
-            _overlay_file_tree(generated_src, generated_dst, "*.rst")
+            _overlay_file_tree(
+                generated_src,
+                generated_dst,
+                "*.rst",
+                destination_root=bundle_dir,
+            )
             applied = True
         elif _overlay_selected_relative_files(
             src_root=generated_src,
             dst_root=generated_dst,
             relative_path_pairs=tuple((relative_path, relative_path) for relative_path in selected_generated_paths),
+            destination_root=bundle_dir,
         ):
             applied = True
 
@@ -494,6 +611,27 @@ def _render_placeholder_values(template_line: str, values: tuple[str, ...]) -> s
     return "".join(rendered_parts)
 
 
+_DIRECTIVE_LINE_RE = re.compile(r"^\s*\.\.( |$)")
+_OPTION_LINE_RE = re.compile(r"^\s*:[A-Za-z][\w-]*:")
+_GRID_BORDER_LINE_RE = re.compile(r"^\s*\+[-=+]+\+?\s*$")
+
+
+def _line_structure_class(line: str) -> str:
+    """Coarse RST structural class used to guard placeholder-line refreshes."""
+    stripped = line.strip()
+    if not stripped:
+        return "blank"
+    if _DIRECTIVE_LINE_RE.match(line):
+        return "directive"
+    if _OPTION_LINE_RE.match(line):
+        return "option"
+    if _GRID_BORDER_LINE_RE.match(line):
+        return "grid-border"
+    if stripped.startswith("|") and stripped.endswith("|") and stripped.count("|") >= 3:
+        return "grid-row"
+    return "content"
+
+
 def _merge_parameter_lines(
     *,
     template_path: Path,
@@ -528,6 +666,25 @@ def _merge_parameter_lines(
             continue
         review_idx = review_line_mapping.get(template_idx)
         if review_idx is None or review_idx >= len(merged_lines):
+            continue
+        # When the pages have diverged, the line mapping can land a template
+        # content line on top of an unrelated structural line — e.g. a
+        # `.. list-table::` directive — and blindly overwriting it splices the
+        # page into malformed RST. Prose refreshes onto prose stay allowed;
+        # replacements that would change the line's structural class are not.
+        if _line_structure_class(merged_lines[review_idx]) != _line_structure_class(template_line):
+            continue
+        # _render_placeholder_values rebuilds the line from the TEMPLATE's
+        # inter-placeholder text and the TEMPLATE's indentation, so it is only
+        # safe when the review line is still that same line with its slots
+        # filled. Require that first: if the review line no longer matches the
+        # template's shape, a reviewer has edited it — authored prose sharing
+        # the line with a placeholder, or a different indent — and rebuilding
+        # would silently revert their edit. Leaving the line's parameters stale
+        # is the recoverable failure; destroying the edit is not.
+        # tools/check_review_branch_sync.py is the notice path for a shared
+        # source change that an open review branch still has to pick up.
+        if _extract_placeholder_values(template_line, merged_lines[review_idx]) is None:
             continue
         merged_lines[review_idx] = _render_placeholder_values(template_line, runtime_values)
 
@@ -609,23 +766,49 @@ def sync_review_paths(
 
     sync_plan = plan or tuple(SyncPlanEntry(relative_path=relative_path) for relative_path in relative_paths)
 
+    manifest_path = review_dir / "manifest.json"
+    manifest = _review_manifest(review_dir)
+    preserve_paths = _sync_preserve_paths(manifest)
+
     copied: list[Path] = []
+    preserved: list[Path] = []
     for entry in sync_plan:
+        if entry.relative_path in preserve_paths:
+            preserved.append(review_dir / entry.relative_path)
+            continue
         src_relative_path = entry.source_relative_path or entry.relative_path
         src_path = runtime_bundle_dir / src_relative_path
         dst_path = review_dir / entry.relative_path
         if entry.mode == "copy":
-            copied.append(
-                _rewrite_review_rst_asset_paths(
-                    _copy_relative_file(
-                        runtime_bundle_dir,
-                        review_dir,
-                        src_relative_path=src_relative_path,
-                        dst_relative_path=entry.relative_path,
-                    ),
-                    review_dir=review_dir,
-                )
+            # Review pages are a frozen byte surface: the refreshed runtime
+            # copy re-emits attachment basenames with the CURRENT Feishu file
+            # token, and tokens rotate on every export. Preserve the frozen
+            # basenames (same semantic identity) so a re-sync of identical
+            # data leaves the page bytes unchanged — otherwise every queue
+            # run breaks the same-source reference-layout pins.
+            frozen_text = (
+                dst_path.read_text(encoding="utf-8")
+                if dst_path.suffix == ".rst" and dst_path.is_file()
+                else None
             )
+            copied_path = _rewrite_review_rst_asset_paths(
+                _copy_relative_file(
+                    runtime_bundle_dir,
+                    review_dir,
+                    src_relative_path=src_relative_path,
+                    dst_relative_path=entry.relative_path,
+                ),
+                review_dir=review_dir,
+            )
+            if frozen_text is not None:
+                refreshed_text = copied_path.read_text(encoding="utf-8")
+                stable_text, preserved_names = preserve_frozen_attachment_names(
+                    frozen_text=frozen_text,
+                    refreshed_text=refreshed_text,
+                )
+                if preserved_names:
+                    copied_path.write_text(stable_text, encoding="utf-8")
+            copied.append(copied_path)
             continue
         if entry.mode == "merge_params":
             if entry.template_path is None:
@@ -639,17 +822,10 @@ def sync_review_paths(
             continue
         raise RuntimeError(f"Unsupported sync mode: {entry.mode}")
 
-    manifest_path = review_dir / "manifest.json"
-    manifest: dict[str, object] = {}
-    if manifest_path.exists():
-        try:
-            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-        except json.JSONDecodeError:
-            manifest = {}
-
     manifest["last_synced_at"] = datetime.now(timezone.utc).isoformat()
     manifest["last_sync_scope"] = scope
     manifest["last_sync_files"] = [path.relative_to(review_dir).as_posix() for path in copied]
+    manifest["last_sync_preserved_files"] = [path.relative_to(review_dir).as_posix() for path in preserved]
     manifest["page_files"] = [path.relative_to(review_dir).as_posix() for path in _iter_rst_files(review_dir / "page")]
     manifest["generated_files"] = [
         path.relative_to(review_dir).as_posix() for path in _iter_rst_files(review_dir / "generated")

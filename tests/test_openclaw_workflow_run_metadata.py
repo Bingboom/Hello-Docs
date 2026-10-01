@@ -75,7 +75,11 @@ class TestOpenClawWorkflowRunMetadata(unittest.TestCase):
             self.assertEqual(payload["queue_record_id"], "rec_publish")
             self.assertEqual(payload["openclaw_dispatch_nonce"], "nonce-123")
             self.assertEqual(payload["publish_url"], "https://manual.example.com/latest")
-            self.assertEqual(payload["document_link_url"], "https://docs.example.com/doc")
+            self.assertEqual(payload["delivery_kind"], "idml_file")
+            self.assertEqual(payload["delivery_url"], "https://docs.example.com/doc")
+            self.assertNotIn("document_link_url", payload)
+            self.assertNotIn("document_link_url", payload["publish_metadata"])
+            self.assertEqual(payload["publish_metadata"]["idml_file"], "https://docs.example.com/doc")
             self.assertEqual(
                 payload["publish_pdf_output_path"],
                 "reports/releases/JE-1000F/US/en/versions/V1/manual.pdf",
@@ -135,3 +139,48 @@ class TestOpenClawWorkflowRunMetadata(unittest.TestCase):
             assert isinstance(failure_summary, dict)
             self.assertEqual("missing_spec_data", failure_summary["summary_code"])
             self.assertEqual("缺少 JE-1000F_CN 的规格数据，无法进入 review。", failure_summary["summary_message"])
+
+    def test_web_publish_metadata_supplies_the_rtd_url(self) -> None:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            releases_root = Path(tmpdir) / "reports" / "releases"
+            meta_path = (
+                releases_root
+                / "JE-1000F"
+                / "US"
+                / "en"
+                / "latest"
+                / "web"
+                / "publish_meta.json"
+            )
+            meta_path.parent.mkdir(parents=True, exist_ok=True)
+            meta_path.write_text(
+                (
+                    '{\n'
+                    '  "built_at": "2026-08-02T12:00:00+00:00",\n'
+                    '  "publish_url": "https://ht-doc.readthedocs.io/en/latest/JE-1000F/US/md/manual.html",\n'
+                    '  "html_index": "reports/releases/JE-1000F/US/en/versions/2.0/web/html/index.html"\n'
+                    '}\n'
+                ),
+                encoding="utf-8",
+            )
+
+            payload = build_metadata(
+                workflow_name="Feishu Web Publish Queue",
+                workflow_file=".github/workflows/feishu-web-publish-queue.yml",
+                queue_record_id="rec_web",
+                trigger_source="openclaw",
+                openclaw_dispatch_nonce="nonce-web",
+                artifact_names=["feishu-web-publish-queue-output"],
+                publish_url="",
+                failure_summary_path=None,
+                releases_root=releases_root,
+                env={},
+            )
+
+            self.assertEqual(
+                "https://ht-doc.readthedocs.io/en/latest/JE-1000F/US/md/manual.html",
+                payload["publish_url"],
+            )
+            self.assertEqual("html", payload["delivery_kind"])
+            self.assertEqual(payload["publish_url"], payload["delivery_url"])
+            self.assertTrue(str(payload["publish_metadata_path"]).endswith("latest/web/publish_meta.json"))

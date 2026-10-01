@@ -4,8 +4,8 @@ GRUNDLEGENDE OPERATIONEN
 HAUPTSTROMVERSORGUNG EIN/AUS
 ----------------------------
 
-.. image:: templates/word_template/common_assets/operation/main_power.png
-   :alt: Platzhalter für Ein-/Ausschalten.
+.. image:: asset:operation/main_power
+   :alt: Ein-/Ausschalten.
    :width: 360px
 
 | Ein: Einmal drücken.
@@ -21,8 +21,8 @@ AC-AUSGANG EIN/AUS
 
 **Voraussetzung**: Das Produkt ist eingeschaltet.
 
-.. image:: templates/word_template/common_assets/operation/ac_output.png
-   :alt: Platzhalter für AC-Ausgang Ein/Aus.
+.. image:: asset:operation/ac_output
+   :alt: AC-Ausgang Ein/Aus.
    :width: 360px
 
 | 
@@ -37,8 +37,8 @@ DC 12V/USB-AUSGANG EIN/AUS
 
 **Voraussetzung**: Das Produkt ist eingeschaltet.
 
-.. image:: templates/word_template/common_assets/operation/dc_usb_output.png
-   :alt: Platzhalter für DC/USB-Ausgang Ein/Aus.
+.. image:: asset:operation/dc_usb_output
+   :alt: DC/USB-Ausgang Ein/Aus.
    :width: 360px
 
 | 
@@ -48,28 +48,64 @@ DC 12V/USB-AUSGANG EIN/AUS
 | Einmal drücken
 |
 
-.. list-table::
-   :header-rows: 0
-   :widths: 12 88
+.. The JE-1000H print (EU-UK V2.0-2026-08-03, PDF page 63) rates its high-power
+   USB-C port at 140 W and adds the 28 V/5 A cable rating; each model follows its
+   own print.
 
-   * - **VORSICHT**
-     -
-       - **Der USB-C-100-W-Anschluss ist ein Hochleistungs-Ausgangsanschluss des USB-PD-Typs Power Source 3 (PS3).** Wenn das angeschlossene Benutzergerät oder Zubehör die Sicherheitsanforderungen nicht erfüllt, kann Brandgefahr bestehen. Stellen Sie vor der Verwendung dieses Anschlusses sicher, dass das angeschlossene Gerät oder Zubehör über Brandschutz verfügt.
-       - Schließen Sie |PRODUCT_NAME| nur an Geräte oder Zubehör an, die den Abschnitten 6.3, 6.4 und 6.5 der IEC/EN/UL 62368-1 (oder anderen gleichwertigen Normen) entsprechen.
-       - Verwenden Sie für die maximale Ausgangsleistung das USB-C-auf-USB-C-5 A-Kabel (20 V DC/5 A, 100 W).
+.. only:: model_je_1000h
+
+   .. list-table::
+      :header-rows: 0
+      :widths: 12 88
+
+      * - **VORSICHT**
+        -
+          - **Der USB-C-140-W-Anschluss ist ein Hochleistungs-Ausgangsanschluss des USB-PD-Typs Power Source 3 (PS3).** Wenn das angeschlossene Benutzergerät oder Zubehör die Sicherheitsanforderungen nicht erfüllt, kann Brandgefahr bestehen. Stellen Sie vor der Verwendung dieses Anschlusses sicher, dass das angeschlossene Gerät oder Zubehör über Brandschutz verfügt.
+          - Schließen Sie |PRODUCT_NAME| nur an Geräte oder Zubehör an, die den Abschnitten 6.3, 6.4 und 6.5 der IEC/EN/UL 62368-1 (oder anderen gleichwertigen Normen) entsprechen.
+          - Verwenden Sie für die maximale Ausgangsleistung das USB-C-auf-USB-C-5 A-Kabel (20 V DC/5 A, 100 W; 28 V DC/5 A, 140 W).
+
+.. only:: not model_je_1000h
+
+   .. list-table::
+      :header-rows: 0
+      :widths: 12 88
+
+      * - **VORSICHT**
+        -
+          - **Der USB-C-100-W-Anschluss ist ein Hochleistungs-Ausgangsanschluss des USB-PD-Typs Power Source 3 (PS3).** Wenn das angeschlossene Benutzergerät oder Zubehör die Sicherheitsanforderungen nicht erfüllt, kann Brandgefahr bestehen. Stellen Sie vor der Verwendung dieses Anschlusses sicher, dass das angeschlossene Gerät oder Zubehör über Brandschutz verfügt.
+          - Schließen Sie |PRODUCT_NAME| nur an Geräte oder Zubehör an, die den Abschnitten 6.3, 6.4 und 6.5 der IEC/EN/UL 62368-1 (oder anderen gleichwertigen Normen) entsprechen.
+          - Verwenden Sie für die maximale Ausgangsleistung das USB-C-auf-USB-C-5 A-Kabel (20 V DC/5 A, 100 W).
 
 | Das Produkt kann Ihre Fahrzeugbatterie mit dem Jackery 12-V-Autobatterie-Ladekabel aufladen, das separat erhältlich und auf unserer Website verfügbar ist.
- 
 
-.. list-table::
-   :header-rows: 0
-   :widths: 12 88
 
-   * - **VORSICHT**
-     -
-       - Der DC-12-V-Anschluss ist nur mit 12-V-Autobatterien kompatibel und nicht für 24-V-Systeme geeignet.
-       - Starten Sie das Fahrzeug nicht, während das Produkt die Fahrzeugbatterie über den 12-V-DC-Ausgang lädt, da dies das Produkt beschädigen kann.
-       - Diese Funktion ist nur für den Notfall vorgesehen und kann eine leere oder beschädigte Fahrzeugbatterie nicht aufladen.
+.. The JE-1000H German print (EU-UK V2.0-2026-08-03, PDF page 63) words
+   this 12 V caution differently from the other models on this carrier; each
+   model follows its own print.
+
+.. only:: model_je_1000h
+
+   .. list-table::
+      :header-rows: 0
+      :widths: 12 88
+
+      * - **VORSICHT**
+        -
+          - Der Zigarettenanzünderanschluss ist nur mit 12V-Autobatterien kompatibel und nicht für 24V-Systeme geeignet.
+          - Starten Sie das Fahrzeug nicht, während das Gerät die Autobatterie über den 12V-DC-Ausgang (Zigarettenanzünderanschluss) lädt, da dies das Gerät beschädigen kann.
+          - Diese Funktion ist ausschließlich für den Notfall vorgesehen und kann eine vollständig entladene oder defekte Autobatterie nicht aufladen.
+
+.. only:: not model_je_1000h
+
+   .. list-table::
+      :header-rows: 0
+      :widths: 12 88
+
+      * - **VORSICHT**
+        -
+          - Der DC-12-V-Anschluss ist nur mit 12-V-Autobatterien kompatibel und nicht für 24-V-Systeme geeignet.
+          - Starten Sie das Fahrzeug nicht, während das Produkt die Fahrzeugbatterie über den 12-V-DC-Ausgang lädt, da dies das Produkt beschädigen kann.
+          - Diese Funktion ist nur für den Notfall vorgesehen und kann eine leere oder beschädigte Fahrzeugbatterie nicht aufladen.
 
 ENERGIESPARMODUS
 ----------------
@@ -80,8 +116,8 @@ Um den Energiesparmodus zu deaktivieren, halten Sie sowohl die AC-Einschalttaste
 
 Wenn Sie Geräte mit geringem Stromverbrauch betreiben (AC <= |ENERGY_SAVING_AC_THRESHOLD| oder DC/USB <= |ENERGY_SAVING_DC_THRESHOLD|), deaktivieren Sie den Energiesparmodus, damit der Ausgang während des Betriebs nicht automatisch ausgeschaltet wird.
 
-.. image:: templates/word_template/common_assets/operation/energy_saving.png
-   :alt: Platzhalter für die Tastenbedienung des Energiesparmodus.
+.. image:: asset:operation/energy_saving
+   :alt: Tastenbedienung des Energiesparmodus.
    :width: 320px
 
 
@@ -100,14 +136,16 @@ LED-LICHT EIN/AUS
 
 Die LED-Leuchte verfügt über zwei Modi: Lichtmodus und SOS-Modus. Halten Sie in jedem Modus die LED-Lichttaste gedrückt, um das Licht auszuschalten.
 
-.. image:: templates/word_template/common_assets/operation/led_light.png
-   :alt: Platzhalter für den LED-Licht-Modus.
+.. image:: asset:operation/led_light
+   :alt: LED-Licht-Modus.
    :width: 360px
 
 |
 | Drücken Sie die LED-Lichttaste einmal, um das Licht einzuschalten.
 | Drücken Sie sie erneut, um in den SOS-Modus zu wechseln.
 | Drücken Sie sie ein drittes Mal, um das Licht auszuschalten.
+
+.. hb-capability-begin: AC/DC输出记忆恢复
 
 Wiederaufnahmefunktion für AC- und DC-Ausgänge
 ----------------------------------------------
@@ -126,6 +164,9 @@ Die Wiederaufnahmefunktion für AC- und DC-Ausgänge ist standardmäßig deaktiv
 | OTA-Update abgeschlossen                                          | Durch Entlade-Timer gesteuerter Ausgang deaktiviert         |
 +-------------------------------------------------------------------+-------------------------------------------------------------+
 
+.. hb-capability-end:
+
+
 LCD-ANZEIGE
 -----------
 
@@ -136,7 +177,7 @@ LCD-ANZEIGE
       <table style="width:100%; border-collapse:collapse; margin:0.75rem 0 0.5rem 0;">
         <tr>
           <td rowspan="6" style="width:24%; border:1px solid #cfcfcf; padding:8px; vertical-align:top; text-align:center;">
-            <img src="_assets/templates/word_template/common_assets/operation/lcd_mode.png" alt="Platzhalter für den LCD-Anzeigemodus." style="max-width:140px; width:100%; height:auto; display:block; margin:0 auto;">
+            <img src="asset:operation/lcd_mode" alt="LCD-Anzeigemodus." style="max-width:140px; width:100%; height:auto; display:block; margin:0 auto;">
           </td>
           <td rowspan="3" style="width:18%; border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Kurzzeitig an</td>
           <td style="width:12%; border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Ein</td>
@@ -169,7 +210,7 @@ LCD-ANZEIGE
 
    .. raw:: latex
 
-      \begin{HBLcdModeTable}{lcd_mode.png}
+      \begin{HBLcdModeTable}{asset:operation/lcd_mode}
       \HBLcdModeFirstGroup{Kurzzeitig an}{Ein}{Drücken Sie die Haupt-POWER-Taste oder während das Produkt geladen wird.}{Aus}{Drücken Sie die Haupt-POWER-Taste.}{Autom. aus}{Die LCD-Anzeige schaltet sich nach 2 Minuten Inaktivität automatisch aus und wechselt in den Schlafmodus.}
       \HBLcdModeSecondGroup{Dauerhaft an (beim Laden oder Entladen)}{Ein}{Drücken Sie die Haupt-POWER-Taste zweimal, wenn das Produkt eingeschaltet ist.}{Aus}{Drücken Sie die Haupt-POWER-Taste.}{Autom. aus}{Die LCD-Anzeige schaltet sich nach |DEFAULT_STANDBY_DURATION| Inaktivität automatisch aus.}
       \end{HBLcdModeTable}

@@ -4,7 +4,7 @@ OPERATIONS
 POWER ON/OFF
 ------------
 
-.. image:: templates/word_template/common_assets/operation/main_power.png
+.. image:: asset:operation/main_power
    :alt: Power on/off operation placeholder.
    :width: 360px
 
@@ -21,7 +21,7 @@ AC OUTPUT ON/OFF
 
 **Prerequisite**: The product is powered on.
 
-.. image:: templates/word_template/common_assets/operation/ac_output.png
+.. image:: asset:operation/ac_output
    :alt: AC output on/off operation placeholder.
    :width: 360px
 
@@ -37,7 +37,7 @@ DC 12V/USB OUTPUT ON/OFF
 
 **Prerequisite**: The product is powered on.
 
-.. image:: templates/word_template/common_assets/operation/dc_usb_output.png
+.. image:: asset:operation/dc_usb_output
    :alt: DC USB output on/off operation placeholder.
    :width: 360px
 
@@ -75,13 +75,17 @@ DC 12V/USB OUTPUT ON/OFF
 ENERGY SAVING MODE
 ------------------
 
-To prevent unnecessary battery consumption from forgetting to turn off the output, the product enables Energy Saving Mode by default. When the AC or DC/USB output is turned on, the Energy Saving Mode icon will be displayed on the LCD screen. In this mode, if no device is connected or the connected device's power consumption is below a certain threshold (|ENERGY_SAVING_AC_THRESHOLD| AC output or |ENERGY_SAVING_DC_THRESHOLD| DC/USB output), the corresponding output will automatically turns off after the set time. The default setting is |ENERGY_SAVING_AUTO_OFF_DURATION|. The Energy Saving Mode duration can be set in the Jackery App to 1H, 2 H, 8 H, 12 H or 24 H. If it is set to Never Off, Energy Saving Mode will be disabled.
+To prevent unnecessary battery consumption from forgetting to turn off the output, the product enables Energy Saving Mode by default. When the AC or DC/USB output is turned on, the Energy Saving Mode icon will be displayed on the LCD screen. In this mode, if no device is connected or the connected device's power consumption is below a certain threshold (|ENERGY_SAVING_AC_THRESHOLD| AC output or |ENERGY_SAVING_DC_THRESHOLD| DC/USB output), the corresponding output will automatically turns off after the set time. The default setting is |ENERGY_SAVING_AUTO_OFF_DURATION|. The Energy Saving Mode duration can be set in the Jackery App to 1 H, 2 H, 8 H, 12 H or 24 H. If it is set to Never Off, Energy Saving Mode will be disabled.
 
-To disable the energy saving mode, press and hold both the AC power button and the main POWER button for more than 3 seconds. Once Energy Saving Mode is disabled, the icon will no longer appear on the LCD screen, and the product will not automatically turn off the AC or USB output.
+To disable the energy saving mode, press and hold both the AC power button and the POWER button for more than 3 seconds. Once Energy Saving Mode is disabled, the icon will no longer appear on the LCD screen, and the product will not automatically turn off the AC or USB output.
 
 When powering low-power devices (AC ≤ |ENERGY_SAVING_AC_THRESHOLD| or DC/USB ≤ |ENERGY_SAVING_DC_THRESHOLD|), disable Energy Saving Mode to prevent the output from shutting down automatically during operation.
 
-.. image:: templates/word_template/common_assets/operation/energy_saving.png
+.. raw:: manual-ir
+
+   {"kind":"operation_panel_copy","layout":"energy_saving","mode_label":"On/Off"}
+
+.. image:: asset:operation/energy_saving
    :alt: Energy saving mode key operation placeholder.
    :width: 320px
 
@@ -101,7 +105,11 @@ LED LIGHT ON/OFF
 
 The LED light has two modes: Light mode and SOS mode. In any mode, press and hold the LED light button to turn off the light.
 
-.. image:: templates/word_template/common_assets/operation/led_light.png
+.. raw:: manual-ir
+
+   {"kind":"operation_panel_copy","layout":"led_light","sos_label":"SOS"}
+
+.. image:: asset:operation/led_light
    :alt: LED light mode operation placeholder.
    :width: 360px
 
@@ -137,15 +145,15 @@ LCD SCREEN
       <table style="width:100%; border-collapse:collapse; margin:0.75rem 0 0.5rem 0;">
         <tr>
           <td rowspan="6" style="width:24%; border:1px solid #cfcfcf; padding:8px; vertical-align:top; text-align:center;">
-            <img src="_assets/templates/word_template/common_assets/operation/lcd_mode.png" alt="LCD display mode placeholder." style="max-width:140px; width:100%; height:auto; display:block; margin:0 auto;">
+            <img src="asset:operation/lcd_mode" alt="LCD display mode placeholder." style="max-width:140px; width:100%; height:auto; display:block; margin:0 auto;">
           </td>
           <td rowspan="3" style="width:18%; border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Shortly On</td>
           <td style="width:12%; border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Turn on</td>
-          <td style="width:46%; border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Press the main POWER button or when the product is charging.</td>
+          <td style="width:46%; border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Press the POWER button or when the product is charging.</td>
         </tr>
         <tr>
           <td style="border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Turn off</td>
-          <td style="border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Press the main POWER button.</td>
+          <td style="border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Press the POWER button.</td>
         </tr>
         <tr>
           <td style="border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Auto-off</td>
@@ -154,11 +162,11 @@ LCD SCREEN
         <tr>
           <td rowspan="3" style="border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Steady On (in charging or discharging state)</td>
           <td style="border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Turn on</td>
-          <td style="border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Press the main POWER button twice when the product is powered on.</td>
+          <td style="border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Press the POWER button twice when the product is powered on.</td>
         </tr>
         <tr>
           <td style="border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Turn off</td>
-          <td style="border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Press the main POWER button.</td>
+          <td style="border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Press the POWER button.</td>
         </tr>
         <tr>
           <td style="border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Auto-off</td>
@@ -170,20 +178,10 @@ LCD SCREEN
 
    .. raw:: latex
 
-      \begingroup
-      \renewcommand{\arraystretch}{1.25}
-      \setlength{\tabcolsep}{6pt}
-      \begin{tabular}{|m{0.24\linewidth}|m{0.16\linewidth}|m{0.12\linewidth}|m{0.36\linewidth}|}
-      \hline
-      \multirow{6}{*}{\parbox[c]{0.22\linewidth}{\centering\includegraphics[width=0.20\linewidth]{lcd_mode.png}}}
-      & \multirow{3}{*}{\parbox[t]{0.14\linewidth}{Shortly On}} & Turn on & Press the main POWER button or when the product is charging. \\ \cline{3-4}
-      & & Turn off & Press the main POWER button. \\ \cline{3-4}
-      & & Auto-off & The LCD turns off automatically and enters sleep mode after 2 minutes of inactivity. \\ \cline{2-4}
-      & \multirow{3}{*}{\parbox[t]{0.14\linewidth}{Steady On (in charging or discharging state)}} & Turn on & Press the main POWER button twice when the product is powered on. \\ \cline{3-4}
-      & & Turn off & Press the main POWER button. \\ \cline{3-4}
-      & & Auto-off & The LCD turns off automatically after |DEFAULT_STANDBY_DURATION| of inactivity. \\ \hline
-      \end{tabular}
-      \endgroup
+      \begin{HBLcdModeTable}{asset:operation/lcd_mode}
+      \HBLcdModeFirstGroup{Shortly On}{Turn on}{Press the POWER button or when the product is charging.}{Turn off}{Press the POWER button.}{Auto-off}{The LCD turns off automatically and enters sleep mode after 2 minutes of inactivity.}
+      \HBLcdModeSecondGroup{Steady On (in charging or discharging state)}{Turn on}{Press the POWER button twice when the product is powered on.}{Turn off}{Press the POWER button.}{Auto-off}{The LCD turns off automatically after |DEFAULT_STANDBY_DURATION| of inactivity.}
+      \end{HBLcdModeTable}
 
 You can also set the screen display mode in the Jackery App.
 
@@ -197,15 +195,15 @@ KEY COMBINATION
    * - Buttons
      - Operation
      - Function
-   * - Main POWER button + AC Power Button
+   * - POWER button + AC Power Button
      - Press and hold both for 3s
      - Turn on/off the Energy Saving Mode
-   * - Main POWER button + DC/USB Power Button
+   * - POWER button + DC/USB Power Button
      - Press and hold both for 3s
      - Reset Wi-Fi and Bluetooth
    * - DC/USB Power Button + AC Power Button
      - Press and hold both for 1s
      - Turn on/off Wi-Fi and Bluetooth
-   * - Main POWER button + LED Light button
+   * - POWER button + LED Light button
      - Press and hold both for 1s
      - Turn on/off Emergency Charging Mode

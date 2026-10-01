@@ -22,8 +22,8 @@ const pluginRoot = path.dirname(fileURLToPath(import.meta.url));
 function usage() {
   return [
     "Usage:",
-    "  node cli.mjs dispatch <start-review|build-draft> <record_id>",
-    "  node cli.mjs dispatch publish <record_id> confirm",
+    "  node cli.mjs dispatch <start-review|build-draft> <record_id|batch>",
+    "  node cli.mjs dispatch <publish|web-publish> <record_id|batch> confirm",
     "  node cli.mjs status [last|<run_id>]",
   ].join("\n");
 }
@@ -40,6 +40,8 @@ function commandByName(name) {
     "build-draft": "build-draft",
     "build_draft": "build-draft",
     "publish": "publish",
+    "web-publish": "web-publish",
+    "web_publish": "web-publish",
   };
   const commandName = aliases[normalized];
   return COMMAND_DEFINITIONS.find((command) => command.commandName === commandName) || null;
@@ -57,12 +59,14 @@ async function dispatch(commandName, rawArgs) {
     throw new Error(`Unknown dispatch command: ${commandName}\n${usage()}`);
   }
 
-  const { queueRecordId } = ensureDispatchArgs(commandName, rawArgs);
+  const { queueRecordId, queueRecordIds, batch } = ensureDispatchArgs(commandName, rawArgs);
   const github = createGitHubClient(settings);
   const stateStore = createStateStore(settings.stateFile);
   const result = await dispatchCommandFlow({
     command,
     queueRecordId,
+    queueRecordIds,
+    batch,
     github,
     stateStore,
     settings,

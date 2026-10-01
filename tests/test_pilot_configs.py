@@ -56,11 +56,24 @@ class TestPilotConfigs(unittest.TestCase):
             region="JP",
         )
 
+    def test_kr_config_should_register_je_2000e_target(self) -> None:
+        cfg = check_docs.load_config(ROOT / "configs/config.kr.yaml")
+
+        self.assertIn(
+            {"model": "JE-2000E", "region": "KR"},
+            cfg.get("build", {}).get("targets", []),
+        )
+        self.assertEqual(["ko"], cfg.get("build", {}).get("languages"))
+        self.assertEqual(
+            "docs/manifests/manual_kr.yaml",
+            cfg.get("paths", {}).get("page_manifest"),
+        )
+
     def test_us_single_language_configs_should_resolve_manifest_backed_pages_without_issues(self) -> None:
         cases = (
             ("configs/config.us-en.yaml", "en", "us-en", "docs/manifests/manual_us-single-en.yaml", 17),
-            ("configs/config.us-es.yaml", "es", "us-es", "docs/manifests/manual_us-single-es.yaml", 16),
-            ("configs/config.us-fr.yaml", "fr", "us-fr", "docs/manifests/manual_us-single-fr.yaml", 16),
+            ("configs/config.us-es.yaml", "es", "us-es", "docs/manifests/manual_us-single-es.yaml", 17),
+            ("configs/config.us-fr.yaml", "fr", "us-fr", "docs/manifests/manual_us-single-fr.yaml", 17),
         )
 
         for config_name, expected_lang, expected_family, expected_manifest, expected_page_count in cases:
@@ -262,22 +275,35 @@ class TestPilotConfigs(unittest.TestCase):
 
     def test_eu_single_language_configs_should_resolve_manifest_backed_pages_without_issues(self) -> None:
         cases = (
-            ("configs/config.eu-en.yaml", "en", "eu-en", "docs/manifests/manual_eu-en.yaml", 16),
-            ("configs/config.eu-fr.yaml", "fr", "eu-fr", "docs/manifests/manual_eu-single-fr.yaml", 15),
-            ("configs/config.eu-es.yaml", "es", "eu-es", "docs/manifests/manual_eu-single-es.yaml", 15),
+            ("configs/config.eu-en.yaml", "en", "eu-en", "docs/manifests/manual_eu-en.yaml", 18, ["JE-1000F", "JE-1000H", "JE-2000F", "JE-2000E", "JE-100C", "JE-300D", "JE-500A", "JE-3000C", "JE-3600A"]),
+            ("configs/config.eu-fr.yaml", "fr", "eu-fr", "docs/manifests/manual_eu-single-fr.yaml", 16, ["JE-1000F", "JE-1000H", "JE-2000F", "JE-2000E", "JE-3600A", "JE-3000C"]),
+            ("configs/config.eu-es.yaml", "es", "eu-es", "docs/manifests/manual_eu-single-es.yaml", 16, ["JE-1000F", "JE-1000H", "JE-2000F", "JE-2000E", "JE-3600A", "JE-3000C"]),
         )
 
-        for config_name, expected_lang, expected_family, expected_manifest, expected_page_count in cases:
+        for config_name, expected_lang, expected_family, expected_manifest, expected_page_count, expected_models in cases:
             with self.subTest(config_name=config_name):
                 cfg = check_docs.load_config(ROOT / config_name)
                 self.assertEqual(expected_family, cfg.get("build", {}).get("family_id"))
                 self.assertEqual("JE-1000F", cfg.get("build", {}).get("default_model"))
                 self.assertEqual("EU", cfg.get("build", {}).get("default_region"))
-                self.assertEqual([{"model": "JE-1000F", "region": "EU"}], cfg.get("build", {}).get("targets"))
+                self.assertEqual(
+                    [{"model": model, "region": "EU"} for model in expected_models],
+                    cfg.get("build", {}).get("targets"),
+                )
                 self.assertEqual([expected_lang], cfg.get("build", {}).get("languages"))
                 self.assertTrue(cfg.get("build", {}).get("include_lang_in_output_path"))
                 self.assertEqual(expected_manifest, cfg.get("paths", {}).get("page_manifest"))
-                self.assertEqual(["占位符"], cfg.get("checks", {}).get("allowed_foreign_identity_literals"))
+                # Battery Pack 3600 is named by JE-3600A's capability-gated page,
+                # which the fr/es lines now carry as well as the English one.
+                expected_identity_allowlist = [
+                    "占位符",
+                    "Jackery Battery Pack 2000",
+                    "Jackery Battery Pack 3600",
+                ]
+                self.assertEqual(
+                    expected_identity_allowlist,
+                    cfg.get("checks", {}).get("allowed_foreign_identity_literals"),
+                )
                 phase2 = cfg.get("sync", {}).get("phase2", {})
                 self.assertEqual(
                     {
@@ -301,7 +327,16 @@ class TestPilotConfigs(unittest.TestCase):
                 generated_pages = [page for page in resolved.pages if isinstance(page, GeneratedPage)]
                 csv_pages = [page for page in resolved.pages if isinstance(page, CsvPage)]
 
-                self.assertEqual({"03_product_overview", "05_operation_guide", "12_app_setup"}, {page.page for page in generated_pages})
+                # 07_extra_battery is capability-gated (加电包扩容) and now carried by
+                # every EU manifest, not just the English line: the single-language
+                # routes need it too or JE-2000E fails CAPABILITY_CONTENT_MISSING.
+                expected_generated = {
+                    "03_product_overview",
+                    "05_operation_guide",
+                    "07_extra_battery",
+                    "12_app_setup",
+                }
+                self.assertEqual(expected_generated, {page.page for page in generated_pages})
                 self.assertEqual({"lcd_icons", "symbols", "troubleshooting", "spec"}, {page.page for page in csv_pages})
                 self.assertEqual(expected_page_count, len(resolved.pages))
 
@@ -366,14 +401,19 @@ class TestPilotConfigs(unittest.TestCase):
         text = (ROOT / "docs" / "templates" / "page_shared" / "en" / "08_charging_methods.rst").read_text(
             encoding="utf-8"
         )
-        intro = "|PRODUCT_NAME| has two DC8020 input ports and is compatible with the Jackery solar panels."
-        adapter_intro = "If one DC8020 input port needs to connect two solar panels simultaneously"
+        intro = (
+            "|PRODUCT_NAME| has two |DC_INPUT_CONNECTOR| input ports and is compatible with the "
+            "Jackery solar panels."
+        )
+        adapter_intro = (
+            "If one |DC_INPUT_CONNECTOR| input port needs to connect two solar panels simultaneously"
+        )
 
-        self.assertLess(text.index(intro), text.index("charging/solar_direct.png"))
-        self.assertLess(text.index("charging/solar_direct.png"), text.index(adapter_intro))
-        self.assertLess(text.index(adapter_intro), text.index("charging/solar_adapter.png"))
+        self.assertLess(text.index(intro), text.index("asset:charging/solar_direct"))
+        self.assertLess(text.index("asset:charging/solar_direct"), text.index(adapter_intro))
+        self.assertLess(text.index(adapter_intro), text.index("asset:charging/solar_adapter"))
 
-    def test_shared_app_setup_wifi_added_line_should_not_be_numbered(self) -> None:
+    def test_shared_app_setup_wifi_result_line_is_not_numbered(self) -> None:
         for path in (ROOT / "docs" / "templates" / "page_shared").glob("*/12_app_setup_placeholder.rst"):
             with self.subTest(path=path):
                 text = path.read_text(encoding="utf-8")
@@ -384,12 +424,18 @@ class TestPilotConfigs(unittest.TestCase):
         self.assertEqual("eu-merged", cfg.get("build", {}).get("family_id"))
         self.assertEqual("JE-1000F", cfg.get("build", {}).get("default_model"))
         self.assertEqual("EU", cfg.get("build", {}).get("default_region"))
-        self.assertEqual([{"model": "JE-1000F", "region": "EU"}], cfg.get("build", {}).get("targets"))
+        self.assertEqual(
+            [{"model": "JE-1000F", "region": "EU"}, {"model": "JE-2000F", "region": "EU"}],
+            cfg.get("build", {}).get("targets"),
+        )
         self.assertEqual(["en", "fr", "es", "de", "it", "uk"], cfg.get("build", {}).get("languages"))
         self.assertFalse(cfg.get("build", {}).get("include_lang_in_output_path"))
         self.assertTrue(cfg.get("build", {}).get("queue_by_document_key"))
         self.assertEqual("docs/manifests/manual_eu.yaml", cfg.get("paths", {}).get("page_manifest"))
-        self.assertEqual(["占位符"], cfg.get("checks", {}).get("allowed_foreign_identity_literals"))
+        self.assertEqual(
+            ["占位符", "Jackery Battery Pack 2000"],
+            cfg.get("checks", {}).get("allowed_foreign_identity_literals"),
+        )
         phase2 = cfg.get("sync", {}).get("phase2", {})
         self.assertEqual(
             {

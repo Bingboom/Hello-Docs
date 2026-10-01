@@ -17,8 +17,12 @@ paths:
   page_registry_csv: data/phase2/page_registry.csv
 
 checks:
+  # NOTE: this list REPLACES the one in us-single-language-base.yaml —
+  # config_loader deep-merges mappings but assigns lists wholesale — so the
+  # accessory literal has to be repeated here.
   allowed_foreign_identity_literals:
     - 占位符
+    - Jackery Battery Pack 2000
 
 # NOTE: sync stays inline here (not extracted to phase2-sync-base.yaml): this
 # file already `extends: us-single-language-base.yaml`, and config_loader
@@ -66,6 +70,16 @@ sync:
         base_token_env: FEISHU_TRANSLATION_MEMORY_BASE_TOKEN
         table_id_env: FEISHU_TRANSLATION_MEMORY_TABLE_ID
         view_id_env: FEISHU_TRANSLATION_MEMORY_VIEW_ID
+    model_capabilities:
+      table_id_env: FEISHU_PHASE2_MODEL_CAPABILITIES_TABLE_ID
+    asset_registry:
+      # Table coordinates default to data/asset_base_bindings.json; set
+      # this env only for a tenant whose asset tables live elsewhere.
+      table_id_env: FEISHU_PHASE2_ASSET_DEFINITIONS_TABLE_ID
+      view_id_env: FEISHU_PHASE2_ASSET_DEFINITIONS_VIEW_ID
+    # Definition/export coordinates also come from asset_base_bindings.json.
+    # Approved attachments are frozen into the selected phase2 snapshot.
+    web_composites: {}
     document_link:
       table_id_env: FEISHU_PHASE2_DOCUMENT_LINK_TABLE_ID
       view_id_env: FEISHU_PHASE2_DOCUMENT_LINK_VIEW_ID

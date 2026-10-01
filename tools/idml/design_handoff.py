@@ -1,0 +1,250 @@
+"""Design handoff package helpers for IDML dual-mode exports."""
+from __future__ import annotations
+
+import csv
+import json
+import shutil
+import subprocess
+from dataclasses import dataclass
+from pathlib import Path
+
+try:
+    from tools.utils.path_utils import PathSegments
+except ModuleNotFoundError:  # direct tools/export_idml.py execution
+    from utils.path_utils import PathSegments  # type: ignore
+
+from tools.manual_ir import read_manual_ir
+
+from .flow_idml import FlowOutputs
+from .font_assets import provision_document_fonts
+
+
+@dataclass(frozen=True)
+class HandoffOutputs:
+    root: Path
+    production_idml: Path
+    production_trace: Path
+    production_asset_manifest: Path
+    missing_assets_report: Path
+    designer_checklist: Path
+    layout_feedback: Path
+    latex_page_plan: Path | None
+    reference_layout_plan: Path | None
+
+
+def write_handoff_package(*, root: Path, model: str, region: str, lang: str,
+                          data_root: Path, bundle_root: Path,
+                          production_idml: Path, flow: FlowOutputs,
+                          build_command: list[str]) -> HandoffOutputs:
+    # Validate the source sidecar before copying or overwriting handoff files.
+    manual_ir_path = _manual_ir_path(production_idml)
+    skipped_raw_blocks = _skipped_raw_blocks(production_idml)
+    handoff_root = flow.markdown.parent.parent
+    production_dir = handoff_root / "production"
+    production_dir.mkdir(parents=True, exist_ok=True)
+    production_copy = production_dir / "manual.production.idml"
+    shutil.copyfile(production_idml, production_copy)
+    provision_document_fonts(production_copy)
+    production_manifest = production_dir / "asset_manifest.csv"
+    if flow.asset_manifest.is_file():
+        shutil.copyfile(flow.asset_manifest, production_manifest)
+    else:
+        production_manifest.write_text("asset_id,asset_ref,resolved_path,source_ref,kind\n", encoding="utf-8")
+    production_trace = production_dir / "source_trace.json"
+    source_page_plan = production_idml.parent / PathSegments.LATEX_PAGE_PLAN_JSON
+    production_page_plan = production_dir / PathSegments.LATEX_PAGE_PLAN_JSON
+    if source_page_plan.is_file():
+        shutil.copyfile(source_page_plan, production_page_plan)
+    source_reference_plan = production_idml.parent / PathSegments.REFERENCE_LAYOUT_PLAN_JSON
+    production_reference_plan = production_dir / PathSegments.REFERENCE_LAYOUT_PLAN_JSON
+    if source_reference_plan.is_file():
+        shutil.copyfile(source_reference_plan, production_reference_plan)
+    production_trace.write_text(
+        json.dumps(
+            _production_trace(
+                root=root,
+                model=model,
+                region=region,
+                lang=lang,
+                data_root=data_root,
+                bundle_root=bundle_root,
+                production_idml=production_copy,
+                asset_manifest=production_manifest,
+                build_command=build_command,
+                manual_ir_path=manual_ir_path, skipped_raw_blocks=skipped_raw_blocks,
+            ),
+            ensure_ascii=False,
+            indent=2,
+        ) + "\n",
+        encoding="utf-8",
+    )
+    missing_report = handoff_root / "missing_assets_report.md"
+    missing_report.write_text(_missing_assets_report(flow.asset_manifest), encoding="utf-8")
+    checklist = handoff_root / "designer_checklist.md"
+    checklist.write_text(_designer_checklist(model, region, lang), encoding="utf-8")
+    feedback = handoff_root / "layout_feedback.md"
+    feedback.write_text(_layout_feedback(model, region, lang), encoding="utf-8")
+    return HandoffOutputs(
+        root=handoff_root,
+        production_idml=production_copy,
+        production_trace=production_trace,
+        production_asset_manifest=production_manifest,
+        missing_assets_report=missing_report,
+        designer_checklist=checklist,
+        layout_feedback=feedback,
+        latex_page_plan=production_page_plan if production_page_plan.is_file() else None,
+        reference_layout_plan=(
+            production_reference_plan if production_reference_plan.is_file() else None
+        ),
+    )
+
+
+def _production_trace(*, root: Path, model: str, region: str, lang: str,
+                      data_root: Path, bundle_root: Path, production_idml: Path,
+                      asset_manifest: Path, build_command: list[str],
+                      manual_ir_path: Path | None, skipped_raw_blocks: int | None) -> dict:
+    return {
+        "manual_id": f"{model.replace('-', '')}_{region}_{lang.upper()}",
+        "model": model,
+        "region": region,
+        "language": lang,
+        "version": "unknown",
+        "source_snapshot": _display_path(root, data_root / "snapshot_manifest.json")
+        if (data_root / "snapshot_manifest.json").exists() else _display_path(root, data_root),
+        "source_tables": sorted(path.name for path in data_root.glob("*.csv")) if data_root.exists() else [],
+        "canonical_md": None,
+        "template_commit": _git_sha(root),
+        "asset_manifest": _display_path(root, asset_manifest),
+        "build_command": build_command,
+        "idml_mode": "production",
+        "bundle_root": _display_path(root, bundle_root),
+        "production_idml": _display_path(root, production_idml),
+        "manual_ir": _display_path(root, manual_ir_path) if manual_ir_path else None,
+        "skipped_raw_blocks": skipped_raw_blocks,
+        "latex_page_plan": _display_path(
+            root, production_idml.parent / PathSegments.LATEX_PAGE_PLAN_JSON),
+        "reference_layout_plan": _display_path(
+            root, production_idml.parent / PathSegments.REFERENCE_LAYOUT_PLAN_JSON),
+    }
+
+
+def _skipped_raw_blocks(production_idml: Path) -> int | None:
+    """Read the report-only skipped-raw count from the production IR sidecar."""
+    candidate = _manual_ir_path(production_idml)
+    if candidate is None:
+        return None
+    ir = read_manual_ir(candidate)
+    return sum(page.skipped_raw for page in ir.pages)
+
+
+def _manual_ir_path(production_idml: Path) -> Path | None:
+    for candidate in (
+        production_idml.parent / PathSegments.MANUAL_IR_JSON,
+        production_idml.parent.parent / PathSegments.MANUAL_IR_JSON,
+    ):
+        if candidate.is_file():
+            return candidate
+    return None
+
+
+def _missing_assets_report(manifest_path: Path) -> str:
+    missing: list[dict[str, str]] = []
+    total = 0
+    if manifest_path.is_file():
+        with manifest_path.open(encoding="utf-8", newline="") as fh:
+            for row in csv.DictReader(fh):
+                total += 1
+                if not (row.get("resolved_path") or "").strip():
+                    missing.append(row)
+    lines = ["# Missing Assets Report", "", f"- Assets referenced: {total}"]
+    if not missing:
+        lines.extend(["- Missing assets: 0", "", "No missing assets detected in the flow asset manifest."])
+        return "\n".join(lines) + "\n"
+    lines.extend(["- Missing assets: " + str(len(missing)), "", "| Asset ID | Reference | Source | Kind |",
+                  "|---|---|---|---|"])
+    for row in missing:
+        lines.append(
+            "| {asset_id} | {asset_ref} | {source_ref} | {kind} |".format(
+                asset_id=_cell(row.get("asset_id", "")),
+                asset_ref=_cell(row.get("asset_ref", "")),
+                source_ref=_cell(row.get("source_ref", "")),
+                kind=_cell(row.get("kind", "")),
+            )
+        )
+    return "\n".join(lines) + "\n"
+
+
+def _designer_checklist(model: str, region: str, lang: str) -> str:
+    return f"""# Designer Checklist
+
+- Target: `{model}_{region}_{lang}`
+- **Install the fonts in `Document fonts/` first.** Importing an IDML produces
+  an untitled document, and InDesign resolves a `Document fonts` folder
+  relative to a saved document, so the bundled copies are not picked up on that
+  first open — every bundled face is reported missing and substituted. See
+  `fonts_manifest.md` for the list and which families are not shipped.
+- Open `production/manual.production.idml` for visual parity review.
+- Open `flow/manual.flow.idml` for the rendered, editable continuous-story
+  template; verify that linked images, native tables, and registered component
+  blocks are visible instead of raw Markdown/JSON.
+- Use `flow/manual.flow.md` as the readable semantic/source trace reference;
+  its JSON blocks are a serialization format, not the intended InDesign
+  appearance.
+- When reviewing the delivery zip, check the flow IDML links as well as the
+  production IDML links under `Links/`.
+- Check `missing_assets_report.md` before relinking or replacing assets.
+- A red ⊞ overset marker on a frame means the content IS in the file but the
+  frame's estimated height was too small — drag the frame taller to reveal it;
+  frame heights are deliberately coarse estimates, not content loss.
+- Record visual feedback in `layout_feedback.md`.
+- Do not treat edited IDML text as the source of truth; route copy fixes back to source tables, templates, review docs, or TM.
+"""
+
+
+def _layout_feedback(model: str, region: str, lang: str) -> str:
+    return f"""# Layout Feedback
+
+Target: `{model}_{region}_{lang}`
+
+## Production IDML
+
+- Page / section:
+- Issue:
+- Suggested renderer or layout parameter change:
+
+## Flow IDML
+
+- Style map / template issue:
+- Story editability issue:
+- Asset placeholder issue:
+
+## Source Corrections
+
+- Copy or translation issue:
+- Source location if known:
+"""
+
+
+def _cell(value: str) -> str:
+    return value.replace("|", "\\|").replace("\n", "<br>")
+
+
+def _git_sha(root: Path) -> str:
+    try:
+        result = subprocess.run(
+            ["git", "rev-parse", "HEAD"],
+            cwd=root,
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+    except (OSError, subprocess.CalledProcessError):
+        return "unknown"
+    return result.stdout.strip() or "unknown"
+
+
+def _display_path(root: Path, path: Path) -> str:
+    try:
+        return path.resolve().relative_to(root.resolve()).as_posix()
+    except ValueError:
+        return path.as_posix()

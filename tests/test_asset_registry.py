@@ -1,0 +1,768 @@
+from __future__ import annotations
+
+import json
+import unittest
+import re
+from dataclasses import replace
+from pathlib import Path
+from tempfile import TemporaryDirectory
+
+from tools.asset_registry import (
+    APPROVED_STATUS,
+    QUARANTINED_STATUS,
+    AssetRecord,
+    AssetRegistryError,
+    NoMatchingAssetExportError,
+    check_registry,
+    load_registry,
+    load_registry_bytes,
+    refresh_registry_csv,
+    resolve_asset,
+)
+from tools.component_specs.overview_instance import resolve_overview_instance
+
+
+ROOT = Path(__file__).resolve().parents[1]
+
+
+class TestAssetRegistry(unittest.TestCase):
+    def setUp(self) -> None:
+        self.records = load_registry(ROOT / "data" / "asset_registry.csv")
+
+    def test_real_registry_exports_have_matching_hashes(self) -> None:
+        report = check_registry(self.records, repo_root=ROOT)
+
+        self.assertEqual(468, report.records)
+        self.assertEqual((), report.errors)
+        self.assertEqual(460, report.status_counts[APPROVED_STATUS])
+        self.assertEqual(3, report.status_counts[QUARANTINED_STATUS])
+
+    def test_battery_pack_templates_only_name_resolvable_asset_keys(self) -> None:
+        """Every asset key the page_bp family names must actually resolve.
+
+        These keys live in `.. TODO(资产)` comments until the integration PR
+        turns them into real directives, so nothing else validates them — and
+        three of them shipped naming keys that do not exist
+        (connections/stack_clearance, charging/jbp2000b_solar), which would
+        have failed only when someone followed the comment.
+        """
+        family = ROOT / "docs" / "templates" / "page_bp"
+        pattern = re.compile(r"asset:([A-Za-z0-9._/-]+)")
+        referenced: dict[str, set[str]] = {}
+        for path in sorted(family.rglob("*.rst")):
+            # page_bp's top directory is the language, except for the
+            # ``<lang>-web`` carrier variants: those are the same language
+            # rendered for the Web profile, not a language of their own.
+            language = path.relative_to(family).parts[0].split('-')[0]
+            for asset_key in pattern.findall(path.read_text(encoding="utf-8")):
+                referenced.setdefault(asset_key, set()).add(language)
+
+        self.assertTrue(referenced, "page_bp names no assets; update this guard")
+        self.assertIn("in_the_box/jbp2000b/main_unit", referenced)
+        self.assertIn("in_the_box/jbp2000b/expansion_cable", referenced)
+        self.assertNotIn("in_the_box/ac_charging_cable", referenced)
+        for asset_key, languages in sorted(referenced.items()):
+            for language in sorted(languages):
+                with self.subTest(asset_key=asset_key, language=language):
+                    region = "JP" if language == "ja" else "US"
+                    resolution = resolve_asset(
+                        self.records,
+                        repo_root=ROOT,
+                        asset_key=asset_key,
+                        model="JBP-2000B",
+                        region=region,
+                        language=language,
+                    )
+                    self.assertTrue(resolution.path)
+
+    def test_overview_instances_only_name_resolvable_asset_keys(self) -> None:
+        """Every image_key a shared overview instance names must resolve.
+
+        The je3000c-kr-v1 instance shipped naming overview/je3000c_kr/front_art
+        with no registry row, so resolve_asset raised for it. Nothing caught
+        that: the IDML path reads the plan's raw asset_refs instead, and only
+        the web/composite path resolves the contract's image_key. This guard
+        covers every instance in the contract, not just the KR one.
+        """
+        contract = json.loads(
+            (
+                ROOT / "docs" / "renderers" / "contracts"
+                / "overview_component_instances.json"
+            ).read_text(encoding="utf-8")
+        )
+        checked = 0
+        for instance_id in contract["instances"]:
+            instance = resolve_overview_instance(
+                model=None,
+                region=None,
+                instance_id=instance_id,
+                registry=contract,
+            )
+            target = instance["target"]
+            for view in instance["views"]:
+                image_key = view.get("image_key")
+                if not image_key:
+                    continue
+                checked += 1
+                with self.subTest(instance=instance_id, image_key=image_key):
+                    resolution = resolve_asset(
+                        self.records,
+                        repo_root=ROOT,
+                        asset_key=image_key,
+                        model=target["model"],
+                        region=target["region"],
+                    )
+                    self.assertTrue(resolution.path)
+        self.assertGreater(checked, 0, "contract names no image keys; update this guard")
+
+    def test_refresh_recomputes_materialized_hashes_without_changing_registry_shape(self) -> None:
+        existing = (ROOT / "data" / "asset_registry.csv").read_text(encoding="utf-8")
+
+        first = re.search(r"png:[0-9a-f]{64}", existing)
+        self.assertIsNotNone(first)
+        assert first is not None
+        mutated = existing[: first.start()] + first.group(0)[:16] + existing[first.end() :]
+        changed_text, changed_report = refresh_registry_csv(
+            mutated,
+            repo_root=ROOT,
+            source=ROOT / "data" / "asset_registry.csv",
+        )
+        self.assertGreater(len(changed_report.updated), 0)
+        self.assertIn(first.group(0), changed_text)
+
+        refreshed, report = refresh_registry_csv(
+            existing,
+            repo_root=ROOT,
+            source=ROOT / "data" / "asset_registry.csv",
+        )
+
+        self.assertEqual(468, report.records)
+        self.assertEqual((), report.errors)
+        self.assertEqual((), report.updated)
+        self.assertGreater(len(report.unchanged), 0)
+        self.assertEqual(existing.count("\n"), refreshed.count("\n"))
+        refreshed_records = load_registry_bytes(refreshed.encode("utf-8"), source="refreshed")
+        self.assertEqual(len(self.records), len(refreshed_records))
+        for record in refreshed_records:
+            for label, digest in record.hashes:
+                if digest:
+                    self.assertEqual(64, len(digest), (record.asset_key, label))
+
+    def test_real_registry_has_explicit_region_scopes(self) -> None:
+        by_key = {record.asset_key: record for record in self.records}
+
+        self.assertTrue(all(record.region_scope for record in self.records))
+        for asset_key in ("page/cover", "page/product_overview", "page/back_cover", "mark/fcc"):
+            self.assertEqual(("US",), by_key[asset_key].region_scope)
+        self.assertEqual(("JP",), by_key["mark/jp_certifications"].region_scope)
+        # kr/image_placeholders was closed out 2026-07-28: every semantic key
+        # the KR pages reference now resolves from master-extracted exports.
+        self.assertNotIn("kr/image_placeholders", by_key)
+        self.assertEqual(("ALL",), by_key["operation/ac_output"].region_scope)
+        self.assertEqual(
+            ("JE-1000F",),
+            by_key["controls/je1000f_us/network_pairing_panel"].model_scope,
+        )
+        self.assertEqual(
+            ("US",),
+            by_key["controls/je1000f_us/network_pairing_panel"].region_scope,
+        )
+        self.assertEqual(("ALL",), by_key["overview/front_controls"].model_scope)
+        self.assertEqual(("ALL",), by_key["overview/front_controls"].region_scope)
+        for asset_key in (
+            "app/add_device",
+            "app/connect_result",
+            "operation/energy_saving",
+            "operation/led_light",
+            "operation/lcd_mode",
+            "operation/ups_mode",
+            "charging/solar_adapter",
+            "charging/car_charge",
+        ):
+            with self.subTest(asset_key=asset_key):
+                self.assertEqual(("ALL",), by_key[asset_key].model_scope)
+                self.assertEqual(("ALL",), by_key[asset_key].region_scope)
+        for asset_key, override_for in (
+            ("app/je1000f_us/add_device", "app/add_device"),
+            ("app/je1000f_us/connect_result", "app/connect_result"),
+            ("operation/je1000f_us/energy_saving", "operation/energy_saving"),
+            ("operation/je1000f_us/led_light", "operation/led_light"),
+            ("operation/je1000f_us/lcd_mode", "operation/lcd_mode"),
+            ("operation/je1000f_us/ups_mode", "operation/ups_mode"),
+            ("charging/je1000f_us/solar_adapter", "charging/solar_adapter"),
+            ("charging/je1000f_us/car_charge", "charging/car_charge"),
+            ("overview/je1000f_us/front_controls", "overview/front_controls"),
+        ):
+            with self.subTest(asset_key=asset_key):
+                self.assertEqual(("JE-1000F",), by_key[asset_key].model_scope)
+                self.assertEqual(("US",), by_key[asset_key].region_scope)
+                self.assertEqual(override_for, by_key[asset_key].override_for)
+        for asset_key, region, dimension, variants in (
+            ("operation/je1000f_eu/led_light_en", "EU", "按语言", ("en",)),
+            ("operation/je1000f_eu/led_light", "EU", "按语言", ("fr", "es", "de", "it")),
+            ("operation/je1000f_jp/led_light", "JP", "中立", ()),
+        ):
+            with self.subTest(asset_key=asset_key):
+                record = by_key[asset_key]
+                self.assertEqual("operation/led_light", record.override_for)
+                self.assertEqual(("JE-1000F",), record.model_scope)
+                self.assertEqual((region,), record.region_scope)
+                self.assertEqual(dimension, record.language_dimension)
+                self.assertEqual(variants, record.language_variants)
+
+    def test_target_override_is_selected_without_changing_shared_template_key(self) -> None:
+        us_resolution = resolve_asset(
+            self.records,
+            repo_root=ROOT,
+            asset_key="operation/energy_saving",
+            format_name="png",
+            language="en",
+            model="JE-1000F",
+            region="US",
+        )
+        self.assertEqual("operation/je1000f_us/energy_saving", us_resolution.asset_key)
+        self.assertEqual(
+            "docs/renderers/latex/assets/op_energy_saving.png",
+            us_resolution.path,
+        )
+
+        jp_resolution = resolve_asset(
+            self.records,
+            repo_root=ROOT,
+            asset_key="operation/energy_saving",
+            format_name="png",
+            language="ja",
+            model="JE-1000F",
+            region="JP",
+        )
+        self.assertEqual("operation/energy_saving", jp_resolution.asset_key)
+        self.assertEqual(
+            "docs/templates/word_template/common_assets/operation/energy_saving.png",
+            jp_resolution.path,
+        )
+
+        # The shared LED extraction lost the magnifier and hand. JE-1000F/US
+        # and JE-1000F/JP resolve their own art; JE-1000F/EU resolves per
+        # language, because its print draws UK sockets in the English block and
+        # Schuko sockets in the others. Every other target keeps the shared row.
+        shared_led = "docs/templates/word_template/common_assets/operation/led_light.png"
+        for model, region, language, asset_key, path in (
+            (
+                "JE-1000F", "US", "en", "operation/je1000f_us/led_light",
+                "docs/renderers/latex/assets/op_led_light_je1000f_us.png",
+            ),
+            (
+                "JE-1000F", "JP", "ja", "operation/je1000f_jp/led_light",
+                "docs/renderers/latex/assets/op_led_light_je1000f_jp.png",
+            ),
+            (
+                "JE-1000F", "EU", "en", "operation/je1000f_eu/led_light_en",
+                "docs/renderers/latex/assets/op_led_light_je1000f_eu_en.png",
+            ),
+            (
+                "JE-1000F", "EU", "de", "operation/je1000f_eu/led_light",
+                "docs/renderers/latex/assets/op_led_light_je1000f_eu.png",
+            ),
+            ("JE-1000F", "EU", "uk", "operation/led_light", shared_led),
+            ("JE-1000F", "AU", "en", "operation/led_light", shared_led),
+        ):
+            with self.subTest(region=region, language=language):
+                led = resolve_asset(
+                    self.records,
+                    repo_root=ROOT,
+                    asset_key="operation/led_light",
+                    format_name="png",
+                    language=language,
+                    model=model,
+                    region=region,
+                )
+                self.assertEqual(asset_key, led.asset_key)
+                self.assertEqual(path, led.path)
+
+        us_overview = resolve_asset(
+            self.records,
+            repo_root=ROOT,
+            asset_key="overview/front_controls",
+            format_name="png",
+            language="en",
+            model="JE-1000F",
+            region="US",
+        )
+        self.assertEqual("overview/je1000f_us/front_controls", us_overview.asset_key)
+        self.assertEqual(
+            "docs/renderers/latex/assets/front_controls.png",
+            us_overview.path,
+        )
+
+        jp_overview = resolve_asset(
+            self.records,
+            repo_root=ROOT,
+            asset_key="overview/front_controls",
+            format_name="png",
+            language="ja",
+            model="JE-1000F",
+            region="JP",
+        )
+        self.assertEqual("overview/front_controls", jp_overview.asset_key)
+        self.assertEqual(
+            "docs/templates/word_template/common_assets/overview/front_controls.png",
+            jp_overview.path,
+        )
+
+        bp_lcd = resolve_asset(
+            self.records,
+            repo_root=ROOT,
+            asset_key="lcd/lcd_map",
+            format_name="png",
+            language="en",
+            model="JBP-2000B",
+            region="US",
+        )
+        self.assertEqual("lcd/jbp2000b/screen", bp_lcd.asset_key)
+        self.assertEqual(
+            "docs/renderers/latex/assets/jbp2000b_lcd_screen.png",
+            bp_lcd.path,
+        )
+
+    def test_battery_pack_eu_overrides_do_not_change_us_resolution(self) -> None:
+        cases = (
+            (
+                "page/cover",
+                "page/jbp2000b_eu/cover",
+                "cover_jbp2000b_eu-en.pdf",
+                "page/jbp2000b_us/cover",
+                "cover_jbp2000b-en.pdf",
+            ),
+            (
+                "connections/jbp2000b/stack_clearance",
+                "connections/jbp2000b/eu/stack_clearance",
+                "jbp2000b_eu_stack_clearance.pdf",
+                "connections/jbp2000b/stack_clearance",
+                "jbp2000b_stack_clearance.pdf",
+            ),
+            (
+                "connections/jbp2000b/locking_en",
+                "connections/jbp2000b/eu/locking_en",
+                "jbp2000b_eu_connection_locking_en.pdf",
+                "connections/jbp2000b/locking_en",
+                "jbp2000b_connection_locking_en.pdf",
+            ),
+            (
+                "charging/jbp2000b/ac_wall",
+                "charging/jbp2000b/eu/ac_wall",
+                "jbp2000b_eu_ac_charging.pdf",
+                "charging/jbp2000b/ac_wall",
+                "jbp2000b_ac_charging.pdf",
+            ),
+            (
+                "charging/jbp2000b/solar",
+                "charging/jbp2000b/eu/solar",
+                "jbp2000b_eu_solar_charging.pdf",
+                "charging/jbp2000b/solar",
+                "jbp2000b_solar_charging.pdf",
+            ),
+        )
+        for asset_key, eu_key, eu_name, us_key, us_name in cases:
+            with self.subTest(asset_key=asset_key, region="EU"):
+                eu = resolve_asset(
+                    self.records,
+                    repo_root=ROOT,
+                    asset_key=asset_key,
+                    format_name="pdf",
+                    language="en",
+                    model="JBP-2000B",
+                    region="EU",
+                )
+                self.assertEqual(eu_key, eu.asset_key)
+                self.assertEqual(eu_name, Path(eu.path).name)
+
+            with self.subTest(asset_key=asset_key, region="US"):
+                us = resolve_asset(
+                    self.records,
+                    repo_root=ROOT,
+                    asset_key=asset_key,
+                    format_name="pdf",
+                    language="en",
+                    model="JBP-2000B",
+                    region="US",
+                )
+                self.assertEqual(us_key, us.asset_key)
+                self.assertEqual(us_name, Path(us.path).name)
+
+        for language in ("de", "it", "uk"):
+            asset_key = f"connections/jbp2000b/eu/locking_{language}"
+            resolution = resolve_asset(
+                self.records,
+                repo_root=ROOT,
+                asset_key=asset_key,
+                format_name="pdf",
+                language=language,
+                model="JBP-2000B",
+                region="EU",
+            )
+            self.assertEqual(asset_key, resolution.asset_key)
+            self.assertEqual(
+                f"jbp2000b_eu_connection_locking_{language}.pdf",
+                Path(resolution.path).name,
+            )
+
+    def test_battery_pack_jp_assets_resolve_only_for_the_jp_target(self) -> None:
+        cases = (
+            ("page/cover", "page/jbp2000b_jp/cover", "cover_jbp2000b-ja.pdf", "ja"),
+            (
+                "connections/jbp2000b/stack_clearance",
+                "connections/jbp2000b/jp/stack_clearance",
+                "jbp2000b_jp_stack_clearance.pdf",
+                None,
+            ),
+            (
+                "charging/jbp2000b/ac_wall",
+                "charging/jbp2000b/jp/ac_wall",
+                "jbp2000b_jp_ac_charging.pdf",
+                None,
+            ),
+            (
+                "charging/jbp2000b/solar",
+                "charging/jbp2000b/jp/solar",
+                "jbp2000b_jp_solar_charging.pdf",
+                None,
+            ),
+        )
+        for shared_key, jp_key, filename, language in cases:
+            with self.subTest(asset_key=shared_key):
+                resolution = resolve_asset(
+                    self.records,
+                    repo_root=ROOT,
+                    asset_key=shared_key,
+                    format_name="pdf",
+                    language=language,
+                    model="JBP-2000B",
+                    region="JP",
+                )
+                self.assertEqual(jp_key, resolution.asset_key)
+                self.assertEqual(filename, Path(resolution.path).name)
+
+        direct_keys = (
+            "connections/jbp2000b/jp/stacking_guidance",
+            "connections/jbp2000b/jp/lock_steps",
+            "connections/jbp2000b/jp/unlock_steps",
+            "connections/jbp2000b/jp/locked_stack",
+        )
+        for asset_key in direct_keys:
+            with self.subTest(asset_key=asset_key):
+                resolution = resolve_asset(
+                    self.records,
+                    repo_root=ROOT,
+                    asset_key=asset_key,
+                    format_name="pdf",
+                    model="JBP-2000B",
+                    region="JP",
+                )
+                self.assertEqual(asset_key, resolution.asset_key)
+
+                with self.assertRaisesRegex(AssetRegistryError, "region US"):
+                    resolve_asset(
+                        self.records,
+                        repo_root=ROOT,
+                        asset_key=asset_key,
+                        format_name="pdf",
+                        model="JBP-2000B",
+                        region="US",
+                    )
+
+    def test_resolve_v2_vector_projection(self) -> None:
+        resolution = resolve_asset(
+            self.records,
+            repo_root=ROOT,
+            asset_key="operation/ac_output",
+            format_name="png",
+        )
+
+        self.assertEqual("docs/renderers/latex/assets/op_ac_output.png", resolution.path)
+        self.assertEqual("✅成品", resolution.status)
+        self.assertEqual(64, len(resolution.content_hash))
+        self.assertTrue(resolution.content_hash.startswith(resolution.declared_hash))
+        self.assertIsNone(resolution.language)
+
+    def test_neutral_asset_does_not_claim_requested_language(self) -> None:
+        resolution = resolve_asset(
+            self.records,
+            repo_root=ROOT,
+            asset_key="operation/ac_output",
+            format_name="png",
+            language="en",
+        )
+
+        self.assertIsNone(resolution.language)
+
+    def test_model_and_region_scopes_are_strict_when_provided(self) -> None:
+        for kwargs, message in (
+            ({"model": "JE-2000F", "region": "US"}, "model JE-2000F"),
+            ({"model": "JE-1000F", "region": "EU"}, "region EU"),
+        ):
+            with self.subTest(**kwargs):
+                with self.assertRaisesRegex(AssetRegistryError, message):
+                    resolve_asset(
+                        self.records,
+                        repo_root=ROOT,
+                        asset_key="mark/fcc",
+                        format_name="png",
+                        **kwargs,
+                    )
+        with self.assertRaisesRegex(AssetRegistryError, "model "):
+            resolve_asset(
+                self.records,
+                repo_root=ROOT,
+                asset_key="operation/ac_output",
+                format_name="png",
+                model="",
+            )
+
+    def test_restricted_scope_requires_explicit_target(self) -> None:
+        with self.assertRaisesRegex(AssetRegistryError, "model None"):
+            resolve_asset(
+                self.records,
+                repo_root=ROOT,
+                asset_key="mark/fcc",
+                format_name="png",
+            )
+        with self.assertRaisesRegex(AssetRegistryError, "region None"):
+            resolve_asset(
+                self.records,
+                repo_root=ROOT,
+                asset_key="mark/fcc",
+                format_name="png",
+                model="JE-1000F",
+            )
+
+    def test_language_scoped_asset_requires_a_declared_variant(self) -> None:
+        with self.assertRaisesRegex(AssetRegistryError, "requires an explicit language"):
+            resolve_asset(
+                self.records,
+                repo_root=ROOT,
+                asset_key="page/product_overview",
+                model="JE-1000F",
+                region="US",
+            )
+        with self.assertRaisesRegex(AssetRegistryError, "no language variant 'de'"):
+            resolve_asset(
+                self.records,
+                repo_root=ROOT,
+                asset_key="page/product_overview",
+                language="de",
+                model="JE-1000F",
+                region="US",
+            )
+
+        resolution = resolve_asset(
+            self.records,
+            repo_root=ROOT,
+            asset_key="page/product_overview",
+            format_name="pdf",
+            language="EN",
+            model="JE-1000F",
+            region="us",
+        )
+        self.assertEqual("en", resolution.language)
+
+    def test_quarantined_asset_cannot_resolve_or_publish(self) -> None:
+        for asset_key, language in (
+            ("page/back_cover", "en"),
+            ("qr/back_cover_reference_candidate", None),
+        ):
+            with self.subTest(asset_key=asset_key):
+                with self.assertRaisesRegex(AssetRegistryError, QUARANTINED_STATUS):
+                    resolve_asset(
+                        self.records,
+                        repo_root=ROOT,
+                        asset_key=asset_key,
+                        format_name="pdf",
+                        language=language,
+                        model="JE-1000F",
+                        region="US",
+                        allow_temporary=True,
+                    )
+
+        for asset_key in (
+            "page/back_cover",
+            "qr/back_cover_reference_candidate",
+        ):
+            report = check_registry(
+                self.records,
+                repo_root=ROOT,
+                asset_keys=(asset_key,),
+                publish=True,
+            )
+            self.assertEqual(
+                ("non_approved_status",),
+                tuple(issue.code for issue in report.errors),
+            )
+
+        ai_qr = resolve_asset(
+            self.records,
+            repo_root=ROOT,
+            asset_key="qr/back_cover_ai_candidate",
+            format_name="pdf",
+            model="JE-1000F",
+            region="US",
+        )
+        self.assertEqual(
+            "back_cover_qr_ai_candidate.pdf", Path(ai_qr.path).name,
+        )
+
+    def test_resolve_fails_closed_when_export_hash_does_not_match(self) -> None:
+        record = AssetRecord(
+            asset_key="demo/example",
+            category="插图",
+            language_dimension="中立",
+            status=APPROVED_STATUS,
+            textless_pending=False,
+            model_scope=("ALL",),
+            region_scope=("ALL",),
+            export_root=Path("docs"),
+            language_variants=(),
+            hashes=(("png", "deadbeef"),),
+            notes="",
+        )
+        with TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            root.joinpath("docs").mkdir()
+            root.joinpath("docs", "example.png").write_bytes(b"not the registered bytes")
+
+            with self.assertRaisesRegex(AssetRegistryError, "hash mismatch"):
+                resolve_asset((record,), repo_root=root, asset_key=record.asset_key)
+
+    def test_no_materialized_export_uses_typed_error(self) -> None:
+        record = AssetRecord(
+            asset_key="demo/missing_export",
+            category="插图",
+            language_dimension="中立",
+            status=APPROVED_STATUS,
+            textless_pending=False,
+            model_scope=("ALL",),
+            region_scope=("ALL",),
+            export_root=Path("docs"),
+            language_variants=(),
+            hashes=(("png", "deadbeef"),),
+            notes="",
+        )
+        with TemporaryDirectory() as tmp:
+            Path(tmp, "docs").mkdir()
+            with self.assertRaises(NoMatchingAssetExportError):
+                resolve_asset((record,), repo_root=Path(tmp), asset_key=record.asset_key)
+
+    def test_load_registry_bytes_parses_one_snapshot(self) -> None:
+        data = (
+            "asset_key,override_for,类别,语言维度,状态,待无字化,适用机型,适用区域,"
+            "导出物路径,语言变体,内容哈希,备注\n"
+            "demo/source,,插图,中立,❌缺失,FALSE,ALL,US,,,,待补\n"
+        ).encode("utf-8")
+
+        records = load_registry_bytes(data, source="fixture.csv")
+
+        self.assertEqual(1, len(records))
+        self.assertEqual(("US",), records[0].region_scope)
+
+    def test_load_registry_rejects_unknown_language_dimension(self) -> None:
+        data = (
+            "asset_key,override_for,类别,语言维度,状态,待无字化,适用机型,适用区域,"
+            "导出物路径,语言变体,内容哈希,备注\n"
+            "demo/source,,插图,按语种,✅成品,FALSE,ALL,US,docs/assets,en,png:deadbeef,错误维度\n"
+        ).encode("utf-8")
+
+        with self.assertRaisesRegex(AssetRegistryError, "unknown language dimension"):
+            load_registry_bytes(data, source="fixture.csv")
+
+    def test_load_registry_rejects_unknown_override_base(self) -> None:
+        data = (
+            "asset_key,override_for,类别,语言维度,状态,待无字化,适用机型,适用区域,"
+            "导出物路径,语言变体,内容哈希,备注\n"
+            "demo/scoped,demo/missing,插图,中立,✅成品,FALSE,M1,US,"
+            "docs/assets,,png:deadbeef,错误覆盖\n"
+        ).encode("utf-8")
+
+        with self.assertRaisesRegex(AssetRegistryError, "overrides unknown key"):
+            load_registry_bytes(data, source="fixture.csv")
+
+    def test_resolve_rejects_ambiguous_target_overrides(self) -> None:
+        base = AssetRecord(
+            asset_key="demo/base",
+            category="插图",
+            language_dimension="中立",
+            status=APPROVED_STATUS,
+            textless_pending=False,
+            model_scope=("ALL",),
+            region_scope=("ALL",),
+            export_root=Path("docs"),
+            language_variants=(),
+            hashes=(("png", "deadbeef"),),
+            notes="",
+        )
+        first = replace(
+            base,
+            asset_key="demo/scoped-a",
+            model_scope=("M1",),
+            region_scope=("US",),
+            override_for=base.asset_key,
+        )
+        second = replace(first, asset_key="demo/scoped-b")
+
+        with self.assertRaisesRegex(AssetRegistryError, "ambiguous target overrides"):
+            resolve_asset(
+                (base, first, second),
+                repo_root=ROOT,
+                asset_key=base.asset_key,
+                model="M1",
+                region="US",
+            )
+
+    def test_load_registry_reads_source_bytes_once(self) -> None:
+        data = (ROOT / "data" / "asset_registry.csv").read_bytes()
+
+        class ReadOnceSource:
+            def __init__(self, snapshot: bytes) -> None:
+                self.snapshot = snapshot
+                self.calls = 0
+
+            def read_bytes(self) -> bytes:
+                self.calls += 1
+                if self.calls > 1:
+                    raise AssertionError("registry source was read more than once")
+                return self.snapshot
+
+            def __str__(self) -> str:
+                return "read-once.csv"
+
+        source = ReadOnceSource(data)
+        records = load_registry(source)  # type: ignore[arg-type]
+
+        self.assertEqual(1, source.calls)
+        self.assertEqual(468, len(records))
+
+    def test_temporary_asset_is_not_importable_by_default(self) -> None:
+        with self.assertRaisesRegex(AssetRegistryError, "only ✅成品"):
+            resolve_asset(
+                self.records,
+                repo_root=ROOT,
+                asset_key="mark/warning_lockup",
+                format_name="jpg",
+                model="JE-1000F",
+                region="US",
+            )
+
+    def test_temporary_asset_can_be_resolved_for_draft(self) -> None:
+        resolution = resolve_asset(
+            self.records,
+            repo_root=ROOT,
+            asset_key="mark/warning_lockup",
+            format_name="jpg",
+            model="JE-1000F",
+            region="US",
+            allow_temporary=True,
+        )
+
+        self.assertEqual("docs/renderers/latex/assets/warning_lockup.jpg", resolution.path)
+
+
+if __name__ == "__main__":
+    unittest.main()

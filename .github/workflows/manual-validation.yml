@@ -23,6 +23,22 @@ jobs:
       - name: Run minimal static checks
         run: python -m ruff check build.py integrations tools tests scripts
 
+  # Milestone K6 (severable slice): fail the PR when a credential-shaped
+  # string lands in the tree. Allowlist policy lives in .gitleaks.toml
+  # (Feishu RESOURCE tokens are committed by design; credentials never).
+  secret-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download gitleaks (pinned + checksum-verified)
+        run: |
+          curl -sSfL -o /tmp/gitleaks.tgz \
+            https://github.com/gitleaks/gitleaks/releases/download/v8.30.1/gitleaks_8.30.1_linux_x64.tar.gz
+          echo "551f6fc83ea457d62a0d98237cbad105af8d557003051f41f3e7ca7b3f2470eb  /tmp/gitleaks.tgz" | sha256sum -c -
+          tar -xzf /tmp/gitleaks.tgz -C /tmp gitleaks
+      - name: Scan working tree for credential shapes
+        run: /tmp/gitleaks detect --source . --no-git --redact --no-banner --config .gitleaks.toml
+
   maintainability-guardrails:
     runs-on: ubuntu-latest
     steps:
@@ -42,6 +58,34 @@ jobs:
           python-version: "3.12"
       - name: Check code-as-doc and user-guide link integrity
         run: python tools/check_doc_link_integrity.py
+
+  reference-layout-pins:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.lock
+      - name: Check approved reference-layout pins
+        run: python tools/check_reference_layout_pins.py
+
+  asset-registry:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.lock
+      - name: Check asset registry export hashes
+        run: python build.py asset-check --config configs/config.us.yaml --model JE-1000F --region US
 
   type-check:
     runs-on: ubuntu-latest
@@ -82,6 +126,20 @@ jobs:
         working-directory: integrations/openclaw/feishu-im-webhook-adapter
         run: npm test
 
+  # Browser-side portal scripts (tools/rtd_portal_assets/_static/*.js) are
+  # tested with Node's built-in runner against a minimal fake DOM; there are
+  # no npm dependencies. Every tests/*.test.mjs file runs, so a new UI test is
+  # picked up without editing this job.
+  node-ui:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Run Node UI tests
+        run: node --test tests/*.test.mjs
+
   unit:
     runs-on: ubuntu-latest
     steps:
@@ -92,7 +150,7 @@ jobs:
       - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
-          python -m pip install -r requirements.txt
+          python -m pip install -r requirements.lock
       - name: Run unit tests
         run: python -m unittest
 
@@ -106,7 +164,7 @@ jobs:
       - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
-          python -m pip install -r requirements.txt
+          python -m pip install -r requirements.lock
       - name: Run queue contract tests
         run: python -m unittest tests.test_queue_transitions tests.test_process_build_queue_writeback
       - name: Run schema drift fixture check
@@ -144,7 +202,7 @@ jobs:
       - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
-          python -m pip install -r requirements.txt
+          python -m pip install -r requirements.lock
       - name: Run doctor (EN/US)
         run: python build.py doctor --config configs/config.us-en.yaml --model JE-1000F --region US --data-root tests/fixtures/phase2
 
@@ -158,7 +216,7 @@ jobs:
       - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
-          python -m pip install -r requirements.txt
+          python -m pip install -r requirements.lock
       - name: Run check (EN/US)
         run: python build.py check --config configs/config.us-en.yaml --model JE-1000F --region US --data-root tests/fixtures/phase2
 
@@ -172,9 +230,33 @@ jobs:
       - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
-          python -m pip install -r requirements.txt
+          python -m pip install -r requirements.lock
       - name: Run check (JP)
         run: python build.py check --config configs/config.ja.yaml --model JE-1000F --region JP --data-root tests/fixtures/phase2
+
+  # Keep the long-lived US/JP jobs above as stable comparison points while
+  # automatically extending check coverage to every config*.yaml target.
+  check-all:
+    # Stage 1 is an observation lane: existing check-en/check-jp remain the
+    # required gates while this inventory establishes the target baseline.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements.lock
+      - name: Run config-derived check targets
+        run: |
+          python tools/ci_check_targets.py \
+            --data-root tests/fixtures/phase2 \
+            --skip-baseline .github/ci_check_targets_skip_baseline.json \
+            --report "$RUNNER_TEMP/ci_check_targets.json" \
+            --staging-root "$RUNNER_TEMP/ci_check_targets_stage" \
+            --observation
 
   workflow-smoke:
     runs-on: ubuntu-latest
@@ -188,7 +270,7 @@ jobs:
       - name: Install Python dependencies
         run: |
           python -m pip install --upgrade pip
-          python -m pip install -r requirements.txt
+          python -m pip install -r requirements.lock
       - name: Run diff-report smoke
         run: python build.py diff-report --config configs/config.us.yaml --model JE-1000F --region US --data-root tests/fixtures/phase2 --from-ref HEAD~1 --to-ref HEAD
       - name: Run release-manifest smoke

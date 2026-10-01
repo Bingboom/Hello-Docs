@@ -1,0 +1,19 @@
+{
+  "schema_version": "auto-manual-web-publish-target/v2",
+  "model": "JA-AD600A",
+  "region": "EU",
+  "lang": "en",
+  "version": "2.0-20260927",
+  "built_at": "2026-09-27T11:06:20-07:00",
+  "git_ref": "424983ad878c7a00a5dadbdd015b4180d8b12cdf",
+  "route": "JA-AD600A/EU/en/md",
+  "manual": "manual_jaad600a_eu_en.md",
+  "language_scope": "single",
+  "language_projection_evidence_path": "evidence/language_projection_receipt.json",
+  "language_projection_evidence_sha256": "08a3262e9ae9d702060ebac9efe3d57d0dc5c338890daa3817bdffe96de5fd81",
+  "legacy_default": true,
+  "legacy_route": "JA-AD600A/EU/md",
+  "legacy_aliases": [
+    "manual_jaad600a_eu_en"
+  ]
+}

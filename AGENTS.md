@@ -29,8 +29,8 @@ For current human workflows, read:
 
 - Default to [`build.py`](build.py).
 - Treat [`tools/`](tools) as low-level implementation unless the task is explicitly about those scripts.
-- Claude Code navigation is layered: root [`CLAUDE.md`](CLAUDE.md) stays thin, while directory-local `CLAUDE.md` files provide local maps and targeted validation commands.
-  These files are navigation overlays, not a second policy source; this `AGENTS.md` wins on conflict.
+- Agent navigation is layered: this root `AGENTS.md` owns shared policy, while directory-local `AGENTS.md` files provide Codex local maps and targeted validation commands. Directory-local `CLAUDE.md` files remain Claude Code compatibility overlays.
+  Local files are navigation/ownership overlays, not a second policy source; this root `AGENTS.md` wins on conflict.
 
 ## 2. Editing Surface
 
@@ -49,6 +49,7 @@ For current human workflows, read:
 - Avoid hardcoded model defaults such as `JE-1000F` in CLI behavior, report paths, or release paths.
 - Build repo-relative paths through [`tools/utils/path_utils.py`](tools/utils/path_utils.py) — its `PathSegments` constants, `Paths` members, and `*_of(base)` helpers — instead of hardcoding segments such as `docs/_build`, `_review`, `reports/version_tracking`, or `renderers/latex`. When a site already holds a base (repo root, a worktree, a config-resolved `docs_dir`), pass that base to the `*_of(base)` helpers rather than re-anchoring at repo root.
 - Keep config-driven `docs_dir` / `layout_params_csv` / staging resolution in [`tools/build_paths.py`](tools/build_paths.py); it is a thin adapter that delegates path construction to `path_utils`. Do not add a parallel path-segment helper module.
+- Live-data discipline: never claim a record/table/value "doesn't exist" from one script run or inference — query the live Base (or build a minimal repro) first. Every live source-table write is operator-gated and followed by a read-back of the same record (report record_id + field; attachment fields must show a non-empty file token). Recipes and traps: [`.agents/skills/lark-cli-bitable-ops/SKILL.md`](.agents/skills/lark-cli-bitable-ops/SKILL.md).
 
 ## 4. Validation
 
@@ -62,6 +63,7 @@ For current human workflows, read:
 
 - Update docs in the same change when behavior changes.
 - Minimum set: [`README.md`](README.md), [`code-as-doc/build_doc_guide.md`](code-as-doc/build_doc_guide.md), [`user-guide/hello_auto-doc.md`](user-guide/hello_auto-doc.md)
+- [`README.md`](README.md) is the workflow roadmap + quickstart + navigation map only. Touch it when the stable workflow topology, an entry point, a navigation pointer, or an editing-surface rule changes; behavior and contract details go to the owning document, with at most a one-line pointer in the README. Treat a README beyond ~350 lines as documentation debt.
 - If a code change affects the current workflow, editing surface, environment setup, or release flow, update [`user-guide/hello_auto-doc.md`](user-guide/hello_auto-doc.md) in the same change.
 - If a code change affects the happy-path example, onboarding steps, or target-specific sample commands, update [`user-guide/quick_start_guide.md`](user-guide/quick_start_guide.md) in the same change.
 - When a phase or workstream from [`code-as-doc/optimization_project.md`](code-as-doc/optimization_project.md) is completed, add a matching maintenance record to [`code-as-doc/code_optimization_log.md`](code-as-doc/code_optimization_log.md).
@@ -73,19 +75,28 @@ For current human workflows, read:
 
 ## 7. Local Skills
 
-- Use [`.claude/skills/config-review/SKILL.md`](.claude/skills/config-review/SKILL.md) for Claude Code scaffolding review.
-  Use it when changing root or nested `CLAUDE.md`, `.claude/settings.json`, hooks, skills, permissions, plugin/MCP setup, or model-release configuration cleanup.
-- Use [`.agents/skills/markdown-rst-template-intake/SKILL.md`](.agents/skills/markdown-rst-template-intake/SKILL.md) when mapping external Markdown manuals into this repo's reusable RST template and recipe layout.
-- Use [`.agents/skills/spec-sheet-structured-intake/SKILL.md`](.agents/skills/spec-sheet-structured-intake/SKILL.md) when onboarding a new model/region from a product spec sheet (产品规格书, PDF/Markdown): rule-driven region-aware extraction into structured candidates, completeness gate against a sibling target, human confirmation, then clone-ingest into both phase2 source tables (`规格参数明细` + `页面占位参数`) followed by sync-data/check/build. The entry counterpart of `cloud_doc_backport.py` (the return path); backed by `tools/source_intake*.py`.
-- Use [`.agents/skills/bitable-translation-memory/SKILL.md`](.agents/skills/bitable-translation-memory/SKILL.md) for one-shot sentence translation, terminology lookup, and live sentence-pair retrieval.
-- Use [`.agents/skills/product-manual-catalog/SKILL.md`](.agents/skills/product-manual-catalog/SKILL.md) to look up a shipped product's manual link/version/region/document type, or a catalog overview, from the Feishu `发布文档管理` Base. Read-only catalog lookup, distinct from the phase2 build-source tables and from `Translation_Memory`.
-- Use [`.agents/skills/manual-rewrite-with-tm/SKILL.md`](.agents/skills/manual-rewrite-with-tm/SKILL.md) for Markdown / plain-text rewrite tasks that must preserve structure and reuse translation-memory phrasing (unmatched source text stays in place, marked `==...==` — a text convention, not a colour). For document pre-translation that must show colour highlights, use `lark-tm-translation-preprocess` on the `.docx` instead.
-- Use [`.agents/skills/bilingual-tm-maintenance/SKILL.md`](.agents/skills/bilingual-tm-maintenance/SKILL.md) when bilingual source/target copy should be written to live `Translation_Memory`, followed by target-language maintenance logs, bilingual audit, and audit logs.
-- Use [`.agents/skills/lark-tm-translation-preprocess/SKILL.md`](.agents/skills/lark-tm-translation-preprocess/SKILL.md) to TM-pretranslate a Feishu/Lark cloud doc or `.docx`: download, replace exact / parameter-fuzzy TM matches with the target-language sentence, colour-highlight every replaced span, verify the output opens cleanly, and upload back to the original path. This is the primary pre-translation pass — the carrier is Word (`.docx`), because Markdown cannot express colour annotations. Unmatched text is left unchanged for a later human/LLM pass.
-- Use [`.agents/skills/manual-revision-backport/SKILL.md`](.agents/skills/manual-revision-backport/SKILL.md) when back-porting a reviewer's tracked-changes manual `.docx` (e.g. `…修订.docx`) into source: extract the changes, map each to its repo template or Feishu phase2 table, diff against the current source instead of transcribing, surface model/region/sibling scope decisions, and verify zero residuals before claiming done. This is reverse-sync of reviewed output — distinct from Markdown intake and from TM translation/rewrite.
-- Use [`.agents/skills/docx-highlight-changes/SKILL.md`](.agents/skills/docx-highlight-changes/SKILL.md) to highlight specific text spans in a built `.docx` with a colour of your choice — e.g. marking exactly what you corrected so a reviewer sees every change. It colours only the target text (splits runs; handles cross-run words and single accent characters), via background shading (any hex) or the Word highlighter pen, through its bundled `scripts/highlight_changes.py`. Pairs with `manual-revision-backport` / `manual-rewrite-with-tm` when a reviewed Word file needs its edits visually flagged for the reviewer.
-- Use [`.agents/skills/pdf-annotate-qc/SKILL.md`](.agents/skills/pdf-annotate-qc/SKILL.md) to render QC findings (e.g. `content_lint` output) as highlight + note annotations on a **built PDF**, producing a read-only `*_annotated.pdf` sidecar for PDF-facing reviewers via `tools/pdf_annotate.py`. Annotate on the PDF, correct at the source: the shipped PDF is never modified, unlocatable findings degrade to a page-1 summary note instead of wrong highlights, and fixes route through the backport / approval-gated source paths. The PDF counterpart of `docx-highlight-changes`.
-- Use [`.agents/skills/new-region-line/SKILL.md`](.agents/skills/new-region-line/SKILL.md) when standing up a **brand-new region / compliance manual line** (a `(Model, Region, Language)` target that does not exist yet — e.g. 新建韩规/欧规安规产线, "onboard a new market/language"). It is the end-to-end playbook: the family config + manifest + cloned page templates, the code registration for a new output language, the Feishu source-table data entry (spec params via the 入库表 + 字段映射规则表, page placeholders, localized content, market/region tags, dictionary + TM entries), sync, and validation — plus the checklist of operator inputs (spec-sheet PDF, product display name, warranty/legal, compliance + translation decisions). Distinct from plain spec ingest, rewrite, and backport. See its `references/setup-map.md` for exact files, table IDs, and `lark-cli` recipes.
+- For Codex scaffolding, use [`.agents/skills/config-review/SKILL.md`](.agents/skills/config-review/SKILL.md) when changing root or nested `AGENTS.md`, `.agents/skills`, `.codexignore`, permissions, plugin/MCP setup, or model-release configuration.
+- For Claude Code scaffolding, keep using [`.claude/skills/config-review/SKILL.md`](.claude/skills/config-review/SKILL.md) when changing root or nested `CLAUDE.md`, `.claude/settings.json`, Claude hooks/skills, permissions, plugin/MCP setup, or model-release configuration. Do not replace or redirect the Claude skill through the Codex copy.
+
+One line per skill below; full descriptions, trigger phrases, and scope notes live in [`.agents/skills/README.md`](.agents/skills/README.md). Read a skill's `SKILL.md` before running it.
+
+- [`hardcore-task-execution`](.agents/skills/hardcore-task-execution/SKILL.md): large or high-risk work (full-repo reviews with fixes, refactors, migrations, format changes, release artifacts) as small, observable, reversible phases; the full Claude Code version lives in `.claude/skills/hardcore-task-execution/`.
+- [`markdown-rst-template-intake`](.agents/skills/markdown-rst-template-intake/SKILL.md): map external Markdown manuals into reusable RST templates and recipes.
+- [`spec-sheet-structured-intake`](.agents/skills/spec-sheet-structured-intake/SKILL.md): onboard a new model/region from a product spec sheet (产品规格书) into both phase2 source tables, with a completeness gate and human confirmation.
+- [`bitable-translation-memory`](.agents/skills/bitable-translation-memory/SKILL.md): one-shot sentence translation, terminology lookup, live sentence-pair retrieval.
+- [`lark-cli-bitable-ops`](.agents/skills/lark-cli-bitable-ops/SKILL.md): read it **BEFORE any direct `lark-cli` read/write of a live Feishu Bitable**; every write is followed by a GET read-back reporting record_id + field.
+- [`product-manual-catalog`](.agents/skills/product-manual-catalog/SKILL.md): read-only lookup of shipped manuals (link/version/region/type) in the `发布文档管理` Base.
+- [`manual-rewrite-with-tm`](.agents/skills/manual-rewrite-with-tm/SKILL.md): structure-preserving Markdown / plain-text rewrite that reuses TM phrasing (unmatched text marked `==...==`).
+- [`bilingual-tm-maintenance`](.agents/skills/bilingual-tm-maintenance/SKILL.md): write bilingual copy to live `Translation_Memory`, then maintenance logs and bilingual audit.
+- [`lark-tm-translation-preprocess`](.agents/skills/lark-tm-translation-preprocess/SKILL.md): primary TM pre-translation of a Feishu cloud doc / `.docx`, colour-highlighting every replaced span.
+- [`manual-revision-backport`](.agents/skills/manual-revision-backport/SKILL.md): back-port a reviewer's tracked-changes `.docx` (`…修订.docx`) into source and verify zero residuals.
+- [`cloud-doc-backport-ops`](.agents/skills/cloud-doc-backport-ops/SKILL.md): run a review cloud-doc backport round end to end (「执行回写」+ URL) around the §3 `cloud_doc_backport.py` command.
+- [`docx-highlight-changes`](.agents/skills/docx-highlight-changes/SKILL.md): colour-highlight exact text spans in a built `.docx` so a reviewer sees every change.
+- [`pdf-annotate-qc`](.agents/skills/pdf-annotate-qc/SKILL.md): render QC findings as annotations on a built-PDF sidecar; the shipped PDF is never modified and fixes go through source paths.
+- [`asset-textless-extraction`](.agents/skills/asset-textless-extraction/SKILL.md): extract text-free (无字化) illustration assets from an `.ai`/PDF master; template/IDML re-pointing stays a separate PR.
+- [`new-region-line`](.agents/skills/new-region-line/SKILL.md): stand up a brand-new `(Model, Region, Language)` manual line end to end.
+- [`local-publish-queue-run`](.agents/skills/local-publish-queue-run/SKILL.md): run the build-queue publish locally as the CI bot when Actions cannot run or a publish needs local repair.
+- [`hello-docs-pipeline-dispatch-triage`](.agents/skills/hello-docs-pipeline-dispatch-triage/SKILL.md): dispatch and triage the Hello-Docs mirror pipeline; code changes NEVER PR the mirror's main — only `backport/...` → `review/*` data-plane PRs belong there.
 - For TM-guided translation jobs, route by carrier: `.docx` / Feishu cloud doc pre-translation → `lark-tm-translation-preprocess`; Markdown / plain-text rewrite → `bitable-translation-memory` for lookup, then `manual-rewrite-with-tm` for the structure-preserving rewrite flow.
 
 ## 8. Multi-Window Parallel Development
@@ -171,7 +182,7 @@ If any check fails, do not open the PR. Report which check failed and the last c
 1. Open the PR with `gh pr create --base main`. Title format: Conventional Commits (`feat(area): topic` etc.), ≤72 chars.
 2. Fill in every field of [`.github/pull_request_template.md`](.github/pull_request_template.md), including the validation block with the actual commands you ran.
 3. Tick the impact-surface and anti-debt boxes honestly. An empty Anti-Debt section is a signal you skipped the checklist, not that nothing was relevant.
-4. Do **not** self-merge. Wait for the operator (夏冰) to review. Do not run `gh pr merge` from the window.
+4. Do **not** self-merge. Wait for the operator (夏冰) to review. Do not run `gh pr merge` from the window. **Single exception — gate-on-green authorization:** when a live entry in [`code-as-doc/dev/merge_authorizations.md`](code-as-doc/dev/merge_authorizations.md) covers the PR, merge is allowed after that file's protocol passes (EVERY check green — non-required included, pending ≠ green — and no changes-requested review). A chat grant is recorded in that registry *before* being acted on; doubt about coverage means no coverage. Take a new row's number with `python tools/next_registry_id.py ma` right before you push; it counts main, every open PR and your checkout, and `rev` does the same for new ledger rows.
 5. After merge, delete the head branch (`gh pr` already does this when the repo has *Automatically delete head branches* on, which it does — see §8.8 of `git_branching_guide.md`). Do not keep it open as a second working lane.
 
 ### 8.7 Communication boundaries with the operator
@@ -180,3 +191,7 @@ If any check fails, do not open the PR. Report which check failed and the last c
 - Out-of-scope bugs noticed mid-task → call them out in the PR body under a "Follow-up" or "Future work" section; do not fix them in the same branch.
 - The task turns out 3× larger than expected → stop, report the new scope, let the operator decide between splitting and continuing.
 - The following always require explicit confirmation **before** acting, even if the task seems to imply them: deleting large blocks of code, changing public CLI flags or function signatures exported by `build.py`, editing `data/phase2/**` schema, bumping dependency versions in `requirements.txt` or `pyproject.toml`, deleting / renaming committed files under `docs/_review/**`, touching `.github/workflows/**`.
+
+## 9. Delegation (Fable)
+
+When the active model is Fable, do not do the work yourself. Never read the documentation, write the code, or run the tests in person — decompose the task and deploy every piece to others through Sub-agents and Dynamic Workflows, and keep your own turn to routing, briefing, and accepting their results. When staffing that work: (1) never assign Fable to it — Opus is the highest model an assignee may use; (2) the single exception is a high-stakes architecture review, which may be given to Fable.

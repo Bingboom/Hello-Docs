@@ -4,7 +4,7 @@
 from __future__ import annotations
 
 import argparse
-from datetime import datetime, timezone
+from datetime import datetime
 from pathlib import Path
 import subprocess
 import sys
@@ -17,6 +17,10 @@ except ImportError:  # pragma: no cover - direct script execution fallback
 ROOT = bootstrap_repo_root(__file__, parent_count=1)
 
 from tools.release_manifest_service import build_release_manifest as _build_release_manifest  # noqa: E402
+from tools.release_reproducibility import (  # noqa: E402
+    review_overlay_from_environment,
+    source_date_epoch_from_environment,
+)
 
 
 def _read_git_sha() -> str | None:
@@ -44,6 +48,9 @@ def build_release_manifest(
     built_at: datetime | None = None,
     docs_build_dir: Path | None = None,
     releases_root: Path | None = None,
+    release_version: str | None = None,
+    source_date_epoch: int | None = None,
+    toolchain: dict[str, object] | None = None,
 ) -> tuple[Path, Path]:
     return _build_release_manifest(
         repo_root=ROOT,
@@ -55,6 +62,17 @@ def build_release_manifest(
         built_at=built_at,
         docs_build_dir=docs_build_dir,
         releases_root=releases_root,
+        release_version=release_version,
+        source_date_epoch=(
+            source_date_epoch
+            if source_date_epoch is not None
+            else source_date_epoch_from_environment()
+        ),
+        # `build.py publish` validates the complete overlay before any build
+        # mutation, then passes its verified tree SHA through the deterministic
+        # release environment. The manifest binds that proof after rendering.
+        review_overlay=review_overlay_from_environment(ROOT, verify_worktree=False),
+        toolchain=toolchain,
     )
 
 
@@ -66,6 +84,11 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     ap.add_argument("--releases-root", default=None, help="Override reports/releases root used to write manifests")
     ap.add_argument("--model", required=True, help="Explicit release target model")
     ap.add_argument("--region", required=True, help="Explicit release target region")
+    ap.add_argument(
+        "--version",
+        default=None,
+        help="Freeze and bind the phase2 snapshot under this release version",
+    )
     return ap.parse_args(argv)
 
 
@@ -88,6 +111,8 @@ def main(argv: list[str] | None = None) -> int:
             releases_root = ROOT / releases_root
 
     try:
+        if args.version is not None:
+            source_date_epoch_from_environment(required=True)
         json_path, csv_path = build_release_manifest(
             config_path=config_path,
             model=args.model,
@@ -95,6 +120,7 @@ def main(argv: list[str] | None = None) -> int:
             data_root=args.data_root,
             docs_build_dir=docs_build_dir,
             releases_root=releases_root,
+            release_version=args.version,
         )
     except RuntimeError as exc:
         print(f"[release-manifest] ERROR: {exc}", file=sys.stderr)

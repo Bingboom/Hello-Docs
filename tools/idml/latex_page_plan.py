@@ -1,0 +1,275 @@
+"""Derive a deterministic source-page plan from the LaTeX reference PDF."""
+from __future__ import annotations
+
+import hashlib
+import json
+import re
+import subprocess
+import unicodedata
+from pathlib import Path
+from typing import Any
+
+from tools.manual_ir import ManualIR, ManualPage
+
+
+SCHEMA_VERSION = "latex-page-plan/v1"
+
+
+def find_reference_pdf(bundle_root: Path) -> Path | None:
+    candidates = sorted((bundle_root.parent / "pdf").glob("*.pdf"))
+    return candidates[-1] if candidates else None
+
+
+def _sha256(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def _normalize(text: str) -> str:
+    text = unicodedata.normalize("NFKC", text).casefold()
+    text = text.replace("\u2011", "-").replace("\u2013", "-").replace("\u2014", "-")
+    return re.sub(r"[^\w%+./-]+", " ", text, flags=re.UNICODE).strip()
+
+
+def extract_pdf_pages(pdf: Path) -> list[str]:
+    result = subprocess.run(
+        ["pdftotext", "-layout", str(pdf), "-"], check=True,
+        capture_output=True, text=True, encoding="utf-8", errors="replace")
+    pages = result.stdout.split("\f")
+    if pages and not pages[-1].strip():
+        pages.pop()
+    return pages
+
+
+def _strings(value: Any) -> list[str]:
+    if isinstance(value, str):
+        return [value]
+    if isinstance(value, dict):
+        preferred = [value.get(key) for key in ("title", "label", "name", "text", "desc")]
+        out = [item for item in preferred if isinstance(item, str)]
+        for key, child in value.items():
+            if key not in {"title", "label", "name", "text", "desc", "asset", "figure", "img"}:
+                out.extend(_strings(child))
+        return out
+    if isinstance(value, (list, tuple)):
+        return [text for child in value for text in _strings(child)]
+    return []
+
+
+def _ranked_anchor_candidates(page: ManualPage) -> list[tuple[int, str]]:
+    ranked: list[tuple[int, str]] = []
+    for block in page.blocks:
+        priority = {"h1": 0, "h2": 1, "body": 2, "list": 3}.get(block.kind, 4)
+        if (
+            block.kind == "component"
+            and isinstance(block.payload, dict)
+            and block.payload.get("kind") == "fcc"
+        ):
+            # FCC is a stable structural page anchor, not a synthesized
+            # visible heading.  Keep PDF matching without adding an H1 to IR.
+            ranked.append((0, "fcc"))
+        for raw in _strings(block.payload):
+            text = _normalize(raw)
+            minimum = 3 if block.kind == "h1" and text == "fcc" else (
+                6 if block.kind in {"h1", "h2"} else 12)
+            if len(text) >= minimum:
+                ranked.append((priority, " ".join(text.split()[:12])))
+    unique: dict[str, int] = {}
+    for priority, text in sorted(ranked):
+        unique.setdefault(text, priority)
+    return [(priority, text) for text, priority in unique.items()][:8]
+
+
+def anchor_candidates(page: ManualPage) -> list[str]:
+    return [text for _, text in _ranked_anchor_candidates(page)]
+
+
+def is_placed_page(page: ManualPage) -> bool:
+    """A page rendered entirely from placed finished PDFs has no text anchors.
+
+    Such pages (e.g. the cover) are structurally unmatchable against the
+    LaTeX reference text and must not dilute the match rate, or a real
+    regression could hide behind the permanently-unmatched entry.
+    """
+
+    if not page.blocks:
+        return False
+    return all(
+        block.kind == "data"
+        and isinstance(block.payload, dict)
+        and block.payload.get("kind") == "placed_pdf"
+        for block in page.blocks
+    )
+
+
+def _is_final_back_cover(page: ManualPage, *, is_final_source_page: bool) -> bool:
+    """Return whether a final source page owns the physical back cover.
+
+    Back-cover contact copy can also appear in warranty/legal text, so text
+    matching alone may bind the source to the preceding body page.  The
+    manual contract is structural: a terminal ``back_cover``/``99_back_cover``
+    source owns the final physical page.
+    """
+
+    if not is_final_source_page:
+        return False
+    stem = Path(page.source_path).stem.casefold()
+    return stem in {"back_cover", "99_back_cover"} or stem.endswith("_back_cover")
+
+
+def map_pages(ir: ManualIR, pdf_pages: list[str]) -> list[dict[str, Any]]:
+    normalized_pages = [_normalize(page) for page in pdf_pages]
+    toc_pages = {index for index, text in enumerate(normalized_pages)
+                 if "table of contents" in text}
+    cursor = 0
+    entries: list[dict[str, Any]] = []
+    for source_index, source_page in enumerate(ir.pages):
+        placed = is_placed_page(source_page)
+        ranked_candidates = [] if placed else _ranked_anchor_candidates(source_page)
+        candidates = [text for _, text in ranked_candidates]
+        matches: list[tuple[int, int, int, str]] = []
+        for rank, (priority, anchor) in enumerate(ranked_candidates):
+            for index in range(cursor, len(normalized_pages)):
+                if "toc" not in source_page.source_path and index in toc_pages:
+                    continue
+                if anchor in normalized_pages[index]:
+                    matches.append((priority, index, rank, anchor))
+                    break
+        match_page = None
+        matched_anchor = None
+        if _is_final_back_cover(
+            source_page,
+            is_final_source_page=source_index == len(ir.pages) - 1,
+        ) and normalized_pages:
+            match_page = len(normalized_pages)
+            matched_anchor = "structural:last-page"
+            cursor = len(normalized_pages) - 1
+        elif matches:
+            _, index, _, matched_anchor = min(matches)
+            match_page = index + 1
+            cursor = index
+        entries.append({
+            "page_id": source_page.page_id,
+            "source_ref": source_page.source_ref,
+            "source_path": source_page.source_path,
+            "language": source_page.language,
+            "latex_start_page": match_page,
+            "matched_anchor": matched_anchor,
+            "candidate_count": len(candidates),
+            "placed": placed,
+        })
+    return entries
+
+
+def build_page_plan(ir: ManualIR, pdf: Path) -> dict[str, Any]:
+    pages = extract_pdf_pages(pdf)
+    entries = map_pages(ir, pages)
+    matchable = [entry for entry in entries if not entry["placed"]]
+    matched = sum(entry["latex_start_page"] is not None for entry in matchable)
+    return {
+        "schema_version": SCHEMA_VERSION,
+        "manual_content_sha256": ir.content_sha256,
+        "style_contract_sha256": ir.style_contract_sha256,
+        "reference_pdf": pdf.as_posix(),
+        "reference_pdf_sha256": _sha256(pdf),
+        "physical_page_count": len(pages),
+        "source_page_count": len(entries),
+        "placed_source_pages": len(entries) - len(matchable),
+        "matched_source_pages": matched,
+        "unmatched_source_pages": len(matchable) - matched,
+        "match_rate": matched / len(matchable) if matchable else 0.0,
+        "virtual_pages": [
+            {"kind": "toc", "physical_page": index + 1}
+            for index, text in enumerate(pages)
+            if "table of contents" in _normalize(text)
+        ],
+        "pages": entries,
+    }
+
+
+def validate_page_plan(plan: dict[str, Any], *, minimum_match_rate: float = 0.65) -> list[str]:
+    issues = []
+    if plan.get("schema_version") != SCHEMA_VERSION:
+        issues.append(f"schema_version must be {SCHEMA_VERSION}")
+    if int(plan.get("physical_page_count") or 0) <= 0:
+        issues.append("reference PDF has no pages")
+    if float(plan.get("match_rate") or 0.0) < minimum_match_rate:
+        issues.append(
+            f"source-page match rate {float(plan.get('match_rate') or 0.0):.1%} "
+            f"is below {minimum_match_rate:.0%}")
+    starts = [entry["latex_start_page"] for entry in plan.get("pages", [])
+              if entry.get("latex_start_page") is not None]
+    if starts != sorted(starts):
+        issues.append("source-page anchors are not monotonic")
+    return issues
+
+
+def planned_span(plan: dict[str, Any] | None, stems: list[str], fallback: int) -> int:
+    """Return the LaTeX physical span for a consecutive source-story group."""
+    if not plan or not stems:
+        return fallback
+    entries = plan.get("pages", [])
+    try:
+        physical_page_count = int(plan.get("physical_page_count") or 0)
+        anchored_starts = [
+            int(entry["latex_start_page"])
+            for entry in entries
+            if entry.get("latex_start_page") is not None
+        ]
+        by_stem = {
+            Path(entry["source_path"]).stem: index
+            for index, entry in enumerate(entries)
+        }
+    except (KeyError, TypeError, ValueError):
+        return fallback
+    if any(start <= 0 for start in anchored_starts):
+        return fallback
+    if physical_page_count and any(
+        start > physical_page_count for start in anchored_starts
+    ):
+        return fallback
+    if anchored_starts != sorted(anchored_starts):
+        return fallback
+    indices = [by_stem[stem] for stem in stems if stem in by_stem]
+    if not indices:
+        return fallback
+    selected = [entries[index] for index in indices]
+    explicit_counts = {
+        int(entry["planned_page_count"])
+        for entry in selected if entry.get("planned_page_count") is not None
+    }
+    explicit_compositions = {
+        entry.get("composition_id") for entry in selected
+        if entry.get("composition_id") is not None
+    }
+    if explicit_counts or explicit_compositions:
+        if len(explicit_counts) == 1 and len(explicit_compositions) == 1:
+            return next(iter(explicit_counts))
+        return fallback
+    first_index, last_index = min(indices), max(indices)
+    first_start = entries[first_index].get("latex_start_page")
+    if first_start is None:
+        return fallback
+    first_start = int(first_start)
+    # An unmatched source between this group and the next anchor owns physical
+    # pages of its own and is emitted as its own spread.  Taking the raw anchor
+    # distance would hand those pages to this story as trailing blank linked
+    # frames, so an unanchored gap falls back to the height estimate instead.
+    for entry in entries[last_index + 1:]:
+        next_start = entry.get("latex_start_page")
+        if next_start is None:
+            return fallback
+        if next_start > first_start:
+            return max(1, int(next_start) - int(first_start))
+    if physical_page_count:
+        return max(1, physical_page_count - first_start + 1)
+    return fallback
+
+
+def write_page_plan(plan: dict[str, Any], path: Path) -> Path:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(plan, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return path

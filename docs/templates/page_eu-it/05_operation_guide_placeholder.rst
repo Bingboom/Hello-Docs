@@ -4,8 +4,8 @@ OPERAZIONI
 ACCENSIONE/SPEGNIMENTO
 ----------------------
 
-.. image:: templates/word_template/common_assets/operation/main_power.png
-   :alt: Segnaposto operazione accensione/spegnimento.
+.. image:: asset:operation/main_power
+   :alt: Operazione accensione/spegnimento.
    :width: 360px
 
 | Accensione: premi una volta.
@@ -21,8 +21,8 @@ USCITA CA ATTIVA/DISATTIVA
 
 **Prerequisito**: il prodotto è acceso.
 
-.. image:: templates/word_template/common_assets/operation/ac_output.png
-   :alt: Segnaposto operazione uscita CA attiva/disattiva.
+.. image:: asset:operation/ac_output
+   :alt: Operazione uscita CA attiva/disattiva.
    :width: 360px
 
 | 
@@ -37,8 +37,8 @@ USCITA CC 12 V/ USB ATTIVA/DISATTIVA
 
 **Prerequisito**: il prodotto è acceso.
 
-.. image:: templates/word_template/common_assets/operation/dc_usb_output.png
-   :alt: Segnaposto operazione uscita CC USB attiva/disattiva.
+.. image:: asset:operation/dc_usb_output
+   :alt: Operazione uscita CC USB attiva/disattiva.
    :width: 360px
 
 | 
@@ -48,15 +48,33 @@ USCITA CC 12 V/ USB ATTIVA/DISATTIVA
 | Premi una volta
 |
 
-.. list-table::
-   :header-rows: 0
-   :widths: 12 88
+.. The JE-1000H print (EU-UK V2.0-2026-08-03, PDF page 80) rates its high-power
+   USB-C port at 140 W and adds the 28 V/5 A cable rating; each model follows its
+   own print.
 
-   * - **ATTENZIONE**
-     -
-       - **USB-C 100W è una porta di uscita ad alta potenza USB-PD Power Source 3 (PS3).** Se il dispositivo o l'accessorio collegato non soddisfa i requisiti di sicurezza, potrebbe esserci un rischio di incendio. Prima di utilizzare queste porte, assicurarsi che il dispositivo o l'accessorio collegato sia dotato di protezione antincendio.
-       - Collega |PRODUCT_NAME| solo a dispositivi o accessori conformi alle clausole 6.3, 6.4 e 6.5 della norma IEC/EN/UL 62368-1 (o di altri standard equivalenti).
-       - Per ottenere la massima potenza di uscita, usa il cavo da USB-C a USB-C da 5 A (20 V CC/5 A, 100 W).
+.. only:: model_je_1000h
+
+   .. list-table::
+      :header-rows: 0
+      :widths: 12 88
+
+      * - **ATTENZIONE**
+        -
+          - **USB-C 140W è una porta di uscita ad alta potenza USB-PD Power Source 3 (PS3).** Se il dispositivo o l'accessorio collegato non soddisfa i requisiti di sicurezza, potrebbe esserci un rischio di incendio. Prima di utilizzare queste porte, assicurarsi che il dispositivo o l'accessorio collegato sia dotato di protezione antincendio.
+          - Collega |PRODUCT_NAME| solo a dispositivi o accessori conformi alle clausole 6.3, 6.4 e 6.5 della norma IEC/EN/UL 62368-1 (o di altri standard equivalenti).
+          - Per ottenere la massima potenza di uscita, usa il cavo da USB-C a USB-C da 5 A (20 V CC/5 A, 100 W; 28 V CC/5 A, 140 W).
+
+.. only:: not model_je_1000h
+
+   .. list-table::
+      :header-rows: 0
+      :widths: 12 88
+
+      * - **ATTENZIONE**
+        -
+          - **USB-C 100W è una porta di uscita ad alta potenza USB-PD Power Source 3 (PS3).** Se il dispositivo o l'accessorio collegato non soddisfa i requisiti di sicurezza, potrebbe esserci un rischio di incendio. Prima di utilizzare queste porte, assicurarsi che il dispositivo o l'accessorio collegato sia dotato di protezione antincendio.
+          - Collega |PRODUCT_NAME| solo a dispositivi o accessori conformi alle clausole 6.3, 6.4 e 6.5 della norma IEC/EN/UL 62368-1 (o di altri standard equivalenti).
+          - Per ottenere la massima potenza di uscita, usa il cavo da USB-C a USB-C da 5 A (20 V CC/5 A, 100 W).
 
 | Il prodotto può ricaricare la batteria dell'auto utilizzando il cavo Jackery per la ricarica della batteria dell'auto a 12 V, venduto separatamente e disponibile sul nostro sito web.
  
@@ -80,8 +98,8 @@ Per disattivare la Modalità risparmio energetico, tieni premuti per più di 3 s
 
 Quando si alimentano dispositivi a basso consumo (CA <= |ENERGY_SAVING_AC_THRESHOLD| oppure DC/USB <= |ENERGY_SAVING_DC_THRESHOLD|), disattiva la Modalità risparmio energetico per evitare che l'uscita si spenga automaticamente durante il funzionamento.
 
-.. image:: templates/word_template/common_assets/operation/energy_saving.png
-   :alt: Segnaposto operazione tasti modalità risparmio energetico.
+.. image:: asset:operation/energy_saving
+   :alt: Operazione tasti modalità risparmio energetico.
    :width: 320px
 
 
@@ -100,14 +118,16 @@ LUCE LED ON/OFF
 
 La luce LED ha due modalità: modalità luce e modalità SOS. In qualsiasi modalità, tieni premuto il pulsante della luce LED per spegnere la luce.
 
-.. image:: templates/word_template/common_assets/operation/led_light.png
-   :alt: Segnaposto operazione modalità luce LED.
+.. image:: asset:operation/led_light
+   :alt: Operazione modalità luce LED.
    :width: 360px
 
 |
 | Premi una volta il pulsante luce LED per accendere la luce.
 | Premilo di nuovo per passare alla modalità SOS.
 | Premilo una terza volta per spegnere la luce.
+
+.. hb-capability-begin: AC/DC输出记忆恢复
 
 Funzione di ripristino delle uscite CA e CC
 -------------------------------------------
@@ -126,6 +146,9 @@ La funzione di ripristino delle uscite CA e CC è disattivata per impostazione p
 | Aggiornamento OTA completato                                           | Spegnimento delle uscite attivato dal timer di scarica           |
 +------------------------------------------------------------------------+------------------------------------------------------------------+
 
+.. hb-capability-end:
+
+
 SCHERMO LCD
 -----------
 
@@ -136,7 +159,7 @@ SCHERMO LCD
       <table style="width:100%; border-collapse:collapse; margin:0.75rem 0 0.5rem 0;">
         <tr>
           <td rowspan="6" style="width:24%; border:1px solid #cfcfcf; padding:8px; vertical-align:top; text-align:center;">
-            <img src="_assets/templates/word_template/common_assets/operation/lcd_mode.png" alt="Segnaposto modalità display LCD." style="max-width:140px; width:100%; height:auto; display:block; margin:0 auto;">
+            <img src="asset:operation/lcd_mode" alt="Modalità display LCD." style="max-width:140px; width:100%; height:auto; display:block; margin:0 auto;">
           </td>
           <td rowspan="3" style="width:18%; border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Acceso brevemente</td>
           <td style="width:12%; border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Accendi</td>
@@ -169,7 +192,7 @@ SCHERMO LCD
 
    .. raw:: latex
 
-      \begin{HBLcdModeTable}{lcd_mode.png}
+      \begin{HBLcdModeTable}{asset:operation/lcd_mode}
       \HBLcdModeFirstGroup{Acceso brevemente}{Accendi}{Premi il pulsante POWER principale oppure quando il prodotto è in carica.}{Spegni}{Premi il pulsante POWER principale.}{Spegnimento automatico}{Lo schermo LCD si spegne automaticamente ed entra in modalità sleep dopo 2 minuti di inattività.}
       \HBLcdModeSecondGroup{Acceso fisso (in carica o in scarica)}{Accendi}{Premi due volte il pulsante POWER principale quando il prodotto è acceso.}{Spegni}{Premi il pulsante POWER principale.}{Spegnimento automatico}{Lo schermo LCD si spegne automaticamente dopo |DEFAULT_STANDBY_DURATION| di inattività.}
       \end{HBLcdModeTable}

@@ -142,37 +142,40 @@ SPEC_MASTER_VISIBLE_ORDER = (
 )
 
 def _run_lark_base(cli_bin: str, args: list[str], *, input_json: Any | None = None) -> dict[str, Any]:
-    command = [*shlex.split(cli_bin), "base", *args]
     payload_path: Path | None = None
     if input_json is not None:
         (ROOT / ".tmp").mkdir(parents=True, exist_ok=True)
         with tempfile.NamedTemporaryFile("w", encoding="utf-8", dir=str(ROOT / ".tmp"), delete=False, suffix=".json") as handle:
             payload_path = Path(handle.name)
             handle.write(json.dumps(input_json, ensure_ascii=False, separators=(",", ":")))
-        command += ["--json", "@" + payload_path.relative_to(ROOT).as_posix()]
     try:
-        proc = subprocess.run(
-            command,
-            cwd=str(ROOT),
-            check=True,
-            capture_output=True,
-            text=True,
-            encoding="utf-8",
+        command_args = ["base", *args] + (
+            ["--json", "@" + payload_path.relative_to(ROOT).as_posix()] if payload_path is not None else []
         )
-    except subprocess.CalledProcessError as exc:
-        details = "\n".join(part for part in (exc.stdout.strip(), exc.stderr.strip()) if part)
-        raise RuntimeError(f"lark-cli failed: {_format_command_for_log(command)}\n{details}") from exc
+        from tools.feishu_record_transport import run_lark_cli_json
+
+        return run_lark_cli_json(
+            cli_bin=cli_bin,
+            args=command_args,
+            repo_root=ROOT,
+            resolved_cli_command_parts=shlex.split,
+            parse_json_payload=_parse_lark_json_payload,
+            format_command=_format_command_for_log,
+        )
     finally:
         if payload_path is not None:
             payload_path.unlink(missing_ok=True)
-    text = proc.stdout.strip()
+
+
+def _parse_lark_json_payload(text: str) -> dict[str, Any]:
+    text = text.strip()
     try:
         payload = json.loads(text)
-    except json.JSONDecodeError:
+    except json.JSONDecodeError as exc:
         start = min((idx for idx in (text.find("{"), text.find("[")) if idx != -1), default=-1)
         end = max(text.rfind("}"), text.rfind("]"))
         if start < 0 or end < start:
-            raise RuntimeError(f"lark-cli returned non-JSON output: {text}")
+            raise RuntimeError(f"lark-cli returned non-JSON output: {text}") from exc
         payload = json.loads(text[start : end + 1])
     if isinstance(payload, dict) and payload.get("ok") is False:
         raise RuntimeError(json.dumps(payload.get("error") or payload, ensure_ascii=False))
@@ -213,7 +216,7 @@ def _field_list(cli_bin: str, base_token: str, table_id: str) -> list[dict[str, 
             "--table-id",
             table_id,
             "--limit",
-            "500",
+            "200",  # lark-cli >=1.0.69 caps --limit at 200
         ],
     )
     return _data_items(payload, "fields")

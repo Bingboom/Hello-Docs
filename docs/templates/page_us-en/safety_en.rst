@@ -10,7 +10,7 @@
 
    .. raw:: latex
 
-      \safetywarning{INSTRUCTIONS PERTAINING TO RISK OF FIRE, ELECTRIC SHOCK, OR INJURY TO PERSONS}
+      \HBSafetyInstruction{INSTRUCTIONS PERTAINING TO RISK OF FIRE, ELECTRIC SHOCK, OR INJURY TO PERSONS}
 
    .. raw:: latex
 
@@ -19,7 +19,7 @@
 
    .. raw:: latex
 
-      \safetylead{Always follow these basic precautions when using this product.}
+      \HBWarningLeadBlock{WARNING}{Always follow these basic precautions when using this product.}
 
 
    - Read all the instructions before using the product.
@@ -56,9 +56,11 @@
 
    - Stop using the product immediately if it shows signs of damage. Discontinue use and contact customer support for assistance.
    - Do not charge the battery in extremely hot or cold environments and strictly adhere to the product's specified operating temperature ranges:
+
      - Charging temperature: |CHARGING_TEMPERATURE_VALUE_1|
      - Discharging temperature: |DISCHARGING_TEMPERATURE_VALUE_1|
    - To ensure proper air circulation, keep the product vents uncovered. The area where the product is used must have adequate airflow in a cool, dry environment to prevent overheating.
+
      - Charging in damp or poorly ventilated spaces may cause safety hazards.
      - Water can cause short circuits or damage to the charger, leading to safety risks.
    - Unplug the power cord from a power outlet during a storm.
@@ -82,13 +84,11 @@
 
    .. raw:: latex
 
-      \safetywarning{WARNING}
-
-   Improper connection of the equipment grounding conductor is able to result in a risk of electric shock. Check with a qualified electrician if you are in doubt as to whether the product is properly grounded. Do not modify the plug provided with the product – if it will not fit the outlet, have a proper outlet installed by a qualified electrician.
+      \safetywarning[WARNING]{Improper connection of the equipment grounding conductor is able to result in a risk of electric shock. Check with a qualified electrician if you are in doubt as to whether the product is properly grounded. Do not modify the plug provided with the product – if it will not fit the outlet, have a proper outlet installed by a qualified electrician.}
 
    .. raw:: latex
 
-      \HBNoticeBlock{DANGER}{This device is intended for indoor use only (Please place this device in a similar indoor environment when using it outdoors, e.g., Home, RVs, tents, cabins, etc.).}{※ This device is not waterproof or dustproof. Keep away from rain and humid environments during use.}
+      \HBDangerBlock{DANGER}{This device is intended for indoor use only (Please place this device in a similar indoor environment when using it outdoors, e.g., Home, RVs, tents, cabins, etc.).}{※ This device is not waterproof or dustproof. Keep away from rain and humid environments during use.}
 
 
 .. only:: html

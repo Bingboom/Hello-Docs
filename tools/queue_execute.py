@@ -10,12 +10,16 @@ from pathlib import Path
 from typing import Any
 
 from tools.phase2_support import load_config
+from tools.queue_asset_preflight import preflight_asset_lineage
+from tools.queue_delivery import render_queue_delivery_lines, serialize_queue_row
 from tools.queue_query import (
     QueueQueryRow,
     apply_inferred_queue_query,
     collect_queue_query_rows,
     filter_queue_query_rows,
+    should_apply_latest_per_document_key,
 )
+from tools.review_branch_resolver import parse_document_id
 
 _CONTROL_LAYER_CLI = (
     "node",
@@ -32,6 +36,7 @@ _TERMINAL_CONCLUSIONS = {
     "skipped",
 }
 _SUCCESS_CONCLUSIONS = {"success", "neutral", "skipped"}
+_PUBLISH_DISPATCH_COMMANDS = {"publish", "web-publish"}
 
 
 def _null_text(value: str) -> str:
@@ -83,8 +88,23 @@ def select_queue_rows(args: argparse.Namespace, rows: list[QueueQueryRow]) -> tu
     skipped instead of silently dropping them.
     """
     resolved_args = apply_inferred_queue_query(args)
-    selection_args = _namespace_with(resolved_args, allow_multiple=False, limit=1000)
+    # Dropping allow_multiple bypasses the trigger pre-filter, but the
+    # latest-per-document-key collapse keys off allow_multiple too — pin it to
+    # the original args so the collapse cannot swallow trigger-enabled rows.
+    selection_args = _namespace_with(
+        resolved_args,
+        allow_multiple=False,
+        latest_per_document_key=should_apply_latest_per_document_key(resolved_args),
+        limit=1000,
+    )
     filtered = filter_queue_query_rows(selection_args, rows)
+    requested_record_ids = {
+        item.strip()
+        for item in str(getattr(args, "record_ids", "") or "").split(",")
+        if item.strip()
+    }
+    if requested_record_ids:
+        filtered = [row for row in filtered if row.record_id in requested_record_ids]
     if not filtered:
         request_text = str(getattr(args, "query_text", "") or "").strip()
         details = f" for request `{request_text}`" if request_text else ""
@@ -97,6 +117,7 @@ def dispatch_command_for_row(row: QueueQueryRow) -> str:
         "start_review": "start-review",
         "draft": "build-draft",
         "publish": "publish",
+        "web_publish": "web-publish",
     }
     command = mapping.get(row.normalized_workflow_action or "")
     if command:
@@ -141,22 +162,24 @@ def ensure_start_review_dispatchable(row: QueueQueryRow) -> None:
 
 
 def ensure_publish_confirmation(args: argparse.Namespace, row: QueueQueryRow) -> None:
-    if (row.normalized_workflow_action or "") != "publish":
+    if (row.normalized_workflow_action or "") not in {"publish", "web_publish"}:
         return
     if getattr(args, "confirm_publish", False):
         return
     raise RuntimeError(
-        "queue-execute resolved a Publish row. Re-run with `--confirm-publish` to dispatch the Publish worker."
+        "queue-execute resolved a Publish/Web Publish row. Re-run with `--confirm-publish` "
+        "to dispatch the publishing worker."
     )
 
 
 def ensure_build_trigger_requested(row: QueueQueryRow) -> None:
-    if (row.normalized_workflow_action or "") not in {"draft", "publish"}:
+    if (row.normalized_workflow_action or "") not in {"draft", "publish", "web_publish"}:
         return
     if row.build_trigger_requested is True:
         return
     raise RuntimeError(
-        "queue-execute resolved a Build Draft Package / Publish row, but `是否触发文档构建` is not enabled. "
+        "queue-execute resolved a Build Draft Package / Publish / Web Publish row, "
+        "but `是否触发文档构建` is not enabled. "
         f"record_id={row.record_id} document_id={row.document_id or '-'} workflow_action={row.workflow_action or '-'}"
     )
 
@@ -247,20 +270,80 @@ def _now_iso() -> str:
     return datetime.now(timezone.utc).isoformat(timespec="seconds")
 
 
+def _asset_preflight_for_row(row: QueueQueryRow, *, repo_root: Path) -> dict[str, object] | None:
+    """Return an advisory asset projection for build/publish rows.
+
+    Start Review does not build a bundle, so it has no meaningful target asset
+    set yet. Any preflight implementation failure is converted to a warning
+    payload: dispatch must never become dependent on an advisory check.
+    """
+
+    if (row.normalized_workflow_action or "") not in {"draft", "publish", "web_publish"}:
+        return None
+    parsed = parse_document_id(row.document_id or row.document_key)
+    if parsed is None:
+        return {
+            "mode": "advisory",
+            "warnings": [
+                {
+                    "code": "target_unavailable",
+                    "asset_key": None,
+                    "message": (
+                        "queue row has no parseable Document_ID/Document_Key; "
+                        "formal bundle lineage remains authoritative"
+                    ),
+                }
+            ],
+        }
+    model, region, _version = parsed
+    try:
+        return preflight_asset_lineage(
+            repo_root=repo_root,
+            model=model,
+            region=region,
+            language=row.lang or None,
+            build_family=row.build_family,
+        ).to_dict()
+    except Exception as exc:  # advisory only; never block an accepted dispatch
+        return {
+            "mode": "advisory",
+            "model": model,
+            "region": region,
+            "language": row.lang or None,
+            "warnings": [
+                {
+                    "code": "preflight_internal_error",
+                    "asset_key": None,
+                    "message": f"asset preflight was unavailable: {exc}",
+                }
+            ],
+        }
+
+
 def render_queue_execute_result(
     row: QueueQueryRow,
     *,
     as_json: bool,
     dispatch_payload: dict[str, str] | None = None,
     accepted_at: str = "",
+    asset_preflight: dict[str, object] | None = None,
 ) -> str:
     dispatch_payload = dispatch_payload or {}
     if as_json:
+        row_payload = serialize_queue_row(row)
         payload = {
             "record_id": row.record_id,
             "git_ref": row.git_ref,
             "result": row.result,
-            "document_link": row.document_link,
+            "idml_file": row_payload["idml_file"],
+            "feishu_cloud_doc": row.feishu_cloud_doc,
+            "baseline_doc": row.baseline_doc,
+            "html_link": row.html_link,
+            "delivery_kind": row_payload["delivery_kind"],
+            "delivery_field": row_payload["delivery_field"],
+            "delivery_url": row_payload["delivery_url"],
+            "delivery_ready": row_payload["delivery_ready"],
+            "baseline_ready": row_payload["baseline_ready"],
             "freshness_status": row.freshness_status,
         }
         if row.result_built_at:
@@ -279,6 +362,8 @@ def render_queue_execute_result(
             payload["pr_url"] = row.pr_url
         if row.review_status:
             payload["review_status"] = row.review_status
+        if asset_preflight is not None:
+            payload["asset_preflight"] = asset_preflight
         return json.dumps(payload, ensure_ascii=False, indent=2)
     lines = [
         f"record_id: {_null_text(row.record_id)}",
@@ -297,10 +382,25 @@ def render_queue_execute_result(
     lines.extend(
         [
             f"构建结果: {_null_text(row.result)}",
-            f"Document link: {_null_text(row.document_link)}",
             f"freshness_status: {_null_text(row.freshness_status)}",
         ]
     )
+    lines.extend(render_queue_delivery_lines(row))
+    if asset_preflight is not None:
+        warnings = asset_preflight.get("warnings", [])
+        warning_count = len(warnings) if isinstance(warnings, list) else 0
+        references = asset_preflight.get("references", [])
+        reference_count = len(references) if isinstance(references, list) else 0
+        lines.append(
+            f"asset_preflight: advisory references={reference_count} warnings={warning_count}"
+        )
+        if isinstance(warnings, list):
+            for warning in warnings:
+                if isinstance(warning, dict):
+                    lines.append(
+                        f"[asset-preflight] {warning.get('asset_key') or '-'}: "
+                        f"{warning.get('message') or warning.get('code') or 'warning'}"
+                    )
     return "\n".join(lines)
 
 
@@ -353,6 +453,59 @@ def _first_line(text: str) -> str:
     return str(text or "").strip().splitlines()[0] if str(text or "").strip() else ""
 
 
+def _dispatch_result(row: QueueQueryRow, *, accepted_at: str) -> dict[str, Any]:
+    return {
+        "record_id": row.record_id,
+        "document_id": row.document_id or row.document_key or "",
+        "workflow_action": row.workflow_action,
+        "git_ref": row.git_ref,
+        "dispatched": False,
+        "status": "skipped",
+        "reason": "",
+        "accepted_at": accepted_at,
+    }
+
+
+def _prepare_dispatch_row(
+    resolved_args: argparse.Namespace,
+    row: QueueQueryRow,
+    *,
+    repo_root: Path,
+    accepted_at: str,
+) -> tuple[dict[str, Any], str | None]:
+    """Validate one row and return its result shell plus dispatch command."""
+    result = _dispatch_result(row, accepted_at=accepted_at)
+    if is_completed_start_review_row(row):
+        result["reason"] = f"already in review (review_status={row.review_status or '-'})"
+        result["review_status"] = row.review_status
+        return result, None
+    try:
+        ensure_build_trigger_requested(row)
+        ensure_publish_confirmation(resolved_args, row)
+        ensure_start_review_dispatchable(row)
+        dispatch_command = dispatch_command_for_row(row)
+        preflight = _asset_preflight_for_row(row, repo_root=repo_root)
+        if preflight is not None:
+            result["asset_preflight"] = preflight
+        return result, dispatch_command
+    except RuntimeError as exc:
+        result["reason"] = _first_line(str(exc))
+        return result, None
+
+
+def _mark_dispatched(result: dict[str, Any], payload: dict[str, str], *, batch: bool = False) -> None:
+    result["dispatched"] = True
+    result["status"] = "dispatched"
+    if batch:
+        result["batch"] = True
+    if payload.get("run_id"):
+        result["run_id"] = payload["run_id"]
+    if payload.get("run"):
+        result["run_url"] = payload["run"]
+    if payload.get("accepted_at"):
+        result["accepted_at"] = payload["accepted_at"]
+
+
 def _dispatch_one_row(
     resolved_args: argparse.Namespace,
     row: QueueQueryRow,
@@ -368,30 +521,16 @@ def _dispatch_one_row(
     accepted dispatch is reported as `dispatched`, so the caller never has to
     infer "已进队" from the trigger flag.
     """
-    result: dict[str, Any] = {
-        "record_id": row.record_id,
-        "document_id": row.document_id or row.document_key or "",
-        "workflow_action": row.workflow_action,
-        "git_ref": row.git_ref,
-        "dispatched": False,
-        "status": "skipped",
-        "reason": "",
-        "accepted_at": accepted_at,
-    }
-    if is_completed_start_review_row(row):
-        result["reason"] = f"already in review (review_status={row.review_status or '-'})"
-        result["review_status"] = row.review_status
+    result, dispatch_command = _prepare_dispatch_row(
+        resolved_args,
+        row,
+        repo_root=repo_root,
+        accepted_at=accepted_at,
+    )
+    if dispatch_command is None:
         return result
     try:
-        ensure_build_trigger_requested(row)
-        ensure_publish_confirmation(resolved_args, row)
-        ensure_start_review_dispatchable(row)
-        dispatch_command = dispatch_command_for_row(row)
-    except RuntimeError as exc:
-        result["reason"] = _first_line(str(exc))
-        return result
-    try:
-        if dispatch_command == "publish":
+        if dispatch_command in _PUBLISH_DISPATCH_COMMANDS:
             payload = _run_control_layer_cli(repo_root, "dispatch", dispatch_command, row.record_id, "confirm")
         else:
             payload = _run_control_layer_cli(repo_root, "dispatch", dispatch_command, row.record_id)
@@ -399,14 +538,7 @@ def _dispatch_one_row(
         result["status"] = "error"
         result["reason"] = _first_line(str(exc))
         return result
-    result["dispatched"] = True
-    result["status"] = "dispatched"
-    if payload.get("run_id"):
-        result["run_id"] = payload["run_id"]
-    if payload.get("run"):
-        result["run_url"] = payload["run"]
-    if payload.get("accepted_at"):
-        result["accepted_at"] = payload["accepted_at"]
+    _mark_dispatched(result, payload)
     return result
 
 
@@ -449,17 +581,53 @@ def run_queue_execute_batch(
     *,
     repo_root: Path,
 ) -> None:
-    """Dispatch every matching row in one call (no per-row completion wait).
+    """Dispatch matching rows through one batch workflow per queue action.
 
-    A batch never blocks on GitHub completion: it fires each eligible row and
-    returns one accurate per-record report. The operator re-queries status
-    afterwards (the lifecycle is accept-first).
+    Validation remains per-row so skipped/error records stay visible, but the
+    eligible rows for one action share one GitHub run. The worker receives no
+    single record id and therefore consumes the pending batch atomically at the
+    queue layer instead of occupying one workflow slot per language/target.
     """
     accepted_at = str(getattr(resolved_args, "fresh_since", "") or "").strip() or _now_iso()
-    results = [
-        _dispatch_one_row(resolved_args, row, repo_root=repo_root, accepted_at=accepted_at)
-        for row in rows
-    ]
+    results: list[dict[str, Any]] = []
+    dispatch_groups: dict[str, list[tuple[int, QueueQueryRow]]] = {}
+    for row in rows:
+        result, dispatch_command = _prepare_dispatch_row(
+            resolved_args,
+            row,
+            repo_root=repo_root,
+            accepted_at=accepted_at,
+        )
+        index = len(results)
+        results.append(result)
+        if dispatch_command:
+            dispatch_groups.setdefault(dispatch_command, []).append((index, row))
+
+    for dispatch_command, entries in dispatch_groups.items():
+        if len(entries) == 1:
+            index, row = entries[0]
+            results[index] = _dispatch_one_row(
+                resolved_args,
+                row,
+                repo_root=repo_root,
+                accepted_at=accepted_at,
+            )
+            continue
+        cli_args = ["dispatch", dispatch_command, "batch"]
+        cli_args.append(
+            "--record-ids=" + ",".join(row.record_id for _index, row in entries)
+        )
+        if dispatch_command in _PUBLISH_DISPATCH_COMMANDS:
+            cli_args.append("confirm")
+        try:
+            payload = _run_control_layer_cli(repo_root, *cli_args)
+        except RuntimeError as exc:
+            for index, _row in entries:
+                results[index]["status"] = "error"
+                results[index]["reason"] = _first_line(str(exc))
+            continue
+        for index, _row in entries:
+            _mark_dispatched(results[index], payload, batch=True)
     print(render_queue_execute_batch_result(results, as_json=bool(getattr(resolved_args, "json", False))))
 
 
@@ -481,8 +649,9 @@ def run_queue_execute(args: argparse.Namespace, *, config_path: Path, repo_root:
         print(render_queue_execute_result(row, as_json=bool(getattr(resolved_args, "json", False))))
         return
     ensure_start_review_dispatchable(row)
+    asset_preflight = _asset_preflight_for_row(row, repo_root=repo_root)
     accepted_at = str(getattr(resolved_args, "fresh_since", "") or "").strip() or _now_iso()
-    if dispatch_command == "publish":
+    if dispatch_command in _PUBLISH_DISPATCH_COMMANDS:
         dispatch_payload = _run_control_layer_cli(repo_root, "dispatch", dispatch_command, row.record_id, "confirm")
     else:
         dispatch_payload = _run_control_layer_cli(repo_root, "dispatch", dispatch_command, row.record_id)
@@ -540,6 +709,7 @@ def run_queue_execute(args: argparse.Namespace, *, config_path: Path, repo_root:
             as_json=bool(getattr(resolved_args, "json", False)),
             dispatch_payload=dispatch_payload,
             accepted_at=accepted_at,
+            asset_preflight=asset_preflight,
         )
     )
 

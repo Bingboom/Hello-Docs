@@ -4,8 +4,8 @@
 ВКЛ./ВИКЛ.
 ---------
 
-.. image:: templates/word_template/common_assets/operation/main_power.png
-   :alt: Заглушка операції вмикання/вимикання живлення.
+.. image:: asset:operation/main_power
+   :alt: Операція вмикання/вимикання живлення.
    :width: 360px
 
 | Увімкнення: натисніть один раз.
@@ -21,8 +21,8 @@
 
 **Передумова**: пристрій увімкнено.
 
-.. image:: templates/word_template/common_assets/operation/ac_output.png
-   :alt: Заглушка операції вмикання/вимикання виходу AC.
+.. image:: asset:operation/ac_output
+   :alt: Операція вмикання/вимикання виходу AC.
    :width: 360px
 
 | 
@@ -37,8 +37,8 @@
 
 **Передумова**: пристрій увімкнено.
 
-.. image:: templates/word_template/common_assets/operation/dc_usb_output.png
-   :alt: Заглушка операції вмикання/вимикання виходу DC USB.
+.. image:: asset:operation/dc_usb_output
+   :alt: Операція вмикання/вимикання виходу DC USB.
    :width: 360px
 
 | 
@@ -48,15 +48,33 @@
 | Натисніть один раз
 |
 
-.. list-table::
-   :header-rows: 0
-   :widths: 12 88
+.. The JE-1000H print (EU-UK V2.0-2026-08-03, PDF page 97) rates its high-power
+   USB-C port at 140 W and adds the 28 V/5 A cable rating; each model follows its
+   own print.
 
-   * - **УВАГА**
-     -
-       - **USB-C 100 Вт є високопотужним вихідним портом USB-PD Power Source 3 (PS3).** Якщо підключений пристрій користувача або аксесуар не відповідає вимогам безпеки, існує ризик пожежі. Перед використанням цих портів переконайтеся, що підключений пристрій або аксесуар має захист від пожежі.
-       - Підключайте |PRODUCT_NAME| лише до пристроїв або аксесуарів, що відповідають пунктам 6.3, 6.4 і 6.5 IEC/EN/UL 62368-1 (або іншим еквівалентним стандартам).
-       - Щоб отримати максимальну вихідну потужність, використовуйте кабель USB-C до USB-C 5 A (20 В DC/5 A, 100 Вт).
+.. only:: model_je_1000h
+
+   .. list-table::
+      :header-rows: 0
+      :widths: 12 88
+
+      * - **УВАГА**
+        -
+          - **USB-C 140 Вт є високопотужним вихідним портом USB-PD Power Source 3 (PS3).** Якщо підключений пристрій користувача або аксесуар не відповідає вимогам безпеки, існує ризик пожежі. Перед використанням цих портів переконайтеся, що підключений пристрій або аксесуар має захист від пожежі.
+          - Підключайте |PRODUCT_NAME| лише до пристроїв або аксесуарів, що відповідають пунктам 6.3, 6.4 і 6.5 IEC/EN/UL 62368-1 (або іншим еквівалентним стандартам).
+          - Щоб отримати максимальну вихідну потужність, використовуйте кабель USB-C до USB-C 5 A (20 В DC/5 A, 100 Вт; 28 В DC/5 A, 140 Вт).
+
+.. only:: not model_je_1000h
+
+   .. list-table::
+      :header-rows: 0
+      :widths: 12 88
+
+      * - **УВАГА**
+        -
+          - **USB-C 100 Вт є високопотужним вихідним портом USB-PD Power Source 3 (PS3).** Якщо підключений пристрій користувача або аксесуар не відповідає вимогам безпеки, існує ризик пожежі. Перед використанням цих портів переконайтеся, що підключений пристрій або аксесуар має захист від пожежі.
+          - Підключайте |PRODUCT_NAME| лише до пристроїв або аксесуарів, що відповідають пунктам 6.3, 6.4 і 6.5 IEC/EN/UL 62368-1 (або іншим еквівалентним стандартам).
+          - Щоб отримати максимальну вихідну потужність, використовуйте кабель USB-C до USB-C 5 A (20 В DC/5 A, 100 Вт).
 
 
 | Пристрій може заряджати акумулятор вашого автомобіля за допомогою автомобільного кабелю заряджання Jackery 12 В, який продається окремо та доступний на нашому вебсайті.
@@ -81,8 +99,8 @@
 
 Під час живлення малопотужних пристроїв (AC <= |ENERGY_SAVING_AC_THRESHOLD| або DC / USB <= |ENERGY_SAVING_DC_THRESHOLD|) вимкніть режим енергозбереження, щоб запобігти автоматичному вимкненню виходу під час роботи.
 
-.. image:: templates/word_template/common_assets/operation/energy_saving.png
-   :alt: Заглушка операції керування режимом енергозбереження.
+.. image:: asset:operation/energy_saving
+   :alt: Операція керування режимом енергозбереження.
    :width: 320px
 
 
@@ -101,14 +119,16 @@
 
 LED-світло має два режими: режим освітлення та режим SOS. У будь-якому режимі натисніть і утримуйте кнопку LED-світла, щоб вимкнути світло.
 
-.. image:: templates/word_template/common_assets/operation/led_light.png
-   :alt: Заглушка операції режимів LED-світла.
+.. image:: asset:operation/led_light
+   :alt: Операція режимів LED-світла.
    :width: 360px
 
 |
 | Натисніть кнопку LED Light один раз, щоб увімкнути світло.
 | Натисніть її ще раз, щоб перейти в режим SOS.
 | Натисніть її втретє, щоб вимкнути світло.
+
+.. hb-capability-begin: AC/DC输出记忆恢复
 
 Функція відновлення виходів AC і DC
 -----------------------------------
@@ -127,6 +147,9 @@ LED-світло має два режими: режим освітлення т�
 | Оновлення OTA завершено                                            | Вихід вимкнено таймером розряджання                      |
 +--------------------------------------------------------------------+----------------------------------------------------------+
 
+.. hb-capability-end:
+
+
 ЕКРАН LCD
 ---------
 
@@ -137,7 +160,7 @@ LED-світло має два режими: режим освітлення т�
       <table style="width:100%; border-collapse:collapse; margin:0.75rem 0 0.5rem 0;">
         <tr>
           <td rowspan="6" style="width:24%; border:1px solid #cfcfcf; padding:8px; vertical-align:top; text-align:center;">
-            <img src="_assets/templates/word_template/common_assets/operation/lcd_mode.png" alt="Заглушка режиму дисплея LCD." style="max-width:140px; width:100%; height:auto; display:block; margin:0 auto;">
+            <img src="asset:operation/lcd_mode" alt="Режим дисплея LCD." style="max-width:140px; width:100%; height:auto; display:block; margin:0 auto;">
           </td>
           <td rowspan="3" style="width:18%; border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Короткочасне увімкнення</td>
           <td style="width:12%; border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Увімкнути</td>
@@ -170,7 +193,7 @@ LED-світло має два режими: режим освітлення т�
 
    .. raw:: latex
 
-      \begin{HBLcdModeTable}{lcd_mode.png}
+      \begin{HBLcdModeTable}{asset:operation/lcd_mode}
       \HBLcdModeFirstGroup{Короткочасне увімкнення}{Увімкнути}{Натисніть кнопку POWER або коли пристрій заряджається.}{Вимкнути}{Натисніть кнопку POWER.}{Автовимкнення}{LCD автоматично вимикається та переходить у режим сну після 2 хвилин бездіяльності.}
       \HBLcdModeSecondGroup{Постійно увімкнено (під час заряджання або розряджання)}{Увімкнути}{Натисніть кнопку POWER двічі, коли пристрій увімкнено.}{Вимкнути}{Натисніть кнопку POWER.}{Автовимкнення}{LCD автоматично вимикається після 2 годин бездіяльності.}
       \end{HBLcdModeTable}

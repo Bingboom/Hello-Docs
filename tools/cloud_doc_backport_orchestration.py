@@ -11,6 +11,7 @@ import os
 import re
 import subprocess
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
@@ -44,13 +45,22 @@ from tools.utils.path_utils import get_paths  # noqa: E402
 REVISION_LEDGER_ENV = "AUTO_MANUAL_REVISION_LEDGER_PATH"
 
 
-def _ledger_ingest_best_effort(report: dict[str, Any]) -> None:
+def _ledger_ingest_best_effort(
+    report: dict[str, Any],
+    *,
+    root: Path | None = None,
+    default_lang: str | None = None,
+) -> None:
     """Feed a diff report into the revision ledger without risking the run.
 
     This is the G1 closed-loop wiring: every review-branch backport round both
     records its deltas and (via the ledger's ingest piggyback semantics)
-    settles earlier rounds' pending rows. Observability must never fail the
-    backport itself, so every failure degrades to a stderr note.
+    settles earlier rounds' pending rows. ``root`` must be the review-branch
+    worktree — the ``_review`` sources the rows point at exist only there, not
+    in the main checkout. The rows written by this very call are excluded from
+    the piggyback reconcile (their PR has not merged yet); they settle on the
+    next round. Observability must never fail the backport itself, so every
+    failure degrades to a stderr note.
     """
     target = os.environ.get(REVISION_LEDGER_ENV, "").strip()
     if target.lower() == "off":
@@ -59,10 +69,15 @@ def _ledger_ingest_best_effort(report: dict[str, Any]) -> None:
         from tools.revision_ledger import default_ledger_path, ingest_report, reconcile
 
         ledger_path = Path(target) if target else default_ledger_path()
-        ingest_report(report, ledger_path=ledger_path)
-        reconcile(ledger_path, root=get_paths().root, auto_merge_meta=True)
+        summary = ingest_report(report, ledger_path=ledger_path, default_lang=default_lang)
+        reconcile(
+            ledger_path,
+            root=root or get_paths().root,
+            auto_merge_meta=True,
+            skip_row_keys=set(summary.get("row_keys") or ()),
+        )
     except Exception as exc:  # noqa: BLE001 - ledger is observability, not the job
-        print(f"cloud-doc-backport: revision-ledger ingest skipped: {exc}", file=sys.stderr)
+        _ERR.warning(f"cloud-doc-backport: revision-ledger ingest skipped: {exc}")
 from tools.cloud_doc_backport_pr import (  # noqa: E402,F401
     _compare_url,
     _default_backport_branch_name,
@@ -212,6 +227,9 @@ from tools.cloud_doc_backport_render import (  # noqa: E402,F401
     markdown_template_sync_proposal_report,
     markdown_review_run_report,
 )
+from tools.utils.log import get_logger
+
+_ERR = get_logger("cloud-doc-backport", stream="stderr")
 
 
 
@@ -240,7 +258,7 @@ def _run_resolve_review_branch(args: argparse.Namespace) -> int:
     try:
         result = match_review_branch(args.cloud_doc, _fetch_build_table_records(args.lark_cli, args.identity))
     except (OSError, RuntimeError) as exc:
-        print(f"cloud-doc-backport: {exc}", file=sys.stderr)
+        _ERR.error(f"cloud-doc-backport: {exc}")
         return 2
     if result is None:
         print(json.dumps({"resolved": False, "cloud_doc": args.cloud_doc}, ensure_ascii=False))
@@ -253,7 +271,7 @@ def _run_sync_review_worktrees(args: argparse.Namespace) -> int:
     try:
         branches = list_in_review_branches(_fetch_build_table_records(args.lark_cli, args.identity))
     except (OSError, RuntimeError) as exc:
-        print(f"cloud-doc-backport: {exc}", file=sys.stderr)
+        _ERR.error(f"cloud-doc-backport: {exc}")
         return 2
     results: list[dict[str, Any]] = []
     for branch in branches:
@@ -270,7 +288,7 @@ def _run_sync_review_worktrees(args: argparse.Namespace) -> int:
             print(f"WORKTREE {branch['git_ref']} -> {path}")
         except (OSError, RuntimeError) as exc:
             results.append({**branch, "error": str(exc)})
-            print(f"cloud-doc-backport: worktree for {branch['git_ref']} failed: {exc}", file=sys.stderr)
+            _ERR.error(f"cloud-doc-backport: worktree for {branch['git_ref']} failed: {exc}")
     print(json.dumps({"in_review": len(branches), "ensured": sum(1 for r in results if "worktree" in r)}, ensure_ascii=False))
     return 0 if branches and all("worktree" in r for r in results) else (0 if not branches else 1)
 
@@ -290,10 +308,42 @@ def _diff_delta_count(page_out: Path) -> int:
         return 0
     return int((payload.get("summary") or {}).get("total_deltas") or 0)
 
+def _page_gate_passed(page_out: Path) -> bool:
+    """Rebuild+rediff verdict from a per-page worker's verify report.
+
+    The worker writes ``cloud_doc_backport_verify.json`` on every ``--write`` run;
+    an unreadable or missing report fails closed — a page whose apply cannot be
+    verified must not ride into the backport PR.
+    """
+    verify_path = page_out / "cloud_doc_backport_verify.json"
+    try:
+        payload = json.loads(verify_path.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return False
+    gate = payload.get("rebuild_rediff")
+    if not isinstance(gate, dict):
+        return False
+    return bool(gate.get("passed"))
+
+
 def _backport_pr_branch(git_ref: str, run_id: str) -> str:
     """Name of the sub-branch that carries backport edits as a PR into the review branch."""
     safe = re.sub(r"[^A-Za-z0-9._-]+", "-", f"{git_ref}-{run_id}").strip("-")[:80] or "edits"
     return f"backport/{safe}"
+
+
+def _default_run_id(git_ref: str) -> str:
+    """Date-stamped, branch-scoped default run id when ``--run-id`` is not given.
+
+    The revision ledger keys rows by ``(run_id, delta_hash)``; a constant default
+    made every un-tagged backport round collapse onto ONE run_id, so a correction
+    observed again in a later round was deduped away instead of recorded. Stamping
+    the day and the review branch separates rounds, while keeping same-day re-runs
+    of the same round idempotent (re-ingesting a report stays a no-op).
+    """
+    safe_ref = re.sub(r"[^A-Za-z0-9._-]+", "-", str(git_ref or "").strip()).strip("-") or "review"
+    today = datetime.now(timezone.utc).strftime("%Y%m%d")
+    return f"backport-{safe_ref}-{today}"
 
 def _lang_from_doc_name(doc_name: str | None) -> str:
     """Best-effort value-column lang from a doc name, e.g. ``manual_je1000f_eu_en_0.8`` -> ``en``."""
@@ -422,11 +472,10 @@ def _run_review_branch(args: argparse.Namespace) -> int:
         explicit_siblings = bool(getattr(args, "sibling", None))
         args.sibling = _resolve_review_branch_siblings(args)
         if args.sibling and not explicit_siblings:
-            print(
+            _ERR.info(
                 f"[backport] F3 family-scope: {len(args.sibling)} shared template(s) "
                 f"(page_shared/{args.lang}) — a shared-prose delta routes to Class T "
-                f"(template-sync proposal), not the _review write",
-                file=sys.stderr,
+                f"(template-sync proposal), not the _review write"
             )
         baseline_text = None
         # baseline_from_seed marks the on-branch .backport/ seed — a locally advanceable
@@ -464,13 +513,17 @@ def _run_review_branch(args: argparse.Namespace) -> int:
         if args.page:
             source_rels = [derive_review_source_rel(review_dir, args.page)]
         else:
-            page_dir = Path(worktree) / review_dir / "page"
-            if not page_dir.is_dir():
-                raise RuntimeError(f"no page directory on branch {git_ref}: {review_dir}/page")
-            source_rels = [f"{review_dir}/page/{path.name}" for path in sorted(page_dir.glob("*.rst"))]
-            if not source_rels:
-                raise RuntimeError(f"no .rst pages under {review_dir}/page on branch {git_ref}")
-        run_id = str(args.run_id or "").strip() or "cloud-doc-backport-branch"
+            pages = _review_bundle_pages(worktree, review_dir)
+            if not pages:
+                raise RuntimeError(
+                    f"no .rst pages under {review_dir}/page or {review_dir}/<lang>/page "
+                    f"on branch {git_ref}"
+                )
+            bundle_root = Path(worktree) / review_dir
+            source_rels = [
+                f"{review_dir}/{page.relative_to(bundle_root).as_posix()}" for page in pages
+            ]
+        run_id = str(args.run_id or "").strip() or _default_run_id(git_ref)
         out_dir = Path(args.out) if args.out else _default_out_dir(run_id)
         out_dir.mkdir(parents=True, exist_ok=True)
         # Fetch the cloud-doc ONCE; diff every page against this local fixture so a
@@ -478,7 +531,7 @@ def _run_review_branch(args: argparse.Namespace) -> int:
         fixture = out_dir / "cloud_doc_fetched.md"
         fixture.write_text(fetch_doc_text(args.cloud_doc, lark_cli=args.lark_cli), encoding="utf-8")
     except (OSError, RuntimeError) as exc:
-        print(f"cloud-doc-backport: {exc}", file=sys.stderr)
+        _ERR.error(f"cloud-doc-backport: {exc}")
         return 2
     print(f"BRANCH {git_ref}  WORKTREE {worktree}  PAGES {len(source_rels)}")
     changed_rels: list[str] = []
@@ -508,10 +561,21 @@ def _run_review_branch(args: argparse.Namespace) -> int:
             review_cmd += ["--sibling", sibling_rel]
         if args.write:
             review_cmd.append("--write")
-        proc = subprocess.run(review_cmd, cwd=str(get_paths().root), capture_output=True, text=True)
-        if proc.returncode not in (0, 1):  # run-review returns 1 only on a FAIL residual result
+        proc = subprocess.run(review_cmd, cwd=str(get_paths().root), capture_output=True, text=True, check=False)
+        if proc.returncode not in (0, 1):  # run-review returns 1 on a FAIL result
             failed = True
-            print(f"  ERROR {source_rel} (rc {proc.returncode})", file=sys.stderr)
+            _ERR.error(f"  ERROR {source_rel} (rc {proc.returncode})")
+            continue
+        # rc 1 covers two FAIL shapes: residual pending deltas (partial apply — still
+        # push what landed cleanly) and a rebuild+rediff gate failure (the apply
+        # corrupted the RST — never commit or push that page; parity with the
+        # baseline path's refusal).
+        if args.write and proc.returncode == 1 and not _page_gate_passed(page_out):
+            failed = True
+            _ERR.error(
+                f"  GATE FAIL {source_rel}: the apply changed more than the intended "
+                "deltas — page excluded from the backport PR; inspect the worktree."
+            )
             continue
         deltas = _diff_delta_count(page_out)
         if deltas > 0:
@@ -526,7 +590,7 @@ def _run_review_branch(args: argparse.Namespace) -> int:
                 changed_rels=changed_rels, git_bin=args.git_bin, remote=args.remote,
             )
         except (OSError, RuntimeError) as exc:
-            print(f"cloud-doc-backport: backport PR into {git_ref} failed: {exc}", file=sys.stderr)
+            _ERR.error(f"cloud-doc-backport: backport PR into {git_ref} failed: {exc}")
             return 2
     print(json.dumps(
         {"git_ref": git_ref, "worktree": worktree, "pages": len(source_rels),
@@ -535,6 +599,29 @@ def _run_review_branch(args: argparse.Namespace) -> int:
         ensure_ascii=False, sort_keys=True,
     ))
     return 1 if failed else 0
+
+def _review_bundle_pages(worktree: str, review_dir: str) -> list[Path]:
+    """Every review page of the bundle, covering both bundle layouts.
+
+    Flat families keep pages at ``<review_dir>/page/*.rst``; families with
+    ``include_lang_in_output_path`` (us-en, au-en, kr-ko, …) nest them one
+    level deeper at ``<review_dir>/<lang>/page/*.rst``. Missing either layout
+    is fine — the caller decides whether an empty result is an error.
+    """
+    bundle_root = Path(worktree) / review_dir
+    page_dirs: list[Path] = []
+    flat = bundle_root / "page"
+    if flat.is_dir():
+        page_dirs.append(flat)
+    if bundle_root.is_dir():
+        for child in sorted(bundle_root.iterdir()):
+            if not child.is_dir() or child.name.startswith(".") or child.name == "page":
+                continue
+            nested = child / "page"
+            if nested.is_dir():
+                page_dirs.append(nested)
+    return [page for page_dir in page_dirs for page in sorted(page_dir.glob("*.rst"))]
+
 
 def _run_review_branch_baseline(
     args: argparse.Namespace,
@@ -571,7 +658,7 @@ def _run_review_branch_baseline(
     (idempotent no-ops on apply).
     """
     git_ref = resolved["git_ref"]
-    run_id = str(args.run_id or "").strip() or "cloud-doc-backport-branch"
+    run_id = str(args.run_id or "").strip() or _default_run_id(git_ref)
     out_dir = Path(args.out) if args.out else _default_out_dir(run_id)
     # F2 value-index: derive the value-column lang from --lang, else the doc name.
     if not getattr(args, "lang", None):
@@ -604,10 +691,9 @@ def _run_review_branch_baseline(
             family_index=_family_index_from_args(args),
         )
     except (OSError, RuntimeError) as exc:
-        print(f"cloud-doc-backport: {exc}", file=sys.stderr)
+        _ERR.error(f"cloud-doc-backport: {exc}")
         return 2
     written = write_reports(report, out_dir)
-    _ledger_ingest_best_effort(report)
     # Emit the actionable Class D / Class T artifacts (parity with the per-page run-review
     # worker). The blessed baseline path classifies these deltas but previously wrote only
     # the diff report, so the operator had nothing to feed `apply-source-table` (which reads
@@ -657,14 +743,44 @@ def _run_review_branch_baseline(
     # corrupted apply. A failure blocks the cursor advance and the PR push (the worktree is
     # left for inspection) — so a backport PR is only ever opened from a verified-clean apply.
     all_deltas = report.get("deltas") or []
+    delta_pages: dict[str, str] = {}
     gate_pages: list[dict[str, Any]] = []
     gate_passed = True
     if args.write and review_bound:
-        page_dir = Path(worktree) / review_dir / "page"
-        for page in sorted(page_dir.glob("*.rst")):
+        bundle_root = Path(worktree) / review_dir
+        bundle_pages = _review_bundle_pages(worktree, review_dir)
+        # Plan pass: find which page(s) each delta would land on. The reviewer edited
+        # ONE instance in the cloud doc, so a delta that applies cleanly in more than
+        # one page (shared boilerplate) is cross-page ambiguous — abstain instead of
+        # fanning the edit out to every page that happens to contain the same text.
+        plan_pages: dict[str, list[Path]] = {}
+        for page in bundle_pages:
+            plan_rep = build_review_apply_report(
+                report, source_path=page, write=False,
+                command=["tools/cloud_doc_backport.py", "run-review-branch", "--baseline-plan"],
+            )
+            for op in plan_rep.get("operations") or []:
+                if op.get("status") == "planned" and op.get("delta_hash"):
+                    plan_pages.setdefault(str(op["delta_hash"]), []).append(page)
+        cross_page_ambiguous = {h for h, hits in plan_pages.items() if len(hits) > 1}
+        if cross_page_ambiguous:
+            _ERR.warning(
+                f"  SKIP {len(cross_page_ambiguous)} delta(s): old text applies cleanly in "
+                "more than one _review page (cross-page ambiguous) — route manually to the "
+                "intended page."
+            )
+        for page in bundle_pages:
+            page_deltas = [
+                delta
+                for delta in all_deltas
+                if str(delta.get("delta_hash")) not in cross_page_ambiguous
+                and plan_pages.get(str(delta.get("delta_hash")), [None])[0] == page
+            ]
+            if not page_deltas:
+                continue
             pre_text = page.read_text(encoding="utf-8") if page.is_file() else ""
             apply_rep = build_review_apply_report(
-                report, source_path=page, write=True,
+                {**report, "deltas": page_deltas}, source_path=page, write=True,
                 command=["tools/cloud_doc_backport.py", "run-review-branch", "--baseline-apply"],
             )
             page_applied = {
@@ -673,8 +789,11 @@ def _run_review_branch_baseline(
                 if op.get("status") == "applied" and op.get("delta_hash")
             }
             applied_hashes |= page_applied
+            page_rel = f"{review_dir}/{page.relative_to(bundle_root).as_posix()}"
+            for delta_hash in page_applied:
+                delta_pages[delta_hash] = page_rel
             if apply_rep["summary"].get("changed"):
-                changed_rels.append(f"{review_dir}/page/{page.name}")
+                changed_rels.append(page_rel)
                 gate = _rebuild_rediff_gate(
                     baseline_text=pre_text,
                     edited_text=page.read_text(encoding="utf-8"),
@@ -687,10 +806,9 @@ def _run_review_branch_baseline(
                     print(f"  APPLIED (Class R) {page.name}  [rebuild+rediff gate OK]")
                 else:
                     gate_passed = False
-                    print(
+                    _ERR.error(
                         f"  GATE FAIL {page.name}: the apply changed more than the intended "
-                        f"deltas (unexpected={gate['unexpected']} missing={gate['missing']})",
-                        file=sys.stderr,
+                        f"deltas (unexpected={gate['unexpected']} missing={gate['missing']})"
                     )
         if not changed_rels:
             print("NOTE: no review-prose delta matched a _review page uniquely (nothing written; handle manually if needed).")
@@ -711,13 +829,25 @@ def _run_review_branch_baseline(
                     "frozen — re-snapshot it to advance the cursor (operator follow-up). "
                     "Re-runs re-report (idempotent)."
                 )
+    # Ledger ingest runs on write runs only, AFTER the apply: each applied delta is
+    # stamped with the _review page it landed on, which is what lets reconcile ever
+    # settle the row (a source-less row is source_missing forever). Dry runs do not
+    # ingest — their rows could never gain a source path, and the row_key dedup
+    # would then block the enriched write-run rows.
+    if args.write:
+        for delta in all_deltas:
+            page_rel = delta_pages.get(str(delta.get("delta_hash")))
+            if page_rel:
+                delta["applied_source_path"] = page_rel
+        _ledger_ingest_best_effort(
+            report, root=Path(worktree), default_lang=getattr(args, "lang", None) or None
+        )
     pushed = False
     backport_pr_url = ""
     if args.write and args.push and changed_rels and not gate_passed:
-        print(
+        _ERR.error(
             "cloud-doc-backport: rebuild+rediff gate FAILED — refusing to push the backport "
-            "PR (the apply changed more than the intended Class R deltas). Inspect the worktree.",
-            file=sys.stderr,
+            "PR (the apply changed more than the intended Class R deltas). Inspect the worktree."
         )
     elif args.write and args.push and changed_rels:
         try:
@@ -726,7 +856,7 @@ def _run_review_branch_baseline(
                 changed_rels=changed_rels, git_bin=args.git_bin, remote=args.remote,
             )
         except (OSError, RuntimeError) as exc:
-            print(f"cloud-doc-backport: backport PR into {git_ref} failed: {exc}", file=sys.stderr)
+            _ERR.error(f"cloud-doc-backport: backport PR into {git_ref} failed: {exc}")
             return 2
     print(json.dumps(
         {"git_ref": git_ref, "worktree": worktree, "mode": "baseline-diff",

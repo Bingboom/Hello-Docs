@@ -69,41 +69,46 @@ Create:
 - `docs/templates/page_shared/<lang>/` ← clone `page_shared/en/`. These are the
   **to-be-translated source baseline** (English until translated).
 
-## 2. Register a NEW output language in code
+## 2. Register a NEW output language
 
-Only if the language is new to the repo. `renderers` resolve columns dynamically via
-`_lang_suffix_candidates(lang)` with an `_en` fallback (lcd/troubleshooting), so no
-renderer edits — but these enumerations DO need the language:
+Only the canonical language registry is a code-plane extension point. Add one
+`LanguageSpec` row to `tools/lang_registry.py`; the sync schemas, signal-word
+columns, localized-copy/TM fields, content-lint maps, CSV-page aliases, display
+labels, and queue-query aliases are derived from that row. The fake-language
+`xx` end-to-end proof in `tests/test_fake_language_e2e.py` locks this boundary:
+adding one registry row must not require another consumer map or a parallel
+golden-test edit.
 
-- `tools/signal_words.py` — add to `_SUPPORTED_LANGS`.
-- `tools/sync_data_models.py` — add the per-language columns to the `columns` tuples:
-  symbols_blocks (`label_<l>`,`aliases_<l>`,`text_<l>`), lcd_icons (`icon_<l>`,`icon_desc_<l>`),
-  troubleshooting (`corrective_measures_<l>`).
-- `tools/localized_copy.py` — `_LANG_TEXT_COLUMNS`: `"<l>": "text_<l>"`.
-- `tools/manual_copy_source.py` — `LOCALIZED_COPY_COLUMNS` (+`text_<l>`),
-  `LOCALIZED_COPY_TEXT_COLUMNS` (`text_<l>`→`<l>`), `TM_LANGUAGE_FIELDS` (`<l>`→`<l>`),
-  and `STATUS_WORD_COLUMNS` (+`<l>`).
-- `data/phase2/page_registry.csv` (**tracked**, not gitignored) — add `<l>` to the
-  `langs` of the symbols/lcd_icons/troubleshooting/spec rows. Miss this and the
-  csv-page builder returns `files=0` → `Missing source RST ... <page>_<l>.rst`.
-- Update hardcoded expectations in `tests/test_sync_data.py` and
-  `tests/test_manual_copy_source.py`.
+The remaining inputs are data/config, not per-consumer Python edits:
+
+- `data/phase2/page_registry.csv` (**tracked**, not gitignored) — add `<l>` to
+  the `langs` of the symbols/lcd_icons/troubleshooting/spec rows. Miss this and
+  the csv-page builder returns `files=0` → `Missing source RST ... <page>_<l>.rst`.
+- `configs/config.<region>-<lang>.yaml`, the family manifest, and the shared
+  language template directory provide the output target and source baseline.
+- The phase2 source tables need the corresponding localized columns and rows;
+  this is the approval-gated Feishu/source-table step, followed by `sync-data`.
+- A new language is not automatically an approved reference-bound IDML
+  language. IDML language packs, governed layout pins, and a reference-layout
+  approval are separate physical-layout work.
 
 ## 3. Feishu data (base = phase2 `LD3lb4G1ua4GOVs1vxAc9W2enje`)
 
-Identities (per hello-docs-machine-setup): **reads** need `--as bot`; **writes**
-(`+field-create`/`+record-batch-create`/`+record-batch-update`/`+record-upsert`) use
-default `--as user`.
+Use the business-plane identity explicitly for every operation:
+`--profile prod --as bot`. Reads and approved writes use the same maintained
+HT-Docs bot; never fall back to the CLI's default profile or default user.
 
 ### lark-cli recipes (gotchas that cost time)
-- `lark-cli base +field-list --as bot --base-token <bt> --table-id <tid> --limit 500`
+- `lark-cli --profile prod base +field-list --as bot --base-token <bt> --table-id <tid> --limit 200`
 - `+record-list … --format json --jq "." --limit 200` returns **columnar** JSON
   (`data.fields`, `data.data` rows, `data.record_id_list`) and **paginates** — loop
   `--offset` until `has_more=false` (a single call caps ~one page; newly-added rows
   are on later pages).
 - `--json @file` must be a **relative path inside cwd** (absolute → invalid_argument);
-  stage payloads in the repo `.tmp/` and pass `@./.tmp/x.json`.
-- `+record-batch-create` payload = `{"fields":[names], "rows":[[values]]}`.
+  `@-` is not stdin. Stage payloads under `reports/source_intake/<run>/` and
+  pass `@reports/source_intake/<run>/spec_intake_staging_payload.json`.
+- `+record-batch-create` payload =
+  `{"create_records":[{"Field":"value"}, ...]}` (maximum 200 records/call).
 - `+record-batch-update` = `{"record_id_list":[…], "patch":{field:value}}` (one patch
   for all; ≤200/call).
 - Multi-select fields do **not** auto-create options on write ("not_found"): add the
@@ -122,8 +127,10 @@ default `--as user`.
 ### 3b. Spec params → `规格参数明细 tblPUFJqt2uGGvTT`
 - Operator flow: extract PDF → map via **字段映射规则表 `tblHrelfzylJIRT2`** (取值规则:
   exclude/passthrough/default/manual/capacity/weight/dims_mm_to_cm/dc12/temp/cycle_life)
-  → write rows to the **入库表 `tblIi0BEufjvGLIU`** (`document_key=<Model>_<Region>`,
-  `Source_lang=en`, `状态`=✅直通/⚠️需确认, `确认` unchecked) → **operator confirms**
+  → generate one sibling-structured batch with `source_intake.py stage-plan`
+  → write that payload to the **入库表 `tblIi0BEufjvGLIU`**
+  (`document_key=<Model>_<Region>`, `Source_lang=en`,
+  `状态`=✅直通/🔧已变换/⚠️需确认, `确认` unchecked) → **operator confirms**
   in Feishu (may edit values + tick 确认=TRUE) → promote confirmed rows into the source table.
 - Source-table rows need **link** fields: `Document_key_link`→document_key dict,
   `Row_key_link`→`tbl8yQfXYe3KKyAM`, `Slot_key_link`→`tblS7qyV1DTZkoNq`

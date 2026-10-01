@@ -2,6 +2,32 @@ from __future__ import annotations
 
 from typing import Any, Callable
 
+from tools.utils.log import get_logger
+
+_LOG = get_logger("build-queue")
+
+
+def sync_phase2_snapshot_once(
+    sync_phase2_snapshot_before_queue: Callable[..., None],
+    *,
+    memo: set[tuple[str, str]],
+    config_path: Any,
+    data_root: str | None,
+) -> None:
+    """Run one phase2 sync at most once for a queue invocation.
+
+    The queue worker may process several groups in one invocation.  A forced
+    refresh is a run-level operation, so repeat groups using the same config
+    and data root reuse the successful snapshot.  Failed syncs are not memoized
+    and remain retryable for a later group.
+    """
+
+    key = (str(config_path), str(data_root or ""))
+    if key in memo:
+        return
+    sync_phase2_snapshot_before_queue(config_path=config_path, data_root=data_root)
+    memo.add(key)
+
 
 def process_build_queue(
     *,
@@ -13,6 +39,7 @@ def process_build_queue(
     workflow_action: str | None,
     doc_phase: str | None,
     record_id: str | None,
+    record_ids: tuple[str, ...] = (),
     bootstrap_queue_session: Callable[..., Any],
     load_pending_queue_state: Callable[..., Any],
     print_no_pending_message: Callable[..., None],
@@ -20,6 +47,9 @@ def process_build_queue(
     sync_phase2_snapshot_before_queue: Callable[..., None],
     resolve_and_report_wiki_destination: Callable[..., Any],
     process_queue_record_group: Callable[..., Any],
+    acquire_queue_claim: Callable[..., Any],
+    result_field: str,
+    queue_claim_ttl_seconds: int,
     build_started_at_field: str,
     force_phase2_refresh_field: str,
     data_sync_field: str,
@@ -57,6 +87,7 @@ def process_build_queue(
     build_success_fields: Callable[..., Any],
     publish_release_latest_dir_for_target: Callable[..., Any],
     write_publish_release_metadata: Callable[..., Any],
+    write_web_publish_metadata: Callable[..., Any],
     build_failure_writeback_fields: Callable[..., Any],
     best_effort_queue_workflow_action: Callable[..., Any],
     resolve_queue_workflow_action: Callable[..., Any],
@@ -73,6 +104,7 @@ def process_build_queue(
         immediate_only=immediate_only,
         workflow_action=session.normalized_cli_action,
         record_id=record_id,
+        record_ids=record_ids,
         select_pending_queue_records=select_pending_queue_records,
         group_pending_queue_records=group_pending_queue_records,
         available_field_names=available_field_names,
@@ -105,16 +137,30 @@ def process_build_queue(
         )
         return 0
 
-    artifact_destination = resolve_and_report_wiki_destination(
-        cfg=cfg,
-        cli_bin=session.cli_bin,
-        identity=session.identity,
-        binding=session.binding,
-        resolve_wiki_destination=resolve_wiki_destination,
+    artifact_destination = (
+        None
+        if session.normalized_cli_action == "web_publish"
+        else resolve_and_report_wiki_destination(
+            cfg=cfg,
+            cli_bin=session.cli_bin,
+            identity=session.identity,
+            binding=session.binding,
+            resolve_wiki_destination=resolve_wiki_destination,
+        )
     )
 
     failures: list[str] = []
     processed = 0
+    phase2_sync_memo: set[tuple[str, str]] = set()
+
+    def sync_phase2_snapshot_for_group(*, config_path: Any, data_root: str | None) -> None:
+        sync_phase2_snapshot_once(
+            sync_phase2_snapshot_before_queue,
+            memo=phase2_sync_memo,
+            config_path=config_path,
+            data_root=data_root,
+        )
+
     for group in pending_state.pending_groups:
         result = process_queue_record_group(
             group=group,
@@ -132,6 +178,9 @@ def process_build_queue(
             cli_bin=session.cli_bin,
             identity=session.identity,
             artifact_destination=artifact_destination,
+            acquire_queue_claim=acquire_queue_claim,
+            result_field=result_field,
+            queue_claim_ttl_seconds=queue_claim_ttl_seconds,
             warn_legacy_record_doc_phase=warn_legacy_record_doc_phase,
             validate_queue_record_group=validate_queue_record_group,
             resolve_target_for_record=resolve_target_for_record,
@@ -143,7 +192,7 @@ def process_build_queue(
             queue_group_upload_dingtalk=queue_group_upload_dingtalk,
             resolve_config_path_for_task=resolve_config_path_for_task,
             resolve_queue_workflow_action=resolve_queue_workflow_action,
-            sync_phase2_snapshot_before_queue=sync_phase2_snapshot_before_queue,
+            sync_phase2_snapshot_before_queue=sync_phase2_snapshot_for_group,
             resolve_lark_wiki_destination=resolve_lark_wiki_destination,
             resolve_row_artifact_destination=resolve_row_artifact_destination,
             resolve_artifact_mirror_provider=resolve_artifact_mirror_provider,
@@ -158,6 +207,7 @@ def process_build_queue(
             queue_record_legacy_doc_phase=queue_record_legacy_doc_phase,
             publish_release_latest_dir_for_target=publish_release_latest_dir_for_target,
             write_publish_release_metadata=write_publish_release_metadata,
+            write_web_publish_metadata=write_web_publish_metadata,
             workflow_action_label=workflow_action_label,
             queue_record_key=queue_record_key,
             build_failure_writeback_fields=build_failure_writeback_fields,
@@ -168,7 +218,7 @@ def process_build_queue(
         if result.failure_message:
             failures.append(result.failure_message)
 
-    print(f"[build-queue] Summary: processed={processed} failed={len(failures)}")
+    _LOG.info(f"[build-queue] Summary: processed={processed} failed={len(failures)}")
     for failure in failures:
         print(f"[build-queue] FAILURE {failure}", file=stderr)
     return 1 if failures else 0

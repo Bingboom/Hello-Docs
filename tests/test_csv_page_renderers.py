@@ -104,6 +104,54 @@ class TestCsvPageRenderers(unittest.TestCase):
         self.assertIn('class="hb-spec-note" data-spec-trailer-kind="note"', out)
         self.assertIn('class="hb-spec-footnote" data-spec-trailer-kind="footnote"', out)
         self.assertLess(out.index("Demo note line"), out.index("Demo footnote"))
+        self.assertLess(out.index(r"\HBSpecPageStart"), out.index(r"\section{SPECIFICATIONS}"))
+        self.assertGreater(out.index(r"\HBSpecPageEnd"), out.index("Demo footnote"))
+
+    def test_render_spec_page_marks_multiline_rows_for_reference_height(self) -> None:
+        blocks = self._spec_blocks()
+        blocks[2]["text_en"] = "Input || Charge mode\nBypass mode"
+
+        out = renderers.render_spec_page(
+            template=self._spec_template(),
+            blocks=blocks,
+            sku_id="JB1000",
+            lang="en",
+            vars_map=self._localized_copy_vars(),
+        )
+
+        self.assertIn(r"& \HBSpecMultilineRowStrut{}\HBTypeSpecValue", out)
+
+    def test_render_spec_page_splits_usb_c_power_variants_for_latex(self) -> None:
+        blocks = self._spec_blocks()
+        blocks.insert(
+            3,
+            {
+                "block_type": "row_item",
+                "order": "111.5",
+                "sku_scope": "ALL",
+                "enabled": "1",
+                "meta_json": "{}",
+                "text_en": (
+                    "2 × USB-C || 30 W max., 5 V / 3 A"
+                    "\n100 W max., 5 V / 3 A"
+                ),
+            },
+        )
+
+        out = renderers.render_spec_page(
+            template=self._spec_template(),
+            blocks=blocks,
+            sku_id="JB1000",
+            lang="en",
+            vars_map=self._localized_copy_vars(),
+        )
+
+        self.assertIn(r"\HBTypeSpecLabel{USB-C 30W}", out)
+        self.assertIn(r"\HBTypeSpecLabel{USB-C 100W}", out)
+        self.assertIn(
+            r"\HBTypeSpecLabel{USB-C 30W} & \HBTypeSpecValue{30 W max., 5 V / 3 A} \tabularnewline",
+            out,
+        )
 
     def test_render_spec_page_row_without_delimiter_should_fail(self) -> None:
         blocks = self._spec_blocks()
@@ -272,6 +320,37 @@ class TestCsvPageRenderers(unittest.TestCase):
         ac_pos = out.find("1 x AC Input")
         self.assertGreater(model_pos, -1)
         self.assertGreater(ac_pos, -1)
+
+    def test_render_spec_page_keeps_legacy_named_usb_c_rows_on_spec_page(self) -> None:
+        blocks = self._spec_master_blocks()
+        usb_rows = []
+        for order, slot, value in (
+            ("1", "30w", "30 W max., 5 V / 3 A"),
+            ("2", "100w", "100 W max., 5 V / 3 A"),
+        ):
+            row = dict(blocks[0])
+            row.update(
+                {
+                    "Row_key": "usb_c",
+                    "Slot_key": slot,
+                    "Row_label_source": "2 × USB-C",
+                    "Param_source": "",
+                    "Line_order": order,
+                    "Value_source": value,
+                }
+            )
+            usb_rows.append(row)
+
+        out = renderers.render_spec_page(
+            template=self._spec_template(),
+            blocks=usb_rows,
+            sku_id="JB1000",
+            lang="en",
+            vars_map=self._localized_copy_vars(),
+        )
+
+        self.assertIn(r"\HBTypeSpecLabel{USB-C 30W}", out)
+        self.assertIn(r"\HBTypeSpecLabel{USB-C 100W}", out)
 
     def test_render_spec_page_should_fallback_to_sibling_region_footnote_definition(self) -> None:
         blocks = self._spec_master_blocks()
@@ -620,6 +699,28 @@ class TestCsvPageRenderers(unittest.TestCase):
         self.assertNotIn("USER MAINTENANCE INSTRUCTIONS", out)
         self.assertNotIn(r"\section{MEANING OF SYMBOLS}", out)
 
+    def test_render_symbols_page_uses_display_width_for_japanese_title(self) -> None:
+        """The RST underline must span display columns, not characters.
+
+        A CJK title underlined by character count leaves the rule half the
+        width of the text, which Sphinx reports as a malformed section title.
+        The underline is checked against the emitted title rather than an
+        expected string so the assertion cannot drift from the shipped copy —
+        and the final check is what fails if anyone returns to len(title).
+        """
+        out = renderers.render_symbols_page(
+            template=self._symbols_template(),
+            blocks=self._symbols_blocks(),
+            sku_id="JBP-2000B",
+            lang="ja",
+            vars_map=self._localized_copy_vars(model="JBP-2000B", region="JP"),
+        )
+
+        title, underline = out.splitlines()[:2]
+        self.assertEqual("絵表示の説明", title)
+        self.assertEqual("=" * 12, underline)
+        self.assertEqual(2 * len(title), len(underline))
+
     def test_render_symbols_page_emits_latex_notice_and_symbol_macros(self) -> None:
         out = renderers.render_symbols_page(
             template=self._symbols_template(),
@@ -631,10 +732,43 @@ class TestCsvPageRenderers(unittest.TestCase):
 
         self.assertNotIn(r"\HBNoticeBlock{DANGER}", out)
         self.assertIn(r"\HBSymbolTable{Symbol}{Meaning}{%", out)
-        self.assertIn(r"\HBSymbolSignalRow{warning_triangle.png}{WARNING}{Data warning.}", out)
+        self.assertIn(r"\HBSymbolTwoColumnTables{Symbol}{Meaning}{%", out)
+        self.assertIn(r"\HBSymbolSignalRow[warning]{warning_triangle.png}{WARNING}{Data warning.}", out)
         self.assertIn(r"\HBSymbolIconRow{warning_triangle.png}{Warning symbol meaning.}", out)
         self.assertIn(".. only:: not latex", out)
         self.assertIn("hb-warning-lockup", out)
+
+    def test_render_symbols_page_keeps_latex_columns_in_source_order(self) -> None:
+        out = renderers.render_symbols_page(
+            template=self._symbols_template(),
+            blocks=self._symbols_blocks(),
+            sku_id="JB1000",
+            lang="en",
+            vars_map=self._localized_copy_vars(),
+        )
+
+        left_start = out.index(r"\HBSymbolTwoColumnTables{Symbol}{Meaning}{%")
+        warning_pos = out.index(r"\HBSymbolIconRow{warning_triangle.png}", left_start)
+        right_start = out.index("}{%", warning_pos)
+        manual_pos = out.index(r"\HBSymbolIconRow{read_manual_operator.png}", left_start)
+        dismantle_pos = out.index(r"\HBSymbolIconRow{do_not_dismantle.png}", left_start)
+
+        self.assertLess(warning_pos, right_start)
+        self.assertLess(manual_pos, right_start)
+        self.assertGreater(dismantle_pos, right_start)
+
+    def test_render_symbols_page_uses_controlled_split_for_long_locales(self) -> None:
+        out = renderers.render_symbols_page(
+            template=self._symbols_template(),
+            blocks=self._symbols_blocks(),
+            sku_id="JB1000",
+            lang="es",
+            vars_map=self._localized_copy_vars(),
+        )
+
+        self.assertIn(r"\HBSymbolTwoColumnTablesSplit{Símbolo}{Significado}{%", out)
+        self.assertIn(r"\HBSymbolIconRow{warning_triangle.png}", out)
+        self.assertIn(r"\HBSymbolIconRow{do_not_dismantle.png}", out)
 
     def test_render_symbols_page_latex_image_args_use_basenames(self) -> None:
         blocks = self._symbols_blocks()
@@ -833,7 +967,7 @@ class TestCsvPageRenderers(unittest.TestCase):
 
         self.assertIn("Advertencia desde datos.", out)
         self.assertIn("Consejo desde datos.", out)
-        self.assertIn(r"\HBSymbolSignalRow{warning_triangle.png}{ADVERTENCIA}{Advertencia desde datos.}", out)
+        self.assertIn(r"\HBSymbolSignalRow[warning]{warning_triangle.png}{ADVERTENCIA}{Advertencia desde datos.}", out)
         self.assertIn("Significado del símbolo de advertencia.", out)
         self.assertNotIn("Prácticas peligrosas que pueden resultar en lesiones graves", out)
 
@@ -852,7 +986,7 @@ class TestCsvPageRenderers(unittest.TestCase):
             vars_map=self._localized_copy_vars(),
         )
 
-        self.assertIn(r"\HBSymbolSignalRow{warning_triangle.png}{WARNING}{Data warning.}", out)
+        self.assertIn(r"\HBSymbolSignalRow[warning]{warning_triangle.png}{WARNING}{Data warning.}", out)
         self.assertIn("<span>CAUTION</span>", out)
         self.assertNotIn("ROW_WARNING", out)
         self.assertNotIn("ROW_TEXT_WARNING", out)
@@ -992,7 +1126,8 @@ class TestCsvPageRenderers(unittest.TestCase):
             ("weee", "5", "Order 5."),
         ]
         table_blocks = [block for block in blocks if block.get("block_type") == "table_row"]
-        for block, (symbol_key, order, text) in zip(table_blocks, rows):
+        # Update existing blocks first; the remaining source rows are appended below.
+        for block, (symbol_key, order, text) in zip(table_blocks, rows, strict=False):
             block["symbol_key"] = symbol_key
             block["order"] = order
             block["text_en"] = text
@@ -1022,10 +1157,7 @@ class TestCsvPageRenderers(unittest.TestCase):
         )
 
         order_positions = [out.index(f"Order {idx}.") for idx in range(1, 6)]
-        self.assertLess(order_positions[0], order_positions[3])
-        self.assertLess(order_positions[3], order_positions[1])
-        self.assertLess(order_positions[1], order_positions[4])
-        self.assertLess(order_positions[4], order_positions[2])
+        self.assertEqual(order_positions, sorted(order_positions))
 
     def test_render_symbols_page_should_use_market_field(self) -> None:
         blocks = self._symbols_blocks()
@@ -1264,6 +1396,8 @@ class TestCsvPageRenderers(unittest.TestCase):
         self.assertIn(".. only:: latex", out)
         self.assertIn(r"\begin{HBLcdIconTable}", out)
         self.assertIn(r"\end{HBLcdIconTable}", out)
+        self.assertEqual(1, out.count(r"\begin{HBLcdIconTable}"))
+        self.assertEqual(1, out.count(r"\HBLcdIconRow"))
         self.assertIn("{7_Battery_AC.png}", row_line)
         self.assertNotIn("data/phase2", row_line)
         self.assertIn(r"{Battery 50\% \& AC}", row_line)
@@ -1271,6 +1405,54 @@ class TestCsvPageRenderers(unittest.TestCase):
             r"{\textbf{On:} Charge\_\#1 \& ready. \newline \textbf{Off:} 0\% \$idle\$.}",
             row_line,
         )
+
+    def test_render_lcd_icons_page_splits_complete_rounded_tables_after_row_seven(self) -> None:
+        blocks = [
+            {
+                "No.": str(index),
+                "Model": "JE-1000F",
+                "Is_latest": "TRUE",
+                "icon_en": f"Icon {index}",
+                "icon_desc_en": f"Description {index}",
+                "figure": f"data/phase2/_attachments/lcd_icons/{index}_Icon.png",
+            }
+            for index in range(1, 9)
+        ]
+        out = renderers.render_lcd_icons_page(
+            template=self._lcd_template(),
+            blocks=blocks,
+            sku_id="",
+            lang="en",
+            vars_map=self._localized_copy_vars(model="JE-1000F"),
+        )
+        self.assertEqual(2, out.count(r"\begin{HBLcdIconTable}"))
+        self.assertEqual(2, out.count(r"\end{HBLcdIconTable}"))
+        self.assertEqual(8, out.count(r"\HBLcdIconRow"))
+
+    def test_render_lcd_icons_page_bounds_every_continuation_table(self) -> None:
+        blocks = [
+            {
+                "No.": str(index),
+                "Model": "JE-1000F",
+                "Is_latest": "TRUE",
+                "icon_en": f"Icon {index}",
+                "icon_desc_en": f"Description {index}",
+                "figure": f"data/phase2/_attachments/lcd_icons/{index}_Icon.png",
+            }
+            for index in range(1, 27)
+        ]
+        out = renderers.render_lcd_icons_page(
+            template=self._lcd_template(),
+            blocks=blocks,
+            sku_id="",
+            lang="en",
+            vars_map=self._localized_copy_vars(model="JE-1000F"),
+        )
+
+        self.assertEqual(2, out.count(r"\begin{HBLcdIconTable}"))
+        self.assertEqual(2, out.count(r"\end{HBLcdIconTable}"))
+        self.assertEqual(1, out.count(r"\clearpage"))
+        self.assertEqual(26, out.count(r"\HBLcdIconRow"))
 
     def test_render_lcd_icons_page_should_normalize_document_key_style_target_model(self) -> None:
         with tempfile.TemporaryDirectory() as td:
@@ -1629,6 +1811,46 @@ class TestCsvPageRenderers(unittest.TestCase):
         self.assertNotIn("EU-only row.", out)
         self.assertNotIn("Old row.", out)
 
+    def test_render_troubleshooting_page_prefers_model_specific_rows_over_all(self) -> None:
+        blocks = [
+            {
+                "No.": "1",
+                "Model": "ALL",
+                "Region": "US",
+                "Is_latest": "TRUE",
+                "error_code": "GENERIC",
+                "corrective_measures_en": "Generic measure.",
+            },
+            {
+                "No.": "2",
+                "Model": "JBP-2000B",
+                "Region": "US",
+                "Is_latest": "TRUE",
+                "error_code": "SPECIFIC",
+                "corrective_measures_en": "Specific measure.",
+            },
+        ]
+
+        specific = renderers.render_troubleshooting_page(
+            template=self._troubleshooting_template(),
+            blocks=blocks,
+            sku_id="",
+            lang="en",
+            vars_map={"model": "JBP-2000B", "region": "US"},
+        )
+        fallback = renderers.render_troubleshooting_page(
+            template=self._troubleshooting_template(),
+            blocks=blocks,
+            sku_id="",
+            lang="en",
+            vars_map={"model": "UNREGISTERED", "region": "US"},
+        )
+
+        self.assertIn("SPECIFIC", specific)
+        self.assertNotIn("GENERIC", specific)
+        self.assertIn("GENERIC", fallback)
+        self.assertNotIn("SPECIFIC", fallback)
+
     def test_render_troubleshooting_page_supports_pt_br_columns_and_region_alias(self) -> None:
         blocks = [
             {
@@ -1666,6 +1888,28 @@ class TestCsvPageRenderers(unittest.TestCase):
         self.assertEqual("SPECIFICATIONS", data["title_main"])
         self.assertEqual("GENERAL INFO", data["sections"][0]["title"])
         self.assertIn("Demo footnote text", data["footnotes"][0])
+
+    def test_spec_invalid_orders_keep_default_content_and_rendered_output(self) -> None:
+        fields = ("Section_order", "row_order", "Line_order", "note_order", "footnote_order")
+        invalid_values = (" \t", "invalid", "1 W", "1,000", "1\0", "9" * 100000 + " W")
+        for field in fields:
+            expected_blocks = self._spec_master_blocks()
+            for row in expected_blocks:
+                row[field] = ""
+            arguments = dict(sku_id="JB1000", lang="en", vars_map=self._localized_copy_vars())
+            expected_content = renderers.collect_spec_content(blocks=expected_blocks, **arguments)
+            expected_output = renderers.render_spec_page(
+                self._spec_template(), expected_blocks, **arguments,
+            )
+            for value in invalid_values:
+                with self.subTest(field=field, value=value[:20], length=len(value)):
+                    blocks = [dict(row, **{field: value}) for row in expected_blocks]
+                    self.assertEqual(
+                        expected_content, renderers.collect_spec_content(blocks=blocks, **arguments),
+                    )
+                    self.assertEqual(
+                        expected_output, renderers.render_spec_page(self._spec_template(), blocks, **arguments),
+                    )
 
     def test_collect_spec_content_filters_by_model_when_model_column_exists(self) -> None:
         blocks = self._spec_master_blocks()
@@ -1894,6 +2138,55 @@ class TestCsvPageRenderers(unittest.TestCase):
                 ["OUTPUT PORTS", "GENERAL INFO"],
                 [section["title"] for section in data["sections"]],
             )
+
+
+class TestFigureAttachmentPathNormalization(unittest.TestCase):
+    """Synced CSVs store physical export-root paths; RST must carry the
+    canonical data/phase2/_attachments/... form so bundle staging can resolve
+    it against whichever data root is active (queue workers use
+    .tmp/review-start/phase2, not the repo snapshot)."""
+
+    def test_symbols_figure_path_normalizes_absolute_export_root(self) -> None:
+        from tools.csv_pages.renderers_symbols import _figure_image_path
+
+        self.assertEqual(
+            "data/phase2/_attachments/symbols/1_warning_tok16chars0000.png",
+            _figure_image_path(
+                "/home/runner/work/x/x/.tmp/review-start/phase2/_attachments/symbols/1_warning_tok16chars0000.png"
+            ),
+        )
+
+    def test_symbols_figure_path_keeps_canonical_form(self) -> None:
+        from tools.csv_pages.renderers_symbols import _figure_image_path
+
+        canonical = "data/phase2/_attachments/symbols/2_caution_tok16chars0000.png"
+        self.assertEqual(canonical, _figure_image_path(canonical))
+
+    def test_symbols_figure_path_leaves_non_attachment_values_alone(self) -> None:
+        from tools.csv_pages.renderers_symbols import _figure_image_path
+
+        self.assertEqual("_assets/foo/bar.png", _figure_image_path("_assets/foo/bar.png"))
+
+    def test_lcd_figure_path_normalizes_absolute_export_root(self) -> None:
+        from tools.csv_pages.renderers_lcd_icons import _figure_image_path
+
+        self.assertEqual(
+            "data/phase2/_attachments/lcd_icons/1_Wi-Fi_tok16chars0000.png",
+            _figure_image_path(
+                "/tmp/anywhere/phase2/_attachments/lcd_icons/1_Wi-Fi_tok16chars0000.png"
+            ),
+        )
+
+    def test_lcd_figure_path_normalizes_json_payload_path(self) -> None:
+        from tools.csv_pages.renderers_lcd_icons import _figure_image_path
+
+        self.assertEqual(
+            "data/phase2/_attachments/lcd_icons/2_Bluetooth_tok16chars0000.png",
+            _figure_image_path(
+                '{"path": "/srv/data/phase2/_attachments/lcd_icons/2_Bluetooth_tok16chars0000.png"}'
+            ),
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

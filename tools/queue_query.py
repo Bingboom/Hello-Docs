@@ -3,7 +3,7 @@ from __future__ import annotations
 import argparse
 import json
 import re
-from dataclasses import asdict, dataclass, replace
+from dataclasses import dataclass, replace
 from pathlib import Path
 from typing import Any
 
@@ -23,13 +23,16 @@ from tools.phase2_support import (
     phase2_identity,
 )
 from tools.process_build_queue import (
+    BASELINE_DOC_FIELD,
     BUILD_FAMILY_FIELD,
     BUILD_STARTED_AT_FIELD,
     DOCUMENT_DIRECTORY_FIELD,
     DOCUMENT_ID_FIELD,
     DOCUMENT_KEY_FIELD,
     DOCUMENT_LINK_FIELD,
+    FEISHU_CLOUD_DOC_FIELD,
     GIT_REF_FIELD,
+    HTML_LINK_FIELD,
     IMMEDIATE_TRIGGER_FIELD,
     RESULT_FIELD,
     TRIGGER_FIELD,
@@ -39,6 +42,11 @@ from tools.process_build_queue import (
     collect_queue_preflight_errors,
     resolve_document_link_binding,
 )
+from tools.queue_delivery import (
+    queue_delivery_contract_for_row,
+    render_queue_delivery_lines,
+    serialize_queue_row,
+)
 from tools.queue_freshness import (
     compute_freshness,
     isoformat_timestamp,
@@ -46,11 +54,8 @@ from tools.queue_freshness import (
 from tools.process_review_start_queue import (
     INITIAL_RESULT_FIELD,
     LANG_FIELD,
-    PR_URL_FIELD,
     REMARKS_FIELD,
     REVIEW_START_ACTION_LABEL,
-    REVIEW_STATUS_FIELD,
-    REVIEW_TRIGGER_FIELD,
     collect_review_start_preflight_errors,
     normalize_review_start_action,
     parse_review_start_records,
@@ -71,11 +76,15 @@ _TASK_ACTION_LABELS = {
     "build draft package": "Build Draft Package",
     "draft": "Build Draft Package",
     "publish": "Publish",
+    "web-publish": "Web Publish",
+    "web_publish": "Web Publish",
+    "web publish": "Web Publish",
 }
 _ACTION_LABEL_TO_QUERY = {
     "start review": "start-review",
     "build draft package": "build-draft-package",
     "publish": "publish",
+    "web publish": "web-publish",
 }
 
 
@@ -101,6 +110,9 @@ class QueueQueryRow:
     immediate_build: bool | None
     initial_result: str
     remarks: str
+    feishu_cloud_doc: str = ""
+    baseline_doc: str = ""
+    html_link: str = ""
     task_id: str = ""
     market_group: str = ""
     build_started_at: str = ""
@@ -151,44 +163,13 @@ _QUERY_TOKEN_RE = re.compile(r"[A-Za-z0-9_.-]+")
 _MODEL_TOKEN_RE = re.compile(r"^(?=.*\d)[A-Za-z0-9]+(?:-[A-Za-z0-9]+)+$")
 _REGION_TOKEN_RE = re.compile(r"^[A-Za-z]{2,3}(?:-[A-Za-z]{2,3})?$")
 _BUILD_FAMILY_TOKEN_RE = re.compile(r"^[a-z]{2,}(?:-[a-z][a-z0-9]*)+$")
-_LANG_CODES = {"en", "fr", "es", "ja", "jp", "zh", "cn", "de", "it", "pt", "br", "pt-br", "ko", "uk"}
-_LANG_ALIASES = {
-    "英语": "en",
-    "英文": "en",
-    "english": "en",
-    "法语": "fr",
-    "法文": "fr",
-    "french": "fr",
-    "西语": "es",
-    "西班牙语": "es",
-    "spanish": "es",
-    "德语": "de",
-    "德文": "de",
-    "german": "de",
-    "意语": "it",
-    "意大利语": "it",
-    "italian": "it",
-    "日语": "ja",
-    "日文": "ja",
-    "japanese": "ja",
-    "中文": "zh",
-    "汉语": "zh",
-    "chinese": "zh",
-    "葡语": "pt",
-    "葡萄牙语": "pt",
-    "portuguese": "pt-BR",
-    "brazilian portuguese": "pt-BR",
-    "pt-br": "pt-BR",
-    "pt_br": "pt-BR",
-    "br": "pt-BR",
-    "韩语": "ko",
-    "韩文": "ko",
-    "korean": "ko",
-    "乌克兰语": "uk",
-    "乌语": "uk",
-    "ukrainian": "uk",
-}
-_LANG_NAME_PATTERN = re.compile("|".join(re.escape(name) for name in sorted(_LANG_ALIASES, key=len, reverse=True)), re.IGNORECASE)
+from tools.queue_query_languages import (
+    LANG_CODES as _LANG_CODES,
+    LANG_NAME_PATTERN as _LANG_NAME_PATTERN,
+    SUPPORTED_LANGS as _SUPPORTED_LANGS,
+    canonical_query_lang as _canonical_query_lang,
+)
+
 _MARKET_ALIASES = {
     "欧规": "EU",
     "欧洲": "EU",
@@ -274,15 +255,10 @@ def _normalize_langs(value: Any) -> tuple[str, ...]:
         part = raw_part.strip().lower()
         if not part:
             continue
-        normalized = _LANG_ALIASES.get(part, part)
-        if normalized == "jp":
-            normalized = "ja"
-        if normalized == "cn":
-            normalized = "zh"
-        if normalized in {"pt", "br", "pt-br"}:
-            normalized = "pt-BR"
-        if (normalized in _LANG_CODES or normalized == "pt-BR") and normalized not in langs:
-            langs.append(normalized)
+        normalized = _canonical_query_lang(part)
+        if normalized in _SUPPORTED_LANGS or normalized == "zh-TW":
+            if normalized not in langs:
+                langs.append(normalized)
     return tuple(langs)
 
 
@@ -295,17 +271,17 @@ def _infer_langs(text: str) -> tuple[str, ...]:
             continue
         if after and re.match(r"[A-Za-z0-9_-]", after):
             continue
-        lang = _LANG_ALIASES.get(match.group(0).lower())
-        if lang and lang not in langs:
-            langs.append(lang)
+        lang = _canonical_query_lang(match.group(0))
+        if lang in _SUPPORTED_LANGS or lang == "zh-TW":
+            if lang not in langs:
+                langs.append(lang)
     tokens = {token.lower() for token in _query_tokens(text)}
     for token in tokens:
         if token in _LANG_CODES:
-            normalized = "ja" if token == "jp" else "zh" if token == "cn" else token
-            if normalized in {"pt", "br", "pt-br"}:
-                normalized = "pt-BR"
-            if normalized not in langs:
-                langs.append(normalized)
+            normalized = _canonical_query_lang(token)
+            if normalized in _SUPPORTED_LANGS or normalized == "zh-TW":
+                if normalized not in langs:
+                    langs.append(normalized)
     return tuple(langs)
 
 
@@ -333,7 +309,7 @@ def _workflow_action_for_task_label(label: str) -> str:
 
 
 def _infer_task_id_filters(text: str) -> tuple[str, str, str]:
-    for action_label in ("Build Draft Package", "Start Review", "Publish"):
+    for action_label in ("Build Draft Package", "Start Review", "Web Publish", "Publish"):
         pattern = re.compile(
             _TASK_DOCUMENT_ID_RE + r"[\s_:-]+" + _action_label_pattern(action_label),
             flags=re.IGNORECASE,
@@ -350,6 +326,7 @@ def _action_label_for_row(row: QueueQueryRow) -> str:
         "start_review": "Start Review",
         "draft": "Build Draft Package",
         "publish": "Publish",
+        "web_publish": "Web Publish",
     }
     if row.normalized_workflow_action in mapping:
         return mapping[row.normalized_workflow_action]
@@ -370,7 +347,7 @@ def _row_task_id(row: QueueQueryRow) -> str:
 
 
 def _is_probable_lang_token(token: str) -> bool:
-    return token.strip().lower() in _LANG_CODES
+    return token.strip().casefold() in _LANG_CODES
 
 
 def _version_sort_key(version: str) -> tuple[int, tuple[int, ...], str]:
@@ -406,8 +383,12 @@ def _prefer_row_for_latest(candidate: QueueQueryRow, current: QueueQueryRow) -> 
     current_version = _version_sort_key(_row_version(current))
     if candidate_version != current_version:
         return candidate_version > current_version
-    if bool(candidate.document_link) != bool(current.document_link):
-        return bool(candidate.document_link)
+    candidate_delivery = queue_delivery_contract_for_row(candidate)
+    current_delivery = queue_delivery_contract_for_row(current)
+    if candidate_delivery.delivery_ready != current_delivery.delivery_ready:
+        return candidate_delivery.delivery_ready
+    if bool(candidate_delivery.delivery_url) != bool(current_delivery.delivery_url):
+        return bool(candidate_delivery.delivery_url)
     if ("success" in candidate.result.lower()) != ("success" in current.result.lower()):
         return "success" in candidate.result.lower()
     return False
@@ -427,10 +408,12 @@ def _latest_per_document_key(rows: list[QueueQueryRow]) -> list[QueueQueryRow]:
     return [selected[key] for key in order]
 
 
-def _should_apply_latest_per_document_key(args: argparse.Namespace, normalized_action: str | None) -> bool:
+def should_apply_latest_per_document_key(args: argparse.Namespace) -> bool:
+    """Latest-per-key collapse decision; public so batch dispatch can pin it to the original args."""
+    normalized_action = _normalize_query_workflow_action(getattr(args, "query_workflow_action", None))
     if not getattr(args, "latest_per_document_key", False):
         return False
-    if getattr(args, "allow_multiple", False) and normalized_action in {"draft", "publish"}:
+    if getattr(args, "allow_multiple", False) and normalized_action in {"draft", "publish", "web_publish"}:
         return False
     return True
 
@@ -647,12 +630,15 @@ def _normalize_query_workflow_action(value: str | None) -> str | None:
         "build draft package": "draft",
         "draft": "draft",
         "publish": "publish",
+        "web-publish": "web_publish",
+        "web_publish": "web_publish",
+        "web publish": "web_publish",
     }
     normalized = aliases.get(text)
     if normalized:
         return normalized
     raise RuntimeError(
-        "--query-workflow-action must be one of: start-review, build-draft-package, publish"
+        "--query-workflow-action must be one of: start-review, build-draft-package, publish, web-publish"
     )
 
 
@@ -686,13 +672,16 @@ def infer_queue_query_from_text(raw_text: str | None) -> InferredQueueQuery:
     elif any(needle in normalized_text for needle in ("build draft package", "build draft", "draft package")) or "草稿" in text:
         workflow_action = "build-draft-package"
         queue_scope = "document-link"
+    elif "web publish" in normalized_text or "网页发布" in text:
+        workflow_action = "web-publish"
+        queue_scope = "document-link"
+    elif "publish" in normalized_text or "发布" in text:
+        workflow_action = "publish"
+        queue_scope = "document-link"
     elif not successful_link_query and (
         any(token in text for token in _BUILD_DRAFT_INTENT_KEYWORDS) or "manual copy" in normalized_text
     ):
         workflow_action = "build-draft-package"
-        queue_scope = "document-link"
-    elif "publish" in normalized_text or "发布" in text:
-        workflow_action = "publish"
         queue_scope = "document-link"
     elif _has_start_review_intent(text, normalized_text):
         workflow_action = "start-review"
@@ -727,7 +716,7 @@ def infer_queue_query_from_text(raw_text: str | None) -> InferredQueueQuery:
     document_keys: tuple[str, ...] = ()
     if workflow_action == "start-review":
         batch_tokens = _infer_document_key_tokens(text)
-    elif workflow_action in ("build-draft-package", "publish"):
+    elif workflow_action in ("build-draft-package", "publish", "web-publish"):
         batch_tokens = _infer_document_id_tokens(text)
     else:
         batch_tokens = ()
@@ -912,6 +901,9 @@ def _build_document_link_rows(cfg: dict[str, Any]) -> list[QueueQueryRow]:
                 immediate_build=is_immediate_trigger_enabled(fields.get(IMMEDIATE_TRIGGER_FIELD)),
                 initial_result="",
                 remarks="",
+                feishu_cloud_doc=_text(fields.get(FEISHU_CLOUD_DOC_FIELD)),
+                baseline_doc=_text(fields.get(BASELINE_DOC_FIELD)),
+                html_link=_text(fields.get(HTML_LINK_FIELD)),
                 task_id=_text(fields.get(TASK_ID_FIELD)),
                 market_group=market_group,
                 build_started_at=_text(fields.get(BUILD_STARTED_AT_FIELD)),
@@ -985,7 +977,7 @@ def _effective_queue_query_limit(args: argparse.Namespace, normalized_action: st
     limit = max(int(getattr(args, "limit", _DEFAULT_QUEUE_QUERY_LIMIT) or _DEFAULT_QUEUE_QUERY_LIMIT), 1)
     if (
         getattr(args, "allow_multiple", False)
-        and normalized_action in {"draft", "publish", "start_review"}
+        and normalized_action in {"draft", "publish", "web_publish", "start_review"}
         and limit == _DEFAULT_QUEUE_QUERY_LIMIT
     ):
         return 1000
@@ -1031,7 +1023,7 @@ def _matches_queue_query_row(
         return False
     if (
         getattr(args, "allow_multiple", False)
-        and normalized_action in {"draft", "publish"}
+        and normalized_action in {"draft", "publish", "web_publish"}
         and row.build_trigger_requested is not True
     ):
         return False
@@ -1053,7 +1045,7 @@ def query_queue_rows(args: argparse.Namespace, rows: list[QueueQueryRow]) -> Que
             lang_filters=lang_filters,
         )
     ]
-    if _should_apply_latest_per_document_key(args, normalized_action):
+    if should_apply_latest_per_document_key(args):
         filtered = _latest_per_document_key(filtered)
     limit = _effective_queue_query_limit(args, normalized_action)
     limited_rows = apply_freshness_to_rows(args, filtered[:limit])
@@ -1117,7 +1109,7 @@ def render_queue_query_rows(
                 "matched_count": matched_count,
                 "limit": limit,
                 "truncated": truncated,
-                "rows": [asdict(row) for row in rows],
+                "rows": [serialize_queue_row(row) for row in rows],
             },
             ensure_ascii=False,
             indent=2,
@@ -1156,8 +1148,7 @@ def render_queue_query_rows(
             lines.append(f"git_ref: {row.git_ref}")
         if row.pr_url:
             lines.append(f"pr_url: {row.pr_url}")
-        if row.document_link:
-            lines.append(f"document_link: {row.document_link}")
+        lines.extend(render_queue_delivery_lines(row))
         if row.document_directory:
             lines.append(f"document_directory: {row.document_directory}")
         if row.result:

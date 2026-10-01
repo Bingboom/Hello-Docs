@@ -2,9 +2,9 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Callable
 
 from tools.build_docs import (
     build_root_for_target,
@@ -15,9 +15,20 @@ from tools.build_docs import (
 )
 from tools.data_snapshot import resolve_data_snapshot_paths
 from tools.gen_index_bundle import bundle_dir_for_target
-from tools.release_contract import release_manifests_dir_for_target
+from tools.release_contract import (
+    release_manifests_dir_for_target,
+    release_snapshot_dir_for_target,
+    release_tag_for_target,
+)
+from tools.release_snapshot import freeze_release_snapshot
+from tools.release_reproducibility import ReviewOverlayProvenance, build_reproducibility_record
 from tools.review_bundle import resolve_docs_dir
 from tools.review_support import review_dir_for_target
+from tools.release_asset_lineage import collect_asset_lineage
+from tools.release_indesign_package import collect_indesign_package
+from tools.release_indesign_package import csv_columns as indesign_csv_columns
+from tools.release_asset_lineage import csv_columns as asset_csv_columns
+from tools.toolchain_provenance import collect_toolchain
 from tools.utils.path_utils import docs_build_dir_of
 from tools.utils.targets import resolve_output_lang
 
@@ -61,7 +72,19 @@ def build_release_manifest(
     built_at: datetime | None = None,
     docs_build_dir: Path | None = None,
     releases_root: Path | None = None,
+    release_version: str | None = None,
+    source_date_epoch: int | None = None,
+    review_overlay: ReviewOverlayProvenance | None = None,
+    toolchain: dict[str, object] | None = None,
+    assets: dict[str, object] | None = None,
+    indesign_package: dict[str, object] | None = None,
 ) -> tuple[Path, Path]:
+    if release_version is not None and source_date_epoch is None:
+        raise RuntimeError(
+            "versioned release manifest requires SOURCE_DATE_EPOCH from the publish Git commit"
+        )
+    if release_version is not None and not re.fullmatch(r"[0-9a-f]{40}", str(git_sha or "")):
+        raise RuntimeError("versioned release manifest requires a full Git commit SHA")
     cfg = load_config(config_path)
     docs_dir = resolve_docs_dir(cfg)
     output_lang = resolve_output_lang(cfg)
@@ -80,6 +103,16 @@ def build_release_manifest(
     build_cfg = build_cfg_raw if isinstance(build_cfg_raw, dict) else {}
     langs = build_langs(cfg)
     primary_lang = langs[0]
+    release_tag = (
+        release_tag_for_target(
+            model=model,
+            region=region,
+            languages=langs,
+            version=release_version,
+        )
+        if release_version is not None
+        else ""
+    )
 
     word_output_name = render_build_template(
         str(build_cfg.get("word_output", "manual_demo.docx")),
@@ -130,23 +163,91 @@ def build_release_manifest(
         model=model,
         region=region,
     )
+    snapshot_record: dict[str, object] | None = None
+    if release_version is not None:
+        frozen = freeze_release_snapshot(
+            cfg=cfg,
+            repo_root=repo_root,
+            data_root=data_root,
+            model=model,
+            region=region,
+            languages=langs,
+            snapshot_dir=release_snapshot_dir_for_target(
+                repo_root=repo_root,
+                config_path=config_path,
+                model=model,
+                region=region,
+                version=release_version,
+                cfg=cfg,
+                releases_root=releases_root,
+            ),
+            frozen_at=built_at_value,
+        )
+        snapshot_paths = resolve_data_snapshot_paths(
+            cfg,
+            repo_root=repo_root,
+            data_root=frozen.snapshot_dir,
+            model=model,
+            region=region,
+        )
+        snapshot_record = {
+            "path": repo_relative(frozen.snapshot_dir, repo_root=repo_root),
+            "identity_path": repo_relative(frozen.identity_path, repo_root=repo_root),
+            "snapshot_sha256": frozen.identity["snapshot_sha256"],
+            "frozen_at": frozen.identity["frozen_at"],
+            "source_revision": frozen.identity["source_revision"],
+            "target_matrix": frozen.identity["target_matrix"],
+        }
+
     product_name = resolve_product_name_for_build(
         cfg,
         model=model,
         region=region,
         lang=primary_lang,
-        data_root=data_root,
+        data_root=snapshot_paths.structured_data_dir,
         repo_root=repo_root,
+    )
+
+    # Toolchain provenance (Milestone I3): the release must be able to name the
+    # exact environment that produced it — the LaTeX line has no golden
+    # snapshot, so this record is the only way to attribute a rendering drift.
+    toolchain_record = toolchain if toolchain is not None else collect_toolchain(repo_root=repo_root)
+
+    # Asset lineage (Milestone J P3): the prepared bundle already froze which
+    # assets it consumed and their exact bytes; carrying that record into the
+    # release is what makes a shipped illustration traceable to a registry row.
+    asset_record = (
+        assets if assets is not None
+        else collect_asset_lineage(bundle_dir=runtime_bundle_dir)
+    )
+
+    # InDesign package (Milestone J P3): the print deliverable is the INDD,
+    # the IDML, its Links and fonts, and the preflight verdict — recorded here
+    # so a release names the package instead of only the PDF. Every part is
+    # optional: finalize and parity run on an operator Mac, not in CI.
+    indesign_record = (
+        indesign_package if indesign_package is not None
+        else collect_indesign_package(idml_dir=build_root / "idml")
     )
 
     manifest = {
         "git_sha": git_sha,
         "built_at": built_at_value.isoformat(),
+        "toolchain": toolchain_record,
+        "assets": asset_record,
+        "indesign_package": indesign_record,
         "config_path": repo_relative(config_path, repo_root=repo_root),
         "model": model,
         "region": region,
         "build_languages": langs,
         "product_name": product_name,
+        "release_version": release_version or "",
+        "release_tag": release_tag,
+        "reproducibility": build_reproducibility_record(
+            source_date_epoch,
+            review_overlay=review_overlay,
+        ),
+        "snapshot": snapshot_record,
         "spec_master_csv": repo_relative(snapshot_paths.spec_master_csv, repo_root=repo_root),
         "spec_footnotes_csv": repo_relative(snapshot_paths.spec_footnotes_csv, repo_root=repo_root),
         "spec_notes_csv": repo_relative(snapshot_paths.spec_notes_csv, repo_root=repo_root),
@@ -163,11 +264,51 @@ def build_release_manifest(
     csv_row = {
         "git_sha": manifest["git_sha"] or "",
         "built_at": manifest["built_at"],
+        "toolchain_python": str(toolchain_record.get("python") or ""),
+        "toolchain_xelatex": str(toolchain_record.get("xelatex") or ""),
+        "toolchain_pandoc": str(toolchain_record.get("pandoc") or ""),
+        **asset_csv_columns(asset_record),
+        **indesign_csv_columns(indesign_record),
         "config_path": manifest["config_path"] or "",
         "model": model,
         "region": region,
         "build_languages": ",".join(langs),
         "product_name": product_name or "",
+        "release_version": release_version or "",
+        "release_tag": release_tag,
+        "reproducibility_schema_version": str(manifest["reproducibility"]["schema_version"]),
+        "reproducibility_policy": str(manifest["reproducibility"]["policy"]),
+        "source_date_epoch": str(
+            manifest["reproducibility"]["source_date_epoch"]
+            if manifest["reproducibility"]["source_date_epoch"] is not None
+            else ""
+        ),
+        "review_overlay_ref": str(
+            (manifest["reproducibility"].get("review_overlay") or {}).get("source_ref") or ""
+        ),
+        "review_overlay_sha": str(
+            (manifest["reproducibility"].get("review_overlay") or {}).get("source_sha") or ""
+        ),
+        "review_overlay_path": str(
+            (manifest["reproducibility"].get("review_overlay") or {}).get("target_path") or ""
+        ),
+        "review_overlay_tree_sha": str(
+            (manifest["reproducibility"].get("review_overlay") or {}).get("tree_sha") or ""
+        ),
+        "snapshot_path": str((snapshot_record or {}).get("path") or ""),
+        "snapshot_identity_path": str((snapshot_record or {}).get("identity_path") or ""),
+        "snapshot_sha256": str((snapshot_record or {}).get("snapshot_sha256") or ""),
+        "snapshot_frozen_at": str((snapshot_record or {}).get("frozen_at") or ""),
+        "snapshot_source_revision": json.dumps(
+            (snapshot_record or {}).get("source_revision") or {},
+            ensure_ascii=False,
+            sort_keys=True,
+        ),
+        "snapshot_target_matrix": json.dumps(
+            (snapshot_record or {}).get("target_matrix") or [],
+            ensure_ascii=False,
+            sort_keys=True,
+        ),
         "spec_master_csv": manifest["spec_master_csv"] or "",
         "spec_footnotes_csv": manifest["spec_footnotes_csv"] or "",
         "spec_notes_csv": manifest["spec_notes_csv"] or "",

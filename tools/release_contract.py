@@ -8,12 +8,55 @@ from pathlib import Path
 from typing import Any
 
 from tools.build_docs import load_config
-from tools.utils.path_utils import releases_of
+from tools.language_aliases import normalize_language
+from tools.utils.path_utils import (
+    release_manifests_of,
+    release_latest_of,
+    release_snapshot_identity_of,
+    release_snapshot_of,
+    release_versions_of,
+    releases_of,
+)
 
 
 def normalize_release_token(value: str) -> str:
     token = re.sub(r"[^A-Za-z0-9._-]+", "-", (value or "").strip())
     return token.strip("-")
+
+
+def _release_tag_component(value: str, *, field: str) -> str:
+    token = normalize_release_token(value).strip(".").lower()
+    while ".." in token:
+        token = token.replace("..", ".")
+    if token.endswith(".lock"):
+        token = f"{token}-release"
+    if not token:
+        raise RuntimeError(f"release tag requires a non-empty {field}")
+    return token
+
+
+def release_tag_for_target(
+    *,
+    model: str,
+    region: str,
+    languages: list[str] | tuple[str, ...],
+    version: str,
+) -> str:
+    language_token = "-".join(
+        _release_tag_component(language, field="language") for language in languages
+    )
+    if not language_token:
+        raise RuntimeError("release tag requires at least one language")
+    version_token = _release_tag_component(version or "unversioned", field="version")
+    return "/".join(
+        (
+            "manual-release",
+            _release_tag_component(model, field="model"),
+            _release_tag_component(region, field="region"),
+            language_token,
+            version_token,
+        )
+    )
 
 
 def _build_languages(cfg: dict[str, Any]) -> list[str]:
@@ -37,10 +80,20 @@ def release_root_for_target(
     region: str,
     cfg: dict[str, Any] | None = None,
     releases_root: Path | None = None,
+    lang: str | None = None,
 ) -> Path:
-    lang = release_lang_for_config(config_path, cfg)
+    loaded_cfg = cfg if cfg is not None else load_config(config_path)
+    languages = _build_languages(loaded_cfg)
+    selected_lang = normalize_language(lang, supported=languages) if (lang or "").strip() else ""
+    if selected_lang and selected_lang.casefold() not in {
+        item.casefold() for item in languages
+    }:
+        raise RuntimeError(
+            f"release language {selected_lang!r} is not configured in {config_path}"
+        )
+    release_lang = selected_lang or release_lang_for_config(config_path, loaded_cfg)
     base_root = releases_root or releases_of(repo_root)
-    return base_root / model / region / lang
+    return base_root / model / region / release_lang
 
 
 def release_latest_dir_for_target(
@@ -51,15 +104,18 @@ def release_latest_dir_for_target(
     region: str,
     cfg: dict[str, Any] | None = None,
     releases_root: Path | None = None,
+    lang: str | None = None,
 ) -> Path:
-    return release_root_for_target(
+    release_root = release_root_for_target(
         repo_root=repo_root,
         config_path=config_path,
         model=model,
         region=region,
         cfg=cfg,
         releases_root=releases_root,
-    ) / "latest"
+        lang=lang,
+    )
+    return release_latest_of(release_root)
 
 
 def release_version_dir_for_target(
@@ -71,16 +127,64 @@ def release_version_dir_for_target(
     version: str,
     cfg: dict[str, Any] | None = None,
     releases_root: Path | None = None,
+    lang: str | None = None,
 ) -> Path:
     version_token = normalize_release_token(version) or "unversioned"
-    return release_root_for_target(
+    release_root = release_root_for_target(
         repo_root=repo_root,
         config_path=config_path,
         model=model,
         region=region,
         cfg=cfg,
         releases_root=releases_root,
-    ) / "versions" / version_token
+        lang=lang,
+    )
+    return release_versions_of(release_root) / version_token
+
+
+def release_snapshot_dir_for_target(
+    *,
+    repo_root: Path,
+    config_path: Path,
+    model: str,
+    region: str,
+    version: str,
+    cfg: dict[str, Any] | None = None,
+    releases_root: Path | None = None,
+) -> Path:
+    version_dir = release_version_dir_for_target(
+        repo_root=repo_root,
+        config_path=config_path,
+        model=model,
+        region=region,
+        version=version,
+        cfg=cfg,
+        releases_root=releases_root,
+    )
+    return release_snapshot_of(version_dir)
+
+
+def release_snapshot_identity_path_for_target(
+    *,
+    repo_root: Path,
+    config_path: Path,
+    model: str,
+    region: str,
+    version: str,
+    cfg: dict[str, Any] | None = None,
+    releases_root: Path | None = None,
+) -> Path:
+    return release_snapshot_identity_of(
+        release_snapshot_dir_for_target(
+            repo_root=repo_root,
+            config_path=config_path,
+            model=model,
+            region=region,
+            version=version,
+            cfg=cfg,
+            releases_root=releases_root,
+        )
+    )
 
 
 def release_manifests_dir_for_target(
@@ -92,11 +196,12 @@ def release_manifests_dir_for_target(
     cfg: dict[str, Any] | None = None,
     releases_root: Path | None = None,
 ) -> Path:
-    return release_root_for_target(
+    release_root = release_root_for_target(
         repo_root=repo_root,
         config_path=config_path,
         model=model,
         region=region,
         cfg=cfg,
         releases_root=releases_root,
-    ) / "manifests"
+    )
+    return release_manifests_of(release_root)

@@ -5,6 +5,7 @@ from pathlib import Path
 from typing import Any, Callable
 
 from tools.config_loader import load_config_mapping
+from tools.utils.targets import format_tokenized
 from tools.utils.path_utils import (
     Paths,
     PathSegments,
@@ -92,17 +93,309 @@ def resolve_layout_params_csv(
     return Paths(root=repo_root).layout_params_csv
 
 
+def resolve_web_illustration_manifest(
+    config_path: Path,
+    *,
+    repo_root: Path,
+    model: str | None = None,
+    region: str | None = None,
+    config_loader: Callable[[Path], dict[str, Any]] = load_config,
+) -> Path | None:
+    """Resolve a global or Document_Key-selected Web illustration manifest."""
+
+    cfg = config_loader(config_path)
+    return resolve_web_illustration_manifest_from_config(
+        cfg,
+        repo_root=repo_root,
+        model=model,
+        region=region,
+    )
+
+
+def resolve_web_illustration_manifest_from_config(
+    cfg: dict[str, Any],
+    *,
+    repo_root: Path,
+    model: str | None = None,
+    region: str | None = None,
+) -> Path | None:
+    """Resolve a Web illustration manifest from an already-loaded config."""
+
+    paths_cfg = cfg.get("paths", {})
+    if not isinstance(paths_cfg, dict):
+        return None
+    raw = paths_cfg.get("web_illustration_manifest")
+    raw_by_target = paths_cfg.get("web_illustration_manifests")
+    if raw is not None and raw_by_target is not None:
+        raise ValueError(
+            "paths.web_illustration_manifest and paths.web_illustration_manifests "
+            "are mutually exclusive"
+        )
+    if raw is not None:
+        if not isinstance(raw, str) or not raw.strip():
+            raise ValueError(
+                "paths.web_illustration_manifest must be a non-empty path"
+            )
+        return resolve_path_from_root(
+            repo_root, format_tokenized(raw.strip(), None, model, region)
+        )
+    if raw_by_target is None:
+        return None
+    _validate_manifests_by_target(raw_by_target)
+    build_cfg = cfg.get("build", {})
+    if not isinstance(build_cfg, dict):
+        build_cfg = {}
+    resolved_model = str(model or build_cfg.get("default_model") or "").strip()
+    resolved_region = str(region or build_cfg.get("default_region") or "").strip()
+    if not resolved_model or not resolved_region:
+        return None
+    document_key = f"{resolved_model}_{resolved_region}".casefold()
+    matches = [
+        value
+        for key, value in raw_by_target.items()
+        if key.strip().casefold() == document_key
+    ]
+    if len(matches) > 1:
+        raise ValueError(
+            "paths.web_illustration_manifests contains duplicate "
+            "case-insensitive Document_Key entries for "
+            f"{resolved_model}_{resolved_region}"
+        )
+    if not matches:
+        return None
+    matched = matches[0]
+    if not isinstance(matched, str):
+        # Per-language binding; resolve_web_illustration_manifests_from_config
+        # owns that shape because a merged document has no single manifest.
+        return None
+    return resolve_path_from_root(repo_root, matched.strip())
+
+
+def _validate_manifests_by_target(raw_by_target: Any) -> None:
+    """Each Document_Key maps to one path, or to a language -> path mapping."""
+
+    shape = (
+        "paths.web_illustration_manifests must map Document_Key to "
+        "non-empty paths or to language -> path mappings"
+    )
+    if not isinstance(raw_by_target, dict):
+        raise ValueError(shape)
+    for key, value in raw_by_target.items():
+        if not isinstance(key, str) or not key.strip():
+            raise ValueError(shape)
+        if isinstance(value, str):
+            if not value.strip():
+                raise ValueError(shape)
+            continue
+        if not isinstance(value, dict) or not value or any(
+            not isinstance(lang, str)
+            or not lang.strip()
+            or not isinstance(path_value, str)
+            or not path_value.strip()
+            for lang, path_value in value.items()
+        ):
+            raise ValueError(
+                "paths.web_illustration_manifests language mapping for "
+                f"{key!r} must be a non-empty language -> path mapping"
+            )
+        seen: set[str] = set()
+        for lang in value:
+            folded = lang.strip().casefold()
+            if folded in seen:
+                raise ValueError(
+                    "paths.web_illustration_manifests contains duplicate "
+                    f"case-insensitive language entries for {key!r}"
+                )
+            seen.add(folded)
+
+
+def resolve_web_illustration_manifests_from_config(
+    cfg: dict[str, Any],
+    *,
+    repo_root: Path,
+    model: str | None = None,
+    region: str | None = None,
+) -> dict[str, Path]:
+    """Resolve per-language Web illustration manifests for one target.
+
+    Empty unless the selected Document_Key binds a language -> path mapping.
+    A merged multi-language document needs one manifest per language; a
+    single-language document keeps the scalar form resolved by
+    resolve_web_illustration_manifest_from_config.
+    """
+
+    paths_cfg = cfg.get("paths", {})
+    if not isinstance(paths_cfg, dict):
+        return {}
+    raw_by_target = paths_cfg.get("web_illustration_manifests")
+    if raw_by_target is None:
+        return {}
+    _validate_manifests_by_target(raw_by_target)
+    build_cfg = cfg.get("build", {})
+    if not isinstance(build_cfg, dict):
+        build_cfg = {}
+    resolved_model = str(model or build_cfg.get("default_model") or "").strip()
+    resolved_region = str(region or build_cfg.get("default_region") or "").strip()
+    if not resolved_model or not resolved_region:
+        return {}
+    document_key = f"{resolved_model}_{resolved_region}".casefold()
+    matches = [
+        value
+        for key, value in raw_by_target.items()
+        if key.strip().casefold() == document_key
+    ]
+    if len(matches) > 1:
+        raise ValueError(
+            "paths.web_illustration_manifests contains duplicate "
+            "case-insensitive Document_Key entries for "
+            f"{resolved_model}_{resolved_region}"
+        )
+    if not matches or isinstance(matches[0], str):
+        return {}
+    return {
+        lang.strip(): resolve_path_from_root(repo_root, path_value.strip())
+        for lang, path_value in matches[0].items()
+    }
+
+
+def resolve_idml_layout_param_overlays(
+    config_path: Path,
+    *,
+    repo_root: Path,
+    model: str | None = None,
+    region: str | None = None,
+    config_loader: Callable[[Path], dict[str, Any]] = load_config,
+) -> tuple[Path, ...]:
+    """Resolve global and target-selected additive IDML token layers."""
+
+    cfg = config_loader(config_path)
+    paths_cfg = cfg.get("paths", {})
+    if not isinstance(paths_cfg, dict):
+        return ()
+    raw = paths_cfg.get("idml_layout_params_overlays", [])
+    raw_by_target = paths_cfg.get("idml_layout_params_overlays_by_target", {})
+    if raw is None:
+        raw = []
+    if not isinstance(raw, list) or any(
+        not isinstance(value, str) or not value.strip() for value in raw
+    ):
+        raise ValueError("paths.idml_layout_params_overlays must be a list of paths")
+    if raw_by_target is None:
+        raw_by_target = {}
+    if not isinstance(raw_by_target, dict) or any(
+        not isinstance(key, str)
+        or not key.strip()
+        or not isinstance(values, list)
+        or any(not isinstance(value, str) or not value.strip() for value in values)
+        for key, values in raw_by_target.items()
+    ):
+        raise ValueError(
+            "paths.idml_layout_params_overlays_by_target must map "
+            "Document_Key to lists of paths"
+        )
+
+    selected = list(raw)
+    build_cfg = cfg.get("build", {})
+    if not isinstance(build_cfg, dict):
+        build_cfg = {}
+    resolved_model = str(model or build_cfg.get("default_model") or "").strip()
+    resolved_region = str(region or build_cfg.get("default_region") or "").strip()
+    if resolved_model and resolved_region:
+        document_key = f"{resolved_model}_{resolved_region}".casefold()
+        matches = [
+            values
+            for key, values in raw_by_target.items()
+            if key.strip().casefold() == document_key
+        ]
+        if len(matches) > 1:
+            raise ValueError(
+                "paths.idml_layout_params_overlays_by_target contains duplicate "
+                "case-insensitive Document_Key entries for "
+                f"{resolved_model}_{resolved_region}"
+            )
+        if matches:
+            selected.extend(matches[0])
+    if len({value.strip() for value in selected}) != len(selected):
+        raise ValueError("IDML layout parameter overlay paths must be unique")
+    return tuple(
+        resolve_path_from_root(repo_root, value.strip())
+        for value in selected
+    )
+
+
+def resolve_idml_assembly_plan(
+    config_path: Path,
+    *,
+    repo_root: Path,
+    model: str | None = None,
+    region: str | None = None,
+    config_loader: Callable[[Path], dict[str, Any]] = load_config,
+) -> Path | None:
+    """Resolve an explicitly configured candidate IDML assembly contract.
+
+    Candidate target assembly is opt-in data.  There is intentionally no
+    filename/model discovery fallback here: approved plans are resolved by
+    their own registry, while an unconfigured target keeps the measured-LaTeX
+    compatibility path.
+    """
+
+    cfg = config_loader(config_path)
+    paths_cfg = cfg.get("paths", {})
+    if not isinstance(paths_cfg, dict):
+        return None
+    raw = paths_cfg.get("idml_assembly_plan")
+    raw_by_target = paths_cfg.get("idml_assembly_plans")
+    if raw is not None and raw_by_target is not None:
+        raise ValueError(
+            "paths.idml_assembly_plan and paths.idml_assembly_plans are "
+            "mutually exclusive"
+        )
+    if raw is not None:
+        if not isinstance(raw, str) or not raw.strip():
+            raise ValueError("paths.idml_assembly_plan must be a non-empty path")
+        return resolve_path_from_root(repo_root, raw.strip())
+    if raw_by_target is None:
+        return None
+    if not isinstance(raw_by_target, dict) or any(
+        not isinstance(key, str)
+        or not key.strip()
+        or not isinstance(value, str)
+        or not value.strip()
+        for key, value in raw_by_target.items()
+    ):
+        raise ValueError(
+            "paths.idml_assembly_plans must map Document_Key to non-empty paths"
+        )
+    build_cfg = cfg.get("build", {})
+    if not isinstance(build_cfg, dict):
+        build_cfg = {}
+    resolved_model = str(model or build_cfg.get("default_model") or "").strip()
+    resolved_region = str(region or build_cfg.get("default_region") or "").strip()
+    if not resolved_model or not resolved_region:
+        return None
+    document_key = f"{resolved_model}_{resolved_region}".casefold()
+    matches = [
+        value
+        for key, value in raw_by_target.items()
+        if key.strip().casefold() == document_key
+    ]
+    if len(matches) > 1:
+        raise ValueError(
+            "paths.idml_assembly_plans contains duplicate case-insensitive "
+            f"Document_Key entries for {resolved_model}_{resolved_region}"
+        )
+    if not matches:
+        return None
+    return resolve_path_from_root(repo_root, matches[0].strip())
+
+
 def resolve_docs_dir(
     config_path: Path,
     *,
     repo_root: Path,
     config_loader: Callable[[Path], dict[str, Any]] = load_config,
 ) -> Path:
-    try:
-        cfg = config_loader(config_path)
-    except RuntimeError:
-        return Paths(root=repo_root).docs_dir
-
+    cfg = config_loader(config_path)
     paths_cfg = cfg.get("paths", {})
     if isinstance(paths_cfg, dict):
         raw = paths_cfg.get("docs_dir")

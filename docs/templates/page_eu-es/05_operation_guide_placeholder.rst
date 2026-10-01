@@ -4,7 +4,7 @@ OPERACIONES
 ENCENDIDO/APAGADO
 -----------------
 
-.. image:: templates/word_template/common_assets/operation/main_power.png
+.. image:: asset:operation/main_power
    :alt: Operación de encendido/apagado.
    :width: 360px
 
@@ -24,7 +24,7 @@ ENCENDER/APAGAR SALIDA CA
 
 **Requisito previo:** el producto está encendido.
 
-.. image:: templates/word_template/common_assets/operation/ac_output.png
+.. image:: asset:operation/ac_output
    :alt: Operación de salida de CA.
    :width: 360px
 
@@ -40,7 +40,7 @@ ENCENDER/APAGAR SALIDA CC 12V/USB
 
 **Requisito previo:** el producto está encendido.
 
-.. image:: templates/word_template/common_assets/operation/dc_usb_output.png
+.. image:: asset:operation/dc_usb_output
    :alt: Operación de salida de CC y USB.
    :width: 360px
 
@@ -51,15 +51,33 @@ ENCENDER/APAGAR SALIDA CC 12V/USB
 | Presione una vez
 |
 
-.. list-table::
-   :header-rows: 0
-   :widths: 12 88
+.. The JE-1000H print (EU-UK V2.0-2026-08-03, PDF page 46) rates its high-power
+   USB-C port at 140 W and adds the 28 V/5 A cable rating; each model follows its
+   own print.
 
-   * - **PRECAUCIÓN**
-     -
-       - El puerto USB‑C de 100 W es una salida de alta potencia de tipo Fuente de Alimentación 3 (PS3) según USB‑PD. Si el dispositivo del usuario o accesorio conectado no cumple con los requisitos de seguridad, puede existir riesgo de incendio. Antes de usar estos puertos, asegúrese de que el dispositivo o accesorio conectado tenga protección contra incendios. 
-       - Solo conecte el |PRODUCT_NAME| a dispositivos o accesorios que cumplan con las cláusulas 6.3, 6.4 y 6.5 de IEC/EN/UL 62368-1 (u otros estándares equivalentes).
-       - Para obtener la potencia máxima de salida, utilice el cable USB-C a USB-C de 5 A (20 V CC/5 A, 100W). 
+.. only:: model_je_1000h
+
+   .. list-table::
+      :header-rows: 0
+      :widths: 12 88
+
+      * - **PRECAUCIÓN**
+        -
+          - El puerto USB‑C de 140 W es una salida de alta potencia de tipo Fuente de Alimentación 3 (PS3) según USB‑PD. Si el dispositivo del usuario o accesorio conectado no cumple con los requisitos de seguridad, puede existir riesgo de incendio. Antes de usar estos puertos, asegúrese de que el dispositivo o accesorio conectado tenga protección contra incendios. 
+          - Solo conecte el |PRODUCT_NAME| a dispositivos o accesorios que cumplan con las cláusulas 6.3, 6.4 y 6.5 de IEC/EN/UL 62368-1 (u otros estándares equivalentes).
+          - Para obtener la potencia máxima de salida, utilice el cable USB-C a USB-C de 5 A (20 V CC/5 A, 100W; 28 V CC/5 A, 140W). 
+
+.. only:: not model_je_1000h
+
+   .. list-table::
+      :header-rows: 0
+      :widths: 12 88
+
+      * - **PRECAUCIÓN**
+        -
+          - El puerto USB‑C de 100 W es una salida de alta potencia de tipo Fuente de Alimentación 3 (PS3) según USB‑PD. Si el dispositivo del usuario o accesorio conectado no cumple con los requisitos de seguridad, puede existir riesgo de incendio. Antes de usar estos puertos, asegúrese de que el dispositivo o accesorio conectado tenga protección contra incendios. 
+          - Solo conecte el |PRODUCT_NAME| a dispositivos o accesorios que cumplan con las cláusulas 6.3, 6.4 y 6.5 de IEC/EN/UL 62368-1 (u otros estándares equivalentes).
+          - Para obtener la potencia máxima de salida, utilice el cable USB-C a USB-C de 5 A (20 V CC/5 A, 100W). 
 
 | El producto puede cargar la batería de su vehículo utilizando el cable de carga de batería para vehículo Jackery de 12 V, que se vende por separado y está disponible en nuestro sitio web.
 
@@ -82,7 +100,7 @@ Para desactivar el modo de ahorro de energía, mantenga pulsados simultáneament
 
 Cuando alimente dispositivos de baja potencia (CA ≤ |ENERGY_SAVING_AC_THRESHOLD| o CC/USB ≤ |ENERGY_SAVING_DC_THRESHOLD|), desactive el modo de ahorro de energía para evitar que la salida se apague automáticamente durante el funcionamiento.
 
-.. image:: templates/word_template/common_assets/operation/energy_saving.png
+.. image:: asset:operation/energy_saving
    :alt: Operación del modo de ahorro de energía.
    :width: 320px
 
@@ -100,7 +118,7 @@ ENCENDER/APAGAR LUZ LED
 
 La luz LED tiene dos modos: modo de luz y modo SOS. En cualquier modo, mantenga presionado el botón de luz LED para apagarla.
 
-.. image:: templates/word_template/common_assets/operation/led_light.png
+.. image:: asset:operation/led_light
    :alt: Operación de la luz LED.
    :width: 360px
 
@@ -108,6 +126,8 @@ La luz LED tiene dos modos: modo de luz y modo SOS. En cualquier modo, mantenga 
 | Presione una vez el botón de la luz LED para encenderla.
 | Presiónelo nuevamente para cambiar al modo SOS.
 | Presiónelo una tercera vez para apagar la luz.
+
+.. hb-capability-begin: AC/DC输出记忆恢复
 
 Función de reanudación de Salida de CA y CC
 ----------------------------------------------
@@ -126,6 +146,9 @@ La función de reanudación de salida de CA/CC está desactivada de forma predet
 | Actualización OTA completada                                           | Apagado de salida activado por temporizador de descarga   |
 +------------------------------------------------------------------------+-----------------------------------------------------------+
 
+.. hb-capability-end:
+
+
 PANTALLA LCD
 ------------
 
@@ -136,7 +159,7 @@ PANTALLA LCD
       <table style="width:100%; border-collapse:collapse; margin:0.75rem 0 0.5rem 0;">
         <tr>
           <td rowspan="6" style="width:24%; border:1px solid #cfcfcf; padding:8px; vertical-align:top; text-align:center;">
-            <img src="_assets/templates/word_template/common_assets/operation/lcd_mode.png" alt="Modo de pantalla LCD." style="max-width:140px; width:100%; height:auto; display:block; margin:0 auto;">
+            <img src="asset:operation/lcd_mode" alt="Modo de pantalla LCD." style="max-width:140px; width:100%; height:auto; display:block; margin:0 auto;">
           </td>
           <td rowspan="3" style="width:18%; border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Encendido breve</td>
           <td style="width:12%; border:1px solid #cfcfcf; padding:8px; vertical-align:top;">Encender</td>
@@ -169,20 +192,10 @@ PANTALLA LCD
 
    .. raw:: latex
 
-      \begingroup
-      \renewcommand{\arraystretch}{1.25}
-      \setlength{\tabcolsep}{6pt}
-      \begin{tabular}{|m{0.24\linewidth}|m{0.16\linewidth}|m{0.12\linewidth}|m{0.36\linewidth}|}
-      \hline
-      \multirow{6}{*}{\parbox[c]{0.22\linewidth}{\centering\includegraphics[width=0.20\linewidth]{lcd_mode.png}}}
-      & \multirow{3}{*}{\parbox[t]{0.14\linewidth}{Encendido breve}} & Encender & Presione el botón POWER principal o cuando el producto se esté cargando. \\ \cline{3-4}
-      & & Apagar & Presione el botón POWER principal. \\ \cline{3-4}
-      & & Apagado automático & La pantalla LCD se apaga automáticamente y entra en modo de suspensión después de 2 minutos de inactividad. \\ \cline{2-4}
-      & \multirow{3}{*}{\parbox[t]{0.14\linewidth}{Estable en (durante el estado de carga o descarga)}} & Encender & Presione dos veces el botón POWER principal cuando el producto esté encendido. \\ \cline{3-4}
-      & & Apagar & Presione el botón POWER principal. \\ \cline{3-4}
-      & & Apagado automático & La pantalla LCD se apaga automáticamente después de |DEFAULT_STANDBY_DURATION| de inactividad. \\ \hline
-      \end{tabular}
-      \endgroup
+      \begin{HBLcdModeTable}{asset:operation/lcd_mode}
+      \HBLcdModeFirstGroup{Encendido breve}{Encender}{Presione el botón POWER principal o cuando el producto se esté cargando.}{Apagar}{Presione el botón POWER principal.}{Apagado automático}{La pantalla LCD se apaga automáticamente y entra en modo de suspensión después de 2 minutos de inactividad.}
+      \HBLcdModeSecondGroup{Estable en (durante el estado de carga o descarga)}{Encender}{Presione dos veces el botón POWER principal cuando el producto esté encendido.}{Apagar}{Presione el botón POWER principal.}{Apagado automático}{La pantalla LCD se apaga automáticamente después de |DEFAULT_STANDBY_DURATION| de inactividad.}
+      \end{HBLcdModeTable}
 
 También puede configurar el modo de visualización de la pantalla en la aplicación Jackery.
 

@@ -1,16 +1,16 @@
 AUFLADEN ÜBER SOLARMODULE (SEPARAT ERHÄLTLICH)
 ----------------------------------------------
 
-|PRODUCT_NAME| verfügt über zwei DC8020-Eingangsanschlüsse und ist mit den Jackery-Solarmodulen kompatibel.
+|PRODUCT_NAME| verfügt über zwei |DC_INPUT_CONNECTOR|-Eingangsanschlüsse und ist mit den Jackery-Solarmodulen kompatibel.
 
-.. image:: templates/word_template/common_assets/charging/solar_direct.png
-   :alt: Abbildung der Solarladeverbindung als Platzhalter 1.
+.. image:: asset:charging/solar_direct
+   :alt: Abbildung der Solarladeverbindung (1).
    :width: 360px
 
-Wenn ein DC8020-Eingangsanschluss zwei Solarmodule gleichzeitig anschließen muss, beziehen Sie sich bitte auf die folgende Abbildung zum Aufladen über den Solarpanel-Anschluss (separat erhältlich, nicht im Lieferumfang enthalten).
+Wenn ein |DC_INPUT_CONNECTOR|-Eingangsanschluss zwei Solarmodule gleichzeitig anschließen muss, beziehen Sie sich bitte auf die folgende Abbildung zum Aufladen über den Solarpanel-Anschluss (separat erhältlich, nicht im Lieferumfang enthalten).
 
-.. image:: templates/word_template/common_assets/charging/solar_adapter.png
-   :alt: Abbildung der Solarladeverbindung als Platzhalter 2.
+.. image:: asset:charging/solar_adapter
+   :alt: Abbildung der Solarladeverbindung (2).
    :width: 360px
 
 .. list-table::
@@ -18,7 +18,7 @@ Wenn ein DC8020-Eingangsanschluss zwei Solarmodule gleichzeitig anschließen mus
    :widths: 12 88
 
    * - **VORSICHT**
-     - An einen DC8020-Eingangsanschluss können höchstens zwei Solarmodule angeschlossen werden.
+     - An einen |DC_INPUT_CONNECTOR|-Eingangsanschluss können höchstens zwei Solarmodule angeschlossen werden.
 
 .. list-table::
    :header-rows: 0
@@ -28,18 +28,18 @@ Wenn ein DC8020-Eingangsanschluss zwei Solarmodule gleichzeitig anschließen mus
      -
        - Stellen Sie sicher, dass die Eingangsspannung an beiden DC-Eingangsanschlüssen gleich ist. Andernfalls kann das Produkt beschädigt werden. Zum Beispiel:
 
-       - Verwenden Sie beim Anschluss von Solarmodulen an beide DC8020-Eingangsanschlüsse das gleiche Jackery-Solarmodell und die gleiche Anzahl an Modulen.
+       - Verwenden Sie beim Anschluss von Solarmodulen an beide |DC_INPUT_CONNECTOR|-Eingangsanschlüsse das gleiche Jackery-Solarmodell und die gleiche Anzahl an Modulen.
        - Laden Sie das Produkt nicht gleichzeitig mit einem Autoladegerät und einem Solarpanel. Andernfalls kann die Fahrzeugsicherung durchbrennen oder der Ladevorgang fehlschlagen.
 
-Es wird empfohlen, das Jackery-Solarpanel zum Laden des Produkts zu verwenden. Stellen Sie sicher, dass die Leerlaufspannung (V\ :sub:`oc`) des Solarpanels innerhalb des DC-Eingangsbereichs (16 V-60 V) von |PRODUCT_NAME| liegt. Jackery ist nicht verantwortlich für Schäden oder Verluste, die durch die Verwendung von Solarmodulen Dritter entstehen.
+Es wird empfohlen, das Jackery-Solarpanel zum Laden des Produkts zu verwenden. Stellen Sie sicher, dass die Leerlaufspannung (V\ :sub:`oc`) des Solarpanels innerhalb des DC-Eingangsbereichs (|PV_INPUT_RANGE|) von |PRODUCT_NAME| liegt. Jackery ist nicht verantwortlich für Schäden oder Verluste, die durch die Verwendung von Solarmodulen Dritter entstehen.
 
 AUFLADEN ÜBER DAS AUTOLADEGERÄT (SEPARAT ERHÄLTLICH)
 ----------------------------------------------------
 
 Dieses Produkt kann mit einem 12-V-Autoladegerät aufgeladen werden. Stellen Sie sicher, dass das Autoladegerät und die 12-V-Autosteckdose (Zigarettenanzünder) gut verbunden sind.
 
-.. image:: templates/word_template/common_assets/charging/car_charge.png
-   :alt: Abbildung der Autoladeverbindung als Platzhalter.
+.. image:: asset:charging/car_charge
+   :alt: Abbildung der Autoladeverbindung.
    :width: 360px
 
 | Fahrzeug

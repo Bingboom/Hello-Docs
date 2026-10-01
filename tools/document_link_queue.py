@@ -8,6 +8,62 @@ from typing import Any, Callable
 from tools.language_aliases import normalize_language, normalize_region
 
 _EXPLICIT_DOCUMENT_KEY_RE = re.compile(r"[A-Za-z0-9-]+_[A-Za-z0-9-]+")
+# lark-cli renders a Bitable ``url``-type field (Document_link.HTML_link is one)
+# as a markdown link rather than a bare string: a cell storing ``https://u``
+# reads back as ``[https://u](https://u)`` — label and target both the stored
+# URL. Observed live in the ops_catalog_sync reconcile lane and again in the
+# web-publish-receipt first run (Hello-Docs run 35492573107). This is the single
+# definition of that rendering shape; callers apply their own strictness on top.
+_RENDERED_URL_RE = re.compile(r"\[\s*([^\]]*?)\s*\]\(\s*([^)]*?)\s*\)")
+
+
+def split_rendered_url(text: Any) -> tuple[str, str] | None:
+    """``[label](target)`` -> ``(label, target)``; ``None`` when not that form.
+
+    Returns the parsed halves without judging them: a caller that must not
+    swallow a real difference compares both halves itself.
+    """
+    candidate = str(text or "").strip()
+    match = _RENDERED_URL_RE.fullmatch(candidate)
+    if not match:
+        return None
+    return match.group(1), match.group(2)
+
+
+def url_field_matches(actual: Any, expected: str) -> bool:
+    """Does a read-back ``url``-field value carry exactly ``expected``?
+
+    Fail-closed: this absorbs the lark-cli rendering artifact and nothing else.
+    A bare string must equal ``expected``; a rendered ``[label](target)`` pair
+    matches only when label **and** target are both ``expected``. A pair whose
+    halves disagree is a real difference and never matches, even when one half
+    happens to be the expected URL.
+    """
+    wanted = str(expected or "").strip()
+    candidate = str(actual or "").strip()
+    if candidate == wanted:
+        return True
+    pair = split_rendered_url(candidate)
+    if pair is None:
+        return False
+    label, target = pair
+    return label == wanted and target == wanted
+
+
+def describe_url_field(actual: Any) -> str:
+    """Render a read-back value for an error message, exposing both halves.
+
+    A mismatching rendered pair is reported as its label/target parts so the
+    operator sees *which* half disagreed rather than one opaque string.
+    """
+    candidate = str(actual or "").strip()
+    pair = split_rendered_url(candidate)
+    if pair is None:
+        return repr(candidate)
+    label, target = pair
+    if label == target:
+        return repr(candidate)
+    return f"{candidate!r} (link text {label!r} != link target {target!r})"
 
 
 def scalar_text(value: Any) -> str:
@@ -164,6 +220,7 @@ def parse_queue_records(
     upload_dingtalk_field: str,
     operator_union_id_fields: tuple[str, ...],
     dingtalk_target_node_url_fields: tuple[str, ...],
+    result_field: str,
 ) -> list[Any]:
     records: list[Any] = []
     for record in raw_records:
@@ -189,6 +246,7 @@ def parse_queue_records(
                 upload_dingtalk_value=fields.get(upload_dingtalk_field),
                 operator_union_id=scalar_text(field_value(fields, *operator_union_id_fields)),
                 dingtalk_target_node_url=scalar_text(field_value(fields, *dingtalk_target_node_url_fields)),
+                result_value=scalar_text(fields.get(result_field)),
             )
         )
     return records
@@ -222,11 +280,14 @@ def select_pending_queue_records(
     workflow_action: str | None,
     doc_phase: str | None,
     record_id: str | None,
+    record_ids: tuple[str, ...] = (),
     parse_queue_records: Callable[[list[dict[str, Any]]], list[Any]],
     normalize_cli_queue_action: Callable[..., str | None],
     resolve_queue_workflow_action: Callable[[Any], str | None],
     is_trigger_requested: Callable[[Any], bool],
     is_immediate_trigger_enabled: Callable[[Any], bool],
+    has_active_queue_claim: Callable[[str], bool],
+    include_active_claims: bool = False,
 ) -> list[Any]:
     normalized_filter_doc_phase = normalize_cli_queue_action(
         workflow_action=workflow_action,
@@ -234,14 +295,21 @@ def select_pending_queue_records(
     )
     selected: list[Any] = []
     targeted_record = None
+    targeted_record_has_active_claim = False
+    targeted_record_ids = {item.strip() for item in record_ids if item.strip()}
     for record in parse_queue_records(raw_records):
         if record_id and record.record_id == record_id:
             targeted_record = record
+            targeted_record_has_active_claim = has_active_queue_claim(record.result_value)
+        if has_active_queue_claim(record.result_value) and not include_active_claims:
+            continue
         if not is_trigger_requested(record.trigger_value):
             continue
         if immediate_only and not is_immediate_trigger_enabled(record.immediate_trigger_value):
             continue
         if record_id and record.record_id != record_id:
+            continue
+        if targeted_record_ids and record.record_id not in targeted_record_ids:
             continue
         try:
             resolved_action = resolve_queue_workflow_action(record)
@@ -255,7 +323,7 @@ def select_pending_queue_records(
             if resolved_action != normalized_filter_doc_phase:
                 continue
         selected.append(record)
-    if record_id and not selected and targeted_record is not None:
+    if record_id and not selected and targeted_record is not None and not targeted_record_has_active_claim:
         trigger_text = scalar_text(targeted_record.trigger_value).strip() or "<empty>"
         raise RuntimeError(
             "Targeted Document_link row is not pending because `是否触发文档构建` is not enabled. "

@@ -1,0 +1,702 @@
+{
+  "schema_version": "web-manual-target-overlays/v1",
+  "overlays": [
+    {
+      "overlay_id": "js200e-eu-en-v1",
+      "target": {
+        "model": "JS-200E",
+        "region": "EU"
+      },
+      "skeleton_profile": "portable-power-station-v1",
+      "capabilities": {
+        "figures": false,
+        "legacy_target_components": false
+      },
+      "contract_overrides": {
+        "warranty": {
+          "source_patterns": [
+            "warranty_en",
+            "*11_warranty*"
+          ],
+          "section_count": 3,
+          "period_years": [
+            "3",
+            "2"
+          ]
+        }
+      }
+    },
+    {
+      "overlay_id": "ja-ca3sa-eu-v1",
+      "target": {
+        "model": "JA-CA3SA",
+        "region": "EU"
+      },
+      "skeleton_profile": "charger-v1",
+      "capabilities": {
+        "figures": false,
+        "legacy_target_components": false
+      },
+      "contract_overrides": {}
+    },
+    {
+      "overlay_id": "je500a-eu-en-v1",
+      "target": {
+        "model": "JE-500A",
+        "region": "EU"
+      },
+      "skeleton_profile": "portable-power-station-v1",
+      "capabilities": {
+        "figures": false,
+        "legacy_target_components": false
+      },
+      "figure_coverage": {
+        "policy_id": "je500a-eu-en-finished-figures-v1",
+        "locales": [
+          "en"
+        ],
+        "required_slots": [
+          "finished-panel.overview",
+          "finished-panel.operation_power",
+          "finished-panel.operation_ac",
+          "finished-panel.operation_dc",
+          "finished-panel.operation_energy",
+          "finished-panel.operation_led",
+          "finished-panel.operation_lcd_device",
+          "finished-panel.charging_ac",
+          "finished-panel.charging_solar_single",
+          "finished-panel.charging_solar_dual",
+          "finished-panel.charging_car"
+        ],
+        "allowed_statuses": [
+          "finished-panel",
+          "approved-composite"
+        ]
+      },
+      "contract_overrides": {}
+    },
+    {
+      "overlay_id": "je100c-eu-en-v1",
+      "target": {
+        "model": "JE-100C",
+        "region": "EU"
+      },
+      "skeleton_profile": "portable-power-station-v1",
+      "capabilities": {
+        "figures": false,
+        "legacy_target_components": false
+      },
+      "figure_coverage": {
+        "policy_id": "je100c-eu-en-finished-figures-v1",
+        "locales": [
+          "en"
+        ],
+        "required_slots": [
+          "finished-panel.overview",
+          "finished-panel.operation_output",
+          "finished-panel.operation_energy",
+          "finished-panel.operation_lcd",
+          "finished-panel.charging_ac",
+          "finished-panel.charging_solar",
+          "finished-panel.charging_car"
+        ],
+        "allowed_statuses": [
+          "finished-panel",
+          "approved-composite"
+        ]
+      },
+      "contract_overrides": {}
+    },
+    {
+      "overlay_id": "je1000f-us-v1",
+      "target": {
+        "model": "JE-1000F",
+        "region": "US"
+      },
+      "skeleton_profile": "portable-power-station-v1",
+      "capabilities": {
+        "figures": true,
+        "legacy_target_components": true
+      },
+      "figure_coverage": {
+        "policy_id": "je1000f-us-finished-figures-v1",
+        "locales": [
+          "en",
+          "fr",
+          "es"
+        ],
+        "required_slots": [
+          "product-overview.front",
+          "product-overview.right",
+          "operation.main-power",
+          "operation.ac-output",
+          "operation.dc-usb-output",
+          "operation.energy-saving",
+          "operation.led-light",
+          "reference.charging-ac-wall",
+          "reference.charging-solar-direct",
+          "reference.charging-solar-adapter",
+          "reference.charging-car"
+        ],
+        "allowed_statuses": [
+          "finished-panel",
+          "approved-composite"
+        ],
+        "slot_status_overrides": {
+          "operation.main-power": [
+            "base-art-live-copy"
+          ],
+          "operation.ac-output": [
+            "base-art-live-copy"
+          ],
+          "operation.dc-usb-output": [
+            "base-art-live-copy"
+          ],
+          "operation.energy-saving": [
+            "base-art-live-copy"
+          ],
+          "operation.led-light": [
+            "base-art-live-copy"
+          ],
+          "reference.charging-car": [
+            "base-art-live-copy"
+          ]
+        }
+      },
+      "contract_overrides": {
+        "operations": {
+          "figures": [
+            {
+              "id": "main-power",
+              "presentation_mode": "base-art-live-copy",
+              "base_art_layout": {
+                "art_sha256": "74004806e6c0996fb77b2260c046e055194855a96bed97c519bb58c292e3b5e2",
+                "step_anchors": [
+                  [
+                    76.5,
+                    15.42
+                  ],
+                  [
+                    76.5,
+                    34.17
+                  ]
+                ],
+                "step_width": 22.5,
+                "duration_anchor": [
+                  81.4,
+                  48.1
+                ]
+              }
+            },
+            {
+              "id": "ac-output",
+              "presentation_mode": "base-art-live-copy",
+              "base_art_layout": {
+                "art_sha256": "43a46a51a98773dd307ff35dd1ac684790109b2b8c437f87ceacbc3636bc1d75",
+                "step_anchors": [
+                  [
+                    84.0,
+                    26.51
+                  ],
+                  [
+                    84.0,
+                    36.98
+                  ]
+                ],
+                "step_width": 15.5,
+                "prerequisite_rect": [
+                  1.14,
+                  1.98,
+                  42.83,
+                  6.05
+                ],
+                "prerequisite_max_width": 55.0,
+                "prerequisite_fill": "#f8f8f8"
+              }
+            },
+            {
+              "id": "dc-usb-output",
+              "presentation_mode": "base-art-live-copy",
+              "base_art_layout": {
+                "art_sha256": "c46c92d6ee991a400208635802b5d2682f215cacaa748a3ca73068fdb18cdec3",
+                "step_anchors": [
+                  [
+                    86.0,
+                    20.28
+                  ],
+                  [
+                    86.0,
+                    31.69
+                  ]
+                ],
+                "step_width": 13.5,
+                "prerequisite_rect": [
+                  1.63,
+                  2.68,
+                  43.49,
+                  7.32
+                ],
+                "prerequisite_max_width": 55.0,
+                "prerequisite_fill": "#e8e8e8"
+              }
+            },
+            {
+              "id": "energy-saving",
+              "presentation_mode": "base-art-live-copy",
+              "base_art_layout": {
+                "art_sha256": "9dd943d3063031c0795ff8c4b2b6aac266bfb2bff78e2250e445f27352c23a07",
+                "footer_x": 72.0
+              }
+            },
+            {
+              "id": "led-light",
+              "presentation_mode": "base-art-live-copy",
+              "base_art_layout": {
+                "art_sha256": "483c0dcfcfd6c0f8c460a32d9e320f07c3b7571cc1af80b1ac9d5b8f235430cc",
+                "art_width": 56.8,
+                "step_markers": [
+                  "bulb-lit",
+                  "sos",
+                  "bulb-off"
+                ]
+              }
+            }
+          ]
+        },
+        "reference_figures": {
+          "figures": [
+            {
+              "id": "charging-car",
+              "presentation_mode": "base-art-live-copy",
+              "base_art_layout": {
+                "art_sha256": "a918de3a4a3b22cc6f400d9250f24905459d010e13e4020c23eadf247e928e75",
+                "panel_top": 6.15,
+                "panel_fill": "#f2f3f3",
+                "labels": [
+                  {
+                    "line": 0,
+                    "rect": [
+                      64.0,
+                      30.6,
+                      18.0,
+                      8.96
+                    ]
+                  },
+                  {
+                    "line": 1,
+                    "rect": [
+                      55.0,
+                      3.73,
+                      42.12,
+                      11.19
+                    ],
+                    "fill": "#ffffff"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "overlay_id": "je1000f-eu-v1",
+      "target": {
+        "model": "JE-1000F",
+        "region": "EU"
+      },
+      "skeleton_profile": "portable-power-station-v1",
+      "capabilities": {
+        "figures": true,
+        "legacy_target_components": false
+      },
+      "figure_coverage": {
+        "policy_id": "je1000f-eu-finished-figures-v1",
+        "locales": [
+          "en",
+          "fr",
+          "es",
+          "de",
+          "it"
+        ],
+        "required_slots": [
+          "product-overview.front",
+          "product-overview.right",
+          "operation.main-power",
+          "operation.ac-output",
+          "operation.dc-usb-output",
+          "operation.energy-saving",
+          "operation.led-light",
+          "reference.charging-ac-wall",
+          "reference.charging-solar-direct",
+          "reference.charging-solar-adapter",
+          "reference.charging-car"
+        ],
+        "allowed_statuses": [
+          "finished-panel",
+          "approved-composite"
+        ]
+      },
+      "contract_overrides": {}
+    },
+    {
+      "overlay_id": "je3000c-kr-v1",
+      "target": {
+        "model": "JE-3000C",
+        "region": "KR"
+      },
+      "skeleton_profile": "portable-power-station-v1",
+      "capabilities": {
+        "figures": false,
+        "legacy_target_components": false
+      },
+      "figure_coverage": {
+        "policy_id": "je3000c-kr-finished-figures-v1",
+        "locales": [
+          "ko"
+        ],
+        "required_slots": [
+          "source-image.front_product",
+          "source-image.right_side_ports",
+          "source-image.op_main_power",
+          "source-image.op_ac_output",
+          "source-image.op_dc_usb_output",
+          "source-image.energy_saving",
+          "source-image.ac_wall",
+          "source-image.solar_adapter",
+          "source-image.car_charge"
+        ],
+        "allowed_statuses": [
+          "finished-panel",
+          "approved-composite"
+        ]
+      },
+      "contract_overrides": {}
+    },
+    {
+      "overlay_id": "jbp2000b-us-v1",
+      "target": {
+        "model": "JBP-2000B",
+        "region": "US"
+      },
+      "skeleton_profile": "battery-pack-v1",
+      "capabilities": {
+        "figures": false,
+        "legacy_target_components": false
+      },
+      "contract_overrides": {}
+    },
+    {
+      "overlay_id": "jbp2000b-eu-v1",
+      "target": {
+        "model": "JBP-2000B",
+        "region": "EU"
+      },
+      "skeleton_profile": "battery-pack-v1",
+      "capabilities": {
+        "figures": false,
+        "legacy_target_components": false
+      },
+      "contract_overrides": {
+        "warranty": {
+          "source_patterns": [
+            "*11_warranty",
+            "warranty_*",
+            "eu_warranty"
+          ]
+        }
+      }
+    },
+    {
+      "overlay_id": "jbp2000b-jp-v1",
+      "target": {
+        "model": "JBP-2000B",
+        "region": "JP"
+      },
+      "skeleton_profile": "battery-pack-v1",
+      "capabilities": {
+        "figures": false,
+        "legacy_target_components": false
+      },
+      "contract_overrides": {}
+    },
+    {
+      "overlay_id": "jbp3600a-eu-en-v1",
+      "target": {
+        "model": "JBP-3600A",
+        "region": "EU"
+      },
+      "skeleton_profile": "battery-pack-v1",
+      "capabilities": {
+        "figures": false,
+        "legacy_target_components": false
+      },
+      "figure_coverage": {
+        "policy_id": "jbp3600a-eu-en-finished-figures-v1",
+        "locales": [
+          "en"
+        ],
+        "required_slots": [
+          "finished-panel.overview_front",
+          "finished-panel.overview_left",
+          "finished-panel.power_annotated",
+          "finished-panel.lcd_control_clean",
+          "finished-panel.ac_charging",
+          "finished-panel.solar_charging"
+        ],
+        "allowed_statuses": [
+          "finished-panel",
+          "approved-composite"
+        ]
+      },
+      "contract_overrides": {
+        "warranty": {
+          "source_patterns": [
+            "*11_warranty",
+            "warranty_en"
+          ]
+        }
+      }
+    },
+    {
+      "overlay_id": "ja-ad01a-eu-v1",
+      "target": {
+        "model": "JA-AD01A",
+        "region": "EU"
+      },
+      "skeleton_profile": "charger-v1",
+      "capabilities": {
+        "figures": false,
+        "legacy_target_components": false
+      },
+      "contract_overrides": {}
+    },
+    {
+      "overlay_id": "ja-ad600a-eu-v1",
+      "target": {
+        "model": "JA-AD600A",
+        "region": "EU"
+      },
+      "skeleton_profile": "charger-v1",
+      "capabilities": {
+        "figures": true,
+        "legacy_target_components": false
+      },
+      "figure_coverage": {
+        "policy_id": "ja-ad600a-eu-en-finished-figures-v1",
+        "locales": [
+          "en"
+        ],
+        "required_slots": [
+          "operation.installation-diagram",
+          "operation.wiring-steps",
+          "operation.secure-vehicle-body",
+          "operation.secure-modification-panel",
+          "operation.connection-diagram"
+        ],
+        "allowed_statuses": [
+          "finished-panel",
+          "approved-composite"
+        ]
+      },
+      "contract_overrides": {
+        "warranty": {
+          "source_patterns": [
+            "*warranty*"
+          ],
+          "section_count": 6,
+          "period_years": [
+            "2"
+          ]
+        },
+        "operations": {
+          "source_patterns": [
+            "*installation*"
+          ],
+          "figures": [
+            {
+              "id": "installation-diagram",
+              "image_key": "installation_diagram",
+              "layout": "footer-panel",
+              "step_ids": [
+                "overview"
+              ],
+              "web_replace_key": "operation.installation-diagram"
+            },
+            {
+              "id": "wiring-steps",
+              "image_key": "wiring_steps",
+              "layout": "footer-panel",
+              "step_ids": [
+                "fuse",
+                "battery",
+                "acc"
+              ],
+              "web_replace_key": "operation.wiring-steps"
+            },
+            {
+              "id": "secure-vehicle-body",
+              "image_key": "secure_vehicle_body",
+              "layout": "footer-panel",
+              "step_ids": [
+                "clearance",
+                "mark",
+                "drill",
+                "secure"
+              ],
+              "web_replace_key": "operation.secure-vehicle-body"
+            },
+            {
+              "id": "secure-modification-panel",
+              "image_key": "secure_modification_panel",
+              "layout": "footer-panel",
+              "step_ids": [
+                "mark",
+                "drill",
+                "secure"
+              ],
+              "web_replace_key": "operation.secure-modification-panel"
+            },
+            {
+              "id": "connection-diagram",
+              "image_key": "connection_diagram",
+              "layout": "footer-panel",
+              "step_ids": [
+                "input",
+                "acc",
+                "output",
+                "power-station"
+              ],
+              "web_replace_key": "operation.connection-diagram"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "overlay_id": "js40c-eu-en-v1",
+      "target": {
+        "model": "JS-40C",
+        "region": "EU"
+      },
+      "skeleton_profile": "solar-v1",
+      "capabilities": {
+        "figures": false,
+        "legacy_target_components": false
+      },
+      "contract_overrides": {
+        "warranty": {
+          "source_patterns": [
+            "warranty_en"
+          ],
+          "section_count": 3,
+          "period_years": [
+            "1",
+            "2"
+          ]
+        }
+      }
+    },
+    {
+      "overlay_id": "jaac-whe-100-eua1-eu-v1",
+      "target": {
+        "model": "JAAC-WHE-100-EUA1",
+        "region": "EU"
+      },
+      "skeleton_profile": "charger-v1",
+      "capabilities": {
+        "figures": false,
+        "legacy_target_components": false
+      },
+      "contract_overrides": {}
+    },
+    {
+      "overlay_id": "je3000c-eu-shared-tables-v1",
+      "target": {
+        "model": "JE-3000C",
+        "region": "EU"
+      },
+      "skeleton_profile": "portable-power-station-v1",
+      "capabilities": {
+        "figures": false,
+        "legacy_target_components": false
+      },
+      "contract_overrides": {
+        "operations": {
+          "source_patterns": [
+            "*05_operation_guide_placeholder",
+            "*05_operation_guide_de",
+            "*05_operation_guide_es",
+            "*05_operation_guide_fr",
+            "*05_operation_guide_it",
+            "*05_operation_guide_uk"
+          ]
+        }
+      }
+    },
+    {
+      "overlay_id": "je1000h-eu-shared-tables-v1",
+      "target": {
+        "model": "JE-1000H",
+        "region": "EU"
+      },
+      "skeleton_profile": "portable-power-station-v1",
+      "capabilities": {
+        "figures": false,
+        "legacy_target_components": false
+      },
+      "contract_overrides": {
+        "operations": {
+          "source_patterns": [
+            "*05_operation_guide_placeholder",
+            "*05_operation_guide"
+          ]
+        }
+      }
+    },
+    {
+      "overlay_id": "je1000f-jp-v1",
+      "target": {
+        "model": "JE-1000F",
+        "region": "JP"
+      },
+      "skeleton_profile": "portable-power-station-v1",
+      "capabilities": {
+        "figures": false,
+        "legacy_target_components": false
+      },
+      "contract_overrides": {
+        "warranty": {
+          "section_count": 7,
+          "period_years": []
+        },
+        "reference_figures": {
+          "source_patterns": [
+            "*12_app_setup_placeholder"
+          ],
+          "figures": [
+            {
+              "id": "app-add-device",
+              "source_patterns": [
+                "*12_app_setup_placeholder"
+              ],
+              "image_key": "app/add_device",
+              "capture_following_lines": 3,
+              "presentation": "shared-art-live-labels",
+              "captions_embedded": true,
+              "phone_artwork": "docs/renderers/contracts/assets/app/app_add_device_steps.png",
+              "label_roles": [
+                "main-power",
+                "dc-usb",
+                "ac-power"
+              ],
+              "control_artwork": "docs/renderers/latex/assets/app_control_panel.png",
+              "asset_scope": "shared",
+              "control_image_key": "overview/front_controls"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

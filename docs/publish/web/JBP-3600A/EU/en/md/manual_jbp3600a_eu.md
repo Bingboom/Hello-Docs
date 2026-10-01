@@ -1,0 +1,353 @@
+**IMPORTANT**
+
+Congratulations on your new Jackery Battery Pack 3600. Please read this manual carefully before using the product, particularly the relevant precautions to ensure proper use. Keep this manual in an accessible place for future reference.
+
+In compliance with laws and regulations, the right of final interpretation of this document and all related documents of this product resides with the Company. Although every effort has been made to ensure the accuracy of this manual, Jackery assumes no responsibility for any errors that may appear.
+
+Please note that no further notifications will be given in case of any update, revision, or termination. For the latest version of the product manuals, visit support.jackery.com.
+
+\* The images are for reference purposes only. Please refer to the actual product.
+
+# IMPORTANT SAFETY INFORMATION
+
+The basic safety precautions should be followed when using this product, including:
+
+- Please read all instructions before using this product.
+
+- Close supervision is required when using this product near children to reduce the risk.
+
+- Risk of electric shock may occur when using accessories recommended or sold by non-professional product manufacturers.
+
+- When the product is not in use, please unplug the power plug from the product\'s socket.
+
+- Do not dismantle the product, which may lead to unpredictable risks such as fire, explosion or electric shock.
+
+- Do not use the product through damaged cords or plugs, or damaged output cables, which may cause electric shock.
+
+- Charge the product in a well-ventilated area and do not restrict ventilation in any way.
+
+- Please put the product in a ventilated and dry place to avoid rain and water causing electric shock.
+
+- Do not expose the product to fire or high temperature (under direct sunlight or in a vehicle under high heat), which may cause accidents such as fire or explosion.
+
+- If this product is stored for a long period of time (3 months--6 months) with the power depleted, it may become unchargeable.
+
+# MEANING OF SYMBOLS
+
+| Symbol | Meaning |
+|----|----|
+| ⚠WARNING | Hazardous practices that may result in severe injury, death, and/or property damage. |
+| ⚠CAUTION | Hazardous practices that may result in personal injury and/or property damage. |
+| ⚠NOTE | Hazardous practices that may result in equipment damage, data loss, performance deterioration, or unanticipated results. |
+| ⚠TIP | Supplements the important information or operation tips in the text. |
+
+|  |  |  |  |
+|----|----|----|----|
+| **Symbol** | **Meaning** | **Symbol** | **Meaning** |
+| <img src="../../../../_static/manual-assets/_pool/1c/1c272a00fbd28d6562d4126040ba43e5747f6a6550878c4b13e05a5c28014577.png" style="width: 40px;" width="40" height="35" alt="warning_triangle" /> | Warning and Caution Symbols. Must read to alert individuals to potential hazards or risks. | <img src="../../../../_static/manual-assets/_pool/e3/e345b3278827691751b6beac9c8343c75ac7a98100618fbef1db73a27329b99d.png" style="width: 40px;" width="40" height="33" alt="keep_away_from_children" /> | Keep away from children. |
+| <img src="../../../../_static/manual-assets/_pool/d1/d14506fa5a9d449039887db61a259f1841f1826de2f190f54063f96195b955f5.png" style="width: 40px;" width="40" height="26" alt="read_manual" /> | Read the user manual before operation. | <img src="../../../../_static/manual-assets/_pool/ea/ea7766d417e962cf711bccf3de79d6f639602848ace780353cb329329d13cc91.png" style="width: 40px;" width="40" height="47" alt="li_ion" /> | This symbol indicates that a lithium-ion (Li-ion) battery is inside the product and should be disposed of or recycled properly. |
+| <img src="../../../../_static/manual-assets/_pool/66/66c3df77e4f84cccad4b9f162798b181c007e89d3f0e9dd4fdf52c392827cbab.png" style="width: 40px;" width="40" height="34" alt="do_not_dismantle" /> | Do not dismantle the product. | <img src="../../../../_static/manual-assets/_pool/eb/eb094578bf165fa39399de1d957cc71a92191f2b0e7ed0a620885065ebedf8a3.png" style="width: 40px;" width="40" height="51" alt="weee" /> | This symbol indicates that the product shall not be disposed of as household waste, and should be delivered to a designated collection facility for recycling. Proper disposal and recycling can help protect the environment. For more information about the disposal and recycling of this product, contact your local community, disposal service, or dealer. |
+| <img src="../../../../_static/manual-assets/_pool/42/422379347e71e7827c3da380e421f2cb106da5d2f74781fc45782a2f86d493d2.png" style="width: 40px;" width="40" height="37" alt="no_open_flame" /> | Keep the product away from fire. | <img src="../../../../_static/manual-assets/_pool/7f/7fb57972ebd1fb8bf82abc75d0d320ecaa9abc6544020f2374da2f1272a46171.png" style="width: 40px;" width="40" height="32" alt="weee2" /> | Batteries and accumulators must not be disposed of with household waste. As a consumer, you are legally required to dispose of all batteries and accumulators at designated collection points, regardless of whether they contain hazardous substances. Please return used batteries and accumulators to a local collection point, recycling center, or to the retailer where they were purchased. Proper disposal ensures environmentally responsible recycling and prevents potential harm to human health and the environment. |
+
+# WHAT\'S IN THE BOX
+
+
+
+<figure aria-label="WHAT'S IN THE BOX" class="hb-inbox-composition" data-card-count="3" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="three-card-responsive"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Jackery Battery Pack 3600." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/jbp3600a_eu_en/inbox_unit_clean.png" data-web-finished-panel-sha256="4f5d7e1edd8b9a0845cc2071a57aafaccdd245811594d3f9b2b9bb8df20b3b44" src="../../../../_static/manual-assets/_pool/4f/4f5d7e1edd8b9a0845cc2071a57aafaccdd245811594d3f9b2b9bb8df20b3b44.png"/><div class="hb-inbox-label">
+<p><strong>Jackery Battery Pack 3600</strong></p>
+</div></li><li class="hb-inbox-card" data-item-number="2"><img alt="Expansion Cable." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/jbp3600a_eu_en/inbox_cable_clean.png" data-web-finished-panel-sha256="0a2f4e72a751a9b8371ea98a0aa330faffab47b36c76a41694e898af9b5d4de7" src="../../../../_static/manual-assets/_pool/0a/0a2f4e72a751a9b8371ea98a0aa330faffab47b36c76a41694e898af9b5d4de7.png"/><div class="hb-inbox-label">
+<p><strong>Expansion Cable</strong></p>
+</div></li><li class="hb-inbox-card" data-item-number="3"><img alt="User Manual." class="manual-finished-illustration hb-inbox-art" data-web-finished-panel-path="assets/jbp3600a_eu_en/inbox_manual_clean.png" data-web-finished-panel-sha256="8e9ae2dfc7de714cac9eb0ac26ab4ee00f43daecd8a13abe9ed438897bdba040" src="../../../../_static/manual-assets/_pool/8e/8e9ae2dfc7de714cac9eb0ac26ab4ee00f43daecd8a13abe9ed438897bdba040.png"/><div class="hb-inbox-label">
+<p>User Manual</p>
+</div></li></ol></figure>
+
+
+
+# PRODUCT OVERVIEW
+
+## FRONT VIEW
+
+<img src="../../../../_static/manual-assets/_pool/d7/d78ec62e108200261f73d80500a68b962162cec2d09350b85b88d15c1d9631e5.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/jbp3600a_eu_en/overview_front.png" data-web-finished-panel-sha256="d78ec62e108200261f73d80500a68b962162cec2d09350b85b88d15c1d9631e5" alt="POWER button LCD" />
+
+## LEFT SIDE VIEW
+
+<img src="../../../../_static/manual-assets/_pool/43/4391ac1711f7aee6c3eee2164f059279ec41a9ecceb95c0106925e7bd04eaa43.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/jbp3600a_eu_en/overview_left.png" data-web-finished-panel-sha256="4391ac1711f7aee6c3eee2164f059279ec41a9ecceb95c0106925e7bd04eaa43" alt="Handle DC Expansion Port A (Connect to Expansion Cable Terminal A) DC Expansion Port B (Connect to Expansion Cable Terminal B)" />
+
+# LCD DISPLAY
+
+<img src="../../../../_static/manual-assets/_pool/77/77ae95b18f3fe93fc26ce6d5de6d29953ff25b285d65ddf4e5f5df464203ed7f.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/jbp3600a_eu_en/lcd_annotated.png" data-web-finished-panel-sha256="77ae95b18f3fe93fc26ce6d5de6d29953ff25b285d65ddf4e5f5df464203ed7f" alt="LCD DISPLAY" />
+
+<table class="longtable lcd-text-only">
+<colgroup>
+<col style="width: 8%" />
+<col style="width: 12%" />
+<col style="width: 28%" />
+<col style="width: 52%" />
+</colgroup>
+<tbody>
+<tr>
+<td><p>1</p></td>
+<td></td>
+<td><p>Power Percentage/Fault Code</p></td>
+<td>The display shows the current power percentage.
+When the system fails, it will display the corresponding fault code F0-FF. If the FF code appears, remove the loads and the product may recover by itself. If not, contact Jackery Customer Support. If any other code appears, contact Customer Support.</td>
+</tr>
+<tr>
+<td><p>2</p></td>
+<td></td>
+<td><p>Charging Indicator</p></td>
+<td><p>The indicator is displayed when charging and disappears when it is fully charged.</p></td>
+</tr>
+</tbody>
+</table>
+
+# OPERATIONS
+
+## POWER ON/OFF
+
+<img src="../../../../_static/manual-assets/_pool/e9/e919bf869023cc58ac590446c5c60c9db8d481fec1fdfd70b78ec3df9873ca3a.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/jbp3600a_eu_en/power_annotated.png" data-web-finished-panel-sha256="e919bf869023cc58ac590446c5c60c9db8d481fec1fdfd70b78ec3df9873ca3a" alt="On Press once Off Press and hold for 3 seconds" />
+
+
+
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>NOTE</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">NOTE</span><span class="manual-callout-label-sizer" aria-hidden="true">CAUTION</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTES</span><span class="manual-callout-label-sizer" aria-hidden="true">WARNING</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>When using with Jackery Explorer 3600 Plus, you can control the power status (on or off) of Jackery Battery Pack 3600 through the main POWER button of Jackery Explorer 3600 Plus.</p>
+<p>The product will automatically shut down if it is not charged or no loads are connected for 2 hours.</p>
+</td></tr></tbody></table>
+
+
+
+## LCD DISPLAY ON/OFF
+
+<img src="../../../../_static/manual-assets/_pool/54/54240ab23ef6adff591634df302821f22ace66a5beb086b35eb508c19a5ac60b.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/jbp3600a_eu_en/lcd_control_clean.png" data-web-finished-panel-sha256="54240ab23ef6adff591634df302821f22ace66a5beb086b35eb508c19a5ac60b" alt="Jackery Battery Pack 3600 LCD display operation." />
+
+When you press the main POWER button or when charging the product, the LCD display is illuminated. When you press it again, the LCD display will be switched off.
+
+# CONNECTIONS
+
+Up to 5 sets of these products can be used along with Jackery Explorer 3600 Plus to meet increased capacity needs.
+
+
+
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>CAUTION</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">NOTE</span><span class="manual-callout-label-sizer" aria-hidden="true">CAUTION</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTES</span><span class="manual-callout-label-sizer" aria-hidden="true">WARNING</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Ensure all products are powered off before connecting Explorer 3600 Plus to Jackery Battery Pack 3600.</p>
+<p>To ensure proper operation of the product, make sure the air intake and exhaust vents on both sides are unobstructed. Leave at least 0.66 ft (200 mm) of space between the vents and any objects to allow for proper heat dissipation.</p>
+</td></tr></tbody></table>
+
+
+
+<img src="../../../../_static/manual-assets/_pool/11/110143fc26d7ab8280a7f09819a1b5d8a03b8c34d6fc5b3ade894c39ddee713f.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/jbp3600a_eu_en/clearance_clean.png" data-web-finished-panel-sha256="110143fc26d7ab8280a7f09819a1b5d8a03b8c34d6fc5b3ade894c39ddee713f" alt="Battery pack connection and clearance diagram." /> <img src="../../../../_static/manual-assets/_pool/5b/5b84e47c6733afc981d143914e74974c5e92df43804c12b163f533330917c2ce.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/jbp3600a_eu_en/stacking_clean.png" data-web-finished-panel-sha256="5b84e47c6733afc981d143914e74974c5e92df43804c12b163f533330917c2ce" alt="Correct and incorrect battery pack stacking." />
+
+
+
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>NOTES</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">NOTE</span><span class="manual-callout-label-sizer" aria-hidden="true">CAUTION</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTES</span><span class="manual-callout-label-sizer" aria-hidden="true">WARNING</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>The display of the connection icon on the LCD screen (Jackery Explorer 3600 Plus) signifies a successful connection between the battery pack and Jackery Explorer 3600 Plus.</p>
+<p>When using the product, do not stack more than three battery packs in one tower to prevent it from falling and causing injury.</p>
+<p>Please do not stack the product on the top of Jackery Explorer 3600 Plus.</p>
+</td></tr></tbody></table>
+
+
+
+<img src="../../../../_static/manual-assets/_pool/6b/6b48a1d7b8ea8b95d8b3b69ae2e14251bf888c018117998eedb4f2d9ec20c1c1.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/jbp3600a_eu_en/locking_clean.png" data-web-finished-panel-sha256="6b48a1d7b8ea8b95d8b3b69ae2e14251bf888c018117998eedb4f2d9ec20c1c1" alt="Battery pack stacking and expansion-cable locking and unlocking steps." />
+
+# TROUBLESHOOTING
+
+If any of the following fault codes appear, follow the listed corrective actions to resolve the issue. If the fault persists, please contact Jackery Customer Support.
+
+
+
+<figure aria-label="Error Code / Corrective Measures" class="hb-troubleshooting-composition" data-component-id="HB-TABLE-TROUBLESHOOTING" tabindex="0"><table class="hb-troubleshooting-table"><colgroup><col class="hb-troubleshooting-col-code"/><col class="hb-troubleshooting-col-measures"/></colgroup><thead><tr><th class="hb-troubleshooting-code" scope="col"><p>Error Code</p></th><th class="hb-troubleshooting-measures" scope="col"><p>Corrective Measures</p></th></tr></thead><tbody><tr><td class="hb-troubleshooting-code"><p>F0</p></td><td class="hb-troubleshooting-measures"><p>Restart the product.</p></td></tr><tr><td class="hb-troubleshooting-code"><p>F1, F2</p></td><td class="hb-troubleshooting-measures"><p>Contact Jackery Customer Support.</p></td></tr><tr><td class="hb-troubleshooting-code"><p>F3</p></td><td class="hb-troubleshooting-measures"><p>Restart the product.</p></td></tr><tr><td class="hb-troubleshooting-code"><p>F4</p></td><td class="hb-troubleshooting-measures"><p>Connect the product to loads to discharge its battery until the fault disappears.</p></td></tr><tr><td class="hb-troubleshooting-code"><p>F5</p></td><td class="hb-troubleshooting-measures"><p>Charge the product via solar panels or an AC wall outlet until the fault disappears.</p></td></tr><tr><td class="hb-troubleshooting-code"><p>F6-F9, FA, FC, FE</p></td><td class="hb-troubleshooting-measures"><p>Contact Jackery Customer Support.</p></td></tr><tr><td class="hb-troubleshooting-code"><p>FF</p></td><td class="hb-troubleshooting-measures"><p>Place the product in an environment with a proper temperature and wait until the fault disappears.</p></td></tr></tbody></table></figure>
+
+
+
+# CHARGING
+
+## CHARGING VIA AC WALL OUTLET
+
+When charging from the wall, this product must be used with Jackery Explorer 3600 Plus.
+
+
+
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>WARNING</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">NOTE</span><span class="manual-callout-label-sizer" aria-hidden="true">CAUTION</span><span class="manual-callout-label-sizer" aria-hidden="true">NOTES</span><span class="manual-callout-label-sizer" aria-hidden="true">WARNING</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Ensure all products are powered off before connecting Explorer 3600 Plus to Jackery Battery Pack 3600.</p></td></tr></tbody></table>
+
+
+
+<img src="../../../../_static/manual-assets/_pool/c3/c365ed7b71ff11a9422746a1d96788c14cf11f681a6ff1ab95d763b042b5c7cc.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/jbp3600a_eu_en/ac_charging.png" data-web-finished-panel-sha256="c365ed7b71ff11a9422746a1d96788c14cf11f681a6ff1ab95d763b042b5c7cc" alt="AC wall charging connection through Jackery Explorer 3600 Plus." />
+
+## CHARGING VIA SOLAR PANELS (SOLD SEPARATELY)
+
+Charge your product with solar panels and Jackery Explorer 3600 Plus as shown in the figure below. Please refer to the Jackery Explorer 3600 Plus user manual for more information.
+
+<img src="../../../../_static/manual-assets/_pool/e4/e4eb11ad06f6b91f8ec03b9a000370bd3ba67076036fea89dee9b37a80d15768.png" class="manual-finished-illustration" style="width: 100%; height: auto;;width:100.0%" data-web-finished-panel-path="assets/jbp3600a_eu_en/solar_charging.png" data-web-finished-panel-sha256="e4eb11ad06f6b91f8ec03b9a000370bd3ba67076036fea89dee9b37a80d15768" alt="Solar charging connection through Jackery Explorer 3600 Plus." />
+
+# STORAGE
+
+Store the product in a dry, clean place with proper ventilation. Storage temperature and humidity:
+
+- 1 month: -20°C to 45°C (0-60%RH)
+
+- 3 months: 0°C to 45°C (0-60%RH)
+
+- 12 months: 0°C to 25°C (0-60%RH)
+
+If this product is stored for a long period of time (3 months - 6 months) with the power depleted, it may become unchargeable. To prevent this and maintain battery health, it is recommended to check and recharge the product every three months and perform a full charge and discharge cycle at least once every 6 to 12 months.
+
+# SPECIFICATIONS
+
+## GENERAL INFO
+
+
+
+<figure aria-label="GENERAL INFO" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
+<tbody>
+<tr>
+<th class="hb-spec-label manual-spec-label" scope="row">Product Name</th>
+<td class="hb-spec-value manual-spec-value">Jackery Battery Pack 3600</td>
+</tr>
+<tr>
+<th class="hb-spec-label manual-spec-label" scope="row">Model No.</th>
+<td class="hb-spec-value manual-spec-value">JBP-3600A</td>
+</tr>
+<tr>
+<th class="hb-spec-label manual-spec-label" scope="row">Capacity</th>
+<td class="hb-spec-value manual-spec-value">80 Ah/44.8 V DC (3584 Wh)</td>
+</tr>
+<tr>
+<th class="hb-spec-label manual-spec-label" scope="row">Cell Chemistry</th>
+<td class="hb-spec-value manual-spec-value">LiFePO₄</td>
+</tr>
+<tr>
+<th class="hb-spec-label manual-spec-label" scope="row">Weight</th>
+<td class="hb-spec-value manual-spec-value">About 55.1 lbs/25 kg</td>
+</tr>
+<tr>
+<th class="hb-spec-label manual-spec-label" scope="row">Dimensions</th>
+<td class="hb-spec-value manual-spec-value">14.8 × 12.5 × 9.0 in / 37.5 × 31.7 × 22.9 cm</td>
+</tr>
+<tr>
+<th class="hb-spec-label manual-spec-label" scope="row">Cycle Life</th>
+<td class="hb-spec-value manual-spec-value">6000 cycles to 70%+ capacity</td>
+</tr>
+<tr>
+<th class="hb-spec-label manual-spec-label" scope="row">IEC Code</th>
+<td class="hb-spec-value manual-spec-value">IFpR41/136[14S4P]M/-20+40/90</td>
+</tr>
+</tbody>
+</table></figure>
+
+
+
+## INPUT/OUTPUT PORTS
+
+
+
+<figure aria-label="INPUT/OUTPUT PORTS" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
+<tbody>
+<tr>
+<th class="hb-spec-label manual-spec-label" scope="row">DC Expansion Port (Input)</th>
+<td class="hb-spec-value manual-spec-value">36.4V-50.4V⎓60A Max</td>
+</tr>
+<tr>
+<th class="hb-spec-label manual-spec-label" scope="row">DC Expansion Port (Output)</th>
+<td class="hb-spec-value manual-spec-value">36.4V-50.4V⎓100A Max</td>
+</tr>
+</tbody>
+</table></figure>
+
+
+
+## ENVIRONMENTAL OPERATING TEMPERATURE
+
+
+
+<figure aria-label="ENVIRONMENTAL OPERATING TEMPERATURE" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
+<tbody>
+<tr>
+<th class="hb-spec-label manual-spec-label" scope="row">Charge Temperature</th>
+<td class="hb-spec-value manual-spec-value">-20°C to 45°C</td>
+</tr>
+<tr>
+<th class="hb-spec-label manual-spec-label" scope="row">Discharge Temperature</th>
+<td class="hb-spec-value manual-spec-value">-20°C to 45°C</td>
+</tr>
+</tbody>
+</table></figure>
+
+
+
+# WARRANTY
+
+
+
+<figure aria-label="WARRANTY" class="hb-warranty-intro-composition" data-component-id="HB-WARRANTY-LEAD"><div class="hb-warranty-intro-panel"><p><strong>We only provide our warranty to customers who purchase from the official Jackery website, Jackery-branded third-party platforms, or local authorized dealers.</strong></p></div><div class="hb-warranty-local-note"><p>*Warranty period and details may vary according to local laws, regulations, and authorized dealers.</p></div></figure>
+
+
+
+## Limited Warranty
+
+
+
+<figure aria-label="Limited Warranty" class="hb-warranty-card" data-component-id="HB-WARRANTY-SECTION" data-warranty-card-index="1"><p>Jackery warrants to the original consumer purchaser that the Jackery product will be free from defects in workmanship and material under normal consumer use during the applicable warranty period identified in the 'Warranty Period' section below, subject to the exclusions set forth below.</p><p>This warranty statement sets forth Jackery's total and exclusive warranty obligation. We will not assume, nor authorize any person to assume for us, any other liability in connection with the sale of our products.</p></figure>
+
+
+
+## Warranty Period
+
+
+
+<figure aria-label="Warranty Period" class="hb-warranty-period-card" data-component-id="HB-WARRANTY-YEARS"><div class="hb-warranty-period-grid"><div aria-label="3 YEARS Standard Warranty" class="hb-warranty-period-item"><div class="hb-warranty-period-heading"><span class="hb-warranty-year-badge">3</span><div class="hb-warranty-period-title"><strong class="hb-warranty-years-unit">YEARS</strong><strong class="hb-warranty-period-label">Standard Warranty</strong></div></div><div class="hb-warranty-period-copy"><p>The standard warranty period for Jackery Battery Pack 3600 is 36 months. In each case, the warranty period is measured starting on the date of purchase by the original consumer purchaser. The sales receipt from the first consumer purchase, or other reasonable documentary proof, is required in order to establish the start date of the warranty period.</p></div></div><div aria-label="2 YEARS Extended Warranty" class="hb-warranty-period-item"><div class="hb-warranty-period-heading"><span class="hb-warranty-year-badge">2</span><div class="hb-warranty-period-title"><strong class="hb-warranty-years-unit">YEARS</strong><strong class="hb-warranty-period-label">Extended Warranty</strong></div></div><div class="hb-warranty-period-copy"><p>To activate the Warranty Extension, you must register your product online or contact our customer service team at <a class="reference external" href="mailto:hello.eu@jackery.com">hello.eu@jackery.com</a> to extend the standard warranty runtime.</p></div></div></div></figure>
+
+
+
+## Repair or replacement
+
+
+
+<figure aria-label="Repair or replacement" class="hb-warranty-card" data-component-id="HB-WARRANTY-SECTION" data-warranty-card-index="3"><p>Jackery will repair or replace (at Jackery's expense) any Jackery product that fails to operate during the applicable warranty period due to a defect in workmanship or material. The repaired/replaced product assumes the remaining warranty of the original date of purchase.</p></figure>
+
+
+
+## Limited to Original Consumer Buyer
+
+
+
+<figure aria-label="Limited to Original Consumer Buyer" class="hb-warranty-card" data-component-id="HB-WARRANTY-SECTION" data-warranty-card-index="4"><p>The warranty on Jackery's product is limited to the original consumer purchaser and is not transferable to any subsequent owner.</p></figure>
+
+
+
+## Exclusions
+
+
+
+<figure aria-label="Exclusions" class="hb-warranty-card" data-component-id="HB-WARRANTY-SECTION" data-warranty-card-index="5"><p>Jackery's warranty does not apply to:</p><ul class="simple">
+<li><p>Misused, abused, modified, damaged by accident, or used for anything other than normal consumer use as authorized in Jackery's current product literature.</p></li>
+<li><p>Attempted repair by anyone other than an authorized facility.</p></li>
+<li><p>Any product purchased through an online auction house.</p></li>
+<li><p>Jackery's warranty does not apply to the battery cell unless the battery cell is fully charged by you within seven days after you purchase the product and at least once every 6 months thereafter.</p></li>
+</ul></figure>
+
+
+
+## Interpretation Rights
+
+
+
+<figure aria-label="Interpretation Rights" class="hb-warranty-card" data-component-id="HB-WARRANTY-SECTION" data-warranty-card-index="6"><p>Jackery reserves the right to final interpretation of the above customer after-sales policy.</p></figure>
+
+
+
+# EU REGULATIONS
+
+## RED DECLARATION OF CONFORMITY
+
+Shenzhen Hello Tech Energy Co., Ltd. hereby declares that this Jackery Battery Pack 3600 with Bluetooth and Wi-Fi JBP-3600A is in compliance with the essential requirements and other relevant provisions of the RED Directive 2014/53/EU. The full text of the EU declaration of conformity is available at the following internet address:
+
+<a href="https://de.jackery.com/pages/user-guides" class="reference external">https://de.jackery.com/pages/user-guides</a>
+
+## MANUFACTURER
+
+SHENZHEN HELLO TECH ENERGY CO., LTD.
+
+Address: F2-3, Bldg. 7, Jiaanda Science and technology industrial park factory, the east side of Huafan Road, Tongsheng Community, Dalang Street, Longhua District, Shenzhen, Guangdong, China
+
++86 400 668 9293
+
+<a href="mailto:sales@hello-tech.com" class="reference external">sales@hello-tech.com</a>
+
+www.hello-tech.com

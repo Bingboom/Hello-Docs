@@ -18,23 +18,58 @@ test("ensureRecordId validates rec ids", () => {
 test("ensureDispatchArgs requires explicit publish confirmation", () => {
   assert.deepEqual(ensureDispatchArgs("publish", "recABC123 confirm"), {
     queueRecordId: "recABC123",
+    queueRecordIds: [],
     publishConfirmed: true,
+    batch: false,
   });
   assert.throws(
     () => ensureDispatchArgs("publish", "recABC123"),
     /Publish requires explicit confirmation/
+  );
+  assert.deepEqual(ensureDispatchArgs("web-publish", "recWEB123 confirm"), {
+    queueRecordId: "recWEB123",
+    queueRecordIds: [],
+    publishConfirmed: true,
+    batch: false,
+  });
+  assert.throws(
+    () => ensureDispatchArgs("web-publish", "recWEB123"),
+    /requires explicit confirmation/
   );
 });
 
 test("ensureDispatchArgs keeps start-review on one record id only", () => {
   assert.deepEqual(ensureDispatchArgs("start-review", "recABC123"), {
     queueRecordId: "recABC123",
+    queueRecordIds: [],
     publishConfirmed: false,
+    batch: false,
   });
   assert.throws(
     () => ensureDispatchArgs("start-review", "recABC123 extra"),
     /Provide one record id/
   );
+});
+
+test("ensureDispatchArgs accepts the batch sentinel", () => {
+  assert.deepEqual(ensureDispatchArgs("build-draft", "batch"), {
+    queueRecordId: "",
+    queueRecordIds: [],
+    publishConfirmed: false,
+    batch: true,
+  });
+  assert.deepEqual(ensureDispatchArgs("publish", "batch confirm"), {
+    queueRecordId: "",
+    queueRecordIds: [],
+    publishConfirmed: true,
+    batch: true,
+  });
+  assert.deepEqual(ensureDispatchArgs("build-draft", "batch --record-ids=recABC123,recDEF456"), {
+    queueRecordId: "",
+    queueRecordIds: ["recABC123", "recDEF456"],
+    publishConfirmed: false,
+    batch: true,
+  });
 });
 
 test("ensureStatusArg accepts last or numeric run ids", () => {
@@ -55,12 +90,16 @@ test("renderStatusResult includes metadata fields when present", () => {
     artifacts: [{ name: "feishu-build-queue-output" }, { name: "openclaw-run-metadata" }],
     metadata: {
       publish_url: "https://publish.example.com",
-      document_link_url: "https://docs.example.com/doc",
+      delivery_kind: "idml_file",
+      delivery_url: "https://docs.example.com/handoff.zip",
       publish_html_index: "reports/releases/latest/index.html",
     },
   });
   assert.match(text, /record_id: rec123/);
   assert.match(text, /publish_url: https:\/\/publish\.example\.com/);
+  assert.match(text, /delivery_kind: idml_file/);
+  assert.match(text, /delivery_url: https:\/\/docs\.example\.com\/handoff\.zip/);
+  assert.doesNotMatch(text, /document_link/i);
   assert.match(text, /artifacts: feishu-build-queue-output, openclaw-run-metadata/);
 });
 

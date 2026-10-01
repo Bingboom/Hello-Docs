@@ -9,8 +9,10 @@ import re
 import unicodedata
 from pathlib import Path
 
+from ..lcd_table_layout import split_lcd_table_rows
+from .. import lang_registry
+from ..localized_copy import LocalizedCopyResolver, first_existing_column, first_text, table_localized_columns
 from .renderers_common import apply_vars, latex_arg_escape, rst_escape
-from ..localized_copy import LocalizedCopyResolver
 from ..utils.spec_master import canonicalize_model_token
 from ..utils.variable_resolver import parse_model_tokens, resolve_variable_value
 
@@ -23,16 +25,6 @@ _TRUE_VALUES = {"1", "true", "yes", "y"}
 _FALSE_VALUES = {"0", "false", "no", "n"}
 _STATUS_WORD_MARKER_FIELD = "是否为 status word"
 _STATUS_WORDS_FILE = "Status_Words.csv"
-
-_LANG_SUFFIX = {
-    "ja": "jp",
-    "jp": "jp",
-    "uk": "ukr",
-    "ukr": "ukr",
-    "pt-br": "pt-BR",
-    "pt_br": "pt-BR",
-    "br": "pt-BR",
-}
 
 def _read_csv(path: str) -> list[dict[str, str]]:
     raw = (path or "").strip()
@@ -56,31 +48,6 @@ def _truthy(value: object, *, default: bool = True) -> bool:
     if raw in _FALSE_VALUES:
         return False
     return default
-
-
-def _lang_suffix(lang: str) -> str:
-    raw = (lang or "").strip().casefold()
-    return _LANG_SUFFIX.get(raw, raw)
-
-
-def _lang_suffix_candidates(lang: str) -> list[str]:
-    suffix = _lang_suffix(lang)
-    candidates = [
-        suffix,
-        str(suffix).casefold(),
-        str(suffix).replace("-", "_"),
-        str(suffix).casefold().replace("-", "_"),
-    ]
-    if (lang or "").strip().casefold() in {"br", "pt-br", "pt_br"}:
-        candidates.extend(["br", "pt-BR", "pt-br", "pt_BR", "pt_br"])
-    return list(dict.fromkeys(candidate for candidate in candidates if candidate))
-
-
-def _first_existing(headers: set[str], candidates: list[str]) -> str:
-    for candidate in candidates:
-        if candidate in headers:
-            return candidate
-    return candidates[0]
 
 
 def _pick_target_model(vars_map: dict[str, str]) -> str:
@@ -219,13 +186,13 @@ def _collect_rows(
     if not blocks:
         raise ValueError(f"lcd_icons page has no rows for lang={lang}")
     headers = set().union(*(row.keys() for row in blocks))
-    name_col = _first_existing(
-        headers,
-        [*(f"icon_{suffix}" for suffix in _lang_suffix_candidates(lang)), "icon_en"],
+    name_col = first_existing_column(
+        headers, table_localized_columns("lcd_icons", "icon", lang),
+        fallback_columns=("icon_en",),
     )
-    desc_col = _first_existing(
-        headers,
-        [*(f"icon_desc_{suffix}" for suffix in _lang_suffix_candidates(lang)), "icon_desc_en"],
+    desc_col = first_existing_column(
+        headers, table_localized_columns("lcd_icons", "icon_desc", lang),
+        fallback_columns=("icon_desc_en",),
     )
     if desc_col not in headers:
         raise ValueError(f"lcd_icons csv missing language description column: {desc_col}")
@@ -241,8 +208,8 @@ def _collect_rows(
                 continue
             if not allow_model_fallback and not _matches_model(row, target_model=target_model, target_region=target_region):
                 continue
-            name = (row.get(name_col) or row.get("icon_en") or "").strip()
-            description = (row.get(desc_col) or row.get("icon_desc_en") or "").strip()
+            name = first_text(row, (name_col,), fallback_columns=("icon_en",), strip=False).strip()
+            description = first_text(row, (desc_col,), fallback_columns=("icon_desc_en",), strip=False).strip()
             if not name or not description:
                 continue
             row_vars = _resolve_row_vars(
@@ -312,13 +279,10 @@ def _status_words_csv_path(vars_map: dict[str, str]) -> Path | None:
 def _status_word_lang_candidates(lang: str) -> list[str]:
     raw = (lang or "").strip()
     normalized = raw.casefold().replace("_", "-")
+    spec = lang_registry.language_spec(raw)
     candidates = [raw, normalized]
-    if normalized in {"ja", "jp"}:
-        candidates.extend(["jp", "ja"])
-    if normalized in {"uk", "ukr"}:
-        candidates.extend(["uk", "ukr"])
-    if normalized in {"pt-br", "br"}:
-        candidates.extend(["pt-BR", "pt-br", "pt_BR", "br"])
+    if spec is not None:
+        candidates.extend([spec.status_word_column, *spec.aliases])
     return list(dict.fromkeys(candidate for candidate in candidates if candidate))
 
 
@@ -384,12 +348,27 @@ def _format_description_line(line: str, *, status_labels: tuple[str, ...]) -> st
     return rst_escape(line)
 
 
+def _canonical_attachment_path(path_value: str) -> str:
+    # Synced CSVs store the attachment path anchored at the PHYSICAL export
+    # root (an absolute path; e.g. .tmp/review-start/phase2 for queue workers).
+    # RST is a deterministic content surface and the asset pipeline's contract
+    # is the LOGICAL location, so normalize anything under an ``_attachments``
+    # tree to data/phase2/_attachments/...; bundle staging then resolves it
+    # against the active data root wherever that physically lives.
+    normalized = path_value.replace("\\", "/")
+    marker = "_attachments/"
+    index = normalized.rfind(marker)
+    if index < 0:
+        return path_value
+    return f"data/phase2/{marker}{normalized[index + len(marker):]}"
+
+
 def _figure_image_path(value: str) -> str:
     raw = (value or "").strip()
     if not raw:
         return ""
     if not raw.startswith(("{", "[")):
-        return raw
+        return _canonical_attachment_path(raw)
     try:
         payload = json.loads(raw)
     except json.JSONDecodeError:
@@ -401,7 +380,7 @@ def _figure_image_path(value: str) -> str:
         for key in ("path", "local_path", "relative_path", "file_path"):
             path_value = str(item.get(key) or "").strip()
             if path_value:
-                return path_value
+                return _canonical_attachment_path(path_value)
         file_token = str(item.get("file_token") or item.get("token") or "").strip()
         if file_token:
             name = str(item.get("name") or item.get("file_name") or "").strip()
@@ -456,6 +435,9 @@ def _append_text_cell(
 def _rst_table(rows: list[dict[str, str]], *, status_labels: tuple[str, ...]) -> str:
     lines: list[str] = [
         ".. list-table::",
+        # longtable: allow page breaks between rows so oversized tables cannot
+        # overflow the 130x185 text block into the footer (see reports/typography_gap)
+        "   :class: longtable" + (" lcd-text-only" if rows and all(not row["figure"].strip() for row in rows) else ""),
         "   :header-rows: 0",
         "   :widths: 8 12 28 52",
         "",
@@ -508,27 +490,40 @@ def _latex_description_arg(text: str, *, status_labels: tuple[str, ...]) -> str:
     return r" \newline ".join(_latex_description_line(part, status_labels=status_labels) for part in parts)
 
 
-def _latex_table(rows: list[dict[str, str]], *, status_labels: tuple[str, ...]) -> str:
-    # Worker A owns the macro definitions. Keep this renderer limited to calling
-    # the shared LCD table interface with escaped text and basename image args.
-    lines: list[str] = [
-        r"\begin{HBLcdIconTable}",
-    ]
-    for row in rows:
-        lines.append(
-            r"\HBLcdIconRow"
-            f"{{{latex_arg_escape(row['no'])}}}"
-            f"{{{_latex_image_arg(row['figure'])}}}"
-            f"{{{_latex_lines_arg(row['name'])}}}"
-            f"{{{_latex_description_arg(row['description'], status_labels=status_labels)}}}"
-        )
-    lines.append(r"\end{HBLcdIconTable}")
+def _latex_table(
+    rows: list[dict[str, str]],
+    *,
+    status_labels: tuple[str, ...],
+    lang: str,
+) -> str:
+    # Every source-driven continuation is a complete rounded table. Page-count
+    # drift is accepted while illustration placeholders await final AI artwork.
+    segments = split_lcd_table_rows(rows, lang=lang)
+    lines: list[str] = []
+    for segment_index, segment in enumerate(segments):
+        if segment_index:
+            lines.append(r"\clearpage")
+        lines.append(r"\begin{HBLcdIconTable}")
+        for row in segment:
+            lines.append(
+                r"\HBLcdIconRow"
+                f"{{{latex_arg_escape(row['no'])}}}"
+                f"{{{_latex_image_arg(row['figure'])}}}"
+                f"{{{_latex_lines_arg(row['name'])}}}"
+                f"{{{_latex_description_arg(row['description'], status_labels=status_labels)}}}"
+            )
+        lines.append(r"\end{HBLcdIconTable}")
     return "\n".join(lines)
 
 
-def _table(rows: list[dict[str, str]], *, status_labels: tuple[str, ...]) -> str:
+def _table(
+    rows: list[dict[str, str]],
+    *,
+    status_labels: tuple[str, ...],
+    lang: str,
+) -> str:
     rst_table = _rst_table(rows, status_labels=status_labels)
-    latex_table = _latex_table(rows, status_labels=status_labels)
+    latex_table = _latex_table(rows, status_labels=status_labels, lang=lang)
     return "\n".join(
         [
             ".. only:: not latex",
@@ -572,5 +567,8 @@ def render_lcd_icons_page(
     rows = _collect_rows(blocks, lang=lang, vars_map=vars_map)
     rendered = template.replace(PH_LCD_ICONS_HEADING_RST, _heading(title))
     rendered = rendered.replace(PH_LCD_ICONS_IMAGE_ALT, rst_escape(title))
-    rendered = rendered.replace(PH_LCD_ICONS_TABLE_RST, _table(rows, status_labels=status_labels))
+    rendered = rendered.replace(
+        PH_LCD_ICONS_TABLE_RST,
+        _table(rows, status_labels=status_labels, lang=lang),
+    )
     return rendered

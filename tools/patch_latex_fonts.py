@@ -16,7 +16,8 @@ except ImportError:  # pragma: no cover - direct script execution fallback
 
 ROOT = bootstrap_repo_root(__file__, parent_count=1)
 
-from tools.utils.path_utils import Paths, PathSegments
+from tools.lang_registry import canonical_language
+from tools.utils.path_utils import Paths, PathSegments, idml_portable_fonts_of
 
 _PATHS = Paths(root=ROOT)
 DOCS = _PATHS.docs_dir
@@ -39,6 +40,20 @@ LOCAL_GILROY_REQUIRED_FILES = (
     "Gilroy-LightItalic-12.otf",
     "Gilroy-ExtraBoldItalic-10.otf",
 )
+# Optional weight files: when present in the same dir, the component weight
+# macros (\HBFontRegular/Medium/SemiBold/Bold/Heavy) are mapped onto them so
+# raw-latex components match the archived manuals, which use Gilroy Medium
+# and SemiBold (typography_gap #13). SemiBold is not shipped in the licensed
+# set, so it falls back to Medium — same policy as \HBSetupLatinWeightMacros.
+LOCAL_GILROY_WEIGHT_FILES = (
+    ("HBGilroyLocalRegular", "HBFontRegular", "gilroy-regular-3.otf"),
+    ("HBGilroyLocalMedium", "HBFontMedium", "Gilroy-Medium-2.otf"),
+    ("HBGilroyLocalSemiBold", "HBFontSemiBold", "Gilroy-Medium-2.otf"),
+    ("HBGilroyLocalBold", "HBFontBold", "gilroy-bold-4.otf"),
+    ("HBGilroyLocalHeavy", "HBFontHeavy", "Radomir-Tinkov-Gilroy-Heavy-9.otf"),
+)
+JAPANESE_PORTABLE_FONT_FILE = "HBManualSansJP-Regular.ttf"
+LANGUAGE_CJK_OVERRIDE_MARKER = "% AUTO_MANUAL_LANGUAGE_CJK_OVERRIDE"
 
 
 def die(msg: str) -> None:
@@ -148,10 +163,25 @@ def build_local_gilroy_override(font_dir: Path) -> str:
             "      ItalicFont=Gilroy-LightItalic-12.otf,",
             "      BoldItalicFont=Gilroy-ExtraBoldItalic-10.otf",
             "    ]",
+            *_local_weight_macro_lines(font_dir),
             "    \\global\\HBLocalGilroyFontsConfiguredtrue",
             "  }{}",
         )
     )
+
+
+def _local_weight_macro_lines(font_dir: Path) -> list[str]:
+    font_path = font_dir.as_posix().rstrip("/") + "/"
+    lines: list[str] = []
+    for family_macro, weight_macro, file_name in LOCAL_GILROY_WEIGHT_FILES:
+        font_file = (font_dir / file_name).as_posix()
+        lines += [
+            f"    \\IfFileExists{{{font_file}}}{{%",
+            f"      \\newfontfamily\\{family_macro}{{{file_name}}}[Path={{{font_path}}},Ligatures=TeX]%",
+            f"      \\renewcommand{{\\{weight_macro}}}{{\\{family_macro}}}%",
+            "    }{}",
+        ]
+    return lines
 
 
 def apply_local_gilroy_override(fonts_path: Path) -> bool:
@@ -170,6 +200,59 @@ def apply_local_gilroy_override(fonts_path: Path) -> bool:
     s = s.replace(LOCAL_GILROY_OVERRIDE_MARKER, override_block, 1)
     fonts_path.write_text(s, encoding="utf-8")
     print(f"[patch_latex_fonts] enabled local Gilroy override from: {font_dir}")
+    return True
+
+
+def apply_language_cjk_override(
+    fonts_path: Path,
+    *,
+    build_dir: Path,
+    language: str | None,
+    portable_font_source: Path | None = None,
+) -> bool:
+    """Carry and select the language-correct CJK face for LaTeX output.
+
+    The generic font cascade intentionally remains Chinese-first for legacy
+    targets. Japanese targets override it with the same redistributable Noto
+    face carried by their IDML package, so a Mac or Windows host font cannot
+    silently determine which glyph forms survive in the PDF.
+    """
+
+    code = canonical_language(
+        (language or "").strip().replace("_", "-").split("-", 1)[0]
+    )
+    if code != "ja":
+        return False
+    source = portable_font_source or (
+        idml_portable_fonts_of(DOCS) / JAPANESE_PORTABLE_FONT_FILE
+    )
+    if not source.is_file():
+        raise RuntimeError(f"Japanese portable font not found: {source}")
+
+    target = build_dir / JAPANESE_PORTABLE_FONT_FILE
+    if source.resolve() != target.resolve():
+        shutil.copyfile(source, target)
+
+    content = fonts_path.read_text(encoding="utf-8", errors="ignore")
+    if LANGUAGE_CJK_OVERRIDE_MARKER in content:
+        return True
+    override = "\n".join(
+        (
+            "",
+            LANGUAGE_CJK_OVERRIDE_MARKER,
+            rf"\IfFileExists{{{JAPANESE_PORTABLE_FONT_FILE}}}{{%",
+            rf"  \setCJKmainfont{{{JAPANESE_PORTABLE_FONT_FILE}}}[Path=./,AutoFakeBold=2.0,AutoFakeSlant=0.2]",
+            rf"  \setCJKsansfont{{{JAPANESE_PORTABLE_FONT_FILE}}}[Path=./,AutoFakeBold=2.0,AutoFakeSlant=0.2]",
+            rf"  \setCJKmonofont{{{JAPANESE_PORTABLE_FONT_FILE}}}[Path=./,AutoFakeBold=2.0,AutoFakeSlant=0.2]",
+            "}{}",
+            "",
+        )
+    )
+    fonts_path.write_text(content.rstrip() + override, encoding="utf-8")
+    print(
+        "[patch_latex_fonts] enabled portable Japanese CJK font: "
+        f"{JAPANESE_PORTABLE_FONT_FILE}"
+    )
     return True
 
 
@@ -247,6 +330,7 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--tex", default="manual_demo.tex", help="main tex filename in _build/latex")
     ap.add_argument("--build-dir", default=None, help="LaTeX build directory (defaults to docs/_build/latex)")
+    ap.add_argument("--lang", default=None, help="Output language used for language-correct CJK font selection")
     args = ap.parse_args()
 
     build_dir = Path(args.build_dir).resolve() if args.build_dir else BUILD
@@ -261,6 +345,11 @@ def main() -> None:
     print(f"[patch_latex_fonts] copied fonts.tex -> {fonts_dst}")
 
     apply_local_gilroy_override(fonts_dst)
+    apply_language_cjk_override(
+        fonts_dst,
+        build_dir=build_dir,
+        language=args.lang,
+    )
     patch_build_fonts_tex_windows(fonts_dst)
 
     main_tex = find_main_tex(build_dir, args.tex)

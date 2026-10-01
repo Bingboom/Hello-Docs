@@ -1,0 +1,33 @@
+# Region profile — US. Layer-2 input of the skeleton resolver.
+# Owns region-level knowledge only: language set, regional slot overrides
+# (regional safety wording, per-line recipes), and compliance fragment
+# mounting rows. Never owns slot order or slot existence (blueprint-owned).
+schema_version: skeleton-region-profile/v1
+region: US
+language_set: [en, fr, es]
+primary_lang: en
+# Select from the blueprint-owned terminal superset. The explicit selection
+# keeps the frozen US manifest byte-identical when another BP@INTL region uses
+# a regulatory declaration instead of this QR-only back cover.
+terminal_slots: [back_cover]
+slot_overrides:
+  safety_info:
+    # BP@INTL uses the compact safety copy from the shipped HTP017 line so
+    # safety + symbols retain their one-page-per-language corpus budget.
+    file: templates/page_bp/{lang}/01_safety.rst
+  product_overview:
+    # One recipe serves every language block: the assembly-time template comes
+    # from the manifest entry, not the recipe (same as the host line, where
+    # manual_us.yaml points all three languages at recipes/us-en/03).
+    recipe: templates/recipes/bp-us/03_product_overview.yaml
+  operation:
+    recipe: templates/recipes/bp-us/05_operation_guide.yaml
+compliance:
+  # Carrier is a per-book mounting fact (audit §6.3). The US/CA carrier today
+  # is the pipeline's standalone-include form; the parasitic-block form stays
+  # selectable pending the operator's form decision (design §8.2).
+  - fragment: fcc
+    carrier: rst_include
+    file: templates/page_us-{lang}/01_fcc.rst
+    mount_after: symbol_meaning
+    repeat_per_language: true

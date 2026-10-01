@@ -6,11 +6,13 @@ from __future__ import annotations
 import json
 import html
 import re
+import unicodedata
 from dataclasses import dataclass
 from pathlib import Path
 
 from .renderers_common import _enabled, _scope_allows, apply_vars, latex_arg_escape, rst_escape
-from ..localized_copy import LocalizedCopyResolver
+from .. import lang_registry
+from ..localized_copy import LocalizedCopyResolver, first_existing_column, localized_columns
 from ..utils.spec_master import canonicalize_model_token
 from ..utils.variable_resolver import parse_model_tokens
 
@@ -111,26 +113,17 @@ def _text_column_for_lang(row: dict[str, str], lang: str) -> str:
     raw = (lang or "").strip()
     normalized = raw.casefold()
     source_lang = (row.get("Source_lang") or row.get("source_lang") or "").strip()
-    aliases = {
-        "ja": ("ja", "jp"),
-        "jp": ("jp", "ja"),
-        "pt-br": ("pt-BR", "br", "pt_br"),
-        "pt_br": ("pt_BR", "pt-BR", "br"),
-        "br": ("br", "pt-BR", "pt_br"),
-        "uk": ("uk", "ukr"),
-        "ukr": ("ukr", "uk"),
-    }.get(normalized, (raw, normalized))
-    candidates = [
-        *(f"text_{token}" for token in aliases if token),
-        f"text_{raw.replace('-', '_')}",
-        f"text_{source_lang}",
-        f"text_{source_lang.casefold()}",
-        "text_en",
-    ]
-    for candidate in candidates:
-        if candidate in row:
-            return candidate
-    return f"text_{raw}"
+    aliases = lang_registry.language_alias_candidates(raw) or (raw, normalized)
+    return first_existing_column(
+        row, localized_columns(("text",), aliases),
+        fallback_columns=(
+            f"text_{raw.replace('-', '_')}",
+            f"text_{source_lang}",
+            f"text_{source_lang.casefold()}",
+            "text_en",
+        ),
+        default=f"text_{raw}",
+    )
 
 
 def _sort_key(row: dict[str, str]) -> float:
@@ -255,7 +248,11 @@ def _matches_symbols_target(
 
 def _rst_heading(title: str, underline: str = "-") -> list[str]:
     title = rst_escape(title)
-    return [title, underline * len(title)]
+    display_width = sum(
+        2 if unicodedata.east_asian_width(character) in {"F", "W"} else 1
+        for character in title
+    )
+    return [title, underline * display_width]
 
 
 def _append_text_cell(lines: list[str], prefix: str, text: str) -> None:
@@ -279,6 +276,7 @@ def _append_notice_table(
     lines.extend(
         [
             ".. list-table::",
+            "   :class: longtable",
             "   :header-rows: 0",
             "   :widths: 18 82",
             "",
@@ -360,12 +358,27 @@ def _append_image_cell(
         lines.append(f"       **{rst_escape(label)}**")
 
 
+def _canonical_attachment_path(path_value: str) -> str:
+    # Synced CSVs store the attachment path anchored at the PHYSICAL export
+    # root (an absolute path; e.g. .tmp/review-start/phase2 for queue workers).
+    # RST is a deterministic content surface and the asset pipeline's contract
+    # is the LOGICAL location, so normalize anything under an ``_attachments``
+    # tree to data/phase2/_attachments/...; bundle staging then resolves it
+    # against the active data root wherever that physically lives.
+    normalized = path_value.replace("\\", "/")
+    marker = "_attachments/"
+    index = normalized.rfind(marker)
+    if index < 0:
+        return path_value
+    return f"data/phase2/{marker}{normalized[index + len(marker):]}"
+
+
 def _figure_image_path(value: str) -> str:
     raw = (value or "").strip()
     if not raw:
         return ""
     if not raw.startswith(("{", "[")):
-        return raw
+        return _canonical_attachment_path(raw)
     try:
         payload = json.loads(raw)
     except json.JSONDecodeError:
@@ -377,7 +390,7 @@ def _figure_image_path(value: str) -> str:
         for key in ("path", "local_path", "relative_path", "file_path"):
             path_value = str(item.get(key) or "").strip()
             if path_value:
-                return path_value
+                return _canonical_attachment_path(path_value)
         file_token = str(item.get("file_token") or item.get("token") or "").strip()
         if file_token:
             name = str(item.get("name") or item.get("file_name") or "").strip()
@@ -519,11 +532,12 @@ def _signal_section(
     lines.append("")
     # LaTeX component contract:
     # \HBSymbolTable{symbol header}{meaning header}{row macro calls}
-    # \HBSymbolSignalRow{image basename}{optional signal label}{meaning}
+    # \HBSymbolSignalRow[semantic key]{image basename}{signal label}{meaning}
     signal_tex_rows = []
     for row in signal_rows:
         signal_tex_rows.append(
-            rf"\HBSymbolSignalRow{{{_latex_image_name(str(row['image']))}}}"
+            rf"\HBSymbolSignalRow[{latex_arg_escape(str(row['signal_key']))}]"
+            rf"{{{_latex_image_name(str(row['image']))}}}"
             rf"{{{latex_arg_escape(str(row['label']))}}}{{{_latex_text_arg(str(row['meaning']))}}}"
         )
     lines.extend(
@@ -539,6 +553,7 @@ def _signal_section(
 
     signal_table_lines: list[str] = [
         ".. list-table::",
+        "   :class: longtable",
         "   :header-rows: 1",
         "   :widths: 22 78",
         "",
@@ -592,6 +607,11 @@ def _collect_icon_rows(
             )
         if symbol_key not in SYMBOL_ASSETS:
             raise ValueError(f"unknown symbols symbol_key='{symbol_key}'")
+        # The JE-1000F US V2.0 master ends at the product-WEEE row. The
+        # battery-WEEE2 notice belongs to the EU disposal set and must not
+        # create a twelfth row or a continuation page in the US manual.
+        if symbol_key == "weee2" and _pick_target_region(vars_map).casefold() == "us":
+            continue
         asset = SYMBOL_ASSETS[symbol_key]
         image_path = _figure_image_path(block.get("Figure") or block.get("figure") or "")
         image_path = image_path or (block.get("image_path") or "").strip() or asset.path
@@ -621,36 +641,49 @@ def _icon_table(lang: str, vars_map: dict[str, str], groups: dict[str, list[dict
     max_rows = max(len(left_rows), len(right_rows))
 
     # LaTeX component contract:
-    # \HBSymbolTable{symbol header}{meaning header}{row macro calls}
+    # \HBSymbolTwoColumnTables{symbol header}{meaning header}{left rows}{right rows}
     # \HBSymbolIconRow{image basename}{meaning}
-    tex_rows: list[str] = []
-    for idx in range(max_rows):
-        paired_rows = (
-            left_rows[idx] if idx < len(left_rows) else None,
-            right_rows[idx] if idx < len(right_rows) else None,
-        )
-        for row in paired_rows:
-            if row is None:
-                continue
-            tex_rows.append(
-                rf"\HBSymbolIconRow{{{_latex_image_name(str(row['image_path']))}}}"
-                rf"{{{_latex_text_arg(row['text'])}}}"
-            )
+    def latex_rows(rows: list[dict[str, str]]) -> list[str]:
+        return [
+            rf"\HBSymbolIconRow{{{_latex_image_name(str(row['image_path']))}}}"
+            rf"{{{_latex_text_arg(row['text'])}}}"
+            for row in rows
+        ]
+
+    left_tex_rows = latex_rows(left_rows)
+    right_tex_rows = latex_rows(right_rows)
 
     lines: list[str] = []
-    lines.extend(
-        _only_latex_raw_block(
-            [
-                rf"\HBSymbolTable{{{latex_arg_escape(header_symbol)}}}{{{latex_arg_escape(header_meaning)}}}{{%",
-                *tex_rows,
-                "}",
-            ]
-        )
-    )
+    if lang.casefold() in {"fr", "es"}:
+        left_top, left_rest = left_tex_rows[:4], left_tex_rows[4:]
+        right_top, right_rest = right_tex_rows[:4], right_tex_rows[4:]
+        latex_component = [
+            rf"\HBSymbolTwoColumnTablesSplit{{{latex_arg_escape(header_symbol)}}}"
+            rf"{{{latex_arg_escape(header_meaning)}}}{{%",
+            *left_top,
+            "}{%",
+            *right_top,
+            "}{%",
+            *left_rest,
+            "}{%",
+            *right_rest,
+            "}",
+        ]
+    else:
+        latex_component = [
+            rf"\HBSymbolTwoColumnTables{{{latex_arg_escape(header_symbol)}}}"
+            rf"{{{latex_arg_escape(header_meaning)}}}{{%",
+            *left_tex_rows,
+            "}{%",
+            *right_tex_rows,
+            "}",
+        ]
+    lines.extend(_only_latex_raw_block(latex_component))
     lines.append("")
 
     table_lines: list[str] = [
         ".. list-table::",
+        "   :class: longtable",
         "   :header-rows: 0",
         "   :widths: 12 38 12 38",
         "",

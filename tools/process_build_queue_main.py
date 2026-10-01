@@ -1,9 +1,12 @@
 from __future__ import annotations
 
 import argparse
-import sys
 from pathlib import Path
 from typing import Any, Callable
+
+from tools.utils.log import get_logger
+
+_ERR = get_logger("build-queue", stream="stderr")
 
 
 def run_main(
@@ -36,7 +39,8 @@ def run_main(
             workflow_action=args.workflow_action,
             doc_phase=args.doc_phase,
             record_id=(args.record_id or "").strip() or None,
+            record_ids=tuple(item.strip() for item in str(args.record_ids or "").split(",") if item.strip()),
         )
     except RuntimeError as exc:
-        print(f"[build-queue] ERROR: {exc}", file=sys.stderr)
+        _ERR.error(f"[build-queue] ERROR: {exc}")
         return 1

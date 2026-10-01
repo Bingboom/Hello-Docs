@@ -160,6 +160,23 @@ def resolve_reference_doc_status(
     return finding_cls("ERROR", "word.reference_doc", f"not found: {path}")
 
 
+def _add_environment_findings(
+    findings: list[Any],
+    doctor_add: Callable[[list[Any], str, str, str], None],
+    collector: Callable[[], list[tuple[str, str, str]]] | None,
+) -> None:
+    """Add drift against the pinned runtime and requirements.lock.
+
+    Advisory only (OK/WARN): a local mismatch is named once up front instead
+    of surfacing later as scattered test/build failures.
+    """
+
+    if collector is None:
+        from tools.env_preflight import collect_environment_findings as collector
+    for level, area, message in collector():
+        doctor_add(findings, level, area, message)
+
+
 def collect_doctor_findings(
     args: argparse.Namespace,
     *,
@@ -179,6 +196,9 @@ def collect_doctor_findings(
     resolve_doctor_pdf_mode: Callable[[dict, str | None], str],
     clean_targets_for_config: Callable[[Path], tuple[Path, Path]],
     which: Callable[[str], str | None] = shutil.which,
+    collect_toolchain: Callable[[], dict[str, Any]] | None = None,
+    collect_data_plane_findings: Callable[..., list[tuple[str, str, str]]] | None = None,
+    collect_environment_findings: Callable[[], list[tuple[str, str, str]]] | None = None,
 ) -> list[Any]:
     findings: list[Any] = []
     config_path = resolve_path_from_root(args.config)
@@ -231,8 +251,37 @@ def collect_doctor_findings(
         else:
             doctor_add(findings, "WARN", area, f"missing optional module '{module_name}': {detail}")
 
+    _add_environment_findings(findings, doctor_add, collect_environment_findings)
+
+    # Toolchain provenance (Milestone I3): informational, never blocking here —
+    # the pdf/word-mode checks below still decide what is an ERROR. This block
+    # exists so environment drift is visible before a build, with the same
+    # collector the release manifest embeds. Injectable for tests; the default
+    # is the real collector.
+    from tools.toolchain_provenance import collect_toolchain as default_collect_toolchain
+    from tools.toolchain_provenance import render_summary_lines
+
+    toolchain_collector = collect_toolchain or default_collect_toolchain
+    for line in render_summary_lines(toolchain_collector()):
+        doctor_add(findings, "OK", "toolchain", line)
+
     model, region = resolve_doctor_target(cfg, args)
     doctor_add(findings, "OK", "target", f"effective target model='{model or ''}' region='{region or ''}'")
+
+    if getattr(args, "data_plane", False):
+        if collect_data_plane_findings is None:
+            from tools.data_plane_doctor import collect_data_plane_findings as default_collect_data_plane_findings
+
+            collect_data_plane_findings = default_collect_data_plane_findings
+        for level, area, message in collect_data_plane_findings(
+            cfg=cfg,
+            cfg_path=config_path,
+            repo_root=config_path.parents[1],
+            model=model,
+            region=region,
+            data_root=getattr(args, "data_root", None),
+        ):
+            doctor_add(findings, level, area, message)
 
     build_cfg_raw = cfg.get("build", {})
     build_cfg = build_cfg_raw if isinstance(build_cfg_raw, dict) else {}

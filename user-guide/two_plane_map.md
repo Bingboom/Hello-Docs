@@ -1,6 +1,6 @@
 # 双平面地图：仓库、飞书 base、谁在哪跑
 
-Updated: 2026-07-02
+Updated: 2026-08-02
 
 这套系统有 **2 个 git 仓库 + 2 组飞书 base**，四个东西都常被叫"库"，
 不看地图必混。本文是唯一的权威地图：改了拓扑（合并仓库、迁移 base、
@@ -29,7 +29,7 @@ Updated: 2026-07-02
 
 三个 base 都绑定在 Hello-Docs 对应的业务飞书主体（xcn57j1urbe6）上。
 
-**① 文档构建（phase2 构建源）** — base `LD3lb4G1ua4GOVs1vxAc9W2enje`，wiki 节点 `BLYEwfMMFiS7wsk9MuvcOvdVnje`，20 张表：
+**① 文档构建（phase2 构建源）** — base `LD3lb4G1ua4GOVs1vxAc9W2enje`，wiki 节点 `BLYEwfMMFiS7wsk9MuvcOvdVnje`，25 张表：
 
 | 分组 | 表名 | table_id |
 | --- | --- | --- |
@@ -51,8 +51,18 @@ Updated: 2026-07-02
 | 03_内容源 | 规格页Footnotes | `tblVusBZ8Fi56AWN` |
 | 03_内容源 | 规格页notes | `tblgJCepw4JvbMbH` |
 | 03_内容源 | Variable_Lang_Overrides | `tblZvjTiBypTAtdi` |
+| 03_内容源 | 插图资产表（旧链路，历史只读；新资产管道禁止消费） | `tblxFBWaDG4OYhqu` |
 | 入库 staging | 数据入库表 | `tblIi0BEufjvGLIU` |
 | 入库 staging | 规格书字段映射规则 | `tblHrelfzylJIRT2` |
+| 入库 staging | 能力→章节映射规则 | `tblwhwpYQJsDzx5w` |
+| 04_资产 | 资产源文件 | `tblsXlZx61Ff5pQC` |
+| 04_资产 | 资产定义 | `tblWilXeN5FXPraC` |
+| 04_资产 | 资产导出物 | `tblavT0dcjZGK9DR` |
+
+资产新链路只消费上面三张 `04_资产*` 表；真实 view/field 绑定冻结在
+[`data/asset_base_bindings.json`](../data/asset_base_bindings.json)。2026-07-15 首个 AI
+母版完成附件回下载逐字节校验。本次归档未读取或写入旧插图表，也未把
+`tblIi0BEufjvGLIU` 当成资产 staging；后续权限失败仍必须停止而不是回退。
 
 **② 多维表CAT（翻译记忆，TM-B = 语料唯一规范写库）** — base
 `Ji1hb5ub1aUbewsTljGccvx5nhc`，wiki 节点 `FRUywcjrPiMoPrkxnadcQhhenmb`：
@@ -72,18 +82,35 @@ Updated: 2026-07-02
 
 ## 2. 三条同步通道
 
+产品研究另有独立 VOC Base「产品优化建议 VOC（手册入口）」
+`Id29bqWMiaFdNjsuyrAcfrkLnZb`，表 `tblmN7OHIB0HsC23`。它只接收访客主动提交的
+产品改进建议，不是 phase2 构建源或 TM；通过业务面 HT-Docs/prod bot 写入。
+Read the Docs 仅显示表单，Mac 接收器是另一个运行边界，详见
+[产品 VOC](../code-as-doc/dev/product_voc.md)。公网与常驻接入须单独验收。
+
 | 通道 | 方向 | 机制 | 频率 |
 | --- | --- | --- | --- |
-| **代码** | auto-manual → Hello-Docs | [`sync-hello-docs.yml`](../.github/workflows/sync-hello-docs.yml) | 每次合入 main 自动，秒级 |
+| **代码** | auto-manual/main → Hello-Docs/main | [`sync-hello-docs.yml`](../.github/workflows/sync-hello-docs.yml) 同步工程树，同时保留业务面已合入的 `docs/publish/**` 和 `docs/knowledge/**` | 每次合入 main 自动，秒级 |
+| **Web 发布快照** | Hello-Docs/main → Hello-Docs/publish → PR → Hello-Docs/main | `feishu-web-publish-queue.yml` 组装候选 `docs/publish/`、范围门禁后普通增量 push，并自动创建/更新只含该目录的 PR | 每次审核后的 Web Publish |
 | **表结构 + 引用数据** | 旧 base → 新 base | `python tools/bitable_schema.py promote`（只增不删、dry-run 默认）；每日 01:00 parity 哨兵盯滞后并开 `[schema-drift]` issue | 人工，有告警兜底 |
 | **翻译语料** | 不同步——**只有一份** | TM-B 是唯一写库（G4 收敛）；TM-A 只读归档，工具层已拆除对它的静默回退 | — |
+
+### 2.1 发布契约与实际托管配置的区别（2026-09-17）
+
+上表的 `publish → PR → main` 是受支持的发布契约，不代表历史 RTD 项目均已迁到该配置。
+操作者提供的调查截图报告 HT-Manuals 仍关联 `publish`，HT-Doc 关联 `main`；
+本次文档更新未在线复核后台，也未执行迁移。以
+[发布入口整合检查](../code-as-doc/dev/web_publish_pipeline.md#31-hosting-convergence-and-legacy-entry-review)
+逐项核实、批准变更并验收后，再回填实际托管状态。
+停止旧 RTD 项目独立更新不删除 `Hello-Docs/publish` 候选分支，也不合并工程/业务两个仓库。
 
 ## 3. 谁在哪跑
 
 | 东西 | 跑在哪 | 对着哪组 base |
 | --- | --- | --- |
 | CI 验证（unittest/check/门禁） | auto-manual | fixtures（不碰活库） |
-| 队列 worker（构建/初稿/评审启动） | 两个仓库各自有 | 各自的 base（auto-manual→旧=legacy；Hello-Docs→新=业务） |
+| 队列 worker（构建/初稿/评审启动） | 两个仓库各自有；正式 Web Publish 只在 Hello-Docs/main 运行 | 各自的 base（auto-manual→旧=legacy；Hello-Docs→新=业务） |
+| Read the Docs | 监听 Hello-Docs/main，构建已通过发布 PR 的 `docs/publish/web/` | 不访问飞书，只读冻结 Git 快照 |
 | schema-parity 哨兵 | 仅 auto-manual（工程面比对，锁源仓库是对的） | 读新旧两组 |
 | backport-reminder 哨兵 | 两个仓库都跑（各用各的 secrets；PR #525 修复守卫后生效） | 各自的 base |
 | OpenClaw / BlockClaw agent | 本机 `~/Documents/GitHub/Hello-Docs` checkout | 新 base（`~/.openclaw/.env`） |
@@ -99,7 +126,12 @@ Updated: 2026-07-02
 
 ## 5. 纪律（违反必出事故）
 
-1. **代码只改 auto-manual**。Hello-Docs 是镜像，改了会被下一次同步覆盖或产生分叉。
+1. **代码只改 auto-manual**。Hello-Docs 的工程树是镜像，直接改代码会被下一次同步覆盖或产生分叉。
+   `Hello-Docs/main:docs/publish/**` 保存已发布说明书；
+   `Hello-Docs/main:docs/knowledge/**` 保存分享稿、配图和示例。两个业务内容目录
+   都由 Hello-Docs 内容 PR 维护，工程同步保留它们；
+   `Hello-Docs/publish` 由 Web Publish workflow 自动写入候选快照，人不在该分支改代码。
+   只能把该分支中 `docs/publish/**` 的差异通过 PR 合入 `main`，不能把 `review/*` 整分支合入。
 2. **表结构只在旧 base 迭代，成熟后 promote**。直接改新 base 结构 = 绕过沙盒，
    parity 哨兵会把它当漂移报出来。
 3. **语料只写 TM-B**。`tm-apply --tm-binding` 只能指向 B。

@@ -25,8 +25,8 @@
    VISTA FRONTALE
    --------------
 
-   .. image:: templates/word_template/common_assets/overview/front_product.jpg
-      :alt: Segnaposto diagramma vista frontale.
+   .. image:: asset:overview/front_product
+      :alt: Diagramma vista frontale.
       :width: 420px
 
    .. list-table::
@@ -67,8 +67,8 @@
    VISTA LATO DESTRO
    -----------------
 
-   .. image:: templates/word_template/common_assets/overview/right_side_ports.png
-      :alt: Segnaposto diagramma vista lato destro.
+   .. image:: asset:overview/right_side_ports
+      :alt: Diagramma vista lato destro.
       :width: 420px
 
    .. list-table::

@@ -9,11 +9,18 @@ build:
   jobs:
     install:
       - python -m pip install --upgrade pip
-      - python -m pip install -r requirements.txt
+      - python -m pip install -r requirements.lock
     build:
       html:
-        - python build.py md --config configs/config.us.yaml --model JE-1000F --region US --source runtime --no-clean --skip-root-index
-        - python build.py md --config configs/config.eu.yaml --model JE-1000F --region EU --source runtime --no-clean --skip-root-index
-        - python build.py md --config configs/config.ja.yaml --model JE-1000F --region JP --source runtime --no-clean --skip-root-index
-        - python tools/readthedocs_source.py --build-root docs/_build --output-dir docs/_build/rtd --title "Auto Manual Library"
-        - python -m sphinx -b html docs/_build/rtd "$READTHEDOCS_OUTPUT/html"
+        # Hello-Docs/main carries reviewed, frozen Web source merged from the
+        # publish candidate branch under docs/publish/web. RTD renders only the
+        # main snapshot and never reads live Feishu data. Keep the review-bundle
+        # path as a bootstrap fallback until the first publish snapshot exists.
+        - |
+          if [ -f docs/publish/web/conf.py ]; then
+            python -m sphinx -b html -D extensions=myst_parser,tools.rtd_portal docs/publish/web "$READTHEDOCS_OUTPUT/html"
+          else
+            AUTO_MANUAL_PRESENTATION_PROFILE=web python build.py md --config configs/config.us.yaml --model JE-1000F --region US --source review-asis --data-root tests/fixtures/phase2 --no-clean --skip-root-index
+            python tools/readthedocs_source.py --build-root docs/_build --output-dir docs/_build/rtd --title "Auto Manual Library"
+            python -m sphinx -b html -D extensions=myst_parser,tools.rtd_portal docs/_build/rtd "$READTHEDOCS_OUTPUT/html"
+          fi

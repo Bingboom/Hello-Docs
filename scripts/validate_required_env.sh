@@ -4,11 +4,12 @@ set -euo pipefail
 preset="${1:-}"
 
 case "${preset}" in
-  feishu-build-queue|feishu-draft-build-queue)
+  feishu-build-queue|feishu-draft-build-queue|feishu-web-publish-queue)
     required=(
       FEISHU_APP_ID
       FEISHU_APP_SECRET
       FEISHU_PHASE2_BASE_TOKEN
+      FEISHU_PHASE2_MODEL_CAPABILITIES_TABLE_ID
       FEISHU_PHASE2_SPEC_ROWS_SOURCE_TABLE_ID
       FEISHU_PHASE2_SPEC_ROWS_SOURCE_VIEW_ID
       FEISHU_PHASE2_PAGE_PLACEHOLDERS_SOURCE_TABLE_ID
@@ -41,6 +42,7 @@ case "${preset}" in
       FEISHU_APP_ID
       FEISHU_APP_SECRET
       FEISHU_PHASE2_BASE_TOKEN
+      FEISHU_PHASE2_MODEL_CAPABILITIES_TABLE_ID
       FEISHU_PHASE2_SPEC_ROWS_SOURCE_TABLE_ID
       FEISHU_PHASE2_SPEC_ROWS_SOURCE_VIEW_ID
       FEISHU_PHASE2_PAGE_PLACEHOLDERS_SOURCE_TABLE_ID
@@ -68,8 +70,26 @@ case "${preset}" in
       FEISHU_PHASE2_DOCUMENT_LINK_VIEW_ID
     )
     ;;
+  phase2-content-backup)
+    required=(
+      FEISHU_APP_ID
+      FEISHU_APP_SECRET
+      FEISHU_PHASE2_BASE_TOKEN
+      FEISHU_TRANSLATION_MEMORY_BASE_TOKEN
+    )
+    ;;
+  web-publish-receipt)
+    # Post-deploy HTML_link registration touches only the Document_link table.
+    required=(
+      FEISHU_APP_ID
+      FEISHU_APP_SECRET
+      FEISHU_PHASE2_BASE_TOKEN
+      FEISHU_PHASE2_DOCUMENT_LINK_TABLE_ID
+      FEISHU_PHASE2_DOCUMENT_LINK_VIEW_ID
+    )
+    ;;
   *)
-    printf 'Usage: %s <feishu-build-queue|feishu-draft-build-queue|feishu-start-review>\n' "$0" >&2
+    printf 'Usage: %s <feishu-build-queue|feishu-draft-build-queue|feishu-web-publish-queue|feishu-start-review|phase2-content-backup|web-publish-receipt>\n' "$0" >&2
     exit 2
     ;;
 esac

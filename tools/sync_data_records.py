@@ -3,16 +3,24 @@
 
 from __future__ import annotations
 
+import contextlib
 import csv
 import hashlib
 import io
 import json
+import os
 import re
 import tempfile
 from pathlib import Path
-from typing import Any, Protocol
+from typing import Any, Iterator, Protocol
+
+if os.name == "nt":  # pragma: no cover - exercised on Windows CI only
+    import msvcrt
+else:  # pragma: no cover - exercised on POSIX CI only
+    import fcntl
 
 from tools.source_record_index import SOURCE_RECORD_ID_KEY
+from tools.sync_schema_sensor import apply_source_field_aliases
 
 
 _MARKDOWN_LINK_RE = re.compile(r"^\[(?P<label>[^\]]+)\]\((?P<target>[^)]+)\)$")
@@ -144,9 +152,7 @@ def _record_values(record: dict[str, Any]) -> dict[str, Any]:
 
 
 def _apply_field_aliases(schema: _SchemaLike, values: dict[str, Any]) -> dict[str, Any]:
-    if schema.logical_name == "spec_footnotes" and "Text_pt-BR" not in values and "pt-BR" in values:
-        values["Text_pt-BR"] = values["pt-BR"]
-    return values
+    return apply_source_field_aliases(getattr(schema, "logical_name", ""), values)
 
 
 def normalize_records(schema: _SchemaLike, raw_records: list[dict[str, Any]]) -> list[dict[str, str]]:
@@ -308,3 +314,28 @@ def _write_atomic_text(path: Path, text: str) -> None:
         handle.write(text)
         temp_path = Path(handle.name)
     temp_path.replace(path)
+
+
+@contextlib.contextmanager
+def phase2_snapshot_write_lock(export_root: Path) -> Iterator[None]:
+    """Serialize the final multi-file phase2 snapshot commit for one export root."""
+    lock_path = export_root.parent / f".{export_root.name}.snapshot.lock"
+    lock_path.parent.mkdir(parents=True, exist_ok=True)
+    with lock_path.open("a+b") as handle:
+        if os.name == "nt":  # pragma: no cover - exercised on Windows CI only
+            handle.seek(0, os.SEEK_END)
+            if handle.tell() == 0:
+                handle.write(b"\0")
+                handle.flush()
+            handle.seek(0)
+            msvcrt.locking(handle.fileno(), msvcrt.LK_LOCK, 1)
+        else:  # pragma: no cover - exercised on POSIX CI only
+            fcntl.flock(handle.fileno(), fcntl.LOCK_EX)
+        try:
+            yield
+        finally:
+            if os.name == "nt":  # pragma: no cover - exercised on Windows CI only
+                handle.seek(0)
+                msvcrt.locking(handle.fileno(), msvcrt.LK_UNLCK, 1)
+            else:  # pragma: no cover - exercised on POSIX CI only
+                fcntl.flock(handle.fileno(), fcntl.LOCK_UN)

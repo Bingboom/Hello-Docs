@@ -1,0 +1,22 @@
+{
+  "schema_version": "auto-manual-web-publish-target/v2",
+  "model": "JE-1000F",
+  "region": "US",
+  "lang": "en",
+  "version": "2.5",
+  "built_at": "2026-09-24T12:07:44+00:00",
+  "git_ref": "review/JE-1000F-US",
+  "route": "JE-1000F/US/en/md",
+  "manual": "manual_je1000f_us.md",
+  "language_scope": "single",
+  "queue_record_ids": [
+    "recvw8AhrrIddm"
+  ],
+  "language_projection_evidence_path": "evidence/language_projection_receipt.json",
+  "language_projection_evidence_sha256": "c73126c4b2bd1f6f0b941cd5f1c46a874f5d82524242d1aeb09af0118c296b18",
+  "legacy_default": true,
+  "legacy_route": "JE-1000F/US/md",
+  "legacy_aliases": [
+    "manual_je1000f_us"
+  ]
+}

@@ -43,6 +43,16 @@ sync:
         base_token_env: FEISHU_TRANSLATION_MEMORY_BASE_TOKEN
         table_id_env: FEISHU_TRANSLATION_MEMORY_TABLE_ID
         view_id_env: FEISHU_TRANSLATION_MEMORY_VIEW_ID
+    model_capabilities:
+      table_id_env: FEISHU_PHASE2_MODEL_CAPABILITIES_TABLE_ID
+    asset_registry:
+      # Table coordinates default to data/asset_base_bindings.json; set
+      # this env only for a tenant whose asset tables live elsewhere.
+      table_id_env: FEISHU_PHASE2_ASSET_DEFINITIONS_TABLE_ID
+      view_id_env: FEISHU_PHASE2_ASSET_DEFINITIONS_VIEW_ID
+    # Definition/export coordinates also come from asset_base_bindings.json.
+    # Approved attachments are frozen into the selected phase2 snapshot.
+    web_composites: {}
     document_link:
       table_id_env: FEISHU_PHASE2_DOCUMENT_LINK_TABLE_ID
       view_id_env: FEISHU_PHASE2_DOCUMENT_LINK_VIEW_ID
@@ -50,3 +60,17 @@ sync:
     review_init:
       table_id_env: FEISHU_PHASE2_DOCUMENT_LINK_TABLE_ID
       view_id_env: FEISHU_PHASE2_DOCUMENT_LINK_VIEW_ID
+
+# Product names that legitimately appear in a manual built for a DIFFERENT
+# target. The identity guard flags any other target's product_name as a stale
+# identity literal, but an accessory the host manual is supposed to name is not
+# drift.
+#
+# "Jackery Battery Pack 2000" became a registered product_name the moment
+# JBP-2000B_US was ingested (skeleton slice S4). That turned nine long-standing
+# host templates red at once — page_shared/{en,fr,es,de,it,pt-BR,uk,ko}/
+# charging.rst, page_jp/charging.rst and page_shared/ko/07_extra_battery.rst all
+# name it as the expansion accessory, which is correct content.
+checks:
+  allowed_foreign_identity_literals:
+    - Jackery Battery Pack 2000

@@ -64,6 +64,12 @@ def collect_check_issues(
     collect_bundle_issues: Callable[..., list[Any]],
     collect_identity_drift_issues: Callable[..., list[Any]],
     collect_duplicate_render_text_issues: Callable[..., list[Any]],
+    collect_fcc_renderer_contract_issues: Callable[..., list[Any]] | None = None,
+    collect_capability_issues: Callable[..., list[Any]] | None = None,
+    collect_terminology_issues: Callable[..., list[Any]] | None = None,
+    collect_lang_parity_issues: Callable[..., list[Any]] | None = None,
+    collect_language_scope_issues: Callable[..., list[Any]] | None = None,
+    resolve_target_languages: Callable[..., Any] | None = None,
 ) -> list[Any]:
     cfg = load_config(cfg_path)
     docs_dir = resolve_docs_dir(cfg)
@@ -89,7 +95,25 @@ def collect_check_issues(
             )
         )
     for target in targets:
-        target_langs = [target.lang] if (target.lang or "").strip() else langs
+        # `langs` is the family union; every per-language collector below must
+        # see what this model actually ships, or a language the bundle no
+        # longer contains is reported as a missing page / missing contract.
+        family_langs = list(langs)
+        if resolve_target_languages is not None:
+            family_langs = list(
+                resolve_target_languages(
+                    langs, model=target.model, region=target.region
+                ).languages
+            )
+        target_langs = (
+            [target.lang] if (target.lang or "").strip() else family_langs
+        )
+        # Authored pages carry no _<lang> suffix. A single-language target
+        # that declares no target-level lang (the JP family) still has one
+        # unambiguous page language; collectors that classify pages need it.
+        page_lang = target.lang
+        if not (page_lang or "").strip() and len(target_langs) == 1:
+            page_lang = target_langs[0]
         bundle_dir = bundle_dir_for_target(
             docs_dir=docs_dir,
             docs_build_dir=docs_build_dir,
@@ -131,6 +155,15 @@ def collect_check_issues(
                 region=target.region,
             )
         )
+        if collect_fcc_renderer_contract_issues is not None:
+            issues.extend(
+                collect_fcc_renderer_contract_issues(
+                    bundle_dir=bundle_dir,
+                    model=target.model,
+                    region=target.region,
+                    lang=page_lang,
+                )
+            )
         issues.extend(
             collect_duplicate_render_text_issues(
                 docs_dir=docs_dir,
@@ -148,4 +181,44 @@ def collect_check_issues(
                 data_root=data_root,
             )
         )
+        if collect_capability_issues is not None:
+            issues.extend(
+                collect_capability_issues(
+                    bundle_dir=bundle_dir,
+                    docs_dir=docs_dir,
+                    model=target.model,
+                    region=target.region,
+                )
+            )
+        if collect_terminology_issues is not None:
+            issues.extend(
+                collect_terminology_issues(
+                    bundle_dir=bundle_dir,
+                    model=target.model,
+                    region=target.region,
+                    lang=page_lang,
+                )
+            )
+        if collect_lang_parity_issues is not None:
+            issues.extend(
+                collect_lang_parity_issues(
+                    bundle_dir=bundle_dir,
+                    docs_dir=docs_dir,
+                    langs=target_langs,
+                    model=target.model,
+                    region=target.region,
+                )
+            )
+        if collect_language_scope_issues is not None:
+            issues.extend(
+                collect_language_scope_issues(
+                    bundle_dir=bundle_dir,
+                    docs_dir=docs_dir,
+                    # The family union, not the narrowed set: this gate's job
+                    # is to judge the narrowing itself.
+                    family_langs=list(langs),
+                    model=target.model,
+                    region=target.region,
+                )
+            )
     return issues

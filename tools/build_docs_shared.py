@@ -4,9 +4,11 @@ import re
 from dataclasses import dataclass
 from pathlib import Path
 
+from tools import lang_registry
+
 VALID_FORMATS = {"html", "word", "pdf", "md"}
 VALID_PDF_MODES = {"latex", "word"}
-VALID_SOURCE_MODES = {"auto", "runtime", "review"}
+VALID_SOURCE_MODES = {"auto", "runtime", "review", "review-asis"}
 _TEMPLATE_TOKEN_RE = re.compile(r"\{([a-z_]+)\}")
 MANUAL_META_FILE_NAME = "manual_meta.json"
 SWITCHER_BLOCK_START = "<!-- HB_MANUAL_SWITCHER_START -->"
@@ -22,12 +24,7 @@ _MANUAL_COVER_SECTION_RE = re.compile(
     r"<section class=\"manual-cover\">.*?</section>",
     re.IGNORECASE | re.DOTALL,
 )
-LANGUAGE_LABELS = {
-    "en": "English",
-    "es": "Espanol",
-    "fr": "Francais",
-    "ja": "Japanese",
-}
+LANGUAGE_LABELS = lang_registry.language_display_labels()
 
 
 @dataclass(frozen=True)

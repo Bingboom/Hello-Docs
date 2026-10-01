@@ -3,18 +3,135 @@ from __future__ import annotations
 from pathlib import Path
 import unittest
 
+import yaml
+
 
 ROOT = Path(__file__).resolve().parents[1]
 
 
 class PrefaceTemplateTests(unittest.TestCase):
+    def test_battery_pack_preface_uses_us_badge(self) -> None:
+        text = (
+            ROOT / "docs" / "templates" / "page_bp" / "en" / "00_preface.rst"
+        ).read_text(encoding="utf-8")
+
+        self.assertIn(r"\HBLangTagLine{US}{IMPORTANT}", text)
+        self.assertNotIn(r"\HBLangTagLine{EN}{IMPORTANT}", text)
+
+    def test_battery_pack_toc_uses_us_badge_and_reference_entry_order(self) -> None:
+        text = (
+            ROOT / "docs" / "templates" / "page_bp" / "en" / "00_toc.rst"
+        ).read_text(encoding="utf-8")
+
+        self.assertIn(r"\HBTocLanguageBlock{US}{English}{01--08}", text)
+        self.assertNotIn(r"\HBTocLanguageBlock{EN}{English}{01--08}", text)
+        for language_entries in text.split("}{%", 1)[1:]:
+            if "STORAGE" in language_entries and "SPECIFICATIONS" in language_entries:
+                self.assertLess(
+                    language_entries.index("STORAGE"),
+                    language_entries.index("SPECIFICATIONS"),
+                )
+
     def test_shared_source_preface_should_keep_multilingual_notice_blocks(self) -> None:
         text = (ROOT / "docs" / "templates" / "page_shared" / "en" / "00_preface.rst").read_text(encoding="utf-8")
 
-        self.assertIn("|MANUAL_LANGUAGE_SCOPE|", text)
+        # The V2.0 JE-1000F master (2026-06-05) drops the language-scope
+        # lead line and marks each section with a brand-dark language tag
+        # (\HBLangTagLine) instead of a bold text heading; the bold
+        # headings remain as the non-latex (html/word) fallback.
+        self.assertNotIn("|MANUAL_LANGUAGE_SCOPE|", text)
+        self.assertIn("\\HBLangTagLine{EN}{IMPORTANT}", text)
+        self.assertIn("\\HBLangTagLine{FR}{IMPORTANT}", text)
+        self.assertIn("\\HBLangTagLine{ES}{IMPORTANTE}", text)
         self.assertIn("**IMPORTANT**", text)
         self.assertIn("FR IMPORTANT", text)
         self.assertIn("ES IMPORTANTE", text)
+
+    def test_us_single_document_manifests_keep_trilingual_preface_for_idml(self) -> None:
+        for language in ("en", "fr", "es"):
+            with self.subTest(language=language):
+                manifest_path = (
+                    ROOT / "docs" / "manifests" / f"manual_us-single-{language}.yaml"
+                )
+                manifest = yaml.safe_load(manifest_path.read_text(encoding="utf-8"))
+                preface = manifest["pages"][0]
+                self.assertEqual(
+                    "templates/page_shared/en/00_preface.rst",
+                    preface["file"],
+                )
+                self.assertNotIn("lang_blocks", preface)
+
+                config = yaml.safe_load(
+                    (ROOT / "configs" / f"config.us-{language}.yaml").read_text(
+                        encoding="utf-8"
+                    )
+                )
+                self.assertEqual(
+                    {"00_preface.rst": "en"},
+                    config["build"]["web_language_block_pages"],
+                )
+
+    def test_au_preface_should_use_english_only_component(self) -> None:
+        template = (
+            ROOT
+            / "docs"
+            / "templates"
+            / "page_shared"
+            / "en"
+            / "00_preface_single_language.rst"
+        )
+        manifest_text = (
+            ROOT / "docs" / "manifests" / "manual_au-en.yaml"
+        ).read_text(encoding="utf-8")
+
+        self.assertTrue(template.is_file())
+        text = template.read_text(encoding="utf-8")
+        self.assertIn(r"\HBLangTagLine{EN}{IMPORTANT}", text)
+        self.assertNotIn(r"\HBLangTagLine{FR}", text)
+        self.assertNotIn(r"\HBLangTagLine{ES}", text)
+        self.assertNotIn("FR IMPORTANT", text)
+        self.assertNotIn("ES IMPORTANTE", text)
+        self.assertIn(
+            "templates/page_shared/en/00_preface_single_language.rst",
+            manifest_text,
+        )
+        self.assertNotIn(
+            "file: templates/page_shared/en/00_preface.rst",
+            manifest_text,
+        )
+
+    def test_us_review_preface_should_keep_latex_page_component_contract(self) -> None:
+        text = (ROOT / "docs" / "_review" / "JE-1000F" / "US" / "page" / "00_preface.rst").read_text(
+            encoding="utf-8"
+        )
+
+        self.assertIn(r"\HBPrefacePageBegin", text)
+        self.assertIn(r"\HBLangTagLine{EN}{IMPORTANT}", text)
+        self.assertIn(r"\HBLangTagLine{FR}{IMPORTANT}", text)
+        self.assertIn(r"\HBLangTagLine{ES}{IMPORTANTE}", text)
+        self.assertIn(r"\HBPrefacePageEnd", text)
+
+    def test_us_inbox_pages_should_end_with_explicit_page_boundary(self) -> None:
+        for lang in ("en", "fr", "es"):
+            text = (
+                ROOT / "docs" / "templates" / "page_shared" / lang / "02_whats_in_the_box.rst"
+            ).read_text(encoding="utf-8")
+            self.assertIn(r"\HBInBoxThree", text)
+            self.assertIn(r"\HBTipBlock", text)
+            self.assertIn(r"\HBPageBreak", text)
+
+    def test_us_spanish_app_and_back_cover_should_use_page_components(self) -> None:
+        app_text = (
+            ROOT / "docs" / "templates" / "page_shared" / "es" / "12_app_setup_placeholder.rst"
+        ).read_text(encoding="utf-8")
+        back_text = (
+            ROOT / "docs" / "templates" / "page_shared" / "en" / "99_back_cover.rst"
+        ).read_text(encoding="utf-8")
+
+        self.assertIn(r"\HBPageBreak", app_text)
+        self.assertIn(r"\HBAppStep", app_text)
+        self.assertIn(r"\HBAppNotice", app_text)
+        self.assertIn(r"\HBBackCoverPage", back_text)
 
     def test_eu_preface_should_cover_all_merged_languages(self) -> None:
         text = (ROOT / "docs" / "templates" / "page_eu" / "00_preface.rst").read_text(encoding="utf-8")

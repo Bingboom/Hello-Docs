@@ -12,10 +12,13 @@ from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
 from types import SimpleNamespace
-from typing import Any, Callable, Mapping, Protocol
+from typing import Any, Callable, ContextManager, Mapping, Protocol
+
+from tools.sync_data_derived import collect_derived_snapshot_writes
 
 from tools.spec_master_sources import (
     collect_footnote_record_id_refs,
+    normalize_footnote_ref_value,
     normalize_spec_master_source_rows,
     source_table_bindings_from_cfg,
 )
@@ -41,10 +44,10 @@ from tools.source_record_index import (
     index_json_text as source_record_index_json_text,
     record_count as source_record_index_count,
 )
+from tools.sync_schema_sensor import append_missing_columns_warning, append_missing_columns_warning_for_sources
 
-# Tables fetched with record ids: footnotes (link-ref mapping) plus the tables the
-# source_record_index sidecar indexes (F1). Other tables keep the id-free fetch so
-# observable sync behavior is unchanged for them.
+# Tables fetched with record ids: footnotes plus source_record_index tables (F1).
+# Other tables keep the id-free fetch so observable sync behavior is unchanged.
 _WITH_ID_LOGICAL_TABLES = frozenset({"spec_footnotes"}) | frozenset(
     _SOURCE_RECORD_INDEX_LOGICAL_TABLES
 )
@@ -129,6 +132,7 @@ class SyncRuntimeDeps:
     build_row_label_row_key_mapping_rows: Callable[..., list[dict[str, str]]]
     dict_rows_csv_text: Callable[..., str]
     write_atomic_text: Callable[..., None]
+    snapshot_write_lock: Callable[[Path], ContextManager[None]]
     table_sync_result_cls: Callable[..., Any]
     sync_run_result_cls: Callable[..., Any]
 
@@ -173,6 +177,7 @@ def manifest_payload(
     built_at: datetime,
     dry_run: bool,
     repo_root: Path,
+    warnings: tuple[dict[str, Any], ...] = (),
 ) -> dict[str, Any]:
     def _result_entry(result: _TableSyncResultLike) -> dict[str, Any]:
         return {
@@ -185,7 +190,7 @@ def manifest_payload(
             "changed": result.changed,
         }
 
-    return {
+    payload: dict[str, Any] = {
         "provider": provider,
         "cli_bin": cli_bin,
         "generated_at": built_at.isoformat(),
@@ -197,6 +202,9 @@ def manifest_payload(
         "tables": [_result_entry(result) for result in synced_tables],
         "derived_files": [_result_entry(result) for result in derived_files],
     }
+    if warnings:
+        payload["warnings"] = list(warnings)
+    return payload
 
 
 def _record_source_with_ids(source: _RecordSourceLike) -> _RecordSourceWithIdsLike | None:
@@ -218,38 +226,6 @@ def _footnote_record_id_to_id_map(raw_records: list[dict[str, Any]]) -> dict[str
     return mapping
 
 
-def _record_id_from_ref_token(token: str) -> str | None:
-    raw = (token or "").strip()
-    if not raw:
-        return None
-    if raw.startswith("rec"):
-        return raw
-    try:
-        payload = json.loads(raw)
-    except json.JSONDecodeError:
-        return None
-    if isinstance(payload, dict):
-        record_id = str(payload.get("id") or "").strip()
-        return record_id or None
-    return None
-
-
-def _normalize_footnote_ref_value(value: str, mapping: dict[str, str]) -> str:
-    raw = (value or "").strip()
-    if not raw:
-        return value
-
-    refs: list[str] = []
-    for token in raw.split(","):
-        item = token.strip()
-        if not item:
-            continue
-        mapped = mapping.get(_record_id_from_ref_token(item) or "", item)
-        if mapped not in refs:
-            refs.append(mapped)
-    return ", ".join(refs)
-
-
 def _normalize_spec_master_footnote_refs(
     rows: list[dict[str, str]],
     *,
@@ -263,7 +239,7 @@ def _normalize_spec_master_footnote_refs(
             "Param_footnote_refs",
             "Value_footnote_refs",
         ):
-            row[column] = _normalize_footnote_ref_value(
+            row[column] = normalize_footnote_ref_value(
                 str(row.get(column) or ""),
                 footnote_record_id_map,
             )
@@ -340,6 +316,16 @@ def _cached_attachment_path(target_path: Path, file_token: str) -> Path | None:
     return candidates[0] if candidates else None
 
 
+def _logical_attachment_path(path: Path) -> str:
+    # CSV cells carry the LOGICAL attachment location, not the physical export
+    # root: snapshots are materialized under arbitrary roots (the queue workers
+    # use .tmp/review-start/phase2), and a physical path baked into the snapshot
+    # is unresolvable for downstream consumers built from a different tree. The
+    # asset pipeline's contract is data/phase2/_attachments/<category>/<name>;
+    # bundle staging resolves that against whichever data root is active.
+    return f"data/phase2/_attachments/{path.parent.name}/{path.name}"
+
+
 def _materialized_attachment_display_path(
     *,
     label: str,
@@ -353,15 +339,15 @@ def _materialized_attachment_display_path(
     file_token = _attachment_file_token(item)
     cached_path = _cached_attachment_path(target_path, file_token)
     if dry_run:
-        return _display_path(cached_path or target_path, repo_root=repo_root)
+        return _logical_attachment_path(cached_path or target_path)
 
     if cached_path == target_path:
-        return _display_path(target_path, repo_root=repo_root)
+        return _logical_attachment_path(target_path)
 
     downloader = _drive_file_downloader(source)
     if downloader is None:
         if cached_path is not None:
-            return _display_path(cached_path, repo_root=repo_root)
+            return _logical_attachment_path(cached_path)
         raise RuntimeError(missing_downloader_message)
 
     try:
@@ -380,7 +366,7 @@ def _materialized_attachment_display_path(
                 f"Using cached attachment {cached_display_path}.",
                 file=sys.stderr,
             )
-            return cached_display_path
+            return _logical_attachment_path(cached_path)
 
         print(
             f"[sync-data] WARNING: Failed to download {label} attachment "
@@ -390,7 +376,7 @@ def _materialized_attachment_display_path(
         )
         return ""
 
-    return _display_path(target_path, repo_root=repo_root)
+    return _logical_attachment_path(target_path)
 
 
 def _lcd_icon_attachment_path(
@@ -516,6 +502,7 @@ def sync_phase2_snapshot(
 
     table_results: list[Any] = []
     derived_results: list[Any] = []
+    warnings: list[dict[str, Any]] = []
     written_files: list[tuple[Path, str]] = []
     bindings_by_table: dict[str, _BindingLike] = {}
     raw_records_by_table: dict[str, list[dict[str, Any]]] = {}
@@ -535,6 +522,14 @@ def sync_phase2_snapshot(
         )
         if logical_name == "spec_master" and spec_rows_source_table_id and placeholders_source_table_id:
             base_token = deps.phase2_base_token(cfg)
+            append_missing_columns_warning_for_sources(
+                warnings,
+                logical_name=logical_name,
+                schema=deps.table_schemas[logical_name],
+                source=resolved_source,
+                base_token=base_token,
+                table_ids=(spec_rows_source_table_id, placeholders_source_table_id),
+            )
             # Fetch with record ids when the source supports it, so the
             # source_record_index sidecar can map Spec_Master rows to record ids
             # (F6). CSV output is unchanged because normalization consumes fields.
@@ -570,6 +565,14 @@ def sync_phase2_snapshot(
 
         binding = deps.resolve_table_binding(cfg, logical_name)
         bindings_by_table[logical_name] = binding
+        append_missing_columns_warning(
+            warnings,
+            logical_name=logical_name,
+            schema=binding.schema,
+            source=resolved_source,
+            base_token=binding.base_token,
+            table_id=binding.table_id,
+        )
         # Fetch with record ids only for tables that need them (footnotes ref
         # mapping + the source_record_index sidecar's indexed tables, F1). CSV
         # output is unchanged because normalization only consumes record fields.
@@ -642,6 +645,14 @@ def sync_phase2_snapshot(
     translation_memory_rows: list[dict[str, str]] | None = None
     if "manual_copy_source" in normalized_rows_by_table:
         tm_binding = translation_memory_binding or deps.resolve_table_binding(cfg, "translation_memory")
+        append_missing_columns_warning(
+            warnings,
+            logical_name="translation_memory",
+            schema=deps.table_schemas["translation_memory"],
+            source=resolved_source,
+            base_token=tm_binding.base_token,
+            table_id=tm_binding.table_id,
+        )
         tm_raw_records = resolved_source.fetch_records(
             base_token=tm_binding.base_token,
             table_id=tm_binding.table_id,
@@ -688,6 +699,20 @@ def sync_phase2_snapshot(
             "Missing repo-maintained page registry CSV: "
             + _display_path(page_registry_source_path, repo_root=deps.repo_root)
         )
+    mirror_results, mirror_writes = collect_derived_snapshot_writes(
+        cfg,
+        source=resolved_source,
+        repo_root=deps.repo_root,
+        export_root=export_root,
+        dry_run=dry_run,
+        generated_at=run_at.isoformat(),
+        sha256_text=deps.sha256_text,
+        sha256_file=deps.sha256_file,
+        result_cls=deps.table_sync_result_cls,
+    )
+    derived_results.extend(mirror_results)
+    written_files.extend(mirror_writes)
+
     page_registry_text = page_registry_source_path.read_text(encoding="utf-8")
     page_registry_sha256 = deps.sha256_text(page_registry_text)
     previous_page_registry_sha256 = deps.sha256_file(page_registry_path)
@@ -841,12 +866,14 @@ def sync_phase2_snapshot(
         built_at=run_at,
         dry_run=dry_run,
         repo_root=deps.repo_root,
+        warnings=tuple(warnings),
     )
 
     if not dry_run:
-        for target_path, csv_text in written_files:
-            deps.write_atomic_text(target_path, csv_text)
-        deps.write_atomic_text(manifest_path, json.dumps(manifest, ensure_ascii=False, indent=2) + "\n")
+        with deps.snapshot_write_lock(export_root):
+            for target_path, csv_text in written_files:
+                deps.write_atomic_text(target_path, csv_text)
+            deps.write_atomic_text(manifest_path, json.dumps(manifest, ensure_ascii=False, indent=2) + "\n")
 
     return deps.sync_run_result_cls(
         export_root=export_root,

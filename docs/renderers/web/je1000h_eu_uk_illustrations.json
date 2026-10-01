@@ -1,0 +1,423 @@
+{
+  "schema_version": "web-illustrations/v1",
+  "model": "JE-1000H",
+  "region": "EU",
+  "language": "uk",
+  "source_pdf_sha256": "07e9ac4b9faabd0852f61702df06f2837caa952c2fa28151b599ad930b1c0bcc",
+  "source_pdf_name": "Jackery Explorer 1000 Plus User Manual (JE-1000H) EUUK V2.0-2026-08-03.pdf",
+  "recipe": "data/asset_recipes/manual_je1000h_eu_web.json",
+  "illustrations": [
+    {
+      "replaces": [
+        "main_unit1.png"
+      ],
+      "path": "assets/je1000h_eu_uk/inbox_unit.png",
+      "sha256": "fc268673c6c5a2349c19b39d3ef57e7dbcf66ca334b7f68297ac304ef4b97ef9",
+      "source_page": 92,
+      "bbox_pt": [
+        40,
+        310,
+        112,
+        394
+      ],
+      "recipe": "data/asset_recipes/manual_je1000h_eu_web.json"
+    },
+    {
+      "replaces": [
+        "ac_charging_cable.png"
+      ],
+      "path": "assets/je1000h_eu_uk/inbox_cable.png",
+      "sha256": "c235c66f37e7dd8ed202a76f825fa8c7d6b8800284e19d72e2a05a5fe0060686",
+      "source_page": 92,
+      "bbox_pt": [
+        150,
+        315,
+        210,
+        394
+      ],
+      "recipe": "data/asset_recipes/manual_je1000h_eu_web.json"
+    },
+    {
+      "replaces": [
+        "manual_icon1.png"
+      ],
+      "path": "assets/je1000h_eu_uk/inbox_documents.png",
+      "sha256": "0e3964401d96c1bf2b1a431da19b0d9af00d7bed461d2b57a4ff77071d1ada0e",
+      "source_page": 92,
+      "bbox_pt": [
+        260,
+        320,
+        315,
+        394
+      ],
+      "recipe": "data/asset_recipes/manual_je1000h_eu_web.json"
+    },
+    {
+      "replaces": [
+        "front_product.jpg"
+      ],
+      "path": "assets/je1000h_eu_uk/overview_front.png",
+      "sha256": "3cccf60ebd9c4405333c3b2a4bd2c8afc0ec9d5d523390d78426d92cfbc3fb7f",
+      "source_page": 93,
+      "bbox_pt": [
+        28,
+        68,
+        342,
+        245
+      ],
+      "recipe": "data/asset_recipes/manual_je1000h_eu_web.json",
+      "covered_annotations": [
+        {
+          "selector": "#section-2 > table",
+          "text": "Кнопка живлення LCD Порт постійного струму 12 В 12 В⎓10 А макс. Кнопка LED-світла Кнопка живлення DC/USB LED-світло Вихід USB-C 30W 30 Вт макс., 5 В⎓3 A, 9 В⎓3 A, 12 В⎓2,5 A, 15 В⎓2 A, 20 В⎓1,5 A Кнопка живлення AC 1/2 Вихід USB-C 140W 140 Вт макс., 5 В⎓3 A, 9 В⎓3 A, 12 В⎓3 A, 15 В⎓3 A, 20 В⎓5 A, 28 В⎓5 A Вихід USB-A 18W 18 Вт макс., 5-6 В⎓3 A, 6-9 В⎓2 A, 9-12 В⎓1,5 A Вихід змінного струму 230 В~ 50 Гц, 7,83 A, 1800 Вт ном. потужності"
+        },
+        {
+          "selector": "#section-2 > table",
+          "text": "Загальна вихідна потужність Номінальна потужність 1800 Вт, пікова потужність 3600 Вт"
+        }
+      ]
+    },
+    {
+      "replaces": [
+        "right_side_ports.png"
+      ],
+      "path": "assets/je1000h_eu_uk/overview_side.png",
+      "sha256": "a8e158867361d7167fda71a0165347f73450682fbb7d1f83b46e859e722fb167",
+      "source_page": 93,
+      "bbox_pt": [
+        28,
+        269,
+        342,
+        493
+      ],
+      "whiteout_bbox_pt": [
+        28,
+        369,
+        111.3,
+        389
+      ],
+      "recipe": "data/asset_recipes/manual_je1000h_eu_web.json",
+      "covered_annotations": [
+        {
+          "selector": "#section-3 > table",
+          "text": "Ручка Вхід змінного струму 220 В-240 В~ 50 Гц, 10 А макс. Вхід постійного струму (2 порти DC8020) ФЕ: 16 В-60 В⎓12 A, подв. до 21 A макс. / 400 Вт макс. Автомобіль: 11 В-16 В⎓8 A макс., подв. до 8 A макс."
+        }
+      ]
+    },
+    {
+      "replaces": [
+        "lcd_map.png"
+      ],
+      "path": "assets/je1000h_eu_uk/lcd_map.png",
+      "sha256": "70d05a78600c7bfe8471aae895b840e0b82bc3aa210f7a8fd596d629abb4cd95",
+      "source_page": 94,
+      "bbox_pt": [
+        34,
+        50.9,
+        325,
+        223.0
+      ],
+      "recipe": "data/asset_recipes/manual_je1000h_eu_web.json"
+    },
+    {
+      "replaces": [
+        "op_main_power.png"
+      ],
+      "path": "assets/je1000h_eu_uk/operation_power.png",
+      "sha256": "994de413535584853e46ccc12e2929c2b6955c8e5ccfcd1d01f6795d80f18ab3",
+      "source_page": 96,
+      "bbox_pt": [
+        27,
+        71,
+        342,
+        233
+      ],
+      "recipe": "data/asset_recipes/manual_je1000h_eu_web.json",
+      "covered_annotations": [
+        {
+          "selector": "#section-2 > .line-block",
+          "text": "Увімкнення: натисніть один раз. Вимкнення: натисніть і утримуйте 3 с."
+        },
+        {
+          "selector": "#section-2 > .line-block",
+          "text": "Стандартний час очікування: 2 години. Пристрій автоматично вимкнеться після 2 годин бездіяльності, якщо не відбувається заряджання чи розряджання. * Час очікування можна налаштувати в Додатку Jackery. Коли режим енергозбереження ввімкнено, пристрій автоматично вимкнеться після 12 годин, якщо вихід AC або DC / USB увімкнено, але пристрій не заряджається і не розряджається."
+        }
+      ]
+    },
+    {
+      "replaces": [
+        "op_ac_output.png"
+      ],
+      "path": "assets/je1000h_eu_uk/operation_ac.png",
+      "sha256": "a218a6d42fa8f4aa5655e171438583971bec33f5e66bbc273c5f4332e85e9a3e",
+      "source_page": 96,
+      "bbox_pt": [
+        27,
+        249,
+        342,
+        495
+      ],
+      "recipe": "data/asset_recipes/manual_je1000h_eu_web.json",
+      "covered_annotations": [
+        {
+          "selector": "#ac > p",
+          "text": "Передумова : пристрій увімкнено."
+        },
+        {
+          "selector": "#ac > .line-block",
+          "text": "Увімкнути Натисніть один раз Вимкнути Натисніть один раз"
+        }
+      ]
+    },
+    {
+      "replaces": [
+        "op_dc_usb_output.png"
+      ],
+      "path": "assets/je1000h_eu_uk/operation_dc.png",
+      "sha256": "fe528eabc0732e3a8c4486e854f71e393f3d0100865f7b64a6be51459473f290",
+      "source_page": 97,
+      "bbox_pt": [
+        27,
+        41,
+        342,
+        198.4
+      ],
+      "recipe": "data/asset_recipes/manual_je1000h_eu_web.json",
+      "covered_annotations": [
+        {
+          "selector": "#dc-12-usb > p",
+          "text": "Передумова : пристрій увімкнено."
+        },
+        {
+          "selector": "#dc-12-usb > .line-block",
+          "text": "Увімкнути Натисніть один раз Вимкнути Натисніть один раз"
+        }
+      ]
+    },
+    {
+      "replaces": [
+        "led_light.png"
+      ],
+      "path": "assets/je1000h_eu_uk/operation_led.png",
+      "sha256": "251f1f2f6bc3150617b5231ccc57dd52be3ce1782d11af4fd313dda4f7085c97",
+      "source_page": 97,
+      "bbox_pt": [
+        27,
+        362,
+        342,
+        498
+      ],
+      "recipe": "data/asset_recipes/manual_je1000h_eu_web.json",
+      "covered_annotations": [
+        {
+          "selector": "#led > p",
+          "text": "LED-світло має два режими: режим освітлення та режим SOS. У будь-якому режимі натисніть і утримуйте кнопку LED-світла, щоб вимкнути світло."
+        },
+        {
+          "selector": "#led > .line-block",
+          "text": "Натисніть кнопку LED Light один раз, щоб увімкнути світло. Натисніть її ще раз, щоб перейти в режим SOS. Натисніть її втретє, щоб вимкнути світло."
+        }
+      ]
+    },
+    {
+      "replaces": [
+        "lcd_mode.png"
+      ],
+      "path": "assets/je1000h_eu_uk/operation_lcd.png",
+      "sha256": "211b6d6d4426348d7b1905f6825a5ff271d9c6f49fad8708e969c878a9c3f6b0",
+      "source_page": 98,
+      "bbox_pt": [
+        28,
+        40,
+        180,
+        150
+      ],
+      "recipe": "data/asset_recipes/manual_je1000h_eu_web.json"
+    },
+    {
+      "replaces": [
+        "energy_saving.png"
+      ],
+      "path": "assets/je1000h_eu_uk/operation_energy.png",
+      "sha256": "7eb2fb56a201fd9b4d7a1667794a3099a30238c0ebdb5d83f41928288a3a9412",
+      "source_page": 98,
+      "bbox_pt": [
+        27,
+        229,
+        342,
+        374
+      ],
+      "recipe": "data/asset_recipes/manual_je1000h_eu_web.json",
+      "covered_annotations": [
+        {
+          "selector": "#section-3 > p",
+          "text": "Щоб вимкнути режим енергозбереження, натисніть і утримуйте кнопку AC та основну кнопку POWER одночасно понад 3 секунди. Після вимкнення режиму енергозбереження значок більше не з'являтиметься на екрані LCD, і пристрій не вимикатиме автоматично вихід AC або DC / USB."
+        },
+        {
+          "selector": "#section-3 > .line-block",
+          "text": "Натисніть і утримуйте обидві кнопки понад 3 секунди."
+        }
+      ]
+    },
+    {
+      "replaces": [
+        "ups_mode.png"
+      ],
+      "path": "assets/je1000h_eu_uk/ups.png",
+      "sha256": "ec7b20037dcac28472e15977cd197ca21eaa3eb0bc2e3c458d4f36b1aded3d12",
+      "source_page": 99,
+      "bbox_pt": [
+        28,
+        257,
+        342,
+        496
+      ],
+      "recipe": "data/asset_recipes/manual_je1000h_eu_web.json"
+    },
+    {
+      "replaces": [
+        "ac_wall.png"
+      ],
+      "path": "assets/je1000h_eu_uk/charging_ac.png",
+      "sha256": "c9db12ac863e6890df811ab7a4d0ea100b89a9067e4ab688945ea265980f405a",
+      "source_page": 101,
+      "bbox_pt": [
+        27,
+        247,
+        342,
+        362
+      ],
+      "recipe": "data/asset_recipes/manual_je1000h_eu_web.json",
+      "covered_annotations": [
+        {
+          "selector": "#ac > p",
+          "text": "Підключіть кабель для заряджання AC до входу AC пристрою та до настінної розетки."
+        }
+      ]
+    },
+    {
+      "replaces": [
+        "solar_direct.png"
+      ],
+      "path": "assets/je1000h_eu_uk/charging_solar.png",
+      "sha256": "2de12fb0e1a7100bec8dee8ac5701a54d055986b4e6ef4ebfcc92c527a59cb5a",
+      "source_page": 102,
+      "bbox_pt": [
+        28,
+        31,
+        342,
+        175
+      ],
+      "recipe": "data/asset_recipes/manual_je1000h_eu_web.json"
+    },
+    {
+      "replaces": [
+        "solar_adapter.png"
+      ],
+      "path": "assets/je1000h_eu_uk/charging_solar_adapter.png",
+      "sha256": "0ae63e952c783fd27cffebcf948a095b03eade283c96a07aedf3c4b9bf1836bb",
+      "source_page": 102,
+      "bbox_pt": [
+        150,
+        31,
+        342,
+        175
+      ],
+      "recipe": "data/asset_recipes/manual_je1000h_eu_web.json"
+    },
+    {
+      "replaces": [
+        "car_charge.png"
+      ],
+      "path": "assets/je1000h_eu_uk/charging_car.png",
+      "sha256": "a99dded3530e91430e34b3027693e066f5899db85b2f1fe4292530a423dcb617",
+      "source_page": 102,
+      "bbox_pt": [
+        28,
+        358,
+        342,
+        494
+      ],
+      "recipe": "data/asset_recipes/manual_je1000h_eu_web.json",
+      "covered_annotations": [
+        {
+          "selector": "#section-2 > .line-block",
+          "text": "Автомобіль * Кабель для заряджання від автомобіля продається окремо."
+        }
+      ]
+    },
+    {
+      "replaces": [
+        "download.png"
+      ],
+      "path": "assets/je1000h_eu_uk/app_download.png",
+      "sha256": "1f45ea8b6064933fdd3cf61c492cbbf0f314d2224f5ec7d22bd1f4448f135acc",
+      "source_page": 106,
+      "bbox_pt": [
+        45,
+        70,
+        340,
+        155.7
+      ],
+      "recipe": "data/asset_recipes/manual_je1000h_eu_web.json",
+      "covered_annotations": [
+        {
+          "selector": "#section-2 > p",
+          "text": "Знайдіть \"Jackery\" у Google Play або App Store, щоб установити додаток. Після цього ви можете зареєструватися та увійти. Або відскануйте QR-код нижче, щоб завантажити та встановити додаток."
+        }
+      ]
+    },
+    {
+      "replaces": [
+        "add_device.png"
+      ],
+      "path": "assets/je1000h_eu_uk/app_control_panel.png",
+      "sha256": "b29bed2f9ab2ee31dcdfecad9c7cf7ecf08f4b6d2dc236c2326c6192d8ee1dcc",
+      "source_page": 106,
+      "bbox_pt": [
+        40,
+        400,
+        340,
+        484
+      ],
+      "reference_id": "app-add-device",
+      "consume_before_presentation": true,
+      "recipe": "data/asset_recipes/manual_je1000h_eu_web.json",
+      "covered_annotations": [
+        {
+          "selector": "#section-3 > .line-block",
+          "text": "Кнопка живлення Кнопка живлення AC 1/2 Кнопка живлення DC/USB"
+        }
+      ]
+    },
+    {
+      "replaces": [
+        "connect_result.png"
+      ],
+      "path": "assets/je1000h_eu_uk/app_connect_result.png",
+      "sha256": "4e7c4891c252516f180ad63a29e3ea6485a38d5aec204fc4bf73627229dfe91e",
+      "source_page": 107,
+      "bbox_pt": [
+        48,
+        141,
+        320,
+        293
+      ],
+      "recipe": "data/asset_recipes/manual_je1000h_eu_web.json"
+    },
+    {
+      "replaces": [
+        "battery_pack.png"
+      ],
+      "path": "assets/je1000h_eu_uk/battery_pack.png",
+      "sha256": "9ab71a843ba9475a808a86f366beade01f89eae2998a99ab66b6106511f07d75",
+      "source_page": 100,
+      "bbox_pt": [
+        28,
+        208.1,
+        342,
+        410
+      ]
+    }
+  ]
+}

@@ -4,11 +4,15 @@
 from __future__ import annotations
 
 import json
+import sys
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+
 from tools.utils.targets import format_tokenized
+from tools.sync_data_models import TABLE_ORDER, TABLE_SCHEMAS
 
 STRUCTURED_DATA_DEFAULT_DIR = "data/phase2"
 LEGACY_STRUCTURED_DATA_DIR = "data/phase1"
@@ -31,15 +35,9 @@ LOCALIZED_COPY_FILE = "Localized_Copy.csv"
 STATUS_WORDS_FILE = "Status_Words.csv"
 
 PHASE2_REQUIRED_TABLE_FILES: dict[str, str] = {
-    "spec_master": SPEC_MASTER_FILE,
-    "spec_footnotes": SPEC_FOOTNOTES_FILE,
-    "spec_notes": SPEC_NOTES_FILE,
-    "symbols_blocks": SYMBOLS_BLOCKS_FILE,
-    "lcd_icons": LCD_ICONS_BLOCKS_FILE,
-    "troubleshooting": TROUBLESHOOTING_BLOCKS_FILE,
-    "variable_defaults": VARIABLE_DEFAULTS_FILE,
-    "variable_lang_overrides": VARIABLE_LANG_OVERRIDES_FILE,
-    "manual_copy_source": MANUAL_COPY_SOURCE_FILE,
+    logical_name: TABLE_SCHEMAS[logical_name].file_name
+    for logical_name in TABLE_ORDER
+    if logical_name in TABLE_SCHEMAS
 }
 PHASE2_REQUIRED_DERIVED_FILES: dict[str, str] = {
     "page_registry": PAGE_REGISTRY_FILE,
@@ -134,9 +132,13 @@ def _phase2_candidate_export_root(
     cfg: dict[str, Any],
     *,
     repo_root: Path,
+    data_root: str | Path | None = None,
     model: str | None = None,
     region: str | None = None,
 ) -> Path:
+    cli_root = _resolve_cli_data_root(repo_root, data_root=data_root)
+    if cli_root is not None:
+        return cli_root
     sync_cfg = _sync_phase2_cfg(cfg)
     configured_export_root = resolve_optional_repo_path(
         repo_root,
@@ -153,9 +155,13 @@ def _phase2_candidate_manifest_path(
     cfg: dict[str, Any],
     *,
     repo_root: Path,
+    data_root: str | Path | None = None,
     model: str | None = None,
     region: str | None = None,
 ) -> Path:
+    cli_root = _resolve_cli_data_root(repo_root, data_root=data_root)
+    if cli_root is not None:
+        return cli_root / SNAPSHOT_MANIFEST_FILE
     sync_cfg = _sync_phase2_cfg(cfg)
     configured = resolve_optional_repo_path(
         repo_root,
@@ -168,6 +174,7 @@ def _phase2_candidate_manifest_path(
     return _phase2_candidate_export_root(
         cfg,
         repo_root=repo_root,
+        data_root=data_root,
         model=model,
         region=region,
     ) / SNAPSHOT_MANIFEST_FILE
@@ -212,18 +219,21 @@ def inspect_phase2_snapshot(
     cfg: dict[str, Any],
     *,
     repo_root: Path,
+    data_root: str | Path | None = None,
     model: str | None = None,
     region: str | None = None,
 ) -> Phase2SnapshotStatus:
     export_root = _phase2_candidate_export_root(
         cfg,
         repo_root=repo_root,
+        data_root=data_root,
         model=model,
         region=region,
     )
     manifest_path = _phase2_candidate_manifest_path(
         cfg,
         repo_root=repo_root,
+        data_root=data_root,
         model=model,
         region=region,
     )
@@ -324,12 +334,14 @@ def phase2_snapshot_is_valid(
     cfg: dict[str, Any],
     *,
     repo_root: Path,
+    data_root: str | Path | None = None,
     model: str | None = None,
     region: str | None = None,
 ) -> bool:
     return inspect_phase2_snapshot(
         cfg,
         repo_root=repo_root,
+        data_root=data_root,
         model=model,
         region=region,
     ).valid
@@ -613,3 +625,27 @@ def resolve_phase2_manifest_path(
         model=model,
         region=region,
     )
+
+
+def main(argv: list[str] | None = None) -> int:
+    """Expose snapshot maintenance utilities without changing build.py CLI."""
+    import argparse
+
+    parser = argparse.ArgumentParser(prog="data_snapshot")
+    subparsers = parser.add_subparsers(dest="command", required=True)
+    subparsers.add_parser(
+        "fixture-refresh",
+        help="refresh one document_key in the committed phase2 fixture snapshot",
+        add_help=False,
+    )
+    args, remainder = parser.parse_known_args(argv)
+    if args.command == "fixture-refresh":
+        from tools.data_snapshot_fixture_refresh import main as fixture_refresh_main
+
+        return fixture_refresh_main(remainder)
+    parser.error(f"unsupported command: {args.command}")
+    return 2
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

@@ -4,6 +4,11 @@ import json
 from dataclasses import dataclass
 from typing import Any, Callable
 
+from tools.queue_transitions import has_active_queue_claim
+from tools.utils.log import get_logger
+
+_LOG = get_logger("build-queue")
+
 
 @dataclass(frozen=True)
 class QueueSessionBootstrap:
@@ -64,6 +69,7 @@ def load_pending_queue_state(
     immediate_only: bool,
     workflow_action: str | None,
     record_id: str | None,
+    record_ids: tuple[str, ...] = (),
     select_pending_queue_records: Callable[..., list[Any]],
     group_pending_queue_records: Callable[[list[Any]], list[list[Any]]],
     available_field_names: Callable[[list[dict[str, Any]]], set[str]],
@@ -79,15 +85,37 @@ def load_pending_queue_state(
         table_id=binding.table_id,
         view_id=binding.view_id,
     )
+    all_candidates = select_pending_queue_records(
+        raw_records,
+        immediate_only=False,
+        workflow_action=None,
+        record_id=None,
+        record_ids=(),
+        include_active_claims=True,
+    )
+    blocked_record_ids = {
+        record.record_id
+        for group in group_pending_queue_records(all_candidates)
+        if any(has_active_queue_claim(getattr(record, "result_value", "")) for record in group)
+        for record in group
+    }
     pending = select_pending_queue_records(
         raw_records,
         immediate_only=immediate_only,
         workflow_action=workflow_action,
         record_id=record_id,
+        record_ids=record_ids,
+        include_active_claims=True,
     )
     if not pending:
         return None
-    pending_groups = group_pending_queue_records(pending)
+    pending_groups = [
+        group
+        for group in group_pending_queue_records(pending)
+        if not any(record.record_id in blocked_record_ids for record in group)
+    ]
+    if not pending_groups:
+        return None
     field_names = available_field_names(raw_records)
     can_write_started_at = build_started_at_field in field_names
     return QueuePendingState(
@@ -103,9 +131,9 @@ def load_pending_queue_state(
 
 def print_no_pending_message(*, immediate_only: bool) -> None:
     if immediate_only:
-        print("[build-queue] No pending immediate build tasks found.")
+        _LOG.info("[build-queue] No pending immediate build tasks found.")
     else:
-        print("[build-queue] No pending build tasks found.")
+        _LOG.info("[build-queue] No pending build tasks found.")
 
 
 def resolve_and_report_wiki_destination(
@@ -124,12 +152,12 @@ def resolve_and_report_wiki_destination(
     )
     if hasattr(destination, "provider") and hasattr(destination, "details"):
         label = str(getattr(destination, "label", "") or "Artifact destination").strip()
-        print(
+        _LOG.info(
             f"[build-queue] {label} "
             + json.dumps(getattr(destination, "details"), ensure_ascii=False)
         )
         return destination
-    print(
+    _LOG.info(
         "[build-queue] Wiki destination "
         + json.dumps(
             {

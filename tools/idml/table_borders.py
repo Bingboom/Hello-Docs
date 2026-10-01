@@ -1,0 +1,135 @@
+"""Table border helpers for IDML story XML."""
+from __future__ import annotations
+
+import re
+
+from .style_names import table_style_ref
+
+
+def suppress_outer_cell_edges(cells: list[str], n_rows: int, n_cols: int) -> list[str]:
+    """Zero only the table perimeter; leave internal grid lines style-driven."""
+    out: list[str] = []
+    for idx, cell_xml in enumerate(cells):
+        row = idx // n_cols
+        col = idx % n_cols
+        attrs: list[str] = []
+        if row == 0:
+            attrs.append('TopEdgeStrokeWeight="0"')
+        if row == n_rows - 1:
+            attrs.append('BottomEdgeStrokeWeight="0"')
+        if col == 0:
+            attrs.append('LeftEdgeStrokeWeight="0"')
+        if col == n_cols - 1:
+            attrs.append('RightEdgeStrokeWeight="0"')
+        if not attrs:
+            out.append(cell_xml)
+            continue
+        def _patch(match: re.Match[str]) -> str:
+            head = match.group(1)
+            for assignment in attrs:  # noqa: B023 -- invoked before the loop advances
+                attr, value = assignment.split("=", 1)
+                pattern = rf'{re.escape(attr)}="[^"]*"'
+                if re.search(pattern, head):
+                    head = re.sub(pattern, f'{attr}={value}', head, count=1)
+                else:
+                    head += " " + assignment
+            return head + match.group(2)
+
+        out.append(re.sub(r'(<Cell\b[^>]*)(>)', _patch, cell_xml, count=1))
+    return out
+
+
+def suppress_inner_vertical_edges_xml(table_xml: str, n_cols: int) -> str:
+    """Drop the internal column dividers of a rendered table; keep the
+    perimeter and row hairlines (master spec-table look). Cells carry
+    Name="col:row" so the column is recoverable from the XML alone."""
+    def _patch(match: re.Match[str]) -> str:
+        head, col = match.group(1), int(match.group(2))
+        attrs = []
+        if col > 0:
+            attrs.append("LeftEdgeStrokeWeight")
+        if col < n_cols - 1:
+            attrs.append("RightEdgeStrokeWeight")
+        for attr in attrs:
+            pattern = rf'{re.escape(attr)}="[^"]*"'
+            if re.search(pattern, head):
+                head = re.sub(pattern, f'{attr}="0"', head, count=1)
+            else:
+                head += f' {attr}="0"'
+        return head
+
+    return re.sub(r'(<Cell\b[^>]*?Name="(\d+):\d+"[^>]*?)(?=/?>)', _patch, table_xml)
+
+
+def component_table_xml(tid: str, cols: list[float], cells: list[str],
+                        n_rows: int = 1, role: str | None = None, *,
+                        outer_stroke: bool = True,
+                        row_heights: list[float] | None = None,
+                        auto_grow_rows: bool = False) -> str:
+    table_style = table_style_ref(role)
+    if not outer_stroke:
+        cells = suppress_outer_cell_edges(cells, n_rows, len(cols))
+    if row_heights is not None and len(row_heights) != n_rows:
+        raise ValueError("row_heights must contain exactly one value per row")
+    row_els = "\n".join(
+        (
+            f'    <Row Self="{tid}r{ri}" Name="{ri}"/>'
+            if row_heights is None else
+            f'    <Row Self="{tid}r{ri}" Name="{ri}" '
+            f'SingleRowHeight="{row_heights[ri]:g}" '
+            f'MinimumHeight="{row_heights[ri]:g}" '
+            f'AutoGrow="{str(auto_grow_rows).lower()}"/>'
+        )
+        for ri in range(n_rows)
+    )
+    col_els = "\n".join(
+        f'    <Column Self="{tid}col{ci}" Name="{ci}" SingleColumnWidth="{wd:g}"/>'
+        for ci, wd in enumerate(cols))
+    return (
+        f'  <Table Self="{tid}" AppliedTableStyle="{table_style}" '
+        f'BodyRowCount="{n_rows}" ColumnCount="{len(cols)}" HeaderRowCount="0" FooterRowCount="0">\n'
+        f'{row_els}\n{col_els}\n' + "\n".join(cells) + "\n  </Table>\n")
+
+
+def fill_column_xml(table_xml: str, col: int, color: str, tint: int = 100) -> str:
+    """Give one column's cells a fill (the master's icon plates)."""
+    return re.sub(
+        rf'(<Cell\b[^>]*?Name="{col}:\d+")',
+        rf'\1 FillColor="{color}" FillTint="{tint}"',
+        table_xml)
+
+
+def suppress_outer_edges_xml(table_xml: str, n_cols: int) -> str:
+    """Zero the boundary cells' outer edges (the rounded wrapper frame
+    draws the outline instead; keeping both doubles the border)."""
+    m = re.search(r'BodyRowCount="(\d+)"', table_xml)
+    n_rows = int(m.group(1)) if m else 1
+
+    def _edges(col: int, row: int) -> str:
+        parts = []
+        if row == 0:
+            parts.append('TopEdgeStrokeWeight="0"')
+        if row == n_rows - 1:
+            parts.append('BottomEdgeStrokeWeight="0"')
+        if col == 0:
+            parts.append('LeftEdgeStrokeWeight="0"')
+        if col == n_cols - 1:
+            parts.append('RightEdgeStrokeWeight="0"')
+        return " ".join(parts)
+
+    def _sub(match: re.Match) -> str:
+        head, col, row = match.group(1), int(match.group(2)), int(match.group(3))
+        for assignment in _edges(col, row).split():
+            attr, value = assignment.split("=", 1)
+            pattern = rf'{re.escape(attr)}="[^"]*"'
+            if re.search(pattern, head):
+                head = re.sub(pattern, f'{attr}={value}', head, count=1)
+            else:
+                head += " " + assignment
+        return head
+
+    return re.sub(
+        r'(<Cell\b[^>]*?Name="(\d+):(\d+)"[^>]*)(?=>)',
+        _sub,
+        table_xml,
+    )

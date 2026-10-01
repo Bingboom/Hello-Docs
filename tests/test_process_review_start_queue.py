@@ -614,9 +614,10 @@ class TestProcessReviewStartQueue(unittest.TestCase):
     def test_resolve_review_start_config_path_should_support_new_resolution_signature(self) -> None:
         expected = Path("config.us.yaml")
 
-        def fake_resolver(*, repo_root, region, lang, build_family=None, config_loader):
+        def fake_resolver(*, repo_root, model=None, region, lang, build_family=None, config_loader):
             self.assertEqual(process_review_start_queue.ROOT, repo_root)
             self.assertIs(process_review_start_queue.load_config, config_loader)
+            self.assertEqual("JE-1000F", model)
             self.assertEqual("US", region)
             self.assertEqual("", lang)
             self.assertEqual("us-merged", build_family)
@@ -624,6 +625,7 @@ class TestProcessReviewStartQueue(unittest.TestCase):
 
         with mock.patch.object(process_review_start_queue, "resolve_config_path_for_task", side_effect=fake_resolver):
             resolved = process_review_start_queue._resolve_review_start_config_path(
+                model="JE-1000F",
                 region="US",
                 lang="",
                 build_family="us-merged",
@@ -631,7 +633,7 @@ class TestProcessReviewStartQueue(unittest.TestCase):
 
         self.assertEqual(expected, resolved)
 
-    def test_resolve_review_start_config_path_should_fallback_to_region_config_when_lang_blank(self) -> None:
+    def test_resolve_review_start_config_path_should_match_single_language_target_when_lang_blank(self) -> None:
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
             (root / "config.zh.yaml").write_text("build: {}\n", encoding="utf-8")
@@ -641,6 +643,7 @@ class TestProcessReviewStartQueue(unittest.TestCase):
                     "build": {
                         "family_id": "cn-zh",
                         "languages": ["zh"],
+                        "default_model": "JE-2000E",
                         "default_region": "CN",
                     }
                 },
@@ -648,6 +651,7 @@ class TestProcessReviewStartQueue(unittest.TestCase):
                     "build": {
                         "family_id": "us-merged",
                         "languages": ["en", "fr", "es"],
+                        "default_model": "JE-1000F",
                         "default_region": "US",
                         "queue_by_document_key": True,
                     }
@@ -657,15 +661,11 @@ class TestProcessReviewStartQueue(unittest.TestCase):
             with mock.patch.object(process_review_start_queue, "ROOT", root), \
                 mock.patch.object(
                     process_review_start_queue,
-                    "resolve_config_path_for_task",
-                    side_effect=RuntimeError("No config family matches region='CN' and lang=''"),
-                ), \
-                mock.patch.object(
-                    process_review_start_queue,
                     "load_config",
                     side_effect=lambda path: cfgs[path.name],
                 ):
                 resolved = process_review_start_queue._resolve_review_start_config_path(
+                    model="JE-2000E",
                     region="CN",
                     lang="",
                     build_family="",
@@ -673,7 +673,7 @@ class TestProcessReviewStartQueue(unittest.TestCase):
 
         self.assertEqual(root / "config.zh.yaml", resolved)
 
-    def test_resolve_review_start_config_path_fallback_should_scan_configs_dir(self) -> None:
+    def test_resolve_review_start_config_path_should_scan_configs_dir(self) -> None:
         with tempfile.TemporaryDirectory() as td:
             root = Path(td)
             configs_dir = root / "configs"
@@ -684,6 +684,7 @@ class TestProcessReviewStartQueue(unittest.TestCase):
                     "build": {
                         "family_id": "eu-merged",
                         "languages": ["en", "fr", "es", "de", "it", "uk"],
+                        "default_model": "JE-1000F",
                         "default_region": "EU",
                         "queue_by_document_key": True,
                     }
@@ -693,15 +694,11 @@ class TestProcessReviewStartQueue(unittest.TestCase):
             with mock.patch.object(process_review_start_queue, "ROOT", root), \
                 mock.patch.object(
                     process_review_start_queue,
-                    "resolve_config_path_for_task",
-                    side_effect=RuntimeError("No config family matches region='EU' and lang=''"),
-                ), \
-                mock.patch.object(
-                    process_review_start_queue,
                     "load_config",
                     side_effect=lambda path: cfgs[path.name],
                 ):
                 resolved = process_review_start_queue._resolve_review_start_config_path(
+                    model="JE-1000F",
                     region="EU",
                     lang="",
                     build_family="",
@@ -869,7 +866,7 @@ class TestProcessReviewStartQueue(unittest.TestCase):
             mock.patch.object(
                 process_review_start_queue,
                 "resolve_config_path_for_task",
-                side_effect=lambda *, region, lang, build_family=None: Path(td) / ("config.us.yaml" if build_family == "us-merged" else "config.us-en.yaml"),
+                side_effect=lambda *, model=None, region, lang, build_family=None: Path(td) / ("config.us.yaml" if build_family == "us-merged" else "config.us-en.yaml"),
             ) as mock_resolve_config_path, \
             mock.patch.object(
                 process_review_start_queue,
@@ -1061,7 +1058,7 @@ class TestProcessReviewStartQueue(unittest.TestCase):
             mock.patch.object(
                 process_review_start_queue,
                 "resolve_config_path_for_task",
-                side_effect=lambda *, region, lang, build_family=None: Path(td) / "config.us.yaml",
+                side_effect=lambda *, model=None, region, lang, build_family=None: Path(td) / "config.us.yaml",
             ), \
             mock.patch.object(process_review_start_queue, "load_config", return_value={"build": {"queue_by_document_key": True}}), \
             mock.patch.object(process_review_start_queue, "start_review_for_record") as mock_start_review:
@@ -1426,3 +1423,195 @@ class TestProcessReviewStartQueue(unittest.TestCase):
         mock_sync.assert_not_called()
         mock_start_review.assert_not_called()
         source.upsert_record.assert_not_called()
+
+    def test_process_review_start_queue_should_treat_targeted_record_with_advanced_workflow_action_as_success(self) -> None:
+        # 2026-07-03 incident: the row finished start-review (Git_ref set, InReview),
+        # then the business plane advanced Workflow_action to "Build Draft Package".
+        # A duplicate targeted dispatch must still exit 0 instead of "No pending
+        # review-start task found".
+        cfg = {
+            "sync": {
+                "phase2": {
+                    "provider": "lark_cli",
+                    "cli_bin": "lark-cli",
+                    "base_token_env": "FEISHU_PHASE2_BASE_TOKEN",
+                    "document_link": {
+                        "table_id_env": "FEISHU_PHASE2_DOCUMENT_LINK_TABLE_ID",
+                        "view_id_env": "FEISHU_PHASE2_DOCUMENT_LINK_VIEW_ID",
+                    },
+                }
+            }
+        }
+        raw_records = [
+            {
+                "record_id": "recvokvmgfofyI",
+                "fields": {
+                    process_review_start_queue.DOCUMENT_ID_FIELD: "JE-2000F_CN",
+                    process_review_start_queue.DOCUMENT_KEY_FIELD: "JE-2000F_CN",
+                    process_review_start_queue.BUILD_FAMILY_FIELD: ["cn-zh"],
+                    process_review_start_queue.LANG_FIELD: ["zh"],
+                    process_review_start_queue.VERSION_FIELD: [""],
+                    process_review_start_queue.WORKFLOW_ACTION_FIELD: "Build Draft Package",
+                    process_review_start_queue.REVIEW_STATUS_FIELD: [process_review_start_queue.REVIEW_STATUS_IN_REVIEW],
+                    process_review_start_queue.REVIEW_TRIGGER_FIELD: False,
+                    process_review_start_queue.GIT_REF_FIELD: "review/JE-2000F-CN",
+                    process_review_start_queue.PR_URL_FIELD: "https://github.com/Bingboom/auto-manual/pull/530",
+                },
+            }
+        ]
+
+        source = mock.Mock()
+        source.fetch_records_with_ids.return_value = raw_records
+
+        with tempfile.TemporaryDirectory() as td, \
+            mock.patch.object(process_review_start_queue, "collect_review_start_preflight_errors", return_value=[]), \
+            mock.patch.object(process_review_start_queue, "resolve_review_init_binding") as mock_binding, \
+            mock.patch.object(process_review_start_queue, "_cli_bin", return_value="lark-cli"), \
+            mock.patch.object(process_review_start_queue, "_phase2_identity", return_value="bot"), \
+            mock.patch.object(process_review_start_queue, "LarkCliSource", return_value=source), \
+            mock.patch.object(process_review_start_queue, "sync_phase2_snapshot_before_review_start") as mock_sync, \
+            mock.patch.object(process_review_start_queue, "start_review_for_record") as mock_start_review:
+            mock_binding.return_value = process_review_start_queue.ReviewInitBinding(
+                base_token_env="FEISHU_PHASE2_BASE_TOKEN",
+                table_id_env="FEISHU_PHASE2_DOCUMENT_LINK_TABLE_ID",
+                view_id_env="FEISHU_PHASE2_DOCUMENT_LINK_VIEW_ID",
+                base_token="app_xxx",
+                table_id="tbl_init",
+                view_id="vew_init",
+            )
+            summary_path = Path(td) / ".tmp" / "openclaw" / "feishu-start-review-failure-summary.json"
+            with mock.patch.dict(
+                process_review_start_queue.os.environ,
+                {"AUTO_MANUAL_FAILURE_SUMMARY_PATH": str(summary_path)},
+                clear=False,
+            ):
+                exit_code = process_review_start_queue.process_review_start_queue(
+                    cfg=cfg,
+                    config_path=Path(td) / "config.yaml",
+                    data_root=str(Path(td) / ".tmp" / "review-start" / "phase2"),
+                    dry_run=False,
+                    record_id="recvokvmgfofyI",
+                )
+
+        self.assertEqual(0, exit_code)
+        self.assertFalse(summary_path.exists())
+        mock_sync.assert_not_called()
+        mock_start_review.assert_not_called()
+        source.upsert_record.assert_not_called()
+
+    def test_process_review_start_queue_should_still_fail_targeted_advanced_action_record_without_git_ref(self) -> None:
+        # An advanced Workflow_action alone is NOT proof of a completed review-start:
+        # without Git_ref + InReview/ReadyForPublish the targeted dispatch stays a
+        # structured failure.
+        cfg = {
+            "sync": {
+                "phase2": {
+                    "provider": "lark_cli",
+                    "cli_bin": "lark-cli",
+                    "base_token_env": "FEISHU_PHASE2_BASE_TOKEN",
+                    "document_link": {
+                        "table_id_env": "FEISHU_PHASE2_DOCUMENT_LINK_TABLE_ID",
+                        "view_id_env": "FEISHU_PHASE2_DOCUMENT_LINK_VIEW_ID",
+                    },
+                }
+            }
+        }
+        raw_records = [
+            {
+                "record_id": "rec_advanced_not_started",
+                "fields": {
+                    process_review_start_queue.DOCUMENT_ID_FIELD: "JE-2000F_CN",
+                    process_review_start_queue.DOCUMENT_KEY_FIELD: "JE-2000F_CN",
+                    process_review_start_queue.BUILD_FAMILY_FIELD: ["cn-zh"],
+                    process_review_start_queue.LANG_FIELD: ["zh"],
+                    process_review_start_queue.VERSION_FIELD: [""],
+                    process_review_start_queue.WORKFLOW_ACTION_FIELD: "Build Draft Package",
+                    process_review_start_queue.REVIEW_STATUS_FIELD: [process_review_start_queue.REVIEW_STATUS_NOT_STARTED],
+                    process_review_start_queue.REVIEW_TRIGGER_FIELD: False,
+                    process_review_start_queue.GIT_REF_FIELD: "",
+                    process_review_start_queue.PR_URL_FIELD: "",
+                },
+            }
+        ]
+
+        source = mock.Mock()
+        source.fetch_records_with_ids.return_value = raw_records
+
+        with tempfile.TemporaryDirectory() as td, \
+            mock.patch.object(process_review_start_queue, "collect_review_start_preflight_errors", return_value=[]), \
+            mock.patch.object(process_review_start_queue, "resolve_review_init_binding") as mock_binding, \
+            mock.patch.object(process_review_start_queue, "_cli_bin", return_value="lark-cli"), \
+            mock.patch.object(process_review_start_queue, "_phase2_identity", return_value="bot"), \
+            mock.patch.object(process_review_start_queue, "LarkCliSource", return_value=source), \
+            mock.patch.object(process_review_start_queue, "sync_phase2_snapshot_before_review_start") as mock_sync, \
+            mock.patch.object(process_review_start_queue, "start_review_for_record") as mock_start_review:
+            mock_binding.return_value = process_review_start_queue.ReviewInitBinding(
+                base_token_env="FEISHU_PHASE2_BASE_TOKEN",
+                table_id_env="FEISHU_PHASE2_DOCUMENT_LINK_TABLE_ID",
+                view_id_env="FEISHU_PHASE2_DOCUMENT_LINK_VIEW_ID",
+                base_token="app_xxx",
+                table_id="tbl_init",
+                view_id="vew_init",
+            )
+            summary_path = Path(td) / ".tmp" / "openclaw" / "feishu-start-review-failure-summary.json"
+            with mock.patch.dict(
+                process_review_start_queue.os.environ,
+                {"AUTO_MANUAL_FAILURE_SUMMARY_PATH": str(summary_path)},
+                clear=False,
+            ):
+                exit_code = process_review_start_queue.process_review_start_queue(
+                    cfg=cfg,
+                    config_path=Path(td) / "config.yaml",
+                    data_root=str(Path(td) / ".tmp" / "review-start" / "phase2"),
+                    dry_run=False,
+                    record_id="rec_advanced_not_started",
+                )
+                self.assertEqual(1, exit_code)
+                self.assertTrue(summary_path.exists())
+                payload = json.loads(summary_path.read_text(encoding="utf-8"))
+                self.assertEqual("review_start_target_not_pending", payload["summary_code"])
+
+        mock_sync.assert_not_called()
+        mock_start_review.assert_not_called()
+        source.upsert_record.assert_not_called()
+
+
+class ReviewStartTargetLanguageRoutingTests(unittest.TestCase):
+    def test_start_review_without_build_family_resolves_bp_target_config(self) -> None:
+        resolved = process_review_start_queue._resolve_review_start_config_path(
+            model="JBP-2000B",
+            region="US",
+            lang="",
+            build_family="",
+        )
+
+        self.assertEqual("config.bp-us.yaml", resolved.name)
+
+    def test_start_review_with_us_language_family_resolves_bp_target_config(self) -> None:
+        resolved = process_review_start_queue._resolve_review_start_config_path(
+            model="JBP-2000B",
+            region="US",
+            lang="",
+            build_family="us-merged",
+        )
+
+        self.assertEqual("config.bp-us.yaml", resolved.name)
+
+    def test_start_review_without_build_family_keeps_host_target_on_host_config(self) -> None:
+        resolved = process_review_start_queue._resolve_review_start_config_path(
+            model="JE-1000F",
+            region="US",
+            lang="",
+            build_family="",
+        )
+
+        self.assertEqual("config.us.yaml", resolved.name)
+
+    def test_start_review_without_build_family_rejects_unknown_us_target(self) -> None:
+        with self.assertRaisesRegex(RuntimeError, "No Start Review config declares target"):
+            process_review_start_queue._resolve_review_start_config_path(
+                model="UNKNOWN-2000",
+                region="US",
+                lang="",
+                build_family="",
+            )

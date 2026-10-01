@@ -3,6 +3,10 @@ pages:
   - type: rst_include
     lang: en
     file: templates/page_shared/en/00_preface.rst
+    # US/CA compliance (operator decision 2026-08-13): the preface ships
+    # EN/FR/ES in every US-line document, including single-language drafts.
+    # The FR/ES blocks are policy, not debt — do NOT re-add lang_blocks here.
+    # Parity-gate coverage: data/lang_parity_known_exceptions.csv preface row.
   - type: rst_include
     lang: en
     file: templates/page_us-en/safety_en.rst
@@ -34,6 +38,7 @@ pages:
   - type: rst_include
     lang: en
     file: templates/page_shared/en/06_ups_mode.rst
+    capability: UPS功能
   - type: rst_include
     lang: en
     file: templates/page_shared/en/charging.rst

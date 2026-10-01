@@ -25,9 +25,9 @@ import argparse
 import csv
 import json
 import os
-import subprocess
 import sys
 from pathlib import Path
+from typing import Any
 
 try:
     from tools.script_bootstrap import bootstrap_repo_root
@@ -35,6 +35,8 @@ except ImportError:  # pragma: no cover - direct execution fallback
     from script_bootstrap import bootstrap_repo_root
 
 ROOT = bootstrap_repo_root(__file__, parent_count=1)
+
+from tools.feishu_record_transport import iter_lark_pages  # noqa: E402
 
 # Field types this tool can create in a target tenant. Anything else (link / formula /
 # lookup / button / auto_number ...) is recorded but flagged for manual setup, because
@@ -53,23 +55,39 @@ _IDENTITY: str = "bot"
 
 
 def _lark(args: list[str], lark_cli: str = "lark-cli") -> dict:
+    from tools.feishu_record_transport import run_lark_cli_json
+
     env = {**os.environ, "LARK_CLI_NO_PROXY": os.environ.get("LARK_CLI_NO_PROXY", "1")}
-    cmd = [lark_cli]
+    command_prefix = [lark_cli]
     if _PROFILE:
-        cmd += ["--profile", _PROFILE]
+        command_prefix += ["--profile", _PROFILE]
     a = list(args)
     if "--as" in a:  # callers pass a default "--as bot"; honor the run-level identity instead
         i = a.index("--as")
         del a[i:i + 2]
-    cmd += [*a, "--as", _IDENTITY]
-    proc = subprocess.run(cmd, capture_output=True, text=True, env=env)
-    # reads emit JSON on stdout; some writes (record-upsert) emit it on stderr -> try both
-    for text in (proc.stdout, (proc.stdout or "") + (proc.stderr or "")):
-        try:
-            return json.loads(text[text.index("{"):])
-        except ValueError:
-            continue
-    return {"ok": False, "_raw": ((proc.stdout or "") + (proc.stderr or ""))[:200]}
+    a += ["--as", _IDENTITY]
+
+    def parse_output(stdout: str, stderr: str) -> dict:
+        # Reads emit JSON on stdout; some writes emit it on stderr. Keep the
+        # historical stdout-then-combined fallback while centralizing execution.
+        for text in (stdout, stdout + stderr):
+            if not text:
+                continue
+            try:
+                return json.loads(text[text.index("{"):])
+            except ValueError:
+                continue
+        return {"ok": False, "_raw": (stdout + stderr)[:200]}
+
+    return run_lark_cli_json(
+        cli_bin=lark_cli,
+        args=a,
+        repo_root=ROOT,
+        resolved_cli_command_parts=lambda _cli: command_prefix,
+        parse_json_payload=parse_output,
+        parse_process_output=parse_output,
+        environment=env,
+    )
 
 
 def _norm_select(raw_type: str, multiple: bool) -> str:
@@ -86,6 +104,21 @@ def _field_export(f: dict) -> dict:
         rec["multiple"] = bool(f.get("multiple")) or t == "multi_select"
         opts = f.get("options") or prop.get("options") or []
         rec["options"] = [o.get("name") for o in opts if isinstance(o, dict) and o.get("name")]
+    if rec["type"] in COMPLEX_TYPES:
+        # Disaster-recovery detail: apply cannot auto-create these, but the
+        # manifest must record HOW to rebuild them by hand — a lookup's source
+        # table/field, a link's target table, a formula's expression. Without
+        # this the mirror only says "a formula existed here".
+        detail = {
+            key: value
+            for key, value in f.items()
+            if key not in ("field_name", "name", "type", "id", "style", "is_primary")
+            and value not in (None, "", [], {})
+        }
+        if prop:
+            detail.setdefault("property", prop)
+        if detail:
+            rec["detail"] = detail
     return rec
 
 
@@ -196,6 +229,8 @@ def parity(
     lark_cli: str,
     ignore_prefixes: "tuple[str, ...] | list[str] | None" = None,
     ignore_names: "set[str] | list[str] | None" = None,
+    table_aliases: "dict[str, str] | None" = None,
+    ignore_fields: "set[str] | list[str] | None" = None,
 ) -> dict:
     """Read-only structure diff between two tenants (e.g. dev vs prod).
 
@@ -206,25 +241,77 @@ def parity(
     ``ignore_prefixes`` / ``ignore_names`` drop SOURCE-only scratch tables (e.g. the dev
     tenant's ``99_*`` experiment/archive tables, ``QC_Report``) from the comparison so a
     prod-lag alert isn't permanently red over tables prod is correct NOT to have.
+
+    ``table_aliases`` maps an intentional source/target rename, for example
+    ``{"数据入库表": "01_数据入库"}``. The target table is compared in place; parity
+    must not propose creating a duplicate table merely because the two tenants use
+    different names during a staged migration.
+
+    ``ignore_fields`` contains exact ``SOURCE_TABLE.FIELD`` keys for fields that are
+    intentionally retired or replaced by a target-specific field design. This is
+    explicit and narrow: it does not suppress other missing fields in the table.
     """
     ignore_prefixes = tuple(ignore_prefixes or ())
     ignore_names = set(ignore_names or ())
+    ignore_fields = set(ignore_fields or ())
 
     def _ignored(name: str) -> bool:
         return name in ignore_names or any(name.startswith(p) for p in ignore_prefixes)
 
     src = export(source_base, table_filter, lark_cli)
     src["tables"] = [t for t in src["tables"] if not _ignored(t["name"])]
-    plan = apply(src, target_base, write=False, lark_cli=lark_cli)
-    src_names = {t["name"] for t in src["tables"]}
-    extra = sorted(n for n in (set(plan["target_tables"]) - src_names) if not _ignored(n)) if table_filter is None else []
+    src["tables"] = [
+        {
+            **table,
+            "fields": [
+                field for field in table.get("fields", [])
+                if f"{table['name']}.{field['name']}" not in ignore_fields
+            ],
+        }
+        for table in src["tables"]
+    ]
+    aliases = dict(table_aliases or {})
+    source_names = {t["name"] for t in src["tables"]}
+    unknown_aliases = sorted(set(aliases) - source_names)
+    if unknown_aliases:
+        raise ValueError("table alias source not found in source base: " + ", ".join(unknown_aliases))
+    aliased_names = [aliases.get(t["name"], t["name"]) for t in src["tables"]]
+    if len(aliased_names) != len(set(aliased_names)):
+        raise ValueError("table aliases map multiple source tables to the same target name")
+    source_by_target = {target: source for source, target in zip(
+        (t["name"] for t in src["tables"]), aliased_names
+    )}
+    aliased_src = {
+        **src,
+        "tables": [
+            {**table, "name": aliases.get(table["name"], table["name"])}
+            for table in src["tables"]
+        ],
+    }
+    plan = apply(aliased_src, target_base, write=False, lark_cli=lark_cli)
+
+    def _source_name(target_name: str) -> str:
+        return source_by_target.get(target_name, target_name)
+
+    missing_tables = [_source_name(name) for name in plan["create_tables"]]
+    missing_fields = [
+        {**field, "table": _source_name(field["table"])}
+        for field in plan["create_fields"]
+    ]
+    drift = [{**item, "table": _source_name(item["table"])} for item in plan["drift"]]
+    manual_complex = [
+        {**field, "table": _source_name(field["table"])}
+        for field in plan["manual_complex"]
+    ]
+    target_names_consumed = set(aliased_names)
+    extra = sorted(n for n in (set(plan["target_tables"]) - target_names_consumed) if not _ignored(n)) if table_filter is None else []
     return {
-        "missing_tables": plan["create_tables"],
-        "missing_fields": plan["create_fields"],
-        "drift": plan["drift"],
-        "manual_complex": plan["manual_complex"],
+        "missing_tables": missing_tables,
+        "missing_fields": missing_fields,
+        "drift": drift,
+        "manual_complex": manual_complex,
         "extra_tables": extra,
-        "in_parity": not (plan["create_tables"] or plan["create_fields"] or plan["drift"]),
+        "in_parity": not (missing_tables or missing_fields or drift),
     }
 
 
@@ -287,13 +374,81 @@ def _coerce_cell(value: str, ftype: str):
     return v
 
 
+def _field_id_name_map(base_token: str, tid: str, lark_cli: str) -> dict[str, str]:
+    """``{field_id: authoritative field name}`` from ``+field-list``.
+
+    record-list returns column *display* names in ``fields``, which can diverge
+    from the real field names (``+field-list``). Keying rows off the display
+    names then makes ``_kv`` / ``seed_export`` read the wrong column -> empty ->
+    updates get misclassified as creates. Rebuild names from field-list, the same
+    authoritative source ``sync_data`` uses.
+    """
+    fl = _lark(["base", "+field-list", "--base-token", base_token, "--table-id", tid, "--format", "json", "--as", "bot"], lark_cli)
+    items = fl.get("data", {}).get("fields") or fl.get("data", {}).get("items") or []
+    mapping: dict[str, str] = {}
+    for item in items:
+        if not isinstance(item, dict):
+            continue
+        field_id = str(item.get("field_id") or item.get("id") or "").strip()
+        name = str(item.get("field_name") or item.get("name") or "").strip()
+        if field_id and name:
+            mapping[field_id] = name
+    return mapping
+
+
 def _read_records(base_token: str, tid: str, lark_cli: str) -> tuple[list[dict], list[str]]:
-    """Return ([row dict], [record_id]) for a table (first 200 rows — reference tables are small)."""
-    rl = _lark(["base", "+record-list", "--base-token", base_token, "--table-id", tid, "--limit", "200", "--format", "json", "--as", "bot"], lark_cli)
-    data = rl.get("data", {}) or {}
-    flds = data.get("fields") or []
-    rids = data.get("record_id_list") or []
-    rows = [dict(zip(flds, row)) for row in (data.get("data") or [])]
+    """Return ([row dict], [record_id]) for a table, following pagination.
+
+    Rows are keyed by the authoritative field names (from ``+field-list`` via the
+    record-list ``field_id_list``), not the record-list display names, which can
+    diverge and misalign seed_export / seed_import against the real columns.
+
+    Reference tables are usually small, but a single ``--limit 200`` call silently
+    truncated any table past 200 rows: ``seed_export`` would drop the tail from the
+    committed CSV and ``seed_import`` would classify those rows as ``create`` and
+    duplicate them on every run (breaking the idempotency contract). Page with
+    ``--offset`` / ``has_more`` so every row is seen.
+    """
+    id_name = _field_id_name_map(base_token, tid, lark_cli)
+    rows: list[dict] = []
+    rids: list[str] = []
+    limit = 200
+    def fetch_page(offset: int, page_limit: int) -> dict[str, Any]:
+        args = [
+            "base", "+record-list", "--base-token", base_token, "--table-id", tid,
+            "--limit", str(page_limit), "--format", "json", "--as", "bot",
+        ]
+        if offset:
+            args += ["--offset", str(offset)]
+        return _lark(args, lark_cli)
+
+    def page_items(payload: dict[str, Any]) -> list[Any]:
+        return (payload.get("data") or {}).get("data") or []
+
+    def page_has_more(payload: dict[str, Any], _offset: int) -> bool:
+        return bool((payload.get("data") or {}).get("has_more"))
+
+    for payload, raw_rows in iter_lark_pages(
+        fetch_page,
+        items_from_payload=page_items,
+        has_more_from_payload=page_has_more,
+        limit=limit,
+    ):
+        data = payload.get("data", {}) or {}
+        display = data.get("fields") or []
+        field_ids = data.get("field_id_list") or []
+        if field_ids:
+            # Rebuild column names from field-list; fall back to the display name
+            # (then the raw id) per position when a field is not in the map.
+            col_names = [
+                id_name.get(str(fid)) or (display[i] if i < len(display) else str(fid))
+                for i, fid in enumerate(field_ids)
+            ]
+        else:
+            col_names = display  # older CLI without field_id_list: display names as-is
+        page_rows = [dict(zip(col_names, row)) for row in raw_rows]
+        rows.extend(page_rows)
+        rids.extend(data.get("record_id_list") or [])
     return rows, rids
 
 
@@ -408,6 +563,19 @@ def _add_routing(sp: argparse.ArgumentParser) -> None:
     sp.add_argument("--identity", default="bot", choices=["bot", "user"], help="lark-cli token identity (default: bot; cross-tenant writes usually need 'user', the base owner's token)")
 
 
+def _parse_table_aliases(raw_aliases: list[str]) -> dict[str, str]:
+    aliases: dict[str, str] = {}
+    for raw in raw_aliases:
+        source, separator, target = raw.partition("=")
+        source, target = source.strip(), target.strip()
+        if not separator or not source or not target:
+            raise ValueError(f"invalid --table-alias {raw!r}; expected SOURCE=TARGET")
+        if source in aliases and aliases[source] != target:
+            raise ValueError(f"duplicate --table-alias source with different targets: {source}")
+        aliases[source] = target
+    return aliases
+
+
 def _parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(description="Export / apply Feishu Bitable schema for dev->prod tenant parity.")
     sub = p.add_subparsers(dest="command", required=True)
@@ -435,6 +603,10 @@ def _parser() -> argparse.ArgumentParser:
                     help="drop SOURCE tables whose name starts with PREFIX (repeatable; e.g. dev scratch '99_')")
     pa.add_argument("--ignore-table", action="append", default=[], metavar="NAME",
                     help="drop a SOURCE table by exact name (repeatable; e.g. 'QC_Report')")
+    pa.add_argument("--table-alias", action="append", default=[], metavar="SOURCE=TARGET",
+                    help="compare a SOURCE table against an intentionally renamed TARGET table (repeatable)")
+    pa.add_argument("--ignore-field", action="append", default=[], metavar="TABLE.FIELD",
+                    help="ignore an explicitly retired/replaced SOURCE field (repeatable; exact TABLE.FIELD)")
     pa.add_argument("--fail-on", choices=["any", "missing"], default="any",
                     help="exit 1 on 'any' divergence (default) or only on 'missing' tables/fields "
                          "(drift still reported but not failed — for a prod-lag alert where dev may carry extra/dirty options)")
@@ -471,156 +643,187 @@ def _parser() -> argparse.ArgumentParser:
     return p
 
 
+def _cmd_export(args: argparse.Namespace) -> int:
+    if not args.base_token:
+        print("bitable-schema: --base-token or $FEISHU_PHASE2_BASE_TOKEN required", file=sys.stderr)
+        return 2
+    manifest = export(args.base_token, [t.strip() for t in args.tables.split(",")] if args.tables else None, args.lark_cli)
+    out = Path(args.out)
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(f"WROTE {out}  ({len(manifest['tables'])} tables)")
+    for t in manifest["tables"]:
+        print(f"  {t['name']}: {len(t['fields'])} fields")
+    return 0
+
+
+def _cmd_apply(args: argparse.Namespace) -> int:
+    manifest = json.loads(Path(args.manifest).read_text(encoding="utf-8"))
+    write = bool(args.write and args.yes)
+    plan = apply(manifest, args.base_token, write, args.lark_cli)
+    print(f"Target base: {args.base_token}  ({len(plan['target_tables'])} existing tables)")
+    if args.write and not args.yes:
+        print("⚠ --write ignored: re-run with --write --yes once you've confirmed this is the intended (prod) base.")
+    mode = "WRITE" if plan["external_write"] else "dry-run"
+    print(f"APPLY ({mode}): create {len(plan['create_tables'])} table(s), {len(plan['create_fields'])} field(s); "
+          f"skip {len(plan['skip_existing'])}; DRIFT {len(plan['drift'])}; {len(plan['manual_complex'])} complex (manual)")
+    for t in plan["create_tables"]:
+        print(f"  + TABLE {t}{'  -> ' + plan['new_table_ids'].get(t, '') if plan['new_table_ids'].get(t) else ''}")
+    for f in plan["create_fields"]:
+        print(f"  + FIELD {f['table']}.{f['field']} ({f['type']})")
+    for d in plan["drift"]:
+        print(f"  ⚠ DRIFT {d['table']}.{d['field']}: {d['detail']} — NOT changed, reconcile by hand")
+    for f in plan["manual_complex"]:
+        print(f"  ! MANUAL {f['table']}.{f['field']} ({f['type']}) — link/formula/lookup, set up by hand")
+    if plan["new_table_ids"]:
+        print("\nAdd these to the target tenant's FEISHU_PHASE2_* env:")
+        for n, i in plan["new_table_ids"].items():
+            print(f"  # {n} = {i}")
+    return 0
+
+
+def _cmd_parity(args: argparse.Namespace) -> int:
+    tables = [t.strip() for t in args.tables.split(",")] if args.tables else None
+    try:
+        aliases = _parse_table_aliases(args.table_alias)
+        res = parity(args.source_base, args.target_base, tables, args.lark_cli,
+                     ignore_prefixes=args.ignore_table_prefix, ignore_names=args.ignore_table,
+                     table_aliases=aliases, ignore_fields=args.ignore_field)
+    except ValueError as exc:
+        print(f"bitable-schema parity: {exc}", file=sys.stderr)
+        return 2
+    missing = bool(res["missing_tables"] or res["missing_fields"])
+    fail = (not res["in_parity"]) if args.fail_on == "any" else missing
+    if res["in_parity"]:
+        print("PARITY ✅ — target has every table/field the source defines")
+    elif not fail:
+        print(f"PARITY ⚠ — 0 missing table/field; {len(res['drift'])} drift reported below "
+              f"(informational under --fail-on missing)")
+    else:
+        print(f"PARITY ✗ — target lags source: {len(res['missing_tables'])} table(s), "
+              f"{len(res['missing_fields'])} field(s), {len(res['drift'])} drift")
+    for t in res["missing_tables"]:
+        print(f"  - MISSING TABLE {t}")
+    for f in res["missing_fields"]:
+        print(f"  - MISSING FIELD {f['table']}.{f['field']} ({f['type']})")
+    for d in res["drift"]:
+        print(f"  ⚠ DRIFT {d['table']}.{d['field']}: {d['detail']}")
+    if res["extra_tables"]:
+        print(f"  (target also has {len(res['extra_tables'])} extra table(s) not in source — informational)")
+    return 1 if fail else 0
+
+
+def _cmd_seed_export(args: argparse.Namespace) -> int:
+    if not args.base_token:
+        print("bitable-schema: --base-token or $FEISHU_PHASE2_BASE_TOKEN required", file=sys.stderr)
+        return 2
+    cols, rows = seed_export(args.base_token, args.table, args.lark_cli)
+    out = Path(args.out)
+    out.parent.mkdir(parents=True, exist_ok=True)
+    with out.open("w", encoding="utf-8-sig", newline="") as fh:
+        writer = csv.DictWriter(fh, fieldnames=cols)
+        writer.writeheader()
+        writer.writerows(rows)
+    print(f"WROTE {out}  ({len(rows)} rows, {len(cols)} cols)")
+    return 0
+
+
+def _cmd_seed_import(args: argparse.Namespace) -> int:
+    with open(args.seed, encoding="utf-8-sig") as fh:
+        seed_rows = list(csv.DictReader(fh))
+    key = [c.strip() for c in args.key.split(",") if c.strip()]
+    write = bool(args.write and args.yes)
+    plan = seed_import(args.base_token, args.table, seed_rows, key, write, args.lark_cli, prune=args.prune)
+    if plan.get("error"):
+        print(f"seed-import: {plan['error']}", file=sys.stderr)
+        return 2
+    if args.write and not args.yes:
+        print("⚠ --write ignored: re-run with --write --yes once you've confirmed the TARGET base.")
+    mode = "WRITE" if plan["write"] else "dry-run"
+    line = (f"SEED-IMPORT ({mode}) {args.table} by {args.key}: "
+            f"create {len(plan['create'])}, update {len(plan['update'])}, skip {len(plan['skip'])}, extras {len(plan['extras'])}")
+    if plan.get("pruned"):
+        line += f", pruned {len(plan['pruned'])}"
+    print(line)
+    for k in plan["create"]:
+        print(f"  + CREATE {k}")
+    for u in plan["update"]:
+        print(f"  ~ UPDATE {u['key']}: {', '.join(u['fields'])}")
+    if plan["extras"]:
+        tail = " — pruned" if plan.get("pruned") else " — left as-is (use --prune to delete)"
+        print(f"  ! EXTRAS in target, not in seed{tail}: {', '.join(plan['extras'][:10])}{' …' if len(plan['extras']) > 10 else ''}")
+    if plan["dup_keys"]:
+        print(f"  ⚠ DUPLICATE {args.key} in target (upsert ambiguous): {', '.join(sorted(set(plan['dup_keys']))[:10])}")
+    return 0
+
+
+def _cmd_promote(args: argparse.Namespace) -> int:
+    manifest = json.loads(Path(args.manifest).read_text(encoding="utf-8"))
+    seeds = []
+    if args.seeds and Path(args.seeds).exists():
+        for s in json.loads(Path(args.seeds).read_text(encoding="utf-8")).get("seeds", []):
+            with open(s["csv"], encoding="utf-8-sig") as fh:
+                rows = list(csv.DictReader(fh))
+            seeds.append({"table": s["table"], "key": [c.strip() for c in s["key"].split(",")], "rows": rows})
+    write = bool(args.write and args.yes)
+    res = promote(manifest, seeds, args.base_token, write, args.lark_cli, prune=args.prune)
+    st = res["structure"]
+    print(f"PROMOTE ({'WRITE' if res['write'] else 'dry-run'}) -> {args.base_token}")
+    if args.write and not args.yes:
+        print("⚠ --write ignored: re-run with --write --yes once you've confirmed the TARGET base.")
+    print(f"  [structure] tables +{len(st['create_tables'])}, fields +{len(st['create_fields'])}, "
+          f"drift {len(st['drift'])}, complex/manual {len(st['manual_complex'])}")
+    for t in st["create_tables"]:
+        print(f"     + TABLE {t}")
+    for f in st["create_fields"]:
+        print(f"     + FIELD {f['table']}.{f['field']} ({f['type']})")
+    for d in st["drift"]:
+        print(f"     ⚠ DRIFT {d['table']}.{d['field']}: {d['detail']}")
+    for f in st["manual_complex"]:
+        print(f"     ! MANUAL {f['table']}.{f['field']} ({f['type']}) — set up by hand")
+    print(f"  [reference data] {len(res['seeds'])} table(s):")
+    for s in res["seeds"]:
+        p = s["plan"]
+        pruned = f", pruned {len(p['pruned'])}" if p.get("pruned") else ""
+        dup = f"  ⚠ {len(set(p['dup_keys']))} DUP key(s)" if p.get("dup_keys") else ""
+        print(f"     - {s['table']}: create {len(p['create'])}, update {len(p['update'])}, "
+              f"skip {len(p['skip'])}, extras {len(p['extras'])}{pruned}{dup}")
+    print("  [env delta] add to the target FEISHU_PHASE2_* env:")
+    if res["new_table_ids"]:
+        for n, i in res["new_table_ids"].items():
+            print(f"     # {n} = {i}")
+    elif res["write"]:
+        print("     (no new tables created)")
+    else:
+        print("     (dry-run: run --write --yes to create tables and emit their IDs)")
+    if res["write"]:
+        pm = res["post_missing"]
+        if not pm["tables"] and not pm["fields"]:
+            print("  [post-check] structure up to date ✅")
+        else:
+            print(f"  [post-check] ⚠ still missing {len(pm['tables'])} table(s), {len(pm['fields'])} field(s) — re-run promote")
+    return 0
+
+
+_COMMAND_HANDLERS = {
+    'export': _cmd_export,
+    'apply': _cmd_apply,
+    'parity': _cmd_parity,
+    'seed-export': _cmd_seed_export,
+    'seed-import': _cmd_seed_import,
+    'promote': _cmd_promote,
+}
+
+
 def main(argv: list[str] | None = None) -> int:
     args = _parser().parse_args(argv)
     global _PROFILE, _IDENTITY
     _PROFILE = getattr(args, "profile", None)
     _IDENTITY = getattr(args, "identity", None) or "bot"
-    if args.command == "export":
-        if not args.base_token:
-            print("bitable-schema: --base-token or $FEISHU_PHASE2_BASE_TOKEN required", file=sys.stderr)
-            return 2
-        manifest = export(args.base_token, [t.strip() for t in args.tables.split(",")] if args.tables else None, args.lark_cli)
-        out = Path(args.out)
-        out.parent.mkdir(parents=True, exist_ok=True)
-        out.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-        print(f"WROTE {out}  ({len(manifest['tables'])} tables)")
-        for t in manifest["tables"]:
-            print(f"  {t['name']}: {len(t['fields'])} fields")
-        return 0
-    if args.command == "apply":
-        manifest = json.loads(Path(args.manifest).read_text(encoding="utf-8"))
-        write = bool(args.write and args.yes)
-        plan = apply(manifest, args.base_token, write, args.lark_cli)
-        print(f"Target base: {args.base_token}  ({len(plan['target_tables'])} existing tables)")
-        if args.write and not args.yes:
-            print("⚠ --write ignored: re-run with --write --yes once you've confirmed this is the intended (prod) base.")
-        mode = "WRITE" if plan["external_write"] else "dry-run"
-        print(f"APPLY ({mode}): create {len(plan['create_tables'])} table(s), {len(plan['create_fields'])} field(s); "
-              f"skip {len(plan['skip_existing'])}; DRIFT {len(plan['drift'])}; {len(plan['manual_complex'])} complex (manual)")
-        for t in plan["create_tables"]:
-            print(f"  + TABLE {t}{'  -> ' + plan['new_table_ids'].get(t, '') if plan['new_table_ids'].get(t) else ''}")
-        for f in plan["create_fields"]:
-            print(f"  + FIELD {f['table']}.{f['field']} ({f['type']})")
-        for d in plan["drift"]:
-            print(f"  ⚠ DRIFT {d['table']}.{d['field']}: {d['detail']} — NOT changed, reconcile by hand")
-        for f in plan["manual_complex"]:
-            print(f"  ! MANUAL {f['table']}.{f['field']} ({f['type']}) — link/formula/lookup, set up by hand")
-        if plan["new_table_ids"]:
-            print("\nAdd these to the target tenant's FEISHU_PHASE2_* env:")
-            for n, i in plan["new_table_ids"].items():
-                print(f"  # {n} = {i}")
-        return 0
-    if args.command == "parity":
-        tables = [t.strip() for t in args.tables.split(",")] if args.tables else None
-        res = parity(args.source_base, args.target_base, tables, args.lark_cli,
-                     ignore_prefixes=args.ignore_table_prefix, ignore_names=args.ignore_table)
-        missing = bool(res["missing_tables"] or res["missing_fields"])
-        fail = (not res["in_parity"]) if args.fail_on == "any" else missing
-        if res["in_parity"]:
-            print("PARITY ✅ — target has every table/field the source defines")
-        elif not fail:
-            print(f"PARITY ⚠ — 0 missing table/field; {len(res['drift'])} drift reported below "
-                  f"(informational under --fail-on missing)")
-        else:
-            print(f"PARITY ✗ — target lags source: {len(res['missing_tables'])} table(s), "
-                  f"{len(res['missing_fields'])} field(s), {len(res['drift'])} drift")
-        for t in res["missing_tables"]:
-            print(f"  - MISSING TABLE {t}")
-        for f in res["missing_fields"]:
-            print(f"  - MISSING FIELD {f['table']}.{f['field']} ({f['type']})")
-        for d in res["drift"]:
-            print(f"  ⚠ DRIFT {d['table']}.{d['field']}: {d['detail']}")
-        if res["extra_tables"]:
-            print(f"  (target also has {len(res['extra_tables'])} extra table(s) not in source — informational)")
-        return 1 if fail else 0
-    if args.command == "seed-export":
-        if not args.base_token:
-            print("bitable-schema: --base-token or $FEISHU_PHASE2_BASE_TOKEN required", file=sys.stderr)
-            return 2
-        cols, rows = seed_export(args.base_token, args.table, args.lark_cli)
-        out = Path(args.out)
-        out.parent.mkdir(parents=True, exist_ok=True)
-        with out.open("w", encoding="utf-8-sig", newline="") as fh:
-            writer = csv.DictWriter(fh, fieldnames=cols)
-            writer.writeheader()
-            writer.writerows(rows)
-        print(f"WROTE {out}  ({len(rows)} rows, {len(cols)} cols)")
-        return 0
-    if args.command == "seed-import":
-        with open(args.seed, encoding="utf-8-sig") as fh:
-            seed_rows = list(csv.DictReader(fh))
-        key = [c.strip() for c in args.key.split(",") if c.strip()]
-        write = bool(args.write and args.yes)
-        plan = seed_import(args.base_token, args.table, seed_rows, key, write, args.lark_cli, prune=args.prune)
-        if plan.get("error"):
-            print(f"seed-import: {plan['error']}", file=sys.stderr)
-            return 2
-        if args.write and not args.yes:
-            print("⚠ --write ignored: re-run with --write --yes once you've confirmed the TARGET base.")
-        mode = "WRITE" if plan["write"] else "dry-run"
-        line = (f"SEED-IMPORT ({mode}) {args.table} by {args.key}: "
-                f"create {len(plan['create'])}, update {len(plan['update'])}, skip {len(plan['skip'])}, extras {len(plan['extras'])}")
-        if plan.get("pruned"):
-            line += f", pruned {len(plan['pruned'])}"
-        print(line)
-        for k in plan["create"]:
-            print(f"  + CREATE {k}")
-        for u in plan["update"]:
-            print(f"  ~ UPDATE {u['key']}: {', '.join(u['fields'])}")
-        if plan["extras"]:
-            tail = " — pruned" if plan.get("pruned") else " — left as-is (use --prune to delete)"
-            print(f"  ! EXTRAS in target, not in seed{tail}: {', '.join(plan['extras'][:10])}{' …' if len(plan['extras']) > 10 else ''}")
-        if plan["dup_keys"]:
-            print(f"  ⚠ DUPLICATE {args.key} in target (upsert ambiguous): {', '.join(sorted(set(plan['dup_keys']))[:10])}")
-        return 0
-    if args.command == "promote":
-        manifest = json.loads(Path(args.manifest).read_text(encoding="utf-8"))
-        seeds = []
-        if args.seeds and Path(args.seeds).exists():
-            for s in json.loads(Path(args.seeds).read_text(encoding="utf-8")).get("seeds", []):
-                with open(s["csv"], encoding="utf-8-sig") as fh:
-                    rows = list(csv.DictReader(fh))
-                seeds.append({"table": s["table"], "key": [c.strip() for c in s["key"].split(",")], "rows": rows})
-        write = bool(args.write and args.yes)
-        res = promote(manifest, seeds, args.base_token, write, args.lark_cli, prune=args.prune)
-        st = res["structure"]
-        print(f"PROMOTE ({'WRITE' if res['write'] else 'dry-run'}) -> {args.base_token}")
-        if args.write and not args.yes:
-            print("⚠ --write ignored: re-run with --write --yes once you've confirmed the TARGET base.")
-        print(f"  [structure] tables +{len(st['create_tables'])}, fields +{len(st['create_fields'])}, "
-              f"drift {len(st['drift'])}, complex/manual {len(st['manual_complex'])}")
-        for t in st["create_tables"]:
-            print(f"     + TABLE {t}")
-        for f in st["create_fields"]:
-            print(f"     + FIELD {f['table']}.{f['field']} ({f['type']})")
-        for d in st["drift"]:
-            print(f"     ⚠ DRIFT {d['table']}.{d['field']}: {d['detail']}")
-        for f in st["manual_complex"]:
-            print(f"     ! MANUAL {f['table']}.{f['field']} ({f['type']}) — set up by hand")
-        print(f"  [reference data] {len(res['seeds'])} table(s):")
-        for s in res["seeds"]:
-            p = s["plan"]
-            pruned = f", pruned {len(p['pruned'])}" if p.get("pruned") else ""
-            dup = f"  ⚠ {len(set(p['dup_keys']))} DUP key(s)" if p.get("dup_keys") else ""
-            print(f"     - {s['table']}: create {len(p['create'])}, update {len(p['update'])}, "
-                  f"skip {len(p['skip'])}, extras {len(p['extras'])}{pruned}{dup}")
-        print("  [env delta] add to the target FEISHU_PHASE2_* env:")
-        if res["new_table_ids"]:
-            for n, i in res["new_table_ids"].items():
-                print(f"     # {n} = {i}")
-        elif res["write"]:
-            print("     (no new tables created)")
-        else:
-            print("     (dry-run: run --write --yes to create tables and emit their IDs)")
-        if res["write"]:
-            pm = res["post_missing"]
-            if not pm["tables"] and not pm["fields"]:
-                print("  [post-check] structure up to date ✅")
-            else:
-                print(f"  [post-check] ⚠ still missing {len(pm['tables'])} table(s), {len(pm['fields'])} field(s) — re-run promote")
-        return 0
-    raise AssertionError(args.command)
+    handler = _COMMAND_HANDLERS.get(args.command)
+    if handler is None:
+        raise AssertionError(args.command)
+    return handler(args)
 
 
 if __name__ == "__main__":

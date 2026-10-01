@@ -1,21 +1,45 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+import os
 import shutil
+import subprocess
 import sys
 from pathlib import Path
 from typing import Callable
 
+from tools.build_docs import load_config
+from tools.build_dispatch import target_has_approved_reference_plan
+from tools.idml.delivery import build_delivery_package
+from tools.release_contract import (
+    release_manifests_dir_for_target,
+    release_snapshot_dir_for_target,
+)
+from tools.release_reproducibility import (
+    REVIEW_OVERLAY_PATH_ENV,
+    REVIEW_OVERLAY_REF_ENV,
+    REVIEW_OVERLAY_SHA_ENV,
+    SOURCE_DATE_EPOCH_ENV,
+    git_commit_epoch,
+)
 from tools.utils.path_utils import PathSegments, review_dir_of
+from tools.web_language_release_evidence import (
+    RECEIPT_FILENAME,
+    ProjectionCapture,
+    capture_projection,
+)
 
 
 @dataclass(frozen=True)
 class BuiltDocumentOutputs:
-    word_output_path: Path
-    upload_output_path: Path
+    word_output_path: Path | None = None
+    upload_output_path: Path | None = None
     md_output_path: Path | None = None
     pdf_output_path: Path | None = None
     html_output_dir: Path | None = None
+    latex_output_dir: Path | None = None
+    language_projection_evidence_path: Path | None = None
+    target_lang: str | None = None
 
 
 def build_py_target_command(
@@ -29,6 +53,8 @@ def build_py_target_command(
     lang: str | None = None,
     source: str | None = None,
     no_clean: bool = False,
+    idml_mode: str | None = None,
+    presentation_profile: str | None = None,
 ) -> list[str]:
     cmd = [
         sys.executable,
@@ -47,8 +73,12 @@ def build_py_target_command(
         cmd += ["--source", source]
     if no_clean:
         cmd.append("--no-clean")
+    if idml_mode:
+        cmd += ["--idml-mode", idml_mode]
     if data_root:
         cmd += ["--data-root", data_root]
+    if presentation_profile:
+        cmd = ["env", f"AUTO_MANUAL_PRESENTATION_PROFILE={presentation_profile}", *cmd]
     return cmd
 
 
@@ -103,6 +133,24 @@ def _replace_path(src: Path, dst: Path) -> bool:
     return True
 
 
+def _git_head_sha(workspace: Path) -> str:
+    try:
+        proc = subprocess.run(
+            ["git", "rev-parse", "HEAD"],
+            cwd=str(workspace),
+            check=True,
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+        )
+    except (OSError, subprocess.CalledProcessError) as exc:
+        raise RuntimeError(f"cannot resolve review overlay Git SHA from {workspace}") from exc
+    sha = (proc.stdout or "").strip().lower()
+    if len(sha) != 40:
+        raise RuntimeError(f"review overlay Git SHA is not a full commit: {sha!r}")
+    return sha
+
+
 def _worktree_data_root(
     data_root: str,
     *,
@@ -131,7 +179,7 @@ def build_document_for_task(
     version: str = "",
     git_ref: str = "",
     normalize_workflow_action: Callable[[str | None], str | None],
-    prepare_git_ref_worktree: Callable[[str], Path],
+    prepare_git_ref_worktree: Callable[..., Path],
     remove_worktree: Callable[[Path], None],
     config_path_in_repo_root: Callable[..., Path],
     run_command: Callable[..., None],
@@ -143,7 +191,8 @@ def build_document_for_task(
     versioned_word_output_path: Callable[..., Path],
     versioned_md_output_path: Callable[..., Path],
     resolve_html_output_dir_for_target: Callable[..., Path],
-    stage_publish_assets_to_host_repo: Callable[..., tuple[Path, Path, Path, Path]],
+    stage_publish_assets_to_host_repo: Callable[..., tuple[Path, Path, Path, Path, Path]],
+    stage_web_publish_assets_to_host_repo: Callable[..., tuple[Path, Path]],
     stage_draft_word_output_to_host_repo: Callable[..., Path],
     stage_draft_md_output_to_host_repo: Callable[..., Path],
 ) -> BuiltDocumentOutputs:
@@ -153,16 +202,29 @@ def build_document_for_task(
     effective_data_root = data_root
     build_workspace: Path | None = None
     review_workspace: Path | None = None
+    review_overlay_env: dict[str, str] | None = None
     if git_ref.strip():
-        build_workspace = prepare_git_ref_worktree("main")
+        # Build code must come from the current remote main, not a stale local
+        # branch left behind by an earlier worker run. Review content is still
+        # overlaid from the queue row's Git_ref below.
+        build_workspace = prepare_git_ref_worktree("main", prefer_local=False)
         review_ref = git_ref.strip()
         review_workspace = build_workspace if review_ref == "main" else prepare_git_ref_worktree(review_ref)
-        if not _replace_path(
-            review_dir_of(review_workspace / PathSegments.DOCS),
-            review_dir_of(build_workspace / PathSegments.DOCS),
-        ):
+        review_target_dir = review_dir_of(review_workspace / PathSegments.DOCS) / model / region
+        build_target_dir = review_dir_of(build_workspace / PathSegments.DOCS) / model / region
+        target_available = review_target_dir.exists()
+        if target_available and review_workspace != build_workspace:
+            target_available = _replace_path(review_target_dir, build_target_dir)
+            if target_available and normalized_doc_phase == "publish":
+                review_overlay_env = {
+                    REVIEW_OVERLAY_REF_ENV: review_ref,
+                    REVIEW_OVERLAY_SHA_ENV: _git_head_sha(review_workspace),
+                    REVIEW_OVERLAY_PATH_ENV: build_target_dir.relative_to(build_workspace).as_posix(),
+                }
+        if not target_available:
             raise RuntimeError(
-                f"Git_ref {review_ref} does not contain docs/_review; queue builds must render review content from the review branch."
+                f"Git_ref {review_ref} does not contain review content for {model}/{region}; "
+                "queue builds must render the active target from the review branch."
             )
         if data_root:
             source_data_root, workspace_data_root = _worktree_data_root(
@@ -219,32 +281,98 @@ def build_document_for_task(
                 cwd=effective_repo_root,
             )
         elif normalized_doc_phase == "publish":
-            run_command(
-                build_py_target_command(
-                    repo_root=effective_repo_root,
-                    action="publish",
-                    config_path=effective_config_path,
-                    model=model,
-                    region=region,
-                    lang=lang,
-                    data_root=effective_data_root,
-                ),
-                cwd=effective_repo_root,
+            publish_command = build_py_target_command(
+                repo_root=effective_repo_root,
+                action="publish",
+                config_path=effective_config_path,
+                model=model,
+                region=region,
+                lang=lang,
+                data_root=effective_data_root,
             )
+            publish_command += ["--version", version]
+            run_command(
+                publish_command,
+                cwd=effective_repo_root,
+                env=review_overlay_env,
+            )
+            idml_source = (
+                "review-asis"
+                if target_has_approved_reference_plan(
+                    model=model,
+                    region=region,
+                    config_path=effective_config_path,
+                    repo_root=effective_repo_root,
+                )
+                else "review"
+            )
+            # IDML is the publish upload artifact (replaces the old Word/PDF upload).
+            # Approved-reference targets must use the same immutable review-asis
+            # content as the earlier Print Publish render. Other targets preserve
+            # the historical review sync. --idml-mode both also emits the flow
+            # outputs and handoff reports the delivery zip below packages. no_clean
+            # keeps the earlier word/pdf/md outputs (default --clean wipes them).
             run_command(
                 build_py_target_command(
                     repo_root=effective_repo_root,
-                    action="html",
+                    action="idml",
                     config_path=effective_config_path,
                     model=model,
                     region=region,
                     lang=lang,
                     data_root=effective_data_root,
-                    source="review",
+                    source=idml_source,
                     no_clean=True,
+                    idml_mode="both",
                 ),
                 cwd=effective_repo_root,
             )
+        elif normalized_doc_phase == "web_publish":
+            source_revision_workspace = review_workspace or effective_repo_root
+            web_build_env = {
+                SOURCE_DATE_EPOCH_ENV: str(git_commit_epoch(source_revision_workspace)),
+            }
+            projection_captures: list[ProjectionCapture] = []
+            projection_manifest_path: Path | None = None
+            if (lang or "").strip():
+                prospective_md_path = resolve_md_output_path_for_target(
+                    config_path=effective_config_path,
+                    model=model,
+                    region=region,
+                    lang=lang,
+                )
+                projection_manifest_path = (
+                    prospective_md_path.parent.parent
+                    / PathSegments.RST
+                    / "bundle_manifest.json"
+                )
+            for action, no_clean in (("check", False), ("md", True), ("html", True)):
+                run_command(
+                    build_py_target_command(
+                        repo_root=effective_repo_root,
+                        action=action,
+                        config_path=effective_config_path,
+                        model=model,
+                        region=region,
+                        lang=lang,
+                        data_root=effective_data_root,
+                        source="review",
+                        no_clean=no_clean,
+                        presentation_profile="web",
+                    ),
+                    cwd=effective_repo_root,
+                    env=web_build_env,
+                )
+                if projection_manifest_path is not None:
+                    projection_captures.append(
+                        capture_projection(
+                            projection_manifest_path,
+                            action=action,
+                            model=model,
+                            region=region,
+                            language=str(lang),
+                        )
+                    )
         else:
             run_command(
                 build_py_target_command(
@@ -270,6 +398,51 @@ def build_document_for_task(
                     no_clean=True,
                 ),
                 cwd=effective_repo_root,
+            )
+
+        if normalized_doc_phase == "web_publish":
+            md_output_path = resolve_md_output_path_for_target(
+                config_path=effective_config_path,
+                model=model,
+                region=region,
+                lang=lang,
+            )
+            if not md_output_path.exists():
+                raise RuntimeError(f"Markdown output was not created for Web Publish: {md_output_path}")
+            html_output_dir = resolve_html_output_dir_for_target(
+                config_path=effective_config_path,
+                model=model,
+                region=region,
+                lang=lang,
+            )
+            if not html_output_dir.exists():
+                raise RuntimeError(f"HTML output was not created for Web Publish: {html_output_dir}")
+            host_config_path = config_path_in_repo_root(config_path, repo_root=repo_root)
+            staged_md_output_path, staged_html_output_dir = stage_web_publish_assets_to_host_repo(
+                built_md_output_path=md_output_path,
+                built_html_dir=html_output_dir,
+                host_config_path=host_config_path,
+                model=model,
+                region=region,
+                version=version,
+                projection_captures=tuple(projection_captures),
+                git_ref=git_ref,
+                target_lang=(projection_captures[-1].language if projection_captures else None),
+            )
+            evidence_path = None
+            target_lang = None
+            if projection_captures:
+                evidence_path = (
+                    staged_md_output_path.parent.parent
+                    / PathSegments.EVIDENCE
+                    / RECEIPT_FILENAME
+                )
+                target_lang = projection_captures[-1].language
+            return BuiltDocumentOutputs(
+                md_output_path=staged_md_output_path,
+                html_output_dir=staged_html_output_dir,
+                language_projection_evidence_path=evidence_path,
+                target_lang=target_lang,
             )
 
         word_output_path = resolve_word_output_path_for_target(
@@ -326,33 +499,79 @@ def build_document_for_task(
                 versioned_pdf_path.parent.mkdir(parents=True, exist_ok=True)
                 shutil.copy2(pdf_output_path, versioned_pdf_path)
                 pdf_output_path = versioned_pdf_path
-            html_output_dir = resolve_html_output_dir_for_target(
-                config_path=effective_config_path,
-                model=model,
-                region=region,
-                lang=lang,
+            latex_output_dir = pdf_output_path.parent.parent / PathSegments.LATEX
+            if not latex_output_dir.exists():
+                raise RuntimeError(f"LaTeX output was not created for publish: {latex_output_dir}")
+            # Locate the production IDML the `idml` step just built: the direct
+            # export at .../idml/manual_*.idml (parent dir "idml" excludes the
+            # flow/ variant and the production/ handoff copy that --idml-mode
+            # both also writes), then package it with its linked images into
+            # one designer handoff zip — the bare .idml only carries absolute
+            # build-machine link URIs, dead once this worktree is removed.
+            idml_search_root = effective_repo_root / "docs" / "_build" / model / region
+            idml_candidates = sorted(
+                p for p in idml_search_root.rglob("manual_*.idml") if p.parent.name == "idml"
             )
-            if not html_output_dir.exists():
-                raise RuntimeError(f"HTML output was not created for publish: {html_output_dir}")
+            if not idml_candidates:
+                raise RuntimeError(f"IDML output was not created for publish under: {idml_search_root}")
+            production_idml_path = idml_candidates[-1]
+            versioned_stem = "_".join(
+                part for part in (production_idml_path.stem, normalized_doc_phase, version) if part
+            )
+            fonts_dir_env = os.environ.get("AUTO_MANUAL_LOCAL_GILROY_DIR", "").strip()
+            delivery = build_delivery_package(
+                production_idml=production_idml_path,
+                handoff_root=production_idml_path.parent,
+                out_zip=production_idml_path.parent / f"{versioned_stem}_handoff.zip",
+                idml_arcname=f"{versioned_stem}.idml",
+                version=version or None,
+                reference_pdf=pdf_output_path,
+                fonts_dir=Path(fonts_dir_env) if fonts_dir_env else None,
+            )
+            idml_output_path = delivery.zip_path
             host_config_path = config_path_in_repo_root(config_path, repo_root=repo_root)
             if md_output_path is None:
                 raise RuntimeError("Markdown output was not created for publish")
-            staged_word_output_path, staged_pdf_output_path, staged_md_output_path, latest_html_dir = stage_publish_assets_to_host_repo(
+            release_cfg = load_config(effective_config_path)
+            (
+                staged_word_output_path,
+                staged_pdf_output_path,
+                staged_md_output_path,
+                staged_latex_output_dir,
+                staged_idml_output_path,
+            ) = stage_publish_assets_to_host_repo(
                 built_word_output_path=word_output_path,
                 built_pdf_output_path=pdf_output_path,
                 built_md_output_path=md_output_path,
-                built_html_dir=html_output_dir,
+                built_idml_output_path=idml_output_path,
+                built_latex_dir=latex_output_dir,
                 host_config_path=host_config_path,
                 model=model,
                 region=region,
                 version=version,
+                built_release_snapshot_dir=release_snapshot_dir_for_target(
+                    repo_root=effective_repo_root,
+                    config_path=effective_config_path,
+                    model=model,
+                    region=region,
+                    version=version,
+                    cfg=release_cfg,
+                ),
+                built_release_manifests_dir=release_manifests_dir_for_target(
+                    repo_root=effective_repo_root,
+                    config_path=effective_config_path,
+                    model=model,
+                    region=region,
+                    cfg=release_cfg,
+                ),
             )
+            # Upload the handoff zip (not the PDF/Word) to the knowledge base -> idml_file.
             return BuiltDocumentOutputs(
                 word_output_path=staged_word_output_path,
-                upload_output_path=staged_pdf_output_path,
+                upload_output_path=staged_idml_output_path,
                 md_output_path=staged_md_output_path,
                 pdf_output_path=staged_pdf_output_path,
-                html_output_dir=latest_html_dir,
+                latex_output_dir=staged_latex_output_dir,
             )
         if effective_repo_root != repo_root:
             staged_word_output_path = stage_draft_word_output_to_host_repo(

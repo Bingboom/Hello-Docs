@@ -4,7 +4,6 @@
 from __future__ import annotations
 
 import argparse
-import sys
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -16,8 +15,9 @@ except ImportError:  # pragma: no cover - direct script execution fallback
 ROOT = bootstrap_repo_root(__file__, parent_count=1)
 
 from tools.config_pages import GeneratedPage, RstIncludePage  # noqa: E402
+from tools.contract_assets import ContractAssetResolver  # noqa: E402
 from tools.data_snapshot import resolve_data_snapshot_paths  # noqa: E402
-from tools.utils.path_utils import contracts_dir_of  # noqa: E402
+from tools.utils.path_utils import Paths, contracts_dir_of  # noqa: E402
 from tools.build_docs import (  # noqa: E402
     BuildTarget,
     load_config,
@@ -41,6 +41,17 @@ from tools.check_docs_bundle import (  # noqa: E402
     resolve_local_reference as _resolve_local_reference_impl,
 )
 from tools.check_docs_entry import run_check_entry as _run_check_entry_impl  # noqa: E402
+from tools.check_docs_capability import collect_capability_issues as _collect_capability_issues_impl  # noqa: E402
+from tools.check_docs_terminology import collect_terminology_issues as _collect_terminology_issues_impl  # noqa: E402
+from tools.check_docs_lang_parity import collect_lang_parity_issues as _collect_lang_parity_issues_impl  # noqa: E402
+from tools.check_docs_lang_parity import load_known_exceptions as _load_lang_parity_exceptions  # noqa: E402
+from tools.check_docs_language_scope import (  # noqa: E402
+    collect_language_scope_issues as _collect_language_scope_issues_impl,
+)
+from tools.check_docs_renderer_contracts import (  # noqa: E402
+    collect_fcc_renderer_contract_issues as _collect_fcc_renderer_contract_issues_impl,
+)
+from tools.model_languages import resolve_target_languages as _resolve_target_languages_impl  # noqa: E402
 from tools.check_docs_generated import collect_generated_page_issues as _collect_generated_page_issues_impl  # noqa: E402
 from tools.check_docs_identity import (  # noqa: E402
     collect_identity_drift_issues as _collect_identity_drift_issues_impl,
@@ -90,7 +101,12 @@ from tools.utils.spec_master import (  # noqa: E402
     source_language_for_row,
     resolve_template_substitutions_from_spec_master,
 )
-from tools.word_bundle_common import load_rst_substitutions, resolve_config_path  # noqa: E402
+from tools.word_bundle_common import (  # noqa: E402
+    load_config_rst_substitutions,
+    load_rst_substitutions,
+    resolve_config_path,
+)
+from tools.word_bundle_html import _convert_rst_fragment_to_html  # noqa: E402
 
 @dataclass(frozen=True)
 class CheckIssue:
@@ -175,6 +191,11 @@ def _pick_spec_value(row: dict[str, str], lang: str) -> str:
     raw_lang = (lang or "").strip()
     normalized_lang = raw_lang.casefold()
     normalized_source_lang = (source_lang or "").strip().casefold()
+    if normalized_lang == "ukr":
+        normalized_lang = "uk"
+        raw_lang = "uk"
+    if normalized_source_lang == "ukr":
+        normalized_source_lang = "uk"
     if normalized_lang in {"br", "pt-br", "pt_br"}:
         normalized_lang = "pt-br"
     if normalized_source_lang in {"br", "pt-br", "pt_br"}:
@@ -287,6 +308,23 @@ def collect_bundle_issues(
     )
 
 
+def collect_fcc_renderer_contract_issues(
+    *,
+    bundle_dir: Path,
+    model: str | None,
+    region: str | None,
+    lang: str | None,
+) -> list[CheckIssue]:
+    return _collect_fcc_renderer_contract_issues_impl(
+        bundle_dir=bundle_dir,
+        model=model,
+        region=region,
+        lang=lang,
+        issue_cls=CheckIssue,
+        convert_rst_fragment_to_html=_convert_rst_fragment_to_html,
+    )
+
+
 def collect_duplicate_render_text_issues(
     *,
     docs_dir: Path,
@@ -333,6 +371,12 @@ def collect_page_contract_issues(
     langs: list[str],
     data_root: str | None = None,
 ) -> list[CheckIssue]:
+    asset_resolver = ContractAssetResolver(
+        docs_dir=docs_dir,
+        repo_root=ROOT,
+        model=target.model,
+        region=target.region,
+    )
     return _collect_page_contract_issues_impl(
         cfg,
         docs_dir=docs_dir,
@@ -361,7 +405,10 @@ def collect_page_contract_issues(
         read_spec_master_rows=read_spec_master_rows,
         resolve_spec_value_from_rows=resolve_spec_value_from_rows,
         describe_page_value_selector=describe_page_value_selector,
-        contract_asset_exists=_contract_asset_exists,
+        contract_asset_exists=lambda raw_value, **kwargs: asset_resolver.exists(
+            raw_value,
+            lang=kwargs.get("lang"),
+        ),
     )
 
 
@@ -391,6 +438,7 @@ def collect_generated_page_issues(
         load_page_contracts=load_page_contracts,
         resolve_contracts_dir=resolve_contracts_dir,
         load_rst_substitutions=load_rst_substitutions,
+        load_config_rst_substitutions=load_config_rst_substitutions,
         resolve_config_path=resolve_config_path,
         load_draft_recipe=load_draft_recipe,
         missing_required_row_keys=missing_required_row_keys,
@@ -478,8 +526,26 @@ def collect_check_issues(
         collect_page_contract_issues=collect_page_contract_issues,
         collect_generated_page_issues=collect_generated_page_issues,
         collect_bundle_issues=collect_bundle_issues,
+        collect_fcc_renderer_contract_issues=collect_fcc_renderer_contract_issues,
         collect_identity_drift_issues=collect_identity_drift_issues,
         collect_duplicate_render_text_issues=collect_duplicate_render_text_issues,
+        collect_capability_issues=lambda **kw: _collect_capability_issues_impl(
+            data_dir=kw.pop("docs_dir").parent / "data",
+            issue_cls=CheckIssue, **kw),
+        collect_terminology_issues=lambda **kw: _collect_terminology_issues_impl(
+            data_dir=Paths(root=ROOT).data_dir,
+            issue_cls=CheckIssue, **kw),
+        collect_lang_parity_issues=lambda **kw: _collect_lang_parity_issues_impl(
+            issue_cls=CheckIssue,
+            exceptions=_load_lang_parity_exceptions(
+                kw.pop("docs_dir").parent / "data"), **kw),
+        collect_language_scope_issues=lambda **kw: _collect_language_scope_issues_impl(
+            data_dir=Paths(root=ROOT).data_dir,
+            issue_cls=CheckIssue, **{k: v for k, v in kw.items() if k != "docs_dir"}),
+        resolve_target_languages=lambda langs, *, model, region: (
+            _resolve_target_languages_impl(
+                langs, model=model, region=region,
+                data_dir=Paths(root=ROOT).data_dir)),
     )
 
 
