@@ -3,11 +3,11 @@
   "model": "JE-3000C",
   "region": "EU",
   "language": "pt",
-  "version": "git-20261001-45219a6e-native-web",
-  "git_ref": "f2916ef1b189ddff78428e362b7c2987843450b9",
+  "version": "git-20261002-45219a6e-pv-web",
+  "git_ref": "29cd41011ca4069d31e7d2809dc16e6577906753",
   "source_manifest": {
     "path": "frozen_source_manifest.json",
-    "sha256": "df43589e7abc3b25adc06518c55411e890cdc78bff58a0fc9ede1eddf7fd2f1d"
+    "sha256": "9a1d3ac87d92035b08d7cd13d629c9b9de5ad9b395b157fb5d05a86535227401"
   },
   "markdown": {
     "manual": "manual_je3000c_eu_pt.md",
@@ -299,16 +299,16 @@
       },
       {
         "path": "manual.ir.json",
-        "size": 579569,
-        "sha256": "7636a3a15e931995c72ab976d3526ba82ff5300e6ff4597ace3ba4f53b2c0e12"
+        "size": 588294,
+        "sha256": "2e89406caafa38edc3a1493ce215ac8d2c8b205461631827fcb23f078f767f8c"
       },
       {
         "path": "manual_je3000c_eu_pt.md",
-        "size": 69696,
-        "sha256": "a8ae231fa99596f33341d2afbe0d31047f70a760f116d1687bd31bc632c5015b"
+        "size": 69700,
+        "sha256": "7bbb82c6f6436655d009053b0bd5670bfc535d630b42b0b4a2db8119ac415ed2"
       }
     ],
-    "sha256": "66c584e429893fbdd2eb205ba62f45f5c19b9dc268eec388c6ca0f9307a0686a"
+    "sha256": "c574c1fc2d686e0b1a25790c48e8f6c087b919b1b19052facf02ea963466a8dc"
   },
   "html": {
     "files": [
@@ -319,18 +319,18 @@
       },
       {
         "path": ".doctrees/environment.pickle",
-        "size": 38554,
-        "sha256": "2c74025872a2a79081a0ba9f272c0634e49d3ac12989925dd0807ddf3da1d229"
+        "size": 38542,
+        "sha256": "0f2ef547ff8120694000a8f098706e0b8dc2fdda0500fe9cdd5b4aef718c6b21"
       },
       {
         "path": ".doctrees/index.doctree",
-        "size": 3360,
-        "sha256": "842482f5ec4baf53659d15d238af0cc40f7532cfef510cffbbcb8fe4eea8036d"
+        "size": 3354,
+        "sha256": "ad5a583b1df3c178f5eb3c891a49713a8662072403c7c6ecb8f12b839a58258d"
       },
       {
         "path": ".doctrees/manual_je3000c_eu_pt.doctree",
-        "size": 170218,
-        "sha256": "858ac6a399b4c21a5e9dd3d16a6271ab13283ad1e87f41538170e99927f5e835"
+        "size": 170220,
+        "sha256": "32cc9b04bb28d3c9e421f23a026a905dd2243e96928b88dea4f736a1e76ff823"
       },
       {
         "path": "_sources/index.md.txt",
@@ -339,8 +339,8 @@
       },
       {
         "path": "_sources/manual_je3000c_eu_pt.md.txt",
-        "size": 69696,
-        "sha256": "a8ae231fa99596f33341d2afbe0d31047f70a760f116d1687bd31bc632c5015b"
+        "size": 69700,
+        "sha256": "7bbb82c6f6436655d009053b0bd5670bfc535d630b42b0b4a2db8119ac415ed2"
       },
       {
         "path": "_static/base-stemmer.js",
@@ -744,8 +744,8 @@
       },
       {
         "path": "manual_je3000c_eu_pt.html",
-        "size": 91018,
-        "sha256": "c4fa4eab43de67c2ca87ded0fd65b7334c816d8dff06af26121e301c404a8b88"
+        "size": 91022,
+        "sha256": "630d02566e20434ec1ddd779bbd74c8904624f9bb36f22f0b84c244542ccc359"
       },
       {
         "path": "objects.inv",
@@ -763,6 +763,6 @@
         "sha256": "7c4c6b04058696207414ed32f2129ba49f584a441987adaf344908a06a441f20"
       }
     ],
-    "sha256": "75ae152286464860f752ec6b7a03f64eb7bef4f76ed19482b489cc942fc43fdc"
+    "sha256": "dcb74ff042e28d8eec75e34f3bb77008cfbcc36a12478ceb62d83554ba5e1864"
   }
 }

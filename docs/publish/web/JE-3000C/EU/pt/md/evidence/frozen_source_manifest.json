@@ -8,7 +8,7 @@
       "nl",
       "pl"
     ],
-    "technical_version": "git-20261001-45219a6e-native-web"
+    "technical_version": "git-20261002-45219a6e-pv-web"
   },
   "original_source": {
     "filename": "HTE156-EU-9国语言-0923.ai",
@@ -26,6 +26,11 @@
       "path": "web/nl/assets/0a922d745008_inbox-manual.png",
       "size": 10446,
       "sha256": "0a922d74500800e0d323f5f1be125c3122bd43e859dc499bcac47bad7e5a2bb6"
+    },
+    {
+      "path": "web/nl/assets/0dc41ff0d581_reference-overview_front_view-nl-approved.png",
+      "size": 90422,
+      "sha256": "0dc41ff0d58107d988507d5e02b625cea1b82c9a3769c5fd3f531197762d1ef2"
     },
     {
       "path": "web/nl/assets/11f1a73a4cb5_symbol-lithium_battery.png",
@@ -113,11 +118,6 @@
       "sha256": "6bc9507107c3e8cbce6174a177f305141fffb64f121ef8f7a3535bbd4f53cbcd"
     },
     {
-      "path": "web/nl/assets/70e824fe0b23_reference-overview_right_view-nl.png",
-      "size": 37793,
-      "sha256": "70e824fe0b2339c324cc520d2599bc5f27eef73c9b8809b2c546636f72cbb7de"
-    },
-    {
       "path": "web/nl/assets/71017f43bab4_lcd-icon-charging-plan.png",
       "size": 2759,
       "sha256": "71017f43bab44852d5586d1d4f996f3c52d8451bceaa9249e29864652c2f537d"
@@ -193,11 +193,6 @@
       "sha256": "bdbf602db74ade39a2a162209c0ff535315dee5e27e4832b2e6a201764b6941a"
     },
     {
-      "path": "web/nl/assets/c037c858fe76_reference-overview_front_view-nl.png",
-      "size": 90210,
-      "sha256": "c037c858fe766ca9a3ba1afb6239236620047a1cc89909ade24a5bc5e6b35d04"
-    },
-    {
       "path": "web/nl/assets/c3f6fc2a8f2c_operation-ac-output.png",
       "size": 82831,
       "sha256": "c3f6fc2a8f2c332756a2a17300921d9ac7dc757b326ced129711d95268f1da12"
@@ -268,6 +263,11 @@
       "sha256": "eba70d2cac9d117d5e53bf7572da12548d08f23ee824a473b652eb839bb93f77"
     },
     {
+      "path": "web/nl/assets/ed2c31a9cf77_reference-overview_right_view-nl-approved.png",
+      "size": 37827,
+      "sha256": "ed2c31a9cf77d0318415fb20f90cf8ff0fcbaf13736f45336fea82894d971320"
+    },
+    {
       "path": "web/nl/assets/ed74c99208e4_inbox-cable.png",
       "size": 30886,
       "sha256": "ed74c99208e4c6536d7a2f60ef696da8a2a6108e088f13bbafa02a3ce653ed6f"
@@ -304,13 +304,13 @@
     },
     {
       "path": "web/nl/manual.ir.json",
-      "size": 576406,
-      "sha256": "406faa4b6551d98e210770dfe90ae126ecaff172cf80bb80d925489ad70d8ae2"
+      "size": 592803,
+      "sha256": "3e5b4a54906037eb916290be66bdba9239ff5dd1114047987b263191a63bb578"
     },
     {
       "path": "web/nl/manual_je3000c_eu_nl.md",
-      "size": 69098,
-      "sha256": "cbc78b843036dc6f9b2cd7eb63177b9dde88bd261c7be632ea200c7961081b19"
+      "size": 69119,
+      "sha256": "2c706b4706d91dffa7fec9acd8884a88da8d311663c35ae9e3eb9e28c29bee12"
     },
     {
       "path": "web/pl/_static/web_manual.css",
@@ -599,13 +599,13 @@
     },
     {
       "path": "web/pl/manual.ir.json",
-      "size": 582656,
-      "sha256": "799bf52faef03aea891301a84b6ecf0a043ac3f71b2b4df17accb7fcb34eae57"
+      "size": 591381,
+      "sha256": "baf43301230bd981dc0eee82460a1519f2d3a955b57ae44ef3619be7ccb1382b"
     },
     {
       "path": "web/pl/manual_je3000c_eu_pl.md",
-      "size": 71983,
-      "sha256": "9fe61245cbf5f568722014d671d8db25e7802856afa8697370afbdbdd473597f"
+      "size": 71987,
+      "sha256": "0f29b1d73fa2d5fe9507ccbc6a01ca2f70e5467c26c54610c3c51008cfe93bcc"
     },
     {
       "path": "web/pt/_static/web_manual.css",
@@ -894,13 +894,13 @@
     },
     {
       "path": "web/pt/manual.ir.json",
-      "size": 579569,
-      "sha256": "7636a3a15e931995c72ab976d3526ba82ff5300e6ff4597ace3ba4f53b2c0e12"
+      "size": 588294,
+      "sha256": "2e89406caafa38edc3a1493ce215ac8d2c8b205461631827fcb23f078f767f8c"
     },
     {
       "path": "web/pt/manual_je3000c_eu_pt.md",
-      "size": 69696,
-      "sha256": "a8ae231fa99596f33341d2afbe0d31047f70a760f116d1687bd31bc632c5015b"
+      "size": 69700,
+      "sha256": "7bbb82c6f6436655d009053b0bd5670bfc535d630b42b0b4a2db8119ac415ed2"
     }
   ],
   "web_roots": {
@@ -909,8 +909,8 @@
     "pl": "web/pl"
   },
   "source_intake": {
-    "path": "manual_sources/JE-3000C/EU/three-language/git-20261001-45219a6e-intake",
-    "sha256": "47e5997728dc9532c5fe94b859464cca89dcf56640d466ee78583e03d765c818"
+    "path": "manual_sources/JE-3000C/EU/three-language/git-20261002-45219a6e-pv-intake",
+    "sha256": "ec5fb36ba7b6beb1d8806f7cca623afd973087f877f8324b0fbf3e3c67ecb4b2"
   },
   "validation_scope": "Native source and shared IR verified per locale; build.py check is a repository regression, not phase2 validation of these three language bodies."
 }

@@ -56,8 +56,8 @@
     "assets/123ee64484e2_app-result.png"
   ],
   "bundle_root": "frozen-source",
-  "bundle_sha256": "c31ed47623596541691dfeea06790a8c0c3bed90f8ab44220231607824b29259",
-  "content_sha256": "1ea73394d4f210960db644bd3c98b3d2aa6356d2741d4e6df47f1b674eff4a1b",
+  "bundle_sha256": "8928b8acd9ecdfde57b9559aa442953ebd2188548c221b64c7888d9adf5d141d",
+  "content_sha256": "990addd6b1a070548c439165ab502d8744811347201a3b49c1c472f2f3607c2d",
   "language": "nl",
   "layout_params_sha256": "f5ae099abc1a82ffda3abcc5a13725aca3c201e720a0374d88d1643f9773f279",
   "metadata": {
@@ -1462,8 +1462,8 @@
       }
     ],
     "frozen_source_manifest": {
-      "artwork_manifest_sha256": "bc18b37c0a048698233426c22305a4c9d694d498fd4cfdad1b75694763dbac75",
-      "geometry_recipe_sha256": "bfe9ea99457595ecf6e74df81f02cc6b1e401d1a4580f34374635951e49732d7",
+      "artwork_manifest_sha256": "2363b02bccbbf4c47d21c31216b47b39fd0fffbbf97afbde0e2fbedb6f628d3d",
+      "geometry_recipe_sha256": "ec5fb36ba7b6beb1d8806f7cca623afd973087f877f8324b0fbf3e3c67ecb4b2",
       "intake_method": "fresh-native-pdf-text",
       "original_source": {
         "filename": "HTE156-EU-9国语言-0923.ai",
@@ -1472,14 +1472,16 @@
         "size_bytes": 41700602
       },
       "schema_version": "auto-manual-frozen-web-source/v1",
-      "source_records_sha256": "aa424ccddca45e08baef6fc8e3a18067b4a7e44590ca8deb8d1ce1a92050bba9",
+      "source_records_sha256": "8fe4b26c875f3c470a4580ed1839718a27c551e29613b80ddd480924c56897ce",
       "target": {
         "languages": [
-          "nl"
+          "pt",
+          "nl",
+          "pl"
         ],
         "model": "JE-3000C",
         "region": "EU",
-        "technical_version": "git-20261001-45219a6e-nl-errata-web"
+        "technical_version": "git-20261002-45219a6e-pv-web"
       },
       "text_source": {
         "filename": "HTE156-EU-9国语言-0923.ai",
@@ -2379,7 +2381,7 @@
           "reason": "Operator-approved correction against same-source English, Portuguese and Polish labels/specifications."
         }
       ],
-      "geometry_recipe_sha256": "bfe9ea99457595ecf6e74df81f02cc6b1e401d1a4580f34374635951e49732d7",
+      "geometry_recipe_sha256": "ec5fb36ba7b6beb1d8806f7cca623afd973087f877f8324b0fbf3e3c67ecb4b2",
       "image_extraction_performed": false,
       "pdf": {
         "filename": "HTE156-EU-9国语言-0923.ai",
@@ -14984,7 +14986,7 @@
         {
           "asset_refs": [],
           "block_id": "specifications:block-0003",
-          "content_sha256": "1096f0fa28385137806fbe3c57e0c28bf7674231de2c3d625b17f90d9e128774",
+          "content_sha256": "0db7e86cbd17525e7f2a23419be0b0684927e8334d4296a682b78f8ad3c84e3e",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -15066,7 +15068,14 @@
                             "children": [
                               {
                                 "kind": "text",
-                                "text": "Auto: 12-16 V⎓8A max, verdubbeld naar 8A max PV: 16-60 V⎓12A max, verdubbeld naar 24A / 1000W max"
+                                "text": "Auto: 12-16 V⎓8A max, verdubbeld naar 8A max"
+                              },
+                              {
+                                "kind": "line_break"
+                              },
+                              {
+                                "kind": "text",
+                                "text": "PV: 16-60 V⎓12A max, verdubbeld naar 24A / 1000W max"
                               }
                             ],
                             "header": false,
@@ -15116,7 +15125,7 @@
                       "values": [
                         {
                           "references": [],
-                          "text": "Auto: 12-16 V⎓8A max, verdubbeld naar 8A max PV: 16-60 V⎓12A max, verdubbeld naar 24A / 1000W max"
+                          "text": "Auto: 12-16 V⎓8A max, verdubbeld naar 8A max\nPV: 16-60 V⎓12A max, verdubbeld naar 24A / 1000W max"
                         }
                       ]
                     }
