@@ -178,7 +178,7 @@
 
 ## PORTAS DE ENTRADA
 
-<figure aria-label="PORTAS DE ENTRADA" class="hb-spec-table-composition"><table class="manual-table manual-spec-table hb-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup><tbody><tr><th class="manual-spec-label hb-spec-label" scope="row">1 × Entrada CA</th><td class="manual-spec-value hb-spec-value">220 V-240 V ~ 50Hz, 10 A máx. Modo de bypass<sup class="hb-spec-reference">①</sup>: 220 V-240 V ~ 50Hz, 10 A máx.</td></tr><tr><th class="manual-spec-label hb-spec-label" scope="row">2 × Portas DC8020</th><td class="manual-spec-value hb-spec-value">Veicular: 12-16 V⎓8 A máx., duplicável para 8 A máx. PV: 16-60 V⎓12 A máx., duplicável para 24 A / 1000 W máx.</td></tr></tbody></table></figure>
+<figure aria-label="PORTAS DE ENTRADA" class="hb-spec-table-composition"><table class="manual-table manual-spec-table hb-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup><tbody><tr><th class="manual-spec-label hb-spec-label" scope="row">1 × Entrada CA</th><td class="manual-spec-value hb-spec-value">220 V-240 V ~ 50Hz, 10 A máx. Modo de bypass<sup class="hb-spec-reference">①</sup>: 220 V-240 V ~ 50Hz, 10 A máx.</td></tr><tr><th class="manual-spec-label hb-spec-label" scope="row">2 × Portas DC8020</th><td class="manual-spec-value hb-spec-value">Veicular: 12-16 V⎓8 A máx., duplicável para 8 A máx.<br/>PV: 16-60 V⎓12 A máx., duplicável para 24 A / 1000 W máx.</td></tr></tbody></table></figure>
 
 ## PORTAS DE SAÍDA
 

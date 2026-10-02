@@ -56,8 +56,8 @@
     "assets/123ee64484e2_app-result.png"
   ],
   "bundle_root": "frozen-source",
-  "bundle_sha256": "a278b59ad4299f31cfcaec45ed9d602d59dd4285e94f60d54364913071e14b4c",
-  "content_sha256": "39b951d389017279a20bb03762f399436ccdd8e148ba43c3286aadc7f10e59f6",
+  "bundle_sha256": "c7c4e0cb3b647c8958804507d543970dc1211b71c34afdef7e34c8533c17ac0a",
+  "content_sha256": "2a8c7d324ab71feee00ee1939dcfb5bd84fb4561dad406b03c4c58ed77d40441",
   "language": "pl",
   "layout_params_sha256": "f5ae099abc1a82ffda3abcc5a13725aca3c201e720a0374d88d1643f9773f279",
   "metadata": {
@@ -1460,8 +1460,8 @@
       }
     ],
     "frozen_source_manifest": {
-      "artwork_manifest_sha256": "51d235836c3b97e682d6dc54bf7ff47c3ad399b808198a9d415ebe77866d5d7a",
-      "geometry_recipe_sha256": "47e5997728dc9532c5fe94b859464cca89dcf56640d466ee78583e03d765c818",
+      "artwork_manifest_sha256": "0460405db993b742b28db02f7989e0b4d503803f7f0d0cdf65381016015129e3",
+      "geometry_recipe_sha256": "ec5fb36ba7b6beb1d8806f7cca623afd973087f877f8324b0fbf3e3c67ecb4b2",
       "intake_method": "fresh-native-pdf-text",
       "original_source": {
         "filename": "HTE156-EU-9国语言-0923.ai",
@@ -1470,7 +1470,7 @@
         "size_bytes": 41700602
       },
       "schema_version": "auto-manual-frozen-web-source/v1",
-      "source_records_sha256": "fb75b8150450e0ecd161ded2d21ad377795549d11694071bd32a454188fac193",
+      "source_records_sha256": "f01bb4335c684a09f696fcd42cac178e051ec17994ba79ae321431e2aacf2a54",
       "target": {
         "languages": [
           "pt",
@@ -1479,7 +1479,7 @@
         ],
         "model": "JE-3000C",
         "region": "EU",
-        "technical_version": "git-20261001-45219a6e-native-web"
+        "technical_version": "git-20261002-45219a6e-pv-web"
       },
       "text_source": {
         "filename": "HTE156-EU-9国语言-0923.ai",
@@ -2210,7 +2210,7 @@
         }
       ],
       "corrections_applied": [],
-      "geometry_recipe_sha256": "47e5997728dc9532c5fe94b859464cca89dcf56640d466ee78583e03d765c818",
+      "geometry_recipe_sha256": "ec5fb36ba7b6beb1d8806f7cca623afd973087f877f8324b0fbf3e3c67ecb4b2",
       "image_extraction_performed": false,
       "pdf": {
         "filename": "HTE156-EU-9国语言-0923.ai",
@@ -8512,8 +8512,267 @@
     },
     "skipped_raw": 0,
     "source_errata": {
-      "entries": [],
-      "policy": "Retain source defects; corrections require operator decision."
+      "entries": [
+        {
+          "asset_corrections": [
+            {
+              "corrected_web_asset": {
+                "path": "artwork/nl/reference-overview_front_view-nl-approved.png",
+                "sha256": "0dc41ff0d58107d988507d5e02b625cea1b82c9a3769c5fd3f531197762d1ef2"
+              },
+              "extraction_recipe": "extraction_recipes/nl-approved-labels.json",
+              "physical_page": 122,
+              "raw_asset": {
+                "path": "artwork/nl/reference-overview_front_view-nl.png",
+                "sha256": "c037c858fe766ca9a3ba1afb6239236620047a1cc89909ade24a5bc5e6b35d04"
+              }
+            }
+          ],
+          "corrected_text": "Aan/uit-knop voor AC",
+          "id": "NL-AC-BUTTON",
+          "locale": "nl",
+          "native_bindings": [
+            {
+              "corrected_text": "Aan/uit-knop voor AC\n",
+              "path": [
+                "source",
+                "pages",
+                2,
+                "blocks_visual_order",
+                13,
+                "text"
+              ],
+              "physical_page": 122,
+              "source_text": "Aan/uit-knop voor DC\n"
+            },
+            {
+              "corrected_text": "Hoofd AAN/UIT-knop\nAan/uit-knop voor AC\n",
+              "path": [
+                "source",
+                "pages",
+                7,
+                "blocks_visual_order",
+                0,
+                "text"
+              ],
+              "physical_page": 127,
+              "source_text": "Hoofd AAN/UIT-knop\nAan/uit-knop voor DC\n"
+            },
+            {
+              "corrected_text": "Houd beide knoppen 3 \nseconden ingedrukt\nAan/Uit-knop\nAan/uit-knop voor AC\n",
+              "path": [
+                "source",
+                "pages",
+                8,
+                "blocks_visual_order",
+                4,
+                "text"
+              ],
+              "physical_page": 128,
+              "source_text": "Houd beide knoppen 3 \nseconden ingedrukt\nAan/Uit-knop\nAan/uit-knop voor DC\n"
+            },
+            {
+              "corrected_text": "Aan/uit-knop voor AC\n",
+              "path": [
+                "source",
+                "pages",
+                8,
+                "blocks_visual_order",
+                11,
+                "text"
+              ],
+              "physical_page": 128,
+              "source_text": "Aan/uit-knop voor DC\n"
+            },
+            {
+              "corrected_text": "Aan/uit-knop voor AC\n",
+              "path": [
+                "source",
+                "pages",
+                14,
+                "blocks_visual_order",
+                10,
+                "text"
+              ],
+              "physical_page": 134,
+              "source_text": "Aan/uit-knop voor DC\n"
+            },
+            {
+              "corrected_text": "Aan/uit-knop voor AC",
+              "path": [
+                "records",
+                "operation_tables",
+                "shortcuts",
+                "rows",
+                0,
+                "buttons",
+                1,
+                "text"
+              ],
+              "physical_page": 128,
+              "source_text": "Aan/uit-knop voor DC"
+            },
+            {
+              "corrected_text": "Aan/uit-knop voor AC",
+              "path": [
+                "records",
+                "operation_tables",
+                "shortcuts",
+                "rows",
+                2,
+                "buttons",
+                1,
+                "text"
+              ],
+              "physical_page": 128,
+              "source_text": "Aan/uit-knop voor DC"
+            },
+            {
+              "corrected_text": "Aan/uit-knop voor AC",
+              "path": [
+                "records",
+                "media",
+                "overview",
+                "views",
+                "front",
+                "callouts",
+                "13",
+                "text"
+              ],
+              "physical_page": 122,
+              "source_text": "Aan/uit-knop voor DC"
+            },
+            {
+              "corrected_text": "Aan/uit-knop voor AC",
+              "path": [
+                "records",
+                "app_control_labels",
+                "rows",
+                2,
+                "text"
+              ],
+              "physical_page": 134,
+              "source_text": "Aan/uit-knop voor DC"
+            },
+            {
+              "corrected_text": "Aan/uit-knop voor AC",
+              "path": [
+                "records",
+                "reference_captions",
+                "energy_saving",
+                "labels",
+                1,
+                "text"
+              ],
+              "physical_page": 127,
+              "source_text": "Aan/uit-knop voor DC"
+            }
+          ],
+          "operator_decision": {
+            "date": "2026-10-01",
+            "quote": "确认这两项按 AC、8 A 修正，并记录勘误"
+          },
+          "physical_pages": [
+            122,
+            127,
+            128,
+            134
+          ],
+          "reason": "Operator-approved correction against same-source English, Portuguese and Polish labels/specifications.",
+          "source_sha256": "45219a6e488358c4a76b847cd0288f5a865fd8ab899d8ceb9e154a5696816574",
+          "source_text": "Aan/uit-knop voor DC",
+          "status": "operator-approved"
+        },
+        {
+          "asset_corrections": [
+            {
+              "corrected_web_asset": {
+                "path": "artwork/nl/reference-overview_right_view-nl-approved.png",
+                "sha256": "ed2c31a9cf77d0318415fb20f90cf8ff0fcbaf13736f45336fea82894d971320"
+              },
+              "extraction_recipe": "extraction_recipes/nl-approved-labels.json",
+              "physical_page": 122,
+              "raw_asset": {
+                "path": "artwork/nl/reference-overview_right_view-nl.png",
+                "sha256": "70e824fe0b2339c324cc520d2599bc5f27eef73c9b8809b2c546636f72cbb7de"
+              }
+            }
+          ],
+          "corrected_text": "8A max",
+          "id": "NL-CAR-INPUT",
+          "locale": "nl",
+          "native_bindings": [
+            {
+              "corrected_text": "8A max\n",
+              "path": [
+                "source",
+                "pages",
+                2,
+                "blocks_visual_order",
+                19,
+                "text"
+              ],
+              "physical_page": 122,
+              "source_text": "16A max\n"
+            },
+            {
+              "corrected_text": "Auto: 12-16 V⎓8A max, verdubbeld naar 8A max\n",
+              "path": [
+                "source",
+                "pages",
+                12,
+                "blocks_visual_order",
+                18,
+                "text"
+              ],
+              "physical_page": 132,
+              "source_text": "Auto: 12-16 V⎓8A max, verdubbeld naar 16A max\n"
+            },
+            {
+              "corrected_text": "Auto: 12-16 V⎓8A max, verdubbeld naar 8A max PV: 16-60 V⎓12A max, verdubbeld naar 24A / 1000W max",
+              "path": [
+                "source",
+                "tables",
+                "specifications",
+                "groups",
+                "inputs",
+                1,
+                "value"
+              ],
+              "physical_page": 132,
+              "source_text": "Auto: 12-16 V⎓8A max, verdubbeld naar 16A max PV: 16-60 V⎓12A max, verdubbeld naar 24A / 1000W max"
+            },
+            {
+              "corrected_text": "8A max",
+              "path": [
+                "records",
+                "media",
+                "overview",
+                "views",
+                "right",
+                "callouts",
+                "19",
+                "text"
+              ],
+              "physical_page": 122,
+              "source_text": "16A max"
+            }
+          ],
+          "operator_decision": {
+            "date": "2026-10-01",
+            "quote": "确认这两项按 AC、8 A 修正，并记录勘误"
+          },
+          "physical_pages": [
+            122,
+            132
+          ],
+          "reason": "Operator-approved correction against same-source English, Portuguese and Polish labels/specifications.",
+          "source_sha256": "45219a6e488358c4a76b847cd0288f5a865fd8ab899d8ceb9e154a5696816574",
+          "source_text": "16A max",
+          "status": "operator-approved"
+        }
+      ],
+      "policy": "Apply only exact native bindings approved by the operator; retain raw AI and raw extraction evidence."
     },
     "title": "Jackery Explorer 3000 — pl",
     "web_contract": {
@@ -14610,7 +14869,7 @@
         {
           "asset_refs": [],
           "block_id": "specifications:block-0003",
-          "content_sha256": "f7d1b30ce0bd6877fbbdbe7bdb8215036c294b1795adb48fdc41046d8cea3d87",
+          "content_sha256": "2a8d9cc6d0f1f0d78a72877da487852dab0682c909a57c9834d46cac13417804",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -14692,7 +14951,14 @@
                             "children": [
                               {
                                 "kind": "text",
-                                "text": "Samochód: 12–16 V ⎓ maks. 8 A, w trybie podwójnym do maks. 8 A Fotowoltaika: 16–60 V ⎓ maks. 12 A, w trybie podwójnym do maks. 24A / 1000W"
+                                "text": "Samochód: 12–16 V ⎓ maks. 8 A, w trybie podwójnym do maks. 8 A"
+                              },
+                              {
+                                "kind": "line_break"
+                              },
+                              {
+                                "kind": "text",
+                                "text": "Fotowoltaika: 16–60 V ⎓ maks. 12 A, w trybie podwójnym do maks. 24A / 1000W"
                               }
                             ],
                             "header": false,
@@ -14742,7 +15008,7 @@
                       "values": [
                         {
                           "references": [],
-                          "text": "Samochód: 12–16 V ⎓ maks. 8 A, w trybie podwójnym do maks. 8 A Fotowoltaika: 16–60 V ⎓ maks. 12 A, w trybie podwójnym do maks. 24A / 1000W"
+                          "text": "Samochód: 12–16 V ⎓ maks. 8 A, w trybie podwójnym do maks. 8 A\nFotowoltaika: 16–60 V ⎓ maks. 12 A, w trybie podwójnym do maks. 24A / 1000W"
                         }
                       ]
                     }

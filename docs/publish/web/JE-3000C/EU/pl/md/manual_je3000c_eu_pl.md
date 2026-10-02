@@ -176,7 +176,7 @@
 
 ## PORTY WEJŚCIOWE
 
-<figure aria-label="PORTY WEJŚCIOWE" class="hb-spec-table-composition"><table class="manual-table manual-spec-table hb-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup><tbody><tr><th class="manual-spec-label hb-spec-label" scope="row">1 × wejście AC</th><td class="manual-spec-value hb-spec-value">220 V – 240 V ~50 Hz, maks. 10 A Tryb obejściowy<sup class="hb-spec-reference">①</sup>: 220 V – 240 V ~50 Hz, maks. 10 A</td></tr><tr><th class="manual-spec-label hb-spec-label" scope="row">2 porty DC8020</th><td class="manual-spec-value hb-spec-value">Samochód: 12–16 V ⎓ maks. 8 A, w trybie podwójnym do maks. 8 A Fotowoltaika: 16–60 V ⎓ maks. 12 A, w trybie podwójnym do maks. 24A / 1000W</td></tr></tbody></table></figure>
+<figure aria-label="PORTY WEJŚCIOWE" class="hb-spec-table-composition"><table class="manual-table manual-spec-table hb-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup><tbody><tr><th class="manual-spec-label hb-spec-label" scope="row">1 × wejście AC</th><td class="manual-spec-value hb-spec-value">220 V – 240 V ~50 Hz, maks. 10 A Tryb obejściowy<sup class="hb-spec-reference">①</sup>: 220 V – 240 V ~50 Hz, maks. 10 A</td></tr><tr><th class="manual-spec-label hb-spec-label" scope="row">2 porty DC8020</th><td class="manual-spec-value hb-spec-value">Samochód: 12–16 V ⎓ maks. 8 A, w trybie podwójnym do maks. 8 A<br/>Fotowoltaika: 16–60 V ⎓ maks. 12 A, w trybie podwójnym do maks. 24A / 1000W</td></tr></tbody></table></figure>
 
 ## PORTY WYJŚCIOWE
 

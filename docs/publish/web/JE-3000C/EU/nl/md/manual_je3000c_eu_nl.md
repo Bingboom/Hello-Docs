@@ -176,7 +176,7 @@
 
 ## INGANGSPOORTEN
 
-<figure aria-label="INGANGSPOORTEN" class="hb-spec-table-composition"><table class="manual-table manual-spec-table hb-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup><tbody><tr><th class="manual-spec-label hb-spec-label" scope="row">1 × AC-ingang</th><td class="manual-spec-value hb-spec-value">220 V-240 V ~ 50Hz, 10 A Max Bypass-modus<sup class="hb-spec-reference">①</sup>: 220 V-240 V ~ 50Hz, 10 A max</td></tr><tr><th class="manual-spec-label hb-spec-label" scope="row">2 × DC8020-poorten</th><td class="manual-spec-value hb-spec-value">Auto: 12-16 V⎓8A max, verdubbeld naar 8A max PV: 16-60 V⎓12A max, verdubbeld naar 24A / 1000W max</td></tr></tbody></table></figure>
+<figure aria-label="INGANGSPOORTEN" class="hb-spec-table-composition"><table class="manual-table manual-spec-table hb-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup><tbody><tr><th class="manual-spec-label hb-spec-label" scope="row">1 × AC-ingang</th><td class="manual-spec-value hb-spec-value">220 V-240 V ~ 50Hz, 10 A Max Bypass-modus<sup class="hb-spec-reference">①</sup>: 220 V-240 V ~ 50Hz, 10 A max</td></tr><tr><th class="manual-spec-label hb-spec-label" scope="row">2 × DC8020-poorten</th><td class="manual-spec-value hb-spec-value">Auto: 12-16 V⎓8A max, verdubbeld naar 8A max<br/>PV: 16-60 V⎓12A max, verdubbeld naar 24A / 1000W max</td></tr></tbody></table></figure>
 
 ## UITGANGSPOORTEN
 
