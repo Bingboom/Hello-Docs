@@ -56,6 +56,13 @@ read-only served HTML/resource hash verification. `rtd_portal.setup` registers
 its callback; queue, publication assembly and link writers are not callers.
 See the [Git-only receipt contract](rtd_deployment_receipt.md).
 
+[`tools/manual_knowledge/`](../../tools/manual_knowledge/) owns the rendered EU
+manual reading model: semantic HTML/table extraction and the bounded JSON export.
+`rtd_portal` runs its writer after HTML and before the deployment receipt.
+The existing [OpenClaw control plugin](../../integrations/openclaw/auto-manual-control-layer/)
+owns receipt verification, search and paginated evidence reads; it does not call
+build/publish workers for a query. See [EU query contract](eu_manual_query.md).
+
 [`tools/rtd_workspace_revision.py`](../../tools/rtd_workspace_revision.py) owns only
 the system page's checkout identity and successful-build version receipt.
 `rtd_portal` supplies that context and registers the writer before the deployment
@@ -394,6 +401,10 @@ Quality and release logic should follow concern-specific modules instead of drif
   - per-test-file count of patches on facade modules against `data/facade_patch_baseline.tsv`: unlisted files may not patch a facade, recorded counts may not grow, a lower count must be written back
 - [`tools/check_broad_except_ratchet.py`](../../tools/check_broad_except_ratchet.py)
   - per-file count of `except Exception` / `except BaseException` in `build.py`, `tools/`, `scripts/`, `integrations/` against `data/broad_except_baseline.tsv`: unlisted files may not add one, recorded counts may not grow, a lower count must be written back
+- [`tools/check_zip_strict_ratchet.py`](../../tools/check_zip_strict_ratchet.py)
+  - per-file count of `zip()` calls without `strict=` (ruff `B905`) in the ruff lint scope against `data/zip_strict_baseline.tsv`, same rules; reuses the broad-except ratchet's comparison
+- [`tools/check_mypy_ratchet.py`](../../tools/check_mypy_ratchet.py)
+  - per-file count of `mypy --disallow-untyped-defs` errors in `tools/manual_ir`, `tools/component_specs`, `tools/csv_pages` against `data/mypy_untyped_baseline.tsv`; runs in the CI `type-check` job (not in the guardrails, which have no mypy)
 - [`tools/check_doc_link_integrity.py`](../../tools/check_doc_link_integrity.py)
   - relative links under `code-as-doc/` and `user-guide/`; with the default roots it also runs the lifecycle check
 - [`tools/check_doc_lifecycle.py`](../../tools/check_doc_lifecycle.py)
@@ -419,6 +430,15 @@ Quality and release logic should follow concern-specific modules instead of drif
   - CLI bootstrap and data-root normalization for the queue entrypoint
 - [`tools/process_build_queue_services.py`](../../tools/process_build_queue_services.py)
   - wrapper-compatible service grouping for queue entrypoint helpers
+  - optional queue dependencies are forwarded to existing session/build callbacks; omitted dependencies preserve facade compatibility lookups
+- [`tools/process_build_queue_deps.py`](../../tools/process_build_queue_deps.py)
+  - `QueueDeps` owns the external client factory, command runner, and Git worktree prepare/remove callbacks
+  - `default_queue_deps(module)` resolves the current facade names when defaults are requested; this first dependency seam does not include a clock
+  - optional run-scoped overrides (session preflight/link binding/identity, snapshot sync, document build, artifact destination, DingTalk mirror, artifact publish, cloud-doc import/finalize) replace the facade name for one `process_build_queue(..., deps=...)` call; `queue_dep()` falls back to the facade name when a field is `None`. `resolve_wiki_destination`, `upload_word_to_drive` and `move_drive_file_to_wiki` are also looked up inside the artifact-destination and publish services, so when `deps` sets one of them those two services run against `FacadeOverrides(module, ...)` (the facade with the names replaced) instead of the facade itself
+- [`tools/process_review_start_queue.py`](../../tools/process_review_start_queue.py)
+  - review-start facade accepts the existing `ReviewStartRuntimeDeps` object and builds its default instance per invocation; tests override fields with `replace(default_review_start_deps(), ...)` instead of patching facade names
+- [`tools/process_review_start_queue_runtime.py`](../../tools/process_review_start_queue_runtime.py)
+  - existing review-start runtime dependency container and orchestration; no duplicate container or clock dependency is introduced
 - [`tools/queue_contract.py`](../../tools/queue_contract.py)
   - canonical queue contract constants
   - shared queue dataclasses

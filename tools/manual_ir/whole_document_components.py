@@ -9,7 +9,7 @@ from __future__ import annotations
 from dataclasses import dataclass, replace
 import fnmatch
 from pathlib import Path
-from typing import Any, Callable, Mapping, Sequence
+from typing import Any, Callable, Iterable, Iterator, Mapping, Sequence, TypeGuard
 
 from bs4 import BeautifulSoup, Comment, Tag
 
@@ -29,6 +29,7 @@ from tools.component_specs.lcd_mode_html import parse_lcd_mode_html
 from tools.component_specs.manual_table_html import (
     parse_lcd_icon_html,
     parse_symbol_tables_html,
+    parse_symbol_icon_html,
     parse_troubleshooting_html,
 )
 from tools.component_specs.model import ComponentSpec
@@ -68,7 +69,9 @@ class ComponentClaim:
     consume_interstitial: bool = False
 
 
-def _reference_bindings(references, *, source_path, supports_figures):
+def _reference_bindings(
+    references: Iterable[object], *, source_path: Path, supports_figures: bool,
+) -> Iterator[Mapping[str, Any]]:
     """Select explicit base-art bindings without granting all legacy layouts."""
     for reference in references:
         if not isinstance(reference, Mapping) or not _matches_source(
@@ -87,6 +90,16 @@ def _reference_bindings(references, *, source_path, supports_figures):
 def _matches_source(source_path: Path, patterns: Sequence[str]) -> bool:
     stem = source_path.stem.casefold()
     return any(fnmatch.fnmatch(stem, str(pattern).casefold()) for pattern in patterns)
+
+
+def _matches_app_download(
+    app_download: object, *, source_path: Path, supports_figures: bool,
+) -> TypeGuard[Mapping[str, Any]]:
+    return (
+        isinstance(app_download, Mapping)
+        and (supports_figures or app_download.get("presentation") == "qr-only")
+        and _matches_source(source_path, app_download.get("source_patterns", []))
+    )
 
 
 def _matches_asset_source(source: str, image_key: str) -> bool:
@@ -203,7 +216,10 @@ def _claim_inbox(soup, source_path, language, contract, claimed, claims):
         claims.append(claim)
 
 
-def _claim_lcd_mode(soup, source_path, language, lcd_config, claimed, claims):
+def _claim_lcd_mode(
+    soup: BeautifulSoup, source_path: Path, language: str,
+    lcd_config: Mapping[str, Any], claimed: set[int], claims: list[ComponentClaim],
+) -> None:
     lcd_spec, lcd_table, lcd_artwork = parse_lcd_mode_html(
         soup,
         source_path=source_path,
@@ -218,6 +234,12 @@ def _claim_lcd_mode(soup, source_path, language, lcd_config, claimed, claims):
     )
     _claim_nodes(lcd_claim, claimed=claimed, source_path=source_path)
     claims.append(lcd_claim)
+
+
+def _declared_lcd_tables(soup: BeautifulSoup, declared_role: str | None) -> list[Tag | None]:
+    if declared_role == "lcd_icons" and soup.select_one("table.lcd-text-only") is None:
+        return [None]  # Declared pages enforce the one-table contract.
+    return soup.select("table.hb-lcd-icon-table:not(.lcd-text-only)")
 
 
 def discover_registered_components(
@@ -240,22 +262,24 @@ def discover_registered_components(
 
     claims.extend(_authored_claims(soup, source_path, language, claimed))
 
-    lcd_icon_table = soup.select_one("table.hb-lcd-icon-table")
-    lcd_text_only = soup.select_one("table.lcd-text-only")
-    if lcd_text_only is None and (
-        declared_role == "lcd_icons"
-        or lcd_icon_table is not None
-        and lcd_icon_table.select_one("img") is not None
-    ):
+    for table in _declared_lcd_tables(soup, declared_role):
         spec, boundary, images = parse_lcd_icon_html(
-            soup,
-            source_path=source_path,
-            declared_page=declared_role == "lcd_icons",
-            language=language,
+            soup, source_path=source_path, language=language,
+            declared_page=declared_role == "lcd_icons", table=table,
         )
         claim = ComponentClaim(
-            spec=spec,
-            owned_nodes=(boundary,),
+            spec=spec, owned_nodes=(boundary,),
+            asset_tags=tuple(("icons", image) for image in images),
+        )
+        _claim_nodes(claim, claimed=claimed, source_path=source_path)
+        claims.append(claim)
+
+    if soup.select_one("table.hb-source-symbol-icons") is not None:
+        spec, boundary, images = parse_symbol_icon_html(
+            soup, source_path=source_path, language=language,
+        )
+        claim = ComponentClaim(
+            spec=spec, owned_nodes=(boundary,),
             asset_tags=tuple(("icons", image) for image in images),
         )
         _claim_nodes(claim, claimed=claimed, source_path=source_path)
@@ -377,9 +401,7 @@ def discover_registered_components(
         claims.append(claim)
 
     app_download = contract["app_download"]
-    if (supports_figures or app_download.get("presentation") == "qr-only") and _matches_source(
-        source_path, app_download.get("source_patterns", [])
-    ):
+    if _matches_app_download(app_download, source_path=source_path, supports_figures=supports_figures):
         spec, owned, asset_tags, asset_paths = parse_app_download_html(
             soup,
             source_path=source_path,

@@ -1106,6 +1106,7 @@ UPS、扩容连接图、配件排、节能组合操作面板或 App 按键说明
 面板顶部的灰底说明区、灰色外框及引线与操作文字的相对位置一并保留，不能拆到
 图下重排，也不能额外叠加第二个时钟或边框。
 是否采用成品面板由目标明确声明，不能以此把正文、表格或普通图默认转成截图。
+普通 `base-art-live-copy` 不属于上述成品面板例外。图中独立承载说明文字的白色/灰色胶囊、气泡或提示框仍按「新录入网页的图文分工」去除，由共享 CSS 绘制；不能把“保留面板背景”理解为保留空文字框。验收同时看裸底图和桌面/窄屏页面，IR 组件计数不能证明图片中没有空框。
 无字底图加原生标签的 App 控制面板同样保留灰底和完整引线；是否含文字与是否
 保留面板背景是两个独立决定。App 截图须保留手机四边、圆角、顶部状态栏和底部
 界面，不得只按内部内容收紧裁切。原图已含步骤编号时，不再叠加第二套编号。
@@ -1410,3 +1411,36 @@ after its authored H2; it reuses `HB-TABLE-SPEC`. `hb-source-signals` reuses
 troubleshooting component. These declarations belong in source RST, not
 hand-edited generated HTML. The CSV assembly plan also passes the semantic
 `symbols` page role even when a slot renames the generated filename.
+
+### Source-authored LCD and panel boundaries
+
+A declared `hb-lcd-icon-table` may occur more than once in a page. The
+`lcd-unnumbered` declaration maps a true three-column icon/name/description
+source to `HB-TABLE-LCD-ICON/icon-catalog-unnumbered`; numbered sources retain
+four columns and circles. Neither variant fabricates a header row.
+
+The `web_source_panels.css` source containers preserve PDF grouping around
+registered components: `hb-device-actions` pairs device art with an authored
+function table, `hb-source-operation` groups illustration and source copy,
+`hb-source-warranty` keeps a caption on the card border, and
+`hb-source-purchase` / `hb-source-safety-heading` keep original icon/text strips.
+Only these explicit boundaries bypass Pandoc flattening; ordinary paragraphs
+continue through normal Markdown conversion. Narrow displays stack device art
+above its function table without adding manual text. Both function-table column
+headers retain bold type across languages; normal first-column weight applies
+only to body cells. Function and description cells are vertically centered
+within each row, including when localized text wraps across multiple lines.
+
+When the operator requests preservation of original panel backgrounds, retain
+the complete source panel (including gray shapes and rounded edges). The
+standalone-device crop and the complete illustration panel are different
+presentation assets. Avoid duplicate live captions when the original panel
+already contains them.
+
+
+Within `hb-source-signals`, the source may explicitly mark a label using the
+RST roles `hb-signal-warning`, `hb-signal-danger`, `hb-signal-caution`,
+`hb-signal-note`, or `hb-signal-tip`. This binds icon presence to authored
+semantics while retaining the exact localized label. At most one such role
+may occur in a label cell; conflicting roles are rejected. Unmarked legacy
+labels keep the existing language-data lookup behavior.

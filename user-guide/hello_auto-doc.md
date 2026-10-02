@@ -80,6 +80,19 @@ Web profile 配合显式 `--lang` 现在会[冻结完整配置语言源并生成
 发布组装会原样保留已生成的 `manual.ir.json` 和 `manual_bundle.html`，不再遗漏凭据中
 记录的辅助文件；旧版本没有这些文件时仍可组装。未知文件不会被静默加入或从校验中排除。
 
+### 钉钉查询欧规产品信息
+
+在已启用查询功能的 BlockClaw 中，直接问“JE-2000F 欧规 USB-C 输出功率是多少？”
+或“JE-2000F 节能模式怎么关闭？”。机器人读取已发布说明书，回答应附型号、EU、
+版本和原文章节链接。型号不明确会先确认；未找到依据会说明未命中。
+默认检索英文来源，用中文解释；旧版语言范围未验证时会明确标记。
+
+固定入口 `/manual-query JE-2000F USB-C输出` 返回章节链接和检索片段；完整操作
+请继续提问或打开原文。所有已发布 EU 版本自动随 RTD 构建进入索引；新增型号无需
+单独配置。图片目前仅使用已有 alt 文字，复杂接线图仍需查看原文。
+现有机器人只需更新控制插件并设置站点地址，具体见
+[启用与验收](../code-as-doc/dev/eu_manual_query.md#activation-on-the-existing-gateway)。
+
 ### 发布健康、反馈与统计
 
 Web 冻结产物可使用[只读健康报告](../code-as-doc/dev/manual_operations_health_report.md)
@@ -659,6 +672,8 @@ GitHub note:
 - the same guard applies a per-function complexity ratchet (`data/complexity_baseline.tsv`): new functions stay at complexity 20 or below, recorded ones may only get simpler, and a simplification is locked in by rerunning `python tools/check_complexity_ratchet.py update`
 - the same guard counts test patches on facade modules (`data/facade_patch_baseline.tsv`): tests should patch the module that looks a name up, so the count may only fall; a drop is locked in with `python tools/check_facade_patch_ratchet.py update`
 - the same guard counts broad exception handlers (`except Exception` / `except BaseException`, `data/broad_except_baseline.tsv`): new code catches the specific exception, so the count may only fall; a drop is locked in with `python tools/check_broad_except_ratchet.py update`
+- it also counts `zip()` calls without `strict=` (`data/zip_strict_baseline.tsv`): pass `strict=True`, or `strict=False` with a comment when truncation is intended; lock a drop in with `python tools/check_zip_strict_ratchet.py update`
+- CI's `type-check` job counts untyped-def mypy errors in `tools/manual_ir`, `tools/component_specs` and `tools/csv_pages` (`data/mypy_untyped_baseline.tsv`); annotate new functions there, and after fixing errors run `python tools/check_mypy_ratchet.py update` (with `mypy==2.3.1` installed)
 - `build.py check` also compares duplicated RST and raw HTML list text so renderer-specific copies cannot silently drift from the source wording
 - `build.py check` also renders every prepared FCC page with the target language in both document and web profiles. A missing FCC opening line block, an unregistered localized right-column marker, or a runtime filename remap that loses language context now fails during `check`, before Word generation.
 - `build.py check` also enforces capability -> chapter consistency: [`../data/model_capabilities.csv`](../data/model_capabilities.csv) mirrors the 文档构建表 feature checkboxes (refreshed by `sync-data` when `FEISHU_PHASE2_MODEL_CAPABILITIES_TABLE_ID` is set — it is a tracked file like `page_registry.csv`, so the git diff is the review surface for capability changes; duplicate build-table rows collapse to one mirror row), and [`../data/capability_page_rules.csv`](../data/capability_page_rules.csv) maps each capability to a required/forbidden bundle page or in-page section regex. A target with `UPS功能=TRUE` must carry `06_ups_mode`; one with `加电包扩容=FALSE` must not carry an extra-battery page. Targets without a capability row emit a non-blocking `CAPABILITY_ROW_MISSING` warning unless listed in [`../data/capability_known_missing.csv`](../data/capability_known_missing.csv); capability page selection remains fail-open. Each rule's enforcement is toggled per direction in the rules CSV (`required_when_true` / `forbidden_when_false`), so noisy rules stay recorded but inert until their wording is unified. The Feishu 文档构建 base carries a mirror rules table for visibility; the repo CSVs are the consumed source.
@@ -2017,3 +2032,31 @@ JE-1000F/JP 的 Web 展示契约保留日规质保的 7 个正文章节与原有
 通用 LCD／状态图标及 POWER、AC、DC/USB、LIGHT 按钮图先按功能语义复用现有共用素材（Web 按钮图使用透明 SVG），不从各语言 PDF 重裁带底色的小图；仅在共用素材缺失或有明确机型差异时才提取。仅上述 LCD／状态图标、独立按钮符号等小图默认透明底，移除其外围单元格底色和边框；保留符号、按键面和丝印。大图面板保留灰底、圆角、外框和引线，不能套用小图规则。普通图采用无字底图加原生文字，表格保持原生 HTML，密集引线图不重复显示图内文字。规则见[共用图标优先](../docs/renderers/contracts/STYLE_DEFINITION.md#共用图标优先web-插图选材规则)。
 
 JE-2000F/CN 沿用 `configs/config.zh.yaml` 中规共享配置与现有审核源；预览、发布按审核稿原样构建。
+
+新增 JE-3000C/EU 葡语、荷语、波语沿用现有六语网页的公共 IR 和组件。
+图中标签从各语原稿的坐标范围读取，保持可选文字；同一个 PDF 文本块里的多个标签
+也分别绑定，避免漏用共享图文组件。安全提示的标签在原生读取顺序首尾均能识别，
+正文只显示一次。技术事实矛盾记录为待确认，预览可以打开，但发布封存会阻止该语种。
+范围、来源和验收见[三语录入记录](../reports/je3000c-eu-three-language/README.md)。
+
+### 原生 RST 提示框的 Web 保留
+
+Native RST `note`, `tip`, `warning`, `caution` and `danger` directives pass through the existing `HB-CALLOUT-STRIP` component before Pandoc. Their explicit body boundary, rich paragraphs and lists survive Markdown/Sphinx export; adjacent prose stays outside the box. Docutils titles such as `Caution!` retain their displayed punctuation and registered semantic variant. This also applies to the shared Word HTML adapter.
+
+PDF 对照修正时，表头、圈号、图标、提示标签和说明文字都以操作员提供的原稿为准。
+不要补写滚动提示或把购买提示改成 NOTE。LCD 图标表可分别声明有编号四列或
+无编号三列；设备图与操作表、保修卡片等原稿组合使用受保护的 RST 容器，
+需在实际 Sphinx 页面检查桌面和手机显示。独立设备图应排除误截的表格边框；充电等完整成图应保留原稿的灰底、分区、
+圆角及图内标签。保留设备、手指、引线及产品标记，并单独记录来源、页码、裁切范围和哈希。
+
+
+JE-100C/EU 的 Web 本地源现支持英文及新增法、西、德、意、乌、葡、荷、波，共九语。
+按语种选择 `configs/config.eu-<lang>.yaml`，复用英文冻结包中的产品身份数据，
+正文和插图由各自语言的原稿及修订记录绑定；[示例命令与来源边界](../code-as-doc/build_doc_guide.md#je-100ceu-nine-language-web-source)。
+乌、葡、荷、波的旧版 AC 充电等差异已按操作者指示对齐新版英文，原始来源和修订依据均保留。
+葡语代码为 `pt`，区别于巴西葡语 `pt-BR`。本地构建通过不等于线上发布；
+正式发布仍走既有审核、冻结快照、Hello-Docs 和 RTD 流程。
+
+### 原生 PDF 的已确认勘误
+
+原生语言导入的 `source/errata.json` 可为已确认条目登记 `native_bindings`：源哈希、确认记录、来源页码、精确字段路径以及修改前后全文。适配器在共享组件构造前应用，原始提取证据保留；原文或来源不匹配即失败。文字勘误涉及带标注的概览图时，须同时修正图内文字并重锁资产哈希；清空待确认状态不能代替实际修正。

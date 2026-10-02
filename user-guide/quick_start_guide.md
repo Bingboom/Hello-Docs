@@ -9,6 +9,10 @@ Updated: 2026-08-17
 - Start Review 看 `Review Init`；Build Draft Package 看 PR 分支里的 [`docs/_review/`](../docs/_review)
 - Publish 默认看 `Document_link.Git_ref` 指向的 review / PR 分支；只有 `Git_ref` 为空时，才会退回当前 queue worker 所在分支（远端通常是 `main`）
 
+查询已发布欧规产品信息：现有钉钉 BlockClaw 启用后可问“JE-2000F 欧规 USB-C
+输出功率是多少？”，或用 `/manual-query JE-2000F USB-C输出` 查原文章节。
+首次启用见[欧规说明书查询](../code-as-doc/dev/eu_manual_query.md#activation-on-the-existing-gateway)。
+
 ## 1. 先分清三张表各自负责什么
 
 ### 1.1 phase2 源表
@@ -841,3 +845,10 @@ python build.py html \
 
 JBP-2000B 欧规英文单语的可执行示例见
 [版本化结构源](../manual_sources/JBP-2000B/EU/en/2.0/README.md)。
+
+
+JE-100C/EU 九语 Web 的本地示例见[构建指南](../code-as-doc/build_doc_guide.md#je-100ceu-nine-language-web-source)：
+`--config configs/config.eu-fr.yaml --model JE-100C --region EU --lang fr`，
+并显式指定 `--data-root manual_sources/JE-100C/EU/en/2.0/phase2`。
+其余可用语言为 `en/es/de/it/uk/pt/nl/pl`，配置文件后缀与 `--lang` 同步替换。
+这些产物是本地候选，未修改线上构建表或发布链接。
