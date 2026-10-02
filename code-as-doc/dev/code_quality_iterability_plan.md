@@ -111,7 +111,8 @@ web、IDML、队列、回写这几块目前最大的代码面。
     - [ ] `resolve_wiki_destination`、`upload_word_to_drive` 等在其它门面服务内部再次查找的名字，需先把内部调用改成经 deps 传递
     - [x] `process_review_start_queue`：直接调用 `process_review_start_queue()` 的 9 个测试块改为传 `deps=replace(default_review_start_deps(), ...)`（已有 `ReviewStartRuntimeDeps`，8 个字段），87 → 21，合计 226 → 160（2026-10-02）
     - [x] `build_docs` 门面：`test_build_docs_review_compat.py` 改为直接调用 `build_docs_bundle.prepare_manual_bundle` 并显式传入协作者，只留 1 处检查门面自身转发的 patch，22 → 1，合计 160 → 139（2026-10-02）。`test_target_resolution.py` 的 6 处 patch 的是 `build_docs` 自己定义的函数，属于在查找处 patch，保留
-    - [ ] 余下 139 处（目标 ≤73）：`test_process_build_queue.py` 70（多为在其它门面服务内部再次查找的名字）、`test_process_build_queue_routing.py` 25（`ROOT`、`load_config`）、review-start 21、`test_web_publish_queue.py` 15
+    - [x] 内部再次查找的名字：`QueueDeps` 增加 `resolve_wiki_destination`、`upload_word_to_drive`、`move_drive_file_to_wiki`，设置后产物目标与发布两个服务改在 `FacadeOverrides`（替换了这些名字的门面）上运行；`build_document_for_task` 的测试改为直接调用 `queue_build_execution.build_document_for_task` 并显式传入协作者，发布与 wiki 目标的测试改为把 `FacadeOverrides` 作为 `module` 传给服务。`test_process_build_queue.py` 70 → 17，合计 139 → 86（2026-10-02）
+    - [ ] 余下 86 处（目标 ≤73）：routing 25（`ROOT`、`load_config`）、review-start 21、`test_process_build_queue.py` 17（`ROOT`、`_run_lark_cli_json`、`resolve_config_path_for_task` 等）、`test_web_publish_queue.py` 15
 - [ ] **CQ-2.4 删除无人使用的转发。** 某个 `*_impl` 转发或再导出在测试和代码中都没有引用时，
   将其删除，并把门面的公开名写入 `__all__`。先做 `tools/build_docs.py`，再做
   `tools/process_build_queue.py`。
@@ -193,14 +194,14 @@ web、IDML、队列、回写这几块目前最大的代码面。
   - [x] `B905` 计数棘轮（2026-10-02；`tools/check_zip_strict_ratchet.py` + `data/zip_strict_baseline.tsv`，
     已接入 guardrails，用 `ast` 计数，与 ruff `B905` 逐处一致：43 个文件 64 处，较 9-30 的 62 处回升 2 处）
   - [ ] `B905` 逐处确认长度、清零后加入 `select`
-- [ ] **CQ-4.5 扩大 mypy 严格范围。** 在 `pyproject.toml` 为 `tools.manual_ir.*`、
+- [x] **CQ-4.5 扩大 mypy 严格范围。** 在 `pyproject.toml` 为 `tools.manual_ir.*`、
   `tools.component_specs.*`、`tools.csv_pages.*` 逐个增加严格 override。**CI 命令目前固定为
   `python -m mypy tools/utils`，扩大检查路径需要改 workflow，须操作者确认。**
   - [x] 计数棘轮（2026-10-02，操作者确认改 workflow）：`tools/check_mypy_ratchet.py` +
     `data/mypy_untyped_baseline.tsv`，按文件统计三个子包内 `mypy --disallow-untyped-defs` 错误（不计导入的
     包外文件；`--no-site-packages`，本地结果与 CI 一致），在 `type-check` job 运行，mypy 锁定 2.3.1。
     基线 22 个文件 68 处（manual_ir 29、component_specs 18、csv_pages 21）。本轮业务合入曾使错误回升，#1375、#1379 修回。
-  - [ ] 逐个子包清零后加严格 override
+  - [x] 三个子包清零（68 → 0，2026-10-02）：只补注解、`cast`、改名消除变量复用，`component_specs` 各 `parse_*_html` 的组件返回类型由 `object` 收紧为 `ComponentSpec`，无运行行为变化；`pyproject.toml` 为三个子包加 `disallow_untyped_defs` override，基线清空后由 mypy 棘轮在 CI `type-check` job 保持为 0
 
 **验收。** `pyproject.toml` 的 ruff `select` 至少包含 `E722, F, B023, B904, PLW1510`；CI 绿色；
 测试输出中没有 `ResourceWarning`；mypy 严格模式覆盖 ≥4 个子包。
@@ -303,15 +304,16 @@ CI 全量测试时长下降 ≥40%（若采纳 CQ-6.4）。
 - [x] **CQ-7.2 状态检查棘轮。** 扩展 [`../../tools/check_doc_link_integrity.py`](../../tools/check_doc_link_integrity.py)
   或新增一个检查：以当前缺少状态行的文档为基线，新文档必须带状态行。
   （#1320，2026-09-29；评审中收紧：`superseded-by` 必须带替代文档的链接）
-- [ ] **CQ-7.3 补状态并建索引。** 为存量文档补状态行，在 [`../README.md`](../README.md) §5 列出已归档
+- [x] **CQ-7.3 补状态并建索引。** 为存量文档补状态行，在 [`../README.md`](../README.md) §5 列出已归档
   文档。第一步只标状态、不移动文件；如需移动到 `code-as-doc/archive/`，**另开 PR 并经操作者确认**
   （由链接检查保证没有断链）。
   - [x] 补状态行：`reviews/`（#1354）、`dev/`（#1359），基线 174 → 5（2026-10-01）
-  - [ ] 剩余 5 篇与 `../README.md` §5 已归档索引
+  - [x] 剩余 5 篇（2026-10-02），基线清空；`../README.md` §5 已列出全部标为 archived 的文档
 - [x] **CQ-7.4 刷新边界文档。** 更新 `code_style_guide.md` §2 与 `orchestration_module_map.md`
   （与 CQ-1.1 同一个 PR）。（#1331，2026-09-30；同时补登 phase 1 新增的三个辅助模块）
-- [ ] **CQ-7.5 精简路线图。** 把 `optimization_project.md` §4 "Recently Completed" 迁到
+- [x] **CQ-7.5 精简路线图。** 把 `optimization_project.md` §4 "Recently Completed" 迁到
   [`../code_optimization_log.md`](../code_optimization_log.md)，§4 只保留指针；目标 ≤600 行。
+  （2026-10-02：§4 与 12 个已完成工作流 A–H、J、R、W、X 原文移入日志"Archived roadmap sections"一节，994 → 572 行）
 - [x] **CQ-7.6 精简 `AGENTS.md` §7。** 把每个技能的长描述移到技能索引，§7 只保留一行名称和
   触发条件。**修改 `AGENTS.md` 需要走 `config-review` 技能，并经操作者确认。**（#1321，2026-09-29）
 
