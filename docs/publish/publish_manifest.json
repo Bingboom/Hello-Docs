@@ -1,6 +1,6 @@
 {
   "schema_version": "auto-manual-web-publish-branch/v2",
-  "built_at": "2026-10-02T23:36:11+00:00",
+  "built_at": "2026-10-03T01:16:57+00:00",
   "targets": [
     {
       "schema_version": "auto-manual-web-publish-target/v2",
@@ -190,14 +190,14 @@
       "model": "JBP-3600A",
       "region": "EU",
       "lang": "en",
-      "version": "git-20261002-96f3d373",
-      "built_at": "2026-10-02T23:36:11+00:00",
-      "git_ref": "96f3d373c832cdb71632341eda0f3a39799b822d",
+      "version": "git-20261002-565c52a2",
+      "built_at": "2026-10-03T01:16:57+00:00",
+      "git_ref": "565c52a2d450d2b353e0186b22d0b230a2fb13ee",
       "route": "JBP-3600A/EU/en/md",
       "manual": "manual_jbp3600a_eu.md",
       "language_scope": "single",
       "language_projection_evidence_path": "evidence/language_projection_receipt.json",
-      "language_projection_evidence_sha256": "75b4e2444682f47a5d11d8600275bfce3f742da3f7d387709f45011309f0a281",
+      "language_projection_evidence_sha256": "55fde324a6dddb7567d739abb9e6e1494ca0eec13e9b917010ffc802fd2839a3",
       "legacy_default": true,
       "legacy_route": "JBP-3600A/EU/md",
       "legacy_aliases": [
@@ -2597,7 +2597,7 @@
     {
       "path": "sources/web/JBP-3600A/EU/en/md/evidence/language_projection_receipt.json",
       "size": 19309,
-      "sha256": "75b4e2444682f47a5d11d8600275bfce3f742da3f7d387709f45011309f0a281"
+      "sha256": "55fde324a6dddb7567d739abb9e6e1494ca0eec13e9b917010ffc802fd2839a3"
     },
     {
       "path": "sources/web/JBP-3600A/EU/en/md/evidence/projection_bundle_manifest.json",
@@ -2612,7 +2612,7 @@
     {
       "path": "sources/web/JBP-3600A/EU/en/md/manual.ir.json",
       "size": 383876,
-      "sha256": "2fcbe5c3cc68f9d5e7a64b9710a5f2c8fb7c797affb3c75090d4771a7f381014"
+      "sha256": "4c4fb33a2016849503a7812fa6cd0c3e0c70c84036cb2d65e3b8208b1f4a0a79"
     },
     {
       "path": "sources/web/JBP-3600A/EU/en/md/manual_jbp3600a_eu.md",
@@ -2622,7 +2622,7 @@
     {
       "path": "sources/web/JBP-3600A/EU/en/md/publish_meta.json",
       "size": 664,
-      "sha256": "ca0886456acf54e882183a808151e3c90eae637e98d0b9bb31982ced6b248af6"
+      "sha256": "a4d08a722d7376a161972454cf06bbdd23df3c0232680c29cb938fb0611ef929"
     },
     {
       "path": "sources/web/JE-1000F/EU/de/md/assets/app_add_device_steps_9b7e0cf44d0f.png",
@@ -25137,7 +25137,7 @@
     {
       "path": "web/JBP-3600A/EU/en/md/evidence/language_projection_receipt.json",
       "size": 19309,
-      "sha256": "75b4e2444682f47a5d11d8600275bfce3f742da3f7d387709f45011309f0a281"
+      "sha256": "55fde324a6dddb7567d739abb9e6e1494ca0eec13e9b917010ffc802fd2839a3"
     },
     {
       "path": "web/JBP-3600A/EU/en/md/evidence/projection_bundle_manifest.json",
@@ -25152,7 +25152,7 @@
     {
       "path": "web/JBP-3600A/EU/en/md/manual.ir.json",
       "size": 383876,
-      "sha256": "2fcbe5c3cc68f9d5e7a64b9710a5f2c8fb7c797affb3c75090d4771a7f381014"
+      "sha256": "4c4fb33a2016849503a7812fa6cd0c3e0c70c84036cb2d65e3b8208b1f4a0a79"
     },
     {
       "path": "web/JBP-3600A/EU/en/md/manual_jbp3600a_eu.md",
