@@ -19,7 +19,7 @@ from tools.manual_copy_source import (
     TM_LANGUAGE_FIELDS,
     TRANSLATION_MEMORY_COLUMNS,
 )
-from tools.sync_data_models import TABLE_SCHEMAS
+from tools.data.sync_data_models import TABLE_SCHEMAS
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -216,7 +216,7 @@ class LanguageRegistryTest(unittest.TestCase):
                         for column in TABLE_SCHEMAS[table].columns
                     ))
         # Offline registration must not reinterpret existing live queue aliases.
-        from tools.queue_query_languages import SUPPORTED_LANGS, canonical_query_lang
+        from tools.build_queue.query_languages import SUPPORTED_LANGS, canonical_query_lang
 
         self.assertEqual(canonical_query_lang("pt"), "pt-BR")
         self.assertFalse({"pt", "nl", "pl"}.intersection(SUPPORTED_LANGS))

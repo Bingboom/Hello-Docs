@@ -23,8 +23,8 @@ from tools.skeleton_resolve import (
     load_slot_templates,
     resolve_plan,
 )
-from tools.web_document_ir import render_document_fragments
-from tools.web_component_admission import require_fresh_component_admission
+from tools.web.document_ir import render_document_fragments
+from tools.web.component_admission import require_fresh_component_admission
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -284,6 +284,10 @@ class Jbp3600aEuEnWebTests(unittest.TestCase):
                  for item in self.ir.metadata["web_figure_coverage"]["slots"]}
         for key in ("operation.main-power", "reference.clearance", "reference.locking"):
             self.assertEqual("base-art-live-copy", slots[key])
+        badges = soup.select('[data-web-replace-key="reference.locking"] .hb-reference-live-pill')
+        self.assertEqual(2, len(badges))
+        for badge in badges:
+            self.assertIn("--hb-fill:#434345;--hb-label-color:#ffffff", badge["style"])
         self.assertFalse(soup.select(".hb-auto-resume-table,.hb-key-combination-table"))
 
     def test_warranty_uses_shared_native_components(self) -> None:
@@ -310,7 +314,7 @@ def guarded(path, *args, **kwargs):
     return original(path, *args, **kwargs)
 with patch.object(Path, "open", guarded):
     from tools.manual_ir import read_manual_ir
-    from tools.web_document_ir import render_document_fragments
+    from tools.web.document_ir import render_document_fragments
     package = Path(sys.argv[1])
     result = render_document_fragments(
         read_manual_ir(package / "manual.ir.json"), package_root=package

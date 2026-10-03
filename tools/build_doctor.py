@@ -10,7 +10,7 @@ import sys
 from pathlib import Path
 from typing import Any, Callable
 
-from tools.word_bundle_docx_pandoc import pandoc_version, resolve_pandoc_binary
+from tools.word.bundle_docx_pandoc import pandoc_version, resolve_pandoc_binary
 
 
 class SafeFormatDict(dict[str, str]):
@@ -270,7 +270,7 @@ def collect_doctor_findings(
 
     if getattr(args, "data_plane", False):
         if collect_data_plane_findings is None:
-            from tools.data_plane_doctor import collect_data_plane_findings as default_collect_data_plane_findings
+            from tools.data.plane_doctor import collect_data_plane_findings as default_collect_data_plane_findings
 
             collect_data_plane_findings = default_collect_data_plane_findings
         for level, area, message in collect_data_plane_findings(

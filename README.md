@@ -7,7 +7,7 @@ Auto-Manual 将飞书结构化数据、RST 模板、翻译记忆和受控资产�
 
 ## 工作流路线图
 
-说明书工作台提供工作入口、三类资产管理与生产复用证据；统计边界见 [工作台统计契约](code-as-doc/dev/workspace_production_evidence.md)。
+说明书工作台提供工作入口、三类资产管理与生产复用证据；统计边界见 [工作台统计契约](code-as-doc/dev/workspace_production_evidence.md)，生产后刷新与补做见 [数据持续更新](code-as-doc/dev/workspace_data_refresh.md)。
 
 手册中心按冻结发布记录提供[独立语言切换](code-as-doc/dev/rtd_locale_navigation.md)，区分已验证单语与语言身份待核验的旧出版物。
 
@@ -107,3 +107,5 @@ Prepared EU Web admission and legacy migration debt: [shared-component admission
 中规/日规审核源的纯文字清单、LCD 表和 App 接入规则见 [构建说明](code-as-doc/build_doc_guide.md)。
 
 旧版 RST 网页表格的共享组件声明见 [样式定义](docs/renderers/contracts/STYLE_DEFINITION.md#authored-text-references-hb-table-reference)。
+
+Intake preparation: [source-copy work packets and shared-art review](code-as-doc/dev/manual_intake_assistance.md) enumerate pending work without approving a baseline or publishing.

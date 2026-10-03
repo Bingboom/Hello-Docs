@@ -7,14 +7,14 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-from tools.build_docs import (
+from tools.build.docs import (
     build_root_for_target,
     load_config,
     render_build_template,
     resolve_output_path,
     resolve_product_name_for_build,
 )
-from tools.data_snapshot import resolve_data_snapshot_paths
+from tools.data.snapshot import resolve_data_snapshot_paths
 from tools.gen_index_bundle import bundle_dir_for_target
 from tools.release_contract import (
     release_manifests_dir_for_target,

@@ -11,16 +11,17 @@ import shutil
 import tempfile
 import unicodedata
 import unittest
+from types import SimpleNamespace
 from unittest.mock import patch
 
 from bs4 import BeautifulSoup
 from markdown_it import MarkdownIt
 
-from tools.frozen_ai_web import build_book, replay_package
+from tools.web.frozen_ai_web import build_book, replay_package
 from tools.manual_ir import validate_manual_ir
 from tools.manual_ir.document import validate_document
 from tools.manual_ir.hashing import file_sha256
-from tools.web_document_ir import render_document_fragments
+from tools.web.document_ir import render_document_fragments
 
 
 SOURCE = Path(__file__).resolve().parents[1] / "manual_sources/JE-1000F/EU/nine-language/git-20260927-c38415f5/four-language"
@@ -39,6 +40,30 @@ def _words(text):
     # Ignore typographic ligatures, punctuation and superscript wrappers;
     # retain every word and number, including source repetitions.
     return Counter(re.findall(r"[^\W\d_]+|\d+", unicodedata.normalize("NFKC", text)))
+
+
+class FrozenHeadingReplayTests(unittest.TestCase):
+    def test_styled_document_heading_enters_myst_navigation(self):
+        with tempfile.TemporaryDirectory() as directory:
+            package = Path(directory)
+            (package / "_static").mkdir()
+            css = package / "_static/web_manual.css"
+            css.write_text("")
+            ir = SimpleNamespace(metadata={
+                "frozen_stylesheet_sha256": file_sha256(css),
+                "markdown_filename": "manual.md",
+            })
+            fragments = ('<h1 class="hb-h1-pill" id="specifications">SPÉCIFICATIONS</h1>'
+                         '<figure><h2 class="component-title">Keep inside component</h2></figure>'
+                         '<h2 hidden>Do not promote</h2>',)
+            with patch("tools.web.frozen_ai_web.read_manual_ir", return_value=ir), \
+                 patch("tools.web.frozen_ai_web.render_document_fragments", return_value=fragments):
+                replay_package(package)
+            output = (package / "manual.md").read_text()
+            self.assertIn('<span id="specifications"></span>\n\n# SPÉCIFICATIONS', output)
+            self.assertIn('<figure><h2 class="component-title">', output)
+            self.assertNotIn("## Keep inside component", output)
+            self.assertNotIn("## Do not promote", output)
 
 
 class FrozenAIWebTests(unittest.TestCase):
@@ -105,8 +130,8 @@ class FrozenAIWebTests(unittest.TestCase):
                 moved = self.output / f"moved-{language}"
                 shutil.copytree(original, moved)
                 expected = (original / ir.metadata["markdown_filename"]).read_bytes()
-                with patch("tools.frozen_ai_web.FrozenBook", side_effect=AssertionError("source reopened")), \
-                     patch("tools.frozen_ai_web.load_web_manual_contract", side_effect=AssertionError("contract reopened")), \
+                with patch("tools.web.frozen_ai_web.FrozenBook", side_effect=AssertionError("source reopened")), \
+                     patch("tools.web.frozen_ai_web.load_web_manual_contract", side_effect=AssertionError("contract reopened")), \
                      patch("tools.component_specs.registry.default_registry_path", side_effect=AssertionError("registry reopened")), \
                      patch("tools.component_specs.theme.default_theme_path", side_effect=AssertionError("theme reopened")):
                     replay_package(moved)

@@ -12,7 +12,7 @@ from tools.utils.path_utils import get_paths
 class PreparedPolicyTests(unittest.TestCase):
     def test_all_reviewed_targets_resolve_against_capability_ssot(self):
         contract = json.loads((get_paths().renderer_contracts_dir / POLICY_FILENAME).read_text())
-        self.assertEqual(len(contract["targets"]), 67)
+        self.assertEqual(len(contract["targets"]), 75)
         for key in contract["targets"]:
             model, region, language = key.split("/")
             with self.subTest(target=key):
@@ -54,7 +54,7 @@ class PreparedPolicyTests(unittest.TestCase):
                 resolve_prepared_component_policy(model="JA-AD01A", region="EU", language="en", contract_path=path)
 
     def test_newly_enabled_capability_needs_chapter_review(self):
-        from tools.check_docs_capability import load_capabilities
+        from tools.check.docs_capability import load_capabilities
         capabilities = load_capabilities(get_paths().data_dir)
         capabilities["JE-3600A_EU"]["AC/DC输出记忆恢复"] = True
         with patch("tools.prepared_component_policy.load_capabilities", return_value=capabilities):

@@ -7,8 +7,8 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from tools.web_presentation import WebPresentationError, load_web_manual_contract
-from tools.web_presentation_contract import merge_contract_layers
+from tools.web.presentation import WebPresentationError, load_web_manual_contract
+from tools.web.presentation_contract import merge_contract_layers
 from tools.operation_artwork_mode import operation_artwork_mode
 
 
@@ -747,6 +747,7 @@ class WebPresentationContractTests(unittest.TestCase):
             ("a line that was not captured", overlay(placed(line=2)), "distinct captured line"),
             ("rect outside the panel", overlay(placed(rect=[55, 3.73, 42.12, 111])), "rect must be 4 percentages"),
             ("pill tone that is not #rrggbb", overlay(placed(fill="white")), "fill must be a #rrggbb tone"),
+            ("foreground that is not #rrggbb", overlay(placed(color="white")), "color must be a #rrggbb tone"),
             ("label names a leader", overlay(placed(leader=[1, 2])), "must name only"),
         )
         for label, candidate, message in rejected:
