@@ -1,13 +1,13 @@
 {
   "asset_refs": [
-    "assets/ir/1c272a00fbd28d6562d4126040ba43e5747f6a6550878c4b13e05a5c28014577/10_warning_triangle_RkOwbJ9j1oUHJgxFEx3cqhVynjb.png",
-    "assets/ir/d14506fa5a9d449039887db61a259f1841f1826de2f190f54063f96195b955f5/20_read_manual_VK1Ab1MGIoOHdgx1rkUchOHRntb.png",
-    "assets/ir/66c3df77e4f84cccad4b9f162798b181c007e89d3f0e9dd4fdf52c392827cbab/10_do_not_dismantle_Ml7EbCjtYohuKAxWNDUc93UMnVc.png",
-    "assets/ir/422379347e71e7827c3da380e421f2cb106da5d2f74781fc45782a2f86d493d2/20_no_open_flame_SAbnbxa6iohb2rxxk3PcEh8cnuf.png",
-    "assets/ir/e345b3278827691751b6beac9c8343c75ac7a98100618fbef1db73a27329b99d/30_keep_away_from_children_Nc5NbV2kyoMaTSxvismcAlzbnlh.png",
-    "assets/ir/ea7766d417e962cf711bccf3de79d6f639602848ace780353cb329329d13cc91/40_li_ion_ZEcHbhY0Eo3XOExtXKCcbEVjnpe.png",
-    "assets/ir/eb094578bf165fa39399de1d957cc71a92191f2b0e7ed0a620885065ebedf8a3/50_weee_L9o3bcXq0oSsqdxSX86covnpnle.png",
-    "assets/ir/7fb57972ebd1fb8bf82abc75d0d320ecaa9abc6544020f2374da2f1272a46171/70_weee2_VL7tbeJhHoy9wBxRZIdcygPBnmf.png",
+    "assets/ir/ead6abb99089c0c223d8d89588c1a48bc158bb93be15ed402bbcfc7563a02bf8/symbol_warning.png",
+    "assets/ir/e0ea61a86d361997c3f183bb97dd110eaaa45efc09757ff5fb7b82de0299ca61/symbol_manual.png",
+    "assets/ir/f3e73715b8d162d565997f94284fa374a51252d3ada90f88f39381d22b1796e8/symbol_dismantle.png",
+    "assets/ir/5535d752347971c9a7faf8850a57099f87365bff2e6138879832639b25d85941/symbol_fire.png",
+    "assets/ir/e3fae2d4d963da0abba9cdd5b96f2dae1a631c10b188715ad96456ddb706faab/symbol_children.png",
+    "assets/ir/81c8856189a40c97bad96998b51131030f8ce01652183fe9ef19655a09acb804/symbol_li_ion.png",
+    "assets/ir/6883f899f43ac0642f43b8f9cf4118a394c1382ee409f4498544f90ba37b56a5/symbol_weee.png",
+    "assets/ir/cf04ff00bdeb8de5971a55e5d8be6ef91e1a4ddad479f817f0c535914a392d45/symbol_battery_weee.png",
     "assets/ir/97378797f84abf92d40fdf97bdf655b8f6eab326f908700e99424c02f5d57306/jbp2000b_in_box_main_unit.png",
     "assets/ir/2f6216b28c08a64de215bcbae3c62e2c90219a0aa93d53ed77ee365fd21b11fc/jbp2000b_expansion_cable.png",
     "assets/ir/87ac44e52863324b761a672089e6b0497e40fdf48432f698fccf30508060c60a/manual_icon1.png",
@@ -21,35 +21,35 @@
     "assets/ir/e249b7661d9874293f6f1ad478e9392d2bcd4a625ecc60ec27fa2898cbb4361f/jbp2000b_eu_ac_charging.png",
     "assets/ir/e7777b74c8b716d19c996bff31a0d33de8a4ea60260d00aaed789f97ceb60fef/jbp2000b_eu_solar_charging.png"
   ],
-  "bundle_root": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/eu-shared-release-24f51176/JBP-2000B-fr/docs/_build/JBP-2000B/EU/fr/rst",
-  "bundle_sha256": "d7fab74dff9a4c417c0950b107112ab6e42a22a287e29905ead1e6a620cb166a",
-  "content_sha256": "f768ecbc5860049a630d8391aeb336c08513bc1d406db87a3217a23d1ef04a21",
+  "bundle_root": "/private/tmp/jbp2000b-release-validation/fr/docs/_build/JBP-2000B/EU/fr/rst",
+  "bundle_sha256": "dd136452735728c1c5d636bb1a4f1596eadadfde8f9fbad025b79167f8bc7ce9",
+  "content_sha256": "fb3da8387e4934d96c0ce406acffe6c831ae42de679c631f2fc60139b4ea9d08",
   "language": "fr",
   "layout_params_sha256": "f5ae099abc1a82ffda3abcc5a13725aca3c201e720a0374d88d1643f9773f279",
   "metadata": {
     "asset_sha256": {
-      "assets/ir/1c272a00fbd28d6562d4126040ba43e5747f6a6550878c4b13e05a5c28014577/10_warning_triangle_RkOwbJ9j1oUHJgxFEx3cqhVynjb.png": "1c272a00fbd28d6562d4126040ba43e5747f6a6550878c4b13e05a5c28014577",
       "assets/ir/2f6216b28c08a64de215bcbae3c62e2c90219a0aa93d53ed77ee365fd21b11fc/jbp2000b_expansion_cable.png": "2f6216b28c08a64de215bcbae3c62e2c90219a0aa93d53ed77ee365fd21b11fc",
-      "assets/ir/422379347e71e7827c3da380e421f2cb106da5d2f74781fc45782a2f86d493d2/20_no_open_flame_SAbnbxa6iohb2rxxk3PcEh8cnuf.png": "422379347e71e7827c3da380e421f2cb106da5d2f74781fc45782a2f86d493d2",
       "assets/ir/4d5f74e927261d7c174b45b5c0eb039d0e7c11ff4ab4c932e5719d2138415975/jbp2000b_lcd_control.png": "4d5f74e927261d7c174b45b5c0eb039d0e7c11ff4ab4c932e5719d2138415975",
-      "assets/ir/66c3df77e4f84cccad4b9f162798b181c007e89d3f0e9dd4fdf52c392827cbab/10_do_not_dismantle_Ml7EbCjtYohuKAxWNDUc93UMnVc.png": "66c3df77e4f84cccad4b9f162798b181c007e89d3f0e9dd4fdf52c392827cbab",
+      "assets/ir/5535d752347971c9a7faf8850a57099f87365bff2e6138879832639b25d85941/symbol_fire.png": "5535d752347971c9a7faf8850a57099f87365bff2e6138879832639b25d85941",
+      "assets/ir/6883f899f43ac0642f43b8f9cf4118a394c1382ee409f4498544f90ba37b56a5/symbol_weee.png": "6883f899f43ac0642f43b8f9cf4118a394c1382ee409f4498544f90ba37b56a5",
       "assets/ir/6ac9bc60991ebd6da65bcea1f62a1f82a737d8f38031144396d857f35ccbd8fc/jbp2000b_left_side_ports.png": "6ac9bc60991ebd6da65bcea1f62a1f82a737d8f38031144396d857f35ccbd8fc",
-      "assets/ir/7fb57972ebd1fb8bf82abc75d0d320ecaa9abc6544020f2374da2f1272a46171/70_weee2_VL7tbeJhHoy9wBxRZIdcygPBnmf.png": "7fb57972ebd1fb8bf82abc75d0d320ecaa9abc6544020f2374da2f1272a46171",
+      "assets/ir/81c8856189a40c97bad96998b51131030f8ce01652183fe9ef19655a09acb804/symbol_li_ion.png": "81c8856189a40c97bad96998b51131030f8ce01652183fe9ef19655a09acb804",
       "assets/ir/87ac44e52863324b761a672089e6b0497e40fdf48432f698fccf30508060c60a/manual_icon1.png": "87ac44e52863324b761a672089e6b0497e40fdf48432f698fccf30508060c60a",
       "assets/ir/8951b52e1a2fd330c8e7b996a7b0b91442b5dce1e68c7d8139dddf2672b61a7e/jbp2000b_eu_stack_clearance.png": "8951b52e1a2fd330c8e7b996a7b0b91442b5dce1e68c7d8139dddf2672b61a7e",
       "assets/ir/97378797f84abf92d40fdf97bdf655b8f6eab326f908700e99424c02f5d57306/jbp2000b_in_box_main_unit.png": "97378797f84abf92d40fdf97bdf655b8f6eab326f908700e99424c02f5d57306",
       "assets/ir/ad4a3f6c7140f14222b620191aed30bf8fcc230c8e16a10d86d9f4c7ef27353b/jbp2000b_lcd_screen.png": "ad4a3f6c7140f14222b620191aed30bf8fcc230c8e16a10d86d9f4c7ef27353b",
       "assets/ir/c405e6a1fdd35bb593429ee85568e843e02ced8e8a43d672ef1cb8034774cce3/jbp2000b_front_controls.png": "c405e6a1fdd35bb593429ee85568e843e02ced8e8a43d672ef1cb8034774cce3",
       "assets/ir/c8332fadce5987fef4ecd43938fb3a61bda2211b588bd20fd7c52a18768b1799/jbp2000b_power_control.png": "c8332fadce5987fef4ecd43938fb3a61bda2211b588bd20fd7c52a18768b1799",
-      "assets/ir/d14506fa5a9d449039887db61a259f1841f1826de2f190f54063f96195b955f5/20_read_manual_VK1Ab1MGIoOHdgx1rkUchOHRntb.png": "d14506fa5a9d449039887db61a259f1841f1826de2f190f54063f96195b955f5",
+      "assets/ir/cf04ff00bdeb8de5971a55e5d8be6ef91e1a4ddad479f817f0c535914a392d45/symbol_battery_weee.png": "cf04ff00bdeb8de5971a55e5d8be6ef91e1a4ddad479f817f0c535914a392d45",
       "assets/ir/df6b8c37f6b24c5b6655f0769b9ce189937a9327e11487cdf505523ea0311bc1/jbp2000b_eu_connection_locking_fr.png": "df6b8c37f6b24c5b6655f0769b9ce189937a9327e11487cdf505523ea0311bc1",
+      "assets/ir/e0ea61a86d361997c3f183bb97dd110eaaa45efc09757ff5fb7b82de0299ca61/symbol_manual.png": "e0ea61a86d361997c3f183bb97dd110eaaa45efc09757ff5fb7b82de0299ca61",
       "assets/ir/e249b7661d9874293f6f1ad478e9392d2bcd4a625ecc60ec27fa2898cbb4361f/jbp2000b_eu_ac_charging.png": "e249b7661d9874293f6f1ad478e9392d2bcd4a625ecc60ec27fa2898cbb4361f",
-      "assets/ir/e345b3278827691751b6beac9c8343c75ac7a98100618fbef1db73a27329b99d/30_keep_away_from_children_Nc5NbV2kyoMaTSxvismcAlzbnlh.png": "e345b3278827691751b6beac9c8343c75ac7a98100618fbef1db73a27329b99d",
+      "assets/ir/e3fae2d4d963da0abba9cdd5b96f2dae1a631c10b188715ad96456ddb706faab/symbol_children.png": "e3fae2d4d963da0abba9cdd5b96f2dae1a631c10b188715ad96456ddb706faab",
       "assets/ir/e7777b74c8b716d19c996bff31a0d33de8a4ea60260d00aaed789f97ceb60fef/jbp2000b_eu_solar_charging.png": "e7777b74c8b716d19c996bff31a0d33de8a4ea60260d00aaed789f97ceb60fef",
-      "assets/ir/ea7766d417e962cf711bccf3de79d6f639602848ace780353cb329329d13cc91/40_li_ion_ZEcHbhY0Eo3XOExtXKCcbEVjnpe.png": "ea7766d417e962cf711bccf3de79d6f639602848ace780353cb329329d13cc91",
-      "assets/ir/eb094578bf165fa39399de1d957cc71a92191f2b0e7ed0a620885065ebedf8a3/50_weee_L9o3bcXq0oSsqdxSX86covnpnle.png": "eb094578bf165fa39399de1d957cc71a92191f2b0e7ed0a620885065ebedf8a3"
+      "assets/ir/ead6abb99089c0c223d8d89588c1a48bc158bb93be15ed402bbcfc7563a02bf8/symbol_warning.png": "ead6abb99089c0c223d8d89588c1a48bc158bb93be15ed402bbcfc7563a02bf8",
+      "assets/ir/f3e73715b8d162d565997f94284fa374a51252d3ada90f88f39381d22b1796e8/symbol_dismantle.png": "f3e73715b8d162d565997f94284fa374a51252d3ada90f88f39381d22b1796e8"
     },
-    "block_count": 78,
+    "block_count": 76,
     "component_registry": {
       "components": {
         "HB-CALLOUT-STRIP": {
@@ -172,6 +172,12 @@
               ],
               "required": false
             },
+            "interstitial_note": {
+              "content_kinds": [
+                "rich_text"
+              ],
+              "required": false
+            },
             "labels": {
               "content_kinds": [
                 "ordered_labels"
@@ -206,8 +212,29 @@
           "token_roles": [
             "component.special.app"
           ],
+          "variant_adapters": {
+            "download-qr-only": {
+              "idml": {
+                "capability": "not-applicable",
+                "key": "idml_app"
+              },
+              "latex": {
+                "capability": "not-applicable",
+                "key": "hb_latex_app"
+              },
+              "web": {
+                "capability": "rendered",
+                "key": "hb_app"
+              },
+              "word": {
+                "capability": "not-applicable",
+                "key": "word_app"
+              }
+            }
+          },
           "variants": [
             "download",
+            "download-qr-only",
             "inline-control",
             "add-device"
           ]
@@ -757,7 +784,8 @@
             "component.table.lcd-icon"
           ],
           "variants": [
-            "icon-catalog"
+            "icon-catalog",
+            "icon-catalog-unnumbered"
           ]
         },
         "HB-TABLE-LCD-MODE": {
@@ -861,10 +889,12 @@
             "component.table.reference"
           ],
           "variants": [
+            "lcd-descriptions",
             "lcd-legend",
             "lcd-actions",
             "lcd-actions-compact",
-            "symbol-meanings"
+            "symbol-meanings",
+            "plain-inventory"
           ]
         },
         "HB-TABLE-SPEC": {
@@ -1222,7 +1252,7 @@
       "registry_id": "hb-component-registry",
       "schema_version": "component-registry/v1"
     },
-    "component_registry_sha256": "b2952c2d89dbfb87a8ceae7b65a892a63a09f80ccf753bffb65158be2123100e",
+    "component_registry_sha256": "9275f1facc80873cdbf74f4f3c91c29f87ebc26fd6056eb37e69e13f96639a8f",
     "composites": [],
     "declared_languages": [
       "fr"
@@ -1890,7 +1920,8 @@
       "meaning_symbols": {
         "signal_row_count": 4,
         "source_patterns": [
-          "symbols_*"
+          "symbols_*",
+          "symbols"
         ]
       },
       "operations": {
@@ -2256,7 +2287,7 @@
         {
           "asset_refs": [],
           "block_id": "preface_important_fr.rst:block-0005",
-          "content_sha256": "ac0277dd03a40f847dc212b2cdb589b1843e54824aed689ab5270ce772d66df0",
+          "content_sha256": "06de9e9769ad50145eec08e28b5b83ae2f72b7ce7f4fee19e310974d1907d2d2",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -2359,7 +2390,7 @@
                   "role": "body"
                 }
               ],
-              "source_ref": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/eu-shared-release-24f51176/JBP-2000B-fr/docs/_build/JBP-2000B/EU/fr/rst/page/preface_important_fr.rst#callout-1",
+              "source_ref": "/private/tmp/jbp2000b-release-validation/fr/docs/_build/JBP-2000B/EU/fr/rst/page/preface_important_fr.rst#callout-1",
               "token_roles": [
                 "component.callout"
               ],
@@ -2374,7 +2405,7 @@
       "language": "fr",
       "page_id": "preface_important_fr.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/eu-shared-release-24f51176/JBP-2000B-fr/docs/_build/JBP-2000B/EU/fr/rst/page/preface_important_fr.rst",
+      "source_path": "/private/tmp/jbp2000b-release-validation/fr/docs/_build/JBP-2000B/EU/fr/rst/page/preface_important_fr.rst",
       "source_ref": "preface_important_fr.rst",
       "source_sha256": "098c7964520bdaf96b78254d56d6940be96bcfa90f0ec6131c8faf57a8365ea7"
     },
@@ -2396,7 +2427,7 @@
       "language": "fr",
       "page_id": "toc.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/eu-shared-release-24f51176/JBP-2000B-fr/docs/_build/JBP-2000B/EU/fr/rst/page/toc.rst",
+      "source_path": "/private/tmp/jbp2000b-release-validation/fr/docs/_build/JBP-2000B/EU/fr/rst/page/toc.rst",
       "source_ref": "toc.rst",
       "source_sha256": "11937979ac13710d5ec8eed3bdaf4a6b4d30c35d06c6d32dc75342ffafc11b66"
     },
@@ -2660,7 +2691,7 @@
       "language": "fr",
       "page_id": "safety_info_fr.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/eu-shared-release-24f51176/JBP-2000B-fr/docs/_build/JBP-2000B/EU/fr/rst/page/safety_info_fr.rst",
+      "source_path": "/private/tmp/jbp2000b-release-validation/fr/docs/_build/JBP-2000B/EU/fr/rst/page/safety_info_fr.rst",
       "source_ref": "safety_info_fr.rst",
       "source_sha256": "9fda999eaaf45063bc93c0a8540606d64b31788a08da2d6696409dfad532217f"
     },
@@ -2687,7 +2718,7 @@
         {
           "asset_refs": [],
           "block_id": "symbol_meaning_fr.rst:block-0002",
-          "content_sha256": "3d9028b57a0f32827fad8cf7c0856a02649fc0fc052e3bc2fb61a230be0ac16d",
+          "content_sha256": "116dd75a878d7c0beaa447b8a352594015d6cdd7569278adce39a48139a53899",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -3189,29 +3220,33 @@
                     {
                       "label": "AVERTISSEMENT",
                       "meaning_html": "<p>Pratiques dangereuses pouvant entraîner des blessures graves, la mort et/ou des dommages matériels.</p>",
-                      "meaning_text": "Pratiques dangereuses pouvant entraîner des blessures graves, la mort et/ou des dommages matériels."
+                      "meaning_text": "Pratiques dangereuses pouvant entraîner des blessures graves, la mort et/ou des dommages matériels.",
+                      "show_icon": true
                     },
                     {
                       "label": "ATTENTION",
                       "meaning_html": "<p>Pratiques dangereuses pouvant entraîner des blessures corporelles et/ou des dommages matériels.</p>",
-                      "meaning_text": "Pratiques dangereuses pouvant entraîner des blessures corporelles et/ou des dommages matériels."
+                      "meaning_text": "Pratiques dangereuses pouvant entraîner des blessures corporelles et/ou des dommages matériels.",
+                      "show_icon": true
                     },
                     {
                       "label": "REMARQUE",
                       "meaning_html": "<p>Pratiques dangereuses pouvant entraîner des dommages à l'équipement, une perte de données, une détérioration des performances ou des résultats inattendus.</p>",
-                      "meaning_text": "Pratiques dangereuses pouvant entraîner des dommages à l'équipement, une perte de données, une détérioration des performances ou des résultats inattendus."
+                      "meaning_text": "Pratiques dangereuses pouvant entraîner des dommages à l'équipement, une perte de données, une détérioration des performances ou des résultats inattendus.",
+                      "show_icon": false
                     },
                     {
                       "label": "CONSEIL",
                       "meaning_html": "<p>Complète les informations importantes ou les conseils d'utilisation dans le texte.</p>",
-                      "meaning_text": "Complète les informations importantes ou les conseils d'utilisation dans le texte."
+                      "meaning_text": "Complète les informations importantes ou les conseils d'utilisation dans le texte.",
+                      "show_icon": false
                     }
                   ],
                   "content_kind": "ordered_rows",
                   "role": "rows"
                 }
               ],
-              "source_ref": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/eu-shared-release-24f51176/JBP-2000B-fr/docs/_build/JBP-2000B/EU/fr/rst/page/symbol_meaning_fr.rst#symbol-signals",
+              "source_ref": "/private/tmp/jbp2000b-release-validation/fr/docs/_build/JBP-2000B/EU/fr/rst/page/symbol_meaning_fr.rst#symbol-signals",
               "token_roles": [
                 "component.table.symbol-signal"
               ],
@@ -3236,17 +3271,17 @@
         },
         {
           "asset_refs": [
-            "assets/ir/1c272a00fbd28d6562d4126040ba43e5747f6a6550878c4b13e05a5c28014577/10_warning_triangle_RkOwbJ9j1oUHJgxFEx3cqhVynjb.png",
-            "assets/ir/d14506fa5a9d449039887db61a259f1841f1826de2f190f54063f96195b955f5/20_read_manual_VK1Ab1MGIoOHdgx1rkUchOHRntb.png",
-            "assets/ir/66c3df77e4f84cccad4b9f162798b181c007e89d3f0e9dd4fdf52c392827cbab/10_do_not_dismantle_Ml7EbCjtYohuKAxWNDUc93UMnVc.png",
-            "assets/ir/422379347e71e7827c3da380e421f2cb106da5d2f74781fc45782a2f86d493d2/20_no_open_flame_SAbnbxa6iohb2rxxk3PcEh8cnuf.png",
-            "assets/ir/e345b3278827691751b6beac9c8343c75ac7a98100618fbef1db73a27329b99d/30_keep_away_from_children_Nc5NbV2kyoMaTSxvismcAlzbnlh.png",
-            "assets/ir/ea7766d417e962cf711bccf3de79d6f639602848ace780353cb329329d13cc91/40_li_ion_ZEcHbhY0Eo3XOExtXKCcbEVjnpe.png",
-            "assets/ir/eb094578bf165fa39399de1d957cc71a92191f2b0e7ed0a620885065ebedf8a3/50_weee_L9o3bcXq0oSsqdxSX86covnpnle.png",
-            "assets/ir/7fb57972ebd1fb8bf82abc75d0d320ecaa9abc6544020f2374da2f1272a46171/70_weee2_VL7tbeJhHoy9wBxRZIdcygPBnmf.png"
+            "assets/ir/ead6abb99089c0c223d8d89588c1a48bc158bb93be15ed402bbcfc7563a02bf8/symbol_warning.png",
+            "assets/ir/e0ea61a86d361997c3f183bb97dd110eaaa45efc09757ff5fb7b82de0299ca61/symbol_manual.png",
+            "assets/ir/f3e73715b8d162d565997f94284fa374a51252d3ada90f88f39381d22b1796e8/symbol_dismantle.png",
+            "assets/ir/5535d752347971c9a7faf8850a57099f87365bff2e6138879832639b25d85941/symbol_fire.png",
+            "assets/ir/e3fae2d4d963da0abba9cdd5b96f2dae1a631c10b188715ad96456ddb706faab/symbol_children.png",
+            "assets/ir/81c8856189a40c97bad96998b51131030f8ce01652183fe9ef19655a09acb804/symbol_li_ion.png",
+            "assets/ir/6883f899f43ac0642f43b8f9cf4118a394c1382ee409f4498544f90ba37b56a5/symbol_weee.png",
+            "assets/ir/cf04ff00bdeb8de5971a55e5d8be6ef91e1a4ddad479f817f0c535914a392d45/symbol_battery_weee.png"
           ],
           "block_id": "symbol_meaning_fr.rst:block-0004",
-          "content_sha256": "8154fcf7a010854dca8624f50a62924d4863c3101950ac2502e13688bf5f2153",
+          "content_sha256": "bf983e8902ea839e74f4e7fd079f811a7c0b708360f1725360081d904bc65469",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -3450,7 +3485,7 @@
                                     }
                                   }
                                 },
-                                "source": "assets/ir/1c272a00fbd28d6562d4126040ba43e5747f6a6550878c4b13e05a5c28014577/10_warning_triangle_RkOwbJ9j1oUHJgxFEx3cqhVynjb.png"
+                                "source": "assets/ir/ead6abb99089c0c223d8d89588c1a48bc158bb93be15ed402bbcfc7563a02bf8/symbol_warning.png"
                               },
                               {
                                 "kind": "text",
@@ -3495,7 +3530,7 @@
                                     }
                                   }
                                 },
-                                "source": "assets/ir/e345b3278827691751b6beac9c8343c75ac7a98100618fbef1db73a27329b99d/30_keep_away_from_children_Nc5NbV2kyoMaTSxvismcAlzbnlh.png"
+                                "source": "assets/ir/e3fae2d4d963da0abba9cdd5b96f2dae1a631c10b188715ad96456ddb706faab/symbol_children.png"
                               },
                               {
                                 "kind": "text",
@@ -3549,7 +3584,7 @@
                                     }
                                   }
                                 },
-                                "source": "assets/ir/d14506fa5a9d449039887db61a259f1841f1826de2f190f54063f96195b955f5/20_read_manual_VK1Ab1MGIoOHdgx1rkUchOHRntb.png"
+                                "source": "assets/ir/e0ea61a86d361997c3f183bb97dd110eaaa45efc09757ff5fb7b82de0299ca61/symbol_manual.png"
                               },
                               {
                                 "kind": "text",
@@ -3594,7 +3629,7 @@
                                     }
                                   }
                                 },
-                                "source": "assets/ir/ea7766d417e962cf711bccf3de79d6f639602848ace780353cb329329d13cc91/40_li_ion_ZEcHbhY0Eo3XOExtXKCcbEVjnpe.png"
+                                "source": "assets/ir/81c8856189a40c97bad96998b51131030f8ce01652183fe9ef19655a09acb804/symbol_li_ion.png"
                               },
                               {
                                 "kind": "text",
@@ -3648,7 +3683,7 @@
                                     }
                                   }
                                 },
-                                "source": "assets/ir/66c3df77e4f84cccad4b9f162798b181c007e89d3f0e9dd4fdf52c392827cbab/10_do_not_dismantle_Ml7EbCjtYohuKAxWNDUc93UMnVc.png"
+                                "source": "assets/ir/f3e73715b8d162d565997f94284fa374a51252d3ada90f88f39381d22b1796e8/symbol_dismantle.png"
                               },
                               {
                                 "kind": "text",
@@ -3693,7 +3728,7 @@
                                     }
                                   }
                                 },
-                                "source": "assets/ir/eb094578bf165fa39399de1d957cc71a92191f2b0e7ed0a620885065ebedf8a3/50_weee_L9o3bcXq0oSsqdxSX86covnpnle.png"
+                                "source": "assets/ir/6883f899f43ac0642f43b8f9cf4118a394c1382ee409f4498544f90ba37b56a5/symbol_weee.png"
                               },
                               {
                                 "kind": "text",
@@ -3747,7 +3782,7 @@
                                     }
                                   }
                                 },
-                                "source": "assets/ir/422379347e71e7827c3da380e421f2cb106da5d2f74781fc45782a2f86d493d2/20_no_open_flame_SAbnbxa6iohb2rxxk3PcEh8cnuf.png"
+                                "source": "assets/ir/5535d752347971c9a7faf8850a57099f87365bff2e6138879832639b25d85941/symbol_fire.png"
                               },
                               {
                                 "kind": "text",
@@ -3792,7 +3827,7 @@
                                     }
                                   }
                                 },
-                                "source": "assets/ir/7fb57972ebd1fb8bf82abc75d0d320ecaa9abc6544020f2374da2f1272a46171/70_weee2_VL7tbeJhHoy9wBxRZIdcygPBnmf.png"
+                                "source": "assets/ir/cf04ff00bdeb8de5971a55e5d8be6ef91e1a4ddad479f817f0c535914a392d45/symbol_battery_weee.png"
                               },
                               {
                                 "kind": "text",
@@ -3855,42 +3890,42 @@
             "component_spec": {
               "assets": [
                 {
-                  "asset_ref": "assets/ir/1c272a00fbd28d6562d4126040ba43e5747f6a6550878c4b13e05a5c28014577/10_warning_triangle_RkOwbJ9j1oUHJgxFEx3cqhVynjb.png",
+                  "asset_ref": "assets/ir/ead6abb99089c0c223d8d89588c1a48bc158bb93be15ed402bbcfc7563a02bf8/symbol_warning.png",
                   "locale_policy": "shared",
                   "role": "icons"
                 },
                 {
-                  "asset_ref": "assets/ir/d14506fa5a9d449039887db61a259f1841f1826de2f190f54063f96195b955f5/20_read_manual_VK1Ab1MGIoOHdgx1rkUchOHRntb.png",
+                  "asset_ref": "assets/ir/e0ea61a86d361997c3f183bb97dd110eaaa45efc09757ff5fb7b82de0299ca61/symbol_manual.png",
                   "locale_policy": "shared",
                   "role": "icons"
                 },
                 {
-                  "asset_ref": "assets/ir/66c3df77e4f84cccad4b9f162798b181c007e89d3f0e9dd4fdf52c392827cbab/10_do_not_dismantle_Ml7EbCjtYohuKAxWNDUc93UMnVc.png",
+                  "asset_ref": "assets/ir/f3e73715b8d162d565997f94284fa374a51252d3ada90f88f39381d22b1796e8/symbol_dismantle.png",
                   "locale_policy": "shared",
                   "role": "icons"
                 },
                 {
-                  "asset_ref": "assets/ir/422379347e71e7827c3da380e421f2cb106da5d2f74781fc45782a2f86d493d2/20_no_open_flame_SAbnbxa6iohb2rxxk3PcEh8cnuf.png",
+                  "asset_ref": "assets/ir/5535d752347971c9a7faf8850a57099f87365bff2e6138879832639b25d85941/symbol_fire.png",
                   "locale_policy": "shared",
                   "role": "icons"
                 },
                 {
-                  "asset_ref": "assets/ir/e345b3278827691751b6beac9c8343c75ac7a98100618fbef1db73a27329b99d/30_keep_away_from_children_Nc5NbV2kyoMaTSxvismcAlzbnlh.png",
+                  "asset_ref": "assets/ir/e3fae2d4d963da0abba9cdd5b96f2dae1a631c10b188715ad96456ddb706faab/symbol_children.png",
                   "locale_policy": "shared",
                   "role": "icons"
                 },
                 {
-                  "asset_ref": "assets/ir/ea7766d417e962cf711bccf3de79d6f639602848ace780353cb329329d13cc91/40_li_ion_ZEcHbhY0Eo3XOExtXKCcbEVjnpe.png",
+                  "asset_ref": "assets/ir/81c8856189a40c97bad96998b51131030f8ce01652183fe9ef19655a09acb804/symbol_li_ion.png",
                   "locale_policy": "shared",
                   "role": "icons"
                 },
                 {
-                  "asset_ref": "assets/ir/eb094578bf165fa39399de1d957cc71a92191f2b0e7ed0a620885065ebedf8a3/50_weee_L9o3bcXq0oSsqdxSX86covnpnle.png",
+                  "asset_ref": "assets/ir/6883f899f43ac0642f43b8f9cf4118a394c1382ee409f4498544f90ba37b56a5/symbol_weee.png",
                   "locale_policy": "shared",
                   "role": "icons"
                 },
                 {
-                  "asset_ref": "assets/ir/7fb57972ebd1fb8bf82abc75d0d320ecaa9abc6544020f2374da2f1272a46171/70_weee2_VL7tbeJhHoy9wBxRZIdcygPBnmf.png",
+                  "asset_ref": "assets/ir/cf04ff00bdeb8de5971a55e5d8be6ef91e1a4ddad479f817f0c535914a392d45/symbol_battery_weee.png",
                   "locale_policy": "shared",
                   "role": "icons"
                 }
@@ -3986,7 +4021,7 @@
                   "role": "panels"
                 }
               ],
-              "source_ref": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/eu-shared-release-24f51176/JBP-2000B-fr/docs/_build/JBP-2000B/EU/fr/rst/page/symbol_meaning_fr.rst#symbol-icons",
+              "source_ref": "/private/tmp/jbp2000b-release-validation/fr/docs/_build/JBP-2000B/EU/fr/rst/page/symbol_meaning_fr.rst#symbol-icons",
               "token_roles": [
                 "component.table.symbol-icon"
               ],
@@ -4001,9 +4036,9 @@
       "language": "fr",
       "page_id": "symbol_meaning_fr.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/eu-shared-release-24f51176/JBP-2000B-fr/docs/_build/JBP-2000B/EU/fr/rst/page/symbol_meaning_fr.rst",
+      "source_path": "/private/tmp/jbp2000b-release-validation/fr/docs/_build/JBP-2000B/EU/fr/rst/page/symbol_meaning_fr.rst",
       "source_ref": "symbol_meaning_fr.rst",
-      "source_sha256": "4601ca7e64a58e9e2a30a14d274e242c9f1340818f0595aa062b475aee98dd65"
+      "source_sha256": "2cf5e66f3bc2980da4622bed67184635f85d4ee5df73db5f4c1e4c572e93dbbc"
     },
     {
       "blocks": [
@@ -4032,7 +4067,7 @@
             "assets/ir/87ac44e52863324b761a672089e6b0497e40fdf48432f698fccf30508060c60a/manual_icon1.png"
           ],
           "block_id": "box_contents_fr.rst:block-0002",
-          "content_sha256": "4c209131433c8c0be33f550dfd79b1cd55045e741e90d3793c84ffa8a33f1b0b",
+          "content_sha256": "8ed686cffd13a667b884630f8528c6fcfc043f6bbd1b593ddf87bfe395b1c10a",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -4313,7 +4348,7 @@
                   "role": "tip_body"
                 }
               ],
-              "source_ref": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/eu-shared-release-24f51176/JBP-2000B-fr/docs/_build/JBP-2000B/EU/fr/rst/page/box_contents_fr.rst",
+              "source_ref": "/private/tmp/jbp2000b-release-validation/fr/docs/_build/JBP-2000B/EU/fr/rst/page/box_contents_fr.rst",
               "token_roles": [
                 "component.special.inbox"
               ],
@@ -4328,7 +4363,7 @@
       "language": "fr",
       "page_id": "box_contents_fr.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/eu-shared-release-24f51176/JBP-2000B-fr/docs/_build/JBP-2000B/EU/fr/rst/page/box_contents_fr.rst",
+      "source_path": "/private/tmp/jbp2000b-release-validation/fr/docs/_build/JBP-2000B/EU/fr/rst/page/box_contents_fr.rst",
       "source_ref": "box_contents_fr.rst",
       "source_sha256": "ec138b907949b2cd7a981d3687a8f186e8a7df61382da2470ab7cfc209c55a1e"
     },
@@ -4792,7 +4827,7 @@
       "language": "fr",
       "page_id": "product_overview_fr.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/eu-shared-release-24f51176/JBP-2000B-fr/docs/_build/JBP-2000B/EU/fr/rst/page/product_overview_fr.rst",
+      "source_path": "/private/tmp/jbp2000b-release-validation/fr/docs/_build/JBP-2000B/EU/fr/rst/page/product_overview_fr.rst",
       "source_ref": "product_overview_fr.rst",
       "source_sha256": "9c61dc655c5e5291ad3a852e3c422947a4ffc771b551cd01e284eacd62e38752"
     },
@@ -5113,7 +5148,7 @@
       "language": "fr",
       "page_id": "lcd_display_fr.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/eu-shared-release-24f51176/JBP-2000B-fr/docs/_build/JBP-2000B/EU/fr/rst/page/lcd_display_fr.rst",
+      "source_path": "/private/tmp/jbp2000b-release-validation/fr/docs/_build/JBP-2000B/EU/fr/rst/page/lcd_display_fr.rst",
       "source_ref": "lcd_display_fr.rst",
       "source_sha256": "5982f35a14d40f034ef2432180d4cbbb7a11b71c7265e18ec18821d91b24ea73"
     },
@@ -5142,7 +5177,7 @@
             "assets/ir/c8332fadce5987fef4ecd43938fb3a61bda2211b588bd20fd7c52a18768b1799/jbp2000b_power_control.png"
           ],
           "block_id": "operation_fr.rst:block-0002",
-          "content_sha256": "73757b0e88d28d79520a49c1f387e2b8a9fa2128f1338c0799f28469ccad3deb",
+          "content_sha256": "9a1c4a30ed322cadd647d8f1bf21150e8192f4c993db43d253c87070ff541035",
           "kind": "flow",
           "payload": {
             "anchor": "marche-arret",
@@ -5424,7 +5459,7 @@
                       "role": "body"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/eu-shared-release-24f51176/JBP-2000B-fr/docs/_build/JBP-2000B/EU/fr/rst/page/operation_fr.rst#callout-1",
+                  "source_ref": "/private/tmp/jbp2000b-release-validation/fr/docs/_build/JBP-2000B/EU/fr/rst/page/operation_fr.rst#callout-1",
                   "token_roles": [
                     "component.callout"
                   ],
@@ -5517,7 +5552,7 @@
       "language": "fr",
       "page_id": "operation_fr.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/eu-shared-release-24f51176/JBP-2000B-fr/docs/_build/JBP-2000B/EU/fr/rst/page/operation_fr.rst",
+      "source_path": "/private/tmp/jbp2000b-release-validation/fr/docs/_build/JBP-2000B/EU/fr/rst/page/operation_fr.rst",
       "source_ref": "operation_fr.rst",
       "source_sha256": "a810ea31c05614c70273c51bbd05c995a3e7dfb92edbe7b048c062e0b1480b9b"
     },
@@ -5607,61 +5642,12 @@
         {
           "asset_refs": [],
           "block_id": "connections_fr.rst:block-0006",
-          "content_sha256": "8860b9c284d765251b760a93855ff2d59ebfd0dea74d4a6d024a795394efde28",
+          "content_sha256": "d87db009058bc4535f95a6bfe7ef5f369cb95273b47d290372017c0ea851bc15",
           "kind": "flow",
           "payload": {
-            "children": [
-              {
-                "kind": "text",
-                "text": "\n"
-              },
+            "carrier_flow": [
               {
                 "children": [
-                  {
-                    "kind": "text",
-                    "text": "\n"
-                  },
-                  {
-                    "kind": "column",
-                    "presentation": {
-                      "html": {
-                        "attributes": {
-                          "style": "width: 12.0%"
-                        }
-                      }
-                    }
-                  },
-                  {
-                    "kind": "text",
-                    "text": "\n"
-                  },
-                  {
-                    "kind": "column",
-                    "presentation": {
-                      "html": {
-                        "attributes": {
-                          "style": "width: 88.0%"
-                        }
-                      }
-                    }
-                  },
-                  {
-                    "kind": "text",
-                    "text": "\n"
-                  }
-                ],
-                "kind": "column_group"
-              },
-              {
-                "kind": "text",
-                "text": "\n"
-              },
-              {
-                "children": [
-                  {
-                    "kind": "text",
-                    "text": "\n"
-                  },
                   {
                     "children": [
                       {
@@ -5671,108 +5657,159 @@
                               {
                                 "children": [
                                   {
-                                    "kind": "text",
-                                    "text": "Important"
-                                  }
-                                ],
-                                "kind": "strong"
-                              }
-                            ],
-                            "kind": "paragraph"
-                          }
-                        ],
-                        "header": false,
-                        "kind": "table_cell"
-                      },
-                      {
-                        "kind": "text",
-                        "text": "\n"
-                      },
-                      {
-                        "children": [
-                          {
-                            "children": [
-                              {
-                                "kind": "text",
-                                "text": "\n"
-                              },
-                              {
-                                "children": [
-                                  {
                                     "children": [
                                       {
                                         "kind": "text",
-                                        "text": "Assurez-vous que tous les produits sont éteints avant de connecter la station d'énergie portable au(x) Jackery Battery Pack 2000."
+                                        "text": "IMPORTANT"
                                       }
                                     ],
-                                    "kind": "paragraph"
+                                    "kind": "strong"
                                   }
                                 ],
-                                "kind": "list_item"
-                              },
-                              {
-                                "kind": "text",
-                                "text": "\n"
-                              },
-                              {
-                                "children": [
-                                  {
-                                    "children": [
-                                      {
-                                        "kind": "text",
-                                        "text": "Pour assurer le bon fonctionnement du produit, assurez-vous que les entrées et sorties d'air sur les deux côtés ne sont pas obstruées. Laissez un espace d'au moins 0,66 pied (200 mm) entre les ouvertures et tout objet pour permettre une dissipation thermique adéquate."
-                                      }
-                                    ],
-                                    "kind": "paragraph"
-                                  }
-                                ],
-                                "kind": "list_item"
-                              },
-                              {
-                                "kind": "text",
-                                "text": "\n"
+                                "kind": "paragraph"
                               }
                             ],
-                            "kind": "list",
-                            "ordered": false,
+                            "header": false,
+                            "kind": "table_cell",
                             "presentation": {
                               "html": {
                                 "attributes": {
                                   "class": [
-                                    "simple"
-                                  ]
+                                    "manual-callout-label"
+                                  ],
+                                  "style": "width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"
                                 }
                               }
                             }
                           },
                           {
-                            "kind": "text",
-                            "text": "\n"
+                            "children": [
+                              {
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "\n"
+                                  },
+                                  {
+                                    "children": [
+                                      {
+                                        "children": [
+                                          {
+                                            "kind": "text",
+                                            "text": "Assurez-vous que tous les produits sont éteints avant de connecter la station d'énergie portable au(x) Jackery Battery Pack 2000."
+                                          }
+                                        ],
+                                        "kind": "paragraph"
+                                      }
+                                    ],
+                                    "kind": "list_item"
+                                  },
+                                  {
+                                    "kind": "text",
+                                    "text": "\n"
+                                  },
+                                  {
+                                    "children": [
+                                      {
+                                        "children": [
+                                          {
+                                            "kind": "text",
+                                            "text": "Pour assurer le bon fonctionnement du produit, assurez-vous que les entrées et sorties d'air sur les deux côtés ne sont pas obstruées. Laissez un espace d'au moins 0,66 pied (200 mm) entre les ouvertures et tout objet pour permettre une dissipation thermique adéquate."
+                                          }
+                                        ],
+                                        "kind": "paragraph"
+                                      }
+                                    ],
+                                    "kind": "list_item"
+                                  },
+                                  {
+                                    "kind": "text",
+                                    "text": "\n"
+                                  }
+                                ],
+                                "kind": "list",
+                                "ordered": false,
+                                "presentation": {
+                                  "html": {
+                                    "attributes": {
+                                      "class": [
+                                        "simple"
+                                      ]
+                                    }
+                                  }
+                                }
+                              },
+                              {
+                                "kind": "text",
+                                "text": "\n"
+                              }
+                            ],
+                            "header": false,
+                            "kind": "table_cell",
+                            "presentation": {
+                              "html": {
+                                "attributes": {
+                                  "class": [
+                                    "manual-callout-body"
+                                  ],
+                                  "style": "border:1px solid #000; padding:6px 8px; vertical-align:top;"
+                                }
+                              }
+                            }
                           }
                         ],
-                        "header": false,
-                        "kind": "table_cell"
-                      },
-                      {
-                        "kind": "text",
-                        "text": "\n"
+                        "kind": "table_row"
                       }
                     ],
-                    "kind": "table_row"
-                  },
-                  {
-                    "kind": "text",
-                    "text": "\n"
+                    "kind": "table_body"
                   }
                 ],
-                "kind": "table_body"
-              },
-              {
-                "kind": "text",
-                "text": "\n"
+                "kind": "table",
+                "presentation": {
+                  "html": {
+                    "attributes": {
+                      "class": [
+                        "manual-callout-table"
+                      ],
+                      "style": "width:100%; border-collapse:collapse; margin:0 0 16px 0;"
+                    }
+                  }
+                }
               }
             ],
-            "kind": "table",
+            "component_spec": {
+              "assets": [],
+              "component_id": "HB-CALLOUT-STRIP",
+              "language": "und",
+              "metadata": {},
+              "schema_version": "component-spec/v1",
+              "slots": [
+                {
+                  "content": "IMPORTANT",
+                  "content_kind": "inline_text",
+                  "role": "label"
+                },
+                {
+                  "content": "Assurez-vous que tous les produits sont éteints avant de connecter la station d'énergie portable au(x) Jackery Battery Pack 2000.\nPour assurer le bon fonctionnement du produit, assurez-vous que les entrées et sorties d'air sur les deux côtés ne sont pas obstruées. Laissez un espace d'au moins 0,66 pied (200 mm) entre les ouvertures et tout objet pour permettre une dissipation thermique adéquate.",
+                  "content_kind": "rich_text",
+                  "role": "body"
+                },
+                {
+                  "content": [
+                    "Assurez-vous que tous les produits sont éteints avant de connecter la station d'énergie portable au(x) Jackery Battery Pack 2000.",
+                    "Pour assurer le bon fonctionnement du produit, assurez-vous que les entrées et sorties d'air sur les deux côtés ne sont pas obstruées. Laissez un espace d'au moins 0,66 pied (200 mm) entre les ouvertures et tout objet pour permettre une dissipation thermique adéquate."
+                  ],
+                  "content_kind": "list_items",
+                  "role": "items"
+                }
+              ],
+              "source_ref": "/private/tmp/jbp2000b-release-validation/fr/docs/_build/JBP-2000B/EU/fr/rst/page/connections_fr.rst#callout-1",
+              "token_roles": [
+                "component.callout"
+              ],
+              "variant": "note"
+            },
+            "kind": "component",
             "schema_version": "manual-flow/v2"
           },
           "source_ref": "connections_fr.rst#block-6"
@@ -5780,73 +5817,12 @@
         {
           "asset_refs": [],
           "block_id": "connections_fr.rst:block-0007",
-          "content_sha256": "409f08d09ec16d10e5859c444f978d45e82cc092bc1ece8fafaf29f65dc755f8",
+          "content_sha256": "da8dcdccc6cd703488fe50f6e2c9611e7fab5eb2d314cba61c7f3ae5c644bb1b",
           "kind": "flow",
           "payload": {
-            "kind": "text",
-            "schema_version": "manual-flow/v2",
-            "text": "\n"
-          },
-          "source_ref": "connections_fr.rst#block-7"
-        },
-        {
-          "asset_refs": [],
-          "block_id": "connections_fr.rst:block-0008",
-          "content_sha256": "92011e3644bc6aa20c3b6dd357b205b0f33fbab20aec2f60c454a681d10d4955",
-          "kind": "flow",
-          "payload": {
-            "children": [
-              {
-                "kind": "text",
-                "text": "\n"
-              },
+            "carrier_flow": [
               {
                 "children": [
-                  {
-                    "kind": "text",
-                    "text": "\n"
-                  },
-                  {
-                    "kind": "column",
-                    "presentation": {
-                      "html": {
-                        "attributes": {
-                          "style": "width: 12.0%"
-                        }
-                      }
-                    }
-                  },
-                  {
-                    "kind": "text",
-                    "text": "\n"
-                  },
-                  {
-                    "kind": "column",
-                    "presentation": {
-                      "html": {
-                        "attributes": {
-                          "style": "width: 88.0%"
-                        }
-                      }
-                    }
-                  },
-                  {
-                    "kind": "text",
-                    "text": "\n"
-                  }
-                ],
-                "kind": "column_group"
-              },
-              {
-                "kind": "text",
-                "text": "\n"
-              },
-              {
-                "children": [
-                  {
-                    "kind": "text",
-                    "text": "\n"
-                  },
                   {
                     "children": [
                       {
@@ -5856,165 +5832,206 @@
                               {
                                 "children": [
                                   {
-                                    "kind": "text",
-                                    "text": "Remarques"
+                                    "children": [
+                                      {
+                                        "kind": "text",
+                                        "text": "REMARQUES"
+                                      }
+                                    ],
+                                    "kind": "strong"
                                   }
                                 ],
-                                "kind": "strong"
+                                "kind": "paragraph"
                               }
                             ],
-                            "kind": "paragraph"
-                          }
-                        ],
-                        "header": false,
-                        "kind": "table_cell"
-                      },
-                      {
-                        "kind": "text",
-                        "text": "\n"
-                      },
-                      {
-                        "children": [
-                          {
-                            "children": [
-                              {
-                                "kind": "text",
-                                "text": "\n"
-                              },
-                              {
-                                "children": [
-                                  {
-                                    "children": [
-                                      {
-                                        "kind": "text",
-                                        "text": "L'apparition de l'icône de connexion sur l'écran LCD (la station d'énergie portable) signifie que la connexion entre l'unité de batterie et la station d'énergie portable est réussie."
-                                      }
-                                    ],
-                                    "kind": "paragraph"
-                                  }
-                                ],
-                                "kind": "list_item"
-                              },
-                              {
-                                "kind": "text",
-                                "text": "\n"
-                              },
-                              {
-                                "children": [
-                                  {
-                                    "children": [
-                                      {
-                                        "kind": "text",
-                                        "text": "Veuillez ne pas empiler le dispositif sur la station d'énergie portable."
-                                      }
-                                    ],
-                                    "kind": "paragraph"
-                                  }
-                                ],
-                                "kind": "list_item"
-                              },
-                              {
-                                "kind": "text",
-                                "text": "\n"
-                              },
-                              {
-                                "children": [
-                                  {
-                                    "children": [
-                                      {
-                                        "kind": "text",
-                                        "text": "Placez les batteries d'extension sur une surface plane, stable et suffisamment résistante. Le nombre maximal de batteries d'extension empilées est de 3 par défaut."
-                                      }
-                                    ],
-                                    "kind": "paragraph"
-                                  }
-                                ],
-                                "kind": "list_item"
-                              },
-                              {
-                                "kind": "text",
-                                "text": "\n"
-                              },
-                              {
-                                "children": [
-                                  {
-                                    "children": [
-                                      {
-                                        "kind": "text",
-                                        "text": "Si 4 batteries d'extension ou plus sont nécessaires, elles doivent être placées dans une zone stable, contre un mur et à l'abri des chocs extérieurs, et les mesures nécessaires de fixation anti-basculement doivent être prises."
-                                      }
-                                    ],
-                                    "kind": "paragraph"
-                                  }
-                                ],
-                                "kind": "list_item"
-                              },
-                              {
-                                "kind": "text",
-                                "text": "\n"
-                              }
-                            ],
-                            "kind": "list",
-                            "ordered": false,
+                            "header": false,
+                            "kind": "table_cell",
                             "presentation": {
                               "html": {
                                 "attributes": {
                                   "class": [
-                                    "simple"
-                                  ]
+                                    "manual-callout-label"
+                                  ],
+                                  "style": "width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"
                                 }
                               }
                             }
                           },
                           {
-                            "kind": "text",
-                            "text": "\n"
+                            "children": [
+                              {
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "\n"
+                                  },
+                                  {
+                                    "children": [
+                                      {
+                                        "children": [
+                                          {
+                                            "kind": "text",
+                                            "text": "L'apparition de l'icône de connexion sur l'écran LCD (la station d'énergie portable) signifie que la connexion entre l'unité de batterie et la station d'énergie portable est réussie."
+                                          }
+                                        ],
+                                        "kind": "paragraph"
+                                      }
+                                    ],
+                                    "kind": "list_item"
+                                  },
+                                  {
+                                    "kind": "text",
+                                    "text": "\n"
+                                  },
+                                  {
+                                    "children": [
+                                      {
+                                        "children": [
+                                          {
+                                            "kind": "text",
+                                            "text": "Veuillez ne pas empiler le dispositif sur la station d'énergie portable."
+                                          }
+                                        ],
+                                        "kind": "paragraph"
+                                      }
+                                    ],
+                                    "kind": "list_item"
+                                  },
+                                  {
+                                    "kind": "text",
+                                    "text": "\n"
+                                  },
+                                  {
+                                    "children": [
+                                      {
+                                        "children": [
+                                          {
+                                            "kind": "text",
+                                            "text": "Placez les batteries d'extension sur une surface plane, stable et suffisamment résistante. Le nombre maximal de batteries d'extension empilées est de 3 par défaut."
+                                          }
+                                        ],
+                                        "kind": "paragraph"
+                                      }
+                                    ],
+                                    "kind": "list_item"
+                                  },
+                                  {
+                                    "kind": "text",
+                                    "text": "\n"
+                                  },
+                                  {
+                                    "children": [
+                                      {
+                                        "children": [
+                                          {
+                                            "kind": "text",
+                                            "text": "Si 4 batteries d'extension ou plus sont nécessaires, elles doivent être placées dans une zone stable, contre un mur et à l'abri des chocs extérieurs, et les mesures nécessaires de fixation anti-basculement doivent être prises."
+                                          }
+                                        ],
+                                        "kind": "paragraph"
+                                      }
+                                    ],
+                                    "kind": "list_item"
+                                  },
+                                  {
+                                    "kind": "text",
+                                    "text": "\n"
+                                  }
+                                ],
+                                "kind": "list",
+                                "ordered": false,
+                                "presentation": {
+                                  "html": {
+                                    "attributes": {
+                                      "class": [
+                                        "simple"
+                                      ]
+                                    }
+                                  }
+                                }
+                              },
+                              {
+                                "kind": "text",
+                                "text": "\n"
+                              }
+                            ],
+                            "header": false,
+                            "kind": "table_cell",
+                            "presentation": {
+                              "html": {
+                                "attributes": {
+                                  "class": [
+                                    "manual-callout-body"
+                                  ],
+                                  "style": "border:1px solid #000; padding:6px 8px; vertical-align:top;"
+                                }
+                              }
+                            }
                           }
                         ],
-                        "header": false,
-                        "kind": "table_cell"
-                      },
-                      {
-                        "kind": "text",
-                        "text": "\n"
+                        "kind": "table_row"
                       }
                     ],
-                    "kind": "table_row"
-                  },
-                  {
-                    "kind": "text",
-                    "text": "\n"
+                    "kind": "table_body"
                   }
                 ],
-                "kind": "table_body"
-              },
-              {
-                "kind": "text",
-                "text": "\n"
+                "kind": "table",
+                "presentation": {
+                  "html": {
+                    "attributes": {
+                      "class": [
+                        "manual-callout-table"
+                      ],
+                      "style": "width:100%; border-collapse:collapse; margin:0 0 16px 0;"
+                    }
+                  }
+                }
               }
             ],
-            "kind": "table",
+            "component_spec": {
+              "assets": [],
+              "component_id": "HB-CALLOUT-STRIP",
+              "language": "und",
+              "metadata": {},
+              "schema_version": "component-spec/v1",
+              "slots": [
+                {
+                  "content": "REMARQUES",
+                  "content_kind": "inline_text",
+                  "role": "label"
+                },
+                {
+                  "content": "L'apparition de l'icône de connexion sur l'écran LCD (la station d'énergie portable) signifie que la connexion entre l'unité de batterie et la station d'énergie portable est réussie.\nVeuillez ne pas empiler le dispositif sur la station d'énergie portable.\nPlacez les batteries d'extension sur une surface plane, stable et suffisamment résistante. Le nombre maximal de batteries d'extension empilées est de 3 par défaut.\nSi 4 batteries d'extension ou plus sont nécessaires, elles doivent être placées dans une zone stable, contre un mur et à l'abri des chocs extérieurs, et les mesures nécessaires de fixation anti-basculement doivent être prises.",
+                  "content_kind": "rich_text",
+                  "role": "body"
+                },
+                {
+                  "content": [
+                    "L'apparition de l'icône de connexion sur l'écran LCD (la station d'énergie portable) signifie que la connexion entre l'unité de batterie et la station d'énergie portable est réussie.",
+                    "Veuillez ne pas empiler le dispositif sur la station d'énergie portable.",
+                    "Placez les batteries d'extension sur une surface plane, stable et suffisamment résistante. Le nombre maximal de batteries d'extension empilées est de 3 par défaut.",
+                    "Si 4 batteries d'extension ou plus sont nécessaires, elles doivent être placées dans une zone stable, contre un mur et à l'abri des chocs extérieurs, et les mesures nécessaires de fixation anti-basculement doivent être prises."
+                  ],
+                  "content_kind": "list_items",
+                  "role": "items"
+                }
+              ],
+              "source_ref": "/private/tmp/jbp2000b-release-validation/fr/docs/_build/JBP-2000B/EU/fr/rst/page/connections_fr.rst#callout-2",
+              "token_roles": [
+                "component.callout"
+              ],
+              "variant": "note"
+            },
+            "kind": "component",
             "schema_version": "manual-flow/v2"
           },
-          "source_ref": "connections_fr.rst#block-8"
-        },
-        {
-          "asset_refs": [],
-          "block_id": "connections_fr.rst:block-0009",
-          "content_sha256": "409f08d09ec16d10e5859c444f978d45e82cc092bc1ece8fafaf29f65dc755f8",
-          "kind": "flow",
-          "payload": {
-            "kind": "text",
-            "schema_version": "manual-flow/v2",
-            "text": "\n"
-          },
-          "source_ref": "connections_fr.rst#block-9"
+          "source_ref": "connections_fr.rst#block-7"
         },
         {
           "asset_refs": [
             "assets/ir/df6b8c37f6b24c5b6655f0769b9ce189937a9327e11487cdf505523ea0311bc1/jbp2000b_eu_connection_locking_fr.png"
           ],
-          "block_id": "connections_fr.rst:block-0010",
+          "block_id": "connections_fr.rst:block-0008",
           "content_sha256": "9b4ec91e546d5487bce2a34f069030e32c3037bfa012c09602a31f6cb163de5e",
           "kind": "flow",
           "payload": {
@@ -6030,13 +6047,13 @@
             "schema_version": "manual-flow/v2",
             "source": "assets/ir/df6b8c37f6b24c5b6655f0769b9ce189937a9327e11487cdf505523ea0311bc1/jbp2000b_eu_connection_locking_fr.png"
           },
-          "source_ref": "connections_fr.rst#block-10"
+          "source_ref": "connections_fr.rst#block-8"
         }
       ],
       "language": "fr",
       "page_id": "connections_fr.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/eu-shared-release-24f51176/JBP-2000B-fr/docs/_build/JBP-2000B/EU/fr/rst/page/connections_fr.rst",
+      "source_path": "/private/tmp/jbp2000b-release-validation/fr/docs/_build/JBP-2000B/EU/fr/rst/page/connections_fr.rst",
       "source_ref": "connections_fr.rst",
       "source_sha256": "b4e4b0986bdb5914f98bf5c8c0ba80d1da366a72e06fab7bdb5a9fe34d56e896"
     },
@@ -6092,7 +6109,7 @@
         {
           "asset_refs": [],
           "block_id": "troubleshooting_fr.rst:block-0004",
-          "content_sha256": "9bd119bebca7e451ab7bf53e507ec717c1488af14ced461ab8dbce8215794dad",
+          "content_sha256": "618cb5e80619a15862f4c7bcf3cd9512ee81fdd2a6bda3e0d4a1d33a19b3af77",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -6646,7 +6663,7 @@
                   "role": "rows"
                 }
               ],
-              "source_ref": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/eu-shared-release-24f51176/JBP-2000B-fr/docs/_build/JBP-2000B/EU/fr/rst/page/troubleshooting_fr.rst#troubleshooting",
+              "source_ref": "/private/tmp/jbp2000b-release-validation/fr/docs/_build/JBP-2000B/EU/fr/rst/page/troubleshooting_fr.rst#troubleshooting",
               "token_roles": [
                 "component.table.troubleshooting"
               ],
@@ -6661,7 +6678,7 @@
       "language": "fr",
       "page_id": "troubleshooting_fr.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/eu-shared-release-24f51176/JBP-2000B-fr/docs/_build/JBP-2000B/EU/fr/rst/page/troubleshooting_fr.rst",
+      "source_path": "/private/tmp/jbp2000b-release-validation/fr/docs/_build/JBP-2000B/EU/fr/rst/page/troubleshooting_fr.rst",
       "source_ref": "troubleshooting_fr.rst",
       "source_sha256": "66273ae6536a0677f872e91d6c6eb5b8251b2ed8ed1a4999ee0e4b709ee8f1ca"
     },
@@ -6690,7 +6707,7 @@
             "assets/ir/e249b7661d9874293f6f1ad478e9392d2bcd4a625ecc60ec27fa2898cbb4361f/jbp2000b_eu_ac_charging.png"
           ],
           "block_id": "charging_fr.rst:block-0002",
-          "content_sha256": "9a43fd59dd216bb4eab2b3f34d1842f0e7391194d5007b17ad06ae7036c7fc40",
+          "content_sha256": "a0421ebb6227798ed8a09bce2e709a1bb484b97163559a822106b0e1569e268b",
           "kind": "flow",
           "payload": {
             "anchor": "chargement-par-prise-murale-ca",
@@ -6827,7 +6844,7 @@
                       "role": "body"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/eu-shared-release-24f51176/JBP-2000B-fr/docs/_build/JBP-2000B/EU/fr/rst/page/charging_fr.rst#callout-1",
+                  "source_ref": "/private/tmp/jbp2000b-release-validation/fr/docs/_build/JBP-2000B/EU/fr/rst/page/charging_fr.rst#callout-1",
                   "token_roles": [
                     "component.callout"
                   ],
@@ -6936,7 +6953,7 @@
       "language": "fr",
       "page_id": "charging_fr.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/eu-shared-release-24f51176/JBP-2000B-fr/docs/_build/JBP-2000B/EU/fr/rst/page/charging_fr.rst",
+      "source_path": "/private/tmp/jbp2000b-release-validation/fr/docs/_build/JBP-2000B/EU/fr/rst/page/charging_fr.rst",
       "source_ref": "charging_fr.rst",
       "source_sha256": "efb9fd5cabd5ddd7f0e47ef044a3f2cfb8f66ebf8ea72ed197b1cf0e354a5144"
     },
@@ -7169,7 +7186,7 @@
       "language": "fr",
       "page_id": "storage_fr.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/eu-shared-release-24f51176/JBP-2000B-fr/docs/_build/JBP-2000B/EU/fr/rst/page/storage_fr.rst",
+      "source_path": "/private/tmp/jbp2000b-release-validation/fr/docs/_build/JBP-2000B/EU/fr/rst/page/storage_fr.rst",
       "source_ref": "storage_fr.rst",
       "source_sha256": "8719c5f8095c51b7556ca91cbcedeab7bf7d3dbf29fe2d9ce45fdb442687b1fb"
     },
@@ -7205,7 +7222,7 @@
         {
           "asset_refs": [],
           "block_id": "specifications_fr.rst:block-0002",
-          "content_sha256": "6b9d46f0a7212556b72f88f1bef34f3e63da95b2747ee7906edb74ae5c3586ae",
+          "content_sha256": "a38c5bace02c59a67c6531c85ab41be3e36049e0bec89d388f16a2c4f235f623",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -7809,7 +7826,7 @@
                   "role": "rows"
                 }
               ],
-              "source_ref": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/eu-shared-release-24f51176/JBP-2000B-fr/docs/_build/JBP-2000B/EU/fr/rst/page/specifications_fr.rst#specification-1",
+              "source_ref": "/private/tmp/jbp2000b-release-validation/fr/docs/_build/JBP-2000B/EU/fr/rst/page/specifications_fr.rst#specification-1",
               "token_roles": [
                 "component.table.spec"
               ],
@@ -7835,7 +7852,7 @@
         {
           "asset_refs": [],
           "block_id": "specifications_fr.rst:block-0004",
-          "content_sha256": "3b9e4f2012c33b78f2455b91b8ab971d391a8620693a86a1709675bb16028467",
+          "content_sha256": "ae1d5ff2b4c5d5f413e63d36365256a6281c8cc1bf4a61ac33f85d8946446f0b",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -8084,7 +8101,7 @@
                   "role": "rows"
                 }
               ],
-              "source_ref": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/eu-shared-release-24f51176/JBP-2000B-fr/docs/_build/JBP-2000B/EU/fr/rst/page/specifications_fr.rst#specification-2",
+              "source_ref": "/private/tmp/jbp2000b-release-validation/fr/docs/_build/JBP-2000B/EU/fr/rst/page/specifications_fr.rst#specification-2",
               "token_roles": [
                 "component.table.spec"
               ],
@@ -8110,7 +8127,7 @@
         {
           "asset_refs": [],
           "block_id": "specifications_fr.rst:block-0006",
-          "content_sha256": "7fb96ad9c017dfe3ee04a59ff71057e0081267e9fbb30c390c72b8b4a1b0fe92",
+          "content_sha256": "d3d38404c2cb504fbadf725574f3a067571d8385af7b0c1318bb55d3066689be",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -8359,7 +8376,7 @@
                   "role": "rows"
                 }
               ],
-              "source_ref": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/eu-shared-release-24f51176/JBP-2000B-fr/docs/_build/JBP-2000B/EU/fr/rst/page/specifications_fr.rst#specification-3",
+              "source_ref": "/private/tmp/jbp2000b-release-validation/fr/docs/_build/JBP-2000B/EU/fr/rst/page/specifications_fr.rst#specification-3",
               "token_roles": [
                 "component.table.spec"
               ],
@@ -8386,7 +8403,7 @@
       "language": "fr",
       "page_id": "specifications_fr.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/eu-shared-release-24f51176/JBP-2000B-fr/docs/_build/JBP-2000B/EU/fr/rst/page/specifications_fr.rst",
+      "source_path": "/private/tmp/jbp2000b-release-validation/fr/docs/_build/JBP-2000B/EU/fr/rst/page/specifications_fr.rst",
       "source_ref": "specifications_fr.rst",
       "source_sha256": "b1d1077a6d4e6c79d4f6cf55015db3ad68c5cb4b76bf1d82c7b971a3e538c792"
     },
@@ -8425,7 +8442,7 @@
         {
           "asset_refs": [],
           "block_id": "warranty_fr.rst:block-0003",
-          "content_sha256": "1d2d0f9d650cfafb3898037bd1b4ab38405646c41aa25935bc6c9581a22dcadf",
+          "content_sha256": "0fd5e80600b6092a493d8fc21d2f48b5d571a7f3b404249d2b37f1004ea1f5ad",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -8504,7 +8521,7 @@
                   "role": "local_note"
                 }
               ],
-              "source_ref": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/eu-shared-release-24f51176/JBP-2000B-fr/docs/_build/JBP-2000B/EU/fr/rst/page/warranty_fr.rst#warranty-lead",
+              "source_ref": "/private/tmp/jbp2000b-release-validation/fr/docs/_build/JBP-2000B/EU/fr/rst/page/warranty_fr.rst#warranty-lead",
               "token_roles": [
                 "component.warranty.lead"
               ],
@@ -8530,7 +8547,7 @@
         {
           "asset_refs": [],
           "block_id": "warranty_fr.rst:block-0005",
-          "content_sha256": "23ba23b6ec3a2ac7431e124232d9066ff7acfab53a9dccde68a687548adf34ea",
+          "content_sha256": "2fd406f103074524b5328fcee82decde15320cbd5214f85cabb55826672c8929",
           "kind": "flow",
           "payload": {
             "anchor": "garantie-limitee",
@@ -8608,7 +8625,7 @@
                       "role": "blocks"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/eu-shared-release-24f51176/JBP-2000B-fr/docs/_build/JBP-2000B/EU/fr/rst/page/warranty_fr.rst#warranty-section-1",
+                  "source_ref": "/private/tmp/jbp2000b-release-validation/fr/docs/_build/JBP-2000B/EU/fr/rst/page/warranty_fr.rst#warranty-section-1",
                   "token_roles": [
                     "component.warranty.section"
                   ],
@@ -8650,7 +8667,7 @@
         {
           "asset_refs": [],
           "block_id": "warranty_fr.rst:block-0007",
-          "content_sha256": "cf65d6305ff0413520b4334c91923d22b66109a063e18c472f13a63ddb11d2bc",
+          "content_sha256": "1c8f8112af8868f83151858310d0000779ea340dd3e216dbf42cc64ad10ec710",
           "kind": "flow",
           "payload": {
             "anchor": "periode-de-garantie",
@@ -8887,7 +8904,7 @@
                       "role": "periods"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/eu-shared-release-24f51176/JBP-2000B-fr/docs/_build/JBP-2000B/EU/fr/rst/page/warranty_fr.rst#warranty-years",
+                  "source_ref": "/private/tmp/jbp2000b-release-validation/fr/docs/_build/JBP-2000B/EU/fr/rst/page/warranty_fr.rst#warranty-years",
                   "token_roles": [
                     "component.warranty.years"
                   ],
@@ -8930,7 +8947,7 @@
         {
           "asset_refs": [],
           "block_id": "warranty_fr.rst:block-0009",
-          "content_sha256": "595428038a2f0b5b4539518f29d806ca0e5b8df65c99f97c6bdf69f8db6e9ac0",
+          "content_sha256": "43dab49718fa83ce872851b1919472b18cc846d594f07452c7b0f6795965d758",
           "kind": "flow",
           "payload": {
             "anchor": "echanger",
@@ -8994,7 +9011,7 @@
                       "role": "blocks"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/eu-shared-release-24f51176/JBP-2000B-fr/docs/_build/JBP-2000B/EU/fr/rst/page/warranty_fr.rst#warranty-section-3",
+                  "source_ref": "/private/tmp/jbp2000b-release-validation/fr/docs/_build/JBP-2000B/EU/fr/rst/page/warranty_fr.rst#warranty-section-3",
                   "token_roles": [
                     "component.warranty.section"
                   ],
@@ -9036,7 +9053,7 @@
         {
           "asset_refs": [],
           "block_id": "warranty_fr.rst:block-0011",
-          "content_sha256": "f5e91185b64966368ac87ce8eeeca740a7ad250b6f35e4fe37c81087bcb6e85b",
+          "content_sha256": "e3950aaf6eb4b2f5dd159f7285c77d33646f2e072ddd236f57a21ab36e7cd78b",
           "kind": "flow",
           "payload": {
             "anchor": "limitee-a-l-acheteur-et-consommateur-d-origine",
@@ -9100,7 +9117,7 @@
                       "role": "blocks"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/eu-shared-release-24f51176/JBP-2000B-fr/docs/_build/JBP-2000B/EU/fr/rst/page/warranty_fr.rst#warranty-section-4",
+                  "source_ref": "/private/tmp/jbp2000b-release-validation/fr/docs/_build/JBP-2000B/EU/fr/rst/page/warranty_fr.rst#warranty-section-4",
                   "token_roles": [
                     "component.warranty.section"
                   ],
@@ -9142,7 +9159,7 @@
         {
           "asset_refs": [],
           "block_id": "warranty_fr.rst:block-0013",
-          "content_sha256": "ceb49c5f624192cb07e415162802d734f21540bd673654cd220711d3516927f5",
+          "content_sha256": "4a976606f6272e23d213d260fe214b4644ffef97ee22907ac8c5f82c2c6aacd8",
           "kind": "flow",
           "payload": {
             "anchor": "exclusions",
@@ -9307,7 +9324,7 @@
                       "role": "blocks"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/eu-shared-release-24f51176/JBP-2000B-fr/docs/_build/JBP-2000B/EU/fr/rst/page/warranty_fr.rst#warranty-section-5",
+                  "source_ref": "/private/tmp/jbp2000b-release-validation/fr/docs/_build/JBP-2000B/EU/fr/rst/page/warranty_fr.rst#warranty-section-5",
                   "token_roles": [
                     "component.warranty.section"
                   ],
@@ -9349,7 +9366,7 @@
         {
           "asset_refs": [],
           "block_id": "warranty_fr.rst:block-0015",
-          "content_sha256": "e5b9c5567e167ab57c24df0abc00d72280ffda01c9f3107a99ac5c6288e3758e",
+          "content_sha256": "d4afb10bb65637d8de5d8734d86da487208c2a930cd31a544589a9e9b40128a3",
           "kind": "flow",
           "payload": {
             "anchor": "droits-d-interpretation",
@@ -9413,7 +9430,7 @@
                       "role": "blocks"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/eu-shared-release-24f51176/JBP-2000B-fr/docs/_build/JBP-2000B/EU/fr/rst/page/warranty_fr.rst#warranty-section-6",
+                  "source_ref": "/private/tmp/jbp2000b-release-validation/fr/docs/_build/JBP-2000B/EU/fr/rst/page/warranty_fr.rst#warranty-section-6",
                   "token_roles": [
                     "component.warranty.section"
                   ],
@@ -9444,7 +9461,7 @@
       "language": "fr",
       "page_id": "warranty_fr.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/eu-shared-release-24f51176/JBP-2000B-fr/docs/_build/JBP-2000B/EU/fr/rst/page/warranty_fr.rst",
+      "source_path": "/private/tmp/jbp2000b-release-validation/fr/docs/_build/JBP-2000B/EU/fr/rst/page/warranty_fr.rst",
       "source_ref": "warranty_fr.rst",
       "source_sha256": "50c8dd7ac867bc5b62189f0fad53e4cf087dd12069bcf6dc0a2aa9ebe4cd1de4"
     },
@@ -9724,7 +9741,7 @@
       "language": "fr",
       "page_id": "regulatory_compliance.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/eu-shared-release-24f51176/JBP-2000B-fr/docs/_build/JBP-2000B/EU/fr/rst/page/regulatory_compliance.rst",
+      "source_path": "/private/tmp/jbp2000b-release-validation/fr/docs/_build/JBP-2000B/EU/fr/rst/page/regulatory_compliance.rst",
       "source_ref": "regulatory_compliance.rst",
       "source_sha256": "cff6f894e279dd135a0084bc3974406d7aa89d5e469b7a42cd150fb1c5debce5"
     }
@@ -9733,5 +9750,5 @@
   "schema_version": "manual-ir/v2",
   "snapshot_sha256": null,
   "source": "prepared-document",
-  "style_contract_sha256": "1905bedf4e2036b92051bfa7b5d1d6f828868b043b0e3b511e6278305a8ea746"
+  "style_contract_sha256": "c2bc089879fa6a6f93df6e3688c2eb4241076c63361a74dff08db9b15e6b25e8"
 }
