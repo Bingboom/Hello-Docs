@@ -5,7 +5,7 @@
     "languages": [
       "nl"
     ],
-    "technical_version": "git-20261004-47a346dc"
+    "technical_version": "git-20261005-47a346dc"
   },
   "source_role": "git-only-native-and-visual-source-intake",
   "original_source": {
@@ -30,7 +30,7 @@
     }
   ],
   "baseline_main": "6bd85d39f7f7dba2aa751a69f82f258c63eab9c3",
-  "validated_main": "9518c314eccdcece5f8bc5c02ed51b12440753f2",
+  "validated_main": "c1c984c5f5e656df6ec0a90905c8e9fd99d8e92b",
   "native_pages": {
     "preface": [
       4
@@ -364,8 +364,8 @@
     },
     {
       "path": "source-bindings.json",
-      "size": 170176,
-      "sha256": "836fc72f4efaa8553596a568e25d6f35d9cae86d09c756db4c3ca1a6672c0881"
+      "size": 170108,
+      "sha256": "b8676041bd837aef6ded034928c7b4a213e39cce89f22f0f60d3d0d7354b94a8"
     },
     {
       "path": "source/admission-audit.json",
@@ -374,18 +374,18 @@
     },
     {
       "path": "source/bindings.json",
-      "size": 170176,
-      "sha256": "836fc72f4efaa8553596a568e25d6f35d9cae86d09c756db4c3ca1a6672c0881"
+      "size": 170108,
+      "sha256": "b8676041bd837aef6ded034928c7b4a213e39cce89f22f0f60d3d0d7354b94a8"
     },
     {
       "path": "source/chapters.json",
-      "size": 312298,
-      "sha256": "f7649e8a20bc70526351a73d89104983506a7acf7fb28ed8f2fd53589e74c27c"
+      "size": 312191,
+      "sha256": "45cf7cdb89e74a1b6c14ec59e74bddc1f0f287d8ef3c02efafab0b4af62f05c7"
     },
     {
       "path": "source/component-copy.json",
-      "size": 29193,
-      "sha256": "4df73d84ef69d2c21f4d5439296d0d5a8e182f5151c81ffd1d20377338a73e72"
+      "size": 29123,
+      "sha256": "29484771ca178295b2b292f3074c5ca5bf2fa06217b608b1735d7ac7973a8110"
     },
     {
       "path": "source/native-pages.json",
@@ -394,8 +394,8 @@
     },
     {
       "path": "source/sections.json",
-      "size": 86665,
-      "sha256": "39b98d9ff7c28464f2556fae4f036a2fb3194283a59092b32efebdfc4ab32552"
+      "size": 86597,
+      "sha256": "4538ad6abf6443ddd6711efc8006d6c7892d0fa935a52fcb404e93ae94c87aff"
     },
     {
       "path": "source/symbol-header-capture.json",
@@ -404,8 +404,8 @@
     },
     {
       "path": "source/text-ledger.json",
-      "size": 98237,
-      "sha256": "c86dc552082cb532b37068dff7a9784f18fd4e810900fab01ea0666f967897b5"
+      "size": 98169,
+      "sha256": "138ad458635c2b187662838c10b6a4529c6f700e119b59642ed2b9bd8cdcc12e"
     },
     {
       "path": "web/nl/_static/web_manual.css",
@@ -699,13 +699,13 @@
     },
     {
       "path": "web/nl/manual.ir.json",
-      "size": 430074,
-      "sha256": "8aa76c2a2242fe6cc3ae13601892e526b2b90ea508f245fc3599850814bf7d0c"
+      "size": 429967,
+      "sha256": "f816510164a2dc3aa241d3794e64d3508fef849dbb6fea2122a95eb00384b14e"
     },
     {
       "path": "web/nl/manual_je3600a_eu_nl.md",
-      "size": 71225,
-      "sha256": "689e0bd9b3bc4a04d1643ebca1494ebc87829494d1de2085bbec1026c45aa766"
+      "size": 71118,
+      "sha256": "404340c3fd82dc415a18e3c570cbdb1f16df780995284511b3b357c8f49a3756"
     }
   ]
 }

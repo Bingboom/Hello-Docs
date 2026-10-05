@@ -57,8 +57,8 @@
     "assets/contact-qr.png"
   ],
   "bundle_root": "frozen-source",
-  "bundle_sha256": "da95801b2532a5f119c68405b35ff8ba2b60d0c5bf76f47934c2e13764197b6a",
-  "content_sha256": "b19fe1c5cc10d2e62e45807487b7b6def0445669c37b5d4c9cf55c470a5872d3",
+  "bundle_sha256": "b5e781b3e458bdc98aeb0bd6bbcb1a79cd5ca0796307dbd4e3c1c47ec8a67d8d",
+  "content_sha256": "dcbe7a965e22befa35aad4d9f16fbebad343b853e6da9d071e4152c62e7507e0",
   "language": "uk",
   "layout_params_sha256": "f5ae099abc1a82ffda3abcc5a13725aca3c201e720a0374d88d1643f9773f279",
   "metadata": {
@@ -1398,9 +1398,9 @@
         ],
         "model": "JE-3600A",
         "region": "EU",
-        "technical_version": "git-20261004-47a346dc"
+        "technical_version": "git-20261005-47a346dc"
       },
-      "validated_main": "9518c314eccdcece5f8bc5c02ed51b12440753f2",
+      "validated_main": "c1c984c5f5e656df6ec0a90905c8e9fd99d8e92b",
       "web_roots": {
         "uk": "web/uk"
       }
@@ -7002,16 +7002,16 @@
         {
           "asset_refs": [],
           "block_id": "charging:block-0008",
-          "content_sha256": "5172fce4892c8ed4e8d2d3bdf40a8b9b15d33f0cdaa605b0c1b73bdc6207123f",
+          "content_sha256": "f13377f03d50dd77a042814aee65b3f1b9401f71331e384a4ad71914ae48710d",
           "kind": "flow",
           "payload": {
-            "anchor": "нестабільний-струм-перегрів-поганий-контакт-або-несправність-пристрою-заряджання-від-сонячних-панелей-продається-окремо",
+            "anchor": "заряджання-від-сонячних-панелей-продається-окремо",
             "children": [
               {
                 "children": [
                   {
                     "kind": "text",
-                    "text": "нестабільний струм, перегрів, поганий контакт або несправність пристрою. ЗАРЯДЖАННЯ ВІД СОНЯЧНИХ ПАНЕЛЕЙ "
+                    "text": "ЗАРЯДЖАННЯ ВІД СОНЯЧНИХ ПАНЕЛЕЙ "
                   },
                   {
                     "children": [
@@ -7050,13 +7050,13 @@
         {
           "asset_refs": [],
           "block_id": "charging:block-0009",
-          "content_sha256": "50357109cd3615e4e4bc0ed29a9569a7e92cc80a6825597e078f6eec74adfb20",
+          "content_sha256": "2483419a68929b62ea266ea298b6201fd1b20c1ba3a7507a1bf4e1e8285c3adc",
           "kind": "flow",
           "payload": {
             "children": [
               {
                 "kind": "text",
-                "text": "ЗАРЯДЖАННЯ ВІД СОНЯЧНИХ ПАНЕЛЕЙ ПРОДАЄТЬСЯ ОКРЕМО Jackery Explorer 3600 Plus має два вхідні порти DC8020 і сумісний із сонячними панелями Jackery. Якщо потрібно підключити дві сонячні панелі до одного вхідного порту DC8020 одночасно, зверніться до рисунка нижче для заряджання через з’єднувач сонячної панелі (продається окремо, не входить до стандартної комплектації)."
+                "text": "Jackery Explorer 3600 Plus має два вхідні порти DC8020 і сумісний із сонячними панелями Jackery. Якщо потрібно підключити дві сонячні панелі до одного вхідного порту DC8020 одночасно, зверніться до рисунка нижче для заряджання через з’єднувач сонячної панелі (продається окремо, не входить до стандартної комплектації)."
               }
             ],
             "kind": "paragraph",

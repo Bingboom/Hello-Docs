@@ -57,8 +57,8 @@
     "assets/contact-qr.png"
   ],
   "bundle_root": "frozen-source",
-  "bundle_sha256": "2ddb6f1fa1b412736f53d4a75d1ba9d598f8c21a7b6f1d527694b269e0720813",
-  "content_sha256": "ec714c37da6210cddee5413b896aa16b9427bca787edf1680c2722275f51e332",
+  "bundle_sha256": "088d1b6b5949c75d40a75c2ce5736b1ca2ba4ec22b8fcf551f02c836b447aa19",
+  "content_sha256": "7a77d18aa1963af5bd4f757ec94554b8b1624fb9a4bb8761b9c80710f6e74f52",
   "language": "de",
   "layout_params_sha256": "f5ae099abc1a82ffda3abcc5a13725aca3c201e720a0374d88d1643f9773f279",
   "metadata": {
@@ -1398,9 +1398,9 @@
         ],
         "model": "JE-3600A",
         "region": "EU",
-        "technical_version": "git-20261004-47a346dc"
+        "technical_version": "git-20261005-47a346dc"
       },
-      "validated_main": "9518c314eccdcece5f8bc5c02ed51b12440753f2",
+      "validated_main": "c1c984c5f5e656df6ec0a90905c8e9fd99d8e92b",
       "web_roots": {
         "de": "web/de"
       }
@@ -7050,13 +7050,13 @@
         {
           "asset_refs": [],
           "block_id": "charging:block-0009",
-          "content_sha256": "ccb5f568d90ec9f9c269915a204414765e7c5083d15f8a5568e4559d8586e191",
+          "content_sha256": "31837537d02d9e58084937cc2666587c2fd3b61a1d18efbee991250769b4bf6f",
           "kind": "flow",
           "payload": {
             "children": [
               {
                 "kind": "text",
-                "text": "AUFLADEN ÜBER SOLARPANEL Der Jackery Explorer 3600 Plus verfügt über zwei DC8020-Eingangsanschlüsse und ist mit den Jackery-Solarmodulen kompatibel. Wenn ein DC8020-Eingangsanschluss zwei Solarmodule gleichzeitig anschließen muss, beziehen Sie sich bitte auf die folgende Abbildung zum Aufladen über den Solarpanel-Anschluss (separat erhältlich, nicht im Lieferumfang enthalten)."
+                "text": "Der Jackery Explorer 3600 Plus verfügt über zwei DC8020-Eingangsanschlüsse und ist mit den Jackery-Solarmodulen kompatibel. Wenn ein DC8020-Eingangsanschluss zwei Solarmodule gleichzeitig anschließen muss, beziehen Sie sich bitte auf die folgende Abbildung zum Aufladen über den Solarpanel-Anschluss (separat erhältlich, nicht im Lieferumfang enthalten)."
               }
             ],
             "kind": "paragraph",

@@ -57,8 +57,8 @@
     "assets/contact-qr.png"
   ],
   "bundle_root": "frozen-source",
-  "bundle_sha256": "40a6b5400ba318daff582eeafa41c440580a79d03c1d7fe22045f1a1e80830b8",
-  "content_sha256": "7d97f3f9eea1f35662c23e649868a33fae2ac835e5fe75eb2ce87b4ce2c77fc8",
+  "bundle_sha256": "4c8f188e001eb5d6615a92cba4981e9d9b76acdd3a2a448da7db6c2ea4178f19",
+  "content_sha256": "506146a99ddafac8eef444972197add578b21476745254ca89f3e1a6c7d2f934",
   "language": "pt",
   "layout_params_sha256": "f5ae099abc1a82ffda3abcc5a13725aca3c201e720a0374d88d1643f9773f279",
   "metadata": {
@@ -1404,9 +1404,9 @@
         ],
         "model": "JE-3600A",
         "region": "EU",
-        "technical_version": "git-20261004-47a346dc"
+        "technical_version": "git-20261005-47a346dc"
       },
-      "validated_main": "9518c314eccdcece5f8bc5c02ed51b12440753f2",
+      "validated_main": "c1c984c5f5e656df6ec0a90905c8e9fd99d8e92b",
       "web_roots": {
         "pt": "web/pt"
       }
@@ -7014,16 +7014,16 @@
         {
           "asset_refs": [],
           "block_id": "charging:block-0008",
-          "content_sha256": "7d78fede10bc9753f185e4410ce96e4d7e355023b1d6061e46e4313f697862a2",
+          "content_sha256": "0fba210750a0146df2ed3c32c8210f61be8102e99aa6c7ccb06efdc8772d0c6b",
           "kind": "flow",
           "payload": {
-            "anchor": "mau-contato-ou-mau-funcionamento-do-dispositivo-carregamento-via-painéis-solares-vendido-separadamente",
+            "anchor": "carregamento-via-painéis-solares-vendido-separadamente",
             "children": [
               {
                 "children": [
                   {
                     "kind": "text",
-                    "text": "mau contato ou mau funcionamento do dispositivo. CARREGAMENTO VIA PAINÉIS SOLARES "
+                    "text": "CARREGAMENTO VIA PAINÉIS SOLARES "
                   },
                   {
                     "children": [
@@ -7062,13 +7062,13 @@
         {
           "asset_refs": [],
           "block_id": "charging:block-0009",
-          "content_sha256": "0ce9d30f8d2d25b1a0b83d48467b2812efb6b8e7d5c470cbc1130b29555f8f70",
+          "content_sha256": "72c563e23d91ac39d7409b1ef95734f10298ca53c805fe0b7146fe232118d0c5",
           "kind": "flow",
           "payload": {
             "children": [
               {
                 "kind": "text",
-                "text": "CARREGAMENTO VIA PAINÉIS SOLARES VENDIDO SEPARADAMENTE O Jackery Explorer 3600 Plus possui duas portas de entrada DC8020 e é compatível com os painéis solares da Jackery. Se for necessário conectar dois painéis solares a uma única porta de entrada DC8020, consulte a figura abaixo para carregar por meio do conector para painel solar (vendido separadamente, não incluso no pacote padrão)."
+                "text": "O Jackery Explorer 3600 Plus possui duas portas de entrada DC8020 e é compatível com os painéis solares da Jackery. Se for necessário conectar dois painéis solares a uma única porta de entrada DC8020, consulte a figura abaixo para carregar por meio do conector para painel solar (vendido separadamente, não incluso no pacote padrão)."
               }
             ],
             "kind": "paragraph",

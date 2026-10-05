@@ -57,8 +57,8 @@
     "assets/contact-qr.png"
   ],
   "bundle_root": "frozen-source",
-  "bundle_sha256": "c9805b9c98cf054d4f6d2eaef3f3badf5eca544abbf0f3c86338f42236470862",
-  "content_sha256": "5b1d8df8709199cea106086007a7d467bbfe17ab0ceb54c6a4604bfd3ebbcddf",
+  "bundle_sha256": "a25199ac0c8b6761cbe426718163caabdfce8a97cbfdcfe83a7580730e496eaa",
+  "content_sha256": "668382a7792689a0dfe518f2cf728a7a5c213802d5cee568a9882dfdf8be8ba4",
   "language": "pl",
   "layout_params_sha256": "f5ae099abc1a82ffda3abcc5a13725aca3c201e720a0374d88d1643f9773f279",
   "metadata": {
@@ -1398,9 +1398,9 @@
         ],
         "model": "JE-3600A",
         "region": "EU",
-        "technical_version": "git-20261004-47a346dc"
+        "technical_version": "git-20261005-47a346dc"
       },
-      "validated_main": "9518c314eccdcece5f8bc5c02ed51b12440753f2",
+      "validated_main": "c1c984c5f5e656df6ec0a90905c8e9fd99d8e92b",
       "web_roots": {
         "pl": "web/pl"
       }
@@ -7002,16 +7002,16 @@
         {
           "asset_refs": [],
           "block_id": "charging:block-0008",
-          "content_sha256": "1858bae6444531bb5e8da771a96465e9d940044012a22ceed28328254e07a257",
+          "content_sha256": "aeeffa94fb1c9c11ffa99e6fd2ef4f387cbb3acd63c4100025303f4f8f17faa9",
           "kind": "flow",
           "payload": {
-            "anchor": "przegrzanie-słaby-styk-lub-awarię-urządzenia-ładowanie-za-pomocą-paneli-słonecznych-sprzedawane-oddzielnie",
+            "anchor": "ładowanie-za-pomocą-paneli-słonecznych-sprzedawane-oddzielnie",
             "children": [
               {
                 "children": [
                   {
                     "kind": "text",
-                    "text": "przegrzanie, słaby styk lub awarię urządzenia. ŁADOWANIE ZA POMOCĄ PANELI SŁONECZNYCH "
+                    "text": "ŁADOWANIE ZA POMOCĄ PANELI SŁONECZNYCH "
                   },
                   {
                     "children": [
@@ -7050,13 +7050,13 @@
         {
           "asset_refs": [],
           "block_id": "charging:block-0009",
-          "content_sha256": "bdf6cbe2b4663f539d9d3fdd6f68d3360b1d86dd545e837821a8acab3ebc9d89",
+          "content_sha256": "243d11ec3ebfe5b3d297a900cf5307f043764bfb64eae67b213378dc361cc4b8",
           "kind": "flow",
           "payload": {
             "children": [
               {
                 "kind": "text",
-                "text": "ŁADOWANIE ZA POMOCĄ PANELI SŁONECZNYCH SPRZEDAWANE ODDZIELNIE Stacja Jackery Explorer 3600 Plus ma dwa porty wejściowe DC8020 i jest kompatybilna z panelami słonecznymi Jackery. Jeśli do jednego portu wejściowego DC8020 trzeba podłączyć jednocześnie dwa panele słoneczne, należy skorzystać z poniższego rysunku ilustrującego ładowanie przez łącznik paneli słonecznych (sprzedawany oddzielnie, nie wchodzi w skład standardowego wyposażenia)."
+                "text": "Stacja Jackery Explorer 3600 Plus ma dwa porty wejściowe DC8020 i jest kompatybilna z panelami słonecznymi Jackery. Jeśli do jednego portu wejściowego DC8020 trzeba podłączyć jednocześnie dwa panele słoneczne, należy skorzystać z poniższego rysunku ilustrującego ładowanie przez łącznik paneli słonecznych (sprzedawany oddzielnie, nie wchodzi w skład standardowego wyposażenia)."
               }
             ],
             "kind": "paragraph",

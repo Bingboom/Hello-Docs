@@ -5,7 +5,7 @@
     "languages": [
       "es"
     ],
-    "technical_version": "git-20261004-47a346dc"
+    "technical_version": "git-20261005-47a346dc"
   },
   "source_role": "git-only-native-and-visual-source-intake",
   "original_source": {
@@ -40,7 +40,7 @@
     }
   ],
   "baseline_main": "6bd85d39f7f7dba2aa751a69f82f258c63eab9c3",
-  "validated_main": "9518c314eccdcece5f8bc5c02ed51b12440753f2",
+  "validated_main": "c1c984c5f5e656df6ec0a90905c8e9fd99d8e92b",
   "native_pages": {
     "preface": [
       2
@@ -374,8 +374,8 @@
     },
     {
       "path": "source-bindings.json",
-      "size": 171521,
-      "sha256": "d078eb15f101420b5607f9db90bda9dd755cf7c1c4d27d7cc9b51141e23ac5cb"
+      "size": 171535,
+      "sha256": "d6072e0bd413043743daee8b2b62e0b0b93db639145dcf91612f3e1bcfe65ed3"
     },
     {
       "path": "source/admission-audit.json",
@@ -384,8 +384,8 @@
     },
     {
       "path": "source/bindings.json",
-      "size": 171521,
-      "sha256": "d078eb15f101420b5607f9db90bda9dd755cf7c1c4d27d7cc9b51141e23ac5cb"
+      "size": 171535,
+      "sha256": "d6072e0bd413043743daee8b2b62e0b0b93db639145dcf91612f3e1bcfe65ed3"
     },
     {
       "path": "source/chapters.json",
@@ -394,8 +394,8 @@
     },
     {
       "path": "source/component-copy.json",
-      "size": 30101,
-      "sha256": "05bf4d7aa65d27810c83db4d617063135c78f0191a01a726c8ca4428e1bbb980"
+      "size": 30058,
+      "sha256": "eee7bb54f4a01ec949cd5cff01458c9d4d16d361aeae1d90914f1ca71635d13d"
     },
     {
       "path": "source/native-pages.json",
@@ -404,8 +404,8 @@
     },
     {
       "path": "source/sections.json",
-      "size": 84189,
-      "sha256": "8211ef15aab6484decb53fbd322d076935ce0962cbf21e6f29916b4d2841e16a"
+      "size": 84203,
+      "sha256": "65ccc0488e0fae256b978b212ec374a83a3e693f84745d011d40739b27dcc8e6"
     },
     {
       "path": "source/symbol-header-capture.json",
@@ -414,8 +414,8 @@
     },
     {
       "path": "source/text-ledger.json",
-      "size": 99835,
-      "sha256": "2f18f286972f95754ab51c29cfc5ac24f38ab369f1220de204dcbd1367d646e7"
+      "size": 99849,
+      "sha256": "ebeb8a7d7f5802f8d40af3707e841f677079c33e819ca4249b3d4533fa648f69"
     },
     {
       "path": "source/visual-transcription.json",
@@ -715,7 +715,7 @@
     {
       "path": "web/es/manual.ir.json",
       "size": 432942,
-      "sha256": "fd2487590f8790735e267f2b0e702a41bc34f112d8cda0a4c7de80354e06b160"
+      "sha256": "003eeed21b8db52dcedec7cb48eb29f58d447ba1ebc7d295a21c98b60f23110e"
     },
     {
       "path": "web/es/manual_je3600a_eu_es.md",

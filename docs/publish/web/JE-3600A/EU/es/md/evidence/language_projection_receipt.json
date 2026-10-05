@@ -3,11 +3,11 @@
   "model": "JE-3600A",
   "region": "EU",
   "language": "es",
-  "version": "git-20261004-47a346dc",
-  "git_ref": "f25f2f312173e1e021a30e493b31c2ca38ccc1c7",
+  "version": "git-20261005-47a346dc",
+  "git_ref": "e7f56f46961ecc0690cd59de3f2c5acfd7123e59",
   "source_manifest": {
     "path": "frozen_source_manifest.json",
-    "sha256": "4ff7f8fa0d5a88a272d62919405252507ca63a74154cf7a8a6b3b3ebd07fc59d"
+    "sha256": "39a80b8acffa0a64a8ffd558e49eafc3b7e21cd9a5b54220b2a867ff3dfda01b"
   },
   "markdown": {
     "manual": "manual_je3600a_eu_es.md",
@@ -305,7 +305,7 @@
       {
         "path": "manual.ir.json",
         "size": 432942,
-        "sha256": "fd2487590f8790735e267f2b0e702a41bc34f112d8cda0a4c7de80354e06b160"
+        "sha256": "003eeed21b8db52dcedec7cb48eb29f58d447ba1ebc7d295a21c98b60f23110e"
       },
       {
         "path": "manual_je3600a_eu_es.md",
@@ -313,7 +313,7 @@
         "sha256": "f9ba8604a54980102872351e29c14ccdfee0c6f69820945d8ce3b76bb3c491de"
       }
     ],
-    "sha256": "990a2d8a59b96060c12a8c07b1a0e6cdc5c1cc5a263b01b1dd273cd3b4ea43b1"
+    "sha256": "873daa18c31362bfe63b870d9d01b0e51369d161c4a31df6d002d4144cc7c611"
   },
   "html": {
     "files": [
@@ -324,18 +324,18 @@
       },
       {
         "path": ".doctrees/environment.pickle",
-        "size": 36163,
-        "sha256": "9af617dcbecfc4cbad0d308d8aa1b553270a9fa4c9b573f434b13c7d7683eb14"
+        "size": 36068,
+        "sha256": "9485f7a3d9d42c869a658bf9916b98777e34fdebc6e0090421fba5bfa92cd111"
       },
       {
         "path": ".doctrees/index.doctree",
-        "size": 3357,
-        "sha256": "61b0bd54281076ff89d2b2a612e33369d2ac4506f0b39e375b0691bcd9daf378"
+        "size": 3329,
+        "sha256": "8dc55769b6f9a16ba391204ad1f30649588a01c7f4afc701dc134437c0fc0aec"
       },
       {
         "path": ".doctrees/manual_je3600a_eu_es.doctree",
-        "size": 169186,
-        "sha256": "b290605f7a33c20f8ad2f65c4787e8ca80cf85291343ce387dc05f95e26ff159"
+        "size": 169158,
+        "sha256": "38d707cf457ba51eeaae7cad20490f2725b80e1c4e28ba8d578c72ce091027e2"
       },
       {
         "path": "_sources/index.md.txt",
@@ -773,6 +773,6 @@
         "sha256": "e72488f115b4c9ae8276b8ab0ef083cc6e87c1510ac9e15a37e387ebeaa4bd4b"
       }
     ],
-    "sha256": "40e0456f47219de04f1fc88ef297bb3d7de67d7596f6f1d26c2588bb1a5c7e78"
+    "sha256": "86ea803a6735a728609469125cf7381ea809415b226f1cdecba6e0bf0317e7ac"
   }
 }

@@ -57,8 +57,8 @@
     "assets/contact-qr.png"
   ],
   "bundle_root": "frozen-source",
-  "bundle_sha256": "cc7da24ae710aa5aef146942c660946af3e7efe66abf7428625f24df81174e01",
-  "content_sha256": "c9ae4fc075542b693882bab3a1624f9a6eb4f7d7da61d18c0d7540ca07d70700",
+  "bundle_sha256": "190f754b5f5ba8e3b5b2deafaf4965186c1724a80421183059b95f78c6827eca",
+  "content_sha256": "a1230b03f37e44fb137b483c590dd25e58a0f924b5db7591e32eb9b264217a73",
   "language": "nl",
   "layout_params_sha256": "f5ae099abc1a82ffda3abcc5a13725aca3c201e720a0374d88d1643f9773f279",
   "metadata": {
@@ -1404,9 +1404,9 @@
         ],
         "model": "JE-3600A",
         "region": "EU",
-        "technical_version": "git-20261004-47a346dc"
+        "technical_version": "git-20261005-47a346dc"
       },
-      "validated_main": "9518c314eccdcece5f8bc5c02ed51b12440753f2",
+      "validated_main": "c1c984c5f5e656df6ec0a90905c8e9fd99d8e92b",
       "web_roots": {
         "nl": "web/nl"
       }
@@ -7014,16 +7014,16 @@
         {
           "asset_refs": [],
           "block_id": "charging:block-0008",
-          "content_sha256": "952fc7443096a5c28c2f5f767b23f7ff0ace688c3b1fd0ac80fe01300e6661aa",
+          "content_sha256": "c42f46a2f92bdb4ee787b9c6686f4035bb8a29aa281fce46624a4a1f9bcb6d2b",
           "kind": "flow",
           "payload": {
-            "anchor": "of-apparaatstoringen-veroorzaken-opladen-via-zonnepanelen-apart-verkocht",
+            "anchor": "opladen-via-zonnepanelen-apart-verkocht",
             "children": [
               {
                 "children": [
                   {
                     "kind": "text",
-                    "text": "of apparaatstoringen veroorzaken. OPLADEN VIA ZONNEPANELEN "
+                    "text": "OPLADEN VIA ZONNEPANELEN "
                   },
                   {
                     "children": [
@@ -7062,13 +7062,13 @@
         {
           "asset_refs": [],
           "block_id": "charging:block-0009",
-          "content_sha256": "8d70c97df81b881667be444196b47840ca80f9eacebf4f974ddff5e3d5ae0ece",
+          "content_sha256": "1ce8967d3ebeb1da1cd595e9177b019650526a735d65f2a408dd85d623ac0e34",
           "kind": "flow",
           "payload": {
             "children": [
               {
                 "kind": "text",
-                "text": "OPLADEN VIA ZONNEPANELEN APART VERKOCHT De Jackery Explorer 3600 Plus heeft twee DC8020-ingangen en is compatibel met de Jackery-zonnepanelen. Als er op één DC8020-ingangspoort twee zonnepanelen tegelijk moeten worden aangesloten, raadpleeg dan de onderstaande afbeelding voor het opladen via de zonnepaneel-connector (deze is apart verkrijgbaar en wordt niet standaard meegeleverd)."
+                "text": "De Jackery Explorer 3600 Plus heeft twee DC8020-ingangen en is compatibel met de Jackery-zonnepanelen. Als er op één DC8020-ingangspoort twee zonnepanelen tegelijk moeten worden aangesloten, raadpleeg dan de onderstaande afbeelding voor het opladen via de zonnepaneel-connector (deze is apart verkrijgbaar en wordt niet standaard meegeleverd)."
               }
             ],
             "kind": "paragraph",
