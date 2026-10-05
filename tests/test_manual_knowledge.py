@@ -9,6 +9,9 @@ from unittest.mock import patch
 
 from tools.manual_knowledge.export import ARTIFACT, make_corpus, write_knowledge
 from tools.manual_knowledge.html import extract_sections
+from tools.manual_knowledge.identity import callout_severity, variant_identity
+from tools.manual_knowledge.manifest import MANIFEST, check_freshness, main as freshness_main
+from tools.rtd.publication_catalog import _provenance, publication_identity
 from tools.rtd.deployment_receipt import write_deployment_receipt
 from tools.rtd.portal import setup
 
@@ -197,3 +200,166 @@ class KnowledgeExportTests(unittest.TestCase):
             write_knowledge(app, None)
             write_knowledge(app, RuntimeError('failed build'))
             self.assertFalse((Path(tmp) / ARTIFACT).exists())
+
+
+class IdentityProvenanceTests(unittest.TestCase):
+    def test_localized_callout_labels_map_to_fixed_severity_and_never_guess(self):
+        for label, severity in [('WARNUNG', 'warning'), ('*Vorsicht:', 'caution'), ('Opmerkingen', 'note'),
+                                ('WSKAZÓWKI', 'tip'), ('ПОПЕРЕДЖЕННЯ', 'warning')]:
+            self.assertEqual(callout_severity(label), severity)
+        for label in ['', 'WAARSCHU', 'OK-knop. OPMERKING', 'Important']:
+            self.assertEqual(callout_severity(label), 'unknown')
+
+    def test_icon_only_callout_label_keeps_alt_text_without_guessing_severity(self):
+        sections, _ = extract('<table class="manual-callout-table"><tr><td class="manual-callout-label">'
+                              '<div style="display:none">⚠</div><img alt="⚠" src="w.png"/></td>'
+                              '<td class="manual-callout-body"><p>Risk of fire.</p></td></tr></table>')
+        callout = sections[0]['blocks'][0]
+        self.assertEqual((callout['label'], callout['severity']), ('⚠', 'unknown'))
+        self.assertEqual(callout['text'], '⚠: Risk of fire.')
+
+    def test_blocks_carry_stable_ids_and_source_refs(self):
+        sections, _ = extract('<section id="safety"><h1>Safety</h1><p>Read.</p>'
+                              '<h2 id="fire">Fire</h2><div class="admonition"><p class="admonition-title">Warning</p>'
+                              '<p>Hot.</p></div></section>')
+        blocks = sections[0]['blocks']
+        self.assertEqual([b['block_id'] for b in blocks], [f"{sections[0]['id']}:{i}" for i in range(3)])
+        self.assertEqual(blocks[0]['source_ref'], 'MODEL/EU/en/md/manual.html#safety')
+        self.assertEqual(blocks[1]['source_ref'], 'MODEL/EU/en/md/manual.html#fire')
+        self.assertEqual(blocks[2]['severity'], 'warning')
+
+    def test_variant_key_is_stable_and_snapshots_are_not_revisions(self):
+        printed = variant_identity(model='M', region='EU', lang='de', version='2.6')
+        self.assertEqual((printed['variant_key'], printed['manual_variant_id']), ('M/EU/de', 'M/EU/de@2.6'))
+        self.assertEqual((printed['revision'], printed['revision_kind']), ('2.6', 'printed'))
+        snapshot = variant_identity(model='M', region='EU', lang='de', version='git-abc123')
+        self.assertEqual(snapshot['variant_key'], printed['variant_key'])
+        self.assertEqual((snapshot['revision'], snapshot['revision_kind']), (None, 'technical_snapshot'))
+        self.assertEqual(snapshot['publication_version'], 'git-abc123')
+        legacy = variant_identity(model='M', region='EU', lang=None, version=None)
+        self.assertEqual((legacy['language'], legacy['language_status']), ('multi', 'needs_review'))
+        self.assertEqual(legacy['manual_variant_id'], 'M/EU/multi@unversioned')
+        self.assertEqual(variant_identity(model='M', region='EU', lang='de', version='candidate')['revision_kind'],
+                         'candidate')
+
+    def test_provenance_names_release_path_from_frozen_files_only(self):
+        with TemporaryDirectory() as tmp:
+            root = Path(tmp) / 'web'
+            meta = Path(tmp) / 'sources' / 'web' / 'M' / 'EU' / 'de' / 'md' / 'publish_meta.json'
+            evidence = meta.parent / 'evidence' / 'frozen_source_manifest.json'
+            evidence.parent.mkdir(parents=True)
+            payload = {'git_ref': 'abc', 'built_at': '2026-10-01'}
+            self.assertEqual(_provenance(root, meta, payload)['release_path'], 'unclassified')
+            self.assertEqual(_provenance(root, meta, {**payload, 'queue_record_ids': ['r1']})['release_path'], 'queue')
+            evidence.write_text('{}')
+            frozen = _provenance(root, meta, payload)
+            self.assertEqual((frozen['release_path'], frozen['authority'], frozen['git_ref']),
+                             ('git_only_frozen', 'git_native', 'abc'))
+            self.assertEqual(frozen['source_manifest'], {
+                'path': 'sources/web/M/EU/de/md/evidence/frozen_source_manifest.json',
+                'sha256': hashlib.sha256(b'{}').hexdigest()})
+            source = root / 'M' / 'EU' / 'md' / 'manual.md'
+            source.parent.mkdir(parents=True)
+            source.write_text('x')
+            legacy = publication_identity(root, source, model='M', region='EU')['provenance']
+            self.assertEqual((legacy['release_path'], legacy['source_manifest']), ('legacy', None))
+
+    def test_corpus_documents_carry_additive_identity_and_provenance(self):
+        with TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            url = 'M/EU/de/md/manual.html'
+            (root / url).parent.mkdir(parents=True)
+            (root / url).write_text('<main><p>Published</p></main>')
+            manifest = {'path': 'sources/web/M/EU/de/md/evidence/frozen_source_manifest.json', 'sha256': 'b' * 64}
+            publication = {'url': url, 'lang': 'de', 'language_scope': 'single', 'version': 'git-abc',
+                           'provenance': {'release_path': 'git_only_frozen', 'authority': 'git_native',
+                                          'git_ref': 'abc', 'built_at': '2026-10-01', 'source_manifest': manifest}}
+            corpus = make_corpus([{'model': 'M', 'region': 'EU', 'name': 'P', 'publications': [publication]}],
+                                 root, source_sha256='a' * 64, published_at='2026-10-02')
+            document = corpus['documents'][0]
+            self.assertEqual(corpus['schema'], 'auto-manual-knowledge/v1')
+            self.assertEqual((document['version'], document['lang']), ('git-abc', 'de'))
+            self.assertEqual(document['manual_variant_id'], 'M/EU/de@git-abc')
+            self.assertEqual(document['machine_surface']['generation_mode'], 'html_compatibility')
+            self.assertEqual(document['source']['route'], 'M/EU/de/md')
+            self.assertEqual(document['source']['frozen_source_sha256'], 'b' * 64)
+            self.assertEqual(document['source']['html_sha256'], document['html_sha256'])
+            self.assertEqual(document['source']['published_at'], '2026-10-02')
+
+
+class ManifestFreshnessTests(unittest.TestCase):
+    def build(self, root, body='<main><h1 id="specs">Specs</h1><div class="admonition"><p class="admonition-title">'
+                                'Warning</p><p>Hot.</p></div><img src="a.png"/></main>'):
+        source = root / 'publish' / 'web'
+        source.mkdir(parents=True, exist_ok=True)
+        out = root / 'html'
+        url = 'MODEL/EU/en/md/manual.html'
+        (out / url).parent.mkdir(parents=True, exist_ok=True)
+        (out / url).write_text(body)
+        (source.parent / 'publish_manifest.json').write_text(json.dumps({'built_at': '2026-10-01', 'targets': [
+            {'region': 'EU', 'route': 'MODEL/EU/en', 'manual': 'md/manual.md'}]}))
+        products = [{'model': 'MODEL', 'region': 'EU', 'name': 'Product', 'publications': [
+            {'url': url, 'lang': 'en', 'language_scope': 'single', 'version': '2.6'}]}]
+        app = SimpleNamespace(srcdir=source, outdir=out, builder=SimpleNamespace(format='html'))
+        with patch('tools.rtd.portal.portal_data', return_value=({}, products)):
+            write_knowledge(app, None)
+            write_deployment_receipt(app, None)
+        return out, url
+
+    @staticmethod
+    def reader(out):
+        return lambda path: (out / path).read_bytes()
+
+    def test_manifest_is_sealed_by_the_receipt_and_current_build_is_fresh(self):
+        with TemporaryDirectory() as tmp:
+            out, url = self.build(Path(tmp))
+            receipt = json.loads((out / 'manual-deployment.json').read_text())
+            manifest = json.loads((out / MANIFEST).read_text())
+            self.assertEqual(receipt['files'][MANIFEST], hashlib.sha256((out / MANIFEST).read_bytes()).hexdigest())
+            self.assertEqual(manifest['corpus']['sha256'], receipt['files'][ARTIFACT])
+            variant = manifest['variants'][0]
+            self.assertEqual((variant['manual_variant_id'], variant['generation_mode'], variant['status']),
+                             ('MODEL/EU/en@2.6', 'html_compatibility', 'fresh'))
+            self.assertEqual(variant['counts']['callouts_by_severity'], {'warning': 1})
+            self.assertEqual(variant['counts']['images_without_alt'], 1)
+            report = check_freshness(self.reader(out), receipt_name='manual-deployment.json')
+            self.assertEqual((report['status'], report['problems']), ('fresh', []))
+            self.assertEqual(report['totals'], {'fresh': 1, 'stale': 0, 'failed': 0, 'unavailable': 0})
+            self.assertEqual(freshness_main(['--site', str(out)]), 0)
+
+    def test_cached_manifest_becomes_stale_after_html_changes(self):
+        with TemporaryDirectory() as tmp:
+            out, _ = self.build(Path(tmp))
+            old = json.loads((out / MANIFEST).read_text())
+            self.build(Path(tmp), body='<main><h1 id="specs">Specs</h1><p>Updated.</p></main>')
+            report = check_freshness(self.reader(out), receipt_name='manual-deployment.json', manifest=old)
+            self.assertEqual(report['totals']['stale'], 1)
+            self.assertEqual(report['status'], 'not_fresh')
+            cached = Path(tmp) / 'old.json'
+            cached.write_text(json.dumps(old))
+            self.assertEqual(freshness_main(['--site', str(out), '--manifest', str(cached)]), 1)
+            self.assertEqual(check_freshness(self.reader(out), receipt_name='manual-deployment.json')['status'],
+                             'fresh')
+
+    def test_tampered_missing_and_unavailable_surfaces_are_not_fresh(self):
+        with TemporaryDirectory() as tmp:
+            out, url = self.build(Path(tmp))
+            corpus = json.loads((out / ARTIFACT).read_text())
+            corpus['documents'][0]['sections'][0]['blocks'][0]['text'] = 'edited by hand'
+            (out / ARTIFACT).write_text(json.dumps(corpus))
+            report = check_freshness(self.reader(out), receipt_name='manual-deployment.json')
+            self.assertIn('corpus bytes differ from the deployment receipt', report['problems'])
+            self.assertEqual(report['totals']['failed'], 1)
+            (out / ARTIFACT).unlink()
+            report = check_freshness(self.reader(out), receipt_name='manual-deployment.json')
+            self.assertTrue(any('unreadable' in p for p in report['problems']))
+            receipt = json.loads((out / 'manual-deployment.json').read_text())
+            del receipt['files'][url]
+            (out / 'manual-deployment.json').write_text(json.dumps(receipt))
+            report = check_freshness(self.reader(out), receipt_name='manual-deployment.json')
+            self.assertEqual(report['totals']['unavailable'], 1)
+            manifest = json.loads((out / MANIFEST).read_text())
+            manifest['variants'][0]['status'] = 'fresh-by-hand'
+            (out / MANIFEST).write_text(json.dumps(manifest))
+            self.assertIn('manifest bytes differ from the deployment receipt',
+                          check_freshness(self.reader(out), receipt_name='manual-deployment.json')['problems'])

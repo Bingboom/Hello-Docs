@@ -5,6 +5,9 @@ Owner: the Auto-Manual maintainer. Scope approved by the
 operator on 2026-10-01: every EU manual published on Read the Docs, content
 export, read-only retrieval and integration with the already connected DingTalk
 bot. This is a new feature, separate from Workstream Y refactors.
+Planned extensions (variant identity, machine-surface manifest, freshness and
+later knowledge extraction) are tracked in
+[`machine_readable_manual_corpus.md`](machine_readable_manual_corpus.md).
 
 ## Discovery and implementation contract
 
@@ -61,6 +64,15 @@ after a refresh failure.
   route/hash, language scope, chapter IDs and semantic blocks. Styles, scripts,
   navigation and known layout helpers are excluded. Row/column spans, nested
   steps, warning labels and chapter-adjacent notes stay attached to their source.
+- v1 also carries additive identity/provenance fields (`variant_key`,
+  `manual_variant_id`, `revision`/`revision_kind`, `machine_surface`, `source`,
+  per-block `block_id`/`source_ref`, callout `severity`); see
+  [`machine_readable_manual_corpus.md`](machine_readable_manual_corpus.md) §5.2–§5.4.
+- The same build writes `machine_surface_manifest.json` (per-variant hashes,
+  counts, status), sealed by the deployment receipt; check freshness with
+  `python -m tools.manual_knowledge.manifest --base-url <site>` (§5.5–§5.6).
+- Phase 1 pilot audit and known source-content defects:
+  [`machine_readable_pilot_audit.md`](machine_readable_pilot_audit.md).
 - Verified single-language editions retain their source locale. Eight baseline
   legacy editions remain queryable with `language: null`; their declared `en`
   metadata is not promoted into a verified language assertion.

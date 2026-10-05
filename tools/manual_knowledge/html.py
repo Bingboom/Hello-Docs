@@ -6,6 +6,7 @@ import re
 
 from bs4 import BeautifulSoup, Comment, NavigableString, Tag
 
+from tools.manual_knowledge.identity import callout_severity
 from tools.manual_knowledge.tables import content_text, list_entries, table_block
 
 _DECORATIVE = (
@@ -65,8 +66,13 @@ def _callout(node: Tag) -> dict | None:
         if title is not None:
             title.decompose()
         body = copy
-    return {"type": "callout", "label": content_text(label), "body": content_text(body),
-            "text": content_text(label) + ": " + content_text(body)}
+    # An icon-only label (e.g. a warning triangle) keeps its alt text as evidence;
+    # the icon alone is not mapped to a severity.
+    label_text = content_text(label) or " ".join(
+        str(image.get("alt") or "").strip() for image in label.find_all("img")).strip()
+    return {"type": "callout", "label": label_text, "body": content_text(body),
+            "severity": callout_severity(label_text),
+            "text": label_text + ": " + content_text(body)}
 
 
 def _anchor(heading: Tag) -> str:
@@ -86,6 +92,9 @@ class _Sections:
     def flush(self) -> None:
         if self.current["blocks"]:
             self.current["id"] = identity(self.url + "#" + self.current["anchor"])
+            for index, block in enumerate(self.current["blocks"]):
+                block["block_id"] = f"{self.current['id']}:{index}"
+                block["source_ref"] = f"{self.url}#{block.get('anchor') or self.current['anchor']}"
             self.sections.append(self.current)
 
     def image(self, node: Tag) -> None:

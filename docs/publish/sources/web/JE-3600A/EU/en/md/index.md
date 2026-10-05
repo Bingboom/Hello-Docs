@@ -1,4 +1,4 @@
-# Jackery Explorer 3600 Plus User Manual
+# Jackery Explorer 3600 Plus
 
 ```{toctree}
 :maxdepth: 2
