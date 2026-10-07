@@ -1,4 +1,4 @@
-# Manual Center
+# Auto Manual Library
 
 - [JA-AD01A / EU / en - Jackery 102W GaN 3-Port Fast Charger User Manual](JA-AD01A/EU/en/md/manual_jaad01a_eu_en.md)
 - [JA-AD500A-SIL / US / en - Jackery DC Input Module](JA-AD500A-SIL/US/en/md/manual_jaad500asil_us_en.md)
@@ -95,6 +95,8 @@
 - [JE-3600A / EU / uk - Jackery Explorer 3600 Plus](JE-3600A/EU/uk/md/manual_je3600a_eu_uk.md)
 - [JE-500A / EU / en - Jackery Explorer 500 User Manual](JE-500A/EU/en/md/manual_je500a_eu_en.md)
 - [JHP-3600C / US / en - Jackery HomePower 3600 Pro Max User Manual](JHP-3600C/US/en/md/manual_jhp3600c_us_en.md)
+- [JHP-3600C / US / es - Jackery HomePower 3600 Pro Max — Manual de usuario](JHP-3600C/US/es/md/manual_jhp3600c_us_es.md)
+- [JHP-3600C / US / fr - Jackery HomePower 3600 Pro Max — Manuel d’utilisation](JHP-3600C/US/fr/md/manual_jhp3600c_us_fr.md)
 - [JS-100F / EU / en - Jackery SolarSaga 100 User Manual](JS-100F/EU/en/md/manual_js100f_eu_en.md)
 - [JS-100I / EU / de - Jackery SolarSaga 100 Air User Manual](JS-100I/EU/de/md/manual_js100i_eu_de.md)
 - [JS-100I / EU / en - Jackery SolarSaga 100 Air User Manual](JS-100I/EU/en/md/manual_js100i_eu_en.md)

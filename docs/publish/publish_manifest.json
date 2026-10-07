@@ -1,6 +1,6 @@
 {
   "schema_version": "auto-manual-web-publish-branch/v2",
-  "built_at": "2026-10-07T00:16:39.634501+00:00",
+  "built_at": "2026-10-07T09:45:38.029719+00:00",
   "targets": [
     {
       "schema_version": "auto-manual-web-publish-target/v2",
@@ -1518,6 +1518,36 @@
       "legacy_aliases": [
         "manual_jhp3600c_us_en"
       ]
+    },
+    {
+      "schema_version": "auto-manual-web-publish-target/v2",
+      "model": "JHP-3600C",
+      "region": "US",
+      "lang": "es",
+      "version": "git-20261007-31fd0692",
+      "built_at": "2026-10-07T09:45:38.029719+00:00",
+      "git_ref": "75c6dc0d2c6ceba211a43235610f579847bf1c7c",
+      "route": "JHP-3600C/US/es/md",
+      "manual": "manual_jhp3600c_us_es.md",
+      "language_scope": "single",
+      "language_projection_evidence_path": "evidence/language_projection_receipt.json",
+      "language_projection_evidence_sha256": "81caa9a6b6f4eb87891d87840f22624f9cc826a9a9871a8f6b249a808616c94c",
+      "legacy_default": false
+    },
+    {
+      "schema_version": "auto-manual-web-publish-target/v2",
+      "model": "JHP-3600C",
+      "region": "US",
+      "lang": "fr",
+      "version": "git-20261007-31fd0692",
+      "built_at": "2026-10-07T09:45:34.486599+00:00",
+      "git_ref": "75c6dc0d2c6ceba211a43235610f579847bf1c7c",
+      "route": "JHP-3600C/US/fr/md",
+      "manual": "manual_jhp3600c_us_fr.md",
+      "language_scope": "single",
+      "language_projection_evidence_path": "evidence/language_projection_receipt.json",
+      "language_projection_evidence_sha256": "b861e2dd563d473e199ba061f3cfd9e0d040a947b09fbfce536a36ca701942b7",
+      "legacy_default": false
     },
     {
       "schema_version": "auto-manual-web-publish-target/v2",
@@ -28927,6 +28957,996 @@
       "sha256": "dfd775e6f2eea97f2c511aa58c20665f6b5eeed66f6716bde4bcc679ca6e306e"
     },
     {
+      "path": "sources/web/JHP-3600C/US/es/md/_static/source_presentation.css",
+      "size": 18249,
+      "sha256": "1df79a0708ec83418e8c44458adcaf39567cb5dbf2edee88aec77658dfacb08a"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/_static/web_manual.css",
+      "size": 111201,
+      "sha256": "8f58d19bed88349a595a5c22e6205e0e93c956d6dc4c4a6278e2780f05ca7c8b"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/21b5f19ca9a6_21b5f19ca9a6_21b5f19ca9a6_16_Charging_Power_Limit_VLf2bJfrkoCL0CxJoMNcL5ZxnCt.png",
+      "size": 2772,
+      "sha256": "21b5f19ca9a6e39d8bd515128297cc1b99e43fd263e39ffba4fdf102d50a4bad"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/28f3cad42ae3_28f3cad42ae3_28f3cad42ae3_12_AC_Wall_Charging_Indicator_ZpOmbCjx8oYUTVxyl4JcvcTanPe.png",
+      "size": 2223,
+      "sha256": "28f3cad42ae32e9e895abfd7cdb16a21b99dfa822c57d542f0e3f59a4b452c6c"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/4025f864c192_usb-bottom.svg",
+      "size": 6266,
+      "sha256": "4025f864c19285cad8c4706c8866fba8e24a3f9142e2d457902f9c7efa79db80"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/45f309ed8b3f_fcc_mark.png",
+      "size": 28135,
+      "sha256": "45f309ed8b3f4787b6dde440c738b8e0fbc5074bf758fecc2e1ac44307153d90"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/58c1d3604ca7_58c1d3604ca7_58c1d3604ca7_26_Output_Power_PviebR618oofvKxcKVRcHLlInqd.png",
+      "size": 6085,
+      "sha256": "58c1d3604ca7b9774b069c6928775a13465ccb9477f477e9e4d4b30e7f75b88d"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/6aab9a14900a_6aab9a14900a_6aab9a14900a_20_Discharge_Timer_DHPMbkjSWoiuALxJyJ8cWyQOn0e.png",
+      "size": 3194,
+      "sha256": "6aab9a14900a08fcd8f8261e6e36fbb9a1220eb931df94ebd149b23930063723"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/71017f43bab4_71017f43bab4_71017f43bab4_4_Charging_Plan_M96RbyZQxoGjRRxQHsuczeIln1b.png",
+      "size": 2759,
+      "sha256": "71017f43bab44852d5586d1d4f996f3c52d8451bceaa9249e29864652c2f537d"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/73225cf9faa8_73225cf9faa8_73225cf9faa8_5_Self-powered_Mode_FYTnb9vttoexjbxVMchcJaobnCg.png",
+      "size": 3466,
+      "sha256": "73225cf9faa868bbe937df298d55a696828a4156f40e90da5c2a7f0011f0b783"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/747147be99d7_747147be99d7_747147be99d7_18_Remaining_Battery_Percentage_VkJcbUDbUoYC1hxrU6rc168OnJe.png",
+      "size": 3712,
+      "sha256": "747147be99d76bb486c858aeca2289d7d05ad3be1f1ea1f0825f54cb29b7fd10"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/7623ef10e229_7623ef10e229_7623ef10e229_9_Output_Voltage_and_Frequency_Jh3JbmBDBoKlmOxaRJDcIMJAn6b.png",
+      "size": 3553,
+      "sha256": "7623ef10e229bcfe66c872f3733d26b86c97d703ed30012188a88bb4a168e6df"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/7b5fa9057ca9_power-bottom.svg",
+      "size": 6321,
+      "sha256": "7b5fa9057ca9527e66b6b49e77f4620f3e0e93cf2b045422c7341654c2ef4d2d"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/7e1392ba6a45_7e1392ba6a45_7e1392ba6a45_2_Bluetooth_HVgvbJhq5o4EDKxhm7McCF4FnjB.png",
+      "size": 2023,
+      "sha256": "7e1392ba6a45e66a2e7367ae5df737ccc41ad2de46c4ac7d6baf062ff63bb361"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/7f743182c050_7f743182c050_7f743182c050_3_Quiet_Charging_Mode_WLkMbiHS1oGsOtxUCp7cRhFAn1g.png",
+      "size": 1414,
+      "sha256": "7f743182c0509307793dde001356fff5c3d20dd32b09105b6a1d467af7e7f66d"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/85921a9ad7fb_85921a9ad7fb_85921a9ad7fb_17_Battery_Power_Indicator_VLufb9exvoVLfgxz47pcfnRGnaf.png",
+      "size": 4879,
+      "sha256": "85921a9ad7fbfa58f98ee7bb0dc904377f31fe3dbface4083d2493144b05362f"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/87ac44e52863_manual_icon1.png",
+      "size": 1614,
+      "sha256": "87ac44e52863324b761a672089e6b0497e40fdf48432f698fccf30508060c60a"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/8be87c5a0849_8be87c5a0849_8be87c5a0849_8_AC_Power_Indicator_HFPSbvWBgosvCux69jMcuWe6nnh.png",
+      "size": 3962,
+      "sha256": "8be87c5a084994e3b4b6ddff46ce0296207a5c49c732f8ed13adfbcb28a36538"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/91cec82eeaa5_91cec82eeaa5_91cec82eeaa5_14_Solar_Charging_Indicator_RgAUbPXNWoRxiHxKNgkc2gqDnEb.png",
+      "size": 3059,
+      "sha256": "91cec82eeaa553477868d38789d68a4937cb11c5c4d794de74db1edddb3aeea4"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/9b148ea95d3a_9b148ea95d3a_9b148ea95d3a_27_Remaining_Discharge_Time_JEpobf59DoBV4dxWlnxcNtIinke.png",
+      "size": 2496,
+      "sha256": "9b148ea95d3a3450591c7220908b0913048f2cdea1e61d200534181c52b47cab"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/ac_framefree.png",
+      "size": 46147,
+      "sha256": "265f7e2b0e74d5ab407b705d85d396347d7c6039fe0fa5b0ca60454a6b96ce19"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/ad437a82a4fe_ac-bottom.svg",
+      "size": 5659,
+      "sha256": "ad437a82a4fe6538b6d65da6639d426919855a4ae2056ce410c526b96734c07a"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/app_add.png",
+      "size": 58893,
+      "sha256": "7998672fe6e308902b49332024bb09d21a7bb1dd06cc87dec160c81603a7c9b7"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/app_connect_result_steps.png",
+      "size": 47119,
+      "sha256": "194f709028c02ca20bb9ad4958cc3ddbc142c75ecf2fe64b8735ffbe5ec1d944"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/app_control.png",
+      "size": 27006,
+      "sha256": "b694de908ad978d7f883e99dae0bcd8773140bbd93e117610ac74e324ce55f80"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/app_download_qr.png",
+      "size": 130235,
+      "sha256": "5f2a58121306f87b6a627309f264ada87ac4778b3338cfc464ff656013ac3c65"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/app_store_badges.png",
+      "size": 25764,
+      "sha256": "1c7bfea9e26bbb00aff9c48d34a7742cd15ff3f0d998f32486c7248a19c9b84d"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/ats_app.png",
+      "size": 72959,
+      "sha256": "f5cc470998ef9e5274a1b9814a1d2c0afa3419bbbc00ad5463e3dcfc17cb41de"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/ats_live.png",
+      "size": 57371,
+      "sha256": "3a501abecb4e24bf96a40a4314d9dab8273cd3bdff9a345905c90bb6fb2652cb"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/battery_packs.png",
+      "size": 66664,
+      "sha256": "a889607cf11ae91cfa2e95512d755ef1193a240fd7bd2c0eb31f5ef15d3dee45"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/bdbf602db74a_bdbf602db74a_bdbf602db74a_24_Low_Temperature_Indicator_JDMEbD96noSbyWxbOnVcgip1nab.png",
+      "size": 2206,
+      "sha256": "bdbf602db74ade39a2a162209c0ff535315dee5e27e4832b2e6a201764b6941a"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/c4b830c769a3_c4b830c769a3_c4b830c769a3_22_Energy_Saving_Mode_O4Jdb5pUQoCBAqx0sfQcm9Nbntd.png",
+      "size": 2056,
+      "sha256": "c4b830c769a3de7f9effaee82466752f5706a0741ba29675cce45633c1cd8222"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/c7862a87e742_c7862a87e742_c7862a87e742_19_Low_Battery_Indicator_KDk9bhs8poHUBdx96PLckPganhd.png",
+      "size": 1293,
+      "sha256": "c7862a87e742d6927b4e1d63a8d0ccb09fbcf980ae662ff94b9134e256e56889"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/car_charging_framefree.svg",
+      "size": 409983,
+      "sha256": "c5bf094d9b0f2cd27cd5f6ac9e82e6ad413ac0c4f36441d76dcb7de7d7cfdfd4"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/cascade.png",
+      "size": 67699,
+      "sha256": "c73793a80a50ef9eb0e2f3ac4b7d28478110bad1b05999bce390bf86a93a67fb"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/cfb69b1ffc0b_cfb69b1ffc0b_cfb69b1ffc0b_11_Remaining_Charge_Time_KIWHbHFOvotGuBxJsxlcunSDnPf.png",
+      "size": 1974,
+      "sha256": "cfb69b1ffc0b30c51216fb6b1e00e35b412dd0148b6999d3d40ac90fbfe108cb"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/charge120.png",
+      "size": 39511,
+      "sha256": "378983dcedd288cc23b4752b949ca53ddf98dcf5a1334ce6b0319c59a0e3ecbb"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/charge240.png",
+      "size": 42466,
+      "sha256": "78421e939d39ded94f7ec9c48de298d160fb082d1302f8aef16d395679252632"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/d5100a538e96_d5100a538e96_d5100a538e96_10_Input_Power_LOAZbnxfqoHFwIxx2Myc532jnzb.png",
+      "size": 4730,
+      "sha256": "d5100a538e964da13e04241a98134e6aeaa36af8991aceeecac3c5d063b6968b"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/e1746d6937db_warning_triangle_dark.svg",
+      "size": 336,
+      "sha256": "e1746d6937db78115fcd8e1f80a71943cb6615561e326bebe2605139a886cce5"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/e32e6ae96321_e32e6ae96321_e32e6ae96321_15_Battery_Saving_Mode_ClYfbtOGSoK5q2xySXCcgehVn8f.png",
+      "size": 1481,
+      "sha256": "e32e6ae96321aa47b39c0c65a18a59da6c90cf87a0d7c8d61556ead273789c3a"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/e422a56922eb_e422a56922eb_e422a56922eb_7_UPS_Lgdgb8pvvoGwaLxSf8ec2QeHn3c.png",
+      "size": 2868,
+      "sha256": "e422a56922eb749ae90802fd964cb451a08d833658c1849abe10a63c60b173cc"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/eed3299c3f6a_eed3299c3f6a_eed3299c3f6a_13_Car_Charging_Indicator_DLkibYaP1ot6d5x1S0jcUr1knlb.png",
+      "size": 1599,
+      "sha256": "eed3299c3f6a15766e433ebbae7a40af8939e6d32489a0aa33a37fe902232a64"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/energy_framefree.png",
+      "size": 41799,
+      "sha256": "6d67c9a092ac2ae9f9144403760601e1463243f6ccf2539aa3859308a2525de2"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/epo.png",
+      "size": 42669,
+      "sha256": "73538543ce16f0a0fbce0da4f719b4c69163a881ba9f66e3376603b1047bc068"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/ess_connection.png",
+      "size": 88530,
+      "sha256": "4039388533950249061954f24e6866b64c0641c146e277ada6e96c4892c52616"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/f4cdcb551105_f4cdcb551105_f4cdcb551105_6_TOU_Mode_BjEkbz0rFo6Bw4xiwNpcod9qnnc.png",
+      "size": 2712,
+      "sha256": "f4cdcb5511058eaaf1879a69a429317dd3d98325dd5e19f5dd95b06ea2c965af"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/f548c6504f49_f548c6504f49_f548c6504f49_23_High_Temperature_Indicator_UmkEbOgCKoKyxoxDSINcfO6LnQd.png",
+      "size": 2248,
+      "sha256": "f548c6504f495da4f208cd8e5fe6eac6076daea05e314115abd26b46a9326ba5"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/fc4cc02b42ef_fc4cc02b42ef_fc4cc02b42ef_1_Wi-Fi_KCcAbdDk7o4RjKx82micuKJ5nyf.png",
+      "size": 1814,
+      "sha256": "fc4cc02b42efc31a32429ada2b78c4480a2fcbca647406da29b2ce75a8a8c1dc"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/inbox_ac.png",
+      "size": 5656,
+      "sha256": "f6ea4630900d41df0e9eaa35be9c229a0dfa13d3dcee83d0a0308298b5ab479d"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/inbox_terminal.png",
+      "size": 8420,
+      "sha256": "da72fe85ec858bdaf30fe06f6dc8cf4e431f7a003ffaab66ea9be6bc7b12f310"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/inbox_unit.png",
+      "size": 6231,
+      "sha256": "98a08132d482146545340cebfb4093bfaa3b63487bacfb95abe2b6e4f8619bb0"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/lcd_ac-expansion-in.png",
+      "size": 954,
+      "sha256": "5651765e549c201fe8afe43c3358a6de619cc034d1af10451aecff647be0e93e"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/lcd_ac-expansion-out.png",
+      "size": 950,
+      "sha256": "435f17477214a56e10fe0039aeb7799ab958f1dcdab4f0314829842028937397"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/lcd_connected-batteries.png",
+      "size": 936,
+      "sha256": "a1f1a5236ea916b088aebe42a22157ad058cbbd18bd29961091831beeeecffd1"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/lcd_device.png",
+      "size": 27010,
+      "sha256": "62379420cc83084f91f8566033f7c77f9be1e74e30fd415e840baace983f7e77"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/lcd_ev-charging.png",
+      "size": 1620,
+      "sha256": "905ff8481cf04c39c16ecafb0da3697978765eea977e457920905172f5960b39"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/lcd_fault-code.png",
+      "size": 1275,
+      "sha256": "7b251bff4004f01b3fbb6e383230d0c27f6ea17654502eca64240888ebe510a0"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/lcd_map.png",
+      "size": 78858,
+      "sha256": "6e59ceb432be306dbed1dca0216dc3a894c9272b7e60ca61d90bf5e501a17349"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/lcd_parallel.png",
+      "size": 1120,
+      "sha256": "1aacd9dc96bbc2ec22ff2364e88a896dd567a0f561f101dd85c93be10779dd04"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/lcd_smart-meter.png",
+      "size": 1196,
+      "sha256": "2eec7e59289bb32c1dd8f173fab2c13b9592740e7c3e882d70c07ba29012baa4"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/lcd_transfer-switch.png",
+      "size": 521,
+      "sha256": "72853bd49a4742f6f2d7e1c6f66d3087a2f68106cc91fdd1c6169a5bba9a9d49"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/mts_cascade_live.png",
+      "size": 109112,
+      "sha256": "a143c40b3d9936f2a5aa9d48b9a459952760a9b518ad9194e59113e2eb805477"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/mts_single_live.png",
+      "size": 79952,
+      "sha256": "6351b0b395ed043bb9f3a66f98605ad951645065688dc1eff8125f6d4870625c"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/overview_front.png",
+      "size": 69383,
+      "sha256": "127fa2f498463cb52a0ccf4634408eb79f587af18ddd1661d577cf661848ee5d"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/overview_side.png",
+      "size": 78707,
+      "sha256": "a7fd07ebfcb75432cb2e8d4fa3777a5737005c0accbf6dfb7eb8a1bd27151926"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/package_ats.png",
+      "size": 17000,
+      "sha256": "d4b0c8520d453b857c36a108e97914d5d2ad4f5e54c5cb41fbbbe5464ae9b1ee"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/package_battery.png",
+      "size": 6221,
+      "sha256": "4f5d7e1edd8b9a0845cc2071a57aafaccdd245811594d3f9b2b9bb8df20b3b44"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/package_expansion.png",
+      "size": 8742,
+      "sha256": "0a2f4e72a751a9b8371ea98a0aa330faffab47b36c76a41694e898af9b5d4de7"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/package_gland.png",
+      "size": 1363,
+      "sha256": "17764661f009821a873f6b96d90c9f9aaed659e62325a616de19c946916656a4"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/package_jumper.png",
+      "size": 2513,
+      "sha256": "247740c71cda195f02994f84c1f4071745dc9e7786000372b2c7888106e3517b"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/package_neutral_wire.png",
+      "size": 506,
+      "sha256": "3c0b2ffecf95738354bbf7c5050dbefde0ee5d896b96f55e1241808d479a7fa8"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/package_power_cable.png",
+      "size": 17507,
+      "sha256": "815fe005bfdcc05e07270558a6650a53631b01d04b7995fe2809ab882e905f16"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/package_template.png",
+      "size": 12221,
+      "sha256": "7393bdf6e7ad9575e3240d88b1d5954970344a23bd91d1221d47381524c84dce"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/placement_framefree.png",
+      "size": 46171,
+      "sha256": "2dc586aea7e86b79daa7f0b0219cdf963ccef0668212657ae0357aaa7a6427a4"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/power_framefree.png",
+      "size": 35623,
+      "sha256": "6861a84beade703c40a0c2a589f02a8df7270577f85e7ed255982b6127c8aa24"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/solar200.png",
+      "size": 132944,
+      "sha256": "2ad7cea648c11ea0309f1ff586bdaf340914d7502b3a75a1b5f5c2253604ebaa"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/solar500.png",
+      "size": 114623,
+      "sha256": "71ee1f8ec5f9a3762e6ba20d2d560872cd1944158152e544f2af6e994fe45939"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/symbol_battery_charging.svg",
+      "size": 5934,
+      "sha256": "6a513fe0122fec428c55a3f840c34ed7afdea311f7f1dd9b6e6fd807d087bf55"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/symbol_do_not_dismantle.svg",
+      "size": 6538,
+      "sha256": "5ad4fa830a5b4f9bf23af4c09493fc2610f8fda94ea6fcf925288d1cb6491f33"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/symbol_electric_shock.svg",
+      "size": 4992,
+      "sha256": "a76bd208ea017906cdcb5624307cdf4b4bb092816d45ef3943a4b3367c837d3f"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/symbol_explosive_material.svg",
+      "size": 6183,
+      "sha256": "3ef06cba72b60935ea421b1b59ff41e1ca9c4c6597b8d8ce1d4ae1904ee68fa0"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/symbol_heavy_object.svg",
+      "size": 4856,
+      "sha256": "5316063a33173d4231610b72babd30cb2282d1fd9d76263bf70e9577352e3910"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/symbol_keep_away_from_children.svg",
+      "size": 6300,
+      "sha256": "a58074f90ef83ab647ae94215dc0e3315cb9d113aaa4e104a6b26dc3b241d899"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/symbol_li_ion.svg",
+      "size": 7306,
+      "sha256": "317b9e9feb7747092569a1074d5e05e43bca5ddb96e9404f8e33746df9da7a8e"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/symbol_no_open_flame.svg",
+      "size": 5630,
+      "sha256": "4a82cdd8683e595eb3c9f63ecce457ca53cc5ea6c3f5906ecd7e1d8a4b3be01f"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/symbol_read_manual.svg",
+      "size": 4961,
+      "sha256": "1d2087064f92538d3b0762607056ac268f1d1c24e8f446c66626ac35c4e43584"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/symbol_warning_triangle.svg",
+      "size": 4481,
+      "sha256": "0f41fe5ea49fb7a830cab90d2a5473587dd8a0c04db775b42953f58dbea3fb0a"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/symbol_weee.png",
+      "size": 7672,
+      "sha256": "6883f899f43ac0642f43b8f9cf4118a394c1382ee409f4498544f90ba37b56a5"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/ups120.png",
+      "size": 56520,
+      "sha256": "4a7768c38f4a2093f1c107c8edecd1c672915a97ed79f5c39886f3c8e8f7b5d6"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/ups240.png",
+      "size": 75599,
+      "sha256": "ed1d46eb529548addc353a34055753b2854d7989835fc3deccad422b11d75fa4"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/assets/usb_framefree.png",
+      "size": 43887,
+      "sha256": "e77d56eb6e5bcdcbacf8eb91329335312e54a50eae18dd68bae697f922c6a619"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/conf.py",
+      "size": 848,
+      "sha256": "c10d8a569cfb347a9e7f92a1789586a90979fb9decfb690ef3e31f8845bd4954"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/evidence/frozen_source_manifest.json",
+      "size": 141740,
+      "sha256": "44916824ca14da55b3d4fb26987e99828f95ba9997f194aeddf4441928d2f4e1"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/evidence/language_projection_receipt.json",
+      "size": 42903,
+      "sha256": "81caa9a6b6f4eb87891d87840f22624f9cc826a9a9871a8f6b249a808616c94c"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/index.md",
+      "size": 109,
+      "sha256": "822fcced179f6044f7d2d86e7b80f284252bf21089d45aa07aac150109c4b290"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/manual.ir.json",
+      "size": 779735,
+      "sha256": "450e7e59727df9d749d4e025841fa8e80ed3922729e75e1f04950323c3e2ec90"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/manual_jhp3600c_us_es.md",
+      "size": 153307,
+      "sha256": "0b54df57aa26515cfe5a665a78b9a65599d1e81221990bb8961a0900cad28fc2"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/es/md/publish_meta.json",
+      "size": 586,
+      "sha256": "76dcf4f96a7bc3974d0c91f8d1272d00ff261028ce12b434e88291bdf667fc3f"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/_static/source_presentation.css",
+      "size": 18124,
+      "sha256": "f961e247fba92a5565c0e71013b26f21506a7ddc85c0139bb4620f83fe1af8f4"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/_static/web_manual.css",
+      "size": 111201,
+      "sha256": "8f58d19bed88349a595a5c22e6205e0e93c956d6dc4c4a6278e2780f05ca7c8b"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/21b5f19ca9a6_21b5f19ca9a6_21b5f19ca9a6_16_Charging_Power_Limit_VLf2bJfrkoCL0CxJoMNcL5ZxnCt.png",
+      "size": 2772,
+      "sha256": "21b5f19ca9a6e39d8bd515128297cc1b99e43fd263e39ffba4fdf102d50a4bad"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/28f3cad42ae3_28f3cad42ae3_28f3cad42ae3_12_AC_Wall_Charging_Indicator_ZpOmbCjx8oYUTVxyl4JcvcTanPe.png",
+      "size": 2223,
+      "sha256": "28f3cad42ae32e9e895abfd7cdb16a21b99dfa822c57d542f0e3f59a4b452c6c"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/4025f864c192_usb-bottom.svg",
+      "size": 6266,
+      "sha256": "4025f864c19285cad8c4706c8866fba8e24a3f9142e2d457902f9c7efa79db80"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/45f309ed8b3f_fcc_mark.png",
+      "size": 28135,
+      "sha256": "45f309ed8b3f4787b6dde440c738b8e0fbc5074bf758fecc2e1ac44307153d90"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/58c1d3604ca7_58c1d3604ca7_58c1d3604ca7_26_Output_Power_PviebR618oofvKxcKVRcHLlInqd.png",
+      "size": 6085,
+      "sha256": "58c1d3604ca7b9774b069c6928775a13465ccb9477f477e9e4d4b30e7f75b88d"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/6aab9a14900a_6aab9a14900a_6aab9a14900a_20_Discharge_Timer_DHPMbkjSWoiuALxJyJ8cWyQOn0e.png",
+      "size": 3194,
+      "sha256": "6aab9a14900a08fcd8f8261e6e36fbb9a1220eb931df94ebd149b23930063723"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/71017f43bab4_71017f43bab4_71017f43bab4_4_Charging_Plan_M96RbyZQxoGjRRxQHsuczeIln1b.png",
+      "size": 2759,
+      "sha256": "71017f43bab44852d5586d1d4f996f3c52d8451bceaa9249e29864652c2f537d"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/73225cf9faa8_73225cf9faa8_73225cf9faa8_5_Self-powered_Mode_FYTnb9vttoexjbxVMchcJaobnCg.png",
+      "size": 3466,
+      "sha256": "73225cf9faa868bbe937df298d55a696828a4156f40e90da5c2a7f0011f0b783"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/747147be99d7_747147be99d7_747147be99d7_18_Remaining_Battery_Percentage_VkJcbUDbUoYC1hxrU6rc168OnJe.png",
+      "size": 3712,
+      "sha256": "747147be99d76bb486c858aeca2289d7d05ad3be1f1ea1f0825f54cb29b7fd10"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/7623ef10e229_7623ef10e229_7623ef10e229_9_Output_Voltage_and_Frequency_Jh3JbmBDBoKlmOxaRJDcIMJAn6b.png",
+      "size": 3553,
+      "sha256": "7623ef10e229bcfe66c872f3733d26b86c97d703ed30012188a88bb4a168e6df"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/7b5fa9057ca9_power-bottom.svg",
+      "size": 6321,
+      "sha256": "7b5fa9057ca9527e66b6b49e77f4620f3e0e93cf2b045422c7341654c2ef4d2d"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/7e1392ba6a45_7e1392ba6a45_7e1392ba6a45_2_Bluetooth_HVgvbJhq5o4EDKxhm7McCF4FnjB.png",
+      "size": 2023,
+      "sha256": "7e1392ba6a45e66a2e7367ae5df737ccc41ad2de46c4ac7d6baf062ff63bb361"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/7f743182c050_7f743182c050_7f743182c050_3_Quiet_Charging_Mode_WLkMbiHS1oGsOtxUCp7cRhFAn1g.png",
+      "size": 1414,
+      "sha256": "7f743182c0509307793dde001356fff5c3d20dd32b09105b6a1d467af7e7f66d"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/85921a9ad7fb_85921a9ad7fb_85921a9ad7fb_17_Battery_Power_Indicator_VLufb9exvoVLfgxz47pcfnRGnaf.png",
+      "size": 4879,
+      "sha256": "85921a9ad7fbfa58f98ee7bb0dc904377f31fe3dbface4083d2493144b05362f"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/87ac44e52863_manual_icon1.png",
+      "size": 1614,
+      "sha256": "87ac44e52863324b761a672089e6b0497e40fdf48432f698fccf30508060c60a"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/8be87c5a0849_8be87c5a0849_8be87c5a0849_8_AC_Power_Indicator_HFPSbvWBgosvCux69jMcuWe6nnh.png",
+      "size": 3962,
+      "sha256": "8be87c5a084994e3b4b6ddff46ce0296207a5c49c732f8ed13adfbcb28a36538"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/91cec82eeaa5_91cec82eeaa5_91cec82eeaa5_14_Solar_Charging_Indicator_RgAUbPXNWoRxiHxKNgkc2gqDnEb.png",
+      "size": 3059,
+      "sha256": "91cec82eeaa553477868d38789d68a4937cb11c5c4d794de74db1edddb3aeea4"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/9b148ea95d3a_9b148ea95d3a_9b148ea95d3a_27_Remaining_Discharge_Time_JEpobf59DoBV4dxWlnxcNtIinke.png",
+      "size": 2496,
+      "sha256": "9b148ea95d3a3450591c7220908b0913048f2cdea1e61d200534181c52b47cab"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/ac_framefree.png",
+      "size": 46147,
+      "sha256": "265f7e2b0e74d5ab407b705d85d396347d7c6039fe0fa5b0ca60454a6b96ce19"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/ad437a82a4fe_ac-bottom.svg",
+      "size": 5659,
+      "sha256": "ad437a82a4fe6538b6d65da6639d426919855a4ae2056ce410c526b96734c07a"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/app_add.png",
+      "size": 58893,
+      "sha256": "7998672fe6e308902b49332024bb09d21a7bb1dd06cc87dec160c81603a7c9b7"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/app_connect_result_steps.png",
+      "size": 49732,
+      "sha256": "d9f8f62d3e0f73da6e71eec006ffe175fad6b5bcb6d351d7cf2c30909cbd9d8a"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/app_control.png",
+      "size": 26205,
+      "sha256": "4374a289f34366bc6b00d3b2144f85901ac71a07f08de447ffd1f135ea13a245"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/app_download_qr.png",
+      "size": 130235,
+      "sha256": "5f2a58121306f87b6a627309f264ada87ac4778b3338cfc464ff656013ac3c65"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/app_store_badges.png",
+      "size": 25764,
+      "sha256": "1c7bfea9e26bbb00aff9c48d34a7742cd15ff3f0d998f32486c7248a19c9b84d"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/ats_app.png",
+      "size": 72959,
+      "sha256": "f5cc470998ef9e5274a1b9814a1d2c0afa3419bbbc00ad5463e3dcfc17cb41de"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/ats_live.png",
+      "size": 57371,
+      "sha256": "3a501abecb4e24bf96a40a4314d9dab8273cd3bdff9a345905c90bb6fb2652cb"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/battery_packs.png",
+      "size": 66664,
+      "sha256": "a889607cf11ae91cfa2e95512d755ef1193a240fd7bd2c0eb31f5ef15d3dee45"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/bdbf602db74a_bdbf602db74a_bdbf602db74a_24_Low_Temperature_Indicator_JDMEbD96noSbyWxbOnVcgip1nab.png",
+      "size": 2206,
+      "sha256": "bdbf602db74ade39a2a162209c0ff535315dee5e27e4832b2e6a201764b6941a"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/c4b830c769a3_c4b830c769a3_c4b830c769a3_22_Energy_Saving_Mode_O4Jdb5pUQoCBAqx0sfQcm9Nbntd.png",
+      "size": 2056,
+      "sha256": "c4b830c769a3de7f9effaee82466752f5706a0741ba29675cce45633c1cd8222"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/c7862a87e742_c7862a87e742_c7862a87e742_19_Low_Battery_Indicator_KDk9bhs8poHUBdx96PLckPganhd.png",
+      "size": 1293,
+      "sha256": "c7862a87e742d6927b4e1d63a8d0ccb09fbcf980ae662ff94b9134e256e56889"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/car_charging_framefree.svg",
+      "size": 409983,
+      "sha256": "c5bf094d9b0f2cd27cd5f6ac9e82e6ad413ac0c4f36441d76dcb7de7d7cfdfd4"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/cascade.png",
+      "size": 67699,
+      "sha256": "c73793a80a50ef9eb0e2f3ac4b7d28478110bad1b05999bce390bf86a93a67fb"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/cfb69b1ffc0b_cfb69b1ffc0b_cfb69b1ffc0b_11_Remaining_Charge_Time_KIWHbHFOvotGuBxJsxlcunSDnPf.png",
+      "size": 1974,
+      "sha256": "cfb69b1ffc0b30c51216fb6b1e00e35b412dd0148b6999d3d40ac90fbfe108cb"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/charge120.png",
+      "size": 39511,
+      "sha256": "378983dcedd288cc23b4752b949ca53ddf98dcf5a1334ce6b0319c59a0e3ecbb"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/charge240.png",
+      "size": 42466,
+      "sha256": "78421e939d39ded94f7ec9c48de298d160fb082d1302f8aef16d395679252632"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/d5100a538e96_d5100a538e96_d5100a538e96_10_Input_Power_LOAZbnxfqoHFwIxx2Myc532jnzb.png",
+      "size": 4730,
+      "sha256": "d5100a538e964da13e04241a98134e6aeaa36af8991aceeecac3c5d063b6968b"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/e1746d6937db_warning_triangle_dark.svg",
+      "size": 336,
+      "sha256": "e1746d6937db78115fcd8e1f80a71943cb6615561e326bebe2605139a886cce5"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/e32e6ae96321_e32e6ae96321_e32e6ae96321_15_Battery_Saving_Mode_ClYfbtOGSoK5q2xySXCcgehVn8f.png",
+      "size": 1481,
+      "sha256": "e32e6ae96321aa47b39c0c65a18a59da6c90cf87a0d7c8d61556ead273789c3a"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/e422a56922eb_e422a56922eb_e422a56922eb_7_UPS_Lgdgb8pvvoGwaLxSf8ec2QeHn3c.png",
+      "size": 2868,
+      "sha256": "e422a56922eb749ae90802fd964cb451a08d833658c1849abe10a63c60b173cc"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/eed3299c3f6a_eed3299c3f6a_eed3299c3f6a_13_Car_Charging_Indicator_DLkibYaP1ot6d5x1S0jcUr1knlb.png",
+      "size": 1599,
+      "sha256": "eed3299c3f6a15766e433ebbae7a40af8939e6d32489a0aa33a37fe902232a64"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/energy_framefree.png",
+      "size": 41799,
+      "sha256": "6d67c9a092ac2ae9f9144403760601e1463243f6ccf2539aa3859308a2525de2"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/epo.png",
+      "size": 42669,
+      "sha256": "73538543ce16f0a0fbce0da4f719b4c69163a881ba9f66e3376603b1047bc068"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/ess_connection.png",
+      "size": 88530,
+      "sha256": "4039388533950249061954f24e6866b64c0641c146e277ada6e96c4892c52616"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/f4cdcb551105_f4cdcb551105_f4cdcb551105_6_TOU_Mode_BjEkbz0rFo6Bw4xiwNpcod9qnnc.png",
+      "size": 2712,
+      "sha256": "f4cdcb5511058eaaf1879a69a429317dd3d98325dd5e19f5dd95b06ea2c965af"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/f548c6504f49_f548c6504f49_f548c6504f49_23_High_Temperature_Indicator_UmkEbOgCKoKyxoxDSINcfO6LnQd.png",
+      "size": 2248,
+      "sha256": "f548c6504f495da4f208cd8e5fe6eac6076daea05e314115abd26b46a9326ba5"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/fc4cc02b42ef_fc4cc02b42ef_fc4cc02b42ef_1_Wi-Fi_KCcAbdDk7o4RjKx82micuKJ5nyf.png",
+      "size": 1814,
+      "sha256": "fc4cc02b42efc31a32429ada2b78c4480a2fcbca647406da29b2ce75a8a8c1dc"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/inbox_ac.png",
+      "size": 5656,
+      "sha256": "f6ea4630900d41df0e9eaa35be9c229a0dfa13d3dcee83d0a0308298b5ab479d"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/inbox_terminal.png",
+      "size": 8420,
+      "sha256": "da72fe85ec858bdaf30fe06f6dc8cf4e431f7a003ffaab66ea9be6bc7b12f310"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/inbox_unit.png",
+      "size": 6231,
+      "sha256": "98a08132d482146545340cebfb4093bfaa3b63487bacfb95abe2b6e4f8619bb0"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/lcd_ac-expansion-in.png",
+      "size": 954,
+      "sha256": "5651765e549c201fe8afe43c3358a6de619cc034d1af10451aecff647be0e93e"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/lcd_ac-expansion-out.png",
+      "size": 950,
+      "sha256": "435f17477214a56e10fe0039aeb7799ab958f1dcdab4f0314829842028937397"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/lcd_connected-batteries.png",
+      "size": 936,
+      "sha256": "a1f1a5236ea916b088aebe42a22157ad058cbbd18bd29961091831beeeecffd1"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/lcd_device.png",
+      "size": 27010,
+      "sha256": "62379420cc83084f91f8566033f7c77f9be1e74e30fd415e840baace983f7e77"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/lcd_ev-charging.png",
+      "size": 1620,
+      "sha256": "905ff8481cf04c39c16ecafb0da3697978765eea977e457920905172f5960b39"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/lcd_fault-code.png",
+      "size": 1275,
+      "sha256": "7b251bff4004f01b3fbb6e383230d0c27f6ea17654502eca64240888ebe510a0"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/lcd_map.png",
+      "size": 78858,
+      "sha256": "6e59ceb432be306dbed1dca0216dc3a894c9272b7e60ca61d90bf5e501a17349"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/lcd_parallel.png",
+      "size": 1120,
+      "sha256": "1aacd9dc96bbc2ec22ff2364e88a896dd567a0f561f101dd85c93be10779dd04"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/lcd_smart-meter.png",
+      "size": 1196,
+      "sha256": "2eec7e59289bb32c1dd8f173fab2c13b9592740e7c3e882d70c07ba29012baa4"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/lcd_transfer-switch.png",
+      "size": 521,
+      "sha256": "72853bd49a4742f6f2d7e1c6f66d3087a2f68106cc91fdd1c6169a5bba9a9d49"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/mts_cascade_live.png",
+      "size": 109112,
+      "sha256": "a143c40b3d9936f2a5aa9d48b9a459952760a9b518ad9194e59113e2eb805477"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/mts_single_live.png",
+      "size": 79952,
+      "sha256": "6351b0b395ed043bb9f3a66f98605ad951645065688dc1eff8125f6d4870625c"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/overview_front.png",
+      "size": 67617,
+      "sha256": "a4cd9cbcf0ca78e4ec1f4ea049610119eec63b79f5a5883ebe3527088f99c708"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/overview_side.png",
+      "size": 78325,
+      "sha256": "5ff471c04faa557c5dba8619c06f810109fed0d1e87d20e3bdfc729a75b87b61"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/package_ats.png",
+      "size": 17000,
+      "sha256": "d4b0c8520d453b857c36a108e97914d5d2ad4f5e54c5cb41fbbbe5464ae9b1ee"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/package_battery.png",
+      "size": 6221,
+      "sha256": "4f5d7e1edd8b9a0845cc2071a57aafaccdd245811594d3f9b2b9bb8df20b3b44"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/package_expansion.png",
+      "size": 8742,
+      "sha256": "0a2f4e72a751a9b8371ea98a0aa330faffab47b36c76a41694e898af9b5d4de7"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/package_gland.png",
+      "size": 1363,
+      "sha256": "17764661f009821a873f6b96d90c9f9aaed659e62325a616de19c946916656a4"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/package_jumper.png",
+      "size": 2513,
+      "sha256": "247740c71cda195f02994f84c1f4071745dc9e7786000372b2c7888106e3517b"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/package_neutral_wire.png",
+      "size": 506,
+      "sha256": "3c0b2ffecf95738354bbf7c5050dbefde0ee5d896b96f55e1241808d479a7fa8"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/package_power_cable.png",
+      "size": 17507,
+      "sha256": "815fe005bfdcc05e07270558a6650a53631b01d04b7995fe2809ab882e905f16"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/package_template.png",
+      "size": 12221,
+      "sha256": "7393bdf6e7ad9575e3240d88b1d5954970344a23bd91d1221d47381524c84dce"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/placement_framefree.png",
+      "size": 46171,
+      "sha256": "2dc586aea7e86b79daa7f0b0219cdf963ccef0668212657ae0357aaa7a6427a4"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/power_framefree.png",
+      "size": 35623,
+      "sha256": "6861a84beade703c40a0c2a589f02a8df7270577f85e7ed255982b6127c8aa24"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/solar200.png",
+      "size": 132944,
+      "sha256": "2ad7cea648c11ea0309f1ff586bdaf340914d7502b3a75a1b5f5c2253604ebaa"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/solar500.png",
+      "size": 114623,
+      "sha256": "71ee1f8ec5f9a3762e6ba20d2d560872cd1944158152e544f2af6e994fe45939"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/symbol_battery_charging.svg",
+      "size": 5934,
+      "sha256": "6a513fe0122fec428c55a3f840c34ed7afdea311f7f1dd9b6e6fd807d087bf55"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/symbol_do_not_dismantle.svg",
+      "size": 6538,
+      "sha256": "5ad4fa830a5b4f9bf23af4c09493fc2610f8fda94ea6fcf925288d1cb6491f33"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/symbol_electric_shock.svg",
+      "size": 4992,
+      "sha256": "a76bd208ea017906cdcb5624307cdf4b4bb092816d45ef3943a4b3367c837d3f"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/symbol_explosive_material.svg",
+      "size": 6183,
+      "sha256": "3ef06cba72b60935ea421b1b59ff41e1ca9c4c6597b8d8ce1d4ae1904ee68fa0"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/symbol_heavy_object.svg",
+      "size": 4856,
+      "sha256": "5316063a33173d4231610b72babd30cb2282d1fd9d76263bf70e9577352e3910"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/symbol_keep_away_from_children.svg",
+      "size": 6300,
+      "sha256": "a58074f90ef83ab647ae94215dc0e3315cb9d113aaa4e104a6b26dc3b241d899"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/symbol_li_ion.svg",
+      "size": 7306,
+      "sha256": "317b9e9feb7747092569a1074d5e05e43bca5ddb96e9404f8e33746df9da7a8e"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/symbol_no_open_flame.svg",
+      "size": 5630,
+      "sha256": "4a82cdd8683e595eb3c9f63ecce457ca53cc5ea6c3f5906ecd7e1d8a4b3be01f"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/symbol_read_manual.svg",
+      "size": 4961,
+      "sha256": "1d2087064f92538d3b0762607056ac268f1d1c24e8f446c66626ac35c4e43584"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/symbol_warning_triangle.svg",
+      "size": 4481,
+      "sha256": "0f41fe5ea49fb7a830cab90d2a5473587dd8a0c04db775b42953f58dbea3fb0a"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/symbol_weee.png",
+      "size": 7672,
+      "sha256": "6883f899f43ac0642f43b8f9cf4118a394c1382ee409f4498544f90ba37b56a5"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/ups120.png",
+      "size": 56520,
+      "sha256": "4a7768c38f4a2093f1c107c8edecd1c672915a97ed79f5c39886f3c8e8f7b5d6"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/ups240.png",
+      "size": 75599,
+      "sha256": "ed1d46eb529548addc353a34055753b2854d7989835fc3deccad422b11d75fa4"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/assets/usb_framefree.png",
+      "size": 43887,
+      "sha256": "e77d56eb6e5bcdcbacf8eb91329335312e54a50eae18dd68bae697f922c6a619"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/conf.py",
+      "size": 853,
+      "sha256": "ddf35ad3056af21026d7cb43b97347720c2ea29b09146a810c88c869d629ef15"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/evidence/frozen_source_manifest.json",
+      "size": 141740,
+      "sha256": "44916824ca14da55b3d4fb26987e99828f95ba9997f194aeddf4441928d2f4e1"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/evidence/language_projection_receipt.json",
+      "size": 42902,
+      "sha256": "b861e2dd563d473e199ba061f3cfd9e0d040a947b09fbfce536a36ca701942b7"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/index.md",
+      "size": 114,
+      "sha256": "4cbd0135b8cf2d3c5f92ccbfc8994a77a26912efe15e76b5ab0cc13f048b2094"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/manual.ir.json",
+      "size": 782027,
+      "sha256": "8a9bfaa8a5e52f78e30e61b714b1c4b1845ba484d5e13d5eff855f5ec379b0da"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/manual_jhp3600c_us_fr.md",
+      "size": 154299,
+      "sha256": "f70a8f9771c8e54e59c6691179823ede7acbbc9f166cd62d9ecfb1b991db7d44"
+    },
+    {
+      "path": "sources/web/JHP-3600C/US/fr/md/publish_meta.json",
+      "size": 586,
+      "sha256": "947eee0633b1add03fb7e339675f8cb25547c469afa4cabdb16f04a2779f0548"
+    },
+    {
       "path": "sources/web/JS-100F/EU/en/md/_static/web_manual.css",
       "size": 59379,
       "sha256": "721d4c8b46f49188c65454e3d048e44cc4eb6e8fe9dc3cd970b7247f456b5fb7"
@@ -33162,6 +34182,76 @@
       "sha256": "82e4630864983192f17a4dbc58958a0422791b28bc9a216ca630168e29290a7a"
     },
     {
+      "path": "web/JHP-3600C/US/es/md/_static/source_presentation.css",
+      "size": 18249,
+      "sha256": "1df79a0708ec83418e8c44458adcaf39567cb5dbf2edee88aec77658dfacb08a"
+    },
+    {
+      "path": "web/JHP-3600C/US/es/md/_static/web_manual.css",
+      "size": 111201,
+      "sha256": "8f58d19bed88349a595a5c22e6205e0e93c956d6dc4c4a6278e2780f05ca7c8b"
+    },
+    {
+      "path": "web/JHP-3600C/US/es/md/evidence/frozen_source_manifest.json",
+      "size": 141740,
+      "sha256": "44916824ca14da55b3d4fb26987e99828f95ba9997f194aeddf4441928d2f4e1"
+    },
+    {
+      "path": "web/JHP-3600C/US/es/md/evidence/language_projection_receipt.json",
+      "size": 42903,
+      "sha256": "81caa9a6b6f4eb87891d87840f22624f9cc826a9a9871a8f6b249a808616c94c"
+    },
+    {
+      "path": "web/JHP-3600C/US/es/md/index.md",
+      "size": 109,
+      "sha256": "822fcced179f6044f7d2d86e7b80f284252bf21089d45aa07aac150109c4b290"
+    },
+    {
+      "path": "web/JHP-3600C/US/es/md/manual.ir.json",
+      "size": 779735,
+      "sha256": "450e7e59727df9d749d4e025841fa8e80ed3922729e75e1f04950323c3e2ec90"
+    },
+    {
+      "path": "web/JHP-3600C/US/es/md/manual_jhp3600c_us_es.md",
+      "size": 160121,
+      "sha256": "be9ecf96302c4693e5edc0e78a931f54d3062220f21df8dd1db6466989237c5d"
+    },
+    {
+      "path": "web/JHP-3600C/US/fr/md/_static/source_presentation.css",
+      "size": 18124,
+      "sha256": "f961e247fba92a5565c0e71013b26f21506a7ddc85c0139bb4620f83fe1af8f4"
+    },
+    {
+      "path": "web/JHP-3600C/US/fr/md/_static/web_manual.css",
+      "size": 111201,
+      "sha256": "8f58d19bed88349a595a5c22e6205e0e93c956d6dc4c4a6278e2780f05ca7c8b"
+    },
+    {
+      "path": "web/JHP-3600C/US/fr/md/evidence/frozen_source_manifest.json",
+      "size": 141740,
+      "sha256": "44916824ca14da55b3d4fb26987e99828f95ba9997f194aeddf4441928d2f4e1"
+    },
+    {
+      "path": "web/JHP-3600C/US/fr/md/evidence/language_projection_receipt.json",
+      "size": 42902,
+      "sha256": "b861e2dd563d473e199ba061f3cfd9e0d040a947b09fbfce536a36ca701942b7"
+    },
+    {
+      "path": "web/JHP-3600C/US/fr/md/index.md",
+      "size": 114,
+      "sha256": "4cbd0135b8cf2d3c5f92ccbfc8994a77a26912efe15e76b5ab0cc13f048b2094"
+    },
+    {
+      "path": "web/JHP-3600C/US/fr/md/manual.ir.json",
+      "size": 782027,
+      "sha256": "8a9bfaa8a5e52f78e30e61b714b1c4b1845ba484d5e13d5eff855f5ec379b0da"
+    },
+    {
+      "path": "web/JHP-3600C/US/fr/md/manual_jhp3600c_us_fr.md",
+      "size": 161113,
+      "sha256": "f20721fa062b3625f2cb6685e1b200b82101a4ee9d7d7f0d2767caacc97a8f5b"
+    },
+    {
       "path": "web/JHP-3600C/US/md/index.md",
       "size": 268,
       "sha256": "5ed027a6be6602a383cf4c5a3d52163e225bf5cb2ba03e3c9ef503b5baeb5570"
@@ -33967,6 +35057,11 @@
       "sha256": "123ee64484e222f7565742843818885dc4e5520c47b8f5fcb60c362b04a562f7"
     },
     {
+      "path": "web/_static/manual-assets/_pool/12/127fa2f498463cb52a0ccf4634408eb79f587af18ddd1661d577cf661848ee5d.png",
+      "size": 69383,
+      "sha256": "127fa2f498463cb52a0ccf4634408eb79f587af18ddd1661d577cf661848ee5d"
+    },
+    {
       "path": "web/_static/manual-assets/_pool/12/12c2fb83fc20fa684577b593e9fb547706eec5511b9d8b679b2f046da7c36158.png",
       "size": 1982,
       "sha256": "12c2fb83fc20fa684577b593e9fb547706eec5511b9d8b679b2f046da7c36158"
@@ -34070,6 +35165,11 @@
       "path": "web/_static/manual-assets/_pool/18/18aa7ea899c14797d99dd5772e3b1f5adf49d0c38a4bce1787c62f9c9113d82f.png",
       "size": 20709,
       "sha256": "18aa7ea899c14797d99dd5772e3b1f5adf49d0c38a4bce1787c62f9c9113d82f"
+    },
+    {
+      "path": "web/_static/manual-assets/_pool/19/194f709028c02ca20bb9ad4958cc3ddbc142c75ecf2fe64b8735ffbe5ec1d944.png",
+      "size": 47119,
+      "sha256": "194f709028c02ca20bb9ad4958cc3ddbc142c75ecf2fe64b8735ffbe5ec1d944"
     },
     {
       "path": "web/_static/manual-assets/_pool/19/196db2418826e717a2c32008c46f01abf8fd03ac6f6192eb1904cdba74493cfc.png",
@@ -35182,6 +36282,11 @@
       "sha256": "435f17477214a56e10fe0039aeb7799ab958f1dcdab4f0314829842028937397"
     },
     {
+      "path": "web/_static/manual-assets/_pool/43/4374a289f34366bc6b00d3b2144f85901ac71a07f08de447ffd1f135ea13a245.png",
+      "size": 26205,
+      "sha256": "4374a289f34366bc6b00d3b2144f85901ac71a07f08de447ffd1f135ea13a245"
+    },
+    {
       "path": "web/_static/manual-assets/_pool/43/4391ac1711f7aee6c3eee2164f059279ec41a9ecceb95c0106925e7bd04eaa43.png",
       "size": 40844,
       "sha256": "4391ac1711f7aee6c3eee2164f059279ec41a9ecceb95c0106925e7bd04eaa43"
@@ -35925,6 +37030,11 @@
       "path": "web/_static/manual-assets/_pool/5f/5feab049c5877a2209ecade814756ea45884ad033d0f4636706c0614229caaf9.png",
       "size": 57385,
       "sha256": "5feab049c5877a2209ecade814756ea45884ad033d0f4636706c0614229caaf9"
+    },
+    {
+      "path": "web/_static/manual-assets/_pool/5f/5ff471c04faa557c5dba8619c06f810109fed0d1e87d20e3bdfc729a75b87b61.png",
+      "size": 78325,
+      "sha256": "5ff471c04faa557c5dba8619c06f810109fed0d1e87d20e3bdfc729a75b87b61"
     },
     {
       "path": "web/_static/manual-assets/_pool/60/6008a94a3019ffb701c6246af17623dc1de49b3a74c326a2bac3ee1a34d9c1b2.png",
@@ -37762,6 +38872,11 @@
       "sha256": "a4bd1269fa8d78623cb782138c7acc10b0b2d7b6b030c795421c073b547750fa"
     },
     {
+      "path": "web/_static/manual-assets/_pool/a4/a4cd9cbcf0ca78e4ec1f4ea049610119eec63b79f5a5883ebe3527088f99c708.png",
+      "size": 67617,
+      "sha256": "a4cd9cbcf0ca78e4ec1f4ea049610119eec63b79f5a5883ebe3527088f99c708"
+    },
+    {
       "path": "web/_static/manual-assets/_pool/a4/a4e4dfda3feedffa658ea4d0c84559fd18c0bc5c7b0a6bfce5306c7acae6ae62.png",
       "size": 56192,
       "sha256": "a4e4dfda3feedffa658ea4d0c84559fd18c0bc5c7b0a6bfce5306c7acae6ae62"
@@ -37850,6 +38965,11 @@
       "path": "web/_static/manual-assets/_pool/a7/a7f118ae94f4c0ccb9eb9cf66f1dcb9831172a814c6385b04292d710f5510d32.svg",
       "size": 324611,
       "sha256": "a7f118ae94f4c0ccb9eb9cf66f1dcb9831172a814c6385b04292d710f5510d32"
+    },
+    {
+      "path": "web/_static/manual-assets/_pool/a7/a7fd07ebfcb75432cb2e8d4fa3777a5737005c0accbf6dfb7eb8a1bd27151926.png",
+      "size": 78707,
+      "sha256": "a7fd07ebfcb75432cb2e8d4fa3777a5737005c0accbf6dfb7eb8a1bd27151926"
     },
     {
       "path": "web/_static/manual-assets/_pool/a8/a80dfec800b74c8bde9c2bf42cf76df226da3d3e8a22f54af1bb5253eaf4e64b.svg",
@@ -38245,6 +39365,11 @@
       "path": "web/_static/manual-assets/_pool/b6/b688edc6129a2373143a5790e11bc01c02dc0e78ac521f93645c7421c1817cee.png",
       "size": 34394,
       "sha256": "b688edc6129a2373143a5790e11bc01c02dc0e78ac521f93645c7421c1817cee"
+    },
+    {
+      "path": "web/_static/manual-assets/_pool/b6/b694de908ad978d7f883e99dae0bcd8773140bbd93e117610ac74e324ce55f80.png",
+      "size": 27006,
+      "sha256": "b694de908ad978d7f883e99dae0bcd8773140bbd93e117610ac74e324ce55f80"
     },
     {
       "path": "web/_static/manual-assets/_pool/b6/b6ba22bf8a029b653a15556e33f2015a13a517eaa08721f9b4e37264c7a14329.png",
@@ -39112,6 +40237,11 @@
       "sha256": "d9f31e0059dfef76bbc024c6da12e904e11bf7dbb7c1fdee5b8131fce571e168"
     },
     {
+      "path": "web/_static/manual-assets/_pool/d9/d9f8f62d3e0f73da6e71eec006ffe175fad6b5bcb6d351d7cf2c30909cbd9d8a.png",
+      "size": 49732,
+      "sha256": "d9f8f62d3e0f73da6e71eec006ffe175fad6b5bcb6d351d7cf2c30909cbd9d8a"
+    },
+    {
       "path": "web/_static/manual-assets/_pool/da/da29f9319eebb2896d9525d2ddb1530bed0a1b50969107bea2e37a973c690364.png",
       "size": 432898,
       "sha256": "da29f9319eebb2896d9525d2ddb1530bed0a1b50969107bea2e37a973c690364"
@@ -39973,13 +41103,13 @@
     },
     {
       "path": "web/conf.py",
-      "size": 452,
-      "sha256": "2a5ebc26fe2d3500acac9b1dd628d939416ccd31d693a331442196b4a652df67"
+      "size": 458,
+      "sha256": "e810563e783da822ff9127554da1cf7700ae8e318f0c602581f2b7539e4c27e7"
     },
     {
       "path": "web/index.md",
-      "size": 11482,
-      "sha256": "4d7e65f8549da50e87d97a3bd4ce8af316569ae81758e3df15146149d768d682"
+      "size": 11741,
+      "sha256": "23a7eb2b7029eff39f593c6f43fc83571f53d3d6d31804d1084476fd0f5875bb"
     },
     {
       "path": "web/manual_jaacwhe100eua1_eu_en.md",
@@ -40455,6 +41585,16 @@
       "path": "web/manual_jhp3600c_us_en.md",
       "size": 343,
       "sha256": "535177dda3d7b8394c7f382cc664080de514ebdbfad43e8238a1489b8008bcd9"
+    },
+    {
+      "path": "web/manual_jhp3600c_us_es.md",
+      "size": 353,
+      "sha256": "370b07085ffbc5901d71b5aa716d40c23b58b5e7d5dd5b36d6e06b35ad8fc1c5"
+    },
+    {
+      "path": "web/manual_jhp3600c_us_fr.md",
+      "size": 358,
+      "sha256": "a9ddd18eeee81f484c288d731abd0894459bb9b77fb288b8c7e2ce844c38f457"
     },
     {
       "path": "web/manual_js100f_eu_en.md",
