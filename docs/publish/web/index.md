@@ -2,6 +2,8 @@
 
 - [JA-AD01A / EU / en - Jackery 102W GaN 3-Port Fast Charger User Manual](JA-AD01A/EU/en/md/manual_jaad01a_eu_en.md)
 - [JA-AD500A-SIL / US / en - Jackery DC Input Module](JA-AD500A-SIL/US/en/md/manual_jaad500asil_us_en.md)
+- [JA-AD500A-SIL / US / es - Jackery DC Input Module](JA-AD500A-SIL/US/es/md/manual_jaad500asil_us_es.md)
+- [JA-AD500A-SIL / US / fr - Jackery DC Input Module](JA-AD500A-SIL/US/fr/md/manual_jaad500asil_us_fr.md)
 - [JA-AD600A / EU / en - Jackery DC-DC Charger User Manual](JA-AD600A/EU/en/md/manual_jaad600a_eu_en.md)
 - [JA-CA05B / EU / en - Jackery Solar Generator Connection Guide User Manual](JA-CA05B/EU/en/md/manual_jaca05b_eu_en.md)
 - [JA-CA3SA / EU / en - Solar Generator Connector User Manual](JA-CA3SA/EU/en/md/manual_jaca3sa_eu_en.md)
