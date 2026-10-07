@@ -10,11 +10,13 @@
 - `ai-share/配图/`：当前页面使用的 Q 版配图（`*-q版.png`）与保留的原图。
 - `ai-share/阅读样式.css`：主稿、参考阅读页及学生情况卡共用的样式；提示框采用浅灰底、细灰线，链接保留下划线。
 - `ai-share/04_参考资料/`：按需阅读的参考页。
+- `market-policy/records.json`：市场与政策文字记录，发布为 `/market/policy.html`；不上传原始资料截图。
 - 其余例子目录：可独立使用的练习文件。
 
 整个文件夹一起维护，保留相对路径；修改后检查图片和页面跳转。
 发布构建将 `ai-share/` 复制到网站同名路径，知识库入口为 `/workspace/`。
 原有说明书仍由 `docs/publish/` 管理。
+产品知识位于 `/products/knowledge.html`，其中保留 HomePower 产品案例；知识页可跳转到说明书，说明书首页不提供知识库入口。
 
 ## 直接在 Hello-Docs 修改
 
