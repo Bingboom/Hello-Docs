@@ -1,0 +1,1840 @@
+{
+  "schema_version": "auto-manual-frozen-web-source/v1",
+  "target": {
+    "model": "JA-AD600A",
+    "region": "EU",
+    "technical_version": "git-20261007-8f8b49d4",
+    "languages": [
+      "fr",
+      "es",
+      "de",
+      "it",
+      "uk",
+      "pt",
+      "nl",
+      "pl"
+    ]
+  },
+  "original_source": {
+    "filename": "HTO814-EU-9国语言-0924 (1).ai",
+    "sha256": "65297e68dbd6c811c5a34bb38a589ef8939b3a9eed6113ef305b60125cffb348"
+  },
+  "web_roots": {
+    "fr": "fr/md",
+    "es": "es/md",
+    "de": "de/md",
+    "it": "it/md",
+    "uk": "uk/md",
+    "pt": "pt/md",
+    "nl": "nl/md",
+    "pl": "pl/md"
+  },
+  "inputs": [
+    {
+      "path": "acceptance.json",
+      "size": 11194,
+      "sha256": "952dd484cedb915fa332e9259485a424da411628864a769272f332374a1a0d34"
+    },
+    {
+      "path": "de/md/_static/dcdc_source_local.css",
+      "size": 2223,
+      "sha256": "8642577141d2b2eb8f69ca5827d6d00203a9dc6efc3e18d032cadb6793ab9108"
+    },
+    {
+      "path": "de/md/_static/web_manual.css",
+      "size": 122691,
+      "sha256": "e6161c0bd93f8870dba044810c478e2b85b516e9d524a122e3165400fc2cf3b8"
+    },
+    {
+      "path": "de/md/assets/ir/0c716a794cf35e80b73fab35c229ebd318d5a2849baded333f09fdf3e8a4ff7f/installation_diagram_base.png",
+      "size": 363982,
+      "sha256": "0c716a794cf35e80b73fab35c229ebd318d5a2849baded333f09fdf3e8a4ff7f"
+    },
+    {
+      "path": "de/md/assets/ir/0f41fe5ea49fb7a830cab90d2a5473587dd8a0c04db775b42953f58dbea3fb0a/symbol_warning_triangle.svg",
+      "size": 4481,
+      "sha256": "0f41fe5ea49fb7a830cab90d2a5473587dd8a0c04db775b42953f58dbea3fb0a"
+    },
+    {
+      "path": "de/md/assets/ir/209c4187aab93e4e3a8a7577875a6b4d31ca325a1ac542ea9d517292ee3b906f/status_device.png",
+      "size": 42162,
+      "sha256": "209c4187aab93e4e3a8a7577875a6b4d31ca325a1ac542ea9d517292ee3b906f"
+    },
+    {
+      "path": "de/md/assets/ir/21cc25108335bcc939730216745e339d36d6ba2f531094b8b95b98b5d78e7fc6/inbox_acc_cable.png",
+      "size": 26717,
+      "sha256": "21cc25108335bcc939730216745e339d36d6ba2f531094b8b95b98b5d78e7fc6"
+    },
+    {
+      "path": "de/md/assets/ir/28488e52ce07c55da409f6ddf49be32eda4d5f2320c9a5f4b95c50c33dac15f6/inbox_output_cable.png",
+      "size": 23393,
+      "sha256": "28488e52ce07c55da409f6ddf49be32eda4d5f2320c9a5f4b95c50c33dac15f6"
+    },
+    {
+      "path": "de/md/assets/ir/2f9c40282fac46a23e7f1a24a353284fa78070862b7f476e8733d940efc888d4/panel_mark.png",
+      "size": 58884,
+      "sha256": "2f9c40282fac46a23e7f1a24a353284fa78070862b7f476e8733d940efc888d4"
+    },
+    {
+      "path": "de/md/assets/ir/312076a28c1795730ae867c3660075da10d04118b0abf628ced67df10c2cb4ff/panel_secure.png",
+      "size": 67264,
+      "sha256": "312076a28c1795730ae867c3660075da10d04118b0abf628ced67df10c2cb4ff"
+    },
+    {
+      "path": "de/md/assets/ir/3e7f503922a3b12c0cbbd613afa9328f080ca159a998b7f1f99067f97538b70b/wiring_acc_base.png",
+      "size": 55903,
+      "sha256": "3e7f503922a3b12c0cbbd613afa9328f080ca159a998b7f1f99067f97538b70b"
+    },
+    {
+      "path": "de/md/assets/ir/69ed53354910bb15207fbcf5b4989c32b2831d1054e5673ed2aa2c13edd46c93/inbox_fuse.png",
+      "size": 4423,
+      "sha256": "69ed53354910bb15207fbcf5b4989c32b2831d1054e5673ed2aa2c13edd46c93"
+    },
+    {
+      "path": "de/md/assets/ir/6e2822b857dd34567734038d31ab7bd5c6553390dc1d828a159cc33dbe69d855/panel_drill.png",
+      "size": 28134,
+      "sha256": "6e2822b857dd34567734038d31ab7bd5c6553390dc1d828a159cc33dbe69d855"
+    },
+    {
+      "path": "de/md/assets/ir/7bdcb4dd3da42b2eff652baae3998703d1c291b8771bb6394feb7a190750ca3f/wiring_battery.png",
+      "size": 65449,
+      "sha256": "7bdcb4dd3da42b2eff652baae3998703d1c291b8771bb6394feb7a190750ca3f"
+    },
+    {
+      "path": "de/md/assets/ir/8d5b841dc3efab625b871f37912e056575f713d1f386841ad471ee8824f4e1c7/inbox_m6_nuts.png",
+      "size": 6414,
+      "sha256": "8d5b841dc3efab625b871f37912e056575f713d1f386841ad471ee8824f4e1c7"
+    },
+    {
+      "path": "de/md/assets/ir/8fb3b2ca8692360087ac958ebbce9e766c34af3e49183107a8fbae3008f3e427/connection_base.png",
+      "size": 80987,
+      "sha256": "8fb3b2ca8692360087ac958ebbce9e766c34af3e49183107a8fbae3008f3e427"
+    },
+    {
+      "path": "de/md/assets/ir/97287dee4780335316be5e85624256bc4786ecb7bebe2a3aaaa84489331780e8/inbox_charger.png",
+      "size": 14264,
+      "sha256": "97287dee4780335316be5e85624256bc4786ecb7bebe2a3aaaa84489331780e8"
+    },
+    {
+      "path": "de/md/assets/ir/ad6701a141a97bc4832f90ccd756b0522e27bcbb2be7a2f617a97d597ac4a54b/body_secure.png",
+      "size": 55756,
+      "sha256": "ad6701a141a97bc4832f90ccd756b0522e27bcbb2be7a2f617a97d597ac4a54b"
+    },
+    {
+      "path": "de/md/assets/ir/adc406430c2f56a7939df30b91b83eeb168141d7351272d8c3520075400bcc95/inbox_m6_bolts.png",
+      "size": 18321,
+      "sha256": "adc406430c2f56a7939df30b91b83eeb168141d7351272d8c3520075400bcc95"
+    },
+    {
+      "path": "de/md/assets/ir/b237253debc460c0ed6213369715ea67e20d6e32a2def888253807b820fe65ee/inbox_input_cable.png",
+      "size": 29781,
+      "sha256": "b237253debc460c0ed6213369715ea67e20d6e32a2def888253807b820fe65ee"
+    },
+    {
+      "path": "de/md/assets/ir/b23a42ec957232b48dff17f43b77d0b521f4fa9126403ed8d6596284bb856f39/body_drill.png",
+      "size": 45602,
+      "sha256": "b23a42ec957232b48dff17f43b77d0b521f4fa9126403ed8d6596284bb856f39"
+    },
+    {
+      "path": "de/md/assets/ir/bafe8512654bb40af713ea793a4da5cb313740b4da9a36843cbfbea58ddc4207/wiring_fuse_base.svg",
+      "size": 182626,
+      "sha256": "bafe8512654bb40af713ea793a4da5cb313740b4da9a36843cbfbea58ddc4207"
+    },
+    {
+      "path": "de/md/assets/ir/c002c36a2bd36883140969c0ce3fe12ec4e43fe0f22a4b1db407a52bf915f7ca/product_overview_base.png",
+      "size": 57852,
+      "sha256": "c002c36a2bd36883140969c0ce3fe12ec4e43fe0f22a4b1db407a52bf915f7ca"
+    },
+    {
+      "path": "de/md/assets/ir/c66743652b31b8642db123cb809912a6f610b7adc28e48ac3b751a49b25c435f/dimensions.png",
+      "size": 49337,
+      "sha256": "c66743652b31b8642db123cb809912a6f610b7adc28e48ac3b751a49b25c435f"
+    },
+    {
+      "path": "de/md/assets/ir/eb21bcf111a7dd76141b96d10afef09dd9109a3dbab6058b5e8072d14575095c/body_clearance.png",
+      "size": 53230,
+      "sha256": "eb21bcf111a7dd76141b96d10afef09dd9109a3dbab6058b5e8072d14575095c"
+    },
+    {
+      "path": "de/md/assets/ir/f1656a627f8c33622604acb6c913bb5fb79185afa64aa9b1e74d730baeaa22ac/inbox_user_guide.png",
+      "size": 2389,
+      "sha256": "f1656a627f8c33622604acb6c913bb5fb79185afa64aa9b1e74d730baeaa22ac"
+    },
+    {
+      "path": "de/md/assets/ir/fab3f07d629ad6e06e7142b235b59b1f65c842a21b4cec93464386a34a3a2647/inbox_st55_screws.png",
+      "size": 8923,
+      "sha256": "fab3f07d629ad6e06e7142b235b59b1f65c842a21b4cec93464386a34a3a2647"
+    },
+    {
+      "path": "de/md/assets/ir/fc909e0e6d1929d528b6845e0a5af500c0220bbf44f031daf44dbcf00da6ee96/body_mark.png",
+      "size": 55971,
+      "sha256": "fc909e0e6d1929d528b6845e0a5af500c0220bbf44f031daf44dbcf00da6ee96"
+    },
+    {
+      "path": "de/md/conf.py",
+      "size": 864,
+      "sha256": "b08d58ffe0db0f0af79c8ee409af7539dd4082327020ef0df57540780f85b2b1"
+    },
+    {
+      "path": "de/md/index.md",
+      "size": 78,
+      "sha256": "dbd136d3ce8ec75851fe8789849d739b7892c244614d0ca5a645da6f1899889a"
+    },
+    {
+      "path": "de/md/manual.ir.json",
+      "size": 515635,
+      "sha256": "48a75f6cbf24802d5c9a7a7d62defa4723eb6a2cb6009cf81c903bfa6046f1f1"
+    },
+    {
+      "path": "de/md/manual_bundle.html",
+      "size": 57220,
+      "sha256": "8de2f2df9946b9f3b781ea1142af7619e8db1cbc1b66fb76222ca7de9702c145"
+    },
+    {
+      "path": "de/md/manual_jaad600a_eu_de.md",
+      "size": 52839,
+      "sha256": "6e7386ed4de8b7c6d1474f5af324775a27c674baca1654a1e4381218c94f956b"
+    },
+    {
+      "path": "es/md/_static/dcdc_source_local.css",
+      "size": 2223,
+      "sha256": "8642577141d2b2eb8f69ca5827d6d00203a9dc6efc3e18d032cadb6793ab9108"
+    },
+    {
+      "path": "es/md/_static/web_manual.css",
+      "size": 122691,
+      "sha256": "e6161c0bd93f8870dba044810c478e2b85b516e9d524a122e3165400fc2cf3b8"
+    },
+    {
+      "path": "es/md/assets/ir/0c716a794cf35e80b73fab35c229ebd318d5a2849baded333f09fdf3e8a4ff7f/installation_diagram_base.png",
+      "size": 363982,
+      "sha256": "0c716a794cf35e80b73fab35c229ebd318d5a2849baded333f09fdf3e8a4ff7f"
+    },
+    {
+      "path": "es/md/assets/ir/0f41fe5ea49fb7a830cab90d2a5473587dd8a0c04db775b42953f58dbea3fb0a/symbol_warning_triangle.svg",
+      "size": 4481,
+      "sha256": "0f41fe5ea49fb7a830cab90d2a5473587dd8a0c04db775b42953f58dbea3fb0a"
+    },
+    {
+      "path": "es/md/assets/ir/209c4187aab93e4e3a8a7577875a6b4d31ca325a1ac542ea9d517292ee3b906f/status_device.png",
+      "size": 42162,
+      "sha256": "209c4187aab93e4e3a8a7577875a6b4d31ca325a1ac542ea9d517292ee3b906f"
+    },
+    {
+      "path": "es/md/assets/ir/21cc25108335bcc939730216745e339d36d6ba2f531094b8b95b98b5d78e7fc6/inbox_acc_cable.png",
+      "size": 26717,
+      "sha256": "21cc25108335bcc939730216745e339d36d6ba2f531094b8b95b98b5d78e7fc6"
+    },
+    {
+      "path": "es/md/assets/ir/28488e52ce07c55da409f6ddf49be32eda4d5f2320c9a5f4b95c50c33dac15f6/inbox_output_cable.png",
+      "size": 23393,
+      "sha256": "28488e52ce07c55da409f6ddf49be32eda4d5f2320c9a5f4b95c50c33dac15f6"
+    },
+    {
+      "path": "es/md/assets/ir/2f9c40282fac46a23e7f1a24a353284fa78070862b7f476e8733d940efc888d4/panel_mark.png",
+      "size": 58884,
+      "sha256": "2f9c40282fac46a23e7f1a24a353284fa78070862b7f476e8733d940efc888d4"
+    },
+    {
+      "path": "es/md/assets/ir/312076a28c1795730ae867c3660075da10d04118b0abf628ced67df10c2cb4ff/panel_secure.png",
+      "size": 67264,
+      "sha256": "312076a28c1795730ae867c3660075da10d04118b0abf628ced67df10c2cb4ff"
+    },
+    {
+      "path": "es/md/assets/ir/3e7f503922a3b12c0cbbd613afa9328f080ca159a998b7f1f99067f97538b70b/wiring_acc_base.png",
+      "size": 55903,
+      "sha256": "3e7f503922a3b12c0cbbd613afa9328f080ca159a998b7f1f99067f97538b70b"
+    },
+    {
+      "path": "es/md/assets/ir/45f309ed8b3f4787b6dde440c738b8e0fbc5074bf758fecc2e1ac44307153d90/fcc_mark.png",
+      "size": 28135,
+      "sha256": "45f309ed8b3f4787b6dde440c738b8e0fbc5074bf758fecc2e1ac44307153d90"
+    },
+    {
+      "path": "es/md/assets/ir/69ed53354910bb15207fbcf5b4989c32b2831d1054e5673ed2aa2c13edd46c93/inbox_fuse.png",
+      "size": 4423,
+      "sha256": "69ed53354910bb15207fbcf5b4989c32b2831d1054e5673ed2aa2c13edd46c93"
+    },
+    {
+      "path": "es/md/assets/ir/6e2822b857dd34567734038d31ab7bd5c6553390dc1d828a159cc33dbe69d855/panel_drill.png",
+      "size": 28134,
+      "sha256": "6e2822b857dd34567734038d31ab7bd5c6553390dc1d828a159cc33dbe69d855"
+    },
+    {
+      "path": "es/md/assets/ir/7bdcb4dd3da42b2eff652baae3998703d1c291b8771bb6394feb7a190750ca3f/wiring_battery.png",
+      "size": 65449,
+      "sha256": "7bdcb4dd3da42b2eff652baae3998703d1c291b8771bb6394feb7a190750ca3f"
+    },
+    {
+      "path": "es/md/assets/ir/8d5b841dc3efab625b871f37912e056575f713d1f386841ad471ee8824f4e1c7/inbox_m6_nuts.png",
+      "size": 6414,
+      "sha256": "8d5b841dc3efab625b871f37912e056575f713d1f386841ad471ee8824f4e1c7"
+    },
+    {
+      "path": "es/md/assets/ir/8fb3b2ca8692360087ac958ebbce9e766c34af3e49183107a8fbae3008f3e427/connection_base.png",
+      "size": 80987,
+      "sha256": "8fb3b2ca8692360087ac958ebbce9e766c34af3e49183107a8fbae3008f3e427"
+    },
+    {
+      "path": "es/md/assets/ir/97287dee4780335316be5e85624256bc4786ecb7bebe2a3aaaa84489331780e8/inbox_charger.png",
+      "size": 14264,
+      "sha256": "97287dee4780335316be5e85624256bc4786ecb7bebe2a3aaaa84489331780e8"
+    },
+    {
+      "path": "es/md/assets/ir/ad6701a141a97bc4832f90ccd756b0522e27bcbb2be7a2f617a97d597ac4a54b/body_secure.png",
+      "size": 55756,
+      "sha256": "ad6701a141a97bc4832f90ccd756b0522e27bcbb2be7a2f617a97d597ac4a54b"
+    },
+    {
+      "path": "es/md/assets/ir/adc406430c2f56a7939df30b91b83eeb168141d7351272d8c3520075400bcc95/inbox_m6_bolts.png",
+      "size": 18321,
+      "sha256": "adc406430c2f56a7939df30b91b83eeb168141d7351272d8c3520075400bcc95"
+    },
+    {
+      "path": "es/md/assets/ir/b237253debc460c0ed6213369715ea67e20d6e32a2def888253807b820fe65ee/inbox_input_cable.png",
+      "size": 29781,
+      "sha256": "b237253debc460c0ed6213369715ea67e20d6e32a2def888253807b820fe65ee"
+    },
+    {
+      "path": "es/md/assets/ir/b23a42ec957232b48dff17f43b77d0b521f4fa9126403ed8d6596284bb856f39/body_drill.png",
+      "size": 45602,
+      "sha256": "b23a42ec957232b48dff17f43b77d0b521f4fa9126403ed8d6596284bb856f39"
+    },
+    {
+      "path": "es/md/assets/ir/bafe8512654bb40af713ea793a4da5cb313740b4da9a36843cbfbea58ddc4207/wiring_fuse_base.svg",
+      "size": 182626,
+      "sha256": "bafe8512654bb40af713ea793a4da5cb313740b4da9a36843cbfbea58ddc4207"
+    },
+    {
+      "path": "es/md/assets/ir/c002c36a2bd36883140969c0ce3fe12ec4e43fe0f22a4b1db407a52bf915f7ca/product_overview_base.png",
+      "size": 57852,
+      "sha256": "c002c36a2bd36883140969c0ce3fe12ec4e43fe0f22a4b1db407a52bf915f7ca"
+    },
+    {
+      "path": "es/md/assets/ir/c66743652b31b8642db123cb809912a6f610b7adc28e48ac3b751a49b25c435f/dimensions.png",
+      "size": 49337,
+      "sha256": "c66743652b31b8642db123cb809912a6f610b7adc28e48ac3b751a49b25c435f"
+    },
+    {
+      "path": "es/md/assets/ir/eb21bcf111a7dd76141b96d10afef09dd9109a3dbab6058b5e8072d14575095c/body_clearance.png",
+      "size": 53230,
+      "sha256": "eb21bcf111a7dd76141b96d10afef09dd9109a3dbab6058b5e8072d14575095c"
+    },
+    {
+      "path": "es/md/assets/ir/f1656a627f8c33622604acb6c913bb5fb79185afa64aa9b1e74d730baeaa22ac/inbox_user_guide.png",
+      "size": 2389,
+      "sha256": "f1656a627f8c33622604acb6c913bb5fb79185afa64aa9b1e74d730baeaa22ac"
+    },
+    {
+      "path": "es/md/assets/ir/fab3f07d629ad6e06e7142b235b59b1f65c842a21b4cec93464386a34a3a2647/inbox_st55_screws.png",
+      "size": 8923,
+      "sha256": "fab3f07d629ad6e06e7142b235b59b1f65c842a21b4cec93464386a34a3a2647"
+    },
+    {
+      "path": "es/md/assets/ir/fc909e0e6d1929d528b6845e0a5af500c0220bbf44f031daf44dbcf00da6ee96/body_mark.png",
+      "size": 55971,
+      "sha256": "fc909e0e6d1929d528b6845e0a5af500c0220bbf44f031daf44dbcf00da6ee96"
+    },
+    {
+      "path": "es/md/conf.py",
+      "size": 864,
+      "sha256": "322729fee944d17474506447dd24ef82f56279b8aae52901768c095b1ec6cbdc"
+    },
+    {
+      "path": "es/md/index.md",
+      "size": 78,
+      "sha256": "06083381515c4308873e79812c60de3e90679798e3d3a3b7239c4f6d9562b236"
+    },
+    {
+      "path": "es/md/manual.ir.json",
+      "size": 516879,
+      "sha256": "081b805f803bf56dd2d09c4e72f05fd7c4b17b7e3883c5f0e3d18ff39000fd59"
+    },
+    {
+      "path": "es/md/manual_bundle.html",
+      "size": 57474,
+      "sha256": "1671c567a7a1edb7f7deeae3624cc81e3da65918a4e26c9fbb404070b7b4ca22"
+    },
+    {
+      "path": "es/md/manual_jaad600a_eu_es.md",
+      "size": 52967,
+      "sha256": "010682778a5305194c7b76cb22ef20e91727f9b8396c94278259ebff8685d855"
+    },
+    {
+      "path": "fr/md/_static/dcdc_source_local.css",
+      "size": 2223,
+      "sha256": "8642577141d2b2eb8f69ca5827d6d00203a9dc6efc3e18d032cadb6793ab9108"
+    },
+    {
+      "path": "fr/md/_static/web_manual.css",
+      "size": 122691,
+      "sha256": "e6161c0bd93f8870dba044810c478e2b85b516e9d524a122e3165400fc2cf3b8"
+    },
+    {
+      "path": "fr/md/assets/ir/0c716a794cf35e80b73fab35c229ebd318d5a2849baded333f09fdf3e8a4ff7f/installation_diagram_base.png",
+      "size": 363982,
+      "sha256": "0c716a794cf35e80b73fab35c229ebd318d5a2849baded333f09fdf3e8a4ff7f"
+    },
+    {
+      "path": "fr/md/assets/ir/0f41fe5ea49fb7a830cab90d2a5473587dd8a0c04db775b42953f58dbea3fb0a/symbol_warning_triangle.svg",
+      "size": 4481,
+      "sha256": "0f41fe5ea49fb7a830cab90d2a5473587dd8a0c04db775b42953f58dbea3fb0a"
+    },
+    {
+      "path": "fr/md/assets/ir/209c4187aab93e4e3a8a7577875a6b4d31ca325a1ac542ea9d517292ee3b906f/status_device.png",
+      "size": 42162,
+      "sha256": "209c4187aab93e4e3a8a7577875a6b4d31ca325a1ac542ea9d517292ee3b906f"
+    },
+    {
+      "path": "fr/md/assets/ir/21cc25108335bcc939730216745e339d36d6ba2f531094b8b95b98b5d78e7fc6/inbox_acc_cable.png",
+      "size": 26717,
+      "sha256": "21cc25108335bcc939730216745e339d36d6ba2f531094b8b95b98b5d78e7fc6"
+    },
+    {
+      "path": "fr/md/assets/ir/28488e52ce07c55da409f6ddf49be32eda4d5f2320c9a5f4b95c50c33dac15f6/inbox_output_cable.png",
+      "size": 23393,
+      "sha256": "28488e52ce07c55da409f6ddf49be32eda4d5f2320c9a5f4b95c50c33dac15f6"
+    },
+    {
+      "path": "fr/md/assets/ir/2f9c40282fac46a23e7f1a24a353284fa78070862b7f476e8733d940efc888d4/panel_mark.png",
+      "size": 58884,
+      "sha256": "2f9c40282fac46a23e7f1a24a353284fa78070862b7f476e8733d940efc888d4"
+    },
+    {
+      "path": "fr/md/assets/ir/312076a28c1795730ae867c3660075da10d04118b0abf628ced67df10c2cb4ff/panel_secure.png",
+      "size": 67264,
+      "sha256": "312076a28c1795730ae867c3660075da10d04118b0abf628ced67df10c2cb4ff"
+    },
+    {
+      "path": "fr/md/assets/ir/3e7f503922a3b12c0cbbd613afa9328f080ca159a998b7f1f99067f97538b70b/wiring_acc_base.png",
+      "size": 55903,
+      "sha256": "3e7f503922a3b12c0cbbd613afa9328f080ca159a998b7f1f99067f97538b70b"
+    },
+    {
+      "path": "fr/md/assets/ir/45f309ed8b3f4787b6dde440c738b8e0fbc5074bf758fecc2e1ac44307153d90/fcc_mark.png",
+      "size": 28135,
+      "sha256": "45f309ed8b3f4787b6dde440c738b8e0fbc5074bf758fecc2e1ac44307153d90"
+    },
+    {
+      "path": "fr/md/assets/ir/69ed53354910bb15207fbcf5b4989c32b2831d1054e5673ed2aa2c13edd46c93/inbox_fuse.png",
+      "size": 4423,
+      "sha256": "69ed53354910bb15207fbcf5b4989c32b2831d1054e5673ed2aa2c13edd46c93"
+    },
+    {
+      "path": "fr/md/assets/ir/6e2822b857dd34567734038d31ab7bd5c6553390dc1d828a159cc33dbe69d855/panel_drill.png",
+      "size": 28134,
+      "sha256": "6e2822b857dd34567734038d31ab7bd5c6553390dc1d828a159cc33dbe69d855"
+    },
+    {
+      "path": "fr/md/assets/ir/7bdcb4dd3da42b2eff652baae3998703d1c291b8771bb6394feb7a190750ca3f/wiring_battery.png",
+      "size": 65449,
+      "sha256": "7bdcb4dd3da42b2eff652baae3998703d1c291b8771bb6394feb7a190750ca3f"
+    },
+    {
+      "path": "fr/md/assets/ir/8d5b841dc3efab625b871f37912e056575f713d1f386841ad471ee8824f4e1c7/inbox_m6_nuts.png",
+      "size": 6414,
+      "sha256": "8d5b841dc3efab625b871f37912e056575f713d1f386841ad471ee8824f4e1c7"
+    },
+    {
+      "path": "fr/md/assets/ir/8fb3b2ca8692360087ac958ebbce9e766c34af3e49183107a8fbae3008f3e427/connection_base.png",
+      "size": 80987,
+      "sha256": "8fb3b2ca8692360087ac958ebbce9e766c34af3e49183107a8fbae3008f3e427"
+    },
+    {
+      "path": "fr/md/assets/ir/97287dee4780335316be5e85624256bc4786ecb7bebe2a3aaaa84489331780e8/inbox_charger.png",
+      "size": 14264,
+      "sha256": "97287dee4780335316be5e85624256bc4786ecb7bebe2a3aaaa84489331780e8"
+    },
+    {
+      "path": "fr/md/assets/ir/ad6701a141a97bc4832f90ccd756b0522e27bcbb2be7a2f617a97d597ac4a54b/body_secure.png",
+      "size": 55756,
+      "sha256": "ad6701a141a97bc4832f90ccd756b0522e27bcbb2be7a2f617a97d597ac4a54b"
+    },
+    {
+      "path": "fr/md/assets/ir/adc406430c2f56a7939df30b91b83eeb168141d7351272d8c3520075400bcc95/inbox_m6_bolts.png",
+      "size": 18321,
+      "sha256": "adc406430c2f56a7939df30b91b83eeb168141d7351272d8c3520075400bcc95"
+    },
+    {
+      "path": "fr/md/assets/ir/b237253debc460c0ed6213369715ea67e20d6e32a2def888253807b820fe65ee/inbox_input_cable.png",
+      "size": 29781,
+      "sha256": "b237253debc460c0ed6213369715ea67e20d6e32a2def888253807b820fe65ee"
+    },
+    {
+      "path": "fr/md/assets/ir/b23a42ec957232b48dff17f43b77d0b521f4fa9126403ed8d6596284bb856f39/body_drill.png",
+      "size": 45602,
+      "sha256": "b23a42ec957232b48dff17f43b77d0b521f4fa9126403ed8d6596284bb856f39"
+    },
+    {
+      "path": "fr/md/assets/ir/bafe8512654bb40af713ea793a4da5cb313740b4da9a36843cbfbea58ddc4207/wiring_fuse_base.svg",
+      "size": 182626,
+      "sha256": "bafe8512654bb40af713ea793a4da5cb313740b4da9a36843cbfbea58ddc4207"
+    },
+    {
+      "path": "fr/md/assets/ir/c002c36a2bd36883140969c0ce3fe12ec4e43fe0f22a4b1db407a52bf915f7ca/product_overview_base.png",
+      "size": 57852,
+      "sha256": "c002c36a2bd36883140969c0ce3fe12ec4e43fe0f22a4b1db407a52bf915f7ca"
+    },
+    {
+      "path": "fr/md/assets/ir/c66743652b31b8642db123cb809912a6f610b7adc28e48ac3b751a49b25c435f/dimensions.png",
+      "size": 49337,
+      "sha256": "c66743652b31b8642db123cb809912a6f610b7adc28e48ac3b751a49b25c435f"
+    },
+    {
+      "path": "fr/md/assets/ir/eb21bcf111a7dd76141b96d10afef09dd9109a3dbab6058b5e8072d14575095c/body_clearance.png",
+      "size": 53230,
+      "sha256": "eb21bcf111a7dd76141b96d10afef09dd9109a3dbab6058b5e8072d14575095c"
+    },
+    {
+      "path": "fr/md/assets/ir/f1656a627f8c33622604acb6c913bb5fb79185afa64aa9b1e74d730baeaa22ac/inbox_user_guide.png",
+      "size": 2389,
+      "sha256": "f1656a627f8c33622604acb6c913bb5fb79185afa64aa9b1e74d730baeaa22ac"
+    },
+    {
+      "path": "fr/md/assets/ir/fab3f07d629ad6e06e7142b235b59b1f65c842a21b4cec93464386a34a3a2647/inbox_st55_screws.png",
+      "size": 8923,
+      "sha256": "fab3f07d629ad6e06e7142b235b59b1f65c842a21b4cec93464386a34a3a2647"
+    },
+    {
+      "path": "fr/md/assets/ir/fc909e0e6d1929d528b6845e0a5af500c0220bbf44f031daf44dbcf00da6ee96/body_mark.png",
+      "size": 55971,
+      "sha256": "fc909e0e6d1929d528b6845e0a5af500c0220bbf44f031daf44dbcf00da6ee96"
+    },
+    {
+      "path": "fr/md/conf.py",
+      "size": 864,
+      "sha256": "3e3e236e3e7575762fba5038ba0de27b89943c918bd9d518e0c6dea2da63094f"
+    },
+    {
+      "path": "fr/md/index.md",
+      "size": 78,
+      "sha256": "1a34554ec59903120dfab9ce4faffc23677cd05e2ecf568787231ba7b40ae832"
+    },
+    {
+      "path": "fr/md/manual.ir.json",
+      "size": 519757,
+      "sha256": "a45760a18584420fbadb99a3146fb7eb1e8215cb7df8d73b51a08e2da87af32f"
+    },
+    {
+      "path": "fr/md/manual_bundle.html",
+      "size": 57950,
+      "sha256": "33266f74d037bf6357fe740477b3d65ec1c84585365ea2882e4dc06a64a8bd34"
+    },
+    {
+      "path": "fr/md/manual_jaad600a_eu_fr.md",
+      "size": 53313,
+      "sha256": "cd17dc068e51f6cef6b6b76344028965256f6a6705dfef514e4f3e7e703e837b"
+    },
+    {
+      "path": "it/md/_static/dcdc_source_local.css",
+      "size": 2223,
+      "sha256": "8642577141d2b2eb8f69ca5827d6d00203a9dc6efc3e18d032cadb6793ab9108"
+    },
+    {
+      "path": "it/md/_static/web_manual.css",
+      "size": 122691,
+      "sha256": "e6161c0bd93f8870dba044810c478e2b85b516e9d524a122e3165400fc2cf3b8"
+    },
+    {
+      "path": "it/md/assets/ir/0c716a794cf35e80b73fab35c229ebd318d5a2849baded333f09fdf3e8a4ff7f/installation_diagram_base.png",
+      "size": 363982,
+      "sha256": "0c716a794cf35e80b73fab35c229ebd318d5a2849baded333f09fdf3e8a4ff7f"
+    },
+    {
+      "path": "it/md/assets/ir/0f41fe5ea49fb7a830cab90d2a5473587dd8a0c04db775b42953f58dbea3fb0a/symbol_warning_triangle.svg",
+      "size": 4481,
+      "sha256": "0f41fe5ea49fb7a830cab90d2a5473587dd8a0c04db775b42953f58dbea3fb0a"
+    },
+    {
+      "path": "it/md/assets/ir/209c4187aab93e4e3a8a7577875a6b4d31ca325a1ac542ea9d517292ee3b906f/status_device.png",
+      "size": 42162,
+      "sha256": "209c4187aab93e4e3a8a7577875a6b4d31ca325a1ac542ea9d517292ee3b906f"
+    },
+    {
+      "path": "it/md/assets/ir/21cc25108335bcc939730216745e339d36d6ba2f531094b8b95b98b5d78e7fc6/inbox_acc_cable.png",
+      "size": 26717,
+      "sha256": "21cc25108335bcc939730216745e339d36d6ba2f531094b8b95b98b5d78e7fc6"
+    },
+    {
+      "path": "it/md/assets/ir/28488e52ce07c55da409f6ddf49be32eda4d5f2320c9a5f4b95c50c33dac15f6/inbox_output_cable.png",
+      "size": 23393,
+      "sha256": "28488e52ce07c55da409f6ddf49be32eda4d5f2320c9a5f4b95c50c33dac15f6"
+    },
+    {
+      "path": "it/md/assets/ir/2f9c40282fac46a23e7f1a24a353284fa78070862b7f476e8733d940efc888d4/panel_mark.png",
+      "size": 58884,
+      "sha256": "2f9c40282fac46a23e7f1a24a353284fa78070862b7f476e8733d940efc888d4"
+    },
+    {
+      "path": "it/md/assets/ir/312076a28c1795730ae867c3660075da10d04118b0abf628ced67df10c2cb4ff/panel_secure.png",
+      "size": 67264,
+      "sha256": "312076a28c1795730ae867c3660075da10d04118b0abf628ced67df10c2cb4ff"
+    },
+    {
+      "path": "it/md/assets/ir/3e7f503922a3b12c0cbbd613afa9328f080ca159a998b7f1f99067f97538b70b/wiring_acc_base.png",
+      "size": 55903,
+      "sha256": "3e7f503922a3b12c0cbbd613afa9328f080ca159a998b7f1f99067f97538b70b"
+    },
+    {
+      "path": "it/md/assets/ir/69ed53354910bb15207fbcf5b4989c32b2831d1054e5673ed2aa2c13edd46c93/inbox_fuse.png",
+      "size": 4423,
+      "sha256": "69ed53354910bb15207fbcf5b4989c32b2831d1054e5673ed2aa2c13edd46c93"
+    },
+    {
+      "path": "it/md/assets/ir/6e2822b857dd34567734038d31ab7bd5c6553390dc1d828a159cc33dbe69d855/panel_drill.png",
+      "size": 28134,
+      "sha256": "6e2822b857dd34567734038d31ab7bd5c6553390dc1d828a159cc33dbe69d855"
+    },
+    {
+      "path": "it/md/assets/ir/7bdcb4dd3da42b2eff652baae3998703d1c291b8771bb6394feb7a190750ca3f/wiring_battery.png",
+      "size": 65449,
+      "sha256": "7bdcb4dd3da42b2eff652baae3998703d1c291b8771bb6394feb7a190750ca3f"
+    },
+    {
+      "path": "it/md/assets/ir/8d5b841dc3efab625b871f37912e056575f713d1f386841ad471ee8824f4e1c7/inbox_m6_nuts.png",
+      "size": 6414,
+      "sha256": "8d5b841dc3efab625b871f37912e056575f713d1f386841ad471ee8824f4e1c7"
+    },
+    {
+      "path": "it/md/assets/ir/8fb3b2ca8692360087ac958ebbce9e766c34af3e49183107a8fbae3008f3e427/connection_base.png",
+      "size": 80987,
+      "sha256": "8fb3b2ca8692360087ac958ebbce9e766c34af3e49183107a8fbae3008f3e427"
+    },
+    {
+      "path": "it/md/assets/ir/97287dee4780335316be5e85624256bc4786ecb7bebe2a3aaaa84489331780e8/inbox_charger.png",
+      "size": 14264,
+      "sha256": "97287dee4780335316be5e85624256bc4786ecb7bebe2a3aaaa84489331780e8"
+    },
+    {
+      "path": "it/md/assets/ir/ad6701a141a97bc4832f90ccd756b0522e27bcbb2be7a2f617a97d597ac4a54b/body_secure.png",
+      "size": 55756,
+      "sha256": "ad6701a141a97bc4832f90ccd756b0522e27bcbb2be7a2f617a97d597ac4a54b"
+    },
+    {
+      "path": "it/md/assets/ir/adc406430c2f56a7939df30b91b83eeb168141d7351272d8c3520075400bcc95/inbox_m6_bolts.png",
+      "size": 18321,
+      "sha256": "adc406430c2f56a7939df30b91b83eeb168141d7351272d8c3520075400bcc95"
+    },
+    {
+      "path": "it/md/assets/ir/b237253debc460c0ed6213369715ea67e20d6e32a2def888253807b820fe65ee/inbox_input_cable.png",
+      "size": 29781,
+      "sha256": "b237253debc460c0ed6213369715ea67e20d6e32a2def888253807b820fe65ee"
+    },
+    {
+      "path": "it/md/assets/ir/b23a42ec957232b48dff17f43b77d0b521f4fa9126403ed8d6596284bb856f39/body_drill.png",
+      "size": 45602,
+      "sha256": "b23a42ec957232b48dff17f43b77d0b521f4fa9126403ed8d6596284bb856f39"
+    },
+    {
+      "path": "it/md/assets/ir/bafe8512654bb40af713ea793a4da5cb313740b4da9a36843cbfbea58ddc4207/wiring_fuse_base.svg",
+      "size": 182626,
+      "sha256": "bafe8512654bb40af713ea793a4da5cb313740b4da9a36843cbfbea58ddc4207"
+    },
+    {
+      "path": "it/md/assets/ir/c002c36a2bd36883140969c0ce3fe12ec4e43fe0f22a4b1db407a52bf915f7ca/product_overview_base.png",
+      "size": 57852,
+      "sha256": "c002c36a2bd36883140969c0ce3fe12ec4e43fe0f22a4b1db407a52bf915f7ca"
+    },
+    {
+      "path": "it/md/assets/ir/c66743652b31b8642db123cb809912a6f610b7adc28e48ac3b751a49b25c435f/dimensions.png",
+      "size": 49337,
+      "sha256": "c66743652b31b8642db123cb809912a6f610b7adc28e48ac3b751a49b25c435f"
+    },
+    {
+      "path": "it/md/assets/ir/eb21bcf111a7dd76141b96d10afef09dd9109a3dbab6058b5e8072d14575095c/body_clearance.png",
+      "size": 53230,
+      "sha256": "eb21bcf111a7dd76141b96d10afef09dd9109a3dbab6058b5e8072d14575095c"
+    },
+    {
+      "path": "it/md/assets/ir/f1656a627f8c33622604acb6c913bb5fb79185afa64aa9b1e74d730baeaa22ac/inbox_user_guide.png",
+      "size": 2389,
+      "sha256": "f1656a627f8c33622604acb6c913bb5fb79185afa64aa9b1e74d730baeaa22ac"
+    },
+    {
+      "path": "it/md/assets/ir/fab3f07d629ad6e06e7142b235b59b1f65c842a21b4cec93464386a34a3a2647/inbox_st55_screws.png",
+      "size": 8923,
+      "sha256": "fab3f07d629ad6e06e7142b235b59b1f65c842a21b4cec93464386a34a3a2647"
+    },
+    {
+      "path": "it/md/assets/ir/fc909e0e6d1929d528b6845e0a5af500c0220bbf44f031daf44dbcf00da6ee96/body_mark.png",
+      "size": 55971,
+      "sha256": "fc909e0e6d1929d528b6845e0a5af500c0220bbf44f031daf44dbcf00da6ee96"
+    },
+    {
+      "path": "it/md/conf.py",
+      "size": 864,
+      "sha256": "9b2f0f02ab5cdb40d7a39c1c8770c5df77fd2c8b818ad489ea4b3af32c20fe7a"
+    },
+    {
+      "path": "it/md/index.md",
+      "size": 78,
+      "sha256": "cc06f8887a5b4ce9d0bc5c307ef5a4bddb77d07621c2f5e5262cc6e424e20231"
+    },
+    {
+      "path": "it/md/manual.ir.json",
+      "size": 514880,
+      "sha256": "0f222c25bdf9d3b52c718bde005fc2dc5938b215c0851f894e4cc86324de59c0"
+    },
+    {
+      "path": "it/md/manual_bundle.html",
+      "size": 56569,
+      "sha256": "4038015c455277d170e603afed318a134d56939371eb3162b9fd6d6b01beda92"
+    },
+    {
+      "path": "it/md/manual_jaad600a_eu_it.md",
+      "size": 52154,
+      "sha256": "cde474a623f25f2ab01bf3e6db5fcdbfc0de26cebdd6c2eb892689d2b79ff6fe"
+    },
+    {
+      "path": "native-source/de/box_contents_de.rst",
+      "size": 2229,
+      "sha256": "c35182b52816b0637e9ff9b691d2bcb0165c991aeeaf2e9b618dd82e50a1cedd"
+    },
+    {
+      "path": "native-source/de/capture.json",
+      "size": 125034,
+      "sha256": "435d22265176d8db805e47a74e73de181cadcb954e5daf67b591383713f0f9b7"
+    },
+    {
+      "path": "native-source/de/dimensions_de.rst",
+      "size": 100,
+      "sha256": "f9551aba3a1fa6ecec310e63b80aa3161714ecfae8ba02aed9479d0c91850e17"
+    },
+    {
+      "path": "native-source/de/disclaimer_de.rst",
+      "size": 1882,
+      "sha256": "a71cfebbb1cc74f2b17eef75c2cd99552baba4a74948667024695bd2ff079a9b"
+    },
+    {
+      "path": "native-source/de/faq_de.rst",
+      "size": 2896,
+      "sha256": "c04b6d45bfc7f83a58644872da1b24b17d8650073a38a68e4c58ee0178992fe5"
+    },
+    {
+      "path": "native-source/de/important_safety_de.rst",
+      "size": 6007,
+      "sha256": "70297aafcc918d6352310bf5e55a7f1de672c8b71862851aaa7b510d9456b264"
+    },
+    {
+      "path": "native-source/de/installation_de.rst",
+      "size": 16829,
+      "sha256": "2b7ca402133ec1f3bccbce58b8907af31278c936d2fc58bbacfb4fa3575b13a2"
+    },
+    {
+      "path": "native-source/de/product_overview_de.rst",
+      "size": 275,
+      "sha256": "8e3fce6ee42ef6817f72993d9a141605ae92832524bde018ee9755a8254ab696"
+    },
+    {
+      "path": "native-source/de/specifications_de.rst",
+      "size": 1648,
+      "sha256": "fddfbd8f343b8e145467abc1b45ebc626219ff1d034c3e1462e8594b9c4ef379"
+    },
+    {
+      "path": "native-source/de/warranty_de.rst",
+      "size": 3267,
+      "sha256": "a925f2bb3a0eaa9b18a5fe4a7e17068277d081d10ee327d8d976a8fc29067ebe"
+    },
+    {
+      "path": "native-source/es/box_contents_es.rst",
+      "size": 2230,
+      "sha256": "01c2cce3be23eb7d60c5e6a4c5452f1ac98cc192782feebe5933d5916e643a40"
+    },
+    {
+      "path": "native-source/es/capture.json",
+      "size": 123748,
+      "sha256": "864f986c7e3fc9a953734788ed8cd85ea60b99a0fcac243c359f93b58313ba7f"
+    },
+    {
+      "path": "native-source/es/dimensions_es.rst",
+      "size": 100,
+      "sha256": "f9551aba3a1fa6ecec310e63b80aa3161714ecfae8ba02aed9479d0c91850e17"
+    },
+    {
+      "path": "native-source/es/disclaimer_es.rst",
+      "size": 1623,
+      "sha256": "41d3f11163cb0309a6e360c35a23e916ecb41d14d94d78b63b9ee50cf1b8ab87"
+    },
+    {
+      "path": "native-source/es/faq_es.rst",
+      "size": 3156,
+      "sha256": "44b9541ce33fda1f7129762f447b807d742731b5859affdea05648aa1ff9004c"
+    },
+    {
+      "path": "native-source/es/important_safety_es.rst",
+      "size": 6281,
+      "sha256": "78ef345064c4cded33a70fff95b096f896901bf200b0a435674e5515a3c0f11d"
+    },
+    {
+      "path": "native-source/es/installation_es.rst",
+      "size": 16883,
+      "sha256": "5e24a03697b32f807333aa25dce81de8983c4bf8b67982c4cfc63865762797b7"
+    },
+    {
+      "path": "native-source/es/product_overview_es.rst",
+      "size": 310,
+      "sha256": "d709dde262430a2082cffe6528506c221c1faf67537e4adf1641195b74ff029c"
+    },
+    {
+      "path": "native-source/es/specifications_es.rst",
+      "size": 1690,
+      "sha256": "e2d0b5339836450623c8873f04e47ad5aa8150e8a14546c6ba86ea31c45adde4"
+    },
+    {
+      "path": "native-source/es/warranty_es.rst",
+      "size": 3080,
+      "sha256": "835b05ab93732d4e30d3fdea6bf24aa5d4051daf08ac4612c9306fead2b54733"
+    },
+    {
+      "path": "native-source/fr/box_contents_fr.rst",
+      "size": 2243,
+      "sha256": "60c941f5693a6efeac6c2856f36f1b66fa32ac100d02682e7f52282ca05e4f8d"
+    },
+    {
+      "path": "native-source/fr/capture.json",
+      "size": 124838,
+      "sha256": "e1797d9eb3530a0e133ec693664751eb21d21fbc37be19c09298fe0d0005a132"
+    },
+    {
+      "path": "native-source/fr/dimensions_fr.rst",
+      "size": 100,
+      "sha256": "f9551aba3a1fa6ecec310e63b80aa3161714ecfae8ba02aed9479d0c91850e17"
+    },
+    {
+      "path": "native-source/fr/disclaimer_fr.rst",
+      "size": 1798,
+      "sha256": "8a55c5cf49610189348567848543bc181ecf5ba5ddc84e137a9e75cc2183c1e6"
+    },
+    {
+      "path": "native-source/fr/faq_fr.rst",
+      "size": 3010,
+      "sha256": "55160a4b892584056bc3e740ac22e4c71531efb6114cb1cdabb6666d133e4398"
+    },
+    {
+      "path": "native-source/fr/important_safety_fr.rst",
+      "size": 6167,
+      "sha256": "da8235cbd20f55a6328639e969d82ea30343a5337f8a217111c0d7afb4b8bfc5"
+    },
+    {
+      "path": "native-source/fr/installation_fr.rst",
+      "size": 17263,
+      "sha256": "86f82de19111fa5e6414a40a715eb578393fa0a9093427921ae3d0d10b253b3e"
+    },
+    {
+      "path": "native-source/fr/product_overview_fr.rst",
+      "size": 268,
+      "sha256": "af19b2a2acde76ac2e03d6cff12776ea6678aba8f334335484cf6e5da1da1702"
+    },
+    {
+      "path": "native-source/fr/specifications_fr.rst",
+      "size": 1704,
+      "sha256": "226a8a59ea479b728b2d2b7c37fdc71bd5fdedd34f5d16a21b4ef4ec74d20704"
+    },
+    {
+      "path": "native-source/fr/warranty_fr.rst",
+      "size": 3186,
+      "sha256": "e4775bd646aafb487c63e7fbf72c2e3c640c4c5e177fbc286cb06081bbff5952"
+    },
+    {
+      "path": "native-source/it/box_contents_it.rst",
+      "size": 2243,
+      "sha256": "15464acd122168acf50997a2437b11a8d7883cf332c87561f42b45f1df88f550"
+    },
+    {
+      "path": "native-source/it/capture.json",
+      "size": 120189,
+      "sha256": "96a047119e21b0aac929451dfed5e70b020acab8ba3fd2430fd9893d08b3e0c8"
+    },
+    {
+      "path": "native-source/it/dimensions_it.rst",
+      "size": 100,
+      "sha256": "f9551aba3a1fa6ecec310e63b80aa3161714ecfae8ba02aed9479d0c91850e17"
+    },
+    {
+      "path": "native-source/it/disclaimer_it.rst",
+      "size": 1763,
+      "sha256": "a7f8952d52099c7b111ccb7761e20649deddca4645d9646707e61e0268af0b93"
+    },
+    {
+      "path": "native-source/it/faq_it.rst",
+      "size": 2926,
+      "sha256": "ee0953b86c4bdf41d5886b95c171848baa5af8dfdb64064416b9e543446624f8"
+    },
+    {
+      "path": "native-source/it/important_safety_it.rst",
+      "size": 5976,
+      "sha256": "c83c83a4f4a74c3d8142930de3a7ecccefcddc5c954b1142c67b66236ebf2bae"
+    },
+    {
+      "path": "native-source/it/installation_it.rst",
+      "size": 16185,
+      "sha256": "eecda42c8fce26bb1a171f572bd596e000f987c4df04fb3e99917396d82690c9"
+    },
+    {
+      "path": "native-source/it/product_overview_it.rst",
+      "size": 281,
+      "sha256": "0030874bceed52204d9f959cb84c6bbd9ed12939325a890980451953bfc8f38f"
+    },
+    {
+      "path": "native-source/it/specifications_it.rst",
+      "size": 1691,
+      "sha256": "99f8bd62ee46e7fc6aa2093bb91f37375be352789d2dcac72670d7ef6049b18d"
+    },
+    {
+      "path": "native-source/it/warranty_it.rst",
+      "size": 3365,
+      "sha256": "c152caa67164bdd2060a1937bcd9061383c21a54d44974a6396b9ef4208e47a9"
+    },
+    {
+      "path": "native-source/nl/box_contents_nl.rst",
+      "size": 2218,
+      "sha256": "78c7f58085bc3cf1af64cb2161f39e23c76f9f23d84921a971760145b7ecfab6"
+    },
+    {
+      "path": "native-source/nl/capture.json",
+      "size": 123226,
+      "sha256": "919084f29f751c2e02cb07a29413929455acbf5e26a93c3161c08a8d574127a7"
+    },
+    {
+      "path": "native-source/nl/dimensions_nl.rst",
+      "size": 100,
+      "sha256": "f9551aba3a1fa6ecec310e63b80aa3161714ecfae8ba02aed9479d0c91850e17"
+    },
+    {
+      "path": "native-source/nl/disclaimer_nl.rst",
+      "size": 1754,
+      "sha256": "0ed0586a0eae2a79f58c1c7ca2f43932fc82e5f5d2c3beaa8a555a389b68553e"
+    },
+    {
+      "path": "native-source/nl/faq_nl.rst",
+      "size": 2923,
+      "sha256": "260e37e354647c62d38b94ee6f36d8751e0c9ac498c4e90768588541433e48a7"
+    },
+    {
+      "path": "native-source/nl/important_safety_nl.rst",
+      "size": 6032,
+      "sha256": "bb9050bbed288bb593ebea8141e00187714b9aad25c1fb765bdfa80d881ad9db"
+    },
+    {
+      "path": "native-source/nl/installation_nl.rst",
+      "size": 16810,
+      "sha256": "efff4afd339ee3c488114dc2500ebf1f9482c79dcc9bce61971ace889a61656e"
+    },
+    {
+      "path": "native-source/nl/product_overview_nl.rst",
+      "size": 255,
+      "sha256": "f4dae53f8a829e8301b8bd547604c9f63324d0cfb4cebd42ee862f26e2aff59e"
+    },
+    {
+      "path": "native-source/nl/specifications_nl.rst",
+      "size": 1648,
+      "sha256": "a506f69b52bb8f350c9227e36215d00e4ec97d0e72adb5ef60e2a62d2ba6e734"
+    },
+    {
+      "path": "native-source/nl/warranty_nl.rst",
+      "size": 2951,
+      "sha256": "a9544e99a19c0861fd6428558f747319127825bac98ab1aca46ec71f8c104678"
+    },
+    {
+      "path": "native-source/outline_recovery/de-pre-checks-before-warning.png",
+      "size": 134880,
+      "sha256": "63d3159263a417278d09e77f12c7ce3a13f8e63fea662c91fc1f5cef73f7a2be"
+    },
+    {
+      "path": "native-source/outline_recovery/de-warranty-body-4.png",
+      "size": 93975,
+      "sha256": "16ab15a3614d842d02c9423268158b2cfa609d8cf4c6c46378f493d4b6403ba1"
+    },
+    {
+      "path": "native-source/outline_recovery/de-wiring-precautions.png",
+      "size": 57418,
+      "sha256": "0efbf0348cf4d19edf656465e91f8e9cf1494ebf759d355ef454d5d1efbd7c45"
+    },
+    {
+      "path": "native-source/outline_recovery/it-daily-precautions.png",
+      "size": 128732,
+      "sha256": "9a568c7b247645e28e697773b1800986b8b18ff3d0103a5275dc25970e0eaea8"
+    },
+    {
+      "path": "native-source/outline_recovery/it-emergency.png",
+      "size": 125174,
+      "sha256": "48924d311209553c3e6a83c7fa64bf62583fc141be28b64f2eaa0493b59996da"
+    },
+    {
+      "path": "native-source/outline_recovery/it-installation-safety.png",
+      "size": 194076,
+      "sha256": "8b2a36ef4e267be045602437231b547126fe2d4eb3025e8defae85895686339f"
+    },
+    {
+      "path": "native-source/outline_recovery/it-pre-checks-before-warning.png",
+      "size": 120516,
+      "sha256": "666b8591d8b7e6b008e3b36a5211a0d331b3ce813e9af22ad43bdb866e1c1ead"
+    },
+    {
+      "path": "native-source/outline_recovery/it-warranty-body-4.png",
+      "size": 96516,
+      "sha256": "928d09c3ba4b175042ce2752b71b8f9ddba5b303a3c99baae3410a0da230bdb1"
+    },
+    {
+      "path": "native-source/outline_recovery/it-wiring-precautions.png",
+      "size": 48357,
+      "sha256": "bb5a9b4013e6b98e2a0349948d2263a323cef9f3eaf1353e2f9f40e0c0a5a7ee"
+    },
+    {
+      "path": "native-source/outline_recovery/manual-recovery.json",
+      "size": 7823,
+      "sha256": "f8047d09b8d758a8ae7323ae8481194fa0957a5cc6bb8fcfcd6cb83ecc5981c9"
+    },
+    {
+      "path": "native-source/pl/box_contents_pl.rst",
+      "size": 2242,
+      "sha256": "edaedb4859a0012ddb12cdcd40016ecd8ce73d981bffd5f5f755b76782eeacc7"
+    },
+    {
+      "path": "native-source/pl/capture.json",
+      "size": 124245,
+      "sha256": "2e661205eedf8fe31dcc15a662127c4f976d594876c3d5de964e2e04e7475970"
+    },
+    {
+      "path": "native-source/pl/dimensions_pl.rst",
+      "size": 100,
+      "sha256": "f9551aba3a1fa6ecec310e63b80aa3161714ecfae8ba02aed9479d0c91850e17"
+    },
+    {
+      "path": "native-source/pl/disclaimer_pl.rst",
+      "size": 1909,
+      "sha256": "ff5bfdf377aa5143bfd87b50c3064b590eecba9b75b2c43fed6b634cf46b4695"
+    },
+    {
+      "path": "native-source/pl/faq_pl.rst",
+      "size": 2854,
+      "sha256": "e75322f60e652150fc1e30515a94e4b7ca552b89b95f584f0b31a04af995611c"
+    },
+    {
+      "path": "native-source/pl/important_safety_pl.rst",
+      "size": 6114,
+      "sha256": "90411bac7d04a053d7254144ec60bd710a8db91ab7f08e86e605389493d4da5f"
+    },
+    {
+      "path": "native-source/pl/installation_pl.rst",
+      "size": 16858,
+      "sha256": "c4c418ed4a7edf89ee2f6b47bde4be1898c3fae94617d2f81394700d3c2b0f69"
+    },
+    {
+      "path": "native-source/pl/product_overview_pl.rst",
+      "size": 271,
+      "sha256": "a426800a6feadfa2dbc48ea71f33e874e84369980ddfa74bd7c23c9af1fef951"
+    },
+    {
+      "path": "native-source/pl/specifications_pl.rst",
+      "size": 1667,
+      "sha256": "da0ea07063d02d291f17d8978468956b0bc6fb55dff57a6aedaa30acd19f6517"
+    },
+    {
+      "path": "native-source/pl/warranty_pl.rst",
+      "size": 3160,
+      "sha256": "6b5a32b08a31761e2eec7640a88aa6643f46a92b540aa5f21b6627e2d00bbd6c"
+    },
+    {
+      "path": "native-source/pt/box_contents_pt.rst",
+      "size": 2221,
+      "sha256": "14e15e99dc883ac82f72a1d6c192b3f66f4d26ba9b84e3fad5a6bf00c889a252"
+    },
+    {
+      "path": "native-source/pt/capture.json",
+      "size": 121465,
+      "sha256": "c0f33f6c151cc5ca525a9a6f3a02ba88416997d5bc207b2728cbb86eff523978"
+    },
+    {
+      "path": "native-source/pt/dimensions_pt.rst",
+      "size": 100,
+      "sha256": "f9551aba3a1fa6ecec310e63b80aa3161714ecfae8ba02aed9479d0c91850e17"
+    },
+    {
+      "path": "native-source/pt/disclaimer_pt.rst",
+      "size": 1609,
+      "sha256": "991db5c5500e2da5f7829c3765a2b7f1c142ac4e8053d7a5af140120ce6b389f"
+    },
+    {
+      "path": "native-source/pt/faq_pt.rst",
+      "size": 2911,
+      "sha256": "46ccd90d784fe0c8db4a2bab2b73b453cfd4bfb3e5148387590b765b543705d8"
+    },
+    {
+      "path": "native-source/pt/important_safety_pt.rst",
+      "size": 6104,
+      "sha256": "29b84a18fcf4e96ec466c9355ca94589020f0e344b298f5e3ae60e97a988ca9e"
+    },
+    {
+      "path": "native-source/pt/installation_pt.rst",
+      "size": 15610,
+      "sha256": "0309a513835bb841599a54f0e5f9682c43b5c4a4c48de26755c23a7bd27f16f5"
+    },
+    {
+      "path": "native-source/pt/product_overview_pt.rst",
+      "size": 287,
+      "sha256": "f1e420225dec946109179fc82710d160ffa7006fcfa238bb5427984d515d1c39"
+    },
+    {
+      "path": "native-source/pt/specifications_pt.rst",
+      "size": 1691,
+      "sha256": "d9f089a5b6cf4a54d798f534a9475c56d581fa2511d58c97a45905c133a5a387"
+    },
+    {
+      "path": "native-source/pt/warranty_pt.rst",
+      "size": 2964,
+      "sha256": "ab1ab053261b5bec56bca18dd62e63a2d23cf53af246dd5e93b41a263bf06de0"
+    },
+    {
+      "path": "native-source/uk/box_contents_uk.rst",
+      "size": 2349,
+      "sha256": "87d6aedb3c201807a7ac30e724af93e5ce1443c96cb3a22a10db40f8f68182be"
+    },
+    {
+      "path": "native-source/uk/capture.json",
+      "size": 151993,
+      "sha256": "2d7e17fb34f3dd5770739b10de10b406a08a874cd45cd980674f21a9ae25ecba"
+    },
+    {
+      "path": "native-source/uk/dimensions_uk.rst",
+      "size": 100,
+      "sha256": "f9551aba3a1fa6ecec310e63b80aa3161714ecfae8ba02aed9479d0c91850e17"
+    },
+    {
+      "path": "native-source/uk/disclaimer_uk.rst",
+      "size": 2977,
+      "sha256": "2494611d83bbdd470e4b1009406fa3c600d16a2280e8e73978f7a49d249ed17a"
+    },
+    {
+      "path": "native-source/uk/faq_uk.rst",
+      "size": 4473,
+      "sha256": "a903f7e3accebd6352c54021ef0f9e99097c151d10800c8be291d0a55f8d01ba"
+    },
+    {
+      "path": "native-source/uk/important_safety_uk.rst",
+      "size": 9202,
+      "sha256": "02211a9673b63eb0671f8108b283c3174e0b08c7995b39d63fcf8f31b8082a12"
+    },
+    {
+      "path": "native-source/uk/installation_uk.rst",
+      "size": 23091,
+      "sha256": "445aedd5097e7b99567e02d1fd3cd0169013b383ae78b867e46010c078dec2be"
+    },
+    {
+      "path": "native-source/uk/product_overview_uk.rst",
+      "size": 317,
+      "sha256": "33531ee5482a588f2b94c8fc56bfbe71b7540fc12314179c4aa6cf4ac2e37bce"
+    },
+    {
+      "path": "native-source/uk/specifications_uk.rst",
+      "size": 1895,
+      "sha256": "f0c11ad7d541106742562ba5a15559ca23dd98b17056960de31ac2989ec38d8f"
+    },
+    {
+      "path": "native-source/uk/warranty_uk.rst",
+      "size": 4929,
+      "sha256": "5dcaa83a9521e11452f31f700f9e81caade9baf338408eda3009ef679746c9cf"
+    },
+    {
+      "path": "native_exceptions.json",
+      "size": 1247,
+      "sha256": "a0ec69580eec1ce331c33ba2beac75660f30868f9dfb0a9ab67a075d24c311b2"
+    },
+    {
+      "path": "native_intake_source_manifest.json",
+      "size": 80195,
+      "sha256": "a44a2dc598dc063da97fee5ed1d5ab5814c4eefe4d461be3ae49d9dc0813b71c"
+    },
+    {
+      "path": "nl/md/_static/dcdc_source_local.css",
+      "size": 2223,
+      "sha256": "8642577141d2b2eb8f69ca5827d6d00203a9dc6efc3e18d032cadb6793ab9108"
+    },
+    {
+      "path": "nl/md/_static/web_manual.css",
+      "size": 122691,
+      "sha256": "e6161c0bd93f8870dba044810c478e2b85b516e9d524a122e3165400fc2cf3b8"
+    },
+    {
+      "path": "nl/md/assets/ir/0c716a794cf35e80b73fab35c229ebd318d5a2849baded333f09fdf3e8a4ff7f/installation_diagram_base.png",
+      "size": 363982,
+      "sha256": "0c716a794cf35e80b73fab35c229ebd318d5a2849baded333f09fdf3e8a4ff7f"
+    },
+    {
+      "path": "nl/md/assets/ir/0f41fe5ea49fb7a830cab90d2a5473587dd8a0c04db775b42953f58dbea3fb0a/symbol_warning_triangle.svg",
+      "size": 4481,
+      "sha256": "0f41fe5ea49fb7a830cab90d2a5473587dd8a0c04db775b42953f58dbea3fb0a"
+    },
+    {
+      "path": "nl/md/assets/ir/209c4187aab93e4e3a8a7577875a6b4d31ca325a1ac542ea9d517292ee3b906f/status_device.png",
+      "size": 42162,
+      "sha256": "209c4187aab93e4e3a8a7577875a6b4d31ca325a1ac542ea9d517292ee3b906f"
+    },
+    {
+      "path": "nl/md/assets/ir/21cc25108335bcc939730216745e339d36d6ba2f531094b8b95b98b5d78e7fc6/inbox_acc_cable.png",
+      "size": 26717,
+      "sha256": "21cc25108335bcc939730216745e339d36d6ba2f531094b8b95b98b5d78e7fc6"
+    },
+    {
+      "path": "nl/md/assets/ir/28488e52ce07c55da409f6ddf49be32eda4d5f2320c9a5f4b95c50c33dac15f6/inbox_output_cable.png",
+      "size": 23393,
+      "sha256": "28488e52ce07c55da409f6ddf49be32eda4d5f2320c9a5f4b95c50c33dac15f6"
+    },
+    {
+      "path": "nl/md/assets/ir/2f9c40282fac46a23e7f1a24a353284fa78070862b7f476e8733d940efc888d4/panel_mark.png",
+      "size": 58884,
+      "sha256": "2f9c40282fac46a23e7f1a24a353284fa78070862b7f476e8733d940efc888d4"
+    },
+    {
+      "path": "nl/md/assets/ir/312076a28c1795730ae867c3660075da10d04118b0abf628ced67df10c2cb4ff/panel_secure.png",
+      "size": 67264,
+      "sha256": "312076a28c1795730ae867c3660075da10d04118b0abf628ced67df10c2cb4ff"
+    },
+    {
+      "path": "nl/md/assets/ir/3e7f503922a3b12c0cbbd613afa9328f080ca159a998b7f1f99067f97538b70b/wiring_acc_base.png",
+      "size": 55903,
+      "sha256": "3e7f503922a3b12c0cbbd613afa9328f080ca159a998b7f1f99067f97538b70b"
+    },
+    {
+      "path": "nl/md/assets/ir/45f309ed8b3f4787b6dde440c738b8e0fbc5074bf758fecc2e1ac44307153d90/fcc_mark.png",
+      "size": 28135,
+      "sha256": "45f309ed8b3f4787b6dde440c738b8e0fbc5074bf758fecc2e1ac44307153d90"
+    },
+    {
+      "path": "nl/md/assets/ir/69ed53354910bb15207fbcf5b4989c32b2831d1054e5673ed2aa2c13edd46c93/inbox_fuse.png",
+      "size": 4423,
+      "sha256": "69ed53354910bb15207fbcf5b4989c32b2831d1054e5673ed2aa2c13edd46c93"
+    },
+    {
+      "path": "nl/md/assets/ir/6e2822b857dd34567734038d31ab7bd5c6553390dc1d828a159cc33dbe69d855/panel_drill.png",
+      "size": 28134,
+      "sha256": "6e2822b857dd34567734038d31ab7bd5c6553390dc1d828a159cc33dbe69d855"
+    },
+    {
+      "path": "nl/md/assets/ir/7bdcb4dd3da42b2eff652baae3998703d1c291b8771bb6394feb7a190750ca3f/wiring_battery.png",
+      "size": 65449,
+      "sha256": "7bdcb4dd3da42b2eff652baae3998703d1c291b8771bb6394feb7a190750ca3f"
+    },
+    {
+      "path": "nl/md/assets/ir/8d5b841dc3efab625b871f37912e056575f713d1f386841ad471ee8824f4e1c7/inbox_m6_nuts.png",
+      "size": 6414,
+      "sha256": "8d5b841dc3efab625b871f37912e056575f713d1f386841ad471ee8824f4e1c7"
+    },
+    {
+      "path": "nl/md/assets/ir/8fb3b2ca8692360087ac958ebbce9e766c34af3e49183107a8fbae3008f3e427/connection_base.png",
+      "size": 80987,
+      "sha256": "8fb3b2ca8692360087ac958ebbce9e766c34af3e49183107a8fbae3008f3e427"
+    },
+    {
+      "path": "nl/md/assets/ir/97287dee4780335316be5e85624256bc4786ecb7bebe2a3aaaa84489331780e8/inbox_charger.png",
+      "size": 14264,
+      "sha256": "97287dee4780335316be5e85624256bc4786ecb7bebe2a3aaaa84489331780e8"
+    },
+    {
+      "path": "nl/md/assets/ir/ad6701a141a97bc4832f90ccd756b0522e27bcbb2be7a2f617a97d597ac4a54b/body_secure.png",
+      "size": 55756,
+      "sha256": "ad6701a141a97bc4832f90ccd756b0522e27bcbb2be7a2f617a97d597ac4a54b"
+    },
+    {
+      "path": "nl/md/assets/ir/adc406430c2f56a7939df30b91b83eeb168141d7351272d8c3520075400bcc95/inbox_m6_bolts.png",
+      "size": 18321,
+      "sha256": "adc406430c2f56a7939df30b91b83eeb168141d7351272d8c3520075400bcc95"
+    },
+    {
+      "path": "nl/md/assets/ir/b237253debc460c0ed6213369715ea67e20d6e32a2def888253807b820fe65ee/inbox_input_cable.png",
+      "size": 29781,
+      "sha256": "b237253debc460c0ed6213369715ea67e20d6e32a2def888253807b820fe65ee"
+    },
+    {
+      "path": "nl/md/assets/ir/b23a42ec957232b48dff17f43b77d0b521f4fa9126403ed8d6596284bb856f39/body_drill.png",
+      "size": 45602,
+      "sha256": "b23a42ec957232b48dff17f43b77d0b521f4fa9126403ed8d6596284bb856f39"
+    },
+    {
+      "path": "nl/md/assets/ir/bafe8512654bb40af713ea793a4da5cb313740b4da9a36843cbfbea58ddc4207/wiring_fuse_base.svg",
+      "size": 182626,
+      "sha256": "bafe8512654bb40af713ea793a4da5cb313740b4da9a36843cbfbea58ddc4207"
+    },
+    {
+      "path": "nl/md/assets/ir/c002c36a2bd36883140969c0ce3fe12ec4e43fe0f22a4b1db407a52bf915f7ca/product_overview_base.png",
+      "size": 57852,
+      "sha256": "c002c36a2bd36883140969c0ce3fe12ec4e43fe0f22a4b1db407a52bf915f7ca"
+    },
+    {
+      "path": "nl/md/assets/ir/c66743652b31b8642db123cb809912a6f610b7adc28e48ac3b751a49b25c435f/dimensions.png",
+      "size": 49337,
+      "sha256": "c66743652b31b8642db123cb809912a6f610b7adc28e48ac3b751a49b25c435f"
+    },
+    {
+      "path": "nl/md/assets/ir/eb21bcf111a7dd76141b96d10afef09dd9109a3dbab6058b5e8072d14575095c/body_clearance.png",
+      "size": 53230,
+      "sha256": "eb21bcf111a7dd76141b96d10afef09dd9109a3dbab6058b5e8072d14575095c"
+    },
+    {
+      "path": "nl/md/assets/ir/f1656a627f8c33622604acb6c913bb5fb79185afa64aa9b1e74d730baeaa22ac/inbox_user_guide.png",
+      "size": 2389,
+      "sha256": "f1656a627f8c33622604acb6c913bb5fb79185afa64aa9b1e74d730baeaa22ac"
+    },
+    {
+      "path": "nl/md/assets/ir/fab3f07d629ad6e06e7142b235b59b1f65c842a21b4cec93464386a34a3a2647/inbox_st55_screws.png",
+      "size": 8923,
+      "sha256": "fab3f07d629ad6e06e7142b235b59b1f65c842a21b4cec93464386a34a3a2647"
+    },
+    {
+      "path": "nl/md/assets/ir/fc909e0e6d1929d528b6845e0a5af500c0220bbf44f031daf44dbcf00da6ee96/body_mark.png",
+      "size": 55971,
+      "sha256": "fc909e0e6d1929d528b6845e0a5af500c0220bbf44f031daf44dbcf00da6ee96"
+    },
+    {
+      "path": "nl/md/conf.py",
+      "size": 864,
+      "sha256": "d53c481590981d742279edebd59c6638adbf3753d5f1907bc3fc227ce1068986"
+    },
+    {
+      "path": "nl/md/index.md",
+      "size": 78,
+      "sha256": "fd41d53fd61c73529bd53d9321e22688aef8c4fbce2fe2acbcb1b0d06f551676"
+    },
+    {
+      "path": "nl/md/manual.ir.json",
+      "size": 514887,
+      "sha256": "5c718cd18677cb447bcebf4748b1d66ff950907ec67c33053338ce8b7471d262"
+    },
+    {
+      "path": "nl/md/manual_bundle.html",
+      "size": 56777,
+      "sha256": "b4a0e8316116c6b64571898b55dc44635b754423b2a13544fb7dbe3891659401"
+    },
+    {
+      "path": "nl/md/manual_jaad600a_eu_nl.md",
+      "size": 52353,
+      "sha256": "d46060dab32c89fe2524826c419b2e8a6cf545975411821356f2acf9f24897f3"
+    },
+    {
+      "path": "pl/md/_static/dcdc_source_local.css",
+      "size": 2223,
+      "sha256": "8642577141d2b2eb8f69ca5827d6d00203a9dc6efc3e18d032cadb6793ab9108"
+    },
+    {
+      "path": "pl/md/_static/web_manual.css",
+      "size": 122691,
+      "sha256": "e6161c0bd93f8870dba044810c478e2b85b516e9d524a122e3165400fc2cf3b8"
+    },
+    {
+      "path": "pl/md/assets/ir/0c716a794cf35e80b73fab35c229ebd318d5a2849baded333f09fdf3e8a4ff7f/installation_diagram_base.png",
+      "size": 363982,
+      "sha256": "0c716a794cf35e80b73fab35c229ebd318d5a2849baded333f09fdf3e8a4ff7f"
+    },
+    {
+      "path": "pl/md/assets/ir/0f41fe5ea49fb7a830cab90d2a5473587dd8a0c04db775b42953f58dbea3fb0a/symbol_warning_triangle.svg",
+      "size": 4481,
+      "sha256": "0f41fe5ea49fb7a830cab90d2a5473587dd8a0c04db775b42953f58dbea3fb0a"
+    },
+    {
+      "path": "pl/md/assets/ir/209c4187aab93e4e3a8a7577875a6b4d31ca325a1ac542ea9d517292ee3b906f/status_device.png",
+      "size": 42162,
+      "sha256": "209c4187aab93e4e3a8a7577875a6b4d31ca325a1ac542ea9d517292ee3b906f"
+    },
+    {
+      "path": "pl/md/assets/ir/21cc25108335bcc939730216745e339d36d6ba2f531094b8b95b98b5d78e7fc6/inbox_acc_cable.png",
+      "size": 26717,
+      "sha256": "21cc25108335bcc939730216745e339d36d6ba2f531094b8b95b98b5d78e7fc6"
+    },
+    {
+      "path": "pl/md/assets/ir/28488e52ce07c55da409f6ddf49be32eda4d5f2320c9a5f4b95c50c33dac15f6/inbox_output_cable.png",
+      "size": 23393,
+      "sha256": "28488e52ce07c55da409f6ddf49be32eda4d5f2320c9a5f4b95c50c33dac15f6"
+    },
+    {
+      "path": "pl/md/assets/ir/2f9c40282fac46a23e7f1a24a353284fa78070862b7f476e8733d940efc888d4/panel_mark.png",
+      "size": 58884,
+      "sha256": "2f9c40282fac46a23e7f1a24a353284fa78070862b7f476e8733d940efc888d4"
+    },
+    {
+      "path": "pl/md/assets/ir/312076a28c1795730ae867c3660075da10d04118b0abf628ced67df10c2cb4ff/panel_secure.png",
+      "size": 67264,
+      "sha256": "312076a28c1795730ae867c3660075da10d04118b0abf628ced67df10c2cb4ff"
+    },
+    {
+      "path": "pl/md/assets/ir/3e7f503922a3b12c0cbbd613afa9328f080ca159a998b7f1f99067f97538b70b/wiring_acc_base.png",
+      "size": 55903,
+      "sha256": "3e7f503922a3b12c0cbbd613afa9328f080ca159a998b7f1f99067f97538b70b"
+    },
+    {
+      "path": "pl/md/assets/ir/45f309ed8b3f4787b6dde440c738b8e0fbc5074bf758fecc2e1ac44307153d90/fcc_mark.png",
+      "size": 28135,
+      "sha256": "45f309ed8b3f4787b6dde440c738b8e0fbc5074bf758fecc2e1ac44307153d90"
+    },
+    {
+      "path": "pl/md/assets/ir/69ed53354910bb15207fbcf5b4989c32b2831d1054e5673ed2aa2c13edd46c93/inbox_fuse.png",
+      "size": 4423,
+      "sha256": "69ed53354910bb15207fbcf5b4989c32b2831d1054e5673ed2aa2c13edd46c93"
+    },
+    {
+      "path": "pl/md/assets/ir/6e2822b857dd34567734038d31ab7bd5c6553390dc1d828a159cc33dbe69d855/panel_drill.png",
+      "size": 28134,
+      "sha256": "6e2822b857dd34567734038d31ab7bd5c6553390dc1d828a159cc33dbe69d855"
+    },
+    {
+      "path": "pl/md/assets/ir/7bdcb4dd3da42b2eff652baae3998703d1c291b8771bb6394feb7a190750ca3f/wiring_battery.png",
+      "size": 65449,
+      "sha256": "7bdcb4dd3da42b2eff652baae3998703d1c291b8771bb6394feb7a190750ca3f"
+    },
+    {
+      "path": "pl/md/assets/ir/8d5b841dc3efab625b871f37912e056575f713d1f386841ad471ee8824f4e1c7/inbox_m6_nuts.png",
+      "size": 6414,
+      "sha256": "8d5b841dc3efab625b871f37912e056575f713d1f386841ad471ee8824f4e1c7"
+    },
+    {
+      "path": "pl/md/assets/ir/8fb3b2ca8692360087ac958ebbce9e766c34af3e49183107a8fbae3008f3e427/connection_base.png",
+      "size": 80987,
+      "sha256": "8fb3b2ca8692360087ac958ebbce9e766c34af3e49183107a8fbae3008f3e427"
+    },
+    {
+      "path": "pl/md/assets/ir/97287dee4780335316be5e85624256bc4786ecb7bebe2a3aaaa84489331780e8/inbox_charger.png",
+      "size": 14264,
+      "sha256": "97287dee4780335316be5e85624256bc4786ecb7bebe2a3aaaa84489331780e8"
+    },
+    {
+      "path": "pl/md/assets/ir/ad6701a141a97bc4832f90ccd756b0522e27bcbb2be7a2f617a97d597ac4a54b/body_secure.png",
+      "size": 55756,
+      "sha256": "ad6701a141a97bc4832f90ccd756b0522e27bcbb2be7a2f617a97d597ac4a54b"
+    },
+    {
+      "path": "pl/md/assets/ir/adc406430c2f56a7939df30b91b83eeb168141d7351272d8c3520075400bcc95/inbox_m6_bolts.png",
+      "size": 18321,
+      "sha256": "adc406430c2f56a7939df30b91b83eeb168141d7351272d8c3520075400bcc95"
+    },
+    {
+      "path": "pl/md/assets/ir/b237253debc460c0ed6213369715ea67e20d6e32a2def888253807b820fe65ee/inbox_input_cable.png",
+      "size": 29781,
+      "sha256": "b237253debc460c0ed6213369715ea67e20d6e32a2def888253807b820fe65ee"
+    },
+    {
+      "path": "pl/md/assets/ir/b23a42ec957232b48dff17f43b77d0b521f4fa9126403ed8d6596284bb856f39/body_drill.png",
+      "size": 45602,
+      "sha256": "b23a42ec957232b48dff17f43b77d0b521f4fa9126403ed8d6596284bb856f39"
+    },
+    {
+      "path": "pl/md/assets/ir/bafe8512654bb40af713ea793a4da5cb313740b4da9a36843cbfbea58ddc4207/wiring_fuse_base.svg",
+      "size": 182626,
+      "sha256": "bafe8512654bb40af713ea793a4da5cb313740b4da9a36843cbfbea58ddc4207"
+    },
+    {
+      "path": "pl/md/assets/ir/c002c36a2bd36883140969c0ce3fe12ec4e43fe0f22a4b1db407a52bf915f7ca/product_overview_base.png",
+      "size": 57852,
+      "sha256": "c002c36a2bd36883140969c0ce3fe12ec4e43fe0f22a4b1db407a52bf915f7ca"
+    },
+    {
+      "path": "pl/md/assets/ir/c66743652b31b8642db123cb809912a6f610b7adc28e48ac3b751a49b25c435f/dimensions.png",
+      "size": 49337,
+      "sha256": "c66743652b31b8642db123cb809912a6f610b7adc28e48ac3b751a49b25c435f"
+    },
+    {
+      "path": "pl/md/assets/ir/eb21bcf111a7dd76141b96d10afef09dd9109a3dbab6058b5e8072d14575095c/body_clearance.png",
+      "size": 53230,
+      "sha256": "eb21bcf111a7dd76141b96d10afef09dd9109a3dbab6058b5e8072d14575095c"
+    },
+    {
+      "path": "pl/md/assets/ir/f1656a627f8c33622604acb6c913bb5fb79185afa64aa9b1e74d730baeaa22ac/inbox_user_guide.png",
+      "size": 2389,
+      "sha256": "f1656a627f8c33622604acb6c913bb5fb79185afa64aa9b1e74d730baeaa22ac"
+    },
+    {
+      "path": "pl/md/assets/ir/fab3f07d629ad6e06e7142b235b59b1f65c842a21b4cec93464386a34a3a2647/inbox_st55_screws.png",
+      "size": 8923,
+      "sha256": "fab3f07d629ad6e06e7142b235b59b1f65c842a21b4cec93464386a34a3a2647"
+    },
+    {
+      "path": "pl/md/assets/ir/fc909e0e6d1929d528b6845e0a5af500c0220bbf44f031daf44dbcf00da6ee96/body_mark.png",
+      "size": 55971,
+      "sha256": "fc909e0e6d1929d528b6845e0a5af500c0220bbf44f031daf44dbcf00da6ee96"
+    },
+    {
+      "path": "pl/md/conf.py",
+      "size": 864,
+      "sha256": "13755c4463564d91af8f6056fb05034db3cb8feca3b75ba70f3b6815dddd4415"
+    },
+    {
+      "path": "pl/md/index.md",
+      "size": 78,
+      "sha256": "c6eb044f8e7503fe555f0bd80c01d320cd4d5fae7277e8e95325b16e38724330"
+    },
+    {
+      "path": "pl/md/manual.ir.json",
+      "size": 515123,
+      "sha256": "71bbfad58e0cf15320eb020621bc7b71af84de46845298de99d023bfd891f473"
+    },
+    {
+      "path": "pl/md/manual_bundle.html",
+      "size": 57228,
+      "sha256": "d64e866452b284ffe22f3d1ca902444f010ed06f52d55a5880939a09f855fc4d"
+    },
+    {
+      "path": "pl/md/manual_jaad600a_eu_pl.md",
+      "size": 52759,
+      "sha256": "b66474ea4bcea58017989b956bfbca2aede807378983cf13e5c7a3354782711f"
+    },
+    {
+      "path": "pt/md/_static/dcdc_source_local.css",
+      "size": 2223,
+      "sha256": "8642577141d2b2eb8f69ca5827d6d00203a9dc6efc3e18d032cadb6793ab9108"
+    },
+    {
+      "path": "pt/md/_static/web_manual.css",
+      "size": 122691,
+      "sha256": "e6161c0bd93f8870dba044810c478e2b85b516e9d524a122e3165400fc2cf3b8"
+    },
+    {
+      "path": "pt/md/assets/ir/0c716a794cf35e80b73fab35c229ebd318d5a2849baded333f09fdf3e8a4ff7f/installation_diagram_base.png",
+      "size": 363982,
+      "sha256": "0c716a794cf35e80b73fab35c229ebd318d5a2849baded333f09fdf3e8a4ff7f"
+    },
+    {
+      "path": "pt/md/assets/ir/0f41fe5ea49fb7a830cab90d2a5473587dd8a0c04db775b42953f58dbea3fb0a/symbol_warning_triangle.svg",
+      "size": 4481,
+      "sha256": "0f41fe5ea49fb7a830cab90d2a5473587dd8a0c04db775b42953f58dbea3fb0a"
+    },
+    {
+      "path": "pt/md/assets/ir/209c4187aab93e4e3a8a7577875a6b4d31ca325a1ac542ea9d517292ee3b906f/status_device.png",
+      "size": 42162,
+      "sha256": "209c4187aab93e4e3a8a7577875a6b4d31ca325a1ac542ea9d517292ee3b906f"
+    },
+    {
+      "path": "pt/md/assets/ir/21cc25108335bcc939730216745e339d36d6ba2f531094b8b95b98b5d78e7fc6/inbox_acc_cable.png",
+      "size": 26717,
+      "sha256": "21cc25108335bcc939730216745e339d36d6ba2f531094b8b95b98b5d78e7fc6"
+    },
+    {
+      "path": "pt/md/assets/ir/28488e52ce07c55da409f6ddf49be32eda4d5f2320c9a5f4b95c50c33dac15f6/inbox_output_cable.png",
+      "size": 23393,
+      "sha256": "28488e52ce07c55da409f6ddf49be32eda4d5f2320c9a5f4b95c50c33dac15f6"
+    },
+    {
+      "path": "pt/md/assets/ir/2f9c40282fac46a23e7f1a24a353284fa78070862b7f476e8733d940efc888d4/panel_mark.png",
+      "size": 58884,
+      "sha256": "2f9c40282fac46a23e7f1a24a353284fa78070862b7f476e8733d940efc888d4"
+    },
+    {
+      "path": "pt/md/assets/ir/312076a28c1795730ae867c3660075da10d04118b0abf628ced67df10c2cb4ff/panel_secure.png",
+      "size": 67264,
+      "sha256": "312076a28c1795730ae867c3660075da10d04118b0abf628ced67df10c2cb4ff"
+    },
+    {
+      "path": "pt/md/assets/ir/3e7f503922a3b12c0cbbd613afa9328f080ca159a998b7f1f99067f97538b70b/wiring_acc_base.png",
+      "size": 55903,
+      "sha256": "3e7f503922a3b12c0cbbd613afa9328f080ca159a998b7f1f99067f97538b70b"
+    },
+    {
+      "path": "pt/md/assets/ir/69ed53354910bb15207fbcf5b4989c32b2831d1054e5673ed2aa2c13edd46c93/inbox_fuse.png",
+      "size": 4423,
+      "sha256": "69ed53354910bb15207fbcf5b4989c32b2831d1054e5673ed2aa2c13edd46c93"
+    },
+    {
+      "path": "pt/md/assets/ir/6e2822b857dd34567734038d31ab7bd5c6553390dc1d828a159cc33dbe69d855/panel_drill.png",
+      "size": 28134,
+      "sha256": "6e2822b857dd34567734038d31ab7bd5c6553390dc1d828a159cc33dbe69d855"
+    },
+    {
+      "path": "pt/md/assets/ir/7bdcb4dd3da42b2eff652baae3998703d1c291b8771bb6394feb7a190750ca3f/wiring_battery.png",
+      "size": 65449,
+      "sha256": "7bdcb4dd3da42b2eff652baae3998703d1c291b8771bb6394feb7a190750ca3f"
+    },
+    {
+      "path": "pt/md/assets/ir/8d5b841dc3efab625b871f37912e056575f713d1f386841ad471ee8824f4e1c7/inbox_m6_nuts.png",
+      "size": 6414,
+      "sha256": "8d5b841dc3efab625b871f37912e056575f713d1f386841ad471ee8824f4e1c7"
+    },
+    {
+      "path": "pt/md/assets/ir/8fb3b2ca8692360087ac958ebbce9e766c34af3e49183107a8fbae3008f3e427/connection_base.png",
+      "size": 80987,
+      "sha256": "8fb3b2ca8692360087ac958ebbce9e766c34af3e49183107a8fbae3008f3e427"
+    },
+    {
+      "path": "pt/md/assets/ir/97287dee4780335316be5e85624256bc4786ecb7bebe2a3aaaa84489331780e8/inbox_charger.png",
+      "size": 14264,
+      "sha256": "97287dee4780335316be5e85624256bc4786ecb7bebe2a3aaaa84489331780e8"
+    },
+    {
+      "path": "pt/md/assets/ir/ad6701a141a97bc4832f90ccd756b0522e27bcbb2be7a2f617a97d597ac4a54b/body_secure.png",
+      "size": 55756,
+      "sha256": "ad6701a141a97bc4832f90ccd756b0522e27bcbb2be7a2f617a97d597ac4a54b"
+    },
+    {
+      "path": "pt/md/assets/ir/adc406430c2f56a7939df30b91b83eeb168141d7351272d8c3520075400bcc95/inbox_m6_bolts.png",
+      "size": 18321,
+      "sha256": "adc406430c2f56a7939df30b91b83eeb168141d7351272d8c3520075400bcc95"
+    },
+    {
+      "path": "pt/md/assets/ir/b237253debc460c0ed6213369715ea67e20d6e32a2def888253807b820fe65ee/inbox_input_cable.png",
+      "size": 29781,
+      "sha256": "b237253debc460c0ed6213369715ea67e20d6e32a2def888253807b820fe65ee"
+    },
+    {
+      "path": "pt/md/assets/ir/b23a42ec957232b48dff17f43b77d0b521f4fa9126403ed8d6596284bb856f39/body_drill.png",
+      "size": 45602,
+      "sha256": "b23a42ec957232b48dff17f43b77d0b521f4fa9126403ed8d6596284bb856f39"
+    },
+    {
+      "path": "pt/md/assets/ir/bafe8512654bb40af713ea793a4da5cb313740b4da9a36843cbfbea58ddc4207/wiring_fuse_base.svg",
+      "size": 182626,
+      "sha256": "bafe8512654bb40af713ea793a4da5cb313740b4da9a36843cbfbea58ddc4207"
+    },
+    {
+      "path": "pt/md/assets/ir/c002c36a2bd36883140969c0ce3fe12ec4e43fe0f22a4b1db407a52bf915f7ca/product_overview_base.png",
+      "size": 57852,
+      "sha256": "c002c36a2bd36883140969c0ce3fe12ec4e43fe0f22a4b1db407a52bf915f7ca"
+    },
+    {
+      "path": "pt/md/assets/ir/c66743652b31b8642db123cb809912a6f610b7adc28e48ac3b751a49b25c435f/dimensions.png",
+      "size": 49337,
+      "sha256": "c66743652b31b8642db123cb809912a6f610b7adc28e48ac3b751a49b25c435f"
+    },
+    {
+      "path": "pt/md/assets/ir/eb21bcf111a7dd76141b96d10afef09dd9109a3dbab6058b5e8072d14575095c/body_clearance.png",
+      "size": 53230,
+      "sha256": "eb21bcf111a7dd76141b96d10afef09dd9109a3dbab6058b5e8072d14575095c"
+    },
+    {
+      "path": "pt/md/assets/ir/f1656a627f8c33622604acb6c913bb5fb79185afa64aa9b1e74d730baeaa22ac/inbox_user_guide.png",
+      "size": 2389,
+      "sha256": "f1656a627f8c33622604acb6c913bb5fb79185afa64aa9b1e74d730baeaa22ac"
+    },
+    {
+      "path": "pt/md/assets/ir/fab3f07d629ad6e06e7142b235b59b1f65c842a21b4cec93464386a34a3a2647/inbox_st55_screws.png",
+      "size": 8923,
+      "sha256": "fab3f07d629ad6e06e7142b235b59b1f65c842a21b4cec93464386a34a3a2647"
+    },
+    {
+      "path": "pt/md/assets/ir/fc909e0e6d1929d528b6845e0a5af500c0220bbf44f031daf44dbcf00da6ee96/body_mark.png",
+      "size": 55971,
+      "sha256": "fc909e0e6d1929d528b6845e0a5af500c0220bbf44f031daf44dbcf00da6ee96"
+    },
+    {
+      "path": "pt/md/conf.py",
+      "size": 864,
+      "sha256": "01c5fd32a4537183436e8ba598b599d15ff195d7ce2ba3a0f866c712fdc396cd"
+    },
+    {
+      "path": "pt/md/index.md",
+      "size": 78,
+      "sha256": "34bff56be2785160bb71ff5761101ff21670ab5e28b617e5e6c7455db633be68"
+    },
+    {
+      "path": "pt/md/manual.ir.json",
+      "size": 511609,
+      "sha256": "dfca7535a39fe957ea1e87e70a72e48d2a4387faaef3f1f23e066c53726999c7"
+    },
+    {
+      "path": "pt/md/manual_bundle.html",
+      "size": 55499,
+      "sha256": "1cf8d2d3f97b87793adcb5e747d2456ad45189296fd530407589fb502197e3bd"
+    },
+    {
+      "path": "pt/md/manual_jaad600a_eu_pt.md",
+      "size": 51171,
+      "sha256": "8ebdb044fdef44e3d32dccf3617039de2463b998c7ec9889f2de68a058957dcb"
+    },
+    {
+      "path": "uk/md/_static/dcdc_source_local.css",
+      "size": 2223,
+      "sha256": "8642577141d2b2eb8f69ca5827d6d00203a9dc6efc3e18d032cadb6793ab9108"
+    },
+    {
+      "path": "uk/md/_static/web_manual.css",
+      "size": 122691,
+      "sha256": "e6161c0bd93f8870dba044810c478e2b85b516e9d524a122e3165400fc2cf3b8"
+    },
+    {
+      "path": "uk/md/assets/ir/0c716a794cf35e80b73fab35c229ebd318d5a2849baded333f09fdf3e8a4ff7f/installation_diagram_base.png",
+      "size": 363982,
+      "sha256": "0c716a794cf35e80b73fab35c229ebd318d5a2849baded333f09fdf3e8a4ff7f"
+    },
+    {
+      "path": "uk/md/assets/ir/0f41fe5ea49fb7a830cab90d2a5473587dd8a0c04db775b42953f58dbea3fb0a/symbol_warning_triangle.svg",
+      "size": 4481,
+      "sha256": "0f41fe5ea49fb7a830cab90d2a5473587dd8a0c04db775b42953f58dbea3fb0a"
+    },
+    {
+      "path": "uk/md/assets/ir/209c4187aab93e4e3a8a7577875a6b4d31ca325a1ac542ea9d517292ee3b906f/status_device.png",
+      "size": 42162,
+      "sha256": "209c4187aab93e4e3a8a7577875a6b4d31ca325a1ac542ea9d517292ee3b906f"
+    },
+    {
+      "path": "uk/md/assets/ir/21cc25108335bcc939730216745e339d36d6ba2f531094b8b95b98b5d78e7fc6/inbox_acc_cable.png",
+      "size": 26717,
+      "sha256": "21cc25108335bcc939730216745e339d36d6ba2f531094b8b95b98b5d78e7fc6"
+    },
+    {
+      "path": "uk/md/assets/ir/28488e52ce07c55da409f6ddf49be32eda4d5f2320c9a5f4b95c50c33dac15f6/inbox_output_cable.png",
+      "size": 23393,
+      "sha256": "28488e52ce07c55da409f6ddf49be32eda4d5f2320c9a5f4b95c50c33dac15f6"
+    },
+    {
+      "path": "uk/md/assets/ir/2f9c40282fac46a23e7f1a24a353284fa78070862b7f476e8733d940efc888d4/panel_mark.png",
+      "size": 58884,
+      "sha256": "2f9c40282fac46a23e7f1a24a353284fa78070862b7f476e8733d940efc888d4"
+    },
+    {
+      "path": "uk/md/assets/ir/312076a28c1795730ae867c3660075da10d04118b0abf628ced67df10c2cb4ff/panel_secure.png",
+      "size": 67264,
+      "sha256": "312076a28c1795730ae867c3660075da10d04118b0abf628ced67df10c2cb4ff"
+    },
+    {
+      "path": "uk/md/assets/ir/3e7f503922a3b12c0cbbd613afa9328f080ca159a998b7f1f99067f97538b70b/wiring_acc_base.png",
+      "size": 55903,
+      "sha256": "3e7f503922a3b12c0cbbd613afa9328f080ca159a998b7f1f99067f97538b70b"
+    },
+    {
+      "path": "uk/md/assets/ir/45f309ed8b3f4787b6dde440c738b8e0fbc5074bf758fecc2e1ac44307153d90/fcc_mark.png",
+      "size": 28135,
+      "sha256": "45f309ed8b3f4787b6dde440c738b8e0fbc5074bf758fecc2e1ac44307153d90"
+    },
+    {
+      "path": "uk/md/assets/ir/69ed53354910bb15207fbcf5b4989c32b2831d1054e5673ed2aa2c13edd46c93/inbox_fuse.png",
+      "size": 4423,
+      "sha256": "69ed53354910bb15207fbcf5b4989c32b2831d1054e5673ed2aa2c13edd46c93"
+    },
+    {
+      "path": "uk/md/assets/ir/6e2822b857dd34567734038d31ab7bd5c6553390dc1d828a159cc33dbe69d855/panel_drill.png",
+      "size": 28134,
+      "sha256": "6e2822b857dd34567734038d31ab7bd5c6553390dc1d828a159cc33dbe69d855"
+    },
+    {
+      "path": "uk/md/assets/ir/7bdcb4dd3da42b2eff652baae3998703d1c291b8771bb6394feb7a190750ca3f/wiring_battery.png",
+      "size": 65449,
+      "sha256": "7bdcb4dd3da42b2eff652baae3998703d1c291b8771bb6394feb7a190750ca3f"
+    },
+    {
+      "path": "uk/md/assets/ir/8d5b841dc3efab625b871f37912e056575f713d1f386841ad471ee8824f4e1c7/inbox_m6_nuts.png",
+      "size": 6414,
+      "sha256": "8d5b841dc3efab625b871f37912e056575f713d1f386841ad471ee8824f4e1c7"
+    },
+    {
+      "path": "uk/md/assets/ir/8fb3b2ca8692360087ac958ebbce9e766c34af3e49183107a8fbae3008f3e427/connection_base.png",
+      "size": 80987,
+      "sha256": "8fb3b2ca8692360087ac958ebbce9e766c34af3e49183107a8fbae3008f3e427"
+    },
+    {
+      "path": "uk/md/assets/ir/97287dee4780335316be5e85624256bc4786ecb7bebe2a3aaaa84489331780e8/inbox_charger.png",
+      "size": 14264,
+      "sha256": "97287dee4780335316be5e85624256bc4786ecb7bebe2a3aaaa84489331780e8"
+    },
+    {
+      "path": "uk/md/assets/ir/ad6701a141a97bc4832f90ccd756b0522e27bcbb2be7a2f617a97d597ac4a54b/body_secure.png",
+      "size": 55756,
+      "sha256": "ad6701a141a97bc4832f90ccd756b0522e27bcbb2be7a2f617a97d597ac4a54b"
+    },
+    {
+      "path": "uk/md/assets/ir/adc406430c2f56a7939df30b91b83eeb168141d7351272d8c3520075400bcc95/inbox_m6_bolts.png",
+      "size": 18321,
+      "sha256": "adc406430c2f56a7939df30b91b83eeb168141d7351272d8c3520075400bcc95"
+    },
+    {
+      "path": "uk/md/assets/ir/b237253debc460c0ed6213369715ea67e20d6e32a2def888253807b820fe65ee/inbox_input_cable.png",
+      "size": 29781,
+      "sha256": "b237253debc460c0ed6213369715ea67e20d6e32a2def888253807b820fe65ee"
+    },
+    {
+      "path": "uk/md/assets/ir/b23a42ec957232b48dff17f43b77d0b521f4fa9126403ed8d6596284bb856f39/body_drill.png",
+      "size": 45602,
+      "sha256": "b23a42ec957232b48dff17f43b77d0b521f4fa9126403ed8d6596284bb856f39"
+    },
+    {
+      "path": "uk/md/assets/ir/bafe8512654bb40af713ea793a4da5cb313740b4da9a36843cbfbea58ddc4207/wiring_fuse_base.svg",
+      "size": 182626,
+      "sha256": "bafe8512654bb40af713ea793a4da5cb313740b4da9a36843cbfbea58ddc4207"
+    },
+    {
+      "path": "uk/md/assets/ir/c002c36a2bd36883140969c0ce3fe12ec4e43fe0f22a4b1db407a52bf915f7ca/product_overview_base.png",
+      "size": 57852,
+      "sha256": "c002c36a2bd36883140969c0ce3fe12ec4e43fe0f22a4b1db407a52bf915f7ca"
+    },
+    {
+      "path": "uk/md/assets/ir/c66743652b31b8642db123cb809912a6f610b7adc28e48ac3b751a49b25c435f/dimensions.png",
+      "size": 49337,
+      "sha256": "c66743652b31b8642db123cb809912a6f610b7adc28e48ac3b751a49b25c435f"
+    },
+    {
+      "path": "uk/md/assets/ir/eb21bcf111a7dd76141b96d10afef09dd9109a3dbab6058b5e8072d14575095c/body_clearance.png",
+      "size": 53230,
+      "sha256": "eb21bcf111a7dd76141b96d10afef09dd9109a3dbab6058b5e8072d14575095c"
+    },
+    {
+      "path": "uk/md/assets/ir/f1656a627f8c33622604acb6c913bb5fb79185afa64aa9b1e74d730baeaa22ac/inbox_user_guide.png",
+      "size": 2389,
+      "sha256": "f1656a627f8c33622604acb6c913bb5fb79185afa64aa9b1e74d730baeaa22ac"
+    },
+    {
+      "path": "uk/md/assets/ir/fab3f07d629ad6e06e7142b235b59b1f65c842a21b4cec93464386a34a3a2647/inbox_st55_screws.png",
+      "size": 8923,
+      "sha256": "fab3f07d629ad6e06e7142b235b59b1f65c842a21b4cec93464386a34a3a2647"
+    },
+    {
+      "path": "uk/md/assets/ir/fc909e0e6d1929d528b6845e0a5af500c0220bbf44f031daf44dbcf00da6ee96/body_mark.png",
+      "size": 55971,
+      "sha256": "fc909e0e6d1929d528b6845e0a5af500c0220bbf44f031daf44dbcf00da6ee96"
+    },
+    {
+      "path": "uk/md/conf.py",
+      "size": 864,
+      "sha256": "1bc7ad166fe748f28a88622ed7408c79d7814e037436e1a4655801d8e41c84b7"
+    },
+    {
+      "path": "uk/md/index.md",
+      "size": 78,
+      "sha256": "3c98bc3b4e6a699dfad47fd5d915699db32c0123901b0e1dbecea80b28af55db"
+    },
+    {
+      "path": "uk/md/manual.ir.json",
+      "size": 530051,
+      "sha256": "437e0755098ca267cdfd78fc2b40f0f32ccfa75266e6e96a6590b44e6c0a5e9d"
+    },
+    {
+      "path": "uk/md/manual_bundle.html",
+      "size": 71189,
+      "sha256": "d9126fbe8804f14db8c7c650ac1cab17c2951732d7ed711feac3fccdff6ab139"
+    },
+    {
+      "path": "uk/md/manual_jaad600a_eu_uk.md",
+      "size": 67046,
+      "sha256": "4ef30cc5ec4c85ab4715cbf319e0859b9711964fb2a573426bd41cf11d28baaa"
+    }
+  ],
+  "source_git_ref": "8f8b49d4afcbd7e134b0e5aff9ad841e7c836004",
+  "printed_version": "unknown",
+  "included_physical_pages": {
+    "fr": [
+      17,
+      30
+    ],
+    "es": [
+      31,
+      44
+    ],
+    "de": [
+      45,
+      58
+    ],
+    "it": [
+      59,
+      72
+    ],
+    "uk": [
+      73,
+      86
+    ],
+    "pt": [
+      87,
+      100
+    ],
+    "nl": [
+      101,
+      114
+    ],
+    "pl": [
+      115,
+      128
+    ]
+  }
+}
