@@ -1,0 +1,19 @@
+{
+  "schema_version": "auto-manual-web-publish-target/v2",
+  "model": "JBP-1000B-SIL",
+  "region": "US",
+  "lang": "pt",
+  "version": "git-20261008-7da20e50",
+  "built_at": "2026-10-08T08:37:51.808326+00:00",
+  "git_ref": "7da20e50345b045eefde08d76682216b694daa7f",
+  "route": "JBP-1000B-SIL/US/pt/md",
+  "manual": "manual_jbp1000bsil_us_pt.md",
+  "language_scope": "single",
+  "language_projection_evidence_path": "evidence/language_projection_receipt.json",
+  "language_projection_evidence_sha256": "42157661fcb7f22849c3ca9044af9fef568e45b958699cd21e09c118b465e3d9",
+  "legacy_default": true,
+  "legacy_route": "JBP-1000B-SIL/US/md",
+  "legacy_aliases": [
+    "manual_jbp1000bsil_us_pt"
+  ]
+}

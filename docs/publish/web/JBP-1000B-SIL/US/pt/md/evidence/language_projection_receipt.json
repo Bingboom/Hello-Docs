@@ -1,0 +1,818 @@
+{
+  "actions": {
+    "check": "dc4385b4a334714c95536d2b329ad3fcbdaad18c3c7e2b40696ec38867df27ca",
+    "html": "dc4385b4a334714c95536d2b329ad3fcbdaad18c3c7e2b40696ec38867df27ca",
+    "md": "dc4385b4a334714c95536d2b329ad3fcbdaad18c3c7e2b40696ec38867df27ca"
+  },
+  "canonical_source": {
+    "files": [
+      {
+        "path": "index.rst",
+        "sha256": "8917db4dfc3ad61a18db963c6da02bf1af88c016c5a62d0c4bc0f83a5a9b6ab5",
+        "size": 606
+      },
+      {
+        "path": "page/back_cover.rst",
+        "sha256": "945e5d37f6f5a5723a1abffadf6993e620767c4a780c2b82e469cd99b706f9cc",
+        "size": 341
+      },
+      {
+        "path": "page/box_contents_pt.rst",
+        "sha256": "53929c9270cc60ce0a454d15b5b75ccefa00393e737a3f8b8d926c7210249544",
+        "size": 702
+      },
+      {
+        "path": "page/charging_pt.rst",
+        "sha256": "5dae0309d5ae92206314a95e733fa0074d8dc27dc1651aa7dcbb0f0833c1e495",
+        "size": 1616
+      },
+      {
+        "path": "page/connections_pt.rst",
+        "sha256": "c75690c16d7b74b04a5f73f4800a5b290b74923f51c8466803b55990b5e83bd9",
+        "size": 953
+      },
+      {
+        "path": "page/fcc_pt.rst",
+        "sha256": "aa998051d9c93eaa9d114f3fbfe9ce125bfd02b9ceba07b25bed291eab7a0d0b",
+        "size": 1705
+      },
+      {
+        "path": "page/installation_pt.rst",
+        "sha256": "f8c7c4386a03874bf867c540f39cf49817aa19c0980250ad6ca28231ae8c61bb",
+        "size": 22272
+      },
+      {
+        "path": "page/lcd_display_pt.rst",
+        "sha256": "a001bcecc242324c19fa3d137a0f547be62d96a791d7bde967a3fb7f2840bcf4",
+        "size": 2846
+      },
+      {
+        "path": "page/operation_pt.rst",
+        "sha256": "fd2e76ddedde17183fdbf86e0c23f8335d78bbbfe331a64459f5e3ead6b77f4c",
+        "size": 2600
+      },
+      {
+        "path": "page/preface_important.rst",
+        "sha256": "f368892d960f75c9e52d322d3647674d5000b4d8f44f05200a97fc9dbf128647",
+        "size": 915
+      },
+      {
+        "path": "page/product_overview_pt.rst",
+        "sha256": "df247c707f532eacf0049258ff3994827d26540ffcf9459a54747714a5dbac15",
+        "size": 1454
+      },
+      {
+        "path": "page/pt_11_warranty.rst",
+        "sha256": "e678f81ba13aeff28125185ecda25e2a54d8d152b90099465908d19472489d86",
+        "size": 3311
+      },
+      {
+        "path": "page/safety_info_pt.rst",
+        "sha256": "4a344a07cdd695a20c037a2706c594a8af12b1be98243f92b871bc532fc238aa",
+        "size": 1480
+      },
+      {
+        "path": "page/specifications_pt.rst",
+        "sha256": "b0dd240006e1d472e49174f355b0fb1fc5b377c811c239224df3b73ca58ce39b",
+        "size": 4836
+      },
+      {
+        "path": "page/storage_pt.rst",
+        "sha256": "dfe28e8e8ffc136e2ba618a4019f1b20c68b67e528a2cb00cb3aeceb809642ad",
+        "size": 668
+      },
+      {
+        "path": "page/symbol_meaning_pt.rst",
+        "sha256": "b5840d2003bfe6699e8ad9fd4cf097167579b53caae728f831462736b91c1217",
+        "size": 6054
+      },
+      {
+        "path": "page/troubleshooting_pt.rst",
+        "sha256": "e2bf11d5de7d6432f06fa9f52e88651553a4f8c74b05cc01d94f180dc3a9d54a",
+        "size": 2009
+      }
+    ],
+    "sha256": "f373f83c705b89ba51d9e17e0bccd26978654d11f0e3263a4bfbf403db944d8d"
+  },
+  "git_ref": "7da20e50345b045eefde08d76682216b694daa7f",
+  "html": {
+    "files": [
+      {
+        "path": ".buildinfo",
+        "sha256": "81921b287ed8a164d2e76b260aec75a2e85b010504d6140ae068d551ac13981b",
+        "size": 231
+      },
+      {
+        "path": "_sources/index.md.txt",
+        "sha256": "dbcda2382f943f364e5214aa5e851aa9acbb8a451565d3a1c2e622257f63275a",
+        "size": 99
+      },
+      {
+        "path": "_sources/manual_jbp1000bsil_us_pt.md.txt",
+        "sha256": "32253e398a0f1f9288235f64b77d738dba6ade7126db59728df2676085d9a691",
+        "size": 72935
+      },
+      {
+        "path": "_static/basic.css",
+        "sha256": "656ff1bacd6f260fc7d71b97f9c2f1fcbf692dc84bf469cd952034efcb9eefed",
+        "size": 14685
+      },
+      {
+        "path": "_static/debug.css",
+        "sha256": "0d05cd9e79d53234304667c08f02971de6196c0ffca593c3903b3667b4055ad6",
+        "size": 1266
+      },
+      {
+        "path": "_static/doctools.js",
+        "sha256": "2992c09df91826a8d33e3b48b645ee77e457adcf7c712d776a814e1e2c448b43",
+        "size": 4322
+      },
+      {
+        "path": "_static/documentation_options.js",
+        "sha256": "de67807817d57570f5b4a39e165f724903240d430e1bd8c52598f433dff81566",
+        "size": 323
+      },
+      {
+        "path": "_static/file.png",
+        "sha256": "5c4bc9a16aebf38c4b950f59b8e501ca36495328cb9eb622218bce9064a35e3e",
+        "size": 286
+      },
+      {
+        "path": "_static/language_data.js",
+        "sha256": "3bc311563b7fc5e80fcab2f8629774bf3cb6b30202000df36dff8e695a9023b7",
+        "size": 4598
+      },
+      {
+        "path": "_static/minus.png",
+        "sha256": "47e7fc50db3699f1ca41ce9a2ffa202c00c5d1d5180c55f62ba859b1bd6cc008",
+        "size": 90
+      },
+      {
+        "path": "_static/plus.png",
+        "sha256": "54115199b96a130cba02147c47c0deb43dcc9b9f08b5162bba8642b34980ac63",
+        "size": 90
+      },
+      {
+        "path": "_static/pygments.css",
+        "sha256": "175552429a0952117a332f75fd6cb601f11e7d88dbf80083afcb8482f963f7e1",
+        "size": 20190
+      },
+      {
+        "path": "_static/scripts/furo-extensions.js",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "size": 0
+      },
+      {
+        "path": "_static/scripts/furo.js",
+        "sha256": "0df6012bf9183882fc314d1eeaa66fe7705e8694cf27351c4be1f5dc32e9fe6f",
+        "size": 5221
+      },
+      {
+        "path": "_static/scripts/furo.js.LICENSE.txt",
+        "sha256": "3eba718c98abe0ad8dd4401edc9ddfabf979f9bb9b8ac446460b61b03694970d",
+        "size": 187
+      },
+      {
+        "path": "_static/scripts/furo.js.map",
+        "sha256": "049d8e3c297854c9e7defecbf64bc92c375b4d94c7bef119ba11c8e8fc723ca2",
+        "size": 28571
+      },
+      {
+        "path": "_static/searchtools.js",
+        "sha256": "371b49c7f094b525244e2a59d7809a6b946fc1c8791201d10dda1dd191133bb7",
+        "size": 21782
+      },
+      {
+        "path": "_static/skeleton.css",
+        "sha256": "e7702bcb03d3eb02e63681f753d88a28bee8f8ed13e50e58ac84a2bc31a5c71d",
+        "size": 6034
+      },
+      {
+        "path": "_static/sphinx_highlight.js",
+        "sha256": "096231e9c87df80ec3273da9c5b71bc81503206726a07a4dd4de44c256ff859c",
+        "size": 5123
+      },
+      {
+        "path": "_static/styles/furo-extensions.css",
+        "sha256": "3d2b0207711a07313dfb6c8b272295f5f931169e4b2b784c61d00be9d871f8fd",
+        "size": 5518
+      },
+      {
+        "path": "_static/styles/furo-extensions.css.map",
+        "sha256": "0b35b6ebb81f2aa1fcaee325c096d683e32c1808a9220670a1a3f88300c6915c",
+        "size": 7762
+      },
+      {
+        "path": "_static/styles/furo.css",
+        "sha256": "177f1163121440086f701bf6cb9d2b2ab8fc29fcb754466465edf7b9f60b5aa0",
+        "size": 50789
+      },
+      {
+        "path": "_static/styles/furo.css.map",
+        "sha256": "b7d40df8a2d2c5cc7727929dce7a482be4506f905ec42588fdbd0571bb1e9a45",
+        "size": 76029
+      },
+      {
+        "path": "_static/web_manual.css",
+        "sha256": "263a48ca9261f83f8df8d1f3c0481343f1e890178073b4a1aa80e8bd97a6c732",
+        "size": 127661
+      },
+      {
+        "path": "assets/fcc_mark_45f309ed8b3f.png",
+        "sha256": "45f309ed8b3f4787b6dde440c738b8e0fbc5074bf758fecc2e1ac44307153d90",
+        "size": 28135
+      },
+      {
+        "path": "assets/ir/06c177bee9e3804ec02c737678b7ca177b4e870fe154b9fa7428ae344d28d8e1/solar_charging.png",
+        "sha256": "06c177bee9e3804ec02c737678b7ca177b4e870fe154b9fa7428ae344d28d8e1",
+        "size": 127576
+      },
+      {
+        "path": "assets/ir/06d5896b50c25c550c67d7973d8d0f4b39073a6f695222d9e719f93c26f5a360/lcd_icon_02.png",
+        "sha256": "06d5896b50c25c550c67d7973d8d0f4b39073a6f695222d9e719f93c26f5a360",
+        "size": 4011
+      },
+      {
+        "path": "assets/ir/0a3059608152fd3629199638915f7d61101abc2fdc7b02092faf2ba530449b54/stacked.png",
+        "sha256": "0a3059608152fd3629199638915f7d61101abc2fdc7b02092faf2ba530449b54",
+        "size": 70047
+      },
+      {
+        "path": "assets/ir/0a6e904e69e110c2fcd2f26d43ea1c7e97aa5240282fda4aafb5e136db0a5c98/lcd_icon_13.png",
+        "sha256": "0a6e904e69e110c2fcd2f26d43ea1c7e97aa5240282fda4aafb5e136db0a5c98",
+        "size": 1030
+      },
+      {
+        "path": "assets/ir/0e06a31abec8eb4f63f69ea4ef2d6df0da780b34f19d9eac6c4bfdb5b6aa4822/concrete_prepare.png",
+        "sha256": "0e06a31abec8eb4f63f69ea4ef2d6df0da780b34f19d9eac6c4bfdb5b6aa4822",
+        "size": 52762
+      },
+      {
+        "path": "assets/ir/0e30a1fffdca45ef0d33af0b2403dbdfcbca3a6a6965e9a387003fe9452ee3f9/concrete_4_5.png",
+        "sha256": "0e30a1fffdca45ef0d33af0b2403dbdfcbca3a6a6965e9a387003fe9452ee3f9",
+        "size": 74184
+      },
+      {
+        "path": "assets/ir/114690be6f4d77ceaebe2ed44641ba2735873d3d6415ae04738dc241392096b7/shared_keep_away_from_children.png",
+        "sha256": "114690be6f4d77ceaebe2ed44641ba2735873d3d6415ae04738dc241392096b7",
+        "size": 7645
+      },
+      {
+        "path": "assets/ir/146e200c2110e790f9ba3532fdda98a51e0d743fa7a7a2cb8f74097ed706b5f7/power.png",
+        "sha256": "146e200c2110e790f9ba3532fdda98a51e0d743fa7a7a2cb8f74097ed706b5f7",
+        "size": 41334
+      },
+      {
+        "path": "assets/ir/1d9fa89da31dca863889c2e051771a7094826814e249d41996b5d79d4bdc7586/read_manual.png",
+        "sha256": "1d9fa89da31dca863889c2e051771a7094826814e249d41996b5d79d4bdc7586",
+        "size": 5391
+      },
+      {
+        "path": "assets/ir/24e567ffad0566246aab95bc86be386842af60454f7a4b5f1a5ac77ff37cbb8c/warning_triangle.png",
+        "sha256": "24e567ffad0566246aab95bc86be386842af60454f7a4b5f1a5ac77ff37cbb8c",
+        "size": 5378
+      },
+      {
+        "path": "assets/ir/2894a3ae3d0c7852c085b34276b9ed7a0d73375f7877b56ab6e131c5ad516b92/lcd_icon_15.png",
+        "sha256": "2894a3ae3d0c7852c085b34276b9ed7a0d73375f7877b56ab6e131c5ad516b92",
+        "size": 4189
+      },
+      {
+        "path": "assets/ir/2aaa65dbb5d6cda19bbc614a75d47c77794e89aa04da2b76dfec4d8e662436eb/parallel.png",
+        "sha256": "2aaa65dbb5d6cda19bbc614a75d47c77794e89aa04da2b76dfec4d8e662436eb",
+        "size": 87799
+      },
+      {
+        "path": "assets/ir/396008647209d7056e59345f3c6c7382bb52c5f88c20a2ef1583c8026a0234b0/connections.png",
+        "sha256": "396008647209d7056e59345f3c6c7382bb52c5f88c20a2ef1583c8026a0234b0",
+        "size": 86879
+      },
+      {
+        "path": "assets/ir/4428ff131502e0f59dbfbea9f79ac99242819c5380f324a1e926e064e431361d/wood_1_2.png",
+        "sha256": "4428ff131502e0f59dbfbea9f79ac99242819c5380f324a1e926e064e431361d",
+        "size": 61973
+      },
+      {
+        "path": "assets/ir/459299ad9a8439354d89f26f621718f1fd54320d0cc371adccfef37edbf5985f/concrete_6_7.png",
+        "sha256": "459299ad9a8439354d89f26f621718f1fd54320d0cc371adccfef37edbf5985f",
+        "size": 59478
+      },
+      {
+        "path": "assets/ir/4635f64a03c544f59d44e2cbc33b106d0de51633c305f92a60eddb0887920b93/concrete_8_9.png",
+        "sha256": "4635f64a03c544f59d44e2cbc33b106d0de51633c305f92a60eddb0887920b93",
+        "size": 116156
+      },
+      {
+        "path": "assets/ir/525d378c03b63f955c83f2e7607c732144233d0ff6588ff56cb8782cffa7cc56/stand_prepare.png",
+        "sha256": "525d378c03b63f955c83f2e7607c732144233d0ff6588ff56cb8782cffa7cc56",
+        "size": 17019
+      },
+      {
+        "path": "assets/ir/55dc36cd9bfecd4c6826e4fe55afec7143e173c6feda85ad63da42324abde8dc/lcd_mode.png",
+        "sha256": "55dc36cd9bfecd4c6826e4fe55afec7143e173c6feda85ad63da42324abde8dc",
+        "size": 30594
+      },
+      {
+        "path": "assets/ir/5c398b3b139b104b0e6d993762020afc9ea37cfef0fa98abbbc149c6b2e409bc/inbox_stand.png",
+        "sha256": "5c398b3b139b104b0e6d993762020afc9ea37cfef0fa98abbbc149c6b2e409bc",
+        "size": 7398
+      },
+      {
+        "path": "assets/ir/5c4fe4a41fc0abe11ec05995a941e124b43f459d40dcf68a445383531cd66a92/wood_4.png",
+        "sha256": "5c4fe4a41fc0abe11ec05995a941e124b43f459d40dcf68a445383531cd66a92",
+        "size": 26656
+      },
+      {
+        "path": "assets/ir/6b3728d19803a5f87c647d4a3e7e6d085a6d79a88a60e046db694a7714eb1a05/concrete_1_2.png",
+        "sha256": "6b3728d19803a5f87c647d4a3e7e6d085a6d79a88a60e046db694a7714eb1a05",
+        "size": 62331
+      },
+      {
+        "path": "assets/ir/6c3cf927a6f8dda75ab9fa347957317ca0e87eb2b763d60fff569fa38c8cb2d9/lcd_map.png",
+        "sha256": "6c3cf927a6f8dda75ab9fa347957317ca0e87eb2b763d60fff569fa38c8cb2d9",
+        "size": 141839
+      },
+      {
+        "path": "assets/ir/718dfbc193a789277bc7198dce66f4b66098cf0583acb8875b2e20376a68f98d/wood_complete.png",
+        "sha256": "718dfbc193a789277bc7198dce66f4b66098cf0583acb8875b2e20376a68f98d",
+        "size": 21256
+      },
+      {
+        "path": "assets/ir/7366462997a1595ef44c1ea5924c07875d4410e55581219dbd53eaa3f3d43e14/lcd_icon_03.png",
+        "sha256": "7366462997a1595ef44c1ea5924c07875d4410e55581219dbd53eaa3f3d43e14",
+        "size": 3163
+      },
+      {
+        "path": "assets/ir/74e2d219427d3155588c28188dcc6b3b870a79f3a7fe8743b89764042b4510f5/lcd_icon_07.png",
+        "sha256": "74e2d219427d3155588c28188dcc6b3b870a79f3a7fe8743b89764042b4510f5",
+        "size": 4374
+      },
+      {
+        "path": "assets/ir/7774684b5ddddb775baf4af7d7a9debccf2d618c3b97dbc914efd41ec441aed5/lcd_icon_10.png",
+        "sha256": "7774684b5ddddb775baf4af7d7a9debccf2d618c3b97dbc914efd41ec441aed5",
+        "size": 1203
+      },
+      {
+        "path": "assets/ir/78908fd2412a7d40f9e4956770adac8cd0697802ac161056aee5d269543abda3/stand_2.png",
+        "sha256": "78908fd2412a7d40f9e4956770adac8cd0697802ac161056aee5d269543abda3",
+        "size": 65836
+      },
+      {
+        "path": "assets/ir/7e4de290ea13b86bd50fbb209b4510116116d4fb403b7ef4f83cf1c1db873989/weee.png",
+        "sha256": "7e4de290ea13b86bd50fbb209b4510116116d4fb403b7ef4f83cf1c1db873989",
+        "size": 2150
+      },
+      {
+        "path": "assets/ir/8703c83342c4f56c548dc86a0dbc11a94eae0b59d56ceb032a8de4dbc69e2dd8/stand_1.png",
+        "sha256": "8703c83342c4f56c548dc86a0dbc11a94eae0b59d56ceb032a8de4dbc69e2dd8",
+        "size": 62239
+      },
+      {
+        "path": "assets/ir/87ac44e52863324b761a672089e6b0497e40fdf48432f698fccf30508060c60a/manual_icon1.png",
+        "sha256": "87ac44e52863324b761a672089e6b0497e40fdf48432f698fccf30508060c60a",
+        "size": 1614
+      },
+      {
+        "path": "assets/ir/8feb333e92438f17f03fa6176eda31e5ce7c28d743996921c1691a077357191c/wood_5.png",
+        "sha256": "8feb333e92438f17f03fa6176eda31e5ce7c28d743996921c1691a077357191c",
+        "size": 37337
+      },
+      {
+        "path": "assets/ir/9025744f59a2ecc8452ebab4d13cb07aed3aee93eebec39c9223447223f53a48/concrete_complete.png",
+        "sha256": "9025744f59a2ecc8452ebab4d13cb07aed3aee93eebec39c9223447223f53a48",
+        "size": 24688
+      },
+      {
+        "path": "assets/ir/906d00d4a8b2609eaf7a5193c233e199c6f1642cae07e46e3ae47f67949905dc/lcd_icon_08.png",
+        "sha256": "906d00d4a8b2609eaf7a5193c233e199c6f1642cae07e46e3ae47f67949905dc",
+        "size": 3619
+      },
+      {
+        "path": "assets/ir/908c33c16c067b87c1b1dc5d6663f159ed88146bbb34b9cdbcfd172a59f9058c/do_not_dismantle.png",
+        "sha256": "908c33c16c067b87c1b1dc5d6663f159ed88146bbb34b9cdbcfd172a59f9058c",
+        "size": 2690
+      },
+      {
+        "path": "assets/ir/9ff96281355a0ff074cfffee4278d35223fba66e8d33e30dbe98bdeabc17a7d2/lcd_icon_09.png",
+        "sha256": "9ff96281355a0ff074cfffee4278d35223fba66e8d33e30dbe98bdeabc17a7d2",
+        "size": 1623
+      },
+      {
+        "path": "assets/ir/a3f56f99081f5cb804d183b42c750d1ab4a184b31a189ef4fab8021e429bb990/inbox_unit.png",
+        "sha256": "a3f56f99081f5cb804d183b42c750d1ab4a184b31a189ef4fab8021e429bb990",
+        "size": 7943
+      },
+      {
+        "path": "assets/ir/a8a846e9767ac618760e6a9ac65d826fb2c092ad7450014fa30ae0894746450a/shared_no_open_flame.png",
+        "sha256": "a8a846e9767ac618760e6a9ac65d826fb2c092ad7450014fa30ae0894746450a",
+        "size": 8901
+      },
+      {
+        "path": "assets/ir/b21ed34d174954cc1abb977753da0b0f7d081875f672d469cc736869d2232c3a/lcd_icon_14.png",
+        "sha256": "b21ed34d174954cc1abb977753da0b0f7d081875f672d469cc736869d2232c3a",
+        "size": 2448
+      },
+      {
+        "path": "assets/ir/bee1babea1dcbb8c2909321a1ffb3c62c1bdafe0fdedb0de7408dfb52f473f45/lcd_icon_01.png",
+        "sha256": "bee1babea1dcbb8c2909321a1ffb3c62c1bdafe0fdedb0de7408dfb52f473f45",
+        "size": 3299
+      },
+      {
+        "path": "assets/ir/c8a1167f43d02cb75233d2edfaded42b0ffef852c4e285cbf64a817908234e64/wood_7.png",
+        "sha256": "c8a1167f43d02cb75233d2edfaded42b0ffef852c4e285cbf64a817908234e64",
+        "size": 78397
+      },
+      {
+        "path": "assets/ir/cfc555a2d22e5a555dcb938c4530196bc50e31bdcdd919fcbc8d625e6370b437/inbox_cable.png",
+        "sha256": "cfc555a2d22e5a555dcb938c4530196bc50e31bdcdd919fcbc8d625e6370b437",
+        "size": 12378
+      },
+      {
+        "path": "assets/ir/d49568878d2f3c459e109748e724314f6a8dd52a6e80a82b66938f93c1e2603b/car_charging.png",
+        "sha256": "d49568878d2f3c459e109748e724314f6a8dd52a6e80a82b66938f93c1e2603b",
+        "size": 108536
+      },
+      {
+        "path": "assets/ir/d6557f1f5c4b910e9336d4032cbe2d015107bb210a6ffa6e08741cf7631c690c/wood_6.png",
+        "sha256": "d6557f1f5c4b910e9336d4032cbe2d015107bb210a6ffa6e08741cf7631c690c",
+        "size": 31906
+      },
+      {
+        "path": "assets/ir/dc6c5ac2d1ed3491b1e2f7a0965878cd52c188b3f4a1898fb8645ee80afbcb6b/wood_prepare.png",
+        "sha256": "dc6c5ac2d1ed3491b1e2f7a0965878cd52c188b3f4a1898fb8645ee80afbcb6b",
+        "size": 59943
+      },
+      {
+        "path": "assets/ir/e8d79dd5cdcdbe06f44f95e591e849565e6f09d0e524d173831e31fecd255d17/overview.png",
+        "sha256": "e8d79dd5cdcdbe06f44f95e591e849565e6f09d0e524d173831e31fecd255d17",
+        "size": 39472
+      },
+      {
+        "path": "assets/ir/f01fc85708cd8e7271311bc09c7b0e39d7424214b07f9a26dafc6f95964f078c/concrete_3.png",
+        "sha256": "f01fc85708cd8e7271311bc09c7b0e39d7424214b07f9a26dafc6f95964f078c",
+        "size": 167004
+      },
+      {
+        "path": "assets/ir/f500eaf9f991134e9430255974a0cc0d1e604eba8cd9fc8a99bfc4bb2120ba5a/wood_3.png",
+        "sha256": "f500eaf9f991134e9430255974a0cc0d1e604eba8cd9fc8a99bfc4bb2120ba5a",
+        "size": 121482
+      },
+      {
+        "path": "assets/ir/f913a65f077499d5c60979c71003f852f6bff932874962ce2337bc31e8543e48/li_ion.png",
+        "sha256": "f913a65f077499d5c60979c71003f852f6bff932874962ce2337bc31e8543e48",
+        "size": 4144
+      },
+      {
+        "path": "assets/ir/fa2f2e31c19dcb95b19969e88c6992ec3c7b0ff29bd8219b1fd3b0219e3d7c01/ac_charging.png",
+        "sha256": "fa2f2e31c19dcb95b19969e88c6992ec3c7b0ff29bd8219b1fd3b0219e3d7c01",
+        "size": 73647
+      },
+      {
+        "path": "assets/ir/fdf3814cc0723a2981e611c34512191f4a43988c5cd1d169c621d6cbc18f2b1c/stand_complete.png",
+        "sha256": "fdf3814cc0723a2981e611c34512191f4a43988c5cd1d169c621d6cbc18f2b1c",
+        "size": 14165
+      },
+      {
+        "path": "assets/ir/ff8253c40eb8397b43d8350b134910dec74dc6903762bd9a93f837ec3a303b15/stand_3.png",
+        "sha256": "ff8253c40eb8397b43d8350b134910dec74dc6903762bd9a93f837ec3a303b15",
+        "size": 72107
+      },
+      {
+        "path": "genindex.html",
+        "sha256": "a548c079311e828159d01a233ca7c9725c0d138661779346ff331197c49dbc44",
+        "size": 14303
+      },
+      {
+        "path": "index.html",
+        "sha256": "872d0fea99f8e81cc4c0768876c5ae5e1bd613cd575de113d8367992153d850c",
+        "size": 20187
+      },
+      {
+        "path": "manual_jbp1000bsil_us_pt.html",
+        "sha256": "7e9d3e71124621f9be6fd036e5ac5238f9836f861db4d68d66904820da0bf837",
+        "size": 93608
+      },
+      {
+        "path": "objects.inv",
+        "sha256": "e499dff9f11fc7d4eafc805f1a52084966503cdc0558b2924b04d33a7042ae52",
+        "size": 324
+      },
+      {
+        "path": "search.html",
+        "sha256": "47aab49196b70079939780d954e4f73c7701ec0b70c9d537528df40327e19088",
+        "size": 14574
+      },
+      {
+        "path": "searchindex.js",
+        "sha256": "25bce2453d13b9b2590ceffc60a1919ce08f203e5038dcc6ab098981e37da733",
+        "size": 13683
+      }
+    ],
+    "sha256": "962de16f23bb1a4d9b9a4843a9b3be2dfc75f3b2800c71def2680a6b485b064e"
+  },
+  "language": "pt",
+  "markdown": {
+    "files": [
+      {
+        "path": "_static/web_manual.css",
+        "sha256": "263a48ca9261f83f8df8d1f3c0481343f1e890178073b4a1aa80e8bd97a6c732",
+        "size": 127661
+      },
+      {
+        "path": "assets/fcc_mark_45f309ed8b3f.png",
+        "sha256": "45f309ed8b3f4787b6dde440c738b8e0fbc5074bf758fecc2e1ac44307153d90",
+        "size": 28135
+      },
+      {
+        "path": "assets/ir/06c177bee9e3804ec02c737678b7ca177b4e870fe154b9fa7428ae344d28d8e1/solar_charging.png",
+        "sha256": "06c177bee9e3804ec02c737678b7ca177b4e870fe154b9fa7428ae344d28d8e1",
+        "size": 127576
+      },
+      {
+        "path": "assets/ir/06d5896b50c25c550c67d7973d8d0f4b39073a6f695222d9e719f93c26f5a360/lcd_icon_02.png",
+        "sha256": "06d5896b50c25c550c67d7973d8d0f4b39073a6f695222d9e719f93c26f5a360",
+        "size": 4011
+      },
+      {
+        "path": "assets/ir/0a3059608152fd3629199638915f7d61101abc2fdc7b02092faf2ba530449b54/stacked.png",
+        "sha256": "0a3059608152fd3629199638915f7d61101abc2fdc7b02092faf2ba530449b54",
+        "size": 70047
+      },
+      {
+        "path": "assets/ir/0a6e904e69e110c2fcd2f26d43ea1c7e97aa5240282fda4aafb5e136db0a5c98/lcd_icon_13.png",
+        "sha256": "0a6e904e69e110c2fcd2f26d43ea1c7e97aa5240282fda4aafb5e136db0a5c98",
+        "size": 1030
+      },
+      {
+        "path": "assets/ir/0e06a31abec8eb4f63f69ea4ef2d6df0da780b34f19d9eac6c4bfdb5b6aa4822/concrete_prepare.png",
+        "sha256": "0e06a31abec8eb4f63f69ea4ef2d6df0da780b34f19d9eac6c4bfdb5b6aa4822",
+        "size": 52762
+      },
+      {
+        "path": "assets/ir/0e30a1fffdca45ef0d33af0b2403dbdfcbca3a6a6965e9a387003fe9452ee3f9/concrete_4_5.png",
+        "sha256": "0e30a1fffdca45ef0d33af0b2403dbdfcbca3a6a6965e9a387003fe9452ee3f9",
+        "size": 74184
+      },
+      {
+        "path": "assets/ir/114690be6f4d77ceaebe2ed44641ba2735873d3d6415ae04738dc241392096b7/shared_keep_away_from_children.png",
+        "sha256": "114690be6f4d77ceaebe2ed44641ba2735873d3d6415ae04738dc241392096b7",
+        "size": 7645
+      },
+      {
+        "path": "assets/ir/146e200c2110e790f9ba3532fdda98a51e0d743fa7a7a2cb8f74097ed706b5f7/power.png",
+        "sha256": "146e200c2110e790f9ba3532fdda98a51e0d743fa7a7a2cb8f74097ed706b5f7",
+        "size": 41334
+      },
+      {
+        "path": "assets/ir/1d9fa89da31dca863889c2e051771a7094826814e249d41996b5d79d4bdc7586/read_manual.png",
+        "sha256": "1d9fa89da31dca863889c2e051771a7094826814e249d41996b5d79d4bdc7586",
+        "size": 5391
+      },
+      {
+        "path": "assets/ir/24e567ffad0566246aab95bc86be386842af60454f7a4b5f1a5ac77ff37cbb8c/warning_triangle.png",
+        "sha256": "24e567ffad0566246aab95bc86be386842af60454f7a4b5f1a5ac77ff37cbb8c",
+        "size": 5378
+      },
+      {
+        "path": "assets/ir/2894a3ae3d0c7852c085b34276b9ed7a0d73375f7877b56ab6e131c5ad516b92/lcd_icon_15.png",
+        "sha256": "2894a3ae3d0c7852c085b34276b9ed7a0d73375f7877b56ab6e131c5ad516b92",
+        "size": 4189
+      },
+      {
+        "path": "assets/ir/2aaa65dbb5d6cda19bbc614a75d47c77794e89aa04da2b76dfec4d8e662436eb/parallel.png",
+        "sha256": "2aaa65dbb5d6cda19bbc614a75d47c77794e89aa04da2b76dfec4d8e662436eb",
+        "size": 87799
+      },
+      {
+        "path": "assets/ir/396008647209d7056e59345f3c6c7382bb52c5f88c20a2ef1583c8026a0234b0/connections.png",
+        "sha256": "396008647209d7056e59345f3c6c7382bb52c5f88c20a2ef1583c8026a0234b0",
+        "size": 86879
+      },
+      {
+        "path": "assets/ir/4428ff131502e0f59dbfbea9f79ac99242819c5380f324a1e926e064e431361d/wood_1_2.png",
+        "sha256": "4428ff131502e0f59dbfbea9f79ac99242819c5380f324a1e926e064e431361d",
+        "size": 61973
+      },
+      {
+        "path": "assets/ir/459299ad9a8439354d89f26f621718f1fd54320d0cc371adccfef37edbf5985f/concrete_6_7.png",
+        "sha256": "459299ad9a8439354d89f26f621718f1fd54320d0cc371adccfef37edbf5985f",
+        "size": 59478
+      },
+      {
+        "path": "assets/ir/4635f64a03c544f59d44e2cbc33b106d0de51633c305f92a60eddb0887920b93/concrete_8_9.png",
+        "sha256": "4635f64a03c544f59d44e2cbc33b106d0de51633c305f92a60eddb0887920b93",
+        "size": 116156
+      },
+      {
+        "path": "assets/ir/525d378c03b63f955c83f2e7607c732144233d0ff6588ff56cb8782cffa7cc56/stand_prepare.png",
+        "sha256": "525d378c03b63f955c83f2e7607c732144233d0ff6588ff56cb8782cffa7cc56",
+        "size": 17019
+      },
+      {
+        "path": "assets/ir/55dc36cd9bfecd4c6826e4fe55afec7143e173c6feda85ad63da42324abde8dc/lcd_mode.png",
+        "sha256": "55dc36cd9bfecd4c6826e4fe55afec7143e173c6feda85ad63da42324abde8dc",
+        "size": 30594
+      },
+      {
+        "path": "assets/ir/5c398b3b139b104b0e6d993762020afc9ea37cfef0fa98abbbc149c6b2e409bc/inbox_stand.png",
+        "sha256": "5c398b3b139b104b0e6d993762020afc9ea37cfef0fa98abbbc149c6b2e409bc",
+        "size": 7398
+      },
+      {
+        "path": "assets/ir/5c4fe4a41fc0abe11ec05995a941e124b43f459d40dcf68a445383531cd66a92/wood_4.png",
+        "sha256": "5c4fe4a41fc0abe11ec05995a941e124b43f459d40dcf68a445383531cd66a92",
+        "size": 26656
+      },
+      {
+        "path": "assets/ir/6b3728d19803a5f87c647d4a3e7e6d085a6d79a88a60e046db694a7714eb1a05/concrete_1_2.png",
+        "sha256": "6b3728d19803a5f87c647d4a3e7e6d085a6d79a88a60e046db694a7714eb1a05",
+        "size": 62331
+      },
+      {
+        "path": "assets/ir/6c3cf927a6f8dda75ab9fa347957317ca0e87eb2b763d60fff569fa38c8cb2d9/lcd_map.png",
+        "sha256": "6c3cf927a6f8dda75ab9fa347957317ca0e87eb2b763d60fff569fa38c8cb2d9",
+        "size": 141839
+      },
+      {
+        "path": "assets/ir/718dfbc193a789277bc7198dce66f4b66098cf0583acb8875b2e20376a68f98d/wood_complete.png",
+        "sha256": "718dfbc193a789277bc7198dce66f4b66098cf0583acb8875b2e20376a68f98d",
+        "size": 21256
+      },
+      {
+        "path": "assets/ir/7366462997a1595ef44c1ea5924c07875d4410e55581219dbd53eaa3f3d43e14/lcd_icon_03.png",
+        "sha256": "7366462997a1595ef44c1ea5924c07875d4410e55581219dbd53eaa3f3d43e14",
+        "size": 3163
+      },
+      {
+        "path": "assets/ir/74e2d219427d3155588c28188dcc6b3b870a79f3a7fe8743b89764042b4510f5/lcd_icon_07.png",
+        "sha256": "74e2d219427d3155588c28188dcc6b3b870a79f3a7fe8743b89764042b4510f5",
+        "size": 4374
+      },
+      {
+        "path": "assets/ir/7774684b5ddddb775baf4af7d7a9debccf2d618c3b97dbc914efd41ec441aed5/lcd_icon_10.png",
+        "sha256": "7774684b5ddddb775baf4af7d7a9debccf2d618c3b97dbc914efd41ec441aed5",
+        "size": 1203
+      },
+      {
+        "path": "assets/ir/78908fd2412a7d40f9e4956770adac8cd0697802ac161056aee5d269543abda3/stand_2.png",
+        "sha256": "78908fd2412a7d40f9e4956770adac8cd0697802ac161056aee5d269543abda3",
+        "size": 65836
+      },
+      {
+        "path": "assets/ir/7e4de290ea13b86bd50fbb209b4510116116d4fb403b7ef4f83cf1c1db873989/weee.png",
+        "sha256": "7e4de290ea13b86bd50fbb209b4510116116d4fb403b7ef4f83cf1c1db873989",
+        "size": 2150
+      },
+      {
+        "path": "assets/ir/8703c83342c4f56c548dc86a0dbc11a94eae0b59d56ceb032a8de4dbc69e2dd8/stand_1.png",
+        "sha256": "8703c83342c4f56c548dc86a0dbc11a94eae0b59d56ceb032a8de4dbc69e2dd8",
+        "size": 62239
+      },
+      {
+        "path": "assets/ir/87ac44e52863324b761a672089e6b0497e40fdf48432f698fccf30508060c60a/manual_icon1.png",
+        "sha256": "87ac44e52863324b761a672089e6b0497e40fdf48432f698fccf30508060c60a",
+        "size": 1614
+      },
+      {
+        "path": "assets/ir/8feb333e92438f17f03fa6176eda31e5ce7c28d743996921c1691a077357191c/wood_5.png",
+        "sha256": "8feb333e92438f17f03fa6176eda31e5ce7c28d743996921c1691a077357191c",
+        "size": 37337
+      },
+      {
+        "path": "assets/ir/9025744f59a2ecc8452ebab4d13cb07aed3aee93eebec39c9223447223f53a48/concrete_complete.png",
+        "sha256": "9025744f59a2ecc8452ebab4d13cb07aed3aee93eebec39c9223447223f53a48",
+        "size": 24688
+      },
+      {
+        "path": "assets/ir/906d00d4a8b2609eaf7a5193c233e199c6f1642cae07e46e3ae47f67949905dc/lcd_icon_08.png",
+        "sha256": "906d00d4a8b2609eaf7a5193c233e199c6f1642cae07e46e3ae47f67949905dc",
+        "size": 3619
+      },
+      {
+        "path": "assets/ir/908c33c16c067b87c1b1dc5d6663f159ed88146bbb34b9cdbcfd172a59f9058c/do_not_dismantle.png",
+        "sha256": "908c33c16c067b87c1b1dc5d6663f159ed88146bbb34b9cdbcfd172a59f9058c",
+        "size": 2690
+      },
+      {
+        "path": "assets/ir/9ff96281355a0ff074cfffee4278d35223fba66e8d33e30dbe98bdeabc17a7d2/lcd_icon_09.png",
+        "sha256": "9ff96281355a0ff074cfffee4278d35223fba66e8d33e30dbe98bdeabc17a7d2",
+        "size": 1623
+      },
+      {
+        "path": "assets/ir/a3f56f99081f5cb804d183b42c750d1ab4a184b31a189ef4fab8021e429bb990/inbox_unit.png",
+        "sha256": "a3f56f99081f5cb804d183b42c750d1ab4a184b31a189ef4fab8021e429bb990",
+        "size": 7943
+      },
+      {
+        "path": "assets/ir/a8a846e9767ac618760e6a9ac65d826fb2c092ad7450014fa30ae0894746450a/shared_no_open_flame.png",
+        "sha256": "a8a846e9767ac618760e6a9ac65d826fb2c092ad7450014fa30ae0894746450a",
+        "size": 8901
+      },
+      {
+        "path": "assets/ir/b21ed34d174954cc1abb977753da0b0f7d081875f672d469cc736869d2232c3a/lcd_icon_14.png",
+        "sha256": "b21ed34d174954cc1abb977753da0b0f7d081875f672d469cc736869d2232c3a",
+        "size": 2448
+      },
+      {
+        "path": "assets/ir/bee1babea1dcbb8c2909321a1ffb3c62c1bdafe0fdedb0de7408dfb52f473f45/lcd_icon_01.png",
+        "sha256": "bee1babea1dcbb8c2909321a1ffb3c62c1bdafe0fdedb0de7408dfb52f473f45",
+        "size": 3299
+      },
+      {
+        "path": "assets/ir/c8a1167f43d02cb75233d2edfaded42b0ffef852c4e285cbf64a817908234e64/wood_7.png",
+        "sha256": "c8a1167f43d02cb75233d2edfaded42b0ffef852c4e285cbf64a817908234e64",
+        "size": 78397
+      },
+      {
+        "path": "assets/ir/cfc555a2d22e5a555dcb938c4530196bc50e31bdcdd919fcbc8d625e6370b437/inbox_cable.png",
+        "sha256": "cfc555a2d22e5a555dcb938c4530196bc50e31bdcdd919fcbc8d625e6370b437",
+        "size": 12378
+      },
+      {
+        "path": "assets/ir/d49568878d2f3c459e109748e724314f6a8dd52a6e80a82b66938f93c1e2603b/car_charging.png",
+        "sha256": "d49568878d2f3c459e109748e724314f6a8dd52a6e80a82b66938f93c1e2603b",
+        "size": 108536
+      },
+      {
+        "path": "assets/ir/d6557f1f5c4b910e9336d4032cbe2d015107bb210a6ffa6e08741cf7631c690c/wood_6.png",
+        "sha256": "d6557f1f5c4b910e9336d4032cbe2d015107bb210a6ffa6e08741cf7631c690c",
+        "size": 31906
+      },
+      {
+        "path": "assets/ir/dc6c5ac2d1ed3491b1e2f7a0965878cd52c188b3f4a1898fb8645ee80afbcb6b/wood_prepare.png",
+        "sha256": "dc6c5ac2d1ed3491b1e2f7a0965878cd52c188b3f4a1898fb8645ee80afbcb6b",
+        "size": 59943
+      },
+      {
+        "path": "assets/ir/e8d79dd5cdcdbe06f44f95e591e849565e6f09d0e524d173831e31fecd255d17/overview.png",
+        "sha256": "e8d79dd5cdcdbe06f44f95e591e849565e6f09d0e524d173831e31fecd255d17",
+        "size": 39472
+      },
+      {
+        "path": "assets/ir/f01fc85708cd8e7271311bc09c7b0e39d7424214b07f9a26dafc6f95964f078c/concrete_3.png",
+        "sha256": "f01fc85708cd8e7271311bc09c7b0e39d7424214b07f9a26dafc6f95964f078c",
+        "size": 167004
+      },
+      {
+        "path": "assets/ir/f500eaf9f991134e9430255974a0cc0d1e604eba8cd9fc8a99bfc4bb2120ba5a/wood_3.png",
+        "sha256": "f500eaf9f991134e9430255974a0cc0d1e604eba8cd9fc8a99bfc4bb2120ba5a",
+        "size": 121482
+      },
+      {
+        "path": "assets/ir/f913a65f077499d5c60979c71003f852f6bff932874962ce2337bc31e8543e48/li_ion.png",
+        "sha256": "f913a65f077499d5c60979c71003f852f6bff932874962ce2337bc31e8543e48",
+        "size": 4144
+      },
+      {
+        "path": "assets/ir/fa2f2e31c19dcb95b19969e88c6992ec3c7b0ff29bd8219b1fd3b0219e3d7c01/ac_charging.png",
+        "sha256": "fa2f2e31c19dcb95b19969e88c6992ec3c7b0ff29bd8219b1fd3b0219e3d7c01",
+        "size": 73647
+      },
+      {
+        "path": "assets/ir/fdf3814cc0723a2981e611c34512191f4a43988c5cd1d169c621d6cbc18f2b1c/stand_complete.png",
+        "sha256": "fdf3814cc0723a2981e611c34512191f4a43988c5cd1d169c621d6cbc18f2b1c",
+        "size": 14165
+      },
+      {
+        "path": "assets/ir/ff8253c40eb8397b43d8350b134910dec74dc6903762bd9a93f837ec3a303b15/stand_3.png",
+        "sha256": "ff8253c40eb8397b43d8350b134910dec74dc6903762bd9a93f837ec3a303b15",
+        "size": 72107
+      },
+      {
+        "path": "conf.py",
+        "sha256": "4f357e60f2d213ca44c324740c4787f1e3ab904ea55f258bae61d36e9b9f431e",
+        "size": 818
+      },
+      {
+        "path": "index.md",
+        "sha256": "dbcda2382f943f364e5214aa5e851aa9acbb8a451565d3a1c2e622257f63275a",
+        "size": 99
+      },
+      {
+        "path": "manual.ir.json",
+        "sha256": "3e27c66940338878ec1431828b11c75dcbba8184644ce2eef1a7318556483963",
+        "size": 618077
+      },
+      {
+        "path": "manual_bundle.html",
+        "sha256": "d728b013a3a371a6e5b173aea8fba357e49715164fb905927615da5cd613f121",
+        "size": 79976
+      },
+      {
+        "path": "manual_jbp1000bsil_us_pt.md",
+        "sha256": "32253e398a0f1f9288235f64b77d738dba6ade7126db59728df2676085d9a691",
+        "size": 72935
+      }
+    ],
+    "manual": "manual_jbp1000bsil_us_pt.md",
+    "sha256": "9f8f83f044d4711ccb48ad5da4a18a5a0ce34fca237f2ded4a1312c8e2ea8d5a"
+  },
+  "model": "JBP-1000B-SIL",
+  "projection_manifest": {
+    "path": "projection_bundle_manifest.json",
+    "sha256": "79ce29a2c10340ab60e127c12d8ebb8db3b4b9dc19b5de3a3b0c4fa3a6754cdf"
+  },
+  "region": "US",
+  "schema_version": "auto-manual-web-language-release-evidence/v1",
+  "version": "git-20261008-7da20e50"
+}
