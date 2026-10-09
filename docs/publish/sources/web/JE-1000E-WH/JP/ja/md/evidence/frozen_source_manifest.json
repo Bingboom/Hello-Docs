@@ -6,7 +6,7 @@
     "languages": [
       "ja"
     ],
-    "technical_version": "git-20261008-efb663e3-reviewed",
+    "technical_version": "git-20261008-efb663e3-no-cover-reviewed",
     "printed_manual_version": null
   },
   "document_title": "Jackery SlimPower H1（JE-1000E-WH）取扱説明書",
@@ -16,7 +16,7 @@
     "size_bytes": 12367319,
     "page_count": 27
   },
-  "source_authority": "Operator-designated Japanese PDF and reviewed candidate; publication authorized by 上线提交发布 on 2026-10-08 under MA-274",
+  "source_authority": "Operator-designated Japanese PDF, previously approved source, and explicit Web cover exclusion under MA-277; continuing 上线提交发布",
   "included_physical_pages": [
     1,
     2,
@@ -90,7 +90,8 @@
     "Japanese print-wrap reflow only; vector-plus recovery; p21 F2/F6 font-glyph recovery with visual evidence",
     "No retranslation, technical correction, online table write or asset registry promotion",
     "Complete illustration frames with editable labels; complete native App phone screenshots",
-    "Additional navigational headings and semantic table headers documented in source/differences.json"
+    "Additional navigational headings and semantic table headers documented in source/differences.json",
+    "MA-277 excludes the printed cover from the Web edition; original PDF and print-cover source remain archived; all non-cover chapter blocks and artwork bytes unchanged"
   ],
   "validation_boundary": "Approved JP native semantic source; independent chapter/component admission, original text/geometry and artwork verification, shared ComponentSpec consumers, cold replay and strict Sphinx. Existing JE-1000F JP check is repository regression only. Publication evidence and deployment acceptance remain distinct.",
   "inputs": [
@@ -106,13 +107,13 @@
     },
     {
       "path": "README.md",
-      "size": 2494,
-      "sha256": "d52da7acba90fd6706b7d9a79c3158e9bc871119aa52ab4961dc02959100b83c"
+      "size": 1752,
+      "sha256": "3d8b57c004e446a368843c3b382a83ba8921d37a8c97f2b444985f0e170aa8a9"
     },
     {
       "path": "approval.json",
-      "size": 1728,
-      "sha256": "c9481b1d8c538acccc86cb10fbb9cdf62b960d847c94918ef84800454776743a"
+      "size": 1975,
+      "sha256": "462069fa6d87c9d86f984cfd8d71d628230e635c83123e079f96b138c96b8af4"
     },
     {
       "path": "artwork/ac-charge.png",
@@ -421,8 +422,8 @@
     },
     {
       "path": "rebuild.py",
-      "size": 9020,
-      "sha256": "3f49dac044c2e24d1e559b0756381b0a44859051bfaf061c113e624ebabf9f49"
+      "size": 9209,
+      "sha256": "b5104c23bed1db0f92538ce24dc0020ea11be0e2a8042a6fba87f72f0c747405"
     },
     {
       "path": "seal.py",
@@ -431,8 +432,8 @@
     },
     {
       "path": "source/admission.json",
-      "size": 1325,
-      "sha256": "1e7c421381d259d375343f6388b85a58af51e408c2f164182b0ea07be67a080b"
+      "size": 1305,
+      "sha256": "f9f8e1af5aabf93f7f2ce57e68ff5b51f985dc183220959b4efeb55bc54f0419"
     },
     {
       "path": "source/asset-recipe.json",
@@ -441,18 +442,23 @@
     },
     {
       "path": "source/chapters.json",
-      "size": 305856,
-      "sha256": "0cf08d1303281a889660f3a120e839a05b8cd56e936cc743967e9bf2f5e6cdd8"
+      "size": 300869,
+      "sha256": "efbfaea54d0a31be350b823f83d67a02974a4db0568d57784181c46c7171a269"
+    },
+    {
+      "path": "source/cover-removal.json",
+      "size": 547,
+      "sha256": "1f755cdb4e36130449f542f7b8b172d9702385224e9a2eb414aa7442e66decfd"
     },
     {
       "path": "source/differences.json",
-      "size": 2224,
-      "sha256": "61c4f9e0f88a0225d52879832bcd354c554ef6119678bdbf625fd8fe35e52b7e"
+      "size": 2397,
+      "sha256": "e81969ec45fe598badda20e8bdfd208828b106e0290f290b0809e3c971fec3a3"
     },
     {
       "path": "source/dispositions.json",
-      "size": 65140,
-      "sha256": "bac55103c2766a5b7cd43541a02ec9b51a296ba94830f799060106d80f55cb7b"
+      "size": 65740,
+      "sha256": "c1d085043ea4d5c477f8eab903c55c739becb47dd5a51d7cc014b2370442ad9b"
     },
     {
       "path": "source/native-text.json",
@@ -461,8 +467,13 @@
     },
     {
       "path": "source/presentation.css",
-      "size": 5575,
-      "sha256": "02af9439adf6a5fc3ddff3f79af3fe1548541311afda99b90abd103756335d14"
+      "size": 5091,
+      "sha256": "5cffa7c23741eed96535925d60c039fb3a114c07d433b04c4dff5d36f01e737d"
+    },
+    {
+      "path": "source/print-cover.json",
+      "size": 4630,
+      "sha256": "758445c4443d62800a3abb9126ec580e637ea5f63f87e5fbaa4a33badc51fb12"
     },
     {
       "path": "source/reading-order.json",
@@ -481,18 +492,18 @@
     },
     {
       "path": "verify.py",
-      "size": 6598,
-      "sha256": "480986b014bac5a54ca5e892f113cb9a3bdab2e002b4056ceac2c16c6de1b42e"
+      "size": 7044,
+      "sha256": "ab0aa4bd6c7cac47f911c8f749f0c17f674d9a3acab26c3316161f05324bb070"
     },
     {
       "path": "web/ja/_static/source_presentation.css",
-      "size": 5575,
-      "sha256": "02af9439adf6a5fc3ddff3f79af3fe1548541311afda99b90abd103756335d14"
+      "size": 5091,
+      "sha256": "5cffa7c23741eed96535925d60c039fb3a114c07d433b04c4dff5d36f01e737d"
     },
     {
       "path": "web/ja/_static/web_manual.css",
-      "size": 124859,
-      "sha256": "5783008c449b8db9c618492118199a11c10f5aafae5d53c2a15b90ab2ebb65f1"
+      "size": 125530,
+      "sha256": "b21d68bbd53bf1e93bde5c9387d5bcbdde5f0317c810f38cce0f9d6041326090"
     },
     {
       "path": "web/ja/assets/ac-charge.png",
@@ -806,13 +817,13 @@
     },
     {
       "path": "web/ja/manual.ir.json",
-      "size": 485100,
-      "sha256": "7e6dea4cc66ed970a3dd0aea898962d5a181720e379089a624579f2b1f9833d2"
+      "size": 478154,
+      "sha256": "bb3204d42b22ec96750e5dd215e2d53e8e03f4ecae5b7aeb2c8a82d0f3da8cae"
     },
     {
       "path": "web/ja/manual.md",
-      "size": 86430,
-      "sha256": "3f48213cc0f23cbed3db0374292bbe52beda24ecac708efc1d058f0fe721c1ba"
+      "size": 84512,
+      "sha256": "b87915f1e1cbde8e4ca8abc20fe7e68f0c40e82d40731957b482f626f180b3be"
     }
   ],
   "symbol_asset_admission": {
@@ -1243,5 +1254,21 @@
         }
       ]
     }
-  }
+  },
+  "web_exclusions": [
+    {
+      "physical_pages": [
+        1
+      ],
+      "chapter": "introduction",
+      "reason": "封面 不要放进去网页版里面啊",
+      "authorization": "MA-277"
+    },
+    {
+      "physical_pages": [
+        2
+      ],
+      "reason": "Printed TOC already represented by Web navigation"
+    }
+  ]
 }

@@ -1,13 +1,6 @@
 <style>
-/* Source-local cover composition; shared components retain rendering ownership. */
+/* Source-local navigation and safety styles; the printed cover is excluded from Web. */
 article span[id]:empty { display: block; scroll-margin-top: 2rem; }
-article .hb-reference-figure[data-reference-id="cover-unit"] {
-  max-width: 260px; margin: 1.2rem auto 0.35rem;
-}
-article .slimpower-cover-model, article .slimpower-cover-region,
-article .slimpower-cover-caption, article .slimpower-cover-support { text-align: center; }
-article .slimpower-cover-caption { font-size: .85rem; margin-top: .5rem; }
-article .slimpower-cover-thanks { font-weight: 600; margin-top: 1.4rem; }
 #furo-main-content .hb-symbol-signal-composition .hb-signal-badge {
   background: transparent; color: #333; font-size: 1.15rem; min-width: 0;
 }
@@ -38,7 +31,6 @@ article img[src="assets/concrete_3_4.png"] { aspect-ratio: 1261 / 919; }
 article img[src="assets/concrete_5_6.png"] { aspect-ratio: 1261 / 944; }
 article img[src="assets/concrete_7_8.png"] { aspect-ratio: 1257 / 755; }
 article img[src="assets/concrete_prepare.png"] { aspect-ratio: 1261 / 529; }
-article img[src="assets/cover-unit.png"] { aspect-ratio: 366 / 720; }
 article img[src="assets/inbox-cable.png"] { aspect-ratio: 216 / 219; }
 article img[src="assets/inbox-manual.png"] { aspect-ratio: 183 / 219; }
 article img[src="assets/inbox-stand.png"] { aspect-ratio: 183 / 219; }
@@ -85,24 +77,6 @@ article img[src="assets/wood_6.png"] { aspect-ratio: 1259 / 680; }
 article img[src="assets/wood_prepare.png"] { aspect-ratio: 879 / 553; }
 
 </style>
-
-<span id="introduction"></span>
-
-## Jackery SlimPower H1 取扱説明書
-
-<p class="slimpower-cover-model">型番：JE-1000E-WH</p>
-
-<p class="slimpower-cover-region">国内専用/For use only in Japan</p>
-
-<figure class="hb-reference-figure" data-component-id="HB-SPECIAL-REFERENCE-FIGURE" data-reference-id="cover-unit" data-source-fragment-sha256="0aca56979e715fa6d3db98dab85130cdcdb63031f1ce8bb18670a14035f7a6f9"><div class="hb-reference-semantic" data-reference-id="cover-unit.semantic"><img alt="Jackery SlimPower H1" class="hb-reference-art hb-composite-art" src="assets/cover-unit.png" style="max-width:260px;height:auto;display:block;margin:0 auto"/></div></figure>
-
-<p class="slimpower-cover-caption">写真はイメージです。実際の商品とは異なる場合があります。</p>
-
-<p class="slimpower-cover-thanks">お買い上げありがとうございます。</p>
-
-<p>ご使用の前にこの「取扱説明書」をよくお読みのうえ、正しくお使いください。特に「安全上のご注意」は、必ずお読みいただき、安全にお使いください。お読みになったあとは、すぐに取り出せる場所に大切に保管してください。本製品の取扱説明書は随時更新されますので、最新の取扱説明書は公式サイトでご確認ください。</p>
-
-<p class="slimpower-cover-support">カスタマーサポート: jackery.jp@jackery.com</p>
 
 <span id="safety"></span>
 
