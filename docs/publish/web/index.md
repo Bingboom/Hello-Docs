@@ -1,4 +1,4 @@
-# Auto Manual Library
+# Published manuals
 
 - [JA-AD01A / EU / en - Jackery 102W GaN 3-Port Fast Charger User Manual](JA-AD01A/EU/en/md/manual_jaad01a_eu_en.md)
 - [JA-AD500A-SIL / JP / ja - Jackery DC Input Module](JA-AD500A-SIL/JP/ja/md/manual_jaad500asil_jp_ja.md)
@@ -114,6 +114,9 @@
 - [JE-3600A / EU / pt - Jackery Explorer 3600 Plus](JE-3600A/EU/pt/md/manual_je3600a_eu_pt.md)
 - [JE-3600A / EU / uk - Jackery Explorer 3600 Plus](JE-3600A/EU/uk/md/manual_je3600a_eu_uk.md)
 - [JE-500A / EU / en - Jackery Explorer 500 User Manual](JE-500A/EU/en/md/manual_je500a_eu_en.md)
+- [JHP-3000D / US / en - Jackery HomePower 3000 · JHP-3000D](JHP-3000D/US/en/md/manual_jhp3000d_us_en.md)
+- [JHP-3000D / US / es - Jackery HomePower 3000 · JHP-3000D](JHP-3000D/US/es/md/manual_jhp3000d_us_es.md)
+- [JHP-3000D / US / fr - Jackery HomePower 3000 · JHP-3000D](JHP-3000D/US/fr/md/manual_jhp3000d_us_fr.md)
 - [JHP-3600C / US / en - Jackery HomePower 3600 Pro Max User Manual](JHP-3600C/US/en/md/manual_jhp3600c_us_en.md)
 - [JHP-3600C / US / es - Jackery HomePower 3600 Pro Max — Manual de usuario](JHP-3600C/US/es/md/manual_jhp3600c_us_es.md)
 - [JHP-3600C / US / fr - Jackery HomePower 3600 Pro Max — Manuel d’utilisation](JHP-3600C/US/fr/md/manual_jhp3600c_us_fr.md)

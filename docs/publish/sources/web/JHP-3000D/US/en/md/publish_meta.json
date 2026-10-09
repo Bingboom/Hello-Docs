@@ -1,0 +1,19 @@
+{
+  "schema_version": "auto-manual-web-publish-target/v2",
+  "model": "JHP-3000D",
+  "region": "US",
+  "lang": "en",
+  "version": "git-20261009-cebe4aab",
+  "built_at": "2026-10-09T15:32:23.003244+00:00",
+  "git_ref": "167bf6ad376cf008ded34cfb840d28cb5ff588c3",
+  "route": "JHP-3000D/US/en/md",
+  "manual": "manual_jhp3000d_us_en.md",
+  "language_scope": "single",
+  "language_projection_evidence_path": "evidence/language_projection_receipt.json",
+  "language_projection_evidence_sha256": "aacf6a2afdbff502ae608b17da2bd44d5858daff292e34f580bde53581638819",
+  "legacy_default": true,
+  "legacy_route": "JHP-3000D/US/md",
+  "legacy_aliases": [
+    "manual_jhp3000d_us_en"
+  ]
+}
