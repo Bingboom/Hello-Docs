@@ -1,12 +1,93 @@
 <style>
-/* Source-local dimensions only; shared component geometry and tokens remain authoritative. */
-#furo-main-content .hb-reference-figure[data-reference-id="cover-unit"] { max-width: 12rem; margin-inline: auto; }
+/* Source-local presentation only; shared component geometry and tokens remain authoritative.
+   Web edition of the print manual: no printed cover/TOC, JE-1000F JP Web idiom. */
+
+/* Print titles are mixed case ("Jackery Battery Pack"); do not upper-case them. */
+#furo-main-content :is(h1, h2) { text-transform: none; }
+article span[id]:empty { display: block; scroll-margin-top: 2rem; }
+
+/* 使用上のご注意: pictogram explanations are dark bands inside the chapter. */
+#furo-main-content section:has(> figure:is(.hb-symbol-signal-composition, .hb-symbol-pair-composition)) > h2 {
+  display: block; max-width: var(--hb-reading-width); margin: 1.6rem 0 1rem; padding: .38rem 1rem;
+  border-radius: 2rem; background: var(--hb-brand-dark); color: var(--hb-paper); font-size: 1rem; line-height: 1.4;
+}
+#furo-main-content section:has(> figure:is(.hb-symbol-signal-composition, .hb-symbol-pair-composition)) > h2::before { display: none; }
+#furo-main-content section:has(> figure:is(.hb-symbol-signal-composition, .hb-symbol-pair-composition)) > h2 .headerlink { color: rgba(255, 255, 255, .7); }
+/* The print tables carry no column headings; keep them for assistive technology only. */
+#furo-main-content figure:is(.hb-symbol-signal-composition, .hb-symbol-pair-composition) table > thead > tr > th {
+  height: 0; padding: 0 !important; border: 0 !important; font-size: 0 !important; line-height: 0 !important;
+}
+#furo-main-content .hb-symbol-signal-composition .hb-symbol-signal-label-cell { background: var(--hb-surface) !important; text-align: center; }
+#furo-main-content .hb-symbol-signal-composition .hb-signal-badge {
+  width: auto; min-width: 0; min-height: 0; padding: 0; background: transparent; color: var(--hb-text);
+  font-size: clamp(1.2rem, 2.4vw, 1.7rem); font-weight: 800; line-height: 1.2; white-space: nowrap;
+}
+#furo-main-content .hb-symbol-meaning strong { display: inline-block; margin-bottom: .1rem; }
+
+/* 同梱品: print notes sit in one grey panel; the disclaimer is a bold ■ line. */
+#furo-main-content .jbp-inbox-notes {
+  max-width: var(--hb-reading-width); margin: .2rem 0 .9rem; padding: .8rem 1rem;
+  border-radius: .9rem; background: var(--hb-surface); font-size: .95rem; line-height: 1.5;
+}
+#furo-main-content .jbp-inbox-notes p { margin: 0; }
+#furo-main-content .jbp-inbox-notes p + p { margin-top: .3rem; }
+#furo-main-content p.jbp-inbox-disclaimer { margin: .6rem 0 1.5rem; font-size: 1.05rem; }
+#furo-main-content p.jbp-inbox-disclaimer::before { content: "■"; margin-right: .15em; font-weight: 700; }
+
+/* 各部の名称: print callouts end at their leader lines; names bold, ratings small. */
+#furo-main-content .hb-reference-figure[data-reference-id="overview"] .hb-reference-live-label { justify-content: flex-end; text-align: right; font-weight: 700; }
+#furo-main-content .hb-reference-figure[data-reference-id="overview"] .hb-reference-live-label:is([data-source-line="1"], [data-source-line="2"]) { font-weight: 400; }
+
+/* Narrow source art keeps its print width. */
 #furo-main-content .hb-reference-figure[data-reference-id="lcd-control"] { max-width: 10rem; margin-inline: auto; }
-#furo-main-content .hb-reference-figure[data-reference-id="stand-installed"],
-#furo-main-content .hb-reference-figure[data-reference-id="wood-installed"] { max-width: 13rem; margin-inline: auto; }
-#furo-main-content .hb-reference-figure[data-reference-id="wood-installed"] .hb-reference-live-label { font-size: .65rem; }
 #furo-main-content .hb-reference-figure[data-reference-id="lcd-map"] .hb-reference-live-label { font-size: .8rem; }
-#furo-main-content .hb-callout-copy img { width: 1em; height: auto; vertical-align: middle; }
+
+/* オン/オフ: the clock and "3s" stay on the drawing as printed. */
+@media (min-width: 761px) {
+  #furo-main-content .hb-operation-figure[data-operation-id="power"] .hb-operation-stage { container-type: inline-size; }
+  #furo-main-content .hb-operation-figure[data-operation-id="power"] .hb-operation-steps { min-height: 0; padding: 3.3cqw 0 0 .9cqw; background: transparent; }
+  #furo-main-content .hb-operation-figure[data-operation-id="power"] .hb-operation-step .line:first-child { font-size: 2.85cqw; line-height: 1.2; }
+  #furo-main-content .hb-operation-figure[data-operation-id="power"] .hb-operation-step .line + .line { font-size: 1.9cqw; line-height: 1.2; }
+  #furo-main-content .hb-operation-figure[data-operation-id="power"] .hb-operation-step + .hb-operation-step { margin-top: 2.55cqw; }
+  #furo-main-content .hb-operation-figure[data-operation-id="power"] .hb-operation-supporting-copy {
+    position: absolute; top: 46.9%; left: 82.4%; padding: 0; background: transparent; font-size: 2.22cqw; line-height: 1.3;
+  }
+}
+
+/* Inline LCD connection icon reads at text size. */
+#furo-main-content .manual-callout-body img { width: auto !important; height: 1.35em !important; margin: 0 .15em; vertical-align: -.3em; }
+
+/* 縦置 / 木製の壁: print places the installed unit beside the lead and preparation panel. */
+@media (min-width: 761px) {
+  #furo-main-content section:has(> figure[data-reference-id="stand-installed"]),
+  #furo-main-content section:has(> figure[data-reference-id="wood-installed"]) {
+    display: grid; grid-template-columns: minmax(0, 1fr) 27%; column-gap: 1.25rem; align-items: start;
+  }
+  #furo-main-content section:has(> figure[data-reference-id="stand-installed"]) > *,
+  #furo-main-content section:has(> figure[data-reference-id="wood-installed"]) > * { grid-column: 1 / -1; }
+  /* Grid items keep their margins; restore the flow rhythm of the other chapters. */
+  #furo-main-content section:has(> figure[data-reference-id="stand-installed"]) > figure,
+  #furo-main-content section:has(> figure[data-reference-id="wood-installed"]) > figure { margin: 0 0 1.6rem; }
+  #furo-main-content section:has(> figure[data-reference-id="stand-installed"]) > p:has(> span[id]:only-child:empty),
+  #furo-main-content section:has(> figure[data-reference-id="wood-installed"]) > p:has(> span[id]:only-child:empty) { margin: 0; }
+  #furo-main-content section:has(> figure[data-reference-id="stand-installed"]) > h1 { grid-row: 1; }
+  #furo-main-content section:has(> figure[data-reference-id="stand-installed"]) > p:has(+ figure[data-reference-id="stand-preparation"]) { grid-column: 1; grid-row: 2; margin-bottom: 0; }
+  #furo-main-content section > figure[data-reference-id="stand-preparation"] { grid-column: 1; grid-row: 3; }
+  #furo-main-content section > figure[data-reference-id="stand-installed"] { grid-column: 2; grid-row: 2 / span 2; align-self: center; margin: 0; }
+  #furo-main-content section:has(> figure[data-reference-id="wood-installed"]) > h2 { grid-column: 1; grid-row: 1; margin-top: 0; }
+  #furo-main-content section > figure[data-reference-id="wood-preparation"] { grid-column: 1; grid-row: 2; }
+  #furo-main-content section > figure[data-reference-id="wood-installed"] { grid-column: 2; grid-row: 1 / span 2; align-self: end; }
+}
+@media (max-width: 760px) {
+  #furo-main-content .hb-reference-figure:is([data-reference-id="stand-installed"], [data-reference-id="wood-installed"]) { max-width: 13rem; margin-inline: auto; }
+  #furo-main-content .hb-reference-figure[data-reference-id="overview"] .hb-reference-live-label { justify-content: flex-start; text-align: left; }
+}
+
+/* 保証について: print notes are grey capsules; scope details are indented. */
+#furo-main-content .hb-warranty-card p.jbp-warranty-note { display: table; padding: .2rem .65rem; border-radius: .45rem; background: var(--hb-surface); font-size: .84rem; }
+#furo-main-content .hb-warranty-card p.jbp-warranty-detail { padding-left: 1.25em; }
+#furo-main-content p.jbp-contact-line { width: fit-content; max-width: 100%; margin: .45rem 0 0; padding: .3rem .8rem; border-radius: .45rem; background: var(--hb-surface); font-size: .9rem; }
+#furo-main-content .hb-warranty-card + p.jbp-contact-line { margin-top: 1rem; }
 
 /* Preserve native table semantics while making this Japanese source readable without panning. */
 @media (max-width: 760px) {
@@ -20,31 +101,61 @@
  #furo-main-content .hb-troubleshooting-composition[aria-label="エラーコード / 対処方法"] .hb-troubleshooting-col-measures { width: 78%; }
 }
 
+/* Live labels keep the print type size relative to each panel (generated from figures.json). */
+@media (min-width: 761px) {
+  #furo-main-content .hb-reference-figure[data-reference-id="overview"] .hb-reference-live-label { font-size: 2.236cqw; }
+  #furo-main-content .hb-reference-figure[data-reference-id="overview"] .hb-reference-live-label[data-source-line="1"] { font-size: 1.597cqw; }
+  #furo-main-content .hb-reference-figure[data-reference-id="overview"] .hb-reference-live-label[data-source-line="2"] { font-size: 1.597cqw; }
+  #furo-main-content .hb-reference-figure[data-reference-id="stand-preparation"] .hb-reference-live-label { font-size: 3.256cqw; }
+  #furo-main-content .hb-reference-figure[data-reference-id="stand-1"] .hb-reference-live-label { font-size: 2.222cqw; }
+  #furo-main-content .hb-reference-figure[data-reference-id="stand-2"] .hb-reference-live-label { font-size: 2.222cqw; }
+  #furo-main-content .hb-reference-figure[data-reference-id="stand-3"] .hb-reference-live-label { font-size: 2.222cqw; }
+  #furo-main-content .hb-reference-figure[data-reference-id="wood-preparation"] .hb-reference-live-label { font-size: 3.223cqw; }
+  #furo-main-content .hb-reference-figure[data-reference-id="wood-preparation"] .hb-reference-live-label[data-source-line="1"] { font-size: 4.144cqw; }
+  #furo-main-content .hb-reference-figure[data-reference-id="wood-installed"] .hb-reference-live-label { font-size: 7.447cqw; }
+  #furo-main-content .hb-reference-figure[data-reference-id="wood-1-2"] .hb-reference-live-label { font-size: 2.239cqw; }
+  #furo-main-content .hb-reference-figure[data-reference-id="wood-3-4"] .hb-reference-live-label { font-size: 1.912cqw; }
+  #furo-main-content .hb-reference-figure[data-reference-id="wood-3-4"] .hb-reference-live-label[data-source-line="0"] { line-height: 1.5; }
+  #furo-main-content .hb-reference-figure[data-reference-id="wood-3-4"] .hb-reference-live-label[data-source-line="1"] { line-height: 1.5; }
+  #furo-main-content .hb-reference-figure[data-reference-id="wood-3-4"] .hb-reference-live-label[data-source-line="2"] { font-size: 2.231cqw; }
+  #furo-main-content .hb-reference-figure[data-reference-id="wood-5"] .hb-reference-live-label { font-size: 2.222cqw; }
+  #furo-main-content .hb-reference-figure[data-reference-id="wood-5"] .hb-reference-live-label[data-source-line="0"] { line-height: 1.86; }
+  #furo-main-content .hb-reference-figure[data-reference-id="wood-5"] .hb-reference-live-label[data-source-line="5"] { font-size: 1.587cqw; }
+  #furo-main-content .hb-reference-figure[data-reference-id="wood-6"] .hb-reference-live-label { font-size: 2.251cqw; }
+  #furo-main-content .hb-reference-figure[data-reference-id="wood-6"] .hb-reference-live-label[data-source-line="2"] { font-size: 1.929cqw; }
+  #furo-main-content .hb-reference-figure[data-reference-id="wood-6"] .hb-reference-live-label[data-source-line="3"] { font-size: 1.608cqw; }
+  #furo-main-content .hb-reference-figure[data-reference-id="wood-7"] .hb-reference-live-label { font-size: 2.222cqw; }
+  #furo-main-content .hb-reference-figure[data-reference-id="wood-7"] .hb-reference-live-label[data-source-line="0"] { line-height: 1.86; }
+  #furo-main-content .hb-reference-figure[data-reference-id="concrete-preparation"] .hb-reference-live-label { font-size: 2.208cqw; }
+  #furo-main-content .hb-reference-figure[data-reference-id="concrete-preparation"] .hb-reference-live-label[data-source-line="1"] { font-size: 2.839cqw; }
+  #furo-main-content .hb-reference-figure[data-reference-id="concrete-1-2"] .hb-reference-live-label { font-size: 2.238cqw; }
+  #furo-main-content .hb-reference-figure[data-reference-id="concrete-3"] .hb-reference-live-label { font-size: 2.236cqw; }
+  #furo-main-content .hb-reference-figure[data-reference-id="concrete-3"] .hb-reference-live-label[data-source-line="0"] { line-height: 1.86; }
+  #furo-main-content .hb-reference-figure[data-reference-id="concrete-4-5"] .hb-reference-live-label { font-size: 1.926cqw; }
+  #furo-main-content .hb-reference-figure[data-reference-id="concrete-4-5"] .hb-reference-live-label[data-source-line="0"] { font-size: 2.247cqw; line-height: 1.71; }
+  #furo-main-content .hb-reference-figure[data-reference-id="concrete-4-5"] .hb-reference-live-label[data-source-line="1"] { font-size: 2.247cqw; line-height: 1.57; }
+  #furo-main-content .hb-reference-figure[data-reference-id="concrete-4-5"] .hb-reference-live-label[data-source-line="4"] { font-size: 2.247cqw; line-height: 1.71; }
+  #furo-main-content .hb-reference-figure[data-reference-id="concrete-6-7"] .hb-reference-live-label { font-size: 2.241cqw; }
+  #furo-main-content .hb-reference-figure[data-reference-id="concrete-6-7"] .hb-reference-live-label[data-source-line="0"] { line-height: 1.86; }
+  #furo-main-content .hb-reference-figure[data-reference-id="concrete-6-7"] .hb-reference-live-label[data-source-line="1"] { line-height: 1.86; }
+  #furo-main-content .hb-reference-figure[data-reference-id="concrete-6-7"] .hb-reference-live-label[data-source-line="2"] { font-size: 1.921cqw; }
+  #furo-main-content .hb-reference-figure[data-reference-id="concrete-6-7"] .hb-reference-live-label[data-source-line="3"] { font-size: 1.921cqw; }
+  #furo-main-content .hb-reference-figure[data-reference-id="concrete-8-9"] .hb-reference-live-label { font-size: 2.262cqw; }
+  #furo-main-content .hb-reference-figure[data-reference-id="concrete-8-9"] .hb-reference-live-label[data-source-line="0"] { line-height: 1.86; }
+  #furo-main-content .hb-reference-figure[data-reference-id="concrete-8-9"] .hb-reference-live-label[data-source-line="1"] { line-height: 1.86; }
+  #furo-main-content .hb-reference-figure[data-reference-id="connection"] .hb-reference-live-label { font-size: 1.899cqw; }
+  #furo-main-content .hb-reference-figure[data-reference-id="ac-charge"] .hb-reference-live-label { font-size: 1.905cqw; }
+  #furo-main-content .hb-reference-figure[data-reference-id="solar-charge"] .hb-reference-live-label { font-size: 1.429cqw; }
+  #furo-main-content .hb-reference-figure[data-reference-id="solar-charge"] .hb-reference-live-label[data-source-line="1"] { font-size: 1.905cqw; }
+}
+
 </style>
-
-<span id="preface"></span>
-
-## Jackery Battery Pack 取扱説明書
-
-<p>型番：JBP-1000B-WH</p>
-
-<p>国内専用/For use only in Japan</p>
-
-<figure class="hb-reference-figure" data-component-id="HB-SPECIAL-REFERENCE-FIGURE" data-reference-id="cover-unit" data-source-fragment-sha256="f13eac3367dc4c3b03fd59a642e10324f3aad0548ad7a8354b92ab67a00db370"><div class="hb-reference-semantic" data-reference-id="cover-unit.semantic"><img alt="cover-unit" class="hb-reference-art hb-composite-art" src="assets/cover-unit.png"/></div></figure>
-
-<p>写真はイメージです。実際の商品とは異なる場合があります。</p>
-
-<p>カスタマーサポート: jackery.jp@jackery.com</p>
-
-<p>お買い上げありがとうございます。</p>
-
-<p>ご使用の前にこの「取扱説明書」をよくお読みのうえ、正しくお使いください。特に「安全上のご注意」は、必ずお読みいただき、安全にお使いください。お読みになったあとは、すぐに取り出せる場所に大切に保管してください。本製品の取扱説明書は随時更新されますので、最新の取扱説明書は公式サイトでご確認ください。</p>
 
 <span id="safety"></span>
 
-## 使用上のご注意
+# 使用上のご注意
 
-<p>本製品を使用する際、以下の注意事項を守ってください。</p>
+<p><strong>本製品を使用する際、以下の注意事項を守ってください。</strong></p>
 
 <ul><li><p>本製品を使用する前に取扱説明書をよくお読みください。</p></li><li><p>危険防止のため、お子様の近くで本製品を使用する時は、お子様から目を離さないようにしてください。</p></li><li><p>メーカーが保証していない推奨外の付属品を使用すると、感電の恐れがあります。</p></li><li><p>製品を使用しない場合は、プラグを抜いてください。</p></li><li><p>火災、爆発、感電などの予測できない危険が発生する恐れがありますので、本製品を解体しないでください。</p></li><li><p>感電の危険があるため、破損したコードやプラグ、またはケーブルを使用しないでください。</p></li><li><p>製品の充電は風通しの良い場所で行い、風通しの悪い場所での充電はおやめください。</p></li><li><p>雨に濡れないよう、風通しのよい乾燥した場所に保管してください。本製品は濡れると感電の危険があります。</p></li><li><p>火災、爆発などの事故の原因となるため、本製品を火気に近づけないでください。</p></li><li><p>高温の下 (直射日光や猛暑の車内) で使用したり放置しないでください。内蔵のバッテリーが過熱して発火したり、機能しなくなったり、寿命が短くなる可能性があります。</p></li><li><p>本製品を初めてご使用になる時は、十分に充電してからご使用ください。本製品を電池が切れた状態で長期間 (3 ヶ月～6 ヶ月) 放置すると、性能が低下し、過放電により充電ができなくなる場合があります。</p></li></ul>
 
@@ -54,75 +165,75 @@
 
 <p>製品を安全に正しくお使いいただき、お客様や他の方々への危害や財産への損害を未然に防止するための表示です。内容をよく理解してから本文をお読みください。</p>
 
-<figure aria-label="絵表示について" class="hb-symbol-signal-composition" data-component-id="HB-TABLE-SYMBOL-SIGNAL"><table class="hb-symbol-signal-table"><colgroup><col class="hb-symbol-signal-col-label"/><col class="hb-symbol-signal-col-meaning"/></colgroup><thead><tr><th class="hb-symbol-signal-label-heading" scope="col">表示</th><th class="hb-symbol-signal-meaning-heading" scope="col">意味</th></tr></thead><tbody><tr><td class="hb-symbol-signal-label-cell"><span aria-label="警告" class="hb-signal-badge"><span aria-hidden="true" class="hb-signal-icon">⚠</span><span class="hb-signal-label">警告</span></span></td><td class="hb-symbol-signal-meaning-cell">この表示を無視して、誤った取り扱いをすると、人が死亡または重傷を負う可能性が想定される内容を示しています。</td></tr><tr><td class="hb-symbol-signal-label-cell"><span aria-label="ご注意" class="hb-signal-badge"><span aria-hidden="true" class="hb-signal-icon">⚠</span><span class="hb-signal-label">ご注意</span></span></td><td class="hb-symbol-signal-meaning-cell">この表示を無視して、誤った取り扱いをすると、人が傷害を負う可能性が想定される内容または物的損害の発生が想定される内容を示しています。</td></tr><tr><td class="hb-symbol-signal-label-cell"><span aria-label="説明" class="hb-signal-badge"><span aria-hidden="true" class="hb-signal-icon">⚠</span><span class="hb-signal-label">説明</span></span></td><td class="hb-symbol-signal-meaning-cell">この表示を無視して誤った取り扱いをすると、機器の損傷、データの消失、性能の低下、または予期しない動作が発生する可能性があることを示しています。</td></tr><tr><td class="hb-symbol-signal-label-cell"><span aria-label="ヒント" class="hb-signal-badge"><span aria-hidden="true" class="hb-signal-icon">⚠</span><span class="hb-signal-label">ヒント</span></span></td><td class="hb-symbol-signal-meaning-cell">文章内の重要な情報や操作のヒントを補足する内容を示しています。</td></tr></tbody></table></figure>
+<figure aria-label="絵表示について" class="hb-symbol-signal-composition" data-component-id="HB-TABLE-SYMBOL-SIGNAL"><table class="hb-symbol-signal-table"><colgroup><col class="hb-symbol-signal-col-label"/><col class="hb-symbol-signal-col-meaning"/></colgroup><thead><tr><th class="hb-symbol-signal-label-heading" scope="col">表示</th><th class="hb-symbol-signal-meaning-heading" scope="col">意味</th></tr></thead><tbody><tr><td class="hb-symbol-signal-label-cell"><span aria-label="警告" class="hb-signal-badge"><span class="hb-signal-label">警告</span></span></td><td class="hb-symbol-signal-meaning-cell">この表示を無視して、誤った取り扱いをすると、人が死亡または重傷を負う可能性が想定される内容を示しています。</td></tr><tr><td class="hb-symbol-signal-label-cell"><span aria-label="ご注意" class="hb-signal-badge"><span class="hb-signal-label">ご注意</span></span></td><td class="hb-symbol-signal-meaning-cell">この表示を無視して、誤った取り扱いをすると、人が傷害を負う可能性が想定される内容または物的損害の発生が想定される内容を示しています。</td></tr><tr><td class="hb-symbol-signal-label-cell"><span aria-label="説明" class="hb-signal-badge"><span class="hb-signal-label">説明</span></span></td><td class="hb-symbol-signal-meaning-cell">この表示を無視して誤った取り扱いをすると、機器の損傷、データの消失、性能の低下、または予期しない動作が発生する可能性があることを示しています。</td></tr><tr><td class="hb-symbol-signal-label-cell"><span aria-label="ヒント" class="hb-signal-badge"><span class="hb-signal-label">ヒント</span></span></td><td class="hb-symbol-signal-meaning-cell">文章内の重要な情報や操作のヒントを補足する内容を示しています。</td></tr></tbody></table></figure>
 
-### 絵表示の説明
+<span id="symbols-legend"></span>
 
-<figure aria-label="絵表示の説明" class="hb-symbol-pair-composition" data-component-id="HB-TABLE-SYMBOL-ICON"><div class="hb-symbol-pair-grid"><div class="hb-symbol-panel hb-symbol-panel-1"><table class="hb-symbol-panel-table"><colgroup><col class="hb-symbol-col-icon"/><col class="hb-symbol-col-meaning"/></colgroup><thead><tr><th class="hb-symbol-icon-heading" scope="col">記号</th><th class="hb-symbol-meaning-heading" scope="col">説明</th></tr></thead><tbody><tr><td class="hb-symbol-icon"><img alt="製品を分解、改造を禁止する記号" class="hb-symbol-art" src="assets/symbol_do_not_dismantle.svg"/></td><td class="hb-symbol-meaning">製品を分解、改造を禁止する記号</td></tr><tr><td class="hb-symbol-icon"><img alt="潜在的な危険やリスクについて注意喚起するために、必ずお読みください。" class="hb-symbol-art" src="assets/symbol_warning_triangle.svg"/></td><td class="hb-symbol-meaning">潜在的な危険やリスクについて注意喚起するために、必ずお読みください。</td></tr><tr><td class="hb-symbol-icon"><img alt="操作の前に取扱説明書をお読みください。" class="hb-symbol-art" src="assets/symbol_read_manual.svg"/></td><td class="hb-symbol-meaning">操作の前に取扱説明書をお読みください。</td></tr><tr><td class="hb-symbol-icon"><img alt="本製品を火気の近くに置かないでください。" class="hb-symbol-art" src="assets/symbol_no_open_flame.svg"/></td><td class="hb-symbol-meaning">本製品を火気の近くに置かないでください。</td></tr><tr><td class="hb-symbol-icon"><img alt="小さなお子様の手の届かない場所に保管してください。" class="hb-symbol-art" src="assets/symbol_keep_away_from_children.svg"/></td><td class="hb-symbol-meaning">小さなお子様の手の届かない場所に保管してください。</td></tr></tbody></table></div><div class="hb-symbol-panel hb-symbol-panel-2"><table class="hb-symbol-panel-table"><colgroup><col class="hb-symbol-col-icon"/><col class="hb-symbol-col-meaning"/></colgroup><thead><tr><th class="hb-symbol-icon-heading" scope="col">記号</th><th class="hb-symbol-meaning-heading" scope="col">説明</th></tr></thead><tbody><tr><td class="hb-symbol-icon"><img alt="充電式電池のリサイクルについて本機はリサイクル可能な充電池を内蔵しています。この商品を廃棄する場合は、当社のカスタマーサポートにご連絡ください。充電池の取りはずしはお客様自身では行わないでください。" class="hb-symbol-art" src="assets/native-li_ion.svg"/></td><td class="hb-symbol-meaning">充電式電池のリサイクルについて本機はリサイクル可能な充電池を内蔵しています。この商品を廃棄する場合は、当社のカスタマーサポートにご連絡ください。充電池の取りはずしはお客様自身では行わないでください。</td></tr><tr><td class="hb-symbol-icon"><img alt="このシンボルは、本製品を一般家庭ごみとして廃棄せず、リサイクルのために指定の回収施設に持ち込む必要があることを示しています。適切な廃棄およびリサイクルは、環境保護に役立ちます。本製品の廃棄やリサイクルについての詳細は、お住まいの自治体、廃棄物処理業者、または販売店にお問い合わせください。" class="hb-symbol-art" src="assets/symbol_weee.svg"/></td><td class="hb-symbol-meaning">このシンボルは、本製品を一般家庭ごみとして廃棄せず、リサイクルのために指定の回収施設に持ち込む必要があることを示しています。適切な廃棄およびリサイクルは、環境保護に役立ちます。本製品の廃棄やリサイクルについての詳細は、お住まいの自治体、廃棄物処理業者、または販売店にお問い合わせください。</td></tr></tbody></table></div></div></figure>
+## 絵表示の説明
+
+<figure aria-label="絵表示の説明" class="hb-symbol-pair-composition" data-component-id="HB-TABLE-SYMBOL-ICON"><div class="hb-symbol-pair-grid"><div class="hb-symbol-panel hb-symbol-panel-1"><table class="hb-symbol-panel-table"><colgroup><col class="hb-symbol-col-icon"/><col class="hb-symbol-col-meaning"/></colgroup><thead><tr><th class="hb-symbol-icon-heading" scope="col">記号</th><th class="hb-symbol-meaning-heading" scope="col">説明</th></tr></thead><tbody><tr><td class="hb-symbol-icon"><img alt="製品を分解、改造を禁止する記号" class="hb-symbol-art" src="assets/symbol_do_not_dismantle.svg"/></td><td class="hb-symbol-meaning">製品を分解、改造を禁止する記号</td></tr><tr><td class="hb-symbol-icon"><img alt="潜在的な危険やリスクについて注意喚起するために、必ずお読みください。" class="hb-symbol-art" src="assets/symbol_warning_triangle.svg"/></td><td class="hb-symbol-meaning">潜在的な危険やリスクについて注意喚起するために、必ずお読みください。</td></tr><tr><td class="hb-symbol-icon"><img alt="操作の前に取扱説明書をお読みください。" class="hb-symbol-art" src="assets/symbol_read_manual.svg"/></td><td class="hb-symbol-meaning">操作の前に取扱説明書をお読みください。</td></tr><tr><td class="hb-symbol-icon"><img alt="本製品を火気の近くに置かないでください。" class="hb-symbol-art" src="assets/symbol_no_open_flame.svg"/></td><td class="hb-symbol-meaning">本製品を火気の近くに置かないでください。</td></tr><tr><td class="hb-symbol-icon"><img alt="小さなお子様の手の届かない場所に保管してください。" class="hb-symbol-art" src="assets/symbol_keep_away_from_children.svg"/></td><td class="hb-symbol-meaning">小さなお子様の手の届かない場所に保管してください。</td></tr></tbody></table></div><div class="hb-symbol-panel hb-symbol-panel-2"><table class="hb-symbol-panel-table"><colgroup><col class="hb-symbol-col-icon"/><col class="hb-symbol-col-meaning"/></colgroup><thead><tr><th class="hb-symbol-icon-heading" scope="col">記号</th><th class="hb-symbol-meaning-heading" scope="col">説明</th></tr></thead><tbody><tr><td class="hb-symbol-icon"><img alt="充電式電池のリサイクルについて本機はリサイクル可能な充電池を内蔵しています。この商品を廃棄する場合は、当社のカスタマーサポートにご連絡ください。充電池の取りはずしはお客様自身では行わないでください。" class="hb-symbol-art" src="assets/native-li_ion.svg"/></td><td class="hb-symbol-meaning"><strong>充電式電池のリサイクルについて</strong><br/>本機はリサイクル可能な充電池を内蔵しています。<br/>この商品を廃棄する場合は、当社のカスタマーサポートにご連絡ください。<br/>充電池の取りはずしはお客様自身では行わないでください。</td></tr><tr><td class="hb-symbol-icon"><img alt="このシンボルは、本製品を一般家庭ごみとして廃棄せず、リサイクルのために指定の回収施設に持ち込む必要があることを示しています。適切な廃棄およびリサイクルは、環境保護に役立ちます。本製品の廃棄やリサイクルについての詳細は、お住まいの自治体、廃棄物処理業者、または販売店にお問い合わせください。" class="hb-symbol-art" src="assets/symbol_weee.svg"/></td><td class="hb-symbol-meaning">このシンボルは、本製品を一般家庭ごみとして廃棄せず、リサイクルのために指定の回収施設に持ち込む必要があることを示しています。<br/>適切な廃棄およびリサイクルは、環境保護に役立ちます。<br/>本製品の廃棄やリサイクルについての詳細は、お住まいの自治体、廃棄物処理業者、または販売店にお問い合わせください。</td></tr></tbody></table></div></div></figure>
 
 <span id="in_the_box"></span>
 
-## 同梱品
+# 同梱品
 
 <figure aria-label="同梱品" class="hb-inbox-composition" data-card-count="4" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="responsive-card-grid"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="本体" class="hb-inbox-art" src="assets/inbox-unit.png"/><div class="hb-inbox-label"><p>本体</p></div></li><li class="hb-inbox-card" data-item-number="2"><img alt="拡張ケーブル" class="hb-inbox-art" src="assets/inbox-cable.png"/><div class="hb-inbox-label"><p>拡張ケーブル</p></div></li><li class="hb-inbox-card" data-item-number="3"><img alt="取扱説明書" class="hb-inbox-art" src="assets/inbox-manual.png"/><div class="hb-inbox-label"><p>取扱説明書</p></div></li><li class="hb-inbox-card" data-item-number="4"><img alt="スタンド" class="hb-inbox-art" src="assets/inbox-stand.png"/><div class="hb-inbox-label"><p>スタンド</p></div></li></ol></figure>
 
-<p>※  付属品を故障、紛失等してしまった場合はカスタマーサポートまでご連絡ください。※  本拡張ケーブルは、同梱されている本体以外には使用しないでください。</p>
+<div class="jbp-inbox-notes"><p>※  付属品を故障、紛失等してしまった場合はカスタマーサポートまでご連絡ください。</p><p>※  本拡張ケーブルは、同梱されている本体以外には使用しないでください。</p></div>
 
-<p>本機の仕様および外観は、改善のため予告なく変更することがあります。</p>
+<p class="jbp-inbox-disclaimer"><strong>本機の仕様および外観は、改善のため予告なく変更することがあります。</strong></p>
 
 <span id="product_overview"></span>
 
-## 各部の名称
+# 各部の名称
 
-<figure class="hb-reference-figure hb-base-art-live-copy" data-component-id="HB-SPECIAL-REFERENCE-FIGURE" data-reference-id="overview" data-source-fragment-sha256="ace4c972fafabcb8c792039c4c0b4e2b55c307e1372b4f835d646135cad7c577" data-web-base-art-ref="overview" data-web-presentation-mode="base-art-live-copy"><div class="hb-reference-semantic" data-preserve-art-frame="true" data-reference-id="overview.semantic"><div class="hb-reference-art-panel" style="--hb-panel-top:0%;--hb-panel-fill:#ffffff"><img alt="" class="hb-reference-art hb-composite-art" src="assets/overview.png"/><span class="hb-reference-live-label" data-source-line="0" style="--hb-x:71.9603%;--hb-y:0.13%;--hb-width:20.8667%;--hb-height:15.9963%">DC 拡張ポートDC入力: 40V-57.6V⎓24A DC出力: 40V-57.6V⎓50A</span><span class="hb-reference-live-label" data-source-line="1" style="--hb-x:75.9853%;--hb-y:34.8155%;--hb-width:16.4185%;--hb-height:9.9323%">主電源ボタン</span><span class="hb-reference-live-label" data-source-line="2" style="--hb-x:71.0697%;--hb-y:50.4906%;--hb-width:21.3342%;--hb-height:9.9323%">LCD ディスプレイ</span></div></div></figure>
+<figure class="hb-reference-figure hb-base-art-live-copy" data-component-id="HB-SPECIAL-REFERENCE-FIGURE" data-reference-id="overview" data-source-fragment-sha256="b2023aa68d340a05e121af47130267473bb3fef67fdd07f249795fc7f357ca25" data-web-base-art-ref="overview" data-web-presentation-mode="base-art-live-copy"><div class="hb-reference-semantic" data-preserve-art-frame="true" data-reference-id="overview.semantic"><div class="hb-reference-art-panel" style="--hb-panel-top:0%;--hb-panel-fill:#ffffff"><img alt="" class="hb-reference-art hb-composite-art" src="assets/overview.png"/><span class="hb-reference-live-label" data-source-line="0" style="--hb-x:72.0711%;--hb-y:0.13%;--hb-width:17.7559%;--hb-height:9.9323%">DC 拡張ポート</span><span class="hb-reference-live-label" data-source-line="1" style="--hb-x:68.9603%;--hb-y:6.0368%;--hb-width:20.4439%;--hb-height:7.1045%">DC入力: 40V-57.6V⎓24A</span><span class="hb-reference-live-label" data-source-line="2" style="--hb-x:68.9603%;--hb-y:9.0219%;--hb-width:20.4439%;--hb-height:7.1045%">DC出力: 40V-57.6V⎓50A</span><span class="hb-reference-live-label" data-source-line="3" style="--hb-x:72.9853%;--hb-y:34.8155%;--hb-width:16.4185%;--hb-height:9.9323%">主電源ボタン</span><span class="hb-reference-live-label" data-source-line="4" style="--hb-x:68.0697%;--hb-y:50.4906%;--hb-width:21.3342%;--hb-height:9.9323%">LCD ディスプレイ</span></div></div></figure>
 
 <span id="lcd_display"></span>
 
-## 液晶画面
+# 液晶画面
 
 <figure class="hb-reference-figure hb-base-art-live-copy" data-component-id="HB-SPECIAL-REFERENCE-FIGURE" data-reference-id="lcd-map" data-source-fragment-sha256="502527165ee07efebabd5b0f840480c1559395ad089931b35e6db4a096a705b7" data-web-base-art-ref="lcd-map" data-web-presentation-mode="base-art-live-copy"><div class="hb-reference-semantic" data-mobile-labels="overlay" data-preserve-art-frame="true" data-reference-id="lcd-map.semantic"><div class="hb-reference-art-panel" style="--hb-panel-top:0%;--hb-panel-fill:#ffffff"><img alt="" class="hb-reference-art hb-composite-art" src="assets/lcd-map.png"/><span class="hb-reference-live-label" data-source-line="0" style="--hb-x:22.0703%;--hb-y:3.0483%;--hb-width:12%;--hb-height:5%">2</span><span class="hb-reference-live-label" data-source-line="1" style="--hb-x:38.7021%;--hb-y:3.0483%;--hb-width:12%;--hb-height:5%">3</span><span class="hb-reference-live-label" data-source-line="2" style="--hb-x:89.0388%;--hb-y:3.0483%;--hb-width:10.9612%;--hb-height:5%">3</span><span class="hb-reference-live-label" data-source-line="3" style="--hb-x:7.892%;--hb-y:3.4142%;--hb-width:12%;--hb-height:5%">1</span><span class="hb-reference-live-label" data-source-line="4" style="--hb-x:58.229%;--hb-y:3.4142%;--hb-width:12%;--hb-height:5%">1</span><span class="hb-reference-live-label" data-source-line="5" style="--hb-x:38.7471%;--hb-y:92.6011%;--hb-width:12%;--hb-height:5%">7</span><span class="hb-reference-live-label" data-source-line="6" style="--hb-x:2.243%;--hb-y:93.4316%;--hb-width:12%;--hb-height:5%">4</span><span class="hb-reference-live-label" data-source-line="7" style="--hb-x:9.9575%;--hb-y:93.4316%;--hb-width:12%;--hb-height:5%">5</span><span class="hb-reference-live-label" data-source-line="8" style="--hb-x:23.2877%;--hb-y:93.4316%;--hb-width:12%;--hb-height:5%">6</span></div></div></figure>
 
-<figure aria-label="液晶画面" class="hb-lcd-table-composition" data-component-id="HB-TABLE-LCD-ICON" tabindex="0"><table class="hb-lcd-icon-table"><colgroup><col class="hb-lcd-col-number"/><col class="hb-lcd-col-icon"/><col class="hb-lcd-col-name"/><col class="hb-lcd-col-description"/></colgroup><tbody><tr><td class="hb-lcd-number" rowspan="2">1</td><td class="hb-lcd-icon"><img alt="入力電力表示" class="hb-lcd-icon-art" src="assets/10_Input_Power_BiBvbNteAoNsHqxoMICc11cjnHc.png"/></td><td class="hb-lcd-name">入力電力表示</td><td class="hb-lcd-description">入力電力と残り充電時間を交互に表示します。</td></tr><tr><td class="hb-lcd-icon"><img alt="充電残り時間" class="hb-lcd-icon-art" src="assets/11_Remaining_Charge_Time_VeBobGZMDoYpBuxLRcFcti9cnlc.png"/></td><td class="hb-lcd-name">充電残り時間</td><td class="hb-lcd-description">入力電力と残り充電時間を交互に表示します。</td></tr><tr><td class="hb-lcd-number">2</td><td class="hb-lcd-icon"><img alt="バッテリー残量(%)" class="hb-lcd-icon-art" src="assets/18_Remaining_Battery_Percentage_F7gbbsgPKo4mdkx4JqccMfQRngc.png"/></td><td class="hb-lcd-name">バッテリー残量(%)</td><td class="hb-lcd-description">バッテリー残量を表示します。</td></tr><tr><td class="hb-lcd-number" rowspan="2">3</td><td class="hb-lcd-icon"><img alt="消費電力" class="hb-lcd-icon-art" src="assets/26_Output_Power_PviebR618oofvKxcKVRcHLlInqd.png"/></td><td class="hb-lcd-name">消費電力</td><td class="hb-lcd-description">出力電力と残り放電時間を交互に表示します。</td></tr><tr><td class="hb-lcd-icon"><img alt="バッテリー使用可能時間" class="hb-lcd-icon-art" src="assets/27_Remaining_Discharge_Time_QvCQbFmEhoQR3kxgWt4c6H9zn0b.png"/></td><td class="hb-lcd-name">バッテリー使用可能時間</td><td class="hb-lcd-description">出力電力と残り放電時間を交互に表示します。</td></tr><tr><td class="hb-lcd-number">4</td><td class="hb-lcd-icon"><img alt="充電インジケーター" class="hb-lcd-icon-art" src="assets/lcd-charge.svg"/></td><td class="hb-lcd-name">充電インジケーター</td><td class="hb-lcd-description">オン: Jackery SlimPower H1は充電状態です。
-オフ: Jackery SlimPower H1は充電状態ではありません。</td></tr><tr><td class="hb-lcd-number">5</td><td class="hb-lcd-icon"><img alt="バッテリーレベルパーセントタグ" class="hb-lcd-icon-art" src="assets/lcd-ring.svg"/></td><td class="hb-lcd-name">バッテリーレベルパーセントタグ</td><td class="hb-lcd-description">オレンジの円は残バッテリーレベルを示しています。</td></tr><tr><td class="hb-lcd-number">6</td><td class="hb-lcd-icon"><img alt="DC 入力" class="hb-lcd-icon-art" src="assets/lcd-dc.svg"/></td><td class="hb-lcd-name">DC 入力</td><td class="hb-lcd-description">オン：Jackery DC Input Moduleが接続されています。
-オフ：Jackery DC Input Moduleが切断されています。</td></tr><tr><td class="hb-lcd-number">7</td><td class="hb-lcd-icon"><img alt="エラーコード" class="hb-lcd-icon-art" src="assets/lcd-error.svg"/></td><td class="hb-lcd-name">エラーコード</td><td class="hb-lcd-description">製品エラーが発生しました。詳細については、トラブルシューティングのセクションを参照してください。</td></tr></tbody></table></figure>
+<figure aria-label="液晶画面" class="hb-lcd-table-composition" data-component-id="HB-TABLE-LCD-ICON" tabindex="0"><table class="hb-lcd-icon-table"><colgroup><col class="hb-lcd-col-number"/><col class="hb-lcd-col-icon"/><col class="hb-lcd-col-name"/><col class="hb-lcd-col-description"/></colgroup><tbody><tr><td class="hb-lcd-number" rowspan="2"><p>1</p></td><td class="hb-lcd-icon"><img alt="入力電力表示" class="hb-lcd-icon-art" src="assets/10_Input_Power_BiBvbNteAoNsHqxoMICc11cjnHc.png"/></td><td class="hb-lcd-name">入力電力表示</td><td class="hb-lcd-description" rowspan="2">入力電力と残り充電時間を交互に表示します。</td></tr><tr><td class="hb-lcd-icon"><img alt="充電残り時間" class="hb-lcd-icon-art" src="assets/11_Remaining_Charge_Time_VeBobGZMDoYpBuxLRcFcti9cnlc.png"/></td><td class="hb-lcd-name">充電残り時間</td></tr><tr><td class="hb-lcd-number"><p>2</p></td><td class="hb-lcd-icon"><img alt="バッテリー残量(%)" class="hb-lcd-icon-art" src="assets/18_Remaining_Battery_Percentage_F7gbbsgPKo4mdkx4JqccMfQRngc.png"/></td><td class="hb-lcd-name">バッテリー残量(%)</td><td class="hb-lcd-description">バッテリー残量を表示します。</td></tr><tr><td class="hb-lcd-number" rowspan="2"><p>3</p></td><td class="hb-lcd-icon"><img alt="消費電力" class="hb-lcd-icon-art" src="assets/26_Output_Power_PviebR618oofvKxcKVRcHLlInqd.png"/></td><td class="hb-lcd-name">消費電力</td><td class="hb-lcd-description" rowspan="2">出力電力と残り放電時間を交互に表示します。</td></tr><tr><td class="hb-lcd-icon"><img alt="バッテリー使用可能時間" class="hb-lcd-icon-art" src="assets/27_Remaining_Discharge_Time_QvCQbFmEhoQR3kxgWt4c6H9zn0b.png"/></td><td class="hb-lcd-name">バッテリー使用可能時間</td></tr><tr><td class="hb-lcd-number"><p>4</p></td><td class="hb-lcd-icon"><img alt="充電インジケーター" class="hb-lcd-icon-art" src="assets/lcd-charge.svg"/></td><td class="hb-lcd-name">充電インジケーター</td><td class="hb-lcd-description"><strong>オン:</strong> Jackery SlimPower H1は充電状態です。<br/><strong>オフ:</strong> Jackery SlimPower H1は充電状態ではありません。</td></tr><tr><td class="hb-lcd-number"><p>5</p></td><td class="hb-lcd-icon"><img alt="バッテリーレベルパーセントタグ" class="hb-lcd-icon-art" src="assets/lcd-ring.svg"/></td><td class="hb-lcd-name">バッテリーレベルパーセントタグ</td><td class="hb-lcd-description">オレンジの円は残バッテリーレベルを示しています。</td></tr><tr><td class="hb-lcd-number"><p>6</p></td><td class="hb-lcd-icon"><img alt="DC 入力" class="hb-lcd-icon-art" src="assets/lcd-dc.svg"/></td><td class="hb-lcd-name">DC 入力</td><td class="hb-lcd-description"><strong>オン：</strong>Jackery DC Input Moduleが接続されています。<br/><strong>オフ：</strong>Jackery DC Input Moduleが切断されています。</td></tr><tr><td class="hb-lcd-number"><p>7</p></td><td class="hb-lcd-icon"><img alt="エラーコード" class="hb-lcd-icon-art" src="assets/lcd-error.svg"/></td><td class="hb-lcd-name">エラーコード</td><td class="hb-lcd-description">製品エラーが発生しました。詳細については、トラブルシューティングのセクションを参照してください。</td></tr></tbody></table></figure>
 
 <span id="operations"></span>
 
-## 製品の使用方法について
+# 製品の使用方法について
 
-### オン/オフ
+## オン/オフ
 
 <figure class="hb-operation-figure hb-operation-layout-status-right" data-component-id="HB-SPECIAL-OPERATION" data-operation-id="power" data-source-fragment-sha256="7c50ab040d12f3deedaabd2e10d02b0f73ed5efa9eeab0dfbd0824e4ff2737a0" data-web-replace-key="operation.power"><div class="hb-operation-stage"><img alt="オン/オフ" class="hb-operation-art" src="assets/power.png"/><div class="line-block hb-operation-steps" data-callout-id="operation.power.steps" style="--hb-x:77%;--hb-y:5%;--hb-width:20%;--hb-height:40%"><div class="hb-operation-step" data-callout-id="operation.power.off" data-step-id="off"><div class="line" data-step-id="off" data-step-part="label"><strong>オフ</strong></div><div class="line" data-step-id="off" data-step-part="instruction">1回押す</div></div><div class="hb-operation-step" data-callout-id="operation.power.on" data-step-id="on"><div class="line" data-step-id="on" data-step-part="label"><strong>オン</strong></div><div class="line" data-step-id="on" data-step-part="instruction">3秒</div></div></div><div class="hb-operation-supporting-copy" data-callout-id="operation.power.supporting-copy"><div class="line">3s</div></div></div></figure>
 
-### LCDスクリーン
+## LCDスクリーン
 
 <figure aria-label="LCDスクリーン" class="hb-lcd-mode-composition hb-lcd-mode-portrait" data-component-id="HB-TABLE-LCD-MODE"><div class="hb-lcd-mode-art-panel"><img alt="LCDスクリーン" class="hb-lcd-mode-art" src="assets/lcd-control.png"/></div><div class="hb-lcd-mode-table-panel"><table class="hb-lcd-mode-table"><colgroup><col class="hb-lcd-mode-col-state"/><col class="hb-lcd-mode-col-action"/><col class="hb-lcd-mode-col-copy"/></colgroup><tbody><tr><td class="hb-lcd-mode-state" rowspan="3">一時点灯</td><td class="hb-lcd-mode-action">オンにする</td><td class="hb-lcd-mode-copy">主電源ボタンを押すか、充電入力がある場合。</td></tr><tr><td class="hb-lcd-mode-action">オフにする</td><td class="hb-lcd-mode-copy">主電源ボタンを押します。</td></tr><tr><td class="hb-lcd-mode-action">自動オフ</td><td class="hb-lcd-mode-copy">2分後にLCDは自動的に消灯し、スリープモードになります。</td></tr><tr><td class="hb-lcd-mode-state" rowspan="3">常時点灯</td><td class="hb-lcd-mode-action">オンにする</td><td class="hb-lcd-mode-copy">デバイスが起動している状態で主電源ボタンを2回押します。</td></tr><tr><td class="hb-lcd-mode-action">オフにする</td><td class="hb-lcd-mode-copy">主電源ボタンを押します。</td></tr><tr><td class="hb-lcd-mode-action">自動オフ</td><td class="hb-lcd-mode-copy">常時点灯ディスプレイモードは、2時間操作がないと自動的に消灯します。</td></tr></tbody></table></div></figure>
 
 <span id="placement"></span>
 
-## Jackery Battery Pack と 本体の設置方法
+# Jackery Battery Pack と 本体の設置方法
 
-### 並列配置
+## 並列配置
 
 <p>Jackery Battery Pack と Jackery SlimPower H1 本体を横並びに配置します。</p>
 
 <figure class="hb-reference-figure" data-component-id="HB-SPECIAL-REFERENCE-FIGURE" data-reference-id="parallel" data-source-fragment-sha256="22a90c1b2e23fdadf5129d9b482ebbec2887e0dd0100f024182e30afaf6c2dee"><div class="hb-reference-semantic" data-reference-id="parallel.semantic"><img alt="parallel" class="hb-reference-art hb-composite-art" src="assets/parallel.png"/></div></figure>
 
-### 積層配置
+## 積層配置
 
 <p>Jackery Battery Pack と Jackery SlimPower H1 本体を上下に積み重ねて配置します。</p>
 
 <figure class="hb-reference-figure" data-component-id="HB-SPECIAL-REFERENCE-FIGURE" data-reference-id="stacked" data-source-fragment-sha256="25c918891aae75ad49507ea5111f8e5e59838fc4bc2a35c64493bf4bbc54393d"><div class="hb-reference-semantic" data-reference-id="stacked.semantic"><img alt="stacked" class="hb-reference-art hb-composite-art" src="assets/stacked.png"/></div></figure>
 
-### ブラケット取付の場合
+## ブラケット取付の場合
 
 <table class="manual-callout-table manual-callout-table"><tbody><tr><td class="manual-callout-label">ご注意</td><td class="manual-callout-body"><p>· 石膏ボード、断熱壁、中空レンガなどの耐荷重構造ではない場所には設置しないでください。製品が落下するおそれがあります。</p><p>· 壁内の配線（電線・水道管・ガス管など）を避けて設置してください。</p></td></tr></tbody></table>
 
 <span id="stand"></span>
 
-## 縦置
+# 縦置
 
-<p>スタンドに取り付けられた Jackery Battery Packは、地面に設置することができます。以下の設置手順に従ってください。</p>
+<p><strong>スタンドに取り付けられた Jackery Battery Packは、地面に設置することができます。以下の設置手順に従ってください。</strong></p>
 
 <figure class="hb-reference-figure hb-base-art-live-copy" data-component-id="HB-SPECIAL-REFERENCE-FIGURE" data-reference-id="stand-preparation" data-source-fragment-sha256="e8ab40e650ed27fbf529bd2dfd5c43802f95ae42b7ede1c03fd2b4fe8040daed" data-web-base-art-ref="stand-preparation" data-web-presentation-mode="base-art-live-copy"><div class="hb-reference-semantic" data-preserve-art-frame="true" data-reference-id="stand-preparation.semantic"><div class="hb-reference-art-panel" style="--hb-panel-top:0%;--hb-panel-fill:#ffffff"><img alt="" class="hb-reference-art hb-composite-art" src="assets/stand-preparation.png"/><span class="hb-reference-live-label" data-source-line="0" style="--hb-x:6.1106%;--hb-y:1.873%;--hb-width:25.7907%;--hb-height:22.4629%">設置前の準備。</span></div></div></figure>
 
@@ -134,11 +245,11 @@
 
 <figure class="hb-reference-figure hb-base-art-live-copy" data-component-id="HB-SPECIAL-REFERENCE-FIGURE" data-reference-id="stand-3" data-source-fragment-sha256="1c4bda8512ac8cd4a176e321e37a41aa9efd0fe716d5d4d71419590a692b3ffe" data-web-base-art-ref="stand-3" data-web-presentation-mode="base-art-live-copy"><div class="hb-reference-semantic" data-preserve-art-frame="true" data-reference-id="stand-3.semantic"><div class="hb-reference-art-panel" style="--hb-panel-top:0%;--hb-panel-fill:#ffffff"><img alt="" class="hb-reference-art hb-composite-art" src="assets/stand-3.png"/><span class="hb-reference-live-label" data-source-line="0" style="--hb-x:3.1486%;--hb-y:3.9908%;--hb-width:27.0422%;--hb-height:19.2231%">3.ネジを締め付けます。</span></div></div></figure>
 
+<p><strong>Jackery Wall-Mounted Bracket（別売）を使用すると、Jackery Battery Pack を壁に設置することができます。以下の設置手順に従ってください。</strong></p>
+
 <span id="wall_wood"></span>
 
 ## 木製の壁の場合。
-
-<p>Jackery Wall-Mounted Bracket（別売）を使用すると、Jackery Battery Pack を壁に設置することができます。以下の設置手順に従ってください。</p>
 
 <figure class="hb-reference-figure hb-base-art-live-copy" data-component-id="HB-SPECIAL-REFERENCE-FIGURE" data-reference-id="wood-preparation" data-source-fragment-sha256="226518b8699ca30f96259e2b3061bdae2ca5bc8051fb7f42b22d1b57341431ee" data-web-base-art-ref="wood-preparation" data-web-presentation-mode="base-art-live-copy"><div class="hb-reference-semantic" data-preserve-art-frame="true" data-reference-id="wood-preparation.semantic"><div class="hb-reference-art-panel" style="--hb-panel-top:0%;--hb-panel-fill:#ffffff"><img alt="" class="hb-reference-art hb-composite-art" src="assets/wood-preparation.png"/><span class="hb-reference-live-label" data-source-line="0" style="--hb-x:5.9107%;--hb-y:1.7918%;--hb-width:25.5599%;--hb-height:14.7651%">設置前の準備。</span><span class="hb-reference-live-label" data-source-line="1" style="--hb-x:66.0267%;--hb-y:22.0155%;--hb-width:12%;--hb-height:18.9572%">別売</span></div></div></figure>
 
@@ -146,11 +257,9 @@
 
 <figure class="hb-reference-figure hb-base-art-live-copy" data-component-id="HB-SPECIAL-REFERENCE-FIGURE" data-reference-id="wood-1-2" data-source-fragment-sha256="2362c95656e0f92fcad00dbc40c1b84e0cbd1b0bc568db64038d06f660a2eb06" data-web-base-art-ref="wood-1-2" data-web-presentation-mode="base-art-live-copy"><div class="hb-reference-semantic" data-preserve-art-frame="true" data-reference-id="wood-1-2.semantic"><div class="hb-reference-art-panel" style="--hb-panel-top:0%;--hb-panel-fill:#ffffff"><img alt="" class="hb-reference-art hb-composite-art" src="assets/wood-1-2.png"/><span class="hb-reference-live-label" data-source-line="0" style="--hb-x:3.45%;--hb-y:4.5171%;--hb-width:70.9248%;--hb-height:13.7025%">1. Jackery SlimPower H1本体を、取扱説明書に従って設置します。</span><span class="hb-reference-live-label" data-source-line="1" style="--hb-x:3.45%;--hb-y:13.4266%;--hb-width:42.3786%;--hb-height:13.7025%">2. 製品底面のネジ2本を取り外します。</span></div></div></figure>
 
-<figure class="hb-reference-figure hb-base-art-live-copy" data-component-id="HB-SPECIAL-REFERENCE-FIGURE" data-reference-id="wood-3" data-source-fragment-sha256="9fa35ef223d87b97a05eb3bbc7adc73eb85ede832ef8089a346b8d29a48b001b" data-web-base-art-ref="wood-3" data-web-presentation-mode="base-art-live-copy"><div class="hb-reference-semantic" data-preserve-art-frame="true" data-reference-id="wood-3.semantic"><div class="hb-reference-art-panel" style="--hb-panel-top:0%;--hb-panel-fill:#ffffff"><img alt="" class="hb-reference-art hb-composite-art" src="assets/wood-3.png"/><span class="hb-reference-live-label" data-source-line="0" style="--hb-x:39.0788%;--hb-y:3.3627%;--hb-width:56.9703%;--hb-height:11.9558%">3. 上下のマウントブラケットを製品背面にしっかり取り付けます。</span></div></div></figure>
+<figure class="hb-reference-figure hb-base-art-live-copy" data-component-id="HB-SPECIAL-REFERENCE-FIGURE" data-reference-id="wood-3-4" data-source-fragment-sha256="efe2a3d762cdb35ca4c00fd5cae6e955b1440aab112fd19533d064d4d59cfc35" data-web-base-art-ref="wood-3-4" data-web-presentation-mode="base-art-live-copy"><div class="hb-reference-semantic" data-preserve-art-frame="true" data-reference-id="wood-3-4.semantic"><div class="hb-reference-art-panel" style="--hb-panel-top:0%;--hb-panel-fill:#ffffff"><img alt="" class="hb-reference-art hb-composite-art" src="assets/wood-3-4.png"/><span class="hb-reference-live-label" data-source-line="0" style="--hb-x:24.9068%;--hb-y:3.3627%;--hb-width:37.3979%;--hb-height:11.9558%">3. 上下のマウントブラケットを製品背面にしっかり取り付けます。</span><span class="hb-reference-live-label" data-source-line="1" style="--hb-x:68.3804%;--hb-y:4.177%;--hb-width:31.6196%;--hb-height:17.4773%">4. 壁の内側にある間柱を探すには、下地探しセンサーを使用してください。</span><span class="hb-reference-live-label" data-source-line="2" style="--hb-x:88.898%;--hb-y:29.0045%;--hb-width:11.102%;--hb-height:12.265%">間柱</span></div></div></figure>
 
-<figure class="hb-reference-figure hb-base-art-live-copy" data-component-id="HB-SPECIAL-REFERENCE-FIGURE" data-reference-id="wood-4" data-source-fragment-sha256="a9772aff436a99e4f755e1f4249d6c229284873e2e8f6a1cd963918c881ba912" data-web-base-art-ref="wood-4" data-web-presentation-mode="base-art-live-copy"><div class="hb-reference-semantic" data-preserve-art-frame="true" data-reference-id="wood-4.semantic"><div class="hb-reference-art-panel" style="--hb-panel-top:0%;--hb-panel-fill:#ffffff"><img alt="" class="hb-reference-art hb-composite-art" src="assets/wood-4.png"/><span class="hb-reference-live-label" data-source-line="0" style="--hb-x:10.1246%;--hb-y:3.9281%;--hb-width:89.087%;--hb-height:17.7385%">4. 壁の内側にある間柱を探すには、下地探しセンサーを使用してください。</span><span class="hb-reference-live-label" data-source-line="1" style="--hb-x:68.4438%;--hb-y:29.1267%;--hb-width:15.6812%;--hb-height:12.4483%">間柱</span></div></div></figure>
-
-<figure class="hb-reference-figure hb-base-art-live-copy" data-component-id="HB-SPECIAL-REFERENCE-FIGURE" data-reference-id="wood-5" data-source-fragment-sha256="c8b3f4ace103e8e874533852db212370ccba31109897d9c03a71a063ac8e1a45" data-web-base-art-ref="wood-5" data-web-presentation-mode="base-art-live-copy"><div class="hb-reference-semantic" data-preserve-art-frame="true" data-reference-id="wood-5.semantic"><div class="hb-reference-art-panel" style="--hb-panel-top:0%;--hb-panel-fill:#ffffff"><img alt="" class="hb-reference-art hb-composite-art" src="assets/wood-5.png"/><span class="hb-reference-live-label" data-source-line="0" style="--hb-x:3.4118%;--hb-y:2.3691%;--hb-width:95.9511%;--hb-height:28.6101%">5. Jackery SlimPower H1本体のボルト位置から水平方向に455mm離れた場所を測定し、壁の間柱上に取付ポイントをマーキングします。*  455 mmは推奨距離であり、実際の距離は壁の状態に依存します。</span><span class="hb-reference-live-label" data-source-line="1" style="--hb-x:61.1798%;--hb-y:24.4923%;--hb-width:12%;--hb-height:12.8154%">間柱</span><span class="hb-reference-live-label" data-source-line="2" style="--hb-x:36.1264%;--hb-y:25.0576%;--hb-width:12%;--hb-height:12.8154%">間柱</span><span class="hb-reference-live-label" data-source-line="3" style="--hb-x:48.464%;--hb-y:50.8651%;--hb-width:12%;--hb-height:12.8154%">455mm</span><span class="hb-reference-live-label" data-source-line="4" style="--hb-x:6.1753%;--hb-y:75.9037%;--hb-width:18.4573%;--hb-height:5%">Jackery SlimPower H1</span></div></div></figure>
+<figure class="hb-reference-figure hb-base-art-live-copy" data-component-id="HB-SPECIAL-REFERENCE-FIGURE" data-reference-id="wood-5" data-source-fragment-sha256="265035611832b318652a26505b8d77f03ee1fa3b3cfe3512c5cced725c5b62f3" data-web-base-art-ref="wood-5" data-web-presentation-mode="base-art-live-copy"><div class="hb-reference-semantic" data-preserve-art-frame="true" data-reference-id="wood-5.semantic"><div class="hb-reference-art-panel" style="--hb-panel-top:0%;--hb-panel-fill:#ffffff"><img alt="" class="hb-reference-art hb-composite-art" src="assets/wood-5.png"/><span class="hb-reference-live-label" data-source-line="0" style="--hb-x:3.4118%;--hb-y:2.3691%;--hb-width:95.9511%;--hb-height:21.1481%">5. Jackery SlimPower H1本体のボルト位置から水平方向に455mm離れた場所を測定し、壁の間柱上に取付ポイントをマーキングします。</span><span class="hb-reference-live-label" data-source-line="1" style="--hb-x:3.6922%;--hb-y:18.1638%;--hb-width:71.0289%;--hb-height:12.8154%">*  455 mmは推奨距離であり、実際の距離は壁の状態に依存します。</span><span class="hb-reference-live-label" data-source-line="2" style="--hb-x:61.1798%;--hb-y:24.4923%;--hb-width:12%;--hb-height:12.8154%">間柱</span><span class="hb-reference-live-label" data-source-line="3" style="--hb-x:36.1264%;--hb-y:25.0576%;--hb-width:12%;--hb-height:12.8154%">間柱</span><span class="hb-reference-live-label" data-source-line="4" style="--hb-x:48.464%;--hb-y:50.8651%;--hb-width:12%;--hb-height:12.8154%">455mm</span><span class="hb-reference-live-label" data-source-line="5" style="--hb-x:6.1753%;--hb-y:75.9037%;--hb-width:18.4573%;--hb-height:5%">Jackery SlimPower H1</span></div></div></figure>
 
 <figure class="hb-reference-figure hb-base-art-live-copy" data-component-id="HB-SPECIAL-REFERENCE-FIGURE" data-reference-id="wood-6" data-source-fragment-sha256="06ebffb8a51b39ec7285d3adccb3a57d2f2fdfd3e6f440371f64864aae1ab79c" data-web-base-art-ref="wood-6" data-web-presentation-mode="base-art-live-copy"><div class="hb-reference-semantic" data-preserve-art-frame="true" data-reference-id="wood-6.semantic"><div class="hb-reference-art-panel" style="--hb-panel-top:0%;--hb-panel-fill:#ffffff"><img alt="" class="hb-reference-art hb-composite-art" src="assets/wood-6.png"/><span class="hb-reference-live-label" data-source-line="0" style="--hb-x:3.3692%;--hb-y:3.5188%;--hb-width:96.6308%;--hb-height:15.1225%">6. 取付ポイントに木ねじを壁にねじ込み、ねじと壁の間に2～4mmの隙間を残してください。</span><span class="hb-reference-live-label" data-source-line="1" style="--hb-x:59.7596%;--hb-y:16.4319%;--hb-width:12%;--hb-height:15.1225%">間柱</span><span class="hb-reference-live-label" data-source-line="2" style="--hb-x:77.7087%;--hb-y:38.8482%;--hb-width:12%;--hb-height:5.4463%">2~4mm</span><span class="hb-reference-live-label" data-source-line="3" style="--hb-x:2.7455%;--hb-y:71.641%;--hb-width:18.6561%;--hb-height:5%">Jackery SlimPower H1</span></div></div></figure>
 
@@ -166,21 +275,15 @@
 
 <figure class="hb-reference-figure hb-base-art-live-copy" data-component-id="HB-SPECIAL-REFERENCE-FIGURE" data-reference-id="concrete-3" data-source-fragment-sha256="3811cd0ca4634af8186f9ee3f749c3adc0a5d3f0053b918e229789de90a7f328" data-web-base-art-ref="concrete-3" data-web-presentation-mode="base-art-live-copy"><div class="hb-reference-semantic" data-preserve-art-frame="true" data-reference-id="concrete-3.semantic"><div class="hb-reference-art-panel" style="--hb-panel-top:0%;--hb-panel-fill:#ffffff"><img alt="" class="hb-reference-art hb-composite-art" src="assets/concrete-3.png"/><span class="hb-reference-live-label" data-source-line="0" style="--hb-x:40.7373%;--hb-y:8.4532%;--hb-width:54.5316%;--hb-height:17.4279%">3. 上下のマウントブラケットを製品背面にしっかり取り付けます。</span></div></div></figure>
 
-<figure class="hb-reference-figure hb-base-art-live-copy" data-component-id="HB-SPECIAL-REFERENCE-FIGURE" data-reference-id="concrete-4" data-source-fragment-sha256="b3ad0adefc634c577b31b4bc6889205ad0e0fc7e5129b701c01fa2edd11de61c" data-web-base-art-ref="concrete-4" data-web-presentation-mode="base-art-live-copy"><div class="hb-reference-semantic" data-preserve-art-frame="true" data-reference-id="concrete-4.semantic"><div class="hb-reference-art-panel" style="--hb-panel-top:0%;--hb-panel-fill:#ffffff"><img alt="" class="hb-reference-art hb-composite-art" src="assets/concrete-4.png"/><span class="hb-reference-live-label" data-source-line="0" style="--hb-x:5.9204%;--hb-y:1.8515%;--hb-width:91.4301%;--hb-height:25.7534%">4. Jackery SlimPower H1本体のボルト位置から水平方向に455mm離れた場所を測定し、取付ポイントをマーキングします。*   455 mmは推奨距離であり、実際の距離は壁の状態に依存します。</span><span class="hb-reference-live-label" data-source-line="1" style="--hb-x:35.019%;--hb-y:37.683%;--hb-width:14.5645%;--hb-height:5%">455mm</span><span class="hb-reference-live-label" data-source-line="2" style="--hb-x:41.6791%;--hb-y:79.9202%;--hb-width:36.6567%;--hb-height:5%">Jackery SlimPower H1</span></div></div></figure>
+<figure class="hb-reference-figure hb-base-art-live-copy" data-component-id="HB-SPECIAL-REFERENCE-FIGURE" data-reference-id="concrete-4-5" data-source-fragment-sha256="1e390f52dfb19391c322885de88e29716cc67125ea377de30b4f21c2adae4b7a" data-web-base-art-ref="concrete-4-5" data-web-presentation-mode="base-art-live-copy"><div class="hb-reference-semantic" data-preserve-art-frame="true" data-reference-id="concrete-4-5.semantic"><div class="hb-reference-art-panel" style="--hb-panel-top:0%;--hb-panel-fill:#ffffff"><img alt="" class="hb-reference-art hb-composite-art" src="assets/concrete-4-5.png"/><span class="hb-reference-live-label" data-source-line="0" style="--hb-x:3.2995%;--hb-y:1.8515%;--hb-width:51.6022%;--hb-height:17.2164%">4. Jackery SlimPower H1本体のボルト位置から水平方向に455mm離れた場所を測定し、取付ポイントをマーキングします。</span><span class="hb-reference-live-label" data-source-line="1" style="--hb-x:3.5122%;--hb-y:15.4762%;--hb-width:52.0697%;--hb-height:12.1288%">*   455 mmは推奨距離であり、実際の距離は壁の状態に依存します。</span><span class="hb-reference-live-label" data-source-line="2" style="--hb-x:19.5162%;--hb-y:37.683%;--hb-width:12%;--hb-height:5%">455mm</span><span class="hb-reference-live-label" data-source-line="3" style="--hb-x:23.2279%;--hb-y:79.9202%;--hb-width:21.757%;--hb-height:5%">Jackery SlimPower H1</span><span class="hb-reference-live-label" data-source-line="4" style="--hb-x:60.7309%;--hb-y:2.1967%;--hb-width:39.2691%;--hb-height:26.6082%">5. 8mmのコンクリート用インパクトドリルを使用し、取付位置に深さ約70mmの穴をあけます。エクスパンションボルトを挿入し、ナットを2～4mm緩めます。</span><span class="hb-reference-live-label" data-source-line="5" style="--hb-x:81.0417%;--hb-y:48.0632%;--hb-width:12%;--hb-height:5%">70mm</span><span class="hb-reference-live-label" data-source-line="6" style="--hb-x:89.1951%;--hb-y:57.8534%;--hb-width:10.8049%;--hb-height:5%">8mm</span><span class="hb-reference-live-label" data-source-line="7" style="--hb-x:78.3354%;--hb-y:76.2573%;--hb-width:12%;--hb-height:5%">2~4mm</span></div></div></figure>
 
-<figure class="hb-reference-figure hb-base-art-live-copy" data-component-id="HB-SPECIAL-REFERENCE-FIGURE" data-reference-id="concrete-5" data-source-fragment-sha256="53938fed56456254527c9879941b564f82b5cf2f5cdbc4c77e88d0a7db760177" data-web-base-art-ref="concrete-5" data-web-presentation-mode="base-art-live-copy"><div class="hb-reference-semantic" data-preserve-art-frame="true" data-reference-id="concrete-5.semantic"><div class="hb-reference-art-panel" style="--hb-panel-top:0%;--hb-panel-fill:#ffffff"><img alt="" class="hb-reference-art hb-composite-art" src="assets/concrete-5.png"/><span class="hb-reference-live-label" data-source-line="0" style="--hb-x:8.0968%;--hb-y:2.1967%;--hb-width:89.4035%;--hb-height:26.6082%">5. 8mmのコンクリート用インパクトドリルを使用し、取付位置に深さ約70mmの穴をあけます。エクスパンションボルトを挿入し、ナットを2～4mm緩めます。</span><span class="hb-reference-live-label" data-source-line="1" style="--hb-x:55.6309%;--hb-y:48.0632%;--hb-width:15.6041%;--hb-height:5%">70mm</span><span class="hb-reference-live-label" data-source-line="2" style="--hb-x:74.7129%;--hb-y:57.8534%;--hb-width:13.1157%;--hb-height:5%">8mm</span><span class="hb-reference-live-label" data-source-line="3" style="--hb-x:49.2974%;--hb-y:76.2573%;--hb-width:18.3043%;--hb-height:5%">2~4mm</span></div></div></figure>
+<figure class="hb-reference-figure hb-base-art-live-copy" data-component-id="HB-SPECIAL-REFERENCE-FIGURE" data-reference-id="concrete-6-7" data-source-fragment-sha256="a55ae37828360932c56d41db690764161567294d4de763f3868dd1e598da913f" data-web-base-art-ref="concrete-6-7" data-web-presentation-mode="base-art-live-copy"><div class="hb-reference-semantic" data-preserve-art-frame="true" data-reference-id="concrete-6-7.semantic"><div class="hb-reference-art-panel" style="--hb-panel-top:0%;--hb-panel-fill:#ffffff"><img alt="" class="hb-reference-art hb-composite-art" src="assets/concrete-6-7.png"/><span class="hb-reference-live-label" data-source-line="0" style="--hb-x:3.5337%;--hb-y:3.4922%;--hb-width:36.7157%;--hb-height:20.1005%">6. 製品をエクスパンションボルトに垂直に掛け、壁面の取り付け位置をマーキングします。</span><span class="hb-reference-live-label" data-source-line="1" style="--hb-x:46.2488%;--hb-y:3.171%;--hb-width:50.3907%;--hb-height:20.1005%">7. 製品を取り外します。取付ポイントに穴を開け、ナットとワッシャーを使わずにボルトを穴に差し込んでください。</span><span class="hb-reference-live-label" data-source-line="2" style="--hb-x:78.6371%;--hb-y:39.5043%;--hb-width:12%;--hb-height:5%">70mm</span><span class="hb-reference-live-label" data-source-line="3" style="--hb-x:86.7697%;--hb-y:50.437%;--hb-width:12%;--hb-height:5%">8mm</span></div></div></figure>
 
-<figure class="hb-reference-figure hb-base-art-live-copy" data-component-id="HB-SPECIAL-REFERENCE-FIGURE" data-reference-id="concrete-6" data-source-fragment-sha256="07e384517fd9ea301207d6b379736fa3ee9b52c58b36d282b417fa898609c1ef" data-web-base-art-ref="concrete-6" data-web-presentation-mode="base-art-live-copy"><div class="hb-reference-semantic" data-preserve-art-frame="true" data-reference-id="concrete-6.semantic"><div class="hb-reference-art-panel" style="--hb-panel-top:0%;--hb-panel-fill:#ffffff"><img alt="" class="hb-reference-art hb-composite-art" src="assets/concrete-6.png"/><span class="hb-reference-live-label" data-source-line="0" style="--hb-x:8.724%;--hb-y:3.4922%;--hb-width:86.2364%;--hb-height:20.1005%">6. 製品をエクスパンションボルトに垂直に掛け、壁面の取り付け位置をマーキングします。</span></div></div></figure>
-
-<figure class="hb-reference-figure hb-base-art-live-copy" data-component-id="HB-SPECIAL-REFERENCE-FIGURE" data-reference-id="concrete-7" data-source-fragment-sha256="cf1a1ae5bb42c25933aef4f63fe5e67aa804da096108d9939dd6ba8f2e01b567" data-web-base-art-ref="concrete-7" data-web-presentation-mode="base-art-live-copy"><div class="hb-reference-semantic" data-preserve-art-frame="true" data-reference-id="concrete-7.semantic"><div class="hb-reference-art-panel" style="--hb-panel-top:0%;--hb-panel-fill:#ffffff"><img alt="" class="hb-reference-art hb-composite-art" src="assets/concrete-7.png"/><span class="hb-reference-live-label" data-source-line="0" style="--hb-x:6.6379%;--hb-y:3.1751%;--hb-width:85.3142%;--hb-height:20.1269%">7. 製品を取り外します。取付ポイントに穴を開け、ナットとワッシャーを使わずにボルトを穴に差し込んでください。</span><span class="hb-reference-live-label" data-source-line="1" style="--hb-x:62.8942%;--hb-y:39.5562%;--hb-width:12.3304%;--hb-height:5%">70mm</span><span class="hb-reference-live-label" data-source-line="2" style="--hb-x:77.0199%;--hb-y:50.5032%;--hb-width:12%;--hb-height:5%">8mm</span></div></div></figure>
-
-<figure class="hb-reference-figure hb-base-art-live-copy" data-component-id="HB-SPECIAL-REFERENCE-FIGURE" data-reference-id="concrete-8" data-source-fragment-sha256="11219c7624c6768bdeaf1cc65b0dd9c0473221511e4ad53f6aa7ae22ffcbde13" data-web-base-art-ref="concrete-8" data-web-presentation-mode="base-art-live-copy"><div class="hb-reference-semantic" data-preserve-art-frame="true" data-reference-id="concrete-8.semantic"><div class="hb-reference-art-panel" style="--hb-panel-top:0%;--hb-panel-fill:#ffffff"><img alt="" class="hb-reference-art hb-composite-art" src="assets/concrete-8.png"/><span class="hb-reference-live-label" data-source-line="0" style="--hb-x:10.3728%;--hb-y:2.3554%;--hb-width:81.6459%;--hb-height:14.6627%">8.製品を上側のボルトに掛けてください。</span></div></div></figure>
-
-<figure class="hb-reference-figure hb-base-art-live-copy" data-component-id="HB-SPECIAL-REFERENCE-FIGURE" data-reference-id="concrete-9" data-source-fragment-sha256="ee36fd559402827175703cfb078c459b305e398fea36ccf21fb9e25fafd3a80c" data-web-base-art-ref="concrete-9" data-web-presentation-mode="base-art-live-copy"><div class="hb-reference-semantic" data-preserve-art-frame="true" data-reference-id="concrete-9.semantic"><div class="hb-reference-art-panel" style="--hb-panel-top:0%;--hb-panel-fill:#ffffff"><img alt="" class="hb-reference-art hb-composite-art" src="assets/concrete-9.png"/><span class="hb-reference-live-label" data-source-line="0" style="--hb-x:5.6549%;--hb-y:2.3554%;--hb-width:88.2985%;--hb-height:14.6627%">9. 製品を持ち上げ、予め設置されたボルトに合わせてから下ろして設置します。ナットを締めます。</span></div></div></figure>
+<figure class="hb-reference-figure hb-base-art-live-copy" data-component-id="HB-SPECIAL-REFERENCE-FIGURE" data-reference-id="concrete-8-9" data-source-fragment-sha256="950ca756961a8f339dbe2ef1632e2634661437b7711aa8f015df6f8cf4797e35" data-web-base-art-ref="concrete-8-9" data-web-presentation-mode="base-art-live-copy"><div class="hb-reference-semantic" data-preserve-art-frame="true" data-reference-id="concrete-8-9.semantic"><div class="hb-reference-art-panel" style="--hb-panel-top:0%;--hb-panel-fill:#ffffff"><img alt="" class="hb-reference-art hb-composite-art" src="assets/concrete-8-9.png"/><span class="hb-reference-live-label" data-source-line="0" style="--hb-x:3.6062%;--hb-y:2.3554%;--hb-width:30.3418%;--hb-height:14.6627%">8.製品を上側のボルトに掛けてください。</span><span class="hb-reference-live-label" data-source-line="1" style="--hb-x:39.8569%;--hb-y:2.3554%;--hb-width:57.3761%;--hb-height:14.6627%">9. 製品を持ち上げ、予め設置されたボルトに合わせてから下ろして設置します。ナットを締めます。</span></div></div></figure>
 
 <span id="connection"></span>
 
-## ポータブル電源との併用
+# ポータブル電源との併用
 
 <p>Jackery Battery Pack は、Jackery SlimPower H1 と併用することで、より大きな容量ニーズに対応できます。</p>
 
@@ -192,9 +295,9 @@
 
 <span id="charging"></span>
 
-## 充電方法
+# 充電方法
 
-### AC充電
+## AC充電
 
 <p>AC充電の場合、本製品はJackery SlimPower H1と一緒にお使いください。</p>
 
@@ -202,13 +305,13 @@
 
 <figure class="hb-reference-figure hb-base-art-live-copy" data-component-id="HB-SPECIAL-REFERENCE-FIGURE" data-reference-id="ac-charge" data-source-fragment-sha256="c585725660d2e424eeb54154a932c9db8f7accdebb459c166b13858941756370" data-web-base-art-ref="ac-charge" data-web-presentation-mode="base-art-live-copy"><div class="hb-reference-semantic" data-preserve-art-frame="true" data-reference-id="ac-charge.semantic"><div class="hb-reference-art-panel" style="--hb-panel-top:0%;--hb-panel-fill:#ffffff"><img alt="" class="hb-reference-art hb-composite-art" src="assets/ac-charge.png"/><span class="hb-reference-live-label" data-source-line="0" style="--hb-x:65.8205%;--hb-y:5.6947%;--hb-width:14.4286%;--hb-height:10.2611%">拡張ケーブル</span><span class="hb-reference-live-label" data-source-line="1" style="--hb-x:10.0798%;--hb-y:78.9179%;--hb-width:12.9905%;--hb-height:10.2611%">ACケーブル</span></div></div></figure>
 
-### ソーラー充電
+## ソーラー充電
 
 <p>下図のように、ソーラーパネルとJackery DC Input Moduleを使って製品を充電します。詳細については、Jackery DC Input Moduleの取扱説明書を参照してください。</p>
 
 <figure class="hb-reference-figure hb-base-art-live-copy" data-component-id="HB-SPECIAL-REFERENCE-FIGURE" data-reference-id="solar-charge" data-source-fragment-sha256="09a95301bcd4392379163334a0278cf5e54e8cf527281b066b7430bcfd644995" data-web-base-art-ref="solar-charge" data-web-presentation-mode="base-art-live-copy"><div class="hb-reference-semantic" data-preserve-art-frame="true" data-reference-id="solar-charge.semantic"><div class="hb-reference-art-panel" style="--hb-panel-top:0%;--hb-panel-fill:#ffffff"><img alt="" class="hb-reference-art hb-composite-art" src="assets/solar-charge.png"/><span class="hb-reference-live-label" data-source-line="0" style="--hb-x:64.0919%;--hb-y:70.5343%;--hb-width:12%;--hb-height:5%">DC8020</span><span class="hb-reference-live-label" data-source-line="1" style="--hb-x:3.3584%;--hb-y:90.1234%;--hb-width:52.8897%;--hb-height:6.3181%">*ソーラーパネルとJackery DC Input Moduleは別売りです。</span></div></div></figure>
 
-### シガーソケット充電
+## シガーソケット充電
 
 <p>Jackery DC Input Moduleに接続することで、Jackery Battery Pack は12V/10A車載充電器で充電できます。使用方法の詳細については、Jackery DC Input Moduleのユーザーマニュアルを参照してください。</p>
 
@@ -216,15 +319,15 @@
 
 <span id="troubleshooting"></span>
 
-## トラブルシューティング
+# トラブルシューティング
 
 <p>次のいずれかのエラーコードが表示された場合は、記載されている対処方法に従って問題を解決してください。問題が解決しない場合は、Jackeryカスタマーサポートまでご連絡ください。</p>
 
-<figure aria-label="エラーコード / 対処方法" class="hb-troubleshooting-composition" data-component-id="HB-TABLE-TROUBLESHOOTING" tabindex="0"><table class="hb-troubleshooting-table"><colgroup><col class="hb-troubleshooting-col-code"/><col class="hb-troubleshooting-col-measures"/></colgroup><thead><tr><th class="hb-troubleshooting-code" scope="col">エラーコード</th><th class="hb-troubleshooting-measures" scope="col">対処方法</th></tr></thead><tbody><tr><td class="hb-troubleshooting-code">F0 /F2<br/>F3</td><td class="hb-troubleshooting-measures">製品を再起動してください。</td></tr><tr><td class="hb-troubleshooting-code">F1 /F6<br/>F7/F8</td><td class="hb-troubleshooting-measures">Jackeryカスタマーサポートまでご連絡ください。</td></tr><tr><td class="hb-troubleshooting-code">F4</td><td class="hb-troubleshooting-measures">製品に負荷を接続してバッテリーを放電し、エラーが消えるまで続けてください。</td></tr><tr><td class="hb-troubleshooting-code">F5</td><td class="hb-troubleshooting-measures">ソーラーパネルまたはAC電源コンセントを使用して、エラーが消えるまで製品を充電してください。</td></tr><tr><td class="hb-troubleshooting-code">FF</td><td class="hb-troubleshooting-measures"><p>高温環境下で</p><p>1.製品へのすべての充電・放電ケーブル（壁用充電器、ソーラーパネル、車載充電器、負荷機器を含む）を切り離してください。</p><p>2.製品を日陰で風通しの良い場所に設置し、周囲温度が45°C以下であることを確認してください。</p><p>3. 製品をアイドル状態にし、故障が消えるまで待ってください。</p><p>低温環境下で</p><p>1.製品を0℃以上の暖かい環境へ移動させてください。</p><p>2.極端に寒い屋外での使用や充電は行わないでください。必要に応じて、室内で予熱してください。</p><p>3.製品を寒い環境から室内に移動させた場合は、使用前にしばらく放置してください。</p><p>4.低温インジケーターが表示された場合は、製品をアイドル状態にして、システムが自動的に回復するのを待ってください。</p></td></tr></tbody></table></figure>
+<figure aria-label="エラーコード / 対処方法" class="hb-troubleshooting-composition" data-component-id="HB-TABLE-TROUBLESHOOTING" tabindex="0"><table class="hb-troubleshooting-table"><colgroup><col class="hb-troubleshooting-col-code"/><col class="hb-troubleshooting-col-measures"/></colgroup><thead><tr><th class="hb-troubleshooting-code" scope="col">エラーコード</th><th class="hb-troubleshooting-measures" scope="col">対処方法</th></tr></thead><tbody><tr><td class="hb-troubleshooting-code">F0 /F2<br/>F3</td><td class="hb-troubleshooting-measures">製品を再起動してください。</td></tr><tr><td class="hb-troubleshooting-code">F1 /F6<br/>F7/F8</td><td class="hb-troubleshooting-measures">Jackeryカスタマーサポートまでご連絡ください。</td></tr><tr><td class="hb-troubleshooting-code">F4</td><td class="hb-troubleshooting-measures">製品に負荷を接続してバッテリーを放電し、エラーが消えるまで続けてください。</td></tr><tr><td class="hb-troubleshooting-code">F5</td><td class="hb-troubleshooting-measures">ソーラーパネルまたはAC電源コンセントを使用して、エラーが消えるまで製品を充電してください。</td></tr><tr><td class="hb-troubleshooting-code">FF</td><td class="hb-troubleshooting-measures"><p><strong>高温環境下で</strong></p><p>1.製品へのすべての充電・放電ケーブル（壁用充電器、ソーラーパネル、車載充電器、負荷機器を含む）を切り離してください。</p><p>2.製品を日陰で風通しの良い場所に設置し、周囲温度が45°C以下であることを確認してください。</p><p>3. 製品をアイドル状態にし、故障が消えるまで待ってください。</p><p><strong>低温環境下で</strong></p><p>1.製品を0℃以上の暖かい環境へ移動させてください。</p><p>2.極端に寒い屋外での使用や充電は行わないでください。必要に応じて、室内で予熱してください。</p><p>3.製品を寒い環境から室内に移動させた場合は、使用前にしばらく放置してください。</p><p>4.低温インジケーターが表示された場合は、製品をアイドル状態にして、システムが自動的に回復するのを待ってください。</p></td></tr></tbody></table></figure>
 
 <span id="specifications"></span>
 
-## 主な仕様
+# 主な仕様
 
 ## 基本情報
 
@@ -242,58 +345,54 @@
 
 <span id="warranty"></span>
 
-## 保証について
+# 保証について
 
-<figure aria-label="保証について" class="hb-warranty-intro-composition" data-component-id="HB-WARRANTY-LEAD"><div class="hb-warranty-intro-panel"><p>このたびはJackery 製品をご購入いただき、誠にありがとうございます。本保証書は、Jackery ポータブル電源製品に関する保証内容を明確にご案内するものです。</p></div><div class="hb-warranty-local-note"><p>ご使用前に必ずご確認のうえ、大切に保管してください。</p></div></figure>
+<figure aria-label="保証について" class="hb-warranty-intro-composition" data-component-id="HB-WARRANTY-LEAD"><div class="hb-warranty-intro-panel"><p>このたびはJackery 製品をご購入いただき、誠にありがとうございます。<br/>本保証書は、Jackery ポータブル電源製品に関する保証内容を明確にご案内するものです。</p></div><div class="hb-warranty-local-note"><p>ご使用前に必ずご確認のうえ、大切に保管してください。</p></div></figure>
 
 <span id="warranty-1"></span>
 
-### 保証期間
+## 保証期間
 
-<figure aria-label="保証期間" class="hb-warranty-card" data-component-id="HB-WARRANTY-SECTION" data-warranty-card-index="1"><p>1. 保証期間はご購入日から3 年間です。</p><p>2. また、延長保証にご登録いただくと、さらに2 年間の保証が追加されます。詳しくはJackery公式サイトをご確認ください。</p><p>※ Jackery 公式オンラインストアまたは正規代理店以外での購入品は保証対象外となります。</p></figure>
+<figure aria-label="保証期間" class="hb-warranty-card" data-component-id="HB-WARRANTY-SECTION" data-warranty-card-index="1"><p>1. 保証期間はご購入日から3 年間です。</p><p>2. また、延長保証にご登録いただくと、さらに2 年間の保証が追加されます。詳しくはJackery公式サイトをご確認ください。</p><p class="jbp-warranty-note">※ Jackery 公式オンラインストアまたは正規代理店以外での購入品は保証対象外となります。</p></figure>
 
 <span id="warranty-2"></span>
 
-### 保証の適用範囲
+## 保証の適用範囲
 
-<figure aria-label="保証の適用範囲" class="hb-warranty-card" data-component-id="HB-WARRANTY-SECTION" data-warranty-card-index="2"><p>1. 購入チャネルについて本保証は、Jackery公式オンラインストアまたは正規代理店で購入された製品に限り有効です。</p><p>2. 保証提供地域保証は、日本国内に在住の方が、日本国内で使用する場合に限り有効です。</p></figure>
+<figure aria-label="保証の適用範囲" class="hb-warranty-card" data-component-id="HB-WARRANTY-SECTION" data-warranty-card-index="2"><p>1. 購入チャネルについて</p><p class="jbp-warranty-detail">本保証は、Jackery公式オンラインストアまたは正規代理店で購入された製品に限り有効です。</p><p>2. 保証提供地域</p><p class="jbp-warranty-detail">保証は、日本国内に在住の方が、日本国内で使用する場合に限り有効です。</p></figure>
 
 <span id="warranty-3"></span>
 
-### 保証の適用条件
+## 保証の適用条件
 
 <figure aria-label="保証の適用条件" class="hb-warranty-card" data-component-id="HB-WARRANTY-SECTION" data-warranty-card-index="3"><p>以下のすべての条件を満たす場合に、保証の適用対象となります：</p><p>・Jackery公式オンラインストアまたは正規代理店にてご購入されたこと</p><p>・保証期間内であること</p><p>・下記の「保証対象外」に該当しないこと</p></figure>
 
 <span id="warranty-4"></span>
 
-### 保証対象外となる場合
+## 保証対象外となる場合
 
 <figure aria-label="保証対象外となる場合" class="hb-warranty-card" data-component-id="HB-WARRANTY-SECTION" data-warranty-card-index="4"><p>以下のいずれかに該当する場合、保証期間内であっても保証の対象外となります：</p><p>1.故障・損傷が保証期間内に発生していても、保証期間終了後に申請された場合</p><p>2.使用上の誤り（取扱説明書や本体ラベルに記載の注意事項に従わなかった使用）による故障・損傷</p><p>3.他機器からの影響、不適切な修理または改造による故障・損傷</p><p>4.移設・輸送・落下などに起因する故障・損傷</p><p>5.火災・地震・風水害・落雷などの天災、または公害・塩害・異常電圧などによる故障・損傷</p><p>6.消耗部品の劣化や摩耗、または外観の汚損など</p></figure>
 
 <span id="warranty-5"></span>
 
-### 購入証明について
+## 購入証明について
 
-<figure aria-label="購入証明について" class="hb-warranty-card" data-component-id="HB-WARRANTY-SECTION" data-warranty-card-index="5"><p>保証をご利用の際には、以下いずれかの購入証明書類をご提示いただく必要があります：</p><p>・Jackery公式オンラインストアでの購入：注文番号（注文履歴画面または確認メール）</p><p>・正規代理店での購入：購入日・販売店名の記載された領収書または納品書</p><p>※  ご提示がない場合、保証対応いたしかねます。</p></figure>
+<figure aria-label="購入証明について" class="hb-warranty-card" data-component-id="HB-WARRANTY-SECTION" data-warranty-card-index="5"><p>保証をご利用の際には、以下いずれかの購入証明書類をご提示いただく必要があります：</p><p>・Jackery公式オンラインストアでの購入：注文番号（注文履歴画面または確認メール）</p><p>・正規代理店での購入：購入日・販売店名の記載された領収書または納品書</p><p class="jbp-warranty-note">※  ご提示がない場合、保証対応いたしかねます。</p></figure>
 
 <span id="warranty-6"></span>
 
-### 保証内容
+## 保証内容
 
-<figure aria-label="保証内容" class="hb-warranty-card" data-component-id="HB-WARRANTY-SECTION" data-warranty-card-index="6"><p>1. 初期不良による交換（ご購入日から30日以内）</p><p>・取扱説明書に従った正常な使用中に不具合が発生した場合、同一製品の新品と交換いたします。</p><p>・在庫切れや販売終了の場合は、同等品への交換または返金にて対応いたします。</p><p>2. 無償修理（ご購入日から31日以上～保証期間内）</p><p>・保証条件を満たす自然故障については、無料で修理対応いたします。</p><p>・修理が困難な場合は、同等品（同モデルまたは同等スペック品）への交換にて対応いたします。</p><p>3. 有償修理以下に該当する場合は、有償での修理対応となります：</p><p>・保証期間を超えた製品</p><p>・保証対象外と判断された場合</p><p>・Jackery公式オンラインストアまたは正規代理店以外で購入された製品</p><p>有償修理後の保証期間は、修理完了日より90日間です。</p><p>*無償修理の場合、残りの保証期間が90日未満であれば「90日間」、90日以上であれば「元の保証期間に準じます」。</p></figure>
+<figure aria-label="保証内容" class="hb-warranty-card" data-component-id="HB-WARRANTY-SECTION" data-warranty-card-index="6"><p><strong>1. 初期不良による交換</strong>（ご購入日から30日以内）</p><p>・取扱説明書に従った正常な使用中に不具合が発生した場合、同一製品の新品と交換いたします。</p><p>・在庫切れや販売終了の場合は、同等品への交換または返金にて対応いたします。</p><p><strong>2. 無償修理</strong>（ご購入日から31日以上～保証期間内）</p><p>・保証条件を満たす自然故障については、無料で修理対応いたします。</p><p>・修理が困難な場合は、同等品（同モデルまたは同等スペック品）への交換にて対応いたします。</p><p><strong>3. 有償修理</strong></p><p>以下に該当する場合は、有償での修理対応となります：</p><p>・保証期間を超えた製品</p><p>・保証対象外と判断された場合</p><p>・Jackery公式オンラインストアまたは正規代理店以外で購入された製品</p><p>有償修理後の保証期間は、修理完了日より90日間です。</p><p class="jbp-warranty-note">*無償修理の場合、残りの保証期間が90日未満であれば「90日間」、90日以上であれば「元の保証期間に準じます」。</p></figure>
 
 <span id="warranty-7"></span>
 
-### 免責事項
+## 免責事項
 
-<figure aria-label="免責事項" class="hb-warranty-card" data-component-id="HB-WARRANTY-SECTION" data-warranty-card-index="7"><p>1. 弊社では、いかなる場合においても、間接的損害または付随的損害（データの損失・逸失利益など）に対して責任を負いません。</p><p>2. 本保証書は、お客様が法律上有する権利を制限するものではありません。</p><p>3. 保証内容は、予告なく変更される場合がございます。あらかじめご了承ください。Jackery 製品を安心してご使用いただくために、本保証書の内容をご確認のうえ、ご活用くださいますようお願いいたします。ご不明点がございましたら、Jackery カスタマーサービスまでお問い合わせください。</p></figure>
+<figure aria-label="免責事項" class="hb-warranty-card" data-component-id="HB-WARRANTY-SECTION" data-warranty-card-index="7"><p>1. 弊社では、いかなる場合においても、間接的損害または付随的損害（データの損失・逸失利益など）に対して責任を負いません。</p><p>2. 本保証書は、お客様が法律上有する権利を制限するものではありません。</p><p>3. 保証内容は、予告なく変更される場合がございます。あらかじめご了承ください。</p><p>Jackery 製品を安心してご使用いただくために、本保証書の内容をご確認のうえ、ご活用くださいますようお願いいたします。</p><p>ご不明点がございましたら、Jackery カスタマーサービスまでお問い合わせください。</p></figure>
 
-<span id="contact"></span>
+<p class="jbp-contact-line"><strong>公式サイト:</strong> https://www.jackery.jp</p>
 
-## お問い合わせ
+<p class="jbp-contact-line"><strong>カスタマーサポート:</strong> jackery.jp@jackery.com</p>
 
-<p>公式サイト: https://www.jackery.jp</p>
-
-<p>カスタマーサポート: jackery.jp@jackery.com</p>
-
-<p>お問い合わせ電話番号: 050-3198-9007</p>
+<p class="jbp-contact-line"><strong>お問い合わせ電話番号:</strong> 050-3198-9007</p>

@@ -1,6 +1,5 @@
 {
   "asset_refs": [
-    "assets/cover-unit.png",
     "assets/symbol_do_not_dismantle.svg",
     "assets/symbol_warning_triangle.svg",
     "assets/symbol_read_manual.svg",
@@ -35,20 +34,16 @@
     "assets/wood-preparation.png",
     "assets/wood-installed.png",
     "assets/wood-1-2.png",
-    "assets/wood-3.png",
-    "assets/wood-4.png",
+    "assets/wood-3-4.png",
     "assets/wood-5.png",
     "assets/wood-6.png",
     "assets/wood-7.png",
     "assets/concrete-preparation.png",
     "assets/concrete-1-2.png",
     "assets/concrete-3.png",
-    "assets/concrete-4.png",
-    "assets/concrete-5.png",
-    "assets/concrete-6.png",
-    "assets/concrete-7.png",
-    "assets/concrete-8.png",
-    "assets/concrete-9.png",
+    "assets/concrete-4-5.png",
+    "assets/concrete-6-7.png",
+    "assets/concrete-8-9.png",
     "assets/connection.png",
     "assets/native-connected-batteries.svg",
     "assets/ac-charge.png",
@@ -56,8 +51,8 @@
     "assets/car-charge.svg"
   ],
   "bundle_root": "frozen-source",
-  "bundle_sha256": "c69e866776048a85e818e4432d31c1b65b84e0c3bba54a65fb4880fc929e8438",
-  "content_sha256": "e5c9a9332c5eebcac56933872db85cc54239f8a625665c270dda2b4f8697ed13",
+  "bundle_sha256": "de483afd650c40d9b2208651450e485a152eb8b2e72bb86f514f64c749c1dacb",
+  "content_sha256": "592a584e897df2f75641da53974113a3b94d6a614a01cc30be9e8f79dc91beba",
   "language": "ja",
   "layout_params_sha256": "f5ae099abc1a82ffda3abcc5a13725aca3c201e720a0374d88d1643f9773f279",
   "metadata": {
@@ -71,15 +66,11 @@
       "assets/car-charge.svg": "88619617a9667401adf359241f338dd129288f020f647378615ce271a3abb8e1",
       "assets/concrete-1-2.png": "c5ba7b5d1ed4d5df23822b97cf149e368e77223ce511d285e022d2cf7d75359f",
       "assets/concrete-3.png": "724dcd5c632cb46a1688cde31b4e6653e790f2df8cf28ed7861fd5880d7f8b2c",
-      "assets/concrete-4.png": "bd1c43db43a92049d80fa034c72f8c95a84bb165090597850372075464e8b9c5",
-      "assets/concrete-5.png": "dfb08e5121ce05578fdba9ace36e5e8f82da6450ff3685686bfbf23a80aa91e5",
-      "assets/concrete-6.png": "137156d6f9b508ef9c2a43f9f71620c473093f4846bd619e0ba8a9bce0c2235f",
-      "assets/concrete-7.png": "944f9ddc36ee7fee6b019b3ab4fa43f4535e59a2cead6f3011267e30aa0d01c2",
-      "assets/concrete-8.png": "4c15f829e84d435d74443003d3ff61e6d9fceda313b652c53dca393bbd7cbfeb",
-      "assets/concrete-9.png": "e78d1d349f8ba3efa91013ee9cc580ab3ca3302d271ac93d08067b2a30d86ea4",
+      "assets/concrete-4-5.png": "d54978ece2521a349908af0f1954de0b6bd638fead27349b24fc570905fc5f37",
+      "assets/concrete-6-7.png": "84e00b0cc447501d7d88f17f2c7b101bacee39afc8f67a13c8ddabbc48f070a3",
+      "assets/concrete-8-9.png": "0608ae8d09f8bb3058bc78e2889221df7a30f55bc4cb2168b92d3999dc129eb3",
       "assets/concrete-preparation.png": "f150bcf4f2f31f53f09bd1e456c00819fa35d8b00298fb4449a887f0b294c450",
       "assets/connection.png": "72aef778fc5a513385611504f842cb1d42224860eab8d442b62785f7268c0f2b",
-      "assets/cover-unit.png": "b776b784f12ddbf1454d3643fef769b9899cfad864eb78a775a3bf388835304c",
       "assets/inbox-cable.png": "07b72c58901f0768bdcb7ee22af411a0edfe88b39a6d6efe96c9ab701443f272",
       "assets/inbox-manual.png": "7313eb417b5791dc99a99f55ea812bb81c404cc2a63c60695d9ae6373da475e3",
       "assets/inbox-stand.png": "5f923f0353f2d8f7f6d2f7c6c6c76eac40448388668d215fef9582d8916097aa",
@@ -110,15 +101,14 @@
       "assets/symbol_weee.png": "6883f899f43ac0642f43b8f9cf4118a394c1382ee409f4498544f90ba37b56a5",
       "assets/symbol_weee.svg": "b44fa52c396de4a7944718d279b2b26bb90b0964328aa5a9e177bc65b982acb1",
       "assets/wood-1-2.png": "efc1ab4cfe1c218f94ff3ff2e39bce319cd0e9611e5377a84184d9bf1b621c84",
-      "assets/wood-3.png": "cd69e780fb653ac235bd5b40fbe58a5f485bf40af243443b65dfc953920e329d",
-      "assets/wood-4.png": "9dc34c9609877d3ae1f48a248011bb0f953e66aafa76bcef271ef95548374c98",
+      "assets/wood-3-4.png": "a827f3eeb9fedfc291d53c65517ee6fd2b27caba72e18a6eff79b15523391534",
       "assets/wood-5.png": "c1cc2514d65958d47a849571aed3738d7160680d39a9376baa3a90a80ff78350",
       "assets/wood-6.png": "304b7aa09b1c65662cef232d47be82953e2c4ff332f961cb3ed202346f0f813c",
       "assets/wood-7.png": "a6a89d44245566081663916bab026a5bc9a2ff0c29261b28ea4f1f07737b5a82",
       "assets/wood-installed.png": "516e80d5c1d7c08779f179dd3b3023835f8e462cdad1653b359e2a97732f523c",
       "assets/wood-preparation.png": "752ede1ae02ddaeb20e084d0c75ceed56e1e5977faf96f53d3260e8e6c6a7265"
     },
-    "block_count": 110,
+    "block_count": 97,
     "component_registry": {
       "components": {
         "HB-CALLOUT-STRIP": {
@@ -1335,18 +1325,18 @@
         },
         {
           "path": "source/admission.json",
-          "sha256": "3bf96be5267804d63f6ca675e9b250a8a9f6ae01425b39c96a85bf9987d49a1e",
-          "size": 6887
+          "sha256": "be58fd3bd17a611e0bd9cade9a136cea94be3bb5e731501b572c941b9da3d410",
+          "size": 6711
         },
         {
           "path": "source/approval.json",
-          "sha256": "a7324c2341729f24b1d31cda473bb7cf583699b6bb576310e0842bc7eb8a0556",
-          "size": 22532
+          "sha256": "d24f0dc50e278b66104e4b1ad918a907d97ea9a6839cd7721731c794fe66c9ac",
+          "size": 11328
         },
         {
           "path": "source/asset_recipe.json",
-          "sha256": "957ca2e79cee8148f7faea132bc36b4112a00df0bcf19de582b0479f05b4a1f7",
-          "size": 169151
+          "sha256": "448a404af34d3c2dc435e87a69032155d16b0f0f78293a77605b0eb0873a5568",
+          "size": 164321
         },
         {
           "path": "source/assets/10_Input_Power_BiBvbNteAoNsHqxoMICc11cjnHc.png",
@@ -1394,34 +1384,19 @@
           "size": 115971
         },
         {
-          "path": "source/assets/concrete-4.png",
-          "sha256": "bd1c43db43a92049d80fa034c72f8c95a84bb165090597850372075464e8b9c5",
-          "size": 33826
+          "path": "source/assets/concrete-4-5.png",
+          "sha256": "d54978ece2521a349908af0f1954de0b6bd638fead27349b24fc570905fc5f37",
+          "size": 55006
         },
         {
-          "path": "source/assets/concrete-5.png",
-          "sha256": "dfb08e5121ce05578fdba9ace36e5e8f82da6450ff3685686bfbf23a80aa91e5",
-          "size": 20080
+          "path": "source/assets/concrete-6-7.png",
+          "sha256": "84e00b0cc447501d7d88f17f2c7b101bacee39afc8f67a13c8ddabbc48f070a3",
+          "size": 41538
         },
         {
-          "path": "source/assets/concrete-6.png",
-          "sha256": "137156d6f9b508ef9c2a43f9f71620c473093f4846bd619e0ba8a9bce0c2235f",
-          "size": 18790
-        },
-        {
-          "path": "source/assets/concrete-7.png",
-          "sha256": "944f9ddc36ee7fee6b019b3ab4fa43f4535e59a2cead6f3011267e30aa0d01c2",
-          "size": 21552
-        },
-        {
-          "path": "source/assets/concrete-8.png",
-          "sha256": "4c15f829e84d435d74443003d3ff61e6d9fceda313b652c53dca393bbd7cbfeb",
-          "size": 29028
-        },
-        {
-          "path": "source/assets/concrete-9.png",
-          "sha256": "e78d1d349f8ba3efa91013ee9cc580ab3ca3302d271ac93d08067b2a30d86ea4",
-          "size": 50563
+          "path": "source/assets/concrete-8-9.png",
+          "sha256": "0608ae8d09f8bb3058bc78e2889221df7a30f55bc4cb2168b92d3999dc129eb3",
+          "size": 80998
         },
         {
           "path": "source/assets/concrete-preparation.png",
@@ -1432,11 +1407,6 @@
           "path": "source/assets/connection.png",
           "sha256": "72aef778fc5a513385611504f842cb1d42224860eab8d442b62785f7268c0f2b",
           "size": 85679
-        },
-        {
-          "path": "source/assets/cover-unit.png",
-          "sha256": "b776b784f12ddbf1454d3643fef769b9899cfad864eb78a775a3bf388835304c",
-          "size": 20232
         },
         {
           "path": "source/assets/inbox-cable.png",
@@ -1589,14 +1559,9 @@
           "size": 44620
         },
         {
-          "path": "source/assets/wood-3.png",
-          "sha256": "cd69e780fb653ac235bd5b40fbe58a5f485bf40af243443b65dfc953920e329d",
-          "size": 81311
-        },
-        {
-          "path": "source/assets/wood-4.png",
-          "sha256": "9dc34c9609877d3ae1f48a248011bb0f953e66aafa76bcef271ef95548374c98",
-          "size": 19057
+          "path": "source/assets/wood-3-4.png",
+          "sha256": "a827f3eeb9fedfc291d53c65517ee6fd2b27caba72e18a6eff79b15523391534",
+          "size": 105689
         },
         {
           "path": "source/assets/wood-5.png",
@@ -1625,8 +1590,8 @@
         },
         {
           "path": "source/differences.md",
-          "sha256": "13912e38d23e4b5483add82be43b624c5a15ae97783efcbe22eedc880592bc5f",
-          "size": 5180
+          "sha256": "5d4ca29fa69b499d12f2c6484a33aafcb77d3267426cf8f06fd22970991392cc",
+          "size": 9976
         },
         {
           "path": "source/discovery.md",
@@ -1635,13 +1600,13 @@
         },
         {
           "path": "source/document.json",
-          "sha256": "53bda798a68efe37209954163527a1f2bf9db5bfafc8044c5bf4f45dee55c47e",
-          "size": 263035
+          "sha256": "ae93bb1d2a9e8366e2fb4f5d7a946e38c6c71d303203a9a7e9890c8bbc4ce1bb",
+          "size": 254673
         },
         {
           "path": "source/figures.json",
-          "sha256": "a6dcf49d2b5cbf6294ffb47b2a62cce0a94a59d91216c9f8fb3f8e50ad471cbb",
-          "size": 48488
+          "sha256": "577632e7fc0e59f14d27f25b4fa2862fe5e3f59b594682d205495063f0176688",
+          "size": 47630
         },
         {
           "path": "source/native_icon_recipe.json",
@@ -1655,8 +1620,8 @@
         },
         {
           "path": "source/presentation.css",
-          "sha256": "64788a2fdf6865e450e11798f24c2a163a0e669f1f2ea71a17ab71124664216c",
-          "size": 1951
+          "sha256": "d708113dcd3effb1b7d07f5cc27fff53125804d0971a97668efcaf94806efe55",
+          "size": 14729
         },
         {
           "path": "source/reuse.json",
@@ -1675,7 +1640,10 @@
         "Symbols and compatible LCD icons reused unchanged; source-specific installation/body panels extracted from this PDF.",
         "External labels are live source-native text; fixed product markings and complete panels preserved.",
         "Hidden English duplicate warning physical 15 archived in pdf_blocks, excluded from visible Japanese body after rendered inspection.",
-        "Preserve source on/off order, charging temperature and heading typo. Normalize extraction-only 8.. to visible 8. on physical page 13."
+        "Preserve source on/off order, charging temperature and heading typo. Normalize extraction-only 8.. to visible 8. on physical page 13.",
+        "Web layout: printed cover (physical 1) and print TOC (physical 2) are not part of the Web edition.",
+        "Web layout: chapter/sub-section hierarchy follows the print TOC and the reviewed JE-1000F JP Web manual.",
+        "Web layout: steps printed side by side (wood 3–4, concrete 4–5, 6–7, 8–9) are one row figure each."
       ],
       "original_source": {
         "filename": "Jackery Battery Pack取扱説明書V2.0-2026-07-29.pdf",
@@ -1686,7 +1654,7 @@
       },
       "publication_status": "operator-approved-git-only-release",
       "schema_version": "auto-manual-frozen-web-source/v1",
-      "source_authority": "Supplied original Japanese PDF visible content, physical pages 1 and 3–19; operator accepted candidate fd9ebe04a for public Git-only JP/ja release on 2026-10-08 under MA-275. Source questions are preserved without technical rewriting.",
+      "source_authority": "Supplied original Japanese PDF visible content, physical pages 3–19. Web-layout candidate derived from the operator-approved native package git-20261008-3aa6c003-native (MA-275) on operator instruction 2026-10-09 (「全部修，一次做完」「封面和目录 不用体现在web版面上」「你参考 资料库里 现有的je-1000f的日语网页说明书」); operator accepted reviewed candidate 4352254 for public Git-only JP/ja release on 2026-10-09 (「上线提交发布」; merge by operator review). Acceptance is hash-bound in source/approval.json.",
       "symbol_asset_admission": {
         "locales": {
           "ja": [
@@ -2013,7 +1981,7 @@
         "printed_manual_version": "V2.0-2026-07-29",
         "printed_manual_version_basis": "operator-supplied filename; version not printed in body",
         "region": "JP",
-        "technical_version": "git-20261008-3aa6c003-native"
+        "technical_version": "git-20261009-3aa6c003-web-layout"
       },
       "validation_boundary": "Source-local shared prepared-document admission verifies exact native chapter map and actual shared components. No phase2 target registered; JE-1000F JP build.py check is regression only. Source-specific applicability excludes absent UPS/App/auto-resume/key combinations.",
       "web_roots": {
@@ -2601,343 +2569,30 @@
     "manual_theme_sha256": "e8fc88458d239edef85f2cfb0b26b71df2e83859c8e51e9c093e5abc2982b47d",
     "markdown_filename": "manual_jbp1000bwh_jp_ja.md",
     "operator_source_acceptance": {
-      "authorized_source_fidelity_corrections": "Under the operator Git-only release instruction, six generic symbol glyphs are replaced by the exact supplied PDF vectors. Caption text is unchanged. The existing Li-ion32 glyph is byte-identical. Geometry, source captions and comparison evidence are recorded in symbol_release_admission.json; no admission rule is changed.",
-      "date": "2026-10-08",
-      "merge_authorization": "MA-275",
+      "date": "2026-10-09",
+      "derived_from": {
+        "merge_authorization": "MA-275",
+        "operator_instructions": [
+          "全部修，一次做完",
+          "封面和目录 不用体现在web版面上",
+          "你参考 资料库里 现有的je-1000f的日语网页说明书"
+        ],
+        "package": "git-20261008-3aa6c003-native"
+      },
+      "merge_authorization": "Operator review and merge of the engineering PR (AGENTS.md §8.6); no agent self-merge grant.",
+      "operator_merge_choice": "B，你先开PR，我来审核合入",
       "operator_quote": "上线提交发布",
-      "original_reviewed_inputs": [
-        {
-          "path": "source/admission.json",
-          "sha256": "3bf96be5267804d63f6ca675e9b250a8a9f6ae01425b39c96a85bf9987d49a1e",
-          "size": 6887
-        },
-        {
-          "path": "source/asset_recipe.json",
-          "sha256": "957ca2e79cee8148f7faea132bc36b4112a00df0bcf19de582b0479f05b4a1f7",
-          "size": 169151
-        },
-        {
-          "path": "source/assets/10_Input_Power_BiBvbNteAoNsHqxoMICc11cjnHc.png",
-          "sha256": "182e6b96b78860011722a6f127073bca8eb297cea98a1f1ec1b46172141e5658",
-          "size": 4851
-        },
-        {
-          "path": "source/assets/11_Remaining_Charge_Time_VeBobGZMDoYpBuxLRcFcti9cnlc.png",
-          "sha256": "6bdbda943b9ad2457d9113f1f1fd4be8d60c2f97c2b8803e57a3af9612e03272",
-          "size": 4421
-        },
-        {
-          "path": "source/assets/18_Remaining_Battery_Percentage_F7gbbsgPKo4mdkx4JqccMfQRngc.png",
-          "sha256": "8c3c5ff517ff51988805f90c9262b743aa0da43a1058f83b784925179305f11e",
-          "size": 2388
-        },
-        {
-          "path": "source/assets/26_Output_Power_PviebR618oofvKxcKVRcHLlInqd.png",
-          "sha256": "58c1d3604ca7b9774b069c6928775a13465ccb9477f477e9e4d4b30e7f75b88d",
-          "size": 6085
-        },
-        {
-          "path": "source/assets/27_Remaining_Discharge_Time_QvCQbFmEhoQR3kxgWt4c6H9zn0b.png",
-          "sha256": "14b7fae06ace57348de6185c2aac7435c2a88b340d44626388a6db75f6b65162",
-          "size": 2808
-        },
-        {
-          "path": "source/assets/ac-charge.png",
-          "sha256": "d5ce7b091a2c1c6e80d680a4302f3be6f0e5d1aee805c650c427b24f3323ad59",
-          "size": 41584
-        },
-        {
-          "path": "source/assets/car-charge.svg",
-          "sha256": "88619617a9667401adf359241f338dd129288f020f647378615ce271a3abb8e1",
-          "size": 1263694
-        },
-        {
-          "path": "source/assets/concrete-1-2.png",
-          "sha256": "c5ba7b5d1ed4d5df23822b97cf149e368e77223ce511d285e022d2cf7d75359f",
-          "size": 44245
-        },
-        {
-          "path": "source/assets/concrete-3.png",
-          "sha256": "724dcd5c632cb46a1688cde31b4e6653e790f2df8cf28ed7861fd5880d7f8b2c",
-          "size": 115971
-        },
-        {
-          "path": "source/assets/concrete-4.png",
-          "sha256": "bd1c43db43a92049d80fa034c72f8c95a84bb165090597850372075464e8b9c5",
-          "size": 33826
-        },
-        {
-          "path": "source/assets/concrete-5.png",
-          "sha256": "dfb08e5121ce05578fdba9ace36e5e8f82da6450ff3685686bfbf23a80aa91e5",
-          "size": 20080
-        },
-        {
-          "path": "source/assets/concrete-6.png",
-          "sha256": "137156d6f9b508ef9c2a43f9f71620c473093f4846bd619e0ba8a9bce0c2235f",
-          "size": 18790
-        },
-        {
-          "path": "source/assets/concrete-7.png",
-          "sha256": "944f9ddc36ee7fee6b019b3ab4fa43f4535e59a2cead6f3011267e30aa0d01c2",
-          "size": 21552
-        },
-        {
-          "path": "source/assets/concrete-8.png",
-          "sha256": "4c15f829e84d435d74443003d3ff61e6d9fceda313b652c53dca393bbd7cbfeb",
-          "size": 29028
-        },
-        {
-          "path": "source/assets/concrete-9.png",
-          "sha256": "e78d1d349f8ba3efa91013ee9cc580ab3ca3302d271ac93d08067b2a30d86ea4",
-          "size": 50563
-        },
-        {
-          "path": "source/assets/concrete-preparation.png",
-          "sha256": "f150bcf4f2f31f53f09bd1e456c00819fa35d8b00298fb4449a887f0b294c450",
-          "size": 55298
-        },
-        {
-          "path": "source/assets/connection.png",
-          "sha256": "72aef778fc5a513385611504f842cb1d42224860eab8d442b62785f7268c0f2b",
-          "size": 85679
-        },
-        {
-          "path": "source/assets/cover-unit.png",
-          "sha256": "b776b784f12ddbf1454d3643fef769b9899cfad864eb78a775a3bf388835304c",
-          "size": 20232
-        },
-        {
-          "path": "source/assets/inbox-cable.png",
-          "sha256": "07b72c58901f0768bdcb7ee22af411a0edfe88b39a6d6efe96c9ab701443f272",
-          "size": 8053
-        },
-        {
-          "path": "source/assets/inbox-manual.png",
-          "sha256": "7313eb417b5791dc99a99f55ea812bb81c404cc2a63c60695d9ae6373da475e3",
-          "size": 2114
-        },
-        {
-          "path": "source/assets/inbox-stand.png",
-          "sha256": "5f923f0353f2d8f7f6d2f7c6c6c76eac40448388668d215fef9582d8916097aa",
-          "size": 4672
-        },
-        {
-          "path": "source/assets/inbox-unit.png",
-          "sha256": "5800d46a66e52df51dfa38d3a6076491de6aeb13cf7a80ea3814e3ac65556041",
-          "size": 5172
-        },
-        {
-          "path": "source/assets/lcd-charge.svg",
-          "sha256": "9ba47b425dd127cd919700d80e28fc5c6e62757aae51f07d320cb2443eb46176",
-          "size": 2234
-        },
-        {
-          "path": "source/assets/lcd-control.png",
-          "sha256": "0b9b5109729b21f307a2a878e85fcaac4c5b3e3bdd26ca34a6d6d040cefe64fa",
-          "size": 20023
-        },
-        {
-          "path": "source/assets/lcd-dc.svg",
-          "sha256": "d92d6ba0b407094be7fb6b1d02cd8434014f982ed626af7172b357b273ee88a2",
-          "size": 3299
-        },
-        {
-          "path": "source/assets/lcd-error.svg",
-          "sha256": "87182fe3fb19dff98971aceaa7b839bb8c3a92c49b8ffda58e00f19c841ab54a",
-          "size": 3022
-        },
-        {
-          "path": "source/assets/lcd-map.png",
-          "sha256": "2962ffe3a81bf7ce7112e19ed34b02980222cd42be3109ae56234bb5fad897d3",
-          "size": 101572
-        },
-        {
-          "path": "source/assets/lcd-ring.svg",
-          "sha256": "c387d389fc043de868f02bf048a19faf68a1a41e6f1827a853e78bf71c8f1e7d",
-          "size": 2544
-        },
-        {
-          "path": "source/assets/native-connected-batteries.svg",
-          "sha256": "ff46e52f1e6098b58234e1f4fad01ae3ae10ee0eb961037964336a6ec17c9a1b",
-          "size": 1800
-        },
-        {
-          "path": "source/assets/native-li_ion.svg",
-          "sha256": "4d202540e27b0d52e806abf8b0e357382d0661d31f07a756b624108e2c0716d9",
-          "size": 5969
-        },
-        {
-          "path": "source/assets/overview.png",
-          "sha256": "a22ea3f7eb2e6c4fc0870d64150414a2264ca77dc713fce560af1846466eeaa0",
-          "size": 25680
-        },
-        {
-          "path": "source/assets/parallel.png",
-          "sha256": "b5f7c498fd77739300b5fd4d60e8ec387dc006f3e678839b3acea0a910a2abe7",
-          "size": 34750
-        },
-        {
-          "path": "source/assets/power.png",
-          "sha256": "36f4774ec4690e9aeaee2f02ea3c6cc9337fc86697dc09f0f1b9cc8e812f1654",
-          "size": 28085
-        },
-        {
-          "path": "source/assets/solar-charge.png",
-          "sha256": "b65d34b501128145eabc21f1f1346d796fa8a55bac351c06dc410903b9901a5c",
-          "size": 128620
-        },
-        {
-          "path": "source/assets/stacked.png",
-          "sha256": "7bc1b597e574ffd82cb803a78cbb4d6245a4737833842ceb67a75e3088e0a98c",
-          "size": 39147
-        },
-        {
-          "path": "source/assets/stand-1.png",
-          "sha256": "23d130500f47b18e27a5e795d9cc12a84453e84c37221e8be76a676b99f960c1",
-          "size": 43494
-        },
-        {
-          "path": "source/assets/stand-2.png",
-          "sha256": "5ef6508abe7fe140897736e3ac86a942dbffc683c4b00ba7b0a34765ed1a335b",
-          "size": 44418
-        },
-        {
-          "path": "source/assets/stand-3.png",
-          "sha256": "e1ea2912e8fc0ee2ae541ee87ba823873512d2249563c333508539b7784f1d63",
-          "size": 49894
-        },
-        {
-          "path": "source/assets/stand-installed.png",
-          "sha256": "498f6475727de7096e9fb3258f5f8b82bc901e52e7619d554f961bf9ad8c5863",
-          "size": 9472
-        },
-        {
-          "path": "source/assets/stand-preparation.png",
-          "sha256": "6a6426ac8ffaa53164fbf9406000409d1f186ffc6d68827e54ec2ff89aa7396d",
-          "size": 11631
-        },
-        {
-          "path": "source/assets/symbol_do_not_dismantle.svg",
-          "sha256": "5ad4fa830a5b4f9bf23af4c09493fc2610f8fda94ea6fcf925288d1cb6491f33",
-          "size": 6538
-        },
-        {
-          "path": "source/assets/symbol_keep_away_from_children.svg",
-          "sha256": "a58074f90ef83ab647ae94215dc0e3315cb9d113aaa4e104a6b26dc3b241d899",
-          "size": 6300
-        },
-        {
-          "path": "source/assets/symbol_no_open_flame.svg",
-          "sha256": "4a82cdd8683e595eb3c9f63ecce457ca53cc5ea6c3f5906ecd7e1d8a4b3be01f",
-          "size": 5630
-        },
-        {
-          "path": "source/assets/symbol_read_manual.svg",
-          "sha256": "1d2087064f92538d3b0762607056ac268f1d1c24e8f446c66626ac35c4e43584",
-          "size": 4961
-        },
-        {
-          "path": "source/assets/symbol_warning_triangle.svg",
-          "sha256": "0f41fe5ea49fb7a830cab90d2a5473587dd8a0c04db775b42953f58dbea3fb0a",
-          "size": 4481
-        },
-        {
-          "path": "source/assets/symbol_weee.png",
-          "sha256": "6883f899f43ac0642f43b8f9cf4118a394c1382ee409f4498544f90ba37b56a5",
-          "size": 7672
-        },
-        {
-          "path": "source/assets/wood-1-2.png",
-          "sha256": "efc1ab4cfe1c218f94ff3ff2e39bce319cd0e9611e5377a84184d9bf1b621c84",
-          "size": 44620
-        },
-        {
-          "path": "source/assets/wood-3.png",
-          "sha256": "cd69e780fb653ac235bd5b40fbe58a5f485bf40af243443b65dfc953920e329d",
-          "size": 81311
-        },
-        {
-          "path": "source/assets/wood-4.png",
-          "sha256": "9dc34c9609877d3ae1f48a248011bb0f953e66aafa76bcef271ef95548374c98",
-          "size": 19057
-        },
-        {
-          "path": "source/assets/wood-5.png",
-          "sha256": "c1cc2514d65958d47a849571aed3738d7160680d39a9376baa3a90a80ff78350",
-          "size": 25674
-        },
-        {
-          "path": "source/assets/wood-6.png",
-          "sha256": "304b7aa09b1c65662cef232d47be82953e2c4ff332f961cb3ed202346f0f813c",
-          "size": 22453
-        },
-        {
-          "path": "source/assets/wood-7.png",
-          "sha256": "a6a89d44245566081663916bab026a5bc9a2ff0c29261b28ea4f1f07737b5a82",
-          "size": 53621
-        },
-        {
-          "path": "source/assets/wood-installed.png",
-          "sha256": "516e80d5c1d7c08779f179dd3b3023835f8e462cdad1653b359e2a97732f523c",
-          "size": 14223
-        },
-        {
-          "path": "source/assets/wood-preparation.png",
-          "sha256": "752ede1ae02ddaeb20e084d0c75ceed56e1e5977faf96f53d3260e8e6c6a7265",
-          "size": 40917
-        },
-        {
-          "path": "source/differences.md",
-          "sha256": "01c55eae4a8d8e084df2ecf615ead9af18f4dcb73fa9704edf64aeb03ea8eeb5",
-          "size": 4477
-        },
-        {
-          "path": "source/discovery.md",
-          "sha256": "4780aced7cad86aed4a3b4a788dca54b1d3755f343f63a12429e5f161b480911",
-          "size": 2001
-        },
-        {
-          "path": "source/document.json",
-          "sha256": "1caa7816d0dc13f21049a8f4830611f488d5e5d1842cff0a8ca4d708b6a70fd1",
-          "size": 263035
-        },
-        {
-          "path": "source/figures.json",
-          "sha256": "a6dcf49d2b5cbf6294ffb47b2a62cce0a94a59d91216c9f8fb3f8e50ad471cbb",
-          "size": 48488
-        },
-        {
-          "path": "source/native_icon_recipe.json",
-          "sha256": "dfe1abc5e1d798a55ceb0f5cb2aeccdbf2532fbd63940f2d685a19b27f64ef7f",
-          "size": 2694
-        },
-        {
-          "path": "source/pdf_blocks.json",
-          "sha256": "e8be76ee0058b10e4d567b35b7087b3a3a1ac8f5f7854fc1864eb5e8a1a55b54",
-          "size": 78261
-        },
-        {
-          "path": "source/presentation.css",
-          "sha256": "64788a2fdf6865e450e11798f24c2a163a0e669f1f2ea71a17ab71124664216c",
-          "size": 1951
-        },
-        {
-          "path": "source/reuse.json",
-          "sha256": "39e252a1611d3117d1d12b1dbc27f475a3f9231c87c120f54642ed87569efb2d",
-          "size": 7226
-        }
-      ],
       "original_source_sha256": "3aa6c0039b413716274089e5335dc2ce5853264dca4d7b0a6e5e110b6b0b302c",
       "reviewed_inputs": [
         {
           "path": "source/admission.json",
-          "sha256": "3bf96be5267804d63f6ca675e9b250a8a9f6ae01425b39c96a85bf9987d49a1e",
-          "size": 6887
+          "sha256": "be58fd3bd17a611e0bd9cade9a136cea94be3bb5e731501b572c941b9da3d410",
+          "size": 6711
         },
         {
           "path": "source/asset_recipe.json",
-          "sha256": "957ca2e79cee8148f7faea132bc36b4112a00df0bcf19de582b0479f05b4a1f7",
-          "size": 169151
+          "sha256": "448a404af34d3c2dc435e87a69032155d16b0f0f78293a77605b0eb0873a5568",
+          "size": 164321
         },
         {
           "path": "source/assets/10_Input_Power_BiBvbNteAoNsHqxoMICc11cjnHc.png",
@@ -2985,34 +2640,19 @@
           "size": 115971
         },
         {
-          "path": "source/assets/concrete-4.png",
-          "sha256": "bd1c43db43a92049d80fa034c72f8c95a84bb165090597850372075464e8b9c5",
-          "size": 33826
+          "path": "source/assets/concrete-4-5.png",
+          "sha256": "d54978ece2521a349908af0f1954de0b6bd638fead27349b24fc570905fc5f37",
+          "size": 55006
         },
         {
-          "path": "source/assets/concrete-5.png",
-          "sha256": "dfb08e5121ce05578fdba9ace36e5e8f82da6450ff3685686bfbf23a80aa91e5",
-          "size": 20080
+          "path": "source/assets/concrete-6-7.png",
+          "sha256": "84e00b0cc447501d7d88f17f2c7b101bacee39afc8f67a13c8ddabbc48f070a3",
+          "size": 41538
         },
         {
-          "path": "source/assets/concrete-6.png",
-          "sha256": "137156d6f9b508ef9c2a43f9f71620c473093f4846bd619e0ba8a9bce0c2235f",
-          "size": 18790
-        },
-        {
-          "path": "source/assets/concrete-7.png",
-          "sha256": "944f9ddc36ee7fee6b019b3ab4fa43f4535e59a2cead6f3011267e30aa0d01c2",
-          "size": 21552
-        },
-        {
-          "path": "source/assets/concrete-8.png",
-          "sha256": "4c15f829e84d435d74443003d3ff61e6d9fceda313b652c53dca393bbd7cbfeb",
-          "size": 29028
-        },
-        {
-          "path": "source/assets/concrete-9.png",
-          "sha256": "e78d1d349f8ba3efa91013ee9cc580ab3ca3302d271ac93d08067b2a30d86ea4",
-          "size": 50563
+          "path": "source/assets/concrete-8-9.png",
+          "sha256": "0608ae8d09f8bb3058bc78e2889221df7a30f55bc4cb2168b92d3999dc129eb3",
+          "size": 80998
         },
         {
           "path": "source/assets/concrete-preparation.png",
@@ -3023,11 +2663,6 @@
           "path": "source/assets/connection.png",
           "sha256": "72aef778fc5a513385611504f842cb1d42224860eab8d442b62785f7268c0f2b",
           "size": 85679
-        },
-        {
-          "path": "source/assets/cover-unit.png",
-          "sha256": "b776b784f12ddbf1454d3643fef769b9899cfad864eb78a775a3bf388835304c",
-          "size": 20232
         },
         {
           "path": "source/assets/inbox-cable.png",
@@ -3180,14 +2815,9 @@
           "size": 44620
         },
         {
-          "path": "source/assets/wood-3.png",
-          "sha256": "cd69e780fb653ac235bd5b40fbe58a5f485bf40af243443b65dfc953920e329d",
-          "size": 81311
-        },
-        {
-          "path": "source/assets/wood-4.png",
-          "sha256": "9dc34c9609877d3ae1f48a248011bb0f953e66aafa76bcef271ef95548374c98",
-          "size": 19057
+          "path": "source/assets/wood-3-4.png",
+          "sha256": "a827f3eeb9fedfc291d53c65517ee6fd2b27caba72e18a6eff79b15523391534",
+          "size": 105689
         },
         {
           "path": "source/assets/wood-5.png",
@@ -3216,8 +2846,8 @@
         },
         {
           "path": "source/differences.md",
-          "sha256": "13912e38d23e4b5483add82be43b624c5a15ae97783efcbe22eedc880592bc5f",
-          "size": 5180
+          "sha256": "5d4ca29fa69b499d12f2c6484a33aafcb77d3267426cf8f06fd22970991392cc",
+          "size": 9976
         },
         {
           "path": "source/discovery.md",
@@ -3226,13 +2856,13 @@
         },
         {
           "path": "source/document.json",
-          "sha256": "53bda798a68efe37209954163527a1f2bf9db5bfafc8044c5bf4f45dee55c47e",
-          "size": 263035
+          "sha256": "ae93bb1d2a9e8366e2fb4f5d7a946e38c6c71d303203a9a7e9890c8bbc4ce1bb",
+          "size": 254673
         },
         {
           "path": "source/figures.json",
-          "sha256": "a6dcf49d2b5cbf6294ffb47b2a62cce0a94a59d91216c9f8fb3f8e50ad471cbb",
-          "size": 48488
+          "sha256": "577632e7fc0e59f14d27f25b4fa2862fe5e3f59b594682d205495063f0176688",
+          "size": 47630
         },
         {
           "path": "source/native_icon_recipe.json",
@@ -3246,8 +2876,8 @@
         },
         {
           "path": "source/presentation.css",
-          "sha256": "64788a2fdf6865e450e11798f24c2a163a0e669f1f2ea71a17ab71124664216c",
-          "size": 1951
+          "sha256": "d708113dcd3effb1b7d07f5cc27fff53125804d0971a97668efcaf94806efe55",
+          "size": 14729
         },
         {
           "path": "source/reuse.json",
@@ -3260,16 +2890,16 @@
           "size": 10524
         }
       ],
-      "reviewed_source_commit": "fd9ebe04a",
+      "reviewed_source_commit": "4352254",
       "schema_version": "source-operator-acceptance/v1",
-      "scope": "Public engineering submission and Git-only JP/ja release; preserve source questions and native copy/art; no online data writes.",
+      "scope": "Public engineering submission and Git-only JP/ja Web-layout release of git-20261009-3aa6c003-web-layout; the native package and its release evidence stay unchanged; approved Japanese wording and *_text fields unchanged; no online Base, queue, source-table, asset-registry or HTML_link writes.",
       "target": {
         "language": "ja",
         "model": "JBP-1000B-WH",
         "region": "JP"
       }
     },
-    "page_count": 17,
+    "page_count": 16,
     "page_declarations": {},
     "page_slots": {
       "charging": "charging",
@@ -3279,7 +2909,6 @@
       "lcd_display": "lcd_display",
       "operations": "operations",
       "placement": "placement",
-      "preface": "preface",
       "product_overview": "product_overview",
       "safety": "safety",
       "specifications": "specifications",
@@ -3298,7 +2927,7 @@
         "HB-CALLOUT-STRIP": 4,
         "HB-SPECIAL-INBOX": 1,
         "HB-SPECIAL-OPERATION": 1,
-        "HB-SPECIAL-REFERENCE-FIGURE": 31,
+        "HB-SPECIAL-REFERENCE-FIGURE": 26,
         "HB-TABLE-LCD-ICON": 1,
         "HB-TABLE-LCD-MODE": 1,
         "HB-TABLE-SPEC": 3,
@@ -3347,10 +2976,6 @@
           "HB-SPECIAL-REFERENCE-FIGURE": 2,
           "HB-SPECIAL-REFERENCE-FIGURE/semantic-fallback": 2
         },
-        "preface": {
-          "HB-SPECIAL-REFERENCE-FIGURE": 1,
-          "HB-SPECIAL-REFERENCE-FIGURE/semantic-fallback": 1
-        },
         "product_overview": {
           "HB-SPECIAL-REFERENCE-FIGURE": 1,
           "HB-SPECIAL-REFERENCE-FIGURE/semantic-fallback": 1
@@ -3375,12 +3000,12 @@
           "HB-TABLE-TROUBLESHOOTING/two-column": 1
         },
         "wall_concrete": {
-          "HB-SPECIAL-REFERENCE-FIGURE": 9,
-          "HB-SPECIAL-REFERENCE-FIGURE/semantic-fallback": 9
+          "HB-SPECIAL-REFERENCE-FIGURE": 6,
+          "HB-SPECIAL-REFERENCE-FIGURE/semantic-fallback": 6
         },
         "wall_wood": {
-          "HB-SPECIAL-REFERENCE-FIGURE": 8,
-          "HB-SPECIAL-REFERENCE-FIGURE/semantic-fallback": 8
+          "HB-SPECIAL-REFERENCE-FIGURE": 7,
+          "HB-SPECIAL-REFERENCE-FIGURE/semantic-fallback": 7
         },
         "warranty": {
           "HB-WARRANTY-LEAD": 1,
@@ -3400,7 +3025,7 @@
         "HB-CALLOUT-STRIP/warning": 1,
         "HB-SPECIAL-INBOX/responsive-card-grid": 1,
         "HB-SPECIAL-OPERATION/status-right": 1,
-        "HB-SPECIAL-REFERENCE-FIGURE/semantic-fallback": 31,
+        "HB-SPECIAL-REFERENCE-FIGURE/semantic-fallback": 26,
         "HB-TABLE-LCD-ICON/icon-catalog": 1,
         "HB-TABLE-LCD-MODE/two-state-three-action": 1,
         "HB-TABLE-SPEC/vertical": 3,
@@ -3437,9 +3062,6 @@
       "placement": [
         7,
         8
-      ],
-      "preface": [
-        1
       ],
       "product_overview": [
         5
@@ -3478,7 +3100,7 @@
     },
     "source_stylesheet": {
       "path": "_static/source.css",
-      "sha256": "64788a2fdf6865e450e11798f24c2a163a0e669f1f2ea71a17ab71124664216c"
+      "sha256": "d708113dcd3effb1b7d07f5cc27fff53125804d0971a97668efcaf94806efe55"
     },
     "title": "Jackery Battery Pack 取扱説明書",
     "web_contract": {
@@ -3646,203 +3268,8 @@
       "blocks": [
         {
           "asset_refs": [],
-          "block_id": "preface:block-0001",
-          "content_sha256": "23a59624e470e68f5e091c39191163a37f2361f5550dacab68fb6f178ebdde89",
-          "kind": "flow",
-          "payload": {
-            "anchor": "preface",
-            "children": [
-              {
-                "kind": "text",
-                "text": "Jackery Battery Pack 取扱説明書"
-              }
-            ],
-            "kind": "heading",
-            "level": 2,
-            "schema_version": "manual-flow/v2"
-          },
-          "source_ref": "ja/preface#block-1"
-        },
-        {
-          "asset_refs": [],
-          "block_id": "preface:block-0002",
-          "content_sha256": "de0fd7ef9f52e7822594703965ac17338cfaffaee14d9b41dba50dc4ec9542f6",
-          "kind": "flow",
-          "payload": {
-            "children": [
-              {
-                "kind": "text",
-                "text": "型番：JBP-1000B-WH"
-              }
-            ],
-            "kind": "paragraph",
-            "schema_version": "manual-flow/v2"
-          },
-          "source_ref": "ja/preface#block-2"
-        },
-        {
-          "asset_refs": [],
-          "block_id": "preface:block-0003",
-          "content_sha256": "5f77aa7e89a9f0a7e3389e6d9832eb0f6c063d2f577ec398065d11c58cd3b950",
-          "kind": "flow",
-          "payload": {
-            "children": [
-              {
-                "kind": "text",
-                "text": "国内専用/For use only in Japan"
-              }
-            ],
-            "kind": "paragraph",
-            "schema_version": "manual-flow/v2"
-          },
-          "source_ref": "ja/preface#block-3"
-        },
-        {
-          "asset_refs": [
-            "assets/cover-unit.png"
-          ],
-          "block_id": "preface:block-0004",
-          "content_sha256": "76bc6993c2a55e1690b6f71d5df7d676b3be0349cc2b429ee102de8e24c7cee0",
-          "kind": "flow",
-          "payload": {
-            "carrier_flow": [
-              {
-                "alt": "cover-unit",
-                "kind": "image",
-                "source": "assets/cover-unit.png"
-              }
-            ],
-            "component_spec": {
-              "assets": [
-                {
-                  "asset_ref": "assets/cover-unit.png",
-                  "locale_policy": "shared",
-                  "role": "source_art"
-                }
-              ],
-              "component_id": "HB-SPECIAL-REFERENCE-FIGURE",
-              "language": "ja",
-              "metadata": {
-                "image_key": "cover-unit",
-                "source_fragment_sha256": "f13eac3367dc4c3b03fd59a642e10324f3aad0548ad7a8354b92ab67a00db370",
-                "web_replace_key": ""
-              },
-              "schema_version": "component-spec/v1",
-              "slots": [
-                {
-                  "content": "cover-unit",
-                  "content_kind": "inline_text",
-                  "role": "reference_id"
-                },
-                {
-                  "content": "cover-unit",
-                  "content_kind": "inline_text",
-                  "role": "accessibility_label"
-                },
-                {
-                  "content": "none",
-                  "content_kind": "inline_text",
-                  "role": "caption_mode"
-                },
-                {
-                  "content": "equal",
-                  "content_kind": "inline_text",
-                  "role": "caption_layout"
-                }
-              ],
-              "source_ref": "ja/pdf-page-1#cover-unit",
-              "token_roles": [
-                "component.special.reference-figure"
-              ],
-              "variant": "semantic-fallback"
-            },
-            "kind": "component",
-            "schema_version": "manual-flow/v2"
-          },
-          "source_ref": "ja/preface#block-4"
-        },
-        {
-          "asset_refs": [],
-          "block_id": "preface:block-0005",
-          "content_sha256": "ed15ae8c8b16f714a9676fd18139128d7160717e6cff0f217ca7af352270906c",
-          "kind": "flow",
-          "payload": {
-            "children": [
-              {
-                "kind": "text",
-                "text": "写真はイメージです。実際の商品とは異なる場合があります。"
-              }
-            ],
-            "kind": "paragraph",
-            "schema_version": "manual-flow/v2"
-          },
-          "source_ref": "ja/preface#block-5"
-        },
-        {
-          "asset_refs": [],
-          "block_id": "preface:block-0006",
-          "content_sha256": "c1a4fccc02ca103aa68755578a580a1b8d48e8054c520809a27c6380e30a9ddc",
-          "kind": "flow",
-          "payload": {
-            "children": [
-              {
-                "kind": "text",
-                "text": "カスタマーサポート: jackery.jp@jackery.com"
-              }
-            ],
-            "kind": "paragraph",
-            "schema_version": "manual-flow/v2"
-          },
-          "source_ref": "ja/preface#block-6"
-        },
-        {
-          "asset_refs": [],
-          "block_id": "preface:block-0007",
-          "content_sha256": "b6028fc7e483d890a2be5d1657f1bc4027176518c25e04d6a3c8b01e67242afe",
-          "kind": "flow",
-          "payload": {
-            "children": [
-              {
-                "kind": "text",
-                "text": "お買い上げありがとうございます。"
-              }
-            ],
-            "kind": "paragraph",
-            "schema_version": "manual-flow/v2"
-          },
-          "source_ref": "ja/preface#block-7"
-        },
-        {
-          "asset_refs": [],
-          "block_id": "preface:block-0008",
-          "content_sha256": "bb5060c4f14c19200e697b99c282bfc0759f6d7b61e21f5d5d86d0b71d68a72b",
-          "kind": "flow",
-          "payload": {
-            "children": [
-              {
-                "kind": "text",
-                "text": "ご使用の前にこの「取扱説明書」をよくお読みのうえ、正しくお使いください。特に「安全上のご注意」は、必ずお読みいただき、安全にお使いください。お読みになったあとは、すぐに取り出せる場所に大切に保管してください。本製品の取扱説明書は随時更新されますので、最新の取扱説明書は公式サイトでご確認ください。"
-              }
-            ],
-            "kind": "paragraph",
-            "schema_version": "manual-flow/v2"
-          },
-          "source_ref": "ja/preface#block-8"
-        }
-      ],
-      "language": "ja",
-      "page_id": "preface",
-      "skipped_raw": 0,
-      "source_path": "source/document.json#preface",
-      "source_ref": "ja/preface",
-      "source_sha256": "53bda798a68efe37209954163527a1f2bf9db5bfafc8044c5bf4f45dee55c47e"
-    },
-    {
-      "blocks": [
-        {
-          "asset_refs": [],
           "block_id": "safety:block-0001",
-          "content_sha256": "afd2df35be3947d698a689ce85f4551b25aecd4a660b383a6be899b92cc119f5",
+          "content_sha256": "bb2d84aaf8e1205121a8a797ac3fcd1d89bd7f5de05410c8712c5837a256bd42",
           "kind": "flow",
           "payload": {
             "anchor": "safety",
@@ -3853,7 +3280,7 @@
               }
             ],
             "kind": "heading",
-            "level": 2,
+            "level": 1,
             "schema_version": "manual-flow/v2"
           },
           "source_ref": "ja/safety#block-1"
@@ -3861,13 +3288,18 @@
         {
           "asset_refs": [],
           "block_id": "safety:block-0002",
-          "content_sha256": "17da7fd37ad5c931f6e467659826a47a8fe82a9ce86fcfc95b08f510aa6f4dbc",
+          "content_sha256": "ce74b6852961f5e76f481e3f25280d1b562b252f37f63608ca435b71bc83286a",
           "kind": "flow",
           "payload": {
             "children": [
               {
-                "kind": "text",
-                "text": "本製品を使用する際、以下の注意事項を守ってください。"
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "本製品を使用する際、以下の注意事項を守ってください。"
+                  }
+                ],
+                "kind": "strong"
               }
             ],
             "kind": "paragraph",
@@ -4049,7 +3481,7 @@
       "skipped_raw": 0,
       "source_path": "source/document.json#safety",
       "source_ref": "ja/safety",
-      "source_sha256": "53bda798a68efe37209954163527a1f2bf9db5bfafc8044c5bf4f45dee55c47e"
+      "source_sha256": "ae93bb1d2a9e8366e2fb4f5d7a946e38c6c71d303203a9a7e9890c8bbc4ce1bb"
     },
     {
       "blocks": [
@@ -4092,7 +3524,7 @@
         {
           "asset_refs": [],
           "block_id": "symbols:block-0003",
-          "content_sha256": "735395a17994b691b7f650b01462f11c3691e923df2874e6dc8c33b83a956365",
+          "content_sha256": "29fa50e0a0dbe669e15df19cd5cccbc85fe212d02aed929bd53090a3d3b157d8",
           "kind": "flow",
           "payload": {
             "component_spec": {
@@ -4127,25 +3559,25 @@
                       "label": "警告",
                       "meaning_html": "この表示を無視して、誤った取り扱いをすると、人が死亡または重傷を負う可能性が想定される内容を示しています。",
                       "meaning_text": "この表示を無視して、誤った取り扱いをすると、人が死亡または重傷を負う可能性が想定される内容を示しています。",
-                      "show_icon": true
+                      "show_icon": false
                     },
                     {
                       "label": "ご注意",
                       "meaning_html": "この表示を無視して、誤った取り扱いをすると、人が傷害を負う可能性が想定される内容または物的損害の発生が想定される内容を示しています。",
                       "meaning_text": "この表示を無視して、誤った取り扱いをすると、人が傷害を負う可能性が想定される内容または物的損害の発生が想定される内容を示しています。",
-                      "show_icon": true
+                      "show_icon": false
                     },
                     {
                       "label": "説明",
                       "meaning_html": "この表示を無視して誤った取り扱いをすると、機器の損傷、データの消失、性能の低下、または予期しない動作が発生する可能性があることを示しています。",
                       "meaning_text": "この表示を無視して誤った取り扱いをすると、機器の損傷、データの消失、性能の低下、または予期しない動作が発生する可能性があることを示しています。",
-                      "show_icon": true
+                      "show_icon": false
                     },
                     {
                       "label": "ヒント",
                       "meaning_html": "文章内の重要な情報や操作のヒントを補足する内容を示しています。",
                       "meaning_text": "文章内の重要な情報や操作のヒントを補足する内容を示しています。",
-                      "show_icon": true
+                      "show_icon": false
                     }
                   ],
                   "content_kind": "ordered_rows",
@@ -4166,9 +3598,10 @@
         {
           "asset_refs": [],
           "block_id": "symbols:block-0004",
-          "content_sha256": "445c876f92e5db69e9b07ce0a5e72be970b5f5ac71778951a7062cd3234f24ac",
+          "content_sha256": "c3d0695d273d9c3e9eabc171cdeb1a116942b4800f01f0feb84d65365eaeb8f9",
           "kind": "flow",
           "payload": {
+            "anchor": "symbols-legend",
             "children": [
               {
                 "kind": "text",
@@ -4176,7 +3609,7 @@
               }
             ],
             "kind": "heading",
-            "level": 3,
+            "level": 2,
             "schema_version": "manual-flow/v2"
           },
           "source_ref": "ja/symbols#block-4"
@@ -4192,7 +3625,7 @@
             "assets/symbol_weee.svg"
           ],
           "block_id": "symbols:block-0005",
-          "content_sha256": "f8f49d7af94edb32f133a6a917ee8d3b65edab81b2c9c5fb70b72728db5c86d7",
+          "content_sha256": "3a5260965ef472dd52df7e20e4795cba4be201326a3609ce8d8329381037270f",
           "kind": "flow",
           "payload": {
             "component_spec": {
@@ -4303,13 +3736,13 @@
                       {
                         "asset_index": 5,
                         "icon_alt": "充電式電池のリサイクルについて本機はリサイクル可能な充電池を内蔵しています。この商品を廃棄する場合は、当社のカスタマーサポートにご連絡ください。充電池の取りはずしはお客様自身では行わないでください。",
-                        "meaning_html": "充電式電池のリサイクルについて本機はリサイクル可能な充電池を内蔵しています。この商品を廃棄する場合は、当社のカスタマーサポートにご連絡ください。充電池の取りはずしはお客様自身では行わないでください。",
+                        "meaning_html": "<strong>充電式電池のリサイクルについて</strong><br/>本機はリサイクル可能な充電池を内蔵しています。<br/>この商品を廃棄する場合は、当社のカスタマーサポートにご連絡ください。<br/>充電池の取りはずしはお客様自身では行わないでください。",
                         "meaning_text": "充電式電池のリサイクルについて本機はリサイクル可能な充電池を内蔵しています。この商品を廃棄する場合は、当社のカスタマーサポートにご連絡ください。充電池の取りはずしはお客様自身では行わないでください。"
                       },
                       {
                         "asset_index": 6,
                         "icon_alt": "このシンボルは、本製品を一般家庭ごみとして廃棄せず、リサイクルのために指定の回収施設に持ち込む必要があることを示しています。適切な廃棄およびリサイクルは、環境保護に役立ちます。本製品の廃棄やリサイクルについての詳細は、お住まいの自治体、廃棄物処理業者、または販売店にお問い合わせください。",
-                        "meaning_html": "このシンボルは、本製品を一般家庭ごみとして廃棄せず、リサイクルのために指定の回収施設に持ち込む必要があることを示しています。適切な廃棄およびリサイクルは、環境保護に役立ちます。本製品の廃棄やリサイクルについての詳細は、お住まいの自治体、廃棄物処理業者、または販売店にお問い合わせください。",
+                        "meaning_html": "このシンボルは、本製品を一般家庭ごみとして廃棄せず、リサイクルのために指定の回収施設に持ち込む必要があることを示しています。<br/>適切な廃棄およびリサイクルは、環境保護に役立ちます。<br/>本製品の廃棄やリサイクルについての詳細は、お住まいの自治体、廃棄物処理業者、または販売店にお問い合わせください。",
                         "meaning_text": "このシンボルは、本製品を一般家庭ごみとして廃棄せず、リサイクルのために指定の回収施設に持ち込む必要があることを示しています。適切な廃棄およびリサイクルは、環境保護に役立ちます。本製品の廃棄やリサイクルについての詳細は、お住まいの自治体、廃棄物処理業者、または販売店にお問い合わせください。"
                       }
                     ]
@@ -4335,14 +3768,14 @@
       "skipped_raw": 0,
       "source_path": "source/document.json#symbols",
       "source_ref": "ja/symbols",
-      "source_sha256": "53bda798a68efe37209954163527a1f2bf9db5bfafc8044c5bf4f45dee55c47e"
+      "source_sha256": "ae93bb1d2a9e8366e2fb4f5d7a946e38c6c71d303203a9a7e9890c8bbc4ce1bb"
     },
     {
       "blocks": [
         {
           "asset_refs": [],
           "block_id": "in_the_box:block-0001",
-          "content_sha256": "6728efbfb8c0689c405481692d0c15e85a1cf85647a0cdabd0e5c69cd56861f2",
+          "content_sha256": "97e765e4924fad78ec80ba73193aff4e274a0de73e264ea402f0caa263f6a276",
           "kind": "flow",
           "payload": {
             "anchor": "in_the_box",
@@ -4353,7 +3786,7 @@
               }
             ],
             "kind": "heading",
-            "level": 2,
+            "level": 1,
             "schema_version": "manual-flow/v2"
           },
           "source_ref": "ja/in_the_box#block-1"
@@ -4561,16 +3994,40 @@
         {
           "asset_refs": [],
           "block_id": "in_the_box:block-0003",
-          "content_sha256": "8d38d668165416d221c5eb365d2cce4874ec06d4e9cc95e56388166d8f310e5f",
+          "content_sha256": "e1913f0438fd70a0e2f032eefbd776d2a343087009dec1b01b1c7e23f88aa973",
           "kind": "flow",
           "payload": {
             "children": [
               {
-                "kind": "text",
-                "text": "※  付属品を故障、紛失等してしまった場合はカスタマーサポートまでご連絡ください。※  本拡張ケーブルは、同梱されている本体以外には使用しないでください。"
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "※  付属品を故障、紛失等してしまった場合はカスタマーサポートまでご連絡ください。"
+                  }
+                ],
+                "kind": "paragraph"
+              },
+              {
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "※  本拡張ケーブルは、同梱されている本体以外には使用しないでください。"
+                  }
+                ],
+                "kind": "paragraph"
               }
             ],
-            "kind": "paragraph",
+            "kind": "group",
+            "presentation": {
+              "html": {
+                "attributes": {
+                  "class": [
+                    "jbp-inbox-notes"
+                  ]
+                }
+              }
+            },
+            "role": "container",
             "schema_version": "manual-flow/v2"
           },
           "source_ref": "ja/in_the_box#block-3"
@@ -4578,16 +4035,30 @@
         {
           "asset_refs": [],
           "block_id": "in_the_box:block-0004",
-          "content_sha256": "19e2a369339eda153d0cf1c7e21237ca61778ce700711a90eff10568984d4daa",
+          "content_sha256": "a428462d1486fce8902d10784d34ebc05862a7bdc50e30a9f3ed3af4d92d946f",
           "kind": "flow",
           "payload": {
             "children": [
               {
-                "kind": "text",
-                "text": "本機の仕様および外観は、改善のため予告なく変更することがあります。"
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "本機の仕様および外観は、改善のため予告なく変更することがあります。"
+                  }
+                ],
+                "kind": "strong"
               }
             ],
             "kind": "paragraph",
+            "presentation": {
+              "html": {
+                "attributes": {
+                  "class": [
+                    "jbp-inbox-disclaimer"
+                  ]
+                }
+              }
+            },
             "schema_version": "manual-flow/v2"
           },
           "source_ref": "ja/in_the_box#block-4"
@@ -4598,14 +4069,14 @@
       "skipped_raw": 0,
       "source_path": "source/document.json#in_the_box",
       "source_ref": "ja/in_the_box",
-      "source_sha256": "53bda798a68efe37209954163527a1f2bf9db5bfafc8044c5bf4f45dee55c47e"
+      "source_sha256": "ae93bb1d2a9e8366e2fb4f5d7a946e38c6c71d303203a9a7e9890c8bbc4ce1bb"
     },
     {
       "blocks": [
         {
           "asset_refs": [],
           "block_id": "product_overview:block-0001",
-          "content_sha256": "ebcea62dba819dc68e64b291b5ff9cb167a6ab6ed1d418e850e3dca4ca122416",
+          "content_sha256": "9823c26947ae74ae4d64f748e2dbcaa1f3a675923ddab6b92a4472b04664a848",
           "kind": "flow",
           "payload": {
             "anchor": "product_overview",
@@ -4616,7 +4087,7 @@
               }
             ],
             "kind": "heading",
-            "level": 2,
+            "level": 1,
             "schema_version": "manual-flow/v2"
           },
           "source_ref": "ja/product_overview#block-1"
@@ -4626,7 +4097,7 @@
             "assets/overview.png"
           ],
           "block_id": "product_overview:block-0002",
-          "content_sha256": "55c2a9170eb351accf0e59e7d31ae94789357305655b96060c4521356e1edf20",
+          "content_sha256": "2653f6462004c1614a1b71c8585766a0b6479303e2bceb3b8cee17d51091db5a",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -4641,7 +4112,41 @@
                     "children": [
                       {
                         "kind": "text",
-                        "text": "DC 拡張ポートDC入力: 40V-57.6V⎓24A DC出力: 40V-57.6V⎓50A"
+                        "text": "DC 拡張ポート"
+                      }
+                    ],
+                    "kind": "group",
+                    "presentation": {
+                      "html": {
+                        "attributes": {
+                          "class": "line"
+                        }
+                      }
+                    },
+                    "role": "container"
+                  },
+                  {
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "DC入力: 40V-57.6V⎓24A"
+                      }
+                    ],
+                    "kind": "group",
+                    "presentation": {
+                      "html": {
+                        "attributes": {
+                          "class": "line"
+                        }
+                      }
+                    },
+                    "role": "container"
+                  },
+                  {
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "DC出力: 40V-57.6V⎓50A"
                       }
                     ],
                     "kind": "group",
@@ -4717,25 +4222,43 @@
                     {
                       "line": 0,
                       "rect": [
-                        71.96031759341304,
+                        72.07114593213359,
                         0.13004132171175373,
-                        20.866730613830374,
-                        15.996316179114196
+                        17.755902275109825,
+                        9.932336759804492
                       ]
                     },
                     {
                       "line": 1,
                       "rect": [
-                        75.98530827238918,
+                        68.96031759341304,
+                        6.036805869334966,
+                        20.4439207814372,
+                        7.104477004625311
+                      ]
+                    },
+                    {
+                      "line": 2,
+                      "rect": [
+                        68.96031759341304,
+                        9.021880496200637,
+                        20.4439207814372,
+                        7.104477004625311
+                      ]
+                    },
+                    {
+                      "line": 3,
+                      "rect": [
+                        72.98530827238918,
                         34.81551592622824,
                         16.4185303514377,
                         9.932340555523165
                       ]
                     },
                     {
-                      "line": 2,
+                      "line": 4,
                       "rect": [
-                        71.06965281331121,
+                        68.06965281331121,
                         50.4906345955768,
                         21.334185810515674,
                         9.932340555523165
@@ -4750,11 +4273,11 @@
                 "caption_centers_pct": null,
                 "captions_embedded": false,
                 "captions_origin": "carrier",
-                "capture_following_lines": 3,
+                "capture_following_lines": 5,
                 "composite_locale": "",
                 "image_key": "overview",
                 "presentation_mode": "base-art-live-copy",
-                "source_fragment_sha256": "ace4c972fafabcb8c792039c4c0b4e2b55c307e1372b4f835d646135cad7c577",
+                "source_fragment_sha256": "b2023aa68d340a05e121af47130267473bb3fef67fdd07f249795fc7f357ca25",
                 "web_replace_key": ""
               },
               "schema_version": "component-spec/v1",
@@ -4782,8 +4305,16 @@
                 {
                   "content": [
                     {
-                      "html": "DC 拡張ポートDC入力: 40V-57.6V⎓24A DC出力: 40V-57.6V⎓50A",
-                      "text": "DC 拡張ポートDC入力: 40V-57.6V⎓24A DC出力: 40V-57.6V⎓50A"
+                      "html": "DC 拡張ポート",
+                      "text": "DC 拡張ポート"
+                    },
+                    {
+                      "html": "DC入力: 40V-57.6V⎓24A",
+                      "text": "DC入力: 40V-57.6V⎓24A"
+                    },
+                    {
+                      "html": "DC出力: 40V-57.6V⎓50A",
+                      "text": "DC出力: 40V-57.6V⎓50A"
                     },
                     {
                       "html": "主電源ボタン",
@@ -4815,14 +4346,14 @@
       "skipped_raw": 0,
       "source_path": "source/document.json#product_overview",
       "source_ref": "ja/product_overview",
-      "source_sha256": "53bda798a68efe37209954163527a1f2bf9db5bfafc8044c5bf4f45dee55c47e"
+      "source_sha256": "ae93bb1d2a9e8366e2fb4f5d7a946e38c6c71d303203a9a7e9890c8bbc4ce1bb"
     },
     {
       "blocks": [
         {
           "asset_refs": [],
           "block_id": "lcd_display:block-0001",
-          "content_sha256": "4a81ecef5ef8baae64b0d9a2d80d612e2127da8563eced95d556a3d4833c72d0",
+          "content_sha256": "1df496db0866ab69bff6d764b6137940535dc873ef22ac592212fa8e401a428e",
           "kind": "flow",
           "payload": {
             "anchor": "lcd_display",
@@ -4833,7 +4364,7 @@
               }
             ],
             "kind": "heading",
-            "level": 2,
+            "level": 1,
             "schema_version": "manual-flow/v2"
           },
           "source_ref": "ja/lcd_display#block-1"
@@ -5219,7 +4750,7 @@
             "assets/lcd-error.svg"
           ],
           "block_id": "lcd_display:block-0003",
-          "content_sha256": "54d504fdd45bc5a99e2ddac5caac449db8f6d674f34a240f3004fbb64ba3c9c9",
+          "content_sha256": "c309cb77862e4006e239b8ce163dbb5f997085eac6327f94eb7062eab8d38d12",
           "kind": "flow",
           "payload": {
             "component_spec": {
@@ -5273,6 +4804,7 @@
               "component_id": "HB-TABLE-LCD-ICON",
               "language": "ja",
               "metadata": {
+                "description_cell_layout": "span-adjacent-equal",
                 "number_cell_layout": "span-adjacent-equal"
               },
               "schema_version": "component-spec/v1",
@@ -5291,7 +4823,7 @@
                       "icon_alt": "入力電力表示",
                       "name_html": "入力電力表示",
                       "name_text": "入力電力表示",
-                      "number_html": "1",
+                      "number_html": "<p>1</p>",
                       "number_text": "1"
                     },
                     {
@@ -5301,7 +4833,7 @@
                       "icon_alt": "充電残り時間",
                       "name_html": "充電残り時間",
                       "name_text": "充電残り時間",
-                      "number_html": "1",
+                      "number_html": "<p>1</p>",
                       "number_text": "1"
                     },
                     {
@@ -5311,7 +4843,7 @@
                       "icon_alt": "バッテリー残量(%)",
                       "name_html": "バッテリー残量(%)",
                       "name_text": "バッテリー残量(%)",
-                      "number_html": "2",
+                      "number_html": "<p>2</p>",
                       "number_text": "2"
                     },
                     {
@@ -5321,7 +4853,7 @@
                       "icon_alt": "消費電力",
                       "name_html": "消費電力",
                       "name_text": "消費電力",
-                      "number_html": "3",
+                      "number_html": "<p>3</p>",
                       "number_text": "3"
                     },
                     {
@@ -5331,17 +4863,17 @@
                       "icon_alt": "バッテリー使用可能時間",
                       "name_html": "バッテリー使用可能時間",
                       "name_text": "バッテリー使用可能時間",
-                      "number_html": "3",
+                      "number_html": "<p>3</p>",
                       "number_text": "3"
                     },
                     {
                       "asset_index": 5,
-                      "description_html": "オン: Jackery SlimPower H1は充電状態です。\nオフ: Jackery SlimPower H1は充電状態ではありません。",
+                      "description_html": "<strong>オン:</strong> Jackery SlimPower H1は充電状態です。<br/><strong>オフ:</strong> Jackery SlimPower H1は充電状態ではありません。",
                       "description_text": "オン: Jackery SlimPower H1は充電状態です。\nオフ: Jackery SlimPower H1は充電状態ではありません。",
                       "icon_alt": "充電インジケーター",
                       "name_html": "充電インジケーター",
                       "name_text": "充電インジケーター",
-                      "number_html": "4",
+                      "number_html": "<p>4</p>",
                       "number_text": "4"
                     },
                     {
@@ -5351,17 +4883,17 @@
                       "icon_alt": "バッテリーレベルパーセントタグ",
                       "name_html": "バッテリーレベルパーセントタグ",
                       "name_text": "バッテリーレベルパーセントタグ",
-                      "number_html": "5",
+                      "number_html": "<p>5</p>",
                       "number_text": "5"
                     },
                     {
                       "asset_index": 7,
-                      "description_html": "オン：Jackery DC Input Moduleが接続されています。\nオフ：Jackery DC Input Moduleが切断されています。",
+                      "description_html": "<strong>オン：</strong>Jackery DC Input Moduleが接続されています。<br/><strong>オフ：</strong>Jackery DC Input Moduleが切断されています。",
                       "description_text": "オン：Jackery DC Input Moduleが接続されています。\nオフ：Jackery DC Input Moduleが切断されています。",
                       "icon_alt": "DC 入力",
                       "name_html": "DC 入力",
                       "name_text": "DC 入力",
-                      "number_html": "6",
+                      "number_html": "<p>6</p>",
                       "number_text": "6"
                     },
                     {
@@ -5371,7 +4903,7 @@
                       "icon_alt": "エラーコード",
                       "name_html": "エラーコード",
                       "name_text": "エラーコード",
-                      "number_html": "7",
+                      "number_html": "<p>7</p>",
                       "number_text": "7"
                     }
                   ],
@@ -5396,14 +4928,14 @@
       "skipped_raw": 0,
       "source_path": "source/document.json#lcd_display",
       "source_ref": "ja/lcd_display",
-      "source_sha256": "53bda798a68efe37209954163527a1f2bf9db5bfafc8044c5bf4f45dee55c47e"
+      "source_sha256": "ae93bb1d2a9e8366e2fb4f5d7a946e38c6c71d303203a9a7e9890c8bbc4ce1bb"
     },
     {
       "blocks": [
         {
           "asset_refs": [],
           "block_id": "operations:block-0001",
-          "content_sha256": "c48bbf6eccb308a51682828d26004190524248dfd59dbcbf1d73d8cd69421d7f",
+          "content_sha256": "5edc6de5521ae01fd6accb3c28ea663a8d61c028c7ee4faadffff833664470dd",
           "kind": "flow",
           "payload": {
             "anchor": "operations",
@@ -5414,7 +4946,7 @@
               }
             ],
             "kind": "heading",
-            "level": 2,
+            "level": 1,
             "schema_version": "manual-flow/v2"
           },
           "source_ref": "ja/operations#block-1"
@@ -5422,7 +4954,7 @@
         {
           "asset_refs": [],
           "block_id": "operations:block-0002",
-          "content_sha256": "e5b62b276e84cad355b903a8b9594ba052d1d139005bc0c7e33e0c1fb5c92b2e",
+          "content_sha256": "01ac1902acb421988f3f6d5bb64ea58116e2d8c2411fafe76dcb2b2a17125ec5",
           "kind": "flow",
           "payload": {
             "children": [
@@ -5432,7 +4964,7 @@
               }
             ],
             "kind": "heading",
-            "level": 3,
+            "level": 2,
             "schema_version": "manual-flow/v2"
           },
           "source_ref": "ja/operations#block-2"
@@ -5644,7 +5176,7 @@
         {
           "asset_refs": [],
           "block_id": "operations:block-0004",
-          "content_sha256": "6d77b7c5d6439c7226368d9824449fbf79a66712a4ff7ecf05e4121afc0808e4",
+          "content_sha256": "8a5bc06f65ed277600b62ea1521079c4305b54410dc9755fabb6565804a30b24",
           "kind": "flow",
           "payload": {
             "children": [
@@ -5654,7 +5186,7 @@
               }
             ],
             "kind": "heading",
-            "level": 3,
+            "level": 2,
             "schema_version": "manual-flow/v2"
           },
           "source_ref": "ja/operations#block-4"
@@ -5759,14 +5291,14 @@
       "skipped_raw": 0,
       "source_path": "source/document.json#operations",
       "source_ref": "ja/operations",
-      "source_sha256": "53bda798a68efe37209954163527a1f2bf9db5bfafc8044c5bf4f45dee55c47e"
+      "source_sha256": "ae93bb1d2a9e8366e2fb4f5d7a946e38c6c71d303203a9a7e9890c8bbc4ce1bb"
     },
     {
       "blocks": [
         {
           "asset_refs": [],
           "block_id": "placement:block-0001",
-          "content_sha256": "18f05d35bdb45523a5f83cdded55186ba9e2ef01f6ca1da52d907e7cf77caeec",
+          "content_sha256": "1ee969f15e546e4ce91e52f66b1cb87bbcf78aa9502dcb6779b3aa3364d27d5f",
           "kind": "flow",
           "payload": {
             "anchor": "placement",
@@ -5777,7 +5309,7 @@
               }
             ],
             "kind": "heading",
-            "level": 2,
+            "level": 1,
             "schema_version": "manual-flow/v2"
           },
           "source_ref": "ja/placement#block-1"
@@ -5785,7 +5317,7 @@
         {
           "asset_refs": [],
           "block_id": "placement:block-0002",
-          "content_sha256": "711a40866ecd7d1192a185afc09f15075737812fa57d900214e0254a8ad03dba",
+          "content_sha256": "36dc266e38772ec3157281c658b5c72fab925d5ccf76e54f5d3676f536edfdb2",
           "kind": "flow",
           "payload": {
             "children": [
@@ -5795,7 +5327,7 @@
               }
             ],
             "kind": "heading",
-            "level": 3,
+            "level": 2,
             "schema_version": "manual-flow/v2"
           },
           "source_ref": "ja/placement#block-2"
@@ -5884,7 +5416,7 @@
         {
           "asset_refs": [],
           "block_id": "placement:block-0005",
-          "content_sha256": "e6c5860f49ad5ea03b3d2b7bddf25d249789369b4e0c2cda4236a988a931fbb0",
+          "content_sha256": "49263419cbfcad6381f7c897ba6337278d784d2b5980c2a79ed4992e5d43ae24",
           "kind": "flow",
           "payload": {
             "children": [
@@ -5894,7 +5426,7 @@
               }
             ],
             "kind": "heading",
-            "level": 3,
+            "level": 2,
             "schema_version": "manual-flow/v2"
           },
           "source_ref": "ja/placement#block-5"
@@ -5983,7 +5515,7 @@
         {
           "asset_refs": [],
           "block_id": "placement:block-0008",
-          "content_sha256": "0c79e4ded56875a7a88f86d86b673fa7a660873a77dfcbac00bf1f51e7790f21",
+          "content_sha256": "bded73a63a7fddd7bbf983cb21b488072efd676b2cba4440eef1116b4702b403",
           "kind": "flow",
           "payload": {
             "children": [
@@ -5993,7 +5525,7 @@
               }
             ],
             "kind": "heading",
-            "level": 3,
+            "level": 2,
             "schema_version": "manual-flow/v2"
           },
           "source_ref": "ja/placement#block-8"
@@ -6111,14 +5643,14 @@
       "skipped_raw": 0,
       "source_path": "source/document.json#placement",
       "source_ref": "ja/placement",
-      "source_sha256": "53bda798a68efe37209954163527a1f2bf9db5bfafc8044c5bf4f45dee55c47e"
+      "source_sha256": "ae93bb1d2a9e8366e2fb4f5d7a946e38c6c71d303203a9a7e9890c8bbc4ce1bb"
     },
     {
       "blocks": [
         {
           "asset_refs": [],
           "block_id": "stand:block-0001",
-          "content_sha256": "4cf9994387659b1cb2a9db7835c791d1f337ccff7b6d69dba15a93f5322973a2",
+          "content_sha256": "c2c6e8be28d2044ee32c8e03b69a86d8b59daf5b667154a2750ef1e0a8123a0a",
           "kind": "flow",
           "payload": {
             "anchor": "stand",
@@ -6129,7 +5661,7 @@
               }
             ],
             "kind": "heading",
-            "level": 2,
+            "level": 1,
             "schema_version": "manual-flow/v2"
           },
           "source_ref": "ja/stand#block-1"
@@ -6137,13 +5669,18 @@
         {
           "asset_refs": [],
           "block_id": "stand:block-0002",
-          "content_sha256": "7d73a88b80510f8dde494315eddab6e315da80c84aa9092ee8fbc8dbf777d21c",
+          "content_sha256": "185a316bdddc1b23bf219c619f18b0ceef6d47c3b0f504c00f20be7243f277e5",
           "kind": "flow",
           "payload": {
             "children": [
               {
-                "kind": "text",
-                "text": "スタンドに取り付けられた Jackery Battery Packは、地面に設置することができます。以下の設置手順に従ってください。"
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "スタンドに取り付けられた Jackery Battery Packは、地面に設置することができます。以下の設置手順に従ってください。"
+                  }
+                ],
+                "kind": "strong"
               }
             ],
             "kind": "paragraph",
@@ -6733,13 +6270,35 @@
       "skipped_raw": 0,
       "source_path": "source/document.json#stand",
       "source_ref": "ja/stand",
-      "source_sha256": "53bda798a68efe37209954163527a1f2bf9db5bfafc8044c5bf4f45dee55c47e"
+      "source_sha256": "ae93bb1d2a9e8366e2fb4f5d7a946e38c6c71d303203a9a7e9890c8bbc4ce1bb"
     },
     {
       "blocks": [
         {
           "asset_refs": [],
           "block_id": "wall_wood:block-0001",
+          "content_sha256": "1f7d4d17aa9f32dd1b87e85abb686e75d34092f4b5d8703c43edbc2443c8958a",
+          "kind": "flow",
+          "payload": {
+            "children": [
+              {
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "Jackery Wall-Mounted Bracket（別売）を使用すると、Jackery Battery Pack を壁に設置することができます。以下の設置手順に従ってください。"
+                  }
+                ],
+                "kind": "strong"
+              }
+            ],
+            "kind": "paragraph",
+            "schema_version": "manual-flow/v2"
+          },
+          "source_ref": "ja/wall_wood#block-1"
+        },
+        {
+          "asset_refs": [],
+          "block_id": "wall_wood:block-0002",
           "content_sha256": "ef65d85f3e78dbf4a0d1f514d3cea7ec12fafb0267e420023fdddba99ba2a54e",
           "kind": "flow",
           "payload": {
@@ -6752,23 +6311,6 @@
             ],
             "kind": "heading",
             "level": 2,
-            "schema_version": "manual-flow/v2"
-          },
-          "source_ref": "ja/wall_wood#block-1"
-        },
-        {
-          "asset_refs": [],
-          "block_id": "wall_wood:block-0002",
-          "content_sha256": "e50353f82c1584f730f06d5de4387d213f3e9d58c164d5b8116505cc9b89ad17",
-          "kind": "flow",
-          "payload": {
-            "children": [
-              {
-                "kind": "text",
-                "text": "Jackery Wall-Mounted Bracket（別売）を使用すると、Jackery Battery Pack を壁に設置することができます。以下の設置手順に従ってください。"
-              }
-            ],
-            "kind": "paragraph",
             "schema_version": "manual-flow/v2"
           },
           "source_ref": "ja/wall_wood#block-2"
@@ -7219,17 +6761,17 @@
         },
         {
           "asset_refs": [
-            "assets/wood-3.png"
+            "assets/wood-3-4.png"
           ],
           "block_id": "wall_wood:block-0006",
-          "content_sha256": "8264f776d60e7be78a12152071da184ac29b123ce02b9f788bc2946f66488e78",
+          "content_sha256": "db2bb6324ad41981e81a413ee6afa4658486cc0d2b6a3afcfcdf19371fafcb7a",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
               {
-                "alt": "wood-3",
+                "alt": "wood-3-4",
                 "kind": "image",
-                "source": "assets/wood-3.png"
+                "source": "assets/wood-3-4.png"
               },
               {
                 "children": [
@@ -7249,118 +6791,7 @@
                       }
                     },
                     "role": "container"
-                  }
-                ],
-                "kind": "group",
-                "presentation": {
-                  "html": {
-                    "attributes": {
-                      "class": "line-block"
-                    }
-                  }
-                },
-                "role": "container"
-              }
-            ],
-            "component_spec": {
-              "assets": [
-                {
-                  "asset_ref": "assets/wood-3.png",
-                  "locale_policy": "shared",
-                  "role": "source_art"
-                }
-              ],
-              "component_id": "HB-SPECIAL-REFERENCE-FIGURE",
-              "language": "ja",
-              "metadata": {
-                "base_art_layout": {
-                  "art_sha256": "cd69e780fb653ac235bd5b40fbe58a5f485bf40af243443b65dfc953920e329d",
-                  "labels": [
-                    {
-                      "line": 0,
-                      "rect": [
-                        39.07879638671875,
-                        3.3627422309360626,
-                        56.97030639648438,
-                        11.955829924600987
-                      ]
-                    }
-                  ],
-                  "mobile_labels": "stack",
-                  "panel_fill": "#ffffff",
-                  "panel_top": 0,
-                  "preserve_frame": true
-                },
-                "caption_centers_pct": null,
-                "captions_embedded": false,
-                "captions_origin": "carrier",
-                "capture_following_lines": 1,
-                "composite_locale": "",
-                "image_key": "wood-3",
-                "presentation_mode": "base-art-live-copy",
-                "source_fragment_sha256": "9fa35ef223d87b97a05eb3bbc7adc73eb85ede832ef8089a346b8d29a48b001b",
-                "web_replace_key": ""
-              },
-              "schema_version": "component-spec/v1",
-              "slots": [
-                {
-                  "content": "wood-3",
-                  "content_kind": "inline_text",
-                  "role": "reference_id"
-                },
-                {
-                  "content": "wood-3",
-                  "content_kind": "inline_text",
-                  "role": "accessibility_label"
-                },
-                {
-                  "content": "live",
-                  "content_kind": "inline_text",
-                  "role": "caption_mode"
-                },
-                {
-                  "content": "equal",
-                  "content_kind": "inline_text",
-                  "role": "caption_layout"
-                },
-                {
-                  "content": [
-                    {
-                      "html": "3. 上下のマウントブラケットを製品背面にしっかり取り付けます。",
-                      "text": "3. 上下のマウントブラケットを製品背面にしっかり取り付けます。"
-                    }
-                  ],
-                  "content_kind": "ordered_labels",
-                  "role": "captions"
-                }
-              ],
-              "source_ref": "ja/pdf-page-10#reference-wood-3",
-              "token_roles": [
-                "component.special.reference-figure"
-              ],
-              "variant": "semantic-fallback"
-            },
-            "kind": "component",
-            "schema_version": "manual-flow/v2"
-          },
-          "source_ref": "ja/wall_wood#block-6"
-        },
-        {
-          "asset_refs": [
-            "assets/wood-4.png"
-          ],
-          "block_id": "wall_wood:block-0007",
-          "content_sha256": "c0f2cb48ab3bd3214c8570e695fb65eda562775d4b6946fe111355cd280d8815",
-          "kind": "flow",
-          "payload": {
-            "carrier_flow": [
-              {
-                "alt": "wood-4",
-                "kind": "image",
-                "source": "assets/wood-4.png"
-              },
-              {
-                "children": [
+                  },
                   {
                     "children": [
                       {
@@ -7410,7 +6841,7 @@
             "component_spec": {
               "assets": [
                 {
-                  "asset_ref": "assets/wood-4.png",
+                  "asset_ref": "assets/wood-3-4.png",
                   "locale_policy": "shared",
                   "role": "source_art"
                 }
@@ -7419,24 +6850,33 @@
               "language": "ja",
               "metadata": {
                 "base_art_layout": {
-                  "art_sha256": "9dc34c9609877d3ae1f48a248011bb0f953e66aafa76bcef271ef95548374c98",
+                  "art_sha256": "a827f3eeb9fedfc291d53c65517ee6fd2b27caba72e18a6eff79b15523391534",
                   "labels": [
                     {
                       "line": 0,
                       "rect": [
-                        10.124643298162924,
-                        3.9280883104982296,
-                        89.0870195471722,
-                        17.738480051309054
+                        24.90681732741794,
+                        3.3627422309360626,
+                        37.39790082631254,
+                        11.955829924600987
                       ]
                     },
                     {
                       "line": 1,
                       "rect": [
-                        68.44376273777173,
-                        29.12665779237284,
-                        15.681159420289854,
-                        12.448316790247024
+                        68.38037163835942,
+                        4.176999893656538,
+                        31.61962836164058,
+                        17.477299976933953
+                      ]
+                    },
+                    {
+                      "line": 2,
+                      "rect": [
+                        88.89799683317399,
+                        29.00454749358944,
+                        11.102003166826009,
+                        12.265028690267926
                       ]
                     }
                   ],
@@ -7448,22 +6888,22 @@
                 "caption_centers_pct": null,
                 "captions_embedded": false,
                 "captions_origin": "carrier",
-                "capture_following_lines": 2,
+                "capture_following_lines": 3,
                 "composite_locale": "",
-                "image_key": "wood-4",
+                "image_key": "wood-3-4",
                 "presentation_mode": "base-art-live-copy",
-                "source_fragment_sha256": "a9772aff436a99e4f755e1f4249d6c229284873e2e8f6a1cd963918c881ba912",
+                "source_fragment_sha256": "efe2a3d762cdb35ca4c00fd5cae6e955b1440aab112fd19533d064d4d59cfc35",
                 "web_replace_key": ""
               },
               "schema_version": "component-spec/v1",
               "slots": [
                 {
-                  "content": "wood-4",
+                  "content": "wood-3-4",
                   "content_kind": "inline_text",
                   "role": "reference_id"
                 },
                 {
-                  "content": "wood-4",
+                  "content": "wood-3-4",
                   "content_kind": "inline_text",
                   "role": "accessibility_label"
                 },
@@ -7480,6 +6920,10 @@
                 {
                   "content": [
                     {
+                      "html": "3. 上下のマウントブラケットを製品背面にしっかり取り付けます。",
+                      "text": "3. 上下のマウントブラケットを製品背面にしっかり取り付けます。"
+                    },
+                    {
                       "html": "4. 壁の内側にある間柱を探すには、下地探しセンサーを使用してください。",
                       "text": "4. 壁の内側にある間柱を探すには、下地探しセンサーを使用してください。"
                     },
@@ -7492,7 +6936,7 @@
                   "role": "captions"
                 }
               ],
-              "source_ref": "ja/pdf-page-10#reference-wood-4",
+              "source_ref": "ja/pdf-page-10#reference-wood-3-4",
               "token_roles": [
                 "component.special.reference-figure"
               ],
@@ -7501,14 +6945,14 @@
             "kind": "component",
             "schema_version": "manual-flow/v2"
           },
-          "source_ref": "ja/wall_wood#block-7"
+          "source_ref": "ja/wall_wood#block-6"
         },
         {
           "asset_refs": [
             "assets/wood-5.png"
           ],
-          "block_id": "wall_wood:block-0008",
-          "content_sha256": "a034941071355528e3ee11feb8c1d2906dd4f49c452d0d0a04bfcbc34442401d",
+          "block_id": "wall_wood:block-0007",
+          "content_sha256": "2dd4a17ba1090fd6d55b9599c933a30d881f19d5f37fa1db6f4102614e064016",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -7523,7 +6967,24 @@
                     "children": [
                       {
                         "kind": "text",
-                        "text": "5. Jackery SlimPower H1本体のボルト位置から水平方向に455mm離れた場所を測定し、壁の間柱上に取付ポイントをマーキングします。*  455 mmは推奨距離であり、実際の距離は壁の状態に依存します。"
+                        "text": "5. Jackery SlimPower H1本体のボルト位置から水平方向に455mm離れた場所を測定し、壁の間柱上に取付ポイントをマーキングします。"
+                      }
+                    ],
+                    "kind": "group",
+                    "presentation": {
+                      "html": {
+                        "attributes": {
+                          "class": "line"
+                        }
+                      }
+                    },
+                    "role": "container"
+                  },
+                  {
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "*  455 mmは推奨距離であり、実際の距離は壁の状態に依存します。"
                       }
                     ],
                     "kind": "group",
@@ -7636,11 +7097,20 @@
                         3.411778041294643,
                         2.369103064903846,
                         95.95110793340774,
-                        28.610053429236782
+                        21.148075201572517
                       ]
                     },
                     {
                       "line": 1,
+                      "rect": [
+                        3.6921909877232144,
+                        18.1637690617488,
+                        71.02888900514633,
+                        12.815387432391828
+                      ]
+                    },
+                    {
+                      "line": 2,
                       "rect": [
                         61.179775661892364,
                         24.492254012670273,
@@ -7649,7 +7119,7 @@
                       ]
                     },
                     {
-                      "line": 2,
+                      "line": 3,
                       "rect": [
                         36.12644256107391,
                         25.057631272536057,
@@ -7658,7 +7128,7 @@
                       ]
                     },
                     {
-                      "line": 3,
+                      "line": 4,
                       "rect": [
                         48.46400185236855,
                         50.86513421474359,
@@ -7667,7 +7137,7 @@
                       ]
                     },
                     {
-                      "line": 4,
+                      "line": 5,
                       "rect": [
                         6.175269475058904,
                         75.90367243840144,
@@ -7684,11 +7154,11 @@
                 "caption_centers_pct": null,
                 "captions_embedded": false,
                 "captions_origin": "carrier",
-                "capture_following_lines": 5,
+                "capture_following_lines": 6,
                 "composite_locale": "",
                 "image_key": "wood-5",
                 "presentation_mode": "base-art-live-copy",
-                "source_fragment_sha256": "c8b3f4ace103e8e874533852db212370ccba31109897d9c03a71a063ac8e1a45",
+                "source_fragment_sha256": "265035611832b318652a26505b8d77f03ee1fa3b3cfe3512c5cced725c5b62f3",
                 "web_replace_key": ""
               },
               "schema_version": "component-spec/v1",
@@ -7716,8 +7186,12 @@
                 {
                   "content": [
                     {
-                      "html": "5. Jackery SlimPower H1本体のボルト位置から水平方向に455mm離れた場所を測定し、壁の間柱上に取付ポイントをマーキングします。*  455 mmは推奨距離であり、実際の距離は壁の状態に依存します。",
-                      "text": "5. Jackery SlimPower H1本体のボルト位置から水平方向に455mm離れた場所を測定し、壁の間柱上に取付ポイントをマーキングします。*  455 mmは推奨距離であり、実際の距離は壁の状態に依存します。"
+                      "html": "5. Jackery SlimPower H1本体のボルト位置から水平方向に455mm離れた場所を測定し、壁の間柱上に取付ポイントをマーキングします。",
+                      "text": "5. Jackery SlimPower H1本体のボルト位置から水平方向に455mm離れた場所を測定し、壁の間柱上に取付ポイントをマーキングします。"
+                    },
+                    {
+                      "html": "*  455 mmは推奨距離であり、実際の距離は壁の状態に依存します。",
+                      "text": "*  455 mmは推奨距離であり、実際の距離は壁の状態に依存します。"
                     },
                     {
                       "html": "間柱",
@@ -7749,13 +7223,13 @@
             "kind": "component",
             "schema_version": "manual-flow/v2"
           },
-          "source_ref": "ja/wall_wood#block-8"
+          "source_ref": "ja/wall_wood#block-7"
         },
         {
           "asset_refs": [
             "assets/wood-6.png"
           ],
-          "block_id": "wall_wood:block-0009",
+          "block_id": "wall_wood:block-0008",
           "content_sha256": "80f3fc09eeea9f4800db79c7f3031ef1fc856b197858b71f8b25f77a11a1d85d",
           "kind": "flow",
           "payload": {
@@ -7967,13 +7441,13 @@
             "kind": "component",
             "schema_version": "manual-flow/v2"
           },
-          "source_ref": "ja/wall_wood#block-9"
+          "source_ref": "ja/wall_wood#block-8"
         },
         {
           "asset_refs": [
             "assets/wood-7.png"
           ],
-          "block_id": "wall_wood:block-0010",
+          "block_id": "wall_wood:block-0009",
           "content_sha256": "2a1afa9786f7eb652abf9cf60b319bc8fe1e52724b70d270cd5d00626bc95e17",
           "kind": "flow",
           "payload": {
@@ -8095,7 +7569,7 @@
             "kind": "component",
             "schema_version": "manual-flow/v2"
           },
-          "source_ref": "ja/wall_wood#block-10"
+          "source_ref": "ja/wall_wood#block-9"
         }
       ],
       "language": "ja",
@@ -8103,7 +7577,7 @@
       "skipped_raw": 0,
       "source_path": "source/document.json#wall_wood",
       "source_ref": "ja/wall_wood",
-      "source_sha256": "53bda798a68efe37209954163527a1f2bf9db5bfafc8044c5bf4f45dee55c47e"
+      "source_sha256": "ae93bb1d2a9e8366e2fb4f5d7a946e38c6c71d303203a9a7e9890c8bbc4ce1bb"
     },
     {
       "blocks": [
@@ -8572,17 +8046,17 @@
         },
         {
           "asset_refs": [
-            "assets/concrete-4.png"
+            "assets/concrete-4-5.png"
           ],
           "block_id": "wall_concrete:block-0005",
-          "content_sha256": "f9315cd76ee004e58f54f12c5cd2adaa4f2851ba021e5dba0a5c183e167b731b",
+          "content_sha256": "ca9234956be20d334c89524b053f09d8e1a36c39f1d096c01897220493bf2df4",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
               {
-                "alt": "concrete-4",
+                "alt": "concrete-4-5",
                 "kind": "image",
-                "source": "assets/concrete-4.png"
+                "source": "assets/concrete-4-5.png"
               },
               {
                 "children": [
@@ -8590,7 +8064,24 @@
                     "children": [
                       {
                         "kind": "text",
-                        "text": "4. Jackery SlimPower H1本体のボルト位置から水平方向に455mm離れた場所を測定し、取付ポイントをマーキングします。*   455 mmは推奨距離であり、実際の距離は壁の状態に依存します。"
+                        "text": "4. Jackery SlimPower H1本体のボルト位置から水平方向に455mm離れた場所を測定し、取付ポイントをマーキングします。"
+                      }
+                    ],
+                    "kind": "group",
+                    "presentation": {
+                      "html": {
+                        "attributes": {
+                          "class": "line"
+                        }
+                      }
+                    },
+                    "role": "container"
+                  },
+                  {
+                    "children": [
+                      {
+                        "kind": "text",
+                        "text": "*   455 mmは推奨距離であり、実際の距離は壁の状態に依存します。"
                       }
                     ],
                     "kind": "group",
@@ -8636,144 +8127,7 @@
                       }
                     },
                     "role": "container"
-                  }
-                ],
-                "kind": "group",
-                "presentation": {
-                  "html": {
-                    "attributes": {
-                      "class": "line-block"
-                    }
-                  }
-                },
-                "role": "container"
-              }
-            ],
-            "component_spec": {
-              "assets": [
-                {
-                  "asset_ref": "assets/concrete-4.png",
-                  "locale_policy": "shared",
-                  "role": "source_art"
-                }
-              ],
-              "component_id": "HB-SPECIAL-REFERENCE-FIGURE",
-              "language": "ja",
-              "metadata": {
-                "base_art_layout": {
-                  "art_sha256": "bd1c43db43a92049d80fa034c72f8c95a84bb165090597850372075464e8b9c5",
-                  "labels": [
-                    {
-                      "line": 0,
-                      "rect": [
-                        5.920392576999928,
-                        1.8515438669581745,
-                        91.43006186770954,
-                        25.753431824088796
-                      ]
-                    },
-                    {
-                      "line": 1,
-                      "rect": [
-                        35.01900879468786,
-                        37.68296691536204,
-                        14.56451405468075,
-                        5
-                      ]
-                    },
-                    {
-                      "line": 2,
-                      "rect": [
-                        41.67914500434278,
-                        79.92015502690802,
-                        36.656660862232684,
-                        5
-                      ]
-                    }
-                  ],
-                  "mobile_labels": "stack",
-                  "panel_fill": "#ffffff",
-                  "panel_top": 0,
-                  "preserve_frame": true
-                },
-                "caption_centers_pct": null,
-                "captions_embedded": false,
-                "captions_origin": "carrier",
-                "capture_following_lines": 3,
-                "composite_locale": "",
-                "image_key": "concrete-4",
-                "presentation_mode": "base-art-live-copy",
-                "source_fragment_sha256": "b3ad0adefc634c577b31b4bc6889205ad0e0fc7e5129b701c01fa2edd11de61c",
-                "web_replace_key": ""
-              },
-              "schema_version": "component-spec/v1",
-              "slots": [
-                {
-                  "content": "concrete-4",
-                  "content_kind": "inline_text",
-                  "role": "reference_id"
-                },
-                {
-                  "content": "concrete-4",
-                  "content_kind": "inline_text",
-                  "role": "accessibility_label"
-                },
-                {
-                  "content": "live",
-                  "content_kind": "inline_text",
-                  "role": "caption_mode"
-                },
-                {
-                  "content": "equal",
-                  "content_kind": "inline_text",
-                  "role": "caption_layout"
-                },
-                {
-                  "content": [
-                    {
-                      "html": "4. Jackery SlimPower H1本体のボルト位置から水平方向に455mm離れた場所を測定し、取付ポイントをマーキングします。*   455 mmは推奨距離であり、実際の距離は壁の状態に依存します。",
-                      "text": "4. Jackery SlimPower H1本体のボルト位置から水平方向に455mm離れた場所を測定し、取付ポイントをマーキングします。*   455 mmは推奨距離であり、実際の距離は壁の状態に依存します。"
-                    },
-                    {
-                      "html": "455mm",
-                      "text": "455mm"
-                    },
-                    {
-                      "html": "Jackery SlimPower H1",
-                      "text": "Jackery SlimPower H1"
-                    }
-                  ],
-                  "content_kind": "ordered_labels",
-                  "role": "captions"
-                }
-              ],
-              "source_ref": "ja/pdf-page-12#reference-concrete-4",
-              "token_roles": [
-                "component.special.reference-figure"
-              ],
-              "variant": "semantic-fallback"
-            },
-            "kind": "component",
-            "schema_version": "manual-flow/v2"
-          },
-          "source_ref": "ja/wall_concrete#block-5"
-        },
-        {
-          "asset_refs": [
-            "assets/concrete-5.png"
-          ],
-          "block_id": "wall_concrete:block-0006",
-          "content_sha256": "689194023fb96bb7f7d03883a4a6de7561a8884b453f86f5985dd4613957a39e",
-          "kind": "flow",
-          "payload": {
-            "carrier_flow": [
-              {
-                "alt": "concrete-5",
-                "kind": "image",
-                "source": "assets/concrete-5.png"
-              },
-              {
-                "children": [
+                  },
                   {
                     "children": [
                       {
@@ -8857,7 +8211,7 @@
             "component_spec": {
               "assets": [
                 {
-                  "asset_ref": "assets/concrete-5.png",
+                  "asset_ref": "assets/concrete-4-5.png",
                   "locale_policy": "shared",
                   "role": "source_art"
                 }
@@ -8866,41 +8220,77 @@
               "language": "ja",
               "metadata": {
                 "base_art_layout": {
-                  "art_sha256": "dfb08e5121ce05578fdba9ace36e5e8f82da6450ff3685686bfbf23a80aa91e5",
+                  "art_sha256": "d54978ece2521a349908af0f1954de0b6bd638fead27349b24fc570905fc5f37",
                   "labels": [
                     {
                       "line": 0,
                       "rect": [
-                        8.09676057857109,
-                        2.1967448553693782,
-                        89.4034720061866,
-                        26.60822261802838
+                        3.2994547395415332,
+                        1.8515438669581745,
+                        51.60224593699839,
+                        17.216440936124023
                       ]
                     },
                     {
                       "line": 1,
                       "rect": [
-                        55.63094943739434,
-                        48.063207577819234,
-                        15.604080761938864,
-                        5
+                        3.5121666677116776,
+                        15.476203216731902,
+                        52.069659629564605,
+                        12.128772474315069
                       ]
                     },
                     {
                       "line": 2,
                       "rect": [
-                        74.71285045460415,
-                        57.853425804182976,
-                        13.115717336882515,
+                        19.516211642882222,
+                        37.68296691536204,
+                        12,
                         5
                       ]
                     },
                     {
                       "line": 3,
                       "rect": [
-                        49.29737116858799,
+                        23.227928002420246,
+                        79.92015502690802,
+                        21.75697054794091,
+                        5
+                      ]
+                    },
+                    {
+                      "line": 4,
+                      "rect": [
+                        60.7309111814055,
+                        2.1967448553693782,
+                        39.2690888185945,
+                        26.60822261802838
+                      ]
+                    },
+                    {
+                      "line": 5,
+                      "rect": [
+                        81.04166731979835,
+                        48.063207577819234,
+                        12,
+                        5
+                      ]
+                    },
+                    {
+                      "line": 6,
+                      "rect": [
+                        89.19512165492075,
+                        57.853425804182976,
+                        10.804878345079246,
+                        5
+                      ]
+                    },
+                    {
+                      "line": 7,
+                      "rect": [
+                        78.3354096389697,
                         76.25732899645303,
-                        18.30430175414397,
+                        12,
                         5
                       ]
                     }
@@ -8913,22 +8303,22 @@
                 "caption_centers_pct": null,
                 "captions_embedded": false,
                 "captions_origin": "carrier",
-                "capture_following_lines": 4,
+                "capture_following_lines": 8,
                 "composite_locale": "",
-                "image_key": "concrete-5",
+                "image_key": "concrete-4-5",
                 "presentation_mode": "base-art-live-copy",
-                "source_fragment_sha256": "53938fed56456254527c9879941b564f82b5cf2f5cdbc4c77e88d0a7db760177",
+                "source_fragment_sha256": "1e390f52dfb19391c322885de88e29716cc67125ea377de30b4f21c2adae4b7a",
                 "web_replace_key": ""
               },
               "schema_version": "component-spec/v1",
               "slots": [
                 {
-                  "content": "concrete-5",
+                  "content": "concrete-4-5",
                   "content_kind": "inline_text",
                   "role": "reference_id"
                 },
                 {
-                  "content": "concrete-5",
+                  "content": "concrete-4-5",
                   "content_kind": "inline_text",
                   "role": "accessibility_label"
                 },
@@ -8944,6 +8334,22 @@
                 },
                 {
                   "content": [
+                    {
+                      "html": "4. Jackery SlimPower H1本体のボルト位置から水平方向に455mm離れた場所を測定し、取付ポイントをマーキングします。",
+                      "text": "4. Jackery SlimPower H1本体のボルト位置から水平方向に455mm離れた場所を測定し、取付ポイントをマーキングします。"
+                    },
+                    {
+                      "html": "*   455 mmは推奨距離であり、実際の距離は壁の状態に依存します。",
+                      "text": "*   455 mmは推奨距離であり、実際の距離は壁の状態に依存します。"
+                    },
+                    {
+                      "html": "455mm",
+                      "text": "455mm"
+                    },
+                    {
+                      "html": "Jackery SlimPower H1",
+                      "text": "Jackery SlimPower H1"
+                    },
                     {
                       "html": "5. 8mmのコンクリート用インパクトドリルを使用し、取付位置に深さ約70mmの穴をあけます。エクスパンションボルトを挿入し、ナットを2～4mm緩めます。",
                       "text": "5. 8mmのコンクリート用インパクトドリルを使用し、取付位置に深さ約70mmの穴をあけます。エクスパンションボルトを挿入し、ナットを2～4mm緩めます。"
@@ -8965,7 +8371,7 @@
                   "role": "captions"
                 }
               ],
-              "source_ref": "ja/pdf-page-12#reference-concrete-5",
+              "source_ref": "ja/pdf-page-12#reference-concrete-4-5",
               "token_roles": [
                 "component.special.reference-figure"
               ],
@@ -8974,21 +8380,21 @@
             "kind": "component",
             "schema_version": "manual-flow/v2"
           },
-          "source_ref": "ja/wall_concrete#block-6"
+          "source_ref": "ja/wall_concrete#block-5"
         },
         {
           "asset_refs": [
-            "assets/concrete-6.png"
+            "assets/concrete-6-7.png"
           ],
-          "block_id": "wall_concrete:block-0007",
-          "content_sha256": "55228edc1b2addb06b63f3769d17f5b07d306874bd4e4ccdd447a7d0b0b071ba",
+          "block_id": "wall_concrete:block-0006",
+          "content_sha256": "9018f69ac6b1344df9440f0afaf9031f63bef145aebdb03919994f7aa948c575",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
               {
-                "alt": "concrete-6",
+                "alt": "concrete-6-7",
                 "kind": "image",
-                "source": "assets/concrete-6.png"
+                "source": "assets/concrete-6-7.png"
               },
               {
                 "children": [
@@ -9008,118 +8414,7 @@
                       }
                     },
                     "role": "container"
-                  }
-                ],
-                "kind": "group",
-                "presentation": {
-                  "html": {
-                    "attributes": {
-                      "class": "line-block"
-                    }
-                  }
-                },
-                "role": "container"
-              }
-            ],
-            "component_spec": {
-              "assets": [
-                {
-                  "asset_ref": "assets/concrete-6.png",
-                  "locale_policy": "shared",
-                  "role": "source_art"
-                }
-              ],
-              "component_id": "HB-SPECIAL-REFERENCE-FIGURE",
-              "language": "ja",
-              "metadata": {
-                "base_art_layout": {
-                  "art_sha256": "137156d6f9b508ef9c2a43f9f71620c473093f4846bd619e0ba8a9bce0c2235f",
-                  "labels": [
-                    {
-                      "line": 0,
-                      "rect": [
-                        8.724031109112524,
-                        3.4922253001819956,
-                        86.23636262313178,
-                        20.10051687280615
-                      ]
-                    }
-                  ],
-                  "mobile_labels": "stack",
-                  "panel_fill": "#ffffff",
-                  "panel_top": 0,
-                  "preserve_frame": true
-                },
-                "caption_centers_pct": null,
-                "captions_embedded": false,
-                "captions_origin": "carrier",
-                "capture_following_lines": 1,
-                "composite_locale": "",
-                "image_key": "concrete-6",
-                "presentation_mode": "base-art-live-copy",
-                "source_fragment_sha256": "07e384517fd9ea301207d6b379736fa3ee9b52c58b36d282b417fa898609c1ef",
-                "web_replace_key": ""
-              },
-              "schema_version": "component-spec/v1",
-              "slots": [
-                {
-                  "content": "concrete-6",
-                  "content_kind": "inline_text",
-                  "role": "reference_id"
-                },
-                {
-                  "content": "concrete-6",
-                  "content_kind": "inline_text",
-                  "role": "accessibility_label"
-                },
-                {
-                  "content": "live",
-                  "content_kind": "inline_text",
-                  "role": "caption_mode"
-                },
-                {
-                  "content": "equal",
-                  "content_kind": "inline_text",
-                  "role": "caption_layout"
-                },
-                {
-                  "content": [
-                    {
-                      "html": "6. 製品をエクスパンションボルトに垂直に掛け、壁面の取り付け位置をマーキングします。",
-                      "text": "6. 製品をエクスパンションボルトに垂直に掛け、壁面の取り付け位置をマーキングします。"
-                    }
-                  ],
-                  "content_kind": "ordered_labels",
-                  "role": "captions"
-                }
-              ],
-              "source_ref": "ja/pdf-page-13#reference-concrete-6",
-              "token_roles": [
-                "component.special.reference-figure"
-              ],
-              "variant": "semantic-fallback"
-            },
-            "kind": "component",
-            "schema_version": "manual-flow/v2"
-          },
-          "source_ref": "ja/wall_concrete#block-7"
-        },
-        {
-          "asset_refs": [
-            "assets/concrete-7.png"
-          ],
-          "block_id": "wall_concrete:block-0008",
-          "content_sha256": "cf8c703e3f0ec5f58684c1eff1d33167e07c0453c8179e1c6f1b0835c65d09c8",
-          "kind": "flow",
-          "payload": {
-            "carrier_flow": [
-              {
-                "alt": "concrete-7",
-                "kind": "image",
-                "source": "assets/concrete-7.png"
-              },
-              {
-                "children": [
+                  },
                   {
                     "children": [
                       {
@@ -9186,7 +8481,7 @@
             "component_spec": {
               "assets": [
                 {
-                  "asset_ref": "assets/concrete-7.png",
+                  "asset_ref": "assets/concrete-6-7.png",
                   "locale_policy": "shared",
                   "role": "source_art"
                 }
@@ -9195,31 +8490,40 @@
               "language": "ja",
               "metadata": {
                 "base_art_layout": {
-                  "art_sha256": "944f9ddc36ee7fee6b019b3ab4fa43f4535e59a2cead6f3011267e30aa0d01c2",
+                  "art_sha256": "84e00b0cc447501d7d88f17f2c7b101bacee39afc8f67a13c8ddabbc48f070a3",
                   "labels": [
                     {
                       "line": 0,
                       "rect": [
-                        6.637871968202511,
-                        3.175140314081305,
-                        85.3142419800212,
-                        20.126907048131496
+                        3.533749392580001,
+                        3.4922253001819956,
+                        36.71565761071461,
+                        20.10051687280615
                       ]
                     },
                     {
                       "line": 1,
                       "rect": [
-                        62.89420971218019,
-                        39.556153545755265,
-                        12.330384590734496,
-                        5
+                        46.24876522536923,
+                        3.170977105627527,
+                        50.39065228308617,
+                        20.10051687280615
                       ]
                     },
                     {
                       "line": 2,
                       "rect": [
-                        77.01991063203906,
-                        50.50320614871102,
+                        78.63714026977264,
+                        39.5042879598124,
+                        12,
+                        5
+                      ]
+                    },
+                    {
+                      "line": 3,
+                      "rect": [
+                        86.76970839462254,
+                        50.436986909879664,
                         12,
                         5
                       ]
@@ -9233,22 +8537,22 @@
                 "caption_centers_pct": null,
                 "captions_embedded": false,
                 "captions_origin": "carrier",
-                "capture_following_lines": 3,
+                "capture_following_lines": 4,
                 "composite_locale": "",
-                "image_key": "concrete-7",
+                "image_key": "concrete-6-7",
                 "presentation_mode": "base-art-live-copy",
-                "source_fragment_sha256": "cf1a1ae5bb42c25933aef4f63fe5e67aa804da096108d9939dd6ba8f2e01b567",
+                "source_fragment_sha256": "a55ae37828360932c56d41db690764161567294d4de763f3868dd1e598da913f",
                 "web_replace_key": ""
               },
               "schema_version": "component-spec/v1",
               "slots": [
                 {
-                  "content": "concrete-7",
+                  "content": "concrete-6-7",
                   "content_kind": "inline_text",
                   "role": "reference_id"
                 },
                 {
-                  "content": "concrete-7",
+                  "content": "concrete-6-7",
                   "content_kind": "inline_text",
                   "role": "accessibility_label"
                 },
@@ -9264,6 +8568,10 @@
                 },
                 {
                   "content": [
+                    {
+                      "html": "6. 製品をエクスパンションボルトに垂直に掛け、壁面の取り付け位置をマーキングします。",
+                      "text": "6. 製品をエクスパンションボルトに垂直に掛け、壁面の取り付け位置をマーキングします。"
+                    },
                     {
                       "html": "7. 製品を取り外します。取付ポイントに穴を開け、ナットとワッシャーを使わずにボルトを穴に差し込んでください。",
                       "text": "7. 製品を取り外します。取付ポイントに穴を開け、ナットとワッシャーを使わずにボルトを穴に差し込んでください。"
@@ -9281,7 +8589,7 @@
                   "role": "captions"
                 }
               ],
-              "source_ref": "ja/pdf-page-13#reference-concrete-7",
+              "source_ref": "ja/pdf-page-13#reference-concrete-6-7",
               "token_roles": [
                 "component.special.reference-figure"
               ],
@@ -9290,21 +8598,21 @@
             "kind": "component",
             "schema_version": "manual-flow/v2"
           },
-          "source_ref": "ja/wall_concrete#block-8"
+          "source_ref": "ja/wall_concrete#block-6"
         },
         {
           "asset_refs": [
-            "assets/concrete-8.png"
+            "assets/concrete-8-9.png"
           ],
-          "block_id": "wall_concrete:block-0009",
-          "content_sha256": "4c9791eecce41242c9bbb4eb5276020a2d3c24343e8382c2a42b98b813c6dd3f",
+          "block_id": "wall_concrete:block-0007",
+          "content_sha256": "632541ede65785bb61d666ece36d7be210f5cd59da31c63964dc2aa1c94dad97",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
               {
-                "alt": "concrete-8",
+                "alt": "concrete-8-9",
                 "kind": "image",
-                "source": "assets/concrete-8.png"
+                "source": "assets/concrete-8-9.png"
               },
               {
                 "children": [
@@ -9324,118 +8632,7 @@
                       }
                     },
                     "role": "container"
-                  }
-                ],
-                "kind": "group",
-                "presentation": {
-                  "html": {
-                    "attributes": {
-                      "class": "line-block"
-                    }
-                  }
-                },
-                "role": "container"
-              }
-            ],
-            "component_spec": {
-              "assets": [
-                {
-                  "asset_ref": "assets/concrete-8.png",
-                  "locale_policy": "shared",
-                  "role": "source_art"
-                }
-              ],
-              "component_id": "HB-SPECIAL-REFERENCE-FIGURE",
-              "language": "ja",
-              "metadata": {
-                "base_art_layout": {
-                  "art_sha256": "4c15f829e84d435d74443003d3ff61e6d9fceda313b652c53dca393bbd7cbfeb",
-                  "labels": [
-                    {
-                      "line": 0,
-                      "rect": [
-                        10.372768104297965,
-                        2.3554253472222326,
-                        81.64590825644568,
-                        14.662651909722221
-                      ]
-                    }
-                  ],
-                  "mobile_labels": "stack",
-                  "panel_fill": "#ffffff",
-                  "panel_top": 0,
-                  "preserve_frame": true
-                },
-                "caption_centers_pct": null,
-                "captions_embedded": false,
-                "captions_origin": "carrier",
-                "capture_following_lines": 1,
-                "composite_locale": "",
-                "image_key": "concrete-8",
-                "presentation_mode": "base-art-live-copy",
-                "source_fragment_sha256": "11219c7624c6768bdeaf1cc65b0dd9c0473221511e4ad53f6aa7ae22ffcbde13",
-                "web_replace_key": ""
-              },
-              "schema_version": "component-spec/v1",
-              "slots": [
-                {
-                  "content": "concrete-8",
-                  "content_kind": "inline_text",
-                  "role": "reference_id"
-                },
-                {
-                  "content": "concrete-8",
-                  "content_kind": "inline_text",
-                  "role": "accessibility_label"
-                },
-                {
-                  "content": "live",
-                  "content_kind": "inline_text",
-                  "role": "caption_mode"
-                },
-                {
-                  "content": "equal",
-                  "content_kind": "inline_text",
-                  "role": "caption_layout"
-                },
-                {
-                  "content": [
-                    {
-                      "html": "8.製品を上側のボルトに掛けてください。",
-                      "text": "8.製品を上側のボルトに掛けてください。"
-                    }
-                  ],
-                  "content_kind": "ordered_labels",
-                  "role": "captions"
-                }
-              ],
-              "source_ref": "ja/pdf-page-13#reference-concrete-8",
-              "token_roles": [
-                "component.special.reference-figure"
-              ],
-              "variant": "semantic-fallback"
-            },
-            "kind": "component",
-            "schema_version": "manual-flow/v2"
-          },
-          "source_ref": "ja/wall_concrete#block-9"
-        },
-        {
-          "asset_refs": [
-            "assets/concrete-9.png"
-          ],
-          "block_id": "wall_concrete:block-0010",
-          "content_sha256": "3658540c472aab4c348a91c2da6a728fd940de5258a29819161a5c62191ddbec",
-          "kind": "flow",
-          "payload": {
-            "carrier_flow": [
-              {
-                "alt": "concrete-9",
-                "kind": "image",
-                "source": "assets/concrete-9.png"
-              },
-              {
-                "children": [
+                  },
                   {
                     "children": [
                       {
@@ -9468,7 +8665,7 @@
             "component_spec": {
               "assets": [
                 {
-                  "asset_ref": "assets/concrete-9.png",
+                  "asset_ref": "assets/concrete-8-9.png",
                   "locale_policy": "shared",
                   "role": "source_art"
                 }
@@ -9477,14 +8674,23 @@
               "language": "ja",
               "metadata": {
                 "base_art_layout": {
-                  "art_sha256": "e78d1d349f8ba3efa91013ee9cc580ab3ca3302d271ac93d08067b2a30d86ea4",
+                  "art_sha256": "0608ae8d09f8bb3058bc78e2889221df7a30f55bc4cb2168b92d3999dc129eb3",
                   "labels": [
                     {
                       "line": 0,
                       "rect": [
-                        5.65489175896082,
+                        3.606170752899712,
                         2.3554253472222326,
-                        88.29854110818313,
+                        30.341840802563986,
+                        14.662651909722221
+                      ]
+                    },
+                    {
+                      "line": 1,
+                      "rect": [
+                        39.856898688345616,
+                        2.3554253472222326,
+                        57.37609744957845,
                         14.662651909722221
                       ]
                     }
@@ -9497,22 +8703,22 @@
                 "caption_centers_pct": null,
                 "captions_embedded": false,
                 "captions_origin": "carrier",
-                "capture_following_lines": 1,
+                "capture_following_lines": 2,
                 "composite_locale": "",
-                "image_key": "concrete-9",
+                "image_key": "concrete-8-9",
                 "presentation_mode": "base-art-live-copy",
-                "source_fragment_sha256": "ee36fd559402827175703cfb078c459b305e398fea36ccf21fb9e25fafd3a80c",
+                "source_fragment_sha256": "950ca756961a8f339dbe2ef1632e2634661437b7711aa8f015df6f8cf4797e35",
                 "web_replace_key": ""
               },
               "schema_version": "component-spec/v1",
               "slots": [
                 {
-                  "content": "concrete-9",
+                  "content": "concrete-8-9",
                   "content_kind": "inline_text",
                   "role": "reference_id"
                 },
                 {
-                  "content": "concrete-9",
+                  "content": "concrete-8-9",
                   "content_kind": "inline_text",
                   "role": "accessibility_label"
                 },
@@ -9529,6 +8735,10 @@
                 {
                   "content": [
                     {
+                      "html": "8.製品を上側のボルトに掛けてください。",
+                      "text": "8.製品を上側のボルトに掛けてください。"
+                    },
+                    {
                       "html": "9. 製品を持ち上げ、予め設置されたボルトに合わせてから下ろして設置します。ナットを締めます。",
                       "text": "9. 製品を持ち上げ、予め設置されたボルトに合わせてから下ろして設置します。ナットを締めます。"
                     }
@@ -9537,7 +8747,7 @@
                   "role": "captions"
                 }
               ],
-              "source_ref": "ja/pdf-page-13#reference-concrete-9",
+              "source_ref": "ja/pdf-page-13#reference-concrete-8-9",
               "token_roles": [
                 "component.special.reference-figure"
               ],
@@ -9546,7 +8756,7 @@
             "kind": "component",
             "schema_version": "manual-flow/v2"
           },
-          "source_ref": "ja/wall_concrete#block-10"
+          "source_ref": "ja/wall_concrete#block-7"
         }
       ],
       "language": "ja",
@@ -9554,14 +8764,14 @@
       "skipped_raw": 0,
       "source_path": "source/document.json#wall_concrete",
       "source_ref": "ja/wall_concrete",
-      "source_sha256": "53bda798a68efe37209954163527a1f2bf9db5bfafc8044c5bf4f45dee55c47e"
+      "source_sha256": "ae93bb1d2a9e8366e2fb4f5d7a946e38c6c71d303203a9a7e9890c8bbc4ce1bb"
     },
     {
       "blocks": [
         {
           "asset_refs": [],
           "block_id": "connection:block-0001",
-          "content_sha256": "8d7f0176c09a2cf0d71e47eeb196b26bfd4bcac0e4550e065a06c2e5d5744eeb",
+          "content_sha256": "a7bd998b804c33a5ebac5c9bc7e9f0d6f5e27f748e37fe06d387df93b4526d2a",
           "kind": "flow",
           "payload": {
             "anchor": "connection",
@@ -9572,7 +8782,7 @@
               }
             ],
             "kind": "heading",
-            "level": 2,
+            "level": 1,
             "schema_version": "manual-flow/v2"
           },
           "source_ref": "ja/connection#block-1"
@@ -9935,14 +9145,14 @@
       "skipped_raw": 0,
       "source_path": "source/document.json#connection",
       "source_ref": "ja/connection",
-      "source_sha256": "53bda798a68efe37209954163527a1f2bf9db5bfafc8044c5bf4f45dee55c47e"
+      "source_sha256": "ae93bb1d2a9e8366e2fb4f5d7a946e38c6c71d303203a9a7e9890c8bbc4ce1bb"
     },
     {
       "blocks": [
         {
           "asset_refs": [],
           "block_id": "charging:block-0001",
-          "content_sha256": "90bcff01197f56f8ecf7735159388245d677952367a956715974e21ceb8924ab",
+          "content_sha256": "7805ccd08aad7c1b0501aeba4e797f1165bbd2d27ba8ba08423e05ff721cd47f",
           "kind": "flow",
           "payload": {
             "anchor": "charging",
@@ -9953,7 +9163,7 @@
               }
             ],
             "kind": "heading",
-            "level": 2,
+            "level": 1,
             "schema_version": "manual-flow/v2"
           },
           "source_ref": "ja/charging#block-1"
@@ -9961,7 +9171,7 @@
         {
           "asset_refs": [],
           "block_id": "charging:block-0002",
-          "content_sha256": "9069f1d7f9b2f6f3de756b64b910c3d7f173406cdabb013c61fafe19eddbeb80",
+          "content_sha256": "64639a01f45ef0face9a6b5978febc7e47b7e0c8cee013c704e373aca6e58943",
           "kind": "flow",
           "payload": {
             "children": [
@@ -9971,7 +9181,7 @@
               }
             ],
             "kind": "heading",
-            "level": 3,
+            "level": 2,
             "schema_version": "manual-flow/v2"
           },
           "source_ref": "ja/charging#block-2"
@@ -10252,7 +9462,7 @@
         {
           "asset_refs": [],
           "block_id": "charging:block-0006",
-          "content_sha256": "44b4963d5e8c4f40f1ab16ab9c9e7719cab7824b2591ba1fb21d7cffcd2e1a60",
+          "content_sha256": "c2c410a4982e7d9c7312b5f8ef29c46532d6821453c223d76507bfe487ddf1aa",
           "kind": "flow",
           "payload": {
             "children": [
@@ -10262,7 +9472,7 @@
               }
             ],
             "kind": "heading",
-            "level": 3,
+            "level": 2,
             "schema_version": "manual-flow/v2"
           },
           "source_ref": "ja/charging#block-6"
@@ -10445,7 +9655,7 @@
         {
           "asset_refs": [],
           "block_id": "charging:block-0009",
-          "content_sha256": "b485e927a6717e612835532c121719e62f372710e99e2820a0ef8e383425a938",
+          "content_sha256": "61376c18e49e9cf915dc6d26f76dd2d1e36221919320e369079921e2e0cc9cfe",
           "kind": "flow",
           "payload": {
             "children": [
@@ -10455,7 +9665,7 @@
               }
             ],
             "kind": "heading",
-            "level": 3,
+            "level": 2,
             "schema_version": "manual-flow/v2"
           },
           "source_ref": "ja/charging#block-9"
@@ -10673,14 +9883,14 @@
       "skipped_raw": 0,
       "source_path": "source/document.json#charging",
       "source_ref": "ja/charging",
-      "source_sha256": "53bda798a68efe37209954163527a1f2bf9db5bfafc8044c5bf4f45dee55c47e"
+      "source_sha256": "ae93bb1d2a9e8366e2fb4f5d7a946e38c6c71d303203a9a7e9890c8bbc4ce1bb"
     },
     {
       "blocks": [
         {
           "asset_refs": [],
           "block_id": "troubleshooting:block-0001",
-          "content_sha256": "64d3794ee9aa491035c17163b6e8649b17b6a37db48f432dc654503f93d123b1",
+          "content_sha256": "56177102f5bf3ef84b63e5719f9cbe112d41e7c99b45b4f9fff7f18c95e1e2a8",
           "kind": "flow",
           "payload": {
             "anchor": "troubleshooting",
@@ -10691,7 +9901,7 @@
               }
             ],
             "kind": "heading",
-            "level": 2,
+            "level": 1,
             "schema_version": "manual-flow/v2"
           },
           "source_ref": "ja/troubleshooting#block-1"
@@ -10716,7 +9926,7 @@
         {
           "asset_refs": [],
           "block_id": "troubleshooting:block-0003",
-          "content_sha256": "86184df3529632cabd08142e1efcdfd701a08e91c3f408b7cfff5f615b2b16e2",
+          "content_sha256": "ee6660ba5a03b0e7e2c53a65dd51df0c20faeb8ea4500c49f3b0a066a3beb44c",
           "kind": "flow",
           "payload": {
             "component_spec": {
@@ -10769,7 +9979,7 @@
                     {
                       "code_html": "FF",
                       "code_text": "FF",
-                      "measures_html": "<p>高温環境下で</p><p>1.製品へのすべての充電・放電ケーブル（壁用充電器、ソーラーパネル、車載充電器、負荷機器を含む）を切り離してください。</p><p>2.製品を日陰で風通しの良い場所に設置し、周囲温度が45°C以下であることを確認してください。</p><p>3. 製品をアイドル状態にし、故障が消えるまで待ってください。</p><p>低温環境下で</p><p>1.製品を0℃以上の暖かい環境へ移動させてください。</p><p>2.極端に寒い屋外での使用や充電は行わないでください。必要に応じて、室内で予熱してください。</p><p>3.製品を寒い環境から室内に移動させた場合は、使用前にしばらく放置してください。</p><p>4.低温インジケーターが表示された場合は、製品をアイドル状態にして、システムが自動的に回復するのを待ってください。</p>",
+                      "measures_html": "<p><strong>高温環境下で</strong></p><p>1.製品へのすべての充電・放電ケーブル（壁用充電器、ソーラーパネル、車載充電器、負荷機器を含む）を切り離してください。</p><p>2.製品を日陰で風通しの良い場所に設置し、周囲温度が45°C以下であることを確認してください。</p><p>3. 製品をアイドル状態にし、故障が消えるまで待ってください。</p><p><strong>低温環境下で</strong></p><p>1.製品を0℃以上の暖かい環境へ移動させてください。</p><p>2.極端に寒い屋外での使用や充電は行わないでください。必要に応じて、室内で予熱してください。</p><p>3.製品を寒い環境から室内に移動させた場合は、使用前にしばらく放置してください。</p><p>4.低温インジケーターが表示された場合は、製品をアイドル状態にして、システムが自動的に回復するのを待ってください。</p>",
                       "measures_text": "高温環境下で1.製品へのすべての充電・放電ケーブル（壁用充電器、ソーラーパネル、車載充電器、負荷機器を含む）を切り離してください。2.製品を日陰で風通しの良い場所に設置し、周囲温度が45°C以下であることを確認してください。3. 製品をアイドル状態にし、故障が消えるまで待ってください。低温環境下で1.製品を0℃以上の暖かい環境へ移動させてください。2.極端に寒い屋外での使用や充電は行わないでください。必要に応じて、室内で予熱してください。3.製品を寒い環境から室内に移動させた場合は、使用前にしばらく放置してください。4.低温インジケーターが表示された場合は、製品をアイドル状態にして、システムが自動的に回復するのを待ってください。"
                     }
                   ],
@@ -10794,14 +10004,14 @@
       "skipped_raw": 0,
       "source_path": "source/document.json#troubleshooting",
       "source_ref": "ja/troubleshooting",
-      "source_sha256": "53bda798a68efe37209954163527a1f2bf9db5bfafc8044c5bf4f45dee55c47e"
+      "source_sha256": "ae93bb1d2a9e8366e2fb4f5d7a946e38c6c71d303203a9a7e9890c8bbc4ce1bb"
     },
     {
       "blocks": [
         {
           "asset_refs": [],
           "block_id": "specifications:block-0001",
-          "content_sha256": "a3844d9eb06ad8e7c05775b505f43330655bce0ea2c6f2aa260727aa14d52090",
+          "content_sha256": "42843c44cc903c71a5e7a808222d5c25aa3d2059dfd5f4b0381c0e0fc2c0d23b",
           "kind": "flow",
           "payload": {
             "anchor": "specifications",
@@ -10812,7 +10022,7 @@
               }
             ],
             "kind": "heading",
-            "level": 2,
+            "level": 1,
             "schema_version": "manual-flow/v2"
           },
           "source_ref": "ja/specifications#block-1"
@@ -11457,14 +10667,14 @@
       "skipped_raw": 0,
       "source_path": "source/document.json#specifications",
       "source_ref": "ja/specifications",
-      "source_sha256": "53bda798a68efe37209954163527a1f2bf9db5bfafc8044c5bf4f45dee55c47e"
+      "source_sha256": "ae93bb1d2a9e8366e2fb4f5d7a946e38c6c71d303203a9a7e9890c8bbc4ce1bb"
     },
     {
       "blocks": [
         {
           "asset_refs": [],
           "block_id": "warranty:block-0001",
-          "content_sha256": "0240929cf9e4f36605668e555a72802349e0f485cba369fdb8831552e4b200c5",
+          "content_sha256": "23eaa50142013ddb932b7758975cb096452b9ddf55cb797f276f58c9ae806724",
           "kind": "flow",
           "payload": {
             "anchor": "warranty",
@@ -11475,7 +10685,7 @@
               }
             ],
             "kind": "heading",
-            "level": 2,
+            "level": 1,
             "schema_version": "manual-flow/v2"
           },
           "source_ref": "ja/warranty#block-1"
@@ -11483,7 +10693,7 @@
         {
           "asset_refs": [],
           "block_id": "warranty:block-0002",
-          "content_sha256": "481bf3dd30a7190cd75814a7e4a054d475fd96223d659ac43c35ffec572f8b99",
+          "content_sha256": "5c0a0082a36e0bd053778a2752a3c0e206169f7c249b9f40471a0aba792b80e0",
           "kind": "flow",
           "payload": {
             "component_spec": {
@@ -11499,7 +10709,7 @@
                   "role": "accessibility_label"
                 },
                 {
-                  "content": "<p>このたびはJackery 製品をご購入いただき、誠にありがとうございます。本保証書は、Jackery ポータブル電源製品に関する保証内容を明確にご案内するものです。</p>",
+                  "content": "<p>このたびはJackery 製品をご購入いただき、誠にありがとうございます。<br/>本保証書は、Jackery ポータブル電源製品に関する保証内容を明確にご案内するものです。</p>",
                   "content_kind": "rich_text",
                   "role": "lead"
                 },
@@ -11523,7 +10733,7 @@
         {
           "asset_refs": [],
           "block_id": "warranty:block-0003",
-          "content_sha256": "a38da5b010f1e7321615182def5bab2933d2813676286bf6df3b5416aa2f74cf",
+          "content_sha256": "8c47d3aed9ed9a78e82879a80671f421b10d1e36d866dfef86239f328e47303e",
           "kind": "flow",
           "payload": {
             "anchor": "warranty-1",
@@ -11534,7 +10744,7 @@
               }
             ],
             "kind": "heading",
-            "level": 3,
+            "level": 2,
             "schema_version": "manual-flow/v2"
           },
           "source_ref": "ja/warranty#block-3"
@@ -11542,7 +10752,7 @@
         {
           "asset_refs": [],
           "block_id": "warranty:block-0004",
-          "content_sha256": "d69715c5278a673235f6a33444a1538acff0b2b93fd20416d6244477610bbb44",
+          "content_sha256": "0cc124c855e48ca9866baf172d037fe457d502c766d6d6ca398f4b1c42adfc86",
           "kind": "flow",
           "payload": {
             "component_spec": {
@@ -11575,7 +10785,7 @@
                       "text": "2. また、延長保証にご登録いただくと、さらに2 年間の保証が追加されます。詳しくはJackery公式サイトをご確認ください。"
                     },
                     {
-                      "html": "<p>※ Jackery 公式オンラインストアまたは正規代理店以外での購入品は保証対象外となります。</p>",
+                      "html": "<p class=\"jbp-warranty-note\">※ Jackery 公式オンラインストアまたは正規代理店以外での購入品は保証対象外となります。</p>",
                       "kind": "paragraph",
                       "text": "※ Jackery 公式オンラインストアまたは正規代理店以外での購入品は保証対象外となります。"
                     }
@@ -11598,7 +10808,7 @@
         {
           "asset_refs": [],
           "block_id": "warranty:block-0005",
-          "content_sha256": "29c427d5df9ff8ee8552405c894c0c2d604b2e5948f2161587a247041ce39a19",
+          "content_sha256": "fc63fe71aeac9d430dfd4f86cd876b8098f639e09e1c2f4bad0283b5585a5b2d",
           "kind": "flow",
           "payload": {
             "anchor": "warranty-2",
@@ -11609,7 +10819,7 @@
               }
             ],
             "kind": "heading",
-            "level": 3,
+            "level": 2,
             "schema_version": "manual-flow/v2"
           },
           "source_ref": "ja/warranty#block-5"
@@ -11617,7 +10827,7 @@
         {
           "asset_refs": [],
           "block_id": "warranty:block-0006",
-          "content_sha256": "a863182079fa55741ca7851da8b562adb94823f9167822c6820079fac358e994",
+          "content_sha256": "05f87196fe8c3d6fdd66fb63eece44c436675fa0ce00048d63dd4c50c1f438e1",
           "kind": "flow",
           "payload": {
             "component_spec": {
@@ -11640,14 +10850,24 @@
                 {
                   "content": [
                     {
-                      "html": "<p>1. 購入チャネルについて本保証は、Jackery公式オンラインストアまたは正規代理店で購入された製品に限り有効です。</p>",
+                      "html": "<p>1. 購入チャネルについて</p>",
                       "kind": "paragraph",
-                      "text": "1. 購入チャネルについて本保証は、Jackery公式オンラインストアまたは正規代理店で購入された製品に限り有効です。"
+                      "text": "1. 購入チャネルについて"
                     },
                     {
-                      "html": "<p>2. 保証提供地域保証は、日本国内に在住の方が、日本国内で使用する場合に限り有効です。</p>",
+                      "html": "<p class=\"jbp-warranty-detail\">本保証は、Jackery公式オンラインストアまたは正規代理店で購入された製品に限り有効です。</p>",
                       "kind": "paragraph",
-                      "text": "2. 保証提供地域保証は、日本国内に在住の方が、日本国内で使用する場合に限り有効です。"
+                      "text": "本保証は、Jackery公式オンラインストアまたは正規代理店で購入された製品に限り有効です。"
+                    },
+                    {
+                      "html": "<p>2. 保証提供地域</p>",
+                      "kind": "paragraph",
+                      "text": "2. 保証提供地域"
+                    },
+                    {
+                      "html": "<p class=\"jbp-warranty-detail\">保証は、日本国内に在住の方が、日本国内で使用する場合に限り有効です。</p>",
+                      "kind": "paragraph",
+                      "text": "保証は、日本国内に在住の方が、日本国内で使用する場合に限り有効です。"
                     }
                   ],
                   "content_kind": "ordered_blocks",
@@ -11668,7 +10888,7 @@
         {
           "asset_refs": [],
           "block_id": "warranty:block-0007",
-          "content_sha256": "d18fbcc473c5d5744cc35fac0fc1c1ee233c2c509d8dd447d9ba54290f10d617",
+          "content_sha256": "be9e3df4a22b0ab97465262977156b0e8d2e9f97dd4c50d0802e46ba83a672c6",
           "kind": "flow",
           "payload": {
             "anchor": "warranty-3",
@@ -11679,7 +10899,7 @@
               }
             ],
             "kind": "heading",
-            "level": 3,
+            "level": 2,
             "schema_version": "manual-flow/v2"
           },
           "source_ref": "ja/warranty#block-7"
@@ -11748,7 +10968,7 @@
         {
           "asset_refs": [],
           "block_id": "warranty:block-0009",
-          "content_sha256": "ee1dec8abc1d800dce75cf9818e17a6531a3a99bf0f1fae3ada9de9e659ba92d",
+          "content_sha256": "23897a07f1645653b06ed9ff0307cdcf2741c150a7d5fd804c9a6ad859949c6b",
           "kind": "flow",
           "payload": {
             "anchor": "warranty-4",
@@ -11759,7 +10979,7 @@
               }
             ],
             "kind": "heading",
-            "level": 3,
+            "level": 2,
             "schema_version": "manual-flow/v2"
           },
           "source_ref": "ja/warranty#block-9"
@@ -11843,7 +11063,7 @@
         {
           "asset_refs": [],
           "block_id": "warranty:block-0011",
-          "content_sha256": "0614a8c72c7b42a88bd2fd3ee2c24f76458f443922d4e171e91eaf436380d276",
+          "content_sha256": "117770de10e447e8586503dbb91712701a98593e4922c1ca3ca86aeb5677127d",
           "kind": "flow",
           "payload": {
             "anchor": "warranty-5",
@@ -11854,7 +11074,7 @@
               }
             ],
             "kind": "heading",
-            "level": 3,
+            "level": 2,
             "schema_version": "manual-flow/v2"
           },
           "source_ref": "ja/warranty#block-11"
@@ -11862,7 +11082,7 @@
         {
           "asset_refs": [],
           "block_id": "warranty:block-0012",
-          "content_sha256": "cd0e32ba9cb78adb5a027b471a11ca6eed5991cb2c193ee66181f30154db2eee",
+          "content_sha256": "24c4f2549a57f7e248556733372a68eae581ba51c6366814382d3a9d76c91486",
           "kind": "flow",
           "payload": {
             "component_spec": {
@@ -11900,7 +11120,7 @@
                       "text": "・正規代理店での購入：購入日・販売店名の記載された領収書または納品書"
                     },
                     {
-                      "html": "<p>※  ご提示がない場合、保証対応いたしかねます。</p>",
+                      "html": "<p class=\"jbp-warranty-note\">※  ご提示がない場合、保証対応いたしかねます。</p>",
                       "kind": "paragraph",
                       "text": "※  ご提示がない場合、保証対応いたしかねます。"
                     }
@@ -11923,7 +11143,7 @@
         {
           "asset_refs": [],
           "block_id": "warranty:block-0013",
-          "content_sha256": "c410879ae3190a44b1a2005529318ee68128986ae9dece1bc57df34e34b0b4fb",
+          "content_sha256": "7443c6e8e68f50d088988c7913bfc278f82a13336756187054c2529599fe9684",
           "kind": "flow",
           "payload": {
             "anchor": "warranty-6",
@@ -11934,7 +11154,7 @@
               }
             ],
             "kind": "heading",
-            "level": 3,
+            "level": 2,
             "schema_version": "manual-flow/v2"
           },
           "source_ref": "ja/warranty#block-13"
@@ -11942,7 +11162,7 @@
         {
           "asset_refs": [],
           "block_id": "warranty:block-0014",
-          "content_sha256": "1573a6ac5db3078a7f8a9a145cb49b39b2854bccb4462681f45e9a00a151623f",
+          "content_sha256": "59d61487a6634ec0bf5b55f589dd06995b53fed5f8c9ec0f96d73ad7fa867211",
           "kind": "flow",
           "payload": {
             "component_spec": {
@@ -11965,7 +11185,7 @@
                 {
                   "content": [
                     {
-                      "html": "<p>1. 初期不良による交換（ご購入日から30日以内）</p>",
+                      "html": "<p><strong>1. 初期不良による交換</strong>（ご購入日から30日以内）</p>",
                       "kind": "paragraph",
                       "text": "1. 初期不良による交換（ご購入日から30日以内）"
                     },
@@ -11980,7 +11200,7 @@
                       "text": "・在庫切れや販売終了の場合は、同等品への交換または返金にて対応いたします。"
                     },
                     {
-                      "html": "<p>2. 無償修理（ご購入日から31日以上～保証期間内）</p>",
+                      "html": "<p><strong>2. 無償修理</strong>（ご購入日から31日以上～保証期間内）</p>",
                       "kind": "paragraph",
                       "text": "2. 無償修理（ご購入日から31日以上～保証期間内）"
                     },
@@ -11995,9 +11215,14 @@
                       "text": "・修理が困難な場合は、同等品（同モデルまたは同等スペック品）への交換にて対応いたします。"
                     },
                     {
-                      "html": "<p>3. 有償修理以下に該当する場合は、有償での修理対応となります：</p>",
+                      "html": "<p><strong>3. 有償修理</strong></p>",
                       "kind": "paragraph",
-                      "text": "3. 有償修理以下に該当する場合は、有償での修理対応となります："
+                      "text": "3. 有償修理"
+                    },
+                    {
+                      "html": "<p>以下に該当する場合は、有償での修理対応となります：</p>",
+                      "kind": "paragraph",
+                      "text": "以下に該当する場合は、有償での修理対応となります："
                     },
                     {
                       "html": "<p>・保証期間を超えた製品</p>",
@@ -12020,7 +11245,7 @@
                       "text": "有償修理後の保証期間は、修理完了日より90日間です。"
                     },
                     {
-                      "html": "<p>*無償修理の場合、残りの保証期間が90日未満であれば「90日間」、90日以上であれば「元の保証期間に準じます」。</p>",
+                      "html": "<p class=\"jbp-warranty-note\">*無償修理の場合、残りの保証期間が90日未満であれば「90日間」、90日以上であれば「元の保証期間に準じます」。</p>",
                       "kind": "paragraph",
                       "text": "*無償修理の場合、残りの保証期間が90日未満であれば「90日間」、90日以上であれば「元の保証期間に準じます」。"
                     }
@@ -12043,7 +11268,7 @@
         {
           "asset_refs": [],
           "block_id": "warranty:block-0015",
-          "content_sha256": "3005576d28f2e0d65bc7db25dc9bb6b033ae0bc0305b14cebe66911fe768ac6e",
+          "content_sha256": "c1da57f74b2dab3c75e97c2be64319217d8e4d9bc000e813a5a087c9728207ae",
           "kind": "flow",
           "payload": {
             "anchor": "warranty-7",
@@ -12054,7 +11279,7 @@
               }
             ],
             "kind": "heading",
-            "level": 3,
+            "level": 2,
             "schema_version": "manual-flow/v2"
           },
           "source_ref": "ja/warranty#block-15"
@@ -12062,7 +11287,7 @@
         {
           "asset_refs": [],
           "block_id": "warranty:block-0016",
-          "content_sha256": "190a61bcfd8d985e93ffa7e8a112630c854cad3683b33e178ddb8f8ed9ff244e",
+          "content_sha256": "3107debc7d1eac296c00ac05882af300c9f7dd598e656e8b844cf66911a31676",
           "kind": "flow",
           "payload": {
             "component_spec": {
@@ -12095,9 +11320,19 @@
                       "text": "2. 本保証書は、お客様が法律上有する権利を制限するものではありません。"
                     },
                     {
-                      "html": "<p>3. 保証内容は、予告なく変更される場合がございます。あらかじめご了承ください。Jackery 製品を安心してご使用いただくために、本保証書の内容をご確認のうえ、ご活用くださいますようお願いいたします。ご不明点がございましたら、Jackery カスタマーサービスまでお問い合わせください。</p>",
+                      "html": "<p>3. 保証内容は、予告なく変更される場合がございます。あらかじめご了承ください。</p>",
                       "kind": "paragraph",
-                      "text": "3. 保証内容は、予告なく変更される場合がございます。あらかじめご了承ください。Jackery 製品を安心してご使用いただくために、本保証書の内容をご確認のうえ、ご活用くださいますようお願いいたします。ご不明点がございましたら、Jackery カスタマーサービスまでお問い合わせください。"
+                      "text": "3. 保証内容は、予告なく変更される場合がございます。あらかじめご了承ください。"
+                    },
+                    {
+                      "html": "<p>Jackery 製品を安心してご使用いただくために、本保証書の内容をご確認のうえ、ご活用くださいますようお願いいたします。</p>",
+                      "kind": "paragraph",
+                      "text": "Jackery 製品を安心してご使用いただくために、本保証書の内容をご確認のうえ、ご活用くださいますようお願いいたします。"
+                    },
+                    {
+                      "html": "<p>ご不明点がございましたら、Jackery カスタマーサービスまでお問い合わせください。</p>",
+                      "kind": "paragraph",
+                      "text": "ご不明点がございましたら、Jackery カスタマーサービスまでお問い合わせください。"
                     }
                   ],
                   "content_kind": "ordered_blocks",
@@ -12121,25 +11356,41 @@
       "skipped_raw": 0,
       "source_path": "source/document.json#warranty",
       "source_ref": "ja/warranty",
-      "source_sha256": "53bda798a68efe37209954163527a1f2bf9db5bfafc8044c5bf4f45dee55c47e"
+      "source_sha256": "ae93bb1d2a9e8366e2fb4f5d7a946e38c6c71d303203a9a7e9890c8bbc4ce1bb"
     },
     {
       "blocks": [
         {
           "asset_refs": [],
           "block_id": "contact:block-0001",
-          "content_sha256": "64b670cfd1b316a9719886942bd5942ec21c4257d1fde6a51c60d3386da13b69",
+          "content_sha256": "f9c80788b25b761b0dbbe9aa72f0396ef6425c316349948ae9bdd1d970029f87",
           "kind": "flow",
           "payload": {
-            "anchor": "contact",
             "children": [
               {
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "公式サイト:"
+                  }
+                ],
+                "kind": "strong"
+              },
+              {
                 "kind": "text",
-                "text": "お問い合わせ"
+                "text": " https://www.jackery.jp"
               }
             ],
-            "kind": "heading",
-            "level": 2,
+            "kind": "paragraph",
+            "presentation": {
+              "html": {
+                "attributes": {
+                  "class": [
+                    "jbp-contact-line"
+                  ]
+                }
+              }
+            },
             "schema_version": "manual-flow/v2"
           },
           "source_ref": "ja/contact#block-1"
@@ -12147,16 +11398,34 @@
         {
           "asset_refs": [],
           "block_id": "contact:block-0002",
-          "content_sha256": "1358d101d799bb39080004729ee7bf82c931b745875bd2519b8a5bce1884b475",
+          "content_sha256": "18e3e1d7f9471e5729d2f457889a0a72dff68c64cb50f5289bbeefe6dfdb842b",
           "kind": "flow",
           "payload": {
             "children": [
               {
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "カスタマーサポート:"
+                  }
+                ],
+                "kind": "strong"
+              },
+              {
                 "kind": "text",
-                "text": "公式サイト: https://www.jackery.jp"
+                "text": " jackery.jp@jackery.com"
               }
             ],
             "kind": "paragraph",
+            "presentation": {
+              "html": {
+                "attributes": {
+                  "class": [
+                    "jbp-contact-line"
+                  ]
+                }
+              }
+            },
             "schema_version": "manual-flow/v2"
           },
           "source_ref": "ja/contact#block-2"
@@ -12164,36 +11433,37 @@
         {
           "asset_refs": [],
           "block_id": "contact:block-0003",
-          "content_sha256": "c1a4fccc02ca103aa68755578a580a1b8d48e8054c520809a27c6380e30a9ddc",
+          "content_sha256": "3311931457bab656eead70a73ea5d607a73da1f9a563f843c4fe65880d88a22f",
           "kind": "flow",
           "payload": {
             "children": [
               {
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "お問い合わせ電話番号:"
+                  }
+                ],
+                "kind": "strong"
+              },
+              {
                 "kind": "text",
-                "text": "カスタマーサポート: jackery.jp@jackery.com"
+                "text": " 050-3198-9007"
               }
             ],
             "kind": "paragraph",
+            "presentation": {
+              "html": {
+                "attributes": {
+                  "class": [
+                    "jbp-contact-line"
+                  ]
+                }
+              }
+            },
             "schema_version": "manual-flow/v2"
           },
           "source_ref": "ja/contact#block-3"
-        },
-        {
-          "asset_refs": [],
-          "block_id": "contact:block-0004",
-          "content_sha256": "cb60489650ca886d90e9687215f88d6020729a31448aac7ddf7f577d9015dcf6",
-          "kind": "flow",
-          "payload": {
-            "children": [
-              {
-                "kind": "text",
-                "text": "お問い合わせ電話番号: 050-3198-9007"
-              }
-            ],
-            "kind": "paragraph",
-            "schema_version": "manual-flow/v2"
-          },
-          "source_ref": "ja/contact#block-4"
         }
       ],
       "language": "ja",
@@ -12201,7 +11471,7 @@
       "skipped_raw": 0,
       "source_path": "source/document.json#contact",
       "source_ref": "ja/contact",
-      "source_sha256": "53bda798a68efe37209954163527a1f2bf9db5bfafc8044c5bf4f45dee55c47e"
+      "source_sha256": "ae93bb1d2a9e8366e2fb4f5d7a946e38c6c71d303203a9a7e9890c8bbc4ce1bb"
     }
   ],
   "region": "JP",
