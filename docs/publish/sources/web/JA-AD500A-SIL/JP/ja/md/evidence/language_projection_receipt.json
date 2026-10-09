@@ -1,0 +1,281 @@
+{
+  "schema_version": "auto-manual-frozen-web-language-evidence/v1",
+  "model": "JA-AD500A-SIL",
+  "region": "JP",
+  "language": "ja",
+  "version": "git-20261008-ac3a1f82-reviewed",
+  "git_ref": "fb9bd49262149a9984286dfb7a6207581fb3d9a9",
+  "caption_frame_admission": [
+    {
+      "source_ref": "/Users/pika/.codex/worktrees/dc-input-jp-web/auto-manual2/manual_sources/JA-AD500A-SIL/JP/ja/git-20261008-ac3a1f82-reviewed/source/page/charging_ja.rst#reference-car-connection",
+      "asset_ref": "assets/ir/29f7b772d7e313cac5527f2d81b82b00716586375fa6bfd562556030a50319fb/car.png",
+      "labels": [
+        {
+          "line": 2,
+          "status": "passed",
+          "baked_fill_fraction": 0.0
+        }
+      ]
+    }
+  ],
+  "source_manifest": {
+    "path": "frozen_source_manifest.json",
+    "sha256": "0babde2c5e53f01e3511bcc40c0ce6d7603f61351fd627f062e6e89408fb7291"
+  },
+  "markdown": {
+    "manual": "manual_jaad500asil_jp_ja.md",
+    "files": [
+      {
+        "path": "_static/web_manual.css",
+        "size": 124859,
+        "sha256": "5783008c449b8db9c618492118199a11c10f5aafae5d53c2a15b90ab2ebb65f1"
+      },
+      {
+        "path": "assets/ir/29f7b772d7e313cac5527f2d81b82b00716586375fa6bfd562556030a50319fb/car.png",
+        "size": 91687,
+        "sha256": "29f7b772d7e313cac5527f2d81b82b00716586375fa6bfd562556030a50319fb"
+      },
+      {
+        "path": "assets/ir/3c140171d4ae33f68026b81db880318d28ccf3ecd4d4d201c0ec9015080db49d/inbox-module.png",
+        "size": 14353,
+        "sha256": "3c140171d4ae33f68026b81db880318d28ccf3ecd4d4d201c0ec9015080db49d"
+      },
+      {
+        "path": "assets/ir/434a3768abbb54d3f148e55fbe2475ce1a38906a18518ce96f266538e72080d8/solar.png",
+        "size": 214039,
+        "sha256": "434a3768abbb54d3f148e55fbe2475ce1a38906a18518ce96f266538e72080d8"
+      },
+      {
+        "path": "assets/ir/786c47843102633c475c02ce22d32ea089f348d91799195a648d7fca37fc90d4/inbox-manual.png",
+        "size": 15368,
+        "sha256": "786c47843102633c475c02ce22d32ea089f348d91799195a648d7fca37fc90d4"
+      },
+      {
+        "path": "assets/ir/910a6ce8542f5be9df214a28699b57df6c5abb97c788f1efd72c3b6507f967c2/overview-textless.png",
+        "size": 72743,
+        "sha256": "910a6ce8542f5be9df214a28699b57df6c5abb97c788f1efd72c3b6507f967c2"
+      },
+      {
+        "path": "assets/ir/aaa58d773ab76092d7d3236a2a90ebcad33f992eaeb6491e37bb1c51c5c2ba10/contact-qr.png",
+        "size": 3197,
+        "sha256": "aaa58d773ab76092d7d3236a2a90ebcad33f992eaeb6491e37bb1c51c5c2ba10"
+      },
+      {
+        "path": "conf.py",
+        "size": 818,
+        "sha256": "e9b2ad14300680dc7c9723f547a17d9bf18c65f4dcad7b9b877f031d3fedf40b"
+      },
+      {
+        "path": "index.md",
+        "size": 83,
+        "sha256": "d18299d9eec5e1ae4d4115bbb6a8efdd3f306383a09884e33943947f9df82f66"
+      },
+      {
+        "path": "manual.ir.json",
+        "size": 256404,
+        "sha256": "a27ebcd866d0385fd948a148eee66308572481cf876196242c18d6ba907337b3"
+      },
+      {
+        "path": "manual_bundle.html",
+        "size": 25103,
+        "sha256": "6036b8071884c7e33010a1b64946093a3d6447d76192586e99655cbff12d122e"
+      },
+      {
+        "path": "manual_jaad500asil_jp_ja.md",
+        "size": 23152,
+        "sha256": "3c5f07767ca49687a9ba3ce11c8befe1d0ae673c33ed79463edfae79bdb5748f"
+      }
+    ],
+    "sha256": "17e48dc3507e74c4fd860ab1a82846c816fb5a6d4287ee109d1a2564ce28afd7"
+  },
+  "html": {
+    "files": [
+      {
+        "path": ".buildinfo",
+        "size": 231,
+        "sha256": "f597975bbed87cdd0f1de5781f9acfdd27e93eb6d24161ceaf1d2ac99982f83e"
+      },
+      {
+        "path": "_sources/index.md.txt",
+        "size": 83,
+        "sha256": "d18299d9eec5e1ae4d4115bbb6a8efdd3f306383a09884e33943947f9df82f66"
+      },
+      {
+        "path": "_sources/manual_jaad500asil_jp_ja.md.txt",
+        "size": 23152,
+        "sha256": "3c5f07767ca49687a9ba3ce11c8befe1d0ae673c33ed79463edfae79bdb5748f"
+      },
+      {
+        "path": "_static/basic.css",
+        "size": 14685,
+        "sha256": "656ff1bacd6f260fc7d71b97f9c2f1fcbf692dc84bf469cd952034efcb9eefed"
+      },
+      {
+        "path": "_static/debug.css",
+        "size": 1266,
+        "sha256": "0d05cd9e79d53234304667c08f02971de6196c0ffca593c3903b3667b4055ad6"
+      },
+      {
+        "path": "_static/doctools.js",
+        "size": 4322,
+        "sha256": "2992c09df91826a8d33e3b48b645ee77e457adcf7c712d776a814e1e2c448b43"
+      },
+      {
+        "path": "_static/documentation_options.js",
+        "size": 323,
+        "sha256": "20c21c7247652bf20777e53b47b32fa37ddac90c4ea114ce49ec91933747f378"
+      },
+      {
+        "path": "_static/file.png",
+        "size": 286,
+        "sha256": "5c4bc9a16aebf38c4b950f59b8e501ca36495328cb9eb622218bce9064a35e3e"
+      },
+      {
+        "path": "_static/language_data.js",
+        "size": 385,
+        "sha256": "1b7abdb4f91a9c18241a2de39eb33b219c52a80c63b4dc378db0207411b8af31"
+      },
+      {
+        "path": "_static/minus.png",
+        "size": 90,
+        "sha256": "47e7fc50db3699f1ca41ce9a2ffa202c00c5d1d5180c55f62ba859b1bd6cc008"
+      },
+      {
+        "path": "_static/plus.png",
+        "size": 90,
+        "sha256": "54115199b96a130cba02147c47c0deb43dcc9b9f08b5162bba8642b34980ac63"
+      },
+      {
+        "path": "_static/pygments.css",
+        "size": 20190,
+        "sha256": "175552429a0952117a332f75fd6cb601f11e7d88dbf80083afcb8482f963f7e1"
+      },
+      {
+        "path": "_static/scripts/furo-extensions.js",
+        "size": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "_static/scripts/furo.js",
+        "size": 5221,
+        "sha256": "0df6012bf9183882fc314d1eeaa66fe7705e8694cf27351c4be1f5dc32e9fe6f"
+      },
+      {
+        "path": "_static/scripts/furo.js.LICENSE.txt",
+        "size": 187,
+        "sha256": "3eba718c98abe0ad8dd4401edc9ddfabf979f9bb9b8ac446460b61b03694970d"
+      },
+      {
+        "path": "_static/scripts/furo.js.map",
+        "size": 28571,
+        "sha256": "049d8e3c297854c9e7defecbf64bc92c375b4d94c7bef119ba11c8e8fc723ca2"
+      },
+      {
+        "path": "_static/searchtools.js",
+        "size": 21782,
+        "sha256": "371b49c7f094b525244e2a59d7809a6b946fc1c8791201d10dda1dd191133bb7"
+      },
+      {
+        "path": "_static/skeleton.css",
+        "size": 6034,
+        "sha256": "e7702bcb03d3eb02e63681f753d88a28bee8f8ed13e50e58ac84a2bc31a5c71d"
+      },
+      {
+        "path": "_static/sphinx_highlight.js",
+        "size": 5123,
+        "sha256": "096231e9c87df80ec3273da9c5b71bc81503206726a07a4dd4de44c256ff859c"
+      },
+      {
+        "path": "_static/styles/furo-extensions.css",
+        "size": 5518,
+        "sha256": "3d2b0207711a07313dfb6c8b272295f5f931169e4b2b784c61d00be9d871f8fd"
+      },
+      {
+        "path": "_static/styles/furo-extensions.css.map",
+        "size": 7762,
+        "sha256": "0b35b6ebb81f2aa1fcaee325c096d683e32c1808a9220670a1a3f88300c6915c"
+      },
+      {
+        "path": "_static/styles/furo.css",
+        "size": 50789,
+        "sha256": "177f1163121440086f701bf6cb9d2b2ab8fc29fcb754466465edf7b9f60b5aa0"
+      },
+      {
+        "path": "_static/styles/furo.css.map",
+        "size": 76029,
+        "sha256": "b7d40df8a2d2c5cc7727929dce7a482be4506f905ec42588fdbd0571bb1e9a45"
+      },
+      {
+        "path": "_static/translations.js",
+        "size": 4940,
+        "sha256": "db4c1e24507ff84dc9bf73088596d72d78e3a04f297987b3f62b24d17040b4f9"
+      },
+      {
+        "path": "_static/web_manual.css",
+        "size": 124859,
+        "sha256": "5783008c449b8db9c618492118199a11c10f5aafae5d53c2a15b90ab2ebb65f1"
+      },
+      {
+        "path": "assets/ir/29f7b772d7e313cac5527f2d81b82b00716586375fa6bfd562556030a50319fb/car.png",
+        "size": 91687,
+        "sha256": "29f7b772d7e313cac5527f2d81b82b00716586375fa6bfd562556030a50319fb"
+      },
+      {
+        "path": "assets/ir/3c140171d4ae33f68026b81db880318d28ccf3ecd4d4d201c0ec9015080db49d/inbox-module.png",
+        "size": 14353,
+        "sha256": "3c140171d4ae33f68026b81db880318d28ccf3ecd4d4d201c0ec9015080db49d"
+      },
+      {
+        "path": "assets/ir/434a3768abbb54d3f148e55fbe2475ce1a38906a18518ce96f266538e72080d8/solar.png",
+        "size": 214039,
+        "sha256": "434a3768abbb54d3f148e55fbe2475ce1a38906a18518ce96f266538e72080d8"
+      },
+      {
+        "path": "assets/ir/786c47843102633c475c02ce22d32ea089f348d91799195a648d7fca37fc90d4/inbox-manual.png",
+        "size": 15368,
+        "sha256": "786c47843102633c475c02ce22d32ea089f348d91799195a648d7fca37fc90d4"
+      },
+      {
+        "path": "assets/ir/910a6ce8542f5be9df214a28699b57df6c5abb97c788f1efd72c3b6507f967c2/overview-textless.png",
+        "size": 72743,
+        "sha256": "910a6ce8542f5be9df214a28699b57df6c5abb97c788f1efd72c3b6507f967c2"
+      },
+      {
+        "path": "assets/ir/aaa58d773ab76092d7d3236a2a90ebcad33f992eaeb6491e37bb1c51c5c2ba10/contact-qr.png",
+        "size": 3197,
+        "sha256": "aaa58d773ab76092d7d3236a2a90ebcad33f992eaeb6491e37bb1c51c5c2ba10"
+      },
+      {
+        "path": "genindex.html",
+        "size": 13014,
+        "sha256": "9167b570588845c05984e35bf093a58d8bdeddd91ce175ea5430b29007bdbbe7"
+      },
+      {
+        "path": "index.html",
+        "size": 15084,
+        "sha256": "191867adc21f61769f68c4379f0747b1dc48195f19c106947eeb378ac3e9c148"
+      },
+      {
+        "path": "manual_jaad500asil_jp_ja.html",
+        "size": 37668,
+        "sha256": "3415d087c55e55c60b08717296065786e9de735303347f48f09bd108b4d088a1"
+      },
+      {
+        "path": "objects.inv",
+        "size": 326,
+        "sha256": "2036f3f9bfae4f994777db13aefd9103029cd7f30cec6fb58432bd403e8c6052"
+      },
+      {
+        "path": "search.html",
+        "size": 13287,
+        "sha256": "a2662ccd80b765498767248d81d69182f4ca58a9c38b100ae0644d3c8e7c0d00"
+      },
+      {
+        "path": "searchindex.js",
+        "size": 8681,
+        "sha256": "5bdf9d5fcbe3a4e415e3ff172cbaeac23017db554de4eeb21622a6e270f0675c"
+      }
+    ],
+    "sha256": "7f70e6ad5c4ba88fdcf52b612c1776c3a00a29216e2aabeae75ffa78bb1e7232"
+  }
+}
