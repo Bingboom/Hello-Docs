@@ -1,4 +1,4 @@
-# Auto Manual Library
+# Published manuals
 
 - [JA-AD01A / EU / en - Jackery 102W GaN 3-Port Fast Charger User Manual](JA-AD01A/EU/en/md/manual_jaad01a_eu_en.md)
 - [JA-AD500A-SIL / JP / ja - Jackery DC Input Module](JA-AD500A-SIL/JP/ja/md/manual_jaad500asil_jp_ja.md)
@@ -42,6 +42,7 @@
 - [JE-1000E-SIL / US / en - Jackery FridgeGuard User Manual](JE-1000E-SIL/US/en/md/manual_je1000esil_us.md)
 - [JE-1000E-SIL / US / es - Jackery FridgeGuard Manual de usuario](JE-1000E-SIL/US/es/md/manual_je1000esil_us_es.md)
 - [JE-1000E-SIL / US / fr - Jackery FridgeGuard Manuel d'utilisation](JE-1000E-SIL/US/fr/md/manual_je1000esil_us_fr.md)
+- [JE-1000E-WH / JP / ja - Jackery SlimPower H1（JE-1000E-WH）取扱説明書](JE-1000E-WH/JP/ja/md/manual.md)
 - [JE-1000F / EU / de - Jackery Explorer 1000 Benutzerhandbuch](JE-1000F/EU/de/md/manual_je1000f_eu_de.md)
 - [JE-1000F / EU / en - Jackery Explorer 1000 User Manual](JE-1000F/EU/en/md/manual_je1000f_eu_en.md)
 - [JE-1000F / EU / es - Jackery Explorer 1000 Manual de usuario](JE-1000F/EU/es/md/manual_je1000f_eu_es.md)
