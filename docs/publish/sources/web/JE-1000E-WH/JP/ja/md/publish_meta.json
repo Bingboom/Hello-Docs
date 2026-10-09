@@ -1,0 +1,19 @@
+{
+  "schema_version": "auto-manual-web-publish-target/v2",
+  "model": "JE-1000E-WH",
+  "region": "JP",
+  "lang": "ja",
+  "version": "git-20261008-efb663e3-reviewed",
+  "built_at": "2026-10-09T02:42:48.684230+00:00",
+  "git_ref": "5e1de68efb780b6a5c529b66e9f6544741c8642c",
+  "route": "JE-1000E-WH/JP/ja/md",
+  "manual": "manual.md",
+  "language_scope": "single",
+  "language_projection_evidence_path": "evidence/language_projection_receipt.json",
+  "language_projection_evidence_sha256": "ac2482f6eaa4e33717ca5c8d216d207e584b83048f36417ed667fe04cb02feff",
+  "legacy_default": true,
+  "legacy_route": "JE-1000E-WH/JP/md",
+  "legacy_aliases": [
+    "manual"
+  ]
+}
