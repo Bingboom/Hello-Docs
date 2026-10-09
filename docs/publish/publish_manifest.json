@@ -1,6 +1,6 @@
 {
   "schema_version": "auto-manual-web-publish-branch/v2",
-  "built_at": "2026-10-09T13:16:44+00:00",
+  "built_at": "2026-10-09T15:32:31.049855+00:00",
   "targets": [
     {
       "schema_version": "auto-manual-web-publish-target/v2",
@@ -1815,6 +1815,55 @@
       "legacy_aliases": [
         "manual_je500a_eu_en"
       ]
+    },
+    {
+      "schema_version": "auto-manual-web-publish-target/v2",
+      "model": "JHP-3000D",
+      "region": "US",
+      "lang": "en",
+      "version": "git-20261009-cebe4aab",
+      "built_at": "2026-10-09T15:32:23.003244+00:00",
+      "git_ref": "167bf6ad376cf008ded34cfb840d28cb5ff588c3",
+      "route": "JHP-3000D/US/en/md",
+      "manual": "manual_jhp3000d_us_en.md",
+      "language_scope": "single",
+      "language_projection_evidence_path": "evidence/language_projection_receipt.json",
+      "language_projection_evidence_sha256": "aacf6a2afdbff502ae608b17da2bd44d5858daff292e34f580bde53581638819",
+      "legacy_default": true,
+      "legacy_route": "JHP-3000D/US/md",
+      "legacy_aliases": [
+        "manual_jhp3000d_us_en"
+      ]
+    },
+    {
+      "schema_version": "auto-manual-web-publish-target/v2",
+      "model": "JHP-3000D",
+      "region": "US",
+      "lang": "es",
+      "version": "git-20261009-cebe4aab",
+      "built_at": "2026-10-09T15:32:31.049855+00:00",
+      "git_ref": "167bf6ad376cf008ded34cfb840d28cb5ff588c3",
+      "route": "JHP-3000D/US/es/md",
+      "manual": "manual_jhp3000d_us_es.md",
+      "language_scope": "single",
+      "language_projection_evidence_path": "evidence/language_projection_receipt.json",
+      "language_projection_evidence_sha256": "5307ee25b6ca96e7f1b12807aeb65eeab2f389ce0f34b813828520c62dfe6f57",
+      "legacy_default": false
+    },
+    {
+      "schema_version": "auto-manual-web-publish-target/v2",
+      "model": "JHP-3000D",
+      "region": "US",
+      "lang": "fr",
+      "version": "git-20261009-cebe4aab",
+      "built_at": "2026-10-09T15:32:27.045864+00:00",
+      "git_ref": "167bf6ad376cf008ded34cfb840d28cb5ff588c3",
+      "route": "JHP-3000D/US/fr/md",
+      "manual": "manual_jhp3000d_us_fr.md",
+      "language_scope": "single",
+      "language_projection_evidence_path": "evidence/language_projection_receipt.json",
+      "language_projection_evidence_sha256": "1714cb2d414b2eedcec01b8f18ee643aac253fb2a7a05b803b3e7d783d25d43b",
+      "legacy_default": false
     },
     {
       "schema_version": "auto-manual-web-publish-target/v2",
@@ -32443,6 +32492,966 @@
       "sha256": "4d97f3929973360965616b64ea73b386deed80f10d0469b87dc0c405e058c509"
     },
     {
+      "path": "sources/web/JHP-3000D/US/en/md/_static/source_presentation.css",
+      "size": 4024,
+      "sha256": "6bf2810a49128b7f4f186be55f772fc3acdade035491840fbf858d0a2b5a3de0"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/_static/web_manual.css",
+      "size": 125530,
+      "sha256": "b21d68bbd53bf1e93bde5c9387d5bcbdde5f0317c810f38cce0f9d6041326090"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/assets/ac-charge.svg",
+      "size": 346542,
+      "sha256": "73e47cbd6f8f8dd02b8be679fe07bc65de78489d112d19ef04d072f2efb11f1a"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/assets/ac-output.svg",
+      "size": 322405,
+      "sha256": "20d2bb74dffe1cb42a4429dbb830412ed6b32cba48f32794aa9bc6217302cb3e"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/assets/ac.svg",
+      "size": 1664,
+      "sha256": "74bcd0bb2a825ff4d7831dbdb368f4d13cdf5cf1d741e349f8bc649ee1898839"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/assets/app-control.svg",
+      "size": 648956,
+      "sha256": "0984323f428bdceabe126955738b46ca71856bc36adcd419cfe663928d61c4fa"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/assets/app_add.png",
+      "size": 58893,
+      "sha256": "7998672fe6e308902b49332024bb09d21a7bb1dd06cc87dec160c81603a7c9b7"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/assets/app_connect_result_steps.png",
+      "size": 288384,
+      "sha256": "17ccfa065009948c9e6e661017fab0b261adac03d880c025178d207e2f47ffe3"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/assets/app_download_qr.png",
+      "size": 130235,
+      "sha256": "5f2a58121306f87b6a627309f264ada87ac4778b3338cfc464ff656013ac3c65"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/assets/app_store_badges.png",
+      "size": 25764,
+      "sha256": "1c7bfea9e26bbb00aff9c48d34a7742cd15ff3f0d998f32486c7248a19c9b84d"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/assets/car.svg",
+      "size": 391556,
+      "sha256": "29a8c72e587c3e4f0192f384710682687a48ce40666e8f6a87c528471efb0a57"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/assets/dc-output.svg",
+      "size": 203353,
+      "sha256": "4fbb0e3fbece7f53f02ab7f6dbb4c1554f63738c0dee38ac6aecf44b1254fbc7"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/assets/dc_usb.svg",
+      "size": 2936,
+      "sha256": "3355388bad2221362a63dfad0c04fb9c15f521866166144cd3a644bde14e5864"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/assets/energy.svg",
+      "size": 336907,
+      "sha256": "430f615f40588f62aa0ed9bdf8ec401cea95f754ee3c46bcf17a3fd07d1b79e2"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/assets/fcc-mark.svg",
+      "size": 1927,
+      "sha256": "eeb4731c3bf989a31adc56b161f96690332624f7c8649f16a0d17a1d7eb743fe"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/assets/inbox-cable.png",
+      "size": 4023,
+      "sha256": "287650f3a89ae520e32f0d75df8401151b808004ee50075b96aff70af04ca4ef"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/assets/inbox-main.svg",
+      "size": 154107,
+      "sha256": "35cec3a529f6655b0e93a2085a0ef82d0ac8e7ad54f4e3e7233c2ec8a59170aa"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/assets/inbox-manual.png",
+      "size": 1614,
+      "sha256": "87ac44e52863324b761a672089e6b0497e40fdf48432f698fccf30508060c60a"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/assets/lcd-01.png",
+      "size": 1814,
+      "sha256": "fc4cc02b42efc31a32429ada2b78c4480a2fcbca647406da29b2ce75a8a8c1dc"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/assets/lcd-02.png",
+      "size": 2023,
+      "sha256": "7e1392ba6a45e66a2e7367ae5df737ccc41ad2de46c4ac7d6baf062ff63bb361"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/assets/lcd-03.png",
+      "size": 1414,
+      "sha256": "7f743182c0509307793dde001356fff5c3d20dd32b09105b6a1d467af7e7f66d"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/assets/lcd-04.png",
+      "size": 1481,
+      "sha256": "e32e6ae96321aa47b39c0c65a18a59da6c90cf87a0d7c8d61556ead273789c3a"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/assets/lcd-05.png",
+      "size": 2759,
+      "sha256": "71017f43bab44852d5586d1d4f996f3c52d8451bceaa9249e29864652c2f537d"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/assets/lcd-06.png",
+      "size": 2772,
+      "sha256": "21b5f19ca9a6e39d8bd515128297cc1b99e43fd263e39ffba4fdf102d50a4bad"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/assets/lcd-07.png",
+      "size": 3466,
+      "sha256": "73225cf9faa868bbe937df298d55a696828a4156f40e90da5c2a7f0011f0b783"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/assets/lcd-08.png",
+      "size": 2712,
+      "sha256": "f4cdcb5511058eaaf1879a69a429317dd3d98325dd5e19f5dd95b06ea2c965af"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/assets/lcd-09.png",
+      "size": 2868,
+      "sha256": "e422a56922eb749ae90802fd964cb451a08d833658c1849abe10a63c60b173cc"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/assets/lcd-10.png",
+      "size": 3962,
+      "sha256": "8be87c5a084994e3b4b6ddff46ce0296207a5c49c732f8ed13adfbcb28a36538"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/assets/lcd-11.png",
+      "size": 4730,
+      "sha256": "d5100a538e964da13e04241a98134e6aeaa36af8991aceeecac3c5d063b6968b"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/assets/lcd-12.png",
+      "size": 1974,
+      "sha256": "cfb69b1ffc0b30c51216fb6b1e00e35b412dd0148b6999d3d40ac90fbfe108cb"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/assets/lcd-13.png",
+      "size": 2223,
+      "sha256": "28f3cad42ae32e9e895abfd7cdb16a21b99dfa822c57d542f0e3f59a4b452c6c"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/assets/lcd-14.png",
+      "size": 1599,
+      "sha256": "eed3299c3f6a15766e433ebbae7a40af8939e6d32489a0aa33a37fe902232a64"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/assets/lcd-15.png",
+      "size": 3059,
+      "sha256": "91cec82eeaa553477868d38789d68a4937cb11c5c4d794de74db1edddb3aeea4"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/assets/lcd-16.png",
+      "size": 4879,
+      "sha256": "85921a9ad7fbfa58f98ee7bb0dc904377f31fe3dbface4083d2493144b05362f"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/assets/lcd-17.png",
+      "size": 1293,
+      "sha256": "c7862a87e742d6927b4e1d63a8d0ccb09fbcf980ae662ff94b9134e256e56889"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/assets/lcd-18.png",
+      "size": 3712,
+      "sha256": "747147be99d76bb486c858aeca2289d7d05ad3be1f1ea1f0825f54cb29b7fd10"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/assets/lcd-19.png",
+      "size": 3194,
+      "sha256": "6aab9a14900a08fcd8f8261e6e36fbb9a1220eb931df94ebd149b23930063723"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/assets/lcd-20.png",
+      "size": 2056,
+      "sha256": "c4b830c769a3de7f9effaee82466752f5706a0741ba29675cce45633c1cd8222"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/assets/lcd-21.png",
+      "size": 2248,
+      "sha256": "f548c6504f495da4f208cd8e5fe6eac6076daea05e314115abd26b46a9326ba5"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/assets/lcd-22.png",
+      "size": 2206,
+      "sha256": "bdbf602db74ade39a2a162209c0ff535315dee5e27e4832b2e6a201764b6941a"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/assets/lcd-23.png",
+      "size": 1275,
+      "sha256": "7b251bff4004f01b3fbb6e383230d0c27f6ea17654502eca64240888ebe510a0"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/assets/lcd-24.png",
+      "size": 3553,
+      "sha256": "7623ef10e229bcfe66c872f3733d26b86c97d703ed30012188a88bb4a168e6df"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/assets/lcd-25.png",
+      "size": 6085,
+      "sha256": "58c1d3604ca7b9774b069c6928775a13465ccb9477f477e9e4d4b30e7f75b88d"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/assets/lcd-26.png",
+      "size": 2496,
+      "sha256": "9b148ea95d3a3450591c7220908b0913048f2cdea1e61d200534181c52b47cab"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/assets/lcd-button.svg",
+      "size": 339811,
+      "sha256": "1f4f46895de14c782dc8fa17c4c22f6d7752de5124254bfd79f5d02a249fe179"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/assets/lcd-map.svg",
+      "size": 130344,
+      "sha256": "c1d7bae1f750ef71cd2c20ed30254a3467a4b0a0bc185ae4a38404eb477bd402"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/assets/overview.svg",
+      "size": 155749,
+      "sha256": "9b244f4f6ceb3a2c9e0210cf7247f808e8d2af00e23ec0a46544284e00e4124d"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/assets/power.svg",
+      "size": 359256,
+      "sha256": "6ebb0b28a8fc426f4d892a76837c420c471dc5af7dccf03eabb388b84f9bcba9"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/assets/solar.svg",
+      "size": 825368,
+      "sha256": "190e8e1a3ecba4eafa647c8191f4b17c1dad17888f0ac2b817272a5cb52a0e91"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/assets/symbol_do_not_dismantle.svg",
+      "size": 6538,
+      "sha256": "5ad4fa830a5b4f9bf23af4c09493fc2610f8fda94ea6fcf925288d1cb6491f33"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/assets/symbol_keep_away_from_children_gray_jp.svg",
+      "size": 4074,
+      "sha256": "af71ae09a5498979d0722d5a8a11347936d4be2b994898f2aabda0e2cea5c817"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/assets/symbol_li_ion.svg",
+      "size": 7306,
+      "sha256": "317b9e9feb7747092569a1074d5e05e43bca5ddb96e9404f8e33746df9da7a8e"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/assets/symbol_no_open_flame_gray_jp.svg",
+      "size": 2815,
+      "sha256": "5d52569eb51f41f45826b7b144efe59410b5017b0557508b1577c4620d7e8aee"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/assets/symbol_read_manual_person.svg",
+      "size": 4918,
+      "sha256": "b925552372b168a3e354081d97e43ccd08eb74803f685fc32223e49a27d0c0e5"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/assets/symbol_warning_triangle.svg",
+      "size": 4481,
+      "sha256": "0f41fe5ea49fb7a830cab90d2a5473587dd8a0c04db775b42953f58dbea3fb0a"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/assets/symbol_weee.png",
+      "size": 7672,
+      "sha256": "6883f899f43ac0642f43b8f9cf4118a394c1382ee409f4498544f90ba37b56a5"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/assets/ups.svg",
+      "size": 308607,
+      "sha256": "87f8ac97678da34f07718a44549ecc46dfa3fb96c78a6dbba04732df5d774edf"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/conf.py",
+      "size": 831,
+      "sha256": "dff3ab9fd615c7ff1c09b4964ee97a36137847d3feec835f640d826138480828"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/evidence/frozen_source_manifest.json",
+      "size": 118324,
+      "sha256": "214803cb076ddcab301669ef57947621868037000ff5a0b78afbe32b823496de"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/evidence/language_projection_receipt.json",
+      "size": 26660,
+      "sha256": "aacf6a2afdbff502ae608b17da2bd44d5858daff292e34f580bde53581638819"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/index.md",
+      "size": 92,
+      "sha256": "f7327677eb44274baa807d5d3220c954e4591f877fb567cac9904d49abea2156"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/manual.ir.json",
+      "size": 531803,
+      "sha256": "069db40d0c3471261102adde229e9b0197bfa502f0f6a009341e9f10cdd1ca64"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/manual_jhp3000d_us_en.md",
+      "size": 77956,
+      "sha256": "88061beb2d6a6fa2f9237f1f6f8c69191da3e4d9af055a98c3eb8cfaad29d084"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/en/md/publish_meta.json",
+      "size": 677,
+      "sha256": "b390248b81dc038a0a18be401379dc86125023b7b79d77226b393540dbc9696e"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/_static/source_presentation.css",
+      "size": 4024,
+      "sha256": "6bf2810a49128b7f4f186be55f772fc3acdade035491840fbf858d0a2b5a3de0"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/_static/web_manual.css",
+      "size": 125530,
+      "sha256": "b21d68bbd53bf1e93bde5c9387d5bcbdde5f0317c810f38cce0f9d6041326090"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/assets/ac-charge.svg",
+      "size": 346542,
+      "sha256": "73e47cbd6f8f8dd02b8be679fe07bc65de78489d112d19ef04d072f2efb11f1a"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/assets/ac-output.svg",
+      "size": 322405,
+      "sha256": "20d2bb74dffe1cb42a4429dbb830412ed6b32cba48f32794aa9bc6217302cb3e"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/assets/ac.svg",
+      "size": 1664,
+      "sha256": "74bcd0bb2a825ff4d7831dbdb368f4d13cdf5cf1d741e349f8bc649ee1898839"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/assets/app-control.svg",
+      "size": 648956,
+      "sha256": "0984323f428bdceabe126955738b46ca71856bc36adcd419cfe663928d61c4fa"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/assets/app_add.png",
+      "size": 58893,
+      "sha256": "7998672fe6e308902b49332024bb09d21a7bb1dd06cc87dec160c81603a7c9b7"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/assets/app_connect_result_steps.png",
+      "size": 288384,
+      "sha256": "17ccfa065009948c9e6e661017fab0b261adac03d880c025178d207e2f47ffe3"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/assets/app_download_qr.png",
+      "size": 130235,
+      "sha256": "5f2a58121306f87b6a627309f264ada87ac4778b3338cfc464ff656013ac3c65"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/assets/app_store_badges.png",
+      "size": 25764,
+      "sha256": "1c7bfea9e26bbb00aff9c48d34a7742cd15ff3f0d998f32486c7248a19c9b84d"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/assets/car.svg",
+      "size": 391556,
+      "sha256": "29a8c72e587c3e4f0192f384710682687a48ce40666e8f6a87c528471efb0a57"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/assets/dc-output.svg",
+      "size": 203353,
+      "sha256": "4fbb0e3fbece7f53f02ab7f6dbb4c1554f63738c0dee38ac6aecf44b1254fbc7"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/assets/dc_usb.svg",
+      "size": 2936,
+      "sha256": "3355388bad2221362a63dfad0c04fb9c15f521866166144cd3a644bde14e5864"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/assets/energy.svg",
+      "size": 336907,
+      "sha256": "430f615f40588f62aa0ed9bdf8ec401cea95f754ee3c46bcf17a3fd07d1b79e2"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/assets/fcc-mark.svg",
+      "size": 1927,
+      "sha256": "eeb4731c3bf989a31adc56b161f96690332624f7c8649f16a0d17a1d7eb743fe"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/assets/inbox-cable.png",
+      "size": 4023,
+      "sha256": "287650f3a89ae520e32f0d75df8401151b808004ee50075b96aff70af04ca4ef"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/assets/inbox-main.svg",
+      "size": 154107,
+      "sha256": "35cec3a529f6655b0e93a2085a0ef82d0ac8e7ad54f4e3e7233c2ec8a59170aa"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/assets/inbox-manual.png",
+      "size": 1614,
+      "sha256": "87ac44e52863324b761a672089e6b0497e40fdf48432f698fccf30508060c60a"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/assets/lcd-01.png",
+      "size": 1814,
+      "sha256": "fc4cc02b42efc31a32429ada2b78c4480a2fcbca647406da29b2ce75a8a8c1dc"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/assets/lcd-02.png",
+      "size": 2023,
+      "sha256": "7e1392ba6a45e66a2e7367ae5df737ccc41ad2de46c4ac7d6baf062ff63bb361"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/assets/lcd-03.png",
+      "size": 1414,
+      "sha256": "7f743182c0509307793dde001356fff5c3d20dd32b09105b6a1d467af7e7f66d"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/assets/lcd-04.png",
+      "size": 1481,
+      "sha256": "e32e6ae96321aa47b39c0c65a18a59da6c90cf87a0d7c8d61556ead273789c3a"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/assets/lcd-05.png",
+      "size": 2759,
+      "sha256": "71017f43bab44852d5586d1d4f996f3c52d8451bceaa9249e29864652c2f537d"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/assets/lcd-06.png",
+      "size": 2772,
+      "sha256": "21b5f19ca9a6e39d8bd515128297cc1b99e43fd263e39ffba4fdf102d50a4bad"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/assets/lcd-07.png",
+      "size": 3466,
+      "sha256": "73225cf9faa868bbe937df298d55a696828a4156f40e90da5c2a7f0011f0b783"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/assets/lcd-08.png",
+      "size": 2712,
+      "sha256": "f4cdcb5511058eaaf1879a69a429317dd3d98325dd5e19f5dd95b06ea2c965af"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/assets/lcd-09.png",
+      "size": 2868,
+      "sha256": "e422a56922eb749ae90802fd964cb451a08d833658c1849abe10a63c60b173cc"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/assets/lcd-10.png",
+      "size": 3962,
+      "sha256": "8be87c5a084994e3b4b6ddff46ce0296207a5c49c732f8ed13adfbcb28a36538"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/assets/lcd-11.png",
+      "size": 4730,
+      "sha256": "d5100a538e964da13e04241a98134e6aeaa36af8991aceeecac3c5d063b6968b"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/assets/lcd-12.png",
+      "size": 1974,
+      "sha256": "cfb69b1ffc0b30c51216fb6b1e00e35b412dd0148b6999d3d40ac90fbfe108cb"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/assets/lcd-13.png",
+      "size": 2223,
+      "sha256": "28f3cad42ae32e9e895abfd7cdb16a21b99dfa822c57d542f0e3f59a4b452c6c"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/assets/lcd-14.png",
+      "size": 1599,
+      "sha256": "eed3299c3f6a15766e433ebbae7a40af8939e6d32489a0aa33a37fe902232a64"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/assets/lcd-15.png",
+      "size": 3059,
+      "sha256": "91cec82eeaa553477868d38789d68a4937cb11c5c4d794de74db1edddb3aeea4"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/assets/lcd-16.png",
+      "size": 4879,
+      "sha256": "85921a9ad7fbfa58f98ee7bb0dc904377f31fe3dbface4083d2493144b05362f"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/assets/lcd-17.png",
+      "size": 1293,
+      "sha256": "c7862a87e742d6927b4e1d63a8d0ccb09fbcf980ae662ff94b9134e256e56889"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/assets/lcd-18.png",
+      "size": 3712,
+      "sha256": "747147be99d76bb486c858aeca2289d7d05ad3be1f1ea1f0825f54cb29b7fd10"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/assets/lcd-19.png",
+      "size": 3194,
+      "sha256": "6aab9a14900a08fcd8f8261e6e36fbb9a1220eb931df94ebd149b23930063723"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/assets/lcd-20.png",
+      "size": 2056,
+      "sha256": "c4b830c769a3de7f9effaee82466752f5706a0741ba29675cce45633c1cd8222"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/assets/lcd-21.png",
+      "size": 2248,
+      "sha256": "f548c6504f495da4f208cd8e5fe6eac6076daea05e314115abd26b46a9326ba5"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/assets/lcd-22.png",
+      "size": 2206,
+      "sha256": "bdbf602db74ade39a2a162209c0ff535315dee5e27e4832b2e6a201764b6941a"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/assets/lcd-23.png",
+      "size": 1275,
+      "sha256": "7b251bff4004f01b3fbb6e383230d0c27f6ea17654502eca64240888ebe510a0"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/assets/lcd-24.png",
+      "size": 3553,
+      "sha256": "7623ef10e229bcfe66c872f3733d26b86c97d703ed30012188a88bb4a168e6df"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/assets/lcd-25.png",
+      "size": 6085,
+      "sha256": "58c1d3604ca7b9774b069c6928775a13465ccb9477f477e9e4d4b30e7f75b88d"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/assets/lcd-26.png",
+      "size": 2496,
+      "sha256": "9b148ea95d3a3450591c7220908b0913048f2cdea1e61d200534181c52b47cab"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/assets/lcd-button.svg",
+      "size": 339811,
+      "sha256": "1f4f46895de14c782dc8fa17c4c22f6d7752de5124254bfd79f5d02a249fe179"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/assets/lcd-map.svg",
+      "size": 130344,
+      "sha256": "c1d7bae1f750ef71cd2c20ed30254a3467a4b0a0bc185ae4a38404eb477bd402"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/assets/overview.svg",
+      "size": 155749,
+      "sha256": "9b244f4f6ceb3a2c9e0210cf7247f808e8d2af00e23ec0a46544284e00e4124d"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/assets/power.svg",
+      "size": 359256,
+      "sha256": "6ebb0b28a8fc426f4d892a76837c420c471dc5af7dccf03eabb388b84f9bcba9"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/assets/solar.svg",
+      "size": 825368,
+      "sha256": "190e8e1a3ecba4eafa647c8191f4b17c1dad17888f0ac2b817272a5cb52a0e91"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/assets/symbol_do_not_dismantle.svg",
+      "size": 6538,
+      "sha256": "5ad4fa830a5b4f9bf23af4c09493fc2610f8fda94ea6fcf925288d1cb6491f33"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/assets/symbol_keep_away_from_children_gray_jp.svg",
+      "size": 4074,
+      "sha256": "af71ae09a5498979d0722d5a8a11347936d4be2b994898f2aabda0e2cea5c817"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/assets/symbol_li_ion.svg",
+      "size": 7306,
+      "sha256": "317b9e9feb7747092569a1074d5e05e43bca5ddb96e9404f8e33746df9da7a8e"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/assets/symbol_no_open_flame_gray_jp.svg",
+      "size": 2815,
+      "sha256": "5d52569eb51f41f45826b7b144efe59410b5017b0557508b1577c4620d7e8aee"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/assets/symbol_read_manual_person.svg",
+      "size": 4918,
+      "sha256": "b925552372b168a3e354081d97e43ccd08eb74803f685fc32223e49a27d0c0e5"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/assets/symbol_warning_triangle.svg",
+      "size": 4481,
+      "sha256": "0f41fe5ea49fb7a830cab90d2a5473587dd8a0c04db775b42953f58dbea3fb0a"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/assets/symbol_weee.png",
+      "size": 7672,
+      "sha256": "6883f899f43ac0642f43b8f9cf4118a394c1382ee409f4498544f90ba37b56a5"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/assets/ups.svg",
+      "size": 308607,
+      "sha256": "87f8ac97678da34f07718a44549ecc46dfa3fb96c78a6dbba04732df5d774edf"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/conf.py",
+      "size": 831,
+      "sha256": "dce2bcb0f84d2ef99f8d004dd21b31a1690201f18c59d723651ea15956c5c41e"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/evidence/frozen_source_manifest.json",
+      "size": 118324,
+      "sha256": "214803cb076ddcab301669ef57947621868037000ff5a0b78afbe32b823496de"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/evidence/language_projection_receipt.json",
+      "size": 27166,
+      "sha256": "5307ee25b6ca96e7f1b12807aeb65eeab2f389ce0f34b813828520c62dfe6f57"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/index.md",
+      "size": 92,
+      "sha256": "b577f6b25ace7345a7feba9947510f615cdd0d05770f6cd1d026c4a70d2345a7"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/manual.ir.json",
+      "size": 567303,
+      "sha256": "f1b80ab4a5a071252f893034f30b3d59a6f2e7352e8d3aee8dbc2c3cc4e9289a"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/manual_jhp3000d_us_es.md",
+      "size": 83627,
+      "sha256": "336fd2e3703e4349478411d31bb6de89f5efa592faf00c6b0769f682679d4e1b"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/es/md/publish_meta.json",
+      "size": 586,
+      "sha256": "710dd338fe1de71f62d91504a446ec939acb890ece2579cd07467dde844f00a4"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/_static/source_presentation.css",
+      "size": 4024,
+      "sha256": "6bf2810a49128b7f4f186be55f772fc3acdade035491840fbf858d0a2b5a3de0"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/_static/web_manual.css",
+      "size": 125530,
+      "sha256": "b21d68bbd53bf1e93bde5c9387d5bcbdde5f0317c810f38cce0f9d6041326090"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/assets/ac-charge.svg",
+      "size": 346542,
+      "sha256": "73e47cbd6f8f8dd02b8be679fe07bc65de78489d112d19ef04d072f2efb11f1a"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/assets/ac-output.svg",
+      "size": 322405,
+      "sha256": "20d2bb74dffe1cb42a4429dbb830412ed6b32cba48f32794aa9bc6217302cb3e"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/assets/ac.svg",
+      "size": 1664,
+      "sha256": "74bcd0bb2a825ff4d7831dbdb368f4d13cdf5cf1d741e349f8bc649ee1898839"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/assets/app-control.svg",
+      "size": 648956,
+      "sha256": "0984323f428bdceabe126955738b46ca71856bc36adcd419cfe663928d61c4fa"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/assets/app_add.png",
+      "size": 58893,
+      "sha256": "7998672fe6e308902b49332024bb09d21a7bb1dd06cc87dec160c81603a7c9b7"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/assets/app_connect_result_steps.png",
+      "size": 288384,
+      "sha256": "17ccfa065009948c9e6e661017fab0b261adac03d880c025178d207e2f47ffe3"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/assets/app_download_qr.png",
+      "size": 130235,
+      "sha256": "5f2a58121306f87b6a627309f264ada87ac4778b3338cfc464ff656013ac3c65"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/assets/app_store_badges.png",
+      "size": 25764,
+      "sha256": "1c7bfea9e26bbb00aff9c48d34a7742cd15ff3f0d998f32486c7248a19c9b84d"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/assets/car.svg",
+      "size": 391556,
+      "sha256": "29a8c72e587c3e4f0192f384710682687a48ce40666e8f6a87c528471efb0a57"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/assets/dc-output.svg",
+      "size": 203353,
+      "sha256": "4fbb0e3fbece7f53f02ab7f6dbb4c1554f63738c0dee38ac6aecf44b1254fbc7"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/assets/dc_usb.svg",
+      "size": 2936,
+      "sha256": "3355388bad2221362a63dfad0c04fb9c15f521866166144cd3a644bde14e5864"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/assets/energy.svg",
+      "size": 336907,
+      "sha256": "430f615f40588f62aa0ed9bdf8ec401cea95f754ee3c46bcf17a3fd07d1b79e2"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/assets/fcc-mark.svg",
+      "size": 1927,
+      "sha256": "eeb4731c3bf989a31adc56b161f96690332624f7c8649f16a0d17a1d7eb743fe"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/assets/inbox-cable.png",
+      "size": 4023,
+      "sha256": "287650f3a89ae520e32f0d75df8401151b808004ee50075b96aff70af04ca4ef"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/assets/inbox-main.svg",
+      "size": 154107,
+      "sha256": "35cec3a529f6655b0e93a2085a0ef82d0ac8e7ad54f4e3e7233c2ec8a59170aa"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/assets/inbox-manual.png",
+      "size": 1614,
+      "sha256": "87ac44e52863324b761a672089e6b0497e40fdf48432f698fccf30508060c60a"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/assets/lcd-01.png",
+      "size": 1814,
+      "sha256": "fc4cc02b42efc31a32429ada2b78c4480a2fcbca647406da29b2ce75a8a8c1dc"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/assets/lcd-02.png",
+      "size": 2023,
+      "sha256": "7e1392ba6a45e66a2e7367ae5df737ccc41ad2de46c4ac7d6baf062ff63bb361"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/assets/lcd-03.png",
+      "size": 1414,
+      "sha256": "7f743182c0509307793dde001356fff5c3d20dd32b09105b6a1d467af7e7f66d"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/assets/lcd-04.png",
+      "size": 1481,
+      "sha256": "e32e6ae96321aa47b39c0c65a18a59da6c90cf87a0d7c8d61556ead273789c3a"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/assets/lcd-05.png",
+      "size": 2759,
+      "sha256": "71017f43bab44852d5586d1d4f996f3c52d8451bceaa9249e29864652c2f537d"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/assets/lcd-06.png",
+      "size": 2772,
+      "sha256": "21b5f19ca9a6e39d8bd515128297cc1b99e43fd263e39ffba4fdf102d50a4bad"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/assets/lcd-07.png",
+      "size": 3466,
+      "sha256": "73225cf9faa868bbe937df298d55a696828a4156f40e90da5c2a7f0011f0b783"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/assets/lcd-08.png",
+      "size": 2712,
+      "sha256": "f4cdcb5511058eaaf1879a69a429317dd3d98325dd5e19f5dd95b06ea2c965af"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/assets/lcd-09.png",
+      "size": 2868,
+      "sha256": "e422a56922eb749ae90802fd964cb451a08d833658c1849abe10a63c60b173cc"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/assets/lcd-10.png",
+      "size": 3962,
+      "sha256": "8be87c5a084994e3b4b6ddff46ce0296207a5c49c732f8ed13adfbcb28a36538"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/assets/lcd-11.png",
+      "size": 4730,
+      "sha256": "d5100a538e964da13e04241a98134e6aeaa36af8991aceeecac3c5d063b6968b"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/assets/lcd-12.png",
+      "size": 1974,
+      "sha256": "cfb69b1ffc0b30c51216fb6b1e00e35b412dd0148b6999d3d40ac90fbfe108cb"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/assets/lcd-13.png",
+      "size": 2223,
+      "sha256": "28f3cad42ae32e9e895abfd7cdb16a21b99dfa822c57d542f0e3f59a4b452c6c"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/assets/lcd-14.png",
+      "size": 1599,
+      "sha256": "eed3299c3f6a15766e433ebbae7a40af8939e6d32489a0aa33a37fe902232a64"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/assets/lcd-15.png",
+      "size": 3059,
+      "sha256": "91cec82eeaa553477868d38789d68a4937cb11c5c4d794de74db1edddb3aeea4"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/assets/lcd-16.png",
+      "size": 4879,
+      "sha256": "85921a9ad7fbfa58f98ee7bb0dc904377f31fe3dbface4083d2493144b05362f"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/assets/lcd-17.png",
+      "size": 1293,
+      "sha256": "c7862a87e742d6927b4e1d63a8d0ccb09fbcf980ae662ff94b9134e256e56889"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/assets/lcd-18.png",
+      "size": 3712,
+      "sha256": "747147be99d76bb486c858aeca2289d7d05ad3be1f1ea1f0825f54cb29b7fd10"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/assets/lcd-19.png",
+      "size": 3194,
+      "sha256": "6aab9a14900a08fcd8f8261e6e36fbb9a1220eb931df94ebd149b23930063723"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/assets/lcd-20.png",
+      "size": 2056,
+      "sha256": "c4b830c769a3de7f9effaee82466752f5706a0741ba29675cce45633c1cd8222"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/assets/lcd-21.png",
+      "size": 2248,
+      "sha256": "f548c6504f495da4f208cd8e5fe6eac6076daea05e314115abd26b46a9326ba5"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/assets/lcd-22.png",
+      "size": 2206,
+      "sha256": "bdbf602db74ade39a2a162209c0ff535315dee5e27e4832b2e6a201764b6941a"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/assets/lcd-23.png",
+      "size": 1275,
+      "sha256": "7b251bff4004f01b3fbb6e383230d0c27f6ea17654502eca64240888ebe510a0"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/assets/lcd-24.png",
+      "size": 3553,
+      "sha256": "7623ef10e229bcfe66c872f3733d26b86c97d703ed30012188a88bb4a168e6df"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/assets/lcd-25.png",
+      "size": 6085,
+      "sha256": "58c1d3604ca7b9774b069c6928775a13465ccb9477f477e9e4d4b30e7f75b88d"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/assets/lcd-26.png",
+      "size": 2496,
+      "sha256": "9b148ea95d3a3450591c7220908b0913048f2cdea1e61d200534181c52b47cab"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/assets/lcd-button.svg",
+      "size": 339811,
+      "sha256": "1f4f46895de14c782dc8fa17c4c22f6d7752de5124254bfd79f5d02a249fe179"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/assets/lcd-map.svg",
+      "size": 130344,
+      "sha256": "c1d7bae1f750ef71cd2c20ed30254a3467a4b0a0bc185ae4a38404eb477bd402"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/assets/overview.svg",
+      "size": 155749,
+      "sha256": "9b244f4f6ceb3a2c9e0210cf7247f808e8d2af00e23ec0a46544284e00e4124d"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/assets/power.svg",
+      "size": 359256,
+      "sha256": "6ebb0b28a8fc426f4d892a76837c420c471dc5af7dccf03eabb388b84f9bcba9"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/assets/solar.svg",
+      "size": 825368,
+      "sha256": "190e8e1a3ecba4eafa647c8191f4b17c1dad17888f0ac2b817272a5cb52a0e91"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/assets/symbol_do_not_dismantle.svg",
+      "size": 6538,
+      "sha256": "5ad4fa830a5b4f9bf23af4c09493fc2610f8fda94ea6fcf925288d1cb6491f33"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/assets/symbol_keep_away_from_children_gray_jp.svg",
+      "size": 4074,
+      "sha256": "af71ae09a5498979d0722d5a8a11347936d4be2b994898f2aabda0e2cea5c817"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/assets/symbol_li_ion.svg",
+      "size": 7306,
+      "sha256": "317b9e9feb7747092569a1074d5e05e43bca5ddb96e9404f8e33746df9da7a8e"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/assets/symbol_no_open_flame_gray_jp.svg",
+      "size": 2815,
+      "sha256": "5d52569eb51f41f45826b7b144efe59410b5017b0557508b1577c4620d7e8aee"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/assets/symbol_read_manual_person.svg",
+      "size": 4918,
+      "sha256": "b925552372b168a3e354081d97e43ccd08eb74803f685fc32223e49a27d0c0e5"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/assets/symbol_warning_triangle.svg",
+      "size": 4481,
+      "sha256": "0f41fe5ea49fb7a830cab90d2a5473587dd8a0c04db775b42953f58dbea3fb0a"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/assets/symbol_weee.png",
+      "size": 7672,
+      "sha256": "6883f899f43ac0642f43b8f9cf4118a394c1382ee409f4498544f90ba37b56a5"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/assets/ups.svg",
+      "size": 308607,
+      "sha256": "87f8ac97678da34f07718a44549ecc46dfa3fb96c78a6dbba04732df5d774edf"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/conf.py",
+      "size": 831,
+      "sha256": "dd57e78ee9de9a3d943f6389cb61a4380433cc2e3efdc6af83fd1d0e8055c94c"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/evidence/frozen_source_manifest.json",
+      "size": 118324,
+      "sha256": "214803cb076ddcab301669ef57947621868037000ff5a0b78afbe32b823496de"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/evidence/language_projection_receipt.json",
+      "size": 27165,
+      "sha256": "1714cb2d414b2eedcec01b8f18ee643aac253fb2a7a05b803b3e7d783d25d43b"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/index.md",
+      "size": 92,
+      "sha256": "c12d6c0b7dedc057bcbfde555c48cde009c886bbae47fc70ae0c012bad92f667"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/manual.ir.json",
+      "size": 564382,
+      "sha256": "be9e76c076e20426900c17ff2d3d1fdd9924cf9196a4a15ea6fb7d463738282e"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/manual_jhp3000d_us_fr.md",
+      "size": 84874,
+      "sha256": "bf11595a317f4ff65eff23f85c53f1f1f984849a14e251283f073959d5423d00"
+    },
+    {
+      "path": "sources/web/JHP-3000D/US/fr/md/publish_meta.json",
+      "size": 586,
+      "sha256": "b348561d917da234c41a8af80f537950db4a17077600f0284a9f40856e03d72a"
+    },
+    {
       "path": "sources/web/JHP-3600C/US/en/md/_static/source_presentation.css",
       "size": 17582,
       "sha256": "4bb5dc2af01483b92085d676324eff017babc0d1a75f9dda476d2ea14d952da7"
@@ -39048,6 +40057,121 @@
       "sha256": "7539d454fc17333a40bd3eddb39d36b43de80b24516f7a29eaac8e8fb2a74d12"
     },
     {
+      "path": "web/JHP-3000D/US/en/md/_static/source_presentation.css",
+      "size": 4024,
+      "sha256": "6bf2810a49128b7f4f186be55f772fc3acdade035491840fbf858d0a2b5a3de0"
+    },
+    {
+      "path": "web/JHP-3000D/US/en/md/_static/web_manual.css",
+      "size": 125530,
+      "sha256": "b21d68bbd53bf1e93bde5c9387d5bcbdde5f0317c810f38cce0f9d6041326090"
+    },
+    {
+      "path": "web/JHP-3000D/US/en/md/evidence/frozen_source_manifest.json",
+      "size": 118324,
+      "sha256": "214803cb076ddcab301669ef57947621868037000ff5a0b78afbe32b823496de"
+    },
+    {
+      "path": "web/JHP-3000D/US/en/md/evidence/language_projection_receipt.json",
+      "size": 26660,
+      "sha256": "aacf6a2afdbff502ae608b17da2bd44d5858daff292e34f580bde53581638819"
+    },
+    {
+      "path": "web/JHP-3000D/US/en/md/index.md",
+      "size": 92,
+      "sha256": "f7327677eb44274baa807d5d3220c954e4591f877fb567cac9904d49abea2156"
+    },
+    {
+      "path": "web/JHP-3000D/US/en/md/manual.ir.json",
+      "size": 531803,
+      "sha256": "069db40d0c3471261102adde229e9b0197bfa502f0f6a009341e9f10cdd1ca64"
+    },
+    {
+      "path": "web/JHP-3000D/US/en/md/manual_jhp3000d_us_en.md",
+      "size": 83409,
+      "sha256": "0df0bbcf2875088fbb83aeb5661fc624a92dbb4247c2114bb30c8d3af9d72b57"
+    },
+    {
+      "path": "web/JHP-3000D/US/es/md/_static/source_presentation.css",
+      "size": 4024,
+      "sha256": "6bf2810a49128b7f4f186be55f772fc3acdade035491840fbf858d0a2b5a3de0"
+    },
+    {
+      "path": "web/JHP-3000D/US/es/md/_static/web_manual.css",
+      "size": 125530,
+      "sha256": "b21d68bbd53bf1e93bde5c9387d5bcbdde5f0317c810f38cce0f9d6041326090"
+    },
+    {
+      "path": "web/JHP-3000D/US/es/md/evidence/frozen_source_manifest.json",
+      "size": 118324,
+      "sha256": "214803cb076ddcab301669ef57947621868037000ff5a0b78afbe32b823496de"
+    },
+    {
+      "path": "web/JHP-3000D/US/es/md/evidence/language_projection_receipt.json",
+      "size": 27166,
+      "sha256": "5307ee25b6ca96e7f1b12807aeb65eeab2f389ce0f34b813828520c62dfe6f57"
+    },
+    {
+      "path": "web/JHP-3000D/US/es/md/index.md",
+      "size": 92,
+      "sha256": "b577f6b25ace7345a7feba9947510f615cdd0d05770f6cd1d026c4a70d2345a7"
+    },
+    {
+      "path": "web/JHP-3000D/US/es/md/manual.ir.json",
+      "size": 567303,
+      "sha256": "f1b80ab4a5a071252f893034f30b3d59a6f2e7352e8d3aee8dbc2c3cc4e9289a"
+    },
+    {
+      "path": "web/JHP-3000D/US/es/md/manual_jhp3000d_us_es.md",
+      "size": 89080,
+      "sha256": "233efaa3df9a042820b63068a7fb404c762967dab164902b5f9b8aeab6ae4975"
+    },
+    {
+      "path": "web/JHP-3000D/US/fr/md/_static/source_presentation.css",
+      "size": 4024,
+      "sha256": "6bf2810a49128b7f4f186be55f772fc3acdade035491840fbf858d0a2b5a3de0"
+    },
+    {
+      "path": "web/JHP-3000D/US/fr/md/_static/web_manual.css",
+      "size": 125530,
+      "sha256": "b21d68bbd53bf1e93bde5c9387d5bcbdde5f0317c810f38cce0f9d6041326090"
+    },
+    {
+      "path": "web/JHP-3000D/US/fr/md/evidence/frozen_source_manifest.json",
+      "size": 118324,
+      "sha256": "214803cb076ddcab301669ef57947621868037000ff5a0b78afbe32b823496de"
+    },
+    {
+      "path": "web/JHP-3000D/US/fr/md/evidence/language_projection_receipt.json",
+      "size": 27165,
+      "sha256": "1714cb2d414b2eedcec01b8f18ee643aac253fb2a7a05b803b3e7d783d25d43b"
+    },
+    {
+      "path": "web/JHP-3000D/US/fr/md/index.md",
+      "size": 92,
+      "sha256": "c12d6c0b7dedc057bcbfde555c48cde009c886bbae47fc70ae0c012bad92f667"
+    },
+    {
+      "path": "web/JHP-3000D/US/fr/md/manual.ir.json",
+      "size": 564382,
+      "sha256": "be9e76c076e20426900c17ff2d3d1fdd9924cf9196a4a15ea6fb7d463738282e"
+    },
+    {
+      "path": "web/JHP-3000D/US/fr/md/manual_jhp3000d_us_fr.md",
+      "size": 90327,
+      "sha256": "fa2b0d7a7c6740274556cae2f9a7a2d8032e8497b2eae5fdd4d7abd60ac27a2b"
+    },
+    {
+      "path": "web/JHP-3000D/US/md/index.md",
+      "size": 268,
+      "sha256": "6e939fe04b15a2858ecd0663b3c23bc5feb7d2725c5117ce16cac2200c707a51"
+    },
+    {
+      "path": "web/JHP-3000D/US/md/manual_jhp3000d_us_en.md",
+      "size": 268,
+      "sha256": "6e939fe04b15a2858ecd0663b3c23bc5feb7d2725c5117ce16cac2200c707a51"
+    },
+    {
       "path": "web/JHP-3600C/US/en/md/_static/source_presentation.css",
       "size": 17582,
       "sha256": "4bb5dc2af01483b92085d676324eff017babc0d1a75f9dda476d2ea14d952da7"
@@ -39668,6 +40792,11 @@
       "sha256": "0934d106ad41c9b4bcf4057b81c3895ae54c1702e127d569986eead92237d914"
     },
     {
+      "path": "web/_static/manual-assets/_pool/09/0984323f428bdceabe126955738b46ca71856bc36adcd419cfe663928d61c4fa.svg",
+      "size": 648956,
+      "sha256": "0984323f428bdceabe126955738b46ca71856bc36adcd419cfe663928d61c4fa"
+    },
+    {
       "path": "web/_static/manual-assets/_pool/09/0997cc2b9e06f3c1918f9642ae4584aa414b048e2390ae60aded8ae9838cb3c0.webp",
       "size": 14628,
       "sha256": "0997cc2b9e06f3c1918f9642ae4584aa414b048e2390ae60aded8ae9838cb3c0"
@@ -40128,6 +41257,11 @@
       "sha256": "18aa7ea899c14797d99dd5772e3b1f5adf49d0c38a4bce1787c62f9c9113d82f"
     },
     {
+      "path": "web/_static/manual-assets/_pool/19/190e8e1a3ecba4eafa647c8191f4b17c1dad17888f0ac2b817272a5cb52a0e91.svg",
+      "size": 825368,
+      "sha256": "190e8e1a3ecba4eafa647c8191f4b17c1dad17888f0ac2b817272a5cb52a0e91"
+    },
+    {
       "path": "web/_static/manual-assets/_pool/19/194f709028c02ca20bb9ad4958cc3ddbc142c75ecf2fe64b8735ffbe5ec1d944.png",
       "size": 47119,
       "sha256": "194f709028c02ca20bb9ad4958cc3ddbc142c75ecf2fe64b8735ffbe5ec1d944"
@@ -40303,6 +41437,11 @@
       "sha256": "1f45ea8b6064933fdd3cf61c492cbbf0f314d2224f5ec7d22bd1f4448f135acc"
     },
     {
+      "path": "web/_static/manual-assets/_pool/1f/1f4f46895de14c782dc8fa17c4c22f6d7752de5124254bfd79f5d02a249fe179.svg",
+      "size": 339811,
+      "sha256": "1f4f46895de14c782dc8fa17c4c22f6d7752de5124254bfd79f5d02a249fe179"
+    },
+    {
       "path": "web/_static/manual-assets/_pool/1f/1f678cd2a4c2ff2959697886a2af1fa1042477b5c4199eeffe3619efcd8f33a6.png",
       "size": 401527,
       "sha256": "1f678cd2a4c2ff2959697886a2af1fa1042477b5c4199eeffe3619efcd8f33a6"
@@ -40346,6 +41485,11 @@
       "path": "web/_static/manual-assets/_pool/20/209c4187aab93e4e3a8a7577875a6b4d31ca325a1ac542ea9d517292ee3b906f.png",
       "size": 42162,
       "sha256": "209c4187aab93e4e3a8a7577875a6b4d31ca325a1ac542ea9d517292ee3b906f"
+    },
+    {
+      "path": "web/_static/manual-assets/_pool/20/20d2bb74dffe1cb42a4429dbb830412ed6b32cba48f32794aa9bc6217302cb3e.svg",
+      "size": 322405,
+      "sha256": "20d2bb74dffe1cb42a4429dbb830412ed6b32cba48f32794aa9bc6217302cb3e"
     },
     {
       "path": "web/_static/manual-assets/_pool/21/211b6d6d4426348d7b1905f6825a5ff271d9c6f49fad8708e969c878a9c3f6b0.png",
@@ -40636,6 +41780,11 @@
       "path": "web/_static/manual-assets/_pool/29/29942f351ac342bb225ffa477fce7f44a460679ea2c33e5057609d31e2db68e0.svg",
       "size": 1629717,
       "sha256": "29942f351ac342bb225ffa477fce7f44a460679ea2c33e5057609d31e2db68e0"
+    },
+    {
+      "path": "web/_static/manual-assets/_pool/29/29a8c72e587c3e4f0192f384710682687a48ce40666e8f6a87c528471efb0a57.svg",
+      "size": 391556,
+      "sha256": "29a8c72e587c3e4f0192f384710682687a48ce40666e8f6a87c528471efb0a57"
     },
     {
       "path": "web/_static/manual-assets/_pool/29/29bdd9e2f9e601bf4e508c86279d43697a281fb74622f67f2156f53aacdfd99a.png",
@@ -40998,6 +42147,11 @@
       "sha256": "355656ed0bcf93aae23effb5e548754e98325ec1efa4169cfa22fe93eec938e3"
     },
     {
+      "path": "web/_static/manual-assets/_pool/35/35cec3a529f6655b0e93a2085a0ef82d0ac8e7ad54f4e3e7233c2ec8a59170aa.svg",
+      "size": 154107,
+      "sha256": "35cec3a529f6655b0e93a2085a0ef82d0ac8e7ad54f4e3e7233c2ec8a59170aa"
+    },
+    {
       "path": "web/_static/manual-assets/_pool/36/3683c9a448c2f8326ef436d54ae1b401b6c24f96064df70048004f8aae2645f9.png",
       "size": 101681,
       "sha256": "3683c9a448c2f8326ef436d54ae1b401b6c24f96064df70048004f8aae2645f9"
@@ -41351,6 +42505,11 @@
       "path": "web/_static/manual-assets/_pool/42/4274c3366ff11b5c753a52a078d218478ea99bec2b5aa8f2fd49798bac541f9d.svg",
       "size": 325081,
       "sha256": "4274c3366ff11b5c753a52a078d218478ea99bec2b5aa8f2fd49798bac541f9d"
+    },
+    {
+      "path": "web/_static/manual-assets/_pool/43/430f615f40588f62aa0ed9bdf8ec401cea95f754ee3c46bcf17a3fd07d1b79e2.svg",
+      "size": 336907,
+      "sha256": "430f615f40588f62aa0ed9bdf8ec401cea95f754ee3c46bcf17a3fd07d1b79e2"
     },
     {
       "path": "web/_static/manual-assets/_pool/43/4320efcbbc0506ca4cabe0cd0b4c268357fc87a224b3a76cf69cffd2f8771075.png",
@@ -41711,6 +42870,11 @@
       "path": "web/_static/manual-assets/_pool/4f/4fa62f372acc9f233dfca89f889e0368314bbcb1b671917b0c2c1903bf2210e8.png",
       "size": 2152,
       "sha256": "4fa62f372acc9f233dfca89f889e0368314bbcb1b671917b0c2c1903bf2210e8"
+    },
+    {
+      "path": "web/_static/manual-assets/_pool/4f/4fbb0e3fbece7f53f02ab7f6dbb4c1554f63738c0dee38ac6aecf44b1254fbc7.svg",
+      "size": 203353,
+      "sha256": "4fbb0e3fbece7f53f02ab7f6dbb4c1554f63738c0dee38ac6aecf44b1254fbc7"
     },
     {
       "path": "web/_static/manual-assets/_pool/4f/4fdc5548fc8aec3252599168df25e9490c5225b62564c500879e867cab252d84.png",
@@ -42628,6 +43792,11 @@
       "sha256": "6eb8244df99af302a5d115bad73b941dc29e575e1a945947d31de3afeafff7f8"
     },
     {
+      "path": "web/_static/manual-assets/_pool/6e/6ebb0b28a8fc426f4d892a76837c420c471dc5af7dccf03eabb388b84f9bcba9.svg",
+      "size": 359256,
+      "sha256": "6ebb0b28a8fc426f4d892a76837c420c471dc5af7dccf03eabb388b84f9bcba9"
+    },
+    {
       "path": "web/_static/manual-assets/_pool/6e/6efe223dae51a4ed12038f782bf0daad4927b34b62622ead6a115d25341b4409.png",
       "size": 107583,
       "sha256": "6efe223dae51a4ed12038f782bf0daad4927b34b62622ead6a115d25341b4409"
@@ -42806,6 +43975,11 @@
       "path": "web/_static/manual-assets/_pool/73/73c5de56ec7f4cab50339c7855a0bc81300d00c25f8730cf8634b83aef1448dd.png",
       "size": 382355,
       "sha256": "73c5de56ec7f4cab50339c7855a0bc81300d00c25f8730cf8634b83aef1448dd"
+    },
+    {
+      "path": "web/_static/manual-assets/_pool/73/73e47cbd6f8f8dd02b8be679fe07bc65de78489d112d19ef04d072f2efb11f1a.svg",
+      "size": 346542,
+      "sha256": "73e47cbd6f8f8dd02b8be679fe07bc65de78489d112d19ef04d072f2efb11f1a"
     },
     {
       "path": "web/_static/manual-assets/_pool/74/74004806e6c0996fb77b2260c046e055194855a96bed97c519bb58c292e3b5e2.png",
@@ -43286,6 +44460,11 @@
       "path": "web/_static/manual-assets/_pool/87/87c82e3b1821a8e3ca32f693e12d5fe81718e94661bcc8dbcb70e803fa7e3576.png",
       "size": 56789,
       "sha256": "87c82e3b1821a8e3ca32f693e12d5fe81718e94661bcc8dbcb70e803fa7e3576"
+    },
+    {
+      "path": "web/_static/manual-assets/_pool/87/87f8ac97678da34f07718a44549ecc46dfa3fb96c78a6dbba04732df5d774edf.svg",
+      "size": 308607,
+      "sha256": "87f8ac97678da34f07718a44549ecc46dfa3fb96c78a6dbba04732df5d774edf"
     },
     {
       "path": "web/_static/manual-assets/_pool/88/88619617a9667401adf359241f338dd129288f020f647378615ce271a3abb8e1.svg",
@@ -43931,6 +45110,11 @@
       "path": "web/_static/manual-assets/_pool/9b/9b148ea95d3a3450591c7220908b0913048f2cdea1e61d200534181c52b47cab.png",
       "size": 2496,
       "sha256": "9b148ea95d3a3450591c7220908b0913048f2cdea1e61d200534181c52b47cab"
+    },
+    {
+      "path": "web/_static/manual-assets/_pool/9b/9b244f4f6ceb3a2c9e0210cf7247f808e8d2af00e23ec0a46544284e00e4124d.svg",
+      "size": 155749,
+      "sha256": "9b244f4f6ceb3a2c9e0210cf7247f808e8d2af00e23ec0a46544284e00e4124d"
     },
     {
       "path": "web/_static/manual-assets/_pool/9b/9b296f0184c0fab0f68297668f6ef34786959141e06bcc14724fe65d98bf1117.png",
@@ -44853,6 +46037,11 @@
       "sha256": "b904648b35d52ca62a075fe5bb8ff52a08de5eab82f8111ca7bf19c0324e5f3a"
     },
     {
+      "path": "web/_static/manual-assets/_pool/b9/b925552372b168a3e354081d97e43ccd08eb74803f685fc32223e49a27d0c0e5.svg",
+      "size": 4918,
+      "sha256": "b925552372b168a3e354081d97e43ccd08eb74803f685fc32223e49a27d0c0e5"
+    },
+    {
       "path": "web/_static/manual-assets/_pool/b9/b98301d1742f0695e0b0c1ec523eba3c79f8c9879fc2672565ff5d79fde0bd66.svg",
       "size": 7080,
       "sha256": "b98301d1742f0695e0b0c1ec523eba3c79f8c9879fc2672565ff5d79fde0bd66"
@@ -45096,6 +46285,11 @@
       "path": "web/_static/manual-assets/_pool/c1/c1cc2514d65958d47a849571aed3738d7160680d39a9376baa3a90a80ff78350.png",
       "size": 25674,
       "sha256": "c1cc2514d65958d47a849571aed3738d7160680d39a9376baa3a90a80ff78350"
+    },
+    {
+      "path": "web/_static/manual-assets/_pool/c1/c1d7bae1f750ef71cd2c20ed30254a3467a4b0a0bc185ae4a38404eb477bd402.svg",
+      "size": 130344,
+      "sha256": "c1d7bae1f750ef71cd2c20ed30254a3467a4b0a0bc185ae4a38404eb477bd402"
     },
     {
       "path": "web/_static/manual-assets/_pool/c2/c203da0caf4cc3538b1d9463dce4566161b82b65d3f1bc43835200a390fec7cd.png",
@@ -46734,8 +47928,8 @@
     },
     {
       "path": "web/index.md",
-      "size": 13783,
-      "sha256": "276e0f2747814270d6fb89f317f3a1bbe631c15e2ad58e19d720c0cb1acb5bd5"
+      "size": 14102,
+      "sha256": "352f39ea3d0fe697b2e347e8b1a3e30e8eff51475700180885b08423934a1926"
     },
     {
       "path": "web/manual.md",
@@ -47306,6 +48500,21 @@
       "path": "web/manual_je500a_eu_en.md",
       "size": 319,
       "sha256": "d381a51c0da3146ead45a83f6c869ce906ebdaee15278f8e2be814c630031b90"
+    },
+    {
+      "path": "web/manual_jhp3000d_us_en.md",
+      "size": 336,
+      "sha256": "9cd964581c7c597511d2627b1b6ce6fc183968d3896bdc9d3c7728b7223ea967"
+    },
+    {
+      "path": "web/manual_jhp3000d_us_es.md",
+      "size": 336,
+      "sha256": "bff60c3c07d0a5ea01289339dfdd29e17ae98444b9a5f67c90f493dd7f677e4c"
+    },
+    {
+      "path": "web/manual_jhp3000d_us_fr.md",
+      "size": 336,
+      "sha256": "da0b45e168ccfa06cc904e5116bc05ec4c9b944ea337a8e715cfe26d11666b57"
     },
     {
       "path": "web/manual_jhp3600c_us_en.md",
