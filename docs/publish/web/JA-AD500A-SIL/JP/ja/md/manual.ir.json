@@ -1,15 +1,15 @@
 {
   "asset_refs": [
     "assets/ir/3c140171d4ae33f68026b81db880318d28ccf3ecd4d4d201c0ec9015080db49d/inbox-module.png",
-    "assets/ir/786c47843102633c475c02ce22d32ea089f348d91799195a648d7fca37fc90d4/inbox-manual.png",
+    "assets/ir/f01512af441ad341022a4116ac908c865d15f29660688fc2801c8b46c7b4dcfa/inbox-manual.png",
     "assets/ir/910a6ce8542f5be9df214a28699b57df6c5abb97c788f1efd72c3b6507f967c2/overview-textless.png",
     "assets/ir/434a3768abbb54d3f148e55fbe2475ce1a38906a18518ce96f266538e72080d8/solar.png",
     "assets/ir/29f7b772d7e313cac5527f2d81b82b00716586375fa6bfd562556030a50319fb/car.png",
     "assets/ir/aaa58d773ab76092d7d3236a2a90ebcad33f992eaeb6491e37bb1c51c5c2ba10/contact-qr.png"
   ],
   "bundle_root": "frozen-source",
-  "bundle_sha256": "1828c37ba9d36a7fa182bed62452b99c11879cf61f412968f6b8755ec7165921",
-  "content_sha256": "ca7c750d1009fef287a53b22077872c9004cb0191b723a8f48feab815188303e",
+  "bundle_sha256": "234b463b1706f23b6df58d49a2a92a17f6b503e82945022b3224a34451857da7",
+  "content_sha256": "eb1fbfa1b10cae8128749e4933ee5692624e37acea1775b8ece9952ae99c24c4",
   "language": "ja",
   "layout_params_sha256": "f5ae099abc1a82ffda3abcc5a13725aca3c201e720a0374d88d1643f9773f279",
   "metadata": {
@@ -17,11 +17,11 @@
       "assets/ir/29f7b772d7e313cac5527f2d81b82b00716586375fa6bfd562556030a50319fb/car.png": "29f7b772d7e313cac5527f2d81b82b00716586375fa6bfd562556030a50319fb",
       "assets/ir/3c140171d4ae33f68026b81db880318d28ccf3ecd4d4d201c0ec9015080db49d/inbox-module.png": "3c140171d4ae33f68026b81db880318d28ccf3ecd4d4d201c0ec9015080db49d",
       "assets/ir/434a3768abbb54d3f148e55fbe2475ce1a38906a18518ce96f266538e72080d8/solar.png": "434a3768abbb54d3f148e55fbe2475ce1a38906a18518ce96f266538e72080d8",
-      "assets/ir/786c47843102633c475c02ce22d32ea089f348d91799195a648d7fca37fc90d4/inbox-manual.png": "786c47843102633c475c02ce22d32ea089f348d91799195a648d7fca37fc90d4",
       "assets/ir/910a6ce8542f5be9df214a28699b57df6c5abb97c788f1efd72c3b6507f967c2/overview-textless.png": "910a6ce8542f5be9df214a28699b57df6c5abb97c788f1efd72c3b6507f967c2",
-      "assets/ir/aaa58d773ab76092d7d3236a2a90ebcad33f992eaeb6491e37bb1c51c5c2ba10/contact-qr.png": "aaa58d773ab76092d7d3236a2a90ebcad33f992eaeb6491e37bb1c51c5c2ba10"
+      "assets/ir/aaa58d773ab76092d7d3236a2a90ebcad33f992eaeb6491e37bb1c51c5c2ba10/contact-qr.png": "aaa58d773ab76092d7d3236a2a90ebcad33f992eaeb6491e37bb1c51c5c2ba10",
+      "assets/ir/f01512af441ad341022a4116ac908c865d15f29660688fc2801c8b46c7b4dcfa/inbox-manual.png": "f01512af441ad341022a4116ac908c865d15f29660688fc2801c8b46c7b4dcfa"
     },
-    "block_count": 69,
+    "block_count": 58,
     "component_inventory": {
       "HB-CALLOUT-STRIP": 2,
       "HB-SPECIAL-INBOX": 1,
@@ -1268,18 +1268,13 @@
           9
         ]
       },
+      "derived_from": {
+        "authorization": "MA-272",
+        "manifest_sha256": "0babde2c5e53f01e3511bcc40c0ce6d7603f61351fd627f062e6e89408fb7291",
+        "package": "git-20261008-ac3a1f82-reviewed"
+      },
       "filename_version": "V2.0-20260525",
       "inputs": [
-        {
-          "path": "README.md",
-          "sha256": "6b97a039cb4e8cea62928b5ce26d8ddff16db81a21f19988fefe78499454ea97",
-          "size": 1163
-        },
-        {
-          "path": "approval.json",
-          "sha256": "1a97cf349dd46dcd08626b2cde6453979c5462f5a5a55bf03e9cc57c5b719c0b",
-          "size": 2329
-        },
         {
           "path": "assets/car.png",
           "sha256": "29f7b772d7e313cac5527f2d81b82b00716586375fa6bfd562556030a50319fb",
@@ -1292,8 +1287,8 @@
         },
         {
           "path": "assets/inbox-manual.png",
-          "sha256": "786c47843102633c475c02ce22d32ea089f348d91799195a648d7fca37fc90d4",
-          "size": 15368
+          "sha256": "f01512af441ad341022a4116ac908c865d15f29660688fc2801c8b46c7b4dcfa",
+          "size": 15546
         },
         {
           "path": "assets/inbox-module.png",
@@ -1316,14 +1311,29 @@
           "size": 214039
         },
         {
+          "path": "derive_web_layout.py",
+          "sha256": "bd3169eb5739451470539f02fa41a2e46646dc1da53ed7521eb45908a3f8891b",
+          "size": 15249
+        },
+        {
           "path": "render.py",
-          "sha256": "c3c13e74a0b4fe1402b0f4b15d446b0d267af69e35aba5920f7ed3f5a051df4f",
-          "size": 4277
+          "sha256": "4369939d628677b1efd3b94bc338e38d4df769a404fc4fa7b10f3a4240e7c459",
+          "size": 7539
+        },
+        {
+          "path": "source/approval.json",
+          "sha256": "7d442f34a9c5c8abc8e07a5abed84e6714103119825f3136fb8c89765b042600",
+          "size": 4461
         },
         {
           "path": "source/asset_recipe.json",
-          "sha256": "e6f36e4b8ac4cbdbcff31bce53739e2f39ff9c38cb4d3d0f828c37f0e310ea7a",
+          "sha256": "cc4cfb583d3d45701f780c94112241acde56f81da44d889189a1a5e49f843f5e",
           "size": 8152
+        },
+        {
+          "path": "source/differences.md",
+          "sha256": "11f38c76cb201d2bc75bdd6d3762c4b9d4eb8c7a40dd41987bba76a15ec68d06",
+          "size": 5750
         },
         {
           "path": "source/native_pages.json",
@@ -1337,18 +1347,18 @@
         },
         {
           "path": "source/page/00_preface_ja.rst",
-          "sha256": "97c32b36adfeec2577b3da60571931fb95e77f227fd3768ca05b15b9b762f223",
-          "size": 801
+          "sha256": "e3924cf5160099db9fa872f84bab83a8778183266241b6974aa16247518f1e83",
+          "size": 563
         },
         {
           "path": "source/page/box_contents_ja.rst",
-          "sha256": "bf9ff42e9ffe6ec6367402fdf4ee8b30093eff2a0d4e6d926566ae3ab60459e4",
-          "size": 387
+          "sha256": "660112948d06424916a348f00569eadbfc4409be87f38c1f29a6a46ecf70835a",
+          "size": 391
         },
         {
           "path": "source/page/charging_ja.rst",
-          "sha256": "6cb2e9120c898a039d989d80eca332cc37fc3bc87c7b84eacf9e2c467053cec1",
-          "size": 5764
+          "sha256": "32ea8806732698b782763308233684d2e3e9dab7b370aad95187717eee75ad26",
+          "size": 5908
         },
         {
           "path": "source/page/contact_ja.rst",
@@ -1357,18 +1367,23 @@
         },
         {
           "path": "source/page/product_overview_ja.rst",
-          "sha256": "aa7b1f6766d188de1dad32e8a89a99a20fc2138d48d75f5538c7a0a9b7ca4a5b",
-          "size": 3923
+          "sha256": "4776b64c70932be46e0be4832ac31620a0b954a65a3e4b0be74349c114d26e2d",
+          "size": 4165
         },
         {
           "path": "source/page/spec_ja.rst",
-          "sha256": "fb7fd9c24d1156e015bc1a3e3c2a4580e8b540733f9fc426cd100c792cc82ad7",
-          "size": 946
+          "sha256": "56e5a7d035e8b535205c091055ec95747c4d47df0b6527d7eae5f261ffcd39c8",
+          "size": 968
         },
         {
           "path": "source/page/warranty_ja.rst",
-          "sha256": "9221f19655ccb1d1c9c1f9711073750fcff4cb007a5434e76db6d47d4fdbb0ff",
-          "size": 4380
+          "sha256": "5bcffdd906357eb26d84eed3bbc61c5bc79568666fc49c37760bbaa36aaecde7",
+          "size": 4507
+        },
+        {
+          "path": "source/presentation.css",
+          "sha256": "ba157c945942b1c2264a51b25efa8d9b9931ab6fc195fce987dcee30d9f44fde",
+          "size": 4270
         }
       ],
       "language_scope": "single",
@@ -1378,7 +1393,9 @@
         "source 出カ, halfwidth ｼｶﾞｰｿｹｯﾄ, commas/hyphens/numerals retained",
         "cover repeated inside booklet artwork kept in image only; primary cover copy remains selectable",
         "external diagram labels editable through shared ReferenceFigure; product markings retained",
-        "no added contact chapter"
+        "no added contact chapter",
+        "Web layout: printed cover identity lines (physical 1) are not part of the Web edition; the welcome lead and its four reader instructions remain at the top.",
+        "Web layout: rich-text structure, print line breaks, grey panels/capsules and source.css follow the PDF; no Japanese wording is edited."
       ],
       "original_source": {
         "filename": "Jackery DC Input Module取扱説明書V2.0-20260525.pdf",
@@ -1398,6 +1415,7 @@
       "pending_source_review": [],
       "printed_manual_version": null,
       "publication_eligible": true,
+      "publication_status": "operator-approved-git-only-release",
       "repo_inputs": [
         {
           "path": "docs/renderers/contracts/web_presentation/target_overlays.json",
@@ -1436,7 +1454,7 @@
         }
       ],
       "schema_version": "auto-manual-frozen-web-source/v1",
-      "source_authority": "operator-designated Japanese PDF; original Japanese governs all technical/legal copy",
+      "source_authority": "operator-designated Japanese PDF; original Japanese governs all technical/legal copy. Web-layout edition of the approved package git-20261008-ac3a1f82-reviewed (MA-272) on operator instruction 2026-10-09 (「开新窗口 把这个的版面也调整了」, applying the JBP-1000B-WH JP rules 「全部修，一次做完」「封面和目录 不用体现在web版面上」「你参考 资料库里 现有的je-1000f的日语网页说明书」); operator accepted reviewed candidate 618c31e for public Git-only JP/ja release on 2026-10-09 (「上线提交发布」; merge by operator review). Acceptance is hash-bound in source/approval.json.",
       "source_concerns": [
         {
           "disposition": "preserved verbatim under operator publication authorization; source-owner corrections remain separate",
@@ -1463,20 +1481,34 @@
           "issue": "warranty refers to portable power products"
         }
       ],
-      "source_role": "Git-only operator-approved Japanese prepared native Web release",
+      "source_role": "Git-only Japanese prepared native Web-layout edition of the approved release",
       "target": {
         "languages": [
           "ja"
         ],
         "model": "JA-AD500A-SIL",
         "region": "JP",
-        "technical_version": "git-20261008-ac3a1f82-reviewed"
+        "technical_version": "git-20261009-ac3a1f82-web-layout"
       },
+      "web_exclusions": [
+        {
+          "lines": [
+            "取扱説明書",
+            "Jackery DC Input Module",
+            "型番:JA-AD500A-SIL",
+            "国内専用/For use only in Japan",
+            "写真はイメージです。実際の商品とは異なる場合があります。",
+            "カスタマーサポート: jackery.jp@jackery.com"
+          ],
+          "physical_page": 1,
+          "role": "printed cover"
+        }
+      ],
       "web_roots": {
         "ja": "web/ja"
       }
     },
-    "frozen_stylesheet_sha256": "5783008c449b8db9c618492118199a11c10f5aafae5d53c2a15b90ab2ebb65f1",
+    "frozen_stylesheet_sha256": "b21d68bbd53bf1e93bde5c9387d5bcbdde5f0317c810f38cce0f9d6041326090",
     "illustration_provenance": null,
     "manual_theme": {
       "component_roles": {
@@ -2057,47 +2089,130 @@
     },
     "manual_theme_sha256": "e8fc88458d239edef85f2cfb0b26b71df2e83859c8e51e9c093e5abc2982b47d",
     "markdown_filename": "manual_jaad500asil_jp_ja.md",
-    "operator_release_approval": {
-      "authorization": "MA-272",
-      "candidate_manifest_sha256": "5d00ca5e318372ed031e21805bf10886b53a683b6e7bb15ac908a1fa2172f192",
-      "candidate_source_commit": "be6643d5683acfa6e20a8e46b43eea25e9447da9",
-      "date": "2026-10-08",
-      "decision": "Publish the current Japanese candidate with its source wording, numerical discrepancies and warranty wording preserved. Filename version remains distinct from unknown printed version. No live table or registry writes.",
-      "language": "ja",
-      "model": "JA-AD500A-SIL",
+    "operator_source_acceptance": {
+      "date": "2026-10-09",
+      "derived_from": {
+        "merge_authorization": "MA-272",
+        "operator_instructions": [
+          "开新窗口 把这个的版面也调整了",
+          "全部修，一次做完",
+          "封面和目录 不用体现在web版面上",
+          "你参考 资料库里 现有的je-1000f的日语网页说明书"
+        ],
+        "package": "git-20261008-ac3a1f82-reviewed"
+      },
+      "merge_authorization": "Operator review and merge of the engineering PR (AGENTS.md §8.6); no agent self-merge grant.",
+      "operator_decisions": [
+        "以仓库里这份为准，欢迎语保留，不加图标",
+        "就是这个：我这次逐页对比用的是仓库里 JA-AD500A-SIL 已批准包里的另一份：Jackery DC Input Module取扱説明書V2.0-20260525.pdf"
+      ],
+      "operator_quote": "上线提交发布",
       "original_source_sha256": "ac3a1f820d94277f6c1a667bafddfa930363b1d74fb084eb7bed43b1c3749777",
-      "region": "JP",
-      "retained_source_concerns": [
+      "reviewed_inputs": [
         {
-          "disposition": "preserved verbatim under operator publication authorization; source-owner corrections remain separate",
-          "issue": "filename V2.0-20260525 vs PDF metadata 2026-05-06; no printed version"
+          "path": "assets/car.png",
+          "sha256": "29f7b772d7e313cac5527f2d81b82b00716586375fa6bfd562556030a50319fb",
+          "size": 91687
         },
         {
-          "disposition": "preserved verbatim under operator publication authorization; source-owner corrections remain separate",
-          "issue": "cover refers to safety chapter absent as standalone heading"
+          "path": "assets/contact-qr.png",
+          "sha256": "aaa58d773ab76092d7d3236a2a90ebcad33f992eaeb6491e37bb1c51c5c2ba10",
+          "size": 3197
         },
         {
-          "disposition": "preserved verbatim under operator publication authorization; source-owner corrections remain separate",
-          "issue": "DC input 8A versus 12V/10A vehicle text; host ranges differ from module range"
+          "path": "assets/inbox-manual.png",
+          "sha256": "f01512af441ad341022a4116ac908c865d15f29660688fc2801c8b46c7b4dcfa",
+          "size": 15546
         },
         {
-          "disposition": "preserved verbatim under operator publication authorization; source-owner corrections remain separate",
-          "issue": "spec labels use 出カ"
+          "path": "assets/inbox-module.png",
+          "sha256": "3c140171d4ae33f68026b81db880318d28ccf3ecd4d4d201c0ec9015080db49d",
+          "size": 14353
         },
         {
-          "disposition": "preserved verbatim under operator publication authorization; source-owner corrections remain separate",
-          "issue": "voltage warning and geographic warranty scope concatenate phrases"
+          "path": "assets/overview-textless.pdf",
+          "sha256": "daea42641b87e4d3a7a838645858b852b609c8146a7703c834425fbd30cd0891",
+          "size": 1016968
         },
         {
-          "disposition": "preserved verbatim under operator publication authorization; source-owner corrections remain separate",
-          "issue": "warranty refers to portable power products"
+          "path": "assets/overview-textless.png",
+          "sha256": "910a6ce8542f5be9df214a28699b57df6c5abb97c788f1efd72c3b6507f967c2",
+          "size": 72743
+        },
+        {
+          "path": "assets/solar.png",
+          "sha256": "434a3768abbb54d3f148e55fbe2475ce1a38906a18518ce96f266538e72080d8",
+          "size": 214039
+        },
+        {
+          "path": "source/asset_recipe.json",
+          "sha256": "cc4cfb583d3d45701f780c94112241acde56f81da44d889189a1a5e49f843f5e",
+          "size": 8152
+        },
+        {
+          "path": "source/differences.md",
+          "sha256": "11f38c76cb201d2bc75bdd6d3762c4b9d4eb8c7a40dd41987bba76a15ec68d06",
+          "size": 5750
+        },
+        {
+          "path": "source/native_pages.json",
+          "sha256": "6628ad196c0206fc5165ce498827bb61c5f4c8d27636251fcc25c5237ed698f5",
+          "size": 46041
+        },
+        {
+          "path": "source/original.pdf",
+          "sha256": "ac3a1f820d94277f6c1a667bafddfa930363b1d74fb084eb7bed43b1c3749777",
+          "size": 1263748
+        },
+        {
+          "path": "source/page/00_preface_ja.rst",
+          "sha256": "e3924cf5160099db9fa872f84bab83a8778183266241b6974aa16247518f1e83",
+          "size": 563
+        },
+        {
+          "path": "source/page/box_contents_ja.rst",
+          "sha256": "660112948d06424916a348f00569eadbfc4409be87f38c1f29a6a46ecf70835a",
+          "size": 391
+        },
+        {
+          "path": "source/page/charging_ja.rst",
+          "sha256": "32ea8806732698b782763308233684d2e3e9dab7b370aad95187717eee75ad26",
+          "size": 5908
+        },
+        {
+          "path": "source/page/contact_ja.rst",
+          "sha256": "1e28f9fcfb583bc579d9aea1a0de3db3e38b9a7894da839eb98eea01e2b27a89",
+          "size": 495
+        },
+        {
+          "path": "source/page/product_overview_ja.rst",
+          "sha256": "4776b64c70932be46e0be4832ac31620a0b954a65a3e4b0be74349c114d26e2d",
+          "size": 4165
+        },
+        {
+          "path": "source/page/spec_ja.rst",
+          "sha256": "56e5a7d035e8b535205c091055ec95747c4d47df0b6527d7eae5f261ffcd39c8",
+          "size": 968
+        },
+        {
+          "path": "source/page/warranty_ja.rst",
+          "sha256": "5bcffdd906357eb26d84eed3bbc61c5bc79568666fc49c37760bbaa36aaecde7",
+          "size": 4507
+        },
+        {
+          "path": "source/presentation.css",
+          "sha256": "ba157c945942b1c2264a51b25efa8d9b9931ab6fc195fce987dcee30d9f44fde",
+          "size": 4270
         }
       ],
-      "reviewed_css_sha256": "5783008c449b8db9c618492118199a11c10f5aafae5d53c2a15b90ab2ebb65f1",
-      "reviewed_html_sha256": "3415d087c55e55c60b08717296065786e9de735303347f48f09bd108b4d088a1",
-      "reviewed_markdown_sha256": "3c5f07767ca49687a9ba3ce11c8befe1d0ae673c33ed79463edfae79bdb5748f",
-      "schema_version": "manual-reviewed-publication-approval/v1",
-      "user_instruction": "上线提交发布"
+      "reviewed_source_commit": "618c31e",
+      "schema_version": "source-operator-acceptance/v1",
+      "scope": "Public engineering submission and Git-only JP/ja Web-layout release of git-20261009-ac3a1f82-web-layout; the approved package and its release evidence stay unchanged; approved Japanese wording unchanged (printed cover identity lines omitted); no online Base, queue, source-table, asset-registry or HTML_link writes.",
+      "target": {
+        "language": "ja",
+        "model": "JA-AD500A-SIL",
+        "region": "JP"
+      }
     },
     "page_count": 7,
     "page_declarations": {},
@@ -2106,6 +2221,10 @@
     "projection": "whole-document-components/v1",
     "publication_eligible": true,
     "skipped_raw": 0,
+    "source_stylesheet": {
+      "path": "_static/source.css",
+      "sha256": "ba157c945942b1c2264a51b25efa8d9b9931ab6fc195fce987dcee30d9f44fde"
+    },
     "title": "Jackery DC Input Module",
     "web_contract": {
       "app_download": {
@@ -2277,17 +2396,30 @@
         {
           "asset_refs": [],
           "block_id": "00_preface_ja.rst:block-0001",
-          "content_sha256": "5ac9e563de078a5ae7c218278d2d4534c91c5fc13d85b3e44fad45b635fcef42",
+          "content_sha256": "285e0f21c253831b082ae3f7772b2c28a95bbfd6dabdbc6fcda4c426d6e329b5",
           "kind": "flow",
           "payload": {
             "children": [
               {
-                "kind": "text",
-                "text": "取扱説明書"
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "お買い上げありがとうございます。"
+                  }
+                ],
+                "kind": "strong"
               }
             ],
-            "kind": "heading",
-            "level": 1,
+            "kind": "paragraph",
+            "presentation": {
+              "html": {
+                "attributes": {
+                  "class": [
+                    "jpad-welcome-lead"
+                  ]
+                }
+              }
+            },
             "schema_version": "manual-flow/v2"
           },
           "source_ref": "00_preface_ja.rst#block-1"
@@ -2295,201 +2427,19 @@
         {
           "asset_refs": [],
           "block_id": "00_preface_ja.rst:block-0002",
-          "content_sha256": "37e52e738c59d23458eb5c15b4cd1abed26217549bbe870abeca048c3da8406f",
+          "content_sha256": "409f08d09ec16d10e5859c444f978d45e82cc092bc1ece8fafaf29f65dc755f8",
           "kind": "flow",
           "payload": {
-            "children": [
-              {
-                "kind": "text",
-                "text": "Jackery DC Input Module"
-              }
-            ],
-            "kind": "paragraph",
-            "schema_version": "manual-flow/v2"
+            "kind": "text",
+            "schema_version": "manual-flow/v2",
+            "text": "\n"
           },
           "source_ref": "00_preface_ja.rst#block-2"
         },
         {
           "asset_refs": [],
           "block_id": "00_preface_ja.rst:block-0003",
-          "content_sha256": "409f08d09ec16d10e5859c444f978d45e82cc092bc1ece8fafaf29f65dc755f8",
-          "kind": "flow",
-          "payload": {
-            "kind": "text",
-            "schema_version": "manual-flow/v2",
-            "text": "\n"
-          },
-          "source_ref": "00_preface_ja.rst#block-3"
-        },
-        {
-          "asset_refs": [],
-          "block_id": "00_preface_ja.rst:block-0004",
-          "content_sha256": "07a023451ea016c918a4c6795b3b472d476a1f8c75ee41f37dc6341f9352f492",
-          "kind": "flow",
-          "payload": {
-            "children": [
-              {
-                "kind": "text",
-                "text": "型番:JA-AD500A-SIL"
-              }
-            ],
-            "kind": "paragraph",
-            "schema_version": "manual-flow/v2"
-          },
-          "source_ref": "00_preface_ja.rst#block-4"
-        },
-        {
-          "asset_refs": [],
-          "block_id": "00_preface_ja.rst:block-0005",
-          "content_sha256": "409f08d09ec16d10e5859c444f978d45e82cc092bc1ece8fafaf29f65dc755f8",
-          "kind": "flow",
-          "payload": {
-            "kind": "text",
-            "schema_version": "manual-flow/v2",
-            "text": "\n"
-          },
-          "source_ref": "00_preface_ja.rst#block-5"
-        },
-        {
-          "asset_refs": [],
-          "block_id": "00_preface_ja.rst:block-0006",
-          "content_sha256": "5f77aa7e89a9f0a7e3389e6d9832eb0f6c063d2f577ec398065d11c58cd3b950",
-          "kind": "flow",
-          "payload": {
-            "children": [
-              {
-                "kind": "text",
-                "text": "国内専用/For use only in Japan"
-              }
-            ],
-            "kind": "paragraph",
-            "schema_version": "manual-flow/v2"
-          },
-          "source_ref": "00_preface_ja.rst#block-6"
-        },
-        {
-          "asset_refs": [],
-          "block_id": "00_preface_ja.rst:block-0007",
-          "content_sha256": "409f08d09ec16d10e5859c444f978d45e82cc092bc1ece8fafaf29f65dc755f8",
-          "kind": "flow",
-          "payload": {
-            "kind": "text",
-            "schema_version": "manual-flow/v2",
-            "text": "\n"
-          },
-          "source_ref": "00_preface_ja.rst#block-7"
-        },
-        {
-          "asset_refs": [],
-          "block_id": "00_preface_ja.rst:block-0008",
-          "content_sha256": "ed15ae8c8b16f714a9676fd18139128d7160717e6cff0f217ca7af352270906c",
-          "kind": "flow",
-          "payload": {
-            "children": [
-              {
-                "kind": "text",
-                "text": "写真はイメージです。実際の商品とは異なる場合があります。"
-              }
-            ],
-            "kind": "paragraph",
-            "schema_version": "manual-flow/v2"
-          },
-          "source_ref": "00_preface_ja.rst#block-8"
-        },
-        {
-          "asset_refs": [],
-          "block_id": "00_preface_ja.rst:block-0009",
-          "content_sha256": "409f08d09ec16d10e5859c444f978d45e82cc092bc1ece8fafaf29f65dc755f8",
-          "kind": "flow",
-          "payload": {
-            "kind": "text",
-            "schema_version": "manual-flow/v2",
-            "text": "\n"
-          },
-          "source_ref": "00_preface_ja.rst#block-9"
-        },
-        {
-          "asset_refs": [],
-          "block_id": "00_preface_ja.rst:block-0010",
-          "content_sha256": "244fa4e9a6b026d1c3d3c290d2e416e47bf046890c8933c7357ce261b48ba2f5",
-          "kind": "flow",
-          "payload": {
-            "children": [
-              {
-                "kind": "text",
-                "text": "カスタマーサポート: "
-              },
-              {
-                "children": [
-                  {
-                    "kind": "text",
-                    "text": "jackery.jp@jackery.com"
-                  }
-                ],
-                "kind": "link",
-                "presentation": {
-                  "html": {
-                    "attributes": {
-                      "class": [
-                        "reference",
-                        "external"
-                      ]
-                    }
-                  }
-                },
-                "target": "mailto:jackery.jp@jackery.com"
-              }
-            ],
-            "kind": "paragraph",
-            "schema_version": "manual-flow/v2"
-          },
-          "source_ref": "00_preface_ja.rst#block-10"
-        },
-        {
-          "asset_refs": [],
-          "block_id": "00_preface_ja.rst:block-0011",
-          "content_sha256": "409f08d09ec16d10e5859c444f978d45e82cc092bc1ece8fafaf29f65dc755f8",
-          "kind": "flow",
-          "payload": {
-            "kind": "text",
-            "schema_version": "manual-flow/v2",
-            "text": "\n"
-          },
-          "source_ref": "00_preface_ja.rst#block-11"
-        },
-        {
-          "asset_refs": [],
-          "block_id": "00_preface_ja.rst:block-0012",
-          "content_sha256": "b6028fc7e483d890a2be5d1657f1bc4027176518c25e04d6a3c8b01e67242afe",
-          "kind": "flow",
-          "payload": {
-            "children": [
-              {
-                "kind": "text",
-                "text": "お買い上げありがとうございます。"
-              }
-            ],
-            "kind": "paragraph",
-            "schema_version": "manual-flow/v2"
-          },
-          "source_ref": "00_preface_ja.rst#block-12"
-        },
-        {
-          "asset_refs": [],
-          "block_id": "00_preface_ja.rst:block-0013",
-          "content_sha256": "409f08d09ec16d10e5859c444f978d45e82cc092bc1ece8fafaf29f65dc755f8",
-          "kind": "flow",
-          "payload": {
-            "kind": "text",
-            "schema_version": "manual-flow/v2",
-            "text": "\n"
-          },
-          "source_ref": "00_preface_ja.rst#block-13"
-        },
-        {
-          "asset_refs": [],
-          "block_id": "00_preface_ja.rst:block-0014",
-          "content_sha256": "dc66d3388ab8cae2a35f7483d11cc1db65d2d37e72a6d68d9c653861f108f1a7",
+          "content_sha256": "ec6e3731d605eb3b74028096b4254d5a4e89cc6e74d81b7ec6e0a7b605f492e3",
           "kind": "flow",
           "payload": {
             "children": [
@@ -2576,6 +2526,7 @@
               "html": {
                 "attributes": {
                   "class": [
+                    "jpad-tight",
                     "simple"
                   ]
                 }
@@ -2583,15 +2534,15 @@
             },
             "schema_version": "manual-flow/v2"
           },
-          "source_ref": "00_preface_ja.rst#block-14"
+          "source_ref": "00_preface_ja.rst#block-3"
         }
       ],
       "language": "ja",
       "page_id": "00_preface_ja.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/dc-input-jp-web/auto-manual2/manual_sources/JA-AD500A-SIL/JP/ja/git-20261008-ac3a1f82-reviewed/source/page/00_preface_ja.rst",
+      "source_path": "source/page/00_preface_ja.rst",
       "source_ref": "00_preface_ja.rst",
-      "source_sha256": "97c32b36adfeec2577b3da60571931fb95e77f227fd3768ca05b15b9b762f223"
+      "source_sha256": "e3924cf5160099db9fa872f84bab83a8778183266241b6974aa16247518f1e83"
     },
     {
       "blocks": [
@@ -2616,10 +2567,10 @@
         {
           "asset_refs": [
             "assets/ir/3c140171d4ae33f68026b81db880318d28ccf3ecd4d4d201c0ec9015080db49d/inbox-module.png",
-            "assets/ir/786c47843102633c475c02ce22d32ea089f348d91799195a648d7fca37fc90d4/inbox-manual.png"
+            "assets/ir/f01512af441ad341022a4116ac908c865d15f29660688fc2801c8b46c7b4dcfa/inbox-manual.png"
           ],
           "block_id": "box_contents_ja.rst:block-0002",
-          "content_sha256": "d3887f752281ff544b22cbf7ca0a0144b265d33177d7c07cc3a4d10bda68bad1",
+          "content_sha256": "5e31afee73930ac466c936caf6072579881b131cbac25b2dd688a8587033934d",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -2715,7 +2666,7 @@
                               {
                                 "alt": "取扱説明書",
                                 "kind": "image",
-                                "source": "assets/ir/786c47843102633c475c02ce22d32ea089f348d91799195a648d7fca37fc90d4/inbox-manual.png"
+                                "source": "assets/ir/f01512af441ad341022a4116ac908c865d15f29660688fc2801c8b46c7b4dcfa/inbox-manual.png"
                               },
                               {
                                 "kind": "text",
@@ -2768,7 +2719,7 @@
                   "role": "card_art"
                 },
                 {
-                  "asset_ref": "assets/ir/786c47843102633c475c02ce22d32ea089f348d91799195a648d7fca37fc90d4/inbox-manual.png",
+                  "asset_ref": "assets/ir/f01512af441ad341022a4116ac908c865d15f29660688fc2801c8b46c7b4dcfa/inbox-manual.png",
                   "locale_policy": "shared",
                   "role": "card_art"
                 }
@@ -2812,7 +2763,7 @@
                   "role": "tip_body"
                 }
               ],
-              "source_ref": "/Users/pika/.codex/worktrees/dc-input-jp-web/auto-manual2/manual_sources/JA-AD500A-SIL/JP/ja/git-20261008-ac3a1f82-reviewed/source/page/box_contents_ja.rst",
+              "source_ref": "source/page/box_contents_ja.rst",
               "token_roles": [
                 "component.special.inbox"
               ],
@@ -2838,13 +2789,18 @@
         {
           "asset_refs": [],
           "block_id": "box_contents_ja.rst:block-0004",
-          "content_sha256": "19e2a369339eda153d0cf1c7e21237ca61778ce700711a90eff10568984d4daa",
+          "content_sha256": "32b66ed427d1a9c8249f9a4829697c153dc46142a0258870428ada3de661a61a",
           "kind": "flow",
           "payload": {
             "children": [
               {
-                "kind": "text",
-                "text": "本機の仕様および外観は、改善のため予告なく変更することがあります。"
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "本機の仕様および外観は、改善のため予告なく変更することがあります。"
+                  }
+                ],
+                "kind": "strong"
               }
             ],
             "kind": "paragraph",
@@ -2856,9 +2812,9 @@
       "language": "ja",
       "page_id": "box_contents_ja.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/dc-input-jp-web/auto-manual2/manual_sources/JA-AD500A-SIL/JP/ja/git-20261008-ac3a1f82-reviewed/source/page/box_contents_ja.rst",
+      "source_path": "source/page/box_contents_ja.rst",
       "source_ref": "box_contents_ja.rst",
-      "source_sha256": "bf9ff42e9ffe6ec6367402fdf4ee8b30093eff2a0d4e6d926566ae3ab60459e4"
+      "source_sha256": "660112948d06424916a348f00569eadbfc4409be87f38c1f29a6a46ecf70835a"
     },
     {
       "blocks": [
@@ -2885,7 +2841,7 @@
             "assets/ir/910a6ce8542f5be9df214a28699b57df6c5abb97c788f1efd72c3b6507f967c2/overview-textless.png"
           ],
           "block_id": "product_overview_ja.rst:block-0002",
-          "content_sha256": "a2a8efc78d1dd0d103190c6d60fc8b02ef03fe429d3e80b0410004c2247ea9f5",
+          "content_sha256": "4e377990e254692e8816bc60c4e3ccd23004475f83703a3be1e8f25be744bcf7",
           "kind": "flow",
           "payload": {
             "children": [
@@ -2921,7 +2877,7 @@
                             "presentation": {
                               "html": {
                                 "attributes": {
-                                  "style": "display:block;width:100%;text-align:right;font-size:clamp(12px,1.2em,18px);line-height:1.15"
+                                  "style": "display:block;width:100%;text-align:right;font-size:clamp(12px,1.2em,18px);line-height:1.15;font-weight:700"
                                 }
                               }
                             }
@@ -2952,7 +2908,7 @@
                             "presentation": {
                               "html": {
                                 "attributes": {
-                                  "style": "display:block;width:100%;text-align:right;font-size:clamp(10px,0.95em,14px);line-height:1.15"
+                                  "style": "display:block;width:100%;text-align:right;font-size:clamp(10px,0.8em,12px);line-height:1.15;color:#8a8a8a"
                                 }
                               }
                             }
@@ -2983,7 +2939,7 @@
                             "presentation": {
                               "html": {
                                 "attributes": {
-                                  "style": "display:block;width:100%;text-align:right;font-size:clamp(10px,0.95em,14px);line-height:1.15"
+                                  "style": "display:block;width:100%;text-align:right;font-size:clamp(10px,0.8em,12px);line-height:1.15;color:#8a8a8a"
                                 }
                               }
                             }
@@ -3014,7 +2970,7 @@
                             "presentation": {
                               "html": {
                                 "attributes": {
-                                  "style": "display:block;width:100%;text-align:right;font-size:clamp(12px,1.2em,18px);line-height:1.15"
+                                  "style": "display:block;width:100%;text-align:right;font-size:clamp(12px,1.2em,18px);line-height:1.15;font-weight:700"
                                 }
                               }
                             }
@@ -3045,7 +3001,7 @@
                             "presentation": {
                               "html": {
                                 "attributes": {
-                                  "style": "display:block;width:100%;text-align:right;font-size:clamp(12px,1.2em,18px);line-height:1.15"
+                                  "style": "display:block;width:100%;text-align:right;font-size:clamp(12px,1.2em,18px);line-height:1.15;font-weight:700"
                                 }
                               }
                             }
@@ -3149,7 +3105,7 @@
                     "composite_locale": "",
                     "image_key": "../../assets/overview-textless.png",
                     "presentation_mode": "base-art-live-copy",
-                    "source_fragment_sha256": "658ec9327e381903aa095fb5019d393c1b0f2382bc0f9e7e00e58514ec6c9659",
+                    "source_fragment_sha256": "ce934ab4ce71eaa014b8e0698dbe853724b36f83bb4fc6c2faee91db0923e571",
                     "web_replace_key": "reference.product-overview"
                   },
                   "schema_version": "component-spec/v1",
@@ -3177,23 +3133,23 @@
                     {
                       "content": [
                         {
-                          "html": "<span style=\"display:block;width:100%;text-align:right;font-size:clamp(12px,1.2em,18px);line-height:1.15\">DC入力ポート</span>",
+                          "html": "<span style=\"display:block;width:100%;text-align:right;font-size:clamp(12px,1.2em,18px);line-height:1.15;font-weight:700\">DC入力ポート</span>",
                           "text": "DC入力ポート"
                         },
                         {
-                          "html": "<span style=\"display:block;width:100%;text-align:right;font-size:clamp(10px,0.95em,14px);line-height:1.15\">PV：16V-60V⎓最大13A，2ポート最大24A，最大500W</span>",
+                          "html": "<span style=\"display:block;width:100%;text-align:right;font-size:clamp(10px,0.8em,12px);line-height:1.15;color:#8a8a8a\">PV：16V-60V⎓最大13A，2ポート最大24A，最大500W</span>",
                           "text": "PV：16V-60V⎓最大13A，2ポート最大24A，最大500W"
                         },
                         {
-                          "html": "<span style=\"display:block;width:100%;text-align:right;font-size:clamp(10px,0.95em,14px);line-height:1.15\">ｼｶﾞｰｿｹｯﾄ ：11V-16V⎓最大8A</span>",
+                          "html": "<span style=\"display:block;width:100%;text-align:right;font-size:clamp(10px,0.8em,12px);line-height:1.15;color:#8a8a8a\">ｼｶﾞｰｿｹｯﾄ ：11V-16V⎓最大8A</span>",
                           "text": "ｼｶﾞｰｿｹｯﾄ ：11V-16V⎓最大8A"
                         },
                         {
-                          "html": "<span style=\"display:block;width:100%;text-align:right;font-size:clamp(12px,1.2em,18px);line-height:1.15\">LEDライト</span>",
+                          "html": "<span style=\"display:block;width:100%;text-align:right;font-size:clamp(12px,1.2em,18px);line-height:1.15;font-weight:700\">LEDライト</span>",
                           "text": "LEDライト"
                         },
                         {
-                          "html": "<span style=\"display:block;width:100%;text-align:right;font-size:clamp(12px,1.2em,18px);line-height:1.15\">プラグ</span>",
+                          "html": "<span style=\"display:block;width:100%;text-align:right;font-size:clamp(12px,1.2em,18px);line-height:1.15;font-weight:700\">プラグ</span>",
                           "text": "プラグ"
                         }
                       ],
@@ -3201,7 +3157,7 @@
                       "role": "captions"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/dc-input-jp-web/auto-manual2/manual_sources/JA-AD500A-SIL/JP/ja/git-20261008-ac3a1f82-reviewed/source/page/product_overview_ja.rst#reference-product-overview",
+                  "source_ref": "source/page/product_overview_ja.rst#reference-product-overview",
                   "token_roles": [
                     "component.special.reference-figure"
                   ],
@@ -3261,7 +3217,7 @@
         {
           "asset_refs": [],
           "block_id": "product_overview_ja.rst:block-0005",
-          "content_sha256": "98427d23651fd7a4b65ef70fd3631b8e5b28cbceae162610553b2b04a215818d",
+          "content_sha256": "3cb4409c7c0cfb85439ea245e2453bd07eaba86b97364d154f24d6bbac36c42e",
           "kind": "flow",
           "payload": {
             "children": [
@@ -3354,7 +3310,7 @@
                                   "class": [
                                     "head"
                                   ],
-                                  "style": "padding:0.25rem 0.6rem!important;text-align:left!important;border-bottom:1px solid var(--hb-line-soft)!important;"
+                                  "style": "padding:0.25rem 0.6rem!important;text-align:center!important;border-bottom:1px solid var(--hb-line-soft)!important;background:var(--hb-surface-strong)!important;"
                                 }
                               }
                             },
@@ -3384,7 +3340,7 @@
                                   "class": [
                                     "head"
                                   ],
-                                  "style": "padding:0.25rem 0.6rem!important;text-align:left!important;border-bottom:1px solid var(--hb-line-soft)!important;"
+                                  "style": "padding:0.25rem 0.6rem!important;text-align:center!important;border-bottom:1px solid var(--hb-line-soft)!important;background:var(--hb-surface-strong)!important;"
                                 }
                               }
                             },
@@ -3414,7 +3370,7 @@
                                   "class": [
                                     "head"
                                   ],
-                                  "style": "padding:0.25rem 0.6rem!important;text-align:left!important;border-bottom:1px solid var(--hb-line-soft)!important;"
+                                  "style": "padding:0.25rem 0.6rem!important;text-align:center!important;border-bottom:1px solid var(--hb-line-soft)!important;background:var(--hb-surface-strong)!important;"
                                 }
                               }
                             },
@@ -3463,7 +3419,7 @@
                             "presentation": {
                               "html": {
                                 "attributes": {
-                                  "style": "padding:0.25rem 0.6rem!important;text-align:left!important;"
+                                  "style": "padding:0.25rem 0.6rem!important;text-align:center!important;"
                                 }
                               }
                             }
@@ -3489,7 +3445,7 @@
                             "presentation": {
                               "html": {
                                 "attributes": {
-                                  "style": "padding:0.25rem 0.6rem!important;text-align:left!important;"
+                                  "style": "padding:0.25rem 0.6rem!important;text-align:center!important;"
                                 }
                               }
                             }
@@ -3515,7 +3471,7 @@
                             "presentation": {
                               "html": {
                                 "attributes": {
-                                  "style": "padding:0.25rem 0.6rem!important;text-align:left!important;"
+                                  "style": "padding:0.25rem 0.6rem!important;text-align:center!important;"
                                 }
                               }
                             }
@@ -3550,7 +3506,7 @@
                             "presentation": {
                               "html": {
                                 "attributes": {
-                                  "style": "padding:0.25rem 0.6rem!important;text-align:left!important;"
+                                  "style": "padding:0.25rem 0.6rem!important;text-align:center!important;"
                                 }
                               }
                             }
@@ -3576,7 +3532,7 @@
                             "presentation": {
                               "html": {
                                 "attributes": {
-                                  "style": "padding:0.25rem 0.6rem!important;text-align:left!important;"
+                                  "style": "padding:0.25rem 0.6rem!important;text-align:center!important;"
                                 }
                               }
                             }
@@ -3602,7 +3558,7 @@
                             "presentation": {
                               "html": {
                                 "attributes": {
-                                  "style": "padding:0.25rem 0.6rem!important;text-align:left!important;"
+                                  "style": "padding:0.25rem 0.6rem!important;text-align:center!important;"
                                 }
                               }
                             }
@@ -3637,7 +3593,7 @@
                             "presentation": {
                               "html": {
                                 "attributes": {
-                                  "style": "padding:0.25rem 0.6rem!important;text-align:left!important;"
+                                  "style": "padding:0.25rem 0.6rem!important;text-align:center!important;"
                                 }
                               }
                             }
@@ -3663,7 +3619,7 @@
                             "presentation": {
                               "html": {
                                 "attributes": {
-                                  "style": "padding:0.25rem 0.6rem!important;text-align:left!important;"
+                                  "style": "padding:0.25rem 0.6rem!important;text-align:center!important;"
                                 }
                               }
                             }
@@ -3689,7 +3645,7 @@
                             "presentation": {
                               "html": {
                                 "attributes": {
-                                  "style": "padding:0.25rem 0.6rem!important;text-align:left!important;"
+                                  "style": "padding:0.25rem 0.6rem!important;text-align:center!important;"
                                 }
                               }
                             }
@@ -3724,7 +3680,7 @@
                             "presentation": {
                               "html": {
                                 "attributes": {
-                                  "style": "padding:0.25rem 0.6rem!important;text-align:left!important;"
+                                  "style": "padding:0.25rem 0.6rem!important;text-align:center!important;"
                                 }
                               }
                             }
@@ -3750,7 +3706,7 @@
                             "presentation": {
                               "html": {
                                 "attributes": {
-                                  "style": "padding:0.25rem 0.6rem!important;text-align:left!important;"
+                                  "style": "padding:0.25rem 0.6rem!important;text-align:center!important;"
                                 }
                               }
                             }
@@ -3776,7 +3732,7 @@
                             "presentation": {
                               "html": {
                                 "attributes": {
-                                  "style": "padding:0.25rem 0.6rem!important;text-align:left!important;"
+                                  "style": "padding:0.25rem 0.6rem!important;text-align:center!important;"
                                 }
                               }
                             }
@@ -3834,9 +3790,9 @@
       "language": "ja",
       "page_id": "product_overview_ja.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/dc-input-jp-web/auto-manual2/manual_sources/JA-AD500A-SIL/JP/ja/git-20261008-ac3a1f82-reviewed/source/page/product_overview_ja.rst",
+      "source_path": "source/page/product_overview_ja.rst",
       "source_ref": "product_overview_ja.rst",
-      "source_sha256": "aa7b1f6766d188de1dad32e8a89a99a20fc2138d48d75f5538c7a0a9b7ca4a5b"
+      "source_sha256": "4776b64c70932be46e0be4832ac31620a0b954a65a3e4b0be74349c114d26e2d"
     },
     {
       "blocks": [
@@ -3938,7 +3894,7 @@
         {
           "asset_refs": [],
           "block_id": "charging_ja.rst:block-0007",
-          "content_sha256": "411ace560796ab415c096ed9487eb3d0eedac973e3afd67551f00f57233c6f8e",
+          "content_sha256": "7d344c40a2e1e6530b795b538ac24e97be30678258365ce0f87df251c420a416",
           "kind": "flow",
           "payload": {
             "children": [
@@ -3989,6 +3945,7 @@
               "html": {
                 "attributes": {
                   "class": [
+                    "jpad-tight",
                     "simple"
                   ]
                 }
@@ -4013,7 +3970,7 @@
         {
           "asset_refs": [],
           "block_id": "charging_ja.rst:block-0009",
-          "content_sha256": "ef3b5f492092956893cce853a1f55273da1f35e2aad56dafe06f80bd8db4813d",
+          "content_sha256": "963ed1158ba28b879d3d4449f07b8b448835d62aaaddddf6f38de9fd7060b622",
           "kind": "flow",
           "payload": {
             "children": [
@@ -4023,6 +3980,15 @@
               }
             ],
             "kind": "paragraph",
+            "presentation": {
+              "html": {
+                "attributes": {
+                  "class": [
+                    "jpad-hang"
+                  ]
+                }
+              }
+            },
             "schema_version": "manual-flow/v2"
           },
           "source_ref": "charging_ja.rst#block-9"
@@ -4044,7 +4010,7 @@
             "assets/ir/434a3768abbb54d3f148e55fbe2475ce1a38906a18518ce96f266538e72080d8/solar.png"
           ],
           "block_id": "charging_ja.rst:block-0011",
-          "content_sha256": "fb5e87ff7d9bfaf1eae6614658cdaae8802f086fb70c5fdb8865514e9e6a4e50",
+          "content_sha256": "ba97107934d90e3f7e8c9123b5c70b42f1cff72f15a6c3a3c8d12e85759312b7",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -4182,7 +4148,7 @@
                   "role": "captions"
                 }
               ],
-              "source_ref": "/Users/pika/.codex/worktrees/dc-input-jp-web/auto-manual2/manual_sources/JA-AD500A-SIL/JP/ja/git-20261008-ac3a1f82-reviewed/source/page/charging_ja.rst#reference-solar-connection",
+              "source_ref": "source/page/charging_ja.rst#reference-solar-connection",
               "token_roles": [
                 "component.special.reference-figure"
               ],
@@ -4196,7 +4162,7 @@
         {
           "asset_refs": [],
           "block_id": "charging_ja.rst:block-0012",
-          "content_sha256": "a85b0f70d9a05c3ccfee37d7297b27af368b3f9495a954b892c3a73b5a6b8881",
+          "content_sha256": "82e7640c9a45943e0812d4ef099dc6aea0e5d471844763324f7d6a41aba555de",
           "kind": "flow",
           "payload": {
             "children": [
@@ -4210,10 +4176,93 @@
                     "children": [
                       {
                         "kind": "text",
-                        "text": "直接接続可能です。\n追加のアクセサリーは不要です。\n本製品のDC入力ポートは「8020メス」です。ソーラーパネル側の「8020オス」と接続してください。"
+                        "text": "\n"
+                      },
+                      {
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "直接接続可能です。"
+                          }
+                        ],
+                        "kind": "group",
+                        "presentation": {
+                          "html": {
+                            "attributes": {
+                              "class": [
+                                "line"
+                              ]
+                            }
+                          }
+                        },
+                        "role": "container"
+                      },
+                      {
+                        "kind": "text",
+                        "text": "\n"
+                      },
+                      {
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "追加のアクセサリーは不要です。"
+                          }
+                        ],
+                        "kind": "group",
+                        "presentation": {
+                          "html": {
+                            "attributes": {
+                              "class": [
+                                "line"
+                              ]
+                            }
+                          }
+                        },
+                        "role": "container"
+                      },
+                      {
+                        "kind": "text",
+                        "text": "\n"
+                      },
+                      {
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "本製品のDC入力ポートは「8020メス」です。ソーラーパネル側の「8020オス」と接続してください。"
+                          }
+                        ],
+                        "kind": "group",
+                        "presentation": {
+                          "html": {
+                            "attributes": {
+                              "class": [
+                                "line"
+                              ]
+                            }
+                          }
+                        },
+                        "role": "container"
+                      },
+                      {
+                        "kind": "text",
+                        "text": "\n"
                       }
                     ],
-                    "kind": "paragraph"
+                    "kind": "group",
+                    "presentation": {
+                      "html": {
+                        "attributes": {
+                          "class": [
+                            "line-block"
+                          ]
+                        }
+                      }
+                    },
+                    "role": "container"
+                  },
+                  {
+                    "kind": "text",
+                    "text": "\n"
                   }
                 ],
                 "kind": "list_item"
@@ -4228,10 +4277,115 @@
                     "children": [
                       {
                         "kind": "text",
-                        "text": "別売りの「Jackery SolarSaga アダプター(Pro/Plus/New専用)」が必要です。\n「Jackery SolarSaga アダプター(Pro/Plus/New専用)」（オス・メス）とも8020端子です。\nソーラーパネルの8020オス端子を「Jackery SolarSaga アダプター(Pro/Plus/New専用)」の8020メス端子に接続してください。"
+                        "text": "\n"
+                      },
+                      {
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "別売りの「Jackery SolarSaga アダプター(Pro/Plus/New専用)」が必要です。"
+                          }
+                        ],
+                        "kind": "group",
+                        "presentation": {
+                          "html": {
+                            "attributes": {
+                              "class": [
+                                "line"
+                              ]
+                            }
+                          }
+                        },
+                        "role": "container"
+                      },
+                      {
+                        "kind": "text",
+                        "text": "\n"
+                      },
+                      {
+                        "children": [
+                          {
+                            "kind": "line_break"
+                          }
+                        ],
+                        "kind": "group",
+                        "presentation": {
+                          "html": {
+                            "attributes": {
+                              "class": [
+                                "line"
+                              ]
+                            }
+                          }
+                        },
+                        "role": "container"
+                      },
+                      {
+                        "kind": "text",
+                        "text": "\n"
+                      },
+                      {
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "「Jackery SolarSaga アダプター(Pro/Plus/New専用)」（オス・メス）とも8020端子です。"
+                          }
+                        ],
+                        "kind": "group",
+                        "presentation": {
+                          "html": {
+                            "attributes": {
+                              "class": [
+                                "line"
+                              ]
+                            }
+                          }
+                        },
+                        "role": "container"
+                      },
+                      {
+                        "kind": "text",
+                        "text": "\n"
+                      },
+                      {
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "ソーラーパネルの8020オス端子を「Jackery SolarSaga アダプター(Pro/Plus/New専用)」の8020メス端子に接続してください。"
+                          }
+                        ],
+                        "kind": "group",
+                        "presentation": {
+                          "html": {
+                            "attributes": {
+                              "class": [
+                                "line"
+                              ]
+                            }
+                          }
+                        },
+                        "role": "container"
+                      },
+                      {
+                        "kind": "text",
+                        "text": "\n"
                       }
                     ],
-                    "kind": "paragraph"
+                    "kind": "group",
+                    "presentation": {
+                      "html": {
+                        "attributes": {
+                          "class": [
+                            "line-block"
+                          ]
+                        }
+                      }
+                    },
+                    "role": "container"
+                  },
+                  {
+                    "kind": "text",
+                    "text": "\n"
                   }
                 ],
                 "kind": "list_item"
@@ -4243,15 +4397,6 @@
             ],
             "kind": "list",
             "ordered": false,
-            "presentation": {
-              "html": {
-                "attributes": {
-                  "class": [
-                    "simple"
-                  ]
-                }
-              }
-            },
             "schema_version": "manual-flow/v2"
           },
           "source_ref": "charging_ja.rst#block-12"
@@ -4271,7 +4416,7 @@
         {
           "asset_refs": [],
           "block_id": "charging_ja.rst:block-0014",
-          "content_sha256": "28231b9fa219284748a86d752d7fae27fca0bf3b8429926b233f828cc287d9b3",
+          "content_sha256": "1258572a69627223f898210696a56509c07c5228f2c77d407a6820730bec3a45",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -4329,8 +4474,13 @@
                               {
                                 "children": [
                                   {
-                                    "kind": "text",
-                                    "text": "例："
+                                    "children": [
+                                      {
+                                        "kind": "text",
+                                        "text": "例："
+                                      }
+                                    ],
+                                    "kind": "strong"
                                   }
                                 ],
                                 "kind": "paragraph"
@@ -4458,7 +4608,7 @@
                   "role": "items"
                 }
               ],
-              "source_ref": "/Users/pika/.codex/worktrees/dc-input-jp-web/auto-manual2/manual_sources/JA-AD500A-SIL/JP/ja/git-20261008-ac3a1f82-reviewed/source/page/charging_ja.rst#callout-1",
+              "source_ref": "source/page/charging_ja.rst#callout-1",
               "token_roles": [
                 "component.callout"
               ],
@@ -4549,13 +4699,18 @@
         {
           "asset_refs": [],
           "block_id": "charging_ja.rst:block-0020",
-          "content_sha256": "1aa460a6c30376a13ffef8d5cd2d097d340f2c6520c5991fd8e44ccad74e8e1c",
+          "content_sha256": "fe5b00434ff951835dacd81620daaab42879a5306f73b76040fed2493e851115",
           "kind": "flow",
           "payload": {
             "children": [
               {
-                "kind": "text",
-                "text": "ご使用の際は、以下にご注意ください："
+                "children": [
+                  {
+                    "kind": "text",
+                    "text": "ご使用の際は、以下にご注意ください："
+                  }
+                ],
+                "kind": "strong"
               }
             ],
             "kind": "paragraph",
@@ -4578,7 +4733,7 @@
         {
           "asset_refs": [],
           "block_id": "charging_ja.rst:block-0022",
-          "content_sha256": "4d4d7037ea1db8886ad9cb517d8e4c8578adf228bdf75a091a2f4de1f281dd21",
+          "content_sha256": "11bb27eed0604f7c1a298d5df8c0bfd553751b2f081c0d8aed6f31ca6024e911",
           "kind": "flow",
           "payload": {
             "children": [
@@ -4589,105 +4744,130 @@
               {
                 "children": [
                   {
-                    "children": [
-                      {
-                        "kind": "text",
-                        "text": "必ず車のエンジンを始動させてから接続してください。エンジン停止状態で使用すると、車両のバッテリーが上がる恐れがあります。"
-                      }
-                    ],
-                    "kind": "paragraph"
-                  }
-                ],
-                "kind": "list_item"
-              },
-              {
-                "kind": "text",
-                "text": "\n"
-              },
-              {
-                "children": [
+                    "kind": "text",
+                    "text": "\n"
+                  },
                   {
                     "children": [
                       {
-                        "kind": "text",
-                        "text": "車の充電ポートとシガーソケット充電ケーブルの接触状態をご確認ください。"
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "必ず車のエンジンを始動させてから接続してください。エンジン停止状態で使用すると、車両のバッテリーが上がる恐れがあります。"
+                          }
+                        ],
+                        "kind": "paragraph"
                       }
                     ],
-                    "kind": "paragraph"
-                  }
-                ],
-                "kind": "list_item"
-              },
-              {
-                "kind": "text",
-                "text": "\n"
-              },
-              {
-                "children": [
+                    "kind": "list_item"
+                  },
+                  {
+                    "kind": "text",
+                    "text": "\n"
+                  },
                   {
                     "children": [
                       {
-                        "kind": "text",
-                        "text": "ケーブルが確実に奥まで差し込まれていることをご確認ください。"
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "車の充電ポートとシガーソケット充電ケーブルの接触状態をご確認ください。"
+                          }
+                        ],
+                        "kind": "paragraph"
                       }
                     ],
-                    "kind": "paragraph"
-                  }
-                ],
-                "kind": "list_item"
-              },
-              {
-                "kind": "text",
-                "text": "\n"
-              },
-              {
-                "children": [
+                    "kind": "list_item"
+                  },
+                  {
+                    "kind": "text",
+                    "text": "\n"
+                  },
                   {
                     "children": [
                       {
-                        "kind": "text",
-                        "text": "悪路などで車両の振動が激しい場合は、接触不良や発熱・焼損の恐れがあるため、充電を中止してください。"
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "ケーブルが確実に奥まで差し込まれていることをご確認ください。"
+                          }
+                        ],
+                        "kind": "paragraph"
                       }
                     ],
-                    "kind": "paragraph"
-                  }
-                ],
-                "kind": "list_item"
-              },
-              {
-                "kind": "text",
-                "text": "\n"
-              },
-              {
-                "children": [
+                    "kind": "list_item"
+                  },
+                  {
+                    "kind": "text",
+                    "text": "\n"
+                  },
                   {
                     "children": [
                       {
-                        "kind": "text",
-                        "text": "誤使用による故障・損傷については、弊社では責任を負いかねます。あらかじめご了承ください。"
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "悪路などで車両の振動が激しい場合は、接触不良や発熱・焼損の恐れがあるため、充電を中止してください。"
+                          }
+                        ],
+                        "kind": "paragraph"
                       }
                     ],
-                    "kind": "paragraph"
+                    "kind": "list_item"
+                  },
+                  {
+                    "kind": "text",
+                    "text": "\n"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "誤使用による故障・損傷については、弊社では責任を負いかねます。あらかじめご了承ください。"
+                          }
+                        ],
+                        "kind": "paragraph"
+                      }
+                    ],
+                    "kind": "list_item"
+                  },
+                  {
+                    "kind": "text",
+                    "text": "\n"
                   }
                 ],
-                "kind": "list_item"
+                "kind": "list",
+                "ordered": false,
+                "presentation": {
+                  "html": {
+                    "attributes": {
+                      "class": [
+                        "simple"
+                      ]
+                    }
+                  }
+                }
               },
               {
                 "kind": "text",
                 "text": "\n"
               }
             ],
-            "kind": "list",
-            "ordered": false,
+            "kind": "group",
             "presentation": {
               "html": {
                 "attributes": {
                   "class": [
-                    "simple"
+                    "jpad-panel",
+                    "docutils",
+                    "container"
                   ]
                 }
               }
             },
+            "role": "container",
             "schema_version": "manual-flow/v2"
           },
           "source_ref": "charging_ja.rst#block-22"
@@ -4709,7 +4889,7 @@
             "assets/ir/29f7b772d7e313cac5527f2d81b82b00716586375fa6bfd562556030a50319fb/car.png"
           ],
           "block_id": "charging_ja.rst:block-0024",
-          "content_sha256": "a462f3fa132956cfc455932489b93e7adef1843a72605504f0952cd4d963d620",
+          "content_sha256": "594cb1415b36e4221db0f99bce2201ca7dc89451ebc127993004de6bef798d9a",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -4805,7 +4985,7 @@
                         "presentation": {
                           "html": {
                             "attributes": {
-                              "style": "display:block;width:100%;text-align:right;font-size:clamp(10px,0.95em,14px);line-height:1.15"
+                              "style": "display:block;width:100%;text-align:left;padding-left:1em;text-indent:-1em;font-size:clamp(10px,0.95em,14px);line-height:1.15"
                             }
                           }
                         }
@@ -4892,7 +5072,7 @@
                 "composite_locale": "",
                 "image_key": "../../assets/car.png",
                 "presentation_mode": "base-art-live-copy",
-                "source_fragment_sha256": "5e6974f11a4310bb20bb7198bd8143b531da1a89be0a5813ed8b928714d0a208",
+                "source_fragment_sha256": "1b24721c23d37addaabddebaa00e2d3db0f972558ef4c9fae4ac3333a02a8312",
                 "web_replace_key": "reference.car-connection"
               },
               "schema_version": "component-spec/v1",
@@ -4928,7 +5108,7 @@
                       "text": "DC8020"
                     },
                     {
-                      "html": "<span style=\"display:block;width:100%;text-align:right;font-size:clamp(10px,0.95em,14px);line-height:1.15\">※ シガーソケット充電ケーブルは別売りです。</span>",
+                      "html": "<span style=\"display:block;width:100%;text-align:left;padding-left:1em;text-indent:-1em;font-size:clamp(10px,0.95em,14px);line-height:1.15\">※ シガーソケット充電ケーブルは別売りです。</span>",
                       "text": "※ シガーソケット充電ケーブルは別売りです。"
                     }
                   ],
@@ -4936,7 +5116,7 @@
                   "role": "captions"
                 }
               ],
-              "source_ref": "/Users/pika/.codex/worktrees/dc-input-jp-web/auto-manual2/manual_sources/JA-AD500A-SIL/JP/ja/git-20261008-ac3a1f82-reviewed/source/page/charging_ja.rst#reference-car-connection",
+              "source_ref": "source/page/charging_ja.rst#reference-car-connection",
               "token_roles": [
                 "component.special.reference-figure"
               ],
@@ -4950,7 +5130,7 @@
         {
           "asset_refs": [],
           "block_id": "charging_ja.rst:block-0025",
-          "content_sha256": "713cb690db691f9ce4b79c77a1b012314ee5ac8cd5ba359253a1022d1705f1b7",
+          "content_sha256": "0dae397146446073274e816949b783d7a390dc1abcb83843856bcdac386e5abd",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -5111,7 +5291,7 @@
                   "role": "items"
                 }
               ],
-              "source_ref": "/Users/pika/.codex/worktrees/dc-input-jp-web/auto-manual2/manual_sources/JA-AD500A-SIL/JP/ja/git-20261008-ac3a1f82-reviewed/source/page/charging_ja.rst#callout-2",
+              "source_ref": "source/page/charging_ja.rst#callout-2",
               "token_roles": [
                 "component.callout"
               ],
@@ -5126,9 +5306,9 @@
       "language": "ja",
       "page_id": "charging_ja.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/dc-input-jp-web/auto-manual2/manual_sources/JA-AD500A-SIL/JP/ja/git-20261008-ac3a1f82-reviewed/source/page/charging_ja.rst",
+      "source_path": "source/page/charging_ja.rst",
       "source_ref": "charging_ja.rst",
-      "source_sha256": "6cb2e9120c898a039d989d80eca332cc37fc3bc87c7b84eacf9e2c467053cec1"
+      "source_sha256": "32ea8806732698b782763308233684d2e3e9dab7b370aad95187717eee75ad26"
     },
     {
       "blocks": [
@@ -5153,7 +5333,7 @@
         {
           "asset_refs": [],
           "block_id": "spec_ja.rst:block-0002",
-          "content_sha256": "f1152bb96036a1f1922cb443fa2663f3d16d69a557d6fb95fa9f2cb3ca779de9",
+          "content_sha256": "74f801bbdf35b4066ace7acdc29350f1d8088d344b9b15d9eec211f686e8f3aa",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -5353,7 +5533,7 @@
                   "role": "rows"
                 }
               ],
-              "source_ref": "/Users/pika/.codex/worktrees/dc-input-jp-web/auto-manual2/manual_sources/JA-AD500A-SIL/JP/ja/git-20261008-ac3a1f82-reviewed/source/page/spec_ja.rst#specification-1",
+              "source_ref": "source/page/spec_ja.rst#specification-1",
               "token_roles": [
                 "component.table.spec"
               ],
@@ -5379,7 +5559,7 @@
         {
           "asset_refs": [],
           "block_id": "spec_ja.rst:block-0004",
-          "content_sha256": "1ba1f75a7e16f4fc84d644c21ea3d75ce5bd6bbcd7ae5c13a420908d90689128",
+          "content_sha256": "9a42c210ee8cbee423a009f0f8994a0d8ac5fe3a07dbb7c52af073d0c32d6d6f",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -5563,7 +5743,7 @@
                   "role": "rows"
                 }
               ],
-              "source_ref": "/Users/pika/.codex/worktrees/dc-input-jp-web/auto-manual2/manual_sources/JA-AD500A-SIL/JP/ja/git-20261008-ac3a1f82-reviewed/source/page/spec_ja.rst#specification-2",
+              "source_ref": "source/page/spec_ja.rst#specification-2",
               "token_roles": [
                 "component.table.spec"
               ],
@@ -5589,16 +5769,25 @@
         {
           "asset_refs": [],
           "block_id": "spec_ja.rst:block-0006",
-          "content_sha256": "b438ef0766010cc4d241cf9f3302ca61b5b194137c39b0e6e44bcd34ca0c1e35",
+          "content_sha256": "ec27932ca90a837f81b65af6c14c5935c515a119f7076f6c0cbc777b8a33632a",
           "kind": "flow",
           "payload": {
             "children": [
               {
                 "kind": "text",
-                "text": "本製品はJackery SlimPower H1およびJackery Battery Packとの組み合わせ専用となります。\n他の機器には接続しないでください。"
+                "text": "本製品はJackery SlimPower H1およびJackery Battery Packとの組み合わせ専用となります。他の機器には接続しないでください。"
               }
             ],
             "kind": "paragraph",
+            "presentation": {
+              "html": {
+                "attributes": {
+                  "class": [
+                    "jpad-small"
+                  ]
+                }
+              }
+            },
             "schema_version": "manual-flow/v2"
           },
           "source_ref": "spec_ja.rst#block-6"
@@ -5607,9 +5796,9 @@
       "language": "ja",
       "page_id": "spec_ja.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/dc-input-jp-web/auto-manual2/manual_sources/JA-AD500A-SIL/JP/ja/git-20261008-ac3a1f82-reviewed/source/page/spec_ja.rst",
+      "source_path": "source/page/spec_ja.rst",
       "source_ref": "spec_ja.rst",
-      "source_sha256": "fb7fd9c24d1156e015bc1a3e3c2a4580e8b540733f9fc426cd100c792cc82ad7"
+      "source_sha256": "56e5a7d035e8b535205c091055ec95747c4d47df0b6527d7eae5f261ffcd39c8"
     },
     {
       "blocks": [
@@ -5634,7 +5823,7 @@
         {
           "asset_refs": [],
           "block_id": "warranty_ja.rst:block-0002",
-          "content_sha256": "2c468aecc79c0c92988119c8f16df9fe1af9c593d68dae7bddd4dc5424848eff",
+          "content_sha256": "6e57e3e830e42bfc6678cf84d56414a1726daf4e9dd17d902dca7609b3f97509",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -5689,7 +5878,7 @@
                   "role": "local_note"
                 }
               ],
-              "source_ref": "/Users/pika/.codex/worktrees/dc-input-jp-web/auto-manual2/manual_sources/JA-AD500A-SIL/JP/ja/git-20261008-ac3a1f82-reviewed/source/page/warranty_ja.rst#warranty-lead",
+              "source_ref": "source/page/warranty_ja.rst#warranty-lead",
               "token_roles": [
                 "component.warranty.lead"
               ],
@@ -5715,7 +5904,7 @@
         {
           "asset_refs": [],
           "block_id": "warranty_ja.rst:block-0004",
-          "content_sha256": "6b9a709ec8e7a45e237e33ed0354891d390a96898d7e54a40e18d0bb2691f5e8",
+          "content_sha256": "1a373de413faf4a63b8415aacbfdc6688106d970b5dfc530c466ae0f6997c735",
           "kind": "flow",
           "payload": {
             "anchor": "section-2",
@@ -5756,7 +5945,16 @@
                         "text": "※ Jackery公式オンラインストアまたは正規代理店以外での購入品は保証対象外となります。"
                       }
                     ],
-                    "kind": "paragraph"
+                    "kind": "paragraph",
+                    "presentation": {
+                      "html": {
+                        "attributes": {
+                          "class": [
+                            "jpad-hang"
+                          ]
+                        }
+                      }
+                    }
                   }
                 ],
                 "component_spec": {
@@ -5784,7 +5982,7 @@
                           "text": "保証期間はご購入日から1年間です。"
                         },
                         {
-                          "html": "<p>※ Jackery公式オンラインストアまたは正規代理店以外での購入品は保証対象外となります。</p>",
+                          "html": "<p class=\"jpad-hang\">※ Jackery公式オンラインストアまたは正規代理店以外での購入品は保証対象外となります。</p>",
                           "kind": "paragraph",
                           "text": "※ Jackery公式オンラインストアまたは正規代理店以外での購入品は保証対象外となります。"
                         }
@@ -5793,7 +5991,7 @@
                       "role": "blocks"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/dc-input-jp-web/auto-manual2/manual_sources/JA-AD500A-SIL/JP/ja/git-20261008-ac3a1f82-reviewed/source/page/warranty_ja.rst#warranty-section-1",
+                  "source_ref": "source/page/warranty_ja.rst#warranty-section-1",
                   "token_roles": [
                     "component.warranty.section"
                   ],
@@ -5826,7 +6024,7 @@
         {
           "asset_refs": [],
           "block_id": "warranty_ja.rst:block-0006",
-          "content_sha256": "b5f3e938eee71be5420656b790b51187d7f3afc30e29595bb843904156424d84",
+          "content_sha256": "ef64754d4d2f2c8d7a383b2d04a1e77e4f8b931722f8379f2bfe45670f11822b",
           "kind": "flow",
           "payload": {
             "anchor": "section-3",
@@ -5863,10 +6061,70 @@
                             "children": [
                               {
                                 "kind": "text",
-                                "text": "購入チャネルについて\n本保証は、Jackery公式オンラインストアまたは正規代理店で購入された製品に限り有効です。"
+                                "text": "\n"
+                              },
+                              {
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "購入チャネルについて"
+                                  }
+                                ],
+                                "kind": "group",
+                                "presentation": {
+                                  "html": {
+                                    "attributes": {
+                                      "class": [
+                                        "line"
+                                      ]
+                                    }
+                                  }
+                                },
+                                "role": "container"
+                              },
+                              {
+                                "kind": "text",
+                                "text": "\n"
+                              },
+                              {
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "本保証は、Jackery公式オンラインストアまたは正規代理店で購入された製品に限り有効です。"
+                                  }
+                                ],
+                                "kind": "group",
+                                "presentation": {
+                                  "html": {
+                                    "attributes": {
+                                      "class": [
+                                        "line"
+                                      ]
+                                    }
+                                  }
+                                },
+                                "role": "container"
+                              },
+                              {
+                                "kind": "text",
+                                "text": "\n"
                               }
                             ],
-                            "kind": "paragraph"
+                            "kind": "group",
+                            "presentation": {
+                              "html": {
+                                "attributes": {
+                                  "class": [
+                                    "line-block"
+                                  ]
+                                }
+                              }
+                            },
+                            "role": "container"
+                          },
+                          {
+                            "kind": "text",
+                            "text": "\n"
                           }
                         ],
                         "kind": "list_item"
@@ -5900,8 +6158,7 @@
                       "html": {
                         "attributes": {
                           "class": [
-                            "arabic",
-                            "simple"
+                            "arabic"
                           ]
                         }
                       }
@@ -5928,9 +6185,9 @@
                     {
                       "content": [
                         {
-                          "html": "<ol class=\"arabic simple\">\n<li><p>購入チャネルについて\n本保証は、Jackery公式オンラインストアまたは正規代理店で購入された製品に限り有効です。</p></li>\n<li><p>保証提供地域保証は、日本国内に在住の方が、日本国内で使用する場合に限り有効です。</p></li>\n</ol>",
+                          "html": "<ol class=\"arabic\">\n<li><div class=\"line-block\">\n<div class=\"line\">購入チャネルについて</div>\n<div class=\"line\">本保証は、Jackery公式オンラインストアまたは正規代理店で購入された製品に限り有効です。</div>\n</div>\n</li>\n<li><p>保証提供地域保証は、日本国内に在住の方が、日本国内で使用する場合に限り有効です。</p></li>\n</ol>",
                           "items": [
-                            "購入チャネルについて\n本保証は、Jackery公式オンラインストアまたは正規代理店で購入された製品に限り有効です。",
+                            "購入チャネルについて 本保証は、Jackery公式オンラインストアまたは正規代理店で購入された製品に限り有効です。",
                             "保証提供地域保証は、日本国内に在住の方が、日本国内で使用する場合に限り有効です。"
                           ],
                           "kind": "list"
@@ -5940,7 +6197,7 @@
                       "role": "blocks"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/dc-input-jp-web/auto-manual2/manual_sources/JA-AD500A-SIL/JP/ja/git-20261008-ac3a1f82-reviewed/source/page/warranty_ja.rst#warranty-section-2",
+                  "source_ref": "source/page/warranty_ja.rst#warranty-section-2",
                   "token_roles": [
                     "component.warranty.section"
                   ],
@@ -5973,7 +6230,7 @@
         {
           "asset_refs": [],
           "block_id": "warranty_ja.rst:block-0008",
-          "content_sha256": "91bf254b33bd26ecf1654d8218bf08c182ddbac5f1845034ae33c961036aab88",
+          "content_sha256": "be35d8ce6bbc570265e024c1f3f0f2810b69ade09e500223dd1539d0cfa22489",
           "kind": "flow",
           "payload": {
             "anchor": "section-4",
@@ -6177,7 +6434,7 @@
                       "role": "blocks"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/dc-input-jp-web/auto-manual2/manual_sources/JA-AD500A-SIL/JP/ja/git-20261008-ac3a1f82-reviewed/source/page/warranty_ja.rst#warranty-section-3",
+                  "source_ref": "source/page/warranty_ja.rst#warranty-section-3",
                   "token_roles": [
                     "component.warranty.section"
                   ],
@@ -6210,7 +6467,7 @@
         {
           "asset_refs": [],
           "block_id": "warranty_ja.rst:block-0010",
-          "content_sha256": "3799901e618ac665ebf7ec23aad66fbae1d9077634be61a9c4fb18d707f1af54",
+          "content_sha256": "546057f59e9153d6b86657ebaf2b264fa79d59669a6a8e56cd55014b82d8a2c6",
           "kind": "flow",
           "payload": {
             "anchor": "section-5",
@@ -6306,7 +6563,16 @@
                         "text": "※ ご提示がない場合、保証対応いたしかねます。"
                       }
                     ],
-                    "kind": "paragraph"
+                    "kind": "paragraph",
+                    "presentation": {
+                      "html": {
+                        "attributes": {
+                          "class": [
+                            "jpad-note"
+                          ]
+                        }
+                      }
+                    }
                   }
                 ],
                 "component_spec": {
@@ -6342,7 +6608,7 @@
                           "kind": "list"
                         },
                         {
-                          "html": "<p>※ ご提示がない場合、保証対応いたしかねます。</p>",
+                          "html": "<p class=\"jpad-note\">※ ご提示がない場合、保証対応いたしかねます。</p>",
                           "kind": "paragraph",
                           "text": "※ ご提示がない場合、保証対応いたしかねます。"
                         }
@@ -6351,7 +6617,7 @@
                       "role": "blocks"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/dc-input-jp-web/auto-manual2/manual_sources/JA-AD500A-SIL/JP/ja/git-20261008-ac3a1f82-reviewed/source/page/warranty_ja.rst#warranty-section-4",
+                  "source_ref": "source/page/warranty_ja.rst#warranty-section-4",
                   "token_roles": [
                     "component.warranty.section"
                   ],
@@ -6384,7 +6650,7 @@
         {
           "asset_refs": [],
           "block_id": "warranty_ja.rst:block-0012",
-          "content_sha256": "d1c6921bf5009d8737aa7bb4db20d567e49d4b124e931afa674a67aed7d520e9",
+          "content_sha256": "04fe7d9b698037b7abee96b15d41f6dee6ff88ddb0e3337cbf2efca508a250c1",
           "kind": "flow",
           "payload": {
             "anchor": "section-6",
@@ -6420,8 +6686,17 @@
                           {
                             "children": [
                               {
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "初期不良による交換"
+                                  }
+                                ],
+                                "kind": "strong"
+                              },
+                              {
                                 "kind": "text",
-                                "text": "初期不良による交換（ご購入日から30日以内）"
+                                "text": "（ご購入日から30日以内）"
                               }
                             ],
                             "kind": "paragraph"
@@ -6501,8 +6776,17 @@
                           {
                             "children": [
                               {
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "無償修理"
+                                  }
+                                ],
+                                "kind": "strong"
+                              },
+                              {
                                 "kind": "text",
-                                "text": "無償修理（ご購入日から31日以上～保証期間内）"
+                                "text": "（ご購入日から31日以上～保証期間内）"
                               }
                             ],
                             "kind": "paragraph"
@@ -6582,8 +6866,13 @@
                           {
                             "children": [
                               {
-                                "kind": "text",
-                                "text": "有償修理"
+                                "children": [
+                                  {
+                                    "kind": "text",
+                                    "text": "有償修理"
+                                  }
+                                ],
+                                "kind": "strong"
                               }
                             ],
                             "kind": "paragraph"
@@ -6722,7 +7011,16 @@
                         "text": "* 無償修理の場合、残りの保証期間が90日未満であれば「90日間」、90日以上であれば「元の保証期間に準じます」。"
                       }
                     ],
-                    "kind": "paragraph"
+                    "kind": "paragraph",
+                    "presentation": {
+                      "html": {
+                        "attributes": {
+                          "class": [
+                            "jpad-note"
+                          ]
+                        }
+                      }
+                    }
                   }
                 ],
                 "component_spec": {
@@ -6745,16 +7043,16 @@
                     {
                       "content": [
                         {
-                          "html": "<ol class=\"arabic\">\n<li><p>初期不良による交換（ご購入日から30日以内）</p>\n<ul class=\"simple\">\n<li><p>取扱説明書に従った正常な使用中に不具合が発生した場合、同一製品の新品と交換いたします。</p></li>\n<li><p>在庫切れや販売終了の場合は、同等品への交換または返金にて対応いたします。</p></li>\n</ul>\n</li>\n<li><p>無償修理（ご購入日から31日以上～保証期間内）</p>\n<ul class=\"simple\">\n<li><p>保証条件を満たす自然故障については、無料で修理対応いたします。</p></li>\n<li><p>修理が困難な場合は、同等品（同モデルまたは同等スペック品）への交換にて対応いたします。</p></li>\n</ul>\n</li>\n<li><p>有償修理</p>\n<p>以下に該当する場合は、有償での修理対応となります：</p>\n<ul class=\"simple\">\n<li><p>保証期間を超えた製品</p></li>\n<li><p>保証対象外と判断された場合</p></li>\n<li><p>Jackery公式オンラインストアまたは正規代理店以外で購入された製品</p></li>\n</ul>\n<p>有償修理後の保証期間は、修理完了日より90日間です。</p>\n</li>\n</ol>",
+                          "html": "<ol class=\"arabic\">\n<li><p><strong>初期不良による交換</strong>（ご購入日から30日以内）</p>\n<ul class=\"simple\">\n<li><p>取扱説明書に従った正常な使用中に不具合が発生した場合、同一製品の新品と交換いたします。</p></li>\n<li><p>在庫切れや販売終了の場合は、同等品への交換または返金にて対応いたします。</p></li>\n</ul>\n</li>\n<li><p><strong>無償修理</strong>（ご購入日から31日以上～保証期間内）</p>\n<ul class=\"simple\">\n<li><p>保証条件を満たす自然故障については、無料で修理対応いたします。</p></li>\n<li><p>修理が困難な場合は、同等品（同モデルまたは同等スペック品）への交換にて対応いたします。</p></li>\n</ul>\n</li>\n<li><p><strong>有償修理</strong></p>\n<p>以下に該当する場合は、有償での修理対応となります：</p>\n<ul class=\"simple\">\n<li><p>保証期間を超えた製品</p></li>\n<li><p>保証対象外と判断された場合</p></li>\n<li><p>Jackery公式オンラインストアまたは正規代理店以外で購入された製品</p></li>\n</ul>\n<p>有償修理後の保証期間は、修理完了日より90日間です。</p>\n</li>\n</ol>",
                           "items": [
-                            "初期不良による交換（ご購入日から30日以内） 取扱説明書に従った正常な使用中に不具合が発生した場合、同一製品の新品と交換いたします。 在庫切れや販売終了の場合は、同等品への交換または返金にて対応いたします。",
-                            "無償修理（ご購入日から31日以上～保証期間内） 保証条件を満たす自然故障については、無料で修理対応いたします。 修理が困難な場合は、同等品（同モデルまたは同等スペック品）への交換にて対応いたします。",
+                            "初期不良による交換 （ご購入日から30日以内） 取扱説明書に従った正常な使用中に不具合が発生した場合、同一製品の新品と交換いたします。 在庫切れや販売終了の場合は、同等品への交換または返金にて対応いたします。",
+                            "無償修理 （ご購入日から31日以上～保証期間内） 保証条件を満たす自然故障については、無料で修理対応いたします。 修理が困難な場合は、同等品（同モデルまたは同等スペック品）への交換にて対応いたします。",
                             "有償修理 以下に該当する場合は、有償での修理対応となります： 保証期間を超えた製品 保証対象外と判断された場合 Jackery公式オンラインストアまたは正規代理店以外で購入された製品 有償修理後の保証期間は、修理完了日より90日間です。"
                           ],
                           "kind": "list"
                         },
                         {
-                          "html": "<p>* 無償修理の場合、残りの保証期間が90日未満であれば「90日間」、90日以上であれば「元の保証期間に準じます」。</p>",
+                          "html": "<p class=\"jpad-note\">* 無償修理の場合、残りの保証期間が90日未満であれば「90日間」、90日以上であれば「元の保証期間に準じます」。</p>",
                           "kind": "paragraph",
                           "text": "* 無償修理の場合、残りの保証期間が90日未満であれば「90日間」、90日以上であれば「元の保証期間に準じます」。"
                         }
@@ -6763,7 +7061,7 @@
                       "role": "blocks"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/dc-input-jp-web/auto-manual2/manual_sources/JA-AD500A-SIL/JP/ja/git-20261008-ac3a1f82-reviewed/source/page/warranty_ja.rst#warranty-section-5",
+                  "source_ref": "source/page/warranty_ja.rst#warranty-section-5",
                   "token_roles": [
                     "component.warranty.section"
                   ],
@@ -6796,7 +7094,7 @@
         {
           "asset_refs": [],
           "block_id": "warranty_ja.rst:block-0014",
-          "content_sha256": "cd62f5d4e8c3fcfa40d670e1e1ae206093dab101e437185e1e123d6bed3eaaac",
+          "content_sha256": "7daaedf713ae29c54a487f6147645b7c2ab803cebe50600a28b4b00f75b2494f",
           "kind": "flow",
           "payload": {
             "anchor": "section-7",
@@ -6899,10 +7197,67 @@
                     "children": [
                       {
                         "kind": "text",
-                        "text": "Jackery製品を安心してご使用いただくために、本保証書の内容をご確認のうえ、ご活用くださいますようお願いいたします。\nご不明点がございましたら、Jackeryカスタマーサービスまでお問い合わせください。"
+                        "text": "\n"
+                      },
+                      {
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "Jackery製品を安心してご使用いただくために、本保証書の内容をご確認のうえ、ご活用くださいますようお願いいたします。"
+                          }
+                        ],
+                        "kind": "group",
+                        "presentation": {
+                          "html": {
+                            "attributes": {
+                              "class": [
+                                "line"
+                              ]
+                            }
+                          }
+                        },
+                        "role": "container"
+                      },
+                      {
+                        "kind": "text",
+                        "text": "\n"
+                      },
+                      {
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "ご不明点がございましたら、Jackeryカスタマーサービスまでお問い合わせください。"
+                          }
+                        ],
+                        "kind": "group",
+                        "presentation": {
+                          "html": {
+                            "attributes": {
+                              "class": [
+                                "line"
+                              ]
+                            }
+                          }
+                        },
+                        "role": "container"
+                      },
+                      {
+                        "kind": "text",
+                        "text": "\n"
                       }
                     ],
-                    "kind": "paragraph"
+                    "kind": "group",
+                    "presentation": {
+                      "html": {
+                        "attributes": {
+                          "class": [
+                            "jpad-closing",
+                            "line-block"
+                          ]
+                        }
+                      }
+                    },
+                    "role": "container"
                   }
                 ],
                 "component_spec": {
@@ -6934,16 +7289,16 @@
                           "kind": "list"
                         },
                         {
-                          "html": "<p>Jackery製品を安心してご使用いただくために、本保証書の内容をご確認のうえ、ご活用くださいますようお願いいたします。\nご不明点がございましたら、Jackeryカスタマーサービスまでお問い合わせください。</p>",
+                          "html": "<div class=\"jpad-closing line-block\">\n<div class=\"line\">Jackery製品を安心してご使用いただくために、本保証書の内容をご確認のうえ、ご活用くださいますようお願いいたします。</div>\n<div class=\"line\">ご不明点がございましたら、Jackeryカスタマーサービスまでお問い合わせください。</div>\n</div>",
                           "kind": "paragraph",
-                          "text": "Jackery製品を安心してご使用いただくために、本保証書の内容をご確認のうえ、ご活用くださいますようお願いいたします。\nご不明点がございましたら、Jackeryカスタマーサービスまでお問い合わせください。"
+                          "text": "Jackery製品を安心してご使用いただくために、本保証書の内容をご確認のうえ、ご活用くださいますようお願いいたします。 ご不明点がございましたら、Jackeryカスタマーサービスまでお問い合わせください。"
                         }
                       ],
                       "content_kind": "ordered_blocks",
                       "role": "blocks"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/dc-input-jp-web/auto-manual2/manual_sources/JA-AD500A-SIL/JP/ja/git-20261008-ac3a1f82-reviewed/source/page/warranty_ja.rst#warranty-section-6",
+                  "source_ref": "source/page/warranty_ja.rst#warranty-section-6",
                   "token_roles": [
                     "component.warranty.section"
                   ],
@@ -6965,9 +7320,9 @@
       "language": "ja",
       "page_id": "warranty_ja.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/dc-input-jp-web/auto-manual2/manual_sources/JA-AD500A-SIL/JP/ja/git-20261008-ac3a1f82-reviewed/source/page/warranty_ja.rst",
+      "source_path": "source/page/warranty_ja.rst",
       "source_ref": "warranty_ja.rst",
-      "source_sha256": "9221f19655ccb1d1c9c1f9711073750fcff4cb007a5434e76db6d47d4fdbb0ff"
+      "source_sha256": "5bcffdd906357eb26d84eed3bbc61c5bc79568666fc49c37760bbaa36aaecde7"
     },
     {
       "blocks": [
@@ -7102,7 +7457,7 @@
       "language": "ja",
       "page_id": "contact_ja.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/dc-input-jp-web/auto-manual2/manual_sources/JA-AD500A-SIL/JP/ja/git-20261008-ac3a1f82-reviewed/source/page/contact_ja.rst",
+      "source_path": "source/page/contact_ja.rst",
       "source_ref": "contact_ja.rst",
       "source_sha256": "1e28f9fcfb583bc579d9aea1a0de3db3e38b9a7894da839eb98eea01e2b27a89"
     }
