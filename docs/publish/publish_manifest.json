@@ -1,6 +1,6 @@
 {
   "schema_version": "auto-manual-web-publish-branch/v2",
-  "built_at": "2026-10-09T03:31:39.520657+00:00",
+  "built_at": "2026-10-09T05:15:23.181768+00:00",
   "targets": [
     {
       "schema_version": "auto-manual-web-publish-target/v2",
@@ -694,14 +694,14 @@
       "model": "JE-1000E-WH",
       "region": "JP",
       "lang": "ja",
-      "version": "git-20261008-efb663e3-reviewed",
-      "built_at": "2026-10-09T02:42:48.684230+00:00",
-      "git_ref": "5e1de68efb780b6a5c529b66e9f6544741c8642c",
+      "version": "git-20261008-efb663e3-no-cover-reviewed",
+      "built_at": "2026-10-09T05:15:23.181768+00:00",
+      "git_ref": "3909169f1a1546f410591ba341ba62c37e5004ba",
       "route": "JE-1000E-WH/JP/ja/md",
       "manual": "manual.md",
       "language_scope": "single",
       "language_projection_evidence_path": "evidence/language_projection_receipt.json",
-      "language_projection_evidence_sha256": "ac2482f6eaa4e33717ca5c8d216d207e584b83048f36417ed667fe04cb02feff",
+      "language_projection_evidence_sha256": "0eace0c3b1a3412de6c646e71fca73c0966b47db831ae88cab441509c8f100bf",
       "legacy_default": true,
       "legacy_route": "JE-1000E-WH/JP/md",
       "legacy_aliases": [
@@ -9114,13 +9114,13 @@
     },
     {
       "path": "sources/web/JE-1000E-WH/JP/ja/md/_static/source_presentation.css",
-      "size": 5575,
-      "sha256": "02af9439adf6a5fc3ddff3f79af3fe1548541311afda99b90abd103756335d14"
+      "size": 5091,
+      "sha256": "5cffa7c23741eed96535925d60c039fb3a114c07d433b04c4dff5d36f01e737d"
     },
     {
       "path": "sources/web/JE-1000E-WH/JP/ja/md/_static/web_manual.css",
-      "size": 124859,
-      "sha256": "5783008c449b8db9c618492118199a11c10f5aafae5d53c2a15b90ab2ebb65f1"
+      "size": 125530,
+      "sha256": "b21d68bbd53bf1e93bde5c9387d5bcbdde5f0317c810f38cce0f9d6041326090"
     },
     {
       "path": "sources/web/JE-1000E-WH/JP/ja/md/assets/ac-charge.png",
@@ -9429,13 +9429,13 @@
     },
     {
       "path": "sources/web/JE-1000E-WH/JP/ja/md/evidence/frozen_source_manifest.json",
-      "size": 37300,
-      "sha256": "79e5b9757997db3cab0639dff3946fdad31a6ae0599258e45c69723e0ecc7c46"
+      "size": 38142,
+      "sha256": "6c39f95653c143ac90e8dfa479ddbb7b53970705e9fa813ba08e1aecafef7121"
     },
     {
       "path": "sources/web/JE-1000E-WH/JP/ja/md/evidence/language_projection_receipt.json",
-      "size": 27358,
-      "sha256": "ac2482f6eaa4e33717ca5c8d216d207e584b83048f36417ed667fe04cb02feff"
+      "size": 27367,
+      "sha256": "0eace0c3b1a3412de6c646e71fca73c0966b47db831ae88cab441509c8f100bf"
     },
     {
       "path": "sources/web/JE-1000E-WH/JP/ja/md/index.md",
@@ -9444,18 +9444,18 @@
     },
     {
       "path": "sources/web/JE-1000E-WH/JP/ja/md/manual.ir.json",
-      "size": 485100,
-      "sha256": "7e6dea4cc66ed970a3dd0aea898962d5a181720e379089a624579f2b1f9833d2"
+      "size": 478154,
+      "sha256": "bb3204d42b22ec96750e5dd215e2d53e8e03f4ecae5b7aeb2c8a82d0f3da8cae"
     },
     {
       "path": "sources/web/JE-1000E-WH/JP/ja/md/manual.md",
-      "size": 86430,
-      "sha256": "3f48213cc0f23cbed3db0374292bbe52beda24ecac708efc1d058f0fe721c1ba"
+      "size": 84512,
+      "sha256": "b87915f1e1cbde8e4ca8abc20fe7e68f0c40e82d40731957b482f626f180b3be"
     },
     {
       "path": "sources/web/JE-1000E-WH/JP/ja/md/publish_meta.json",
-      "size": 662,
-      "sha256": "f27f5fe45802a38eda33b0aa25a3fa852439b0d8d9aa0840ed4835f3fc442d9b"
+      "size": 671,
+      "sha256": "9ad5c2f4de27cb386f906a023a13db0192098f6c71bae14ca4aeb77213ea2658"
     },
     {
       "path": "sources/web/JE-1000F/EU/de/md/assets/app_add_device_steps_9b7e0cf44d0f.png",
@@ -37139,23 +37139,23 @@
     },
     {
       "path": "web/JE-1000E-WH/JP/ja/md/_static/source_presentation.css",
-      "size": 5575,
-      "sha256": "02af9439adf6a5fc3ddff3f79af3fe1548541311afda99b90abd103756335d14"
+      "size": 5091,
+      "sha256": "5cffa7c23741eed96535925d60c039fb3a114c07d433b04c4dff5d36f01e737d"
     },
     {
       "path": "web/JE-1000E-WH/JP/ja/md/_static/web_manual.css",
-      "size": 124859,
-      "sha256": "5783008c449b8db9c618492118199a11c10f5aafae5d53c2a15b90ab2ebb65f1"
+      "size": 125530,
+      "sha256": "b21d68bbd53bf1e93bde5c9387d5bcbdde5f0317c810f38cce0f9d6041326090"
     },
     {
       "path": "web/JE-1000E-WH/JP/ja/md/evidence/frozen_source_manifest.json",
-      "size": 37300,
-      "sha256": "79e5b9757997db3cab0639dff3946fdad31a6ae0599258e45c69723e0ecc7c46"
+      "size": 38142,
+      "sha256": "6c39f95653c143ac90e8dfa479ddbb7b53970705e9fa813ba08e1aecafef7121"
     },
     {
       "path": "web/JE-1000E-WH/JP/ja/md/evidence/language_projection_receipt.json",
-      "size": 27358,
-      "sha256": "ac2482f6eaa4e33717ca5c8d216d207e584b83048f36417ed667fe04cb02feff"
+      "size": 27367,
+      "sha256": "0eace0c3b1a3412de6c646e71fca73c0966b47db831ae88cab441509c8f100bf"
     },
     {
       "path": "web/JE-1000E-WH/JP/ja/md/index.md",
@@ -37164,13 +37164,13 @@
     },
     {
       "path": "web/JE-1000E-WH/JP/ja/md/manual.ir.json",
-      "size": 485100,
-      "sha256": "7e6dea4cc66ed970a3dd0aea898962d5a181720e379089a624579f2b1f9833d2"
+      "size": 478154,
+      "sha256": "bb3204d42b22ec96750e5dd215e2d53e8e03f4ecae5b7aeb2c8a82d0f3da8cae"
     },
     {
       "path": "web/JE-1000E-WH/JP/ja/md/manual.md",
-      "size": 91903,
-      "sha256": "e75c9061383c4011e45bef6cc8319c1703d3768027fc715e4f699b013b8a7751"
+      "size": 89972,
+      "sha256": "164d86b374a30ab9842b779fb77e1a92d49d5cd23f002832f9e2ff77150dcff7"
     },
     {
       "path": "web/JE-1000E-WH/JP/md/index.md",
@@ -42663,11 +42663,6 @@
       "sha256": "6f61db7caf815d28f215a36484b265b246a58ec07a1393da2e39f1e336d801af"
     },
     {
-      "path": "web/_static/manual-assets/_pool/6f/6f9452323ac9073238cd789b8d334c380ee11d9f883aa0aaf0ccf00f435bf46a.png",
-      "size": 25744,
-      "sha256": "6f9452323ac9073238cd789b8d334c380ee11d9f883aa0aaf0ccf00f435bf46a"
-    },
-    {
       "path": "web/_static/manual-assets/_pool/6f/6faf4b41c002fb3d8882d04d7c11cff539685bf1cf11637d68004dbfc984039c.png",
       "size": 62895,
       "sha256": "6faf4b41c002fb3d8882d04d7c11cff539685bf1cf11637d68004dbfc984039c"
@@ -46774,8 +46769,8 @@
     },
     {
       "path": "web/conf.py",
-      "size": 458,
-      "sha256": "e810563e783da822ff9127554da1cf7700ae8e318f0c602581f2b7539e4c27e7"
+      "size": 456,
+      "sha256": "cf990ccbb4a03134b9b7769be1b43b55cc984f3fd85f39f2a9ea4feb41974297"
     },
     {
       "path": "web/index.md",

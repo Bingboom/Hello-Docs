@@ -1,6 +1,5 @@
 {
   "asset_refs": [
-    "assets/cover-unit.png",
     "assets/symbol-mandatory.svg",
     "assets/symbol-prohibited.svg",
     "assets/symbol-do_not_dismantle.svg",
@@ -62,10 +61,10 @@
     "assets/back-qr.png"
   ],
   "bundle_root": "frozen-source",
-  "bundle_sha256": "5f190ac79dc6da85a0a6d7567a5b983f1b24c0e6160949b3a0265e2fe0e4a935",
-  "content_sha256": "ce2e43f67f5e1ef8192ad771e7fc61947537c8dab72e87fc976ade2e6c71d352",
+  "bundle_sha256": "d17b18b437a0ac480ab02477e127e3007fe08824c6c56f60722b4083fbeaaeeb",
+  "content_sha256": "e79b20541e62458c949e64e64a1a5d159fd60a3dc9a0698844a0f7785db4d091",
   "language": "ja",
-  "layout_params_sha256": "993e9c64939596ad6156cdc96ff1b8a7e7742784ab2fcedd6ffaaa08a2573995",
+  "layout_params_sha256": "6b11ed06e4a923a59bb8d6c14d4efb4774f519cab575b55dbdfcedcc028222cb",
   "metadata": {
     "asset_sha256": {
       "assets/ac-charge.png": "3ff6fe9c38400ad9967b299406585682d4d256e40e9a160eb7cbd653f62c7ca4",
@@ -129,11 +128,10 @@
       "assets/wood_6.png": "b3bc37532b4a6a48d53fdea7b7ab2f1ac6ad712ac8835fda42824b567a7ea3eb",
       "assets/wood_prepare.png": "047da5e3737625ada189066eac35143ed0c3186dba2c9a2db242ebeefe715fdf"
     },
-    "block_count": 165,
+    "block_count": 157,
     "candidate_admission": {
-      "boundary": "Operator-authorized JP production source admission MA-274; exact native chapter map and shared components, no unbound images/tables; no global asset promotion",
+      "boundary": "Operator-authorized H1 JP Web edition MA-277; omit physical-page-1 cover, keep all 16 remaining chapters and original artwork bytes; no global asset promotion",
       "chapters": [
-        "introduction",
         "safety",
         "usage-precautions",
         "disclaimer",
@@ -155,7 +153,7 @@
         "HB-CALLOUT-STRIP": 13,
         "HB-SPECIAL-APP": 2,
         "HB-SPECIAL-INBOX": 1,
-        "HB-SPECIAL-REFERENCE-FIGURE": 29,
+        "HB-SPECIAL-REFERENCE-FIGURE": 28,
         "HB-TABLE-LCD-ICON": 1,
         "HB-TABLE-LCD-MODE": 1,
         "HB-TABLE-SPEC": 4,
@@ -1420,13 +1418,13 @@
         },
         {
           "path": "README.md",
-          "sha256": "d52da7acba90fd6706b7d9a79c3158e9bc871119aa52ab4961dc02959100b83c",
-          "size": 2494
+          "sha256": "3d8b57c004e446a368843c3b382a83ba8921d37a8c97f2b444985f0e170aa8a9",
+          "size": 1752
         },
         {
           "path": "approval.json",
-          "sha256": "c9481b1d8c538acccc86cb10fbb9cdf62b960d847c94918ef84800454776743a",
-          "size": 1728
+          "sha256": "462069fa6d87c9d86f984cfd8d71d628230e635c83123e079f96b138c96b8af4",
+          "size": 1975
         },
         {
           "path": "artwork/ac-charge.png",
@@ -1735,8 +1733,8 @@
         },
         {
           "path": "rebuild.py",
-          "sha256": "3f49dac044c2e24d1e559b0756381b0a44859051bfaf061c113e624ebabf9f49",
-          "size": 9020
+          "sha256": "b5104c23bed1db0f92538ce24dc0020ea11be0e2a8042a6fba87f72f0c747405",
+          "size": 9209
         },
         {
           "path": "seal.py",
@@ -1745,8 +1743,8 @@
         },
         {
           "path": "source/admission.json",
-          "sha256": "1e7c421381d259d375343f6388b85a58af51e408c2f164182b0ea07be67a080b",
-          "size": 1325
+          "sha256": "f9f8e1af5aabf93f7f2ce57e68ff5b51f985dc183220959b4efeb55bc54f0419",
+          "size": 1305
         },
         {
           "path": "source/asset-recipe.json",
@@ -1755,18 +1753,23 @@
         },
         {
           "path": "source/chapters.json",
-          "sha256": "0cf08d1303281a889660f3a120e839a05b8cd56e936cc743967e9bf2f5e6cdd8",
-          "size": 305856
+          "sha256": "efbfaea54d0a31be350b823f83d67a02974a4db0568d57784181c46c7171a269",
+          "size": 300869
+        },
+        {
+          "path": "source/cover-removal.json",
+          "sha256": "1f755cdb4e36130449f542f7b8b172d9702385224e9a2eb414aa7442e66decfd",
+          "size": 547
         },
         {
           "path": "source/differences.json",
-          "sha256": "61c4f9e0f88a0225d52879832bcd354c554ef6119678bdbf625fd8fe35e52b7e",
-          "size": 2224
+          "sha256": "e81969ec45fe598badda20e8bdfd208828b106e0290f290b0809e3c971fec3a3",
+          "size": 2397
         },
         {
           "path": "source/dispositions.json",
-          "sha256": "bac55103c2766a5b7cd43541a02ec9b51a296ba94830f799060106d80f55cb7b",
-          "size": 65140
+          "sha256": "c1d085043ea4d5c477f8eab903c55c739becb47dd5a51d7cc014b2370442ad9b",
+          "size": 65740
         },
         {
           "path": "source/native-text.json",
@@ -1775,8 +1778,13 @@
         },
         {
           "path": "source/presentation.css",
-          "sha256": "02af9439adf6a5fc3ddff3f79af3fe1548541311afda99b90abd103756335d14",
-          "size": 5575
+          "sha256": "5cffa7c23741eed96535925d60c039fb3a114c07d433b04c4dff5d36f01e737d",
+          "size": 5091
+        },
+        {
+          "path": "source/print-cover.json",
+          "sha256": "758445c4443d62800a3abb9126ec580e637ea5f63f87e5fbaa4a33badc51fb12",
+          "size": 4630
         },
         {
           "path": "source/reading-order.json",
@@ -1795,15 +1803,16 @@
         },
         {
           "path": "verify.py",
-          "sha256": "480986b014bac5a54ca5e892f113cb9a3bdab2e002b4056ceac2c16c6de1b42e",
-          "size": 6598
+          "sha256": "ab0aa4bd6c7cac47f911c8f749f0c17f674d9a3acab26c3316161f05324bb070",
+          "size": 7044
         }
       ],
       "normalizations": [
         "Japanese print-wrap reflow only; vector-plus recovery; p21 F2/F6 font-glyph recovery with visual evidence",
         "No retranslation, technical correction, online table write or asset registry promotion",
         "Complete illustration frames with editable labels; complete native App phone screenshots",
-        "Additional navigational headings and semantic table headers documented in source/differences.json"
+        "Additional navigational headings and semantic table headers documented in source/differences.json",
+        "MA-277 excludes the printed cover from the Web edition; original PDF and print-cover source remain archived; all non-cover chapter blocks and artwork bytes unchanged"
       ],
       "original_source": {
         "filename": "Jackery SlimPower H1取扱説明書V2.0-2026-07-29.pdf",
@@ -1812,7 +1821,7 @@
         "size_bytes": 12367319
       },
       "schema_version": "auto-manual-frozen-web-source/v1",
-      "source_authority": "Operator-designated Japanese PDF and reviewed candidate; publication authorized by 上线提交发布 on 2026-10-08 under MA-274",
+      "source_authority": "Operator-designated Japanese PDF, previously approved source, and explicit Web cover exclusion under MA-277; continuing 上线提交发布",
       "source_page_map": {
         "back_cover": [
           27
@@ -2286,14 +2295,30 @@
         "model": "JE-1000E-WH",
         "printed_manual_version": null,
         "region": "JP",
-        "technical_version": "git-20261008-efb663e3-reviewed"
+        "technical_version": "git-20261008-efb663e3-no-cover-reviewed"
       },
       "validation_boundary": "Approved JP native semantic source; independent chapter/component admission, original text/geometry and artwork verification, shared ComponentSpec consumers, cold replay and strict Sphinx. Existing JE-1000F JP check is repository regression only. Publication evidence and deployment acceptance remain distinct.",
+      "web_exclusions": [
+        {
+          "authorization": "MA-277",
+          "chapter": "introduction",
+          "physical_pages": [
+            1
+          ],
+          "reason": "封面 不要放进去网页版里面啊"
+        },
+        {
+          "physical_pages": [
+            2
+          ],
+          "reason": "Printed TOC already represented by Web navigation"
+        }
+      ],
       "web_roots": {
         "ja": "web/ja"
       }
     },
-    "frozen_stylesheet_sha256": "5783008c449b8db9c618492118199a11c10f5aafae5d53c2a15b90ab2ebb65f1",
+    "frozen_stylesheet_sha256": "b21d68bbd53bf1e93bde5c9387d5bcbdde5f0317c810f38cce0f9d6041326090",
     "manual_theme": {
       "component_roles": {
         "component.callout": {
@@ -2873,19 +2898,20 @@
     },
     "manual_theme_sha256": "e8fc88458d239edef85f2cfb0b26b71df2e83859c8e51e9c093e5abc2982b47d",
     "markdown_filename": "manual.md",
-    "page_count": 17,
+    "page_count": 16,
     "page_declarations": {},
     "pending_source_review": [],
     "projection": "whole-document-components/v1",
     "publication_approval": {
-      "authorization": "MA-274",
-      "candidate_manifest_sha256": "683dd114373e460d56e4434fe178573518f013f5a0257627a501a70166ecce49",
-      "candidate_source_commit": "6bf0f4c8c657b95bb3d70db27dc3d8d646c0f765",
+      "authorization": "MA-277",
+      "candidate_manifest_sha256": "79e5b9757997db3cab0639dff3946fdad31a6ae0599258e45c69723e0ecc7c46",
+      "candidate_source_commit": "5e1de68efb780b6a5c529b66e9f6544741c8642c",
       "date": "2026-10-08",
-      "decision": "Publish this reviewed Japanese candidate through Git-only frozen-language evidence; no live table, queue, HTML_link or asset registry writes.",
+      "decision": "Publish a new Web edition that excludes the whole printed cover only. Preserve the prior approved package and all remaining native copy/artwork; continue Git-only publication and CSS warning resource repair.",
       "language": "ja",
       "model": "JE-1000E-WH",
       "original_source_sha256": "efb663e3b22fec90bb8d4f602cb830471360034d9ead9293168f708ce937c3be",
+      "publication_instruction": "上线提交发布",
       "region": "JP",
       "retained_boundaries": [
         "Printed version unknown; filename V2.0/date remain provenance",
@@ -2893,12 +2919,12 @@
         "Four finished localized panels retain embedded captions and semantic companions",
         "Shared Web callouts do not reproduce every PDF warning-row pictogram/frame"
       ],
-      "reviewed_chapters_sha256": "0cf08d1303281a889660f3a120e839a05b8cd56e936cc743967e9bf2f5e6cdd8",
+      "reviewed_chapters_sha256": "efbfaea54d0a31be350b823f83d67a02974a4db0568d57784181c46c7171a269",
       "reviewed_component_requirements": {
         "HB-CALLOUT-STRIP": 13,
         "HB-SPECIAL-APP": 2,
         "HB-SPECIAL-INBOX": 1,
-        "HB-SPECIAL-REFERENCE-FIGURE": 29,
+        "HB-SPECIAL-REFERENCE-FIGURE": 28,
         "HB-TABLE-LCD-ICON": 1,
         "HB-TABLE-LCD-MODE": 1,
         "HB-TABLE-SPEC": 4,
@@ -2910,15 +2936,16 @@
         "HB-WARRANTY-YEARS": 1
       },
       "reviewed_markdown_sha256": "3f48213cc0f23cbed3db0374292bbe52beda24ecac708efc1d058f0fe721c1ba",
-      "reviewed_presentation_css_sha256": "02af9439adf6a5fc3ddff3f79af3fe1548541311afda99b90abd103756335d14",
+      "reviewed_non_cover_chapters_sha256": "7b3bd50e1d4022ee95854c7334b6dd9a38ca976ed2aa9478971832a59e27d052",
+      "reviewed_presentation_css_sha256": "5cffa7c23741eed96535925d60c039fb3a114c07d433b04c4dff5d36f01e737d",
       "schema_version": "manual-reviewed-publication-approval/v1",
-      "user_instruction": "上线提交发布"
+      "user_instruction": "封面 不要放进去网页版里面啊"
     },
     "publication_eligible": true,
     "skipped_raw": 0,
     "source_stylesheet": {
       "path": "_static/source_presentation.css",
-      "sha256": "02af9439adf6a5fc3ddff3f79af3fe1548541311afda99b90abd103756335d14"
+      "sha256": "5cffa7c23741eed96535925d60c039fb3a114c07d433b04c4dff5d36f01e737d"
     },
     "title": "Jackery SlimPower H1（JE-1000E-WH）取扱説明書",
     "web_contract": {
@@ -3082,243 +3109,6 @@
   },
   "model": "JE-1000E-WH",
   "pages": [
-    {
-      "blocks": [
-        {
-          "asset_refs": [],
-          "block_id": "introduction:block-0001",
-          "content_sha256": "771437207b98a6599c0a9fab71856ec2c9d519cec39eaa32c2a09ab0400f4008",
-          "kind": "flow",
-          "payload": {
-            "anchor": "introduction",
-            "children": [
-              {
-                "kind": "text",
-                "text": "Jackery SlimPower H1 取扱説明書"
-              }
-            ],
-            "kind": "heading",
-            "level": 2,
-            "schema_version": "manual-flow/v2"
-          },
-          "source_ref": "ja/introduction#block-1"
-        },
-        {
-          "asset_refs": [],
-          "block_id": "introduction:block-0002",
-          "content_sha256": "cb725092a0042dc3bede755076517fd38f8edf5cdbef1c5bd2305f19d9fa0363",
-          "kind": "flow",
-          "payload": {
-            "children": [
-              {
-                "kind": "text",
-                "text": "型番：JE-1000E-WH"
-              }
-            ],
-            "kind": "paragraph",
-            "presentation": {
-              "html": {
-                "attributes": {
-                  "class": "slimpower-cover-model"
-                }
-              }
-            },
-            "schema_version": "manual-flow/v2"
-          },
-          "source_ref": "ja/introduction#block-2"
-        },
-        {
-          "asset_refs": [],
-          "block_id": "introduction:block-0003",
-          "content_sha256": "a4ab4865b3ae3e73b960cb0f0be7db9e2afcf5b623073d577012976670376352",
-          "kind": "flow",
-          "payload": {
-            "children": [
-              {
-                "kind": "text",
-                "text": "国内専用/For use only in Japan"
-              }
-            ],
-            "kind": "paragraph",
-            "presentation": {
-              "html": {
-                "attributes": {
-                  "class": "slimpower-cover-region"
-                }
-              }
-            },
-            "schema_version": "manual-flow/v2"
-          },
-          "source_ref": "ja/introduction#block-3"
-        },
-        {
-          "asset_refs": [
-            "assets/cover-unit.png"
-          ],
-          "block_id": "introduction:block-0004",
-          "content_sha256": "5ea0941431238c80497a0af988099288540a48d8a08908ae588714100986bb06",
-          "kind": "flow",
-          "payload": {
-            "carrier_flow": [
-              {
-                "alt": "Jackery SlimPower H1",
-                "kind": "image",
-                "presentation": {
-                  "html": {
-                    "attributes": {
-                      "style": "max-width:260px;height:auto;display:block;margin:0 auto"
-                    }
-                  }
-                },
-                "source": "assets/cover-unit.png"
-              }
-            ],
-            "component_spec": {
-              "assets": [
-                {
-                  "asset_ref": "assets/cover-unit.png",
-                  "locale_policy": "shared",
-                  "role": "source_art"
-                }
-              ],
-              "component_id": "HB-SPECIAL-REFERENCE-FIGURE",
-              "language": "ja",
-              "metadata": {
-                "image_key": "cover-unit",
-                "source_fragment_sha256": "0aca56979e715fa6d3db98dab85130cdcdb63031f1ce8bb18670a14035f7a6f9",
-                "web_replace_key": ""
-              },
-              "schema_version": "component-spec/v1",
-              "slots": [
-                {
-                  "content": "cover-unit",
-                  "content_kind": "inline_text",
-                  "role": "reference_id"
-                },
-                {
-                  "content": "Jackery SlimPower H1",
-                  "content_kind": "inline_text",
-                  "role": "accessibility_label"
-                },
-                {
-                  "content": "none",
-                  "content_kind": "inline_text",
-                  "role": "caption_mode"
-                },
-                {
-                  "content": "equal",
-                  "content_kind": "inline_text",
-                  "role": "caption_layout"
-                }
-              ],
-              "source_ref": "ja/p1/figure-cover-unit",
-              "token_roles": [
-                "component.special.reference-figure"
-              ],
-              "variant": "semantic-fallback"
-            },
-            "kind": "component",
-            "schema_version": "manual-flow/v2"
-          },
-          "source_ref": "ja/introduction#block-4"
-        },
-        {
-          "asset_refs": [],
-          "block_id": "introduction:block-0005",
-          "content_sha256": "20e0cb9fa4d8c6d528c3b556e76a5ffb715a69c1acd2eede22c1d15d4be84aa7",
-          "kind": "flow",
-          "payload": {
-            "children": [
-              {
-                "kind": "text",
-                "text": "写真はイメージです。実際の商品とは異なる場合があります。"
-              }
-            ],
-            "kind": "paragraph",
-            "presentation": {
-              "html": {
-                "attributes": {
-                  "class": "slimpower-cover-caption"
-                }
-              }
-            },
-            "schema_version": "manual-flow/v2"
-          },
-          "source_ref": "ja/introduction#block-5"
-        },
-        {
-          "asset_refs": [],
-          "block_id": "introduction:block-0006",
-          "content_sha256": "3befa3505f0f9dea73b65b57ed8ac3b08a0aefe62c20eb00d82af4bd2d29e756",
-          "kind": "flow",
-          "payload": {
-            "children": [
-              {
-                "kind": "text",
-                "text": "お買い上げありがとうございます。"
-              }
-            ],
-            "kind": "paragraph",
-            "presentation": {
-              "html": {
-                "attributes": {
-                  "class": "slimpower-cover-thanks"
-                }
-              }
-            },
-            "schema_version": "manual-flow/v2"
-          },
-          "source_ref": "ja/introduction#block-6"
-        },
-        {
-          "asset_refs": [],
-          "block_id": "introduction:block-0007",
-          "content_sha256": "bb5060c4f14c19200e697b99c282bfc0759f6d7b61e21f5d5d86d0b71d68a72b",
-          "kind": "flow",
-          "payload": {
-            "children": [
-              {
-                "kind": "text",
-                "text": "ご使用の前にこの「取扱説明書」をよくお読みのうえ、正しくお使いください。特に「安全上のご注意」は、必ずお読みいただき、安全にお使いください。お読みになったあとは、すぐに取り出せる場所に大切に保管してください。本製品の取扱説明書は随時更新されますので、最新の取扱説明書は公式サイトでご確認ください。"
-              }
-            ],
-            "kind": "paragraph",
-            "schema_version": "manual-flow/v2"
-          },
-          "source_ref": "ja/introduction#block-7"
-        },
-        {
-          "asset_refs": [],
-          "block_id": "introduction:block-0008",
-          "content_sha256": "988519f738198ae2c4c23eabbeea73b374159a1ed12fd09b8b8ba65e9c2c00c1",
-          "kind": "flow",
-          "payload": {
-            "children": [
-              {
-                "kind": "text",
-                "text": "カスタマーサポート: jackery.jp@jackery.com"
-              }
-            ],
-            "kind": "paragraph",
-            "presentation": {
-              "html": {
-                "attributes": {
-                  "class": "slimpower-cover-support"
-                }
-              }
-            },
-            "schema_version": "manual-flow/v2"
-          },
-          "source_ref": "ja/introduction#block-8"
-        }
-      ],
-      "language": "ja",
-      "page_id": "introduction",
-      "skipped_raw": 0,
-      "source_path": "source/introduction",
-      "source_ref": "ja/introduction",
-      "source_sha256": "d3cbd2134e776c4307e835bb3b3a9746d777943c4d61d8d7adf8b67909606f81"
-    },
     {
       "blocks": [
         {
