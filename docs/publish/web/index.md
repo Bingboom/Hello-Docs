@@ -1,4 +1,4 @@
-# Auto Manual Library
+# Published manuals
 
 - [JA-AD01A / EU / en - Jackery 102W GaN 3-Port Fast Charger User Manual](JA-AD01A/EU/en/md/manual_jaad01a_eu_en.md)
 - [JA-AD500A-SIL / JP / ja - Jackery DC Input Module](JA-AD500A-SIL/JP/ja/md/manual_jaad500asil_jp_ja.md)
@@ -18,6 +18,9 @@
 - [JA-CA3SA / EU / en - Solar Generator Connector User Manual](JA-CA3SA/EU/en/md/manual_jaca3sa_eu_en.md)
 - [JA-CC30A / EU / en - Jackery Extreme Guard Carrying Bag (L Size) User Manual](JA-CC30A/EU/en/md/manual_jacc30a_eu_en.md)
 - [JAAC-WHE-100-EUA1 / EU / en - Jackery Foldable Trolley User Manual](JAAC-WHE-100-EUA1/EU/en/md/manual_jaacwhe100eua1_eu_en.md)
+- [JBP-1000B-SIL / US / en - Jackery Battery Pack — JBP-1000B-SIL](JBP-1000B-SIL/US/en/md/manual_jbp1000bsil_us_en.md)
+- [JBP-1000B-SIL / US / es - Jackery Battery Pack — JBP-1000B-SIL](JBP-1000B-SIL/US/es/md/manual_jbp1000bsil_us_es.md)
+- [JBP-1000B-SIL / US / fr - Jackery Battery Pack — JBP-1000B-SIL](JBP-1000B-SIL/US/fr/md/manual_jbp1000bsil_us_fr.md)
 - [JBP-2000B / EU / de - Jackery Battery Pack 2000 User Manual](JBP-2000B/EU/de/md/manual_jbp2000b_eu_de.md)
 - [JBP-2000B / EU / en - Jackery Battery Pack 2000 User Manual](JBP-2000B/EU/en/md/manual_jbp2000b_eu.md)
 - [JBP-2000B / EU / es - Jackery Battery Pack 2000 User Manual](JBP-2000B/EU/es/md/manual_jbp2000b_eu_es.md)
