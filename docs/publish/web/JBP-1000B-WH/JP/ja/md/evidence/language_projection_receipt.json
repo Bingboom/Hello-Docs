@@ -3,8 +3,8 @@
   "model": "JBP-1000B-WH",
   "region": "JP",
   "language": "ja",
-  "version": "git-20261008-3aa6c003-native",
-  "git_ref": "edbbdac7e6170771ea6ed28945addcfd49b00c6f",
+  "version": "git-20261009-3aa6c003-web-layout",
+  "git_ref": "e1bf6480247e841600e98c5006ec5a91ab7ecedb",
   "caption_frame_admission": [
     {
       "source_ref": "ja/pdf-page-16#reference-car-charge",
@@ -20,15 +20,15 @@
   ],
   "source_manifest": {
     "path": "frozen_source_manifest.json",
-    "sha256": "a53be98bff4feb5a52ce61691ed353c6384b3e7c29a614d83c916f890341d6f8"
+    "sha256": "e3c71fd3428c055b3f4aea933012215152e1d2909d14c73f30f8f6940d281223"
   },
   "markdown": {
     "manual": "manual_jbp1000bwh_jp_ja.md",
     "files": [
       {
         "path": "_static/source.css",
-        "size": 1951,
-        "sha256": "64788a2fdf6865e450e11798f24c2a163a0e669f1f2ea71a17ab71124664216c"
+        "size": 14729,
+        "sha256": "d708113dcd3effb1b7d07f5cc27fff53125804d0971a97668efcaf94806efe55"
       },
       {
         "path": "_static/web_manual.css",
@@ -81,34 +81,19 @@
         "sha256": "724dcd5c632cb46a1688cde31b4e6653e790f2df8cf28ed7861fd5880d7f8b2c"
       },
       {
-        "path": "assets/concrete-4.png",
-        "size": 33826,
-        "sha256": "bd1c43db43a92049d80fa034c72f8c95a84bb165090597850372075464e8b9c5"
+        "path": "assets/concrete-4-5.png",
+        "size": 55006,
+        "sha256": "d54978ece2521a349908af0f1954de0b6bd638fead27349b24fc570905fc5f37"
       },
       {
-        "path": "assets/concrete-5.png",
-        "size": 20080,
-        "sha256": "dfb08e5121ce05578fdba9ace36e5e8f82da6450ff3685686bfbf23a80aa91e5"
+        "path": "assets/concrete-6-7.png",
+        "size": 41538,
+        "sha256": "84e00b0cc447501d7d88f17f2c7b101bacee39afc8f67a13c8ddabbc48f070a3"
       },
       {
-        "path": "assets/concrete-6.png",
-        "size": 18790,
-        "sha256": "137156d6f9b508ef9c2a43f9f71620c473093f4846bd619e0ba8a9bce0c2235f"
-      },
-      {
-        "path": "assets/concrete-7.png",
-        "size": 21552,
-        "sha256": "944f9ddc36ee7fee6b019b3ab4fa43f4535e59a2cead6f3011267e30aa0d01c2"
-      },
-      {
-        "path": "assets/concrete-8.png",
-        "size": 29028,
-        "sha256": "4c15f829e84d435d74443003d3ff61e6d9fceda313b652c53dca393bbd7cbfeb"
-      },
-      {
-        "path": "assets/concrete-9.png",
-        "size": 50563,
-        "sha256": "e78d1d349f8ba3efa91013ee9cc580ab3ca3302d271ac93d08067b2a30d86ea4"
+        "path": "assets/concrete-8-9.png",
+        "size": 80998,
+        "sha256": "0608ae8d09f8bb3058bc78e2889221df7a30f55bc4cb2168b92d3999dc129eb3"
       },
       {
         "path": "assets/concrete-preparation.png",
@@ -119,11 +104,6 @@
         "path": "assets/connection.png",
         "size": 85679,
         "sha256": "72aef778fc5a513385611504f842cb1d42224860eab8d442b62785f7268c0f2b"
-      },
-      {
-        "path": "assets/cover-unit.png",
-        "size": 20232,
-        "sha256": "b776b784f12ddbf1454d3643fef769b9899cfad864eb78a775a3bf388835304c"
       },
       {
         "path": "assets/inbox-cable.png",
@@ -276,14 +256,9 @@
         "sha256": "efc1ab4cfe1c218f94ff3ff2e39bce319cd0e9611e5377a84184d9bf1b621c84"
       },
       {
-        "path": "assets/wood-3.png",
-        "size": 81311,
-        "sha256": "cd69e780fb653ac235bd5b40fbe58a5f485bf40af243443b65dfc953920e329d"
-      },
-      {
-        "path": "assets/wood-4.png",
-        "size": 19057,
-        "sha256": "9dc34c9609877d3ae1f48a248011bb0f953e66aafa76bcef271ef95548374c98"
+        "path": "assets/wood-3-4.png",
+        "size": 105689,
+        "sha256": "a827f3eeb9fedfc291d53c65517ee6fd2b27caba72e18a6eff79b15523391534"
       },
       {
         "path": "assets/wood-5.png",
@@ -322,16 +297,16 @@
       },
       {
         "path": "manual.ir.json",
-        "size": 434291,
-        "sha256": "756b803242fad42089a81edbc75daf25784498008cd0e9dfa145023cc6b86a2a"
+        "size": 407563,
+        "sha256": "ac840cd12843fc353005e8b04a1eb6539adff899b2ef0717a5830c37e75e4cb6"
       },
       {
         "path": "manual_jbp1000bwh_jp_ja.md",
-        "size": 63224,
-        "sha256": "19cef743373a85a6c4274e5b91748ba98f0e4209db5700eb3a62068152e650fe"
+        "size": 73197,
+        "sha256": "a2413fb5138e3a484f5f692ceba9426c9768775f0f9b8cbc1b1ccd561fb75d27"
       }
     ],
-    "sha256": "6abc0dd165e6bfaa70cb0558ccad419a718d843a418d1907886d2a64fc4f7e0a"
+    "sha256": "119cfd1fbe62857390b57b9dfaa88711d15f6058a975fd64c56c6aa43358483a"
   },
   "html": {
     "files": [
@@ -342,18 +317,18 @@
       },
       {
         "path": ".doctrees/environment.pickle",
-        "size": 32191,
-        "sha256": "c2f9fb51a18e4f1f81f1bd19c3e4ae5038aa5010dbd1e3d484ac828608ad7f60"
+        "size": 31757,
+        "sha256": "cc123040df0ac46128a7e10a819bbb47e6eafbe7d13309d4bcda911f8051f9c2"
       },
       {
         "path": ".doctrees/index.doctree",
-        "size": 3451,
-        "sha256": "c38590a9416f935996ce182c7873f56aefd07003abe226e2b7f4c786a3e37b84"
+        "size": 3463,
+        "sha256": "8c54629578b62cb6fbb4bd4e996ebc660800051411b919304d1eaf99664d88c6"
       },
       {
         "path": ".doctrees/manual_jbp1000bwh_jp_ja.doctree",
-        "size": 154899,
-        "sha256": "c9da41fc1c329ef5e0fd7aecd7f6931e627ae83bd398c487589d641afba81d39"
+        "size": 172968,
+        "sha256": "91768c7f913de5ddd6d8b857fa9db2fc1024ad500e4819e075f77a98ddf11f60"
       },
       {
         "path": "_sources/index.md.txt",
@@ -362,8 +337,8 @@
       },
       {
         "path": "_sources/manual_jbp1000bwh_jp_ja.md.txt",
-        "size": 63224,
-        "sha256": "19cef743373a85a6c4274e5b91748ba98f0e4209db5700eb3a62068152e650fe"
+        "size": 73197,
+        "sha256": "a2413fb5138e3a484f5f692ceba9426c9768775f0f9b8cbc1b1ccd561fb75d27"
       },
       {
         "path": "_static/basic.css",
@@ -442,8 +417,8 @@
       },
       {
         "path": "_static/source.css",
-        "size": 1951,
-        "sha256": "64788a2fdf6865e450e11798f24c2a163a0e669f1f2ea71a17ab71124664216c"
+        "size": 14729,
+        "sha256": "d708113dcd3effb1b7d07f5cc27fff53125804d0971a97668efcaf94806efe55"
       },
       {
         "path": "_static/sphinx_highlight.js",
@@ -526,34 +501,19 @@
         "sha256": "724dcd5c632cb46a1688cde31b4e6653e790f2df8cf28ed7861fd5880d7f8b2c"
       },
       {
-        "path": "assets/concrete-4.png",
-        "size": 33826,
-        "sha256": "bd1c43db43a92049d80fa034c72f8c95a84bb165090597850372075464e8b9c5"
+        "path": "assets/concrete-4-5.png",
+        "size": 55006,
+        "sha256": "d54978ece2521a349908af0f1954de0b6bd638fead27349b24fc570905fc5f37"
       },
       {
-        "path": "assets/concrete-5.png",
-        "size": 20080,
-        "sha256": "dfb08e5121ce05578fdba9ace36e5e8f82da6450ff3685686bfbf23a80aa91e5"
+        "path": "assets/concrete-6-7.png",
+        "size": 41538,
+        "sha256": "84e00b0cc447501d7d88f17f2c7b101bacee39afc8f67a13c8ddabbc48f070a3"
       },
       {
-        "path": "assets/concrete-6.png",
-        "size": 18790,
-        "sha256": "137156d6f9b508ef9c2a43f9f71620c473093f4846bd619e0ba8a9bce0c2235f"
-      },
-      {
-        "path": "assets/concrete-7.png",
-        "size": 21552,
-        "sha256": "944f9ddc36ee7fee6b019b3ab4fa43f4535e59a2cead6f3011267e30aa0d01c2"
-      },
-      {
-        "path": "assets/concrete-8.png",
-        "size": 29028,
-        "sha256": "4c15f829e84d435d74443003d3ff61e6d9fceda313b652c53dca393bbd7cbfeb"
-      },
-      {
-        "path": "assets/concrete-9.png",
-        "size": 50563,
-        "sha256": "e78d1d349f8ba3efa91013ee9cc580ab3ca3302d271ac93d08067b2a30d86ea4"
+        "path": "assets/concrete-8-9.png",
+        "size": 80998,
+        "sha256": "0608ae8d09f8bb3058bc78e2889221df7a30f55bc4cb2168b92d3999dc129eb3"
       },
       {
         "path": "assets/concrete-preparation.png",
@@ -564,11 +524,6 @@
         "path": "assets/connection.png",
         "size": 85679,
         "sha256": "72aef778fc5a513385611504f842cb1d42224860eab8d442b62785f7268c0f2b"
-      },
-      {
-        "path": "assets/cover-unit.png",
-        "size": 20232,
-        "sha256": "b776b784f12ddbf1454d3643fef769b9899cfad864eb78a775a3bf388835304c"
       },
       {
         "path": "assets/inbox-cable.png",
@@ -721,14 +676,9 @@
         "sha256": "efc1ab4cfe1c218f94ff3ff2e39bce319cd0e9611e5377a84184d9bf1b621c84"
       },
       {
-        "path": "assets/wood-3.png",
-        "size": 81311,
-        "sha256": "cd69e780fb653ac235bd5b40fbe58a5f485bf40af243443b65dfc953920e329d"
-      },
-      {
-        "path": "assets/wood-4.png",
-        "size": 19057,
-        "sha256": "9dc34c9609877d3ae1f48a248011bb0f953e66aafa76bcef271ef95548374c98"
+        "path": "assets/wood-3-4.png",
+        "size": 105689,
+        "sha256": "a827f3eeb9fedfc291d53c65517ee6fd2b27caba72e18a6eff79b15523391534"
       },
       {
         "path": "assets/wood-5.png",
@@ -757,35 +707,35 @@
       },
       {
         "path": "genindex.html",
-        "size": 14853,
-        "sha256": "b92278336742268c7722bf368d82b38a169fbedfed8f84f4038563f093c58a8e"
+        "size": 13862,
+        "sha256": "598623f1335d466e5c3c91c1b1e6dc2151c5cb982474e3134626e98d3e7aa428"
       },
       {
         "path": "index.html",
-        "size": 20255,
-        "sha256": "0a495839e0235f362ee7dd394a351e3b3bc0ffb6b769ca7864e15b5ced8e974d"
+        "size": 19011,
+        "sha256": "66fa63a1a47832493579c6de50ed88c8ce3b8200e316e0afea293f6d798711dc"
       },
       {
         "path": "manual_jbp1000bwh_jp_ja.html",
-        "size": 82151,
-        "sha256": "c6b08f143a6e15017dcf2952ad126866cc6916956c69d870712a6295a2fb84ff"
+        "size": 94147,
+        "sha256": "e1a488a61b6f92ec568d7801cc72c13f371a938a4cd27e3cf3a414e2f7694e1d"
       },
       {
         "path": "objects.inv",
-        "size": 333,
-        "sha256": "ff82793bc417cc71769870e9d569dde644e39dab8fcefc346d16fb468383d5dd"
+        "size": 357,
+        "sha256": "3b0a1782923fecec8243ff85c376ed322df10c77f32421ed0fbcca2dbd4e802c"
       },
       {
         "path": "search.html",
-        "size": 15126,
-        "sha256": "e093cec15a0b05c3d9a194b2657e622f0bf3d58150550852c06d9c4e24cef26a"
+        "size": 14135,
+        "sha256": "17d5a163418583df1d24864b143a1a26488bb0e5c2bd423435991561653bfdca"
       },
       {
         "path": "searchindex.js",
-        "size": 16557,
-        "sha256": "708ef72621b2f61fa63b8b651d8a7e15d186f6089293a37edc02a939ea63eb53"
+        "size": 16061,
+        "sha256": "be3f9c0b17b491242995885384998287b8c2b7f1b3a87b66ddb97d670fcda3c9"
       }
     ],
-    "sha256": "9fb8d27d1321a7530fd0273f543b99c99575bd3aa9b1d5c35c5d3afa7171bd71"
+    "sha256": "d0015389742a1519cd8135e4178aa541a907d84590978abeeb7742a853bab229"
   }
 }
