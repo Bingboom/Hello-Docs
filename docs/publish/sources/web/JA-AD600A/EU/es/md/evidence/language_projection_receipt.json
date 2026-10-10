@@ -3,11 +3,11 @@
   "model": "JA-AD600A",
   "region": "EU",
   "language": "es",
-  "version": "git-20261007-4055eadc",
-  "git_ref": "4055eadc32888b9ea685f4b387446012b7c42e52",
+  "version": "native-0924-batch1465",
+  "git_ref": "a1ded3cc0f4578d179b9708c3448892236468e98",
   "caption_frame_admission": [
     {
-      "source_ref": "/Users/pika/Documents/Codex/2026-10-07/kan-x/work/dcdc-release/inbox-wrap-fix/project/data/manual_sources/JA-AD600A/EU/added-locales/native-0924/source/es/installation_es.rst#reference-installation-diagram",
+      "source_ref": "/Users/hello-tech-team/.codex/worktrees/1465-ja-ad600a/auto-manual-codex/data/manual_sources/JA-AD600A/EU/added-locales/native-0924/source/es/installation_es.rst#reference-installation-diagram",
       "asset_ref": "assets/ir/0c716a794cf35e80b73fab35c229ebd318d5a2849baded333f09fdf3e8a4ff7f/installation_diagram_base.png",
       "labels": [
         {
@@ -18,7 +18,7 @@
       ]
     },
     {
-      "source_ref": "/Users/pika/Documents/Codex/2026-10-07/kan-x/work/dcdc-release/inbox-wrap-fix/project/data/manual_sources/JA-AD600A/EU/added-locales/native-0924/source/es/installation_es.rst#reference-wiring-fuse",
+      "source_ref": "/Users/hello-tech-team/.codex/worktrees/1465-ja-ad600a/auto-manual-codex/data/manual_sources/JA-AD600A/EU/added-locales/native-0924/source/es/installation_es.rst#reference-wiring-fuse",
       "asset_ref": "assets/ir/bafe8512654bb40af713ea793a4da5cb313740b4da9a36843cbfbea58ddc4207/wiring_fuse_base.svg",
       "labels": [
         {
@@ -34,7 +34,7 @@
   ],
   "source_manifest": {
     "path": "frozen_source_manifest.json",
-    "sha256": "0824561e6278a1073f207d9bdb5a73793788c4c437e40be4fefecd43a07dd30b"
+    "sha256": "3951fdf6c365a01aa161d22673d50cc815b6ab67ff4acd2691d51f8c0b50a548"
   },
   "markdown": {
     "manual": "manual_jaad600a_eu_es.md",
@@ -46,8 +46,8 @@
       },
       {
         "path": "_static/web_manual.css",
-        "size": 124859,
-        "sha256": "5783008c449b8db9c618492118199a11c10f5aafae5d53c2a15b90ab2ebb65f1"
+        "size": 123623,
+        "sha256": "4c01adf9222e7faa8fb5552490d8b8fa4ebba550b4ef2a1e7171a1b9a6538434"
       },
       {
         "path": "assets/ir/0c716a794cf35e80b73fab35c229ebd318d5a2849baded333f09fdf3e8a4ff7f/installation_diagram_base.png",
@@ -191,21 +191,21 @@
       },
       {
         "path": "manual.ir.json",
-        "size": 518769,
-        "sha256": "f11234f6a24082f50b1dfe1acd81e913cc7140832c8b72780cb2354413d7b51c"
+        "size": 518471,
+        "sha256": "8d032ce8fee4c0110b8a81011576f3312084f4c3a916aebef76bf5e30c26f62b"
       },
       {
         "path": "manual_bundle.html",
-        "size": 58181,
-        "sha256": "a035cd0ef0f2e257fd376fcf8069b7b54960b16e64407c699f413a6812b6068c"
+        "size": 57219,
+        "sha256": "7980260b380f796158de7b61c4b48a2a7c7b87ed0ceee25455a40fe6d6fdca2c"
       },
       {
         "path": "manual_jaad600a_eu_es.md",
-        "size": 53354,
-        "sha256": "cbc504529894b4c7c8e81a5372fe1991a620469693f68d32e015dea4e5c540ac"
+        "size": 53317,
+        "sha256": "96958076e5cb4021b0ce00950bbead30cf5e89cb5f0b35a3bbadbec5890461f7"
       }
     ],
-    "sha256": "8f8e27ca54efa93c6e89dfcda0795dd3767aa516f857847e0437e7466a462694"
+    "sha256": "ccc21379cf6a3caeebd9823a86b28cce5009fe68ea74b33910c79b7cca63822c"
   },
   "html": {
     "files": [
@@ -216,18 +216,18 @@
       },
       {
         "path": ".doctrees/environment.pickle",
-        "size": 29316,
-        "sha256": "2027c3092843387b3a93a3cd3073a71e3659b98a2eb342e4cbd8e23f251134e4"
+        "size": 29196,
+        "sha256": "d940f251561c63b0c9de7c55287223132282a2158189e775bd19462597f08e46"
       },
       {
         "path": ".doctrees/index.doctree",
-        "size": 3298,
-        "sha256": "35124e31b9fb8fb93d788a2e1f676bc177c8e9f808d559ef51a314bf66e4a21f"
+        "size": 3265,
+        "sha256": "733ab7bbcbd8d65694d2987f88ba91265a05daf7facf3c643d04610302316c3f"
       },
       {
         "path": ".doctrees/manual_jaad600a_eu_es.doctree",
-        "size": 143819,
-        "sha256": "6c31384f302759652b0faa747bea93b2e6ded03c4b143ce38d5b122df3e41d23"
+        "size": 143712,
+        "sha256": "3b0c5df7940b8ec59f255b3091bd66dece39d18535405de8d84f2629f8539975"
       },
       {
         "path": "_sources/index.md.txt",
@@ -236,8 +236,8 @@
       },
       {
         "path": "_sources/manual_jaad600a_eu_es.md.txt",
-        "size": 53354,
-        "sha256": "cbc504529894b4c7c8e81a5372fe1991a620469693f68d32e015dea4e5c540ac"
+        "size": 53317,
+        "sha256": "96958076e5cb4021b0ce00950bbead30cf5e89cb5f0b35a3bbadbec5890461f7"
       },
       {
         "path": "_static/base-stemmer.js",
@@ -361,8 +361,8 @@
       },
       {
         "path": "_static/web_manual.css",
-        "size": 124859,
-        "sha256": "5783008c449b8db9c618492118199a11c10f5aafae5d53c2a15b90ab2ebb65f1"
+        "size": 123623,
+        "sha256": "4c01adf9222e7faa8fb5552490d8b8fa4ebba550b4ef2a1e7171a1b9a6538434"
       },
       {
         "path": "assets/ir/0c716a794cf35e80b73fab35c229ebd318d5a2849baded333f09fdf3e8a4ff7f/installation_diagram_base.png",
@@ -497,17 +497,17 @@
       {
         "path": "genindex.html",
         "size": 13577,
-        "sha256": "ea1b414c050a8cb29e6ab71763efee932e78e86288c2b043255125ea5d67f461"
+        "sha256": "d5aa53cabdfba0e86a4c4ba992d90ac8961a05b083f033c04911e0384b13c90f"
       },
       {
         "path": "index.html",
         "size": 18364,
-        "sha256": "466fd30d7cfdd16995671d4d1fa947a111466bef3879773334ff0f0a15d9ef99"
+        "sha256": "12f14f066cf9a2b1de567df7583cc38e2facc8a2b1e59478ab495ceae2d600a8"
       },
       {
         "path": "manual_jaad600a_eu_es.html",
-        "size": 73335,
-        "sha256": "ae6e326b6a9577ebb87196439baac3f33044dc0d1199b05f23ef430019d9e965"
+        "size": 73297,
+        "sha256": "595503ee3bdc880a0a797c32456b174467aa4a338aefd62f27a7a1c98e68fb90"
       },
       {
         "path": "objects.inv",
@@ -517,7 +517,7 @@
       {
         "path": "search.html",
         "size": 13847,
-        "sha256": "8f80cd41c7de5153f2d319e1264f5a46a82898917ea00c2bce35411c52e782e4"
+        "sha256": "fc56608abcc0464815b1f4e74fc27bded971c8656c64007e4c7f60f64fc4c3c6"
       },
       {
         "path": "searchindex.js",
@@ -525,6 +525,6 @@
         "sha256": "0c1b35316a6a878fff16fe4c68f480c2cf1ae23519358e2d7084126bb9734788"
       }
     ],
-    "sha256": "d3a846836bcd701873c21cd19fa9f77730330200a5c3c9224addb288c5c97c02"
+    "sha256": "2d99b81fc3f4313cde94375b79b9c91e86981a4ec226fe0fd217febf7df723e9"
   }
 }
