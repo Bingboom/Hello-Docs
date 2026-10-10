@@ -112,11 +112,11 @@ LCD-ANZEIGE
         - Das Produkt wird über den DC-Eingang (DC8020) mit Solarpanel(s) geladen.
       * - 15
         - .. image:: .tmp/review-start/phase2/_attachments/lcd_icons/15_Battery_Saving_Mode_CCdUbbrkBoZnKlx8tQwc4ImvnUO.png
-             :alt: Batterieschonmodus
+             :alt: Batteriesparmodus
              :width: 42px
-        - Batterieschonmodus
-        - | **Ein:** Der Batterieschonmodus ist aktiviert. Die maximal nutzbare Batteriekapazität wird begrenzt, um die Batterielebensdauer zu verlängern.
-          | **Aus:** Der Batterieschonmodus ist deaktiviert.
+        - Batteriesparmodus
+        - | **Ein:** Der Batteriesparmodus ist aktiviert. Zur Verlängerung der Batterielebensdauer werden Lade- und Entladegrenzen angewendet.
+          | **Aus:** Der Batteriesparmodus ist deaktiviert.
           | Aktivieren oder deaktivieren Sie diese Funktion in der Jackery-App. Die Einstellung bleibt auch nach dem Ausschalten des Geräts erhalten.
           | Wenn diese Funktion aktiviert ist, führt das Produkt gelegentlich einen vollständigen Lade- und Entladezyklus durch, um den SOC zu kalibrieren.
       * - 16
@@ -213,7 +213,7 @@ LCD-ANZEIGE
       \HBLcdIconRow{12}{12_AC_Wall_Charging_Indicator_XAwzbeoXio638oxMkNGceBMtn8e.png}{AC-Netzladeanzeige}{Das Produkt wird über den AC-Eingang mit Netzstrom geladen.}
       \HBLcdIconRow{13}{13_Car_Charging_Indicator_BsGzbYD1Yo2r8Yx2Wa5c8cPonPf.png}{Autoladeanzeige}{Das Produkt wird über den DC-Eingang (DC8020) mit 12V Gleichstrom (Autoladung) geladen.}
       \HBLcdIconRow{14}{14_Solar_Charging_Indicator_Fx0vbS8Cco5fgyxqIuXcxYdAn2f.png}{Solar-Ladeanzeige}{Das Produkt wird über den DC-Eingang (DC8020) mit Solarpanel(s) geladen.}
-      \HBLcdIconRow{15}{15_Battery_Saving_Mode_CCdUbbrkBoZnKlx8tQwc4ImvnUO.png}{Batterieschonmodus}{\textbf{Ein:} Der Batterieschonmodus ist aktiviert. Die maximal nutzbare Batteriekapazität wird begrenzt, um die Batterielebensdauer zu verlängern. \newline \textbf{Aus:} Der Batterieschonmodus ist deaktiviert. \newline Aktivieren oder deaktivieren Sie diese Funktion in der Jackery-App. Die Einstellung bleibt auch nach dem Ausschalten des Geräts erhalten. \newline Wenn diese Funktion aktiviert ist, führt das Produkt gelegentlich einen vollständigen Lade- und Entladezyklus durch, um den SOC zu kalibrieren.}
+      \HBLcdIconRow{15}{15_Battery_Saving_Mode_CCdUbbrkBoZnKlx8tQwc4ImvnUO.png}{Batteriesparmodus}{\textbf{Ein:} Der Batteriesparmodus ist aktiviert. Zur Verlängerung der Batterielebensdauer werden Lade- und Entladegrenzen angewendet. \newline \textbf{Aus:} Der Batteriesparmodus ist deaktiviert. \newline Aktivieren oder deaktivieren Sie diese Funktion in der Jackery-App. Die Einstellung bleibt auch nach dem Ausschalten des Geräts erhalten. \newline Wenn diese Funktion aktiviert ist, führt das Produkt gelegentlich einen vollständigen Lade- und Entladezyklus durch, um den SOC zu kalibrieren.}
       \HBLcdIconRow{16}{16_Charging_Power_Limit_TNd3bybh5oUGbPxiPZ0cz7Uenae.png}{Begrenzung der Ladeleistung}{\textbf{Ein:} Die Begrenzung der Ladeleistung ist in der Jackery-App aktiviert. \newline \textbf{Aus:} Die Begrenzung der Ladeleistung ist in der Jackery-App deaktiviert. \newline Die Einstellung bleibt auch nach dem Ausschalten des Geräts erhalten.}
       \HBLcdIconRow{17}{17_Battery_Power_Indicator_Nda8bBUfvomQq2xu5gpcoI8vnif.png}{Batteriezustandsanzeige}{Wenn das Produkt geladen wird, leuchtet der orangefarbene Kreis um die Batterieanzeige nacheinander auf. Beim Laden anderer Geräte bleibt der orangefarbene Kreis dauerhaft eingeschaltet.}
       \HBLcdIconRow{18}{18_Remaining_Battery_Percentage_HBmrbEEGAod6qdxG9cLcGQr8nYe.png}{Verbleibender Batterieprozentsatz}{Zeigt den verbleibenden Batteriestand an.}
