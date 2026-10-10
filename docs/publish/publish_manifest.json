@@ -1,6 +1,6 @@
 {
   "schema_version": "auto-manual-web-publish-branch/v2",
-  "built_at": "2026-10-10T01:22:28.979786+00:00",
+  "built_at": "2026-10-10T10:00:37.283422+00:00",
   "targets": [
     {
       "schema_version": "auto-manual-web-publish-target/v2",
@@ -929,14 +929,14 @@
       "model": "JE-1000H",
       "region": "EU",
       "lang": "de",
-      "version": "git-20260930-4e7df369-lcd-icons",
-      "built_at": "2026-09-30T15:26:16.337845+00:00",
-      "git_ref": "4e7df36943950a61f898d5a89c9fda41f4f001bc",
+      "version": "git-20261010-6d851884-1465-lcd",
+      "built_at": "2026-10-10T10:00:37.283422+00:00",
+      "git_ref": "6d851884a60521d62daa6ea8612c7ea35c3e10ed",
       "route": "JE-1000H/EU/de/md",
       "manual": "manual_je1000h_eu_de.md",
       "language_scope": "single",
       "language_projection_evidence_path": "evidence/language_projection_receipt.json",
-      "language_projection_evidence_sha256": "5ca9cab90af98ea8827c4d96a3771f84f6a0d77be55d9e18b17899e248158139",
+      "language_projection_evidence_sha256": "086daae961e12efa691739fdcd8fa5f5f8337d02e8cc8912e941a900683e8027",
       "legacy_default": false
     },
     {
@@ -993,14 +993,14 @@
       "model": "JE-1000H",
       "region": "EU",
       "lang": "it",
-      "version": "git-20260930-4e7df369-lcd-icons",
-      "built_at": "2026-09-30T15:26:44.679010+00:00",
-      "git_ref": "4e7df36943950a61f898d5a89c9fda41f4f001bc",
+      "version": "git-20261010-6d851884-1465-lcd",
+      "built_at": "2026-10-10T10:00:37.281541+00:00",
+      "git_ref": "6d851884a60521d62daa6ea8612c7ea35c3e10ed",
       "route": "JE-1000H/EU/it/md",
       "manual": "manual_je1000h_eu_it.md",
       "language_scope": "single",
       "language_projection_evidence_path": "evidence/language_projection_receipt.json",
-      "language_projection_evidence_sha256": "37d4c57faad2f79a6aab19e3b7d7ed98044ac2afe420bbc490eab4a7f763182f",
+      "language_projection_evidence_sha256": "6d98959c122450b458f9d5c1aa84b98c2f3d80e14d1403e9fbc2eff8e068605d",
       "legacy_default": false
     },
     {
@@ -15806,6 +15806,11 @@
       "sha256": "e9ea5df45307233f30fc98603772601a7983eee94c0f015343c413b140f19b24"
     },
     {
+      "path": "sources/web/JE-1000H/EU/de/md/_static/web_manual.css",
+      "size": 123623,
+      "sha256": "4c01adf9222e7faa8fb5552490d8b8fa4ebba550b4ef2a1e7171a1b9a6538434"
+    },
+    {
       "path": "sources/web/JE-1000H/EU/de/md/assets/ir/0e0d05a704860c778a7e3888b0f985f797e5020f62efb583befc2a5f0a273eee/overview_front.png",
       "size": 55792,
       "sha256": "0e0d05a704860c778a7e3888b0f985f797e5020f62efb583befc2a5f0a273eee"
@@ -16087,13 +16092,13 @@
     },
     {
       "path": "sources/web/JE-1000H/EU/de/md/evidence/language_projection_receipt.json",
-      "size": 35968,
-      "sha256": "5ca9cab90af98ea8827c4d96a3771f84f6a0d77be55d9e18b17899e248158139"
+      "size": 66693,
+      "sha256": "086daae961e12efa691739fdcd8fa5f5f8337d02e8cc8912e941a900683e8027"
     },
     {
       "path": "sources/web/JE-1000H/EU/de/md/evidence/projection_bundle_manifest.json",
       "size": 4752,
-      "sha256": "b6a9afe37b79689b967d1e09980079f1805bd752efb9f5ea18f0b82ae616c015"
+      "sha256": "577dcf4b2f21a8beecacae14d65a2b43dcf09cb1288cb6666302fe1e1307832e"
     },
     {
       "path": "sources/web/JE-1000H/EU/de/md/index.md",
@@ -16102,18 +16107,23 @@
     },
     {
       "path": "sources/web/JE-1000H/EU/de/md/manual.ir.json",
-      "size": 834051,
-      "sha256": "8c18c22b45c19efa509300b66270e00c346c4904205aa29e9b5d506da92da421"
+      "size": 834643,
+      "sha256": "86f19610ca92f70b28cd98dc3af467978a1d471a9c51e63099407cecae6af134"
+    },
+    {
+      "path": "sources/web/JE-1000H/EU/de/md/manual_bundle.html",
+      "size": 85055,
+      "sha256": "4033a0f7cfbceedd9b69a832cdd090eb1336d17593a2cbc4a9f9ed5e16cc31cc"
     },
     {
       "path": "sources/web/JE-1000H/EU/de/md/manual_je1000h_eu_de.md",
-      "size": 76573,
-      "sha256": "ba2d5a712d879bc2144fc5645d07e9320f015518edd4414336d6e5e507ecf895"
+      "size": 76495,
+      "sha256": "cf457c32cce287227507a8b023a1356de670a5287a0bafce22ada9a41a703a04"
     },
     {
       "path": "sources/web/JE-1000H/EU/de/md/publish_meta.json",
-      "size": 593,
-      "sha256": "54a4b563e993cca4f991bb13627a63189d7ed4ea96c805a5fa512d653e8f80e9"
+      "size": 592,
+      "sha256": "22cf1fa11e85a75d1a959ab6c35476b08d2b14ac802cc1387cbaa19d8bd1a99d"
     },
     {
       "path": "sources/web/JE-1000H/EU/en/md/assets/ir/090df5c32cf9886aa7a0d4b47d37673c8a8b3a6bbfdf8f832b8a086e6962638c/battery_pack.png",
@@ -17046,6 +17056,11 @@
       "sha256": "c6537aef307031eadde5998957c65dd27c6f7f5c498b7ad5424dec64fb87ecb9"
     },
     {
+      "path": "sources/web/JE-1000H/EU/it/md/_static/web_manual.css",
+      "size": 123623,
+      "sha256": "4c01adf9222e7faa8fb5552490d8b8fa4ebba550b4ef2a1e7171a1b9a6538434"
+    },
+    {
       "path": "sources/web/JE-1000H/EU/it/md/assets/ir/0ae63e952c783fd27cffebcf948a095b03eade283c96a07aedf3c4b9bf1836bb/charging_solar_adapter.png",
       "size": 94888,
       "sha256": "0ae63e952c783fd27cffebcf948a095b03eade283c96a07aedf3c4b9bf1836bb"
@@ -17327,13 +17342,13 @@
     },
     {
       "path": "sources/web/JE-1000H/EU/it/md/evidence/language_projection_receipt.json",
-      "size": 35968,
-      "sha256": "37d4c57faad2f79a6aab19e3b7d7ed98044ac2afe420bbc490eab4a7f763182f"
+      "size": 66693,
+      "sha256": "6d98959c122450b458f9d5c1aa84b98c2f3d80e14d1403e9fbc2eff8e068605d"
     },
     {
       "path": "sources/web/JE-1000H/EU/it/md/evidence/projection_bundle_manifest.json",
       "size": 4752,
-      "sha256": "e3cddb837f100bcab56c7daafdff1585cffa13fd2049502f012d4ad2c3044051"
+      "sha256": "50399c0cabc15ea4f7438aac05935639947bbc10799ce753575cf1d6a25640f3"
     },
     {
       "path": "sources/web/JE-1000H/EU/it/md/index.md",
@@ -17342,18 +17357,23 @@
     },
     {
       "path": "sources/web/JE-1000H/EU/it/md/manual.ir.json",
-      "size": 829018,
-      "sha256": "1192ccc1e4663475b73e7079f853c2ae3f44939d09752684f35d7bc101c378f0"
+      "size": 829735,
+      "sha256": "1ac2e8a24c413c5d838b3aa9525f9f4053455c1117c94a7c2dc6ca7cf82bfa77"
+    },
+    {
+      "path": "sources/web/JE-1000H/EU/it/md/manual_bundle.html",
+      "size": 85366,
+      "sha256": "789f6ca4bc36fc273c37ca7f9ea60638cff838983e646f8e068ce5cf3f6c6a1f"
     },
     {
       "path": "sources/web/JE-1000H/EU/it/md/manual_je1000h_eu_it.md",
-      "size": 76876,
-      "sha256": "635a6ce4416a612bcde6c66c2013fdca1a85f88df7de4d97e0eed225db2183e7"
+      "size": 76848,
+      "sha256": "cb8cc79573489b018393bba785acc12c91e34434814667d866142413b68b59dd"
     },
     {
       "path": "sources/web/JE-1000H/EU/it/md/publish_meta.json",
-      "size": 593,
-      "sha256": "531b144a2071bc08d8060c2c9018f3961465107fcf3d25775abd4b68d27b1994"
+      "size": 592,
+      "sha256": "ea3013668f96a86ed8938f2add2a74dcc1c0d9da62f10a6eded874ac2f7320d4"
     },
     {
       "path": "sources/web/JE-1000H/EU/nl/md/_static/web_manual.css",
@@ -39911,14 +39931,19 @@
       "sha256": "41c8b0f1358891c02196dabf9cf884fb52ed198c6c3a18befc53d9d06b80841a"
     },
     {
+      "path": "web/JE-1000H/EU/de/md/_static/web_manual.css",
+      "size": 123623,
+      "sha256": "4c01adf9222e7faa8fb5552490d8b8fa4ebba550b4ef2a1e7171a1b9a6538434"
+    },
+    {
       "path": "web/JE-1000H/EU/de/md/evidence/language_projection_receipt.json",
-      "size": 35968,
-      "sha256": "5ca9cab90af98ea8827c4d96a3771f84f6a0d77be55d9e18b17899e248158139"
+      "size": 66693,
+      "sha256": "086daae961e12efa691739fdcd8fa5f5f8337d02e8cc8912e941a900683e8027"
     },
     {
       "path": "web/JE-1000H/EU/de/md/evidence/projection_bundle_manifest.json",
       "size": 4752,
-      "sha256": "b6a9afe37b79689b967d1e09980079f1805bd752efb9f5ea18f0b82ae616c015"
+      "sha256": "577dcf4b2f21a8beecacae14d65a2b43dcf09cb1288cb6666302fe1e1307832e"
     },
     {
       "path": "web/JE-1000H/EU/de/md/index.md",
@@ -39927,13 +39952,18 @@
     },
     {
       "path": "web/JE-1000H/EU/de/md/manual.ir.json",
-      "size": 834051,
-      "sha256": "8c18c22b45c19efa509300b66270e00c346c4904205aa29e9b5d506da92da421"
+      "size": 834643,
+      "sha256": "86f19610ca92f70b28cd98dc3af467978a1d471a9c51e63099407cecae6af134"
+    },
+    {
+      "path": "web/JE-1000H/EU/de/md/manual_bundle.html",
+      "size": 85055,
+      "sha256": "4033a0f7cfbceedd9b69a832cdd090eb1336d17593a2cbc4a9f9ed5e16cc31cc"
     },
     {
       "path": "web/JE-1000H/EU/de/md/manual_je1000h_eu_de.md",
-      "size": 77416,
-      "sha256": "588116d81d28a14c755ecc923426a49f3e82a1f66cedf5f7ebbce1eda1ba942d"
+      "size": 77338,
+      "sha256": "2b1c657ad457df22a38ee4e637866d3ce623c960cf09a98d5a20975bd21e038c"
     },
     {
       "path": "web/JE-1000H/EU/en/md/evidence/language_projection_receipt.json",
@@ -40011,14 +40041,19 @@
       "sha256": "89d31a636dd889c183c29634671530eb8a5062210519075b71e2dcafacee73cb"
     },
     {
+      "path": "web/JE-1000H/EU/it/md/_static/web_manual.css",
+      "size": 123623,
+      "sha256": "4c01adf9222e7faa8fb5552490d8b8fa4ebba550b4ef2a1e7171a1b9a6538434"
+    },
+    {
       "path": "web/JE-1000H/EU/it/md/evidence/language_projection_receipt.json",
-      "size": 35968,
-      "sha256": "37d4c57faad2f79a6aab19e3b7d7ed98044ac2afe420bbc490eab4a7f763182f"
+      "size": 66693,
+      "sha256": "6d98959c122450b458f9d5c1aa84b98c2f3d80e14d1403e9fbc2eff8e068605d"
     },
     {
       "path": "web/JE-1000H/EU/it/md/evidence/projection_bundle_manifest.json",
       "size": 4752,
-      "sha256": "e3cddb837f100bcab56c7daafdff1585cffa13fd2049502f012d4ad2c3044051"
+      "sha256": "50399c0cabc15ea4f7438aac05935639947bbc10799ce753575cf1d6a25640f3"
     },
     {
       "path": "web/JE-1000H/EU/it/md/index.md",
@@ -40027,13 +40062,18 @@
     },
     {
       "path": "web/JE-1000H/EU/it/md/manual.ir.json",
-      "size": 829018,
-      "sha256": "1192ccc1e4663475b73e7079f853c2ae3f44939d09752684f35d7bc101c378f0"
+      "size": 829735,
+      "sha256": "1ac2e8a24c413c5d838b3aa9525f9f4053455c1117c94a7c2dc6ca7cf82bfa77"
+    },
+    {
+      "path": "web/JE-1000H/EU/it/md/manual_bundle.html",
+      "size": 85366,
+      "sha256": "789f6ca4bc36fc273c37ca7f9ea60638cff838983e646f8e068ce5cf3f6c6a1f"
     },
     {
       "path": "web/JE-1000H/EU/it/md/manual_je1000h_eu_it.md",
-      "size": 77719,
-      "sha256": "c479c837e2a403b2c9a6cdc460e5b44299a7c83024176d9ba5b7d69097bfafd1"
+      "size": 77691,
+      "sha256": "7205cec40bddf5201723cb856c3550f9a000fa08a223368b0bcba3f97cb101a3"
     },
     {
       "path": "web/JE-1000H/EU/md/index.md",
