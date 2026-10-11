@@ -114,6 +114,7 @@
 - [JE-3600A / EU / pl - Jackery Explorer 3600 Plus](JE-3600A/EU/pl/md/manual_je3600a_eu_pl.md)
 - [JE-3600A / EU / pt - Jackery Explorer 3600 Plus](JE-3600A/EU/pt/md/manual_je3600a_eu_pt.md)
 - [JE-3600A / EU / uk - Jackery Explorer 3600 Plus](JE-3600A/EU/uk/md/manual_je3600a_eu_uk.md)
+- [JE-5000A / JP / ja - Jackery ポータブル電源 5000 Plus · JE-5000A](JE-5000A/JP/ja/md/manual_je5000a_jp_ja.md)
 - [JE-500A / EU / en - Jackery Explorer 500 User Manual](JE-500A/EU/en/md/manual_je500a_eu_en.md)
 - [JHP-3000D / US / en - Jackery HomePower 3000 · JHP-3000D](JHP-3000D/US/en/md/manual_jhp3000d_us_en.md)
 - [JHP-3000D / US / es - Jackery HomePower 3000 · JHP-3000D](JHP-3000D/US/es/md/manual_jhp3000d_us_es.md)
