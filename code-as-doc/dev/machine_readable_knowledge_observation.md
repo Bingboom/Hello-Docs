@@ -1,14 +1,14 @@
 # 欧规说明书知识观察立项（机读 Phase 2）
 
-Status: proposed · Owner: Auto-Manual maintainer · Created: 2026-10-11
+Status: active · Owner: Auto-Manual maintainer · Created: 2026-10-11
 
 上位计划：[`machine_readable_manual_corpus.md`](machine_readable_manual_corpus.md)（§4 路线、§9 Phase 2 目标）。
 Phase 1 验收记录：[`machine_readable_pilot_audit.md`](machine_readable_pilot_audit.md)。
 
-本文件是 Phase 2（Knowledge Observation）的立项稿，包括立项依据、范围、待决事项及建议、
-契约草案、PR 切分与验收标准。§5 的决定确认前不开工；确认后本文件改为 `active`，
-Phase 2 的实施以本文件为准。Phase 1 已上线的行为（`manual-knowledge.json` v1、机读面清单、
-查询插件）不因本文件改变。
+本文件是 Phase 2（Knowledge Observation）的立项文件，包括立项依据、范围、决策、契约草案、
+PR 切分与验收标准。§5 的决策已于 2026-10-11 按建议确认，Phase 2a 的实施以本文件为准；
+各实施 PR 仍按 §10 另行登记授权。Phase 1 已上线的行为（`manual-knowledge.json` v1、
+机读面清单、查询插件）不因本文件改变。
 
 ## 1. 立项依据
 
@@ -165,20 +165,22 @@ JBP-2000B/EU/de 的两条 `HINWEISE` 渲染为表格，JS-100I/EU/en 的两条�
 无 alt 图片从 191 / 3,593 增至 361 / 4,326，JE-3600A 每个语言 13 / 56。图中或图标里的
 警示在 Phase 2 中仍不可见（不做 OCR），报告按版本列出盲区规模。
 
-## 5. 待决事项（附建议）
+## 5. 决策（2026-10-11 按建议确认）
 
-| # | 问题 | 选项 | 建议 |
-| --- | --- | --- | --- |
-| D6 | 范围拆分 | (a) 2a 只做 EU，跨区域进 2b；(b) Phase 2 一次包含跨区域 | (a)，理由见 §3.1 |
-| D7 | 产物与生成位置 | (a) 进 RTD 构建，随部署回执封存；(b) 离线命令读取已封存的语料与回执后生成；(c) 2a 用 (b)，2b 再按消费方需要评估 (a) | (c)：抽取出错不影响发布；产物记录语料与网页哈希，可判断 stale |
-| D7a | 产物是否入库 | (a) 只在本地 / 制品中生成，不提交；(b) 提交到 `reports/` | (a)；试点结论写成验收记录入库，与 P1-4 相同 |
-| D8 | 条目身份 | (a) 直接用 `block_id`；(b) 内容寻址的 `knowledge_id`（含规范化文本哈希） | (b)，见 §6.2；新鲜度按 `knowledge_id` 判断，不改 v1 语料 |
-| D9 | 状态边界 | (a) 机器只写 `extracted` / `candidate`，人工结论归 Phase 3 评审台账；(b) 2a 就建最小评审台账 | (a)；试点的人工核对写成验收记录，不进机器状态 |
-| D10 | 分类与对齐方法 | (a) 确定性规则：多语受控词表加实体锚点（数字、单位、型号、接口名）；(b) 以规则为主，现有网关模型只出候选并标 `method: llm`；(c) 向量检索 | (a)：同一语料输出字节一致；(b) 作为 2a 之后的可选增量另行确认；(c) 违反非目标 |
-| D11 | 修订号 | (a) 维持现状，比较结果带 `revision_alignment`（`same` / `different` / `unknown`）；(b) 从 IR 或文件名推断修订号 | (a)；正式修订号由发布元数据补充，另行立项，Phase 2 不推断 |
-| D12 | 跨修订比较的归属 | (a) 归 Phase 3（与上位计划 §9 一致），并更正 P1-4 §3.3"跨修订比较归 Phase 2"的说法；(b) 在 2a 内做 | (a)；2a 产物记录 `source_sha256`，将来可从 Hello-Docs Git 历史重建语料做比较，不新建归档存储 |
-| D13 | 警示级别词表 | (a) 补 `ПОРАДА`；`Important` / `IMPORTANT` / `Importante` 按 Style Guide 等级词条款处理：允许则映射为 caution，不允许则作为源缺陷交内容负责人；(b) 维持现状 | (a)，并加 §7 P2-0 的 `unknown` 标签护栏 |
-| D14 | 试点验收门槛 | (a) 对高置信度齐套候选的人工确认率设门槛；(b) 不设门槛，只记录结果 | (a) ≥ 80%（确认为真实差异，或差异有可解释的原因）；全部误报记录原因 |
+编号接续上位计划 §7 的 D1–D5。
+
+| # | 问题 | 决定 |
+| --- | --- | --- |
+| D6 | 范围拆分 | Phase 2a 只做 EU；跨区域比较进 Phase 2b，与上位计划 D4 的区域扩展和插件改动一起另行立项（理由见 §3.1） |
+| D7 | 产物与生成位置 | 2a 用离线命令读取已封存的语料与回执后生成，不进 RTD 构建，抽取出错不影响发布；2b 再按消费方需要评估是否进构建 |
+| D7a | 产物是否入库 | 不提交，只在本地或制品中生成；试点结论写成验收记录入库（与 P1-4 相同） |
+| D8 | 条目身份 | 内容寻址的 `knowledge_id`（含规范化文本哈希），新鲜度按 `knowledge_id` 判断（§6.2）；不改 v1 语料 |
+| D9 | 状态边界 | 机器只写 `extracted` / `candidate`；人工结论归 Phase 3 评审台账，试点的人工核对写成验收记录 |
+| D10 | 分类与对齐方法 | 确定性规则：多语受控词表加实体锚点（数字、单位、型号、接口名），同一语料输出字节一致。由现有网关模型出候选作为 2a 之后的可选增量，另行确认；不用向量检索 |
+| D11 | 修订号 | 不推断；比较结果带 `revision_alignment`（`same` / `different` / `unknown`）。正式修订号由发布元数据补充，另行立项 |
+| D12 | 跨修订比较的归属 | 归 Phase 3（与上位计划 §9 一致），P2-0 更正 P1-4 §3.3"跨修订比较归 Phase 2"的说法；2a 产物记录 `source_sha256`，将来可从 Hello-Docs Git 历史重建语料做比较，不新建归档存储 |
+| D13 | 警示级别词表 | 补 `ПОРАДА`；`Important` / `IMPORTANT` / `Importante` 按 Style Guide 等级词条款处理：允许则映射为 caution，不允许则作为源缺陷交内容负责人；加 §7 P2-0 的 `unknown` 标签护栏 |
+| D14 | 试点验收门槛 | 高置信度齐套候选的人工确认率 ≥ 80%（确认为真实差异，或差异有可解释的原因）；全部误报记录原因 |
 
 ## 6. 契约草案
 
@@ -289,7 +291,7 @@ JBP-2000B/EU/de 的两条 `HINWEISE` 渲染为表格，JS-100I/EU/en 的两条�
 
 | PR | 内容 | 主要文件 | 验证 |
 | --- | --- | --- | --- |
-| 立项 | 本文件；上位计划头部指向本文件 | `code-as-doc/dev/` | 文档链接与生命周期检查 |
+| 立项 | 本文件；上位计划头部指向本文件；系统演进史环 14 的状态表述 | `code-as-doc/dev/`、`code-as-doc/architecture/system_evolution_history.md` | 文档链接与生命周期检查；系统演变页测试 |
 | P2-0 词表与护栏 | D13 的词表调整；`machine_surface_manifest.json` 增加 `unknown` 标签清单（只加字段）；`manifest` 命令对照仓库内的已知例外表报告新增的 `unknown` 标签，不在构建中失败；按 D12、D13 的决定更正 P1-4 §3.2、§3.3 的说法 | `tools/manual_knowledge/identity.py`、`manifest.py`、`data/` 下新的例外表、测试、P1-4 验收记录 | 单元测试；本地重建前后对比：网页 HTML 与语料其他字段不变 |
 | P2-1 契约与身份 | 观察命令与产物骨架；`knowledge_id`、条目与比较记录的新鲜度 | `tools/manual_knowledge/`、`tools/utils/path_utils.py`、测试 | 确定性（两次运行字节一致）；原地改字、插入块、换路由三种用例 |
 | P2-2 抽取与分类 | §6.3 的抽取范围、多语词表、等级词说明表排除 | 同上 | 规则用例；本地重建上的覆盖率与未判定率报告 |
@@ -336,9 +338,9 @@ JBP-2000B/EU/de 的两条 `HINWEISE` 渲染为表格，JS-100I/EU/en 的两条�
 - 每个 PR 按 [`AGENTS.md`](../../AGENTS.md) §8 与 [`merge_authorizations.md`](merge_authorizations.md)
   执行。已归档的 MA-251 明确不含 Phase 2，实施 PR 需要新的登记，取号用
   `python -m tools.next_registry_id ma`。
-- §5 的决定确认后，本文件改为 `active`，同时更新
+- §5 于 2026-10-11 确认后本文件转为 `active`；
   [`system_evolution_history.md`](../architecture/system_evolution_history.md) 环 14 中
-  "Phase 2／3 尚未立项"的表述。
+  "Phase 2／3 尚未立项"的表述在立项 PR 中同步更新。
 - 观察发现的源内容问题只交内容负责人，在该版本声明的权威源修改后重新发布；不在机读面或
   观察产物中修正。
 
