@@ -1,6 +1,6 @@
 {
   "schema_version": "auto-manual-web-publish-branch/v2",
-  "built_at": "2026-10-11T08:10:44.198072+00:00",
+  "built_at": "2026-10-11T14:07:26.227437+00:00",
   "targets": [
     {
       "schema_version": "auto-manual-web-publish-target/v2",
@@ -639,6 +639,25 @@
       "language_projection_evidence_path": "evidence/language_projection_receipt.json",
       "language_projection_evidence_sha256": "82958864dd48e606357206282aa9cc156da527657e873b7c89493b8d20609cbf",
       "legacy_default": false
+    },
+    {
+      "schema_version": "auto-manual-web-publish-target/v2",
+      "model": "JBP-5000A",
+      "region": "JP",
+      "lang": "ja",
+      "version": "git-20261011-cdd40510-reviewed",
+      "built_at": "2026-10-11T14:07:26.227437+00:00",
+      "git_ref": "1ab207f89bfdfbc15d15f0d27161e2d270608e04",
+      "route": "JBP-5000A/JP/ja/md",
+      "manual": "manual_jbp5000a_jp_ja.md",
+      "language_scope": "single",
+      "language_projection_evidence_path": "evidence/language_projection_receipt.json",
+      "language_projection_evidence_sha256": "80e8e96a733e2e5b85336cf92f5d03dc6f7e17a2f5e7700d6e3f2ba076d2ae30",
+      "legacy_default": true,
+      "legacy_route": "JBP-5000A/JP/md",
+      "legacy_aliases": [
+        "manual_jbp5000a_jp_ja"
+      ]
     },
     {
       "schema_version": "auto-manual-web-publish-target/v2",
@@ -8192,6 +8211,146 @@
       "path": "sources/web/JBP-3600A/EU/uk/md/publish_meta.json",
       "size": 588,
       "sha256": "ba23446724c58494fbde978f03bf246060a2e958c442c58f2fa97bf2033f14d0"
+    },
+    {
+      "path": "sources/web/JBP-5000A/JP/ja/md/_static/source_presentation.css",
+      "size": 7218,
+      "sha256": "fa0afd7a9320cdf115159142d03232f89e28600eb47baf2380594de1f8bc23d2"
+    },
+    {
+      "path": "sources/web/JBP-5000A/JP/ja/md/_static/web_manual.css",
+      "size": 123623,
+      "sha256": "4c01adf9222e7faa8fb5552490d8b8fa4ebba550b4ef2a1e7171a1b9a6538434"
+    },
+    {
+      "path": "sources/web/JBP-5000A/JP/ja/md/assets/ac-charge.svg",
+      "size": 1374700,
+      "sha256": "2e631ef75388c58af6259a947645a4e3aa4537d082d77ea347003a683997f5d7"
+    },
+    {
+      "path": "sources/web/JBP-5000A/JP/ja/md/assets/app-download.svg",
+      "size": 16869,
+      "sha256": "0cf80731f66daa375a8ee40b2cb9cde5cf8e73fea8304061b31719c40d6df45a"
+    },
+    {
+      "path": "sources/web/JBP-5000A/JP/ja/md/assets/app-qr.svg",
+      "size": 5689,
+      "sha256": "2faaeb1f63bde180669d27fe0adc8cd3dd40f66b85b96caa46ee2b397f3b2ee8"
+    },
+    {
+      "path": "sources/web/JBP-5000A/JP/ja/md/assets/battery-packs.svg",
+      "size": 2180260,
+      "sha256": "81af55ff98f81ada561b90c77deefb99b1c99bc668dcefa232725fdba0e08278"
+    },
+    {
+      "path": "sources/web/JBP-5000A/JP/ja/md/assets/connected-batteries.svg",
+      "size": 48784,
+      "sha256": "e83e8f4142517d2d9771312ce4fc90c68bc0dcde47b2b5df5b6e20269cf4dcfb"
+    },
+    {
+      "path": "sources/web/JBP-5000A/JP/ja/md/assets/inbox-cable.png",
+      "size": 8742,
+      "sha256": "0a2f4e72a751a9b8371ea98a0aa330faffab47b36c76a41694e898af9b5d4de7"
+    },
+    {
+      "path": "sources/web/JBP-5000A/JP/ja/md/assets/inbox-main.svg",
+      "size": 390354,
+      "sha256": "28f48b185c652fc0e144acbfb214055eafb39fa8f84a9bcb64c5c37eb7865382"
+    },
+    {
+      "path": "sources/web/JBP-5000A/JP/ja/md/assets/inbox-manual.svg",
+      "size": 568842,
+      "sha256": "a07e88fde477f05ccd86746e200155f53e6a95c950b1a8444152bcc1914bd133"
+    },
+    {
+      "path": "sources/web/JBP-5000A/JP/ja/md/assets/lcd-charge.svg",
+      "size": 2547,
+      "sha256": "e1ffa40277a7eb92a8a4c3f770d0099c0a5f5d414bad82d5cbb8d7555d3b27c2"
+    },
+    {
+      "path": "sources/web/JBP-5000A/JP/ja/md/assets/lcd-map.svg",
+      "size": 7648,
+      "sha256": "55f3c68fcf37bc58acbe5ba99e32b9867adb47e636c0c904287ab36beb851f8e"
+    },
+    {
+      "path": "sources/web/JBP-5000A/JP/ja/md/assets/lcd-percentage.svg",
+      "size": 3998,
+      "sha256": "af251a1736d323f84a1a71cb0ad5bd173922a7b599b72e03f3f00727cdbff5a9"
+    },
+    {
+      "path": "sources/web/JBP-5000A/JP/ja/md/assets/locking-connection.svg",
+      "size": 2051844,
+      "sha256": "098fc8ad4c29e0cdd5ada28e03edd83bdd549016e5a8b849ff21f8e8f99f950f"
+    },
+    {
+      "path": "sources/web/JBP-5000A/JP/ja/md/assets/overview.svg",
+      "size": 421135,
+      "sha256": "d2cfb9e6a142b099fb8073971082b0123fc1477ca6a9b3bae3a10ad5245970e7"
+    },
+    {
+      "path": "sources/web/JBP-5000A/JP/ja/md/assets/power.svg",
+      "size": 417603,
+      "sha256": "9ffade3f6f4f7679e046d56764cc532798ff9acc746c80343a4d9422a587b47f"
+    },
+    {
+      "path": "sources/web/JBP-5000A/JP/ja/md/assets/service-logo.svg",
+      "size": 7802,
+      "sha256": "00889b66437ecd87e2c6ba008a202edcd1e352e07bb7fd3ec07713c946e8635c"
+    },
+    {
+      "path": "sources/web/JBP-5000A/JP/ja/md/assets/solar-house.svg",
+      "size": 2894605,
+      "sha256": "ad5c6265c1bc7b0ddc4ae96e3c9312a1d249d909b4bab3695fa24aa008799969"
+    },
+    {
+      "path": "sources/web/JBP-5000A/JP/ja/md/assets/solar-portable.svg",
+      "size": 1852100,
+      "sha256": "76caf021d16116ff166b7b72841ab215e3f61c44ab6ec9f658d97ed1a8a6f1c3"
+    },
+    {
+      "path": "sources/web/JBP-5000A/JP/ja/md/assets/stack-limits.svg",
+      "size": 790768,
+      "sha256": "d03b4f3801abb3ab6b35ca6364e530d8c9b6fa2629bf2195fd35a921c4dce8f0"
+    },
+    {
+      "path": "sources/web/JBP-5000A/JP/ja/md/assets/symbol-li-ion.svg",
+      "size": 6007,
+      "sha256": "00ce194f2bd6b45d8b61766ee0e15d21b51a49992b4c0e3165953c8c779a79b1"
+    },
+    {
+      "path": "sources/web/JBP-5000A/JP/ja/md/conf.py",
+      "size": 839,
+      "sha256": "bdbc3a2362027b567c17818e0a7098060e2be1e5a2d5d117a21685ab481c21bf"
+    },
+    {
+      "path": "sources/web/JBP-5000A/JP/ja/md/evidence/frozen_source_manifest.json",
+      "size": 46325,
+      "sha256": "8ebd4af3ab5f1186599702a31aaeda86f358bfe41b43ecd43c8182a659d328b7"
+    },
+    {
+      "path": "sources/web/JBP-5000A/JP/ja/md/evidence/language_projection_receipt.json",
+      "size": 13903,
+      "sha256": "80e8e96a733e2e5b85336cf92f5d03dc6f7e17a2f5e7700d6e3f2ba076d2ae30"
+    },
+    {
+      "path": "sources/web/JBP-5000A/JP/ja/md/index.md",
+      "size": 100,
+      "sha256": "1d947f8dad91d2f4d45b4e80de4f096c2b23a411730a451b6379dd78f9c82cd3"
+    },
+    {
+      "path": "sources/web/JBP-5000A/JP/ja/md/manual.ir.json",
+      "size": 270754,
+      "sha256": "6b6fda38484a792e4828abe34002d2b7ad688a6be78fd5c374f6e2f568df0ad1"
+    },
+    {
+      "path": "sources/web/JBP-5000A/JP/ja/md/manual_jbp5000a_jp_ja.md",
+      "size": 38993,
+      "sha256": "ed533649dc65a1bc953987c5340a1a1d8e52e6e704dc7603283922691c9cab63"
+    },
+    {
+      "path": "sources/web/JBP-5000A/JP/ja/md/publish_meta.json",
+      "size": 686,
+      "sha256": "ab923126290124a2ea8e8e6dda0eed53814be58f95c6cb531e2bee5ec5b24e0d"
     },
     {
       "path": "sources/web/JE-1000E-SIL/US/en/md/_static/web_manual.css",
@@ -40149,6 +40308,51 @@
       "sha256": "32385f15cd918574e94f35d095c2a3d92870a10998ba3e3e61468b2c25058427"
     },
     {
+      "path": "web/JBP-5000A/JP/ja/md/_static/source_presentation.css",
+      "size": 7218,
+      "sha256": "fa0afd7a9320cdf115159142d03232f89e28600eb47baf2380594de1f8bc23d2"
+    },
+    {
+      "path": "web/JBP-5000A/JP/ja/md/_static/web_manual.css",
+      "size": 123623,
+      "sha256": "4c01adf9222e7faa8fb5552490d8b8fa4ebba550b4ef2a1e7171a1b9a6538434"
+    },
+    {
+      "path": "web/JBP-5000A/JP/ja/md/evidence/frozen_source_manifest.json",
+      "size": 46325,
+      "sha256": "8ebd4af3ab5f1186599702a31aaeda86f358bfe41b43ecd43c8182a659d328b7"
+    },
+    {
+      "path": "web/JBP-5000A/JP/ja/md/evidence/language_projection_receipt.json",
+      "size": 13903,
+      "sha256": "80e8e96a733e2e5b85336cf92f5d03dc6f7e17a2f5e7700d6e3f2ba076d2ae30"
+    },
+    {
+      "path": "web/JBP-5000A/JP/ja/md/index.md",
+      "size": 100,
+      "sha256": "1d947f8dad91d2f4d45b4e80de4f096c2b23a411730a451b6379dd78f9c82cd3"
+    },
+    {
+      "path": "web/JBP-5000A/JP/ja/md/manual.ir.json",
+      "size": 270754,
+      "sha256": "6b6fda38484a792e4828abe34002d2b7ad688a6be78fd5c374f6e2f568df0ad1"
+    },
+    {
+      "path": "web/JBP-5000A/JP/ja/md/manual_jbp5000a_jp_ja.md",
+      "size": 40677,
+      "sha256": "2a124ecefba69cf5c64731c1f63854a099723e6eb6b37c0abdcc6836cd9d4129"
+    },
+    {
+      "path": "web/JBP-5000A/JP/md/index.md",
+      "size": 268,
+      "sha256": "d3eb0d1d0a3b3010c0edafa988c5576b5915132043de7d642c0af96cebc50979"
+    },
+    {
+      "path": "web/JBP-5000A/JP/md/manual_jbp5000a_jp_ja.md",
+      "size": 268,
+      "sha256": "d3eb0d1d0a3b3010c0edafa988c5576b5915132043de7d642c0af96cebc50979"
+    },
+    {
       "path": "web/JE-1000E-SIL/US/en/md/_static/web_manual.css",
       "size": 100403,
       "sha256": "38930fef28fcd3a35f1ef566a9291123b1e4721d9892d244b1cce09ecb62f3ff"
@@ -43184,6 +43388,11 @@
       "sha256": "0984323f428bdceabe126955738b46ca71856bc36adcd419cfe663928d61c4fa"
     },
     {
+      "path": "web/_static/manual-assets/_pool/09/098fc8ad4c29e0cdd5ada28e03edd83bdd549016e5a8b849ff21f8e8f99f950f.svg",
+      "size": 2051844,
+      "sha256": "098fc8ad4c29e0cdd5ada28e03edd83bdd549016e5a8b849ff21f8e8f99f950f"
+    },
+    {
       "path": "web/_static/manual-assets/_pool/09/0997cc2b9e06f3c1918f9642ae4584aa414b048e2390ae60aded8ae9838cb3c0.webp",
       "size": 14628,
       "sha256": "0997cc2b9e06f3c1918f9642ae4584aa414b048e2390ae60aded8ae9838cb3c0"
@@ -43382,6 +43591,11 @@
       "path": "web/_static/manual-assets/_pool/0c/0ce34b25f210e2f613d02065d94c38a6da5486c8a2489ff8d56b68a76050f964.webp",
       "size": 88486,
       "sha256": "0ce34b25f210e2f613d02065d94c38a6da5486c8a2489ff8d56b68a76050f964"
+    },
+    {
+      "path": "web/_static/manual-assets/_pool/0c/0cf80731f66daa375a8ee40b2cb9cde5cf8e73fea8304061b31719c40d6df45a.svg",
+      "size": 16869,
+      "sha256": "0cf80731f66daa375a8ee40b2cb9cde5cf8e73fea8304061b31719c40d6df45a"
     },
     {
       "path": "web/_static/manual-assets/_pool/0d/0d1e2c82ce86e51eeb4a1001096fb5073c867927d8f4c86ec29cff2a86f8014f.png",
@@ -44299,6 +44513,11 @@
       "sha256": "28f3cad42ae32e9e895abfd7cdb16a21b99dfa822c57d542f0e3f59a4b452c6c"
     },
     {
+      "path": "web/_static/manual-assets/_pool/28/28f48b185c652fc0e144acbfb214055eafb39fa8f84a9bcb64c5c37eb7865382.svg",
+      "size": 390354,
+      "sha256": "28f48b185c652fc0e144acbfb214055eafb39fa8f84a9bcb64c5c37eb7865382"
+    },
+    {
       "path": "web/_static/manual-assets/_pool/28/28ffcbf9af284efc6870c0dc8ea46e81ed64bd3ee7da2d4ea4ab9a39cabc47d8.png",
       "size": 323533,
       "sha256": "28ffcbf9af284efc6870c0dc8ea46e81ed64bd3ee7da2d4ea4ab9a39cabc47d8"
@@ -44509,6 +44728,11 @@
       "sha256": "2e5c885fec9e09dfc2538fe6dbabb35e4024b9e634a71bd979ccf861e2ee06a7"
     },
     {
+      "path": "web/_static/manual-assets/_pool/2e/2e631ef75388c58af6259a947645a4e3aa4537d082d77ea347003a683997f5d7.svg",
+      "size": 1374700,
+      "sha256": "2e631ef75388c58af6259a947645a4e3aa4537d082d77ea347003a683997f5d7"
+    },
+    {
       "path": "web/_static/manual-assets/_pool/2e/2e6ed961723e02a85d355869482f2f66863576de9482fb0a9650ddfbd3ded2a5.svg",
       "size": 74003,
       "sha256": "2e6ed961723e02a85d355869482f2f66863576de9482fb0a9650ddfbd3ded2a5"
@@ -44567,6 +44791,11 @@
       "path": "web/_static/manual-assets/_pool/2f/2f9c40282fac46a23e7f1a24a353284fa78070862b7f476e8733d940efc888d4.png",
       "size": 58884,
       "sha256": "2f9c40282fac46a23e7f1a24a353284fa78070862b7f476e8733d940efc888d4"
+    },
+    {
+      "path": "web/_static/manual-assets/_pool/2f/2faaeb1f63bde180669d27fe0adc8cd3dd40f66b85b96caa46ee2b397f3b2ee8.svg",
+      "size": 5689,
+      "sha256": "2faaeb1f63bde180669d27fe0adc8cd3dd40f66b85b96caa46ee2b397f3b2ee8"
     },
     {
       "path": "web/_static/manual-assets/_pool/2f/2fc5967073188a8484a48dbabb86f814061b39d498df8e54e03b0321f58e564d.svg",
@@ -45722,6 +45951,11 @@
       "path": "web/_static/manual-assets/_pool/55/55c8fe8b038402a39f7040043eacfae7bd89b46fde1e6636e03f0e31f25fe251.png",
       "size": 140184,
       "sha256": "55c8fe8b038402a39f7040043eacfae7bd89b46fde1e6636e03f0e31f25fe251"
+    },
+    {
+      "path": "web/_static/manual-assets/_pool/55/55f3c68fcf37bc58acbe5ba99e32b9867adb47e636c0c904287ab36beb851f8e.svg",
+      "size": 7648,
+      "sha256": "55f3c68fcf37bc58acbe5ba99e32b9867adb47e636c0c904287ab36beb851f8e"
     },
     {
       "path": "web/_static/manual-assets/_pool/56/562f998c918a50bdedcaaeff1e005b505ced57e8252bc987fe0662ea9fa8b658.jpg",
@@ -46907,6 +47141,11 @@
       "path": "web/_static/manual-assets/_pool/76/76cac1d1065be67da5f4bb58721d0e4975d3ad6b339c554c1f753208425fc334.png",
       "size": 122133,
       "sha256": "76cac1d1065be67da5f4bb58721d0e4975d3ad6b339c554c1f753208425fc334"
+    },
+    {
+      "path": "web/_static/manual-assets/_pool/76/76caf021d16116ff166b7b72841ab215e3f61c44ab6ec9f658d97ed1a8a6f1c3.svg",
+      "size": 1852100,
+      "sha256": "76caf021d16116ff166b7b72841ab215e3f61c44ab6ec9f658d97ed1a8a6f1c3"
     },
     {
       "path": "web/_static/manual-assets/_pool/77/7715470a2bd015814131bd6836e18771577c08c84fbed06b6e8df909c787df46.png",
@@ -48189,6 +48428,11 @@
       "sha256": "9ff96281355a0ff074cfffee4278d35223fba66e8d33e30dbe98bdeabc17a7d2"
     },
     {
+      "path": "web/_static/manual-assets/_pool/9f/9ffade3f6f4f7679e046d56764cc532798ff9acc746c80343a4d9422a587b47f.svg",
+      "size": 417603,
+      "sha256": "9ffade3f6f4f7679e046d56764cc532798ff9acc746c80343a4d9422a587b47f"
+    },
+    {
       "path": "web/_static/manual-assets/_pool/a0/a046f7aaa00d1bc492625ed793ad6a0854ad4bbcb4c82eac69d639bd730d7278.png",
       "size": 126499,
       "sha256": "a046f7aaa00d1bc492625ed793ad6a0854ad4bbcb4c82eac69d639bd730d7278"
@@ -48202,6 +48446,11 @@
       "path": "web/_static/manual-assets/_pool/a0/a05735b7276a37de99d3bc5a98ea6e61bb23b9ce79bc26b4ca837a7550fc8f51.png",
       "size": 4636,
       "sha256": "a05735b7276a37de99d3bc5a98ea6e61bb23b9ce79bc26b4ca837a7550fc8f51"
+    },
+    {
+      "path": "web/_static/manual-assets/_pool/a0/a07e88fde477f05ccd86746e200155f53e6a95c950b1a8444152bcc1914bd133.svg",
+      "size": 568842,
+      "sha256": "a07e88fde477f05ccd86746e200155f53e6a95c950b1a8444152bcc1914bd133"
     },
     {
       "path": "web/_static/manual-assets/_pool/a0/a09a3f9a66bd56e55aa338f274f316d0965185bdc6dea7fde1137089a74fb4bf.png",
@@ -48639,6 +48888,11 @@
       "sha256": "ad4a3f6c7140f14222b620191aed30bf8fcc230c8e16a10d86d9f4c7ef27353b"
     },
     {
+      "path": "web/_static/manual-assets/_pool/ad/ad5c6265c1bc7b0ddc4ae96e3c9312a1d249d909b4bab3695fa24aa008799969.svg",
+      "size": 2894605,
+      "sha256": "ad5c6265c1bc7b0ddc4ae96e3c9312a1d249d909b4bab3695fa24aa008799969"
+    },
+    {
       "path": "web/_static/manual-assets/_pool/ad/ad6701a141a97bc4832f90ccd756b0522e27bcbb2be7a2f617a97d597ac4a54b.png",
       "size": 55756,
       "sha256": "ad6701a141a97bc4832f90ccd756b0522e27bcbb2be7a2f617a97d597ac4a54b"
@@ -48697,6 +48951,11 @@
       "path": "web/_static/manual-assets/_pool/ae/aef694a3044c4c69e1b0ef98e7cce02bbbd616eca35b23a6be8aefe57ab4d78f.png",
       "size": 334792,
       "sha256": "aef694a3044c4c69e1b0ef98e7cce02bbbd616eca35b23a6be8aefe57ab4d78f"
+    },
+    {
+      "path": "web/_static/manual-assets/_pool/af/af251a1736d323f84a1a71cb0ad5bd173922a7b599b72e03f3f00727cdbff5a9.svg",
+      "size": 3998,
+      "sha256": "af251a1736d323f84a1a71cb0ad5bd173922a7b599b72e03f3f00727cdbff5a9"
     },
     {
       "path": "web/_static/manual-assets/_pool/af/af2528e787e5eb5bce483a91f35b6cb621dcd8976b2632815b291852a7631380.png",
@@ -49754,6 +50013,11 @@
       "sha256": "d014cea3e9f0bf75ae0f67feb858c9c197908ab7d9822b9a9e82d9ffd22191d3"
     },
     {
+      "path": "web/_static/manual-assets/_pool/d0/d03b4f3801abb3ab6b35ca6364e530d8c9b6fa2629bf2195fd35a921c4dce8f0.svg",
+      "size": 790768,
+      "sha256": "d03b4f3801abb3ab6b35ca6364e530d8c9b6fa2629bf2195fd35a921c4dce8f0"
+    },
+    {
       "path": "web/_static/manual-assets/_pool/d0/d042326898a2450ebee6e356886e7403fe0a33b6a2d4a12266454205093a1218.png",
       "size": 64361,
       "sha256": "d042326898a2450ebee6e356886e7403fe0a33b6a2d4a12266454205093a1218"
@@ -49827,6 +50091,11 @@
       "path": "web/_static/manual-assets/_pool/d2/d2c69cc2d49ec6b957bb9fbd6e614abb9fe645059aee1b27e5f3fedab5d4f93f.svg",
       "size": 571983,
       "sha256": "d2c69cc2d49ec6b957bb9fbd6e614abb9fe645059aee1b27e5f3fedab5d4f93f"
+    },
+    {
+      "path": "web/_static/manual-assets/_pool/d2/d2cfb9e6a142b099fb8073971082b0123fc1477ca6a9b3bae3a10ad5245970e7.svg",
+      "size": 421135,
+      "sha256": "d2cfb9e6a142b099fb8073971082b0123fc1477ca6a9b3bae3a10ad5245970e7"
     },
     {
       "path": "web/_static/manual-assets/_pool/d2/d2e36e5df3391568b5140ef68683dbc2d0f58e1cc059f1b5c822005960c55295.png",
@@ -50287,6 +50556,11 @@
       "path": "web/_static/manual-assets/_pool/e1/e1ea2912e8fc0ee2ae541ee87ba823873512d2249563c333508539b7784f1d63.png",
       "size": 49894,
       "sha256": "e1ea2912e8fc0ee2ae541ee87ba823873512d2249563c333508539b7784f1d63"
+    },
+    {
+      "path": "web/_static/manual-assets/_pool/e1/e1ffa40277a7eb92a8a4c3f770d0099c0a5f5d414bad82d5cbb8d7555d3b27c2.svg",
+      "size": 2547,
+      "sha256": "e1ffa40277a7eb92a8a4c3f770d0099c0a5f5d414bad82d5cbb8d7555d3b27c2"
     },
     {
       "path": "web/_static/manual-assets/_pool/e2/e23bf35cb13c283125574e15ce604dda2353f4f57919d0cc877300c5d4d126c4.png",
@@ -51165,8 +51439,8 @@
     },
     {
       "path": "web/index.md",
-      "size": 14677,
-      "sha256": "3538af9c0073a3ca3cdb05b9518d156a78d7eacd49804a00679849c533137fc7"
+      "size": 14792,
+      "sha256": "b24ec18cfb57314f1836478881c5f6b996633bac12237c609af4f14a8ddfae43"
     },
     {
       "path": "web/manual.md",
@@ -51372,6 +51646,11 @@
       "path": "web/manual_jbp3600a_eu_uk.md",
       "size": 345,
       "sha256": "ef2133ec515740438ff3daca708270ea649e3627b31627ca553d6c24abe8b33b"
+    },
+    {
+      "path": "web/manual_jbp5000a_jp_ja.md",
+      "size": 344,
+      "sha256": "eb56ac403b8b9789ffab085defdeec43a1c4d0a94821b445d23e23b7eecf9f01"
     },
     {
       "path": "web/manual_je1000esil_us.md",
