@@ -75,6 +75,7 @@
 - [JE-100C / EU / pl - Jackery Explorer 100D Instrukcja obsługi](JE-100C/EU/pl/md/manual_je100c_eu_pl.md)
 - [JE-100C / EU / pt - Jackery Explorer 100D Manual do usuário](JE-100C/EU/pt/md/manual_je100c_eu_pt.md)
 - [JE-100C / EU / uk - Jackery Explorer 100D Посібник користувача](JE-100C/EU/uk/md/manual_je100c_eu_uk.md)
+- [JE-1500C / TW / zh-TW - Jackery Explorer 1500 Ultra · JE-1500C](JE-1500C/TW/zh-TW/md/manual_je1500c_tw_zh-TW.md)
 - [JE-2000E / EU / de - Jackery Explorer 2000 Plus Benutzerhandbuch](JE-2000E/EU/de/md/manual_je2000e_eu_de.md)
 - [JE-2000E / EU / en - Jackery Explorer 2000 Plus User Manual](JE-2000E/EU/en/md/manual_je2000e_eu_en.md)
 - [JE-2000E / EU / es - Jackery Explorer 2000 Plus Manual de usuario](JE-2000E/EU/es/md/manual_je2000e_eu_es.md)
