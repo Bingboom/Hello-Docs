@@ -1,0 +1,419 @@
+{
+  "schema_version": "auto-manual-frozen-web-language-evidence/v1",
+  "model": "JBP-5000A",
+  "region": "JP",
+  "language": "ja",
+  "version": "git-20261011-cdd40510-reviewed",
+  "git_ref": "1ab207f89bfdfbc15d15f0d27161e2d270608e04",
+  "caption_frame_admission": [],
+  "source_manifest": {
+    "path": "frozen_source_manifest.json",
+    "sha256": "8ebd4af3ab5f1186599702a31aaeda86f358bfe41b43ecd43c8182a659d328b7"
+  },
+  "markdown": {
+    "manual": "manual_jbp5000a_jp_ja.md",
+    "files": [
+      {
+        "path": "_static/source_presentation.css",
+        "size": 7218,
+        "sha256": "fa0afd7a9320cdf115159142d03232f89e28600eb47baf2380594de1f8bc23d2"
+      },
+      {
+        "path": "_static/web_manual.css",
+        "size": 123623,
+        "sha256": "4c01adf9222e7faa8fb5552490d8b8fa4ebba550b4ef2a1e7171a1b9a6538434"
+      },
+      {
+        "path": "assets/ac-charge.svg",
+        "size": 1374700,
+        "sha256": "2e631ef75388c58af6259a947645a4e3aa4537d082d77ea347003a683997f5d7"
+      },
+      {
+        "path": "assets/app-download.svg",
+        "size": 16869,
+        "sha256": "0cf80731f66daa375a8ee40b2cb9cde5cf8e73fea8304061b31719c40d6df45a"
+      },
+      {
+        "path": "assets/app-qr.svg",
+        "size": 5689,
+        "sha256": "2faaeb1f63bde180669d27fe0adc8cd3dd40f66b85b96caa46ee2b397f3b2ee8"
+      },
+      {
+        "path": "assets/battery-packs.svg",
+        "size": 2180260,
+        "sha256": "81af55ff98f81ada561b90c77deefb99b1c99bc668dcefa232725fdba0e08278"
+      },
+      {
+        "path": "assets/connected-batteries.svg",
+        "size": 48784,
+        "sha256": "e83e8f4142517d2d9771312ce4fc90c68bc0dcde47b2b5df5b6e20269cf4dcfb"
+      },
+      {
+        "path": "assets/inbox-cable.png",
+        "size": 8742,
+        "sha256": "0a2f4e72a751a9b8371ea98a0aa330faffab47b36c76a41694e898af9b5d4de7"
+      },
+      {
+        "path": "assets/inbox-main.svg",
+        "size": 390354,
+        "sha256": "28f48b185c652fc0e144acbfb214055eafb39fa8f84a9bcb64c5c37eb7865382"
+      },
+      {
+        "path": "assets/inbox-manual.svg",
+        "size": 568842,
+        "sha256": "a07e88fde477f05ccd86746e200155f53e6a95c950b1a8444152bcc1914bd133"
+      },
+      {
+        "path": "assets/lcd-charge.svg",
+        "size": 2547,
+        "sha256": "e1ffa40277a7eb92a8a4c3f770d0099c0a5f5d414bad82d5cbb8d7555d3b27c2"
+      },
+      {
+        "path": "assets/lcd-map.svg",
+        "size": 7648,
+        "sha256": "55f3c68fcf37bc58acbe5ba99e32b9867adb47e636c0c904287ab36beb851f8e"
+      },
+      {
+        "path": "assets/lcd-percentage.svg",
+        "size": 3998,
+        "sha256": "af251a1736d323f84a1a71cb0ad5bd173922a7b599b72e03f3f00727cdbff5a9"
+      },
+      {
+        "path": "assets/locking-connection.svg",
+        "size": 2051844,
+        "sha256": "098fc8ad4c29e0cdd5ada28e03edd83bdd549016e5a8b849ff21f8e8f99f950f"
+      },
+      {
+        "path": "assets/overview.svg",
+        "size": 421135,
+        "sha256": "d2cfb9e6a142b099fb8073971082b0123fc1477ca6a9b3bae3a10ad5245970e7"
+      },
+      {
+        "path": "assets/power.svg",
+        "size": 417603,
+        "sha256": "9ffade3f6f4f7679e046d56764cc532798ff9acc746c80343a4d9422a587b47f"
+      },
+      {
+        "path": "assets/service-logo.svg",
+        "size": 7802,
+        "sha256": "00889b66437ecd87e2c6ba008a202edcd1e352e07bb7fd3ec07713c946e8635c"
+      },
+      {
+        "path": "assets/solar-house.svg",
+        "size": 2894605,
+        "sha256": "ad5c6265c1bc7b0ddc4ae96e3c9312a1d249d909b4bab3695fa24aa008799969"
+      },
+      {
+        "path": "assets/solar-portable.svg",
+        "size": 1852100,
+        "sha256": "76caf021d16116ff166b7b72841ab215e3f61c44ab6ec9f658d97ed1a8a6f1c3"
+      },
+      {
+        "path": "assets/stack-limits.svg",
+        "size": 790768,
+        "sha256": "d03b4f3801abb3ab6b35ca6364e530d8c9b6fa2629bf2195fd35a921c4dce8f0"
+      },
+      {
+        "path": "assets/symbol-li-ion.svg",
+        "size": 6007,
+        "sha256": "00ce194f2bd6b45d8b61766ee0e15d21b51a49992b4c0e3165953c8c779a79b1"
+      },
+      {
+        "path": "conf.py",
+        "size": 839,
+        "sha256": "bdbc3a2362027b567c17818e0a7098060e2be1e5a2d5d117a21685ab481c21bf"
+      },
+      {
+        "path": "index.md",
+        "size": 100,
+        "sha256": "1d947f8dad91d2f4d45b4e80de4f096c2b23a411730a451b6379dd78f9c82cd3"
+      },
+      {
+        "path": "manual.ir.json",
+        "size": 270754,
+        "sha256": "6b6fda38484a792e4828abe34002d2b7ad688a6be78fd5c374f6e2f568df0ad1"
+      },
+      {
+        "path": "manual_jbp5000a_jp_ja.md",
+        "size": 38993,
+        "sha256": "ed533649dc65a1bc953987c5340a1a1d8e52e6e704dc7603283922691c9cab63"
+      }
+    ],
+    "sha256": "91876030eb79104ea833523cec85a5650e944e4ba602a762d4bd95868b97c6a3"
+  },
+  "html": {
+    "files": [
+      {
+        "path": ".buildinfo",
+        "size": 231,
+        "sha256": "883c2c97355c02773a2f800888b389d8e5fad1d4f9b4b4ae069f9e5571122bb0"
+      },
+      {
+        "path": ".doctrees/environment.pickle",
+        "size": 22269,
+        "sha256": "c2bde439159a692fbd03447d484bc3faeada573847878237638d2276eabfb19f"
+      },
+      {
+        "path": ".doctrees/index.doctree",
+        "size": 3498,
+        "sha256": "0cd6c51015be541ec1e8c471a4f31e0e21a48930fb46a023d0386bd0e051ba73"
+      },
+      {
+        "path": ".doctrees/manual_jbp5000a_jp_ja.doctree",
+        "size": 90820,
+        "sha256": "14f4916ffdd127f9c4f2c7cb8a636dbbcd5fa528bd230f817d12db77dce3d72b"
+      },
+      {
+        "path": "_sources/index.md.txt",
+        "size": 100,
+        "sha256": "1d947f8dad91d2f4d45b4e80de4f096c2b23a411730a451b6379dd78f9c82cd3"
+      },
+      {
+        "path": "_sources/manual_jbp5000a_jp_ja.md.txt",
+        "size": 38993,
+        "sha256": "ed533649dc65a1bc953987c5340a1a1d8e52e6e704dc7603283922691c9cab63"
+      },
+      {
+        "path": "_static/basic.css",
+        "size": 14685,
+        "sha256": "656ff1bacd6f260fc7d71b97f9c2f1fcbf692dc84bf469cd952034efcb9eefed"
+      },
+      {
+        "path": "_static/debug.css",
+        "size": 1266,
+        "sha256": "0d05cd9e79d53234304667c08f02971de6196c0ffca593c3903b3667b4055ad6"
+      },
+      {
+        "path": "_static/doctools.js",
+        "size": 4322,
+        "sha256": "2992c09df91826a8d33e3b48b645ee77e457adcf7c712d776a814e1e2c448b43"
+      },
+      {
+        "path": "_static/documentation_options.js",
+        "size": 323,
+        "sha256": "20c21c7247652bf20777e53b47b32fa37ddac90c4ea114ce49ec91933747f378"
+      },
+      {
+        "path": "_static/file.png",
+        "size": 286,
+        "sha256": "5c4bc9a16aebf38c4b950f59b8e501ca36495328cb9eb622218bce9064a35e3e"
+      },
+      {
+        "path": "_static/language_data.js",
+        "size": 385,
+        "sha256": "1b7abdb4f91a9c18241a2de39eb33b219c52a80c63b4dc378db0207411b8af31"
+      },
+      {
+        "path": "_static/minus.png",
+        "size": 90,
+        "sha256": "47e7fc50db3699f1ca41ce9a2ffa202c00c5d1d5180c55f62ba859b1bd6cc008"
+      },
+      {
+        "path": "_static/plus.png",
+        "size": 90,
+        "sha256": "54115199b96a130cba02147c47c0deb43dcc9b9f08b5162bba8642b34980ac63"
+      },
+      {
+        "path": "_static/pygments.css",
+        "size": 20190,
+        "sha256": "175552429a0952117a332f75fd6cb601f11e7d88dbf80083afcb8482f963f7e1"
+      },
+      {
+        "path": "_static/scripts/furo-extensions.js",
+        "size": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "_static/scripts/furo.js",
+        "size": 5221,
+        "sha256": "0df6012bf9183882fc314d1eeaa66fe7705e8694cf27351c4be1f5dc32e9fe6f"
+      },
+      {
+        "path": "_static/scripts/furo.js.LICENSE.txt",
+        "size": 187,
+        "sha256": "3eba718c98abe0ad8dd4401edc9ddfabf979f9bb9b8ac446460b61b03694970d"
+      },
+      {
+        "path": "_static/scripts/furo.js.map",
+        "size": 28571,
+        "sha256": "049d8e3c297854c9e7defecbf64bc92c375b4d94c7bef119ba11c8e8fc723ca2"
+      },
+      {
+        "path": "_static/searchtools.js",
+        "size": 21782,
+        "sha256": "371b49c7f094b525244e2a59d7809a6b946fc1c8791201d10dda1dd191133bb7"
+      },
+      {
+        "path": "_static/skeleton.css",
+        "size": 6034,
+        "sha256": "e7702bcb03d3eb02e63681f753d88a28bee8f8ed13e50e58ac84a2bc31a5c71d"
+      },
+      {
+        "path": "_static/source_presentation.css",
+        "size": 7218,
+        "sha256": "fa0afd7a9320cdf115159142d03232f89e28600eb47baf2380594de1f8bc23d2"
+      },
+      {
+        "path": "_static/sphinx_highlight.js",
+        "size": 5123,
+        "sha256": "096231e9c87df80ec3273da9c5b71bc81503206726a07a4dd4de44c256ff859c"
+      },
+      {
+        "path": "_static/styles/furo-extensions.css",
+        "size": 5518,
+        "sha256": "3d2b0207711a07313dfb6c8b272295f5f931169e4b2b784c61d00be9d871f8fd"
+      },
+      {
+        "path": "_static/styles/furo-extensions.css.map",
+        "size": 7762,
+        "sha256": "0b35b6ebb81f2aa1fcaee325c096d683e32c1808a9220670a1a3f88300c6915c"
+      },
+      {
+        "path": "_static/styles/furo.css",
+        "size": 50789,
+        "sha256": "177f1163121440086f701bf6cb9d2b2ab8fc29fcb754466465edf7b9f60b5aa0"
+      },
+      {
+        "path": "_static/styles/furo.css.map",
+        "size": 76029,
+        "sha256": "b7d40df8a2d2c5cc7727929dce7a482be4506f905ec42588fdbd0571bb1e9a45"
+      },
+      {
+        "path": "_static/translations.js",
+        "size": 4940,
+        "sha256": "db4c1e24507ff84dc9bf73088596d72d78e3a04f297987b3f62b24d17040b4f9"
+      },
+      {
+        "path": "_static/web_manual.css",
+        "size": 123623,
+        "sha256": "4c01adf9222e7faa8fb5552490d8b8fa4ebba550b4ef2a1e7171a1b9a6538434"
+      },
+      {
+        "path": "assets/ac-charge.svg",
+        "size": 1374700,
+        "sha256": "2e631ef75388c58af6259a947645a4e3aa4537d082d77ea347003a683997f5d7"
+      },
+      {
+        "path": "assets/app-download.svg",
+        "size": 16869,
+        "sha256": "0cf80731f66daa375a8ee40b2cb9cde5cf8e73fea8304061b31719c40d6df45a"
+      },
+      {
+        "path": "assets/app-qr.svg",
+        "size": 5689,
+        "sha256": "2faaeb1f63bde180669d27fe0adc8cd3dd40f66b85b96caa46ee2b397f3b2ee8"
+      },
+      {
+        "path": "assets/battery-packs.svg",
+        "size": 2180260,
+        "sha256": "81af55ff98f81ada561b90c77deefb99b1c99bc668dcefa232725fdba0e08278"
+      },
+      {
+        "path": "assets/connected-batteries.svg",
+        "size": 48784,
+        "sha256": "e83e8f4142517d2d9771312ce4fc90c68bc0dcde47b2b5df5b6e20269cf4dcfb"
+      },
+      {
+        "path": "assets/inbox-cable.png",
+        "size": 8742,
+        "sha256": "0a2f4e72a751a9b8371ea98a0aa330faffab47b36c76a41694e898af9b5d4de7"
+      },
+      {
+        "path": "assets/inbox-main.svg",
+        "size": 390354,
+        "sha256": "28f48b185c652fc0e144acbfb214055eafb39fa8f84a9bcb64c5c37eb7865382"
+      },
+      {
+        "path": "assets/inbox-manual.svg",
+        "size": 568842,
+        "sha256": "a07e88fde477f05ccd86746e200155f53e6a95c950b1a8444152bcc1914bd133"
+      },
+      {
+        "path": "assets/lcd-charge.svg",
+        "size": 2547,
+        "sha256": "e1ffa40277a7eb92a8a4c3f770d0099c0a5f5d414bad82d5cbb8d7555d3b27c2"
+      },
+      {
+        "path": "assets/lcd-map.svg",
+        "size": 7648,
+        "sha256": "55f3c68fcf37bc58acbe5ba99e32b9867adb47e636c0c904287ab36beb851f8e"
+      },
+      {
+        "path": "assets/lcd-percentage.svg",
+        "size": 3998,
+        "sha256": "af251a1736d323f84a1a71cb0ad5bd173922a7b599b72e03f3f00727cdbff5a9"
+      },
+      {
+        "path": "assets/locking-connection.svg",
+        "size": 2051844,
+        "sha256": "098fc8ad4c29e0cdd5ada28e03edd83bdd549016e5a8b849ff21f8e8f99f950f"
+      },
+      {
+        "path": "assets/overview.svg",
+        "size": 421135,
+        "sha256": "d2cfb9e6a142b099fb8073971082b0123fc1477ca6a9b3bae3a10ad5245970e7"
+      },
+      {
+        "path": "assets/power.svg",
+        "size": 417603,
+        "sha256": "9ffade3f6f4f7679e046d56764cc532798ff9acc746c80343a4d9422a587b47f"
+      },
+      {
+        "path": "assets/service-logo.svg",
+        "size": 7802,
+        "sha256": "00889b66437ecd87e2c6ba008a202edcd1e352e07bb7fd3ec07713c946e8635c"
+      },
+      {
+        "path": "assets/solar-house.svg",
+        "size": 2894605,
+        "sha256": "ad5c6265c1bc7b0ddc4ae96e3c9312a1d249d909b4bab3695fa24aa008799969"
+      },
+      {
+        "path": "assets/solar-portable.svg",
+        "size": 1852100,
+        "sha256": "76caf021d16116ff166b7b72841ab215e3f61c44ab6ec9f658d97ed1a8a6f1c3"
+      },
+      {
+        "path": "assets/stack-limits.svg",
+        "size": 790768,
+        "sha256": "d03b4f3801abb3ab6b35ca6364e530d8c9b6fa2629bf2195fd35a921c4dce8f0"
+      },
+      {
+        "path": "assets/symbol-li-ion.svg",
+        "size": 6007,
+        "sha256": "00ce194f2bd6b45d8b61766ee0e15d21b51a49992b4c0e3165953c8c779a79b1"
+      },
+      {
+        "path": "genindex.html",
+        "size": 13450,
+        "sha256": "1c410230a78a0405e009bc1ea33aa13521683f90984db8a7ce7833ea5a708b86"
+      },
+      {
+        "path": "index.html",
+        "size": 15922,
+        "sha256": "44200370176ffc12458764ee12061cdf82287f4256ebb3d13128494a8d75aded"
+      },
+      {
+        "path": "manual_jbp5000a_jp_ja.html",
+        "size": 54318,
+        "sha256": "c044e078591d5369ca638cbd296252bed48287ae91b2b071df580eb380dd4130"
+      },
+      {
+        "path": "objects.inv",
+        "size": 354,
+        "sha256": "b6dc4831526035f2320c4e5060411f9465bc6bc3157b717cf090ddda6da43772"
+      },
+      {
+        "path": "search.html",
+        "size": 13723,
+        "sha256": "f8b3d6950ea008ce5b6291e710c0a65d1d34b906d313a6d934da54f6dd522cbd"
+      },
+      {
+        "path": "searchindex.js",
+        "size": 10838,
+        "sha256": "2c0e252d86ff8f5132cafaa827cacc78f0673d98408097cd08337bcf2a43046a"
+      }
+    ],
+    "sha256": "2da2d5d58c330d9cce18318e6c24f54d14ed75b3baa132aaeb3f291fbdec9d88"
+  }
+}
