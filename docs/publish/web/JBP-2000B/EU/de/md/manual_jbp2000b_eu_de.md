@@ -1,62 +1,54 @@
-**WICHTIG**
-
-Herzlichen Glückwunsch zu Ihrem neuen Jackery Battery Pack 2000. Bitte lesen Sie dieses Handbuch vor der Verwendung des Produkts sorgfältig durch, insbesondere die relevanten Vorsichtsmaßnahmen, um eine ordnungsgemäße Verwendung sicherzustellen. Bewahren Sie dieses Handbuch an einem zugänglichen Ort auf, damit Sie später darauf zurückgreifen können.
-
-In Übereinstimmung mit Gesetzen und Vorschriften liegt das endgültige Auslegungsrecht für dieses Dokument und alle zugehörigen Dokumente dieses Produkts beim Unternehmen. Obwohl alle Anstrengungen unternommen wurden, um die Genauigkeit dieses Handbuchs sicherzustellen, übernimmt Jackery keine Verantwortung für etwaige Fehler.
-
-Bitte beachten Sie, dass bei Aktualisierung, Überarbeitung oder Einstellung keine weiteren Benachrichtigungen erfolgen. Die neueste Version der Produkthandbücher finden Sie unter support.jackery.com.
-
-\* Die Abbildungen dienen nur als Referenz. Bitte beziehen Sie sich auf das tatsächliche Produkt.
+<p><strong>WICHTIG</strong></p>
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>HINWEIS</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">HINWEIS</span><span class="manual-callout-label-sizer" aria-hidden="true">VORSICHT</span><span class="manual-callout-label-sizer" aria-hidden="true">WARNUNG</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Dieses Batteriepack ist mit dem Jackery E2000 Plus V2 und dem Jackery E1000 Plus V2 kompatibel. In diesem Handbuch bezeichnet „die tragbare Powerstation“ eines der beiden Modelle, sofern nicht anders angegeben.</p></td></tr></tbody></table>
+
+<div class="line-block">
+<div class="line">Herzlichen Glückwunsch zu Ihrem neuen Jackery Battery Pack 2000. Bitte lesen Sie dieses Handbuch vor der Verwendung des Produkts sorgfältig durch, insbesondere die relevanten Vorsichtsmaßnahmen, um eine ordnungsgemäße Verwendung sicherzustellen. Bewahren Sie dieses Handbuch an einem zugänglichen Ort auf, damit Sie später darauf zurückgreifen können.</div>
+<div class="line">In Übereinstimmung mit Gesetzen und Vorschriften liegt das endgültige Auslegungsrecht für dieses Dokument und alle zugehörigen Dokumente dieses Produkts beim Unternehmen. Obwohl alle Anstrengungen unternommen wurden, um die Genauigkeit dieses Handbuchs sicherzustellen, übernimmt Jackery keine Verantwortung für etwaige Fehler.</div>
+<div class="line">Bitte beachten Sie, dass bei Aktualisierung, Überarbeitung oder Einstellung keine weiteren Benachrichtigungen erfolgen. Die neueste Version der Produkthandbücher finden Sie unter support.jackery.com.</div>
+<div class="line">* Die Abbildungen dienen nur als Referenz. Bitte beziehen Sie sich auf das tatsächliche Produkt.</div>
+</div>
 
 
+
+
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>HINWEIS</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Dieses Batteriepack ist mit dem Jackery E2000 Plus V2 und dem Jackery E1000 Plus V2 kompatibel. In diesem Handbuch bezeichnet „die tragbare Powerstation“ eines der beiden Modelle, sofern nicht anders angegeben.</p></td></tr></tbody></table>
 
 # SICHERHEITSVORKEHRUNGEN BEI DER VERWENDUNG
 
-Befolgen Sie bei der Verwendung dieses Produkts stets die folgenden grundlegenden Vorsichtsmaßnahmen.
+<p>Befolgen Sie bei der Verwendung dieses Produkts stets die folgenden grundlegenden Vorsichtsmaßnahmen.</p>
 
-- Bitte lesen Sie alle Anweisungen, bevor Sie dieses Produkt verwenden.
 
-- Lassen Sie Kinder nicht mit dem Produkt spielen. Achten Sie darauf, dass Kinder beaufsichtigt werden, wenn das Produkt in ihrer Nähe verwendet wird.
 
-- Bei der Verwendung von Zubehör, das von nicht professionellen Herstellern empfohlen oder verkauft wird, besteht die Gefahr eines Stromschlags.
 
-- Wenn das Produkt nicht verwendet wird, ziehen Sie bitte den Netzstecker aus der Steckdose des Produkts.
-
-- Zerlegen Sie das Produkt nicht, da dies zu unvorhersehbaren Risiken führen kann, wie Feuer, Explosion oder Stromschlag.
-
-- Verwenden Sie das Produkt nicht mit beschädigten Kabeln oder Steckern oder beschädigten Ausgangskabeln, die einen Stromschlag verursachen können.
-
-- Laden Sie das Gerät in einem gut belüfteten Bereich und beeinträchtigen Sie die Belüftung in keiner Weise.
-
-- Stellen Sie das Gerät an einem gut belüfteten und trockenen Ort auf, um Regen und Feuchtigkeit zu vermeiden, die einen elektrischen Schlag verursachen könnten.
-
-- Setzen Sie das Gerät weder Feuer noch hohen Temperaturen aus (z. B. direkter Sonneneinstrahlung oder großer Hitze im Fahrzeug), da dies zu Unfällen wie Bränden oder Explosionen führen kann.
-
-- Wird dieses Gerät über einen längeren Zeitraum (3-6 Monate) in vollständig entladenem Zustand gelagert, kann es möglicherweise nicht mehr aufgeladen werden.
+<ul class="simple">
+<li><p>Bitte lesen Sie alle Anweisungen, bevor Sie dieses Produkt verwenden.</p></li>
+<li><p>Lassen Sie Kinder nicht mit dem Produkt spielen. Achten Sie darauf, dass Kinder beaufsichtigt werden, wenn das Produkt in ihrer Nähe verwendet wird.</p></li>
+<li><p>Bei der Verwendung von Zubehör, das von nicht professionellen Herstellern empfohlen oder verkauft wird, besteht die Gefahr eines Stromschlags.</p></li>
+<li><p>Wenn das Produkt nicht verwendet wird, ziehen Sie bitte den Netzstecker aus der Steckdose des Produkts.</p></li>
+<li><p>Zerlegen Sie das Produkt nicht, da dies zu unvorhersehbaren Risiken führen kann, wie Feuer, Explosion oder Stromschlag.</p></li>
+<li><p>Verwenden Sie das Produkt nicht mit beschädigten Kabeln oder Steckern oder beschädigten Ausgangskabeln, die einen Stromschlag verursachen können.</p></li>
+<li><p>Laden Sie das Gerät in einem gut belüfteten Bereich und beeinträchtigen Sie die Belüftung in keiner Weise.</p></li>
+<li><p>Stellen Sie das Gerät an einem gut belüfteten und trockenen Ort auf, um Regen und Feuchtigkeit zu vermeiden, die einen elektrischen Schlag verursachen könnten.</p></li>
+<li><p>Setzen Sie das Gerät weder Feuer noch hohen Temperaturen aus (z. B. direkter Sonneneinstrahlung oder großer Hitze im Fahrzeug), da dies zu Unfällen wie Bränden oder Explosionen führen kann.</p></li>
+<li><p>Wird dieses Gerät über einen längeren Zeitraum (3-6 Monate) in vollständig entladenem Zustand gelagert, kann es möglicherweise nicht mehr aufgeladen werden.</p></li>
+</ul>
 
 # BEDEUTUNG DER SYMBOLE
-
-
 
 <figure aria-label="Symbol / Bedeutung" class="hb-symbol-signal-composition" data-component-id="HB-TABLE-SYMBOL-SIGNAL"><table class="hb-symbol-signal-table"><colgroup><col class="hb-symbol-signal-col-label"/><col class="hb-symbol-signal-col-meaning"/></colgroup><thead><tr><th class="hb-symbol-signal-label-heading" scope="col"><p>Symbol</p></th><th class="hb-symbol-signal-meaning-heading" scope="col"><p>Bedeutung</p></th></tr></thead><tbody><tr><td class="hb-symbol-signal-label-cell"><span aria-label="WARNUNG" class="hb-signal-badge"><span aria-hidden="true" class="hb-signal-icon">⚠</span><span class="hb-signal-label">WARNUNG</span></span></td><td class="hb-symbol-signal-meaning-cell"><p>Gefährliche Handlungen, die zu schweren Verletzungen, zum Tod und/oder zu Sachschäden führen können.</p></td></tr><tr><td class="hb-symbol-signal-label-cell"><span aria-label="VORSICHT" class="hb-signal-badge"><span aria-hidden="true" class="hb-signal-icon">⚠</span><span class="hb-signal-label">VORSICHT</span></span></td><td class="hb-symbol-signal-meaning-cell"><p>Gefährliche Handlungen, die zu Personenschäden und/oder zu Sachschäden führen können.</p></td></tr><tr><td class="hb-symbol-signal-label-cell"><span aria-label="HINWEIS" class="hb-signal-badge"><span class="hb-signal-label">HINWEIS</span></span></td><td class="hb-symbol-signal-meaning-cell"><p>Handlungen, die zu Geräteschäden, Datenverlust, Leistungseinbußen oder unerwarteten Ergebnissen führen können.</p></td></tr><tr><td class="hb-symbol-signal-label-cell"><span aria-label="TIPP" class="hb-signal-badge"><span class="hb-signal-label">TIPP</span></span></td><td class="hb-symbol-signal-meaning-cell"><p>Ergänzt wichtige Informationen oder Bedienhinweise im Text.</p></td></tr></tbody></table></figure>
 
 
 
 
-
-<figure aria-label="Symbol / Bedeutung" class="hb-symbol-pair-composition" data-component-id="HB-TABLE-SYMBOL-ICON"><div class="hb-symbol-pair-grid"><div class="hb-symbol-panel hb-symbol-panel-1"><table class="hb-symbol-panel-table"><colgroup><col class="hb-symbol-col-icon"/><col class="hb-symbol-col-meaning"/></colgroup><thead><tr><th class="hb-symbol-icon-heading" scope="col"><p><strong>Symbol</strong></p></th><th class="hb-symbol-meaning-heading" scope="col"><p><strong>Bedeutung</strong></p></th></tr></thead><tbody><tr><td class="hb-symbol-icon"><img alt="warning_triangle" class="hb-symbol-art" src="../../../../_static/manual-assets/_pool/ea/ead6abb99089c0c223d8d89588c1a48bc158bb93be15ed402bbcfc7563a02bf8.png"/></td><td class="hb-symbol-meaning"><p>Warn- und Vorsichtssymbole. Lesen Sie diese Hinweise, um auf mögliche Gefahren oder Risiken aufmerksam gemacht zu werden.</p></td></tr><tr><td class="hb-symbol-icon"><img alt="read_manual" class="hb-symbol-art" src="../../../../_static/manual-assets/_pool/e0/e0ea61a86d361997c3f183bb97dd110eaaa45efc09757ff5fb7b82de0299ca61.png"/></td><td class="hb-symbol-meaning"><p>Lesen Sie vor der Anwendung die Benutzeranleitung.</p></td></tr><tr><td class="hb-symbol-icon"><img alt="do_not_dismantle" class="hb-symbol-art" src="../../../../_static/manual-assets/_pool/f3/f3e73715b8d162d565997f94284fa374a51252d3ada90f88f39381d22b1796e8.png"/></td><td class="hb-symbol-meaning"><p>Demontieren Sie das Produkt nicht.</p></td></tr><tr><td class="hb-symbol-icon"><img alt="no_open_flame" class="hb-symbol-art" src="../../../../_static/manual-assets/_pool/55/5535d752347971c9a7faf8850a57099f87365bff2e6138879832639b25d85941.png"/></td><td class="hb-symbol-meaning"><p>Rauchen Sie nicht und verwenden Sie keine offenen Flammen.</p></td></tr></tbody></table></div><div class="hb-symbol-panel hb-symbol-panel-2"><table class="hb-symbol-panel-table"><colgroup><col class="hb-symbol-col-icon"/><col class="hb-symbol-col-meaning"/></colgroup><thead><tr><th class="hb-symbol-icon-heading" scope="col"><p><strong>Symbol</strong></p></th><th class="hb-symbol-meaning-heading" scope="col"><p><strong>Bedeutung</strong></p></th></tr></thead><tbody><tr><td class="hb-symbol-icon"><img alt="keep_away_from_children" class="hb-symbol-art" src="../../../../_static/manual-assets/_pool/e3/e3fae2d4d963da0abba9cdd5b96f2dae1a631c10b188715ad96456ddb706faab.png"/></td><td class="hb-symbol-meaning"><p>Halten Sie das Produkt fern von Kindern.</p></td></tr><tr><td class="hb-symbol-icon"><img alt="li_ion" class="hb-symbol-art" src="../../../../_static/manual-assets/_pool/81/81c8856189a40c97bad96998b51131030f8ce01652183fe9ef19655a09acb804.png"/></td><td class="hb-symbol-meaning"><p>Dieses Symbol weist darauf hin, dass sich im Produkt ein Lithium-Ionen-Akku (Li-Ion) befindet, der ordnungsgemäß entsorgt oder recycelt werden muss.</p></td></tr><tr><td class="hb-symbol-icon"><img alt="weee" class="hb-symbol-art" src="../../../../_static/manual-assets/_pool/68/6883f899f43ac0642f43b8f9cf4118a394c1382ee409f4498544f90ba37b56a5.png"/></td><td class="hb-symbol-meaning"><p>Dieses Symbol weist darauf hin, dass das Produkt nicht über den Hausmüll entsorgt werden darf, sondern einer ausgewiesenen Sammelstelle zum Recycling zugeführt werden muss. Eine ordnungsgemäße Entsorgung und Wiederverwertung trägt zum Schutz der Umwelt bei. Weitere Informationen zur Entsorgung und zum Recycling dieses Produkts erhalten Sie bei Ihrer Gemeinde, Ihrem Entsorgungsdienst oder Ihrem Händler.</p></td></tr><tr><td class="hb-symbol-icon"><img alt="weee2" class="hb-symbol-art" src="../../../../_static/manual-assets/_pool/cf/cf04ff00bdeb8de5971a55e5d8be6ef91e1a4ddad479f817f0c535914a392d45.png"/></td><td class="hb-symbol-meaning"><p>Batterien und Akkumulatoren dürfen nicht über den Hausmüll entsorgt werden.
+<figure aria-label="Symbol / Bedeutung" class="hb-symbol-pair-composition" data-component-id="HB-TABLE-SYMBOL-ICON"><div class="hb-symbol-pair-grid"><div class="hb-symbol-panel hb-symbol-panel-1"><table class="hb-symbol-panel-table"><colgroup><col class="hb-symbol-col-icon"/><col class="hb-symbol-col-meaning"/></colgroup><thead><tr><th class="hb-symbol-icon-heading" scope="col"><p><strong>Symbol</strong></p></th><th class="hb-symbol-meaning-heading" scope="col"><p><strong>Bedeutung</strong></p></th></tr></thead><tbody><tr><td class="hb-symbol-icon"><img alt="Warn- und Hinweissymbole. Weisen Personen auf Informationen hin, die gelesen werden müssen, um potenzielle Gefahren oder Risiken zu vermeiden." class="hb-symbol-art" src="../../../../_static/manual-assets/_pool/0f/0f41fe5ea49fb7a830cab90d2a5473587dd8a0c04db775b42953f58dbea3fb0a.svg"/></td><td class="hb-symbol-meaning">Warn- und Hinweissymbole. Weisen Personen auf Informationen hin, die gelesen werden müssen, um potenzielle Gefahren oder Risiken zu vermeiden.</td></tr><tr><td class="hb-symbol-icon"><img alt="Lesen Sie vor der Anwendung die Benutzeranleitung." class="hb-symbol-art" src="../../../../_static/manual-assets/_pool/1d/1d2087064f92538d3b0762607056ac268f1d1c24e8f446c66626ac35c4e43584.svg"/></td><td class="hb-symbol-meaning">Lesen Sie vor der Anwendung die Benutzeranleitung.</td></tr><tr><td class="hb-symbol-icon"><img alt="Vermeiden Sie Hitze." class="hb-symbol-art" src="../../../../_static/manual-assets/_pool/5a/5ad4fa830a5b4f9bf23af4c09493fc2610f8fda94ea6fcf925288d1cb6491f33.svg"/></td><td class="hb-symbol-meaning">Vermeiden Sie Hitze.</td></tr><tr><td class="hb-symbol-icon"><img alt="Demontieren Sie das Produkt nicht." class="hb-symbol-art" src="../../../../_static/manual-assets/_pool/4a/4a82cdd8683e595eb3c9f63ecce457ca53cc5ea6c3f5906ecd7e1d8a4b3be01f.svg"/></td><td class="hb-symbol-meaning">Demontieren Sie das Produkt nicht.</td></tr></tbody></table></div><div class="hb-symbol-panel hb-symbol-panel-2"><table class="hb-symbol-panel-table"><colgroup><col class="hb-symbol-col-icon"/><col class="hb-symbol-col-meaning"/></colgroup><thead><tr><th class="hb-symbol-icon-heading" scope="col"><p><strong>Symbol</strong></p></th><th class="hb-symbol-meaning-heading" scope="col"><p><strong>Bedeutung</strong></p></th></tr></thead><tbody><tr><td class="hb-symbol-icon"><img alt="Halten Sie das Produkt fern von Kindern." class="hb-symbol-art" src="../../../../_static/manual-assets/_pool/a5/a58074f90ef83ab647ae94215dc0e3315cb9d113aaa4e104a6b26dc3b241d899.svg"/></td><td class="hb-symbol-meaning">Halten Sie das Produkt fern von Kindern.</td></tr><tr><td class="hb-symbol-icon"><img alt="Dieses Symbol zeigt an, dass sich ein Lithium-Ionen-Akku (Li-Ion) im Produkt befindet und ordnungsgemäß entsorgt oder recycelt werden sollte." class="hb-symbol-art" src="../../../../_static/manual-assets/_pool/b9/b98301d1742f0695e0b0c1ec523eba3c79f8c9879fc2672565ff5d79fde0bd66.svg"/></td><td class="hb-symbol-meaning">Dieses Symbol zeigt an, dass sich ein Lithium-Ionen-Akku (Li-Ion) im Produkt befindet und ordnungsgemäß entsorgt oder recycelt werden sollte.</td></tr><tr><td class="hb-symbol-icon"><img alt="Dieses Symbol zeigt an, dass das Produkt nicht als Haushaltsabfall entsorgt werden soll und an eine dafür vorgesehene Sammelstelle zur Entsorgung und Recycling gebracht werden sollte. Eine ordnungsgemäße Entsorgung und Recycling kann dazu beitragen, die Umwelt zu schützen. Für weitere Informationen zur Entsorgung und Recycling dieses Produkts wenden Sie sich an Ihre örtliche Gemeinde, Entsorgungsdienstleistungen oder Ihren Händler." class="hb-symbol-art" src="../../../../_static/manual-assets/_pool/68/6883f899f43ac0642f43b8f9cf4118a394c1382ee409f4498544f90ba37b56a5.png"/></td><td class="hb-symbol-meaning">Dieses Symbol zeigt an, dass das Produkt nicht als Haushaltsabfall entsorgt werden soll und an eine dafür vorgesehene Sammelstelle zur Entsorgung und Recycling gebracht werden sollte. Eine ordnungsgemäße Entsorgung und Recycling kann dazu beitragen, die Umwelt zu schützen. Für weitere Informationen zur Entsorgung und Recycling dieses Produkts wenden Sie sich an Ihre örtliche Gemeinde, Entsorgungsdienstleistungen oder Ihren Händler.</td></tr><tr><td class="hb-symbol-icon"><img alt="Batterien und Akkumulatoren dürfen nicht über den Hausmüll entsorgt werden.
 Als Verbraucher sind Sie gesetzlich verpflichtet, alle Batterien und Akkumulatoren an dafür vorgesehenen Sammelstellen zu entsorgen, unabhängig davon, ob sie Schadstoffe enthalten.
-Bitte geben Sie gebrauchte Batterien und Akkumulatoren an einer örtlichen Sammelstelle, einem Recyclingzentrum oder beim Händler zurück, bei dem sie gekauft wurden. Die ordnungsgemäße Entsorgung gewährleistet eine umweltgerechte Wiederverwertung und verhindert mögliche Schäden für die menschliche Gesundheit und die Umwelt.</p></td></tr></tbody></table></div></div></figure>
-
-
+Bitte geben Sie gebrauchte Batterien und Akkumulatoren an einer örtlichen Sammelstelle, einem Recyclingzentrum oder beim Händler zurück, bei dem sie gekauft wurden. Die ordnungsgemäße Entsorgung gewährleistet eine umweltgerechte Wiederverwertung und verhindert mögliche Schäden für die menschliche Gesundheit und die Umwelt." class="hb-symbol-art" src="../../../../_static/manual-assets/_pool/cf/cf04ff00bdeb8de5971a55e5d8be6ef91e1a4ddad479f817f0c535914a392d45.png"/></td><td class="hb-symbol-meaning">Batterien und Akkumulatoren dürfen nicht über den Hausmüll entsorgt werden.
+Als Verbraucher sind Sie gesetzlich verpflichtet, alle Batterien und Akkumulatoren an dafür vorgesehenen Sammelstellen zu entsorgen, unabhängig davon, ob sie Schadstoffe enthalten.
+Bitte geben Sie gebrauchte Batterien und Akkumulatoren an einer örtlichen Sammelstelle, einem Recyclingzentrum oder beim Händler zurück, bei dem sie gekauft wurden. Die ordnungsgemäße Entsorgung gewährleistet eine umweltgerechte Wiederverwertung und verhindert mögliche Schäden für die menschliche Gesundheit und die Umwelt.</td></tr></tbody></table></div></div></figure>
 
 # LIEFERUMFANG
-
-
 
 <figure aria-label="LIEFERUMFANG" class="hb-inbox-composition" data-card-count="3" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="three-card-responsive"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Jackery Battery Pack 2000." class="hb-inbox-art" src="../../../../_static/manual-assets/_pool/97/97378797f84abf92d40fdf97bdf655b8f6eab326f908700e99424c02f5d57306.png"/><div class="hb-inbox-label">
 <p><strong>Jackery Battery Pack 2000</strong></p>
@@ -66,62 +58,75 @@ Bitte geben Sie gebrauchte Batterien und Akkumulatoren an einer örtlichen Samme
 <p>Benutzerhandbuch</p>
 </div></li></ol></figure>
 
-
-
 # PRODUKTÜBERSICHT
 
-## PRODUKTDARSTELLUNG
-
-<img src="../../../../_static/manual-assets/_pool/c4/c405e6a1fdd35bb593429ee85568e843e02ced8e8a43d672ef1cb8034774cce3.png" style="width: 360px;" width="360" height="191" alt="Vorderansicht des Battery Pack 2000." />
-
-|                   |         |
-|-------------------|---------|
-| **Hauptschalter** | **LCD** |
-
-## LINKE SEITENANSICHT
-
-<img src="../../../../_static/manual-assets/_pool/6a/6ac9bc60991ebd6da65bcea1f62a1f82a737d8f38031144396d857f35ccbd8fc.png" style="width: 360px;" width="360" height="261" alt="Linke Seitenansicht mit Griff und DC-Erweiterungsports A und B." />
-
+<section id="produktdarstellung">
+<h2>PRODUKTDARSTELLUNG</h2>
+<img alt="Vorderansicht des Battery Pack 2000." src="../../../../_static/manual-assets/_pool/c4/c405e6a1fdd35bb593429ee85568e843e02ced8e8a43d672ef1cb8034774cce3.png" style="width: 360px;"/>
 <table>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col style="width: 50.0%"/>
+<col style="width: 50.0%"/>
 </colgroup>
 <tbody>
-<tr>
-<td><p><strong>Ausziehgriff</strong></p></td>
-<td><p><strong>DC-Erweiterungsport A</strong></p>
-<p>(Anschluss an Verlängerungskabel Terminal A)</p></td>
-</tr>
-<tr>
-<td></td>
-<td><p><strong>DC-Erweiterungsport B</strong></p>
-<p>(Anschluss an Verlängerungskabel Terminal B)</p></td>
+<tr><td><p><strong>Hauptschalter</strong></p></td>
+<td><p><strong>LCD</strong></p></td>
 </tr>
 </tbody>
 </table>
+</section>
+
+
+
+
+<section id="linke-seitenansicht">
+<h2>LINKE SEITENANSICHT</h2>
+<img alt="Linke Seitenansicht mit Griff und DC-Erweiterungsports A und B." src="../../../../_static/manual-assets/_pool/6a/6ac9bc60991ebd6da65bcea1f62a1f82a737d8f38031144396d857f35ccbd8fc.png" style="width: 360px;"/>
+<table>
+<colgroup>
+<col style="width: 50.0%"/>
+<col style="width: 50.0%"/>
+</colgroup>
+<tbody>
+<tr><td><p><strong>Ausziehgriff</strong></p></td>
+<td><p><strong>DC-Erweiterungsport A</strong></p>
+<p>(Anschluss an Verlängerungskabel Terminal A)</p>
+</td>
+</tr>
+<tr><td></td>
+<td><p><strong>DC-Erweiterungsport B</strong></p>
+<p>(Anschluss an Verlängerungskabel Terminal B)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
 
 # LCD-ANZEIGE
 
-<img src="../../../../_static/manual-assets/_pool/ad/ad4a3f6c7140f14222b620191aed30bf8fcc230c8e16a10d86d9f4c7ef27353b.png" style="width: 420px;" width="420" height="303" alt="LCD-ANZEIGE" />
+<img alt="LCD-ANZEIGE" src="../../../../_static/manual-assets/_pool/ad/ad4a3f6c7140f14222b620191aed30bf8fcc230c8e16a10d86d9f4c7ef27353b.png" style="width: 420px;"/>
+
+
+
 
 <table class="longtable lcd-text-only">
 <colgroup>
-<col style="width: 8%" />
-<col style="width: 12%" />
-<col style="width: 28%" />
-<col style="width: 52%" />
+<col style="width: 8.0%"/>
+<col style="width: 12.0%"/>
+<col style="width: 28.0%"/>
+<col style="width: 52.0%"/>
 </colgroup>
 <tbody>
-<tr>
-<td><p>1</p></td>
+<tr><td><p>1</p></td>
 <td></td>
 <td><p>Leistungsprozentanzeige/Fehlercode</p></td>
-<td>Die Anzeige zeigt den aktuellen Akkustand in Prozent an.
-Bei einem Systemfehler wird der entsprechende Fehlercode F0-FF angezeigt.</td>
+<td><div class="line-block">
+<div class="line">Die Anzeige zeigt den aktuellen Akkustand in Prozent an.</div>
+<div class="line">Bei einem Systemfehler wird der entsprechende Fehlercode F0-FF angezeigt.</div>
+</div>
+</td>
 </tr>
-<tr>
-<td><p>2</p></td>
+<tr><td><p>2</p></td>
 <td></td>
 <td><p>Ladeanzeige</p></td>
 <td><p>Die Anzeige wird während des Ladevorgangs angezeigt und verschwindet, wenn das Gerät vollständig aufgeladen ist.</p></td>
@@ -131,121 +136,132 @@ Bei einem Systemfehler wird der entsprechende Fehlercode F0-FF angezeigt.</td>
 
 # GRUNDLEGENDE OPERATIONEN
 
-## EINSCHALTEN / AUSSCHALTEN
-
-<img src="../../../../_static/manual-assets/_pool/c8/c8332fadce5987fef4ecd43938fb3a61bda2211b588bd20fd7c52a18768b1799.png" style="width: 360px;" width="360" height="90" alt="Bedienung des POWER-Schalters am Battery Pack 2000." />
-
-**Ein**
-
-Einmal drücken
-
-**Aus**
-
-3 Sekunden lang gedrückt halten
-
+<section id="einschalten-ausschalten">
+<h2>EINSCHALTEN / AUSSCHALTEN</h2>
+<img alt="Bedienung des POWER-Schalters am Battery Pack 2000." src="../../../../_static/manual-assets/_pool/c8/c8332fadce5987fef4ecd43938fb3a61bda2211b588bd20fd7c52a18768b1799.png" style="width: 360px;"/>
+<div class="line-block">
+<div class="line"><strong>Ein</strong></div>
+<div class="line">Einmal drücken</div>
+<div class="line"><strong>Aus</strong></div>
+<div class="line">3 Sekunden lang gedrückt halten</div>
+</div>
 <table>
 <colgroup>
-<col style="width: 12%" />
-<col style="width: 88%" />
+<col style="width: 12.0%"/>
+<col style="width: 88.0%"/>
 </colgroup>
 <tbody>
-<tr>
-<td><p><strong>HINWEISE</strong></p></td>
-<td><p>Wenn Sie es mit der tragbaren Powerstation verwenden, können Sie die Stromversorgung des Jackery Battery Pack 2000 über den Hauptschalter der tragbaren Powerstation steuern.</p>
-<p>Wenn keine Entladung oder Ladung erfolgt, wird das Produkt nach 2 Stunden automatisch heruntergefahren.</p></td>
+<tr><td><p><strong>HINWEISE</strong></p></td>
+<td><p>Bei Verwendung mit der tragbaren Powerstation können Sie den Jackery Battery Pack 2000 über die Haupt-POWER-Taste der tragbaren Powerstation ein- oder ausschalten.</p>
+<p>Wenn keine Entladung oder Ladung erfolgt, wird das Produkt nach 2 Stunden automatisch heruntergefahren.</p>
+</td>
 </tr>
 </tbody>
 </table>
+</section>
 
-## LCD-DISPLAY EIN/AUS
 
-<img src="../../../../_static/manual-assets/_pool/4d/4d5f74e927261d7c174b45b5c0eb039d0e7c11ff4ab4c932e5719d2138415975.png" style="width: 360px;" width="360" height="91" alt="Bedienung des LCD-Displays am Battery Pack 2000." />
 
-Wenn Sie den Hauptschalter drücken oder das Gerät aufladen, wird das LCD-Display beleuchtet. Wenn Sie den Hauptschalter erneut drücken, wird das Display ausgeschaltet.
+
+<section id="lcd-display-ein-aus">
+<h2>LCD-DISPLAY EIN/AUS</h2>
+<img alt="Bedienung des LCD-Displays am Battery Pack 2000." src="../../../../_static/manual-assets/_pool/4d/4d5f74e927261d7c174b45b5c0eb039d0e7c11ff4ab4c932e5719d2138415975.png" style="width: 360px;"/>
+<p>Wenn Sie den Hauptschalter drücken oder das Gerät aufladen, wird das LCD-Display beleuchtet. Wenn Sie den Hauptschalter erneut drücken, wird das Display ausgeschaltet.</p>
+</section>
 
 # ANSCHLÜSSE
 
-Die tragbare Powerstation kann mit bis zu 5 Sätzen dieses Produkts gleichzeitig verwendet werden, um größere Kapazitätsanforderungen zu erfüllen.
-
-<img src="../../../../_static/manual-assets/_pool/89/8951b52e1a2fd330c8e7b996a7b0b91442b5dce1e68c7d8139dddf2672b61a7e.png" style="width: 500px;" width="500" height="378" alt="Anschluss-, Stapel- und Abstandsdiagramm für die Batteriepacks." />
+<p>Bis zu fünf Batteriepacks können zusammen mit der tragbaren Powerstation verwendet werden, um die verfügbare Kapazität zu erhöhen.</p>
 
 
 
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>VORSICHT</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">HINWEIS</span><span class="manual-callout-label-sizer" aria-hidden="true">VORSICHT</span><span class="manual-callout-label-sizer" aria-hidden="true">WARNUNG</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
-<li><p>Stellen Sie sicher, dass alle Geräte ausgeschaltet sind, bevor Sie die tragbare Powerstation an das Jackery Battery Pack 2000 anschließen.</p></li>
+
+<img alt="Anschluss-, Stapel- und Abstandsdiagramm für die Batteriepacks." src="../../../../_static/manual-assets/_pool/89/8951b52e1a2fd330c8e7b996a7b0b91442b5dce1e68c7d8139dddf2672b61a7e.png" style="width: 500px;"/>
+
+
+
+
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>VORSICHT</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
+<li><p>Stellen Sie sicher, dass alle Geräte ausgeschaltet sind, bevor Sie die tragbare Powerstation mit dem Jackery Battery Pack 2000 verbinden.</p></li>
 <li><p>Stellen Sie für einen ordnungsgemäßen Betrieb sicher, dass die Lufteinlass- und Abluftöffnungen auf beiden Seiten nicht blockiert sind. Halten Sie zwischen den Lüftungsöffnungen und anderen Gegenständen einen Abstand von mindestens 200 mm ein, um eine ausreichende Wärmeableitung zu gewährleisten.</p></li>
 </ul>
 </td></tr></tbody></table>
 
-
-
 <table>
 <colgroup>
-<col style="width: 12%" />
-<col style="width: 88%" />
+<col style="width: 12.0%"/>
+<col style="width: 88.0%"/>
 </colgroup>
 <tbody>
-<tr>
-<td><p><strong>HINWEISE</strong></p></td>
-<td><ul>
+<tr><td><p><strong>HINWEISE</strong></p></td>
+<td><ul class="simple">
 <li><p>Die Anzeige des Verbindungssymbols auf dem LCD-Bildschirm (tragbare Powerstation) zeigt eine erfolgreiche Verbindung zwischen dem Batteriepack und der tragbaren Powerstation an.</p></li>
 <li><p>Stapeln Sie bei der Verwendung des Geräts nicht mehr als drei Batteriepacks übereinander, um ein Umkippen und mögliche Verletzungen zu vermeiden. Stapeln Sie das Gerät nicht auf der tragbaren Powerstation.</p></li>
 <li><p>Stellen Sie die Batteriepacks auf eine ebene, stabile Oberfläche mit ausreichender Tragfähigkeit. Standardmäßig dürfen maximal 3 Batteriepacks gestapelt werden.</p></li>
 <li><p>Wenn 4 oder mehr Batteriepacks erforderlich sind, müssen diese an einem stabilen Standort an einer Wand und vor äußeren Einwirkungen geschützt platziert werden. Zudem müssen die erforderlichen Maßnahmen zur Kippsicherung getroffen werden.</p></li>
-</ul></td>
+</ul>
+</td>
 </tr>
 </tbody>
 </table>
 
-<img src="../../../../_static/manual-assets/_pool/c7/c784e46834d0f7bdb3c7a62ec2cf4bdf30052a93a22783fd72b87b44f4aeda11.png" style="width: 100%;;width:100.0%" alt="Richtige Anschlussreihenfolge sowie Verriegeln und Entriegeln des Verlängerungskabels." />
+
+
+
+<img alt="Richtige Anschlussreihenfolge sowie Verriegeln und Entriegeln des Verlängerungskabels." src="../../../../_static/manual-assets/_pool/c7/c784e46834d0f7bdb3c7a62ec2cf4bdf30052a93a22783fd72b87b44f4aeda11.png" style="width: 100%;"/>
 
 # FEHLERSUCHE
 
-Wenn einer der folgenden Fehlercodes angezeigt wird, befolgen Sie die aufgeführten Korrekturmaßnahmen, um das Problem zu beheben. Wenn der Fehler weiterhin besteht, wenden Sie sich bitte an den Jackery-Kundendienst.
+<p>Wenn einer der folgenden Fehlercodes angezeigt wird, befolgen Sie die aufgeführten Korrekturmaßnahmen, um das Problem zu beheben.
+Wenn der Fehler weiterhin besteht, wenden Sie sich bitte an den Jackery-Kundendienst.</p>
+
 
 
 
 <figure aria-label="Fehlercode / Korrekturmaßnahmen" class="hb-troubleshooting-composition" data-component-id="HB-TABLE-TROUBLESHOOTING" tabindex="0"><table class="hb-troubleshooting-table"><colgroup><col class="hb-troubleshooting-col-code"/><col class="hb-troubleshooting-col-measures"/></colgroup><thead><tr><th class="hb-troubleshooting-code" scope="col"><p>Fehlercode</p></th><th class="hb-troubleshooting-measures" scope="col"><p>Korrekturmaßnahmen</p></th></tr></thead><tbody><tr><td class="hb-troubleshooting-code"><p>F0</p></td><td class="hb-troubleshooting-measures"><p>Starten Sie das Gerät neu.</p></td></tr><tr><td class="hb-troubleshooting-code"><p>F3</p></td><td class="hb-troubleshooting-measures"><p>Starten Sie das Gerät neu.</p></td></tr><tr><td class="hb-troubleshooting-code"><p>F4</p></td><td class="hb-troubleshooting-measures"><p>Schließen Sie das Gerät an Verbraucher an, um die Batterie zu entladen, bis der Fehler verschwindet.</p></td></tr><tr><td class="hb-troubleshooting-code"><p>F5</p></td><td class="hb-troubleshooting-measures"><p>Laden Sie das Gerät über Solarmodule oder eine AC-Wandsteckdose, bis der Fehler verschwindet.</p></td></tr><tr><td class="hb-troubleshooting-code"><p>F8</p></td><td class="hb-troubleshooting-measures"><p>Wenden Sie sich an den Jackery-Kundendienst.</p></td></tr><tr><td class="hb-troubleshooting-code"><p>FE</p></td><td class="hb-troubleshooting-measures"><p>Wenden Sie sich an den Jackery-Kundendienst.</p></td></tr><tr><td class="hb-troubleshooting-code"><p>FF</p></td><td class="hb-troubleshooting-measures"><p>Stellen Sie das Gerät in eine Umgebung mit geeigneter Temperatur und warten Sie, bis der Fehler verschwindet.</p></td></tr></tbody></table></figure>
 
-
-
 # AUFLADEN
 
-## AUFLADEN ÜBER EINE AC-STECKDOSE
-
-Beim Aufladen über das Hauptstromnetz muss dieses Gerät mit der tragbaren Powerstation verwendet werden.
-
-
-
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>WARNUNG</strong></p><span class="manual-callout-label-sizer" aria-hidden="true">HINWEIS</span><span class="manual-callout-label-sizer" aria-hidden="true">VORSICHT</span><span class="manual-callout-label-sizer" aria-hidden="true">WARNUNG</span></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Stellen Sie sicher, dass alle Geräte ausgeschaltet sind, bevor Sie die tragbare Powerstation an das Jackery Battery Pack 2000 anschließen.</p></td></tr></tbody></table>
+<section id="aufladen-uber-eine-ac-steckdose">
+<h2>AUFLADEN ÜBER EINE AC-STECKDOSE</h2>
+<p>Um das Batteriepack über eine AC-Wandsteckdose aufzuladen, verbinden Sie es mit der tragbaren Powerstation.</p>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>WARNUNG</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Stellen Sie sicher, dass alle Geräte ausgeschaltet sind, bevor Sie die tragbare Powerstation mit dem Jackery Battery Pack 2000 verbinden.</p></td></tr></tbody></table><img alt="Aufladen über eine AC-Steckdose mit der tragbaren Powerstation." src="../../../../_static/manual-assets/_pool/e2/e249b7661d9874293f6f1ad478e9392d2bcd4a625ecc60ec27fa2898cbb4361f.png" style="width: 100%;"/>
+</section>
 
 
 
-<img src="../../../../_static/manual-assets/_pool/e2/e249b7661d9874293f6f1ad478e9392d2bcd4a625ecc60ec27fa2898cbb4361f.png" style="width: 100%;;width:100.0%" alt="Aufladen über eine AC-Steckdose mit der tragbaren Powerstation." />
 
-## AUFLADEN ÜBER SOLARPANEL (SEPARAT ERHÄLTLICH)
-
-Laden Sie das Gerät wie in der unten dargestellten Abbildung mit Solarmodulen und der tragbaren Powerstation auf. Weitere Informationen finden Sie im Benutzerhandbuch der tragbaren Powerstation.
-
-<img src="../../../../_static/manual-assets/_pool/e7/e7777b74c8b716d19c996bff31a0d33de8a4ea60260d00aaed789f97ceb60fef.png" style="width: 500px;" width="500" height="286" alt="Solarladeverbindung über die tragbare Powerstation." />
+<section id="aufladen-uber-solarpanel-separat-erhaltlich">
+<h2>AUFLADEN ÜBER SOLARPANEL (SEPARAT ERHÄLTLICH)</h2>
+<p>Laden Sie das Batteriepack wie in der folgenden Abbildung dargestellt mithilfe von Solarmodulen und der tragbaren Powerstation auf. Weitere Informationen finden Sie im Benutzerhandbuch der tragbaren Powerstation.</p>
+<img alt="Solarladeverbindung über die tragbare Powerstation." src="../../../../_static/manual-assets/_pool/e7/e7777b74c8b716d19c996bff31a0d33de8a4ea60260d00aaed789f97ceb60fef.png" style="width: 500px;"/>
+</section>
 
 # LAGERUNG
 
-Bewahren Sie das Produkt an einem trockenen, sauberen Ort mit ausreichender Belüftung auf. Lagertemperatur und Luftfeuchtigkeit:
+<div class="line-block">
+<div class="line">Bewahren Sie das Produkt an einem trockenen, sauberen Ort mit ausreichender Belüftung auf. Lagertemperatur und Luftfeuchtigkeit:</div>
+</div>
 
-- 1 Monat: -20 °C bis 45 °C (0--60 % rL)
 
-- 3 Monate: 0 °C bis 45 °C (0--60 % rL)
 
-- 12 Monate: 0 °C bis 25 °C (0--60 % rL)
 
-Wenn dieses Produkt über einen längeren Zeitraum (3 bis 6 Monate) mit entladener Batterie gelagert wird, kann es sein, dass es danach nicht mehr aufgeladen werden kann. Um dies zu verhindern und die Batterielebensdauer zu erhalten, wird empfohlen, das Produkt alle drei Monate zu überprüfen und aufzuladen sowie mindestens einmal alle 6 bis 12 Monate einen vollständigen Lade- und Entladezyklus durchzuführen.
+<ul class="simple">
+<li><p>1 Monat: -20 °C bis 45 °C (0–60 % rL)</p></li>
+<li><p>3 Monate: 0 °C bis 45 °C (0–60 % rL)</p></li>
+<li><p>12 Monate: 0 °C bis 25 °C (0–60 % rL)</p></li>
+</ul>
+
+
+
+
+<div class="line-block">
+<div class="line">Wenn dieses Produkt über einen längeren Zeitraum (3 bis 6 Monate) mit entladener Batterie gelagert wird, kann es sein, dass es danach nicht mehr aufgeladen werden kann. Um dies zu verhindern und die Batterielebensdauer zu erhalten, wird empfohlen, das Produkt alle drei Monate zu überprüfen und aufzuladen sowie mindestens einmal alle 6 bis 12 Monate einen vollständigen Lade- und Entladezyklus durchzuführen.</div>
+</div>
 
 # TECHNISCHE DATEN
 
 ## ALLGEMEINE INFORMATIONEN
-
-
 
 <figure aria-label="ALLGEMEINE INFORMATIONEN" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
@@ -282,9 +298,8 @@ Wenn dieses Produkt über einen längeren Zeitraum (3 bis 6 Monate) mit entladen
 
 
 
+
 ## EINGANGS-/AUSGANGSANSCHLÜSSE
-
-
 
 <figure aria-label="EINGANGS-/AUSGANGSANSCHLÜSSE" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
@@ -301,9 +316,8 @@ Wenn dieses Produkt über einen längeren Zeitraum (3 bis 6 Monate) mit entladen
 
 
 
+
 ## UMGEBUNGSTEMPERATUR IM BETRIEB
-
-
 
 <figure aria-label="UMGEBUNGSTEMPERATUR IM BETRIEB" class="hb-spec-table-composition"><table class="hb-spec-table manual-table manual-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup>
 <tbody>
@@ -320,83 +334,82 @@ Wenn dieses Produkt über einen längeren Zeitraum (3 bis 6 Monate) mit entladen
 
 
 
+
 # GARANTIE
-
-
 
 <figure aria-label="GARANTIE" class="hb-warranty-intro-composition" data-component-id="HB-WARRANTY-LEAD"><div class="hb-warranty-intro-panel"><p><strong>Wir gewähren unsere Garantie nur Kunden, die über die offizielle Jackery-Website, Jackery-Marken-Drittanbieterplattformen oder lokale autorisierte Händler kaufen.</strong></p></div><div class="hb-warranty-local-note"><p>* Die Garantiefrist und -details können je nach lokalen Gesetzen, Vorschriften und autorisierten Händlern variieren.</p></div></figure>
 
 
 
-## Beschränkte Garantie
 
-
-
+<section class="warranty-section" id="beschrankte-garantie">
+<h2>Beschränkte Garantie</h2>
 <figure aria-label="Beschränkte Garantie" class="hb-warranty-card" data-component-id="HB-WARRANTY-SECTION" data-warranty-card-index="1"><p>Jackery garantiert dem Erstkäufer, dass das Jackery-Produkt bei normaler Nutzung durch den Verbraucher während der geltenden Garantiezeit, die im Abschnitt „Garantiezeit“ unten angegeben ist, frei von Verarbeitungs- und Materialfehlern ist, vorbehaltlich der unten aufgeführten Ausschlüsse.</p><p>Diese Garantieerklärung stellt die gesamte und ausschließliche Garantieverpflichtung von Jackery dar. Wir übernehmen keine weitere Haftung in Verbindung mit dem Verkauf unserer Produkte und ermächtigen auch niemanden, diese für uns zu übernehmen.</p></figure>
+</section>
 
 
 
-## Garantiezeit
 
-
-
+<section class="warranty-section warranty-years" id="garantiezeit">
+<h2>Garantiezeit</h2>
 <figure aria-label="Garantiezeit" class="hb-warranty-period-card" data-component-id="HB-WARRANTY-YEARS"><div class="hb-warranty-period-grid"><div aria-label="3 JAHRE — Standardgarantie" class="hb-warranty-period-item"><div class="hb-warranty-period-heading"><span class="hb-warranty-year-badge">3</span><div class="hb-warranty-period-title"><strong class="hb-warranty-years-unit">JAHRE</strong><strong class="hb-warranty-period-label">— Standardgarantie</strong></div></div><div class="hb-warranty-period-copy"><p>Die Standardgarantiezeit für Jackery Battery Pack 2000 beträgt 36 Monate. Die Garantiezeit beginnt in jedem Fall ab dem Kaufdatum durch den ursprünglichen Verbraucherkäufer. Der Kaufbeleg des ersten Verbraucherkaufs oder ein anderer angemessener dokumentarischer Nachweis ist erforderlich, um das Anfangsdatum der Garantiezeit zu bestimmen.</p></div></div><div aria-label="2 JAHRE — Garantieverlängerung" class="hb-warranty-period-item"><div class="hb-warranty-period-heading"><span class="hb-warranty-year-badge">2</span><div class="hb-warranty-period-title"><strong class="hb-warranty-years-unit">JAHRE</strong><strong class="hb-warranty-period-label">— Garantieverlängerung</strong></div></div><div class="hb-warranty-period-copy"><p>Um die Garantieverlängerung in Anspruch zu nehmen und die Standardgarantielaufzeit zu verlängern, registrieren Sie Ihr Produkt online oder kontaktieren Sie unseren Kundendienst unter <a class="reference external" href="mailto:hello.eu@jackery.com">hello.eu@jackery.com</a>.</p></div></div></div></figure>
+</section>
 
 
 
-## Umtausch
 
-
-
+<section class="warranty-section" id="umtausch">
+<h2>Umtausch</h2>
 <figure aria-label="Umtausch" class="hb-warranty-card" data-component-id="HB-WARRANTY-SECTION" data-warranty-card-index="3"><p>Jackery tauscht (auf Kosten von Jackery) jedes Jackery-Produkt aus, das während der geltenden Garantiezeit aufgrund eines Verarbeitungs- oder Materialfehlers nicht mehr funktioniert. Ein Ersatzprodukt übernimmt die Restgarantie des Originalprodukts.</p></figure>
+</section>
 
 
 
-## Begrenzt auf den ursprünglichen Verbraucherkäufer
 
-
-
+<section class="warranty-section" id="begrenzt-auf-den-ursprunglichen-verbraucherkaufer">
+<h2>Begrenzt auf den ursprünglichen Verbraucherkäufer</h2>
 <figure aria-label="Begrenzt auf den ursprünglichen Verbraucherkäufer" class="hb-warranty-card" data-component-id="HB-WARRANTY-SECTION" data-warranty-card-index="4"><p>Die Garantie auf ein Jackery-Produkt ist auf den Erstkäufer beschränkt und kann nicht auf einen nachfolgenden Besitzer übertragen werden.</p></figure>
+</section>
 
 
 
-## Ausschlüsse
 
-
-
+<section class="warranty-section" id="ausschlusse">
+<h2>Ausschlüsse</h2>
 <figure aria-label="Ausschlüsse" class="hb-warranty-card" data-component-id="HB-WARRANTY-SECTION" data-warranty-card-index="5"><p>Die Garantie von Jackery gilt nicht bei:</p><ul class="simple">
 <li><p>Unsachgemäßer Verwendung, Zweckentfremdung, Modifikation des Geräts, versehentlicher Beschädigung oder Nutzung außerhalb des in der aktuellen Produktliteratur von Jackery vorgesehenen normalen Verbrauchsgebrauchs.</p></li>
 <li><p>Versuch einer Reparatur durch eine nicht autorisierte Drittpartei.</p></li>
 <li><p>Kauf von Produkten über ein Online-Auktionshaus.</p></li>
 <li><p>Die Garantie gilt nicht für die Batteriezelle, es sei denn, sie wird innerhalb von sieben Tagen nach dem Kauf vollständig aufgeladen und anschließend mindestens alle sechs Monate erneut vollständig geladen.</p></li>
 </ul></figure>
+</section>
 
 
 
-## Auslegungsrecht
 
-
-
+<section class="warranty-section" id="auslegungsrecht">
+<h2>Auslegungsrecht</h2>
 <figure aria-label="Auslegungsrecht" class="hb-warranty-card" data-component-id="HB-WARRANTY-SECTION" data-warranty-card-index="6"><p>Jackery behält sich das Recht auf die endgültige Auslegung der oben genannten Kundendienst-Richtlinien vor.</p></figure>
-
-
+</section>
 
 # EU REGULATIONS
 
-## RED DECLARATION OF CONFORMITY
+<section id="red-declaration-of-conformity">
+<h2>RED DECLARATION OF CONFORMITY</h2>
+<p>Shenzhen Hello Tech Energy Co., Ltd. hereby declares that this Jackery Battery Pack 2000 with Bluetooth and Wi-Fi JBP-2000B is in compliance with the essential requirements and other relevant provisions of the RED Directive 2014/53/EU. The full text of the EU declaration of conformity is available at the following internet address:</p>
+<p><a class="reference external" href="https://de.jackery.com/pages/user-guides">https://de.jackery.com/pages/user-guides</a></p>
+</section>
 
-Shenzhen Hello Tech Energy Co., Ltd. hereby declares that this Jackery Battery Pack 2000 with Bluetooth and Wi-Fi JBP-2000B is in compliance with the essential requirements and other relevant provisions of the RED Directive 2014/53/EU. The full text of the EU declaration of conformity is available at the following internet address:
 
-<a href="https://de.jackery.com/pages/user-guides" class="reference external">https://de.jackery.com/pages/user-guides</a>
 
-## MANUFACTURER
 
-SHENZHEN HELLO TECH ENERGY CO., LTD.
-
-Address: F2-3, Bldg. 7, Jiaanda Science and technology industrial park factory, the east side of Huafan Road, Tongsheng Community, Dalang Street, Longhua District, Shenzhen, Guangdong, China
-
-+86 400 668 9293
-
-<a href="mailto:sales@hello-tech.com" class="reference external">sales@hello-tech.com</a>
-
-www.hello-tech.com
+<section id="manufacturer">
+<h2>MANUFACTURER</h2>
+<p>SHENZHEN HELLO TECH ENERGY CO., LTD.</p>
+<p>Address: F2-3, Bldg. 7, Jiaanda Science and technology industrial park factory, the east side of Huafan Road, Tongsheng Community, Dalang Street, Longhua District, Shenzhen, Guangdong, China</p>
+<div class="line-block">
+<div class="line">+86 400 668 9293</div>
+<div class="line"><a class="reference external" href="mailto:sales@hello-tech.com">sales@hello-tech.com</a></div>
+<div class="line">www.hello-tech.com</div>
+</div>
+</section>

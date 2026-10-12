@@ -95,7 +95,7 @@
 
 # POŁĄCZENIA
 
-<p>Przy większym zapotrzebowaniu na pojemność energetyczną z przenośną stacją zasilania można używać 5 zestawów tych produktów.</p>
+<p>Z przenośną stacją zasilania można używać do pięciu pakietów akumulatorów, aby zwiększyć dostępną pojemność.</p>
 
 
 
@@ -134,7 +134,7 @@
 
 <section id="charging-via-ac-wall-outlet">
 <h2>ŁADOWANIE Z SIECIOWEGO GNIAZDKA ŚCIENNEGO AC</h2>
-<p>Podczas ładowania z gniazdka ściennego ten produkt musi być używany razem z przenośną stacją zasilania.</p>
+<p>Aby naładować pakiet akumulatorów z gniazdka sieciowego AC, podłącz go do przenośnej stacji zasilania.</p>
 <table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>OSTRZEŻENIE</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Przed podłączeniem przenośnej stacji zasilania do urządzenia Jackery Battery Pack 2000 upewnij się, że wszystkie urządzenia są wyłączone.</p></td></tr></tbody></table><img alt="ŁADOWANIE — Jackery Battery Pack 2000" class="manual-finished-illustration" data-web-finished-panel-path="assets/jbp2000b_eu_en/ac_charging.png" data-web-finished-panel-sha256="0b4ea051dcd300831613ac1da9ee58a848256999ea462bb30a1a582be10caf3d" src="../../../../_static/manual-assets/_pool/0b/0b4ea051dcd300831613ac1da9ee58a848256999ea462bb30a1a582be10caf3d.png" style="width: 100%; height: auto;"/>
 </section>
 
@@ -143,7 +143,7 @@
 
 <section id="charging-via-solar-panels-sold-separately">
 <h2>ŁADOWANIE ZA POMOCĄ PANELI SŁONECZNYCH (SPRZEDAWANE ODDZIELNIE)</h2>
-<p>Produkt można naładować z paneli słonecznych i przenośnej stacji zasilania, jak pokazano na poniższym rysunku. Więcej informacji można znaleźć w instrukcji obsługi przenośnej stacji zasilania.</p>
+<p>Ładuj pakiet akumulatorów za pomocą paneli słonecznych i przenośnej stacji zasilania, jak pokazano na poniższym rysunku. Więcej informacji można znaleźć w instrukcji obsługi przenośnej stacji zasilania.</p>
 <img alt="ŁADOWANIE — Jackery Battery Pack 2000" class="manual-finished-illustration" data-web-finished-panel-path="assets/jbp2000b_eu_en/solar_charging.png" data-web-finished-panel-sha256="7d3a1d2b3a59fce8643f73dd1d297e1bfcf9bd14ef0afeb46a5d838be974e7e1" src="../../../../_static/manual-assets/_pool/7d/7d3a1d2b3a59fce8643f73dd1d297e1bfcf9bd14ef0afeb46a5d838be974e7e1.png" style="width: 100%; height: auto;"/>
 </section>
 
