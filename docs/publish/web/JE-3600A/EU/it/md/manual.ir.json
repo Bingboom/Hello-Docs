@@ -1,13 +1,13 @@
 {
   "asset_refs": [
-    "assets/symbol-warning_triangle.png",
-    "assets/symbol-read_manual.png",
-    "assets/symbol-do_not_dismantle.png",
-    "assets/symbol-no_open_flame.png",
-    "assets/symbol-keep_away_from_children.png",
-    "assets/symbol-li_ion.png",
-    "assets/symbol-battery_disposal.png",
-    "assets/symbol-weee.png",
+    "assets/symbol_warning_triangle.svg",
+    "assets/symbol_read_manual.svg",
+    "assets/symbol_do_not_dismantle.svg",
+    "assets/symbol_no_open_flame.svg",
+    "assets/symbol_keep_away_from_children.svg",
+    "assets/symbol_li_ion.svg",
+    "assets/symbol_battery_weee.png",
+    "assets/symbol_weee.png",
     "assets/inbox-main.png",
     "assets/inbox-cable.png",
     "assets/inbox-manual.png",
@@ -57,8 +57,8 @@
     "assets/contact-qr.png"
   ],
   "bundle_root": "frozen-source",
-  "bundle_sha256": "1e766b320574f2b498f13e53ccfd03907bc753a7e605efc94dbfa6742938377a",
-  "content_sha256": "5e7457fb5ed9db3369e72a28521623174a907b1365489c7bf3035cc90cfb2042",
+  "bundle_sha256": "cf16e3371ef045888c7b81a91fd8f6d2fee213bab3c8709875ea5dbd331368b2",
+  "content_sha256": "d6d583bb519330f4807c9a249f374cab2cefb5ef03843c0b02074f2946f77ebc",
   "language": "it",
   "layout_params_sha256": "f5ae099abc1a82ffda3abcc5a13725aca3c201e720a0374d88d1643f9773f279",
   "metadata": {
@@ -117,6 +117,14 @@
       "assets/symbol-read_manual.png": "89dae4b809de62e67e42949d33826c6e05b147b57e94b3e9c42f4bfff9af591a",
       "assets/symbol-warning_triangle.png": "6749bd38fdd0b85af591d65d0d81ae591590aa5c35c7b0f72767057a953c5c67",
       "assets/symbol-weee.png": "7e4de290ea13b86bd50fbb209b4510116116d4fb403b7ef4f83cf1c1db873989",
+      "assets/symbol_battery_weee.png": "cf04ff00bdeb8de5971a55e5d8be6ef91e1a4ddad479f817f0c535914a392d45",
+      "assets/symbol_do_not_dismantle.svg": "5ad4fa830a5b4f9bf23af4c09493fc2610f8fda94ea6fcf925288d1cb6491f33",
+      "assets/symbol_keep_away_from_children.svg": "a58074f90ef83ab647ae94215dc0e3315cb9d113aaa4e104a6b26dc3b241d899",
+      "assets/symbol_li_ion.svg": "317b9e9feb7747092569a1074d5e05e43bca5ddb96e9404f8e33746df9da7a8e",
+      "assets/symbol_no_open_flame.svg": "4a82cdd8683e595eb3c9f63ecce457ca53cc5ea6c3f5906ecd7e1d8a4b3be01f",
+      "assets/symbol_read_manual.svg": "1d2087064f92538d3b0762607056ac268f1d1c24e8f446c66626ac35c4e43584",
+      "assets/symbol_warning_triangle.svg": "0f41fe5ea49fb7a830cab90d2a5473587dd8a0c04db775b42953f58dbea3fb0a",
+      "assets/symbol_weee.png": "6883f899f43ac0642f43b8f9cf4118a394c1382ee409f4498544f90ba37b56a5",
       "assets/ups.png": "370b2ae2e50dbbea4b1b1be1f0efefbd0447850d40ee3ba613ca5a97975b23a0"
     },
     "block_count": 124,
@@ -1348,6 +1356,7 @@
       "it"
     ],
     "frozen_source_manifest": {
+      "applied_errata": "source/1465-errata.json",
       "baseline_main": "6bd85d39f7f7dba2aa751a69f82f258c63eab9c3",
       "errata_candidates": [
         {
@@ -1384,6 +1393,7 @@
       "pending_source_review": [],
       "printed_manual_version": null,
       "publication_eligible": true,
+      "revision_batch": "1465",
       "schema_version": "auto-manual-frozen-web-source/v1",
       "source_acceptance": {
         "asset_reuse": "complete accessory panel 4d320b9cd3273dc56cbc3a4a09512e2e4d412839d84c739c17d2cec8b51f5950",
@@ -1398,13 +1408,277 @@
         "review": "code-as-doc/reviews/je3600a_eu_nine_language_web_2026-10.md"
       },
       "source_role": "git-only-native-and-visual-source-intake",
+      "symbol_asset_admission": {
+        "locales": {
+          "it": [
+            {
+              "asset_ref": "assets/symbol_warning_triangle.svg",
+              "asset_sha256": "0f41fe5ea49fb7a830cab90d2a5473587dd8a0c04db775b42953f58dbea3fb0a",
+              "caption_bbox": [
+                73.02439880371094,
+                47.41870880126953,
+                168.25955200195312,
+                68.63871002197266
+              ],
+              "caption_sha256": "5c7a751c807903e0ce4553bb77486abb3b139c206fcb35cfc6514f2385ed2627",
+              "caption_text": "Simboli di avvertenza e cautela. Da leggere assolutamente per avvisare le persone di potenziali pericoli o rischi.",
+              "drawing_indices": [
+                708,
+                709,
+                710
+              ],
+              "glyph_bbox": [
+                36.51890182495117,
+                47.091087341308594,
+                60.29790115356445,
+                68.3670883178711
+              ],
+              "physical_page": 77,
+              "row_bbox": [
+                36.26890182495117,
+                46.841087341308594,
+                168.50955200195312,
+                68.88871002197266
+              ],
+              "shared_symbol_key": "warning/outline-triangle-tinted"
+            },
+            {
+              "asset_ref": "assets/symbol_read_manual.svg",
+              "asset_sha256": "1d2087064f92538d3b0762607056ac268f1d1c24e8f446c66626ac35c4e43584",
+              "caption_bbox": [
+                71.3125,
+                83.44599151611328,
+                166.5359649658203,
+                97.6659927368164
+              ],
+              "caption_sha256": "3a584ebef90045218317cef89b737e03222675f1c07ec2588d111decfa3fb4ae",
+              "caption_text": "Prima dell’utilizzo, leggere il manuale d’istruzioni.",
+              "drawing_indices": [
+                730,
+                731,
+                732
+              ],
+              "glyph_bbox": [
+                36.89480209350586,
+                81.71520233154297,
+                60.21580123901367,
+                99.7781982421875
+              ],
+              "physical_page": 77,
+              "row_bbox": [
+                36.64480209350586,
+                81.46520233154297,
+                166.7859649658203,
+                100.0281982421875
+              ],
+              "shared_symbol_key": "read-manual/book-information"
+            },
+            {
+              "asset_ref": "assets/symbol_do_not_dismantle.svg",
+              "asset_sha256": "5ad4fa830a5b4f9bf23af4c09493fc2610f8fda94ea6fcf925288d1cb6491f33",
+              "caption_bbox": [
+                71.3125,
+                118.7092056274414,
+                136.5753936767578,
+                125.92920684814453
+              ],
+              "caption_sha256": "b168ca279ef269f0815e351223969eb49f8123c92fde6c5d48796fa6b4a3170f",
+              "caption_text": "Non smontare il prodotto.",
+              "drawing_indices": [
+                715,
+                716,
+                717
+              ],
+              "glyph_bbox": [
+                37.508399963378906,
+                112.61898803710938,
+                57.65439987182617,
+                132.75299072265625
+              ],
+              "physical_page": 77,
+              "row_bbox": [
+                37.258399963378906,
+                112.36898803710938,
+                136.8253936767578,
+                133.00299072265625
+              ],
+              "shared_symbol_key": "do-not-dismantle/screwdriver-prohibited"
+            },
+            {
+              "asset_ref": "assets/symbol_no_open_flame.svg",
+              "asset_sha256": "4a82cdd8683e595eb3c9f63ecce457ca53cc5ea6c3f5906ecd7e1d8a4b3be01f",
+              "caption_bbox": [
+                71.3125,
+                149.32998657226562,
+                168.01434326171875,
+                156.54998779296875
+              ],
+              "caption_sha256": "18d45fea1dc130794448dbc14e1f7da1bc8a58b6eefbd1693791bdfcb9bcf62b",
+              "caption_text": "Tenere il prodotto lontano da fiamme.",
+              "drawing_indices": [
+                733,
+                734,
+                735,
+                736,
+                737,
+                738
+              ],
+              "glyph_bbox": [
+                37.5077018737793,
+                141.4206085205078,
+                58.77170181274414,
+                162.68260192871094
+              ],
+              "physical_page": 77,
+              "row_bbox": [
+                37.2577018737793,
+                141.1706085205078,
+                168.26434326171875,
+                162.93260192871094
+              ],
+              "shared_symbol_key": "no-open-flame/fire-match-prohibited"
+            },
+            {
+              "asset_ref": "assets/symbol_keep_away_from_children.svg",
+              "asset_sha256": "a58074f90ef83ab647ae94215dc0e3315cb9d113aaa4e104a6b26dc3b241d899",
+              "caption_bbox": [
+                71.3125,
+                177.73410034179688,
+                178.4303436279297,
+                184.9541015625
+              ],
+              "caption_sha256": "e180962c08d46580548a37e54b34f7de7078b1084ec213c28ee19206b889762f",
+              "caption_text": "Tenere lontano dalla portata dei bambini.",
+              "drawing_indices": [
+                739,
+                740,
+                741,
+                742
+              ],
+              "glyph_bbox": [
+                37.50809860229492,
+                170.05999755859375,
+                58.77109909057617,
+                191.322998046875
+              ],
+              "physical_page": 77,
+              "row_bbox": [
+                37.25809860229492,
+                169.80999755859375,
+                178.6803436279297,
+                191.572998046875
+              ],
+              "shared_symbol_key": "keep-away-from-children/adult-child-prohibited"
+            },
+            {
+              "asset_ref": "assets/symbol_li_ion.svg",
+              "asset_sha256": "317b9e9feb7747092569a1074d5e05e43bca5ddb96e9404f8e33746df9da7a8e",
+              "caption_bbox": [
+                71.3125,
+                198.1796875,
+                178.74951171875,
+                226.39968872070312
+              ],
+              "caption_sha256": "2ff9e6eeb98e84028982531c45b8b699cffc44698712fa9f2c5267386cd6337f",
+              "caption_text": "Questo simbolo indica che all’interno del prodotto è presente una batteria agli ioni di litio (Li-ion), la quale va smaltita o riciclata adeguatamente.",
+              "drawing_indices": [
+                718,
+                719,
+                720,
+                721,
+                722,
+                723,
+                724,
+                725,
+                726
+              ],
+              "glyph_bbox": [
+                38.439002990722656,
+                200.965087890625,
+                58.582603454589844,
+                223.28941345214844
+              ],
+              "physical_page": 77,
+              "row_bbox": [
+                38.189002990722656,
+                197.9296875,
+                178.99951171875,
+                226.64968872070312
+              ],
+              "shared_symbol_key": "li-ion/recycle-li-ion"
+            },
+            {
+              "asset_ref": "assets/symbol_battery_weee.png",
+              "asset_sha256": "cf04ff00bdeb8de5971a55e5d8be6ef91e1a4ddad479f817f0c535914a392d45",
+              "caption_bbox": [
+                226.83590698242188,
+                47.34540557861328,
+                338.58819580078125,
+                149.74301147460938
+              ],
+              "caption_sha256": "8d151bf7a58672348e0468fcf1141759e4f489b50f6d2b8947a9e6d71601f375",
+              "caption_text": "Le batterie e gli accumulatori non devono essere smaltiti insieme ai rifiuti domestici. Come consumatore, sei legalmente obbligato a smaltire tutte le batterie e gli accumulatori nei punti di raccolta designati, indipendentemente dal fatto che contengano sostanze pericolose. Per favore, restituisci le batterie e gli accumulatori usati a un punto di raccolta locale, a un centro di riciclo o al rivenditore presso cui sono stati acquistati. Un corretto smaltimento garantisce un riciclo responsabile per l'ambiente e previene potenziali danni alla salute umana e all'ambiente.",
+              "drawing_indices": [
+                743,
+                744
+              ],
+              "glyph_bbox": [
+                193.88400268554688,
+                82.64000701904297,
+                218.08799743652344,
+                108.21200561523438
+              ],
+              "physical_page": 77,
+              "row_bbox": [
+                193.63400268554688,
+                47.09540557861328,
+                338.83819580078125,
+                149.99301147460938
+              ],
+              "shared_symbol_key": "battery-weee/crossed-bin-no-bar"
+            },
+            {
+              "asset_ref": "assets/symbol_weee.png",
+              "asset_sha256": "6883f899f43ac0642f43b8f9cf4118a394c1382ee409f4498544f90ba37b56a5",
+              "caption_bbox": [
+                226.76849365234375,
+                156.07327270507812,
+                335.7509460449219,
+                224.4788818359375
+              ],
+              "caption_sha256": "83e6cd81c9647b7e10fc5b5b38f8afba6188d3535843c302e9a1139f3e624d26",
+              "caption_text": "Questo simbolo indica che il prodotto non va smaltito come rifiuto domestico e deve essere consegnato per il riciclaggio a un centro di raccolta designato. Smaltire adeguatamente e riciclare aiuta a proteggere l’ambiente. Per maggiori informazioni riguardo lo smaltimento e il riciclaggio di questo prodotto, contattare la propria comunità locale, i servizi di smaltimento o il proprio fornitore.",
+              "drawing_indices": [
+                727,
+                728,
+                729
+              ],
+              "glyph_bbox": [
+                197.63320922851562,
+                175.88189697265625,
+                215.06520080566406,
+                200.66598510742188
+              ],
+              "physical_page": 77,
+              "row_bbox": [
+                197.38320922851562,
+                155.82327270507812,
+                336.0009460449219,
+                224.7288818359375
+              ],
+              "shared_symbol_key": "weee/crossed-bin-bar"
+            }
+          ]
+        },
+        "schema_version": "auto-manual-symbol-asset-admission/v1"
+      },
       "target": {
         "languages": [
           "it"
         ],
         "model": "JE-3600A",
         "region": "EU",
-        "technical_version": "git-20261005-47a346dc"
+        "technical_version": "1465-20261010-r1"
       },
       "validated_main": "c1c984c5f5e656df6ec0a90905c8e9fd99d8e92b",
       "web_roots": {
@@ -2027,13 +2301,52 @@
       "operator_scope": "simultaneously publish nine language web manuals",
       "review": "code-as-doc/reviews/je3600a_eu_nine_language_web_2026-10.md"
     },
-    "source_errata": [
-      {
-        "disposition": "Preserve source; no independent translation.",
-        "issue": "Native Italian F0-F6 corrective actions are in German.",
-        "page": 88
-      }
-    ],
+    "source_errata": {
+      "baseline_version": "git-20261005-47a346dc",
+      "batch": "1465",
+      "deltas": [
+        {
+          "code": "F0",
+          "new": "Riavviare il prodotto.",
+          "old": "Starten Sie das Gerät neu."
+        },
+        {
+          "code": "F1",
+          "new": "Riavviare il prodotto.",
+          "old": "Starten Sie das Gerät neu."
+        },
+        {
+          "code": "F2",
+          "new": "Riavviare il prodotto.",
+          "old": "Starten Sie das Gerät neu."
+        },
+        {
+          "code": "F3",
+          "new": "Riavviare il prodotto.",
+          "old": "Starten Sie das Gerät neu."
+        },
+        {
+          "code": "F4",
+          "new": "Collega il prodotto ai carichi per scaricare la batteria fino a quando il guasto scompare.",
+          "old": "Schließen Sie das Gerät an Verbraucher an, um die Batterie zu entladen, bis der Fehler verschwindet."
+        },
+        {
+          "code": "F5",
+          "new": "Caricare il prodotto tramite pannelli solari o una presa a muro CA fino a quando l'errore non scompare.",
+          "old": "Laden Sie das Gerät über Solarmodule oder eine AC-Wandsteckdose, bis der Fehler verschwindet."
+        },
+        {
+          "code": "F6",
+          "new": "1. Attendi che la rete torni alla normalità prima di caricare il prodotto tramite una presa a muro CA.\r2. Verifica che le prese d'aria di ingresso e di scarico non siano ostruite; assicurati che ci siano 20 cm di spazio libero su entrambi i lati del prodotto.\r3. Posiziona il prodotto in un luogo non esposto alla luce solare diretta o a temperature ambientali elevate.\r4. Scollega tutti i carichi dal prodotto. Lascialo inattivo e attendi che il guasto scompaia.\r5. Riavvia il prodotto.",
+          "old": "1. Warten Sie, bis das Stromnetz stabil ist, bevor Sie das Gerät über eine Netzsteckdose laden. 2. Überprüfen Sie, ob die Lufteinlass- und -auslassöffnungen blockiert sind; stellen Sie sicher, dass auf beiden Seiten des Geräts ein Abstand von 20 cm eingehalten wird. 3. Platzieren Sie das Gerät an einem Ort, der nicht direktem Sonnenlicht oder hohen Umgebungstemperaturen ausgesetzt ist. 4. Trennen Sie alle Verbraucher vom Gerät, lassen Sie es im Leerlauf und warten Sie, bis der Fehler verschwindet. 5. Starten Sie das Gerät neu."
+        }
+      ],
+      "language": "it",
+      "model": "JE-3600A",
+      "raw_capture_policy": "original native capture files retained as evidence; corrected chapters supersede affected original strings",
+      "scope": "semantic Web copy only; no print pagination or reviewer colors",
+      "source": "delivered JE-3600A corrected AI/PDF and modification records"
+    },
     "source_method": "native-selectable-and-visually-verified-outlined-copy",
     "title": "Jackery Explorer 3600 Plus",
     "web_contract": {
@@ -2758,58 +3071,58 @@
         },
         {
           "asset_refs": [
-            "assets/symbol-warning_triangle.png",
-            "assets/symbol-read_manual.png",
-            "assets/symbol-do_not_dismantle.png",
-            "assets/symbol-no_open_flame.png",
-            "assets/symbol-keep_away_from_children.png",
-            "assets/symbol-li_ion.png",
-            "assets/symbol-battery_disposal.png",
-            "assets/symbol-weee.png"
+            "assets/symbol_warning_triangle.svg",
+            "assets/symbol_read_manual.svg",
+            "assets/symbol_do_not_dismantle.svg",
+            "assets/symbol_no_open_flame.svg",
+            "assets/symbol_keep_away_from_children.svg",
+            "assets/symbol_li_ion.svg",
+            "assets/symbol_battery_weee.png",
+            "assets/symbol_weee.png"
           ],
           "block_id": "symbols:block-0003",
-          "content_sha256": "b66a29722c479d772ab2ea8b12389d0119e2ff8ddd5ef9e54dea52701a04fe9b",
+          "content_sha256": "b55bf641c4ec4a725b2e5871be568db29224933949f40e0665204088bb51c1f7",
           "kind": "flow",
           "payload": {
             "component_spec": {
               "assets": [
                 {
-                  "asset_ref": "assets/symbol-warning_triangle.png",
+                  "asset_ref": "assets/symbol_warning_triangle.svg",
                   "locale_policy": "exact",
                   "role": "icons"
                 },
                 {
-                  "asset_ref": "assets/symbol-read_manual.png",
+                  "asset_ref": "assets/symbol_read_manual.svg",
                   "locale_policy": "exact",
                   "role": "icons"
                 },
                 {
-                  "asset_ref": "assets/symbol-do_not_dismantle.png",
+                  "asset_ref": "assets/symbol_do_not_dismantle.svg",
                   "locale_policy": "exact",
                   "role": "icons"
                 },
                 {
-                  "asset_ref": "assets/symbol-no_open_flame.png",
+                  "asset_ref": "assets/symbol_no_open_flame.svg",
                   "locale_policy": "exact",
                   "role": "icons"
                 },
                 {
-                  "asset_ref": "assets/symbol-keep_away_from_children.png",
+                  "asset_ref": "assets/symbol_keep_away_from_children.svg",
                   "locale_policy": "exact",
                   "role": "icons"
                 },
                 {
-                  "asset_ref": "assets/symbol-li_ion.png",
+                  "asset_ref": "assets/symbol_li_ion.svg",
                   "locale_policy": "exact",
                   "role": "icons"
                 },
                 {
-                  "asset_ref": "assets/symbol-battery_disposal.png",
+                  "asset_ref": "assets/symbol_battery_weee.png",
                   "locale_policy": "exact",
                   "role": "icons"
                 },
                 {
-                  "asset_ref": "assets/symbol-weee.png",
+                  "asset_ref": "assets/symbol_weee.png",
                   "locale_policy": "exact",
                   "role": "icons"
                 }
@@ -8062,7 +8375,7 @@
         {
           "asset_refs": [],
           "block_id": "troubleshooting:block-0003",
-          "content_sha256": "dea5724eb813670ba74107c92782e79b4eba289d4c8f8f8f4b7669859d9046bc",
+          "content_sha256": "2f49b64a78488be2ceeaff84bb681b6c6d4ba58fa36b19ac6aa91b1ece53eac8",
           "kind": "flow",
           "payload": {
             "component_spec": {
@@ -8091,44 +8404,44 @@
                     {
                       "code_html": "F0",
                       "code_text": "F0",
-                      "measures_html": "Starten Sie das Gerät neu.",
-                      "measures_text": "Starten Sie das Gerät neu."
+                      "measures_html": "Riavviare il prodotto.",
+                      "measures_text": "Riavviare il prodotto."
                     },
                     {
                       "code_html": "F1",
                       "code_text": "F1",
-                      "measures_html": "Starten Sie das Gerät neu.",
-                      "measures_text": "Starten Sie das Gerät neu."
+                      "measures_html": "Riavviare il prodotto.",
+                      "measures_text": "Riavviare il prodotto."
                     },
                     {
                       "code_html": "F2",
                       "code_text": "F2",
-                      "measures_html": "Starten Sie das Gerät neu.",
-                      "measures_text": "Starten Sie das Gerät neu."
+                      "measures_html": "Riavviare il prodotto.",
+                      "measures_text": "Riavviare il prodotto."
                     },
                     {
                       "code_html": "F3",
                       "code_text": "F3",
-                      "measures_html": "Starten Sie das Gerät neu.",
-                      "measures_text": "Starten Sie das Gerät neu."
+                      "measures_html": "Riavviare il prodotto.",
+                      "measures_text": "Riavviare il prodotto."
                     },
                     {
                       "code_html": "F4",
                       "code_text": "F4",
-                      "measures_html": "Schließen Sie das Gerät an Verbraucher an, um die Batterie zu entladen, bis der Fehler verschwindet.",
-                      "measures_text": "Schließen Sie das Gerät an Verbraucher an, um die Batterie zu entladen, bis der Fehler verschwindet."
+                      "measures_html": "Collega il prodotto ai carichi per scaricare la batteria fino a quando il guasto scompare.",
+                      "measures_text": "Collega il prodotto ai carichi per scaricare la batteria fino a quando il guasto scompare."
                     },
                     {
                       "code_html": "F5",
                       "code_text": "F5",
-                      "measures_html": "Laden Sie das Gerät über Solarmodule oder eine AC-Wandsteckdose, bis der Fehler verschwindet.",
-                      "measures_text": "Laden Sie das Gerät über Solarmodule oder eine AC-Wandsteckdose, bis der Fehler verschwindet."
+                      "measures_html": "Caricare il prodotto tramite pannelli solari o una presa a muro CA fino a quando l&#x27;errore non scompare.",
+                      "measures_text": "Caricare il prodotto tramite pannelli solari o una presa a muro CA fino a quando l'errore non scompare."
                     },
                     {
                       "code_html": "F6",
                       "code_text": "F6",
-                      "measures_html": "1. Warten Sie, bis das Stromnetz stabil ist, bevor Sie das Gerät über eine Netzsteckdose laden.<br />2. Überprüfen Sie, ob die Lufteinlass- und -auslassöffnungen blockiert sind; stellen Sie sicher, dass auf beiden Seiten des Geräts ein Abstand von 20 cm eingehalten wird.<br />3. Platzieren Sie das Gerät an einem Ort, der nicht direktem Sonnenlicht oder hohen Umgebungstemperaturen ausgesetzt ist.<br />4. Trennen Sie alle Verbraucher vom Gerät, lassen Sie es im Leerlauf und warten Sie, bis der Fehler verschwindet.<br />5. Starten Sie das Gerät neu.",
-                      "measures_text": "1. Warten Sie, bis das Stromnetz stabil ist, bevor Sie das Gerät über eine Netzsteckdose laden. 2. Überprüfen Sie, ob die Lufteinlass- und -auslassöffnungen blockiert sind; stellen Sie sicher, dass auf beiden Seiten des Geräts ein Abstand von 20 cm eingehalten wird. 3. Platzieren Sie das Gerät an einem Ort, der nicht direktem Sonnenlicht oder hohen Umgebungstemperaturen ausgesetzt ist. 4. Trennen Sie alle Verbraucher vom Gerät, lassen Sie es im Leerlauf und warten Sie, bis der Fehler verschwindet. 5. Starten Sie das Gerät neu."
+                      "measures_html": "1. Attendi che la rete torni alla normalità prima di caricare il prodotto tramite una presa a muro CA.<br />2. Verifica che le prese d&#x27;aria di ingresso e di scarico non siano ostruite; assicurati che ci siano 20 cm di spazio libero su entrambi i lati del prodotto.<br />3. Posiziona il prodotto in un luogo non esposto alla luce solare diretta o a temperature ambientali elevate.<br />4. Scollega tutti i carichi dal prodotto. Lascialo inattivo e attendi che il guasto scompaia.<br />5. Riavvia il prodotto.",
+                      "measures_text": "1. Attendi che la rete torni alla normalità prima di caricare il prodotto tramite una presa a muro CA. 2. Verifica che le prese d'aria di ingresso e di scarico non siano ostruite; assicurati che ci siano 20 cm di spazio libero su entrambi i lati del prodotto. 3. Posiziona il prodotto in un luogo non esposto alla luce solare diretta o a temperature ambientali elevate. 4. Scollega tutti i carichi dal prodotto. Lascialo inattivo e attendi che il guasto scompaia. 5. Riavvia il prodotto."
                     },
                     {
                       "code_html": "F7",
