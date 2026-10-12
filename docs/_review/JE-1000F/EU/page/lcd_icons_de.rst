@@ -148,7 +148,9 @@ LCD-ANZEIGE
           | **Blinken:** Der Batteriestand liegt unter 5 %.
           | **Aus:** Der Batteriestand liegt nicht unter 20 % oder das Produkt wird aufgeladen.
       * - 20
-        -
+        - .. image:: .tmp/review-start/phase2/_attachments/lcd_icons/20_Discharge_Timer_DHPMbkjSWoiuALxJyJ8cWyQOn0e.png
+             :alt: Entlade-Timer
+             :width: 42px
         - Entlade-Timer
         - | **Ein:** Ein Entlade-Timer ist eingerichtet.
           | **Aus:** Es ist kein Entlade-Timer eingerichtet.
