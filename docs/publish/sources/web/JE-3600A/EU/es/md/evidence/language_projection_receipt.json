@@ -3,11 +3,12 @@
   "model": "JE-3600A",
   "region": "EU",
   "language": "es",
-  "version": "git-20261005-47a346dc",
-  "git_ref": "e7f56f46961ecc0690cd59de3f2c5acfd7123e59",
+  "version": "1465-20261010-r1",
+  "git_ref": "e0d53c14e610440bf799c221526262eea5101fa5",
+  "caption_frame_admission": [],
   "source_manifest": {
     "path": "frozen_source_manifest.json",
-    "sha256": "39a80b8acffa0a64a8ffd558e49eafc3b7e21cd9a5b54220b2a867ff3dfda01b"
+    "sha256": "ee9e90519d8581c2d71cb975e164b2c28b4fe798de18612a566353e4780adfe8"
   },
   "markdown": {
     "manual": "manual_je3600a_eu_es.md",
@@ -288,6 +289,46 @@
         "sha256": "7e4de290ea13b86bd50fbb209b4510116116d4fb403b7ef4f83cf1c1db873989"
       },
       {
+        "path": "assets/symbol_battery_weee.png",
+        "size": 19806,
+        "sha256": "cf04ff00bdeb8de5971a55e5d8be6ef91e1a4ddad479f817f0c535914a392d45"
+      },
+      {
+        "path": "assets/symbol_do_not_dismantle.svg",
+        "size": 6538,
+        "sha256": "5ad4fa830a5b4f9bf23af4c09493fc2610f8fda94ea6fcf925288d1cb6491f33"
+      },
+      {
+        "path": "assets/symbol_keep_away_from_children.svg",
+        "size": 6300,
+        "sha256": "a58074f90ef83ab647ae94215dc0e3315cb9d113aaa4e104a6b26dc3b241d899"
+      },
+      {
+        "path": "assets/symbol_li_ion.svg",
+        "size": 7306,
+        "sha256": "317b9e9feb7747092569a1074d5e05e43bca5ddb96e9404f8e33746df9da7a8e"
+      },
+      {
+        "path": "assets/symbol_no_open_flame.svg",
+        "size": 5630,
+        "sha256": "4a82cdd8683e595eb3c9f63ecce457ca53cc5ea6c3f5906ecd7e1d8a4b3be01f"
+      },
+      {
+        "path": "assets/symbol_read_manual.svg",
+        "size": 4961,
+        "sha256": "1d2087064f92538d3b0762607056ac268f1d1c24e8f446c66626ac35c4e43584"
+      },
+      {
+        "path": "assets/symbol_warning_triangle.svg",
+        "size": 4481,
+        "sha256": "0f41fe5ea49fb7a830cab90d2a5473587dd8a0c04db775b42953f58dbea3fb0a"
+      },
+      {
+        "path": "assets/symbol_weee.png",
+        "size": 7672,
+        "sha256": "6883f899f43ac0642f43b8f9cf4118a394c1382ee409f4498544f90ba37b56a5"
+      },
+      {
         "path": "assets/ups.png",
         "size": 92482,
         "sha256": "370b2ae2e50dbbea4b1b1be1f0efefbd0447850d40ee3ba613ca5a97975b23a0"
@@ -304,16 +345,16 @@
       },
       {
         "path": "manual.ir.json",
-        "size": 432942,
-        "sha256": "003eeed21b8db52dcedec7cb48eb29f58d447ba1ebc7d295a21c98b60f23110e"
+        "size": 444560,
+        "sha256": "17883f9bb9df82fb99cc517ba5f293de7e7d926a990933ccb19942cbcaa28b66"
       },
       {
         "path": "manual_je3600a_eu_es.md",
-        "size": 72629,
-        "sha256": "f9ba8604a54980102872351e29c14ccdfee0c6f69820945d8ce3b76bb3c491de"
+        "size": 72619,
+        "sha256": "a0f29468b51fc674d8c251901c2990649daa32a571a47a22de2134195fea971b"
       }
     ],
-    "sha256": "873daa18c31362bfe63b870d9d01b0e51369d161c4a31df6d002d4144cc7c611"
+    "sha256": "3fa635342f94cac400eaedbd0af779713cb0ee832e3962eb5a0584fe60bbad13"
   },
   "html": {
     "files": [
@@ -323,29 +364,14 @@
         "sha256": "88f6cbad10c3b6c5a1ea1cdcead8b3fdcb1ac1af70a8ba384ea2c3d26292601e"
       },
       {
-        "path": ".doctrees/environment.pickle",
-        "size": 36068,
-        "sha256": "9485f7a3d9d42c869a658bf9916b98777e34fdebc6e0090421fba5bfa92cd111"
-      },
-      {
-        "path": ".doctrees/index.doctree",
-        "size": 3329,
-        "sha256": "8dc55769b6f9a16ba391204ad1f30649588a01c7f4afc701dc134437c0fc0aec"
-      },
-      {
-        "path": ".doctrees/manual_je3600a_eu_es.doctree",
-        "size": 169158,
-        "sha256": "38d707cf457ba51eeaae7cad20490f2725b80e1c4e28ba8d578c72ce091027e2"
-      },
-      {
         "path": "_sources/index.md.txt",
         "size": 82,
         "sha256": "764e1e89facfefd56a164ac23ad95d21de439ee66774f90345bea69a7ecaa9fb"
       },
       {
         "path": "_sources/manual_je3600a_eu_es.md.txt",
-        "size": 72629,
-        "sha256": "f9ba8604a54980102872351e29c14ccdfee0c6f69820945d8ce3b76bb3c491de"
+        "size": 72619,
+        "sha256": "a0f29468b51fc674d8c251901c2990649daa32a571a47a22de2134195fea971b"
       },
       {
         "path": "_static/base-stemmer.js",
@@ -738,24 +764,64 @@
         "sha256": "7e4de290ea13b86bd50fbb209b4510116116d4fb403b7ef4f83cf1c1db873989"
       },
       {
+        "path": "assets/symbol_battery_weee.png",
+        "size": 19806,
+        "sha256": "cf04ff00bdeb8de5971a55e5d8be6ef91e1a4ddad479f817f0c535914a392d45"
+      },
+      {
+        "path": "assets/symbol_do_not_dismantle.svg",
+        "size": 6538,
+        "sha256": "5ad4fa830a5b4f9bf23af4c09493fc2610f8fda94ea6fcf925288d1cb6491f33"
+      },
+      {
+        "path": "assets/symbol_keep_away_from_children.svg",
+        "size": 6300,
+        "sha256": "a58074f90ef83ab647ae94215dc0e3315cb9d113aaa4e104a6b26dc3b241d899"
+      },
+      {
+        "path": "assets/symbol_li_ion.svg",
+        "size": 7306,
+        "sha256": "317b9e9feb7747092569a1074d5e05e43bca5ddb96e9404f8e33746df9da7a8e"
+      },
+      {
+        "path": "assets/symbol_no_open_flame.svg",
+        "size": 5630,
+        "sha256": "4a82cdd8683e595eb3c9f63ecce457ca53cc5ea6c3f5906ecd7e1d8a4b3be01f"
+      },
+      {
+        "path": "assets/symbol_read_manual.svg",
+        "size": 4961,
+        "sha256": "1d2087064f92538d3b0762607056ac268f1d1c24e8f446c66626ac35c4e43584"
+      },
+      {
+        "path": "assets/symbol_warning_triangle.svg",
+        "size": 4481,
+        "sha256": "0f41fe5ea49fb7a830cab90d2a5473587dd8a0c04db775b42953f58dbea3fb0a"
+      },
+      {
+        "path": "assets/symbol_weee.png",
+        "size": 7672,
+        "sha256": "6883f899f43ac0642f43b8f9cf4118a394c1382ee409f4498544f90ba37b56a5"
+      },
+      {
         "path": "assets/ups.png",
         "size": 92482,
         "sha256": "370b2ae2e50dbbea4b1b1be1f0efefbd0447850d40ee3ba613ca5a97975b23a0"
       },
       {
         "path": "genindex.html",
-        "size": 14514,
-        "sha256": "15c2219cd10ca0f80acf5cd680294c5dd2a60c2f503efbbbb46376fc33dc30e4"
+        "size": 14512,
+        "sha256": "58be49653f7bae6aa812d62f774e0020f0bfd0655bdfc0788149f5bd6a6a1f61"
       },
       {
         "path": "index.html",
-        "size": 20675,
-        "sha256": "2b59ddeb84d727d40eb239b87eaca1939beb5f3041131ecbfc7c3a99ec574440"
+        "size": 20670,
+        "sha256": "0d069adf4877f7e5bcc4ddb5f80752395b4ec84ad385b71904f9ad3e5f19ef58"
       },
       {
         "path": "manual_je3600a_eu_es.html",
-        "size": 93125,
-        "sha256": "1b8e5c511dd3a45e378257a0dce73e59cea590ce9a42c5d4ce31bd239c96344f"
+        "size": 93111,
+        "sha256": "d04ce74a0c9475805a959f4621c1aba9e1c1a7c208eeede448a07f09c2293f17"
       },
       {
         "path": "objects.inv",
@@ -764,15 +830,15 @@
       },
       {
         "path": "search.html",
-        "size": 14784,
-        "sha256": "0c1556668c67818e5910ae84b4986df7ad02a4c4ed9a5b0cfcfe8f4a2922ca52"
+        "size": 14782,
+        "sha256": "93d05ebf7ebc6169828b948c0a7d6547615ee7cc45c12f7b5dc709502cf20488"
       },
       {
         "path": "searchindex.js",
-        "size": 14221,
-        "sha256": "e72488f115b4c9ae8276b8ab0ef083cc6e87c1510ac9e15a37e387ebeaa4bd4b"
+        "size": 14144,
+        "sha256": "68f7e677d5bf92feacbaa8d92ce28a8afba8fa3f49e79f66611f51ab54ebfbd0"
       }
     ],
-    "sha256": "86ea803a6735a728609469125cf7381ea809415b226f1cdecba6e0bf0317e7ac"
+    "sha256": "b09e387678eccf888f0825f85902c5ce783eccca8e799722ff44353be7eca37c"
   }
 }
