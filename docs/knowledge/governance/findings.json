@@ -1,0 +1,1209 @@
+{
+  "schema": "auto-manual-knowledge-findings/v1",
+  "region": "EU",
+  "findings": [
+    {
+      "finding_id": "fd-je2000e-je2000f-eu-regulations",
+      "status": "candidate",
+      "priority": "high",
+      "category": "compliance",
+      "summary": "JE-2000E、JE-2000F 的 de、es、fr、it、uk 版没有 EU 法规章节：无 RED 符合性声明、无线电频段与功率、制造商联系方式；与英文版同为印刷修订号 2.10 / 2.6。",
+      "registered": {
+        "date": "2026-10-12",
+        "source": "P2-4 验收记录 §3.2 第 1 条"
+      },
+      "claims": [
+        {
+          "kind": "absent",
+          "variants": [
+            "JE-2000E/EU/de",
+            "JE-2000E/EU/es",
+            "JE-2000E/EU/fr",
+            "JE-2000E/EU/it",
+            "JE-2000E/EU/uk",
+            "JE-2000F/EU/de",
+            "JE-2000F/EU/es",
+            "JE-2000F/EU/fr",
+            "JE-2000F/EU/it",
+            "JE-2000F/EU/uk"
+          ],
+          "references": [
+            {
+              "knowledge_id": "kn:JE-2000E/EU/en:compliance:4c386e02b62c8b53:0",
+              "source_ref": "JE-2000E/EU/en/md/manual_je2000e_eu_en.html#eu-regulations"
+            },
+            {
+              "knowledge_id": "kn:JE-2000E/EU/en:compliance:4c076ffc9b1ecd8c:0",
+              "source_ref": "JE-2000E/EU/en/md/manual_je2000e_eu_en.html#eu-regulations"
+            },
+            {
+              "knowledge_id": "kn:JE-2000E/EU/en:compliance:b795e41819e72a8d:0",
+              "source_ref": "JE-2000E/EU/en/md/manual_je2000e_eu_en.html#eu-regulations"
+            },
+            {
+              "knowledge_id": "kn:JE-2000E/EU/en:compliance:ece93dea2629359f:0",
+              "source_ref": "JE-2000E/EU/en/md/manual_je2000e_eu_en.html#eu-regulations"
+            },
+            {
+              "knowledge_id": "kn:JE-2000F/EU/en:compliance:39bf36d82806df03:0",
+              "source_ref": "JE-2000F/EU/en/md/manual_je2000f_eu_en.html#eu-regulations"
+            },
+            {
+              "knowledge_id": "kn:JE-2000F/EU/en:compliance:4c076ffc9b1ecd8c:0",
+              "source_ref": "JE-2000F/EU/en/md/manual_je2000f_eu_en.html#eu-regulations"
+            },
+            {
+              "knowledge_id": "kn:JE-2000F/EU/en:compliance:b795e41819e72a8d:0",
+              "source_ref": "JE-2000F/EU/en/md/manual_je2000f_eu_en.html#eu-regulations"
+            },
+            {
+              "knowledge_id": "kn:JE-2000F/EU/en:compliance:ece93dea2629359f:0",
+              "source_ref": "JE-2000F/EU/en/md/manual_je2000f_eu_en.html#eu-regulations"
+            }
+          ]
+        }
+      ],
+      "evidence": {
+        "tier": "high",
+        "observation_ids": [
+          "obs:language_parity:JE-2000E/EU:989439cd13957bbb",
+          "obs:language_parity:JE-2000E/EU:f7f1a767517ef8d6",
+          "obs:language_parity:JE-2000E/EU:6489d3f3d0823409",
+          "obs:language_parity:JE-2000E/EU:a7d7bba015c67229",
+          "obs:language_parity:JE-2000F/EU:d8894c6bc2171aa7",
+          "obs:language_parity:JE-2000F/EU:dcadce55c6b7cfba",
+          "obs:language_parity:JE-2000F/EU:f7ff1ef809d90d2f",
+          "obs:language_parity:JE-2000F/EU:33c909087c8ebad0"
+        ],
+        "generator": "manual-observations/0.5",
+        "pilot_check": "real"
+      },
+      "authority": {
+        "JE-2000E/EU/de": "unclassified",
+        "JE-2000E/EU/es": "unclassified",
+        "JE-2000E/EU/fr": "unclassified",
+        "JE-2000E/EU/it": "unclassified",
+        "JE-2000E/EU/uk": "unclassified",
+        "JE-2000F/EU/de": "unclassified",
+        "JE-2000F/EU/es": "unclassified",
+        "JE-2000F/EU/fr": "unclassified",
+        "JE-2000F/EU/it": "unclassified",
+        "JE-2000F/EU/uk": "unclassified"
+      },
+      "decisions": [],
+      "changes": [],
+      "verification": null
+    },
+    {
+      "finding_id": "fd-je1000h-je3000c-eu-regulations",
+      "status": "candidate",
+      "priority": "high",
+      "category": "compliance",
+      "summary": "JE-1000H、JE-3000C 的 de、es、fr、it、uk 版没有 EU 法规章节（同 fd-je2000e-je2000f-eu-regulations；修订号与英文版不同，档位最高为 medium）。",
+      "registered": {
+        "date": "2026-10-12",
+        "source": "P2-4 验收记录 §3.2 第 2 条"
+      },
+      "claims": [
+        {
+          "kind": "absent",
+          "variants": [
+            "JE-1000H/EU/de",
+            "JE-1000H/EU/es",
+            "JE-1000H/EU/fr",
+            "JE-1000H/EU/it",
+            "JE-1000H/EU/uk",
+            "JE-3000C/EU/de",
+            "JE-3000C/EU/es",
+            "JE-3000C/EU/fr",
+            "JE-3000C/EU/it",
+            "JE-3000C/EU/uk"
+          ],
+          "references": [
+            {
+              "knowledge_id": "kn:JE-1000H/EU/en:compliance:58f3c0454e07642a:0",
+              "source_ref": "JE-1000H/EU/en/md/manual_je1000h_eu_en.html#eu-regulations"
+            },
+            {
+              "knowledge_id": "kn:JE-1000H/EU/en:compliance:4c076ffc9b1ecd8c:0",
+              "source_ref": "JE-1000H/EU/en/md/manual_je1000h_eu_en.html#eu-regulations"
+            },
+            {
+              "knowledge_id": "kn:JE-1000H/EU/en:compliance:b795e41819e72a8d:0",
+              "source_ref": "JE-1000H/EU/en/md/manual_je1000h_eu_en.html#eu-regulations"
+            },
+            {
+              "knowledge_id": "kn:JE-1000H/EU/en:compliance:ece93dea2629359f:0",
+              "source_ref": "JE-1000H/EU/en/md/manual_je1000h_eu_en.html#eu-regulations"
+            },
+            {
+              "knowledge_id": "kn:JE-3000C/EU/en:compliance:8849000e4fe92442:0",
+              "source_ref": "JE-3000C/EU/en/md/manual_je3000c_eu_en.html#eu-regulations"
+            },
+            {
+              "knowledge_id": "kn:JE-3000C/EU/en:compliance:4c076ffc9b1ecd8c:0",
+              "source_ref": "JE-3000C/EU/en/md/manual_je3000c_eu_en.html#eu-regulations"
+            },
+            {
+              "knowledge_id": "kn:JE-3000C/EU/en:compliance:b795e41819e72a8d:0",
+              "source_ref": "JE-3000C/EU/en/md/manual_je3000c_eu_en.html#eu-regulations"
+            },
+            {
+              "knowledge_id": "kn:JE-3000C/EU/en:compliance:ece93dea2629359f:0",
+              "source_ref": "JE-3000C/EU/en/md/manual_je3000c_eu_en.html#eu-regulations"
+            }
+          ]
+        }
+      ],
+      "evidence": {
+        "tier": "medium",
+        "observation_ids": [
+          "obs:language_parity:JE-1000H/EU:a5b81f418647e68f",
+          "obs:language_parity:JE-1000H/EU:947d3c85002b088c",
+          "obs:language_parity:JE-1000H/EU:4a7ae8d8a2d7c430",
+          "obs:language_parity:JE-1000H/EU:b0e79ac6418dddca",
+          "obs:language_parity:JE-3000C/EU:86924fdaea91e5f4",
+          "obs:language_parity:JE-3000C/EU:c840f2fa99670b4c",
+          "obs:language_parity:JE-3000C/EU:a1268b457cd0cdc3",
+          "obs:language_parity:JE-3000C/EU:1dc8cb985c6b4939"
+        ],
+        "generator": "manual-observations/0.5",
+        "pilot_check": "real"
+      },
+      "authority": {
+        "JE-1000H/EU/de": "unclassified",
+        "JE-1000H/EU/es": "unclassified",
+        "JE-1000H/EU/fr": "unclassified",
+        "JE-1000H/EU/it": "unclassified",
+        "JE-1000H/EU/uk": "unclassified",
+        "JE-3000C/EU/de": "unclassified",
+        "JE-3000C/EU/es": "unclassified",
+        "JE-3000C/EU/fr": "unclassified",
+        "JE-3000C/EU/it": "unclassified",
+        "JE-3000C/EU/uk": "unclassified"
+      },
+      "decisions": [],
+      "changes": [],
+      "verification": null
+    },
+    {
+      "finding_id": "fd-je2000e-radio-rohs-nl-pl-pt",
+      "status": "candidate",
+      "priority": "medium",
+      "category": "compliance",
+      "summary": "JE-2000E 的 nl、pl、pt 版没有无线电频段与功率；RED 声明比英文版少两项 RoHS 法规（2011/65/EU、(EU) 2015/863）。",
+      "registered": {
+        "date": "2026-10-12",
+        "source": "P2-4 验收记录 §3.2 第 3 条"
+      },
+      "claims": [
+        {
+          "kind": "absent",
+          "variants": [
+            "JE-2000E/EU/nl",
+            "JE-2000E/EU/pl",
+            "JE-2000E/EU/pt"
+          ],
+          "references": [
+            {
+              "knowledge_id": "kn:JE-2000E/EU/en:compliance:4c076ffc9b1ecd8c:0",
+              "source_ref": "JE-2000E/EU/en/md/manual_je2000e_eu_en.html#eu-regulations"
+            },
+            {
+              "knowledge_id": "kn:JE-2000E/EU/en:compliance:b795e41819e72a8d:0",
+              "source_ref": "JE-2000E/EU/en/md/manual_je2000e_eu_en.html#eu-regulations"
+            }
+          ]
+        },
+        {
+          "kind": "numbers",
+          "variants": [
+            "JE-2000E/EU/nl",
+            "JE-2000E/EU/pl",
+            "JE-2000E/EU/pt"
+          ],
+          "references": [
+            {
+              "knowledge_id": "kn:JE-2000E/EU/en:compliance:4c386e02b62c8b53:0",
+              "source_ref": "JE-2000E/EU/en/md/manual_je2000e_eu_en.html#eu-regulations"
+            }
+          ]
+        }
+      ],
+      "evidence": {
+        "tier": "medium",
+        "observation_ids": [
+          "obs:language_parity:JE-2000E/EU:f7f1a767517ef8d6",
+          "obs:language_parity:JE-2000E/EU:6489d3f3d0823409",
+          "obs:language_parity:JE-2000E/EU:989439cd13957bbb"
+        ],
+        "generator": "manual-observations/0.5",
+        "pilot_check": "real"
+      },
+      "authority": {
+        "JE-2000E/EU/nl": "git_only_frozen",
+        "JE-2000E/EU/pl": "git_only_frozen",
+        "JE-2000E/EU/pt": "git_only_frozen"
+      },
+      "decisions": [],
+      "changes": [],
+      "verification": null
+    },
+    {
+      "finding_id": "fd-je1000f-eu-declaration",
+      "status": "candidate",
+      "priority": "high",
+      "category": "compliance",
+      "summary": "JE-1000F 的 en、de、es、fr、it 版没有 EU 符合性声明与制造商信息（nl、pl、pt、uk 版有）。",
+      "registered": {
+        "date": "2026-10-12",
+        "source": "P2-4 验收记录 §3.2 第 4 条"
+      },
+      "claims": [
+        {
+          "kind": "absent",
+          "variants": [
+            "JE-1000F/EU/en",
+            "JE-1000F/EU/de",
+            "JE-1000F/EU/es",
+            "JE-1000F/EU/fr",
+            "JE-1000F/EU/it"
+          ],
+          "references": [
+            {
+              "knowledge_id": "kn:JE-1000F/EU/nl:compliance:ce147d556aabea16:0",
+              "source_ref": "JE-1000F/EU/nl/md/manual_je1000f_eu_nl.html#eu-declaration-and-manufacturer"
+            },
+            {
+              "knowledge_id": "kn:JE-1000F/EU/nl:compliance:af4642a893059d17:0",
+              "source_ref": "JE-1000F/EU/nl/md/manual_je1000f_eu_nl.html#eu-declaration-and-manufacturer"
+            },
+            {
+              "knowledge_id": "kn:JE-1000F/EU/nl:compliance:1ff3d2af5bd67f76:0",
+              "source_ref": "JE-1000F/EU/nl/md/manual_je1000f_eu_nl.html#eu-declaration-and-manufacturer"
+            }
+          ]
+        }
+      ],
+      "evidence": {
+        "tier": "medium",
+        "observation_ids": [
+          "obs:language_parity:JE-1000F/EU:5d1bdf76c965a3aa",
+          "obs:language_parity:JE-1000F/EU:a6a5ab64f90e5372",
+          "obs:language_parity:JE-1000F/EU:3166c3eb3187e464"
+        ],
+        "generator": "manual-observations/0.5",
+        "pilot_check": "real"
+      },
+      "authority": {
+        "JE-1000F/EU/de": "unclassified",
+        "JE-1000F/EU/en": "unclassified",
+        "JE-1000F/EU/es": "unclassified",
+        "JE-1000F/EU/fr": "unclassified",
+        "JE-1000F/EU/it": "unclassified"
+      },
+      "decisions": [],
+      "changes": [],
+      "verification": null
+    },
+    {
+      "finding_id": "fd-js100i-ce-declaration-en",
+      "status": "candidate",
+      "priority": "high",
+      "category": "compliance",
+      "summary": "JS-100I 的 en 版没有 CE 符合性声明（其余八种语言在保修章节中有）。",
+      "registered": {
+        "date": "2026-10-12",
+        "source": "P2-4 验收记录 §3.2 第 5 条"
+      },
+      "claims": [
+        {
+          "kind": "absent",
+          "variants": [
+            "JS-100I/EU/en"
+          ],
+          "references": [
+            {
+              "knowledge_id": "kn:JS-100I/EU/de:compliance:afbd0888afe73895:0",
+              "source_ref": "JS-100I/EU/de/md/manual_js100i_eu_de.html#garantie"
+            }
+          ]
+        }
+      ],
+      "evidence": {
+        "tier": "medium",
+        "observation_ids": [
+          "obs:language_parity:JS-100I/EU:a7df32b8cce1b5bc"
+        ],
+        "generator": "manual-observations/0.5",
+        "pilot_check": "real"
+      },
+      "authority": {
+        "JS-100I/EU/en": "unclassified"
+      },
+      "decisions": [],
+      "changes": [],
+      "verification": null
+    },
+    {
+      "finding_id": "fd-jaad600a-fcc-statement",
+      "status": "candidate",
+      "priority": "medium",
+      "category": "compliance",
+      "summary": "JA-AD600A 的 de、it、pt 版没有 FCC 声明（en、es、fr、nl、pl、uk 版有）；EU 版是否需要 FCC 声明由认证负责人判断。",
+      "registered": {
+        "date": "2026-10-12",
+        "source": "P2-4 验收记录 §3.2 第 6 条"
+      },
+      "claims": [
+        {
+          "kind": "absent",
+          "variants": [
+            "JA-AD600A/EU/de",
+            "JA-AD600A/EU/it",
+            "JA-AD600A/EU/pt"
+          ],
+          "references": [
+            {
+              "knowledge_id": "kn:JA-AD600A/EU/en:compliance:7d73efc5db216dac:0",
+              "source_ref": "JA-AD600A/EU/en/md/manual_jaad600a_eu_en.html#product-installation"
+            }
+          ]
+        }
+      ],
+      "evidence": {
+        "tier": "medium",
+        "observation_ids": [
+          "obs:language_parity:JA-AD600A/EU:2611293410882ee2"
+        ],
+        "generator": "manual-observations/0.5",
+        "pilot_check": "real"
+      },
+      "authority": {
+        "JA-AD600A/EU/de": "git_only_frozen",
+        "JA-AD600A/EU/it": "git_only_frozen",
+        "JA-AD600A/EU/pt": "git_only_frozen"
+      },
+      "decisions": [],
+      "changes": [],
+      "verification": null
+    },
+    {
+      "finding_id": "fd-ups-critical-load-warning-nl-pl-pt",
+      "status": "candidate",
+      "priority": "high",
+      "category": "warning",
+      "summary": "JE-1000H、JE-3000C、JE-2000E 的 nl、pl、pt 版 UPS 章节缺少整条 WARNING：不得用于数据服务器、医疗设备等故障可能危及生命或造成重大财产损失的场合，佩戴心脏起搏器者不得使用本产品。",
+      "registered": {
+        "date": "2026-10-12",
+        "source": "P2-4 验收记录 §3.2 第 7 条"
+      },
+      "claims": [
+        {
+          "kind": "absent",
+          "variants": [
+            "JE-1000H/EU/nl",
+            "JE-1000H/EU/pl",
+            "JE-1000H/EU/pt",
+            "JE-3000C/EU/nl",
+            "JE-3000C/EU/pl",
+            "JE-3000C/EU/pt",
+            "JE-2000E/EU/nl",
+            "JE-2000E/EU/pl",
+            "JE-2000E/EU/pt"
+          ],
+          "references": [
+            {
+              "knowledge_id": "kn:JE-1000H/EU/en:warning:823e5e18a1e9a174:0",
+              "source_ref": "JE-1000H/EU/en/md/manual_je1000h_eu_en.html#uninterruptible-power-supply-ups"
+            },
+            {
+              "knowledge_id": "kn:JE-3000C/EU/en:warning:823e5e18a1e9a174:0",
+              "source_ref": "JE-3000C/EU/en/md/manual_je3000c_eu_en.html#uninterruptible-power-supply-ups"
+            },
+            {
+              "knowledge_id": "kn:JE-2000E/EU/en:warning:823e5e18a1e9a174:0",
+              "source_ref": "JE-2000E/EU/en/md/manual_je2000e_eu_en.html#uninterruptible-power-supply-ups"
+            }
+          ]
+        }
+      ],
+      "evidence": {
+        "tier": "medium",
+        "observation_ids": [
+          "obs:language_parity:JE-1000H/EU:e4d4f3f299c51d8d",
+          "obs:language_parity:JE-3000C/EU:95db60b2597402b3",
+          "obs:language_parity:JE-2000E/EU:4b70c0f93faa1f6a"
+        ],
+        "generator": "manual-observations/0.5",
+        "pilot_check": "real"
+      },
+      "authority": {
+        "JE-1000H/EU/nl": "git_only_frozen",
+        "JE-1000H/EU/pl": "git_only_frozen",
+        "JE-1000H/EU/pt": "git_only_frozen",
+        "JE-2000E/EU/nl": "git_only_frozen",
+        "JE-2000E/EU/pl": "git_only_frozen",
+        "JE-2000E/EU/pt": "git_only_frozen",
+        "JE-3000C/EU/nl": "git_only_frozen",
+        "JE-3000C/EU/pl": "git_only_frozen",
+        "JE-3000C/EU/pt": "git_only_frozen"
+      },
+      "decisions": [],
+      "changes": [],
+      "verification": null
+    },
+    {
+      "finding_id": "fd-ups-cascade-caution-nl-pl-pt",
+      "status": "candidate",
+      "priority": "high",
+      "category": "warning",
+      "summary": "JE-1000H、JE-3000C 的 nl、pl、pt 版 0 ms 的 CAUTION 少了第四条“UPS 功能只在单台直接接墙插时有效，不得多台串联（级联）”，全文也没有。",
+      "registered": {
+        "date": "2026-10-12",
+        "source": "P2-4 验收记录 §3.2 第 8 条"
+      },
+      "claims": [
+        {
+          "kind": "manual",
+          "variants": [
+            "JE-1000H/EU/nl",
+            "JE-1000H/EU/pl",
+            "JE-1000H/EU/pt",
+            "JE-3000C/EU/nl",
+            "JE-3000C/EU/pl",
+            "JE-3000C/EU/pt"
+          ],
+          "references": [
+            {
+              "knowledge_id": "kn:JE-1000H/EU/en:warning:ee9dffce8fda3e7c:0",
+              "source_ref": "JE-1000H/EU/en/md/manual_je1000h_eu_en.html#uninterruptible-power-supply-ups"
+            },
+            {
+              "knowledge_id": "kn:JE-3000C/EU/en:warning:ee9dffce8fda3e7c:0",
+              "source_ref": "JE-3000C/EU/en/md/manual_je3000c_eu_en.html#uninterruptible-power-supply-ups"
+            }
+          ]
+        }
+      ],
+      "evidence": {
+        "tier": "manual",
+        "observation_ids": [],
+        "generator": null,
+        "pilot_check": "real"
+      },
+      "authority": {
+        "JE-1000H/EU/nl": "git_only_frozen",
+        "JE-1000H/EU/pl": "git_only_frozen",
+        "JE-1000H/EU/pt": "git_only_frozen",
+        "JE-3000C/EU/nl": "git_only_frozen",
+        "JE-3000C/EU/pl": "git_only_frozen",
+        "JE-3000C/EU/pt": "git_only_frozen"
+      },
+      "decisions": [],
+      "changes": [],
+      "verification": null
+    },
+    {
+      "finding_id": "fd-je3000c-energy-saving-warning",
+      "status": "candidate",
+      "priority": "high",
+      "category": "warning",
+      "summary": "JE-3000C 的 nl、pl、pt 版缺少节能模式的 WARNING（负载功率持续偏低时自动关闭 AC 输出，需要持续供电的设备应关闭节能模式）；三语只有“12 小时无充放电自动关机”的说明。",
+      "registered": {
+        "date": "2026-10-12",
+        "source": "P2-4 验收记录 §3.2 第 9 条"
+      },
+      "claims": [
+        {
+          "kind": "absent",
+          "variants": [
+            "JE-3000C/EU/nl",
+            "JE-3000C/EU/pl",
+            "JE-3000C/EU/pt"
+          ],
+          "references": [
+            {
+              "knowledge_id": "kn:JE-3000C/EU/en:warning:e5fc377ab7c2f095:0",
+              "source_ref": "JE-3000C/EU/en/md/manual_je3000c_eu_en.html#operations"
+            }
+          ]
+        }
+      ],
+      "evidence": {
+        "tier": "medium",
+        "observation_ids": [
+          "obs:language_parity:JE-3000C/EU:e9d6facc854d71bb"
+        ],
+        "generator": "manual-observations/0.5",
+        "pilot_check": "real"
+      },
+      "authority": {
+        "JE-3000C/EU/nl": "git_only_frozen",
+        "JE-3000C/EU/pl": "git_only_frozen",
+        "JE-3000C/EU/pt": "git_only_frozen"
+      },
+      "decisions": [],
+      "changes": [],
+      "verification": null
+    },
+    {
+      "finding_id": "fd-jbp2000b-compatibility-note-uk",
+      "status": "candidate",
+      "priority": "medium",
+      "category": "warning",
+      "summary": "JBP-2000B 的 uk 版引言缺少兼容性 NOTE（本电池包兼容 E1000 Plus V2 与 E2000 Plus V2）。",
+      "registered": {
+        "date": "2026-10-12",
+        "source": "P2-4 验收记录 §3.2 第 10 条"
+      },
+      "claims": [
+        {
+          "kind": "absent",
+          "variants": [
+            "JBP-2000B/EU/uk"
+          ],
+          "references": [
+            {
+              "knowledge_id": "kn:JBP-2000B/EU/en:warning:567ece49fbb2f53f:0",
+              "source_ref": "JBP-2000B/EU/en/md/manual_jbp2000b_eu.html#"
+            }
+          ]
+        }
+      ],
+      "evidence": {
+        "tier": "medium",
+        "observation_ids": [
+          "obs:language_parity:JBP-2000B/EU:60534f7f4c1f2783"
+        ],
+        "generator": "manual-observations/0.5",
+        "pilot_check": "real"
+      },
+      "authority": {
+        "JBP-2000B/EU/uk": "git_only_frozen"
+      },
+      "decisions": [],
+      "changes": [],
+      "verification": null
+    },
+    {
+      "finding_id": "fd-jbp2000b-stacking-note-it",
+      "status": "candidate",
+      "priority": "medium",
+      "category": "warning",
+      "summary": "JBP-2000B 的 it 版连接章节的 NOTES 写“不得堆叠超过三个”；英文版为“默认最多堆叠 3 个，4 个及以上须靠墙放置并采取防倾倒措施”。",
+      "registered": {
+        "date": "2026-10-12",
+        "source": "P2-4 验收记录 §3.2 第 11 条"
+      },
+      "claims": [
+        {
+          "kind": "numbers",
+          "variants": [
+            "JBP-2000B/EU/it"
+          ],
+          "references": [
+            {
+              "knowledge_id": "kn:JBP-2000B/EU/en:warning:e0e0eff141b2240f:0",
+              "source_ref": "JBP-2000B/EU/en/md/manual_jbp2000b_eu.html#connections"
+            }
+          ]
+        }
+      ],
+      "evidence": {
+        "tier": "medium",
+        "observation_ids": [
+          "obs:language_parity:JBP-2000B/EU:f6bad3d10d0a68e0"
+        ],
+        "generator": "manual-observations/0.5",
+        "pilot_check": "real"
+      },
+      "authority": {
+        "JBP-2000B/EU/it": "unclassified"
+      },
+      "decisions": [],
+      "changes": [],
+      "verification": null
+    },
+    {
+      "finding_id": "fd-jaad600a-compatibility-table-it",
+      "status": "candidate",
+      "priority": "medium",
+      "category": "safety",
+      "summary": "JA-AD600A 的 it 版兼容表中 Explorer 2000 v2 的充电时间写作约 3.7 小时（英文版 5.6），Explorer 3000 Pro 的电流写作 8 A（英文版 12 A）。",
+      "registered": {
+        "date": "2026-10-12",
+        "source": "P2-4 验收记录 §3.2 第 12 条"
+      },
+      "claims": [
+        {
+          "kind": "numbers",
+          "variants": [
+            "JA-AD600A/EU/it"
+          ],
+          "references": [
+            {
+              "knowledge_id": "kn:JA-AD600A/EU/en:safety:8e074a7bfb249e85:0",
+              "source_ref": "JA-AD600A/EU/en/md/manual_jaad600a_eu_en.html#important-safety-instructions"
+            },
+            {
+              "knowledge_id": "kn:JA-AD600A/EU/en:safety:9bd186193052d163:0",
+              "source_ref": "JA-AD600A/EU/en/md/manual_jaad600a_eu_en.html#important-safety-instructions"
+            }
+          ]
+        }
+      ],
+      "evidence": {
+        "tier": "medium",
+        "observation_ids": [
+          "obs:language_parity:JA-AD600A/EU:d78fc3159601244c",
+          "obs:language_parity:JA-AD600A/EU:775d22632c1c82dd"
+        ],
+        "generator": "manual-observations/0.5",
+        "pilot_check": "real"
+      },
+      "authority": {
+        "JA-AD600A/EU/it": "git_only_frozen"
+      },
+      "decisions": [],
+      "changes": [],
+      "verification": null
+    },
+    {
+      "finding_id": "fd-je1000h-split-warning-label",
+      "status": "candidate",
+      "priority": "medium",
+      "category": "warning",
+      "summary": "JE-1000H 的 nl、pl 版警示标签被拆开（`WAARSCHU` / `OSTRZE`，应为 WAARSCHUWING / OSTRZEŻENIE），无法识别等级；nl 正文末尾多出 `UWING`（P1-4 §3.2，仍未修）。",
+      "registered": {
+        "date": "2026-10-12",
+        "source": "P2-4 验收记录 §3.2 第 13 条"
+      },
+      "claims": [
+        {
+          "kind": "severity",
+          "variants": [
+            "JE-1000H/EU/nl",
+            "JE-1000H/EU/pl"
+          ],
+          "references": [
+            {
+              "knowledge_id": "kn:JE-1000H/EU/en:warning:423032d855e013ad:0",
+              "source_ref": "JE-1000H/EU/en/md/manual_je1000h_eu_en.html#important-safety-information"
+            }
+          ]
+        }
+      ],
+      "evidence": {
+        "tier": "medium",
+        "observation_ids": [
+          "obs:language_parity:JE-1000H/EU:a54d30b7dd696d52"
+        ],
+        "generator": "manual-observations/0.5",
+        "pilot_check": "real"
+      },
+      "authority": {
+        "JE-1000H/EU/nl": "git_only_frozen",
+        "JE-1000H/EU/pl": "git_only_frozen"
+      },
+      "decisions": [],
+      "changes": [],
+      "verification": null
+    },
+    {
+      "finding_id": "fd-je2000e-wifi-note-label-nl",
+      "status": "candidate",
+      "priority": "medium",
+      "category": "warning",
+      "summary": "JE-2000E 的 nl 版 Wi-Fi 提示的标签为 `OK-knop. OPMERKING`，正文截断（P1-4 §3.2，仍未修）。",
+      "registered": {
+        "date": "2026-10-12",
+        "source": "P2-4 验收记录 §3.2 第 14 条"
+      },
+      "claims": [
+        {
+          "kind": "severity",
+          "variants": [
+            "JE-2000E/EU/nl"
+          ],
+          "references": [
+            {
+              "knowledge_id": "kn:JE-2000E/EU/en:warning:548f83ccafc58035:0",
+              "source_ref": "JE-2000E/EU/en/md/manual_je2000e_eu_en.html#app-setup"
+            }
+          ]
+        },
+        {
+          "kind": "numbers",
+          "variants": [
+            "JE-2000E/EU/nl"
+          ],
+          "references": [
+            {
+              "knowledge_id": "kn:JE-2000E/EU/en:warning:548f83ccafc58035:0",
+              "source_ref": "JE-2000E/EU/en/md/manual_je2000e_eu_en.html#app-setup"
+            }
+          ]
+        }
+      ],
+      "evidence": {
+        "tier": "medium",
+        "observation_ids": [
+          "obs:language_parity:JE-2000E/EU:993d5423acba2a87"
+        ],
+        "generator": "manual-observations/0.5",
+        "pilot_check": "real"
+      },
+      "authority": {
+        "JE-2000E/EU/nl": "git_only_frozen"
+      },
+      "decisions": [],
+      "changes": [],
+      "verification": null
+    },
+    {
+      "finding_id": "fd-important-label-severity",
+      "status": "candidate",
+      "priority": "medium",
+      "category": "warning",
+      "summary": "JBP-2000B fr、JBP-3600A fr、JE-3600A es 版在英文版 CAUTION 的位置写作 `IMPORTANT` / `Important` / `Importante`；按 D13 这是 note 级等级词，比英文版低一级。",
+      "registered": {
+        "date": "2026-10-12",
+        "source": "P2-4 验收记录 §3.2 第 15 条"
+      },
+      "claims": [
+        {
+          "kind": "severity",
+          "variants": [
+            "JBP-2000B/EU/fr",
+            "JBP-3600A/EU/fr",
+            "JE-3600A/EU/es"
+          ],
+          "references": [
+            {
+              "knowledge_id": "kn:JBP-2000B/EU/en:warning:d997b5add9c67d20:0",
+              "source_ref": "JBP-2000B/EU/en/md/manual_jbp2000b_eu.html#connections"
+            },
+            {
+              "knowledge_id": "kn:JBP-3600A/EU/en:warning:662d4220b13b047e:0",
+              "source_ref": "JBP-3600A/EU/en/md/manual_jbp3600a_eu.html#connections"
+            },
+            {
+              "knowledge_id": "kn:JE-3600A/EU/en:warning:a4c250023e2e0eb4:0",
+              "source_ref": "JE-3600A/EU/en/md/manual_je3600a_eu_en.html#charging"
+            }
+          ]
+        }
+      ],
+      "evidence": {
+        "tier": "medium",
+        "observation_ids": [
+          "obs:language_parity:JBP-2000B/EU:295a17991895468b",
+          "obs:language_parity:JBP-3600A/EU:258ca7ce302b66a5",
+          "obs:language_parity:JE-3600A/EU:ab7644db9f0792e7"
+        ],
+        "generator": "manual-observations/0.5",
+        "pilot_check": "real"
+      },
+      "authority": {
+        "JBP-2000B/EU/fr": "unclassified",
+        "JBP-3600A/EU/fr": "git_only_frozen",
+        "JE-3600A/EU/es": "git_only_frozen"
+      },
+      "decisions": [],
+      "changes": [],
+      "verification": null
+    },
+    {
+      "finding_id": "fd-je3600a-tipp-label-de",
+      "status": "candidate",
+      "priority": "low",
+      "category": "warning",
+      "summary": "JE-3600A 的 de 版 App 设置章节的三条 NOTE 写作 `TIPP`。",
+      "registered": {
+        "date": "2026-10-12",
+        "source": "P2-4 验收记录 §3.2 第 16 条"
+      },
+      "claims": [
+        {
+          "kind": "severity",
+          "variants": [
+            "JE-3600A/EU/de"
+          ],
+          "references": [
+            {
+              "knowledge_id": "kn:JE-3600A/EU/en:warning:08347ae438db2b7e:0",
+              "source_ref": "JE-3600A/EU/en/md/manual_je3600a_eu_en.html#app-setup"
+            },
+            {
+              "knowledge_id": "kn:JE-3600A/EU/en:warning:ce5d7dbf3bbe4a49:0",
+              "source_ref": "JE-3600A/EU/en/md/manual_je3600a_eu_en.html#app-setup"
+            },
+            {
+              "knowledge_id": "kn:JE-3600A/EU/en:warning:5c37b223b6619973:0",
+              "source_ref": "JE-3600A/EU/en/md/manual_je3600a_eu_en.html#app-setup"
+            }
+          ]
+        }
+      ],
+      "evidence": {
+        "tier": "medium",
+        "observation_ids": [
+          "obs:language_parity:JE-3600A/EU:cef0603a525629b4",
+          "obs:language_parity:JE-3600A/EU:394898afe9ca8b28",
+          "obs:language_parity:JE-3600A/EU:8aa8d189cd215704"
+        ],
+        "generator": "manual-observations/0.5",
+        "pilot_check": "real"
+      },
+      "authority": {
+        "JE-3600A/EU/de": "git_only_frozen"
+      },
+      "decisions": [],
+      "changes": [],
+      "verification": null
+    },
+    {
+      "finding_id": "fd-je100c-charging-temperature-severity",
+      "status": "candidate",
+      "priority": "medium",
+      "category": "warning",
+      "summary": "JE-100C 的 de、es、fr、it 版充电温度提示为 NOTE（`HINWEIS` / `NOTA` / `REMARQUE`），en、nl、pl、pt、uk 版为 CAUTION。",
+      "registered": {
+        "date": "2026-10-12",
+        "source": "P2-4 验收记录 §3.2 第 17 条"
+      },
+      "claims": [
+        {
+          "kind": "severity",
+          "variants": [
+            "JE-100C/EU/de",
+            "JE-100C/EU/es",
+            "JE-100C/EU/fr",
+            "JE-100C/EU/it"
+          ],
+          "references": [
+            {
+              "knowledge_id": "kn:JE-100C/EU/en:warning:0c32841bdb7c975e:0",
+              "source_ref": "JE-100C/EU/en/md/manual_je100c_eu_en.html#charging"
+            }
+          ]
+        }
+      ],
+      "evidence": {
+        "tier": "medium",
+        "observation_ids": [
+          "obs:language_parity:JE-100C/EU:eea9dbbd509e0bfe"
+        ],
+        "generator": "manual-observations/0.5",
+        "pilot_check": "real"
+      },
+      "authority": {
+        "JE-100C/EU/de": "unclassified",
+        "JE-100C/EU/es": "unclassified",
+        "JE-100C/EU/fr": "unclassified",
+        "JE-100C/EU/it": "unclassified"
+      },
+      "decisions": [],
+      "changes": [],
+      "verification": null
+    },
+    {
+      "finding_id": "fd-no-open-flame-symbol-de",
+      "status": "candidate",
+      "priority": "medium",
+      "category": "safety",
+      "summary": "JE-1000H、JE-3600A 的 de 版禁止明火图标的说明写作 “Vermeiden Sie Hitze.”（避免受热），其他语言为“远离火源”。",
+      "registered": {
+        "date": "2026-10-12",
+        "source": "P2-4 验收记录 §3.2 第 18 条"
+      },
+      "claims": [
+        {
+          "kind": "absent",
+          "variants": [
+            "JE-1000H/EU/de",
+            "JE-3600A/EU/de"
+          ],
+          "references": [
+            {
+              "knowledge_id": "kn:JE-1000H/EU/en:safety:54a270637f57ddc6:0",
+              "source_ref": "JE-1000H/EU/en/md/manual_je1000h_eu_en.html#meaning-of-symbols"
+            },
+            {
+              "knowledge_id": "kn:JE-3600A/EU/en:safety:43acf5b161c04b4a:0",
+              "source_ref": "JE-3600A/EU/en/md/manual_je3600a_eu_en.html#meaning-of-symbols"
+            }
+          ]
+        }
+      ],
+      "evidence": {
+        "tier": "low",
+        "observation_ids": [
+          "obs:language_parity:JE-1000H/EU:5535bd1cd61b35ef",
+          "obs:language_parity:JE-1000H/EU:ad3d9bccd5329de8",
+          "obs:language_parity:JE-3600A/EU:33f597f7724b9859",
+          "obs:language_parity:JE-3600A/EU:d03eb19a3680944a"
+        ],
+        "generator": "manual-observations/0.5",
+        "pilot_check": "real"
+      },
+      "authority": {
+        "JE-1000H/EU/de": "unclassified",
+        "JE-3600A/EU/de": "git_only_frozen"
+      },
+      "decisions": [],
+      "changes": [],
+      "verification": null
+    },
+    {
+      "finding_id": "fd-jbp3600a-symbol-table-de",
+      "status": "candidate",
+      "priority": "medium",
+      "category": "safety",
+      "summary": "JBP-3600A 的 de 版符号表把“勿拆解”“避免受热”的说明配到了别的图标上（P2-3 已核）。",
+      "registered": {
+        "date": "2026-10-12",
+        "source": "P2-4 验收记录 §3.2 第 19 条"
+      },
+      "claims": [
+        {
+          "kind": "absent",
+          "variants": [
+            "JBP-3600A/EU/de"
+          ],
+          "references": [
+            {
+              "knowledge_id": "kn:JBP-3600A/EU/en:safety:54a270637f57ddc6:0",
+              "source_ref": "JBP-3600A/EU/en/md/manual_jbp3600a_eu.html#meaning-of-symbols"
+            }
+          ]
+        }
+      ],
+      "evidence": {
+        "tier": "low",
+        "observation_ids": [
+          "obs:language_parity:JBP-3600A/EU:57948c0c3ed0845d",
+          "obs:language_parity:JBP-3600A/EU:072f2961010167fa"
+        ],
+        "generator": "manual-observations/0.5",
+        "pilot_check": "real"
+      },
+      "authority": {
+        "JBP-3600A/EU/de": "git_only_frozen"
+      },
+      "decisions": [],
+      "changes": [],
+      "verification": null
+    },
+    {
+      "finding_id": "fd-je1000h-dc-car-caution-nl",
+      "status": "candidate",
+      "priority": "low",
+      "category": "warning",
+      "summary": "JE-1000H 的 nl 版“DC 12 V 口只兼容 12 V 车载电池、不适用于 24 V 系统”一条在 OPGELET 框外，框内只有其余两条（呈现差异，供参考）。",
+      "registered": {
+        "date": "2026-10-12",
+        "source": "P2-4 验收记录 §3.2 第 20 条"
+      },
+      "claims": [
+        {
+          "kind": "numbers",
+          "variants": [
+            "JE-1000H/EU/nl"
+          ],
+          "references": [
+            {
+              "knowledge_id": "kn:JE-1000H/EU/en:warning:283d93e296db2270:0",
+              "source_ref": "JE-1000H/EU/en/md/manual_je1000h_eu_en.html#operations"
+            }
+          ]
+        }
+      ],
+      "evidence": {
+        "tier": "medium",
+        "observation_ids": [
+          "obs:language_parity:JE-1000H/EU:041eab7a06a54fd3"
+        ],
+        "generator": "manual-observations/0.5",
+        "pilot_check": "real"
+      },
+      "authority": {
+        "JE-1000H/EU/nl": "git_only_frozen"
+      },
+      "decisions": [],
+      "changes": [],
+      "verification": null
+    },
+    {
+      "finding_id": "fd-je3600a-safety-lead-sentence-fr",
+      "status": "candidate",
+      "priority": "low",
+      "category": "safety",
+      "summary": "JE-3600A 的 fr 版安全章节缺少引导句 “Always follow these basic precautions when using this product.”。",
+      "registered": {
+        "date": "2026-10-12",
+        "source": "P2-4 验收记录 §3.2 第 21 条"
+      },
+      "claims": [
+        {
+          "kind": "manual",
+          "variants": [
+            "JE-3600A/EU/fr"
+          ],
+          "references": [
+            {
+              "knowledge_id": "kn:JE-3600A/EU/en:safety:9df196187e1e70f2:0",
+              "source_ref": "JE-3600A/EU/en/md/manual_je3600a_eu_en.html#important-safety-information"
+            }
+          ]
+        }
+      ],
+      "evidence": {
+        "tier": "manual",
+        "observation_ids": [],
+        "generator": null,
+        "pilot_check": "real"
+      },
+      "authority": {
+        "JE-3600A/EU/fr": "git_only_frozen"
+      },
+      "decisions": [],
+      "changes": [],
+      "verification": null
+    },
+    {
+      "finding_id": "fd-je3600a-english-sentence-fr",
+      "status": "candidate",
+      "priority": "low",
+      "category": "other",
+      "summary": "JE-3600A 的 fr 版充电章节有英文句 “*The car charging cable is sold separately.”（Phase 2 计划附录 B 第 3 条）。",
+      "registered": {
+        "date": "2026-10-12",
+        "source": "P2-4 验收记录 §3.2 第 22 条"
+      },
+      "claims": [
+        {
+          "kind": "manual",
+          "variants": [
+            "JE-3600A/EU/fr"
+          ],
+          "references": [
+            {
+              "knowledge_id": null,
+              "source_ref": "JE-3600A/EU/fr/md/manual_je3600a_eu_fr.html#charge"
+            }
+          ]
+        }
+      ],
+      "evidence": {
+        "tier": "manual",
+        "observation_ids": [],
+        "generator": null,
+        "pilot_check": "real"
+      },
+      "authority": {
+        "JE-3600A/EU/fr": "git_only_frozen"
+      },
+      "decisions": [],
+      "changes": [],
+      "verification": null
+    },
+    {
+      "finding_id": "fd-app-download-panel-nl-pl-pt",
+      "status": "candidate",
+      "priority": "low",
+      "category": "other",
+      "summary": "JE-1000H、JE-2000E、JE-2000F、JE-3000C 的 nl、pl、pt 版 “EU declaration and manufacturer” 章节开头有六种语言（en、fr、es、de、it、uk）的“下载 Jackery App”说明，单语版本中混入其他语言，是否保留由内容负责人判断。",
+      "registered": {
+        "date": "2026-10-12",
+        "source": "P2-4 验收记录 §3.2 第 23 条"
+      },
+      "claims": [
+        {
+          "kind": "manual",
+          "variants": [
+            "JE-1000H/EU/nl",
+            "JE-1000H/EU/pl",
+            "JE-1000H/EU/pt",
+            "JE-2000E/EU/nl",
+            "JE-2000E/EU/pl",
+            "JE-2000E/EU/pt",
+            "JE-2000F/EU/nl",
+            "JE-2000F/EU/pl",
+            "JE-2000F/EU/pt",
+            "JE-3000C/EU/nl",
+            "JE-3000C/EU/pl",
+            "JE-3000C/EU/pt"
+          ],
+          "references": [
+            {
+              "knowledge_id": null,
+              "source_ref": "JE-1000H/EU/nl/md/manual_je1000h_eu_nl.html#eu-declaration-and-manufacturer"
+            },
+            {
+              "knowledge_id": null,
+              "source_ref": "JE-2000E/EU/nl/md/manual_je2000e_eu_nl.html#eu-declaration-and-manufacturer"
+            },
+            {
+              "knowledge_id": null,
+              "source_ref": "JE-2000F/EU/nl/md/manual_je2000f_eu_nl.html#eu-declaration-and-manufacturer"
+            },
+            {
+              "knowledge_id": null,
+              "source_ref": "JE-3000C/EU/nl/md/manual_je3000c_eu_nl.html#eu-declaration-and-manufacturer"
+            }
+          ]
+        }
+      ],
+      "evidence": {
+        "tier": "low",
+        "observation_ids": [
+          "obs:language_parity:JE-1000H/EU:c021483dc9a3376b",
+          "obs:language_parity:JE-1000H/EU:97cd9bd2832ca97e",
+          "obs:language_parity:JE-1000H/EU:688affe58c4964d8",
+          "obs:language_parity:JE-1000H/EU:fe1f79db47ebc493",
+          "obs:language_parity:JE-1000H/EU:be21061fe0a1b1e2",
+          "obs:language_parity:JE-1000H/EU:f68a4a539db172bf",
+          "obs:language_parity:JE-2000E/EU:c56c3a45bfa4c860",
+          "obs:language_parity:JE-2000E/EU:299ccc062805d286",
+          "obs:language_parity:JE-2000E/EU:e606f1f518b51d0f",
+          "obs:language_parity:JE-2000E/EU:ef2e00064b796874",
+          "obs:language_parity:JE-2000E/EU:9e846822ec8f8946",
+          "obs:language_parity:JE-2000E/EU:cbfd24f5a311dc77",
+          "obs:language_parity:JE-2000F/EU:5659f458a6187555",
+          "obs:language_parity:JE-2000F/EU:c23c34272e968346",
+          "obs:language_parity:JE-2000F/EU:facedb6424fb19a9",
+          "obs:language_parity:JE-2000F/EU:22d07e456144d357",
+          "obs:language_parity:JE-2000F/EU:688d0fd33c68bb1a",
+          "obs:language_parity:JE-2000F/EU:89e50a483fd857e6",
+          "obs:language_parity:JE-3000C/EU:7b698424985bcb12",
+          "obs:language_parity:JE-3000C/EU:815569086a936907",
+          "obs:language_parity:JE-3000C/EU:cb0798351871b312",
+          "obs:language_parity:JE-3000C/EU:2dade4aad663a7f2",
+          "obs:language_parity:JE-3000C/EU:934c2baee2a93047",
+          "obs:language_parity:JE-3000C/EU:082e557c9fb2dee8"
+        ],
+        "generator": "manual-observations/0.5",
+        "pilot_check": "real"
+      },
+      "authority": {
+        "JE-1000H/EU/nl": "git_only_frozen",
+        "JE-1000H/EU/pl": "git_only_frozen",
+        "JE-1000H/EU/pt": "git_only_frozen",
+        "JE-2000E/EU/nl": "git_only_frozen",
+        "JE-2000E/EU/pl": "git_only_frozen",
+        "JE-2000E/EU/pt": "git_only_frozen",
+        "JE-2000F/EU/nl": "git_only_frozen",
+        "JE-2000F/EU/pl": "git_only_frozen",
+        "JE-2000F/EU/pt": "git_only_frozen",
+        "JE-3000C/EU/nl": "git_only_frozen",
+        "JE-3000C/EU/pl": "git_only_frozen",
+        "JE-3000C/EU/pt": "git_only_frozen"
+      },
+      "decisions": [],
+      "changes": [],
+      "verification": null
+    }
+  ]
+}
