@@ -3,11 +3,12 @@
   "model": "JE-2000E",
   "region": "EU",
   "language": "pt",
-  "version": "git-20260929-d6462454-native-web",
-  "git_ref": "643af80b3d1aa0ef0d2f45f29479f08b80f985cf",
+  "version": "git-20261010-batch1465-preface",
+  "git_ref": "884b662f0b67539360ba3737885c5ac79ccad6cd",
+  "caption_frame_admission": [],
   "source_manifest": {
     "path": "frozen_source_manifest.json",
-    "sha256": "b3566417fedfed4bf4d81853a8d7d84584e4610ff6fb8e0f1f5d1cd6e1e6069e"
+    "sha256": "c4f05a283cd595fab46340c94622ef79a932f46cc1f1a6e253f649d0320d893e"
   },
   "markdown": {
     "manual": "manual_je2000e_eu_pt.md",
@@ -333,6 +334,46 @@
         "sha256": "fc4cc02b42efc31a32429ada2b78c4480a2fcbca647406da29b2ce75a8a8c1dc"
       },
       {
+        "path": "assets/symbol-battery_disposal-batch1465.svg",
+        "size": 4494,
+        "sha256": "890aad750886f80abc628c01b22c36ae6c305b91d48a8c441d27bbf9bb11411a"
+      },
+      {
+        "path": "assets/symbol-do_not_dismantle-batch1465.svg",
+        "size": 5275,
+        "sha256": "0d8c33aa24918ce77020239e2659f837648ad94a6dd8ff91db9304caa6fe1dea"
+      },
+      {
+        "path": "assets/symbol-general_warning-batch1465.svg",
+        "size": 4567,
+        "sha256": "949fa4b358483f531c93ce6dd6f25c3d2964c4b3c1bf43a760e377618c209661"
+      },
+      {
+        "path": "assets/symbol-keep_away_from_children-batch1465.svg",
+        "size": 5398,
+        "sha256": "6b403148bbaa42cc77f87100c32b91bf06b00db6c69093c247bff1c5fc2a07bd"
+      },
+      {
+        "path": "assets/symbol-li_ion-batch1465.svg",
+        "size": 6100,
+        "sha256": "3c4b2b3413e011c23cfbd259c4d971ed8fa10f37ff011506f95c8018dad18476"
+      },
+      {
+        "path": "assets/symbol-no_open_flame-batch1465.svg",
+        "size": 3680,
+        "sha256": "3073529057ed5709e276e85747cad8532e07939d511bf9b448c8252770dd351d"
+      },
+      {
+        "path": "assets/symbol-read_manual-batch1465.svg",
+        "size": 3483,
+        "sha256": "6362f59270d725546ac3b20117319193bce10d58950c8aa20c4870ce79320931"
+      },
+      {
+        "path": "assets/symbol-weee-batch1465.svg",
+        "size": 4555,
+        "sha256": "fbb8f66e93bbefa15b3edcd942ba6ec2950ad5b533ee07e0ec5efd644194e456"
+      },
+      {
         "path": "conf.py",
         "size": 828,
         "sha256": "7654bcee13cb753caba3d4ef81c22447618b81ca2cc88422657a37cb5fb61999"
@@ -344,16 +385,16 @@
       },
       {
         "path": "manual.ir.json",
-        "size": 585031,
-        "sha256": "8213d618cc87328be0f7de1f71a3c515d58adb90aa932925b97756afcfdc586f"
+        "size": 590903,
+        "sha256": "f3388a16c47d67d66d60c688d878d56f55f6794a199a43382a14847681b0698a"
       },
       {
         "path": "manual_je2000e_eu_pt.md",
-        "size": 79586,
-        "sha256": "d83cd08eef7de76660dda6a6a37f22e9013d90d8068ccb0f64107f8258700207"
+        "size": 79621,
+        "sha256": "cfff6d27c2585c443103074e51c2550a1e6e7c69764ff867b8b491ac16c164de"
       }
     ],
-    "sha256": "c0a22fb3df034380ef8929c15a7d8056ac7f99141f9ef663054831ef8c592932"
+    "sha256": "d650839ac59bc9046531a22283e100fb2921d0b202dcbaa1183772eab060947d"
   },
   "html": {
     "files": [
@@ -369,8 +410,8 @@
       },
       {
         "path": "_sources/manual_je2000e_eu_pt.md.txt",
-        "size": 79586,
-        "sha256": "d83cd08eef7de76660dda6a6a37f22e9013d90d8068ccb0f64107f8258700207"
+        "size": 79621,
+        "sha256": "cfff6d27c2585c443103074e51c2550a1e6e7c69764ff867b8b491ac16c164de"
       },
       {
         "path": "_static/base-stemmer.js",
@@ -808,6 +849,46 @@
         "sha256": "fc4cc02b42efc31a32429ada2b78c4480a2fcbca647406da29b2ce75a8a8c1dc"
       },
       {
+        "path": "assets/symbol-battery_disposal-batch1465.svg",
+        "size": 4494,
+        "sha256": "890aad750886f80abc628c01b22c36ae6c305b91d48a8c441d27bbf9bb11411a"
+      },
+      {
+        "path": "assets/symbol-do_not_dismantle-batch1465.svg",
+        "size": 5275,
+        "sha256": "0d8c33aa24918ce77020239e2659f837648ad94a6dd8ff91db9304caa6fe1dea"
+      },
+      {
+        "path": "assets/symbol-general_warning-batch1465.svg",
+        "size": 4567,
+        "sha256": "949fa4b358483f531c93ce6dd6f25c3d2964c4b3c1bf43a760e377618c209661"
+      },
+      {
+        "path": "assets/symbol-keep_away_from_children-batch1465.svg",
+        "size": 5398,
+        "sha256": "6b403148bbaa42cc77f87100c32b91bf06b00db6c69093c247bff1c5fc2a07bd"
+      },
+      {
+        "path": "assets/symbol-li_ion-batch1465.svg",
+        "size": 6100,
+        "sha256": "3c4b2b3413e011c23cfbd259c4d971ed8fa10f37ff011506f95c8018dad18476"
+      },
+      {
+        "path": "assets/symbol-no_open_flame-batch1465.svg",
+        "size": 3680,
+        "sha256": "3073529057ed5709e276e85747cad8532e07939d511bf9b448c8252770dd351d"
+      },
+      {
+        "path": "assets/symbol-read_manual-batch1465.svg",
+        "size": 3483,
+        "sha256": "6362f59270d725546ac3b20117319193bce10d58950c8aa20c4870ce79320931"
+      },
+      {
+        "path": "assets/symbol-weee-batch1465.svg",
+        "size": 4555,
+        "sha256": "fbb8f66e93bbefa15b3edcd942ba6ec2950ad5b533ee07e0ec5efd644194e456"
+      },
+      {
         "path": "genindex.html",
         "size": 14598,
         "sha256": "c9d603908816e25a589df4d26be345d984ce1b1ae288297bf806b651a463ddfa"
@@ -819,8 +900,8 @@
       },
       {
         "path": "manual_je2000e_eu_pt.html",
-        "size": 101708,
-        "sha256": "d5ef1e6b1e0d0370f0c66d25232caedf55cd90d3bab5162ff24ea3df3a60b4ea"
+        "size": 101743,
+        "sha256": "508f0a13b14c0ba9dc012617fec3bcc6a5a3f2ad624b28a06ca1d1f6d43a2f7c"
       },
       {
         "path": "objects.inv",
@@ -834,10 +915,10 @@
       },
       {
         "path": "searchindex.js",
-        "size": 16928,
-        "sha256": "2bc602ce9ce674a693118aa559251010fe9b0377b31f961abf1dcf18631f9594"
+        "size": 16964,
+        "sha256": "ffd1f5ab002413be1763507ec1aa8c416c0893b0654923a25c877e223c957120"
       }
     ],
-    "sha256": "551be6ea774c7523d2c9015933215b781a26dfabe4b5103d82d929b924632b57"
+    "sha256": "0f0010dc4654a020154470bb098429959e5a7b8f07ece0a54abbcade767b3916"
   }
 }

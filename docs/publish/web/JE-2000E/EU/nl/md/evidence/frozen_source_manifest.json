@@ -5,33 +5,47 @@
     "region": "EU",
     "languages": [
       "pt",
-      "nl",
-      "pl"
+      "nl"
     ],
-    "technical_version": "git-20260929-d6462454-native-web",
+    "technical_version": "git-20261010-batch1465-preface",
     "printed_manual_version": null
   },
   "original_source": {
-    "filename": "HTE152-EU-9国语言-0924.ai",
-    "sha256": "d64624547e3b88fd1d8c3ea78f9e446f07e2364b148b707eb0d97ba4c24415de",
-    "size_bytes": 48125378,
-    "physical_page_count": 179
+    "filename": "JE-2000E_修正版_竖版.pdf",
+    "sha256": "02960a5f51576d9d8a3d825b3844dbf2f8cacc6240cabeee0639c197271a6cf3",
+    "size_bytes": 10263002,
+    "physical_page_count": 179,
+    "role": "operator-provided batch1465 authority PDF; earlier body intake provenance remains pinned in each native IR"
   },
   "recipe_source": {
-    "path": "manual_sources/JE-2000E/EU/nine-language/git-20260929-d6462454-native-candidate/three-language",
-    "manifest_sha256": "94dd2ac7345a1a47833c549c954081e5f332a35834afd229718b2d670e213744"
+    "path": "manual_sources/JE-2000E/EU/nine-language/git-20260929-d6462454-native-web/three-language",
+    "manifest_sha256": "b3566417fedfed4bf4d81853a8d7d84584e4610ff6fb8e0f1f5d1cd6e1e6069e"
   },
   "web_roots": {
     "pt": "web/pt",
-    "nl": "web/nl",
-    "pl": "web/pl"
+    "nl": "web/nl"
   },
-  "validation_boundary": "Native AI/PDF text and governed artwork; six strict Sphinx builds and PDF-free byte-identical cold replays. Existing phase2 US check is a regression gate, not a translation validation of these new bodies.",
+  "validation_boundary": "Operator-confirmed batch 1465 preface copy; EU legal subject Jackery. Later native pages and artwork unchanged. Fresh release evidence, human PR merge and RTD readback remain required.",
   "inputs": [
     {
+      "path": "JE-2000E_修正版_竖版.pdf",
+      "size": 10263002,
+      "sha256": "02960a5f51576d9d8a3d825b3844dbf2f8cacc6240cabeee0639c197271a6cf3"
+    },
+    {
       "path": "README.md",
-      "size": 440,
-      "sha256": "d29037193edd24d68aacbb29412ad4c4b23da6d12122ab1d146bae39ef27e798"
+      "size": 2265,
+      "sha256": "bbcc57787a41c1d9bb3ebaf826bab8cca7d996716689b84c8c3c64d03653f41a"
+    },
+    {
+      "path": "approved_copy_corrections.json",
+      "size": 6119,
+      "sha256": "ea2c7cb0dfdc928666568fa5ee7399cac167f43aa7622f86de4a7b73fea6158d"
+    },
+    {
+      "path": "symbol_caption_recovery.json",
+      "size": 723,
+      "sha256": "3b8e852f7f6d0486dde56ecaa4c2b3367f1a131459e2fca6b078ab8288c2ed5b"
     },
     {
       "path": "web/nl/_static/web_manual.css",
@@ -354,6 +368,46 @@
       "sha256": "fc4cc02b42efc31a32429ada2b78c4480a2fcbca647406da29b2ce75a8a8c1dc"
     },
     {
+      "path": "web/nl/assets/symbol-battery_disposal-batch1465.svg",
+      "size": 3327,
+      "sha256": "be61c6855d5a5268f359fe1b1381423df264bd9d98622c0c67fd54ad611f73c2"
+    },
+    {
+      "path": "web/nl/assets/symbol-do_not_dismantle-batch1465.svg",
+      "size": 3993,
+      "sha256": "485710ddc8f74a55644647db29fa3c62eaa98d3cfbbea4e7dc98d7d60a7840aa"
+    },
+    {
+      "path": "web/nl/assets/symbol-general_warning-batch1465.svg",
+      "size": 3344,
+      "sha256": "eaef6a90726af3e60a79e0f248504e49297eb3292b5ae062d38cd128d42e6ea3"
+    },
+    {
+      "path": "web/nl/assets/symbol-keep_away_from_children-batch1465.svg",
+      "size": 4116,
+      "sha256": "dd1fc4a732d593c1c003c30858ac051eb8280468b88fb8bf349873dcc478eac3"
+    },
+    {
+      "path": "web/nl/assets/symbol-li_ion-batch1465.svg",
+      "size": 4934,
+      "sha256": "260b81ab9fb3571e4440250d359264bb7f85973d01db16ed29618efa6ab6faf7"
+    },
+    {
+      "path": "web/nl/assets/symbol-no_open_flame-batch1465.svg",
+      "size": 2340,
+      "sha256": "2fb0aebd9051c751a6ecb9ca82ff418d8d5a9449e434639f250e80099527001c"
+    },
+    {
+      "path": "web/nl/assets/symbol-read_manual-batch1465.svg",
+      "size": 2317,
+      "sha256": "86b48cf47f0b596dcf2d57ad0e45407d416d5abb34b45e9936d6c9cae0a52933"
+    },
+    {
+      "path": "web/nl/assets/symbol-weee-batch1465.svg",
+      "size": 3389,
+      "sha256": "0c35a797d48e5e6dc936c3731e395590feafb9aff1b1b2b9447a3af4cc42d510"
+    },
+    {
       "path": "web/nl/conf.py",
       "size": 828,
       "sha256": "be57cee70041442541ca8e991f6c302a8b840abab78c5b86d3f8a447c1cc93a4"
@@ -365,353 +419,13 @@
     },
     {
       "path": "web/nl/manual.ir.json",
-      "size": 587956,
-      "sha256": "3a11ec75550a77275158d6e497fa8bea14c14c091995e2505a881d5d1810e47d"
+      "size": 591190,
+      "sha256": "7db45651e7858701c500ca7f87573c8320128bb7eb83bf966f00ec55f3376c0d"
     },
     {
       "path": "web/nl/manual_je2000e_eu_nl.md",
-      "size": 79083,
-      "sha256": "838d6d9f1c653169616e856ca92eb4f43bf3604049534cbdafc3a16ed1034bfb"
-    },
-    {
-      "path": "web/pl/_static/web_manual.css",
-      "size": 81376,
-      "sha256": "3700ecd2bbb804484de7abb0b098381af83d503f5bd1a561daeade6fd261ecac"
-    },
-    {
-      "path": "web/pl/assets/065ca0976dba_symbol-weee.png",
-      "size": 1982,
-      "sha256": "065ca0976dba39954970826db885757ea473672d814f07e1572393df8b1adfec"
-    },
-    {
-      "path": "web/pl/assets/0a8edb12490b_app-store.png",
-      "size": 10141,
-      "sha256": "0a8edb12490b39f8b519bafb7cf360abb082943626053024832b5527b2f811c7"
-    },
-    {
-      "path": "web/pl/assets/21b5f19ca9a6_16_Charging_Power_Limit_VLf2bJfrkoCL0CxJoMNcL5ZxnCt.png",
-      "size": 2772,
-      "sha256": "21b5f19ca9a6e39d8bd515128297cc1b99e43fd263e39ffba4fdf102d50a4bad"
-    },
-    {
-      "path": "web/pl/assets/287650f3a89a_ac_charging_cable.png",
-      "size": 4023,
-      "sha256": "287650f3a89ae520e32f0d75df8401151b808004ee50075b96aff70af04ca4ef"
-    },
-    {
-      "path": "web/pl/assets/28e390203da5_operation-dc-usb-output-geometry-v2.png",
-      "size": 59828,
-      "sha256": "28e390203da59e6ff8152e7ccf6a0bad40d9aad13a6772521d87e075e6501444"
-    },
-    {
-      "path": "web/pl/assets/28e4b2adcd7a_reference-solar_four.png",
-      "size": 113584,
-      "sha256": "28e4b2adcd7aa22eac5ef733e4e16ae31138f42d32833b16836477aba745c4e4"
-    },
-    {
-      "path": "web/pl/assets/28f3cad42ae3_12_AC_Wall_Charging_Indicator_ZpOmbCjx8oYUTVxyl4JcvcTanPe.png",
-      "size": 2223,
-      "sha256": "28f3cad42ae32e9e895abfd7cdb16a21b99dfa822c57d542f0e3f59a4b452c6c"
-    },
-    {
-      "path": "web/pl/assets/305c10f006f5_app-phone.png",
-      "size": 43641,
-      "sha256": "305c10f006f571308070cf7b192a46cfa8b43e1bb7819a38cbb95190e2b9edf1"
-    },
-    {
-      "path": "web/pl/assets/355656ed0bcf_symbol-general_warning.png",
-      "size": 1787,
-      "sha256": "355656ed0bcf93aae23effb5e548754e98325ec1efa4169cfa22fe93eec938e3"
-    },
-    {
-      "path": "web/pl/assets/46b3bca6d3c7_app-qr.png",
-      "size": 18421,
-      "sha256": "46b3bca6d3c75edfec2da9ad7387dc9441cb2196fdc74c93c9831cf229835dbb"
-    },
-    {
-      "path": "web/pl/assets/58c1d3604ca7_26_Output_Power_PviebR618oofvKxcKVRcHLlInqd.png",
-      "size": 6085,
-      "sha256": "58c1d3604ca7b9774b069c6928775a13465ccb9477f477e9e4d4b30e7f75b88d"
-    },
-    {
-      "path": "web/pl/assets/60fce14f923e_lcd-map.png",
-      "size": 70115,
-      "sha256": "60fce14f923e9fb8e40af021823923b129f4953d7446dac00030ea91cca35339"
-    },
-    {
-      "path": "web/pl/assets/6aab9a14900a_20_Discharge_Timer_DHPMbkjSWoiuALxJyJ8cWyQOn0e.png",
-      "size": 3194,
-      "sha256": "6aab9a14900a08fcd8f8261e6e36fbb9a1220eb931df94ebd149b23930063723"
-    },
-    {
-      "path": "web/pl/assets/6d348c9795c7_inbox-main.png",
-      "size": 10396,
-      "sha256": "6d348c9795c7e9254ef4dc63f9e6b176bb719c502470b83866b30c4f5399aeb5"
-    },
-    {
-      "path": "web/pl/assets/7042d901cb07_symbol-do_not_dismantle.png",
-      "size": 2017,
-      "sha256": "7042d901cb07466281ba69904f1017410e9a8767e5c53feb2d291c89c453c13c"
-    },
-    {
-      "path": "web/pl/assets/71017f43bab4_4_Charging_Plan_M96RbyZQxoGjRRxQHsuczeIln1b.png",
-      "size": 2759,
-      "sha256": "71017f43bab44852d5586d1d4f996f3c52d8451bceaa9249e29864652c2f537d"
-    },
-    {
-      "path": "web/pl/assets/728f11ceed97_operation-led-light-geometry-v2.png",
-      "size": 32426,
-      "sha256": "728f11ceed9761dd07b973b4dcd8b9578105c26594b09c4a317f35e046788668"
-    },
-    {
-      "path": "web/pl/assets/73225cf9faa8_5_Self-powered_Mode_FYTnb9vttoexjbxVMchcJaobnCg.png",
-      "size": 3466,
-      "sha256": "73225cf9faa868bbe937df298d55a696828a4156f40e90da5c2a7f0011f0b783"
-    },
-    {
-      "path": "web/pl/assets/747147be99d7_18_Remaining_Battery_Percentage_VkJcbUDbUoYC1hxrU6rc168OnJe.png",
-      "size": 3712,
-      "sha256": "747147be99d76bb486c858aeca2289d7d05ad3be1f1ea1f0825f54cb29b7fd10"
-    },
-    {
-      "path": "web/pl/assets/7623ef10e229_9_Output_Voltage_and_Frequency_Jh3JbmBDBoKlmOxaRJDcIMJAn6b.png",
-      "size": 3553,
-      "sha256": "7623ef10e229bcfe66c872f3733d26b86c97d703ed30012188a88bb4a168e6df"
-    },
-    {
-      "path": "web/pl/assets/7e1392ba6a45_2_Bluetooth_HVgvbJhq5o4EDKxhm7McCF4FnjB.png",
-      "size": 2023,
-      "sha256": "7e1392ba6a45e66a2e7367ae5df737ccc41ad2de46c4ac7d6baf062ff63bb361"
-    },
-    {
-      "path": "web/pl/assets/7f743182c050_3_Quiet_Charging_Mode_WLkMbiHS1oGsOtxUCp7cRhFAn1g.png",
-      "size": 1414,
-      "sha256": "7f743182c0509307793dde001356fff5c3d20dd32b09105b6a1d467af7e7f66d"
-    },
-    {
-      "path": "web/pl/assets/85921a9ad7fb_17_Battery_Power_Indicator_VLufb9exvoVLfgxz47pcfnRGnaf.png",
-      "size": 4879,
-      "sha256": "85921a9ad7fbfa58f98ee7bb0dc904377f31fe3dbface4083d2493144b05362f"
-    },
-    {
-      "path": "web/pl/assets/878fd65019c5_overview-left.png",
-      "size": 18752,
-      "sha256": "878fd65019c5accac800e26f7576a657ce070f5a56c07e353bb44b992bc19622"
-    },
-    {
-      "path": "web/pl/assets/87ac44e52863_manual_icon1.png",
-      "size": 1614,
-      "sha256": "87ac44e52863324b761a672089e6b0497e40fdf48432f698fccf30508060c60a"
-    },
-    {
-      "path": "web/pl/assets/89be6d89976b_lcd-mode.png",
-      "size": 32871,
-      "sha256": "89be6d89976b9868e0c7ca9560b1b8d47632858482f639555a74c3228041840c"
-    },
-    {
-      "path": "web/pl/assets/8a35a1ec91d3_overview-front.png",
-      "size": 31183,
-      "sha256": "8a35a1ec91d3c5cba68c79ad93651e4a4f706ba72dbafa4fc063ca4504be9ffd"
-    },
-    {
-      "path": "web/pl/assets/8be87c5a0849_8_AC_Power_Indicator_HFPSbvWBgosvCux69jMcuWe6nnh.png",
-      "size": 3962,
-      "sha256": "8be87c5a084994e3b4b6ddff46ce0296207a5c49c732f8ed13adfbcb28a36538"
-    },
-    {
-      "path": "web/pl/assets/8cce9f1db0b3_symbol-read_manual.png",
-      "size": 1027,
-      "sha256": "8cce9f1db0b39c87c666b615db8515a9e6f7d42c2923337090c049fb07355a84"
-    },
-    {
-      "path": "web/pl/assets/8e21de9bee6e_symbol-li_ion.png",
-      "size": 2618,
-      "sha256": "8e21de9bee6e3c157a0dcf9fcb0812ff39e8920e8c4dee3bf2e6ba58af482066"
-    },
-    {
-      "path": "web/pl/assets/9109e8a99bf2_symbol-no_open_flame.png",
-      "size": 2338,
-      "sha256": "9109e8a99bf2b208c79e42fea6a081e27ed7765437cec628a29984b0376213bf"
-    },
-    {
-      "path": "web/pl/assets/91cec82eeaa5_14_Solar_Charging_Indicator_RgAUbPXNWoRxiHxKNgkc2gqDnEb.png",
-      "size": 3059,
-      "sha256": "91cec82eeaa553477868d38789d68a4937cb11c5c4d794de74db1edddb3aeea4"
-    },
-    {
-      "path": "web/pl/assets/936e70784690_app-download.png",
-      "size": 35642,
-      "sha256": "936e707846906cace300b1978352b869acf7aad9200baf1868f79ab2e4cd5ac6"
-    },
-    {
-      "path": "web/pl/assets/956c61c44776_overview-right.png",
-      "size": 14155,
-      "sha256": "956c61c44776dead1a0c1c44cace1d2cd89a3ec69e742674c655134d34abaf36"
-    },
-    {
-      "path": "web/pl/assets/9b148ea95d3a_27_Remaining_Discharge_Time_JEpobf59DoBV4dxWlnxcNtIinke.png",
-      "size": 2496,
-      "sha256": "9b148ea95d3a3450591c7220908b0913048f2cdea1e61d200534181c52b47cab"
-    },
-    {
-      "path": "web/pl/assets/9b8ec15ea72e_reference-battery_connection.png",
-      "size": 50374,
-      "sha256": "9b8ec15ea72e3a73378de4e355c40c724794ab199cdbfda16c9aed22d764a1a1"
-    },
-    {
-      "path": "web/pl/assets/9ead5229c296_reference-ups_connection.png",
-      "size": 53438,
-      "sha256": "9ead5229c29698c28e10d015f2e7ac16735dbfc412745d09e17710284d145dac"
-    },
-    {
-      "path": "web/pl/assets/a3409df2148a_reference-battery_kit.png",
-      "size": 18949,
-      "sha256": "a3409df2148a835d4c83c0acc58386b5f9268b6f48bc594095b2360da763d202"
-    },
-    {
-      "path": "web/pl/assets/aab5ecb30f7a_reference-car_charging.png",
-      "size": 76123,
-      "sha256": "aab5ecb30f7a9d3d5601f4be02c1ccb54c3bf1a523e6ee0e23b06a34a048172e"
-    },
-    {
-      "path": "web/pl/assets/abd6613042e3_reference-ac_wall_charging.png",
-      "size": 47175,
-      "sha256": "abd6613042e36c8d7fe7645a1a78fde58ffa80273f3e7ec3d847b9384d7acf5e"
-    },
-    {
-      "path": "web/pl/assets/b17381432f5d_reference-overview_left.png",
-      "size": 21005,
-      "sha256": "b17381432f5d0915bb3f3b1d360a2d7625911473b2b0cfaa24ef0694ff1f1007"
-    },
-    {
-      "path": "web/pl/assets/b4744a483fa9_21_Connected_Batteries_ZeHlbv3HEoRcq2xIXacchUcTndg.png",
-      "size": 1581,
-      "sha256": "b4744a483fa95db386bbb269f277a53f678279c7eda8f8cbf24a78f2b426f2a7"
-    },
-    {
-      "path": "web/pl/assets/bdbf602db74a_24_Low_Temperature_Indicator_JDMEbD96noSbyWxbOnVcgip1nab.png",
-      "size": 2206,
-      "sha256": "bdbf602db74ade39a2a162209c0ff535315dee5e27e4832b2e6a201764b6941a"
-    },
-    {
-      "path": "web/pl/assets/c4b830c769a3_22_Energy_Saving_Mode_O4Jdb5pUQoCBAqx0sfQcm9Nbntd.png",
-      "size": 2056,
-      "sha256": "c4b830c769a3de7f9effaee82466752f5706a0741ba29675cce45633c1cd8222"
-    },
-    {
-      "path": "web/pl/assets/c7862a87e742_19_Low_Battery_Indicator_KDk9bhs8poHUBdx96PLckPganhd.png",
-      "size": 1293,
-      "sha256": "c7862a87e742d6927b4e1d63a8d0ccb09fbcf980ae662ff94b9134e256e56889"
-    },
-    {
-      "path": "web/pl/assets/ce913ebfc775_25_Fault_code_Oz87bX3BGo8H7Zxe0XvcTd7FnJL.png",
-      "size": 3966,
-      "sha256": "ce913ebfc7750764f4206250f5e21aa09bd1cfc074bdee5b0484d61610f1b579"
-    },
-    {
-      "path": "web/pl/assets/cf04ff00bdeb_weee2.png",
-      "size": 19806,
-      "sha256": "cf04ff00bdeb8de5971a55e5d8be6ef91e1a4ddad479f817f0c535914a392d45"
-    },
-    {
-      "path": "web/pl/assets/cfb69b1ffc0b_11_Remaining_Charge_Time_KIWHbHFOvotGuBxJsxlcunSDnPf.png",
-      "size": 1974,
-      "sha256": "cfb69b1ffc0b30c51216fb6b1e00e35b412dd0148b6999d3d40ac90fbfe108cb"
-    },
-    {
-      "path": "web/pl/assets/d5100a538e96_10_Input_Power_LOAZbnxfqoHFwIxx2Myc532jnzb.png",
-      "size": 4730,
-      "sha256": "d5100a538e964da13e04241a98134e6aeaa36af8991aceeecac3c5d063b6968b"
-    },
-    {
-      "path": "web/pl/assets/d6d1f452eb73_operation-energy-saving-geometry-v2.png",
-      "size": 44231,
-      "sha256": "d6d1f452eb737aa8fe374704da5636d265fc7cd52c6ecb51132fbb741dd668c0"
-    },
-    {
-      "path": "web/pl/assets/d74b8d4ce921_operation-main-power-geometry-v2.png",
-      "size": 40878,
-      "sha256": "d74b8d4ce921017022951649a0d1a3d2a7f5e753cef887c9539388d13dc99aae"
-    },
-    {
-      "path": "web/pl/assets/d9e0d7cb3a44_reference-overview_front.png",
-      "size": 83993,
-      "sha256": "d9e0d7cb3a44ce3b41a73c2109195827e99a5acef79aa4da2e12532d42d23956"
-    },
-    {
-      "path": "web/pl/assets/dc3c2b5f79a3_app-result.png",
-      "size": 59146,
-      "sha256": "dc3c2b5f79a3cd953a36058ed46b0c1a6999a770da6d31078f575e8f8e4e2fdb"
-    },
-    {
-      "path": "web/pl/assets/e0c834e8bff0_operation-ac-output-geometry-v2.png",
-      "size": 50859,
-      "sha256": "e0c834e8bff00cf5bc3a578b5105985e91bbb629a90c677c3d373168cefeec71"
-    },
-    {
-      "path": "web/pl/assets/e32e6ae96321_15_Battery_Saving_Mode_ClYfbtOGSoK5q2xySXCcgehVn8f.png",
-      "size": 1481,
-      "sha256": "e32e6ae96321aa47b39c0c65a18a59da6c90cf87a0d7c8d61556ead273789c3a"
-    },
-    {
-      "path": "web/pl/assets/e422a56922eb_7_UPS_Lgdgb8pvvoGwaLxSf8ec2QeHn3c.png",
-      "size": 2868,
-      "sha256": "e422a56922eb749ae90802fd964cb451a08d833658c1849abe10a63c60b173cc"
-    },
-    {
-      "path": "web/pl/assets/eaeedb73b940_symbol-keep_away_from_children.png",
-      "size": 2407,
-      "sha256": "eaeedb73b9400fcf2cadb891f0cc359140d87ae46982b424a270cbf93fbb6a37"
-    },
-    {
-      "path": "web/pl/assets/ee3ca0ea4a8e_reference-overview_right.png",
-      "size": 34978,
-      "sha256": "ee3ca0ea4a8ee389af73c620a09d8c10704dbdbd26b8948706430a5a03367cb7"
-    },
-    {
-      "path": "web/pl/assets/eed3299c3f6a_13_Car_Charging_Indicator_DLkibYaP1ot6d5x1S0jcUr1knlb.png",
-      "size": 1599,
-      "sha256": "eed3299c3f6a15766e433ebbae7a40af8939e6d32489a0aa33a37fe902232a64"
-    },
-    {
-      "path": "web/pl/assets/f4cdcb551105_6_TOU_Mode_BjEkbz0rFo6Bw4xiwNpcod9qnnc.png",
-      "size": 2712,
-      "sha256": "f4cdcb5511058eaaf1879a69a429317dd3d98325dd5e19f5dd95b06ea2c965af"
-    },
-    {
-      "path": "web/pl/assets/f548c6504f49_23_High_Temperature_Indicator_UmkEbOgCKoKyxoxDSINcfO6LnQd.png",
-      "size": 2248,
-      "sha256": "f548c6504f495da4f208cd8e5fe6eac6076daea05e314115abd26b46a9326ba5"
-    },
-    {
-      "path": "web/pl/assets/fa436f75c7c7_app-control.png",
-      "size": 14530,
-      "sha256": "fa436f75c7c7afa2371b17e6436f2f715758edc7ba4e3d4f5fb3e70e0e5def79"
-    },
-    {
-      "path": "web/pl/assets/fc4cc02b42ef_1_Wi-Fi_KCcAbdDk7o4RjKx82micuKJ5nyf.png",
-      "size": 1814,
-      "sha256": "fc4cc02b42efc31a32429ada2b78c4480a2fcbca647406da29b2ce75a8a8c1dc"
-    },
-    {
-      "path": "web/pl/conf.py",
-      "size": 828,
-      "sha256": "c676f3bcc51916f2560bfd39d2f23fdac34483735f685953eb857c31e778028d"
-    },
-    {
-      "path": "web/pl/index.md",
-      "size": 89,
-      "sha256": "591e65489158d07b4609ea49d1edfc1c80ad6f619a6e2661dcf89bcda63e4858"
-    },
-    {
-      "path": "web/pl/manual.ir.json",
-      "size": 592451,
-      "sha256": "17d749461f1651a9118b56967e0ee366ad1ae58e83f87287fbb5f511b53c936e"
-    },
-    {
-      "path": "web/pl/manual_je2000e_eu_pl.md",
-      "size": 82137,
-      "sha256": "be1940c6c325f80b1b315c69ac5d16013b8fd3e05ea40dc3a3a3c1c2668b04d4"
+      "size": 79084,
+      "sha256": "470cbf8b61eee7ab50e26251c32599f8a416ee461eb1a34ca710611a33f67d87"
     },
     {
       "path": "web/pt/_static/web_manual.css",
@@ -1034,6 +748,46 @@
       "sha256": "fc4cc02b42efc31a32429ada2b78c4480a2fcbca647406da29b2ce75a8a8c1dc"
     },
     {
+      "path": "web/pt/assets/symbol-battery_disposal-batch1465.svg",
+      "size": 4494,
+      "sha256": "890aad750886f80abc628c01b22c36ae6c305b91d48a8c441d27bbf9bb11411a"
+    },
+    {
+      "path": "web/pt/assets/symbol-do_not_dismantle-batch1465.svg",
+      "size": 5275,
+      "sha256": "0d8c33aa24918ce77020239e2659f837648ad94a6dd8ff91db9304caa6fe1dea"
+    },
+    {
+      "path": "web/pt/assets/symbol-general_warning-batch1465.svg",
+      "size": 4567,
+      "sha256": "949fa4b358483f531c93ce6dd6f25c3d2964c4b3c1bf43a760e377618c209661"
+    },
+    {
+      "path": "web/pt/assets/symbol-keep_away_from_children-batch1465.svg",
+      "size": 5398,
+      "sha256": "6b403148bbaa42cc77f87100c32b91bf06b00db6c69093c247bff1c5fc2a07bd"
+    },
+    {
+      "path": "web/pt/assets/symbol-li_ion-batch1465.svg",
+      "size": 6100,
+      "sha256": "3c4b2b3413e011c23cfbd259c4d971ed8fa10f37ff011506f95c8018dad18476"
+    },
+    {
+      "path": "web/pt/assets/symbol-no_open_flame-batch1465.svg",
+      "size": 3680,
+      "sha256": "3073529057ed5709e276e85747cad8532e07939d511bf9b448c8252770dd351d"
+    },
+    {
+      "path": "web/pt/assets/symbol-read_manual-batch1465.svg",
+      "size": 3483,
+      "sha256": "6362f59270d725546ac3b20117319193bce10d58950c8aa20c4870ce79320931"
+    },
+    {
+      "path": "web/pt/assets/symbol-weee-batch1465.svg",
+      "size": 4555,
+      "sha256": "fbb8f66e93bbefa15b3edcd942ba6ec2950ad5b533ee07e0ec5efd644194e456"
+    },
+    {
       "path": "web/pt/conf.py",
       "size": 828,
       "sha256": "7654bcee13cb753caba3d4ef81c22447618b81ca2cc88422657a37cb5fb61999"
@@ -1045,13 +799,532 @@
     },
     {
       "path": "web/pt/manual.ir.json",
-      "size": 585031,
-      "sha256": "8213d618cc87328be0f7de1f71a3c515d58adb90aa932925b97756afcfdc586f"
+      "size": 590903,
+      "sha256": "f3388a16c47d67d66d60c688d878d56f55f6794a199a43382a14847681b0698a"
     },
     {
       "path": "web/pt/manual_je2000e_eu_pt.md",
-      "size": 79586,
-      "sha256": "d83cd08eef7de76660dda6a6a37f22e9013d90d8068ccb0f64107f8258700207"
+      "size": 79621,
+      "sha256": "cfff6d27c2585c443103074e51c2550a1e6e7c69764ff867b8b491ac16c164de"
     }
-  ]
+  ],
+  "approved_copy_corrections": {
+    "path": "approved_copy_corrections.json",
+    "sha256": "ea2c7cb0dfdc928666568fa5ee7399cac167f43aa7622f86de4a7b73fea6158d"
+  },
+  "baseline_original_source": {
+    "filename": "HTE152-EU-9国语言-0924.ai",
+    "sha256": "d64624547e3b88fd1d8c3ea78f9e446f07e2364b148b707eb0d97ba4c24415de",
+    "size_bytes": 48125378,
+    "physical_page_count": 179
+  },
+  "symbol_asset_admission": {
+    "schema_version": "auto-manual-symbol-asset-admission/v1",
+    "locales": {
+      "pt": [
+        {
+          "asset_ref": "assets/symbol-general_warning-batch1465.svg",
+          "asset_sha256": "949fa4b358483f531c93ce6dd6f25c3d2964c4b3c1bf43a760e377618c209661",
+          "shared_symbol_key": "general_warning/je2000e-eu-pt-batch1465-native",
+          "physical_page": 123,
+          "glyph_bbox": [
+            31,
+            47,
+            68,
+            71
+          ],
+          "drawing_indices": [
+            80,
+            81,
+            82
+          ],
+          "caption_bbox": [
+            70,
+            43,
+            181,
+            76
+          ],
+          "caption_text": "Símbolos de Advertência e Cuidado. Deve ser lido para alertar sobre potenciais perigos ou riscos.",
+          "caption_sha256": "5952a0c7bddb31272588c96fef74dcb92a8e66add27320f4cbf74cbd575af633",
+          "row_bbox": [
+            30,
+            42,
+            182,
+            77
+          ]
+        },
+        {
+          "asset_ref": "assets/symbol-read_manual-batch1465.svg",
+          "asset_sha256": "6362f59270d725546ac3b20117319193bce10d58950c8aa20c4870ce79320931",
+          "shared_symbol_key": "read_manual/je2000e-eu-pt-batch1465-native",
+          "physical_page": 123,
+          "glyph_bbox": [
+            32,
+            81,
+            66,
+            97
+          ],
+          "drawing_indices": [
+            103,
+            104
+          ],
+          "caption_bbox": [
+            70,
+            78,
+            181,
+            100
+          ],
+          "caption_text": "Leia o manual do usuário antes de operar.",
+          "caption_sha256": "76ee915c22a32c31da05d171be01e47ead575be7b5bf70c3398d045709d3fb32",
+          "row_bbox": [
+            31,
+            77,
+            182,
+            101
+          ]
+        },
+        {
+          "asset_ref": "assets/symbol-do_not_dismantle-batch1465.svg",
+          "asset_sha256": "0d8c33aa24918ce77020239e2659f837648ad94a6dd8ff91db9304caa6fe1dea",
+          "shared_symbol_key": "do_not_dismantle/je2000e-eu-pt-batch1465-native",
+          "physical_page": 123,
+          "glyph_bbox": [
+            32,
+            107,
+            66,
+            127
+          ],
+          "drawing_indices": [
+            87,
+            88
+          ],
+          "caption_bbox": [
+            70,
+            105,
+            181,
+            132
+          ],
+          "caption_text": "Não desmonte o produto.",
+          "caption_sha256": "a4a1cd8c3c28d4fc4212f903d1083ad98bf22fa50bfadd79eac1a428d2b21a39",
+          "row_bbox": [
+            31,
+            104,
+            182,
+            133
+          ]
+        },
+        {
+          "asset_ref": "assets/symbol-no_open_flame-batch1465.svg",
+          "asset_sha256": "3073529057ed5709e276e85747cad8532e07939d511bf9b448c8252770dd351d",
+          "shared_symbol_key": "no_open_flame/je2000e-eu-pt-batch1465-native",
+          "physical_page": 123,
+          "glyph_bbox": [
+            32,
+            136,
+            66,
+            154
+          ],
+          "drawing_indices": [
+            107,
+            108,
+            109
+          ],
+          "caption_bbox": [
+            70,
+            132,
+            181,
+            156
+          ],
+          "caption_text": "Mantenha o produto longe de fogo.",
+          "caption_sha256": "ad4bca3dbfda69c64f6701c90bcd946f0deb38930948ae960de5be82b4b9e3f7",
+          "row_bbox": [
+            31,
+            131,
+            182,
+            157
+          ]
+        },
+        {
+          "asset_ref": "assets/symbol-keep_away_from_children-batch1465.svg",
+          "asset_sha256": "6b403148bbaa42cc77f87100c32b91bf06b00db6c69093c247bff1c5fc2a07bd",
+          "shared_symbol_key": "keep_away_from_children/je2000e-eu-pt-batch1465-native",
+          "physical_page": 123,
+          "glyph_bbox": [
+            32,
+            160,
+            66,
+            181
+          ],
+          "drawing_indices": [
+            111,
+            112,
+            113
+          ],
+          "caption_bbox": [
+            70,
+            157,
+            181,
+            181
+          ],
+          "caption_text": "Mantenha fora do alcance de crianças.",
+          "caption_sha256": "533c4c1f85d068cd8f2e9c4a9045e8f4f13311ed8cc38716f2265bff5490a987",
+          "row_bbox": [
+            31,
+            156,
+            182,
+            182
+          ]
+        },
+        {
+          "asset_ref": "assets/symbol-li_ion-batch1465.svg",
+          "asset_sha256": "3c4b2b3413e011c23cfbd259c4d971ed8fa10f37ff011506f95c8018dad18476",
+          "shared_symbol_key": "li_ion/je2000e-eu-pt-batch1465-native",
+          "physical_page": 123,
+          "glyph_bbox": [
+            32,
+            185,
+            66,
+            206
+          ],
+          "drawing_indices": [
+            90,
+            91,
+            92,
+            93,
+            95,
+            96,
+            97,
+            98
+          ],
+          "caption_bbox": [
+            70,
+            182,
+            181,
+            215
+          ],
+          "caption_text": "Este símbolo indica que o produto contém uma bateria de íon de lítio (Li-ion) e que esta deve ser descartada ou reciclada adequadamente.",
+          "caption_sha256": "7458e47959dbcf610c1829e48b132d423925733cebb5a5e707d5b87e0f3a58f2",
+          "row_bbox": [
+            31,
+            181,
+            182,
+            216
+          ]
+        },
+        {
+          "asset_ref": "assets/symbol-battery_disposal-batch1465.svg",
+          "asset_sha256": "890aad750886f80abc628c01b22c36ae6c305b91d48a8c441d27bbf9bb11411a",
+          "shared_symbol_key": "battery_disposal/je2000e-eu-pt-batch1465-native",
+          "physical_page": 123,
+          "glyph_bbox": [
+            188,
+            60,
+            224,
+            133
+          ],
+          "drawing_indices": [
+            115,
+            116
+          ],
+          "caption_bbox": [
+            225,
+            43,
+            360,
+            144
+          ],
+          "caption_text": "As baterias e os acumuladores não devem ser descartados junto com o lixo doméstico. Como consumidor, você é legalmente obrigado a descartar todas as baterias e acumuladores em pontos de coleta designados, independentemente de conterem substâncias perigosas. Devolva as baterias e acumuladores usados a um ponto de coleta local, centro de reciclagem ou ao revendedor onde foram comprados. O descarte adequado garante a reciclagem ambientalmente responsável e evita danos potenciais à saúde humana e ao meio ambiente.",
+          "caption_sha256": "272905550738e415efa2df18815321e93255d63609edf34b5fd44b18f894926d",
+          "row_bbox": [
+            187,
+            42,
+            361,
+            145
+          ]
+        },
+        {
+          "asset_ref": "assets/symbol-weee-batch1465.svg",
+          "asset_sha256": "fbb8f66e93bbefa15b3edcd942ba6ec2950ad5b533ee07e0ec5efd644194e456",
+          "shared_symbol_key": "weee/je2000e-eu-pt-batch1465-native",
+          "physical_page": 123,
+          "glyph_bbox": [
+            188,
+            155,
+            224,
+            196
+          ],
+          "drawing_indices": [
+            99,
+            100,
+            101
+          ],
+          "caption_bbox": [
+            225,
+            145,
+            360,
+            212
+          ],
+          "caption_text": "Este símbolo indica que o produto não deve ser descartado como lixo doméstico e deve ser encaminhado a um ponto de coleta designado para reciclagem. O descarte e a reciclagem adequados podem ajudar a proteger o meio ambiente. Para obter mais informações sobre o descarte e a reciclagem deste produto, entre em contato com a autoridade local, o serviço de coleta ou o revendedor.",
+          "caption_sha256": "e746ef4249fc6db5a5f6def919e724cee5d383d3019c0bd201846de871529858",
+          "row_bbox": [
+            187,
+            144,
+            361,
+            213
+          ]
+        }
+      ],
+      "nl": [
+        {
+          "asset_ref": "assets/symbol-general_warning-batch1465.svg",
+          "asset_sha256": "eaef6a90726af3e60a79e0f248504e49297eb3292b5ae062d38cd128d42e6ea3",
+          "shared_symbol_key": "general_warning/je2000e-eu-nl-batch1465-native",
+          "physical_page": 142,
+          "glyph_bbox": [
+            31,
+            47,
+            68,
+            71
+          ],
+          "drawing_indices": [
+            93,
+            94,
+            95
+          ],
+          "caption_bbox": [
+            70,
+            43,
+            181,
+            76
+          ],
+          "caption_text": "Waarschuwings- en voorzorgssymbolen. Waarschuwt personen voor informatie die moet worden gelezen om mogelijke gevaren of risico’s te voorkomen.",
+          "caption_sha256": "dd925ff1c14e7ab98214a84c8332d4f4f250f7086d91ef112f2c569475733c1c",
+          "row_bbox": [
+            30,
+            42,
+            182,
+            77
+          ]
+        },
+        {
+          "asset_ref": "assets/symbol-read_manual-batch1465.svg",
+          "asset_sha256": "86b48cf47f0b596dcf2d57ad0e45407d416d5abb34b45e9936d6c9cae0a52933",
+          "shared_symbol_key": "read_manual/je2000e-eu-nl-batch1465-native",
+          "physical_page": 142,
+          "glyph_bbox": [
+            32,
+            81,
+            66,
+            97
+          ],
+          "drawing_indices": [
+            129,
+            130
+          ],
+          "caption_bbox": [
+            70,
+            78,
+            181,
+            100
+          ],
+          "caption_text": "Lees de gebruikershandleiding voor gebruik.",
+          "caption_sha256": "6cc8ae92c806ef43eb92eceb51fa7e53e51917cbb50e9c6bc3954e8c81f422c6",
+          "row_bbox": [
+            31,
+            77,
+            182,
+            101
+          ]
+        },
+        {
+          "asset_ref": "assets/symbol-do_not_dismantle-batch1465.svg",
+          "asset_sha256": "485710ddc8f74a55644647db29fa3c62eaa98d3cfbbea4e7dc98d7d60a7840aa",
+          "shared_symbol_key": "do_not_dismantle/je2000e-eu-nl-batch1465-native",
+          "physical_page": 142,
+          "glyph_bbox": [
+            32,
+            107,
+            66,
+            127
+          ],
+          "drawing_indices": [
+            113,
+            114
+          ],
+          "caption_bbox": [
+            70,
+            105,
+            181,
+            132
+          ],
+          "caption_text": "Demonteer het product niet.",
+          "caption_sha256": "a23a07268d6fbb8fedd291224203d89ec5a4f5387cf72983bc56838ba9bb0c91",
+          "row_bbox": [
+            31,
+            104,
+            182,
+            133
+          ]
+        },
+        {
+          "asset_ref": "assets/symbol-no_open_flame-batch1465.svg",
+          "asset_sha256": "2fb0aebd9051c751a6ecb9ca82ff418d8d5a9449e434639f250e80099527001c",
+          "shared_symbol_key": "no_open_flame/je2000e-eu-nl-batch1465-native",
+          "physical_page": 142,
+          "glyph_bbox": [
+            32,
+            136,
+            66,
+            154
+          ],
+          "drawing_indices": [
+            133,
+            134,
+            135
+          ],
+          "caption_bbox": [
+            70,
+            132,
+            181,
+            156
+          ],
+          "caption_text": "Houd het product uit de buurt van vuur.",
+          "caption_sha256": "ea132f30067ecc1072e7bcc36f816bd4d95fe68772e88bbb3d51d4ac0548ae79",
+          "row_bbox": [
+            31,
+            131,
+            182,
+            157
+          ]
+        },
+        {
+          "asset_ref": "assets/symbol-keep_away_from_children-batch1465.svg",
+          "asset_sha256": "dd1fc4a732d593c1c003c30858ac051eb8280468b88fb8bf349873dcc478eac3",
+          "shared_symbol_key": "keep_away_from_children/je2000e-eu-nl-batch1465-native",
+          "physical_page": 142,
+          "glyph_bbox": [
+            32,
+            160,
+            66,
+            181
+          ],
+          "drawing_indices": [
+            137,
+            138,
+            139
+          ],
+          "caption_bbox": [
+            70,
+            157,
+            181,
+            181
+          ],
+          "caption_text": "Houd het product buiten het bereik van kinderen.",
+          "caption_sha256": "93d16cd8372ec0fe403d57167f60c55d75faabfaa3d3462e73d0e0447880aa36",
+          "row_bbox": [
+            31,
+            156,
+            182,
+            182
+          ]
+        },
+        {
+          "asset_ref": "assets/symbol-li_ion-batch1465.svg",
+          "asset_sha256": "260b81ab9fb3571e4440250d359264bb7f85973d01db16ed29618efa6ab6faf7",
+          "shared_symbol_key": "li_ion/je2000e-eu-nl-batch1465-native",
+          "physical_page": 142,
+          "glyph_bbox": [
+            32,
+            185,
+            66,
+            206
+          ],
+          "drawing_indices": [
+            116,
+            117,
+            118,
+            119,
+            121,
+            122,
+            123,
+            124
+          ],
+          "caption_bbox": [
+            70,
+            182,
+            181,
+            215
+          ],
+          "caption_text": "Dit symbool geeft aan dat er een lithium-ion (Li-ion) accu in het product zit en dat deze op de juiste wijze moet worden afgevoerd of gerecycled.",
+          "caption_sha256": "4e1144d48d46fb4e212529a573c0f59fb36b3a4d9d04bfae441a6909703a98d6",
+          "row_bbox": [
+            31,
+            181,
+            182,
+            216
+          ]
+        },
+        {
+          "asset_ref": "assets/symbol-battery_disposal-batch1465.svg",
+          "asset_sha256": "be61c6855d5a5268f359fe1b1381423df264bd9d98622c0c67fd54ad611f73c2",
+          "shared_symbol_key": "battery_disposal/je2000e-eu-nl-batch1465-native",
+          "physical_page": 142,
+          "glyph_bbox": [
+            188,
+            60,
+            224,
+            133
+          ],
+          "drawing_indices": [
+            141,
+            142
+          ],
+          "caption_bbox": [
+            225,
+            43,
+            360,
+            144
+          ],
+          "caption_text": "Batterijen en accu's mogen niet bij het huishoudelijk afval worden weggegooid. Als consument bent u wettelijk verplicht om alle batterijen en accu's in te leveren bij daarvoor aangewezen inzamelpunten, ongeacht of ze gevaarlijke stoffen bevatten. Lever gebruikte batterijen en accu's in bij een plaatselijk inleverpunt, recyclingcen- trum of bij de winkel waar u ze heeft gekocht. Een juiste afvalverwerking verzekert dat recycling op een milieuvriendelijke manier gebeurt en voorkomt mogelijke schade aan de menselijke gezondheid en het milieu.",
+          "caption_sha256": "28f05690df76830c4e1fb7979e8e19dcca35bf33c93b73b812cfcf71312cfee8",
+          "row_bbox": [
+            187,
+            42,
+            361,
+            145
+          ]
+        },
+        {
+          "asset_ref": "assets/symbol-weee-batch1465.svg",
+          "asset_sha256": "0c35a797d48e5e6dc936c3731e395590feafb9aff1b1b2b9447a3af4cc42d510",
+          "shared_symbol_key": "weee/je2000e-eu-nl-batch1465-native",
+          "physical_page": 142,
+          "glyph_bbox": [
+            188,
+            155,
+            224,
+            196
+          ],
+          "drawing_indices": [
+            125,
+            126,
+            127
+          ],
+          "caption_bbox": [
+            225,
+            145,
+            360,
+            212
+          ],
+          "caption_text": "Dit symbool geeft aan dat het product niet als huishoudelijk afval mag worden weggegooid en naar een aangewezen inzamelingspunt voor recycling moet worden gebracht. Een juiste afvalverwerking en recycling dragen bij aan een beter milieu. Voor meer informatie over de verwijdering en recycling van dit product, neem contact op met uw gemeente, afvalverwerkingsdienst of leverancier.",
+          "caption_sha256": "f97bb435af9cfc35f3edcd542ae672ff1e53120b16bbd8118847eed3fb7bbcbb",
+          "row_bbox": [
+            187,
+            144,
+            361,
+            213
+          ]
+        }
+      ]
+    }
+  }
 }

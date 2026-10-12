@@ -1,13 +1,13 @@
 {
   "asset_refs": [
-    "assets/8f4bc216841c_symbol-general_warning.png",
-    "assets/5b6084824bd3_symbol-read_manual.png",
-    "assets/1052d4ed2fd9_symbol-do_not_dismantle.png",
-    "assets/f99a124f9436_symbol-no_open_flame.png",
-    "assets/af2528e787e5_symbol-keep_away_from_children.png",
-    "assets/fb7212443b32_symbol-li_ion.png",
-    "assets/cf04ff00bdeb_weee2.png",
-    "assets/12c2fb83fc20_symbol-weee.png",
+    "assets/symbol-general_warning-batch1465.svg",
+    "assets/symbol-read_manual-batch1465.svg",
+    "assets/symbol-do_not_dismantle-batch1465.svg",
+    "assets/symbol-no_open_flame-batch1465.svg",
+    "assets/symbol-keep_away_from_children-batch1465.svg",
+    "assets/symbol-li_ion-batch1465.svg",
+    "assets/symbol-battery_disposal-batch1465.svg",
+    "assets/symbol-weee-batch1465.svg",
     "assets/618923f97bd0_inbox-main.png",
     "assets/287650f3a89a_ac_charging_cable.png",
     "assets/87ac44e52863_manual_icon1.png",
@@ -63,7 +63,7 @@
   ],
   "bundle_root": "frozen-source",
   "bundle_sha256": "5413e90a02a454b82e244def0196a2ab9d4344f7e449273e8fc7458abc1d950d",
-  "content_sha256": "9f369a581f5643c360b255b8eb2dbfdbae46d9d4249add5f67d4874a89e2666a",
+  "content_sha256": "a80ef790dd28c41a1ba70b531b442d14f85f3950d7ab058e063ca2927fc68d0f",
   "language": "pt",
   "layout_params_sha256": "f5ae099abc1a82ffda3abcc5a13725aca3c201e720a0374d88d1643f9773f279",
   "metadata": {
@@ -130,7 +130,15 @@
       "assets/f5633d528aed_app-download.png": "f5633d528aed56418bf46d5e2b083267eb8859f6e87fd68b24fba70f604b9295",
       "assets/f99a124f9436_symbol-no_open_flame.png": "f99a124f94361fa18dbc7b987bc71041ab80df619e75636a90c5fe3ddb7eb60a",
       "assets/fb7212443b32_symbol-li_ion.png": "fb7212443b32b67eff3509aabdb23a128dc720541322d2116cccfdb8036d09bd",
-      "assets/fc4cc02b42ef_1_Wi-Fi_KCcAbdDk7o4RjKx82micuKJ5nyf.png": "fc4cc02b42efc31a32429ada2b78c4480a2fcbca647406da29b2ce75a8a8c1dc"
+      "assets/fc4cc02b42ef_1_Wi-Fi_KCcAbdDk7o4RjKx82micuKJ5nyf.png": "fc4cc02b42efc31a32429ada2b78c4480a2fcbca647406da29b2ce75a8a8c1dc",
+      "assets/symbol-general_warning-batch1465.svg": "949fa4b358483f531c93ce6dd6f25c3d2964c4b3c1bf43a760e377618c209661",
+      "assets/symbol-read_manual-batch1465.svg": "6362f59270d725546ac3b20117319193bce10d58950c8aa20c4870ce79320931",
+      "assets/symbol-do_not_dismantle-batch1465.svg": "0d8c33aa24918ce77020239e2659f837648ad94a6dd8ff91db9304caa6fe1dea",
+      "assets/symbol-no_open_flame-batch1465.svg": "3073529057ed5709e276e85747cad8532e07939d511bf9b448c8252770dd351d",
+      "assets/symbol-keep_away_from_children-batch1465.svg": "6b403148bbaa42cc77f87100c32b91bf06b00db6c69093c247bff1c5fc2a07bd",
+      "assets/symbol-li_ion-batch1465.svg": "3c4b2b3413e011c23cfbd259c4d971ed8fa10f37ff011506f95c8018dad18476",
+      "assets/symbol-battery_disposal-batch1465.svg": "890aad750886f80abc628c01b22c36ae6c305b91d48a8c441d27bbf9bb11411a",
+      "assets/symbol-weee-batch1465.svg": "fbb8f66e93bbefa15b3edcd942ba6ec2950ad5b533ee07e0ec5efd644194e456"
     },
     "block_count": 147,
     "component_inventory": {
@@ -7530,6 +7538,54 @@
           "physical_page": 159,
           "reason": "Remove literal imported formatting marker only; operator explicitly approved 2026-09-29. Original native source text is preserved.",
           "source_text": "• Nadat het apparaat is ingeschakeld, worden wiﬁ en Bluetooth automatisch ingeschakeld en lichten de wiﬁ- en Bluetooth-pictogrammen op het scherm op. • Houd de Aan/uit-knop voor DC/USB en de Aan/uit-knop voor AC1 tegelijkertijd ingedrukt totdat de wiﬁ- en Bluetooth-pictogrammen op het scherm oplichten.<g id=\"1\">"
+        },
+        {
+          "id": "batch1465-pt-preface-1",
+          "locale": "pt",
+          "source_text": "Parabéns pelo seu novo Jackery Explorer 2000 Plus. Leia este manual atentamente antes de usar o produto, especialmente as precauções relevantes, para garantir o uso adequado. Mantenha este manual em um local acessível para consulta frequente.",
+          "corrected_text": "Parabéns pela aquisição do seu novo Jackery Explorer 2000 Plus. Leia atentamente este manual antes de utilizar o produto, em especial as precauções relevantes, para garantir uma utilização correta. Guarde este manual num local acessível para consulta futura.",
+          "approval": {
+            "date": "2026-10-10",
+            "instruction": "欧规就是用的 Jackery",
+            "scope": "Batch 1465 preface wording backport, retain EU legal subject Jackery; do not replace with Jackery Inc.",
+            "confirmation": "Operator explicitly requested commit of the prepared changes on 2026-10-10."
+          }
+        },
+        {
+          "id": "batch1465-pt-preface-2",
+          "locale": "pt",
+          "source_text": "Em conformidade com leis e regulamentos, o direito de interpretação final deste documento e de todos os documentos relacionados a este produto pertence à Empresa. Embora tenham sido envidados todos os esforços para garantir a precisão deste manual, a Jackery não assume nenhuma responsabilidade por quaisquer erros que possam ocorrer.",
+          "corrected_text": "Em conformidade com a legislação e os regulamentos, a Empresa reserva-se o direito de interpretação final deste documento e de todos os documentos relacionados com este produto. Embora tenham sido envidados todos os esforços para garantir a exatidão deste manual, a Jackery não assume qualquer responsabilidade por eventuais erros.",
+          "approval": {
+            "date": "2026-10-10",
+            "instruction": "欧规就是用的 Jackery",
+            "scope": "Batch 1465 preface wording backport, retain EU legal subject Jackery; do not replace with Jackery Inc.",
+            "confirmation": "Operator explicitly requested commit of the prepared changes on 2026-10-10."
+          }
+        },
+        {
+          "id": "batch1465-pt-preface-3",
+          "locale": "pt",
+          "source_text": "Observe que não serão enviadas novas notificações em caso de atualização, revisão ou encerramento. Para obter a versão mais recente dos manuais do produto, visite support.jackery.com.",
+          "corrected_text": "Tenha em atenção que não serão emitidas notificações adicionais em caso de atualização, revisão ou descontinuação. Para obter a versão mais recente dos manuais do produto, visite support.jackery.com.",
+          "approval": {
+            "date": "2026-10-10",
+            "instruction": "欧规就是用的 Jackery",
+            "scope": "Batch 1465 preface wording backport, retain EU legal subject Jackery; do not replace with Jackery Inc.",
+            "confirmation": "Operator explicitly requested commit of the prepared changes on 2026-10-10."
+          }
+        },
+        {
+          "id": "batch1465-pt-preface-4",
+          "locale": "pt",
+          "source_text": "* As imagens são apenas para referência. Consulte o produto real.",
+          "corrected_text": "* As imagens são meramente ilustrativas. Consulte o produto real.",
+          "approval": {
+            "date": "2026-10-10",
+            "instruction": "欧规就是用的 Jackery",
+            "scope": "Batch 1465 preface wording backport, retain EU legal subject Jackery; do not replace with Jackery Inc.",
+            "confirmation": "Operator explicitly requested commit of the prepared changes on 2026-10-10."
+          }
         }
       ],
       "schema_version": "auto-manual-source-errata/v1",
@@ -7842,7 +7898,31 @@
         ]
       }
     },
-    "web_source_normalization": "preface-auto-resume/v1"
+    "web_source_normalization": "preface-auto-resume/v1",
+    "approved_copy_corrections": {
+      "path": "approved_copy_corrections.json",
+      "sha256": "ea2c7cb0dfdc928666568fa5ee7399cac167f43aa7622f86de4a7b73fea6158d",
+      "approval": {
+        "date": "2026-10-10",
+        "instruction": "欧规就是用的 Jackery",
+        "scope": "Batch 1465 preface wording backport, retain EU legal subject Jackery; do not replace with Jackery Inc.",
+        "confirmation": "Operator explicitly requested commit of the prepared changes on 2026-10-10."
+      },
+      "delivery_pdf": {
+        "filename": "JE-2000E_修正版_竖版.pdf",
+        "sha256": "02960a5f51576d9d8a3d825b3844dbf2f8cacc6240cabeee0639c197271a6cf3",
+        "physical_page": 4
+      },
+      "baseline": {
+        "path": "manual_sources/JE-2000E/EU/nine-language/git-20260929-d6462454-native-web/three-language",
+        "manifest_sha256": "b3566417fedfed4bf4d81853a8d7d84584e4610ff6fb8e0f1f5d1cd6e1e6069e"
+      }
+    },
+    "symbol_source_binding": {
+      "source_pdf_sha256": "02960a5f51576d9d8a3d825b3844dbf2f8cacc6240cabeee0639c197271a6cf3",
+      "physical_page": 123,
+      "shared_symbols": true
+    }
   },
   "model": "JE-2000E",
   "pages": [
@@ -7873,13 +7953,13 @@
         {
           "asset_refs": [],
           "block_id": "introduction:block-0002",
-          "content_sha256": "4e973a493ed5c42630dcd44ef25481732dc88a430afaf1ce342193c476e2878e",
+          "content_sha256": "9e5741b2c1a369c72aa4af075e7347acc0b80438e976f6332e0533bcb6239733",
           "kind": "flow",
           "payload": {
             "children": [
               {
                 "kind": "text",
-                "text": "Parabéns pelo seu novo Jackery Explorer 2000 Plus. Leia este manual atentamente antes de usar o produto, especialmente as precauções relevantes, para garantir o uso adequado. Mantenha este manual em um local acessível para consulta frequente."
+                "text": "Parabéns pela aquisição do seu novo Jackery Explorer 2000 Plus. Leia atentamente este manual antes de utilizar o produto, em especial as precauções relevantes, para garantir uma utilização correta. Guarde este manual num local acessível para consulta futura."
               }
             ],
             "kind": "paragraph",
@@ -7890,13 +7970,13 @@
         {
           "asset_refs": [],
           "block_id": "introduction:block-0003",
-          "content_sha256": "322e153a9a09f7c4a1c0152e0ebe351508dd6d848c9463784092b4851a317480",
+          "content_sha256": "bddee3364498ade57b784e79c7e83833c202b807f3b29f65e79877e5d9bc7a82",
           "kind": "flow",
           "payload": {
             "children": [
               {
                 "kind": "text",
-                "text": "Em conformidade com leis e regulamentos, o direito de interpretação final deste documento e de todos os documentos relacionados a este produto pertence à Empresa. Embora tenham sido envidados todos os esforços para garantir a precisão deste manual, a Jackery não assume nenhuma responsabilidade por quaisquer erros que possam ocorrer."
+                "text": "Em conformidade com a legislação e os regulamentos, a Empresa reserva-se o direito de interpretação final deste documento e de todos os documentos relacionados com este produto. Embora tenham sido envidados todos os esforços para garantir a exatidão deste manual, a Jackery não assume qualquer responsabilidade por eventuais erros."
               }
             ],
             "kind": "paragraph",
@@ -7907,13 +7987,13 @@
         {
           "asset_refs": [],
           "block_id": "introduction:block-0004",
-          "content_sha256": "b866dcaa63794305ddde4e373fecfafcf159c8dde57ad33f9c99dfb699ec6257",
+          "content_sha256": "5e17fca5ffa9084b9ec475e083c723c429c0cff04711d4ee3b06b19aee168ea7",
           "kind": "flow",
           "payload": {
             "children": [
               {
                 "kind": "text",
-                "text": "Observe que não serão enviadas novas notificações em caso de atualização, revisão ou encerramento. Para obter a versão mais recente dos manuais do produto, visite support.jackery.com."
+                "text": "Tenha em atenção que não serão emitidas notificações adicionais em caso de atualização, revisão ou descontinuação. Para obter a versão mais recente dos manuais do produto, visite support.jackery.com."
               }
             ],
             "kind": "paragraph",
@@ -7924,13 +8004,13 @@
         {
           "asset_refs": [],
           "block_id": "introduction:block-0005",
-          "content_sha256": "042b9cffe212890a94c3749bbb6ac75a66700dcfbddd77fffccd6c9760565215",
+          "content_sha256": "7ac036c926a03b2b11047a12468d97042ae7c14cc2d7ecb0c4a75387ab995d7f",
           "kind": "flow",
           "payload": {
             "children": [
               {
                 "kind": "text",
-                "text": "* As imagens são apenas para referência. Consulte o produto real."
+                "text": "* As imagens são meramente ilustrativas. Consulte o produto real."
               }
             ],
             "kind": "paragraph",
@@ -8349,58 +8429,58 @@
         },
         {
           "asset_refs": [
-            "assets/8f4bc216841c_symbol-general_warning.png",
-            "assets/5b6084824bd3_symbol-read_manual.png",
-            "assets/1052d4ed2fd9_symbol-do_not_dismantle.png",
-            "assets/f99a124f9436_symbol-no_open_flame.png",
-            "assets/af2528e787e5_symbol-keep_away_from_children.png",
-            "assets/fb7212443b32_symbol-li_ion.png",
-            "assets/cf04ff00bdeb_weee2.png",
-            "assets/12c2fb83fc20_symbol-weee.png"
+            "assets/symbol-general_warning-batch1465.svg",
+            "assets/symbol-read_manual-batch1465.svg",
+            "assets/symbol-do_not_dismantle-batch1465.svg",
+            "assets/symbol-no_open_flame-batch1465.svg",
+            "assets/symbol-keep_away_from_children-batch1465.svg",
+            "assets/symbol-li_ion-batch1465.svg",
+            "assets/symbol-battery_disposal-batch1465.svg",
+            "assets/symbol-weee-batch1465.svg"
           ],
           "block_id": "symbols:block-0003",
-          "content_sha256": "f4ae617c10c2ac381d28c72ac84d610e9a24457405968ea7e1da5f3c943217f3",
+          "content_sha256": "b3d5957e0956fa7d9f9f484f6d5e0a90df0ab9262593d132f63d83598bfeb8c6",
           "kind": "flow",
           "payload": {
             "component_spec": {
               "assets": [
                 {
-                  "asset_ref": "assets/8f4bc216841c_symbol-general_warning.png",
+                  "asset_ref": "assets/symbol-general_warning-batch1465.svg",
                   "locale_policy": "exact",
                   "role": "icons"
                 },
                 {
-                  "asset_ref": "assets/5b6084824bd3_symbol-read_manual.png",
+                  "asset_ref": "assets/symbol-read_manual-batch1465.svg",
                   "locale_policy": "exact",
                   "role": "icons"
                 },
                 {
-                  "asset_ref": "assets/1052d4ed2fd9_symbol-do_not_dismantle.png",
+                  "asset_ref": "assets/symbol-do_not_dismantle-batch1465.svg",
                   "locale_policy": "exact",
                   "role": "icons"
                 },
                 {
-                  "asset_ref": "assets/f99a124f9436_symbol-no_open_flame.png",
+                  "asset_ref": "assets/symbol-no_open_flame-batch1465.svg",
                   "locale_policy": "exact",
                   "role": "icons"
                 },
                 {
-                  "asset_ref": "assets/af2528e787e5_symbol-keep_away_from_children.png",
+                  "asset_ref": "assets/symbol-keep_away_from_children-batch1465.svg",
                   "locale_policy": "exact",
                   "role": "icons"
                 },
                 {
-                  "asset_ref": "assets/fb7212443b32_symbol-li_ion.png",
+                  "asset_ref": "assets/symbol-li_ion-batch1465.svg",
                   "locale_policy": "exact",
                   "role": "icons"
                 },
                 {
-                  "asset_ref": "assets/cf04ff00bdeb_weee2.png",
+                  "asset_ref": "assets/symbol-battery_disposal-batch1465.svg",
                   "locale_policy": "exact",
                   "role": "icons"
                 },
                 {
-                  "asset_ref": "assets/12c2fb83fc20_symbol-weee.png",
+                  "asset_ref": "assets/symbol-weee-batch1465.svg",
                   "locale_policy": "exact",
                   "role": "icons"
                 }
@@ -8448,9 +8528,9 @@
                       },
                       {
                         "asset_index": 1,
-                        "icon_alt": "Leia o manual do usuário antes de operar",
-                        "meaning_html": "Leia o manual do usuário antes de operar",
-                        "meaning_text": "Leia o manual do usuário antes de operar"
+                        "icon_alt": "Leia o manual do usuário antes de operar.",
+                        "meaning_html": "Leia o manual do usuário antes de operar.",
+                        "meaning_text": "Leia o manual do usuário antes de operar."
                       },
                       {
                         "asset_index": 2,
@@ -8472,9 +8552,9 @@
                       },
                       {
                         "asset_index": 5,
-                        "icon_alt": "Este símbolo indica que o produto contém uma bateria de íon de lítio (Li-ion e que esta deve ser descartada ou reciclada adequadamente.",
-                        "meaning_html": "Este símbolo indica que o produto contém uma bateria de íon de lítio (Li-ion e que esta deve ser descartada ou reciclada adequadamente.",
-                        "meaning_text": "Este símbolo indica que o produto contém uma bateria de íon de lítio (Li-ion e que esta deve ser descartada ou reciclada adequadamente."
+                        "icon_alt": "Este símbolo indica que o produto contém uma bateria de íon de lítio (Li-ion) e que esta deve ser descartada ou reciclada adequadamente.",
+                        "meaning_html": "Este símbolo indica que o produto contém uma bateria de íon de lítio (Li-ion) e que esta deve ser descartada ou reciclada adequadamente.",
+                        "meaning_text": "Este símbolo indica que o produto contém uma bateria de íon de lítio (Li-ion) e que esta deve ser descartada ou reciclada adequadamente."
                       }
                     ],
                     [

@@ -3,11 +3,12 @@
   "model": "JE-2000E",
   "region": "EU",
   "language": "nl",
-  "version": "git-20260929-d6462454-native-web",
-  "git_ref": "643af80b3d1aa0ef0d2f45f29479f08b80f985cf",
+  "version": "git-20261010-batch1465-preface",
+  "git_ref": "884b662f0b67539360ba3737885c5ac79ccad6cd",
+  "caption_frame_admission": [],
   "source_manifest": {
     "path": "frozen_source_manifest.json",
-    "sha256": "b3566417fedfed4bf4d81853a8d7d84584e4610ff6fb8e0f1f5d1cd6e1e6069e"
+    "sha256": "c4f05a283cd595fab46340c94622ef79a932f46cc1f1a6e253f649d0320d893e"
   },
   "markdown": {
     "manual": "manual_je2000e_eu_nl.md",
@@ -333,6 +334,46 @@
         "sha256": "fc4cc02b42efc31a32429ada2b78c4480a2fcbca647406da29b2ce75a8a8c1dc"
       },
       {
+        "path": "assets/symbol-battery_disposal-batch1465.svg",
+        "size": 3327,
+        "sha256": "be61c6855d5a5268f359fe1b1381423df264bd9d98622c0c67fd54ad611f73c2"
+      },
+      {
+        "path": "assets/symbol-do_not_dismantle-batch1465.svg",
+        "size": 3993,
+        "sha256": "485710ddc8f74a55644647db29fa3c62eaa98d3cfbbea4e7dc98d7d60a7840aa"
+      },
+      {
+        "path": "assets/symbol-general_warning-batch1465.svg",
+        "size": 3344,
+        "sha256": "eaef6a90726af3e60a79e0f248504e49297eb3292b5ae062d38cd128d42e6ea3"
+      },
+      {
+        "path": "assets/symbol-keep_away_from_children-batch1465.svg",
+        "size": 4116,
+        "sha256": "dd1fc4a732d593c1c003c30858ac051eb8280468b88fb8bf349873dcc478eac3"
+      },
+      {
+        "path": "assets/symbol-li_ion-batch1465.svg",
+        "size": 4934,
+        "sha256": "260b81ab9fb3571e4440250d359264bb7f85973d01db16ed29618efa6ab6faf7"
+      },
+      {
+        "path": "assets/symbol-no_open_flame-batch1465.svg",
+        "size": 2340,
+        "sha256": "2fb0aebd9051c751a6ecb9ca82ff418d8d5a9449e434639f250e80099527001c"
+      },
+      {
+        "path": "assets/symbol-read_manual-batch1465.svg",
+        "size": 2317,
+        "sha256": "86b48cf47f0b596dcf2d57ad0e45407d416d5abb34b45e9936d6c9cae0a52933"
+      },
+      {
+        "path": "assets/symbol-weee-batch1465.svg",
+        "size": 3389,
+        "sha256": "0c35a797d48e5e6dc936c3731e395590feafb9aff1b1b2b9447a3af4cc42d510"
+      },
+      {
         "path": "conf.py",
         "size": 828,
         "sha256": "be57cee70041442541ca8e991f6c302a8b840abab78c5b86d3f8a447c1cc93a4"
@@ -344,16 +385,16 @@
       },
       {
         "path": "manual.ir.json",
-        "size": 587956,
-        "sha256": "3a11ec75550a77275158d6e497fa8bea14c14c091995e2505a881d5d1810e47d"
+        "size": 591190,
+        "sha256": "7db45651e7858701c500ca7f87573c8320128bb7eb83bf966f00ec55f3376c0d"
       },
       {
         "path": "manual_je2000e_eu_nl.md",
-        "size": 79083,
-        "sha256": "838d6d9f1c653169616e856ca92eb4f43bf3604049534cbdafc3a16ed1034bfb"
+        "size": 79084,
+        "sha256": "470cbf8b61eee7ab50e26251c32599f8a416ee461eb1a34ca710611a33f67d87"
       }
     ],
-    "sha256": "04dd64e146b854c292b678ceb416ac7bd82ada47420d7fe97d765fc61a37d8aa"
+    "sha256": "988c9ce3023a3fe03f112620889afd761bdca5630b5a54176900ef37e66b929d"
   },
   "html": {
     "files": [
@@ -369,8 +410,8 @@
       },
       {
         "path": "_sources/manual_je2000e_eu_nl.md.txt",
-        "size": 79083,
-        "sha256": "838d6d9f1c653169616e856ca92eb4f43bf3604049534cbdafc3a16ed1034bfb"
+        "size": 79084,
+        "sha256": "470cbf8b61eee7ab50e26251c32599f8a416ee461eb1a34ca710611a33f67d87"
       },
       {
         "path": "_static/base-stemmer.js",
@@ -808,6 +849,46 @@
         "sha256": "fc4cc02b42efc31a32429ada2b78c4480a2fcbca647406da29b2ce75a8a8c1dc"
       },
       {
+        "path": "assets/symbol-battery_disposal-batch1465.svg",
+        "size": 3327,
+        "sha256": "be61c6855d5a5268f359fe1b1381423df264bd9d98622c0c67fd54ad611f73c2"
+      },
+      {
+        "path": "assets/symbol-do_not_dismantle-batch1465.svg",
+        "size": 3993,
+        "sha256": "485710ddc8f74a55644647db29fa3c62eaa98d3cfbbea4e7dc98d7d60a7840aa"
+      },
+      {
+        "path": "assets/symbol-general_warning-batch1465.svg",
+        "size": 3344,
+        "sha256": "eaef6a90726af3e60a79e0f248504e49297eb3292b5ae062d38cd128d42e6ea3"
+      },
+      {
+        "path": "assets/symbol-keep_away_from_children-batch1465.svg",
+        "size": 4116,
+        "sha256": "dd1fc4a732d593c1c003c30858ac051eb8280468b88fb8bf349873dcc478eac3"
+      },
+      {
+        "path": "assets/symbol-li_ion-batch1465.svg",
+        "size": 4934,
+        "sha256": "260b81ab9fb3571e4440250d359264bb7f85973d01db16ed29618efa6ab6faf7"
+      },
+      {
+        "path": "assets/symbol-no_open_flame-batch1465.svg",
+        "size": 2340,
+        "sha256": "2fb0aebd9051c751a6ecb9ca82ff418d8d5a9449e434639f250e80099527001c"
+      },
+      {
+        "path": "assets/symbol-read_manual-batch1465.svg",
+        "size": 2317,
+        "sha256": "86b48cf47f0b596dcf2d57ad0e45407d416d5abb34b45e9936d6c9cae0a52933"
+      },
+      {
+        "path": "assets/symbol-weee-batch1465.svg",
+        "size": 3389,
+        "sha256": "0c35a797d48e5e6dc936c3731e395590feafb9aff1b1b2b9447a3af4cc42d510"
+      },
+      {
         "path": "genindex.html",
         "size": 14488,
         "sha256": "2b7b356b97bbfd1b864d500a4f9872023e33a6bbef1b5ab59c15cee373d05601"
@@ -819,8 +900,8 @@
       },
       {
         "path": "manual_je2000e_eu_nl.html",
-        "size": 100776,
-        "sha256": "73d9d5ee615fb302ca7c91a5e0ccbf4260b3731697a075b5c01f178e0cde06e2"
+        "size": 100777,
+        "sha256": "ca2068ad21a8adf434ea6f067c00db1b344c5b4d022220d27e074252d4600cc4"
       },
       {
         "path": "objects.inv",
@@ -834,10 +915,10 @@
       },
       {
         "path": "searchindex.js",
-        "size": 19076,
-        "sha256": "d024b2000f5b9dc79a93880b0fc9241d99e4bd9f07b3beba5ed1cb3e89f73d9f"
+        "size": 19065,
+        "sha256": "8d453e99393ba3f6a482af963af08dc891914b45a5067c948814a507107740d9"
       }
     ],
-    "sha256": "21029daa0897c0d1367ae2c1f94e609123316ca0823ac6e48a63625eb1d36bb2"
+    "sha256": "bb721276b9e8473ff3c76886315383f03ce2750ed3125c07a1a512e5df86c8e4"
   }
 }
