@@ -80,8 +80,8 @@
 <section id="power-on-off">
 <h2>LIGAR/DESLIGAR</h2>
 <figure class="hb-operation-figure hb-operation-layout-status-right hb-base-art-live-copy" data-component-id="HB-SPECIAL-OPERATION" data-operation-id="main-power" data-source-fragment-sha256="88c17c9de09d0c1028b9dff161061546998cdded985643fcea288733e856da92" data-web-base-art-ref="power_native" data-web-presentation-mode="base-art-live-copy" data-web-replace-key="operation.main-power"><div class="hb-operation-stage"><div class="hb-operation-canvas"><div class="hb-operation-art-box"><img alt="" class="hb-operation-art" src="assets/ir/af29680d9135da5907c8a841c42f860276fa2bce1d2f83cdab3c2512607a853b/power_native.png"/><div aria-hidden="true" class="hb-operation-duration" data-duration-icon="clock" style="--hb-x:79%;--hb-y:70%">3s</div></div><div class="line-block hb-operation-steps" data-callout-id="operation.main-power.steps"><div class="hb-operation-step" data-callout-id="operation.main-power.on" data-step-id="on" style="--hb-step-x:77%;--hb-step-y:17%;--hb-step-width:22%"><div class="line hb-operation-step-label" data-step-id="on" data-step-part="label"><strong>ON</strong></div><div class="line hb-operation-step-instruction" data-step-id="on" data-step-part="instruction">Pressione uma vez</div></div><div class="hb-operation-step" data-callout-id="operation.main-power.off" data-step-id="off" style="--hb-step-x:77%;--hb-step-y:46%;--hb-step-width:22%"><div class="line hb-operation-step-label" data-step-id="off" data-step-part="label"><strong>Apagado</strong></div><div class="line hb-operation-step-instruction" data-step-id="off" data-step-part="instruction">Pressione e segure por 3 s</div></div></div></div></div></figure>
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>NOTA</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Quando o Jackery Battery Pack 2000 é usado com a estação de energia portátil, você pode controlar o estado de energia (ligado ou desligado) do Battery Pack 2000 por meio do botão POWER principal da estação de energia portátil.</p>
-<p>O produto será desligado automaticamente se não for carregado ou se nenhuma carga estiver conectada por 2 horas.</p>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>NOTA</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Quando utilizado com a estação de energia portátil, o Jackery Battery Pack 2000 pode ser ligado ou desligado através do botão POWER principal da estação de energia portátil.</p>
+<p>O produto desliga-se automaticamente se não for carregado ou se não houver nenhuma carga ligada durante 2 horas.</p>
 </td></tr></tbody></table></section>
 
 
@@ -95,7 +95,7 @@
 
 # CONEXÕES
 
-<p>Até 5 conjuntos desses produtos podem ser usados com a estação de energia portátil para atender à necessidade de maior capacidade.</p>
+<p>Podem ser utilizadas até cinco baterias externas com a estação de energia portátil para aumentar a capacidade disponível.</p>
 
 
 
@@ -134,7 +134,7 @@
 
 <section id="charging-via-ac-wall-outlet">
 <h2>CARREGAMENTO POR MEIO DE TOMADA CA</h2>
-<p>Ao carregar pela tomada, este produto deve ser usado com a estação de energia portátil.</p>
+<p>Para carregar a bateria externa através de uma tomada de parede CA, ligue-a à estação de energia portátil.</p>
 <table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>AVISO</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Certifique-se de que todos os produtos estejam desligados antes de conectar a estação de energia portátil ao Jackery Battery Pack 2000.</p></td></tr></tbody></table><img alt="CARREGANDO — Jackery Battery Pack 2000" class="manual-finished-illustration" data-web-finished-panel-path="assets/jbp2000b_eu_en/ac_charging.png" data-web-finished-panel-sha256="0b4ea051dcd300831613ac1da9ee58a848256999ea462bb30a1a582be10caf3d" src="assets/ir/0b4ea051dcd300831613ac1da9ee58a848256999ea462bb30a1a582be10caf3d/ac_charging.png" style="width: 100%; height: auto;"/>
 </section>
 
@@ -143,7 +143,7 @@
 
 <section id="charging-via-solar-panels-sold-separately">
 <h2>CARREGAMENTO VIA PAINÉIS SOLARES (VENDIDO SEPARADAMENTE)</h2>
-<p>Carregue seu produto com painéis solares e a estação de energia portátil conforme mostrado na figura abaixo. Consulte o manual do usuário da estação de energia portátil para obter mais informações.</p>
+<p>Carregue a bateria externa utilizando painéis solares e a estação de energia portátil, conforme ilustrado na figura abaixo. Para mais informações, consulte o manual de utilização da estação de energia portátil.</p>
 <img alt="CARREGANDO — Jackery Battery Pack 2000" class="manual-finished-illustration" data-web-finished-panel-path="assets/jbp2000b_eu_en/solar_charging.png" data-web-finished-panel-sha256="7d3a1d2b3a59fce8643f73dd1d297e1bfcf9bd14ef0afeb46a5d838be974e7e1" src="assets/ir/7d3a1d2b3a59fce8643f73dd1d297e1bfcf9bd14ef0afeb46a5d838be974e7e1/solar_charging.png" style="width: 100%; height: auto;"/>
 </section>
 

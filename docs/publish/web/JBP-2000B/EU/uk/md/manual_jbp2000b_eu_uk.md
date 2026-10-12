@@ -13,6 +13,8 @@
 
 
 
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ПРИМІТКА</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Цей акумуляторний блок сумісний із Jackery E2000 Plus V2 та Jackery E1000 Plus V2. У цьому посібнику термін «портативна електростанція» означає будь-яку з цих моделей, якщо не зазначено інше.</p></td></tr></tbody></table>
+
 # ВАЖЛИВА ІНФОРМАЦІЯ З БЕЗПЕКИ
 
 <p>Під час використання цього продукту необхідно дотримуватися основних заходів безпеки, зокрема:</p>
@@ -78,7 +80,7 @@
 <section id="power-on-off">
 <h2>УВІМКНЕННЯ/ВИМКНЕННЯ</h2>
 <figure class="hb-operation-figure hb-operation-layout-status-right hb-base-art-live-copy" data-component-id="HB-SPECIAL-OPERATION" data-operation-id="main-power" data-source-fragment-sha256="c700410861d107c26e83d15bc4abe92e2889436e4d92e9711aa4357f6cc6fbbf" data-web-base-art-ref="power_native" data-web-presentation-mode="base-art-live-copy" data-web-replace-key="operation.main-power"><div class="hb-operation-stage"><div class="hb-operation-canvas"><div class="hb-operation-art-box"><img alt="" class="hb-operation-art" src="../../../../_static/manual-assets/_pool/af/af29680d9135da5907c8a841c42f860276fa2bce1d2f83cdab3c2512607a853b.png"/><div aria-hidden="true" class="hb-operation-duration" data-duration-icon="clock" style="--hb-x:79%;--hb-y:70%">3s</div></div><div class="line-block hb-operation-steps" data-callout-id="operation.main-power.steps"><div class="hb-operation-step" data-callout-id="operation.main-power.on" data-step-id="on" style="--hb-step-x:77%;--hb-step-y:17%;--hb-step-width:22%"><div class="line hb-operation-step-label" data-step-id="on" data-step-part="label"><strong>Увімкнення</strong></div><div class="line hb-operation-step-instruction" data-step-id="on" data-step-part="instruction">Натисніть один раз</div></div><div class="hb-operation-step" data-callout-id="operation.main-power.off" data-step-id="off" style="--hb-step-x:77%;--hb-step-y:46%;--hb-step-width:22%"><div class="line hb-operation-step-label" data-step-id="off" data-step-part="label"><strong>Вимкнення</strong></div><div class="line hb-operation-step-instruction" data-step-id="off" data-step-part="instruction">Натисніть і утримуйте протягом 3 с</div></div></div></div></div></figure>
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ПРИМІТКА</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Під час використання з Jackery Explorer 2000 Plus ви можете керувати станом живлення (увімкнено або вимкнено) Jackery Battery Pack 2000 за допомогою основної кнопки POWER на Jackery Explorer 2000 Plus.</p>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ПРИМІТКА</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Під час використання з портативною електростанцією ви можете вмикати або вимикати Jackery Battery Pack 2000 за допомогою основної кнопки POWER портативної електростанції.</p>
 <p>Продукт автоматично вимкнеться, якщо протягом 2 годин не виконується заряджання або не підключено жодного навантаження.</p>
 </td></tr></tbody></table></section>
 
@@ -93,7 +95,7 @@
 
 # ПІДКЛЮЧЕННЯ
 
-<p>До 5 комплектів цих продуктів можна використовувати разом із Jackery Explorer 2000 Plus для задоволення підвищених потреб у ємності.</p>
+<p>З портативною електростанцією можна використовувати до п’яти акумуляторних блоків, щоб збільшити доступну ємність.</p>
 
 
 
@@ -104,14 +106,14 @@
 
 
 <table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>УВАГА</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
-<li><p>Переконайтеся, що всі продукти вимкнені, перш ніж підключати Jackery Explorer 2000 Plus до Jackery Battery Pack 2000.</p></li>
+<li><p>Переконайтеся, що всі продукти вимкнені, перш ніж підключати портативну електростанцію до Jackery Battery Pack 2000.</p></li>
 <li><p>Щоб забезпечити належну роботу продукту, переконайтеся, що повітрозабірні та витяжні отвори з обох боків не заблоковані. Залишайте щонайменше 200 мм простору між отворами та будь-якими предметами для належного відведення тепла.</p></li>
 </ul>
 </td></tr></tbody></table>
 
 <table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ПРИМІТКИ</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><ul class="simple">
-<li><p>Відображення піктограми <img alt="×5" class="hb-inline-connection-icon" src="../../../../_static/manual-assets/_pool/8f/8f7a4344e1d965ea755614244602fb78162c697a9ebe5865f560d890c4a1e6cd.png" style="display:inline-block;width:1.9em;height:auto;vertical-align:middle"/> на РК-дисплеї (Jackery Explorer 2000 Plus) означає успішне підключення між акумуляторним блоком і Jackery Explorer 2000 Plus.</p></li>
-<li><p>Будь ласка, не встановлюйте продукт на Jackery Explorer 2000 Plus.</p></li>
+<li><p>Відображення піктограми <img alt="×5" class="hb-inline-connection-icon" src="../../../../_static/manual-assets/_pool/8f/8f7a4344e1d965ea755614244602fb78162c697a9ebe5865f560d890c4a1e6cd.png" style="display:inline-block;width:1.9em;height:auto;vertical-align:middle"/> на РК-дисплеї (портативна електростанція) означає успішне підключення між акумуляторним блоком і портативною електростанцією.</p></li>
+<li><p>Не встановлюйте продукт на портативну електростанцію.</p></li>
 <li><p>Розміщуйте акумуляторні блоки на рівній, стабільній поверхні з достатньою несучою здатністю. Стандартна максимальна кількість складених акумуляторних блоків — 3.</p></li>
 <li><p>Якщо потрібно 4 або більше акумуляторних блоків, їх слід розмістити у стабільній зоні біля стіни, подалі від зовнішніх впливів, і вжити необхідних заходів для запобігання перекиданню.</p></li>
 </ul>
@@ -132,8 +134,8 @@
 
 <section id="charging-via-ac-wall-outlet">
 <h2>ЗАРЯДЖАННЯ ВІД РОЗЕТКИ ЗМІННОГО СТРУМУ</h2>
-<p>Під час заряджання від мережі цей продукт слід використовувати разом із Jackery Explorer 2000 Plus.</p>
-<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ПОПЕРЕДЖЕННЯ</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Переконайтеся, що всі продукти вимкнені, перш ніж підключати Jackery Explorer 2000 Plus до Jackery Battery Pack 2000.</p></td></tr></tbody></table><img alt="ЗАРЯДЖАННЯ — Jackery Battery Pack 2000" class="manual-finished-illustration" data-web-finished-panel-path="assets/jbp2000b_eu_en/ac_charging.png" data-web-finished-panel-sha256="0b4ea051dcd300831613ac1da9ee58a848256999ea462bb30a1a582be10caf3d" src="../../../../_static/manual-assets/_pool/0b/0b4ea051dcd300831613ac1da9ee58a848256999ea462bb30a1a582be10caf3d.png" style="width: 100%; height: auto;"/>
+<p>Щоб зарядити акумуляторний блок від розетки змінного струму, підключіть його до портативної електростанції.</p>
+<table class="manual-callout-table" style="width:100%; border-collapse:collapse; margin:0 0 16px 0;"><tbody><tr><td class="manual-callout-label" style="width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"><p><strong>ПОПЕРЕДЖЕННЯ</strong></p></td><td class="manual-callout-body" style="border:1px solid #000; padding:6px 8px; vertical-align:top;"><p>Переконайтеся, що всі продукти вимкнені, перш ніж підключати портативну електростанцію до Jackery Battery Pack 2000.</p></td></tr></tbody></table><img alt="ЗАРЯДЖАННЯ — Jackery Battery Pack 2000" class="manual-finished-illustration" data-web-finished-panel-path="assets/jbp2000b_eu_en/ac_charging.png" data-web-finished-panel-sha256="0b4ea051dcd300831613ac1da9ee58a848256999ea462bb30a1a582be10caf3d" src="../../../../_static/manual-assets/_pool/0b/0b4ea051dcd300831613ac1da9ee58a848256999ea462bb30a1a582be10caf3d.png" style="width: 100%; height: auto;"/>
 </section>
 
 
@@ -141,7 +143,7 @@
 
 <section id="charging-via-solar-panels-sold-separately">
 <h2>ЗАРЯДЖАННЯ ВІД СОНЯЧНИХ ПАНЕЛЕЙ (ПРОДАЮТЬСЯ ОКРЕМО)</h2>
-<p>Заряджайте свій продукт за допомогою сонячних панелей і Jackery Explorer 2000 Plus, як показано на рисунку нижче. Будь ласка, зверніться до посібника користувача Jackery Explorer 2000 Plus для отримання додаткової інформації.</p>
+<p>Заряджайте акумуляторний блок за допомогою сонячних панелей і портативної електростанції, як показано на рисунку нижче. Для отримання додаткової інформації зверніться до посібника користувача портативної електростанції.</p>
 <img alt="ЗАРЯДЖАННЯ — Jackery Battery Pack 2000" class="manual-finished-illustration" data-web-finished-panel-path="assets/jbp2000b_eu_en/solar_charging.png" data-web-finished-panel-sha256="7d3a1d2b3a59fce8643f73dd1d297e1bfcf9bd14ef0afeb46a5d838be974e7e1" src="../../../../_static/manual-assets/_pool/7d/7d3a1d2b3a59fce8643f73dd1d297e1bfcf9bd14ef0afeb46a5d838be974e7e1.png" style="width: 100%; height: auto;"/>
 </section>
 
@@ -267,8 +269,8 @@
 
 
 <section class="warranty-section" id="exchange">
-<h2>Umtausch</h2>
-<figure aria-label="Umtausch" class="hb-warranty-card" data-component-id="HB-WARRANTY-SECTION" data-warranty-card-index="3"><p>Jackery tauscht (auf Kosten von Jackery) jedes Jackery Produkt aus, das während der geltenden Garantiezeit aufgrund eines Verarbeitungs- oder Materialfehlers nicht mehr funktioniert. Ein Ersatzprodukt übernimmt die Restgarantie des Originalprodukts.</p></figure>
+<h2>Обмін</h2>
+<figure aria-label="Обмін" class="hb-warranty-card" data-component-id="HB-WARRANTY-SECTION" data-warranty-card-index="3"><p>Jackery замінить (за рахунок Jackery) будь-який продукт Jackery, який не працює протягом відповідного гарантійного періоду через дефект матеріалів або виготовлення. Заміна отримує залишок гарантійного терміну оригінального продукту.</p></figure>
 </section>
 
 

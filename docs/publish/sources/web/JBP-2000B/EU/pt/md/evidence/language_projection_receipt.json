@@ -3,8 +3,8 @@
   "model": "JBP-2000B",
   "region": "EU",
   "language": "pt",
-  "version": "git-20261008-557cc07f-reviewed",
-  "git_ref": "c0c82cc5b038fccb7d15322f82253d35cf429bd8",
+  "version": "batch1465-reviewed",
+  "git_ref": "be8436a391e1cd00e635e3b7f933aa89e5438955",
   "caption_frame_admission": [
     {
       "source_ref": "connections_pt.json#reference-locking",
@@ -25,7 +25,7 @@
   ],
   "source_manifest": {
     "path": "frozen_source_manifest.json",
-    "sha256": "55b181bdb4fb8ec3fb3e78be0e6279ebbb800a913c572c9a40742625320c4520"
+    "sha256": "715762a38d6052cc3e9d710e216eea67b3c497ef0e5703d4ec77352199dbba34"
   },
   "markdown": {
     "manual": "manual_jbp2000b_eu_pt.md",
@@ -147,16 +147,16 @@
       },
       {
         "path": "manual.ir.json",
-        "size": 421042,
-        "sha256": "e550c5c758a29a4d546558cc988d170590ebd17cf30eb5e28e5058f3cc925dd0"
+        "size": 426844,
+        "sha256": "e8e99f7fb350eb4ed8a49770f7809e68b04adf8b0b25747aca159584b7319fd7"
       },
       {
         "path": "manual_jbp2000b_eu_pt.md",
-        "size": 33141,
-        "sha256": "d3ac2ee66d523116ad3623b56535981024362ea7324548df1de96cf09105fd3a"
+        "size": 33113,
+        "sha256": "4edb2601b88861d155293f65d344e188ec95cabe7df4c0739374212b2d812231"
       }
     ],
-    "sha256": "640667498a81fd596029609636abdbb82cfad9574b5e8ef12ffea185825cef84"
+    "sha256": "fd948a2d2aaec474378874f8f77e6aa9ee78a60fa6fff3cfd6001adf53f88e04"
   },
   "html": {
     "files": [
@@ -166,29 +166,14 @@
         "sha256": "092a675df493731fb9e8037522b631f4592877c501b08578c803e7d0f8fec2ec"
       },
       {
-        "path": ".doctrees/environment.pickle",
-        "size": 23498,
-        "sha256": "10a172fa1b561da0193970147f6bac70b6b6dbd104851c429016b8faa88539f2"
-      },
-      {
-        "path": ".doctrees/index.doctree",
-        "size": 3361,
-        "sha256": "7035f5711bfc7fb70730f77467c7d887d3fcca4afc0735ee0b7ea488f313a2ba"
-      },
-      {
-        "path": ".doctrees/manual_jbp2000b_eu_pt.doctree",
-        "size": 77431,
-        "sha256": "1414f2368c4a48cfacb470c8467c0a443922f13cab7f57b3df9107b5ffc3aaa4"
-      },
-      {
         "path": "_sources/index.md.txt",
         "size": 82,
         "sha256": "3c55bbaa1639b22c9471df085efa4292bdf5d904c9fc548002b9ae0e709094dc"
       },
       {
         "path": "_sources/manual_jbp2000b_eu_pt.md.txt",
-        "size": 33141,
-        "sha256": "d3ac2ee66d523116ad3623b56535981024362ea7324548df1de96cf09105fd3a"
+        "size": 33113,
+        "sha256": "4edb2601b88861d155293f65d344e188ec95cabe7df4c0739374212b2d812231"
       },
       {
         "path": "_static/base-stemmer.js",
@@ -422,8 +407,8 @@
       },
       {
         "path": "manual_jbp2000b_eu_pt.html",
-        "size": 49597,
-        "sha256": "bad2a80e463bb01e83662375d2e3d759f8e1f753bf2ca917cef9a99c317ce59e"
+        "size": 49569,
+        "sha256": "cf0a2088032689383e8253e0e49f7d98d6d2edb00d5b74cdcf4bc5ae40f25b2d"
       },
       {
         "path": "objects.inv",
@@ -437,10 +422,10 @@
       },
       {
         "path": "searchindex.js",
-        "size": 8359,
-        "sha256": "64a522ba572cc31db5afa5c5bd3b3e7c03f4d623943c55ef0eaf31918b9c52e0"
+        "size": 8350,
+        "sha256": "7331c1130373729232426b03aa189f47b6f36a77311aa00be23ae81dc97d835b"
       }
     ],
-    "sha256": "45a5497868ced8da33c49812523d6d70b739991c510e473683072afec3c30b5f"
+    "sha256": "dc2338c74fc9fc95edc09a3317ef2226c557ff427d43cdaf4b686408b226cc2e"
   }
 }
