@@ -1,0 +1,187 @@
+{
+  "generated_at": "2026-07-03T02:19:46.594666+00:00",
+  "git_sha": "623d163f",
+  "model": "JE-1000F",
+  "region": "EU",
+  "lang": "de",
+  "runtime_bundle_dir": "docs/_build/JE-1000F/EU/de/web/source/rst",
+  "review_dir": "docs/_review/JE-1000F/EU/de",
+  "index_path": "docs/_review/JE-1000F/EU/de/index.rst",
+  "page_files": [
+    "page/01_user_maintenance_instructions.rst",
+    "page/02_whats_in_the_box.rst",
+    "page/03_product_overview_placeholder.rst",
+    "page/05_operation_guide_placeholder.rst",
+    "page/06_ups_mode.rst",
+    "page/08_charging_methods.rst",
+    "page/09_storage_and_maintenance.rst",
+    "page/11_warranty.rst",
+    "page/12_app_setup_placeholder.rst",
+    "page/charging.rst",
+    "page/lcd_icons_de.rst",
+    "page/safety_de.rst",
+    "page/spec_de.rst",
+    "page/symbols_de.rst",
+    "page/troubleshooting_de.rst"
+  ],
+  "generated_files": [
+    "generated/JE-1000F/draft/03_product_overview_de.rst",
+    "generated/JE-1000F/draft/05_operation_guide_de.rst",
+    "generated/JE-1000F/draft/12_app_setup_de.rst",
+    "generated/JE-1000F/lcd_icons_de.rst",
+    "generated/JE-1000F/spec_de.rst",
+    "generated/JE-1000F/symbols_de.rst",
+    "generated/JE-1000F/troubleshooting_de.rst"
+  ],
+  "override_files": [
+    "docs/_review/JE-1000F/EU/overrides/README.md"
+  ],
+  "page_manifest": "docs/manifests/manual_eu-single-de.yaml",
+  "recipe_ids": [
+    "03_product_overview",
+    "05_operation_guide",
+    "12_app_setup"
+  ],
+  "snippet_ids": [],
+  "spec_master": {
+    "path": "/home/runner/work/Hello-Docs/Hello-Docs/.tmp/review-start/phase2/Spec_Master.csv",
+    "sha256": "7fbc8ccbd30d778efc386af569313e3ef678b36ac5c45dde3c4df5cd233ec789"
+  },
+  "sync_preserve_paths": [
+    "page/safety_de.rst",
+    "page/01_user_maintenance_instructions.rst",
+    "page/symbols_de.rst",
+    "page/02_whats_in_the_box.rst",
+    "page/03_product_overview_placeholder.rst",
+    "page/lcd_icons_de.rst",
+    "page/05_operation_guide_placeholder.rst",
+    "page/06_ups_mode.rst",
+    "page/charging.rst",
+    "page/08_charging_methods.rst",
+    "page/09_storage_and_maintenance.rst",
+    "page/troubleshooting_de.rst",
+    "page/spec_de.rst",
+    "page/11_warranty.rst",
+    "page/12_app_setup_placeholder.rst",
+    "generated/JE-1000F/draft/03_product_overview_de.rst",
+    "generated/JE-1000F/draft/05_operation_guide_de.rst",
+    "generated/JE-1000F/draft/12_app_setup_de.rst",
+    "generated/JE-1000F/lcd_icons_de.rst",
+    "generated/JE-1000F/spec_de.rst",
+    "generated/JE-1000F/symbols_de.rst",
+    "generated/JE-1000F/troubleshooting_de.rst"
+  ],
+  "migration_provenance": {
+    "source_commit": "19e3392eab942ea055e25f14a264c53fe2d8a8f4",
+    "source_review_root": "docs/_review/JE-1000F/EU",
+    "path_mapping": {
+      "p48_01_user_maintenance_instructions.rst": "01_user_maintenance_instructions.rst",
+      "p50_02_whats_in_the_box.rst": "02_whats_in_the_box.rst",
+      "p51_03_product_overview_placeholder.rst": "03_product_overview_placeholder.rst",
+      "p53_05_operation_guide_placeholder.rst": "05_operation_guide_placeholder.rst",
+      "p54_06_ups_mode.rst": "06_ups_mode.rst",
+      "p55_charging.rst": "charging.rst",
+      "p56_08_charging_methods.rst": "08_charging_methods.rst",
+      "p57_09_storage_and_maintenance.rst": "09_storage_and_maintenance.rst",
+      "p60_11_warranty.rst": "11_warranty.rst",
+      "p61_12_app_setup_placeholder.rst": "12_app_setup_placeholder.rst"
+    },
+    "reason": "canonical target review projection from reviewed engineering Web baseline; preserve merged batch1465 German LCD recovery; original shared review retained",
+    "baseline_engineering_commit": "623d163f788391e43a6a0f1b38be65c6e818ddad",
+    "source_inventory": {
+      "page/01_user_maintenance_instructions.rst": {
+        "source_path": "prepared-runtime/page/01_user_maintenance_instructions.rst",
+        "sha256": "414a6874d1031c6ccfbe258144832a6ca2d088b6cd760c0df3bd596ebc479e6e"
+      },
+      "page/02_whats_in_the_box.rst": {
+        "source_path": "prepared-runtime/page/02_whats_in_the_box.rst",
+        "sha256": "e8b650f7061d1b0d5aba33617f30bc154f8e8d0dd4883ffcab22db7285b92d43"
+      },
+      "page/03_product_overview_placeholder.rst": {
+        "source_path": "prepared-runtime/page/03_product_overview_placeholder.rst",
+        "sha256": "ad24bdbe17ec0f08cbf8c19790afd448aec651a24a0a0a2251082ea22cf85306"
+      },
+      "page/05_operation_guide_placeholder.rst": {
+        "source_path": "prepared-runtime/page/05_operation_guide_placeholder.rst",
+        "sha256": "becd9a40330fd26d19a266717b7987ae29ab6d35f4e1f3684be927fe2a350818"
+      },
+      "page/06_ups_mode.rst": {
+        "source_path": "prepared-runtime/page/06_ups_mode.rst",
+        "sha256": "b1592b767e57095fc6e0646c3e6910d99858da61eb2f30b835d2f1793764c665"
+      },
+      "page/08_charging_methods.rst": {
+        "source_path": "prepared-runtime/page/08_charging_methods.rst",
+        "sha256": "851cf90fb12a6348c5e81a983c4d3eb3a59ef72bc4350dddedaa4024d32bc352"
+      },
+      "page/09_storage_and_maintenance.rst": {
+        "source_path": "prepared-runtime/page/09_storage_and_maintenance.rst",
+        "sha256": "0574e941835d967372cd9dabda07a156ac5cae4c85a4883cf3f38fe37a60c568"
+      },
+      "page/11_warranty.rst": {
+        "source_path": "prepared-runtime/page/11_warranty.rst",
+        "sha256": "1d178776705e1bf44e530178eba9f0df5a5f0432d6dc42809521d943d4a0df83"
+      },
+      "page/12_app_setup_placeholder.rst": {
+        "source_path": "prepared-runtime/page/12_app_setup_placeholder.rst",
+        "sha256": "04f6dd0f9b77d366998ad0bd3e514e4c324e36e6f7430610e19a3b909b350c24"
+      },
+      "page/charging.rst": {
+        "source_path": "prepared-runtime/page/charging.rst",
+        "sha256": "bd249289465dd292e05e07ea2afc73fc305234adcf1ad4b070df29e3299cb435"
+      },
+      "page/lcd_icons_de.rst": {
+        "source_path": "prepared-runtime/page/lcd_icons_de.rst",
+        "sha256": "e99da71a8bf6fa7fff165b6968817cf3d3a4ad0d7f5c3ab2089ee3078aeaf213"
+      },
+      "page/safety_de.rst": {
+        "source_path": "prepared-runtime/page/safety_de.rst",
+        "sha256": "8eee2962c17dd84a81b0cc8eb5b7c9019896b73f2bdf3ba0a098fb18efa725d3"
+      },
+      "page/spec_de.rst": {
+        "source_path": "prepared-runtime/page/spec_de.rst",
+        "sha256": "d4527021589e631091324ae0c851f28e707dad5edb20843bbe5aaeab0a5a7648"
+      },
+      "page/symbols_de.rst": {
+        "source_path": "prepared-runtime/page/symbols_de.rst",
+        "sha256": "adcb38dd369b7053710ea90080d9d6eefe4f238a85255a6a03f562652759a751"
+      },
+      "page/troubleshooting_de.rst": {
+        "source_path": "prepared-runtime/page/troubleshooting_de.rst",
+        "sha256": "39f0d99445ccfee6a2a845a68e5710d4493b72eb1acf642a068e083c71b5a56f"
+      },
+      "generated/JE-1000F/draft/03_product_overview_de.rst": {
+        "source_path": "prepared-runtime/generated/JE-1000F/draft/03_product_overview_de.rst",
+        "sha256": "ad24bdbe17ec0f08cbf8c19790afd448aec651a24a0a0a2251082ea22cf85306"
+      },
+      "generated/JE-1000F/draft/05_operation_guide_de.rst": {
+        "source_path": "prepared-runtime/generated/JE-1000F/draft/05_operation_guide_de.rst",
+        "sha256": "becd9a40330fd26d19a266717b7987ae29ab6d35f4e1f3684be927fe2a350818"
+      },
+      "generated/JE-1000F/draft/12_app_setup_de.rst": {
+        "source_path": "prepared-runtime/generated/JE-1000F/draft/12_app_setup_de.rst",
+        "sha256": "04f6dd0f9b77d366998ad0bd3e514e4c324e36e6f7430610e19a3b909b350c24"
+      },
+      "generated/JE-1000F/lcd_icons_de.rst": {
+        "source_path": "prepared-runtime/generated/JE-1000F/lcd_icons_de.rst",
+        "sha256": "dc22e671734d98beba654412b271199745b16c027419bba4e1c5e40f199231c0"
+      },
+      "generated/JE-1000F/spec_de.rst": {
+        "source_path": "prepared-runtime/generated/JE-1000F/spec_de.rst",
+        "sha256": "9a09585c9f5bcd17599ec721c32b84731b6a9e6464158fbbbba61f59d3f62ce3"
+      },
+      "generated/JE-1000F/symbols_de.rst": {
+        "source_path": "prepared-runtime/generated/JE-1000F/symbols_de.rst",
+        "sha256": "5fb7907b3570bf04ff47361661b0515327d2d489ef0992df1a8d687756ff60f5"
+      },
+      "generated/JE-1000F/troubleshooting_de.rst": {
+        "source_path": "prepared-runtime/generated/JE-1000F/troubleshooting_de.rst",
+        "sha256": "b979b4a18ad6e60e1429e487c2cac09df809366ab6dc0829d6127fe93128f815"
+      }
+    },
+    "baseline_build": "runtime on 623d163f with frozen JE-1000F EU reviewed phase2 snapshot; fresh component admission PASS; published text diff only heading depth and equivalent DC socket phrase restored",
+    "review_recovery": "merged #199 LCD row15 copy retained in page and generated carrier; #210 row20 icon already present in validated runtime source"
+  },
+  "last_synced_at": "2026-10-12T08:19:03.100272+00:00",
+  "last_sync_scope": "params",
+  "last_sync_files": []
+}
