@@ -1,0 +1,19 @@
+{
+  "schema_version": "auto-manual-web-publish-target/v2",
+  "model": "JE-3600A",
+  "region": "CN",
+  "lang": "zh",
+  "version": "git-20261012-caa5370a-reviewed",
+  "built_at": "2026-10-13T09:27:42.005310+00:00",
+  "git_ref": "6f45b402e3e83d5ed0a7e1ec216e6fb754b8f651",
+  "route": "JE-3600A/CN/zh/md",
+  "manual": "manual_je3600a_cn_zh.md",
+  "language_scope": "single",
+  "language_projection_evidence_path": "evidence/language_projection_receipt.json",
+  "language_projection_evidence_sha256": "69bad50baf2850e58fc71662eaec75746096dbe1e3e0db1312876713541ce42c",
+  "legacy_default": true,
+  "legacy_route": "JE-3600A/CN/md",
+  "legacy_aliases": [
+    "manual_je3600a_cn_zh"
+  ]
+}
