@@ -3,8 +3,8 @@
   "model": "JHP-3000D",
   "region": "US",
   "language": "es",
-  "version": "git-20261009-cebe4aab",
-  "git_ref": "167bf6ad376cf008ded34cfb840d28cb5ff588c3",
+  "version": "git-20261013-cebe4aab-web-layout",
+  "git_ref": "2e81b824dd00095850e87f70d8bee3813f1086b0",
   "caption_frame_admission": [
     {
       "source_ref": "native-pdf/page-10/power",
@@ -63,20 +63,20 @@
   ],
   "source_manifest": {
     "path": "frozen_source_manifest.json",
-    "sha256": "214803cb076ddcab301669ef57947621868037000ff5a0b78afbe32b823496de"
+    "sha256": "67c5c26b648baf2b2ac196609e8118be8583ab48d7e41b0a72f2c201fdef9211"
   },
   "markdown": {
     "manual": "manual_jhp3000d_us_es.md",
     "files": [
       {
         "path": "_static/source_presentation.css",
-        "size": 4024,
-        "sha256": "6bf2810a49128b7f4f186be55f772fc3acdade035491840fbf858d0a2b5a3de0"
+        "size": 9371,
+        "sha256": "0bd291ef094c90e0b362c928deec7f34121a1957cefed7524cdf189aaf08242b"
       },
       {
         "path": "_static/web_manual.css",
-        "size": 125530,
-        "sha256": "b21d68bbd53bf1e93bde5c9387d5bcbdde5f0317c810f38cce0f9d6041326090"
+        "size": 123623,
+        "sha256": "4c01adf9222e7faa8fb5552490d8b8fa4ebba550b4ef2a1e7171a1b9a6538434"
       },
       {
         "path": "assets/ac-charge.svg",
@@ -89,24 +89,19 @@
         "sha256": "20d2bb74dffe1cb42a4429dbb830412ed6b32cba48f32794aa9bc6217302cb3e"
       },
       {
-        "path": "assets/ac.svg",
-        "size": 1664,
-        "sha256": "74bcd0bb2a825ff4d7831dbdb368f4d13cdf5cf1d741e349f8bc649ee1898839"
-      },
-      {
         "path": "assets/app-control.svg",
         "size": 648956,
         "sha256": "0984323f428bdceabe126955738b46ca71856bc36adcd419cfe663928d61c4fa"
       },
       {
+        "path": "assets/app-steps-2-3-to-2-5.png",
+        "size": 224746,
+        "sha256": "4fac6f983ea96bded8b56aa2624c754012e8c579727a6779a1d866b3c8728dce"
+      },
+      {
         "path": "assets/app_add.png",
         "size": 58893,
         "sha256": "7998672fe6e308902b49332024bb09d21a7bb1dd06cc87dec160c81603a7c9b7"
-      },
-      {
-        "path": "assets/app_connect_result_steps.png",
-        "size": 288384,
-        "sha256": "17ccfa065009948c9e6e661017fab0b261adac03d880c025178d207e2f47ffe3"
       },
       {
         "path": "assets/app_download_qr.png",
@@ -119,19 +114,49 @@
         "sha256": "1c7bfea9e26bbb00aff9c48d34a7742cd15ff3f0d998f32486c7248a19c9b84d"
       },
       {
+        "path": "assets/button-ac-p13.svg",
+        "size": 2748,
+        "sha256": "21848380adf439cbaa3fafbf94b3a085ab0691e4deb07a53b0e6138a1b6364a2"
+      },
+      {
+        "path": "assets/button-dc-usb-p13.svg",
+        "size": 4030,
+        "sha256": "b4144d0ef0bba8679e70afddd2357873edf4b8e0d3bf8b291a074c2b43637943"
+      },
+      {
+        "path": "assets/button-power-p13.svg",
+        "size": 3359,
+        "sha256": "a17034327fc54f24967427238be427d024fe019d24c85cbc60ac0079efb8a006"
+      },
+      {
         "path": "assets/car.svg",
         "size": 391556,
         "sha256": "29a8c72e587c3e4f0192f384710682687a48ce40666e8f6a87c528471efb0a57"
       },
       {
+        "path": "assets/contact-mail.svg",
+        "size": 2576,
+        "sha256": "125bafe704617c64e341292ce7f5bad493ee097fc6c8b9e75800bc2ff78aa628"
+      },
+      {
+        "path": "assets/contact-phone.svg",
+        "size": 3823,
+        "sha256": "8c9f1689a4cc2ebe109e87a79ca927ba48d726908e92b54ce2b817f72cf5585c"
+      },
+      {
+        "path": "assets/contact-qr.png",
+        "size": 3809,
+        "sha256": "81ece929198261f4b6bd8640117371699de1da5a0b97c53bbdd55d1ac54e6aee"
+      },
+      {
+        "path": "assets/contact-web.svg",
+        "size": 4311,
+        "sha256": "7b8573e2ef26ca31a0cc369dbf2c2ecf91c55f137a9d4c827ce7285cd42f67ad"
+      },
+      {
         "path": "assets/dc-output.svg",
         "size": 203353,
         "sha256": "4fbb0e3fbece7f53f02ab7f6dbb4c1554f63738c0dee38ac6aecf44b1254fbc7"
-      },
-      {
-        "path": "assets/dc_usb.svg",
-        "size": 2936,
-        "sha256": "3355388bad2221362a63dfad0c04fb9c15f521866166144cd3a644bde14e5864"
       },
       {
         "path": "assets/energy.svg",
@@ -354,6 +379,16 @@
         "sha256": "87f8ac97678da34f07718a44549ecc46dfa3fb96c78a6dbba04732df5d774edf"
       },
       {
+        "path": "assets/warning_triangle_dark.svg",
+        "size": 336,
+        "sha256": "e1746d6937db78115fcd8e1f80a71943cb6615561e326bebe2605139a886cce5"
+      },
+      {
+        "path": "assets/warning_triangle_white.svg",
+        "size": 331,
+        "sha256": "5e5fc8a41e7c547ecd55ef8ffdb24df9e9b7e6b9fd4fe0d7bcc00c2eaad7cb15"
+      },
+      {
         "path": "conf.py",
         "size": 831,
         "sha256": "dce2bcb0f84d2ef99f8d004dd21b31a1690201f18c59d723651ea15956c5c41e"
@@ -365,16 +400,16 @@
       },
       {
         "path": "manual.ir.json",
-        "size": 567303,
-        "sha256": "f1b80ab4a5a071252f893034f30b3d59a6f2e7352e8d3aee8dbc2c3cc4e9289a"
+        "size": 570746,
+        "sha256": "8bfd614a0889100283f85aebba4d5344140ea2aa60f02d83e08efe90d966a0ab"
       },
       {
         "path": "manual_jhp3000d_us_es.md",
-        "size": 83627,
-        "sha256": "336fd2e3703e4349478411d31bb6de89f5efa592faf00c6b0769f682679d4e1b"
+        "size": 94161,
+        "sha256": "f9433231fb5998f5f937d5fe378dabb6c74dfd94648e2642764b877271f09e8e"
       }
     ],
-    "sha256": "8580e64493eb268387b1d035b0ac30bad2fb5e48f3e6b595fd3e577416bb3b9e"
+    "sha256": "a859caca1766c48ddb2cf22f1a85250430480ab2524dd82bff47fa2f1e5b49ff"
   },
   "html": {
     "files": [
@@ -385,18 +420,18 @@
       },
       {
         "path": ".doctrees/environment.pickle",
-        "size": 38586,
-        "sha256": "9f754a45d7d188dc1586f1ff941477097504da3f1f7f0370a3644d0a729af858"
+        "size": 38123,
+        "sha256": "20f0ddd10905edad8e23863edb7adf45b080c2151492ee9c861503c58fd8a711"
       },
       {
         "path": ".doctrees/index.doctree",
-        "size": 3435,
-        "sha256": "8644fc2d44653bcc6dea754416b49531477ebcb00195ae5f0b127574bf215de9"
+        "size": 3447,
+        "sha256": "ffd979f76b5e88cf9c3dcbb607d4a44b97fc1cdb5f9897b0771c351d6b051ad5"
       },
       {
         "path": ".doctrees/manual_jhp3000d_us_es.doctree",
-        "size": 198057,
-        "sha256": "b817fa07349621939c9411509a7c9d4a3e0a0219c4e9147262ddafb9f7f027ee"
+        "size": 218304,
+        "sha256": "471782adcea72f520db95fa14ea4339782e976a30f9f12b587260b26594f7d61"
       },
       {
         "path": "_sources/index.md.txt",
@@ -405,8 +440,8 @@
       },
       {
         "path": "_sources/manual_jhp3000d_us_es.md.txt",
-        "size": 83627,
-        "sha256": "336fd2e3703e4349478411d31bb6de89f5efa592faf00c6b0769f682679d4e1b"
+        "size": 94161,
+        "sha256": "f9433231fb5998f5f937d5fe378dabb6c74dfd94648e2642764b877271f09e8e"
       },
       {
         "path": "_static/base-stemmer.js",
@@ -490,8 +525,8 @@
       },
       {
         "path": "_static/source_presentation.css",
-        "size": 4024,
-        "sha256": "6bf2810a49128b7f4f186be55f772fc3acdade035491840fbf858d0a2b5a3de0"
+        "size": 9371,
+        "sha256": "0bd291ef094c90e0b362c928deec7f34121a1957cefed7524cdf189aaf08242b"
       },
       {
         "path": "_static/spanish-stemmer.js",
@@ -530,8 +565,8 @@
       },
       {
         "path": "_static/web_manual.css",
-        "size": 125530,
-        "sha256": "b21d68bbd53bf1e93bde5c9387d5bcbdde5f0317c810f38cce0f9d6041326090"
+        "size": 123623,
+        "sha256": "4c01adf9222e7faa8fb5552490d8b8fa4ebba550b4ef2a1e7171a1b9a6538434"
       },
       {
         "path": "assets/ac-charge.svg",
@@ -544,24 +579,19 @@
         "sha256": "20d2bb74dffe1cb42a4429dbb830412ed6b32cba48f32794aa9bc6217302cb3e"
       },
       {
-        "path": "assets/ac.svg",
-        "size": 1664,
-        "sha256": "74bcd0bb2a825ff4d7831dbdb368f4d13cdf5cf1d741e349f8bc649ee1898839"
-      },
-      {
         "path": "assets/app-control.svg",
         "size": 648956,
         "sha256": "0984323f428bdceabe126955738b46ca71856bc36adcd419cfe663928d61c4fa"
       },
       {
+        "path": "assets/app-steps-2-3-to-2-5.png",
+        "size": 224746,
+        "sha256": "4fac6f983ea96bded8b56aa2624c754012e8c579727a6779a1d866b3c8728dce"
+      },
+      {
         "path": "assets/app_add.png",
         "size": 58893,
         "sha256": "7998672fe6e308902b49332024bb09d21a7bb1dd06cc87dec160c81603a7c9b7"
-      },
-      {
-        "path": "assets/app_connect_result_steps.png",
-        "size": 288384,
-        "sha256": "17ccfa065009948c9e6e661017fab0b261adac03d880c025178d207e2f47ffe3"
       },
       {
         "path": "assets/app_download_qr.png",
@@ -574,19 +604,49 @@
         "sha256": "1c7bfea9e26bbb00aff9c48d34a7742cd15ff3f0d998f32486c7248a19c9b84d"
       },
       {
+        "path": "assets/button-ac-p13.svg",
+        "size": 2748,
+        "sha256": "21848380adf439cbaa3fafbf94b3a085ab0691e4deb07a53b0e6138a1b6364a2"
+      },
+      {
+        "path": "assets/button-dc-usb-p13.svg",
+        "size": 4030,
+        "sha256": "b4144d0ef0bba8679e70afddd2357873edf4b8e0d3bf8b291a074c2b43637943"
+      },
+      {
+        "path": "assets/button-power-p13.svg",
+        "size": 3359,
+        "sha256": "a17034327fc54f24967427238be427d024fe019d24c85cbc60ac0079efb8a006"
+      },
+      {
         "path": "assets/car.svg",
         "size": 391556,
         "sha256": "29a8c72e587c3e4f0192f384710682687a48ce40666e8f6a87c528471efb0a57"
       },
       {
+        "path": "assets/contact-mail.svg",
+        "size": 2576,
+        "sha256": "125bafe704617c64e341292ce7f5bad493ee097fc6c8b9e75800bc2ff78aa628"
+      },
+      {
+        "path": "assets/contact-phone.svg",
+        "size": 3823,
+        "sha256": "8c9f1689a4cc2ebe109e87a79ca927ba48d726908e92b54ce2b817f72cf5585c"
+      },
+      {
+        "path": "assets/contact-qr.png",
+        "size": 3809,
+        "sha256": "81ece929198261f4b6bd8640117371699de1da5a0b97c53bbdd55d1ac54e6aee"
+      },
+      {
+        "path": "assets/contact-web.svg",
+        "size": 4311,
+        "sha256": "7b8573e2ef26ca31a0cc369dbf2c2ecf91c55f137a9d4c827ce7285cd42f67ad"
+      },
+      {
         "path": "assets/dc-output.svg",
         "size": 203353,
         "sha256": "4fbb0e3fbece7f53f02ab7f6dbb4c1554f63738c0dee38ac6aecf44b1254fbc7"
-      },
-      {
-        "path": "assets/dc_usb.svg",
-        "size": 2936,
-        "sha256": "3355388bad2221362a63dfad0c04fb9c15f521866166144cd3a644bde14e5864"
       },
       {
         "path": "assets/energy.svg",
@@ -809,19 +869,29 @@
         "sha256": "87f8ac97678da34f07718a44549ecc46dfa3fb96c78a6dbba04732df5d774edf"
       },
       {
+        "path": "assets/warning_triangle_dark.svg",
+        "size": 336,
+        "sha256": "e1746d6937db78115fcd8e1f80a71943cb6615561e326bebe2605139a886cce5"
+      },
+      {
+        "path": "assets/warning_triangle_white.svg",
+        "size": 331,
+        "sha256": "5e5fc8a41e7c547ecd55ef8ffdb24df9e9b7e6b9fd4fe0d7bcc00c2eaad7cb15"
+      },
+      {
         "path": "genindex.html",
-        "size": 14393,
-        "sha256": "ff548e62558e14705c174172687594b548c8b70485821393f0368ced0af04aa5"
+        "size": 14168,
+        "sha256": "f740c6bd15573590454ff699c7c9449510dc014a06e1af353eb4c406a64c9de8"
       },
       {
         "path": "index.html",
-        "size": 21431,
-        "sha256": "a0b396194c290c0fa7a70a427ac2203f1e7fcbceea49346ee0cc55c5cbf0fb56"
+        "size": 20815,
+        "sha256": "9e8f6338dec90b336f3ff8aed4cd8b20e50fff4f1e2d5040dd94dcbae3177fb5"
       },
       {
         "path": "manual_jhp3000d_us_es.html",
-        "size": 110148,
-        "sha256": "6c5e0517b833873ecad1cc96dbd1af7c2e8b73d50f3ba40011f8e81e290d36ca"
+        "size": 119482,
+        "sha256": "3c655e79d0ad36bcadf6f35946c3e9e6c37727c65f0f91ba9a1f51b106a434d5"
       },
       {
         "path": "objects.inv",
@@ -830,15 +900,15 @@
       },
       {
         "path": "search.html",
-        "size": 14663,
-        "sha256": "f18c6c5ac0133b9982a2264a9f6f050cb00920985f0f1a19494a4e15b944135f"
+        "size": 14438,
+        "sha256": "3e6ef02269f6eb5a19e4097a91579a1c71d80d71310a2d507e5b227f2871e4e2"
       },
       {
         "path": "searchindex.js",
-        "size": 16917,
-        "sha256": "5abd1196a554abdd38c84213c186fe056f9206bc6036f646e29033f98a561bf2"
+        "size": 16700,
+        "sha256": "1d01545d435fa50b4d9dd7b3929fa09b81279c15f89c9ab4e426ff179fd7538a"
       }
     ],
-    "sha256": "ec0590c3ef4191b0828de3f908f6f00800b0a83c8f12d6966e4234a61afcd6aa"
+    "sha256": "1d476ca649963e94f837bfb6098ceeb6b07a3cdc37c653d88a0d2797a2b33d42"
   }
 }
