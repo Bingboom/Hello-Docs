@@ -144,3 +144,109 @@
 
 /* Original gray table key fields remain distinct from flowing explanation cells. */
 #furo-main-content .ht-troubleshooting td:first-child,#furo-main-content .ht-lcd-modes td[rowspan] {background:var(--hb-fill-muted,#eeeeef);}
+
+/* ---- Web-layout edition (2026-10-13): print layout restored page by page. ----
+   Rules above are the reviewed edition's, unchanged. derive_web_layout.py adds the classes
+   used below; source/differences.md lists each change with its PDF page. */
+
+/* Japanese titles keep their print case (50Hz, Jackery, Plus); the shared rule uppercases them. */
+#furo-main-content h1, #furo-main-content h2:not(.hb-spec-section) { text-transform: none; }
+
+/* p3: 絵表示について / 絵表示の説明 print white on a full-width dark band. */
+#furo-main-content h2:has(> .native-band) {
+  display: block;
+  max-width: none;
+  padding: 0.3rem 0.9rem;
+  border-radius: 999px;
+  background: var(--hb-brand-dark);
+  color: var(--hb-paper);
+  font-size: 0.95rem;
+}
+#furo-main-content h2:has(> .native-band)::before { display: none; }
+#furo-main-content h2:has(> .native-band) .headerlink { color: rgba(255, 255, 255, 0.7); }
+/* p3: the four signal labels share the grey, centred label column. */
+#furo-main-content table.ht-signal-table td:first-child { text-align: center; background: var(--hb-fill-muted, #eeeeef); }
+
+/* p4-5: the 警告 / 注意 lockups print at about twice the body size above their tables. */
+#furo-main-content h2.ht-native-safety-heading { font-size: 1.5rem; }
+
+/* p5: the five symptoms print in three columns, read row by row. */
+#furo-main-content ul.ht-print-grid-3 { display: grid; grid-template-columns: repeat(3, auto); justify-content: start; column-gap: 1.6rem; }
+#furo-main-content ul.ht-print-grid-3 > li { margin: 0.15em 0; }
+@media (max-width: 760px) { #furo-main-content ul.ht-print-grid-3 { grid-template-columns: 1fr; } }
+
+/* p6: the outlined ご注意 panel with the dark triangle; body on white, as printed. */
+#furo-main-content table.hb-source-warning-lockup { border: 1.5px solid var(--hb-brand-dark) !important; background: var(--hb-paper); }
+#furo-main-content .hb-source-warning-lockup .manual-callout-label { width: 24% !important; background: var(--hb-paper) !important; }
+#furo-main-content .hb-source-warning-lockup .manual-callout-body { background: var(--hb-paper) !important; vertical-align: middle !important; }
+#furo-main-content .hb-source-warning-lockup .hb-warning-lockup { display: flex; align-items: center; justify-content: center; gap: 0.45rem; font-size: 1.3rem; font-weight: 700; }
+#furo-main-content .hb-source-warning-lockup .hb-warning-lockup img { flex: 0 0 auto; width: 1.6rem !important; height: auto; margin: 0 !important; }
+
+/* p8: the closing remark prints a drawn square before it; the art crop stops above the notes frame. */
+#furo-main-content p.ht-square-note::before { content: ""; display: inline-block; width: 0.62em; height: 0.62em; margin-right: 0.45em; background: var(--hb-brand-dark); vertical-align: 0.05em; }
+#furo-main-content [data-native-figure="inbox"] img.hb-reference-art { clip-path: inset(0 0 4.5% 0); }
+
+/* p10-11: circled entry numbers; names left, the App note small below the name. */
+#furo-main-content table.ht-lcd-icons td.ht-number p { display: inline-flex; align-items: center; justify-content: center; width: 1.45em; height: 1.45em; border: 1px solid currentColor; border-radius: 50%; font-size: 0.85em; line-height: 1; margin: 0; }
+#furo-main-content table.ht-lcd-icons p.ht-lcd-note { font-size: 0.8em; font-weight: 400; margin-top: 0.1rem; }
+
+/* p14: the energy-saving table centres every cell, as printed. */
+#furo-main-content [data-native-figure="energy-saving"] table.ht-native-table :is(td, th) { text-align: center !important; vertical-align: middle !important; }
+
+/* p15: display modes keep one line per mode and action; button table cells sit mid-row. */
+#furo-main-content table.ht-lcd-modes td.ht-lcd-mode, #furo-main-content table.ht-lcd-modes td.ht-lcd-action { white-space: nowrap; text-align: center; vertical-align: middle; }
+/* p15: mode and action columns print grey; the table takes more of the panel than the art. */
+#furo-main-content table.ht-lcd-modes td.ht-lcd-action { background: var(--hb-fill-muted, #eeeeef); }
+@media (min-width: 761px) { .ht-lcd-pair { grid-template-columns: 0.8fr 1.7fr; } }
+#furo-main-content table.ht-key-combinations td { vertical-align: middle; }
+#furo-main-content table.ht-key-combinations td:nth-child(2) { white-space: nowrap; text-align: left; }
+#furo-main-content table.ht-key-combinations td:last-child { text-align: left; }
+#furo-main-content table.ht-key-combinations th { text-align: center; }
+/* p15, p24: the key column prints grey from head to foot; the other heads print white. */
+#furo-main-content table:is(.ht-key-combinations, .ht-troubleshooting) :is(td, th):first-child { background: var(--hb-fill-muted, #eeeeef) !important; }
+#furo-main-content table:is(.ht-key-combinations, .ht-troubleshooting) th:not(:first-child) { background: var(--hb-paper) !important; }
+
+/* p26-27: ※ notes print in light grey capsules inside the warranty cards. */
+#furo-main-content p.ht-print-note-pill { display: inline-block; max-width: 100%; margin: 0.35rem 0; padding: 0.1rem 0.55rem; border-radius: 0.6rem; background: var(--hb-fill-muted, #eeeeef); font-size: 0.85em; }
+
+/* p4: the Li-ion mark under the recycling glyph keeps one line. */
+#furo-main-content .ht-recycle-glyph + p { white-space: nowrap; font-size: 0.8em; }
+/* p6-7: the precaution lists print compact, one line per item. */
+#furo-main-content .ht-native-precautions li { margin: 0.2em 0; }
+#furo-main-content .ht-native-precautions li > p { margin: 0; }
+
+/* p8: the three notes print in a white panel with a grey outline. */
+#furo-main-content .ht-print-outline-panel { border: 1px solid var(--hb-line-soft); border-radius: var(--hb-panel-radius); padding: 0.6rem 1rem; margin: 1rem 0; background: var(--hb-paper); }
+#furo-main-content .ht-print-outline-panel p { margin: 0.15rem 0; }
+
+/* p10-11: one glossary table; names wrap where the print wraps them (about ten characters a line). */
+#furo-main-content table.ht-lcd-icons td.ht-lcd-name { width: 10.5em; text-align: left; vertical-align: middle; }
+#furo-main-content table.ht-lcd-icons td.ht-lcd-icon { width: 4.6em; text-align: center; padding-left: 0.3rem !important; padding-right: 0.3rem !important; }
+/* Every glyph carries its print height inline (print pt / 7 pt table text); no shared cap. */
+#furo-main-content table.ht-lcd-icons td.ht-lcd-icon img { max-width: none !important; max-height: none !important; }
+#furo-main-content table.ht-lcd-icons td.ht-number { width: 2.6em; }
+@media (max-width: 760px) { #furo-main-content table.ht-lcd-icons td.ht-lcd-name { width: auto; } }
+
+/* p14: the 12H glyph sits in its line of text (and after the section title), as printed. */
+#furo-main-content img.ht-inline-symbol[src$="12h-p14.svg"] { height: 1.25em !important; max-height: 1.25em !important; vertical-align: -0.2em; margin: 0 0.15em !important; }
+#furo-main-content h2 img.ht-inline-symbol { display: inline-block; height: 1.1em; width: auto; margin-left: 0.35em; }
+
+/* Medium print faces (NotoSansJP-Medium) are lighter than bold: the reviewed edition set them bold.
+   The Japanese fallback fonts have no 500 weight while the Latin ones do, so 500 would set Latin
+   words heavier than the Japanese around them; medium therefore reads as regular. */
+#furo-main-content .ht-print-medium { font-weight: 400; }
+
+/* p24: the remedy cells sit mid-row, as printed. */
+#furo-main-content table.ht-troubleshooting td { vertical-align: middle; }
+
+/* p25: the four specification grids share one label width and the print's compact rows. */
+#furo-main-content table.ht-spec-grid td.ht-spec-label { width: 33%; background: var(--hb-fill-muted, #eeeeef); vertical-align: middle; }
+#furo-main-content table.ht-spec-grid td { padding-top: 0.45rem !important; padding-bottom: 0.45rem !important; }
+#furo-main-content table.ht-spec-grid sup, #furo-main-content .ht-prose sup { font-size: 0.68em; line-height: 0; }
+
+/* Lists print compact, one line per item. */
+#furo-main-content .ht-prose li, #furo-main-content .manual-callout-body li { margin: 0.2em 0; }
+#furo-main-content .ht-prose li > p, #furo-main-content .manual-callout-body li > p { margin: 0; }
+/* p10-11: descriptions read left and sit mid-row. */
+#furo-main-content table.ht-lcd-icons td.ht-lcd-desc { text-align: left; vertical-align: middle; }
+#furo-main-content table.ht-lcd-icons td.ht-lcd-number { width: 2.6em; text-align: center; }
