@@ -112,3 +112,54 @@
 
 /* Original gray table key fields remain distinct from flowing explanation cells. */
 #furo-main-content .ht-troubleshooting td:first-child,#furo-main-content .ht-lcd-modes td[rowspan] {background:var(--hb-fill-muted,#eeeeef);}
+
+/* ---- Web-layout edition (2026-10-13): print layout restored page by page. ----
+   Rules above are the reviewed edition's, unchanged. derive_web_layout.py adds the classes
+   used below; source/differences.md lists each change with its PDF page. */
+
+/* Chinese titles keep their print case (App, Plus); the shared rule uppercases them. */
+#furo-main-content h1, #furo-main-content h2:not(.hb-spec-section) { text-transform: none; }
+/* Medium print faces (方正兰亭中黑, 兰亭黑) are lighter than bold. Chinese system fonts on Windows
+   have no 500 weight while the Latin ones do, so 500 would set Latin words heavier than the
+   Chinese around them; medium therefore reads as regular, as in the reviewed edition. */
+#furo-main-content .ht-print-medium { font-weight: 400; }
+
+/* Lists print compact, one line per item. */
+#furo-main-content .ht-prose li, #furo-main-content .manual-callout-body li { margin: 0.2em 0; }
+#furo-main-content .ht-prose li > p, #furo-main-content .manual-callout-body li > p { margin: 0; }
+
+/* p5-7: one glossary table; circled entry numbers; names left and wrapping where the print wraps them. */
+#furo-main-content table.ht-lcd-icons td.ht-number p { display: inline-flex; align-items: center; justify-content: center; width: 1.45em; height: 1.45em; border: 1px solid currentColor; border-radius: 50%; font-size: 0.85em; line-height: 1; margin: 0; }
+#furo-main-content table.ht-lcd-icons td.ht-lcd-number { width: 2.6em; text-align: center; }
+#furo-main-content table.ht-lcd-icons td.ht-lcd-icon { width: 4.6em; text-align: center; padding-left: 0.3rem !important; padding-right: 0.3rem !important; }
+/* Every glyph carries its print height inline (print pt / 7 pt table text); no shared cap. */
+#furo-main-content table.ht-lcd-icons td.ht-lcd-icon img { max-width: none !important; max-height: none !important; }
+#furo-main-content table.ht-lcd-icons td.ht-lcd-name { width: 8em; text-align: left; vertical-align: middle; }
+#furo-main-content table.ht-lcd-icons td.ht-lcd-desc { text-align: left; vertical-align: middle; }
+@media (max-width: 760px) { #furo-main-content table.ht-lcd-icons td.ht-lcd-name { width: auto; } }
+
+/* p9: display modes keep one line per mode and action. */
+#furo-main-content table.ht-lcd-modes td.ht-lcd-mode, #furo-main-content table.ht-lcd-modes td.ht-lcd-action { white-space: nowrap; text-align: center; vertical-align: middle; }
+
+/* p10: the button table centres every cell, as printed. */
+#furo-main-content table.ht-key-combinations :is(td, th) { text-align: center; vertical-align: middle; }
+/* p10, p18: the key column prints grey from head to foot; the other heads print white. */
+#furo-main-content table:is(.ht-key-combinations, .ht-troubleshooting) :is(td, th):first-child { background: var(--hb-fill-muted, #eeeeef) !important; }
+#furo-main-content table:is(.ht-key-combinations, .ht-troubleshooting) th:not(:first-child) { background: var(--hb-paper) !important; }
+
+/* p20: the three download lines print as one block beside the QR code, without paragraph gaps. */
+#furo-main-content .ht-app-download-copy p { margin: 0; }
+
+/* p12: the battery-pack title prints without the section dot. */
+#furo-main-content h2:has(> .native-plain-title)::before { display: none; }
+/* p15: the first-use warning prints bold behind an open warning triangle. */
+#furo-main-content p.ht-print-warning-line { display: flex; align-items: center; gap: 0.45rem; margin: 1.1rem 0 0.6rem; font-size: 1.12rem; }
+#furo-main-content p.ht-print-warning-line img { width: 1.5em; height: auto; margin: 0; }
+
+/* p18: the remedy cells sit mid-row in the print's compact rows. */
+#furo-main-content table.ht-troubleshooting td { vertical-align: middle; padding-top: 0.45rem !important; padding-bottom: 0.45rem !important; }
+
+/* p19: the four specification grids share one label width and the print's compact rows. */
+#furo-main-content table.ht-spec-grid td.ht-spec-label { width: 33%; background: var(--hb-fill-muted, #eeeeef); vertical-align: middle; }
+#furo-main-content table.ht-spec-grid td { padding-top: 0.45rem !important; padding-bottom: 0.45rem !important; }
+#furo-main-content table.ht-spec-grid sup, #furo-main-content .ht-prose sup { font-size: 0.68em; line-height: 0; }
