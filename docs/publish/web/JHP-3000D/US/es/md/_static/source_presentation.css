@@ -48,3 +48,120 @@
   .native-controls > .hb-reference-figure { min-width:570px; }
   .native-lcd-panel .hb-lcd-mode-art-panel { width:95%; }
 }
+
+/* ===== Web-layout edition (git-20261013-cebe4aab-web-layout): print structure ===== */
+/* Each rule styles markup that derive_web_layout.py records in source/<lang>/web_layout.json.
+   The safety columns, key-combination and auto-resume tables use the shared component styles. */
+
+/* Speech bubbles and notes inside the operation panels are left-aligned in print (p10-p11). */
+#furo-main-content :is(.native-power, .native-ac-output) .hb-reference-live-pill {
+  justify-content: flex-start;
+  text-align: left;
+}
+/* Print draws every note box in the figures with one corner radius (p10, p11, p16), so
+   multi-line notes are rounded rectangles, not the shared one-line capsule. They take the
+   shared panel radius, as the approved rules above intend but lose to the capsule rule. */
+#furo-main-content .native-figure .hb-reference-live-pill { border-radius: var(--hb-panel-radius); }
+
+/* Safety sub-sections print as dark pills inside the safety chapter (p4-p5). */
+#furo-main-content h2:has(> .native-band) {
+  max-width: var(--hb-component-band-max);
+  padding: 0.36rem 0.95rem;
+  border-radius: 999px;
+  background: var(--hb-brand-dark);
+  color: var(--hb-paper);
+  font-size: clamp(0.92rem, 1.5vw, 1.02rem);
+}
+#furo-main-content h2:has(> .native-band)::before { display: none; }
+#furo-main-content h2:has(> .native-band) .headerlink { color: rgba(255, 255, 255, 0.7); }
+/* 'GROUNDING INSTRUCTION' is a plain bold title in print, without the section dot. */
+#furo-main-content h2:has(> .native-plain-title)::before { display: none; }
+
+/* WARNING and DANGER (p5): outlined white panels with the print's dark triangle; bodies print bold. */
+#furo-main-content table.hb-source-warning-lockup { border-color: var(--hb-brand-dark) !important; background: var(--hb-paper); }
+#furo-main-content .hb-source-warning-lockup .manual-callout-label { width: 30% !important; }
+#furo-main-content .hb-source-warning-lockup .manual-callout-body {
+  background: var(--hb-paper) !important;
+  vertical-align: middle !important;
+}
+#furo-main-content .hb-source-warning-lockup .hb-warning-lockup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-size: 1.2rem;
+}
+#furo-main-content .hb-source-warning-lockup .hb-warning-lockup img {
+  flex: 0 0 auto;
+  width: 2.5rem !important;
+  height: auto;
+  margin: 0 !important;
+}
+@media (max-width: 40rem) {
+  #furo-main-content .hb-source-warning-lockup :is(.manual-callout-label, .manual-callout-body) { width: 100% !important; }
+}
+
+/* 'Fully charge … before its first use.' prints white on a dark capsule (p14). */
+#furo-main-content p.hb-prose-pill {
+  display: table;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 0.75rem 0;
+  padding: 0.22em 0.7em;
+  border-radius: 999px;
+  background: var(--hb-brand-dark);
+  color: var(--hb-paper);
+  font-weight: 700;
+  line-height: 1.35;
+}
+#furo-main-content p.hb-prose-pill strong { color: inherit; }
+
+/* Key combinations (p13): the shared table fits the reading column on desktop; phones scroll inside it. */
+#furo-main-content table.hb-key-combination-table:has(.hb-key-button-pair) { min-width: 36rem; }
+
+/* LCD glossary: circled entry numbers, one shared number for entry 21 (p8-p9). */
+#furo-main-content td.hb-lcd-number { text-align: center; vertical-align: middle !important; }
+#furo-main-content .native-lcd-number {
+  display: inline-grid;
+  place-items: center;
+  min-width: 1.5em;
+  height: 1.5em;
+  padding: 0 0.12em;
+  box-sizing: border-box;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  font-size: 0.86em;
+  line-height: 1;
+}
+
+/* The USB trademark note under the specification tables. */
+#furo-main-content p.native-trademark { color: var(--hb-text-muted); font-size: 0.88rem; }
+
+/* Back cover (p58): company, address, one contact panel and its QR code. */
+#furo-main-content .native-contact-card { margin: 2.2rem 0 1rem; }
+#furo-main-content p.native-contact-company { margin: 0; font-size: 1.25rem; }
+#furo-main-content p.native-contact-address { margin: 0.15rem 0 0.75rem; }
+#furo-main-content .native-contact-row { display: flex; flex-wrap: wrap; align-items: stretch; gap: 0.6rem; }
+#furo-main-content .native-contact-panel {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem 1.4rem;
+  padding: 0.75rem 1.2rem;
+  border: 1px solid var(--hb-line-soft);
+  border-radius: 0.9rem;
+}
+#furo-main-content .native-contact-qr {
+  display: grid;
+  place-items: center;
+  padding: 0.35rem;
+  border: 1px solid var(--hb-line-soft);
+  border-radius: 0.6rem;
+}
+#furo-main-content .native-contact-qr img { width: 3.6rem !important; height: auto !important; margin: 0 !important; }
+#furo-main-content p.native-contact-phone { margin: 0; font-size: 1.55rem; line-height: 1.1; }
+#furo-main-content .native-contact-region { font-size: 0.55em; font-weight: 400; }
+#furo-main-content .native-contact-links { padding-left: 1.2rem; border-left: 1px solid var(--hb-line-soft); }
+#furo-main-content .native-contact-links p { margin: 0; line-height: 1.5; }
+#furo-main-content img.native-contact-glyph { display: inline-block; width: auto !important; height: 1.05em !important; margin: 0 0.45em 0 0 !important; vertical-align: -0.12em; }
+#furo-main-content p.native-contact-phone img.native-contact-glyph { height: 1.15em !important; vertical-align: -0.2em; margin-right: 0.3em !important; }
