@@ -1,0 +1,689 @@
+{
+  "schema_version": "auto-manual-frozen-web-language-evidence/v1",
+  "model": "JA-TS02A",
+  "region": "US",
+  "language": "fr",
+  "version": "git-20261014-11ce66b1",
+  "git_ref": "78ea7b5f14280891739ae6ed2bbe2afad6262d11",
+  "caption_frame_admission": [],
+  "source_manifest": {
+    "path": "frozen_source_manifest.json",
+    "sha256": "c4dc678f5543319ec875018f0d3e5100362b5b9bb59a4013b9495090bd0b3a29"
+  },
+  "markdown": {
+    "manual": "manual_jats02a_us_fr.md",
+    "files": [
+      {
+        "path": "_static/source_presentation.css",
+        "size": 6174,
+        "sha256": "5c795156a5c77be45f902d3f292a9b59262104761045d38138c898fcc7a76eae"
+      },
+      {
+        "path": "_static/web_manual.css",
+        "size": 123623,
+        "sha256": "4c01adf9222e7faa8fb5552490d8b8fa4ebba550b4ef2a1e7171a1b9a6538434"
+      },
+      {
+        "path": "assets/deadfront-installation.png",
+        "size": 77443,
+        "sha256": "8226827b9e72290fbe0d68220f8346f421fb3f2f7cc3dab5a6e30da2351afc3d"
+      },
+      {
+        "path": "assets/fr-app-add-device.png",
+        "size": 86278,
+        "sha256": "793772142c3fb28641aed2a75f07c8566165e752721263a3efa2151067ff0a17"
+      },
+      {
+        "path": "assets/fr-app-backup-only.png",
+        "size": 52606,
+        "sha256": "ba97e23fe5230dc2e8a92dae727938270d39d3966339f84d907788c7cb9f0d71"
+      },
+      {
+        "path": "assets/fr-app-backup-priority.png",
+        "size": 53221,
+        "sha256": "d90a7a4c4adc6b3731e5d5c4f2dc3b718e418706463775e779a1f1107024aed7"
+      },
+      {
+        "path": "assets/fr-app-circuit-list.png",
+        "size": 46742,
+        "sha256": "9a4e85cb3b7d05c33b350c6d395cb1a66364c3ce808febcfe121c2be2ddac76e"
+      },
+      {
+        "path": "assets/fr-app-circuit-name.png",
+        "size": 32986,
+        "sha256": "3d7c058090c793c4d7049493a2b57ef4423248da48a6b6e7aa020e1f82e0aafb"
+      },
+      {
+        "path": "assets/fr-app-circuits.png",
+        "size": 67373,
+        "sha256": "1c97831aa0ed371213654d117754a37e4307891db27b780638e415624c2cd56c"
+      },
+      {
+        "path": "assets/fr-app-dashboard.png",
+        "size": 51519,
+        "sha256": "2fe1a2fc5622a9681770796c5494f4521fa2afee806467a5b5afc0f2a1227966"
+      },
+      {
+        "path": "assets/fr-app-download-qr.png",
+        "size": 26225,
+        "sha256": "1b0b7242a937d65710b285f147b8128159a267f58954fb9cd4692929378ca46d"
+      },
+      {
+        "path": "assets/fr-app-store-badges.png",
+        "size": 9955,
+        "sha256": "17ddb4358c78068b1f6c5303d4cda77a7886087b3acd317f07bc42401cdf2357"
+      },
+      {
+        "path": "assets/fr-app-ups-mode.png",
+        "size": 68430,
+        "sha256": "37ff97d0a98ed415c36ec6e009cb094da9aaee5d766fb1f28aab81770b1906b0"
+      },
+      {
+        "path": "assets/fr-app-voltage-menu.png",
+        "size": 87997,
+        "sha256": "6503361697c0d1b6d84f2fc7169a6eba9f846dce71a37c3cd06977deb59b8dc9"
+      },
+      {
+        "path": "assets/fr-app-voltage-settings.png",
+        "size": 63019,
+        "sha256": "7d2c4f2ba678b7a26b2a1d4817b4963d6360b6a65f6ff4c09bf3a28a853ca21a"
+      },
+      {
+        "path": "assets/fr-app-wifi.png",
+        "size": 59121,
+        "sha256": "fdbf0182f970d7a315c1bb5e22f73265b3a3580c99510bc6653c54d1860b1b70"
+      },
+      {
+        "path": "assets/fr-app-working-modes.png",
+        "size": 52397,
+        "sha256": "dc9842593f98c690bdeced0eff580679bff00afaddffc921a6dfe2eddb4ea784"
+      },
+      {
+        "path": "assets/fr-cable-entry.png",
+        "size": 126041,
+        "sha256": "feb2310c0e4939184da90058080ee055d26ce96373b9244ac38f834375b39bf3"
+      },
+      {
+        "path": "assets/fr-covered-overview.png",
+        "size": 68842,
+        "sha256": "865c5219ad01cf28095923f74339ff1b55dd2dec6541b9ac1234168837b3d7b5"
+      },
+      {
+        "path": "assets/fr-dimensions.png",
+        "size": 33223,
+        "sha256": "76a9a42a8240b5b78d60b401b6a7b669a49471904f1efb6d9549be273e8fcbe7"
+      },
+      {
+        "path": "assets/fr-external-emergency-stop.png",
+        "size": 70846,
+        "sha256": "2e6a331540c4c12efaba0f785b44f6bff9c8fea1c8c1ef4605eac52db8e222e4"
+      },
+      {
+        "path": "assets/fr-grid-preparation.png",
+        "size": 52489,
+        "sha256": "4eeb8867cbecdc78ff8219b7a3b39f9b6bf7b5d13833ebfe5a6ec0c1d489e63e"
+      },
+      {
+        "path": "assets/fr-grid-wiring.png",
+        "size": 53952,
+        "sha256": "de9427469c18d2df9d35fc742d9ec3074f687d0d0f9bb1a40f634baab94107e0"
+      },
+      {
+        "path": "assets/fr-load-wiring.png",
+        "size": 84589,
+        "sha256": "a8a8dc8288555595b9473d26493e466a4672ac19b9486bb30f1ba5258dbea312"
+      },
+      {
+        "path": "assets/fr-locking-panel.png",
+        "size": 37093,
+        "sha256": "c62a67e17c67d37fe766dd8520f388a266eb4d9365eb38bbc084ab746e6999c0"
+      },
+      {
+        "path": "assets/fr-mounting-brackets.png",
+        "size": 19561,
+        "sha256": "f0d6df9f0f98baab16e3818b26eb66a531a58ed2c7f348cb8f818161cc573d43"
+      },
+      {
+        "path": "assets/fr-mounting-fasteners.png",
+        "size": 27883,
+        "sha256": "a83caee99e79b826d2827b832d545e2eb0280670d835be6b73297057cedf1a36"
+      },
+      {
+        "path": "assets/fr-mounting-template.png",
+        "size": 32106,
+        "sha256": "db751105e894d305d0e885397f4b313429ebfef2adb8ee8ae8bb0b345558af4a"
+      },
+      {
+        "path": "assets/fr-optional-tools.png",
+        "size": 33046,
+        "sha256": "d2b7e11a754097c9479fbe257f4ca966498095f2c68e61f08a38c2dcd838fa22"
+      },
+      {
+        "path": "assets/fr-package-list.png",
+        "size": 62239,
+        "sha256": "0919185f98a40a44fbc13f48547524d552abb556ffd6ebbec59c26527c67b082"
+      },
+      {
+        "path": "assets/fr-power-station-connections.png",
+        "size": 75352,
+        "sha256": "b906b8648318f505a46cbe102c172905c7d62d1b702f11a1af908e476904f469"
+      },
+      {
+        "path": "assets/fr-system-overview.png",
+        "size": 66770,
+        "sha256": "10a31affbf596863435369050bca12a358149fce4e49c89357be0441c765f2f0"
+      },
+      {
+        "path": "assets/fr-uncovered-overview.png",
+        "size": 72142,
+        "sha256": "98469ee218a31defdfabccae9e286ba3c06e1bffe6eca07ebc9b950ee2354021"
+      },
+      {
+        "path": "assets/inline-add-device.png",
+        "size": 1014,
+        "sha256": "4e520c727876b84293a37cff9bf08fe1e71ffefda176fe38a54f23d41ab2c3e3"
+      },
+      {
+        "path": "assets/inline-edit-name.png",
+        "size": 2374,
+        "sha256": "d9836a340efa452417ace01660c453f26fe44950daebe4cf059e2345e65a0c5b"
+      },
+      {
+        "path": "assets/inline-edit.png",
+        "size": 2460,
+        "sha256": "11c966d28e83d003bc47c87036074ff9e15d5a4d298e66045861ff18b2d009fb"
+      },
+      {
+        "path": "assets/inline-link-circuits.png",
+        "size": 2821,
+        "sha256": "c18d9aaaba0bedda5649c4811bf874195fab2acb47b18bafc2854cd9d391f43b"
+      },
+      {
+        "path": "assets/inline-save.png",
+        "size": 2328,
+        "sha256": "d9562c75be4ee1db93c20541ff9692b12051581bc581456e24000140eb03f442"
+      },
+      {
+        "path": "assets/inline-settings.png",
+        "size": 2748,
+        "sha256": "841f078d6aa2add1ac18e1cb3735754bdde17b629e9936e69cce463dc578978d"
+      },
+      {
+        "path": "assets/inline-voltage-config.png",
+        "size": 2921,
+        "sha256": "e93f10afdf54a3e1f3179edb5d4a3e5377b539a01c4b990b78bf92b150d336b0"
+      },
+      {
+        "path": "assets/iot-pairing.png",
+        "size": 24315,
+        "sha256": "5b57169d52289a355eefc42f86ecb04b19fdf996ecc76e57b2bb24db96130ff6"
+      },
+      {
+        "path": "assets/symbol_electric_shock-print.svg",
+        "size": 816,
+        "sha256": "d33edf86ce117fc851fae3d78a3a7bb6bb63ecb218ef31868f72e77fbabbc4a4"
+      },
+      {
+        "path": "assets/symbol_grounding-print.svg",
+        "size": 1460,
+        "sha256": "64d6515747798d90d31619de174b19d88a65262ff1974dcdcbdd7aae6873505c"
+      },
+      {
+        "path": "assets/symbol_ingestion_hazard-print.svg",
+        "size": 3789,
+        "sha256": "db1952a846dd27465f8963df1b743fdc1dd777b6328691958b95e1d82fe94e48"
+      },
+      {
+        "path": "assets/symbol_read_manual.svg",
+        "size": 4961,
+        "sha256": "1d2087064f92538d3b0762607056ac268f1d1c24e8f446c66626ac35c4e43584"
+      },
+      {
+        "path": "assets/symbol_warning_triangle-print.svg",
+        "size": 1257,
+        "sha256": "b4d82cdcc622d3488525ebe5e780807f137ae565e62da8e12d4f9a51eed5e641"
+      },
+      {
+        "path": "assets/symbol_warning_triangle_yellow.svg",
+        "size": 1719,
+        "sha256": "3ba1bfd9a4945818636df78a2defae7ec5eada00f0ca135d29e9b1d962109808"
+      },
+      {
+        "path": "conf.py",
+        "size": 837,
+        "sha256": "f53d02a2fcc768dadc295fea4c223fdd256f553cb2ca20d2943bc56f8146b9dc"
+      },
+      {
+        "path": "index.md",
+        "size": 97,
+        "sha256": "a0c0e294262e366c2d2e245b9d4644bea4ddd56990ce854d8dbe61938c41fadc"
+      },
+      {
+        "path": "manual.ir.json",
+        "size": 418165,
+        "sha256": "d6e64fd4f899b82193aa6963d3c8b85ee5f7dcdfd99357334183ba4997eda790"
+      },
+      {
+        "path": "manual_jats02a_us_fr.md",
+        "size": 61815,
+        "sha256": "67764e40d1add93bdb446a3f63ac99a0b8ad8fbbd93d545380963269655332ec"
+      }
+    ],
+    "sha256": "00c42dd50ddcc62c5013a9148e399d8561f0ceb3dd4425ee0ac0bf48158dc73e"
+  },
+  "html": {
+    "files": [
+      {
+        "path": ".buildinfo",
+        "size": 231,
+        "sha256": "bcb96a88ea08e6311e02aae9e78b080ad63d31c0e589779cff2848fce3d5ab7c"
+      },
+      {
+        "path": ".doctrees/environment.pickle",
+        "size": 43264,
+        "sha256": "3812ef2c939200bbdbfa9649e81c1f5d044952d1d1fb91a9474ee28b13f70fdd"
+      },
+      {
+        "path": ".doctrees/index.doctree",
+        "size": 3470,
+        "sha256": "80d907e4198a7ffa4053b2073e44f2d2fdcda4f0fca3f6a5e6d386a519bb04f8"
+      },
+      {
+        "path": ".doctrees/manual_jats02a_us_fr.doctree",
+        "size": 156108,
+        "sha256": "b89b668d64a620574fae131091706c911058594ba137a321b21c34c331bc1046"
+      },
+      {
+        "path": "_sources/index.md.txt",
+        "size": 97,
+        "sha256": "a0c0e294262e366c2d2e245b9d4644bea4ddd56990ce854d8dbe61938c41fadc"
+      },
+      {
+        "path": "_sources/manual_jats02a_us_fr.md.txt",
+        "size": 61815,
+        "sha256": "67764e40d1add93bdb446a3f63ac99a0b8ad8fbbd93d545380963269655332ec"
+      },
+      {
+        "path": "_static/base-stemmer.js",
+        "size": 8133,
+        "sha256": "a75c8351f2274975d610d2c4627def2050e32f0943b7e3ec45858f5d0cae909e"
+      },
+      {
+        "path": "_static/basic.css",
+        "size": 14685,
+        "sha256": "656ff1bacd6f260fc7d71b97f9c2f1fcbf692dc84bf469cd952034efcb9eefed"
+      },
+      {
+        "path": "_static/debug.css",
+        "size": 1266,
+        "sha256": "0d05cd9e79d53234304667c08f02971de6196c0ffca593c3903b3667b4055ad6"
+      },
+      {
+        "path": "_static/doctools.js",
+        "size": 4322,
+        "sha256": "2992c09df91826a8d33e3b48b645ee77e457adcf7c712d776a814e1e2c448b43"
+      },
+      {
+        "path": "_static/documentation_options.js",
+        "size": 323,
+        "sha256": "93024f53e609b1e63c6296f3f768d4d149e23b2eb51b2d2e012edbaf58ae4ad4"
+      },
+      {
+        "path": "_static/file.png",
+        "size": 286,
+        "sha256": "5c4bc9a16aebf38c4b950f59b8e501ca36495328cb9eb622218bce9064a35e3e"
+      },
+      {
+        "path": "_static/french-stemmer.js",
+        "size": 42080,
+        "sha256": "cddd378786ab5753ac9392b9050623ac0feb7fc2a7ec4f59507c7bf3c630a4b8"
+      },
+      {
+        "path": "_static/language_data.js",
+        "size": 51904,
+        "sha256": "4ea3bd0d6e146b96ccd98d91af68db4ef85905b9e98e3f48df5003691a957f49"
+      },
+      {
+        "path": "_static/minus.png",
+        "size": 90,
+        "sha256": "47e7fc50db3699f1ca41ce9a2ffa202c00c5d1d5180c55f62ba859b1bd6cc008"
+      },
+      {
+        "path": "_static/plus.png",
+        "size": 90,
+        "sha256": "54115199b96a130cba02147c47c0deb43dcc9b9f08b5162bba8642b34980ac63"
+      },
+      {
+        "path": "_static/pygments.css",
+        "size": 20190,
+        "sha256": "175552429a0952117a332f75fd6cb601f11e7d88dbf80083afcb8482f963f7e1"
+      },
+      {
+        "path": "_static/scripts/furo-extensions.js",
+        "size": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "_static/scripts/furo.js",
+        "size": 5221,
+        "sha256": "0df6012bf9183882fc314d1eeaa66fe7705e8694cf27351c4be1f5dc32e9fe6f"
+      },
+      {
+        "path": "_static/scripts/furo.js.LICENSE.txt",
+        "size": 187,
+        "sha256": "3eba718c98abe0ad8dd4401edc9ddfabf979f9bb9b8ac446460b61b03694970d"
+      },
+      {
+        "path": "_static/scripts/furo.js.map",
+        "size": 28571,
+        "sha256": "049d8e3c297854c9e7defecbf64bc92c375b4d94c7bef119ba11c8e8fc723ca2"
+      },
+      {
+        "path": "_static/searchtools.js",
+        "size": 21782,
+        "sha256": "371b49c7f094b525244e2a59d7809a6b946fc1c8791201d10dda1dd191133bb7"
+      },
+      {
+        "path": "_static/skeleton.css",
+        "size": 6034,
+        "sha256": "e7702bcb03d3eb02e63681f753d88a28bee8f8ed13e50e58ac84a2bc31a5c71d"
+      },
+      {
+        "path": "_static/source_presentation.css",
+        "size": 6174,
+        "sha256": "5c795156a5c77be45f902d3f292a9b59262104761045d38138c898fcc7a76eae"
+      },
+      {
+        "path": "_static/sphinx_highlight.js",
+        "size": 5123,
+        "sha256": "096231e9c87df80ec3273da9c5b71bc81503206726a07a4dd4de44c256ff859c"
+      },
+      {
+        "path": "_static/styles/furo-extensions.css",
+        "size": 5518,
+        "sha256": "3d2b0207711a07313dfb6c8b272295f5f931169e4b2b784c61d00be9d871f8fd"
+      },
+      {
+        "path": "_static/styles/furo-extensions.css.map",
+        "size": 7762,
+        "sha256": "0b35b6ebb81f2aa1fcaee325c096d683e32c1808a9220670a1a3f88300c6915c"
+      },
+      {
+        "path": "_static/styles/furo.css",
+        "size": 50789,
+        "sha256": "177f1163121440086f701bf6cb9d2b2ab8fc29fcb754466465edf7b9f60b5aa0"
+      },
+      {
+        "path": "_static/styles/furo.css.map",
+        "size": 76029,
+        "sha256": "b7d40df8a2d2c5cc7727929dce7a482be4506f905ec42588fdbd0571bb1e9a45"
+      },
+      {
+        "path": "_static/translations.js",
+        "size": 4419,
+        "sha256": "72aebbbcc5a0cb931241811061777dae155f97264fb5e0c6359259e7338907a2"
+      },
+      {
+        "path": "_static/web_manual.css",
+        "size": 123623,
+        "sha256": "4c01adf9222e7faa8fb5552490d8b8fa4ebba550b4ef2a1e7171a1b9a6538434"
+      },
+      {
+        "path": "assets/deadfront-installation.png",
+        "size": 77443,
+        "sha256": "8226827b9e72290fbe0d68220f8346f421fb3f2f7cc3dab5a6e30da2351afc3d"
+      },
+      {
+        "path": "assets/fr-app-add-device.png",
+        "size": 86278,
+        "sha256": "793772142c3fb28641aed2a75f07c8566165e752721263a3efa2151067ff0a17"
+      },
+      {
+        "path": "assets/fr-app-backup-only.png",
+        "size": 52606,
+        "sha256": "ba97e23fe5230dc2e8a92dae727938270d39d3966339f84d907788c7cb9f0d71"
+      },
+      {
+        "path": "assets/fr-app-backup-priority.png",
+        "size": 53221,
+        "sha256": "d90a7a4c4adc6b3731e5d5c4f2dc3b718e418706463775e779a1f1107024aed7"
+      },
+      {
+        "path": "assets/fr-app-circuit-list.png",
+        "size": 46742,
+        "sha256": "9a4e85cb3b7d05c33b350c6d395cb1a66364c3ce808febcfe121c2be2ddac76e"
+      },
+      {
+        "path": "assets/fr-app-circuit-name.png",
+        "size": 32986,
+        "sha256": "3d7c058090c793c4d7049493a2b57ef4423248da48a6b6e7aa020e1f82e0aafb"
+      },
+      {
+        "path": "assets/fr-app-circuits.png",
+        "size": 67373,
+        "sha256": "1c97831aa0ed371213654d117754a37e4307891db27b780638e415624c2cd56c"
+      },
+      {
+        "path": "assets/fr-app-dashboard.png",
+        "size": 51519,
+        "sha256": "2fe1a2fc5622a9681770796c5494f4521fa2afee806467a5b5afc0f2a1227966"
+      },
+      {
+        "path": "assets/fr-app-download-qr.png",
+        "size": 26225,
+        "sha256": "1b0b7242a937d65710b285f147b8128159a267f58954fb9cd4692929378ca46d"
+      },
+      {
+        "path": "assets/fr-app-store-badges.png",
+        "size": 9955,
+        "sha256": "17ddb4358c78068b1f6c5303d4cda77a7886087b3acd317f07bc42401cdf2357"
+      },
+      {
+        "path": "assets/fr-app-ups-mode.png",
+        "size": 68430,
+        "sha256": "37ff97d0a98ed415c36ec6e009cb094da9aaee5d766fb1f28aab81770b1906b0"
+      },
+      {
+        "path": "assets/fr-app-voltage-menu.png",
+        "size": 87997,
+        "sha256": "6503361697c0d1b6d84f2fc7169a6eba9f846dce71a37c3cd06977deb59b8dc9"
+      },
+      {
+        "path": "assets/fr-app-voltage-settings.png",
+        "size": 63019,
+        "sha256": "7d2c4f2ba678b7a26b2a1d4817b4963d6360b6a65f6ff4c09bf3a28a853ca21a"
+      },
+      {
+        "path": "assets/fr-app-wifi.png",
+        "size": 59121,
+        "sha256": "fdbf0182f970d7a315c1bb5e22f73265b3a3580c99510bc6653c54d1860b1b70"
+      },
+      {
+        "path": "assets/fr-app-working-modes.png",
+        "size": 52397,
+        "sha256": "dc9842593f98c690bdeced0eff580679bff00afaddffc921a6dfe2eddb4ea784"
+      },
+      {
+        "path": "assets/fr-cable-entry.png",
+        "size": 126041,
+        "sha256": "feb2310c0e4939184da90058080ee055d26ce96373b9244ac38f834375b39bf3"
+      },
+      {
+        "path": "assets/fr-covered-overview.png",
+        "size": 68842,
+        "sha256": "865c5219ad01cf28095923f74339ff1b55dd2dec6541b9ac1234168837b3d7b5"
+      },
+      {
+        "path": "assets/fr-dimensions.png",
+        "size": 33223,
+        "sha256": "76a9a42a8240b5b78d60b401b6a7b669a49471904f1efb6d9549be273e8fcbe7"
+      },
+      {
+        "path": "assets/fr-external-emergency-stop.png",
+        "size": 70846,
+        "sha256": "2e6a331540c4c12efaba0f785b44f6bff9c8fea1c8c1ef4605eac52db8e222e4"
+      },
+      {
+        "path": "assets/fr-grid-preparation.png",
+        "size": 52489,
+        "sha256": "4eeb8867cbecdc78ff8219b7a3b39f9b6bf7b5d13833ebfe5a6ec0c1d489e63e"
+      },
+      {
+        "path": "assets/fr-grid-wiring.png",
+        "size": 53952,
+        "sha256": "de9427469c18d2df9d35fc742d9ec3074f687d0d0f9bb1a40f634baab94107e0"
+      },
+      {
+        "path": "assets/fr-load-wiring.png",
+        "size": 84589,
+        "sha256": "a8a8dc8288555595b9473d26493e466a4672ac19b9486bb30f1ba5258dbea312"
+      },
+      {
+        "path": "assets/fr-locking-panel.png",
+        "size": 37093,
+        "sha256": "c62a67e17c67d37fe766dd8520f388a266eb4d9365eb38bbc084ab746e6999c0"
+      },
+      {
+        "path": "assets/fr-mounting-brackets.png",
+        "size": 19561,
+        "sha256": "f0d6df9f0f98baab16e3818b26eb66a531a58ed2c7f348cb8f818161cc573d43"
+      },
+      {
+        "path": "assets/fr-mounting-fasteners.png",
+        "size": 27883,
+        "sha256": "a83caee99e79b826d2827b832d545e2eb0280670d835be6b73297057cedf1a36"
+      },
+      {
+        "path": "assets/fr-mounting-template.png",
+        "size": 32106,
+        "sha256": "db751105e894d305d0e885397f4b313429ebfef2adb8ee8ae8bb0b345558af4a"
+      },
+      {
+        "path": "assets/fr-optional-tools.png",
+        "size": 33046,
+        "sha256": "d2b7e11a754097c9479fbe257f4ca966498095f2c68e61f08a38c2dcd838fa22"
+      },
+      {
+        "path": "assets/fr-package-list.png",
+        "size": 62239,
+        "sha256": "0919185f98a40a44fbc13f48547524d552abb556ffd6ebbec59c26527c67b082"
+      },
+      {
+        "path": "assets/fr-power-station-connections.png",
+        "size": 75352,
+        "sha256": "b906b8648318f505a46cbe102c172905c7d62d1b702f11a1af908e476904f469"
+      },
+      {
+        "path": "assets/fr-system-overview.png",
+        "size": 66770,
+        "sha256": "10a31affbf596863435369050bca12a358149fce4e49c89357be0441c765f2f0"
+      },
+      {
+        "path": "assets/fr-uncovered-overview.png",
+        "size": 72142,
+        "sha256": "98469ee218a31defdfabccae9e286ba3c06e1bffe6eca07ebc9b950ee2354021"
+      },
+      {
+        "path": "assets/inline-add-device.png",
+        "size": 1014,
+        "sha256": "4e520c727876b84293a37cff9bf08fe1e71ffefda176fe38a54f23d41ab2c3e3"
+      },
+      {
+        "path": "assets/inline-edit-name.png",
+        "size": 2374,
+        "sha256": "d9836a340efa452417ace01660c453f26fe44950daebe4cf059e2345e65a0c5b"
+      },
+      {
+        "path": "assets/inline-edit.png",
+        "size": 2460,
+        "sha256": "11c966d28e83d003bc47c87036074ff9e15d5a4d298e66045861ff18b2d009fb"
+      },
+      {
+        "path": "assets/inline-link-circuits.png",
+        "size": 2821,
+        "sha256": "c18d9aaaba0bedda5649c4811bf874195fab2acb47b18bafc2854cd9d391f43b"
+      },
+      {
+        "path": "assets/inline-save.png",
+        "size": 2328,
+        "sha256": "d9562c75be4ee1db93c20541ff9692b12051581bc581456e24000140eb03f442"
+      },
+      {
+        "path": "assets/inline-settings.png",
+        "size": 2748,
+        "sha256": "841f078d6aa2add1ac18e1cb3735754bdde17b629e9936e69cce463dc578978d"
+      },
+      {
+        "path": "assets/inline-voltage-config.png",
+        "size": 2921,
+        "sha256": "e93f10afdf54a3e1f3179edb5d4a3e5377b539a01c4b990b78bf92b150d336b0"
+      },
+      {
+        "path": "assets/iot-pairing.png",
+        "size": 24315,
+        "sha256": "5b57169d52289a355eefc42f86ecb04b19fdf996ecc76e57b2bb24db96130ff6"
+      },
+      {
+        "path": "assets/symbol_electric_shock-print.svg",
+        "size": 816,
+        "sha256": "d33edf86ce117fc851fae3d78a3a7bb6bb63ecb218ef31868f72e77fbabbc4a4"
+      },
+      {
+        "path": "assets/symbol_grounding-print.svg",
+        "size": 1460,
+        "sha256": "64d6515747798d90d31619de174b19d88a65262ff1974dcdcbdd7aae6873505c"
+      },
+      {
+        "path": "assets/symbol_ingestion_hazard-print.svg",
+        "size": 3789,
+        "sha256": "db1952a846dd27465f8963df1b743fdc1dd777b6328691958b95e1d82fe94e48"
+      },
+      {
+        "path": "assets/symbol_read_manual.svg",
+        "size": 4961,
+        "sha256": "1d2087064f92538d3b0762607056ac268f1d1c24e8f446c66626ac35c4e43584"
+      },
+      {
+        "path": "assets/symbol_warning_triangle-print.svg",
+        "size": 1257,
+        "sha256": "b4d82cdcc622d3488525ebe5e780807f137ae565e62da8e12d4f9a51eed5e641"
+      },
+      {
+        "path": "assets/symbol_warning_triangle_yellow.svg",
+        "size": 1719,
+        "sha256": "3ba1bfd9a4945818636df78a2defae7ec5eada00f0ca135d29e9b1d962109808"
+      },
+      {
+        "path": "genindex.html",
+        "size": 13921,
+        "sha256": "4a4edce6ce94dfce186f4d184685c10ef9f2c71cae1e2630d8842c2c8286cb3d"
+      },
+      {
+        "path": "index.html",
+        "size": 20990,
+        "sha256": "f0edc576d581317293ee881958b678958d7f269e6ff9c1cf3c700dd3fab85bdf"
+      },
+      {
+        "path": "manual_jats02a_us_fr.html",
+        "size": 90519,
+        "sha256": "f1b9ca11aeacddfbcb0f1df58a88e4188046e112509f90fe614c25fea7cd380f"
+      },
+      {
+        "path": "objects.inv",
+        "size": 350,
+        "sha256": "47c9f22671f778fd5607e963795b4dd52b05f59170daddf38047f2135f96dd28"
+      },
+      {
+        "path": "search.html",
+        "size": 14196,
+        "sha256": "1860f28679ed5e23b64e151f67b2a6e1e775342818ed1604fd3223968e066fc8"
+      },
+      {
+        "path": "searchindex.js",
+        "size": 15339,
+        "sha256": "27db69feb39c7f55f719656cc0cf0610ad2b6693238910c55a706eda2c0de251"
+      }
+    ],
+    "sha256": "26191467f991e746ae913994f46832d0b8ea5c51f792bfdec000ac2d81e75727"
+  }
+}
