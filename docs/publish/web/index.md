@@ -18,6 +18,8 @@
 - [JA-CA3SA / EU / en - Solar Generator Connector User Manual](JA-CA3SA/EU/en/md/manual_jaca3sa_eu_en.md)
 - [JA-CC30A / EU / en - Jackery Extreme Guard Carrying Bag (L Size) User Manual](JA-CC30A/EU/en/md/manual_jacc30a_eu_en.md)
 - [JA-TS02A / US / en - Jackery Smart Transfer Switch · JA-TS02A](JA-TS02A/US/en/md/manual_jats02a_us_en.md)
+- [JA-TS02A / US / es - Jackery Smart Transfer Switch · JA-TS02A](JA-TS02A/US/es/md/manual_jats02a_us_es.md)
+- [JA-TS02A / US / fr - Jackery Smart Transfer Switch · JA-TS02A](JA-TS02A/US/fr/md/manual_jats02a_us_fr.md)
 - [JAAC-WHE-100-EUA1 / EU / en - Jackery Foldable Trolley User Manual](JAAC-WHE-100-EUA1/EU/en/md/manual_jaacwhe100eua1_eu_en.md)
 - [JBP-1000B-SIL / US / en - Jackery Battery Pack — JBP-1000B-SIL](JBP-1000B-SIL/US/en/md/manual_jbp1000bsil_us_en.md)
 - [JBP-1000B-SIL / US / es - Jackery Battery Pack — JBP-1000B-SIL](JBP-1000B-SIL/US/es/md/manual_jbp1000bsil_us_es.md)
