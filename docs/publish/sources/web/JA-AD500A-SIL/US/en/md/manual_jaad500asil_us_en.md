@@ -60,7 +60,7 @@
 <li><p>It is recommended to use the same model of Jackery solar panels and the same number of panels when connecting solar panels to both DC8020 Input ports.</p></li>
 <li><p>Do not charge the product using both a car charger and a solar panel simultaneously. Doing so may blow the car fuse or result in charging failure.</p></li>
 </ul>
-</td></tr></tbody></table><p>It is recommended to use the Jackery solar panel to charge the product. Ensure that the open-circuit voltage (V<sub>oc</sub>) of the solar panel is within the DC input range (36.8V–56V) of the Jackery FridgeGuard or the DC input range (40V–57.6V) of the Jackery Battery Pack. Jackery is not responsible for any damage or loss resulting from the use of third-party solar panels.</p>
+</td></tr></tbody></table><p>It is recommended to use Jackery solar panels to charge the connected product through the Jackery DC Input Module. Ensure that the open-circuit voltage (V<sub>oc</sub>) of the connected solar panels is within the module's DC input voltage range (16V–60V). Jackery is not responsible for any damage or loss resulting from the use of third-party solar panels.</p>
 </section>
 
 

@@ -22,7 +22,7 @@ Tenga en cuenta que no se emitirán notificaciones adicionales en caso de actual
 <col style="width: 50%" />
 </colgroup>
 <tbody>
-<tr>
+<tr class="odd">
 <td style="width: 50%; border: none; padding: 0 8px 0 0; vertical-align: top"><p>
 
 <figure class="hb-symbol-signal-composition hb-safety-lead"><table class="hb-symbol-signal-table"><colgroup><col style="width:20%"/><col style="width:80%"/></colgroup><tbody><tr><td class="hb-symbol-signal-label-cell"><span class="hb-signal-badge"><img alt="" src="../../../../_static/manual-assets/_pool/5e/5e5fc8a41e7c547ecd55ef8ffdb24df9e9b7e6b9fd4fe0d7bcc00c2eaad7cb15.svg" style="width:48px;height:auto" width="48"/></span></td><td class="hb-symbol-signal-meaning-cell"><p><strong>ADVERTENCIA</strong></p><p><strong>Sigue siempre estas precauciones básicas al usar este producto.</strong></p></td></tr></tbody></table></figure>
@@ -55,7 +55,7 @@ Tenga en cuenta que no se emitirán notificaciones adicionales en caso de actual
 <col style="width: 50%" />
 </colgroup>
 <tbody>
-<tr>
+<tr class="odd">
 <td style="width: 50%; border: none; padding: 0 8px 0 0; vertical-align: top"><strong>GUARDE ESTAS INSTRUCCIONES</strong>
 <ul>
 <li>Deja de usar el producto de inmediato si muestra signos de daño. Suspende el uso y contacta al servicio al cliente para recibir asistencia.</li>
@@ -360,7 +360,7 @@ Conectado al Módulo de Entrada CC de Jackery, el Jackery FridgeGuard es compati
 
 
 
-Se recomienda usar el panel solar Jackery para cargar el Jackery FridgeGuard. Asegúrese de que el voltaje en circuito abierto (Voc) del panel solar esté dentro del rango de entrada de CC (36,8V-56V) del Jackery FridgeGuard. Jackery no se hace responsable de pérdidas causadas por el uso de paneles solares de otras marcas.
+Se recomienda usar paneles solares Jackery para cargar el producto. Asegúrese de que el voltaje en circuito abierto (Voc) de los paneles solares conectados esté dentro del rango de voltaje de entrada de CC del Jackery DC Input Module (16 V--60 V). Jackery no se hace responsable de pérdidas causadas por el uso de paneles solares de otras marcas.
 
 ## CARGA CON UN CARGADOR DE EN EL VEHÍCULO
 

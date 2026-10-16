@@ -61,9 +61,9 @@
     "assets/ir/2bbcbb64a121b0df1698fccf36002cad7dfe5883412d76d26f41ed7cad0e8695/app_power_art.png",
     "assets/ir/1aed800803214d39132679baf5705228ece603fa38912c3936f60afef7a045e9/app_3_5.png"
   ],
-  "bundle_root": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst",
-  "bundle_sha256": "f38b994d178bb65d27cce1bd7c08bead5b793af9dfc00e51c51daef10f7aa6c1",
-  "content_sha256": "a4cca9ac90565f8db4f1b32596eab855326760d22124ec4fc7e52301ba5fe40e",
+  "bundle_root": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst",
+  "bundle_sha256": "722ea6b3b2b0cb41a85d35a6c86c341bccd34080ccecf8cd3f95d61b6ee25009",
+  "content_sha256": "cf053bbe19f41e898c2bd9e52558dd314b997f4e011c922f574b4f1c9b514593",
   "language": "fr",
   "layout_params_sha256": "f5ae099abc1a82ffda3abcc5a13725aca3c201e720a0374d88d1643f9773f279",
   "metadata": {
@@ -2379,7 +2379,7 @@
       "language": "fr",
       "page_id": "preface.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/preface.rst",
+      "source_path": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/preface.rst",
       "source_ref": "preface.rst",
       "source_sha256": "804ec97e60a7fa9226ed8b8c2301ebc996bc5a9c000a04d1b46fa77edac6cbb7"
     },
@@ -3227,7 +3227,7 @@
         {
           "asset_refs": [],
           "block_id": "safety.rst:block-0006",
-          "content_sha256": "57f76b2df9dd2d3b0dd4611d610941bd865ae162a0339d603b3d174171328e1b",
+          "content_sha256": "d15d2a3c439194fe2fbf0cfac5953d3ce6a8587e0e59837b43527eecdb1c69a6",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -3330,7 +3330,7 @@
                   "role": "body"
                 }
               ],
-              "source_ref": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/safety.rst#callout-1",
+              "source_ref": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/safety.rst#callout-1",
               "token_roles": [
                 "component.callout"
               ],
@@ -3380,7 +3380,7 @@
       "language": "fr",
       "page_id": "safety.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/safety.rst",
+      "source_path": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/safety.rst",
       "source_ref": "safety.rst",
       "source_sha256": "979cbabb7c9807b6c24929ff56e8a70de6cdba1ffc1e5b337e41878d1ff116ea"
     },
@@ -3407,7 +3407,7 @@
         {
           "asset_refs": [],
           "block_id": "symbols.rst:block-0002",
-          "content_sha256": "573480850167d6fe4c82843f8aa7ece65250162a348d5cc2037cf7acfb59e3a0",
+          "content_sha256": "9d2170af1f42da26539df7a36ae48ee796b414836db5bdb5b6459e8862f0d1d8",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -3874,7 +3874,7 @@
                   "role": "rows"
                 }
               ],
-              "source_ref": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/symbols.rst#symbol-signals",
+              "source_ref": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/symbols.rst#symbol-signals",
               "token_roles": [
                 "component.table.symbol-signal"
               ],
@@ -3908,7 +3908,7 @@
             "assets/ir/7e4de290ea13b86bd50fbb209b4510116116d4fb403b7ef4f83cf1c1db873989/weee.png"
           ],
           "block_id": "symbols.rst:block-0004",
-          "content_sha256": "7f726f2912121d7a81a0fba06bded33b5b6b4527c99053b150b2ee1a73568909",
+          "content_sha256": "536154d57102e4550462fd836f7a2710a6895743d3aef0ebfcf1a498fba466f5",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -4626,7 +4626,7 @@
                   "role": "panels"
                 }
               ],
-              "source_ref": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/symbols.rst#symbol-icons",
+              "source_ref": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/symbols.rst#symbol-icons",
               "token_roles": [
                 "component.table.symbol-icon"
               ],
@@ -4641,7 +4641,7 @@
       "language": "fr",
       "page_id": "symbols.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/symbols.rst",
+      "source_path": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/symbols.rst",
       "source_ref": "symbols.rst",
       "source_sha256": "a01c2c59aca30aea850ed4e57c6f621346eedaceb9c9bb8f2b4c7c7d819fca39"
     },
@@ -4670,7 +4670,7 @@
             "assets/fcc_mark_45f309ed8b3f.png"
           ],
           "block_id": "01_fcc.rst:block-0002",
-          "content_sha256": "905e0cf89894211677e9b478877f7d525fbf75cfdada5cc6a8fd21821c99bf2d",
+          "content_sha256": "7c76aabb0335bea1d4af4481c88210bb303b1d7b8c1c1bfadde6c9924406f112",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -4908,7 +4908,7 @@
                   "role": "column_break"
                 }
               ],
-              "source_ref": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/01_fcc.rst",
+              "source_ref": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/01_fcc.rst",
               "token_roles": [
                 "component.special.fcc"
               ],
@@ -4923,7 +4923,7 @@
       "language": "fr",
       "page_id": "01_fcc.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/01_fcc.rst",
+      "source_path": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/01_fcc.rst",
       "source_ref": "01_fcc.rst",
       "source_sha256": "50f9f9969362d36ee4206026dedb2e9a58bdae32020fb5b499413f14894b7177"
     },
@@ -4955,7 +4955,7 @@
             "assets/ir/edb1cf577172c8adcb06b89297b2d09fe8c5dd9b93e10eee0e8b463aeadc65a6/inbox_stand.png"
           ],
           "block_id": "02_whats_in_the_box.rst:block-0002",
-          "content_sha256": "e0f8f2e2a8fc5e5cf2080bfe9873fd48ec78befa5e92b5dce935a00a33ea4465",
+          "content_sha256": "5e5d9711b5142533b8ca5cc38154c6740caae6e7014f010bfafea687a1f3d5c8",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -5362,7 +5362,7 @@
                   "role": "tip_body"
                 }
               ],
-              "source_ref": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/02_whats_in_the_box.rst",
+              "source_ref": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/02_whats_in_the_box.rst",
               "token_roles": [
                 "component.special.inbox"
               ],
@@ -5389,7 +5389,7 @@
       "language": "fr",
       "page_id": "02_whats_in_the_box.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/02_whats_in_the_box.rst",
+      "source_path": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/02_whats_in_the_box.rst",
       "source_ref": "02_whats_in_the_box.rst",
       "source_sha256": "641d3681fa1eb086fade48fcb585166e6265a2fe91728ce4f12dbca0c4582caa"
     },
@@ -5439,7 +5439,7 @@
       "language": "fr",
       "page_id": "03_product_overview.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/03_product_overview.rst",
+      "source_path": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/03_product_overview.rst",
       "source_ref": "03_product_overview.rst",
       "source_sha256": "1dab67a6fe76f3631ab524bd699ac3c26ea26be632c10b4c9def6cd06ddd2919"
     },
@@ -5516,7 +5516,7 @@
             "assets/ir/2894a3ae3d0c7852c085b34276b9ed7a0d73375f7877b56ab6e131c5ad516b92/lcd_icon_15.png"
           ],
           "block_id": "lcd_display.rst:block-0004",
-          "content_sha256": "5b8007fc555064b9c4bcfed6db888e8e396a217918850ffd9d8cd6d15acca0f1",
+          "content_sha256": "8f0fca017e4698b7e454f28973aff33af10bfba7eeafa7b8e0036ebdfccf0b5f",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -6853,7 +6853,7 @@
                   "role": "rows"
                 }
               ],
-              "source_ref": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/lcd_display.rst#lcd-icons",
+              "source_ref": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/lcd_display.rst#lcd-icons",
               "token_roles": [
                 "component.table.lcd-icon"
               ],
@@ -6868,7 +6868,7 @@
       "language": "fr",
       "page_id": "lcd_display.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/lcd_display.rst",
+      "source_path": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/lcd_display.rst",
       "source_ref": "lcd_display.rst",
       "source_sha256": "f8f0f6ac0388ca4b8cfe8022fa589a9c6808101a6a53837af931e725849f898c"
     },
@@ -6897,7 +6897,7 @@
             "assets/ir/cc4a6c69ae614c0c80317f85d0f6b7e0e41efe8fd383bc4f8ff1eb18a093239f/power_art.png"
           ],
           "block_id": "05_operation_guide.rst:block-0002",
-          "content_sha256": "56cbd089b2fb7ec419eb724e99b237214dbb852d327e53fde018315e25c6b2a5",
+          "content_sha256": "608478f18dcdd3267e430ceb21f88e4ccab1d402ecf768980f2397d0d81b0d63",
           "kind": "flow",
           "payload": {
             "anchor": "marche-arret",
@@ -7170,7 +7170,7 @@
                       "role": "supporting_copy"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/05_operation_guide.rst#operation-main-power",
+                  "source_ref": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/05_operation_guide.rst#operation-main-power",
                   "token_roles": [
                     "component.special.operation"
                   ],
@@ -7205,7 +7205,7 @@
             "assets/ir/e4d9be8aab4ba8beee23c037d3c0c59edf7c849289e31948be6b75879483d7c8/lcd_mode.png"
           ],
           "block_id": "05_operation_guide.rst:block-0004",
-          "content_sha256": "13f097ef2b4f8fa5ccb5620af40c4cf2c4913c13aa2a190af854781586033e7c",
+          "content_sha256": "d90d17c304bcf5e2d54701f52c3cae0049c187de217a7a6781d696aae493f054",
           "kind": "flow",
           "payload": {
             "anchor": "affichage-lcd-marche-arret",
@@ -7608,7 +7608,7 @@
                       "role": "groups"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/05_operation_guide.rst#lcd-mode",
+                  "source_ref": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/05_operation_guide.rst#lcd-mode",
                   "token_roles": [
                     "component.table.lcd-mode"
                   ],
@@ -7626,7 +7626,7 @@
       "language": "fr",
       "page_id": "05_operation_guide.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/05_operation_guide.rst",
+      "source_path": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/05_operation_guide.rst",
       "source_ref": "05_operation_guide.rst",
       "source_sha256": "815137694892442b7d56b234085456fc9413931a51500e87fe5c67c165524d28"
     },
@@ -7684,7 +7684,7 @@
             "assets/ir/30ece347e4e314b835c7b558faf4c4b82eb7f1dfca8f209ee084ddc51a3dd97d/ups_art.png"
           ],
           "block_id": "06_ups_mode.rst:block-0004",
-          "content_sha256": "ea7a6b8c608e33215cba89b8c45cae25209a2ce1907103cb3fdf7ba4a0ac9fdd",
+          "content_sha256": "c273b4d7c92f7096e357375b4c3efc42b48635d9e6d3c5a02237e9eab753c722",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -7909,7 +7909,7 @@
                   "role": "captions"
                 }
               ],
-              "source_ref": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/06_ups_mode.rst#reference-ups-connection",
+              "source_ref": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/06_ups_mode.rst#reference-ups-connection",
               "token_roles": [
                 "component.special.reference-figure"
               ],
@@ -8022,7 +8022,7 @@
         {
           "asset_refs": [],
           "block_id": "06_ups_mode.rst:block-0012",
-          "content_sha256": "ffc8abb4a42bc3d09f5bf5d6203e173da3baec7d2defddbb3a0c494a753c4c9f",
+          "content_sha256": "c474700eb20f2566c5d0c0aa1108435d85298974420473449a0cb67d15c098bd",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -8167,7 +8167,7 @@
                   "role": "items"
                 }
               ],
-              "source_ref": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/06_ups_mode.rst#callout-1",
+              "source_ref": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/06_ups_mode.rst#callout-1",
               "token_roles": [
                 "component.callout"
               ],
@@ -8182,7 +8182,7 @@
       "language": "fr",
       "page_id": "06_ups_mode.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/06_ups_mode.rst",
+      "source_path": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/06_ups_mode.rst",
       "source_ref": "06_ups_mode.rst",
       "source_sha256": "1ecd845ef5c077afd89b347fb39914092cf21697a0132bf7d4bb75210a01f0e8"
     },
@@ -8209,7 +8209,7 @@
         {
           "asset_refs": [],
           "block_id": "installation.rst:block-0002",
-          "content_sha256": "66ed17b98bba55640d3234ab0f8459ab9b133f4d399cfb19e78fbd4a25f62910",
+          "content_sha256": "83d3922a99e8e1ce0fa11313047ed16dd2e0f4a2967e17a5f7e3efaa9ed33451",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -8344,7 +8344,7 @@
                   "role": "items"
                 }
               ],
-              "source_ref": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/installation.rst#callout-1",
+              "source_ref": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/installation.rst#callout-1",
               "token_roles": [
                 "component.callout"
               ],
@@ -8363,7 +8363,7 @@
             "assets/ir/fd4927f5e7638076c1a0320b16ada12a513931f4ba1a8fd1a47678c0a53fcc9b/stand_3_art.png"
           ],
           "block_id": "installation.rst:block-0003",
-          "content_sha256": "c6f0f757142acf64179fefab9deff209ec4399a732963d4ab6d39641b85a16b2",
+          "content_sha256": "a0fdd57ee741e1bd920c5e6b828f782bc3b5699ffe140595b1d1715dbc8782be",
           "kind": "flow",
           "payload": {
             "anchor": "support-vertical",
@@ -8534,7 +8534,7 @@
                       "role": "captions"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/installation.rst#reference-stand-preparation",
+                  "source_ref": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/installation.rst#reference-stand-preparation",
                   "token_roles": [
                     "component.special.reference-figure"
                   ],
@@ -8681,7 +8681,7 @@
                       "role": "captions"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/installation.rst#reference-stand-1",
+                  "source_ref": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/installation.rst#reference-stand-1",
                   "token_roles": [
                     "component.special.reference-figure"
                   ],
@@ -8828,7 +8828,7 @@
                       "role": "captions"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/installation.rst#reference-stand-2",
+                  "source_ref": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/installation.rst#reference-stand-2",
                   "token_roles": [
                     "component.special.reference-figure"
                   ],
@@ -8975,7 +8975,7 @@
                       "role": "captions"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/installation.rst#reference-stand-3",
+                  "source_ref": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/installation.rst#reference-stand-3",
                   "token_roles": [
                     "component.special.reference-figure"
                   ],
@@ -9071,7 +9071,7 @@
             "assets/ir/b3bc37532b4a6a48d53fdea7b7ab2f1ac6ad712ac8835fda42824b567a7ea3eb/wood_6_art.png"
           ],
           "block_id": "installation.rst:block-0007",
-          "content_sha256": "771d4a2fbbb092dd473756ffa60131f8c47af4d34535c1436dfb2ffb8995b17d",
+          "content_sha256": "dd09ebc94870b4c24989b60dca5745237eb5775d14cb953ae89e7a4ea55fcf37",
           "kind": "flow",
           "payload": {
             "anchor": "sur-les-murs-en-bois",
@@ -9273,7 +9273,7 @@
                       "role": "captions"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/installation.rst#reference-wood-prepare",
+                  "source_ref": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/installation.rst#reference-wood-prepare",
                   "token_roles": [
                     "component.special.reference-figure"
                   ],
@@ -9420,7 +9420,7 @@
                       "role": "captions"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/installation.rst#reference-wood-1",
+                  "source_ref": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/installation.rst#reference-wood-1",
                   "token_roles": [
                     "component.special.reference-figure"
                   ],
@@ -9655,7 +9655,7 @@
                       "role": "captions"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/installation.rst#reference-wood-2-3",
+                  "source_ref": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/installation.rst#reference-wood-2-3",
                   "token_roles": [
                     "component.special.reference-figure"
                   ],
@@ -9978,7 +9978,7 @@
                       "role": "captions"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/installation.rst#reference-wood-4-5",
+                  "source_ref": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/installation.rst#reference-wood-4-5",
                   "token_roles": [
                     "component.special.reference-figure"
                   ],
@@ -10125,7 +10125,7 @@
                       "role": "captions"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/installation.rst#reference-wood-6",
+                  "source_ref": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/installation.rst#reference-wood-6",
                   "token_roles": [
                     "component.special.reference-figure"
                   ],
@@ -10165,7 +10165,7 @@
             "assets/ir/d7ef4dd0b138e1cbd8c3f4caa0a508658759c2f5faf4be479b1e2eb01f906e07/concrete_7_8_art.png"
           ],
           "block_id": "installation.rst:block-0009",
-          "content_sha256": "4d512946a021edbf25f8ff15e0ddfec2faf2b1b03e4fc5f863495fbae5549592",
+          "content_sha256": "2aac478dd004dc9f9f9cf5ac62ac5dbb09a5c8867f9b48a2996aba61e51e7981",
           "kind": "flow",
           "payload": {
             "anchor": "sur-les-murs-en-beton",
@@ -10367,7 +10367,7 @@
                       "role": "captions"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/installation.rst#reference-concrete-prepare",
+                  "source_ref": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/installation.rst#reference-concrete-prepare",
                   "token_roles": [
                     "component.special.reference-figure"
                   ],
@@ -10514,7 +10514,7 @@
                       "role": "captions"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/installation.rst#reference-concrete-1",
+                  "source_ref": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/installation.rst#reference-concrete-1",
                   "token_roles": [
                     "component.special.reference-figure"
                   ],
@@ -10661,7 +10661,7 @@
                       "role": "captions"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/installation.rst#reference-concrete-2",
+                  "source_ref": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/installation.rst#reference-concrete-2",
                   "token_roles": [
                     "component.special.reference-figure"
                   ],
@@ -10984,7 +10984,7 @@
                       "role": "captions"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/installation.rst#reference-concrete-3-4",
+                  "source_ref": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/installation.rst#reference-concrete-3-4",
                   "token_roles": [
                     "component.special.reference-figure"
                   ],
@@ -11263,7 +11263,7 @@
                       "role": "captions"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/installation.rst#reference-concrete-5-6",
+                  "source_ref": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/installation.rst#reference-concrete-5-6",
                   "token_roles": [
                     "component.special.reference-figure"
                   ],
@@ -11454,7 +11454,7 @@
                       "role": "captions"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/installation.rst#reference-concrete-7-8",
+                  "source_ref": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/installation.rst#reference-concrete-7-8",
                   "token_roles": [
                     "component.special.reference-figure"
                   ],
@@ -11476,7 +11476,7 @@
       "language": "fr",
       "page_id": "installation.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/installation.rst",
+      "source_path": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/installation.rst",
       "source_ref": "installation.rst",
       "source_sha256": "d481757e1e0bed541176bf9b2263ed8531bd21593e8eb83589c287f2b2f7de7c"
     },
@@ -11584,7 +11584,7 @@
         {
           "asset_refs": [],
           "block_id": "connections.rst:block-0007",
-          "content_sha256": "b87ae285d8979fa7327f030a6cb91ae3d96d76cd881d4a2099ed721d48762ae7",
+          "content_sha256": "873902b1145d024a9061aca8e1fb27eeb30c2ff57ad7f7be58cc91238b5b2845",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -11709,7 +11709,7 @@
                   "role": "items"
                 }
               ],
-              "source_ref": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/connections.rst#callout-1",
+              "source_ref": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/connections.rst#callout-1",
               "token_roles": [
                 "component.callout"
               ],
@@ -11724,7 +11724,7 @@
       "language": "fr",
       "page_id": "connections.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/connections.rst",
+      "source_path": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/connections.rst",
       "source_ref": "connections.rst",
       "source_sha256": "45485020c555de7e80377a7a609584115b09a2587ece2dc3ec1ca75896780226"
     },
@@ -11782,7 +11782,7 @@
             "assets/ir/481d26e1f79dea0ec175d8e94a28dd30a34c0baa40f111c7c4ccd6ad436e2e82/maintenance_art.png"
           ],
           "block_id": "maintenance.rst:block-0004",
-          "content_sha256": "2a4f456b722a00abf745e45e0d34b020e26d4be207664fce7d709541ca2aa37b",
+          "content_sha256": "67875a12e9a3e76a2c82b1d552c296be8c548106b9199feee92c328975163bfc",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -11906,7 +11906,7 @@
                   "role": "captions"
                 }
               ],
-              "source_ref": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/maintenance.rst#reference-maintenance-filter",
+              "source_ref": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/maintenance.rst#reference-maintenance-filter",
               "token_roles": [
                 "component.special.reference-figure"
               ],
@@ -11920,7 +11920,7 @@
         {
           "asset_refs": [],
           "block_id": "maintenance.rst:block-0005",
-          "content_sha256": "25cdc4b597415ed5c2bc66cfbf12c0b064d8c3f47297eab52e03bffcd4f73ba9",
+          "content_sha256": "5d055c58371f1fa600e0953df91ca44dcac37fb26a9f0248a7bfd68955b9d8bf",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -12055,7 +12055,7 @@
                   "role": "items"
                 }
               ],
-              "source_ref": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/maintenance.rst#callout-1",
+              "source_ref": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/maintenance.rst#callout-1",
               "token_roles": [
                 "component.callout"
               ],
@@ -12070,7 +12070,7 @@
       "language": "fr",
       "page_id": "maintenance.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/maintenance.rst",
+      "source_path": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/maintenance.rst",
       "source_ref": "maintenance.rst",
       "source_sha256": "11cf1d253c4645e738692a292c623bb5bcd1b12d32b60164895e088bd7a4bbea"
     },
@@ -12160,7 +12160,7 @@
         {
           "asset_refs": [],
           "block_id": "charging.rst:block-0006",
-          "content_sha256": "1b5410a2fa6f21b6a90547273a6f56b361d82db4c422dc4dde8f1860f38f5863",
+          "content_sha256": "50ee36e421d34b9b510a012f916b6dd7a167a42ef26f29881e9d10267d2f322f",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -12295,7 +12295,7 @@
                   "role": "items"
                 }
               ],
-              "source_ref": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/charging.rst#callout-1",
+              "source_ref": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/charging.rst#callout-1",
               "token_roles": [
                 "component.callout"
               ],
@@ -12343,7 +12343,7 @@
         {
           "asset_refs": [],
           "block_id": "charging.rst:block-0009",
-          "content_sha256": "16c9ef783f9bb146df941a5a53e1b8e97f53d5a99d470c04242ba6dafe88ed8d",
+          "content_sha256": "d8b3b32288673a12187b426239325178e70cd6538c468ad2738f88a5f15a9ba1",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -12468,7 +12468,7 @@
                   "role": "items"
                 }
               ],
-              "source_ref": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/charging.rst#callout-2",
+              "source_ref": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/charging.rst#callout-2",
               "token_roles": [
                 "component.callout"
               ],
@@ -12484,7 +12484,7 @@
             "assets/ir/bac101b77b69b40aef000d82fe7c58fda8faba9197b091d34169504842384729/solar_art.png"
           ],
           "block_id": "charging.rst:block-0010",
-          "content_sha256": "0c03773e0216a7194666d25be2d59bc017ecd00281b006dd1c71c74df621634d",
+          "content_sha256": "c4882e20cb2bc0930da7b0bd4a4ac8edebd2cafdfe1688e4f36a29c0f079a6ef",
           "kind": "flow",
           "payload": {
             "anchor": "carga-mediante-paneles-solares",
@@ -12700,7 +12700,7 @@
                       "role": "captions"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/charging.rst#reference-solar-connection",
+                  "source_ref": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/charging.rst#reference-solar-connection",
                   "token_roles": [
                     "component.special.reference-figure"
                   ],
@@ -12716,7 +12716,7 @@
                 "children": [
                   {
                     "kind": "text",
-                    "text": "Il est recommandé d’utiliser le panneau solaire Jackery pour charger le Jackery FridgeGuard. Assurez-vous que la tension en circuit ouvert (Voc) du panneau solaire se situe dans la plage de tension d’entrée CC du Jackery FridgeGuard (36,8V-56V). Jackery décline toute responsabilité en cas de pertes causées par l’utilisation de panneaux solaires d’autres marques."
+                    "text": "Il est recommandé d’utiliser des panneaux solaires Jackery pour charger le produit. Assurez-vous que la tension en circuit ouvert (Voc) des panneaux solaires connectés se situe dans la plage de tension d’entrée CC du Jackery DC Input Module (16 V–60 V). Jackery décline toute responsabilité en cas de pertes causées par l’utilisation de panneaux solaires d’autres marques."
                   }
                 ],
                 "kind": "paragraph"
@@ -12748,7 +12748,7 @@
             "assets/ir/0c1cb6b315a0c2d02a8a9affba466d118b23d67311272e1725c6973bf292839f/car_art.png"
           ],
           "block_id": "charging.rst:block-0012",
-          "content_sha256": "f794cd0aa7bcf9623b940cef099ab201615116ee7ff48531f6bdf400c0a8e847",
+          "content_sha256": "d6232b69bf96fbe9f4cadedfd765af883330d9b3dae83a5c418fc525cda20e78",
           "kind": "flow",
           "payload": {
             "anchor": "chargement-par-prise-de-voiture",
@@ -12964,7 +12964,7 @@
                       "role": "captions"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/charging.rst#reference-car-connection",
+                  "source_ref": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/charging.rst#reference-car-connection",
                   "token_roles": [
                     "component.special.reference-figure"
                   ],
@@ -12986,9 +12986,9 @@
       "language": "fr",
       "page_id": "charging.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/charging.rst",
+      "source_path": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/charging.rst",
       "source_ref": "charging.rst",
-      "source_sha256": "2ae2612fd7ba9885eaf761aca37f5d1087d4d8620202b584a101276c843ddae5"
+      "source_sha256": "8c22070872c3a4b94c24aadb0dd6942413ef29fd68fe2a865c830c60b3dcf876"
     },
     {
       "blocks": [
@@ -13042,7 +13042,7 @@
         {
           "asset_refs": [],
           "block_id": "troubleshooting.rst:block-0004",
-          "content_sha256": "e61bff513b89dddddb6d7997fbed515273e53ede3314a805572716845167a96d",
+          "content_sha256": "a61b2d1519a2a0d8b0d40542cf0ea859cdf34ce2afc1e6cf264990dcc543b75a",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -13545,7 +13545,7 @@
                   "role": "rows"
                 }
               ],
-              "source_ref": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/troubleshooting.rst#troubleshooting",
+              "source_ref": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/troubleshooting.rst#troubleshooting",
               "token_roles": [
                 "component.table.troubleshooting"
               ],
@@ -13560,7 +13560,7 @@
       "language": "fr",
       "page_id": "troubleshooting.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/troubleshooting.rst",
+      "source_path": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/troubleshooting.rst",
       "source_ref": "troubleshooting.rst",
       "source_sha256": "ecea243fc8036e416bcab9c7c285e1b9cc5750d9c9a0e0f15c9825ba05b9e091"
     },
@@ -13596,7 +13596,7 @@
         {
           "asset_refs": [],
           "block_id": "spec_fr.rst:block-0002",
-          "content_sha256": "7243c28446213b5810a8068dcd557cab7eb732015e387f93be4a3a87655683cf",
+          "content_sha256": "d7ee3fdccadea7fe2617c9924fac1ecd14a2c02d6454cab687e979552707655d",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -14200,7 +14200,7 @@
                   "role": "rows"
                 }
               ],
-              "source_ref": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/spec_fr.rst#specification-1",
+              "source_ref": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/spec_fr.rst#specification-1",
               "token_roles": [
                 "component.table.spec"
               ],
@@ -14226,7 +14226,7 @@
         {
           "asset_refs": [],
           "block_id": "spec_fr.rst:block-0004",
-          "content_sha256": "438603d34854f04b51bb7b549930cae13b4b6e5768713ce82069a3fa141aa01e",
+          "content_sha256": "1731278e46121c4c6a12414fb69222007c0d6c0143bc325385d8d54024a438f4",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -14475,7 +14475,7 @@
                   "role": "rows"
                 }
               ],
-              "source_ref": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/spec_fr.rst#specification-2",
+              "source_ref": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/spec_fr.rst#specification-2",
               "token_roles": [
                 "component.table.spec"
               ],
@@ -14501,7 +14501,7 @@
         {
           "asset_refs": [],
           "block_id": "spec_fr.rst:block-0006",
-          "content_sha256": "c030b3538c206f2bb7de4e5f9ae903d68fe2fe85f7c04c696e403b871f261779",
+          "content_sha256": "e2cea40cf7f1454881c628e27bd44cc7e678380ae39a9ce137aad1d095891567",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -14894,7 +14894,7 @@
                   "role": "rows"
                 }
               ],
-              "source_ref": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/spec_fr.rst#specification-3",
+              "source_ref": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/spec_fr.rst#specification-3",
               "token_roles": [
                 "component.table.spec"
               ],
@@ -14920,7 +14920,7 @@
         {
           "asset_refs": [],
           "block_id": "spec_fr.rst:block-0008",
-          "content_sha256": "c165fd118989214d9704045c2be6cc19ec4ef9b4ff364408965fe8cb8c89f1f1",
+          "content_sha256": "359310915e12685cefb6ae8dc5f9f62f5d74d215ccf837ed87855a34b44e32fa",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -15169,7 +15169,7 @@
                   "role": "rows"
                 }
               ],
-              "source_ref": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/spec_fr.rst#specification-4",
+              "source_ref": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/spec_fr.rst#specification-4",
               "token_roles": [
                 "component.table.spec"
               ],
@@ -15223,7 +15223,7 @@
       "language": "fr",
       "page_id": "spec_fr.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/spec_fr.rst",
+      "source_path": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/spec_fr.rst",
       "source_ref": "spec_fr.rst",
       "source_sha256": "a52c04cf9ab9b55cdeb7aeb870775b38b4afd4aaa1790b7813bee3549431f99b"
     },
@@ -15333,7 +15333,7 @@
       "language": "fr",
       "page_id": "09_storage_and_maintenance.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/09_storage_and_maintenance.rst",
+      "source_path": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/09_storage_and_maintenance.rst",
       "source_ref": "09_storage_and_maintenance.rst",
       "source_sha256": "5805c0f81f6fbe2f3e2e6317d97a20944b48ae6ce576e6e05204d2c0a510116f"
     },
@@ -15360,7 +15360,7 @@
         {
           "asset_refs": [],
           "block_id": "11_warranty.rst:block-0002",
-          "content_sha256": "d1e7804e4d71278aa9e8231a9b0dc6720f1cbfbaf820ef47974d18ba8eafbbf5",
+          "content_sha256": "d474520dd672aafc816dbedbd10911d55028550178a4cf066985065f861522fb",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -15406,7 +15406,7 @@
                   "role": "local_note"
                 }
               ],
-              "source_ref": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/11_warranty.rst#warranty-lead",
+              "source_ref": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/11_warranty.rst#warranty-lead",
               "token_roles": [
                 "component.warranty.lead"
               ],
@@ -15432,7 +15432,7 @@
         {
           "asset_refs": [],
           "block_id": "11_warranty.rst:block-0004",
-          "content_sha256": "f68b5ca70899d4ad2a16a0f9031d9ec7fbe4427ef649cb224470f74c99d7fc5c",
+          "content_sha256": "eb67970370b3e34714bfd54c399f69269c14a7f3747af8ae39a673ef8f3df8f8",
           "kind": "flow",
           "payload": {
             "anchor": "garantie-limitee",
@@ -15510,7 +15510,7 @@
                       "role": "blocks"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/11_warranty.rst#warranty-section-1",
+                  "source_ref": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/11_warranty.rst#warranty-section-1",
                   "token_roles": [
                     "component.warranty.section"
                   ],
@@ -15543,7 +15543,7 @@
         {
           "asset_refs": [],
           "block_id": "11_warranty.rst:block-0006",
-          "content_sha256": "e0aa71e436b564ca8849d140f09d8331e4781cc0cb1a76b4e46973c59a3f73a7",
+          "content_sha256": "5f8aa117660ad35e6684860f89e7db16c0bf3604ce312fddb2ac5c068ff6ddd7",
           "kind": "flow",
           "payload": {
             "anchor": "periode-de-garantie",
@@ -15703,7 +15703,7 @@
                       "role": "periods"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/11_warranty.rst#warranty-years",
+                  "source_ref": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/11_warranty.rst#warranty-years",
                   "token_roles": [
                     "component.warranty.years"
                   ],
@@ -15732,7 +15732,7 @@
         {
           "asset_refs": [],
           "block_id": "11_warranty.rst:block-0008",
-          "content_sha256": "d22aede8d57c8d26a0ba6d12df24ed59980f3b1c6f0c10d058aedb0fb215edc8",
+          "content_sha256": "aff5e64af0f522e504b5cd486b0522992cb7cc4f36ec72d40f83a8ea73bad651",
           "kind": "flow",
           "payload": {
             "anchor": "reparation-ou-remplacement",
@@ -15796,7 +15796,7 @@
                       "role": "blocks"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/11_warranty.rst#warranty-section-3",
+                  "source_ref": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/11_warranty.rst#warranty-section-3",
                   "token_roles": [
                     "component.warranty.section"
                   ],
@@ -15829,7 +15829,7 @@
         {
           "asset_refs": [],
           "block_id": "11_warranty.rst:block-0010",
-          "content_sha256": "beb9bb347d0c29356bcdd24ed0105c728ce42ed20f27b3bab8df98a33809420f",
+          "content_sha256": "04a11ea1f1b92ad168182ae678160a6211ad25343bd9b53ee1c33a5122538eab",
           "kind": "flow",
           "payload": {
             "anchor": "limitee-a-lacheteur-et-consommateur-dorigine",
@@ -15893,7 +15893,7 @@
                       "role": "blocks"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/11_warranty.rst#warranty-section-4",
+                  "source_ref": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/11_warranty.rst#warranty-section-4",
                   "token_roles": [
                     "component.warranty.section"
                   ],
@@ -15926,7 +15926,7 @@
         {
           "asset_refs": [],
           "block_id": "11_warranty.rst:block-0012",
-          "content_sha256": "32309997fda2d5ca492558909fda145f21405321c7de46ca958ffd148107e20b",
+          "content_sha256": "7163dbf98ff1566b5444b1818a98aecd8db97278ec1b09fcdc5650cf201999a8",
           "kind": "flow",
           "payload": {
             "anchor": "exclusions",
@@ -16091,7 +16091,7 @@
                       "role": "blocks"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/11_warranty.rst#warranty-section-5",
+                  "source_ref": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/11_warranty.rst#warranty-section-5",
                   "token_roles": [
                     "component.warranty.section"
                   ],
@@ -16124,7 +16124,7 @@
         {
           "asset_refs": [],
           "block_id": "11_warranty.rst:block-0014",
-          "content_sha256": "d59b734018995b7d919630973c6634aa15940d74bb77f1d073a5ef03de459182",
+          "content_sha256": "511e627a18b7ec7ae5c2bb476d35b7969afecde39c4074581ad2dd4f1bbfd59a",
           "kind": "flow",
           "payload": {
             "anchor": "droits-dinterpretation",
@@ -16188,7 +16188,7 @@
                       "role": "blocks"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/11_warranty.rst#warranty-section-6",
+                  "source_ref": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/11_warranty.rst#warranty-section-6",
                   "token_roles": [
                     "component.warranty.section"
                   ],
@@ -16210,7 +16210,7 @@
       "language": "fr",
       "page_id": "11_warranty.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/11_warranty.rst",
+      "source_path": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/11_warranty.rst",
       "source_ref": "11_warranty.rst",
       "source_sha256": "4767da75c7696a4c4392853d12fef4652c93a39b21d015278acb79b76cb32147"
     },
@@ -16241,7 +16241,7 @@
             "assets/app_qr_52d91cbea37c.png"
           ],
           "block_id": "12_app_setup.rst:block-0002",
-          "content_sha256": "11b631ba28308928591fe73854d829f568ca1510e0a05620894afd7b32861d8c",
+          "content_sha256": "6b9829de7e832812244e9825f12e7ba6292fa326ad5c7f4f6c20c445da9dfecb",
           "kind": "flow",
           "payload": {
             "anchor": "pour-telecharger-lapplication-et-se-connecter",
@@ -16347,7 +16347,7 @@
                       "role": "columns"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/12_app_setup.rst#app-download",
+                  "source_ref": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/12_app_setup.rst#app-download",
                   "token_roles": [
                     "component.special.app"
                   ],
@@ -16380,7 +16380,7 @@
             "assets/ir/1aed800803214d39132679baf5705228ece603fa38912c3936f60afef7a045e9/app_3_5.png"
           ],
           "block_id": "12_app_setup.rst:block-0004",
-          "content_sha256": "ddf4c186248df8074f8ba29e810c0562385e41baca8cc968a7bdb7c3b631cfe1",
+          "content_sha256": "a65a954948ea1a66031fe34e83cbb85b5774ab7f73a78967aff50315b3edde25",
           "kind": "flow",
           "payload": {
             "anchor": "pour-ajouter-un-appareil",
@@ -16570,7 +16570,7 @@
                       "role": "captions"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/12_app_setup.rst#reference-app-power-label",
+                  "source_ref": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/12_app_setup.rst#reference-app-power-label",
                   "token_roles": [
                     "component.special.reference-figure"
                   ],
@@ -16734,7 +16734,7 @@
                       "role": "items"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/12_app_setup.rst#callout-1",
+                  "source_ref": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/12_app_setup.rst#callout-1",
                   "token_roles": [
                     "component.callout"
                   ],
@@ -16878,7 +16878,7 @@
                       "role": "items"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/12_app_setup.rst#callout-2",
+                  "source_ref": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/12_app_setup.rst#callout-2",
                   "token_roles": [
                     "component.callout"
                   ],
@@ -17054,7 +17054,7 @@
                       "role": "items"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/12_app_setup.rst#callout-3",
+                  "source_ref": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/12_app_setup.rst#callout-3",
                   "token_roles": [
                     "component.callout"
                   ],
@@ -17291,7 +17291,7 @@
       "language": "fr",
       "page_id": "12_app_setup.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/fridgeguard-us-web/auto-manual2/.tmp/fridgeguard-release-20261003-v2-fr/docs/_build/JE-1000E-SIL/US/fr/rst/page/12_app_setup.rst",
+      "source_path": "/tmp/claude-0/-home-user-auto-manual/a9d7c938-cbdc-500e-b069-55233ba7ff28/scratchpad/wt-rel/docs/_build/JE-1000E-SIL/US/fr/rst/page/12_app_setup.rst",
       "source_ref": "12_app_setup.rst",
       "source_sha256": "ae7a65994e14613dd09298d1aa426245809b227bf87b96d4bddec7830420eab8"
     }
