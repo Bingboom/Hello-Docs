@@ -3,12 +3,12 @@
   "model": "JE-1000E-WH",
   "region": "JP",
   "language": "ja",
-  "version": "git-20261008-efb663e3-no-cover-reviewed",
-  "git_ref": "3909169f1a1546f410591ba341ba62c37e5004ba",
+  "version": "git-20261016-efb663e3-solar-voc",
+  "git_ref": "ff7aa351e117c16ca9c6aee89bc51c5afb454889",
   "caption_frame_admission": [],
   "source_manifest": {
     "path": "frozen_source_manifest.json",
-    "sha256": "6c39f95653c143ac90e8dfa479ddbb7b53970705e9fa813ba08e1aecafef7121"
+    "sha256": "4e94c633b85862591faeafe5f140573a59b512badd88cc2f117e4dff0f3352fc"
   },
   "markdown": {
     "manual": "manual.md",
@@ -20,8 +20,8 @@
       },
       {
         "path": "_static/web_manual.css",
-        "size": 125530,
-        "sha256": "b21d68bbd53bf1e93bde5c9387d5bcbdde5f0317c810f38cce0f9d6041326090"
+        "size": 123623,
+        "sha256": "4c01adf9222e7faa8fb5552490d8b8fa4ebba550b4ef2a1e7171a1b9a6538434"
       },
       {
         "path": "assets/ac-charge.png",
@@ -335,16 +335,16 @@
       },
       {
         "path": "manual.ir.json",
-        "size": 478154,
-        "sha256": "bb3204d42b22ec96750e5dd215e2d53e8e03f4ecae5b7aeb2c8a82d0f3da8cae"
+        "size": 492913,
+        "sha256": "fd1b5999a586b5be63fe754f766475f979d060611483a9df6d0ce5d45ce023d8"
       },
       {
         "path": "manual.md",
-        "size": 84512,
-        "sha256": "b87915f1e1cbde8e4ca8abc20fe7e68f0c40e82d40731957b482f626f180b3be"
+        "size": 84388,
+        "sha256": "ee8af65cf9ec4f60d8f5bcbd03e2c02d0cb98fca8ce72f6534616a8c88c8c59b"
       }
     ],
-    "sha256": "9112c8809a784099646079386335b2676392bfa35531b4302904dcc9e4782399"
+    "sha256": "d0d1095eb8423722ba0c303a4165f76b2377ceabb36696b95361cdb1e3cf17d1"
   },
   "html": {
     "files": [
@@ -354,29 +354,14 @@
         "sha256": "bd2bd5ad37932429c77793fe0e4d641a9d21aff97182fc3233129f39c321abf4"
       },
       {
-        "path": ".doctrees/environment.pickle",
-        "size": 39898,
-        "sha256": "83263c1b43795b38806e3d40b0c834cf39b7b601d9f56c591067c4ecb3b179ce"
-      },
-      {
-        "path": ".doctrees/index.doctree",
-        "size": 3385,
-        "sha256": "3239bbaaa7d73c0157e271edac2971772f30642e0e699e4cc64e4bfe3a339c4a"
-      },
-      {
-        "path": ".doctrees/manual.doctree",
-        "size": 203350,
-        "sha256": "7b3ce2af650b8627914e8d8ebdb8457c04e82797639a874fad277136f23d7b71"
-      },
-      {
         "path": "_sources/index.md.txt",
         "size": 94,
         "sha256": "eca924143f52cf05f935c83ca754fd52efd616a61b1a96f92c5520980b4bee0f"
       },
       {
         "path": "_sources/manual.md.txt",
-        "size": 84512,
-        "sha256": "b87915f1e1cbde8e4ca8abc20fe7e68f0c40e82d40731957b482f626f180b3be"
+        "size": 84388,
+        "sha256": "ee8af65cf9ec4f60d8f5bcbd03e2c02d0cb98fca8ce72f6534616a8c88c8c59b"
       },
       {
         "path": "_static/basic.css",
@@ -490,8 +475,8 @@
       },
       {
         "path": "_static/web_manual.css",
-        "size": 125530,
-        "sha256": "b21d68bbd53bf1e93bde5c9387d5bcbdde5f0317c810f38cce0f9d6041326090"
+        "size": 123623,
+        "sha256": "4c01adf9222e7faa8fb5552490d8b8fa4ebba550b4ef2a1e7171a1b9a6538434"
       },
       {
         "path": "assets/ac-charge.png",
@@ -796,17 +781,17 @@
       {
         "path": "genindex.html",
         "size": 14453,
-        "sha256": "24507bfdac562b4db88a7e00b999fab67ca8da936c51ffddec687387534695a1"
+        "sha256": "63e37377e36a2b8ca452f8d1db8a6eb90c22e979b80b13ceb5076d39a25ca419"
       },
       {
         "path": "index.html",
         "size": 21183,
-        "sha256": "01c1644b22c7a9326b1db700a84e972ee1053824b4bee2162204ab289725c852"
+        "sha256": "efd0c75610af4e28227229347a386da62d2e48c0cb50cd7fee739645577e275c"
       },
       {
         "path": "manual.html",
-        "size": 109552,
-        "sha256": "3848cd9c796b021ae589596ff55ef9b85cc26c7ef9c2fc4d19a2945410946833"
+        "size": 109428,
+        "sha256": "55646fa136d9d099531cda6a957abfa5348dd87c88debd058ae123a699e2cfda"
       },
       {
         "path": "objects.inv",
@@ -816,14 +801,14 @@
       {
         "path": "search.html",
         "size": 14726,
-        "sha256": "a9a704e3fffab59cc9864c2475fd0acf0db49a17b2c9e27e84b0154ce1d6828f"
+        "sha256": "db5ddbd812a0a69e8b817e8303830b861a7fd4d88f221e07d9c7e822c37091cf"
       },
       {
         "path": "searchindex.js",
-        "size": 28110,
-        "sha256": "4b06559e022635691c6ee69be623ed2ea7faa40307dd99b4f35102cb1d3ff530"
+        "size": 28064,
+        "sha256": "526ea80cc318c300dcd689191b4d1869c9efefa65d472b464a3589718049781f"
       }
     ],
-    "sha256": "a2a079ab40c5d7532056389895c2958f37c650f9e4958c64e15f65ede2a978e9"
+    "sha256": "63049eb9e78229f8b20cba6d42c880521cad9a755af93a5fc6bf6dcf2e0f9569"
   }
 }

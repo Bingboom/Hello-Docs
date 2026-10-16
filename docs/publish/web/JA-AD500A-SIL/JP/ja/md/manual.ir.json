@@ -8,8 +8,8 @@
     "assets/ir/aaa58d773ab76092d7d3236a2a90ebcad33f992eaeb6491e37bb1c51c5c2ba10/contact-qr.png"
   ],
   "bundle_root": "frozen-source",
-  "bundle_sha256": "234b463b1706f23b6df58d49a2a92a17f6b503e82945022b3224a34451857da7",
-  "content_sha256": "eb1fbfa1b10cae8128749e4933ee5692624e37acea1775b8ece9952ae99c24c4",
+  "bundle_sha256": "9f6f5ff7eaf85855c5030a084409a9f71d11512eb14704b6668633c61fa3fa7e",
+  "content_sha256": "0829603f9bf77863ce728e72cbc84f6d2184be05e1d26fd121e734be3f69bc29",
   "language": "ja",
   "layout_params_sha256": "f5ae099abc1a82ffda3abcc5a13725aca3c201e720a0374d88d1643f9773f279",
   "metadata": {
@@ -21,7 +21,7 @@
       "assets/ir/aaa58d773ab76092d7d3236a2a90ebcad33f992eaeb6491e37bb1c51c5c2ba10/contact-qr.png": "aaa58d773ab76092d7d3236a2a90ebcad33f992eaeb6491e37bb1c51c5c2ba10",
       "assets/ir/f01512af441ad341022a4116ac908c865d15f29660688fc2801c8b46c7b4dcfa/inbox-manual.png": "f01512af441ad341022a4116ac908c865d15f29660688fc2801c8b46c7b4dcfa"
     },
-    "block_count": 58,
+    "block_count": 60,
     "component_inventory": {
       "HB-CALLOUT-STRIP": 2,
       "HB-SPECIAL-INBOX": 1,
@@ -1269,9 +1269,9 @@
         ]
       },
       "derived_from": {
-        "authorization": "MA-272",
-        "manifest_sha256": "0babde2c5e53f01e3511bcc40c0ce6d7603f61351fd627f062e6e89408fb7291",
-        "package": "git-20261008-ac3a1f82-reviewed"
+        "authorization": "operator review and merge of #1467 (AGENTS.md §8.6); base approval MA-272",
+        "manifest_sha256": "f6c7c1174acd557ff981324ae54d6ccbb0fa4c1ad4fda302123958ff24ff5a75",
+        "package": "git-20261009-ac3a1f82-web-layout"
       },
       "filename_version": "V2.0-20260525",
       "inputs": [
@@ -1311,19 +1311,19 @@
           "size": 214039
         },
         {
-          "path": "derive_web_layout.py",
-          "sha256": "bd3169eb5739451470539f02fa41a2e46646dc1da53ed7521eb45908a3f8891b",
-          "size": 15249
+          "path": "derive_solar_voc.py",
+          "sha256": "14913c49036cc2739e0a5b7d72a551975ea1d7161e0120d1cf25e4f526d5eb68",
+          "size": 14421
         },
         {
           "path": "render.py",
-          "sha256": "4369939d628677b1efd3b94bc338e38d4df769a404fc4fa7b10f3a4240e7c459",
-          "size": 7539
+          "sha256": "b769eb76a1a88dd4d1e5e4cd2037404b79b436a021a33a1338ce3c8cb20b45f5",
+          "size": 7533
         },
         {
           "path": "source/approval.json",
-          "sha256": "7d442f34a9c5c8abc8e07a5abed84e6714103119825f3136fb8c89765b042600",
-          "size": 4461
+          "sha256": "78189d94debadf114247fd0188e0cf587bf7836564ba25b5ed5bcf0da0c88394",
+          "size": 3844
         },
         {
           "path": "source/asset_recipe.json",
@@ -1332,8 +1332,8 @@
         },
         {
           "path": "source/differences.md",
-          "sha256": "11f38c76cb201d2bc75bdd6d3762c4b9d4eb8c7a40dd41987bba76a15ec68d06",
-          "size": 5750
+          "sha256": "2e07d8b79cf106d6397e902dc923aca8506af3442bfa85b5f05f54e8cb601f74",
+          "size": 2742
         },
         {
           "path": "source/native_pages.json",
@@ -1347,8 +1347,8 @@
         },
         {
           "path": "source/page/00_preface_ja.rst",
-          "sha256": "e3924cf5160099db9fa872f84bab83a8778183266241b6974aa16247518f1e83",
-          "size": 563
+          "sha256": "3338d9644c7cfb685a9f25df7c5a1707bc398009c028dd4c7792b2c902e350cd",
+          "size": 510
         },
         {
           "path": "source/page/box_contents_ja.rst",
@@ -1357,23 +1357,23 @@
         },
         {
           "path": "source/page/charging_ja.rst",
-          "sha256": "32ea8806732698b782763308233684d2e3e9dab7b370aad95187717eee75ad26",
-          "size": 5908
+          "sha256": "839e073a4ea07a30e9bb61401d6e3e5a379a803cb3df16284c2b30b9d90ee922",
+          "size": 5871
         },
         {
           "path": "source/page/contact_ja.rst",
-          "sha256": "1e28f9fcfb583bc579d9aea1a0de3db3e38b9a7894da839eb98eea01e2b27a89",
-          "size": 495
+          "sha256": "f5311ed63bb1be847c0a2cf1c80e6acd12242c2fe0bb359258c2f587a0f94a1e",
+          "size": 473
         },
         {
           "path": "source/page/product_overview_ja.rst",
-          "sha256": "4776b64c70932be46e0be4832ac31620a0b954a65a3e4b0be74349c114d26e2d",
-          "size": 4165
+          "sha256": "aad4fdf23fa7cbe4527515aa8db725442b71583feb1502b9534cc7a76dc71644",
+          "size": 2173
         },
         {
           "path": "source/page/spec_ja.rst",
-          "sha256": "56e5a7d035e8b535205c091055ec95747c4d47df0b6527d7eae5f261ffcd39c8",
-          "size": 968
+          "sha256": "28e998906c15162efb8db76c69eaaebdc0764217de5bd4e3139e40ce6e2e3a7e",
+          "size": 974
         },
         {
           "path": "source/page/warranty_ja.rst",
@@ -1382,8 +1382,8 @@
         },
         {
           "path": "source/presentation.css",
-          "sha256": "ba157c945942b1c2264a51b25efa8d9b9931ab6fc195fce987dcee30d9f44fde",
-          "size": 4270
+          "sha256": "864cd07ff86972ebdb6463c1781b1911c3f8b04080370a978b73a9691b756e70",
+          "size": 3066
         }
       ],
       "language_scope": "single",
@@ -1454,6 +1454,15 @@
         }
       ],
       "schema_version": "auto-manual-frozen-web-source/v1",
+      "shared_component_exceptions": [
+        {
+          "kind": "table",
+          "language": "ja",
+          "page_id": "product_overview_ja.rst",
+          "reason": "module LED status/colour/meaning table: no shared ComponentSpec covers an LED-state table; it uses the shared hb-source-status-table classes",
+          "text_sha256": "7410f90222f775cd54decfa20f107c35a8f73f326520548687d7d7c2bf6b1f38"
+        }
+      ],
       "source_authority": "operator-designated Japanese PDF; original Japanese governs all technical/legal copy. Web-layout edition of the approved package git-20261008-ac3a1f82-reviewed (MA-272) on operator instruction 2026-10-09 (「开新窗口 把这个的版面也调整了」, applying the JBP-1000B-WH JP rules 「全部修，一次做完」「封面和目录 不用体现在web版面上」「你参考 资料库里 现有的je-1000f的日语网页说明书」); operator accepted reviewed candidate 618c31e for public Git-only JP/ja release on 2026-10-09 (「上线提交发布」; merge by operator review). Acceptance is hash-bound in source/approval.json.",
       "source_concerns": [
         {
@@ -1465,7 +1474,7 @@
           "issue": "cover refers to safety chapter absent as standalone heading"
         },
         {
-          "disposition": "preserved verbatim under operator publication authorization; source-owner corrections remain separate",
+          "disposition": "solar Voc host ranges corrected in this edition on operator instruction 2026-10-16; the 8A versus 12V/10A vehicle text is preserved verbatim; native_pages.json keeps the printed wording",
           "issue": "DC input 8A versus 12V/10A vehicle text; host ranges differ from module range"
         },
         {
@@ -1481,15 +1490,37 @@
           "issue": "warranty refers to portable power products"
         }
       ],
-      "source_role": "Git-only Japanese prepared native Web-layout edition of the approved release",
+      "source_role": "Git-only Japanese solar-Voc correction edition of the approved Web-layout edition",
+      "style_migration": {
+        "gate": "prepared-document-shared-styles/v1",
+        "instruction": "operator, 2026-10-16: 889 日规 也要删掉第一句 (fix the inherited style issues)",
+        "pages": [
+          "source/page/00_preface_ja.rst",
+          "source/page/charging_ja.rst",
+          "source/page/contact_ja.rst",
+          "source/page/product_overview_ja.rst",
+          "source/page/spec_ja.rst"
+        ],
+        "reason": "re-frozen for the solar-Voc correction, the locale must pass the shared-style gate: page-local classes, inline styles and stylesheet paint replaced by shared theme classes; visible copy unchanged",
+        "stylesheet": "source/presentation.css"
+      },
       "target": {
         "languages": [
           "ja"
         ],
         "model": "JA-AD500A-SIL",
         "region": "JP",
-        "technical_version": "git-20261009-ac3a1f82-web-layout"
+        "technical_version": "git-20261016-ac3a1f82-solar-voc"
       },
+      "text_corrections": [
+        {
+          "approved": "Jackeryブランド以外の付属品を使用して充電しないでください。ソーラーパネルの開放電圧（Voc）が、Jackery SlimPower H1 のDC入力範囲（36.8V～56V）または Jackery Battery PackのDC入力範囲（40V～57.6V）内であることを確認してください。",
+          "corrected": "Jackery DC Input Moduleを介して接続した製品を充電する場合は、Jackery製ソーラーパネルの使用を推奨します。接続するソーラーパネルの開放電圧（Voc）が、本モジュールのDC入力電圧範囲（16V～60V）内であることを確認してください。",
+          "instruction": "operator, 2026-10-15/16: replace the paragraph (整段替换), keep the disclaimer (不删免责句); the opening accessory warning is dropped (删掉第①句, 2026-10-16); the printed source and its transcription stay unchanged",
+          "page": "source/page/charging_ja.rst",
+          "reason": "Solar panels connect through the Jackery DC Input Module; the panel Voc limit is the module's DC input voltage range (16V～60V), not the downstream SlimPower H1 / Battery Pack ranges cited by the printed source."
+        }
+      ],
       "web_exclusions": [
         {
           "lines": [
@@ -1508,7 +1539,7 @@
         "ja": "web/ja"
       }
     },
-    "frozen_stylesheet_sha256": "b21d68bbd53bf1e93bde5c9387d5bcbdde5f0317c810f38cce0f9d6041326090",
+    "frozen_stylesheet_sha256": "4c01adf9222e7faa8fb5552490d8b8fa4ebba550b4ef2a1e7171a1b9a6538434",
     "illustration_provenance": null,
     "manual_theme": {
       "component_roles": {
@@ -2090,23 +2121,15 @@
     "manual_theme_sha256": "e8fc88458d239edef85f2cfb0b26b71df2e83859c8e51e9c093e5abc2982b47d",
     "markdown_filename": "manual_jaad500asil_jp_ja.md",
     "operator_source_acceptance": {
-      "date": "2026-10-09",
-      "derived_from": {
-        "merge_authorization": "MA-272",
-        "operator_instructions": [
-          "开新窗口 把这个的版面也调整了",
-          "全部修，一次做完",
-          "封面和目录 不用体现在web版面上",
-          "你参考 资料库里 现有的je-1000f的日语网页说明书"
-        ],
-        "package": "git-20261008-ac3a1f82-reviewed"
-      },
-      "merge_authorization": "Operator review and merge of the engineering PR (AGENTS.md §8.6); no agent self-merge grant.",
+      "date": "2026-10-16",
+      "merge_authorization": "MA-312",
       "operator_decisions": [
-        "以仓库里这份为准，欢迎语保留，不加图标",
-        "就是这个：我这次逐页对比用的是仓库里 JA-AD500A-SIL 已批准包里的另一份：Jackery DC Input Module取扱説明書V2.0-20260525.pdf"
+        "整段替换（太阳能板 Voc 段改为引用 Jackery DC Input Module 的 DC 输入电压范围 16V–60V）",
+        "不删免责句",
+        "删掉第①句（Jackeryブランド以外の付属品を使用して充電しないでください。）",
+        "889 日规 也要删掉第一句（同步修复继承的共享样式问题）"
       ],
-      "operator_quote": "上线提交发布",
+      "operator_quote": "全部验收并发布上线；然后全部 要发布上线 这四本 验收记录 允许你写",
       "original_source_sha256": "ac3a1f820d94277f6c1a667bafddfa930363b1d74fb084eb7bed43b1c3749777",
       "reviewed_inputs": [
         {
@@ -2151,8 +2174,8 @@
         },
         {
           "path": "source/differences.md",
-          "sha256": "11f38c76cb201d2bc75bdd6d3762c4b9d4eb8c7a40dd41987bba76a15ec68d06",
-          "size": 5750
+          "sha256": "2e07d8b79cf106d6397e902dc923aca8506af3442bfa85b5f05f54e8cb601f74",
+          "size": 2742
         },
         {
           "path": "source/native_pages.json",
@@ -2166,8 +2189,8 @@
         },
         {
           "path": "source/page/00_preface_ja.rst",
-          "sha256": "e3924cf5160099db9fa872f84bab83a8778183266241b6974aa16247518f1e83",
-          "size": 563
+          "sha256": "3338d9644c7cfb685a9f25df7c5a1707bc398009c028dd4c7792b2c902e350cd",
+          "size": 510
         },
         {
           "path": "source/page/box_contents_ja.rst",
@@ -2176,23 +2199,23 @@
         },
         {
           "path": "source/page/charging_ja.rst",
-          "sha256": "32ea8806732698b782763308233684d2e3e9dab7b370aad95187717eee75ad26",
-          "size": 5908
+          "sha256": "839e073a4ea07a30e9bb61401d6e3e5a379a803cb3df16284c2b30b9d90ee922",
+          "size": 5871
         },
         {
           "path": "source/page/contact_ja.rst",
-          "sha256": "1e28f9fcfb583bc579d9aea1a0de3db3e38b9a7894da839eb98eea01e2b27a89",
-          "size": 495
+          "sha256": "f5311ed63bb1be847c0a2cf1c80e6acd12242c2fe0bb359258c2f587a0f94a1e",
+          "size": 473
         },
         {
           "path": "source/page/product_overview_ja.rst",
-          "sha256": "4776b64c70932be46e0be4832ac31620a0b954a65a3e4b0be74349c114d26e2d",
-          "size": 4165
+          "sha256": "aad4fdf23fa7cbe4527515aa8db725442b71583feb1502b9534cc7a76dc71644",
+          "size": 2173
         },
         {
           "path": "source/page/spec_ja.rst",
-          "sha256": "56e5a7d035e8b535205c091055ec95747c4d47df0b6527d7eae5f261ffcd39c8",
-          "size": 968
+          "sha256": "28e998906c15162efb8db76c69eaaebdc0764217de5bd4e3139e40ce6e2e3a7e",
+          "size": 974
         },
         {
           "path": "source/page/warranty_ja.rst",
@@ -2201,13 +2224,13 @@
         },
         {
           "path": "source/presentation.css",
-          "sha256": "ba157c945942b1c2264a51b25efa8d9b9931ab6fc195fce987dcee30d9f44fde",
-          "size": 4270
+          "sha256": "864cd07ff86972ebdb6463c1781b1911c3f8b04080370a978b73a9691b756e70",
+          "size": 3066
         }
       ],
-      "reviewed_source_commit": "618c31e",
+      "reviewed_source_commit": "cebdc754",
       "schema_version": "source-operator-acceptance/v1",
-      "scope": "Public engineering submission and Git-only JP/ja Web-layout release of git-20261009-ac3a1f82-web-layout; the approved package and its release evidence stay unchanged; approved Japanese wording unchanged (printed cover identity lines omitted); no online Base, queue, source-table, asset-registry or HTML_link writes.",
+      "scope": "Git-only Web release of the solar-Voc correction edition git-20261016-ac3a1f82-solar-voc; base editions, printed sources and their release evidence unchanged; no Feishu/Base/source-table, queue, asset-registry or HTML_link writes.",
       "target": {
         "language": "ja",
         "model": "JA-AD500A-SIL",
@@ -2223,7 +2246,7 @@
     "skipped_raw": 0,
     "source_stylesheet": {
       "path": "_static/source.css",
-      "sha256": "ba157c945942b1c2264a51b25efa8d9b9931ab6fc195fce987dcee30d9f44fde"
+      "sha256": "864cd07ff86972ebdb6463c1781b1911c3f8b04080370a978b73a9691b756e70"
     },
     "title": "Jackery DC Input Module",
     "web_contract": {
@@ -2396,7 +2419,7 @@
         {
           "asset_refs": [],
           "block_id": "00_preface_ja.rst:block-0001",
-          "content_sha256": "285e0f21c253831b082ae3f7772b2c28a95bbfd6dabdbc6fcda4c426d6e329b5",
+          "content_sha256": "a63522a358d9b37a43e6f04ef990579306be7252b24ed0113620633b13095698",
           "kind": "flow",
           "payload": {
             "children": [
@@ -2411,15 +2434,6 @@
               }
             ],
             "kind": "paragraph",
-            "presentation": {
-              "html": {
-                "attributes": {
-                  "class": [
-                    "jpad-welcome-lead"
-                  ]
-                }
-              }
-            },
             "schema_version": "manual-flow/v2"
           },
           "source_ref": "00_preface_ja.rst#block-1"
@@ -2439,7 +2453,7 @@
         {
           "asset_refs": [],
           "block_id": "00_preface_ja.rst:block-0003",
-          "content_sha256": "ec6e3731d605eb3b74028096b4254d5a4e89cc6e74d81b7ec6e0a7b605f492e3",
+          "content_sha256": "dc66d3388ab8cae2a35f7483d11cc1db65d2d37e72a6d68d9c653861f108f1a7",
           "kind": "flow",
           "payload": {
             "children": [
@@ -2526,7 +2540,6 @@
               "html": {
                 "attributes": {
                   "class": [
-                    "jpad-tight",
                     "simple"
                   ]
                 }
@@ -2542,7 +2555,7 @@
       "skipped_raw": 0,
       "source_path": "source/page/00_preface_ja.rst",
       "source_ref": "00_preface_ja.rst",
-      "source_sha256": "e3924cf5160099db9fa872f84bab83a8778183266241b6974aa16247518f1e83"
+      "source_sha256": "3338d9644c7cfb685a9f25df7c5a1707bc398009c028dd4c7792b2c902e350cd"
     },
     {
       "blocks": [
@@ -2841,183 +2854,44 @@
             "assets/ir/910a6ce8542f5be9df214a28699b57df6c5abb97c788f1efd72c3b6507f967c2/overview-textless.png"
           ],
           "block_id": "product_overview_ja.rst:block-0002",
-          "content_sha256": "4e377990e254692e8816bc60c4e3ccd23004475f83703a3be1e8f25be744bcf7",
+          "content_sha256": "51f28128e76e28dc3d4963585aeecd6cdfa2b0cc30c76771e60f517745843a43",
           "kind": "flow",
           "payload": {
-            "children": [
+            "carrier_flow": [
               {
-                "carrier_flow": [
-                  {
-                    "alt": "product-overview",
-                    "kind": "image",
-                    "presentation": {
-                      "html": {
-                        "attributes": {
-                          "class": [
-                            "hb-source-reference"
-                          ],
-                          "data-reference": "{\"id\": \"product-overview\", \"web_replace_key\": \"reference.product-overview\", \"capture_following_lines\": 5, \"presentation_mode\": \"base-art-live-copy\", \"base_art_layout\": {\"art_sha256\": \"910a6ce8542f5be9df214a28699b57df6c5abb97c788f1efd72c3b6507f967c2\", \"panel_top\": 0, \"panel_fill\": \"#ffffff\", \"preserve_frame\": true, \"mobile_labels\": \"overlay\", \"labels\": [{\"line\": 0, \"rect\": [58, 0.3, 34, 4.2]}, {\"line\": 1, \"rect\": [2, 4.5, 90, 4.4]}, {\"line\": 2, \"rect\": [32, 8.8, 60, 4.2]}, {\"line\": 3, \"rect\": [65, 30.2, 27, 5]}, {\"line\": 4, \"rect\": [71, 51.8, 21, 5]}]}}"
-                        }
-                      }
-                    },
-                    "source": "assets/ir/910a6ce8542f5be9df214a28699b57df6c5abb97c788f1efd72c3b6507f967c2/overview-textless.png"
-                  },
+                "alt": "product-overview",
+                "kind": "image",
+                "presentation": {
+                  "html": {
+                    "attributes": {
+                      "class": [
+                        "hb-source-reference"
+                      ],
+                      "data-reference": "{\"id\": \"product-overview\", \"web_replace_key\": \"reference.product-overview\", \"capture_following_lines\": 5, \"presentation_mode\": \"base-art-live-copy\", \"base_art_layout\": {\"art_sha256\": \"910a6ce8542f5be9df214a28699b57df6c5abb97c788f1efd72c3b6507f967c2\", \"panel_top\": 0, \"panel_fill\": \"#ffffff\", \"preserve_frame\": true, \"mobile_labels\": \"overlay\", \"labels\": [{\"line\": 0, \"rect\": [58, 0.3, 34, 4.2]}, {\"line\": 1, \"rect\": [2, 4.5, 90, 4.4]}, {\"line\": 2, \"rect\": [32, 8.8, 60, 4.2]}, {\"line\": 3, \"rect\": [65, 30.2, 27, 5]}, {\"line\": 4, \"rect\": [71, 51.8, 21, 5]}]}}"
+                    }
+                  }
+                },
+                "source": "assets/ir/910a6ce8542f5be9df214a28699b57df6c5abb97c788f1efd72c3b6507f967c2/overview-textless.png"
+              },
+              {
+                "children": [
                   {
                     "children": [
                       {
                         "children": [
                           {
-                            "children": [
-                              {
-                                "kind": "text",
-                                "text": "DC入力ポート"
-                              }
-                            ],
-                            "kind": "inline_group",
-                            "presentation": {
-                              "html": {
-                                "attributes": {
-                                  "style": "display:block;width:100%;text-align:right;font-size:clamp(12px,1.2em,18px);line-height:1.15;font-weight:700"
-                                }
-                              }
-                            }
+                            "kind": "text",
+                            "text": "DC入力ポート"
                           }
                         ],
-                        "kind": "group",
+                        "kind": "inline_group",
                         "presentation": {
                           "html": {
                             "attributes": {
-                              "class": [
-                                "line"
-                              ]
+                              "style": "display:block;width:100%;text-align:right;font-size:clamp(12px,1.2em,18px);line-height:1.15;font-weight:700"
                             }
                           }
-                        },
-                        "role": "container"
-                      },
-                      {
-                        "children": [
-                          {
-                            "children": [
-                              {
-                                "kind": "text",
-                                "text": "PV：16V-60V⎓最大13A，2ポート最大24A，最大500W"
-                              }
-                            ],
-                            "kind": "inline_group",
-                            "presentation": {
-                              "html": {
-                                "attributes": {
-                                  "style": "display:block;width:100%;text-align:right;font-size:clamp(10px,0.8em,12px);line-height:1.15;color:#8a8a8a"
-                                }
-                              }
-                            }
-                          }
-                        ],
-                        "kind": "group",
-                        "presentation": {
-                          "html": {
-                            "attributes": {
-                              "class": [
-                                "line"
-                              ]
-                            }
-                          }
-                        },
-                        "role": "container"
-                      },
-                      {
-                        "children": [
-                          {
-                            "children": [
-                              {
-                                "kind": "text",
-                                "text": "ｼｶﾞｰｿｹｯﾄ ：11V-16V⎓最大8A"
-                              }
-                            ],
-                            "kind": "inline_group",
-                            "presentation": {
-                              "html": {
-                                "attributes": {
-                                  "style": "display:block;width:100%;text-align:right;font-size:clamp(10px,0.8em,12px);line-height:1.15;color:#8a8a8a"
-                                }
-                              }
-                            }
-                          }
-                        ],
-                        "kind": "group",
-                        "presentation": {
-                          "html": {
-                            "attributes": {
-                              "class": [
-                                "line"
-                              ]
-                            }
-                          }
-                        },
-                        "role": "container"
-                      },
-                      {
-                        "children": [
-                          {
-                            "children": [
-                              {
-                                "kind": "text",
-                                "text": "LEDライト"
-                              }
-                            ],
-                            "kind": "inline_group",
-                            "presentation": {
-                              "html": {
-                                "attributes": {
-                                  "style": "display:block;width:100%;text-align:right;font-size:clamp(12px,1.2em,18px);line-height:1.15;font-weight:700"
-                                }
-                              }
-                            }
-                          }
-                        ],
-                        "kind": "group",
-                        "presentation": {
-                          "html": {
-                            "attributes": {
-                              "class": [
-                                "line"
-                              ]
-                            }
-                          }
-                        },
-                        "role": "container"
-                      },
-                      {
-                        "children": [
-                          {
-                            "children": [
-                              {
-                                "kind": "text",
-                                "text": "プラグ"
-                              }
-                            ],
-                            "kind": "inline_group",
-                            "presentation": {
-                              "html": {
-                                "attributes": {
-                                  "style": "display:block;width:100%;text-align:right;font-size:clamp(12px,1.2em,18px);line-height:1.15;font-weight:700"
-                                }
-                              }
-                            }
-                          }
-                        ],
-                        "kind": "group",
-                        "presentation": {
-                          "html": {
-                            "attributes": {
-                              "class": [
-                                "line"
-                              ]
-                            }
-                          }
-                        },
-                        "role": "container"
+                        }
                       }
                     ],
                     "kind": "group",
@@ -3025,7 +2899,131 @@
                       "html": {
                         "attributes": {
                           "class": [
-                            "line-block"
+                            "line"
+                          ]
+                        }
+                      }
+                    },
+                    "role": "container"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "PV：16V-60V⎓最大13A，2ポート最大24A，最大500W"
+                          }
+                        ],
+                        "kind": "inline_group",
+                        "presentation": {
+                          "html": {
+                            "attributes": {
+                              "style": "display:block;width:100%;text-align:right;font-size:clamp(10px,0.8em,12px);line-height:1.15;color:#8a8a8a"
+                            }
+                          }
+                        }
+                      }
+                    ],
+                    "kind": "group",
+                    "presentation": {
+                      "html": {
+                        "attributes": {
+                          "class": [
+                            "line"
+                          ]
+                        }
+                      }
+                    },
+                    "role": "container"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "ｼｶﾞｰｿｹｯﾄ ：11V-16V⎓最大8A"
+                          }
+                        ],
+                        "kind": "inline_group",
+                        "presentation": {
+                          "html": {
+                            "attributes": {
+                              "style": "display:block;width:100%;text-align:right;font-size:clamp(10px,0.8em,12px);line-height:1.15;color:#8a8a8a"
+                            }
+                          }
+                        }
+                      }
+                    ],
+                    "kind": "group",
+                    "presentation": {
+                      "html": {
+                        "attributes": {
+                          "class": [
+                            "line"
+                          ]
+                        }
+                      }
+                    },
+                    "role": "container"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "LEDライト"
+                          }
+                        ],
+                        "kind": "inline_group",
+                        "presentation": {
+                          "html": {
+                            "attributes": {
+                              "style": "display:block;width:100%;text-align:right;font-size:clamp(12px,1.2em,18px);line-height:1.15;font-weight:700"
+                            }
+                          }
+                        }
+                      }
+                    ],
+                    "kind": "group",
+                    "presentation": {
+                      "html": {
+                        "attributes": {
+                          "class": [
+                            "line"
+                          ]
+                        }
+                      }
+                    },
+                    "role": "container"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "プラグ"
+                          }
+                        ],
+                        "kind": "inline_group",
+                        "presentation": {
+                          "html": {
+                            "attributes": {
+                              "style": "display:block;width:100%;text-align:right;font-size:clamp(12px,1.2em,18px);line-height:1.15;font-weight:700"
+                            }
+                          }
+                        }
+                      }
+                    ],
+                    "kind": "group",
+                    "presentation": {
+                      "html": {
+                        "attributes": {
+                          "class": [
+                            "line"
                           ]
                         }
                       }
@@ -3033,148 +3031,150 @@
                     "role": "container"
                   }
                 ],
-                "component_spec": {
-                  "assets": [
-                    {
-                      "asset_ref": "assets/ir/910a6ce8542f5be9df214a28699b57df6c5abb97c788f1efd72c3b6507f967c2/overview-textless.png",
-                      "locale_policy": "exact",
-                      "role": "source_art"
+                "kind": "group",
+                "presentation": {
+                  "html": {
+                    "attributes": {
+                      "class": [
+                        "line-block"
+                      ]
                     }
-                  ],
-                  "component_id": "HB-SPECIAL-REFERENCE-FIGURE",
-                  "language": "ja",
-                  "metadata": {
-                    "base_art_layout": {
-                      "art_sha256": "910a6ce8542f5be9df214a28699b57df6c5abb97c788f1efd72c3b6507f967c2",
-                      "labels": [
-                        {
-                          "line": 0,
-                          "rect": [
-                            58,
-                            0.3,
-                            34,
-                            4.2
-                          ]
-                        },
-                        {
-                          "line": 1,
-                          "rect": [
-                            2,
-                            4.5,
-                            90,
-                            4.4
-                          ]
-                        },
-                        {
-                          "line": 2,
-                          "rect": [
-                            32,
-                            8.8,
-                            60,
-                            4.2
-                          ]
-                        },
-                        {
-                          "line": 3,
-                          "rect": [
-                            65,
-                            30.2,
-                            27,
-                            5
-                          ]
-                        },
-                        {
-                          "line": 4,
-                          "rect": [
-                            71,
-                            51.8,
-                            21,
-                            5
-                          ]
-                        }
-                      ],
-                      "mobile_labels": "overlay",
-                      "panel_fill": "#ffffff",
-                      "panel_top": 0,
-                      "preserve_frame": true
-                    },
-                    "caption_centers_pct": null,
-                    "captions_embedded": false,
-                    "captions_origin": "carrier",
-                    "capture_following_lines": 5,
-                    "composite_locale": "",
-                    "image_key": "../../assets/overview-textless.png",
-                    "presentation_mode": "base-art-live-copy",
-                    "source_fragment_sha256": "ce934ab4ce71eaa014b8e0698dbe853724b36f83bb4fc6c2faee91db0923e571",
-                    "web_replace_key": "reference.product-overview"
-                  },
-                  "schema_version": "component-spec/v1",
-                  "slots": [
-                    {
-                      "content": "product-overview",
-                      "content_kind": "inline_text",
-                      "role": "reference_id"
-                    },
-                    {
-                      "content": "product-overview",
-                      "content_kind": "inline_text",
-                      "role": "accessibility_label"
-                    },
-                    {
-                      "content": "live",
-                      "content_kind": "inline_text",
-                      "role": "caption_mode"
-                    },
-                    {
-                      "content": "equal",
-                      "content_kind": "inline_text",
-                      "role": "caption_layout"
-                    },
-                    {
-                      "content": [
-                        {
-                          "html": "<span style=\"display:block;width:100%;text-align:right;font-size:clamp(12px,1.2em,18px);line-height:1.15;font-weight:700\">DC入力ポート</span>",
-                          "text": "DC入力ポート"
-                        },
-                        {
-                          "html": "<span style=\"display:block;width:100%;text-align:right;font-size:clamp(10px,0.8em,12px);line-height:1.15;color:#8a8a8a\">PV：16V-60V⎓最大13A，2ポート最大24A，最大500W</span>",
-                          "text": "PV：16V-60V⎓最大13A，2ポート最大24A，最大500W"
-                        },
-                        {
-                          "html": "<span style=\"display:block;width:100%;text-align:right;font-size:clamp(10px,0.8em,12px);line-height:1.15;color:#8a8a8a\">ｼｶﾞｰｿｹｯﾄ ：11V-16V⎓最大8A</span>",
-                          "text": "ｼｶﾞｰｿｹｯﾄ ：11V-16V⎓最大8A"
-                        },
-                        {
-                          "html": "<span style=\"display:block;width:100%;text-align:right;font-size:clamp(12px,1.2em,18px);line-height:1.15;font-weight:700\">LEDライト</span>",
-                          "text": "LEDライト"
-                        },
-                        {
-                          "html": "<span style=\"display:block;width:100%;text-align:right;font-size:clamp(12px,1.2em,18px);line-height:1.15;font-weight:700\">プラグ</span>",
-                          "text": "プラグ"
-                        }
-                      ],
-                      "content_kind": "ordered_labels",
-                      "role": "captions"
-                    }
-                  ],
-                  "source_ref": "source/page/product_overview_ja.rst#reference-product-overview",
-                  "token_roles": [
-                    "component.special.reference-figure"
-                  ],
-                  "variant": "semantic-fallback"
+                  }
                 },
-                "kind": "component"
+                "role": "container"
               }
             ],
-            "kind": "group",
-            "presentation": {
-              "html": {
-                "attributes": {
-                  "style": "width:min(100%,40rem);margin-inline:auto"
+            "component_spec": {
+              "assets": [
+                {
+                  "asset_ref": "assets/ir/910a6ce8542f5be9df214a28699b57df6c5abb97c788f1efd72c3b6507f967c2/overview-textless.png",
+                  "locale_policy": "exact",
+                  "role": "source_art"
                 }
-              }
+              ],
+              "component_id": "HB-SPECIAL-REFERENCE-FIGURE",
+              "language": "ja",
+              "metadata": {
+                "base_art_layout": {
+                  "art_sha256": "910a6ce8542f5be9df214a28699b57df6c5abb97c788f1efd72c3b6507f967c2",
+                  "labels": [
+                    {
+                      "line": 0,
+                      "rect": [
+                        58,
+                        0.3,
+                        34,
+                        4.2
+                      ]
+                    },
+                    {
+                      "line": 1,
+                      "rect": [
+                        2,
+                        4.5,
+                        90,
+                        4.4
+                      ]
+                    },
+                    {
+                      "line": 2,
+                      "rect": [
+                        32,
+                        8.8,
+                        60,
+                        4.2
+                      ]
+                    },
+                    {
+                      "line": 3,
+                      "rect": [
+                        65,
+                        30.2,
+                        27,
+                        5
+                      ]
+                    },
+                    {
+                      "line": 4,
+                      "rect": [
+                        71,
+                        51.8,
+                        21,
+                        5
+                      ]
+                    }
+                  ],
+                  "mobile_labels": "overlay",
+                  "panel_fill": "#ffffff",
+                  "panel_top": 0,
+                  "preserve_frame": true
+                },
+                "caption_centers_pct": null,
+                "captions_embedded": false,
+                "captions_origin": "carrier",
+                "capture_following_lines": 5,
+                "composite_locale": "",
+                "image_key": "../../assets/overview-textless.png",
+                "presentation_mode": "base-art-live-copy",
+                "source_fragment_sha256": "ce934ab4ce71eaa014b8e0698dbe853724b36f83bb4fc6c2faee91db0923e571",
+                "web_replace_key": "reference.product-overview"
+              },
+              "schema_version": "component-spec/v1",
+              "slots": [
+                {
+                  "content": "product-overview",
+                  "content_kind": "inline_text",
+                  "role": "reference_id"
+                },
+                {
+                  "content": "product-overview",
+                  "content_kind": "inline_text",
+                  "role": "accessibility_label"
+                },
+                {
+                  "content": "live",
+                  "content_kind": "inline_text",
+                  "role": "caption_mode"
+                },
+                {
+                  "content": "equal",
+                  "content_kind": "inline_text",
+                  "role": "caption_layout"
+                },
+                {
+                  "content": [
+                    {
+                      "html": "<span style=\"display:block;width:100%;text-align:right;font-size:clamp(12px,1.2em,18px);line-height:1.15;font-weight:700\">DC入力ポート</span>",
+                      "text": "DC入力ポート"
+                    },
+                    {
+                      "html": "<span style=\"display:block;width:100%;text-align:right;font-size:clamp(10px,0.8em,12px);line-height:1.15;color:#8a8a8a\">PV：16V-60V⎓最大13A，2ポート最大24A，最大500W</span>",
+                      "text": "PV：16V-60V⎓最大13A，2ポート最大24A，最大500W"
+                    },
+                    {
+                      "html": "<span style=\"display:block;width:100%;text-align:right;font-size:clamp(10px,0.8em,12px);line-height:1.15;color:#8a8a8a\">ｼｶﾞｰｿｹｯﾄ ：11V-16V⎓最大8A</span>",
+                      "text": "ｼｶﾞｰｿｹｯﾄ ：11V-16V⎓最大8A"
+                    },
+                    {
+                      "html": "<span style=\"display:block;width:100%;text-align:right;font-size:clamp(12px,1.2em,18px);line-height:1.15;font-weight:700\">LEDライト</span>",
+                      "text": "LEDライト"
+                    },
+                    {
+                      "html": "<span style=\"display:block;width:100%;text-align:right;font-size:clamp(12px,1.2em,18px);line-height:1.15;font-weight:700\">プラグ</span>",
+                      "text": "プラグ"
+                    }
+                  ],
+                  "content_kind": "ordered_labels",
+                  "role": "captions"
+                }
+              ],
+              "source_ref": "source/page/product_overview_ja.rst#reference-product-overview",
+              "token_roles": [
+                "component.special.reference-figure"
+              ],
+              "variant": "semantic-fallback"
             },
-            "role": "container",
+            "kind": "component",
             "schema_version": "manual-flow/v2"
           },
           "source_ref": "product_overview_ja.rst#block-2"
@@ -3217,67 +3217,16 @@
         {
           "asset_refs": [],
           "block_id": "product_overview_ja.rst:block-0005",
-          "content_sha256": "3cb4409c7c0cfb85439ea245e2453bd07eaba86b97364d154f24d6bbac36c42e",
+          "content_sha256": "dc2e1a52b1966d1f49a4c9dd90dc60d606886ba9d3708b846accabe48462cc66",
           "kind": "flow",
           "payload": {
             "children": [
               {
+                "kind": "text",
+                "text": "\n"
+              },
+              {
                 "children": [
-                  {
-                    "kind": "text",
-                    "text": "\n"
-                  },
-                  {
-                    "children": [
-                      {
-                        "kind": "text",
-                        "text": "\n"
-                      },
-                      {
-                        "kind": "column",
-                        "presentation": {
-                          "html": {
-                            "attributes": {
-                              "style": "width: 25.0%"
-                            }
-                          }
-                        }
-                      },
-                      {
-                        "kind": "text",
-                        "text": "\n"
-                      },
-                      {
-                        "kind": "column",
-                        "presentation": {
-                          "html": {
-                            "attributes": {
-                              "style": "width: 20.0%"
-                            }
-                          }
-                        }
-                      },
-                      {
-                        "kind": "text",
-                        "text": "\n"
-                      },
-                      {
-                        "kind": "column",
-                        "presentation": {
-                          "html": {
-                            "attributes": {
-                              "style": "width: 55.0%"
-                            }
-                          }
-                        }
-                      },
-                      {
-                        "kind": "text",
-                        "text": "\n"
-                      }
-                    ],
-                    "kind": "column_group"
-                  },
                   {
                     "kind": "text",
                     "text": "\n"
@@ -3309,12 +3258,10 @@
                                 "attributes": {
                                   "class": [
                                     "head"
-                                  ],
-                                  "style": "padding:0.25rem 0.6rem!important;text-align:center!important;border-bottom:1px solid var(--hb-line-soft)!important;background:var(--hb-surface-strong)!important;"
+                                  ]
                                 }
                               }
-                            },
-                            "scope": "col"
+                            }
                           },
                           {
                             "kind": "text",
@@ -3339,12 +3286,10 @@
                                 "attributes": {
                                   "class": [
                                     "head"
-                                  ],
-                                  "style": "padding:0.25rem 0.6rem!important;text-align:center!important;border-bottom:1px solid var(--hb-line-soft)!important;background:var(--hb-surface-strong)!important;"
+                                  ]
                                 }
                               }
-                            },
-                            "scope": "col"
+                            }
                           },
                           {
                             "kind": "text",
@@ -3369,12 +3314,10 @@
                                 "attributes": {
                                   "class": [
                                     "head"
-                                  ],
-                                  "style": "padding:0.25rem 0.6rem!important;text-align:center!important;border-bottom:1px solid var(--hb-line-soft)!important;background:var(--hb-surface-strong)!important;"
+                                  ]
                                 }
                               }
-                            },
-                            "scope": "col"
+                            }
                           },
                           {
                             "kind": "text",
@@ -3415,14 +3358,7 @@
                               }
                             ],
                             "header": false,
-                            "kind": "table_cell",
-                            "presentation": {
-                              "html": {
-                                "attributes": {
-                                  "style": "padding:0.25rem 0.6rem!important;text-align:center!important;"
-                                }
-                              }
-                            }
+                            "kind": "table_cell"
                           },
                           {
                             "kind": "text",
@@ -3441,14 +3377,7 @@
                               }
                             ],
                             "header": false,
-                            "kind": "table_cell",
-                            "presentation": {
-                              "html": {
-                                "attributes": {
-                                  "style": "padding:0.25rem 0.6rem!important;text-align:center!important;"
-                                }
-                              }
-                            }
+                            "kind": "table_cell"
                           },
                           {
                             "kind": "text",
@@ -3467,14 +3396,7 @@
                               }
                             ],
                             "header": false,
-                            "kind": "table_cell",
-                            "presentation": {
-                              "html": {
-                                "attributes": {
-                                  "style": "padding:0.25rem 0.6rem!important;text-align:center!important;"
-                                }
-                              }
-                            }
+                            "kind": "table_cell"
                           },
                           {
                             "kind": "text",
@@ -3502,14 +3424,7 @@
                               }
                             ],
                             "header": false,
-                            "kind": "table_cell",
-                            "presentation": {
-                              "html": {
-                                "attributes": {
-                                  "style": "padding:0.25rem 0.6rem!important;text-align:center!important;"
-                                }
-                              }
-                            }
+                            "kind": "table_cell"
                           },
                           {
                             "kind": "text",
@@ -3528,14 +3443,7 @@
                               }
                             ],
                             "header": false,
-                            "kind": "table_cell",
-                            "presentation": {
-                              "html": {
-                                "attributes": {
-                                  "style": "padding:0.25rem 0.6rem!important;text-align:center!important;"
-                                }
-                              }
-                            }
+                            "kind": "table_cell"
                           },
                           {
                             "kind": "text",
@@ -3554,14 +3462,7 @@
                               }
                             ],
                             "header": false,
-                            "kind": "table_cell",
-                            "presentation": {
-                              "html": {
-                                "attributes": {
-                                  "style": "padding:0.25rem 0.6rem!important;text-align:center!important;"
-                                }
-                              }
-                            }
+                            "kind": "table_cell"
                           },
                           {
                             "kind": "text",
@@ -3589,14 +3490,7 @@
                               }
                             ],
                             "header": false,
-                            "kind": "table_cell",
-                            "presentation": {
-                              "html": {
-                                "attributes": {
-                                  "style": "padding:0.25rem 0.6rem!important;text-align:center!important;"
-                                }
-                              }
-                            }
+                            "kind": "table_cell"
                           },
                           {
                             "kind": "text",
@@ -3615,14 +3509,7 @@
                               }
                             ],
                             "header": false,
-                            "kind": "table_cell",
-                            "presentation": {
-                              "html": {
-                                "attributes": {
-                                  "style": "padding:0.25rem 0.6rem!important;text-align:center!important;"
-                                }
-                              }
-                            }
+                            "kind": "table_cell"
                           },
                           {
                             "kind": "text",
@@ -3641,14 +3528,7 @@
                               }
                             ],
                             "header": false,
-                            "kind": "table_cell",
-                            "presentation": {
-                              "html": {
-                                "attributes": {
-                                  "style": "padding:0.25rem 0.6rem!important;text-align:center!important;"
-                                }
-                              }
-                            }
+                            "kind": "table_cell"
                           },
                           {
                             "kind": "text",
@@ -3676,14 +3556,7 @@
                               }
                             ],
                             "header": false,
-                            "kind": "table_cell",
-                            "presentation": {
-                              "html": {
-                                "attributes": {
-                                  "style": "padding:0.25rem 0.6rem!important;text-align:center!important;"
-                                }
-                              }
-                            }
+                            "kind": "table_cell"
                           },
                           {
                             "kind": "text",
@@ -3702,14 +3575,7 @@
                               }
                             ],
                             "header": false,
-                            "kind": "table_cell",
-                            "presentation": {
-                              "html": {
-                                "attributes": {
-                                  "style": "padding:0.25rem 0.6rem!important;text-align:center!important;"
-                                }
-                              }
-                            }
+                            "kind": "table_cell"
                           },
                           {
                             "kind": "text",
@@ -3728,14 +3594,7 @@
                               }
                             ],
                             "header": false,
-                            "kind": "table_cell",
-                            "presentation": {
-                              "html": {
-                                "attributes": {
-                                  "style": "padding:0.25rem 0.6rem!important;text-align:center!important;"
-                                }
-                              }
-                            }
+                            "kind": "table_cell"
                           },
                           {
                             "kind": "text",
@@ -3761,12 +3620,15 @@
                   "html": {
                     "attributes": {
                       "class": [
-                        "manual-table"
-                      ],
-                      "style": "table-layout:fixed;min-width:0!important;"
+                        "hb-source-status-table"
+                      ]
                     }
                   }
                 }
+              },
+              {
+                "kind": "text",
+                "text": "\n"
               }
             ],
             "kind": "group",
@@ -3774,10 +3636,10 @@
               "html": {
                 "attributes": {
                   "class": [
-                    "table-wrapper",
-                    "docutils"
-                  ],
-                  "style": "--hb-line-soft:var(--hb-brand-dark);border:1.5px solid var(--hb-brand-dark);border-radius:16px;overflow:hidden;"
+                    "hb-source-status",
+                    "docutils",
+                    "container"
+                  ]
                 }
               }
             },
@@ -3792,7 +3654,7 @@
       "skipped_raw": 0,
       "source_path": "source/page/product_overview_ja.rst",
       "source_ref": "product_overview_ja.rst",
-      "source_sha256": "4776b64c70932be46e0be4832ac31620a0b954a65a3e4b0be74349c114d26e2d"
+      "source_sha256": "aad4fdf23fa7cbe4527515aa8db725442b71583feb1502b9534cc7a76dc71644"
     },
     {
       "blocks": [
@@ -3894,7 +3756,7 @@
         {
           "asset_refs": [],
           "block_id": "charging_ja.rst:block-0007",
-          "content_sha256": "7d344c40a2e1e6530b795b538ac24e97be30678258365ce0f87df251c420a416",
+          "content_sha256": "411ace560796ab415c096ed9487eb3d0eedac973e3afd67551f00f57233c6f8e",
           "kind": "flow",
           "payload": {
             "children": [
@@ -3945,7 +3807,6 @@
               "html": {
                 "attributes": {
                   "class": [
-                    "jpad-tight",
                     "simple"
                   ]
                 }
@@ -3970,7 +3831,7 @@
         {
           "asset_refs": [],
           "block_id": "charging_ja.rst:block-0009",
-          "content_sha256": "963ed1158ba28b879d3d4449f07b8b448835d62aaaddddf6f38de9fd7060b622",
+          "content_sha256": "ef3b5f492092956893cce853a1f55273da1f35e2aad56dafe06f80bd8db4813d",
           "kind": "flow",
           "payload": {
             "children": [
@@ -3980,15 +3841,6 @@
               }
             ],
             "kind": "paragraph",
-            "presentation": {
-              "html": {
-                "attributes": {
-                  "class": [
-                    "jpad-hang"
-                  ]
-                }
-              }
-            },
             "schema_version": "manual-flow/v2"
           },
           "source_ref": "charging_ja.rst#block-9"
@@ -4622,13 +4474,13 @@
         {
           "asset_refs": [],
           "block_id": "charging_ja.rst:block-0015",
-          "content_sha256": "bd3f585050694ff1a8eea1a3f8b651d7fd235e6631e524342dadbc4613e865d7",
+          "content_sha256": "a59eb6c89a19e49c6483351ea1d7825ac4c944d61a86941098f2864c0ede2773",
           "kind": "flow",
           "payload": {
             "children": [
               {
                 "kind": "text",
-                "text": "Jackeryブランド以外の付属品を使用して充電しないでください。ソーラーパネルの開放電圧（Voc）が、Jackery SlimPower H1 のDC入力範囲（36.8V～56V）または Jackery Battery PackのDC入力範囲（40V～57.6V）内であることを確認してください。他社ソーラーパネルで充電することによる損失について、当社は一切の責任を負いません。"
+                "text": "Jackery DC Input Moduleを介して接続した製品を充電する場合は、Jackery製ソーラーパネルの使用を推奨します。接続するソーラーパネルの開放電圧（Voc）が、本モジュールのDC入力電圧範囲（16V～60V）内であることを確認してください。他社ソーラーパネルで充電することによる損失について、当社は一切の責任を負いません。"
               }
             ],
             "kind": "paragraph",
@@ -4733,7 +4585,7 @@
         {
           "asset_refs": [],
           "block_id": "charging_ja.rst:block-0022",
-          "content_sha256": "11bb27eed0604f7c1a298d5df8c0bfd553751b2f081c0d8aed6f31ca6024e911",
+          "content_sha256": "64401be449b49b4360f92157eab8411a8b2d0a5a1693072c2352559d28dc29f6",
           "kind": "flow",
           "payload": {
             "children": [
@@ -4860,7 +4712,7 @@
               "html": {
                 "attributes": {
                   "class": [
-                    "jpad-panel",
+                    "hb-text-panel",
                     "docutils",
                     "container"
                   ]
@@ -5308,7 +5160,7 @@
       "skipped_raw": 0,
       "source_path": "source/page/charging_ja.rst",
       "source_ref": "charging_ja.rst",
-      "source_sha256": "32ea8806732698b782763308233684d2e3e9dab7b370aad95187717eee75ad26"
+      "source_sha256": "839e073a4ea07a30e9bb61401d6e3e5a379a803cb3df16284c2b30b9d90ee922"
     },
     {
       "blocks": [
@@ -5769,7 +5621,7 @@
         {
           "asset_refs": [],
           "block_id": "spec_ja.rst:block-0006",
-          "content_sha256": "ec27932ca90a837f81b65af6c14c5935c515a119f7076f6c0cbc777b8a33632a",
+          "content_sha256": "feb47e9bfe44afef901fab9d72c30e2959730044793559463c4fee27b121e264",
           "kind": "flow",
           "payload": {
             "children": [
@@ -5783,7 +5635,7 @@
               "html": {
                 "attributes": {
                   "class": [
-                    "jpad-small"
+                    "manual-spec-note"
                   ]
                 }
               }
@@ -5798,7 +5650,7 @@
       "skipped_raw": 0,
       "source_path": "source/page/spec_ja.rst",
       "source_ref": "spec_ja.rst",
-      "source_sha256": "56e5a7d035e8b535205c091055ec95747c4d47df0b6527d7eae5f261ffcd39c8"
+      "source_sha256": "28e998906c15162efb8db76c69eaaebdc0764217de5bd4e3139e40ce6e2e3a7e"
     },
     {
       "blocks": [
@@ -7327,11 +7179,9 @@
     {
       "blocks": [
         {
-          "asset_refs": [
-            "assets/ir/aaa58d773ab76092d7d3236a2a90ebcad33f992eaeb6491e37bb1c51c5c2ba10/contact-qr.png"
-          ],
+          "asset_refs": [],
           "block_id": "contact_ja.rst:block-0001",
-          "content_sha256": "c984c8a77d6b5627707b4c4bb8a6cb45377dd8feaa690411e63bcd17308f2e1e",
+          "content_sha256": "685df2d102c9a7b4eaea4cf9e73e27c896bb51a61e0832af68e72caa546aba89",
           "kind": "flow",
           "payload": {
             "children": [
@@ -7342,18 +7192,23 @@
               {
                 "children": [
                   {
-                    "kind": "text",
-                    "text": "公式サイト: "
-                  },
-                  {
                     "children": [
                       {
                         "kind": "text",
-                        "text": "https://www.jackery.jp"
+                        "text": "公式サイト: "
+                      },
+                      {
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "https://www.jackery.jp"
+                          }
+                        ],
+                        "kind": "link",
+                        "target": "https://www.jackery.jp"
                       }
                     ],
-                    "kind": "link",
-                    "target": "https://www.jackery.jp"
+                    "kind": "strong"
                   }
                 ],
                 "kind": "paragraph"
@@ -7365,18 +7220,23 @@
               {
                 "children": [
                   {
-                    "kind": "text",
-                    "text": "カスタマーサポート: "
-                  },
-                  {
                     "children": [
                       {
                         "kind": "text",
-                        "text": "jackery.jp@jackery.com"
+                        "text": "カスタマーサポート: "
+                      },
+                      {
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "jackery.jp@jackery.com"
+                          }
+                        ],
+                        "kind": "link",
+                        "target": "mailto:jackery.jp@jackery.com"
                       }
                     ],
-                    "kind": "link",
-                    "target": "mailto:jackery.jp@jackery.com"
+                    "kind": "strong"
                   }
                 ],
                 "kind": "paragraph"
@@ -7388,50 +7248,26 @@
               {
                 "children": [
                   {
-                    "kind": "text",
-                    "text": "お問い合わせ電話番号: "
-                  },
-                  {
                     "children": [
                       {
                         "kind": "text",
-                        "text": "050-3198-9007"
+                        "text": "お問い合わせ電話番号: "
+                      },
+                      {
+                        "children": [
+                          {
+                            "kind": "text",
+                            "text": "050-3198-9007"
+                          }
+                        ],
+                        "kind": "link",
+                        "target": "tel:05031989007"
                       }
                     ],
-                    "kind": "link",
-                    "target": "tel:05031989007"
+                    "kind": "strong"
                   }
                 ],
                 "kind": "paragraph"
-              },
-              {
-                "kind": "text",
-                "text": "\n"
-              },
-              {
-                "children": [
-                  {
-                    "alt": "原稿裏表紙のQRコード",
-                    "kind": "image",
-                    "presentation": {
-                      "html": {
-                        "attributes": {
-                          "style": "width:100%;height:auto"
-                        }
-                      }
-                    },
-                    "source": "assets/ir/aaa58d773ab76092d7d3236a2a90ebcad33f992eaeb6491e37bb1c51c5c2ba10/contact-qr.png"
-                  }
-                ],
-                "kind": "group",
-                "presentation": {
-                  "html": {
-                    "attributes": {
-                      "style": "width:96px;margin:1rem 0"
-                    }
-                  }
-                },
-                "role": "container"
               },
               {
                 "kind": "text",
@@ -7443,7 +7279,7 @@
               "html": {
                 "attributes": {
                   "class": [
-                    "hb-manual-page-end"
+                    "hb-text-panel"
                   ]
                 }
               }
@@ -7452,6 +7288,38 @@
             "schema_version": "manual-flow/v2"
           },
           "source_ref": "contact_ja.rst#block-1"
+        },
+        {
+          "asset_refs": [],
+          "block_id": "contact_ja.rst:block-0002",
+          "content_sha256": "409f08d09ec16d10e5859c444f978d45e82cc092bc1ece8fafaf29f65dc755f8",
+          "kind": "flow",
+          "payload": {
+            "kind": "text",
+            "schema_version": "manual-flow/v2",
+            "text": "\n"
+          },
+          "source_ref": "contact_ja.rst#block-2"
+        },
+        {
+          "asset_refs": [
+            "assets/ir/aaa58d773ab76092d7d3236a2a90ebcad33f992eaeb6491e37bb1c51c5c2ba10/contact-qr.png"
+          ],
+          "block_id": "contact_ja.rst:block-0003",
+          "content_sha256": "70230e319b135cacac139bb4a51f4884e049e984b2006650f7e1fe9ef3d348ae",
+          "kind": "flow",
+          "payload": {
+            "children": [
+              {
+                "alt": "原稿裏表紙のQRコード",
+                "kind": "image",
+                "source": "assets/ir/aaa58d773ab76092d7d3236a2a90ebcad33f992eaeb6491e37bb1c51c5c2ba10/contact-qr.png"
+              }
+            ],
+            "kind": "paragraph",
+            "schema_version": "manual-flow/v2"
+          },
+          "source_ref": "contact_ja.rst#block-3"
         }
       ],
       "language": "ja",
@@ -7459,7 +7327,7 @@
       "skipped_raw": 0,
       "source_path": "source/page/contact_ja.rst",
       "source_ref": "contact_ja.rst",
-      "source_sha256": "1e28f9fcfb583bc579d9aea1a0de3db3e38b9a7894da839eb98eea01e2b27a89"
+      "source_sha256": "f5311ed63bb1be847c0a2cf1c80e6acd12242c2fe0bb359258c2f587a0f94a1e"
     }
   ],
   "region": "JP",

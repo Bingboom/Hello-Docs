@@ -7,7 +7,7 @@
       "fr",
       "es"
     ],
-    "technical_version": "git-20261007-28c58312-reviewed"
+    "technical_version": "git-20261016-28c58312-solar-voc"
   },
   "original_source": {
     "filename": "Jackery DC Input Module User Manual V2.0-2026-05-25.pdf",
@@ -18,7 +18,7 @@
   "printed_manual_version": null,
   "source_authority": "Operator-supplied PDF; visual transcription of native outlined text, LED table crosschecked with embedded PDF text",
   "baseline_main": "07859f7eae1fe90b72ee950025b28b12cf2c36ff",
-  "source_role": "Git-only operator-approved native French/Spanish prepared Web release",
+  "source_role": "Git-only French/Spanish solar-Voc correction edition of the approved release",
   "live_bitable_dependency": false,
   "publication_eligible": true,
   "page_order": {
@@ -138,7 +138,7 @@
         19
       ],
       "issue": "PV Voc guidance refers to downstream FridgeGuard/Battery Pack ranges",
-      "disposition": "retained; no technical correction authorized"
+      "disposition": "corrected in this edition's prepared pages on operator instruction 2026-10-15; native_copy.json keeps the printed wording"
     },
     {
       "language": "fr/es",
@@ -155,18 +155,8 @@
   "inputs": [
     {
       "path": "README.md",
-      "size": 595,
-      "sha256": "13aba66f55e3642b800721a5cc2b8b48f4cab278df2815601d1b6451f83f2544"
-    },
-    {
-      "path": "approval-parity.json",
-      "size": 933,
-      "sha256": "b2616607abbf2751de8a55494c928bc32f9320535c939c9f2a5df655cb3aa949"
-    },
-    {
-      "path": "approval.json",
-      "size": 2254,
-      "sha256": "b92b0f955b64c66a39c78b8ef816ab6eb13e0bc299ec245d03f493c3f199a678"
+      "size": 2267,
+      "sha256": "b30f13d482f5d76888dbee3272210768f972cd37eec380b55867b90b059f9f89"
     },
     {
       "path": "assets/car.png",
@@ -199,114 +189,24 @@
       "sha256": "0db544e58c9043e70d74311a01ca46edb3b174f5962a28b523da348064df5dfd"
     },
     {
-      "path": "evidence/browser-checks.json",
-      "size": 1166,
-      "sha256": "260e1a0e93bf2fb29354dbb666326d52ac0366fd17f0e9d17ac39bd8610af045"
-    },
-    {
-      "path": "evidence/browser/es-desktop-car-final.png",
-      "size": 104864,
-      "sha256": "9c3f01f00702c07a48c37f80c5fcf8130a8e4bc68ebb3ff5ed70d7e776601989"
-    },
-    {
-      "path": "evidence/browser/es-desktop-full-final.png",
-      "size": 666270,
-      "sha256": "e494a64ce13f30c4339c7a86cfec400aed53902169402ba2b2a6e468663d8870"
-    },
-    {
-      "path": "evidence/browser/es-desktop-warranty-final.png",
-      "size": 153292,
-      "sha256": "dc6a11a4799d34408d6c2a3ca81e3e7f31efcedd0c54e2c2d64714b987fe6eb5"
-    },
-    {
-      "path": "evidence/browser/es-mobile-full-final.png",
-      "size": 416928,
-      "sha256": "95ae964ad54a1bdc331f965f131bdba7bba8fe3e13d50ff36e543b8290ab1492"
-    },
-    {
-      "path": "evidence/browser/es-mobile-overview-final.png",
-      "size": 36255,
-      "sha256": "211b5dbe31fb6496990117c080aaac87bad2e3c177aae0c9fbec893f719fd077"
-    },
-    {
-      "path": "evidence/browser/es-mobile-spec-final.png",
-      "size": 49795,
-      "sha256": "745ab442d10034870a907062a37c06629e8bf2773a5acb5941a5767138b543db"
-    },
-    {
-      "path": "evidence/browser/fr-desktop-full-final.png",
-      "size": 661248,
-      "sha256": "1b282f56988b959340bbb53b40161730c5aeafed11ed2f839c104169669b43a9"
-    },
-    {
-      "path": "evidence/browser/fr-desktop-overview-final.png",
-      "size": 59501,
-      "sha256": "cacc5a339cefdaa4e95e0e8aba5ac6008f1d165e09fad573d0ebf3c620410dff"
-    },
-    {
-      "path": "evidence/browser/fr-mobile-full-final.png",
-      "size": 417959,
-      "sha256": "16fc2324a7a94988284acb01927004c562a585fab1f39a8a2f967eea31f7433a"
-    },
-    {
-      "path": "evidence/browser/fr-mobile-overview-final.png",
-      "size": 35477,
-      "sha256": "1a3e0e0e974762dc814a49b3b1e47257dc2e84166dea7ab6604a3972594f774f"
-    },
-    {
-      "path": "evidence/browser/fr-mobile-warranty-final.png",
-      "size": 70636,
-      "sha256": "0fff3059fff136682643a5f6ba5b8d4f56c7bb7f90fa285d7f865c2b0ded2a3f"
-    },
-    {
-      "path": "evidence/component-tests.log",
-      "size": 1079,
-      "sha256": "1e865e9df09fc14ab1f1693027314204cc4daf1ac8e369f019217af088b2771c"
-    },
-    {
-      "path": "evidence/doc-links.log",
-      "size": 127,
-      "sha256": "9e2798ebbac8e0f5781fce224f3c2bcdd7f9e93caf0c09ecb5d042b169ecccbc"
-    },
-    {
-      "path": "evidence/final-parity.json",
-      "size": 220,
-      "sha256": "b49ee05edd8f11aeaf2471dd38fd9aacd6feff9a0d25cd69ea1cc178bec32a08"
-    },
-    {
-      "path": "evidence/guardrails.log",
-      "size": 425,
-      "sha256": "ff9cd5515d1786fa81cfd30b2dfed211a077378696011d3850739150c8a6517c"
-    },
-    {
-      "path": "evidence/ruff.log",
-      "size": 19,
-      "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
-    },
-    {
-      "path": "evidence/strict-es-final.log",
-      "size": 2079,
-      "sha256": "f5f7370210402685b8c4f455ce6cdbe5a79c36c4b38422c16efc3186d638c31a"
-    },
-    {
-      "path": "evidence/strict-fr-final.log",
-      "size": 2078,
-      "sha256": "3f2c6c16fb2c44358052923d1ceb535dcd3747200c007b01ebd05408682db334"
-    },
-    {
-      "path": "evidence/us-regression.log",
-      "size": 2149,
-      "sha256": "f9983054505936be4833b3d24cd1edb58ed7f1babf781594fddb7d0b148f615f"
-    },
-    {
-      "path": "evidence/verification.json",
-      "size": 1287,
-      "sha256": "7e8a476eb63ed466fc7dcbd9381ed9cfe22e8763572c97425389997902a67f7b"
+      "path": "derive_solar_voc.py",
+      "size": 7678,
+      "sha256": "5b19e0aa20ef8c7cc2a5f96a89f769d20206681f30b08c6ee7bb327d21d5c8e8"
     },
     {
       "path": "render.py",
-      "size": 4479,
-      "sha256": "469a9a2932ac08dcb279b662e801b5cb37f8590238eab9683d65394c5845a6dd"
+      "size": 7781,
+      "sha256": "15e87cd7edbbcc267a3a20076997f7efef3534205499d63e994e0af70793e0ea"
+    },
+    {
+      "path": "source/approval.json",
+      "size": 4055,
+      "sha256": "9f76d4df535e4134cada0b0fd9dca4accbb86a1779c99350c5ac41b260c319ce"
+    },
+    {
+      "path": "source/differences.md",
+      "size": 2647,
+      "sha256": "7e4428a1bb5efbfc02bdb9eabecc83c205c53fee5ef0b4d83ee5ba20a36e726c"
     },
     {
       "path": "source/native_copy.json",
@@ -330,13 +230,13 @@
     },
     {
       "path": "source/page/charging_es.rst",
-      "size": 3545,
-      "sha256": "d2dbd28f016a983b0de35d2257d893c555d605e5480ed2b2dc5a0fd68576bf51"
+      "size": 3505,
+      "sha256": "614fc0f530931b40457ed957400711c3401f1648320ba4f1b417301fdafa73c0"
     },
     {
       "path": "source/page/charging_fr.rst",
-      "size": 3707,
-      "sha256": "d4e442e187088900f5c7fa84137a7b8932456486740c41743a94c7d495a2fe94"
+      "size": 3653,
+      "sha256": "e3cb27f5e986c8907dda38c84345a22b61e80e7ffcda6cb3544d5fb3ab530047"
     },
     {
       "path": "source/page/contact_es.rst",
@@ -379,9 +279,14 @@
       "sha256": "bb237bfdb36aa0c285cac61a55c199d54a781b35b89abe444b2b53bd709443c8"
     },
     {
+      "path": "source_manifest.json",
+      "size": 12841,
+      "sha256": "820e4e06f7c35499dc4d17ef02d365000bbf16c7f97c4eda5ae0402aef70bb9e"
+    },
+    {
       "path": "web/es/_static/web_manual.css",
-      "size": 111201,
-      "sha256": "8f58d19bed88349a595a5c22e6205e0e93c956d6dc4c4a6278e2780f05ca7c8b"
+      "size": 123623,
+      "sha256": "4c01adf9222e7faa8fb5552490d8b8fa4ebba550b4ef2a1e7171a1b9a6538434"
     },
     {
       "path": "web/es/assets/ir/0db544e58c9043e70d74311a01ca46edb3b174f5962a28b523da348064df5dfd/solar.png",
@@ -425,23 +330,23 @@
     },
     {
       "path": "web/es/manual.ir.json",
-      "size": 225701,
-      "sha256": "53631c29d3de7d1aab75e79dc373eddea847cb97eab32d8d1490b8b806334d5c"
+      "size": 224509,
+      "sha256": "993504c9a534cd99323bb4831728f6dcf15d58bf97b273435f985d1763b8cf00"
     },
     {
       "path": "web/es/manual_bundle.html",
-      "size": 21045,
-      "sha256": "9cc76744fbb3be352173dbc554d7103d6e379a989233d0d6ab37616dc9312b90"
+      "size": 20663,
+      "sha256": "9161484c1735b54bc32d4c76282c576165374a0641ac759c32cfd4802cfa7b26"
     },
     {
       "path": "web/es/manual_jaad500asil_us_es.md",
-      "size": 19203,
-      "sha256": "6a2062de21be4ce4223d241f139f23252993d8e5128f2d2ffb81e4e370764598"
+      "size": 19163,
+      "sha256": "afa93ce18a86452e15fd7def12caa6f8c92e303fd35d20744b64773bfd869110"
     },
     {
       "path": "web/fr/_static/web_manual.css",
-      "size": 111201,
-      "sha256": "8f58d19bed88349a595a5c22e6205e0e93c956d6dc4c4a6278e2780f05ca7c8b"
+      "size": 123623,
+      "sha256": "4c01adf9222e7faa8fb5552490d8b8fa4ebba550b4ef2a1e7171a1b9a6538434"
     },
     {
       "path": "web/fr/assets/ir/0db544e58c9043e70d74311a01ca46edb3b174f5962a28b523da348064df5dfd/solar.png",
@@ -485,24 +390,24 @@
     },
     {
       "path": "web/fr/manual.ir.json",
-      "size": 226515,
-      "sha256": "63cb5f7942a3bdffc4a7ec41983ee2cebf0c3c0b2519d32e85508562df63bcb9"
+      "size": 225309,
+      "sha256": "50e380c82bb1ba8dbff0f50d8f9496a7c4b1b486edc6956d26784587ba5157f8"
     },
     {
       "path": "web/fr/manual_bundle.html",
-      "size": 21342,
-      "sha256": "afced81d431ce0afa6deb7755080751fb0ce7dfa82f819e991f6a8e13f1ce747"
+      "size": 20946,
+      "sha256": "9ba415e960c3e1d868fb0ee65f6bb5634efb8f3eb1fddc29671f204f087f6079"
     },
     {
       "path": "web/fr/manual_jaad500asil_us_fr.md",
-      "size": 19500,
-      "sha256": "e8834969b5ec56aa07c256a9b8fd5ff4dc68c79e332dfca0ddd471ebdc268eac"
+      "size": 19446,
+      "sha256": "b1cc4de942132d7c83d9b033a2f574d16596d5fb4d832ac8a75739e30ecf6266"
     }
   ],
   "repo_inputs": [
     {
       "path": "docs/renderers/contracts/web_presentation/target_overlays.json",
-      "sha256": "40aa888c93dddef8fcbba3e8034c0843525adfc1058c72bd3db947cc389c3db4"
+      "sha256": "6337f537ac3b8b7248e00632d9f3d899a410fbadad4319a718b0e39905717a9d"
     }
   ],
   "web_roots": {
@@ -515,5 +420,27 @@
     "source_commit": "ba0f95313d7cc763d5360549e081a413cb89a4eb",
     "structure": "same chapter order, component types/counts, table geometry, reference IDs and art hashes; native text governs all copy"
   },
-  "filename_version_label": "V2.0-2026-05-25; filename metadata only, no printed version located"
+  "filename_version_label": "V2.0-2026-05-25; filename metadata only, no printed version located",
+  "publication_status": "operator-approved-git-only-release",
+  "derived_from": {
+    "package": "git-20261007-28c58312-reviewed",
+    "authorization": "MA-262",
+    "manifest_sha256": "6874e191f6102d52bdf99f113443ec236215e073ecf0816934b33c6a7c8faef4"
+  },
+  "text_corrections": [
+    {
+      "page": "source/page/charging_fr.rst",
+      "approved": "Il est recommandé d’utiliser le panneau solaire Jackery pour charger le Jackery FridgeGuard et Jackery Battery Pack. Assurez-vous que la tension en circuit ouvert (Voc) du panneau solaire se situe dans la plage d’entrée CC (36.8 V–56 V) du Jackery FridgeGuard ou dans la plage d’entrée CC (40 V–57.6 V) du Jackery Battery Pack. Jackery décline toute responsabilité en cas de pertes causées par l’utilisation de panneaux solaires d’autres marques.",
+      "corrected": "Il est recommandé d’utiliser des panneaux solaires Jackery pour charger le produit connecté via le Jackery DC Input Module. Assurez-vous que la tension en circuit ouvert (Voc) des panneaux solaires connectés se situe dans la plage de tension d’entrée CC du module (16 V–60 V). Jackery décline toute responsabilité en cas de pertes causées par l’utilisation de panneaux solaires d’autres marques.",
+      "reason": "Solar panels connect through the Jackery DC Input Module; the panel Voc limit is the module's DC input voltage range (16V–60V), not the downstream FridgeGuard / Battery Pack ranges cited by the printed source.",
+      "instruction": "operator, 2026-10-15: replace the paragraph (整段替换), keep the disclaimer (不删免责句); the printed source and its transcription stay unchanged"
+    },
+    {
+      "page": "source/page/charging_es.rst",
+      "approved": "Se recomienda usar el panel solar Jackery para cargar el Jackery Battery Pack y Jackery FridgeGuard. Asegúrese de que el voltaje de circuito abierto (Voc) del panel solar esté dentro del rango de entrada de CC (36.8 V–56 V) del Jackery FridgeGuard o del rango de entrada de CC (40 V–57.6 V) del Jackery Battery Pack. Jackery no se hace responsable de pérdidas causadas por el uso de paneles solares de otras marcas.",
+      "corrected": "Se recomienda usar paneles solares Jackery para cargar el producto conectado a través del Jackery DC Input Module. Asegúrese de que el voltaje en circuito abierto (Voc) de los paneles solares conectados esté dentro del rango de voltaje de entrada de CC del módulo (16 V–60 V). Jackery no se hace responsable de pérdidas causadas por el uso de paneles solares de otras marcas.",
+      "reason": "Solar panels connect through the Jackery DC Input Module; the panel Voc limit is the module's DC input voltage range (16V–60V), not the downstream FridgeGuard / Battery Pack ranges cited by the printed source.",
+      "instruction": "operator, 2026-10-15: replace the paragraph (整段替换), keep the disclaimer (不删免责句); the printed source and its transcription stay unchanged"
+    }
+  ]
 }

@@ -8,8 +8,8 @@
     "assets/ir/98dd52bc02290abea21f6bfdaa105dfe77a831b99c845ce8f44e2adc9009deaa/contact-qr.png"
   ],
   "bundle_root": "frozen-source",
-  "bundle_sha256": "aa7ec34d357a8ae6171aba25b663ed973412c036f5062d4fc7e6b180793393dd",
-  "content_sha256": "87c425fcb7c537b784868e438edeb4cb6aa3cbe8bb8dda2eb02933b44fbf331c",
+  "bundle_sha256": "9db63d416111660294b92127aec7a21177a65dbbc07788b76359b563f711b229",
+  "content_sha256": "e3105a24df2063828c70c530f0f59ca4456198128028d1c9398bfc6aeb2074b7",
   "language": "es",
   "layout_params_sha256": "f5ae099abc1a82ffda3abcc5a13725aca3c201e720a0374d88d1643f9773f279",
   "metadata": {
@@ -1289,6 +1289,11 @@
           ]
         }
       },
+      "derived_from": {
+        "authorization": "MA-262",
+        "manifest_sha256": "6874e191f6102d52bdf99f113443ec236215e073ecf0816934b33c6a7c8faef4",
+        "package": "git-20261007-28c58312-reviewed"
+      },
       "english_baseline": {
         "manifest_sha256": "d24e3a11daf168221d9061eada6a0ba475cdd3be8ee8846508b67eb7d1529eba",
         "path": "manual_sources/JA-AD500A-SIL/US/en/git-20261006-a6d1659e-reviewed",
@@ -1297,16 +1302,6 @@
       },
       "filename_version_label": "V2.0-2026-05-25; filename metadata only, no printed version located",
       "inputs": [
-        {
-          "path": "README.md",
-          "sha256": "13aba66f55e3642b800721a5cc2b8b48f4cab278df2815601d1b6451f83f2544",
-          "size": 595
-        },
-        {
-          "path": "approval.json",
-          "sha256": "b92b0f955b64c66a39c78b8ef816ab6eb13e0bc299ec245d03f493c3f199a678",
-          "size": 2254
-        },
         {
           "path": "assets/car.png",
           "sha256": "c8237a9bc6433746f86bdbd7e6de26895f426b4fa3d0abf4320f8cbae3662dd2",
@@ -1338,114 +1333,24 @@
           "size": 222637
         },
         {
-          "path": "evidence/browser/es-desktop-car-final.png",
-          "sha256": "9c3f01f00702c07a48c37f80c5fcf8130a8e4bc68ebb3ff5ed70d7e776601989",
-          "size": 104864
-        },
-        {
-          "path": "evidence/browser/es-desktop-full-final.png",
-          "sha256": "e494a64ce13f30c4339c7a86cfec400aed53902169402ba2b2a6e468663d8870",
-          "size": 666270
-        },
-        {
-          "path": "evidence/browser/es-desktop-warranty-final.png",
-          "sha256": "dc6a11a4799d34408d6c2a3ca81e3e7f31efcedd0c54e2c2d64714b987fe6eb5",
-          "size": 153292
-        },
-        {
-          "path": "evidence/browser/es-mobile-full-final.png",
-          "sha256": "95ae964ad54a1bdc331f965f131bdba7bba8fe3e13d50ff36e543b8290ab1492",
-          "size": 416928
-        },
-        {
-          "path": "evidence/browser/es-mobile-overview-final.png",
-          "sha256": "211b5dbe31fb6496990117c080aaac87bad2e3c177aae0c9fbec893f719fd077",
-          "size": 36255
-        },
-        {
-          "path": "evidence/browser/es-mobile-spec-final.png",
-          "sha256": "745ab442d10034870a907062a37c06629e8bf2773a5acb5941a5767138b543db",
-          "size": 49795
-        },
-        {
-          "path": "evidence/browser/fr-desktop-full-final.png",
-          "sha256": "1b282f56988b959340bbb53b40161730c5aeafed11ed2f839c104169669b43a9",
-          "size": 661248
-        },
-        {
-          "path": "evidence/browser/fr-desktop-overview-final.png",
-          "sha256": "cacc5a339cefdaa4e95e0e8aba5ac6008f1d165e09fad573d0ebf3c620410dff",
-          "size": 59501
-        },
-        {
-          "path": "evidence/browser/fr-mobile-full-final.png",
-          "sha256": "16fc2324a7a94988284acb01927004c562a585fab1f39a8a2f967eea31f7433a",
-          "size": 417959
-        },
-        {
-          "path": "evidence/browser/fr-mobile-overview-final.png",
-          "sha256": "1a3e0e0e974762dc814a49b3b1e47257dc2e84166dea7ab6604a3972594f774f",
-          "size": 35477
-        },
-        {
-          "path": "evidence/browser/fr-mobile-warranty-final.png",
-          "sha256": "0fff3059fff136682643a5f6ba5b8d4f56c7bb7f90fa285d7f865c2b0ded2a3f",
-          "size": 70636
-        },
-        {
-          "path": "evidence/browser-checks.json",
-          "sha256": "260e1a0e93bf2fb29354dbb666326d52ac0366fd17f0e9d17ac39bd8610af045",
-          "size": 1166
-        },
-        {
-          "path": "evidence/component-tests.log",
-          "sha256": "1e865e9df09fc14ab1f1693027314204cc4daf1ac8e369f019217af088b2771c",
-          "size": 1079
-        },
-        {
-          "path": "evidence/doc-links.log",
-          "sha256": "9e2798ebbac8e0f5781fce224f3c2bcdd7f9e93caf0c09ecb5d042b169ecccbc",
-          "size": 127
-        },
-        {
-          "path": "evidence/final-parity.json",
-          "sha256": "b49ee05edd8f11aeaf2471dd38fd9aacd6feff9a0d25cd69ea1cc178bec32a08",
-          "size": 220
-        },
-        {
-          "path": "evidence/guardrails.log",
-          "sha256": "ff9cd5515d1786fa81cfd30b2dfed211a077378696011d3850739150c8a6517c",
-          "size": 425
-        },
-        {
-          "path": "evidence/ruff.log",
-          "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18",
-          "size": 19
-        },
-        {
-          "path": "evidence/strict-es-final.log",
-          "sha256": "f5f7370210402685b8c4f455ce6cdbe5a79c36c4b38422c16efc3186d638c31a",
-          "size": 2079
-        },
-        {
-          "path": "evidence/strict-fr-final.log",
-          "sha256": "3f2c6c16fb2c44358052923d1ceb535dcd3747200c007b01ebd05408682db334",
-          "size": 2078
-        },
-        {
-          "path": "evidence/us-regression.log",
-          "sha256": "f9983054505936be4833b3d24cd1edb58ed7f1babf781594fddb7d0b148f615f",
-          "size": 2149
-        },
-        {
-          "path": "evidence/verification.json",
-          "sha256": "7e8a476eb63ed466fc7dcbd9381ed9cfe22e8763572c97425389997902a67f7b",
-          "size": 1287
+          "path": "derive_solar_voc.py",
+          "sha256": "5b19e0aa20ef8c7cc2a5f96a89f769d20206681f30b08c6ee7bb327d21d5c8e8",
+          "size": 7678
         },
         {
           "path": "render.py",
-          "sha256": "469a9a2932ac08dcb279b662e801b5cb37f8590238eab9683d65394c5845a6dd",
-          "size": 4479
+          "sha256": "15e87cd7edbbcc267a3a20076997f7efef3534205499d63e994e0af70793e0ea",
+          "size": 7781
+        },
+        {
+          "path": "source/approval.json",
+          "sha256": "9f76d4df535e4134cada0b0fd9dca4accbb86a1779c99350c5ac41b260c319ce",
+          "size": 4055
+        },
+        {
+          "path": "source/differences.md",
+          "sha256": "7e4428a1bb5efbfc02bdb9eabecc83c205c53fee5ef0b4d83ee5ba20a36e726c",
+          "size": 2647
         },
         {
           "path": "source/native_copy.json",
@@ -1469,13 +1374,13 @@
         },
         {
           "path": "source/page/charging_es.rst",
-          "sha256": "d2dbd28f016a983b0de35d2257d893c555d605e5480ed2b2dc5a0fd68576bf51",
-          "size": 3545
+          "sha256": "614fc0f530931b40457ed957400711c3401f1648320ba4f1b417301fdafa73c0",
+          "size": 3505
         },
         {
           "path": "source/page/charging_fr.rst",
-          "sha256": "d4e442e187088900f5c7fa84137a7b8932456486740c41743a94c7d495a2fe94",
-          "size": 3707
+          "sha256": "e3cb27f5e986c8907dda38c84345a22b61e80e7ffcda6cb3544d5fb3ab530047",
+          "size": 3653
         },
         {
           "path": "source/page/contact_es.rst",
@@ -1562,10 +1467,11 @@
       "pending_source_review": [],
       "printed_manual_version": null,
       "publication_eligible": true,
+      "publication_status": "operator-approved-git-only-release",
       "repo_inputs": [
         {
           "path": "docs/renderers/contracts/web_presentation/target_overlays.json",
-          "sha256": "40aa888c93dddef8fcbba3e8034c0843525adfc1058c72bd3db947cc389c3db4"
+          "sha256": "6337f537ac3b8b7248e00632d9f3d899a410fbadad4319a718b0e39905717a9d"
         }
       ],
       "required_components": {
@@ -1599,7 +1505,7 @@
           "pdf_page": 21
         },
         {
-          "disposition": "retained; no technical correction authorized",
+          "disposition": "corrected in this edition's prepared pages on operator instruction 2026-10-15; native_copy.json keeps the printed wording",
           "issue": "PV Voc guidance refers to downstream FridgeGuard/Battery Pack ranges",
           "language": "fr/es",
           "pdf_pages": [
@@ -1617,7 +1523,7 @@
           ]
         }
       ],
-      "source_role": "Git-only operator-approved native French/Spanish prepared Web release",
+      "source_role": "Git-only French/Spanish solar-Voc correction edition of the approved release",
       "target": {
         "languages": [
           "fr",
@@ -1625,14 +1531,30 @@
         ],
         "model": "JA-AD500A-SIL",
         "region": "US",
-        "technical_version": "git-20261007-28c58312-reviewed"
+        "technical_version": "git-20261016-28c58312-solar-voc"
       },
+      "text_corrections": [
+        {
+          "approved": "Il est recommandé d’utiliser le panneau solaire Jackery pour charger le Jackery FridgeGuard et Jackery Battery Pack. Assurez-vous que la tension en circuit ouvert (Voc) du panneau solaire se situe dans la plage d’entrée CC (36.8 V–56 V) du Jackery FridgeGuard ou dans la plage d’entrée CC (40 V–57.6 V) du Jackery Battery Pack. Jackery décline toute responsabilité en cas de pertes causées par l’utilisation de panneaux solaires d’autres marques.",
+          "corrected": "Il est recommandé d’utiliser des panneaux solaires Jackery pour charger le produit connecté via le Jackery DC Input Module. Assurez-vous que la tension en circuit ouvert (Voc) des panneaux solaires connectés se situe dans la plage de tension d’entrée CC du module (16 V–60 V). Jackery décline toute responsabilité en cas de pertes causées par l’utilisation de panneaux solaires d’autres marques.",
+          "instruction": "operator, 2026-10-15: replace the paragraph (整段替换), keep the disclaimer (不删免责句); the printed source and its transcription stay unchanged",
+          "page": "source/page/charging_fr.rst",
+          "reason": "Solar panels connect through the Jackery DC Input Module; the panel Voc limit is the module's DC input voltage range (16V–60V), not the downstream FridgeGuard / Battery Pack ranges cited by the printed source."
+        },
+        {
+          "approved": "Se recomienda usar el panel solar Jackery para cargar el Jackery Battery Pack y Jackery FridgeGuard. Asegúrese de que el voltaje de circuito abierto (Voc) del panel solar esté dentro del rango de entrada de CC (36.8 V–56 V) del Jackery FridgeGuard o del rango de entrada de CC (40 V–57.6 V) del Jackery Battery Pack. Jackery no se hace responsable de pérdidas causadas por el uso de paneles solares de otras marcas.",
+          "corrected": "Se recomienda usar paneles solares Jackery para cargar el producto conectado a través del Jackery DC Input Module. Asegúrese de que el voltaje en circuito abierto (Voc) de los paneles solares conectados esté dentro del rango de voltaje de entrada de CC del módulo (16 V–60 V). Jackery no se hace responsable de pérdidas causadas por el uso de paneles solares de otras marcas.",
+          "instruction": "operator, 2026-10-15: replace the paragraph (整段替换), keep the disclaimer (不删免责句); the printed source and its transcription stay unchanged",
+          "page": "source/page/charging_es.rst",
+          "reason": "Solar panels connect through the Jackery DC Input Module; the panel Voc limit is the module's DC input voltage range (16V–60V), not the downstream FridgeGuard / Battery Pack ranges cited by the printed source."
+        }
+      ],
       "web_roots": {
         "es": "web/es",
         "fr": "web/fr"
       }
     },
-    "frozen_stylesheet_sha256": "8f58d19bed88349a595a5c22e6205e0e93c956d6dc4c4a6278e2780f05ca7c8b",
+    "frozen_stylesheet_sha256": "4c01adf9222e7faa8fb5552490d8b8fa4ebba550b4ef2a1e7171a1b9a6538434",
     "illustration_provenance": null,
     "manual_theme": {
       "component_roles": {
@@ -2213,69 +2135,134 @@
     },
     "manual_theme_sha256": "e8fc88458d239edef85f2cfb0b26b71df2e83859c8e51e9c093e5abc2982b47d",
     "markdown_filename": "manual_jaad500asil_us_es.md",
-    "operator_release_approval": {
-      "authorization": "MA-262",
-      "candidate_manifest_sha256": "675efbbde7f96588ceca0e517b5ab982d88564f6169230f994060a7530aede9e",
-      "candidate_source_commit": "e657ed079246dbe6beb3b8db2154ab6cdb0ece6a",
-      "date": "2026-10-07",
-      "decision": "Publish reviewed native French and Spanish with documented source concerns retained, English unchanged, no live-table writes; printed version remains unknown.",
-      "languages": [
-        "fr",
-        "es"
+    "operator_source_acceptance": {
+      "date": "2026-10-16",
+      "merge_authorization": "MA-312",
+      "operator_decisions": [
+        "整段替换（太阳能板 Voc 段改为引用 Jackery DC Input Module 的 DC 输入电压范围 16V–60V）",
+        "不删免责句",
+        "都统一成 DC input voltage range；power station 改为 the connected product"
       ],
-      "model": "JA-AD500A-SIL",
+      "operator_quote": "全部验收并发布上线；然后全部 要发布上线 这四本 验收记录 允许你写",
       "original_source_sha256": "28c58312ffafae322161d17701869ede8f6b87e58799379a84fad2850c638530",
-      "region": "US",
-      "retained_source_concerns": [
+      "reviewed_inputs": [
         {
-          "disposition": "native wording retained",
-          "issue": "Oiture and English Double to in native overview",
-          "language": "fr",
-          "pdf_page": 11
+          "path": "assets/car.png",
+          "sha256": "c8237a9bc6433746f86bdbd7e6de26895f426b4fa3d0abf4320f8cbae3662dd2",
+          "size": 89548
         },
         {
-          "disposition": "preserved as printed; requires operator/source-owner correction decision",
-          "issue": "Sortie CC labels 11–16/16–60 input rows; Entrée CC labels 42–58 output row",
-          "language": "fr",
-          "pdf_page": 14
+          "path": "assets/contact-qr.png",
+          "sha256": "98dd52bc02290abea21f6bfdaa105dfe77a831b99c845ce8f44e2adc9009deaa",
+          "size": 2217
         },
         {
-          "disposition": "native copy retained",
-          "issue": "DERECHOS DE INTERPRETACIÓN repeats original-buyer/non-transfer clause",
-          "language": "es",
-          "pdf_page": 21
+          "path": "assets/inbox-manual.png",
+          "sha256": "93420c29dca6c234752aafc094f1f342eb61547215ad73b1fa667785a54f2290",
+          "size": 11774
         },
         {
-          "disposition": "retained; no technical correction authorized",
-          "issue": "PV Voc guidance refers to downstream FridgeGuard/Battery Pack ranges",
-          "language": "fr/es",
-          "pdf_pages": [
-            13,
-            19
-          ]
+          "path": "assets/inbox-module.png",
+          "sha256": "3c140171d4ae33f68026b81db880318d28ccf3ecd4d4d201c0ec9015080db49d",
+          "size": 14353
         },
         {
-          "disposition": "retained per operator instruction 你先不用删",
-          "issue": "Battery-cell charging condition in module warranty",
-          "language": "fr/es",
-          "pdf_pages": [
-            15,
-            21
-          ]
+          "path": "assets/overview-textless.png",
+          "sha256": "910a6ce8542f5be9df214a28699b57df6c5abb97c788f1efd72c3b6507f967c2",
+          "size": 72743
+        },
+        {
+          "path": "assets/solar.png",
+          "sha256": "0db544e58c9043e70d74311a01ca46edb3b174f5962a28b523da348064df5dfd",
+          "size": 222637
+        },
+        {
+          "path": "source/differences.md",
+          "sha256": "7e4428a1bb5efbfc02bdb9eabecc83c205c53fee5ef0b4d83ee5ba20a36e726c",
+          "size": 2647
+        },
+        {
+          "path": "source/native_copy.json",
+          "sha256": "b1bae9a035d05389ba9cb42b85f62079ea152c803895e4b3ba7e7a8ba6054b19",
+          "size": 13561
+        },
+        {
+          "path": "source/original.pdf",
+          "sha256": "28c58312ffafae322161d17701869ede8f6b87e58799379a84fad2850c638530",
+          "size": 3410276
+        },
+        {
+          "path": "source/page/box_contents_es.rst",
+          "sha256": "9c1a41ed40e55292f47ad8474c06b9061d7a72fc23e4eaaa89b3131b18fd802d",
+          "size": 325
+        },
+        {
+          "path": "source/page/box_contents_fr.rst",
+          "sha256": "78801518c24f331a4e04f909986cb5a45c53efd837d0f1fdc6dd7636e1b6c747",
+          "size": 334
+        },
+        {
+          "path": "source/page/charging_es.rst",
+          "sha256": "614fc0f530931b40457ed957400711c3401f1648320ba4f1b417301fdafa73c0",
+          "size": 3505
+        },
+        {
+          "path": "source/page/charging_fr.rst",
+          "sha256": "e3cb27f5e986c8907dda38c84345a22b61e80e7ffcda6cb3544d5fb3ab530047",
+          "size": 3653
+        },
+        {
+          "path": "source/page/contact_es.rst",
+          "sha256": "4df0572685a176f1ab801372a919b8109759cc37e595df57f6f298ef2ad877cb",
+          "size": 662
+        },
+        {
+          "path": "source/page/contact_fr.rst",
+          "sha256": "4df0572685a176f1ab801372a919b8109759cc37e595df57f6f298ef2ad877cb",
+          "size": 662
+        },
+        {
+          "path": "source/page/product_overview_es.rst",
+          "sha256": "f4830f2f0079f184f177389a5a04224e7c3431b041cbc5cc7fe70d5fbf857e33",
+          "size": 4145
+        },
+        {
+          "path": "source/page/product_overview_fr.rst",
+          "sha256": "6fbd7193f9be54a3e822fc68373c2b1d9fd9afe24f1c35c1023ce52fb9463b7c",
+          "size": 4097
+        },
+        {
+          "path": "source/page/spec_es.rst",
+          "sha256": "bb4db5db468038dc67e15a2ff007631f49d2d5515f456bb3ed7a4eeb7927a65e",
+          "size": 879
+        },
+        {
+          "path": "source/page/spec_fr.rst",
+          "sha256": "48b7512256d5bfc6ab4232e8b97f390a37920de8a428cbffe90aa758cb24c691",
+          "size": 854
+        },
+        {
+          "path": "source/page/warranty_es.rst",
+          "sha256": "8f824dfc1ad7af0f713820b8fc525c98f9f2ac9ccf9babf3a14b6c2860428547",
+          "size": 3220
+        },
+        {
+          "path": "source/page/warranty_fr.rst",
+          "sha256": "bb237bfdb36aa0c285cac61a55c199d54a781b35b89abe444b2b53bd709443c8",
+          "size": 3390
         }
       ],
-      "reviewed_languages": {
-        "es": {
-          "css_sha256": "8f58d19bed88349a595a5c22e6205e0e93c956d6dc4c4a6278e2780f05ca7c8b",
-          "markdown_sha256": "6a2062de21be4ce4223d241f139f23252993d8e5128f2d2ffb81e4e370764598"
-        },
-        "fr": {
-          "css_sha256": "8f58d19bed88349a595a5c22e6205e0e93c956d6dc4c4a6278e2780f05ca7c8b",
-          "markdown_sha256": "e8834969b5ec56aa07c256a9b8fd5ff4dc68c79e332dfca0ddd471ebdc268eac"
-        }
-      },
-      "schema_version": "manual-reviewed-publication-approval/v1",
-      "user_instruction": "上线发布"
+      "reviewed_source_commit": "cebdc754",
+      "schema_version": "source-operator-acceptance/v1",
+      "scope": "Git-only Web release of the solar-Voc correction edition git-20261016-28c58312-solar-voc; base editions, printed sources and their release evidence unchanged; no Feishu/Base/source-table, queue, asset-registry or HTML_link writes.",
+      "target": {
+        "languages": [
+          "fr",
+          "es"
+        ],
+        "model": "JA-AD500A-SIL",
+        "region": "US"
+      }
     },
     "page_count": 6,
     "page_declarations": {},
@@ -2498,7 +2485,7 @@
             "assets/ir/93420c29dca6c234752aafc094f1f342eb61547215ad73b1fa667785a54f2290/inbox-manual.png"
           ],
           "block_id": "box_contents_es.rst:block-0002",
-          "content_sha256": "b96e24fb18ad531740c38a4262d17f4a79dc08fc164921be10966e04d4f09982",
+          "content_sha256": "1bd72107f5f376b08fbbd64aa9dd6e2f7435940e874b21b878503bffdd8904df",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -2691,7 +2678,7 @@
                   "role": "tip_body"
                 }
               ],
-              "source_ref": "/Users/pika/.codex/worktrees/manual-intake-assist/auto-manual2/manual_sources/JA-AD500A-SIL/US/fr-es/git-20261007-28c58312-reviewed/source/page/box_contents_es.rst",
+              "source_ref": "source/page/box_contents_es.rst",
               "token_roles": [
                 "component.special.inbox"
               ],
@@ -2706,7 +2693,7 @@
       "language": "es",
       "page_id": "box_contents_es.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/manual-intake-assist/auto-manual2/manual_sources/JA-AD500A-SIL/US/fr-es/git-20261007-28c58312-reviewed/source/page/box_contents_es.rst",
+      "source_path": "source/page/box_contents_es.rst",
       "source_ref": "box_contents_es.rst",
       "source_sha256": "9c1a41ed40e55292f47ad8474c06b9061d7a72fc23e4eaaa89b3131b18fd802d"
     },
@@ -2735,7 +2722,7 @@
             "assets/ir/910a6ce8542f5be9df214a28699b57df6c5abb97c788f1efd72c3b6507f967c2/overview-textless.png"
           ],
           "block_id": "product_overview_es.rst:block-0002",
-          "content_sha256": "171d86bacef2d0cbaf1010bf13987ea00926ebaf065c92f9c45d3c83dbf2afb4",
+          "content_sha256": "de89332cedf33ace8eb3a97111c0d06a0ec6a942a53d3dd79b22e067517be9c6",
           "kind": "flow",
           "payload": {
             "children": [
@@ -3114,7 +3101,7 @@
                       "role": "captions"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/manual-intake-assist/auto-manual2/manual_sources/JA-AD500A-SIL/US/fr-es/git-20261007-28c58312-reviewed/source/page/product_overview_es.rst#reference-product-overview",
+                  "source_ref": "source/page/product_overview_es.rst#reference-product-overview",
                   "token_roles": [
                     "component.special.reference-figure"
                   ],
@@ -3754,7 +3741,7 @@
       "language": "es",
       "page_id": "product_overview_es.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/manual-intake-assist/auto-manual2/manual_sources/JA-AD500A-SIL/US/fr-es/git-20261007-28c58312-reviewed/source/page/product_overview_es.rst",
+      "source_path": "source/page/product_overview_es.rst",
       "source_ref": "product_overview_es.rst",
       "source_sha256": "f4830f2f0079f184f177389a5a04224e7c3431b041cbc5cc7fe70d5fbf857e33"
     },
@@ -3783,7 +3770,7 @@
             "assets/ir/0db544e58c9043e70d74311a01ca46edb3b174f5962a28b523da348064df5dfd/solar.png"
           ],
           "block_id": "charging_es.rst:block-0002",
-          "content_sha256": "136dbec285553e637b2555e489549c683fb7ab6ce7dd97016e8c30a716d89e58",
+          "content_sha256": "15f49dc0afd254a4eb1a915bc8f2f26245bbb7651ccf2754b920fe6229ff78e0",
           "kind": "flow",
           "payload": {
             "anchor": "carga-mediante-paneles-solares-se-vende-por-separado",
@@ -3877,7 +3864,7 @@
                       "role": "caption_layout"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/manual-intake-assist/auto-manual2/manual_sources/JA-AD500A-SIL/US/fr-es/git-20261007-28c58312-reviewed/source/page/charging_es.rst#reference-solar-connection",
+                  "source_ref": "source/page/charging_es.rst#reference-solar-connection",
                   "token_roles": [
                     "component.special.reference-figure"
                   ],
@@ -3990,7 +3977,7 @@
                       "role": "body"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/manual-intake-assist/auto-manual2/manual_sources/JA-AD500A-SIL/US/fr-es/git-20261007-28c58312-reviewed/source/page/charging_es.rst#callout-1",
+                  "source_ref": "source/page/charging_es.rst#callout-1",
                   "token_roles": [
                     "component.callout"
                   ],
@@ -4170,7 +4157,7 @@
                       "role": "items"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/manual-intake-assist/auto-manual2/manual_sources/JA-AD500A-SIL/US/fr-es/git-20261007-28c58312-reviewed/source/page/charging_es.rst#callout-2",
+                  "source_ref": "source/page/charging_es.rst#callout-2",
                   "token_roles": [
                     "component.callout"
                   ],
@@ -4182,7 +4169,7 @@
                 "children": [
                   {
                     "kind": "text",
-                    "text": "Se recomienda usar el panel solar Jackery para cargar el Jackery Battery Pack y Jackery FridgeGuard. Asegúrese de que el voltaje de circuito abierto (Voc) del panel solar esté dentro del rango de entrada de CC (36.8 V–56 V) del Jackery FridgeGuard o del rango de entrada de CC (40 V–57.6 V) del Jackery Battery Pack. Jackery no se hace responsable de pérdidas causadas por el uso de paneles solares de otras marcas."
+                    "text": "Se recomienda usar paneles solares Jackery para cargar el producto conectado a través del Jackery DC Input Module. Asegúrese de que el voltaje en circuito abierto (Voc) de los paneles solares conectados esté dentro del rango de voltaje de entrada de CC del módulo (16 V–60 V). Jackery no se hace responsable de pérdidas causadas por el uso de paneles solares de otras marcas."
                   }
                 ],
                 "kind": "paragraph"
@@ -4214,7 +4201,7 @@
             "assets/ir/c8237a9bc6433746f86bdbd7e6de26895f426b4fa3d0abf4320f8cbae3662dd2/car.png"
           ],
           "block_id": "charging_es.rst:block-0004",
-          "content_sha256": "780fa180c56fc5f754e5c8919cd653ed4c53d377f241cc3de8ff3d134f2af667",
+          "content_sha256": "b0dd0dc4c8efde2a27ec0509da282b9e6768a6f7ba2141deb637f7c70625dbd2",
           "kind": "flow",
           "payload": {
             "anchor": "carga-con-un-cargador-de-en-el-vehiculo-se-vende-por-separado",
@@ -4475,7 +4462,7 @@
                       "role": "captions"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/manual-intake-assist/auto-manual2/manual_sources/JA-AD500A-SIL/US/fr-es/git-20261007-28c58312-reviewed/source/page/charging_es.rst#reference-car-connection",
+                  "source_ref": "source/page/charging_es.rst#reference-car-connection",
                   "token_roles": [
                     "component.special.reference-figure"
                   ],
@@ -4665,7 +4652,7 @@
                       "role": "items"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/manual-intake-assist/auto-manual2/manual_sources/JA-AD500A-SIL/US/fr-es/git-20261007-28c58312-reviewed/source/page/charging_es.rst#callout-3",
+                  "source_ref": "source/page/charging_es.rst#callout-3",
                   "token_roles": [
                     "component.callout"
                   ],
@@ -4683,9 +4670,9 @@
       "language": "es",
       "page_id": "charging_es.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/manual-intake-assist/auto-manual2/manual_sources/JA-AD500A-SIL/US/fr-es/git-20261007-28c58312-reviewed/source/page/charging_es.rst",
+      "source_path": "source/page/charging_es.rst",
       "source_ref": "charging_es.rst",
-      "source_sha256": "d2dbd28f016a983b0de35d2257d893c555d605e5480ed2b2dc5a0fd68576bf51"
+      "source_sha256": "614fc0f530931b40457ed957400711c3401f1648320ba4f1b417301fdafa73c0"
     },
     {
       "blocks": [
@@ -4710,7 +4697,7 @@
         {
           "asset_refs": [],
           "block_id": "spec_es.rst:block-0002",
-          "content_sha256": "607420dbf5c504c882d412d69d54f8e254ba47004051d20132af2a97a25eded4",
+          "content_sha256": "a041b7209eeb4ff7e946537ea553ee31bb20db860d3836ea267fe97606b1af3d",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -4950,7 +4937,7 @@
                   "role": "rows"
                 }
               ],
-              "source_ref": "/Users/pika/.codex/worktrees/manual-intake-assist/auto-manual2/manual_sources/JA-AD500A-SIL/US/fr-es/git-20261007-28c58312-reviewed/source/page/spec_es.rst#specification-1",
+              "source_ref": "source/page/spec_es.rst#specification-1",
               "token_roles": [
                 "component.table.spec"
               ],
@@ -4976,7 +4963,7 @@
         {
           "asset_refs": [],
           "block_id": "spec_es.rst:block-0004",
-          "content_sha256": "63a0164478259a1c5d2ee98a10d48dc1ab6014883011628957e1070df6008e4f",
+          "content_sha256": "aa75ae349ae8aece4f2be966c990c1e0a7ae1230b8b251ca4a7347837ac09136",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -5160,7 +5147,7 @@
                   "role": "rows"
                 }
               ],
-              "source_ref": "/Users/pika/.codex/worktrees/manual-intake-assist/auto-manual2/manual_sources/JA-AD500A-SIL/US/fr-es/git-20261007-28c58312-reviewed/source/page/spec_es.rst#specification-2",
+              "source_ref": "source/page/spec_es.rst#specification-2",
               "token_roles": [
                 "component.table.spec"
               ],
@@ -5187,7 +5174,7 @@
       "language": "es",
       "page_id": "spec_es.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/manual-intake-assist/auto-manual2/manual_sources/JA-AD500A-SIL/US/fr-es/git-20261007-28c58312-reviewed/source/page/spec_es.rst",
+      "source_path": "source/page/spec_es.rst",
       "source_ref": "spec_es.rst",
       "source_sha256": "bb4db5db468038dc67e15a2ff007631f49d2d5515f456bb3ed7a4eeb7927a65e"
     },
@@ -5214,7 +5201,7 @@
         {
           "asset_refs": [],
           "block_id": "warranty_es.rst:block-0002",
-          "content_sha256": "23002d6c74ba7020e7b975ef0d3403bfc8ce8553a4d5de0c6668b982f4878aca",
+          "content_sha256": "49cd9b8d86228ceaa080c1671ff96c36721e471ce39deda60b69ea4d92330841",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -5265,7 +5252,7 @@
                   "role": "local_note"
                 }
               ],
-              "source_ref": "/Users/pika/.codex/worktrees/manual-intake-assist/auto-manual2/manual_sources/JA-AD500A-SIL/US/fr-es/git-20261007-28c58312-reviewed/source/page/warranty_es.rst#warranty-lead",
+              "source_ref": "source/page/warranty_es.rst#warranty-lead",
               "token_roles": [
                 "component.warranty.lead"
               ],
@@ -5291,7 +5278,7 @@
         {
           "asset_refs": [],
           "block_id": "warranty_es.rst:block-0004",
-          "content_sha256": "9c9bad6c4ee983729f45a3a03e7f05c525076370d94de57e226b2824c1c727f9",
+          "content_sha256": "9b379aa697b5cba2943fd1448d97c9ed12f0409c3718f2f6e7f51f24aeaf1a96",
           "kind": "flow",
           "payload": {
             "anchor": "garantia-limitada",
@@ -5369,7 +5356,7 @@
                       "role": "blocks"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/manual-intake-assist/auto-manual2/manual_sources/JA-AD500A-SIL/US/fr-es/git-20261007-28c58312-reviewed/source/page/warranty_es.rst#warranty-section-1",
+                  "source_ref": "source/page/warranty_es.rst#warranty-section-1",
                   "token_roles": [
                     "component.warranty.section"
                   ],
@@ -5402,7 +5389,7 @@
         {
           "asset_refs": [],
           "block_id": "warranty_es.rst:block-0006",
-          "content_sha256": "771154064fe2bde28d8a7313db2be8beccb99c5e54694e2bfe723cd84ee9a148",
+          "content_sha256": "fd26a573b779487f8ec9c77793abe2ef11a01998c59a061e5fd0b663608221a1",
           "kind": "flow",
           "payload": {
             "anchor": "periodo-de-garantia",
@@ -5571,7 +5558,7 @@
                       "role": "periods"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/manual-intake-assist/auto-manual2/manual_sources/JA-AD500A-SIL/US/fr-es/git-20261007-28c58312-reviewed/source/page/warranty_es.rst#warranty-years",
+                  "source_ref": "source/page/warranty_es.rst#warranty-years",
                   "token_roles": [
                     "component.warranty.years"
                   ],
@@ -5604,7 +5591,7 @@
         {
           "asset_refs": [],
           "block_id": "warranty_es.rst:block-0008",
-          "content_sha256": "adb4ad18dd57518bd0ecba5174d7b7ce4bd57fb69ff6caae4709a8f026cc4992",
+          "content_sha256": "85fd7b62be2b6d4b05b0416db5dd92b7fc2b4b6321c8718bb53bb2c17683ede6",
           "kind": "flow",
           "payload": {
             "anchor": "reparacion-o-reemplazo",
@@ -5668,7 +5655,7 @@
                       "role": "blocks"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/manual-intake-assist/auto-manual2/manual_sources/JA-AD500A-SIL/US/fr-es/git-20261007-28c58312-reviewed/source/page/warranty_es.rst#warranty-section-3",
+                  "source_ref": "source/page/warranty_es.rst#warranty-section-3",
                   "token_roles": [
                     "component.warranty.section"
                   ],
@@ -5701,7 +5688,7 @@
         {
           "asset_refs": [],
           "block_id": "warranty_es.rst:block-0010",
-          "content_sha256": "f818a68e24c431f4b7ab03bd6850bfbfd2f9cf8c69d908cd998dd7adb84da336",
+          "content_sha256": "2316d361a11f4028bb4652227b35cc89fdb9c18dfb853265ea832d7325ba10ce",
           "kind": "flow",
           "payload": {
             "anchor": "limitado-al-comprador-consumidor-original",
@@ -5765,7 +5752,7 @@
                       "role": "blocks"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/manual-intake-assist/auto-manual2/manual_sources/JA-AD500A-SIL/US/fr-es/git-20261007-28c58312-reviewed/source/page/warranty_es.rst#warranty-section-4",
+                  "source_ref": "source/page/warranty_es.rst#warranty-section-4",
                   "token_roles": [
                     "component.warranty.section"
                   ],
@@ -5798,7 +5785,7 @@
         {
           "asset_refs": [],
           "block_id": "warranty_es.rst:block-0012",
-          "content_sha256": "77281c3b66293bbd2ae33950e9656ccdde2b367f1339b6feb33f00052d54089e",
+          "content_sha256": "ee5a5aee18686bd56816d564ec01b9cc8fac1c53570b7e1d35f362b35b17047a",
           "kind": "flow",
           "payload": {
             "anchor": "exclusiones",
@@ -5963,7 +5950,7 @@
                       "role": "blocks"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/manual-intake-assist/auto-manual2/manual_sources/JA-AD500A-SIL/US/fr-es/git-20261007-28c58312-reviewed/source/page/warranty_es.rst#warranty-section-5",
+                  "source_ref": "source/page/warranty_es.rst#warranty-section-5",
                   "token_roles": [
                     "component.warranty.section"
                   ],
@@ -5996,7 +5983,7 @@
         {
           "asset_refs": [],
           "block_id": "warranty_es.rst:block-0014",
-          "content_sha256": "06660b7fc3fe1b759964a4ed601799f4375d87b60576b89ce6d791172e0220d8",
+          "content_sha256": "74ff763d917e6784156290272bb824aec8528a18e18693476511576e46f0590f",
           "kind": "flow",
           "payload": {
             "anchor": "derechos-de-interpretacion",
@@ -6060,7 +6047,7 @@
                       "role": "blocks"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/manual-intake-assist/auto-manual2/manual_sources/JA-AD500A-SIL/US/fr-es/git-20261007-28c58312-reviewed/source/page/warranty_es.rst#warranty-section-6",
+                  "source_ref": "source/page/warranty_es.rst#warranty-section-6",
                   "token_roles": [
                     "component.warranty.section"
                   ],
@@ -6082,7 +6069,7 @@
       "language": "es",
       "page_id": "warranty_es.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/manual-intake-assist/auto-manual2/manual_sources/JA-AD500A-SIL/US/fr-es/git-20261007-28c58312-reviewed/source/page/warranty_es.rst",
+      "source_path": "source/page/warranty_es.rst",
       "source_ref": "warranty_es.rst",
       "source_sha256": "8f824dfc1ad7af0f713820b8fc525c98f9f2ac9ccf9babf3a14b6c2860428547"
     },
@@ -6238,7 +6225,7 @@
       "language": "es",
       "page_id": "contact_es.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/manual-intake-assist/auto-manual2/manual_sources/JA-AD500A-SIL/US/fr-es/git-20261007-28c58312-reviewed/source/page/contact_es.rst",
+      "source_path": "source/page/contact_es.rst",
       "source_ref": "contact_es.rst",
       "source_sha256": "4df0572685a176f1ab801372a919b8109759cc37e595df57f6f298ef2ad877cb"
     }

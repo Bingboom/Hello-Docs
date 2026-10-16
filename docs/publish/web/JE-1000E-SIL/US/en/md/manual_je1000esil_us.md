@@ -29,7 +29,7 @@ Please note that no further notifications will be given in case of any update, r
 <col style="width: 50%" />
 </colgroup>
 <tbody>
-<tr>
+<tr class="odd">
 <td style="width: 50%; border: none; padding: 0 8px 0 0; vertical-align: top"><p>
 
 <figure class="hb-symbol-signal-composition hb-safety-lead"><table class="hb-symbol-signal-table"><colgroup><col style="width:20%"/><col style="width:80%"/></colgroup>
@@ -71,7 +71,7 @@ Please note that no further notifications will be given in case of any update, r
 <col style="width: 50%" />
 </colgroup>
 <tbody>
-<tr>
+<tr class="odd">
 <td style="width: 50%; border: none; padding: 0 8px 0 0; vertical-align: top"><p><strong>SAVE THESE INSTRUCTIONS</strong></p>
 <ul>
 <li><p>Make sure to review your local battery recycling guidelines and find a certified recycling center or collection point near you for defective battery disposal. Never dispose of batteries in regular household waste, as they may leak hazardous chemicals or cause fires.</p></li>
@@ -390,7 +390,7 @@ Connected to the Jackery DC Input Module, Jackery FridgeGuard is compatible with
 
 
 
-It is recommended to use the Jackery solar panel to charge the Jackery FridgeGuard. Ensure that the open-circuit voltage (Voc) of the solar panel falls within the Jackery FridgeGuard\'s DC input voltage range (36.8V-56V). Jackery is not responsible for any losses caused by using solar panels from other brands.
+It is recommended to use Jackery solar panels to charge the product. Ensure that the open-circuit voltage (Voc) of the connected solar panels is within the Jackery DC Input Module\'s DC input voltage range (16V--60V). Jackery is not responsible for any losses caused by using solar panels from other brands.
 
 ## CHARGING WITH A CAR CHARGER
 

@@ -6,7 +6,7 @@
     "languages": [
       "en"
     ],
-    "technical_version": "git-20261006-a6d1659e-reviewed"
+    "technical_version": "git-20261016-a6d1659e-solar-voc"
   },
   "original_source": {
     "filename": "16-0102-000239 说明书 HTO889A-US-JAK RoHS REACH.ai",
@@ -18,7 +18,7 @@
   "source_authority": "operator-supplied PDF-compatible Illustrator, visual transcription of outlined English",
   "baseline_main": "ed4d4ec5071d000d590d5b53322aea6c12186f7c",
   "language_scope": "single",
-  "source_role": "Git-only operator-approved English prepared native Web release",
+  "source_role": "Git-only English solar-Voc correction edition of the approved release",
   "live_bitable_dependency": false,
   "publication_eligible": true,
   "page_order": [
@@ -91,18 +91,8 @@
   "inputs": [
     {
       "path": "README.md",
-      "size": 423,
-      "sha256": "3b740a444a660ff9816327ed87ec7708f61e43b5cd4627b23a3135bac8ed25fc"
-    },
-    {
-      "path": "approval-parity.json",
-      "size": 646,
-      "sha256": "c6f3afe2795f91017b8182e3e38da50b5702376fc98cfe9f1bd28dd4c1bd96c6"
-    },
-    {
-      "path": "approval.json",
-      "size": 1060,
-      "sha256": "645e9eb1117caae405f65cba453b0aff10e90bbea55ade85018621eebe688664"
+      "size": 2117,
+      "sha256": "8616ef7972bd39340f92234d0dbb6929fb6a78fcf655f126dc10412349934ac9"
     },
     {
       "path": "assets/car.png",
@@ -145,14 +135,29 @@
       "sha256": "0db544e58c9043e70d74311a01ca46edb3b174f5962a28b523da348064df5dfd"
     },
     {
+      "path": "derive_solar_voc.py",
+      "size": 6385,
+      "sha256": "bba97f5f4fe27706e956345b28f2ed7788a7d699a93afd2ef1442deb8981fed5"
+    },
+    {
       "path": "render.py",
-      "size": 4432,
-      "sha256": "63d4851a99bfdc0f795ad43196d064810409a1e96f0e90daa423e425890dcdcf"
+      "size": 7668,
+      "sha256": "c8e685562bf57783ebf33fecde7ea749c6a1d8147716d39ea3413e01debc8df2"
+    },
+    {
+      "path": "source/approval.json",
+      "size": 3882,
+      "sha256": "5ddffa6c74cabb9deeec69e317cd3ed8e97d46568949ec2e14057c21b5f92d7e"
     },
     {
       "path": "source/asset_recipe.json",
       "size": 8344,
       "sha256": "e80d4f5a6e051f3e0862214ade2f3de016c1bbe6370a217d5fe3117b3f9afd4c"
+    },
+    {
+      "path": "source/differences.md",
+      "size": 1590,
+      "sha256": "8f69ef4723c4158f88f5588e44c10f580ac009003ff881972bb61f3a17f09880"
     },
     {
       "path": "source/original.ai",
@@ -176,8 +181,8 @@
     },
     {
       "path": "source/page/charging_en.rst",
-      "size": 3294,
-      "sha256": "69db9d9335a1537f698a315c616abdcd09b2351dbc9829712da72fd8a7cc5923"
+      "size": 3272,
+      "sha256": "0924e0b9012dbb9dd73586edc3f67b2b955088d0fbb97c7d9c1580316ce10619"
     },
     {
       "path": "source/page/contact_en.rst",
@@ -205,9 +210,14 @@
       "sha256": "b6df97b46c6d1d3c2327a8b0b2d284af87a93804abb90935855e509387eb64ab"
     },
     {
+      "path": "source_manifest.json",
+      "size": 9019,
+      "sha256": "bd8bcf1b91253acfcefc57813520c366af6c3a9497672437ffce308e88196992"
+    },
+    {
       "path": "web/en/_static/web_manual.css",
-      "size": 101156,
-      "sha256": "1421762d41c844bce3b411c370d11c9bd0e2b17f3957e81ccb3e85a11fae85db"
+      "size": 123623,
+      "sha256": "4c01adf9222e7faa8fb5552490d8b8fa4ebba550b4ef2a1e7171a1b9a6538434"
     },
     {
       "path": "web/en/assets/ir/0db544e58c9043e70d74311a01ca46edb3b174f5962a28b523da348064df5dfd/solar.png",
@@ -251,27 +261,42 @@
     },
     {
       "path": "web/en/manual.ir.json",
-      "size": 216120,
-      "sha256": "3ef8eb766912b5e45d503bb0b99ee58cc030c4409ebbe06d8a6639587d7d829c"
+      "size": 218829,
+      "sha256": "df6d2297845cfd582bfae3934682366c24f93740ddb05685e64939a5bc4452d7"
     },
     {
       "path": "web/en/manual_bundle.html",
-      "size": 20258,
-      "sha256": "f65192d3dc2a2fd86a306382e2b3646e8a9d4bcafd82a0032e1d7768fcec8054"
+      "size": 19900,
+      "sha256": "907973d6d87bbd713620813da3e69a42916e5ed18cacd06338de0b0727942315"
     },
     {
       "path": "web/en/manual_jaad500asil_us_en.md",
-      "size": 18422,
-      "sha256": "ed11fa8beffb56d3ec125c4f70411c88e7acfcdcc287eb8bad945b2f61800e9c"
+      "size": 18400,
+      "sha256": "829f2b59d27a89f787a4dd96fb05aa6b5b187e8570568833a8afbcc806ba18d0"
     }
   ],
   "repo_inputs": [
     {
       "path": "docs/renderers/contracts/web_presentation/target_overlays.json",
-      "sha256": "63aa713e1b62891e670e7e1d268e213a06f16f692a2ee3957cf0a3e096b868f2"
+      "sha256": "6337f537ac3b8b7248e00632d9f3d899a410fbadad4319a718b0e39905717a9d"
     }
   ],
   "web_roots": {
     "en": "web/en"
-  }
+  },
+  "publication_status": "operator-approved-git-only-release",
+  "derived_from": {
+    "package": "git-20261006-a6d1659e-reviewed",
+    "authorization": "MA-259",
+    "manifest_sha256": "d24e3a11daf168221d9061eada6a0ba475cdd3be8ee8846508b67eb7d1529eba"
+  },
+  "text_corrections": [
+    {
+      "page": "source/page/charging_en.rst",
+      "approved": "It is recommended to use the Jackery solar panel to charge the product. Ensure that the open-circuit voltage (V\\ :sub:`oc`) of the solar panel is within the DC input range (36.8V–56V) of the Jackery FridgeGuard or the DC input range (40V–57.6V) of the Jackery Battery Pack. Jackery is not responsible for any damage or loss resulting from the use of third-party solar panels.",
+      "corrected": "It is recommended to use Jackery solar panels to charge the connected product through the Jackery DC Input Module. Ensure that the open-circuit voltage (V\\ :sub:`oc`) of the connected solar panels is within the module's DC input voltage range (16V–60V). Jackery is not responsible for any damage or loss resulting from the use of third-party solar panels.",
+      "reason": "Solar panels connect through the Jackery DC Input Module; the panel Voc limit is the module's DC input voltage range (16V–60V), not the downstream FridgeGuard / Battery Pack ranges cited by the printed source.",
+      "instruction": "operator, 2026-10-15: replace the paragraph (整段替换), keep the disclaimer (不删免责句); the printed source and its transcription stay unchanged"
+    }
+  ]
 }

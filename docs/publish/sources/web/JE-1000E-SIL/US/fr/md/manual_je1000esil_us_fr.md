@@ -22,7 +22,7 @@ Veuillez noter qu\'aucune autre notification ne sera faite en cas de mise à jou
 <col style="width: 50%" />
 </colgroup>
 <tbody>
-<tr>
+<tr class="odd">
 <td style="width: 50%; border: none; padding: 0 8px 0 0; vertical-align: top"><p>
 
 <figure class="hb-symbol-signal-composition hb-safety-lead"><table class="hb-symbol-signal-table"><colgroup><col style="width:20%"/><col style="width:80%"/></colgroup><tbody><tr><td class="hb-symbol-signal-label-cell"><span class="hb-signal-badge"><img alt="" src="assets/ir/5e5fc8a41e7c547ecd55ef8ffdb24df9e9b7e6b9fd4fe0d7bcc00c2eaad7cb15/warning_triangle_white.svg" style="width:48px;height:auto" width="48"/></span></td><td class="hb-symbol-signal-meaning-cell"><p><strong>AVERTISSEMENT</strong></p><p><strong>Respectez toujours les précautions suivantes lors de l’utilisation du produit.</strong></p></td></tr></tbody></table></figure>
@@ -55,7 +55,7 @@ Veuillez noter qu\'aucune autre notification ne sera faite en cas de mise à jou
 <col style="width: 50%" />
 </colgroup>
 <tbody>
-<tr>
+<tr class="odd">
 <td style="width: 50%; border: none; padding: 0 8px 0 0; vertical-align: top"><strong>CONSERVEZ CES INSTRUCTIONS</strong>
 <ul>
 <li>Cessez immédiatement d’utiliser le produit s’il présente des signes de dommage. Arrêtez l’utilisation et contactez l’assistance clientèle pour obtenir de l’aide.</li>
@@ -362,7 +362,7 @@ Connecté au module d\'entrée CC Jackery, Jackery FridgeGuard est compatible av
 
 
 
-Il est recommandé d'utiliser le panneau solaire Jackery pour charger le Jackery FridgeGuard. Assurez-vous que la tension en circuit ouvert (Voc) du panneau solaire se situe dans la plage de tension d'entrée CC du Jackery FridgeGuard (36,8V-56V). Jackery décline toute responsabilité en cas de pertes causées par l'utilisation de panneaux solaires d'autres marques.
+Il est recommandé d'utiliser des panneaux solaires Jackery pour charger le produit. Assurez-vous que la tension en circuit ouvert (Voc) des panneaux solaires connectés se situe dans la plage de tension d'entrée CC du Jackery DC Input Module (16 V--60 V). Jackery décline toute responsabilité en cas de pertes causées par l'utilisation de panneaux solaires d'autres marques.
 
 ## CHARGEMENT PAR PRISE DE VOITURE
 

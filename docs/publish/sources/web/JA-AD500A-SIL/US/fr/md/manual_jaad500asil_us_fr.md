@@ -60,7 +60,7 @@
 <li><p>Utiliser le même modèle de panneaux solaires Jackery et le même nombre de panneaux lors de la connexion des panneaux solaires aux deux ports d’entrée DC8020.</p></li>
 <li><p>Ne chargez pas le produit à la fois avec un chargeur de voiture et un panneau solaire simultanément. Cela pourrait faire sauter le fusible de la voiture ou entraîner un échec de la charge.</p></li>
 </ul>
-</td></tr></tbody></table><p>Il est recommandé d’utiliser le panneau solaire Jackery pour charger le Jackery FridgeGuard et Jackery Battery Pack. Assurez-vous que la tension en circuit ouvert (Voc) du panneau solaire se situe dans la plage d’entrée CC (36.8 V–56 V) du Jackery FridgeGuard ou dans la plage d’entrée CC (40 V–57.6 V) du Jackery Battery Pack. Jackery décline toute responsabilité en cas de pertes causées par l’utilisation de panneaux solaires d’autres marques.</p>
+</td></tr></tbody></table><p>Il est recommandé d’utiliser des panneaux solaires Jackery pour charger le produit connecté via le Jackery DC Input Module. Assurez-vous que la tension en circuit ouvert (Voc) des panneaux solaires connectés se situe dans la plage de tension d’entrée CC du module (16 V–60 V). Jackery décline toute responsabilité en cas de pertes causées par l’utilisation de panneaux solaires d’autres marques.</p>
 </section>
 
 

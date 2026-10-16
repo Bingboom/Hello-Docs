@@ -293,7 +293,7 @@ Bluetooth" class="hb-lcd-icon-art" src="../../../../_static/manual-assets/_pool/
 
 <figure class="hb-reference-figure" data-component-id="HB-SPECIAL-REFERENCE-FIGURE" data-reference-id="solar" data-source-fragment-sha256="895dc1c6e2a1992a518f072b90f12f0edcb9fa57ae0fd064c10c7089cec9f598"><div class="hb-reference-semantic" data-reference-id="solar.semantic"><img alt="※ ソーラーパネルとJackery DC Input Moduleは別売りです。 DC8020" class="hb-reference-art hb-composite-art" src="../../../../_static/manual-assets/_pool/a9/a97a1453f0b2478730f27332e8bb654c9b905d69400a0d4ecba473f9f72bbf71.png"/><p style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)">※ ソーラーパネルとJackery DC Input Moduleは別売りです。 DC8020</p></div></figure>
 
-<p>Jackeryブランド以外の付属品を使用して充電しないでください。特に、ソーラーパネルで充電する際は、Jackeryのソーラーパネルを使用することをお勧めします。ソーラーパネルの開放電圧（Voc）が、Jackery SlimPower H1のDC入力電圧範囲（36.8V~56V）内に収まっていることを確認してください。他社ソーラーパネルで充電することによる損失について、当社は一切の責任を負いません。</p>
+<p>本製品の充電には、Jackery製ソーラーパネルの使用を推奨します。接続するソーラーパネルの開放電圧（Voc）が、Jackery DC Input ModuleのDC入力電圧範囲（16V～60V）内であることを確認してください。他社ソーラーパネルで充電することによる損失について、当社は一切の責任を負いません。</p>
 
 ### シガーソケット充電
 
