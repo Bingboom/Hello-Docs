@@ -1,6 +1,6 @@
 {
   "schema_version": "auto-manual-web-publish-branch/v2",
-  "built_at": "2026-10-16T13:24:18.661327+00:00",
+  "built_at": "2026-10-17T14:22:41.027232+00:00",
   "targets": [
     {
       "schema_version": "auto-manual-web-publish-target/v2",
@@ -302,13 +302,13 @@
       "region": "US",
       "lang": "es",
       "version": "git-20261014-11ce66b1",
-      "built_at": "2026-10-15T00:28:01.642807+00:00",
-      "git_ref": "78ea7b5f14280891739ae6ed2bbe2afad6262d11",
+      "built_at": "2026-10-17T14:22:41.027232+00:00",
+      "git_ref": "7230ec29023686830dfdd363dff398f1ebd75a3c",
       "route": "JA-TS02A/US/es/md",
       "manual": "manual_jats02a_us_es.md",
       "language_scope": "single",
       "language_projection_evidence_path": "evidence/language_projection_receipt.json",
-      "language_projection_evidence_sha256": "52812c985efa27a1dcc9d033e76de505f7262f0bf4810cbedf004255b2c14677",
+      "language_projection_evidence_sha256": "0c03eac006abc7a2a6baa175dd80d76356146ef9654340cbf797d98794249b1a",
       "legacy_default": false
     },
     {
@@ -317,13 +317,13 @@
       "region": "US",
       "lang": "fr",
       "version": "git-20261014-11ce66b1",
-      "built_at": "2026-10-15T00:27:57.110736+00:00",
-      "git_ref": "78ea7b5f14280891739ae6ed2bbe2afad6262d11",
+      "built_at": "2026-10-17T14:22:36.435048+00:00",
+      "git_ref": "7230ec29023686830dfdd363dff398f1ebd75a3c",
       "route": "JA-TS02A/US/fr/md",
       "manual": "manual_jats02a_us_fr.md",
       "language_scope": "single",
       "language_projection_evidence_path": "evidence/language_projection_receipt.json",
-      "language_projection_evidence_sha256": "5fdef5be86190137aff7fde1008f446fe054c930fb1dd261a6c439c011536688",
+      "language_projection_evidence_sha256": "0a2fd8f5e07374ee54c9c28734a59176af7548d05e8fda2daa8491affd3ebdcc",
       "legacy_default": false
     },
     {
@@ -4842,8 +4842,8 @@
     },
     {
       "path": "sources/web/JA-TS02A/US/es/md/_static/source_presentation.css",
-      "size": 6174,
-      "sha256": "5c795156a5c77be45f902d3f292a9b59262104761045d38138c898fcc7a76eae"
+      "size": 3133,
+      "sha256": "fd908d0bf930c4c12c9c0a80ac33561dec9cce346d47826f7958766679f04d8c"
     },
     {
       "path": "sources/web/JA-TS02A/US/es/md/_static/web_manual.css",
@@ -5082,13 +5082,13 @@
     },
     {
       "path": "sources/web/JA-TS02A/US/es/md/evidence/frozen_source_manifest.json",
-      "size": 76544,
-      "sha256": "c4dc678f5543319ec875018f0d3e5100362b5b9bb59a4013b9495090bd0b3a29"
+      "size": 80066,
+      "sha256": "4f631366a4de9fba69db0418b83d1ceaffc1e288a1c6fc9fc0417df4b7efc68d"
     },
     {
       "path": "sources/web/JA-TS02A/US/es/md/evidence/language_projection_receipt.json",
       "size": 23559,
-      "sha256": "52812c985efa27a1dcc9d033e76de505f7262f0bf4810cbedf004255b2c14677"
+      "sha256": "0c03eac006abc7a2a6baa175dd80d76356146ef9654340cbf797d98794249b1a"
     },
     {
       "path": "sources/web/JA-TS02A/US/es/md/index.md",
@@ -5097,23 +5097,23 @@
     },
     {
       "path": "sources/web/JA-TS02A/US/es/md/manual.ir.json",
-      "size": 414680,
-      "sha256": "12ceea66ac59c25e000bcab1eaff90d9f0505fc497422788a9ccc8e67db0eae5"
+      "size": 379961,
+      "sha256": "55079c7622f849238c9381f9deeccfc59bab1e86e5337e16de1c50fb8cf12432"
     },
     {
       "path": "sources/web/JA-TS02A/US/es/md/manual_jats02a_us_es.md",
-      "size": 60469,
-      "sha256": "436e7151782d7afbb12cb8444956f09be89f5cc12cdb72f85425a2e194fc1538"
+      "size": 54168,
+      "sha256": "4bba842e63b4d289bbaed512d850e0fd3473503f08126c57aa221306245308b2"
     },
     {
       "path": "sources/web/JA-TS02A/US/es/md/publish_meta.json",
       "size": 583,
-      "sha256": "a245e46bbc355cb42738537cfc0e1de757823991e6caf26cc039d11389ceebb8"
+      "sha256": "d44a4026c991ec6c004f149d363be2b890c9a80a4d9bfa1a68b63c36abd04dfd"
     },
     {
       "path": "sources/web/JA-TS02A/US/fr/md/_static/source_presentation.css",
-      "size": 6174,
-      "sha256": "5c795156a5c77be45f902d3f292a9b59262104761045d38138c898fcc7a76eae"
+      "size": 3133,
+      "sha256": "fd908d0bf930c4c12c9c0a80ac33561dec9cce346d47826f7958766679f04d8c"
     },
     {
       "path": "sources/web/JA-TS02A/US/fr/md/_static/web_manual.css",
@@ -5352,13 +5352,13 @@
     },
     {
       "path": "sources/web/JA-TS02A/US/fr/md/evidence/frozen_source_manifest.json",
-      "size": 76544,
-      "sha256": "c4dc678f5543319ec875018f0d3e5100362b5b9bb59a4013b9495090bd0b3a29"
+      "size": 80066,
+      "sha256": "4f631366a4de9fba69db0418b83d1ceaffc1e288a1c6fc9fc0417df4b7efc68d"
     },
     {
       "path": "sources/web/JA-TS02A/US/fr/md/evidence/language_projection_receipt.json",
       "size": 23552,
-      "sha256": "5fdef5be86190137aff7fde1008f446fe054c930fb1dd261a6c439c011536688"
+      "sha256": "0a2fd8f5e07374ee54c9c28734a59176af7548d05e8fda2daa8491affd3ebdcc"
     },
     {
       "path": "sources/web/JA-TS02A/US/fr/md/index.md",
@@ -5367,18 +5367,18 @@
     },
     {
       "path": "sources/web/JA-TS02A/US/fr/md/manual.ir.json",
-      "size": 418165,
-      "sha256": "d6e64fd4f899b82193aa6963d3c8b85ee5f7dcdfd99357334183ba4997eda790"
+      "size": 382881,
+      "sha256": "7c32f5dde9445a8cda533268f835cff16db4bf15cd6426f5772559bce0c69f05"
     },
     {
       "path": "sources/web/JA-TS02A/US/fr/md/manual_jats02a_us_fr.md",
-      "size": 61815,
-      "sha256": "67764e40d1add93bdb446a3f63ac99a0b8ad8fbbd93d545380963269655332ec"
+      "size": 55468,
+      "sha256": "959895d892ccb741c11283b9c4c3b2220dd416390b4aff40843aa3f05ad48c3a"
     },
     {
       "path": "sources/web/JA-TS02A/US/fr/md/publish_meta.json",
       "size": 583,
-      "sha256": "41faa4f9c99c35976295caf9da60b15a0516baf684f7005158aba72f120618f2"
+      "sha256": "8858552067401089e156bd5c540c0ff11f247499947d29f39ccc0c2d5e16a9ac"
     },
     {
       "path": "sources/web/JAAC-WHE-100-EUA1/EU/en/md/_static/web_manual.css",
@@ -43852,8 +43852,8 @@
     },
     {
       "path": "web/JA-TS02A/US/es/md/_static/source_presentation.css",
-      "size": 6174,
-      "sha256": "5c795156a5c77be45f902d3f292a9b59262104761045d38138c898fcc7a76eae"
+      "size": 3133,
+      "sha256": "fd908d0bf930c4c12c9c0a80ac33561dec9cce346d47826f7958766679f04d8c"
     },
     {
       "path": "web/JA-TS02A/US/es/md/_static/web_manual.css",
@@ -43862,13 +43862,13 @@
     },
     {
       "path": "web/JA-TS02A/US/es/md/evidence/frozen_source_manifest.json",
-      "size": 76544,
-      "sha256": "c4dc678f5543319ec875018f0d3e5100362b5b9bb59a4013b9495090bd0b3a29"
+      "size": 80066,
+      "sha256": "4f631366a4de9fba69db0418b83d1ceaffc1e288a1c6fc9fc0417df4b7efc68d"
     },
     {
       "path": "web/JA-TS02A/US/es/md/evidence/language_projection_receipt.json",
       "size": 23559,
-      "sha256": "52812c985efa27a1dcc9d033e76de505f7262f0bf4810cbedf004255b2c14677"
+      "sha256": "0c03eac006abc7a2a6baa175dd80d76356146ef9654340cbf797d98794249b1a"
     },
     {
       "path": "web/JA-TS02A/US/es/md/index.md",
@@ -43877,18 +43877,18 @@
     },
     {
       "path": "web/JA-TS02A/US/es/md/manual.ir.json",
-      "size": 414680,
-      "sha256": "12ceea66ac59c25e000bcab1eaff90d9f0505fc497422788a9ccc8e67db0eae5"
+      "size": 379961,
+      "sha256": "55079c7622f849238c9381f9deeccfc59bab1e86e5337e16de1c50fb8cf12432"
     },
     {
       "path": "web/JA-TS02A/US/es/md/manual_jats02a_us_es.md",
-      "size": 64275,
-      "sha256": "689581ee32a0b08d0a051363c09998d101ef626363d15b72aef4806377eef5a1"
+      "size": 57974,
+      "sha256": "3012952bb3b8c6560193f52395f2726e8aafeda7dfd43ab60114482807bb3cc1"
     },
     {
       "path": "web/JA-TS02A/US/fr/md/_static/source_presentation.css",
-      "size": 6174,
-      "sha256": "5c795156a5c77be45f902d3f292a9b59262104761045d38138c898fcc7a76eae"
+      "size": 3133,
+      "sha256": "fd908d0bf930c4c12c9c0a80ac33561dec9cce346d47826f7958766679f04d8c"
     },
     {
       "path": "web/JA-TS02A/US/fr/md/_static/web_manual.css",
@@ -43897,13 +43897,13 @@
     },
     {
       "path": "web/JA-TS02A/US/fr/md/evidence/frozen_source_manifest.json",
-      "size": 76544,
-      "sha256": "c4dc678f5543319ec875018f0d3e5100362b5b9bb59a4013b9495090bd0b3a29"
+      "size": 80066,
+      "sha256": "4f631366a4de9fba69db0418b83d1ceaffc1e288a1c6fc9fc0417df4b7efc68d"
     },
     {
       "path": "web/JA-TS02A/US/fr/md/evidence/language_projection_receipt.json",
       "size": 23552,
-      "sha256": "5fdef5be86190137aff7fde1008f446fe054c930fb1dd261a6c439c011536688"
+      "sha256": "0a2fd8f5e07374ee54c9c28734a59176af7548d05e8fda2daa8491affd3ebdcc"
     },
     {
       "path": "web/JA-TS02A/US/fr/md/index.md",
@@ -43912,13 +43912,13 @@
     },
     {
       "path": "web/JA-TS02A/US/fr/md/manual.ir.json",
-      "size": 418165,
-      "sha256": "d6e64fd4f899b82193aa6963d3c8b85ee5f7dcdfd99357334183ba4997eda790"
+      "size": 382881,
+      "sha256": "7c32f5dde9445a8cda533268f835cff16db4bf15cd6426f5772559bce0c69f05"
     },
     {
       "path": "web/JA-TS02A/US/fr/md/manual_jats02a_us_fr.md",
-      "size": 65621,
-      "sha256": "41814f878488019d0b487f2d95bb571e8f5997183c89e79d37d0d270c80f5255"
+      "size": 59274,
+      "sha256": "7dad4957d74d7bf5d3c66020c2d6a8f3cf93d21713274cabf84c98c0edd824ab"
     },
     {
       "path": "web/JA-TS02A/US/md/index.md",
