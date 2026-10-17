@@ -305,8 +305,13 @@
     },
     {
       "path": "docs/renderers/contracts/prepared_component_admission.json",
-      "size": 327166,
-      "sha256": "2c8911281c01bf5e81319c38ebe55433b6ee49b9bd8ba9a9d0a21f014047b738"
+      "size": 330806,
+      "sha256": "0c17fd986bb8634dfa08940e2a5c6426fb58ed1fff98dc829d1ae41471c16b9c"
+    },
+    {
+      "path": "docs/renderers/contracts/prepared_style_baseline.json",
+      "size": 25894,
+      "sha256": "320e428e070944a2cc757f3354011a1a16824c7b493ae752ad3c88a97175b57e"
     },
     {
       "path": "docs/renderers/contracts/reference_layout/je1000f_us_v2_20260605.json",
@@ -1224,6 +1229,11 @@
       "sha256": "60f6a9ff3562bbf5ef1383cc1c8963f5f7937e2123dd8e07633ff40895bac288"
     },
     {
+      "path": "tools/web/prepared_style_audit.py",
+      "size": 9128,
+      "sha256": "1600f5efaa5d512ee7434140b6eab7c07dff6a30b6a4cac27b23e763d8c77121"
+    },
+    {
       "path": "tools/web/presentation.py",
       "size": 65114,
       "sha256": "619902e6a286ea17708a7b62831dda0ac0d6fe6294a2b0b7fea6af4f58d812b8"
@@ -1297,8 +1307,8 @@
   "inputs": [
     {
       "path": "README.md",
-      "size": 7855,
-      "sha256": "1567bf91b2edaf10a3d47a5bdb55a8b2ff709acfad451f3bf84f4ba44556c73b"
+      "size": 9505,
+      "sha256": "1a5d7e59894f187ea907db7d4c586f790f680cda6258dcea9accd24febd7ecd7"
     },
     {
       "path": "assets/app-store-badges.png",
@@ -1687,8 +1697,13 @@
     },
     {
       "path": "audit/browser-validation.json",
-      "size": 4813,
-      "sha256": "d5888fc28372ec062e04aad3d05748855a9e52c08ddc7d1b9b5149c09be9b2f5"
+      "size": 4263,
+      "sha256": "9fff3bebfd602e8da0e0843784643a73a74fef77ffaff2d6a953c2fa8e799c91"
+    },
+    {
+      "path": "audit/component-map.json",
+      "size": 3789,
+      "sha256": "0e4629216a7dd42e0b3dfa4440d5a6740f7cb3bedab2c1b07d09adb71d225853"
     },
     {
       "path": "rebuild.py",
@@ -1697,13 +1712,13 @@
     },
     {
       "path": "source/approval.json",
-      "size": 16478,
-      "sha256": "f1b02637311d3d2ed83d2e2859bfc8adc51ab0fd3231ac7ad7756b52c2b60280"
+      "size": 16865,
+      "sha256": "4382948ce8e9b6b2bd7ac91587f5286a2a94fbba05c369c808b343977f3772db"
     },
     {
       "path": "source/es/content.json",
-      "size": 273102,
-      "sha256": "2a2ede42274ff7d04ba6ff66f003db25bd327cb115ff2e2d4d5ac0a844115a56"
+      "size": 235553,
+      "sha256": "97f05a57d5fd7ea88b2dfa5025e3b5701278b85d31ef7ab9291a37912ba648b0"
     },
     {
       "path": "source/es/coverage.json",
@@ -1722,8 +1737,8 @@
     },
     {
       "path": "source/fr/content.json",
-      "size": 276503,
-      "sha256": "9c829896177945f6fd33f58c8060def58b7687fdb4ef6c29a61ad0c23be62ee0"
+      "size": 238122,
+      "sha256": "b37f993ae6268019c074d0519802c1b2250b42dd765a0b0bf67269250a5048dc"
     },
     {
       "path": "source/fr/coverage.json",
@@ -1737,23 +1752,23 @@
     },
     {
       "path": "source/intake.py",
-      "size": 33150,
-      "sha256": "d20f33bce68e4b8a7bd2bae8b66dc6a3db04fbf0e0acc1055d8fde1dfaadeba4"
+      "size": 32460,
+      "sha256": "56d399649d496ad71927bc3b94ef07bfbaa1d144a9c9e5be102dc6a22fc95750"
     },
     {
       "path": "source/native.py",
-      "size": 22705,
-      "sha256": "b3bc8abfc8e4746ac559f787a24f1105eb53043231fdb53bd137415b4433b84e"
+      "size": 22561,
+      "sha256": "0aebb49febc0ccab80f3aa8ee4abbe659d9823fa368928aef588d73eaa30fb93"
     },
     {
       "path": "source/presentation.css",
-      "size": 6174,
-      "sha256": "5c795156a5c77be45f902d3f292a9b59262104761045d38138c898fcc7a76eae"
+      "size": 3133,
+      "sha256": "fd908d0bf930c4c12c9c0a80ac33561dec9cce346d47826f7958766679f04d8c"
     },
     {
       "path": "source/refresh_manifest.py",
-      "size": 4683,
-      "sha256": "ce660757bc0c5896edf593b3f5b8d5c3acef7577021d548f6f3f7ff7f0f8daa6"
+      "size": 6675,
+      "sha256": "00c874628e424591eb61ee457a0b3a23337600e6493b344bf85dd3d3f6f7c979"
     },
     {
       "path": "source/symbols.json",
@@ -1772,8 +1787,8 @@
     },
     {
       "path": "web/es/_static/source_presentation.css",
-      "size": 6174,
-      "sha256": "5c795156a5c77be45f902d3f292a9b59262104761045d38138c898fcc7a76eae"
+      "size": 3133,
+      "sha256": "fd908d0bf930c4c12c9c0a80ac33561dec9cce346d47826f7958766679f04d8c"
     },
     {
       "path": "web/es/_static/web_manual.css",
@@ -2017,18 +2032,18 @@
     },
     {
       "path": "web/es/manual.ir.json",
-      "size": 414680,
-      "sha256": "12ceea66ac59c25e000bcab1eaff90d9f0505fc497422788a9ccc8e67db0eae5"
+      "size": 379961,
+      "sha256": "55079c7622f849238c9381f9deeccfc59bab1e86e5337e16de1c50fb8cf12432"
     },
     {
       "path": "web/es/manual_jats02a_us_es.md",
-      "size": 60469,
-      "sha256": "436e7151782d7afbb12cb8444956f09be89f5cc12cdb72f85425a2e194fc1538"
+      "size": 54168,
+      "sha256": "4bba842e63b4d289bbaed512d850e0fd3473503f08126c57aa221306245308b2"
     },
     {
       "path": "web/fr/_static/source_presentation.css",
-      "size": 6174,
-      "sha256": "5c795156a5c77be45f902d3f292a9b59262104761045d38138c898fcc7a76eae"
+      "size": 3133,
+      "sha256": "fd908d0bf930c4c12c9c0a80ac33561dec9cce346d47826f7958766679f04d8c"
     },
     {
       "path": "web/fr/_static/web_manual.css",
@@ -2272,13 +2287,71 @@
     },
     {
       "path": "web/fr/manual.ir.json",
-      "size": 418165,
-      "sha256": "d6e64fd4f899b82193aa6963d3c8b85ee5f7dcdfd99357334183ba4997eda790"
+      "size": 382881,
+      "sha256": "7c32f5dde9445a8cda533268f835cff16db4bf15cd6426f5772559bce0c69f05"
     },
     {
       "path": "web/fr/manual_jats02a_us_fr.md",
-      "size": 61815,
-      "sha256": "67764e40d1add93bdb446a3f63ac99a0b8ad8fbbd93d545380963269655332ec"
+      "size": 55468,
+      "sha256": "959895d892ccb741c11283b9c4c3b2220dd416390b4aff40843aa3f05ad48c3a"
+    }
+  ],
+  "shared_component_exceptions": [
+    {
+      "language": "fr",
+      "page_id": "safety",
+      "kind": "table",
+      "text_sha256": "8623a15174e6386d1979dd8d5b4dbb438148b164c10b94b09c2e7fa122ef022e",
+      "reason": "Meaning of symbols. HB-TABLE-SYMBOL-ICON admits only shared catalogue symbols; the print's grounding, caution and electric-shock icons miss the fixed glyph gate against every shared variant, and the operator chose the print's own vectors (D1, 2026-10-15)."
+    },
+    {
+      "language": "fr",
+      "page_id": "what-you-need",
+      "kind": "table",
+      "text_sha256": "c13bd2be63f21e6b78c887865bd66175c9cf0379eef46233a89ab73a39b2906c",
+      "reason": "Optional cables: group labels and currents span four rows and the cable header spans two columns, in five columns; no shared table component has row or column spans."
+    },
+    {
+      "language": "fr",
+      "page_id": "product-overview",
+      "kind": "table",
+      "text_sha256": "bd6a3ae216980e05b952a296326014d4a4ca6949c1af8a2262704e2106baeab0",
+      "reason": "LED indicators: each indicator name spans its two or three status rows; the shared reference and LCD tables have fixed columns and no row spans."
+    },
+    {
+      "language": "fr",
+      "page_id": "installation-guide",
+      "kind": "table",
+      "text_sha256": "e4750a63df7e286f6c5f5c1ba21b3643a0a66be1fb206b6eb4069087469fd4b7",
+      "reason": "Conductor tightening torque: grid and home-load sides in six columns; no shared table component has six columns."
+    },
+    {
+      "language": "es",
+      "page_id": "safety",
+      "kind": "table",
+      "text_sha256": "a1a3f1decdaea7632ce41954a426b8b9d3006239ed926574d9ed64824f04c066",
+      "reason": "Meaning of symbols. HB-TABLE-SYMBOL-ICON admits only shared catalogue symbols; the print's grounding, caution and electric-shock icons miss the fixed glyph gate against every shared variant, and the operator chose the print's own vectors (D1, 2026-10-15)."
+    },
+    {
+      "language": "es",
+      "page_id": "what-you-need",
+      "kind": "table",
+      "text_sha256": "e9579cf7253cb01f6c9e90cbbf411697d6d9dac489a770be4c289739a3233135",
+      "reason": "Optional cables: group labels and currents span four rows and the cable header spans two columns, in five columns; no shared table component has row or column spans."
+    },
+    {
+      "language": "es",
+      "page_id": "product-overview",
+      "kind": "table",
+      "text_sha256": "58939268526dbf4a44743668cfe3b0c0f931e76d99065946271860e1fcc9721e",
+      "reason": "LED indicators: each indicator name spans its two or three status rows; the shared reference and LCD tables have fixed columns and no row spans."
+    },
+    {
+      "language": "es",
+      "page_id": "installation-guide",
+      "kind": "table",
+      "text_sha256": "efa8b4e0ed3750e5f85841a12e83778025d0fe3e456905b79a9335ea7c96a481",
+      "reason": "Conductor tightening torque: grid and home-load sides in six columns; no shared table component has six columns."
     }
   ]
 }
