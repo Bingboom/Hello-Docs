@@ -1,3 +1,22 @@
+<style>
+/* JA-AD500A-SIL US fr spec-label edition: page-local geometry only.
+   Colours, borders and panels come from the shared Web theme (prepared-document shared-style gate). */
+
+/* The product overview figure keeps its print width. */
+#furo-main-content .hb-reference-figure[data-reference-id="product-overview"] { width: min(100%, 40rem); margin-inline: auto; }
+
+/* LED status table columns follow the print. */
+#furo-main-content table.hb-source-status-table { min-width: 0; }
+#furo-main-content table.hb-source-status-table :is(th, td) { text-align: left; }
+#furo-main-content table.hb-source-status-table tr > :nth-child(1) { width: 25%; }
+#furo-main-content table.hb-source-status-table tr > :nth-child(2) { width: 20%; }
+
+/* Contact block and the back-cover QR code keep their print size. */
+#furo-main-content div.hb-text-panel[role="contentinfo"] { margin-top: 2rem; }
+#furo-main-content img[alt="Jackery contact QR from the original back cover"] { width: 96px !important; height: auto; }
+
+</style>
+
 # CONTENU DE LA BOÎTE
 
 <figure aria-label="CONTENU DE LA BOÎTE" class="hb-inbox-composition" data-card-count="2" data-component-id="HB-SPECIAL-INBOX" data-inbox-variant="responsive-card-grid"><ol class="hb-inbox-grid"><li class="hb-inbox-card" data-item-number="1"><img alt="Jackery DC Input Module" class="hb-inbox-art" src="assets/ir/3c140171d4ae33f68026b81db880318d28ccf3ecd4d4d201c0ec9015080db49d/inbox-module.png"/><div class="hb-inbox-label">
@@ -8,46 +27,44 @@
 
 # APERÇU DU PRODUIT
 
-<div class="manual-overview-composition" style="width:min(100%,40rem);margin-inline:auto;">
 <figure class="hb-reference-figure hb-base-art-live-copy" data-component-id="HB-SPECIAL-REFERENCE-FIGURE" data-reference-id="product-overview" data-source-fragment-sha256="6d90a95c353fa2624ab8bad05b4d955b34dd9e18607695fa0e255835f688a916" data-web-base-art-ref="../../assets/overview-textless.png" data-web-presentation-mode="base-art-live-copy" data-web-replace-key="reference.product-overview"><div class="hb-reference-semantic" data-mobile-labels="overlay" data-preserve-art-frame="true" data-reference-id="product-overview.semantic"><div class="hb-reference-art-panel" style="--hb-panel-top:0%;--hb-panel-fill:#ffffff"><img alt="" class="hb-source-reference hb-reference-art hb-composite-art" data-reference='{"id": "product-overview", "web_replace_key": "reference.product-overview", "capture_following_lines": 6, "presentation_mode": "base-art-live-copy", "base_art_layout": {"art_sha256": "910a6ce8542f5be9df214a28699b57df6c5abb97c788f1efd72c3b6507f967c2", "panel_top": 0, "panel_fill": "#ffffff", "preserve_frame": true, "mobile_labels": "overlay", "labels": [{"line": 0, "rect": [58, 0.3, 34, 3.4]}, {"line": 1, "rect": [46, 3.7, 46, 3.2]}, {"line": 2, "rect": [45, 6.9, 47, 3.0]}, {"line": 3, "rect": [20, 10, 72, 3.5]}, {"line": 4, "rect": [65, 30.2, 27, 3.7]}, {"line": 5, "rect": [71, 51.8, 21, 3.7]}]}}' src="assets/ir/910a6ce8542f5be9df214a28699b57df6c5abb97c788f1efd72c3b6507f967c2/overview-textless.png"/><span class="hb-reference-live-label" data-source-line="0" style="--hb-x:58%;--hb-y:0.3%;--hb-width:34%;--hb-height:3.4%"><span style="display:block;width:100%;text-align:right;font-size:1.3em;line-height:1.1"><strong>Entrée CC</strong></span></span><span class="hb-reference-live-label" data-source-line="1" style="--hb-x:46%;--hb-y:3.7%;--hb-width:46%;--hb-height:3.2%"><span style="display:block;width:100%;text-align:right;font-size:1.1em;line-height:1.1">2×Ports DC8020:</span></span><span class="hb-reference-live-label" data-source-line="2" style="--hb-x:45%;--hb-y:6.9%;--hb-width:47%;--hb-height:3%"><span style="display:block;width:100%;text-align:right;font-size:1.1em;line-height:1.1">Oiture: 11–16 V⎓8 A max.</span></span><span class="hb-reference-live-label" data-source-line="3" style="--hb-x:20%;--hb-y:10%;--hb-width:72%;--hb-height:3.5%"><span style="display:block;width:100%;text-align:right;font-size:1.1em;line-height:1.1">PV: 16–60 V⎓13 A Max, Double to 24 A max. / 500W max.</span></span><span class="hb-reference-live-label" data-source-line="4" style="--hb-x:65%;--hb-y:30.2%;--hb-width:27%;--hb-height:3.7%"><span style="display:block;width:100%;text-align:right;font-size:1.3em;line-height:1.1"><strong>Lumière LED</strong></span></span><span class="hb-reference-live-label" data-source-line="5" style="--hb-x:71%;--hb-y:51.8%;--hb-width:21%;--hb-height:3.7%"><span style="display:block;width:100%;text-align:right;font-size:1.3em;line-height:1.1"><strong>Prise</strong></span></span></div></div></figure>
-</div>
+
+
+
 
 <p id="led-light"><strong>Lumière LED</strong></p>
 
 
 
 
-<div class="table-wrapper docutils" style="--hb-line-soft:var(--hb-brand-dark);border:1.5px solid var(--hb-brand-dark);border-radius:16px;overflow:hidden;"><table class="manual-table" style="table-layout:fixed;min-width:0!important;">
-<colgroup>
-<col style="width: 25.0%"/>
-<col style="width: 20.0%"/>
-<col style="width: 55.0%"/>
-</colgroup>
+<div class="hb-source-status docutils container">
+<table class="hb-source-status-table">
 <thead>
-<tr><th class="head" scope="col" style="padding:0.25rem 0.4rem!important;text-align:left!important;border-bottom:1px solid var(--hb-line-soft)!important;"><p>État du voyant DEL</p></th>
-<th class="head" scope="col" style="padding:0.25rem 0.4rem!important;text-align:left!important;border-bottom:1px solid var(--hb-line-soft)!important;"><p>Couleur</p></th>
-<th class="head" scope="col" style="padding:0.25rem 0.4rem!important;text-align:left!important;border-bottom:1px solid var(--hb-line-soft)!important;"><p>État du produit</p></th>
+<tr><th class="head"><p>État du voyant DEL</p></th>
+<th class="head"><p>Couleur</p></th>
+<th class="head"><p>État du produit</p></th>
 </tr>
 </thead>
 <tbody>
-<tr><td style="padding:0.25rem 0.6rem!important;text-align:left!important;"><p>Clignotant</p></td>
-<td style="padding:0.25rem 0.6rem!important;text-align:left!important;"><p>Vert</p></td>
-<td style="padding:0.25rem 0.6rem!important;text-align:left!important;"><p>Charge en cours</p></td>
+<tr><td><p>Clignotant</p></td>
+<td><p>Vert</p></td>
+<td><p>Charge en cours</p></td>
 </tr>
-<tr><td style="padding:0.25rem 0.6rem!important;text-align:left!important;"><p>Fixe</p></td>
-<td style="padding:0.25rem 0.6rem!important;text-align:left!important;"><p>Rouge</p></td>
-<td style="padding:0.25rem 0.6rem!important;text-align:left!important;"><p>Condition anormale</p></td>
+<tr><td><p>Fixe</p></td>
+<td><p>Rouge</p></td>
+<td><p>Condition anormale</p></td>
 </tr>
-<tr><td style="padding:0.25rem 0.6rem!important;text-align:left!important;"><p>Fixe</p></td>
-<td style="padding:0.25rem 0.6rem!important;text-align:left!important;"><p>Vert</p></td>
-<td style="padding:0.25rem 0.6rem!important;text-align:left!important;"><p>Connecté avec succès et prêt à charger</p></td>
+<tr><td><p>Fixe</p></td>
+<td><p>Vert</p></td>
+<td><p>Connecté avec succès et prêt à charger</p></td>
 </tr>
-<tr><td style="padding:0.25rem 0.6rem!important;text-align:left!important;"><p>Éteint</p></td>
-<td style="padding:0.25rem 0.6rem!important;text-align:left!important;"><p>Aucun</p></td>
-<td style="padding:0.25rem 0.6rem!important;text-align:left!important;"><p>Éteint</p></td>
+<tr><td><p>Éteint</p></td>
+<td><p>Aucun</p></td>
+<td><p>Éteint</p></td>
 </tr>
 </tbody>
-</table></div>
+</table>
+</div>
 
 # CHARGE
 
@@ -94,9 +111,9 @@
 ## PORTS D’ENTRÉE/SORTIE
 
 <figure aria-label="PORTS D’ENTRÉE/SORTIE" class="hb-spec-table-composition"><table class="manual-spec-table manual-table hb-spec-table"><colgroup><col class="hb-spec-col-label"/><col class="hb-spec-col-value"/></colgroup><tbody>
-<tr><th class="manual-spec-label hb-spec-label" rowspan="2" scope="row">Sortie CC</th><td class="manual-spec-value hb-spec-value">11 V–16 V⎓8 A max.</td></tr>
+<tr><th class="manual-spec-label hb-spec-label" rowspan="2" scope="row">Entrée CC</th><td class="manual-spec-value hb-spec-value">11 V–16 V⎓8 A max.</td></tr>
 <tr><td class="manual-spec-value hb-spec-value">16 V–60 V⎓13 A max., double à 24 A max./500 W max.</td></tr>
-<tr><th class="manual-spec-label hb-spec-label" scope="row">Entrée CC</th><td class="manual-spec-value hb-spec-value">42V–58V⎓10,7A max.</td></tr>
+<tr><th class="manual-spec-label hb-spec-label" scope="row">Sortie CC</th><td class="manual-spec-value hb-spec-value">42V–58V⎓10,7A max.</td></tr>
 </tbody></table></figure>
 
 
@@ -159,10 +176,14 @@
 <figure aria-label="Droits d’interprétation" class="hb-warranty-card" data-component-id="HB-WARRANTY-SECTION" data-warranty-card-index="6"><p>Jackery Inc. se réserve le droit d’interpréter de manière définitive la politique après-vente des clients ci-dessus.</p></figure>
 </section>
 
-<div aria-label="Jackery contact information" class="manual-contact-footer" role="contentinfo" style="margin-top:2rem;padding-top:1rem;border-top:1px solid #ddd;">
+<div aria-label="Jackery contact information" class="hb-text-panel" role="contentinfo">
 <p><strong>JACKERY INC.</strong></p>
 <p>5310 Bunche Dr., Fremont, CA 94538-8301</p>
 <p><a href="tel:18885022236">1-888-502-2236 (US)</a></p>
 <p><a href="mailto:hello@jackery.com">hello@jackery.com</a><br/><a href="https://www.jackery.com">www.jackery.com</a></p>
-<div class="contact-qr" style="width:96px;max-width:100%;"><img alt="Jackery contact QR from the original back cover" src="assets/ir/98dd52bc02290abea21f6bfdaa105dfe77a831b99c845ce8f44e2adc9009deaa/contact-qr.png" style="width:100%;height:auto;"/></div>
 </div>
+
+
+
+
+<p><img alt="Jackery contact QR from the original back cover" src="assets/ir/98dd52bc02290abea21f6bfdaa105dfe77a831b99c845ce8f44e2adc9009deaa/contact-qr.png"/></p>

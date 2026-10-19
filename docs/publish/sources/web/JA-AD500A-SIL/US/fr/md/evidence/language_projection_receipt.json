@@ -3,8 +3,8 @@
   "model": "JA-AD500A-SIL",
   "region": "US",
   "language": "fr",
-  "version": "git-20261016-28c58312-solar-voc",
-  "git_ref": "ff7aa351e117c16ca9c6aee89bc51c5afb454889",
+  "version": "git-20261019-28c58312-fr-spec",
+  "git_ref": "d1e174a6e0db054b43429780800c53e5d18e4422",
   "caption_frame_admission": [
     {
       "source_ref": "source/page/charging_fr.rst#reference-car-connection",
@@ -20,11 +20,16 @@
   ],
   "source_manifest": {
     "path": "frozen_source_manifest.json",
-    "sha256": "4e910c4f945de2e9ec793607bb9361aad5c6fde840212c1dc0dafc172dc91904"
+    "sha256": "4d5e4b93dbed6e15de52abc390bb69f95ce0af6170f086b0c3c1c4ef726da0e4"
   },
   "markdown": {
     "manual": "manual_jaad500asil_us_fr.md",
     "files": [
+      {
+        "path": "_static/source.css",
+        "size": 993,
+        "sha256": "0606b636278a4710ccb5e1e4f7fb2eb6949c6ccadc031cc5e53324e25da760ed"
+      },
       {
         "path": "_static/web_manual.css",
         "size": 123623,
@@ -72,21 +77,21 @@
       },
       {
         "path": "manual.ir.json",
-        "size": 225309,
-        "sha256": "50e380c82bb1ba8dbff0f50d8f9496a7c4b1b486edc6956d26784587ba5157f8"
+        "size": 215110,
+        "sha256": "6d7ece49c8929c7be766d85bac1714089db2b88672912d8e5601db0d0f8af873"
       },
       {
         "path": "manual_bundle.html",
-        "size": 20946,
-        "sha256": "9ba415e960c3e1d868fb0ee65f6bb5634efb8f3eb1fddc29671f204f087f6079"
+        "size": 19198,
+        "sha256": "c2cbea189d1c3efd62c7a1ec38c69e0a79430a968b5b163030cb29aaa05a79d7"
       },
       {
         "path": "manual_jaad500asil_us_fr.md",
-        "size": 19446,
-        "sha256": "b1cc4de942132d7c83d9b033a2f574d16596d5fb4d832ac8a75739e30ecf6266"
+        "size": 18730,
+        "sha256": "a53c4c42a3fc129baae37bd9486acbd543a9caa766a4a078e164c13edd649e06"
       }
     ],
-    "sha256": "2cd53309fb00b00be620f2cfd352bd0d6c8bf9969b8ccc79541cb1fb8436082f"
+    "sha256": "ae595cb745bb6b8369807af3bc01970ae1d3b00634daf95d480eefcc2c8d7e5e"
   },
   "html": {
     "files": [
@@ -102,8 +107,8 @@
       },
       {
         "path": "_sources/manual_jaad500asil_us_fr.md.txt",
-        "size": 19446,
-        "sha256": "b1cc4de942132d7c83d9b033a2f574d16596d5fb4d832ac8a75739e30ecf6266"
+        "size": 18730,
+        "sha256": "a53c4c42a3fc129baae37bd9486acbd543a9caa766a4a078e164c13edd649e06"
       },
       {
         "path": "_static/base-stemmer.js",
@@ -191,6 +196,11 @@
         "sha256": "e7702bcb03d3eb02e63681f753d88a28bee8f8ed13e50e58ac84a2bc31a5c71d"
       },
       {
+        "path": "_static/source.css",
+        "size": 993,
+        "sha256": "0606b636278a4710ccb5e1e4f7fb2eb6949c6ccadc031cc5e53324e25da760ed"
+      },
+      {
         "path": "_static/sphinx_highlight.js",
         "size": 5123,
         "sha256": "096231e9c87df80ec3273da9c5b71bc81503206726a07a4dd4de44c256ff859c"
@@ -267,8 +277,8 @@
       },
       {
         "path": "manual_jaad500asil_us_fr.html",
-        "size": 33860,
-        "sha256": "80b2418071927891f5ee104b089cbed033f5531facea2f39b678e99a228aa508"
+        "size": 33136,
+        "sha256": "60de51faa152a15fc2584733992fd98f92923714f3e6da9b3e7a2f451ff2b4b7"
       },
       {
         "path": "objects.inv",
@@ -286,6 +296,6 @@
         "sha256": "2f8ec26f8ad8dab1e3f9ade73ca486c0f2ff6ac98cd723eafb0dcb75bd50b859"
       }
     ],
-    "sha256": "00ed44d35684e8a406ba6c47411db4e05439957419d92eaf4e6376a13f6961e8"
+    "sha256": "fc2f8db35e2a78cdce6585e1cca63e6082e615a56d113bbd26919a718607e11a"
   }
 }

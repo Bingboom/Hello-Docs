@@ -1,6 +1,6 @@
 {
   "schema_version": "auto-manual-web-publish-branch/v2",
-  "built_at": "2026-10-17T14:22:41.027232+00:00",
+  "built_at": "2026-10-19T04:46:05+00:00",
   "targets": [
     {
       "schema_version": "auto-manual-web-publish-target/v2",
@@ -77,14 +77,14 @@
       "model": "JA-AD500A-SIL",
       "region": "US",
       "lang": "fr",
-      "version": "git-20261016-28c58312-solar-voc",
-      "built_at": "2026-10-16T10:19:10+00:00",
-      "git_ref": "ff7aa351e117c16ca9c6aee89bc51c5afb454889",
+      "version": "git-20261019-28c58312-fr-spec",
+      "built_at": "2026-10-19T04:46:05+00:00",
+      "git_ref": "d1e174a6e0db054b43429780800c53e5d18e4422",
       "route": "JA-AD500A-SIL/US/fr/md",
       "manual": "manual_jaad500asil_us_fr.md",
       "language_scope": "single",
       "language_projection_evidence_path": "evidence/language_projection_receipt.json",
-      "language_projection_evidence_sha256": "18a1eb43adacc50913842be2da507a3889e29ea89cb9303fe77f6894fa6bfb07",
+      "language_projection_evidence_sha256": "9a7763bf773f1529be4bdc6d73f29dd6674987cdd25ecd67f27f11307833d8e3",
       "legacy_default": false
     },
     {
@@ -2716,6 +2716,11 @@
       "sha256": "397d39b4b2df229bc60c39fbf7f8b18fc2a7caaeeda557e56557bcba1517d4cd"
     },
     {
+      "path": "sources/web/JA-AD500A-SIL/US/fr/md/_static/source.css",
+      "size": 993,
+      "sha256": "0606b636278a4710ccb5e1e4f7fb2eb6949c6ccadc031cc5e53324e25da760ed"
+    },
+    {
       "path": "sources/web/JA-AD500A-SIL/US/fr/md/_static/web_manual.css",
       "size": 123623,
       "sha256": "4c01adf9222e7faa8fb5552490d8b8fa4ebba550b4ef2a1e7171a1b9a6538434"
@@ -2757,13 +2762,13 @@
     },
     {
       "path": "sources/web/JA-AD500A-SIL/US/fr/md/evidence/frozen_source_manifest.json",
-      "size": 17799,
-      "sha256": "4e910c4f945de2e9ec793607bb9361aad5c6fde840212c1dc0dafc172dc91904"
+      "size": 14671,
+      "sha256": "4d5e4b93dbed6e15de52abc390bb69f95ce0af6170f086b0c3c1c4ef726da0e4"
     },
     {
       "path": "sources/web/JA-AD500A-SIL/US/fr/md/evidence/language_projection_receipt.json",
-      "size": 10305,
-      "sha256": "18a1eb43adacc50913842be2da507a3889e29ea89cb9303fe77f6894fa6bfb07"
+      "size": 10625,
+      "sha256": "9a7763bf773f1529be4bdc6d73f29dd6674987cdd25ecd67f27f11307833d8e3"
     },
     {
       "path": "sources/web/JA-AD500A-SIL/US/fr/md/index.md",
@@ -2772,23 +2777,23 @@
     },
     {
       "path": "sources/web/JA-AD500A-SIL/US/fr/md/manual.ir.json",
-      "size": 225309,
-      "sha256": "50e380c82bb1ba8dbff0f50d8f9496a7c4b1b486edc6956d26784587ba5157f8"
+      "size": 215110,
+      "sha256": "6d7ece49c8929c7be766d85bac1714089db2b88672912d8e5601db0d0f8af873"
     },
     {
       "path": "sources/web/JA-AD500A-SIL/US/fr/md/manual_bundle.html",
-      "size": 20946,
-      "sha256": "9ba415e960c3e1d868fb0ee65f6bb5634efb8f3eb1fddc29671f204f087f6079"
+      "size": 19198,
+      "sha256": "c2cbea189d1c3efd62c7a1ec38c69e0a79430a968b5b163030cb29aaa05a79d7"
     },
     {
       "path": "sources/web/JA-AD500A-SIL/US/fr/md/manual_jaad500asil_us_fr.md",
-      "size": 19446,
-      "sha256": "b1cc4de942132d7c83d9b033a2f574d16596d5fb4d832ac8a75739e30ecf6266"
+      "size": 18730,
+      "sha256": "a53c4c42a3fc129baae37bd9486acbd543a9caa766a4a078e164c13edd649e06"
     },
     {
       "path": "sources/web/JA-AD500A-SIL/US/fr/md/publish_meta.json",
-      "size": 600,
-      "sha256": "b2626afb78af5246db9627e91bccc0c4e9313bd9b94dbdb266d3c4b64c0b31ed"
+      "size": 598,
+      "sha256": "9eca69f3ffa40880c74240a3ce761ef6898acae990e85267f096874ee5834ce7"
     },
     {
       "path": "sources/web/JA-AD600A/EU/de/md/_static/dcdc_source_local.css",
@@ -43331,19 +43336,24 @@
       "sha256": "53d143d7581bc2152164553cd4713ee008c4337acc226483fa0204c3591bf96b"
     },
     {
+      "path": "web/JA-AD500A-SIL/US/fr/md/_static/source.css",
+      "size": 993,
+      "sha256": "0606b636278a4710ccb5e1e4f7fb2eb6949c6ccadc031cc5e53324e25da760ed"
+    },
+    {
       "path": "web/JA-AD500A-SIL/US/fr/md/_static/web_manual.css",
       "size": 123623,
       "sha256": "4c01adf9222e7faa8fb5552490d8b8fa4ebba550b4ef2a1e7171a1b9a6538434"
     },
     {
       "path": "web/JA-AD500A-SIL/US/fr/md/evidence/frozen_source_manifest.json",
-      "size": 17799,
-      "sha256": "4e910c4f945de2e9ec793607bb9361aad5c6fde840212c1dc0dafc172dc91904"
+      "size": 14671,
+      "sha256": "4d5e4b93dbed6e15de52abc390bb69f95ce0af6170f086b0c3c1c4ef726da0e4"
     },
     {
       "path": "web/JA-AD500A-SIL/US/fr/md/evidence/language_projection_receipt.json",
-      "size": 10305,
-      "sha256": "18a1eb43adacc50913842be2da507a3889e29ea89cb9303fe77f6894fa6bfb07"
+      "size": 10625,
+      "sha256": "9a7763bf773f1529be4bdc6d73f29dd6674987cdd25ecd67f27f11307833d8e3"
     },
     {
       "path": "web/JA-AD500A-SIL/US/fr/md/index.md",
@@ -43352,18 +43362,18 @@
     },
     {
       "path": "web/JA-AD500A-SIL/US/fr/md/manual.ir.json",
-      "size": 225309,
-      "sha256": "50e380c82bb1ba8dbff0f50d8f9496a7c4b1b486edc6956d26784587ba5157f8"
+      "size": 215110,
+      "sha256": "6d7ece49c8929c7be766d85bac1714089db2b88672912d8e5601db0d0f8af873"
     },
     {
       "path": "web/JA-AD500A-SIL/US/fr/md/manual_bundle.html",
-      "size": 20946,
-      "sha256": "9ba415e960c3e1d868fb0ee65f6bb5634efb8f3eb1fddc29671f204f087f6079"
+      "size": 19198,
+      "sha256": "c2cbea189d1c3efd62c7a1ec38c69e0a79430a968b5b163030cb29aaa05a79d7"
     },
     {
       "path": "web/JA-AD500A-SIL/US/fr/md/manual_jaad500asil_us_fr.md",
-      "size": 19579,
-      "sha256": "5bc2de79de941af994218f8be745e20a6b04b7a5e2b2c8df9a941fb31535c915"
+      "size": 18863,
+      "sha256": "fdd7f8d68da97709349cacf89472d6e7c29b5b8a7d72acc5358e6720c627cbe3"
     },
     {
       "path": "web/JA-AD500A-SIL/US/md/index.md",
