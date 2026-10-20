@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import os
 import re
 from html import escape, unescape
 from html.parser import HTMLParser
@@ -18,15 +19,22 @@ from tools.rtd.design_system import (
     PAGE as DESIGN_PAGE, TEMPLATE as DESIGN_TEMPLATE, design_page_context, template_context, write_design_system,
 )
 from tools.rtd.feedback import context_text, manual_feedback_markup, normalize_channels
+from tools.rtd.knowledge_updates import PAGES as UPDATE_PAGES, load_updates, updates_view
 from tools.rtd.product_voc import normalize_endpoint, page_markup
+from tools.rtd.product_matrix import PAGE as MATRIX_PAGE, TEMPLATE as MATRIX_TEMPLATE, product_matrix_page_context
+from tools.rtd.research_build import clear_research_outputs, demo_enabled, research_bundle, write_research_exports
 from tools.rtd.page_metadata import (
     head_markup, normalize_site_base_url, page_description, page_title, portal_head_markup,
 )
-from tools.rtd.system_data import PAGE as DATA_PAGE, TEMPLATE as DATA_TEMPLATE, system_data_page_context
+from tools.rtd.system_data import system_data_page_context
 from tools.rtd.system_workspace import SYSTEM_PAGE, SYSTEM_TEMPLATE, system_page_context
 from tools.safe_copy import copytree_replace_no_symlinks
 
 ASSETS = Path(__file__).resolve().parents[1] / "rtd_portal_assets"
+# One frozen source can serve two RTD projects: the combined (internal) site
+# and a manuals-only site that is safe to publish. Each project sets
+# RTD_SITE_ROLE in its environment; unset keeps the combined build.
+SITE_ROLES = ("combined", "manuals")
 _LINK = re.compile(r"^- \[([^\n]+)\]\(([^\s]+\.md)\)\s*$", re.MULTILINE)
 
 
@@ -123,6 +131,29 @@ def configure(app, config) -> None:
     config.html_static_path = [*config.html_static_path, str(ASSETS / PathSegments.STATIC)]
 
 
+def site_role(app) -> str:
+    role = app.config.rtd_site_role
+    if role not in SITE_ROLES:
+        raise ValueError(f"rtd_site_role must be one of {SITE_ROLES}, got {role!r}")
+    return role
+
+
+def manuals_only(app) -> bool:
+    """A manuals-only build emits no knowledge, workspace or sharing pages."""
+    return site_role(app) == "manuals"
+
+
+def site_base_url_for(settings: dict) -> str:
+    """Absolute-URL root: the serving project's canonical URL, else the settings value.
+
+    Read the Docs exports READTHEDOCS_CANONICAL_URL per project and version,
+    so each of the two projects gets its own canonical root (custom domain
+    included) without a per-project settings file.
+    """
+    return normalize_site_base_url(
+        os.environ.get("READTHEDOCS_CANONICAL_URL") or settings.get("site_base_url", ""))
+
+
 def portal_data(app) -> tuple[dict, list[dict]]:
     """Validate frozen publications once per build, not once per output page."""
     cached = getattr(app, "_rtd_portal_data", None)
@@ -144,13 +175,16 @@ def clear_catalog_cache(app, exception) -> None:
     app._rtd_system_context = _UNSET
     app._rtd_design_context = _UNSET
     app._rtd_data_context = _UNSET
+    app._rtd_matrix_context = _UNSET
+    app._rtd_research_bundle = None
 
 
 def page_context(app, pagename, templatename, context, doctree):
     settings, products = portal_data(app)
+    context["research_entry"] = demo_enabled(app)
     feedback_channels = normalize_channels(settings.get("feedback_channels", []))
     beacon_token = normalize_beacon_token(settings.get("analytics_beacon_token", ""))
-    site_base_url = normalize_site_base_url(settings.get("site_base_url", ""))
+    site_base_url = site_base_url_for(settings)
     voc_markup = page_markup(
         endpoint=normalize_endpoint(settings.get("product_voc_endpoint", "")),
         publications=[item for product in products for item in product["publications"]],
@@ -272,7 +306,7 @@ def cached_design_context(app):
 
 
 def cached_data_context(app):
-    """Build the system-data context once per build; the sidebar and the page share it."""
+    """Build the workbench statistics context once per build."""
     cached = getattr(app, "_rtd_data_context", _UNSET)
     if cached is _UNSET:
         cached = system_data_page_context(app, portal_data(app)[0])
@@ -280,64 +314,114 @@ def cached_data_context(app):
     return cached
 
 
+def cached_matrix_context(app):
+    """Build the product-matrix context once per build; the sidebar and the page share it."""
+    cached = getattr(app, "_rtd_matrix_context", _UNSET)
+    if cached is _UNSET:
+        settings, products = portal_data(app)
+        cached = product_matrix_page_context(app, ASSETS, settings, products)
+        app._rtd_matrix_context = cached
+    return cached
+
+
 def site_nav(app) -> dict:
     """Optional sidebar entries for the shared site shell (see _site_shell.html)."""
+    if manuals_only(app):
+        # The public shell hides internal entries; do not build their contexts at all.
+        return dict.fromkeys(("system", "deliverables", "design", "matrix"), False)
     return {
-        "share": (workspace_content(app) / "ai-share" / "00_打开分享.html").is_file(),
         "system": cached_system_context(app) is not None,
         "deliverables": True,
         "design": cached_design_context(app) is not None,
-        "data": cached_data_context(app) is not None,
+        "matrix": cached_matrix_context(app) is not None,
+        "research": demo_enabled(app),
     }
 
 
 def collect_workspace_pages(app):
-    """Add the workspace entry and its system, deliverables, design and data pages, leaving the manual-center root alone.
+    """Add the workspace entry, its pages and the product pages, leaving the manual-center root alone.
 
     The workspace exists as a separate entry, with the system and deliverables
     pages inside it. Public manual navigation does not link into it.
     The deliverables page always renders
     (a missing input shows as 无数据); the system page drops out on an authoring
     error. The AI sharing package is an optional entry, so moving or withdrawing
-    it hides only its own links.
+    it hides only its own links. The product-matrix page likewise drops out,
+    with its links, when its inputs are unreadable. The former data URL always
+    forwards to the workbench statistics tab, even when its inputs are unreadable.
     """
+    if manuals_only(app):
+        return
     has_share = (workspace_content(app) / "ai-share" / "00_打开分享.html").is_file()
     system = cached_system_context(app)
     design = cached_design_context(app)
     data = cached_data_context(app)
+    matrix = cached_matrix_context(app)
     settings, products = portal_data(app)
     names = {(product["model"], product["region"]): product.get("name") or "" for product in products}
     deliverables = deliverables_page_context(app, ASSETS, names, list(settings.get("language_labels") or {}))
     from tools.rtd.product_learning import PAGE, TEMPLATE, learning_context
 
-    yield PAGE, {**learning_context(ASSETS, settings, products), "site_nav": site_nav(app)}, TEMPLATE
-    from tools.rtd.market_policy import PAGE as MARKET_PAGE, TEMPLATE as MARKET_TEMPLATE, market_context
+    learning = learning_context(ASSETS, settings, products)
+    yield PAGE, {**learning, "site_nav": site_nav(app)}, TEMPLATE
+    from sphinx.util import logging as sphinx_logging
+    from tools.rtd.market_policy import (
+        PAGE as MARKET_PAGE, TEMPLATE as MARKET_TEMPLATE, market_context, missing_knowledge_anchors,
+    )
 
-    yield MARKET_PAGE, {**market_context(workspace_content(app)), "site_nav": site_nav(app)}, MARKET_TEMPLATE
+    market = market_context(workspace_content(app))
+    # A renamed topic strands policy links; warn only, since malformed data already fails the build.
+    for record, anchor in missing_knowledge_anchors(market["records"], {t["id"] for t in learning["topics"]}):
+        sphinx_logging.getLogger(__name__).warning(
+            "Market policy record %s links to unknown product knowledge topic #%s", record, anchor)
+    yield MARKET_PAGE, {**market, "site_nav": site_nav(app)}, MARKET_TEMPLATE
+    if demo_enabled(app):
+        from tools.rtd.product_research import (
+            PAGE as RESEARCH_PAGE, TEMPLATE as RESEARCH_TEMPLATE, research_page_context,
+        )
+
+        knowledge, research = research_bundle(app, ASSETS, settings, products, workspace_content(app))
+        yield RESEARCH_PAGE, {
+            **research_page_context(knowledge, research), "site_nav": site_nav(app),
+        }, RESEARCH_TEMPLATE
+    entries, problems = load_updates(ASSETS)
+    for problem in problems:
+        sphinx_logging.getLogger(__name__).warning("Knowledge home update skipped: %s", problem)
+    # 最近更新 links only to what this build made; the other pages always build.
+    built = {**dict.fromkeys(UPDATE_PAGES, True), "share": has_share, "product-matrix": matrix is not None,
+             "system": system is not None, "design-system": design is not None}
     yield "workspace/index", {
         "share_entry": "../ai-share/00_打开分享.html" if has_share else "",
         "system_entry": system is not None,
         "deliverables_entry": True,
         "design_entry": design is not None,
-        "data_entry": data is not None,
+        "matrix_entry": matrix is not None,
+        "research_entry": demo_enabled(app),
+        "updates": updates_view(entries, built),
     }, "workspace_portal.html"
     if system is not None:
         from tools.rtd.workspace_revision import page_revision
 
-        yield SYSTEM_PAGE, {**system, "has_share": has_share, "deliverables_entry": True,
-                            "design_entry": design is not None, "data_entry": data is not None,
-                            "workspace_revision": page_revision(app)}, SYSTEM_TEMPLATE
-    yield DELIVERABLES_PAGE, {**deliverables, "has_share": has_share, "system_entry": system is not None,
-                              "design_entry": design is not None, "data_entry": data is not None}, DELIVERABLES_TEMPLATE
+        yield SYSTEM_PAGE, {**system, "deliverables_entry": True,
+                            "design_entry": design is not None,
+                            "matrix_entry": matrix is not None, "workspace_revision": page_revision(app)}, SYSTEM_TEMPLATE
+    yield DELIVERABLES_PAGE, {**deliverables, "system_entry": system is not None,
+                              "design_entry": design is not None,
+                              "matrix_entry": matrix is not None, "statistics": data}, DELIVERABLES_TEMPLATE
     if design is not None:
         yield DESIGN_PAGE, {**template_context(design), "site_nav": site_nav(app)}, DESIGN_TEMPLATE
-    if data is not None:
-        yield DATA_PAGE, {**data, "site_nav": site_nav(app)}, DATA_TEMPLATE
+    # Keep old shared URLs working after removing 系统数据 from the knowledge base.
+    yield "workspace/data/index", {
+        "moved_target": f"{DELIVERABLES_PAGE}#statistics",
+        "moved_title": "说明书工作台「数据统计」",
+    }, "moved_page.html"
+    if matrix is not None:
+        yield MATRIX_PAGE, {**matrix, "site_nav": site_nav(app)}, MATRIX_TEMPLATE
 
 
 def write_design_pages(app, exception) -> None:
     """Write the design-system previews, live stylesheet and art beside its page."""
-    if exception is not None or getattr(app.builder, "format", None) != "html":
+    if exception is not None or getattr(app.builder, "format", None) != "html" or manuals_only(app):
         return
     design = cached_design_context(app)
     if design is not None:
@@ -346,7 +430,7 @@ def write_design_pages(app, exception) -> None:
 
 def copy_workspace_content(app, exception) -> None:
     """Copy the approved sharing package; policy source screenshots stay off-site."""
-    if exception is not None:
+    if exception is not None or manuals_only(app):
         return
     source = workspace_content(app) / "ai-share"
     if not source.is_dir():
@@ -365,9 +449,12 @@ def setup(app):
     from tools.rtd.workspace_revision import write_workspace_revision
 
     app.add_config_value("rtd_knowledge_dir", "", "html")
+    app.add_config_value("rtd_site_role", os.environ.get("RTD_SITE_ROLE", "combined"), "html")
+    app.add_config_value("rtd_product_intelligence_demo", os.environ.get("RTD_PRODUCT_INTELLIGENCE_DEMO", "0"), "html")
     # ISO date for the system and deliverables pages' staleness rules; empty means the build date (UTC).
     app.add_config_value("rtd_system_workspace_date", "", "html")
     app.connect("config-inited", configure)
+    app.connect("builder-inited", clear_research_outputs)
     app.connect("builder-inited", prepare_catalog)
     app.connect("html-page-context", page_context)
     app.connect("html-collect-pages", collect_workspace_pages)
@@ -376,6 +463,7 @@ def setup(app):
     app.connect("build-finished", write_design_pages, priority=850)
     app.connect("build-finished", write_search_index, priority=900)
     app.connect("build-finished", write_knowledge, priority=925)
+    app.connect("build-finished", write_research_exports, priority=940)
     app.connect("build-finished", write_workspace_revision, priority=950)
     app.connect("build-finished", write_deployment_receipt, priority=1000)
     app.connect("build-finished", clear_catalog_cache, priority=1100)

@@ -1,0 +1,16 @@
+{
+  "schema_version": "product-intelligence-preview/v1",
+  "engineering_repository": "Bingboom/auto-manual",
+  "engineering_branch": "feat/product-intelligence-demo",
+  "engineering_commit": "221987a1fe75c3374c34a33fc018a99a6ba31f3f",
+  "frozen_business_repository": "Bingboom/Hello-Docs",
+  "frozen_business_commit": "a728b1f1bf5632ed7471290c5a86041818de85da",
+  "frozen_paths": [
+    "docs/publish",
+    "docs/knowledge"
+  ],
+  "preview_project": "ht-docs-ht-manuals",
+  "preview_branch": "preview/product-intelligence-1579",
+  "visibility_required": "private",
+  "production_defaults_changed": false
+}

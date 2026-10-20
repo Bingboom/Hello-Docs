@@ -22,6 +22,7 @@ from tools import (
     check_top_level_module_ratchet,
 )
 from tools.utils.path_utils import PathSegments, renderer_contracts_of
+from tools.web import frozen_package_registry
 
 
 # Thresholds are set ~25-100 lines above the current size of files that have
@@ -165,6 +166,12 @@ HOTSPOT_LINE_THRESHOLDS: dict[str, int] = {
     # their pages. STYLE_DEFINITION.md keeps §1 and §8 because tests read them.
     "code-as-doc/next_optimization_checklist.md": 190,
     "docs/renderers/contracts/STYLE_DEFINITION.md": 270,
+    # 2026-10-13: the module map, the RTD portal doc, the Web publish contract and the
+    # quick start (11-15K tokens each) became indexes too; notes go to their pages.
+    "code-as-doc/dev/orchestration_module_map.md": 100,
+    "code-as-doc/dev/rtd_manual_portal.md": 40,
+    "code-as-doc/dev/web_publish_pipeline.md": 70,
+    "user-guide/quick_start_guide.md": 110,
 }
 
 
@@ -410,6 +417,10 @@ def main(argv: list[str] | None = None) -> int:
     top_level = check_top_level_module_ratchet.check_repository(args.repo_root.resolve())
     if top_level.exit_code:
         return top_level.exit_code
+
+    frozen_packages = frozen_package_registry.check_repository(args.repo_root.resolve())
+    if frozen_packages.exit_code:
+        return frozen_packages.exit_code
 
     print(
         f"[maintainability] Guardrails OK for {len(HOTSPOT_LINE_THRESHOLDS)} hotspot files."

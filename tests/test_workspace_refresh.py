@@ -115,7 +115,7 @@ class FreshnessTests(unittest.TestCase):
             snap.atomic_json(path, snapshot())
             registry = {"deliverables_feishu": {"stale_after_days": 3}, "corpus": {"stale_after_days": 7}}
             rows = freshness(root, registry, dt.date(2026, 10, 2))
-            self.assertEqual(rows[0]["state"], "待更新")
+            self.assertEqual(rows[0]["state"], "待复核")
             self.assertEqual(rows[1]["state"], "Unavailable")
             snap.atomic_json(path.parent / "deliverables-status.json", {"status": "failed"})
             rows = freshness(root, registry, dt.date(2026, 10, 2))
@@ -160,7 +160,9 @@ class ReleaseTests(unittest.TestCase):
         with TemporaryDirectory() as tmp:
             root = Path(tmp)
             expected = inventory(root)
-            html = b'<span data-workspace-source="deliverables" data-snapshot-sha256=""></span><span data-workspace-source="corpus" data-snapshot-sha256=""></span>'
+            html = (b'<span data-workspace-source="deliverables" data-snapshot-sha256=""></span>'
+                    b'<span data-workspace-source="corpus" data-snapshot-sha256=""></span>'
+                    b'<span data-workspace-source="web_progress" data-snapshot-sha256=""></span>')
             receipt = {"workspace_revision": "target", "workspace_sources": expected,
                        "files": {verify.ROUTE: hashlib.sha256(html).hexdigest()}}
             def fetch(url):
@@ -189,6 +191,31 @@ class ExportServiceTests(unittest.TestCase):
             self.assertEqual(result["status"], "failed")
             self.assertNotIn(secret, out.getvalue())
             self.assertEqual(json.loads((assets / snap.NAMES["deliverables"]).read_text())["documents"], snapshot()["documents"])
+
+    def test_web_progress_reads_the_bound_table_and_history(self):
+        from tools.rtd import web_progress as wp
+        site = "https://ht-docs-ht-manuals.readthedocs-hosted.com/en/latest"
+        grid = {"data": {"fields": ["型号", wp.LINK_FIELD, wp.CHECK_FIELD, wp.SKU_FIELD], "record_id_list": ["r1"],
+                         "data": [["JE-A", {"link": f"{site}/JE-A/EU/en/md/manual.html"}, True, [{"text": "HTE1-EU-JAK"}]]],
+                         "total": 1, "has_more": False}}
+        timeline = [{"date": "2026-10-01", "added": 1, "langs": 1, "editions": 1, "models": 1}]
+        env = {"FEISHU_PUBLISHED_DOCS_BASE_TOKEN": "base", "FEISHU_PUBLISHED_DOCS_WEB_TABLE_ID": "web"}
+        with TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            assets = root / "tools" / "rtd_portal_assets"
+            assets.mkdir(parents=True)
+            (assets / "workspace_refresh_sources.json").write_text(json.dumps({"web_progress": snap.digest(["base", "web"])}))
+            with patch.dict(os.environ, env), redirect_stdout(io.StringIO()):
+                result = refresh.refresh("web_progress", root=root, log=root / "result.json", cli_bin="unused",
+                                         identity="bot", run=lambda _: grid, history=lambda _: timeline)
+            self.assertEqual(result["status"], "changed")
+            saved = json.loads((snap.data_dir(root) / snap.NAMES["web_progress"]).read_text())
+            self.assertEqual((saved["checked"], saved["sold"], saved["timeline"]), (["JE-A/EU/en"], {"JE-A": ["EU"]}, timeline))
+            # A table the binding does not name is refused before any read.
+            with patch.dict(os.environ, dict(env, FEISHU_PUBLISHED_DOCS_WEB_TABLE_ID="other")), redirect_stdout(io.StringIO()):
+                failed = refresh.refresh("web_progress", root=root, log=root / "result.json", cli_bin="unused",
+                                         identity="bot", run=Mock(side_effect=AssertionError("read")), history=lambda _: timeline)
+            self.assertEqual(failed["status"], "failed")
 
     def test_corpus_revision_changes_hash_without_changing_counts(self):
         from tools.rtd.system_workspace import corpus_export
@@ -325,15 +352,15 @@ class QueueBatchTests(unittest.TestCase):
             args = ['verify', '--root', tmp, '--revision', 'a' * 40, '--output', str(output)]
             response = {'results': [{'commit': 'a' * 40, 'state': {'code': 'finished'}, 'success': False}]}
             with patch('sys.argv', args), patch.object(verify, 'command', return_value='a' * 40), \
-                    patch.object(verify, 'FetchSession') as session, patch.object(verify, 'verify_once') as online, \
-                    redirect_stdout(io.StringIO()):
-                session.return_value.fetch.return_value = json.dumps(response).encode()
+                    patch.dict(os.environ, {verify.API_TOKEN_ENV: 'token'}), \
+                    patch.object(verify, 'fetch_builds', return_value=json.dumps(response).encode()), \
+                    patch.object(verify, 'verify_once') as online, redirect_stdout(io.StringIO()):
                 self.assertEqual(verify.main(), 1)
                 online.assert_not_called()
             result = json.loads(output.read_text())
             self.assertEqual((result['stage'], result['status']), ('rtd-build', 'failed'))
 
-    def test_rtd_api_uses_safe_query_free_transport_url(self):
+    def test_community_rtd_api_uses_safe_query_free_transport_url(self):
         from tools.rtd.deployment_receipt import _canonical_probe_url
         with TemporaryDirectory() as tmp:
             output = Path(tmp) / 'result.json'
@@ -348,8 +375,51 @@ class QueueBatchTests(unittest.TestCase):
                 return json.dumps(response).encode()
 
             with patch('sys.argv', args), patch.object(verify, 'command', return_value='a' * 40), \
+                    patch.object(verify, 'BASE_URL', 'https://ht-doc.readthedocs.io/'), \
+                    patch.dict(os.environ, {verify.API_TOKEN_ENV: 'business-only'}), \
                     patch('tools.rtd.deployment_receipt._fetch', side_effect=fetch), \
                     patch.object(verify, 'verify_once', return_value={'status': 'verified'}), \
                     redirect_stdout(io.StringIO()):
                 self.assertEqual(verify.main(), 0)
-            self.assertEqual(json.loads(output.read_text())['rtd_build'], 42)
+            result = json.loads(output.read_text())
+            self.assertEqual(result['rtd_build'], 42)
+            self.assertEqual(result['rtd_url'], 'https://app.readthedocs.org/projects/ht-doc/builds/42/')
+
+    def test_business_rtd_api_sends_the_token_only_to_its_builds_endpoint(self):
+        with TemporaryDirectory() as tmp:
+            output = Path(tmp) / 'result.json'
+            args = ['verify', '--root', tmp, '--revision', 'a' * 40, '--output', str(output)]
+            response = {'results': [{'id': 7, 'commit': 'a' * 40, 'state': {'code': 'finished'}, 'success': True}]}
+            seen = []
+
+            def urlopen(request, timeout):
+                seen.append((request.full_url, request.get_header('Authorization')))
+                return io.BytesIO(json.dumps(response).encode())
+
+            with patch('sys.argv', args), patch.object(verify, 'command', return_value='a' * 40), \
+                    patch.dict(os.environ, {verify.API_TOKEN_ENV: 'secret'}), \
+                    patch.object(verify, 'urlopen', side_effect=urlopen), \
+                    patch.object(verify, 'verify_once', return_value={'status': 'verified'}), \
+                    redirect_stdout(io.StringIO()) as out:
+                self.assertEqual(verify.main(), 0)
+            self.assertEqual(seen, [('https://readthedocs.com/api/v3/projects/ht-docs-ht-manuals/builds/', 'Token secret')])
+            result = json.loads(output.read_text())
+            self.assertEqual(result['rtd_url'], 'https://app.readthedocs.com/projects/ht-docs-ht-manuals/builds/7/')
+            self.assertNotIn('secret', out.getvalue() + output.read_text())
+
+    def test_without_a_business_token_only_this_revisions_receipt_decides(self):
+        with TemporaryDirectory() as tmp:
+            output = Path(tmp) / 'result.json'
+            args = ['verify', '--root', tmp, '--revision', 'a' * 40, '--attempts', '2', '--output', str(output)]
+            results = [ValueError('online-version-mismatch'), {'status': 'verified', 'stage': 'online-verified'}]
+            with patch('sys.argv', args), patch.object(verify, 'command', return_value='a' * 40), \
+                    patch.dict(os.environ, {verify.API_TOKEN_ENV: ''}), \
+                    patch.object(verify, 'fetch_builds') as builds, patch.object(verify.time, 'sleep'), \
+                    patch.object(verify, 'verify_once', side_effect=results) as online, \
+                    redirect_stdout(io.StringIO()):
+                self.assertEqual(verify.main(), 0)
+            builds.assert_not_called()
+            self.assertEqual(online.call_count, 2)
+            result = json.loads(output.read_text())
+            self.assertEqual(result['rtd_build'], f'Not checked (no {verify.API_TOKEN_ENV})')
+            self.assertEqual(result['status'], 'verified')

@@ -33,10 +33,11 @@ small enough to read whole. When a workflow changes, update the owning topic pag
 | [`build-pipeline.md`](hello_auto-doc/build-pipeline.md) | you need the end-to-end `build.py` pipeline steps and the important behavior notes for each action |
 | [`build-commands.md`](hello_auto-doc/build-commands.md) | you need copy-paste commands, config scope, source modes, or `publish`/`preview`/`fast`/`sync-review` behavior |
 | [`web-publish-and-rtd.md`](hello_auto-doc/web-publish-and-rtd.md) | you work on the RTD catalog, Web composites, per-target Web configs, Manual Center search or the knowledge pages |
+| [`product-intelligence-demo.md`](hello_auto-doc/product-intelligence-demo.md) | you run the opt-in product knowledge and external-event research preview, inspect evidence or compare research snapshots |
 | [`web-rendering-and-ir.md`](hello_auto-doc/web-rendering-and-ir.md) | you change how Web components render through public IR (Inbox, FCC, LCD, troubleshooting, warranty, callouts, tables) |
 | [`version-tracking.md`](hello_auto-doc/version-tracking.md) | you set up diff baselines, compare commits, or read the diff reports |
 | [`checklists-and-pitfalls.md`](hello_auto-doc/checklists-and-pitfalls.md) | you need page contracts, common pitfalls, the verification checklist or the one-sentence rule |
 | [`eu-web-components.md`](hello_auto-doc/eu-web-components.md) | you add an EU language or maintain shared Web components (LCD, tables, notices, errata) without regressions |
 | [`web-target-notes.md`](hello_auto-doc/web-target-notes.md) | you work on a Web target listed there (JBP-3600A, JBP-2000B, FridgeGuard US, JA-AD600A, SlimPower H1, JBP-1000B-WH, JA-AD500A-SIL …) |
 
-Git-only 发布的冻结源库上限为 1152 MiB、20,000 个文件；网页输出与线上取回仍限 512 MiB、10,000 个文件。单文件 32 MiB 和全部资源哈希校验保持不变。操作细节见 [Web 发布](hello_auto-doc/web-publication.md)。
+Git-only 发布的冻结源库上限为 1536 MiB（2026-10-14 起，原 1280 MiB）、20,000 个文件；网页输出与线上取回限 768 MiB（2026-10-13 起，原 512 MiB）、10,000 个文件。单文件 32 MiB 和全部资源哈希校验保持不变。操作细节见 [Web 发布](hello_auto-doc/web-publication.md)。
