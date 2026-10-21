@@ -2,12 +2,19 @@
   "schema_version": "product-intelligence-preview/v1",
   "engineering_repository": "Bingboom/auto-manual",
   "engineering_branch": "feat/product-intelligence-demo",
-  "engineering_commit": "9bca3a5cd94764b4a110447cb6fa29bd500445a6",
+  "engineering_commit": "b36c536a7ae6c8448bec880c4278ace3c856fe51",
   "frozen_business_repository": "Bingboom/Hello-Docs",
   "frozen_business_commit": "a728b1f1bf5632ed7471290c5a86041818de85da",
   "frozen_paths": [
     "docs/publish",
     "docs/knowledge"
+  ],
+  "carrier_additions": [
+    {
+      "path": "docs/knowledge/external-intel/events.json",
+      "seeded_from": "Bingboom/auto-manual:tests/fixtures/external_intel/events.json@b36c536a7ae6c8448bec880c4278ace3c856fe51",
+      "sha256": "3588480c1922d4e6a138263092522fe7f40cab08ca0875579f61af562aac2093"
+    }
   ],
   "preview_project": "ht-docs-ht-manuals",
   "preview_branch": "preview/product-intelligence-1579",
