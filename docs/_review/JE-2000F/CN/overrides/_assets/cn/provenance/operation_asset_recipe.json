@@ -1,0 +1,679 @@
+{
+  "schema_version": 1,
+  "coordinate_contract": {
+    "page_numbering": "pdf-1-based",
+    "bbox_units": "pt",
+    "bbox_origin": "top-left",
+    "bbox_space": "source-page"
+  },
+  "normalization": {
+    "engine": "pymupdf",
+    "validated_version": "1.28.0",
+    "validated_mupdf_version": "1.29.0",
+    "pdf_save": {
+      "garbage": 4,
+      "clean": true,
+      "deflate": true,
+      "no_new_id": true
+    },
+    "forbidden_pdf_markers": [
+      "AIPrivateData",
+      "PieceInfo",
+      "AIMetaData"
+    ],
+    "max_render_pixels": 40000000
+  },
+  "source": {
+    "source_key": "source/manual_je2000f_cn_20260818",
+    "expected_sha256": "a14274310442c2ce0443b502e2b29e1bf325a2c38c03d81da049029c02c91010",
+    "expected_page_count": 18
+  },
+  "archive": {
+    "pages": {
+      "first": 1,
+      "last": 18
+    },
+    "pdf": {
+      "path_pattern": "archive/pages/page-{page:04d}.pdf"
+    },
+    "previews": {
+      "path_pattern": "archive/previews/page-{page:04d}.png",
+      "default_scale": 1,
+      "page_scale": {}
+    }
+  },
+  "page_catalog": [
+    {
+      "page": 1,
+      "page_key": "page_001",
+      "role": "manual_page",
+      "locale": "zh",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": [
+        "model-specific",
+        "localized-copy"
+      ]
+    },
+    {
+      "page": 2,
+      "page_key": "page_002",
+      "role": "manual_page",
+      "locale": "zh",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": [
+        "model-specific",
+        "localized-copy"
+      ]
+    },
+    {
+      "page": 3,
+      "page_key": "page_003",
+      "role": "manual_page",
+      "locale": "zh",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": [
+        "model-specific",
+        "localized-copy"
+      ]
+    },
+    {
+      "page": 4,
+      "page_key": "page_004",
+      "role": "manual_page",
+      "locale": "zh",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": [
+        "model-specific",
+        "localized-copy"
+      ]
+    },
+    {
+      "page": 5,
+      "page_key": "page_005",
+      "role": "manual_page",
+      "locale": "zh",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": [
+        "model-specific",
+        "localized-copy"
+      ]
+    },
+    {
+      "page": 6,
+      "page_key": "page_006",
+      "role": "manual_page",
+      "locale": "zh",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": [
+        "model-specific",
+        "localized-copy"
+      ]
+    },
+    {
+      "page": 7,
+      "page_key": "page_007",
+      "role": "manual_page",
+      "locale": "zh",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": [
+        "model-specific",
+        "localized-copy"
+      ]
+    },
+    {
+      "page": 8,
+      "page_key": "page_008",
+      "role": "manual_page",
+      "locale": "zh",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": [
+        "model-specific",
+        "localized-copy"
+      ]
+    },
+    {
+      "page": 9,
+      "page_key": "page_009",
+      "role": "manual_page",
+      "locale": "zh",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": [
+        "model-specific",
+        "localized-copy"
+      ]
+    },
+    {
+      "page": 10,
+      "page_key": "page_010",
+      "role": "manual_page",
+      "locale": "zh",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": [
+        "model-specific",
+        "localized-copy"
+      ]
+    },
+    {
+      "page": 11,
+      "page_key": "page_011",
+      "role": "manual_page",
+      "locale": "zh",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": [
+        "model-specific",
+        "localized-copy"
+      ]
+    },
+    {
+      "page": 12,
+      "page_key": "page_012",
+      "role": "manual_page",
+      "locale": "zh",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": [
+        "model-specific",
+        "localized-copy"
+      ]
+    },
+    {
+      "page": 13,
+      "page_key": "page_013",
+      "role": "manual_page",
+      "locale": "zh",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": [
+        "model-specific",
+        "localized-copy"
+      ]
+    },
+    {
+      "page": 14,
+      "page_key": "page_014",
+      "role": "manual_page",
+      "locale": "zh",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": [
+        "model-specific",
+        "localized-copy"
+      ]
+    },
+    {
+      "page": 15,
+      "page_key": "page_015",
+      "role": "manual_page",
+      "locale": "zh",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": [
+        "model-specific",
+        "localized-copy"
+      ]
+    },
+    {
+      "page": 16,
+      "page_key": "page_016",
+      "role": "manual_page",
+      "locale": "zh",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": [
+        "model-specific",
+        "localized-copy"
+      ]
+    },
+    {
+      "page": 17,
+      "page_key": "page_017",
+      "role": "manual_page",
+      "locale": "zh",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": [
+        "model-specific",
+        "localized-copy"
+      ]
+    },
+    {
+      "page": 18,
+      "page_key": "page_018",
+      "role": "manual_page",
+      "locale": "zh",
+      "build_eligible": false,
+      "gate": {
+        "status": "archive",
+        "reasons": []
+      },
+      "risk_tags": [
+        "model-specific",
+        "localized-copy"
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "asset_key": "web/je2000f/cn/zh/main_power",
+      "page": 6,
+      "build_eligible": false,
+      "scope": {
+        "models": [
+          "JE-2000F"
+        ],
+        "regions": [
+          "CN"
+        ],
+        "locales": [
+          "zh"
+        ]
+      },
+      "text_policy": "textless",
+      "visual_review_required": true,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            34,
+            344,
+            332,
+            429
+          ]
+        },
+        {
+          "op": "redact_text_region",
+          "bbox_pt": [
+            277,
+            345,
+            319,
+            397
+          ],
+          "images": "preserve",
+          "graphics": "preserve",
+          "fill": null
+        },
+        {
+          "op": "redact_text_region",
+          "bbox_pt": [
+            144,
+            418,
+            332,
+            429
+          ],
+          "images": "preserve",
+          "graphics": "remove_if_touched",
+          "fill": null
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "operation/main_power.png",
+          "scale": 4
+        }
+      ],
+      "gate": {
+        "status": "quarantine",
+        "reasons": [
+          "Target-scoped local review asset; no registry promotion"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art"
+      ]
+    },
+    {
+      "asset_key": "web/je2000f/cn/zh/ac_output",
+      "page": 7,
+      "build_eligible": false,
+      "scope": {
+        "models": [
+          "JE-2000F"
+        ],
+        "regions": [
+          "CN"
+        ],
+        "locales": [
+          "zh"
+        ]
+      },
+      "text_policy": "textless",
+      "visual_review_required": true,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            33,
+            81,
+            327,
+            229
+          ]
+        },
+        {
+          "op": "redact_text_region",
+          "bbox_pt": [
+            285,
+            82,
+            319,
+            121
+          ],
+          "images": "preserve",
+          "graphics": "preserve",
+          "fill": null
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "operation/ac_output.png",
+          "scale": 4
+        }
+      ],
+      "gate": {
+        "status": "quarantine",
+        "reasons": [
+          "Target-scoped local review asset; no registry promotion"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art"
+      ]
+    },
+    {
+      "asset_key": "web/je2000f/cn/zh/dc_usb_output",
+      "page": 7,
+      "build_eligible": false,
+      "scope": {
+        "models": [
+          "JE-2000F"
+        ],
+        "regions": [
+          "CN"
+        ],
+        "locales": [
+          "zh"
+        ]
+      },
+      "text_policy": "textless",
+      "visual_review_required": true,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            33,
+            282,
+            327,
+            441
+          ]
+        },
+        {
+          "op": "redact_text_region",
+          "bbox_pt": [
+            285,
+            282,
+            319,
+            321
+          ],
+          "images": "preserve",
+          "graphics": "preserve",
+          "fill": null
+        },
+        {
+          "op": "redact_text_region",
+          "bbox_pt": [
+            33,
+            282,
+            128,
+            287
+          ],
+          "images": "preserve",
+          "graphics": "remove_if_touched",
+          "fill": null
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "operation/dc_usb_output.png",
+          "scale": 4
+        }
+      ],
+      "gate": {
+        "status": "quarantine",
+        "reasons": [
+          "Target-scoped local review asset; no registry promotion"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art"
+      ]
+    },
+    {
+      "asset_key": "web/je2000f/cn/zh/energy_saving",
+      "page": 8,
+      "build_eligible": false,
+      "scope": {
+        "models": [
+          "JE-2000F"
+        ],
+        "regions": [
+          "CN"
+        ],
+        "locales": [
+          "zh"
+        ]
+      },
+      "text_policy": "textless",
+      "visual_review_required": true,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            38,
+            204,
+            322,
+            297
+          ]
+        },
+        {
+          "op": "redact_text_region",
+          "bbox_pt": [
+            170,
+            257,
+            299,
+            297
+          ],
+          "images": "preserve",
+          "graphics": "preserve",
+          "fill": null
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "operation/energy_saving.png",
+          "scale": 4
+        }
+      ],
+      "gate": {
+        "status": "quarantine",
+        "reasons": [
+          "Target-scoped local review asset; no registry promotion"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art"
+      ]
+    },
+    {
+      "asset_key": "web/je2000f/cn/zh/led_light",
+      "page": 8,
+      "build_eligible": false,
+      "scope": {
+        "models": [
+          "JE-2000F"
+        ],
+        "regions": [
+          "CN"
+        ],
+        "locales": [
+          "zh"
+        ]
+      },
+      "text_policy": "textless",
+      "visual_review_required": true,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            37,
+            403,
+            327,
+            484
+          ]
+        },
+        {
+          "op": "redact_text_region",
+          "bbox_pt": [
+            248,
+            405,
+            321,
+            474
+          ],
+          "images": "preserve",
+          "graphics": "preserve",
+          "fill": null
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "operation/led_light.png",
+          "scale": 4
+        }
+      ],
+      "gate": {
+        "status": "quarantine",
+        "reasons": [
+          "Target-scoped local review asset; no registry promotion"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art"
+      ]
+    },
+    {
+      "asset_key": "web/je2000f/cn/zh/lcd_mode",
+      "page": 9,
+      "build_eligible": false,
+      "scope": {
+        "models": [
+          "JE-2000F"
+        ],
+        "regions": [
+          "CN"
+        ],
+        "locales": [
+          "zh"
+        ]
+      },
+      "text_policy": "textless",
+      "visual_review_required": true,
+      "transforms": [
+        {
+          "op": "crop",
+          "bbox_pt": [
+            38,
+            53,
+            181,
+            180
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "format": "png",
+          "path": "operation/lcd_mode.png",
+          "scale": 4
+        }
+      ],
+      "gate": {
+        "status": "quarantine",
+        "reasons": [
+          "Target-scoped local review asset; no registry promotion"
+        ]
+      },
+      "risk_tags": [
+        "model-specific",
+        "region-locked-art"
+      ]
+    }
+  ]
+}

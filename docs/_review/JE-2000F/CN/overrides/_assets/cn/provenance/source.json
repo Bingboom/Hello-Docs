@@ -1,0 +1,16 @@
+{
+  "filename": "便携式储能电源2000 Pro 3 说明书 V2.0-2026-08-18.pdf",
+  "sha256": "a14274310442c2ce0443b502e2b29e1bf325a2c38c03d81da049029c02c91010",
+  "pages": 18,
+  "scope": "JE-2000F/CN/zh; reviewed overrides only; live shared registry unchanged",
+  "operation_extraction": "native PDF clipping and bounded text redactions; preserve product marks and original drawing transparency",
+  "dense_diagram_policy": "front_product and right_side_ports retain approved annotated artwork; identical following HTML label tables removed to prevent duplication",
+  "source_errata": [
+    {
+      "page": 13,
+      "quote": "1000 Pro 3",
+      "context": "solar charging DC input range paragraph",
+      "status": "preserved source wording; model-name correction awaits source confirmation; technical input range unchanged"
+    }
+  ]
+}
