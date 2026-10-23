@@ -90,6 +90,7 @@
     "JE-100C/EU/pt": "reczz28JhrDx01P3",
     "JE-100C/EU/uk": "reczz28JhrDwy2Ae",
     "JE-1500C/TW/zh-TW": "reczz28Nyrhsz5ZG",
+    "JE-1500D/JP/ja": "reczz28QogkwDpFN",
     "JE-2000E/EU/de": "reczz28JhrDwzFxZ",
     "JE-2000E/EU/en": "reczz28JhrDwxal1",
     "JE-2000E/EU/es": "reczz28JhrDwxS7c",
@@ -159,9 +160,9 @@
     "JS-40C/EU/en": "reczz28JhrDwztQv"
   },
   "refresh": {
-    "checked_at": "2026-10-23T04:10:45.668238+00:00",
-    "content_sha256": "f937c4eaccbe6ec3fa9dd909d1e0f5aa22830d08a5e2b7d78956bb71ad5bf527",
-    "execution": "https://github.com/Bingboom/Hello-Docs/actions/runs/39898610167",
+    "checked_at": "2026-10-23T10:22:49.661778+00:00",
+    "content_sha256": "c4716f043da5c5e380a48e74f7d8169a92424626b3bccd3dfc294e0f6dd052fb",
+    "execution": "https://github.com/Bingboom/Hello-Docs/actions/runs/39938476954",
     "source": {
       "identity_sha256": "4bb050d6bd5084c9f5cbdff7cc3b74624524f64a9a8f4d13c420362d6b36b842"
     },
@@ -180,7 +181,7 @@
       "page": "https://ht-docs-review-doc-lib.readthedocs-hosted.com/FridgeGuard-2/US.html",
       "record": "reczz28QgFMoqDKd",
       "status": "审核中（参考复用已补齐，含待确认项）",
-      "version": "v0.10"
+      "version": "v0.12"
     },
     {
       "date": "2026-10-23",
@@ -194,7 +195,7 @@
       "page": "https://ht-docs-review-doc-lib.readthedocs-hosted.com/Guardian-2-Battery-Pack/US.html",
       "record": "reczz28QgFMotD1j",
       "status": "审核中（含待确认项）",
-      "version": "v0.11"
+      "version": "v0.26"
     },
     {
       "date": "2026-10-23",
@@ -208,7 +209,7 @@
       "page": "https://ht-docs-review-doc-lib.readthedocs-hosted.com/JHP-3000X/US.html",
       "record": "reczz28QgFMor9c9",
       "status": "审核中（含待确认项）",
-      "version": "v0.23"
+      "version": "v0.24"
     },
     {
       "date": "2026-10-22",
@@ -349,6 +350,14 @@
       "TW",
       "KR",
       "AU"
+    ],
+    "JE-1500D": [
+      "EU",
+      "US",
+      "JP",
+      "CN",
+      "AU",
+      "BR"
     ],
     "JE-2000E": [
       "EU",
