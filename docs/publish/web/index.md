@@ -17,6 +17,7 @@
 - [JA-CA05B / EU / en - Jackery Solar Generator Connection Guide User Manual](JA-CA05B/EU/en/md/manual_jaca05b_eu_en.md)
 - [JA-CA3SA / EU / en - Solar Generator Connector User Manual](JA-CA3SA/EU/en/md/manual_jaca3sa_eu_en.md)
 - [JA-CC30A / EU / en - Jackery Extreme Guard Carrying Bag (L Size) User Manual](JA-CC30A/EU/en/md/manual_jacc30a_eu_en.md)
+- [JA-CK01A-BK-QG / JP / ja - クイックガイド 自動切替機能付ホーム分電盤](JA-CK01A-BK-QG/JP/ja/md/manual_jack01abkqg_jp_ja.md)
 - [JA-TS02A / US / en - Jackery Smart Transfer Switch · JA-TS02A](JA-TS02A/US/en/md/manual_jats02a_us_en.md)
 - [JA-TS02A / US / es - Jackery Smart Transfer Switch · JA-TS02A](JA-TS02A/US/es/md/manual_jats02a_us_es.md)
 - [JA-TS02A / US / fr - Jackery Smart Transfer Switch · JA-TS02A](JA-TS02A/US/fr/md/manual_jats02a_us_fr.md)
