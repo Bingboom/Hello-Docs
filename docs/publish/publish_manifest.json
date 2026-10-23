@@ -1,6 +1,6 @@
 {
   "schema_version": "auto-manual-web-publish-branch/v2",
-  "built_at": "2026-10-23T12:11:10+00:00",
+  "built_at": "2026-10-23T13:41:22+00:00",
   "targets": [
     {
       "schema_version": "auto-manual-web-publish-target/v2",
@@ -275,6 +275,25 @@
       "legacy_route": "JA-CC30A/EU/md",
       "legacy_aliases": [
         "manual_jacc30a_eu_en"
+      ]
+    },
+    {
+      "schema_version": "auto-manual-web-publish-target/v2",
+      "model": "JA-CK01A-BK",
+      "region": "JP",
+      "lang": "ja",
+      "version": "git-20261023-3ea84ec6-manual",
+      "built_at": "2026-10-23T13:41:22+00:00",
+      "git_ref": "f2aa10398dc6acc5dc50a2b12931c1276059d2cf",
+      "route": "JA-CK01A-BK/JP/ja/md",
+      "manual": "manual_jack01abk_jp_ja.md",
+      "language_scope": "single",
+      "language_projection_evidence_path": "evidence/language_projection_receipt.json",
+      "language_projection_evidence_sha256": "8c6230854b4e6fe015aef9f6ee0c6efcc0d6c14a41504d127b3a10e48a754b62",
+      "legacy_default": true,
+      "legacy_route": "JA-CK01A-BK/JP/md",
+      "legacy_aliases": [
+        "manual_jack01abk_jp_ja"
       ]
     },
     {
@@ -4612,6 +4631,86 @@
       "path": "sources/web/JA-CC30A/EU/en/md/publish_meta.json",
       "size": 482,
       "sha256": "dd2065acd5e539c31e1cbd0dec77d984684a0cc5e4965a12d29cf4a5adb96b0e"
+    },
+    {
+      "path": "sources/web/JA-CK01A-BK/JP/ja/md/_static/source.css",
+      "size": 1766,
+      "sha256": "23b439bba528a9913b38faf4317bacdf9003fe4606d0b5c990de1af5b15f06a2"
+    },
+    {
+      "path": "sources/web/JA-CK01A-BK/JP/ja/md/_static/web_manual.css",
+      "size": 124849,
+      "sha256": "c3604a2e5f22b04bc745bb99cf203b50e60222af70c0aeba3d968cc28adac9ce"
+    },
+    {
+      "path": "sources/web/JA-CK01A-BK/JP/ja/md/assets/ir/6e7efb322c72e79e014bdd75b4fde0c207c7204b7c2e9c7e5e068c3b056a006f/step3-drill.png",
+      "size": 45067,
+      "sha256": "6e7efb322c72e79e014bdd75b4fde0c207c7204b7c2e9c7e5e068c3b056a006f"
+    },
+    {
+      "path": "sources/web/JA-CK01A-BK/JP/ja/md/assets/ir/9d396f46696d41d56128049d176b5acf147b50ca2d40130aaa96f92612563e12/step1-cover.png",
+      "size": 56879,
+      "sha256": "9d396f46696d41d56128049d176b5acf147b50ca2d40130aaa96f92612563e12"
+    },
+    {
+      "path": "sources/web/JA-CK01A-BK/JP/ja/md/assets/ir/a9e90149a9800e43e850e43c09222061cc2b9ae10b0e899c4d997691df063959/step4-fix.png",
+      "size": 58152,
+      "sha256": "a9e90149a9800e43e850e43c09222061cc2b9ae10b0e899c4d997691df063959"
+    },
+    {
+      "path": "sources/web/JA-CK01A-BK/JP/ja/md/assets/ir/d2c92908c427d8a0d7e11f91e0c9d5ffe2984d57b345ea438ad57314cd66847e/contact-qr.png",
+      "size": 3231,
+      "sha256": "d2c92908c427d8a0d7e11f91e0c9d5ffe2984d57b345ea438ad57314cd66847e"
+    },
+    {
+      "path": "sources/web/JA-CK01A-BK/JP/ja/md/assets/ir/ea5ae2d4591a5635a74d8f84f67e4264cfb3b5411e9fa35f948c633eeb4f9eeb/step2-mark.png",
+      "size": 42236,
+      "sha256": "ea5ae2d4591a5635a74d8f84f67e4264cfb3b5411e9fa35f948c633eeb4f9eeb"
+    },
+    {
+      "path": "sources/web/JA-CK01A-BK/JP/ja/md/assets/ir/fe806f83427710176e66da12ac4e6d3b6a069c508defed232f2ca3baa5f8880f/step5-wiring.png",
+      "size": 90988,
+      "sha256": "fe806f83427710176e66da12ac4e6d3b6a069c508defed232f2ca3baa5f8880f"
+    },
+    {
+      "path": "sources/web/JA-CK01A-BK/JP/ja/md/conf.py",
+      "size": 833,
+      "sha256": "2ffa099cfb4ca2024dd909f33776402b4713d3d00a95dd93758b97b58b2c9eba"
+    },
+    {
+      "path": "sources/web/JA-CK01A-BK/JP/ja/md/evidence/frozen_source_manifest.json",
+      "size": 15048,
+      "sha256": "1bb147bcb67532b673635130b4d96e4e015c226710838d3e17e1a72bb53a209f"
+    },
+    {
+      "path": "sources/web/JA-CK01A-BK/JP/ja/md/evidence/language_projection_receipt.json",
+      "size": 10816,
+      "sha256": "8c6230854b4e6fe015aef9f6ee0c6efcc0d6c14a41504d127b3a10e48a754b62"
+    },
+    {
+      "path": "sources/web/JA-CK01A-BK/JP/ja/md/index.md",
+      "size": 96,
+      "sha256": "f305f7ef95c0401e4765d22eca47e1fd99e12a7fb449b7ec8569b51515cf4493"
+    },
+    {
+      "path": "sources/web/JA-CK01A-BK/JP/ja/md/manual.ir.json",
+      "size": 133390,
+      "sha256": "59d0ccb772cf420eba6bc48f58c766e5dcbe0b154699e7f3bd22b57cf8cbed7e"
+    },
+    {
+      "path": "sources/web/JA-CK01A-BK/JP/ja/md/manual_bundle.html",
+      "size": 9530,
+      "sha256": "604345538ecdf65b51f0c67d2dfc038295e6f9d6cdfff8d97478b659f1300a09"
+    },
+    {
+      "path": "sources/web/JA-CK01A-BK/JP/ja/md/manual_jack01abk_jp_ja.md",
+      "size": 9860,
+      "sha256": "6e124bf53faf5671aac05b3cefcd990d7e2f30bc6afd63be3fb457de305b7f3b"
+    },
+    {
+      "path": "sources/web/JA-CK01A-BK/JP/ja/md/publish_meta.json",
+      "size": 685,
+      "sha256": "72bb3edcbdc0ccac0150fa528952f859b1cb7da754181e897877097ac7ad7dea"
     },
     {
       "path": "sources/web/JA-CK01A-BK-QG/JP/ja/md/_static/source.css",
@@ -44454,6 +44553,56 @@
       "sha256": "177742c7f4c3070ffcc21e39a8a1b9eec458835fa8c710a9016efd5592c63e38"
     },
     {
+      "path": "web/JA-CK01A-BK/JP/ja/md/_static/source.css",
+      "size": 1766,
+      "sha256": "23b439bba528a9913b38faf4317bacdf9003fe4606d0b5c990de1af5b15f06a2"
+    },
+    {
+      "path": "web/JA-CK01A-BK/JP/ja/md/_static/web_manual.css",
+      "size": 124849,
+      "sha256": "c3604a2e5f22b04bc745bb99cf203b50e60222af70c0aeba3d968cc28adac9ce"
+    },
+    {
+      "path": "web/JA-CK01A-BK/JP/ja/md/evidence/frozen_source_manifest.json",
+      "size": 15048,
+      "sha256": "1bb147bcb67532b673635130b4d96e4e015c226710838d3e17e1a72bb53a209f"
+    },
+    {
+      "path": "web/JA-CK01A-BK/JP/ja/md/evidence/language_projection_receipt.json",
+      "size": 10816,
+      "sha256": "8c6230854b4e6fe015aef9f6ee0c6efcc0d6c14a41504d127b3a10e48a754b62"
+    },
+    {
+      "path": "web/JA-CK01A-BK/JP/ja/md/index.md",
+      "size": 96,
+      "sha256": "f305f7ef95c0401e4765d22eca47e1fd99e12a7fb449b7ec8569b51515cf4493"
+    },
+    {
+      "path": "web/JA-CK01A-BK/JP/ja/md/manual.ir.json",
+      "size": 133390,
+      "sha256": "59d0ccb772cf420eba6bc48f58c766e5dcbe0b154699e7f3bd22b57cf8cbed7e"
+    },
+    {
+      "path": "web/JA-CK01A-BK/JP/ja/md/manual_bundle.html",
+      "size": 9530,
+      "sha256": "604345538ecdf65b51f0c67d2dfc038295e6f9d6cdfff8d97478b659f1300a09"
+    },
+    {
+      "path": "web/JA-CK01A-BK/JP/ja/md/manual_jack01abk_jp_ja.md",
+      "size": 9989,
+      "sha256": "5129aeff9dd9cd508e352e702b47c5b3faaddca50dc34ac96fdd8c5000192b78"
+    },
+    {
+      "path": "web/JA-CK01A-BK/JP/md/index.md",
+      "size": 273,
+      "sha256": "c0af3e27670211c2d6c36fac4949f9542930a9a01bf436a372b6b9e9b103ae39"
+    },
+    {
+      "path": "web/JA-CK01A-BK/JP/md/manual_jack01abk_jp_ja.md",
+      "size": 273,
+      "sha256": "c0af3e27670211c2d6c36fac4949f9542930a9a01bf436a372b6b9e9b103ae39"
+    },
+    {
       "path": "web/JA-CK01A-BK-QG/JP/ja/md/_static/source.css",
       "size": 2558,
       "sha256": "c9d8cc3b405291232a70c2988cf1039a49b7a25cf9d5041d7dbf0f435a825f83"
@@ -53079,6 +53228,11 @@
       "sha256": "6e59ceb432be306dbed1dca0216dc3a894c9272b7e60ca61d90bf5e501a17349"
     },
     {
+      "path": "web/_static/manual-assets/_pool/6e/6e7efb322c72e79e014bdd75b4fde0c207c7204b7c2e9c7e5e068c3b056a006f.png",
+      "size": 45067,
+      "sha256": "6e7efb322c72e79e014bdd75b4fde0c207c7204b7c2e9c7e5e068c3b056a006f"
+    },
+    {
       "path": "web/_static/manual-assets/_pool/6e/6eb8244df99af302a5d115bad73b941dc29e575e1a945947d31de3afeafff7f8.png",
       "size": 255478,
       "sha256": "6eb8244df99af302a5d115bad73b941dc29e575e1a945947d31de3afeafff7f8"
@@ -55019,6 +55173,11 @@
       "sha256": "9ceaf3a7ffff7be0c679900b9c8f165df3f07517aebdfac5019d43dac9ae7435"
     },
     {
+      "path": "web/_static/manual-assets/_pool/9d/9d396f46696d41d56128049d176b5acf147b50ca2d40130aaa96f92612563e12.png",
+      "size": 56879,
+      "sha256": "9d396f46696d41d56128049d176b5acf147b50ca2d40130aaa96f92612563e12"
+    },
+    {
       "path": "web/_static/manual-assets/_pool/9d/9d50533db979af1d7d7de3b21df464fe139521714af7cd6aa22fb4a1c2e52142.png",
       "size": 1143091,
       "sha256": "9d50533db979af1d7d7de3b21df464fe139521714af7cd6aa22fb4a1c2e52142"
@@ -55592,6 +55751,11 @@
       "path": "web/_static/manual-assets/_pool/a9/a9d2333f0b735497a1404644e48b550f18275da43f079ebbc96c3902692fba43.png",
       "size": 36511,
       "sha256": "a9d2333f0b735497a1404644e48b550f18275da43f079ebbc96c3902692fba43"
+    },
+    {
+      "path": "web/_static/manual-assets/_pool/a9/a9e90149a9800e43e850e43c09222061cc2b9ae10b0e899c4d997691df063959.png",
+      "size": 58152,
+      "sha256": "a9e90149a9800e43e850e43c09222061cc2b9ae10b0e899c4d997691df063959"
     },
     {
       "path": "web/_static/manual-assets/_pool/a9/a9ebf5bed858aaed8e9161047944e40148a8a9b924b54376a297353b9196aac6.png",
@@ -57219,6 +57383,11 @@
       "sha256": "d2c69cc2d49ec6b957bb9fbd6e614abb9fe645059aee1b27e5f3fedab5d4f93f"
     },
     {
+      "path": "web/_static/manual-assets/_pool/d2/d2c92908c427d8a0d7e11f91e0c9d5ffe2984d57b345ea438ad57314cd66847e.png",
+      "size": 3231,
+      "sha256": "d2c92908c427d8a0d7e11f91e0c9d5ffe2984d57b345ea438ad57314cd66847e"
+    },
+    {
       "path": "web/_static/manual-assets/_pool/d2/d2cfb9e6a142b099fb8073971082b0123fc1477ca6a9b3bae3a10ad5245970e7.svg",
       "size": 421135,
       "sha256": "d2cfb9e6a142b099fb8073971082b0123fc1477ca6a9b3bae3a10ad5245970e7"
@@ -58174,6 +58343,11 @@
       "sha256": "ea2885d11317907c578aa712f6b69824a3436e0b4947284f76bff4749dacfc9c"
     },
     {
+      "path": "web/_static/manual-assets/_pool/ea/ea5ae2d4591a5635a74d8f84f67e4264cfb3b5411e9fa35f948c633eeb4f9eeb.png",
+      "size": 42236,
+      "sha256": "ea5ae2d4591a5635a74d8f84f67e4264cfb3b5411e9fa35f948c633eeb4f9eeb"
+    },
+    {
       "path": "web/_static/manual-assets/_pool/ea/eaa2a291d01b9a5c694e8c4dcc1e7b991bc0b2008db1f750f1dd0d67ac993532.png",
       "size": 137376,
       "sha256": "eaa2a291d01b9a5c694e8c4dcc1e7b991bc0b2008db1f750f1dd0d67ac993532"
@@ -58884,6 +59058,11 @@
       "sha256": "fe5e13572998f2fb9203c6e927e48357fe7de3b71adaffc06d50c72e0b9a01a7"
     },
     {
+      "path": "web/_static/manual-assets/_pool/fe/fe806f83427710176e66da12ac4e6d3b6a069c508defed232f2ca3baa5f8880f.png",
+      "size": 90988,
+      "sha256": "fe806f83427710176e66da12ac4e6d3b6a069c508defed232f2ca3baa5f8880f"
+    },
+    {
       "path": "web/_static/manual-assets/_pool/fe/feb2310c0e4939184da90058080ee055d26ce96373b9244ac38f834375b39bf3.png",
       "size": 126041,
       "sha256": "feb2310c0e4939184da90058080ee055d26ce96373b9244ac38f834375b39bf3"
@@ -58925,8 +59104,8 @@
     },
     {
       "path": "web/index.md",
-      "size": 16512,
-      "sha256": "41bc6f017079935120431eb0688ff2b0ad0a8d13646064d9724a6b8fb8f55b2c"
+      "size": 16627,
+      "sha256": "7ac7af508027543e13efae3752ea792461d26d465cfa29b5089e7d0b9e09f6ba"
     },
     {
       "path": "web/manual.md",
@@ -59022,6 +59201,11 @@
       "path": "web/manual_jacc30a_eu_en.md",
       "size": 349,
       "sha256": "290f8f48b5a69d7229372cbb6fe8f4a55cabab601d18dfbe529650692163e15e"
+    },
+    {
+      "path": "web/manual_jack01abk_jp_ja.md",
+      "size": 350,
+      "sha256": "cd814c232a55350ee6df75263559d8ab0e29b866ffaf61129f7ff41bee1d7930"
     },
     {
       "path": "web/manual_jack01abkqg_jp_ja.md",
