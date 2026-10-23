@@ -1,0 +1,306 @@
+{
+  "schema_version": "auto-manual-frozen-web-language-evidence/v1",
+  "model": "JA-CK01A-BK",
+  "region": "JP",
+  "language": "ja",
+  "version": "git-20261023-3ea84ec6-manual",
+  "git_ref": "f2aa10398dc6acc5dc50a2b12931c1276059d2cf",
+  "caption_frame_admission": [
+    {
+      "source_ref": "source/page/installation_ja.rst#reference-step5-wiring",
+      "asset_ref": "assets/ir/fe806f83427710176e66da12ac4e6d3b6a069c508defed232f2ca3baa5f8880f/step5-wiring.png",
+      "labels": [
+        {
+          "line": 0,
+          "status": "passed",
+          "baked_fill_fraction": 0.0
+        }
+      ]
+    }
+  ],
+  "source_manifest": {
+    "path": "frozen_source_manifest.json",
+    "sha256": "1bb147bcb67532b673635130b4d96e4e015c226710838d3e17e1a72bb53a209f"
+  },
+  "markdown": {
+    "manual": "manual_jack01abk_jp_ja.md",
+    "files": [
+      {
+        "path": "_static/source.css",
+        "size": 1766,
+        "sha256": "23b439bba528a9913b38faf4317bacdf9003fe4606d0b5c990de1af5b15f06a2"
+      },
+      {
+        "path": "_static/web_manual.css",
+        "size": 124849,
+        "sha256": "c3604a2e5f22b04bc745bb99cf203b50e60222af70c0aeba3d968cc28adac9ce"
+      },
+      {
+        "path": "assets/ir/6e7efb322c72e79e014bdd75b4fde0c207c7204b7c2e9c7e5e068c3b056a006f/step3-drill.png",
+        "size": 45067,
+        "sha256": "6e7efb322c72e79e014bdd75b4fde0c207c7204b7c2e9c7e5e068c3b056a006f"
+      },
+      {
+        "path": "assets/ir/9d396f46696d41d56128049d176b5acf147b50ca2d40130aaa96f92612563e12/step1-cover.png",
+        "size": 56879,
+        "sha256": "9d396f46696d41d56128049d176b5acf147b50ca2d40130aaa96f92612563e12"
+      },
+      {
+        "path": "assets/ir/a9e90149a9800e43e850e43c09222061cc2b9ae10b0e899c4d997691df063959/step4-fix.png",
+        "size": 58152,
+        "sha256": "a9e90149a9800e43e850e43c09222061cc2b9ae10b0e899c4d997691df063959"
+      },
+      {
+        "path": "assets/ir/d2c92908c427d8a0d7e11f91e0c9d5ffe2984d57b345ea438ad57314cd66847e/contact-qr.png",
+        "size": 3231,
+        "sha256": "d2c92908c427d8a0d7e11f91e0c9d5ffe2984d57b345ea438ad57314cd66847e"
+      },
+      {
+        "path": "assets/ir/ea5ae2d4591a5635a74d8f84f67e4264cfb3b5411e9fa35f948c633eeb4f9eeb/step2-mark.png",
+        "size": 42236,
+        "sha256": "ea5ae2d4591a5635a74d8f84f67e4264cfb3b5411e9fa35f948c633eeb4f9eeb"
+      },
+      {
+        "path": "assets/ir/fe806f83427710176e66da12ac4e6d3b6a069c508defed232f2ca3baa5f8880f/step5-wiring.png",
+        "size": 90988,
+        "sha256": "fe806f83427710176e66da12ac4e6d3b6a069c508defed232f2ca3baa5f8880f"
+      },
+      {
+        "path": "conf.py",
+        "size": 833,
+        "sha256": "2ffa099cfb4ca2024dd909f33776402b4713d3d00a95dd93758b97b58b2c9eba"
+      },
+      {
+        "path": "index.md",
+        "size": 96,
+        "sha256": "f305f7ef95c0401e4765d22eca47e1fd99e12a7fb449b7ec8569b51515cf4493"
+      },
+      {
+        "path": "manual.ir.json",
+        "size": 133390,
+        "sha256": "59d0ccb772cf420eba6bc48f58c766e5dcbe0b154699e7f3bd22b57cf8cbed7e"
+      },
+      {
+        "path": "manual_bundle.html",
+        "size": 9530,
+        "sha256": "604345538ecdf65b51f0c67d2dfc038295e6f9d6cdfff8d97478b659f1300a09"
+      },
+      {
+        "path": "manual_jack01abk_jp_ja.md",
+        "size": 9860,
+        "sha256": "6e124bf53faf5671aac05b3cefcd990d7e2f30bc6afd63be3fb457de305b7f3b"
+      }
+    ],
+    "sha256": "d942fd1985e93ee8a7d9c99ded9625fb44a5712acb998d7ca7b7371ea21c4ca8"
+  },
+  "html": {
+    "files": [
+      {
+        "path": ".buildinfo",
+        "size": 231,
+        "sha256": "953b74d3d73e4cd01e93654cf8fb522e4606b80f42949c7b9327eaebff75bdd0"
+      },
+      {
+        "path": ".doctrees/environment.pickle",
+        "size": 18043,
+        "sha256": "3526f063ac422f62f27eac61df1cfd9d3524ff9c9792b46c403222c88b029f15"
+      },
+      {
+        "path": ".doctrees/index.doctree",
+        "size": 3462,
+        "sha256": "44c86a3062e3110464c3ab3744a7a3f411f2109590825906a0ba09f3d9f0db5a"
+      },
+      {
+        "path": ".doctrees/manual_jack01abk_jp_ja.doctree",
+        "size": 25443,
+        "sha256": "74ea65d8f0a4025840c6b93349464c5e82748279b4ab3f3679c3fdc2b161042f"
+      },
+      {
+        "path": "_sources/index.md.txt",
+        "size": 96,
+        "sha256": "f305f7ef95c0401e4765d22eca47e1fd99e12a7fb449b7ec8569b51515cf4493"
+      },
+      {
+        "path": "_sources/manual_jack01abk_jp_ja.md.txt",
+        "size": 9860,
+        "sha256": "6e124bf53faf5671aac05b3cefcd990d7e2f30bc6afd63be3fb457de305b7f3b"
+      },
+      {
+        "path": "_static/basic.css",
+        "size": 14685,
+        "sha256": "656ff1bacd6f260fc7d71b97f9c2f1fcbf692dc84bf469cd952034efcb9eefed"
+      },
+      {
+        "path": "_static/debug.css",
+        "size": 1266,
+        "sha256": "0d05cd9e79d53234304667c08f02971de6196c0ffca593c3903b3667b4055ad6"
+      },
+      {
+        "path": "_static/doctools.js",
+        "size": 4322,
+        "sha256": "2992c09df91826a8d33e3b48b645ee77e457adcf7c712d776a814e1e2c448b43"
+      },
+      {
+        "path": "_static/documentation_options.js",
+        "size": 323,
+        "sha256": "20c21c7247652bf20777e53b47b32fa37ddac90c4ea114ce49ec91933747f378"
+      },
+      {
+        "path": "_static/file.png",
+        "size": 286,
+        "sha256": "5c4bc9a16aebf38c4b950f59b8e501ca36495328cb9eb622218bce9064a35e3e"
+      },
+      {
+        "path": "_static/language_data.js",
+        "size": 385,
+        "sha256": "1b7abdb4f91a9c18241a2de39eb33b219c52a80c63b4dc378db0207411b8af31"
+      },
+      {
+        "path": "_static/minus.png",
+        "size": 90,
+        "sha256": "47e7fc50db3699f1ca41ce9a2ffa202c00c5d1d5180c55f62ba859b1bd6cc008"
+      },
+      {
+        "path": "_static/plus.png",
+        "size": 90,
+        "sha256": "54115199b96a130cba02147c47c0deb43dcc9b9f08b5162bba8642b34980ac63"
+      },
+      {
+        "path": "_static/pygments.css",
+        "size": 20190,
+        "sha256": "175552429a0952117a332f75fd6cb601f11e7d88dbf80083afcb8482f963f7e1"
+      },
+      {
+        "path": "_static/scripts/furo-extensions.js",
+        "size": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "_static/scripts/furo.js",
+        "size": 5221,
+        "sha256": "0df6012bf9183882fc314d1eeaa66fe7705e8694cf27351c4be1f5dc32e9fe6f"
+      },
+      {
+        "path": "_static/scripts/furo.js.LICENSE.txt",
+        "size": 187,
+        "sha256": "3eba718c98abe0ad8dd4401edc9ddfabf979f9bb9b8ac446460b61b03694970d"
+      },
+      {
+        "path": "_static/scripts/furo.js.map",
+        "size": 28571,
+        "sha256": "049d8e3c297854c9e7defecbf64bc92c375b4d94c7bef119ba11c8e8fc723ca2"
+      },
+      {
+        "path": "_static/searchtools.js",
+        "size": 21782,
+        "sha256": "371b49c7f094b525244e2a59d7809a6b946fc1c8791201d10dda1dd191133bb7"
+      },
+      {
+        "path": "_static/skeleton.css",
+        "size": 6034,
+        "sha256": "e7702bcb03d3eb02e63681f753d88a28bee8f8ed13e50e58ac84a2bc31a5c71d"
+      },
+      {
+        "path": "_static/source.css",
+        "size": 1766,
+        "sha256": "23b439bba528a9913b38faf4317bacdf9003fe4606d0b5c990de1af5b15f06a2"
+      },
+      {
+        "path": "_static/sphinx_highlight.js",
+        "size": 5123,
+        "sha256": "096231e9c87df80ec3273da9c5b71bc81503206726a07a4dd4de44c256ff859c"
+      },
+      {
+        "path": "_static/styles/furo-extensions.css",
+        "size": 5518,
+        "sha256": "3d2b0207711a07313dfb6c8b272295f5f931169e4b2b784c61d00be9d871f8fd"
+      },
+      {
+        "path": "_static/styles/furo-extensions.css.map",
+        "size": 7762,
+        "sha256": "0b35b6ebb81f2aa1fcaee325c096d683e32c1808a9220670a1a3f88300c6915c"
+      },
+      {
+        "path": "_static/styles/furo.css",
+        "size": 50789,
+        "sha256": "177f1163121440086f701bf6cb9d2b2ab8fc29fcb754466465edf7b9f60b5aa0"
+      },
+      {
+        "path": "_static/styles/furo.css.map",
+        "size": 76029,
+        "sha256": "b7d40df8a2d2c5cc7727929dce7a482be4506f905ec42588fdbd0571bb1e9a45"
+      },
+      {
+        "path": "_static/translations.js",
+        "size": 4940,
+        "sha256": "db4c1e24507ff84dc9bf73088596d72d78e3a04f297987b3f62b24d17040b4f9"
+      },
+      {
+        "path": "_static/web_manual.css",
+        "size": 124849,
+        "sha256": "c3604a2e5f22b04bc745bb99cf203b50e60222af70c0aeba3d968cc28adac9ce"
+      },
+      {
+        "path": "assets/ir/6e7efb322c72e79e014bdd75b4fde0c207c7204b7c2e9c7e5e068c3b056a006f/step3-drill.png",
+        "size": 45067,
+        "sha256": "6e7efb322c72e79e014bdd75b4fde0c207c7204b7c2e9c7e5e068c3b056a006f"
+      },
+      {
+        "path": "assets/ir/9d396f46696d41d56128049d176b5acf147b50ca2d40130aaa96f92612563e12/step1-cover.png",
+        "size": 56879,
+        "sha256": "9d396f46696d41d56128049d176b5acf147b50ca2d40130aaa96f92612563e12"
+      },
+      {
+        "path": "assets/ir/a9e90149a9800e43e850e43c09222061cc2b9ae10b0e899c4d997691df063959/step4-fix.png",
+        "size": 58152,
+        "sha256": "a9e90149a9800e43e850e43c09222061cc2b9ae10b0e899c4d997691df063959"
+      },
+      {
+        "path": "assets/ir/d2c92908c427d8a0d7e11f91e0c9d5ffe2984d57b345ea438ad57314cd66847e/contact-qr.png",
+        "size": 3231,
+        "sha256": "d2c92908c427d8a0d7e11f91e0c9d5ffe2984d57b345ea438ad57314cd66847e"
+      },
+      {
+        "path": "assets/ir/ea5ae2d4591a5635a74d8f84f67e4264cfb3b5411e9fa35f948c633eeb4f9eeb/step2-mark.png",
+        "size": 42236,
+        "sha256": "ea5ae2d4591a5635a74d8f84f67e4264cfb3b5411e9fa35f948c633eeb4f9eeb"
+      },
+      {
+        "path": "assets/ir/fe806f83427710176e66da12ac4e6d3b6a069c508defed232f2ca3baa5f8880f/step5-wiring.png",
+        "size": 90988,
+        "sha256": "fe806f83427710176e66da12ac4e6d3b6a069c508defed232f2ca3baa5f8880f"
+      },
+      {
+        "path": "genindex.html",
+        "size": 12740,
+        "sha256": "f21ce7d7596e8934f6525d81d14705ae57e91900f6640b0a38fff05cc384ca0b"
+      },
+      {
+        "path": "index.html",
+        "size": 14025,
+        "sha256": "694ae732c018b1592bdde892fba106f026ffe26be9914c29f6636d2dc59591e2"
+      },
+      {
+        "path": "manual_jack01abk_jp_ja.html",
+        "size": 23522,
+        "sha256": "00700642dd17990fd43a92f20e0673d499b86fb7728aa84bcc984c520c18ed13"
+      },
+      {
+        "path": "objects.inv",
+        "size": 360,
+        "sha256": "0541325e48bdfb561132ff63aae4a1ddd4ee8451e05c44648d3a1e050572aa2d"
+      },
+      {
+        "path": "search.html",
+        "size": 13013,
+        "sha256": "bf2478a4f97946524383d1dc63537d9fad29ff62aa1481fc7ea014716823ac1f"
+      },
+      {
+        "path": "searchindex.js",
+        "size": 4510,
+        "sha256": "2f94f9d26de9694469660b7f77ffb63b513452b5cc0bfdb20ac7d4f1decd5786"
+      }
+    ],
+    "sha256": "2d3409f5025fa7a1a165b1c8ebbd9e4d3a04b571131e1d0b6a6a1b5d60ae8685"
+  }
+}
