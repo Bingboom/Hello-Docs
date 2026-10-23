@@ -175,6 +175,22 @@ class ReleaseTests(unittest.TestCase):
                 with self.assertRaises(ValueError):
                     verify.verify_once(root, "target", fetch=fetch)
 
+    def test_a_sign_in_redirect_reads_as_login_required(self):
+        from tools.rtd.deployment_receipt import CrossOriginRedirect
+
+        def login(_url):
+            raise CrossOriginRedirect("https://app.readthedocs.com/cas/login?service=x")
+
+        def elsewhere(_url):
+            raise CrossOriginRedirect("https://example.com/moved")
+
+        with TemporaryDirectory() as tmp, patch.object(verify, "command", return_value=""):
+            with self.assertRaises(verify.LoginRequired):
+                verify.verify_once(Path(tmp), "target", fetch=login)
+            with self.assertRaises(CrossOriginRedirect) as other:
+                verify.verify_once(Path(tmp), "target", fetch=elsewhere)
+            self.assertNotIsInstance(other.exception, verify.LoginRequired)
+
 
 class ExportServiceTests(unittest.TestCase):
     def test_read_failure_preserves_valid_snapshot_and_redacts_error(self):
@@ -192,30 +208,50 @@ class ExportServiceTests(unittest.TestCase):
             self.assertNotIn(secret, out.getvalue())
             self.assertEqual(json.loads((assets / snap.NAMES["deliverables"]).read_text())["documents"], snapshot()["documents"])
 
-    def test_web_progress_reads_the_bound_table_and_history(self):
+    def test_web_progress_reads_the_bound_tables_and_history(self):
         from tools.rtd import web_progress as wp
+        from tools.rtd import web_reviews as wr
         site = "https://ht-docs-ht-manuals.readthedocs-hosted.com/en/latest"
-        grid = {"data": {"fields": ["型号", wp.LINK_FIELD, wp.CHECK_FIELD, wp.SKU_FIELD], "record_id_list": ["r1"],
-                         "data": [["JE-A", {"link": f"{site}/JE-A/EU/en/md/manual.html"}, True, [{"text": "HTE1-EU-JAK"}]]],
-                         "total": 1, "has_more": False}}
+        grids = {
+            "web": {"data": {"fields": ["型号", wp.LINK_FIELD, wp.CHECK_FIELD, wp.SKU_FIELD], "record_id_list": ["recW1"],
+                             "data": [["JE-A", {"link": f"{site}/JE-A/EU/en/md/manual.html"}, True, [{"text": "HTE1-EU-JAK"}]]],
+                             "total": 1, "has_more": False}},
+            "review": {"data": {"fields": list(wr.FIELDS.values()), "record_id_list": ["recR1"],
+                                "data": [["JE-B", "B", "美规", "en", "v0.1", "2026-10-20", "审核中", "2",
+                                          {"link": "https://review.example/JE-B/US/index.html"}, None]],
+                                "total": 1, "has_more": False}},
+        }
+
+        def run(args):
+            return grids[args[args.index("--table-id") + 1]]
         timeline = [{"date": "2026-10-01", "added": 1, "langs": 1, "editions": 1, "models": 1}]
-        env = {"FEISHU_PUBLISHED_DOCS_BASE_TOKEN": "base", "FEISHU_PUBLISHED_DOCS_WEB_TABLE_ID": "web"}
+        env = {"FEISHU_PUBLISHED_DOCS_BASE_TOKEN": "base", "FEISHU_PUBLISHED_DOCS_WEB_TABLE_ID": "web",
+               "FEISHU_PUBLISHED_DOCS_REVIEW_TABLE_ID": "review", "FEISHU_PUBLISHED_DOCS_URL": "https://t.feishu.cn/wiki/n"}
         with TemporaryDirectory() as tmp:
             root = Path(tmp)
             assets = root / "tools" / "rtd_portal_assets"
             assets.mkdir(parents=True)
-            (assets / "workspace_refresh_sources.json").write_text(json.dumps({"web_progress": snap.digest(["base", "web"])}))
+            (assets / "workspace_refresh_sources.json").write_text(json.dumps(
+                {"web_progress": snap.digest(["base", "web"]), "web_progress_reviews": snap.digest(["base", "review"])}))
             with patch.dict(os.environ, env), redirect_stdout(io.StringIO()):
                 result = refresh.refresh("web_progress", root=root, log=root / "result.json", cli_bin="unused",
-                                         identity="bot", run=lambda _: grid, history=lambda _: timeline)
+                                         identity="bot", run=run, history=lambda _: timeline)
             self.assertEqual(result["status"], "changed")
+            # The snapshot's source stays the 网页文档 binding, so earlier snapshots still match.
+            self.assertEqual(result["source"], {"identity_sha256": snap.digest(["base", "web"])})
             saved = json.loads((snap.data_dir(root) / snap.NAMES["web_progress"]).read_text())
             self.assertEqual((saved["checked"], saved["sold"], saved["timeline"]), (["JE-A/EU/en"], {"JE-A": ["EU"]}, timeline))
-            # A table the binding does not name is refused before any read.
-            with patch.dict(os.environ, dict(env, FEISHU_PUBLISHED_DOCS_WEB_TABLE_ID="other")), redirect_stdout(io.StringIO()):
-                failed = refresh.refresh("web_progress", root=root, log=root / "result.json", cli_bin="unused",
-                                         identity="bot", run=Mock(side_effect=AssertionError("read")), history=lambda _: timeline)
-            self.assertEqual(failed["status"], "failed")
+            self.assertEqual([(r["model"], r["market"], r["open"]) for r in saved["reviews"]], [("JE-B", "US", 2)])
+            self.assertEqual((saved["records"], saved["feishu"]["reviews"]),
+                             ({"JE-A/EU/en": "recW1"}, "https://t.feishu.cn/wiki/n?table=review"))
+            # A table the binding does not name, or a missing review table or address, is refused before any read.
+            for change in ({"FEISHU_PUBLISHED_DOCS_WEB_TABLE_ID": "other"}, {"FEISHU_PUBLISHED_DOCS_REVIEW_TABLE_ID": "other"},
+                           {"FEISHU_PUBLISHED_DOCS_REVIEW_TABLE_ID": ""}, {"FEISHU_PUBLISHED_DOCS_URL": "t.feishu.cn"}):
+                with self.subTest(change), patch.dict(os.environ, dict(env, **change)), redirect_stdout(io.StringIO()):
+                    failed = refresh.refresh("web_progress", root=root, log=root / "result.json", cli_bin="unused",
+                                             identity="bot", run=Mock(side_effect=AssertionError("read")),
+                                             history=lambda _: timeline)
+                self.assertEqual(failed["status"], "failed")
 
     def test_corpus_revision_changes_hash_without_changing_counts(self):
         from tools.rtd.system_workspace import corpus_export
@@ -406,6 +442,38 @@ class QueueBatchTests(unittest.TestCase):
             result = json.loads(output.read_text())
             self.assertEqual(result['rtd_url'], 'https://app.readthedocs.com/projects/ht-docs-ht-manuals/builds/7/')
             self.assertNotIn('secret', out.getvalue() + output.read_text())
+
+    def test_a_sign_in_only_site_is_verified_by_this_revisions_build(self):
+        with TemporaryDirectory() as tmp:
+            output = Path(tmp) / 'result.json'
+            args = ['verify', '--root', tmp, '--revision', 'a' * 40, '--attempts', '20', '--output', str(output)]
+            response = {'results': [{'id': 9, 'commit': 'a' * 40, 'state': {'code': 'finished'}, 'success': True}]}
+            with patch('sys.argv', args), patch.object(verify, 'command', return_value='a' * 40), \
+                    patch.dict(os.environ, {verify.API_TOKEN_ENV: 'token'}), \
+                    patch.object(verify, 'fetch_builds', return_value=json.dumps(response).encode()), \
+                    patch.object(verify.time, 'sleep') as sleep, \
+                    patch.object(verify, 'verify_once', side_effect=verify.LoginRequired('online-login-required')), \
+                    redirect_stdout(io.StringIO()):
+                self.assertEqual(verify.main(), 0)
+            sleep.assert_not_called()
+            result = json.loads(output.read_text())
+            self.assertEqual((result['status'], result['stage'], result['rtd_build']), ('verified', 'rtd-build-verified', 9))
+            self.assertEqual(result['online'], 'Not checked (site requires sign-in)')
+            self.assertIn('deliverables', result['sources'])
+
+    def test_a_sign_in_only_site_without_a_token_fails_at_once(self):
+        with TemporaryDirectory() as tmp:
+            output = Path(tmp) / 'result.json'
+            args = ['verify', '--root', tmp, '--revision', 'a' * 40, '--attempts', '20', '--output', str(output)]
+            with patch('sys.argv', args), patch.object(verify, 'command', return_value='a' * 40), \
+                    patch.dict(os.environ, {verify.API_TOKEN_ENV: ''}), patch.object(verify.time, 'sleep') as sleep, \
+                    patch.object(verify, 'verify_once', side_effect=verify.LoginRequired('online-login-required')) as online, \
+                    redirect_stdout(io.StringIO()):
+                self.assertEqual(verify.main(), 1)
+            self.assertEqual((online.call_count, sleep.call_count), (1, 0))
+            result = json.loads(output.read_text())
+            self.assertEqual((result['status'], result['stage']), ('failed', 'online-verification'))
+            self.assertIn(verify.API_TOKEN_ENV, result['online'])
 
     def test_without_a_business_token_only_this_revisions_receipt_decides(self):
         with TemporaryDirectory() as tmp:
