@@ -1,6 +1,6 @@
 {
   "checked": [],
-  "exported_at": "2026-10-23",
+  "exported_at": "2026-10-24",
   "feishu": {
     "reviews": "https://xcn57j1urbe6.feishu.cn/wiki/QKNGwHFwPiY7J7kZ0bzcximKnyb?table=tblQsiDwY2o1xsJr",
     "web": "https://xcn57j1urbe6.feishu.cn/wiki/QKNGwHFwPiY7J7kZ0bzcximKnyb?table=tblY0i9JUElmuuKb"
@@ -160,9 +160,9 @@
     "JS-40C/EU/en": "reczz28JhrDwztQv"
   },
   "refresh": {
-    "checked_at": "2026-10-23T10:22:49.661778+00:00",
-    "content_sha256": "c4716f043da5c5e380a48e74f7d8169a92424626b3bccd3dfc294e0f6dd052fb",
-    "execution": "https://github.com/Bingboom/Hello-Docs/actions/runs/39938476954",
+    "checked_at": "2026-10-24T01:36:00.185676+00:00",
+    "content_sha256": "219c4b9ad67e09fa3df6b95371c05f5129f0f94f65d30d463850106055cf959e",
+    "execution": "https://github.com/Bingboom/Hello-Docs/actions/runs/40050347918",
     "source": {
       "identity_sha256": "4bb050d6bd5084c9f5cbdff7cc3b74624524f64a9a8f4d13c420362d6b36b842"
     },
@@ -196,6 +196,20 @@
       "record": "reczz28QgFMotD1j",
       "status": "审核中（含待确认项）",
       "version": "v0.26"
+    },
+    {
+      "date": "2026-10-23",
+      "draft": "https://ht-docs-review-doc-lib.readthedocs-hosted.com/Guardian-2-Battery-Pack/JP/index.html",
+      "language": "ja",
+      "market": "JP",
+      "market_label": "日规",
+      "model": "Guardian-2-Battery-Pack",
+      "name": "卫士二号加电包 JBP-1500A-WH",
+      "open": 1,
+      "page": "https://ht-docs-review-doc-lib.readthedocs-hosted.com/Guardian-2-Battery-Pack/JP.html",
+      "record": "reczz28QouAOKhP9",
+      "status": "审核中（含待确认项；新增日文待母语审校）",
+      "version": "v0.06"
     },
     {
       "date": "2026-10-23",
@@ -641,6 +655,13 @@
       "editions": 44,
       "langs": 152,
       "models": 36
+    },
+    {
+      "added": 2,
+      "date": "2026-10-23",
+      "editions": 46,
+      "langs": 154,
+      "models": 38
     }
   ]
 }
