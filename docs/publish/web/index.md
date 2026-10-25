@@ -115,6 +115,7 @@
 - [JE-3000C / EU / pl - Jackery Explorer 3000 — pl](JE-3000C/EU/pl/md/manual_je3000c_eu_pl.md)
 - [JE-3000C / EU / pt - Jackery Explorer 3000 — pt](JE-3000C/EU/pt/md/manual_je3000c_eu_pt.md)
 - [JE-3000C / EU / uk - Jackery Explorer 3000 Посібник користувача](JE-3000C/EU/uk/md/manual_je3000c_eu_uk.md)
+- [JE-3000C / KR / ko - Jackery Explorer 3000](JE-3000C/KR/ko/md/manual_je3000c_kr_ko.md)
 - [JE-300D / EU / en - Jackery Explorer 300D User Manual](JE-300D/EU/en/md/manual_je300d_eu_en.md)
 - [JE-300E / EU / en - Jackery Explorer 300 · JE-300E](JE-300E/EU/en/md/manual_je300e_eu_en.md)
 - [JE-3600A / CN / zh - 电小二户外电源 3600 Plus · JE-3600A](JE-3600A/CN/zh/md/manual_je3600a_cn_zh.md)
