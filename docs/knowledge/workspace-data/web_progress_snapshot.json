@@ -1,6 +1,6 @@
 {
   "checked": [],
-  "exported_at": "2026-10-24",
+  "exported_at": "2026-10-26",
   "feishu": {
     "reviews": "https://xcn57j1urbe6.feishu.cn/wiki/QKNGwHFwPiY7J7kZ0bzcximKnyb?table=tblQsiDwY2o1xsJr",
     "web": "https://xcn57j1urbe6.feishu.cn/wiki/QKNGwHFwPiY7J7kZ0bzcximKnyb?table=tblY0i9JUElmuuKb"
@@ -160,9 +160,9 @@
     "JS-40C/EU/en": "reczz28JhrDwztQv"
   },
   "refresh": {
-    "checked_at": "2026-10-24T01:36:00.185676+00:00",
-    "content_sha256": "219c4b9ad67e09fa3df6b95371c05f5129f0f94f65d30d463850106055cf959e",
-    "execution": "https://github.com/Bingboom/Hello-Docs/actions/runs/40050347918",
+    "checked_at": "2026-10-26T01:09:53.821733+00:00",
+    "content_sha256": "0b62a39ba8339e1ec5a0ea3a220e910abd3527dbd4389e4dfcbdedac68a79be4",
+    "execution": "https://github.com/Bingboom/Hello-Docs/actions/runs/40252642162",
     "source": {
       "identity_sha256": "4bb050d6bd5084c9f5cbdff7cc3b74624524f64a9a8f4d13c420362d6b36b842"
     },
@@ -177,39 +177,39 @@
       "market_label": "美规",
       "model": "FridgeGuard-2",
       "name": "Jackery FridgeGuard 2",
-      "open": 20,
+      "open": 19,
       "page": "https://ht-docs-review-doc-lib.readthedocs-hosted.com/FridgeGuard-2/US.html",
       "record": "reczz28QgFMoqDKd",
       "status": "审核中（参考复用已补齐，含待确认项）",
       "version": "v0.12"
     },
     {
-      "date": "2026-10-23",
+      "date": "2026-10-25",
       "draft": "https://ht-docs-review-doc-lib.readthedocs-hosted.com/Guardian-2-Battery-Pack/US/index.html",
       "language": "en",
       "market": "US",
       "market_label": "美规",
       "model": "Guardian-2-Battery-Pack",
-      "name": "卫士二号加电包（销售型号未定）",
-      "open": 14,
+      "name": "卫士二号加电包",
+      "open": 13,
       "page": "https://ht-docs-review-doc-lib.readthedocs-hosted.com/Guardian-2-Battery-Pack/US.html",
       "record": "reczz28QgFMotD1j",
       "status": "审核中（含待确认项）",
-      "version": "v0.26"
+      "version": "v0.27"
     },
     {
-      "date": "2026-10-23",
+      "date": "2026-10-25",
       "draft": "https://ht-docs-review-doc-lib.readthedocs-hosted.com/Guardian-2-Battery-Pack/JP/index.html",
       "language": "ja",
       "market": "JP",
       "market_label": "日规",
       "model": "Guardian-2-Battery-Pack",
-      "name": "卫士二号加电包 JBP-1500A-WH",
-      "open": 1,
+      "name": "卫士二号加电包",
+      "open": 13,
       "page": "https://ht-docs-review-doc-lib.readthedocs-hosted.com/Guardian-2-Battery-Pack/JP.html",
       "record": "reczz28QouAOKhP9",
       "status": "审核中（含待确认项；新增日文待母语审校）",
-      "version": "v0.06"
+      "version": "v0.08"
     },
     {
       "date": "2026-10-23",
@@ -661,6 +661,13 @@
       "date": "2026-10-23",
       "editions": 46,
       "langs": 154,
+      "models": 38
+    },
+    {
+      "added": 1,
+      "date": "2026-10-24",
+      "editions": 47,
+      "langs": 155,
       "models": 38
     }
   ]
