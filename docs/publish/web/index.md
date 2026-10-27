@@ -50,6 +50,7 @@
 - [JBP-3600A / US / es - Jackery Battery Pack 3600 · JBP-3600A](JBP-3600A/US/es/md/manual_jbp3600a_us_es.md)
 - [JBP-3600A / US / fr - Jackery Battery Pack 3600 · JBP-3600A](JBP-3600A/US/fr/md/manual_jbp3600a_us_fr.md)
 - [JBP-5000A / JP / ja - Jackery Battery Pack 5000 Plus · JBP-5000A](JBP-5000A/JP/ja/md/manual_jbp5000a_jp_ja.md)
+- [JE-1000D / JP / ja - Jackery ポータブル電源 1000 取扱説明書](JE-1000D/JP/ja/md/manual_je1000d_jp_ja.md)
 - [JE-1000E-SIL / US / en - Jackery FridgeGuard User Manual](JE-1000E-SIL/US/en/md/manual_je1000esil_us.md)
 - [JE-1000E-SIL / US / es - Jackery FridgeGuard Manual de usuario](JE-1000E-SIL/US/es/md/manual_je1000esil_us_es.md)
 - [JE-1000E-SIL / US / fr - Jackery FridgeGuard Manuel d'utilisation](JE-1000E-SIL/US/fr/md/manual_je1000esil_us_fr.md)
