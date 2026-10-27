@@ -1,8 +1,8 @@
 {
   "actions": {
-    "check": "3eb4ce3f95200ead61eda660a29595c5c86cb4031008cc5e7e1354e34df66c89",
-    "html": "3eb4ce3f95200ead61eda660a29595c5c86cb4031008cc5e7e1354e34df66c89",
-    "md": "3eb4ce3f95200ead61eda660a29595c5c86cb4031008cc5e7e1354e34df66c89"
+    "check": "df3430c6bb4f5fedc103b7fb8d28cfa7af45853030f15af5accfce5e870cbcd8",
+    "html": "df3430c6bb4f5fedc103b7fb8d28cfa7af45853030f15af5accfce5e870cbcd8",
+    "md": "df3430c6bb4f5fedc103b7fb8d28cfa7af45853030f15af5accfce5e870cbcd8"
   },
   "canonical_source": {
     "files": [
@@ -78,8 +78,8 @@
       },
       {
         "path": "page/symbols_fr.rst",
-        "sha256": "131c27f39c39c9b0dda0fe7682caf74d7467295032d011dd519fccdf06ca0bda",
-        "size": 6879
+        "sha256": "33fabcf7831bf038e9e9c7b8816ce180ba466c1c929003323a49dab03eb90fde",
+        "size": 7626
       },
       {
         "path": "page/troubleshooting_fr.rst",
@@ -87,9 +87,9 @@
         "size": 1864
       }
     ],
-    "sha256": "c99a7b57cb2dd6711475a9065470c31613f9e4b5bdf4626217db7239c93f4e8c"
+    "sha256": "306235302ea60ae6f04ed54ed14aecb8ad41299982355ac65afdf05b2ed29b71"
   },
-  "git_ref": "138c965413ef8b4a14f536bb2b5672dd9274b131",
+  "git_ref": "36f9aa96795412cd11298c2c285974f89742fc21",
   "html": {
     "files": [
       {
@@ -366,6 +366,11 @@
         "path": "_images/solar_direct.png",
         "sha256": "8332edf8c7678e11924ab5efbc3aea63a72516f20f9ae4fde1c9d55983e1e287",
         "size": 188770
+      },
+      {
+        "path": "_images/symbol_battery_weee.png",
+        "sha256": "cf04ff00bdeb8de5971a55e5d8be6ef91e1a4ddad479f817f0c535914a392d45",
+        "size": 19806
       },
       {
         "path": "_sources/index.rst.txt",
@@ -674,8 +679,8 @@
       },
       {
         "path": "index.html",
-        "sha256": "92afea24adf31d048414afbc741443ec47952ead43e35e0e4a7bcb3d4d58d6f2",
-        "size": 85491
+        "sha256": "7773ca9b614284558ebb14ef781bb6330e2cf32b9343acb28298859ab46cf63c",
+        "size": 86267
       },
       {
         "path": "jbp2000b_ac_charging.pdf",
@@ -1474,8 +1479,8 @@
       },
       {
         "path": "searchindex.js",
-        "sha256": "4181632169d44a4496bf04e9c8883fe9bc75d21f3f6407429b871eb84c54e9c6",
-        "size": 13913
+        "sha256": "24fa88140c4c359d4db63f156e1de13261471e701f6fa3fc393772752cbd892a",
+        "size": 14143
       },
       {
         "path": "solar_adapter.pdf",
@@ -1503,7 +1508,7 @@
         "size": 316221
       }
     ],
-    "sha256": "901db5c0fa05d1c7db93607979ed3831f12965953961199828b0b9501909596b"
+    "sha256": "2df59c37049a767c31e449c90d4a0e801b3c8a8c44d20d7b04a28a7debee116d"
   },
   "language": "fr",
   "markdown": {
@@ -1979,6 +1984,11 @@
         "size": 3966
       },
       {
+        "path": "assets/ir/cf04ff00bdeb8de5971a55e5d8be6ef91e1a4ddad479f817f0c535914a392d45/symbol_battery_weee.png",
+        "sha256": "cf04ff00bdeb8de5971a55e5d8be6ef91e1a4ddad479f817f0c535914a392d45",
+        "size": 19806
+      },
+      {
         "path": "assets/ir/cfb69b1ffc0b30c51216fb6b1e00e35b412dd0148b6999d3d40ac90fbfe108cb/11_Remaining_Charge_Time_SZCibGTutonnswxC2CycfSwmncc.png",
         "sha256": "cfb69b1ffc0b30c51216fb6b1e00e35b412dd0148b6999d3d40ac90fbfe108cb",
         "size": 1974
@@ -2074,41 +2084,6 @@
         "size": 1814
       },
       {
-        "path": "assets/operation.ac-output_fr_6efe223dae51_6efe223dae51.png",
-        "sha256": "6efe223dae51a4ed12038f782bf0daad4927b34b62622ead6a115d25341b4409",
-        "size": 107583
-      },
-      {
-        "path": "assets/operation.dc-usb-output_fr_cca746bf84aa_cca746bf84aa.png",
-        "sha256": "cca746bf84aab963823421bfff4098f932515ffd55bf0ee85e5feb4fc3ec9b80",
-        "size": 111716
-      },
-      {
-        "path": "assets/operation.energy-saving_fr_196db2418826_196db2418826.png",
-        "sha256": "196db2418826e717a2c32008c46f01abf8fd03ac6f6192eb1904cdba74493cfc",
-        "size": 129382
-      },
-      {
-        "path": "assets/operation.led-light_fr_3870cb1a99ae_3870cb1a99ae.png",
-        "sha256": "3870cb1a99ae7bb0a67ddc7f74482aff10f068e382eda5a2939695348e18132b",
-        "size": 112632
-      },
-      {
-        "path": "assets/operation.main-power_fr_28a0fab1fb35_28a0fab1fb35.png",
-        "sha256": "28a0fab1fb35bba52bbf384c6e4826dacddb2377acca847809b8630049f1beb6",
-        "size": 102517
-      },
-      {
-        "path": "assets/product-overview.front_fr_80e4af9abe10_80e4af9abe10.png",
-        "sha256": "80e4af9abe10d0654c3746532bfa3de338d02cd6bf90640ce543e1f9b5f48fd9",
-        "size": 121112
-      },
-      {
-        "path": "assets/product-overview.right_fr_d00533ec20fb_d00533ec20fb.png",
-        "sha256": "d00533ec20fb9f0c929be1bbea28322067cf11617b2c09cdd3ab946f4fd10087",
-        "size": 57394
-      },
-      {
         "path": "conf.py",
         "sha256": "86335e6967024ceb7820fc01395b57db3abb16a8f1b921372927f4fe25b9b65d",
         "size": 821
@@ -2119,20 +2094,25 @@
         "size": 98
       },
       {
+        "path": "manual.ir.json",
+        "sha256": "dc14368b70523fa20beb0e6145dcf3ba82d2f2e75d8db7e546fb23fe6dd7f0a6",
+        "size": 963045
+      },
+      {
         "path": "manual_je1000f_eu_fr.md",
-        "sha256": "840f514e36bc834934d082a697684bc574b4d58b5245745b564ecc25e545d6ec",
-        "size": 92220
+        "sha256": "25c1321f6ab961a070b493139b28c585b82152b003bdb3f9dba75a036b0f9dbe",
+        "size": 93279
       }
     ],
     "manual": "manual_je1000f_eu_fr.md",
-    "sha256": "6e7e4743f217648daea053f4d0823366ae9280dac8f2218716262f5c1de61a25"
+    "sha256": "59229fe8c019e43b0fe0b18731c679a580ee38b6e8e1882cfb08196854ccebde"
   },
   "model": "JE-1000F",
   "projection_manifest": {
     "path": "projection_bundle_manifest.json",
-    "sha256": "9e0df2090c5a56a635d44f13443ee2bc9b050b33b56c73f0fee50eb0a40d1469"
+    "sha256": "2acd868634cb25c452477e7dd338e0aa29acd9fb7528c80d60eddd735dfa2828"
   },
   "region": "EU",
   "schema_version": "auto-manual-web-language-release-evidence/v1",
-  "version": "2.7"
+  "version": "git-20261027-36f9aa96-battery-symbol"
 }
