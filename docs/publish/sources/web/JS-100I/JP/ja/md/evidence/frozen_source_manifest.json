@@ -6,7 +6,7 @@
     "languages": [
       "ja"
     ],
-    "technical_version": "git-20261026-cc8b3421"
+    "technical_version": "git-20261027-cc8b3421-spec-table"
   },
   "original_source": {
     "filename": "Jackery SolarSaga 100 Air说明书.pdf",
@@ -41,7 +41,7 @@
   "source_authority": "operator-designated Japanese PDF from the operator-designated Feishu wiki directory (read-only download, SHA-256 verified); the original Japanese governs all technical, safety, specification and warranty copy. Operator instruction 2026-10-26 (coordination session): 「分几个窗口把这个目录下面的文档都转成网页文档」, then 「韩语文档除外」; this window converts the JS-100I (SolarSaga 100 Air) JP manual only. JP Web rules (封面不上网页; 不改动任何日文原文) follow the JA-CK01A-BK / JA-AD500A-SIL JP precedents.",
   "baseline_main": "8a46562",
   "language_scope": "single",
-  "source_role": "Git-only Japanese prepared native Web release (full instruction manual, new JP market for JS-100I), operator-approved 2026-10-27",
+  "source_role": "Git-only Japanese spec-table layout edition of the released git-20261026-cc8b3421 package; visible copy unchanged",
   "document_identity": {
     "printed_model": "JS-100I",
     "product_name": "Jackery SolarSaga 100 Air",
@@ -192,7 +192,7 @@
       "page_id": "spec_ja.rst",
       "kind": "table",
       "text_sha256": "df49aa5f8eaf4af7b101d580aba7187c49e957f8e7d3062ddb46eeb88c62089d",
-      "reason": "電気データ STC/BNPI table: three columns with a header row and value cells spanning both conditions; HB-TABLE-SPEC is a two-column label/value table without header or column spans. It keeps the shared manual-spec-table classes"
+      "reason": "電気データ STC/BNPI table: three columns with a header row and value cells spanning both conditions; HB-TABLE-SPEC is a two-column label/value table without header or column spans. It is drawn as the shared hb-spec-table-composition with the shared hb-spec-* cell classes, like the HB-TABLE-SPEC tables"
     }
   ],
   "component_map": [
@@ -238,7 +238,7 @@
     },
     {
       "printed": "電気データ STC/BNPI table",
-      "shared": "declared plain table on shared manual-spec-table (see shared_component_exceptions)"
+      "shared": "declared three-column table on the shared hb-spec-table-composition (see shared_component_exceptions)"
     },
     {
       "printed": "spec footnotes",
@@ -324,8 +324,8 @@
   "inputs": [
     {
       "path": "README.md",
-      "size": 4763,
-      "sha256": "e83e7ea0338cbde7ac4f9b2fa8695342950e9003f88f5cc5031b91d9f311b627"
+      "size": 2682,
+      "sha256": "c5c0512e213a094bc0cc2dc8fddc42eac56b2c985b682f90ab4ce77cc780326d"
     },
     {
       "path": "assets/angle.png",
@@ -443,49 +443,44 @@
       "sha256": "813d1260d0c1d584bcd1b46a4e696d438119afae10bde75ddba2fafa22fd4973"
     },
     {
-      "path": "derive_assets.py",
-      "size": 17106,
-      "sha256": "c18624d46f73b58c33bad0d956d4db3880dcf87c127925d267395e5e479d8495"
+      "path": "derive_spec_table.py",
+      "size": 8814,
+      "sha256": "655233742b098ca51d9973b75b3accce8c65170c5cbb7a0a7550775ae687f400"
     },
     {
       "path": "evidence/browser-1280.png",
-      "size": 701484,
-      "sha256": "cb0b7653aad2a87a9e06345df30f2064e7d0d8608344b67b86bc2faabeacfe53"
+      "size": 950533,
+      "sha256": "f593f841528d189062ab078f45e1dac3913b580186a0e5aad9449f840743ddf1"
     },
     {
       "path": "evidence/browser-390.png",
-      "size": 569908,
-      "sha256": "bdfbcf2858e97237e72549d69d799b6d72f11138f54a9a250340c059a68d95d3"
+      "size": 690852,
+      "sha256": "79bfa1151336f8d3312be522f0acedc20f7ba784f5a12e6be3cb5a204fe7d1ad"
     },
     {
       "path": "evidence/maintainability.log",
-      "size": 588,
-      "sha256": "871de5f6e61d029bc88809cac5800c775df3a55b6926a39eb8e00ea6fe755f09"
+      "size": 581,
+      "sha256": "3aede29e6b84444335554a3f895f369c8cc989609f1cf298815a0bed8c40c980"
     },
     {
       "path": "evidence/repo-regression.log",
-      "size": 2023,
-      "sha256": "79aa4818f7fc9691e7ae475040c25876e02ee60850fe3ae937c7aad88b618dc2"
+      "size": 2292,
+      "sha256": "310046df5db78a8657fe9314cd34446a7945cba312b60ee5c2480a3dbef108e5"
     },
     {
       "path": "evidence/strict-sphinx.log",
-      "size": 1940,
-      "sha256": "71375f352fe41726c642c5d1ad4c0217b6fc6cee46ba065e33dd5b5c93b48881"
+      "size": 2029,
+      "sha256": "c9429092988c5ca3594e459e96a5b31e47a9d86ca7b2739751bdd2161c23b6fb"
     },
     {
       "path": "evidence/target-tests.log",
-      "size": 145,
-      "sha256": "1009e56516e52019c66399198b76400f30f0b6464e606d1c5e61b7da684d66c0"
+      "size": 143,
+      "sha256": "f6a6a734b2637f8ae1f0435f9b14be6d1fcf8cf0bbb0159130c9aca985b47fbf"
     },
     {
       "path": "evidence/validation.json",
-      "size": 8210,
-      "sha256": "63507f520f6f5e5cac26ef54f45ff32c70103671dbdf3f0f23266c97e000d743"
-    },
-    {
-      "path": "refresh_manifest.py",
-      "size": 2626,
-      "sha256": "f5702d2ebe79140ecc518942a7f4f397c3f2a9ba6a0b7692c2b66f1f2c98dfe6"
+      "size": 8594,
+      "sha256": "02eda9be90b32efbca56917351e4ded4fe373d75f709cfd4b5a4ec83fe37dc3b"
     },
     {
       "path": "render.py",
@@ -494,8 +489,8 @@
     },
     {
       "path": "source/approval.json",
-      "size": 12795,
-      "sha256": "4a1934c046956381598d0d311267d9e8e2d8d00860848db412ec3efd8945439e"
+      "size": 12855,
+      "sha256": "08894568314f7f8e1dff0d9f6df8d21f137951e6b5c1dfd441564495f77a6383"
     },
     {
       "path": "source/asset_decisions.json",
@@ -509,8 +504,8 @@
     },
     {
       "path": "source/differences.md",
-      "size": 3696,
-      "sha256": "9527679fab2fbde84892c19171c4cbb57a7932d2521dd529ef463a0d4359efc7"
+      "size": 1729,
+      "sha256": "a36580f64251b28065cd5585285fecd1c910b6e97e8b2cf3ad5418148d910c1e"
     },
     {
       "path": "source/discovery.md",
@@ -549,8 +544,8 @@
     },
     {
       "path": "source/page/spec_ja.rst",
-      "size": 2589,
-      "sha256": "484461c1f8567b790fe261e799ffab73b0002878f44a26cb485f89cb8998e087"
+      "size": 3576,
+      "sha256": "a0f1aebee23c5833e1d9f061c5d08f4461bc0d975e7323421ad16cc4e42b5c7e"
     },
     {
       "path": "source/page/usage_ja.rst",
@@ -564,8 +559,8 @@
     },
     {
       "path": "source/presentation.css",
-      "size": 2278,
-      "sha256": "dd4f89aff93d606515150d28bdcd7bb11ed7c811dea97f6c43cd32533aedadcd"
+      "size": 2456,
+      "sha256": "b770a3414eeaf9ce5272e2f918c560219521772d85eda72301f6b978a5f15785"
     },
     {
       "path": "source/transcription.json",
@@ -574,13 +569,13 @@
     },
     {
       "path": "source_manifest.json",
-      "size": 20562,
-      "sha256": "758fb63f459b303cd5126e452760eaedb26b43145c7edab4bdc1ae262bc75747"
+      "size": 21531,
+      "sha256": "c5dcd616d81c33d1c99cb29f63412068506187768f15ac7be352a54ace4f9fb7"
     },
     {
       "path": "web/ja/_static/source.css",
-      "size": 2278,
-      "sha256": "dd4f89aff93d606515150d28bdcd7bb11ed7c811dea97f6c43cd32533aedadcd"
+      "size": 2456,
+      "sha256": "b770a3414eeaf9ce5272e2f918c560219521772d85eda72301f6b978a5f15785"
     },
     {
       "path": "web/ja/_static/web_manual.css",
@@ -714,24 +709,39 @@
     },
     {
       "path": "web/ja/manual.ir.json",
-      "size": 371373,
-      "sha256": "438f87dd4b724cc9a1da398e295e676b4489085e12518e7f10ee2451648f87b4"
+      "size": 385468,
+      "sha256": "0777af615ed0931e4f86996f5a8a30cd9881c995e6e9846e0b0d5d36b2ba18e2"
     },
     {
       "path": "web/ja/manual_bundle.html",
-      "size": 38653,
-      "sha256": "d4bc4db27ee2d3bebd881a1d48abdb7685013adf9960b0d1d7ee5f6aa6eece40"
+      "size": 39640,
+      "sha256": "c5a588f411a60e66f73f02bf3930991589b89bdb33d87e28a3c83b516e3fb03d"
     },
     {
       "path": "web/ja/manual_js100i_jp_ja.md",
-      "size": 39634,
-      "sha256": "e4e9a0f689dc9558be12fd35031ea2128592618e03ad99f44d6d2949755d697b"
+      "size": 40799,
+      "sha256": "ba63446aca7fe26666666500e3fe53508fa13691310c747761b8922309732bee"
     }
   ],
   "repo_inputs": [
     {
       "path": "docs/renderers/contracts/web_presentation/target_overlays.json",
       "sha256": "6337f537ac3b8b7248e00632d9f3d899a410fbadad4319a718b0e39905717a9d"
+    }
+  ],
+  "derived_from": {
+    "package": "git-20261026-cc8b3421",
+    "authorization": "operator 2026-10-27 「全部照录，版式都接受，上线提交发布，保留疑点后续纠正」; base release merged as #1611",
+    "manifest_sha256": "758fb63f459b303cd5126e452760eaedb26b43145c7edab4bdc1ae262bc75747"
+  },
+  "layout_corrections": [
+    {
+      "page": "source/page/spec_ja.rst",
+      "block": "電気データ",
+      "base": "declared plain table in a scrolling table-wrapper; manual-spec-table only, no frame",
+      "corrected": "shared hb-spec-table-composition frame and hb-spec-label / hb-spec-value cells, as the HB-TABLE-SPEC tables 基本情報 and 多機能アダプタ; bold STC/BNPI header as printed; three columns fit 390px without scrolling",
+      "stylesheet": "source/presentation.css: the table-wrapper scroll rule replaced by two geometry/typography rules",
+      "instruction": "operator, 2026-10-27: 「这个表格样式不对吧」 on the live page, then 「按新版本包发布」"
     }
   ]
 }
