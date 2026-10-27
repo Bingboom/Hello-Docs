@@ -25,8 +25,8 @@
     "assets/ir/3ef838c9c927d420ede815853601097192e85a207d7e1bc56d871e4f25702b91/contact_qr.png"
   ],
   "bundle_root": "frozen-source",
-  "bundle_sha256": "9478dafbf8e475ac1d8509e8846a794de981d4cb88a90d62745415cb48a74656",
-  "content_sha256": "1f5d06e553905c04f1fbb5a64b054df93f3b32ee848531e98083f09926f74d0a",
+  "bundle_sha256": "d61951e0b6282880a51e9f5f69f0ae8238e12ce09b21125fcf0a7e5604ec36d7",
+  "content_sha256": "f61225409d3e4919384e4ab13eddd4d73989d8e40bfd60772520f42a59b005cc",
   "language": "ja",
   "layout_params_sha256": "f5ae099abc1a82ffda3abcc5a13725aca3c201e720a0374d88d1643f9773f279",
   "metadata": {
@@ -1345,7 +1345,7 @@
         },
         {
           "printed": "電気データ STC/BNPI table",
-          "shared": "declared plain table on shared manual-spec-table (see shared_component_exceptions)"
+          "shared": "declared three-column table on the shared hb-spec-table-composition (see shared_component_exceptions)"
         },
         {
           "printed": "spec footnotes",
@@ -1364,6 +1364,11 @@
           "shared": "frozen QR image"
         }
       ],
+      "derived_from": {
+        "authorization": "operator 2026-10-27 「全部照录，版式都接受，上线提交发布，保留疑点后续纠正」; base release merged as #1611",
+        "manifest_sha256": "758fb63f459b303cd5126e452760eaedb26b43145c7edab4bdc1ae262bc75747",
+        "package": "git-20261026-cc8b3421"
+      },
       "document_identity": {
         "document_kind": "取扱説明書",
         "erp_code": null,
@@ -1489,14 +1494,9 @@
           "size": 122413
         },
         {
-          "path": "derive_assets.py",
-          "sha256": "c18624d46f73b58c33bad0d956d4db3880dcf87c127925d267395e5e479d8495",
-          "size": 17106
-        },
-        {
-          "path": "refresh_manifest.py",
-          "sha256": "f5702d2ebe79140ecc518942a7f4f397c3f2a9ba6a0b7692c2b66f1f2c98dfe6",
-          "size": 2626
+          "path": "derive_spec_table.py",
+          "sha256": "655233742b098ca51d9973b75b3accce8c65170c5cbb7a0a7550775ae687f400",
+          "size": 8814
         },
         {
           "path": "render.py",
@@ -1505,8 +1505,8 @@
         },
         {
           "path": "source/approval.json",
-          "sha256": "4a1934c046956381598d0d311267d9e8e2d8d00860848db412ec3efd8945439e",
-          "size": 12795
+          "sha256": "08894568314f7f8e1dff0d9f6df8d21f137951e6b5c1dfd441564495f77a6383",
+          "size": 12855
         },
         {
           "path": "source/asset_decisions.json",
@@ -1520,8 +1520,8 @@
         },
         {
           "path": "source/differences.md",
-          "sha256": "9527679fab2fbde84892c19171c4cbb57a7932d2521dd529ef463a0d4359efc7",
-          "size": 3696
+          "sha256": "a36580f64251b28065cd5585285fecd1c910b6e97e8b2cf3ad5418148d910c1e",
+          "size": 1729
         },
         {
           "path": "source/discovery.md",
@@ -1560,8 +1560,8 @@
         },
         {
           "path": "source/page/spec_ja.rst",
-          "sha256": "484461c1f8567b790fe261e799ffab73b0002878f44a26cb485f89cb8998e087",
-          "size": 2589
+          "sha256": "a0f1aebee23c5833e1d9f061c5d08f4461bc0d975e7323421ad16cc4e42b5c7e",
+          "size": 3576
         },
         {
           "path": "source/page/usage_ja.rst",
@@ -1575,8 +1575,8 @@
         },
         {
           "path": "source/presentation.css",
-          "sha256": "dd4f89aff93d606515150d28bdcd7bb11ed7c811dea97f6c43cd32533aedadcd",
-          "size": 2278
+          "sha256": "b770a3414eeaf9ce5272e2f918c560219521772d85eda72301f6b978a5f15785",
+          "size": 2456
         },
         {
           "path": "source/transcription.json",
@@ -1585,6 +1585,16 @@
         }
       ],
       "language_scope": "single",
+      "layout_corrections": [
+        {
+          "base": "declared plain table in a scrolling table-wrapper; manual-spec-table only, no frame",
+          "block": "電気データ",
+          "corrected": "shared hb-spec-table-composition frame and hb-spec-label / hb-spec-value cells, as the HB-TABLE-SPEC tables 基本情報 and 多機能アダプタ; bold STC/BNPI header as printed; three columns fit 390px without scrolling",
+          "instruction": "operator, 2026-10-27: 「这个表格样式不对吧」 on the live page, then 「按新版本包发布」",
+          "page": "source/page/spec_ja.rst",
+          "stylesheet": "source/presentation.css: the table-wrapper scroll rule replaced by two geometry/typography rules"
+        }
+      ],
       "live_bitable_dependency": false,
       "normalizations": [
         "outlined (text-less) PDF: every Japanese line is a manual transcription from 260 dpi page renders checked against 330-700 dpi close-ups (source/transcription.json); no text layer exists to extract",
@@ -1695,7 +1705,7 @@
           "kind": "table",
           "language": "ja",
           "page_id": "spec_ja.rst",
-          "reason": "電気データ STC/BNPI table: three columns with a header row and value cells spanning both conditions; HB-TABLE-SPEC is a two-column label/value table without header or column spans. It keeps the shared manual-spec-table classes",
+          "reason": "電気データ STC/BNPI table: three columns with a header row and value cells spanning both conditions; HB-TABLE-SPEC is a two-column label/value table without header or column spans. It is drawn as the shared hb-spec-table-composition with the shared hb-spec-* cell classes, like the HB-TABLE-SPEC tables",
           "text_sha256": "df49aa5f8eaf4af7b101d580aba7187c49e957f8e7d3062ddb46eeb88c62089d"
         }
       ],
@@ -1792,7 +1802,7 @@
           "page": null
         }
       ],
-      "source_role": "Git-only Japanese prepared native Web release (full instruction manual, new JP market for JS-100I), operator-approved 2026-10-27",
+      "source_role": "Git-only Japanese spec-table layout edition of the released git-20261026-cc8b3421 package; visible copy unchanged",
       "symbol_admission": "not applicable: the PDF prints no symbol table (HB-TABLE-SYMBOL-ICON absent)",
       "target": {
         "languages": [
@@ -1800,7 +1810,7 @@
         ],
         "model": "JS-100I",
         "region": "JP",
-        "technical_version": "git-20261026-cc8b3421"
+        "technical_version": "git-20261027-cc8b3421-spec-table"
       },
       "web_exclusions": [
         "cover artwork, photo caption and identity lines",
@@ -2395,13 +2405,13 @@
     "operator_source_acceptance": {
       "date": "2026-10-27",
       "merge_authorization": null,
-      "merge_policy": "engineering PR merged by the operator after review (AGENTS.md §8.6); no merge_authorizations entry",
+      "merge_policy": "engineering PR merged after operator review (AGENTS.md §8.6) or under a live merge_authorizations entry; recorded in the PR",
       "operator_decisions": [
-        "all source concerns preserved verbatim (「全部照录」); corrections are left to the source owner (「保留疑点后续纠正」)",
-        "accepted every listed layout point (「版式都接受」), including warranty as plain flow, indicator check/cross drawings above their captions, grey panels kept whole with live note labels, declared 電気データ table and warning callout without triangle icon",
-        "release instruction 「上线提交发布」"
+        "live page review 2026-10-27: 「这个表格样式不对吧」 — the 電気データ table lacks the shared spec-table frame of 基本情報 and 多機能アダプタ",
+        "reviewed the 1280/390 renders of the shared-frame 電気データ table (bold STC/BNPI header, no narrow-screen scroll) and chose a new edition package: 「按新版本包发布」",
+        "base release decisions carry over unchanged: 「全部照录，版式都接受，上线提交发布，保留疑点后续纠正」"
       ],
-      "operator_quote": "全部照录，版式都接受，上线提交发布，保留疑点后续纠正",
+      "operator_quote": "按新版本包发布",
       "original_source_sha256": "cc8b3421221bf11b03f2ddd0ce86519605189fbe0721a7d8a536520d75513e6f",
       "retained_source_concerns": [
         {
@@ -2623,8 +2633,8 @@
         },
         {
           "path": "source/differences.md",
-          "sha256": "9527679fab2fbde84892c19171c4cbb57a7932d2521dd529ef463a0d4359efc7",
-          "size": 3696
+          "sha256": "a36580f64251b28065cd5585285fecd1c910b6e97e8b2cf3ad5418148d910c1e",
+          "size": 1729
         },
         {
           "path": "source/discovery.md",
@@ -2663,8 +2673,8 @@
         },
         {
           "path": "source/page/spec_ja.rst",
-          "sha256": "484461c1f8567b790fe261e799ffab73b0002878f44a26cb485f89cb8998e087",
-          "size": 2589
+          "sha256": "a0f1aebee23c5833e1d9f061c5d08f4461bc0d975e7323421ad16cc4e42b5c7e",
+          "size": 3576
         },
         {
           "path": "source/page/usage_ja.rst",
@@ -2678,8 +2688,8 @@
         },
         {
           "path": "source/presentation.css",
-          "sha256": "dd4f89aff93d606515150d28bdcd7bb11ed7c811dea97f6c43cd32533aedadcd",
-          "size": 2278
+          "sha256": "b770a3414eeaf9ce5272e2f918c560219521772d85eda72301f6b978a5f15785",
+          "size": 2456
         },
         {
           "path": "source/transcription.json",
@@ -2691,9 +2701,8 @@
         "evidence/browser-1280.png",
         "evidence/browser-390.png"
       ],
-      "reviewed_source_commit": "1d8250e",
       "schema_version": "source-operator-acceptance/v1",
-      "scope": "Git-only Web release of git-20261026-cc8b3421; printed source unchanged; no Feishu/Base/source-table, queue, asset-registry or HTML_link writes.",
+      "scope": "Git-only Web release of the spec-table edition git-20261027-cc8b3421-spec-table; base edition git-20261026-cc8b3421, printed source and their release evidence unchanged; no Feishu/Base/source-table, queue, asset-registry or HTML_link writes.",
       "target": {
         "language": "ja",
         "model": "JS-100I",
@@ -2709,7 +2718,7 @@
     "skipped_raw": 0,
     "source_stylesheet": {
       "path": "_static/source.css",
-      "sha256": "dd4f89aff93d606515150d28bdcd7bb11ed7c811dea97f6c43cd32533aedadcd"
+      "sha256": "b770a3414eeaf9ce5272e2f918c560219521772d85eda72301f6b978a5f15785"
     },
     "title": "Jackery SolarSaga 100 Air",
     "web_contract": {
@@ -7818,12 +7827,35 @@
         {
           "asset_refs": [],
           "block_id": "spec_ja.rst:block-0008",
-          "content_sha256": "85cc4509b67a10d58d83b4b37a6c12843fe1c5101cdeb9456a1fc28809994fa5",
+          "content_sha256": "f373c4187a033976c785188e2fe1210a5217286a2110755ecd59710dfa50f70f",
           "kind": "flow",
           "payload": {
             "children": [
               {
                 "children": [
+                  {
+                    "children": [
+                      {
+                        "kind": "column",
+                        "presentation": {
+                          "html": {
+                            "attributes": {
+                              "class": [
+                                "hb-spec-col-label"
+                              ]
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "kind": "column"
+                      },
+                      {
+                        "kind": "column"
+                      }
+                    ],
+                    "kind": "column_group"
+                  },
                   {
                     "children": [
                       {
@@ -7835,7 +7867,16 @@
                           {
                             "children": [],
                             "header": true,
-                            "kind": "table_cell"
+                            "kind": "table_cell",
+                            "presentation": {
+                              "html": {
+                                "attributes": {
+                                  "class": [
+                                    "hb-spec-label"
+                                  ]
+                                }
+                              }
+                            }
                           },
                           {
                             "children": [
@@ -7854,7 +7895,16 @@
                               }
                             ],
                             "header": true,
-                            "kind": "table_cell"
+                            "kind": "table_cell",
+                            "presentation": {
+                              "html": {
+                                "attributes": {
+                                  "class": [
+                                    "hb-spec-value"
+                                  ]
+                                }
+                              }
+                            }
                           },
                           {
                             "children": [
@@ -7873,7 +7923,16 @@
                               }
                             ],
                             "header": true,
-                            "kind": "table_cell"
+                            "kind": "table_cell",
+                            "presentation": {
+                              "html": {
+                                "attributes": {
+                                  "class": [
+                                    "hb-spec-value"
+                                  ]
+                                }
+                              }
+                            }
                           }
                         ],
                         "kind": "table_row"
@@ -7914,7 +7973,17 @@
                               }
                             ],
                             "header": true,
-                            "kind": "table_cell"
+                            "kind": "table_cell",
+                            "presentation": {
+                              "html": {
+                                "attributes": {
+                                  "class": [
+                                    "hb-spec-label"
+                                  ]
+                                }
+                              }
+                            },
+                            "scope": "row"
                           },
                           {
                             "children": [
@@ -7924,7 +7993,16 @@
                               }
                             ],
                             "header": false,
-                            "kind": "table_cell"
+                            "kind": "table_cell",
+                            "presentation": {
+                              "html": {
+                                "attributes": {
+                                  "class": [
+                                    "hb-spec-value"
+                                  ]
+                                }
+                              }
+                            }
                           },
                           {
                             "children": [
@@ -7934,7 +8012,16 @@
                               }
                             ],
                             "header": false,
-                            "kind": "table_cell"
+                            "kind": "table_cell",
+                            "presentation": {
+                              "html": {
+                                "attributes": {
+                                  "class": [
+                                    "hb-spec-value"
+                                  ]
+                                }
+                              }
+                            }
                           }
                         ],
                         "kind": "table_row"
@@ -7966,7 +8053,17 @@
                               }
                             ],
                             "header": true,
-                            "kind": "table_cell"
+                            "kind": "table_cell",
+                            "presentation": {
+                              "html": {
+                                "attributes": {
+                                  "class": [
+                                    "hb-spec-label"
+                                  ]
+                                }
+                              }
+                            },
+                            "scope": "row"
                           },
                           {
                             "children": [
@@ -7976,7 +8073,16 @@
                               }
                             ],
                             "header": false,
-                            "kind": "table_cell"
+                            "kind": "table_cell",
+                            "presentation": {
+                              "html": {
+                                "attributes": {
+                                  "class": [
+                                    "hb-spec-value"
+                                  ]
+                                }
+                              }
+                            }
                           },
                           {
                             "children": [
@@ -7986,7 +8092,16 @@
                               }
                             ],
                             "header": false,
-                            "kind": "table_cell"
+                            "kind": "table_cell",
+                            "presentation": {
+                              "html": {
+                                "attributes": {
+                                  "class": [
+                                    "hb-spec-value"
+                                  ]
+                                }
+                              }
+                            }
                           }
                         ],
                         "kind": "table_row"
@@ -8018,7 +8133,17 @@
                               }
                             ],
                             "header": true,
-                            "kind": "table_cell"
+                            "kind": "table_cell",
+                            "presentation": {
+                              "html": {
+                                "attributes": {
+                                  "class": [
+                                    "hb-spec-label"
+                                  ]
+                                }
+                              }
+                            },
+                            "scope": "row"
                           },
                           {
                             "children": [
@@ -8028,7 +8153,16 @@
                               }
                             ],
                             "header": false,
-                            "kind": "table_cell"
+                            "kind": "table_cell",
+                            "presentation": {
+                              "html": {
+                                "attributes": {
+                                  "class": [
+                                    "hb-spec-value"
+                                  ]
+                                }
+                              }
+                            }
                           },
                           {
                             "children": [
@@ -8038,7 +8172,16 @@
                               }
                             ],
                             "header": false,
-                            "kind": "table_cell"
+                            "kind": "table_cell",
+                            "presentation": {
+                              "html": {
+                                "attributes": {
+                                  "class": [
+                                    "hb-spec-value"
+                                  ]
+                                }
+                              }
+                            }
                           }
                         ],
                         "kind": "table_row"
@@ -8070,7 +8213,17 @@
                               }
                             ],
                             "header": true,
-                            "kind": "table_cell"
+                            "kind": "table_cell",
+                            "presentation": {
+                              "html": {
+                                "attributes": {
+                                  "class": [
+                                    "hb-spec-label"
+                                  ]
+                                }
+                              }
+                            },
+                            "scope": "row"
                           },
                           {
                             "children": [
@@ -8080,7 +8233,16 @@
                               }
                             ],
                             "header": false,
-                            "kind": "table_cell"
+                            "kind": "table_cell",
+                            "presentation": {
+                              "html": {
+                                "attributes": {
+                                  "class": [
+                                    "hb-spec-value"
+                                  ]
+                                }
+                              }
+                            }
                           },
                           {
                             "children": [
@@ -8090,7 +8252,16 @@
                               }
                             ],
                             "header": false,
-                            "kind": "table_cell"
+                            "kind": "table_cell",
+                            "presentation": {
+                              "html": {
+                                "attributes": {
+                                  "class": [
+                                    "hb-spec-value"
+                                  ]
+                                }
+                              }
+                            }
                           }
                         ],
                         "kind": "table_row"
@@ -8122,7 +8293,17 @@
                               }
                             ],
                             "header": true,
-                            "kind": "table_cell"
+                            "kind": "table_cell",
+                            "presentation": {
+                              "html": {
+                                "attributes": {
+                                  "class": [
+                                    "hb-spec-label"
+                                  ]
+                                }
+                              }
+                            },
+                            "scope": "row"
                           },
                           {
                             "children": [
@@ -8132,7 +8313,16 @@
                               }
                             ],
                             "header": false,
-                            "kind": "table_cell"
+                            "kind": "table_cell",
+                            "presentation": {
+                              "html": {
+                                "attributes": {
+                                  "class": [
+                                    "hb-spec-value"
+                                  ]
+                                }
+                              }
+                            }
                           },
                           {
                             "children": [
@@ -8142,7 +8332,16 @@
                               }
                             ],
                             "header": false,
-                            "kind": "table_cell"
+                            "kind": "table_cell",
+                            "presentation": {
+                              "html": {
+                                "attributes": {
+                                  "class": [
+                                    "hb-spec-value"
+                                  ]
+                                }
+                              }
+                            }
                           }
                         ],
                         "kind": "table_row"
@@ -8161,7 +8360,17 @@
                               }
                             ],
                             "header": true,
-                            "kind": "table_cell"
+                            "kind": "table_cell",
+                            "presentation": {
+                              "html": {
+                                "attributes": {
+                                  "class": [
+                                    "hb-spec-label"
+                                  ]
+                                }
+                              }
+                            },
+                            "scope": "row"
                           },
                           {
                             "children": [
@@ -8172,7 +8381,16 @@
                             ],
                             "column_span": 2,
                             "header": false,
-                            "kind": "table_cell"
+                            "kind": "table_cell",
+                            "presentation": {
+                              "html": {
+                                "attributes": {
+                                  "class": [
+                                    "hb-spec-value"
+                                  ]
+                                }
+                              }
+                            }
                           }
                         ],
                         "kind": "table_row"
@@ -8191,7 +8409,17 @@
                               }
                             ],
                             "header": true,
-                            "kind": "table_cell"
+                            "kind": "table_cell",
+                            "presentation": {
+                              "html": {
+                                "attributes": {
+                                  "class": [
+                                    "hb-spec-label"
+                                  ]
+                                }
+                              }
+                            },
+                            "scope": "row"
                           },
                           {
                             "children": [
@@ -8202,7 +8430,16 @@
                             ],
                             "column_span": 2,
                             "header": false,
-                            "kind": "table_cell"
+                            "kind": "table_cell",
+                            "presentation": {
+                              "html": {
+                                "attributes": {
+                                  "class": [
+                                    "hb-spec-value"
+                                  ]
+                                }
+                              }
+                            }
                           }
                         ],
                         "kind": "table_row"
@@ -8221,7 +8458,17 @@
                               }
                             ],
                             "header": true,
-                            "kind": "table_cell"
+                            "kind": "table_cell",
+                            "presentation": {
+                              "html": {
+                                "attributes": {
+                                  "class": [
+                                    "hb-spec-label"
+                                  ]
+                                }
+                              }
+                            },
+                            "scope": "row"
                           },
                           {
                             "children": [
@@ -8271,7 +8518,16 @@
                             ],
                             "column_span": 2,
                             "header": false,
-                            "kind": "table_cell"
+                            "kind": "table_cell",
+                            "presentation": {
+                              "html": {
+                                "attributes": {
+                                  "class": [
+                                    "hb-spec-value"
+                                  ]
+                                }
+                              }
+                            }
                           }
                         ],
                         "kind": "table_row"
@@ -8290,7 +8546,17 @@
                               }
                             ],
                             "header": true,
-                            "kind": "table_cell"
+                            "kind": "table_cell",
+                            "presentation": {
+                              "html": {
+                                "attributes": {
+                                  "class": [
+                                    "hb-spec-label"
+                                  ]
+                                }
+                              }
+                            },
+                            "scope": "row"
                           },
                           {
                             "children": [
@@ -8301,7 +8567,16 @@
                             ],
                             "column_span": 2,
                             "header": false,
-                            "kind": "table_cell"
+                            "kind": "table_cell",
+                            "presentation": {
+                              "html": {
+                                "attributes": {
+                                  "class": [
+                                    "hb-spec-value"
+                                  ]
+                                }
+                              }
+                            }
                           }
                         ],
                         "kind": "table_row"
@@ -8320,7 +8595,17 @@
                               }
                             ],
                             "header": true,
-                            "kind": "table_cell"
+                            "kind": "table_cell",
+                            "presentation": {
+                              "html": {
+                                "attributes": {
+                                  "class": [
+                                    "hb-spec-label"
+                                  ]
+                                }
+                              }
+                            },
+                            "scope": "row"
                           },
                           {
                             "children": [
@@ -8331,7 +8616,16 @@
                             ],
                             "column_span": 2,
                             "header": false,
-                            "kind": "table_cell"
+                            "kind": "table_cell",
+                            "presentation": {
+                              "html": {
+                                "attributes": {
+                                  "class": [
+                                    "hb-spec-value"
+                                  ]
+                                }
+                              }
+                            }
                           }
                         ],
                         "kind": "table_row"
@@ -8350,7 +8644,17 @@
                               }
                             ],
                             "header": true,
-                            "kind": "table_cell"
+                            "kind": "table_cell",
+                            "presentation": {
+                              "html": {
+                                "attributes": {
+                                  "class": [
+                                    "hb-spec-label"
+                                  ]
+                                }
+                              }
+                            },
+                            "scope": "row"
                           },
                           {
                             "children": [
@@ -8361,7 +8665,16 @@
                             ],
                             "column_span": 2,
                             "header": false,
-                            "kind": "table_cell"
+                            "kind": "table_cell",
+                            "presentation": {
+                              "html": {
+                                "attributes": {
+                                  "class": [
+                                    "hb-spec-value"
+                                  ]
+                                }
+                              }
+                            }
                           }
                         ],
                         "kind": "table_row"
@@ -8380,7 +8693,17 @@
                               }
                             ],
                             "header": true,
-                            "kind": "table_cell"
+                            "kind": "table_cell",
+                            "presentation": {
+                              "html": {
+                                "attributes": {
+                                  "class": [
+                                    "hb-spec-label"
+                                  ]
+                                }
+                              }
+                            },
+                            "scope": "row"
                           },
                           {
                             "children": [
@@ -8391,7 +8714,16 @@
                             ],
                             "column_span": 2,
                             "header": false,
-                            "kind": "table_cell"
+                            "kind": "table_cell",
+                            "presentation": {
+                              "html": {
+                                "attributes": {
+                                  "class": [
+                                    "hb-spec-value"
+                                  ]
+                                }
+                              }
+                            }
                           }
                         ],
                         "kind": "table_row"
@@ -8409,24 +8741,26 @@
                   "html": {
                     "attributes": {
                       "class": [
-                        "manual-spec-table"
+                        "manual-spec-table",
+                        "manual-table",
+                        "hb-spec-table"
                       ]
                     }
                   }
                 }
               }
             ],
-            "kind": "group",
+            "kind": "figure",
             "presentation": {
               "html": {
                 "attributes": {
+                  "aria-label": "電気データ",
                   "class": [
-                    "table-wrapper"
+                    "hb-spec-table-composition"
                   ]
                 }
               }
             },
-            "role": "container",
             "schema_version": "manual-flow/v2"
           },
           "source_ref": "spec_ja.rst#block-8"
@@ -8737,7 +9071,7 @@
       "skipped_raw": 0,
       "source_path": "source/page/spec_ja.rst",
       "source_ref": "spec_ja.rst",
-      "source_sha256": "484461c1f8567b790fe261e799ffab73b0002878f44a26cb485f89cb8998e087"
+      "source_sha256": "a0f1aebee23c5833e1d9f061c5d08f4461bc0d975e7323421ad16cc4e42b5c7e"
     },
     {
       "blocks": [

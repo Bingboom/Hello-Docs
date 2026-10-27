@@ -1,6 +1,6 @@
 {
   "schema_version": "auto-manual-web-publish-branch/v2",
-  "built_at": "2026-10-27T06:39:12+00:00",
+  "built_at": "2026-10-27T07:51:19+00:00",
   "targets": [
     {
       "schema_version": "auto-manual-web-publish-target/v2",
@@ -2499,14 +2499,14 @@
       "model": "JS-100I",
       "region": "JP",
       "lang": "ja",
-      "version": "git-20261026-cc8b3421",
-      "built_at": "2026-10-27T02:51:36+00:00",
-      "git_ref": "d6b495541ec06639ddd868042e415878e2343a91",
+      "version": "git-20261027-cc8b3421-spec-table",
+      "built_at": "2026-10-27T07:51:19+00:00",
+      "git_ref": "f85d1dd89da3cab9df456acbc62cd53e460bb450",
       "route": "JS-100I/JP/ja/md",
       "manual": "manual_js100i_jp_ja.md",
       "language_scope": "single",
       "language_projection_evidence_path": "evidence/language_projection_receipt.json",
-      "language_projection_evidence_sha256": "8f290410e089f16163c22c335a66774c3999214d76728d81c80ab9a0a11776a8",
+      "language_projection_evidence_sha256": "4f79bcdc9ce1755f0090930eb072e1109a8e3cdac634185c4e91b84a16e1f82b",
       "legacy_default": true,
       "legacy_route": "JS-100I/JP/md",
       "legacy_aliases": [
@@ -44330,8 +44330,8 @@
     },
     {
       "path": "sources/web/JS-100I/JP/ja/md/_static/source.css",
-      "size": 2278,
-      "sha256": "dd4f89aff93d606515150d28bdcd7bb11ed7c811dea97f6c43cd32533aedadcd"
+      "size": 2456,
+      "sha256": "b770a3414eeaf9ce5272e2f918c560219521772d85eda72301f6b978a5f15785"
     },
     {
       "path": "sources/web/JS-100I/JP/ja/md/_static/web_manual.css",
@@ -44460,13 +44460,13 @@
     },
     {
       "path": "sources/web/JS-100I/JP/ja/md/evidence/frozen_source_manifest.json",
-      "size": 28356,
-      "sha256": "ce7699e9827276738f2d9707d5770e7555235916f407073e9ea6befdf5c6f059"
+      "size": 29325,
+      "sha256": "06b26daae5d15a38e75cf1bdf9b0e2bd179c2d21982e02a1493560ee76f15851"
     },
     {
       "path": "sources/web/JS-100I/JP/ja/md/evidence/language_projection_receipt.json",
-      "size": 17811,
-      "sha256": "8f290410e089f16163c22c335a66774c3999214d76728d81c80ab9a0a11776a8"
+      "size": 17822,
+      "sha256": "4f79bcdc9ce1755f0090930eb072e1109a8e3cdac634185c4e91b84a16e1f82b"
     },
     {
       "path": "sources/web/JS-100I/JP/ja/md/index.md",
@@ -44475,23 +44475,23 @@
     },
     {
       "path": "sources/web/JS-100I/JP/ja/md/manual.ir.json",
-      "size": 371373,
-      "sha256": "438f87dd4b724cc9a1da398e295e676b4489085e12518e7f10ee2451648f87b4"
+      "size": 385468,
+      "sha256": "0777af615ed0931e4f86996f5a8a30cd9881c995e6e9846e0b0d5d36b2ba18e2"
     },
     {
       "path": "sources/web/JS-100I/JP/ja/md/manual_bundle.html",
-      "size": 38653,
-      "sha256": "d4bc4db27ee2d3bebd881a1d48abdb7685013adf9960b0d1d7ee5f6aa6eece40"
+      "size": 39640,
+      "sha256": "c5a588f411a60e66f73f02bf3930991589b89bdb33d87e28a3c83b516e3fb03d"
     },
     {
       "path": "sources/web/JS-100I/JP/ja/md/manual_js100i_jp_ja.md",
-      "size": 39634,
-      "sha256": "e4e9a0f689dc9558be12fd35031ea2128592618e03ad99f44d6d2949755d697b"
+      "size": 40799,
+      "sha256": "ba63446aca7fe26666666500e3fe53508fa13691310c747761b8922309732bee"
     },
     {
       "path": "sources/web/JS-100I/JP/ja/md/publish_meta.json",
-      "size": 660,
-      "sha256": "c3371efed757ada31cb4ca43d6ce32f92a83e12d8ff39dcc43e79ceeca31161d"
+      "size": 671,
+      "sha256": "f5402c952f5b5e197d3e4486f6fab1975982050317d2cb2ad0a20d3f36a322b5"
     },
     {
       "path": "sources/web/JS-200E/EU/en/md/_static/web_manual.css",
@@ -49685,8 +49685,8 @@
     },
     {
       "path": "web/JS-100I/JP/ja/md/_static/source.css",
-      "size": 2278,
-      "sha256": "dd4f89aff93d606515150d28bdcd7bb11ed7c811dea97f6c43cd32533aedadcd"
+      "size": 2456,
+      "sha256": "b770a3414eeaf9ce5272e2f918c560219521772d85eda72301f6b978a5f15785"
     },
     {
       "path": "web/JS-100I/JP/ja/md/_static/web_manual.css",
@@ -49695,13 +49695,13 @@
     },
     {
       "path": "web/JS-100I/JP/ja/md/evidence/frozen_source_manifest.json",
-      "size": 28356,
-      "sha256": "ce7699e9827276738f2d9707d5770e7555235916f407073e9ea6befdf5c6f059"
+      "size": 29325,
+      "sha256": "06b26daae5d15a38e75cf1bdf9b0e2bd179c2d21982e02a1493560ee76f15851"
     },
     {
       "path": "web/JS-100I/JP/ja/md/evidence/language_projection_receipt.json",
-      "size": 17811,
-      "sha256": "8f290410e089f16163c22c335a66774c3999214d76728d81c80ab9a0a11776a8"
+      "size": 17822,
+      "sha256": "4f79bcdc9ce1755f0090930eb072e1109a8e3cdac634185c4e91b84a16e1f82b"
     },
     {
       "path": "web/JS-100I/JP/ja/md/index.md",
@@ -49710,18 +49710,18 @@
     },
     {
       "path": "web/JS-100I/JP/ja/md/manual.ir.json",
-      "size": 371373,
-      "sha256": "438f87dd4b724cc9a1da398e295e676b4489085e12518e7f10ee2451648f87b4"
+      "size": 385468,
+      "sha256": "0777af615ed0931e4f86996f5a8a30cd9881c995e6e9846e0b0d5d36b2ba18e2"
     },
     {
       "path": "web/JS-100I/JP/ja/md/manual_bundle.html",
-      "size": 38653,
-      "sha256": "d4bc4db27ee2d3bebd881a1d48abdb7685013adf9960b0d1d7ee5f6aa6eece40"
+      "size": 39640,
+      "sha256": "c5a588f411a60e66f73f02bf3930991589b89bdb33d87e28a3c83b516e3fb03d"
     },
     {
       "path": "web/JS-100I/JP/ja/md/manual_js100i_jp_ja.md",
-      "size": 40181,
-      "sha256": "c212260f7a0db28afea5fbd91802f40ef3c99b791122879deb3e55bec67eb5ce"
+      "size": 41346,
+      "sha256": "1cd4674a6ee51f4ef0121d28a34c063d7cf8a47c0bffd6f5b7eb0433f1c85f3e"
     },
     {
       "path": "web/JS-100I/JP/md/index.md",

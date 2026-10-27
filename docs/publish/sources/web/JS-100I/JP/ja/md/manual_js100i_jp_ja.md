@@ -26,8 +26,9 @@
 /* "1630 x 423 x 17mm" keeps the printed letter x (no contextual × substitution). */
 #furo-main-content :is(.hb-spec-value, table.manual-spec-table td) { font-variant-ligatures: no-contextual; font-feature-settings: "calt" 0; }
 
-/* The three-column 電気データ table scrolls inside its own wrapper on narrow screens. */
-#furo-main-content div.table-wrapper { overflow-x: auto; }
+/* 電気データ: the STC/BNPI header is bold as printed; the three columns fit narrow screens without scrolling. */
+#furo-main-content figure[aria-label="電気データ"] table.hb-spec-table thead .hb-spec-value { font-weight: 700; }
+#furo-main-content figure[aria-label="電気データ"] table.hb-spec-table { min-width: 0; }
 
 /* Figure labels keep their printed lines on the art; two print-wrapped labels wrap. */
 @media (min-width: 761px) {
@@ -299,22 +300,22 @@
 
 
 
-<div class="table-wrapper"><table class="manual-spec-table"><thead>
-<tr><th></th><th>STC<sup>*</sup></th><th>BNPI<sup>*</sup></th></tr>
+<figure aria-label="電気データ" class="hb-spec-table-composition"><table class="manual-spec-table manual-table hb-spec-table"><colgroup><col class="hb-spec-col-label"/><col/><col/></colgroup><thead>
+<tr><th class="hb-spec-label"></th><th class="hb-spec-value">STC<sup>*</sup></th><th class="hb-spec-value">BNPI<sup>*</sup></th></tr>
 </thead><tbody>
-<tr><th>最大出力 (P<sub>max</sub>)</th><td>100W±5%</td><td>110W±5%</td></tr>
-<tr><th>開放電圧 (V<sub>oc</sub>)</th><td>26.0V±5%</td><td>26.3V±5%</td></tr>
-<tr><th>短絡電流 (I<sub>sc</sub>)</th><td>4.95A±5%</td><td>5.38A±5%</td></tr>
-<tr><th>動作電圧 (V<sub>mp</sub>)</th><td>21.7V±5%</td><td>22.0V±5%</td></tr>
-<tr><th>動作電流 (I<sub>mp</sub>)</th><td>4.67A±5%</td><td>5.08A±5%</td></tr>
-<tr><th>最大システム電圧</th><td colspan="2">80V</td></tr>
-<tr><th>最大逆電流</th><td colspan="2">15A</td></tr>
-<tr><th>両面係数(背面/前面)</th><td colspan="2">P<sub>max</sub>: &gt;65%, V<sub>oc</sub>: &gt;97%, I<sub>sc</sub>: &gt;65%</td></tr>
-<tr><th>電圧温度係数</th><td colspan="2">-0.27%/°C</td></tr>
-<tr><th>出力温度係数</th><td colspan="2">-0.33%/°C</td></tr>
-<tr><th>感電保護クラス</th><td colspan="2">クラスII</td></tr>
-<tr><th>消費財カテゴリー</th><td colspan="2">IEC TS 63163、消費財タイプ 2</td></tr>
-</tbody></table></div>
+<tr><th class="hb-spec-label" scope="row">最大出力 (P<sub>max</sub>)</th><td class="hb-spec-value">100W±5%</td><td class="hb-spec-value">110W±5%</td></tr>
+<tr><th class="hb-spec-label" scope="row">開放電圧 (V<sub>oc</sub>)</th><td class="hb-spec-value">26.0V±5%</td><td class="hb-spec-value">26.3V±5%</td></tr>
+<tr><th class="hb-spec-label" scope="row">短絡電流 (I<sub>sc</sub>)</th><td class="hb-spec-value">4.95A±5%</td><td class="hb-spec-value">5.38A±5%</td></tr>
+<tr><th class="hb-spec-label" scope="row">動作電圧 (V<sub>mp</sub>)</th><td class="hb-spec-value">21.7V±5%</td><td class="hb-spec-value">22.0V±5%</td></tr>
+<tr><th class="hb-spec-label" scope="row">動作電流 (I<sub>mp</sub>)</th><td class="hb-spec-value">4.67A±5%</td><td class="hb-spec-value">5.08A±5%</td></tr>
+<tr><th class="hb-spec-label" scope="row">最大システム電圧</th><td class="hb-spec-value" colspan="2">80V</td></tr>
+<tr><th class="hb-spec-label" scope="row">最大逆電流</th><td class="hb-spec-value" colspan="2">15A</td></tr>
+<tr><th class="hb-spec-label" scope="row">両面係数(背面/前面)</th><td class="hb-spec-value" colspan="2">P<sub>max</sub>: &gt;65%, V<sub>oc</sub>: &gt;97%, I<sub>sc</sub>: &gt;65%</td></tr>
+<tr><th class="hb-spec-label" scope="row">電圧温度係数</th><td class="hb-spec-value" colspan="2">-0.27%/°C</td></tr>
+<tr><th class="hb-spec-label" scope="row">出力温度係数</th><td class="hb-spec-value" colspan="2">-0.33%/°C</td></tr>
+<tr><th class="hb-spec-label" scope="row">感電保護クラス</th><td class="hb-spec-value" colspan="2">クラスII</td></tr>
+<tr><th class="hb-spec-label" scope="row">消費財カテゴリー</th><td class="hb-spec-value" colspan="2">IEC TS 63163、消費財タイプ 2</td></tr>
+</tbody></table></figure>
 
 <p class="manual-spec-note">* STC-標準試験条件(1000W/m², 25°C, AM 1.5)</p>
 

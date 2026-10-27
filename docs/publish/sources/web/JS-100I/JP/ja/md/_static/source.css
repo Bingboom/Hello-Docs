@@ -25,8 +25,9 @@
 /* "1630 x 423 x 17mm" keeps the printed letter x (no contextual × substitution). */
 #furo-main-content :is(.hb-spec-value, table.manual-spec-table td) { font-variant-ligatures: no-contextual; font-feature-settings: "calt" 0; }
 
-/* The three-column 電気データ table scrolls inside its own wrapper on narrow screens. */
-#furo-main-content div.table-wrapper { overflow-x: auto; }
+/* 電気データ: the STC/BNPI header is bold as printed; the three columns fit narrow screens without scrolling. */
+#furo-main-content figure[aria-label="電気データ"] table.hb-spec-table thead .hb-spec-value { font-weight: 700; }
+#furo-main-content figure[aria-label="電気データ"] table.hb-spec-table { min-width: 0; }
 
 /* Figure labels keep their printed lines on the art; two print-wrapped labels wrap. */
 @media (min-width: 761px) {

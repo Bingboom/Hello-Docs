@@ -3,20 +3,20 @@
   "model": "JS-100I",
   "region": "JP",
   "language": "ja",
-  "version": "git-20261026-cc8b3421",
-  "git_ref": "d6b495541ec06639ddd868042e415878e2343a91",
+  "version": "git-20261027-cc8b3421-spec-table",
+  "git_ref": "f85d1dd89da3cab9df456acbc62cd53e460bb450",
   "caption_frame_admission": [],
   "source_manifest": {
     "path": "frozen_source_manifest.json",
-    "sha256": "ce7699e9827276738f2d9707d5770e7555235916f407073e9ea6befdf5c6f059"
+    "sha256": "06b26daae5d15a38e75cf1bdf9b0e2bd179c2d21982e02a1493560ee76f15851"
   },
   "markdown": {
     "manual": "manual_js100i_jp_ja.md",
     "files": [
       {
         "path": "_static/source.css",
-        "size": 2278,
-        "sha256": "dd4f89aff93d606515150d28bdcd7bb11ed7c811dea97f6c43cd32533aedadcd"
+        "size": 2456,
+        "sha256": "b770a3414eeaf9ce5272e2f918c560219521772d85eda72301f6b978a5f15785"
       },
       {
         "path": "_static/web_manual.css",
@@ -150,21 +150,21 @@
       },
       {
         "path": "manual.ir.json",
-        "size": 371373,
-        "sha256": "438f87dd4b724cc9a1da398e295e676b4489085e12518e7f10ee2451648f87b4"
+        "size": 385468,
+        "sha256": "0777af615ed0931e4f86996f5a8a30cd9881c995e6e9846e0b0d5d36b2ba18e2"
       },
       {
         "path": "manual_bundle.html",
-        "size": 38653,
-        "sha256": "d4bc4db27ee2d3bebd881a1d48abdb7685013adf9960b0d1d7ee5f6aa6eece40"
+        "size": 39640,
+        "sha256": "c5a588f411a60e66f73f02bf3930991589b89bdb33d87e28a3c83b516e3fb03d"
       },
       {
         "path": "manual_js100i_jp_ja.md",
-        "size": 39634,
-        "sha256": "e4e9a0f689dc9558be12fd35031ea2128592618e03ad99f44d6d2949755d697b"
+        "size": 40799,
+        "sha256": "ba63446aca7fe26666666500e3fe53508fa13691310c747761b8922309732bee"
       }
     ],
-    "sha256": "c6c5575ce4f25b2a33a8e8b7847bf9efe74ac6efa6849b2866083097c83a6686"
+    "sha256": "2d065907d0eac521dbc21f882180abc5772aa1dbf9973ca27af47bfaa828e00f"
   },
   "html": {
     "files": [
@@ -180,8 +180,8 @@
       },
       {
         "path": "_sources/manual_js100i_jp_ja.md.txt",
-        "size": 39634,
-        "sha256": "e4e9a0f689dc9558be12fd35031ea2128592618e03ad99f44d6d2949755d697b"
+        "size": 40799,
+        "sha256": "ba63446aca7fe26666666500e3fe53508fa13691310c747761b8922309732bee"
       },
       {
         "path": "_static/basic.css",
@@ -260,8 +260,8 @@
       },
       {
         "path": "_static/source.css",
-        "size": 2278,
-        "sha256": "dd4f89aff93d606515150d28bdcd7bb11ed7c811dea97f6c43cd32533aedadcd"
+        "size": 2456,
+        "sha256": "b770a3414eeaf9ce5272e2f918c560219521772d85eda72301f6b978a5f15785"
       },
       {
         "path": "_static/sphinx_highlight.js",
@@ -425,8 +425,8 @@
       },
       {
         "path": "manual_js100i_jp_ja.html",
-        "size": 53998,
-        "sha256": "5badb2d6da76e2677b9fec53ec4585bf3ff1ae01969fee80f504e525e80bf1a0"
+        "size": 55163,
+        "sha256": "c25f4186301d8a3d336010c035993d50b59ae99845b922e25228331d6b873ffb"
       },
       {
         "path": "objects.inv",
@@ -444,6 +444,6 @@
         "sha256": "ee5a54e4f2160997438c05e96a8ed7941d9e0de944dc325856752d0cedd201cf"
       }
     ],
-    "sha256": "e17d39d027e40588db06e503bcf0ff97a7f8bce6e6b0170973ab608d1abff952"
+    "sha256": "27409de3be4f07c3425e9c944a5ea22e82dd265e090617ad011f0bed8807603d"
   }
 }
