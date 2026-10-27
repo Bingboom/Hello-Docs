@@ -27,7 +27,7 @@ Im Lebenszyklus von Energiespeicherprodukten ist ein gewisser Kapazitäts- und E
 
 
 
-<figure aria-label="Symbol / Bedeutung" class="hb-symbol-signal-composition" data-component-id="HB-TABLE-SYMBOL-SIGNAL"><table class="hb-symbol-signal-table"><colgroup><col class="hb-symbol-signal-col-label"/><col class="hb-symbol-signal-col-meaning"/></colgroup><thead><tr><th class="hb-symbol-signal-label-heading" scope="col"><p>Symbol</p></th><th class="hb-symbol-signal-meaning-heading" scope="col"><p>Bedeutung</p></th></tr></thead><tbody><tr><td class="hb-symbol-signal-label-cell"><span aria-label="WARNUNG" class="hb-signal-badge"><span aria-hidden="true" class="hb-signal-icon">⚠</span><span class="hb-signal-label">WARNUNG</span></span></td><td class="hb-symbol-signal-meaning-cell"><p>Gefährliche Handlungen, die zu schweren Verletzungen, zum Tod und/oder zu Sachschäden führen können.</p></td></tr><tr><td class="hb-symbol-signal-label-cell"><span aria-label="VORSICHT" class="hb-signal-badge"><span aria-hidden="true" class="hb-signal-icon">⚠</span><span class="hb-signal-label">VORSICHT</span></span></td><td class="hb-symbol-signal-meaning-cell"><p>Gefährliche Handlungen, die zu Personenschäden und/oder zu Sachschäden führen können.</p></td></tr><tr><td class="hb-symbol-signal-label-cell"><span aria-label="HINWEIS" class="hb-signal-badge"><span aria-hidden="true" class="hb-signal-icon">⚠</span><span class="hb-signal-label">HINWEIS</span></span></td><td class="hb-symbol-signal-meaning-cell"><p>Handlungen, die zu Geräteschäden, Datenverlust, Leistungseinbußen oder unerwarteten Ergebnissen führen können.</p></td></tr><tr><td class="hb-symbol-signal-label-cell"><span aria-label="TIPP" class="hb-signal-badge"><span aria-hidden="true" class="hb-signal-icon">⚠</span><span class="hb-signal-label">TIPP</span></span></td><td class="hb-symbol-signal-meaning-cell"><p>Ergänzt wichtige Informationen oder Bedienhinweise im Text.</p></td></tr></tbody></table></figure>
+<figure aria-label="Symbol / Bedeutung" class="hb-symbol-signal-composition" data-component-id="HB-TABLE-SYMBOL-SIGNAL"><table class="hb-symbol-signal-table"><colgroup><col class="hb-symbol-signal-col-label"/><col class="hb-symbol-signal-col-meaning"/></colgroup><thead><tr><th class="hb-symbol-signal-label-heading" scope="col"><p>Symbol</p></th><th class="hb-symbol-signal-meaning-heading" scope="col"><p>Bedeutung</p></th></tr></thead><tbody><tr><td class="hb-symbol-signal-label-cell"><span aria-label="WARNUNG" class="hb-signal-badge"><span aria-hidden="true" class="hb-signal-icon">⚠</span><span class="hb-signal-label">WARNUNG</span></span></td><td class="hb-symbol-signal-meaning-cell"><p>Gefährliche Handlungen, die zu schweren Verletzungen, zum Tod und/oder zu Sachschäden führen können.</p></td></tr><tr><td class="hb-symbol-signal-label-cell"><span aria-label="VORSICHT" class="hb-signal-badge"><span aria-hidden="true" class="hb-signal-icon">⚠</span><span class="hb-signal-label">VORSICHT</span></span></td><td class="hb-symbol-signal-meaning-cell"><p>Gefährliche Handlungen, die zu Personenschäden und/oder zu Sachschäden führen können.</p></td></tr><tr><td class="hb-symbol-signal-label-cell"><span aria-label="HINWEIS" class="hb-signal-badge"><span class="hb-signal-label">HINWEIS</span></span></td><td class="hb-symbol-signal-meaning-cell"><p>Handlungen, die zu Geräteschäden, Datenverlust, Leistungseinbußen oder unerwarteten Ergebnissen führen können.</p></td></tr><tr><td class="hb-symbol-signal-label-cell"><span aria-label="TIPP" class="hb-signal-badge"><span class="hb-signal-label">TIPP</span></span></td><td class="hb-symbol-signal-meaning-cell"><p>Ergänzt wichtige Informationen oder Bedienhinweise im Text.</p></td></tr></tbody></table></figure>
 
 
 
@@ -228,26 +228,7 @@ Die Wiederaufnahmefunktion für AC- und DC-Ausgänge ist standardmäßig deaktiv
 
 
 
-<figure aria-label="Bedingungen für automatische Wiederherstellung / Bedingungen ohne automatische Wiederherstellung" class="hb-auto-resume-composition"><table class="hb-auto-resume-table"><colgroup><col class="hb-auto-resume-col"/><col class="hb-auto-resume-col"/></colgroup>
-<thead>
-<tr><th class="head hb-auto-resume-left" scope="col"><p>Bedingungen für automatische Wiederherstellung</p></th>
-<th class="head hb-auto-resume-right" scope="col"><p>Bedingungen ohne automatische Wiederherstellung</p></th>
-</tr>
-</thead>
-<tbody>
-<tr><td class="hb-auto-resume-left"><p>Einschalten/Neustart nach Abschalten oder Neustart</p></td>
-<td class="hb-auto-resume-right"><p>Manuelles Ausschalten der Ausgänge (Taste/App)</p></td>
-</tr>
-<tr><td class="hb-auto-resume-left" rowspan="2"><p>Batterie-SOC ≥ Entladegrenze +10% nach Erreichen der Grenze</p></td>
-<td class="hb-auto-resume-right"><p>Ausgang im Energiesparmodus deaktiviert</p></td>
-</tr>
-<tr><td class="hb-auto-resume-right"><p>Schutzbedingter Ausgang deaktiviert</p></td>
-</tr>
-<tr><td class="hb-auto-resume-left"><p>OTA-Update abgeschlossen</p></td>
-<td class="hb-auto-resume-right"><p>Durch Entlade-Timer gesteuerter Ausgang deaktiviert</p></td>
-</tr>
-</tbody>
-</table></figure>
+<figure aria-label="Bedingungen für automatische Wiederherstellung / Bedingungen ohne automatische Wiederherstellung" class="hb-auto-resume-composition" data-component-id="HB-TABLE-AUTO-RESUME" tabindex="0"><table class="hb-auto-resume-table"><colgroup><col class="hb-auto-resume-col"/><col class="hb-auto-resume-col"/></colgroup><thead><tr><th class="hb-auto-resume-left" scope="col">Bedingungen für automatische Wiederherstellung</th><th class="hb-auto-resume-right" scope="col">Bedingungen ohne automatische Wiederherstellung</th></tr></thead><tbody><tr><td class="hb-auto-resume-left">Einschalten/Neustart nach Abschalten oder Neustart</td><td class="hb-auto-resume-right">Manuelles Ausschalten der Ausgänge (Taste/App)</td></tr><tr><td class="hb-auto-resume-left" rowspan="2">Batterie-SOC ≥ Entladegrenze +10% nach Erreichen der Grenze</td><td class="hb-auto-resume-right">Ausgang im Energiesparmodus deaktiviert</td></tr><tr><td class="hb-auto-resume-right">Schutzbedingter Ausgang deaktiviert</td></tr><tr><td class="hb-auto-resume-left">OTA-Update abgeschlossen</td><td class="hb-auto-resume-right">Durch Entlade-Timer gesteuerter Ausgang deaktiviert</td></tr></tbody></table></figure>
 
 
 
@@ -265,32 +246,7 @@ Sie können den Bildschirm-Anzeigemodus auch in der Jackery-App einstellen.
 
 
 
-<figure aria-label="Tasten / Bedienung / Funktion" class="hb-key-combination-composition" tabindex="0"><table class="hb-key-combination-table"><colgroup><col class="hb-key-col-buttons"/><col class="hb-key-col-operation"/><col class="hb-key-col-function"/></colgroup>
-<thead>
-<tr><th class="head hb-key-buttons" scope="col"><p>Tasten</p></th>
-<th class="head hb-key-operation" scope="col"><p>Bedienung</p></th>
-<th class="head hb-key-function" scope="col"><p>Funktion</p></th>
-</tr>
-</thead>
-<tbody>
-<tr><td class="hb-key-buttons"><p>Haupt-POWER-Taste + AC-Einschalttaste</p></td>
-<td class="hb-key-operation"><p>Beide 3 s lang gedrückt halten</p></td>
-<td class="hb-key-function"><p>Energiesparmodus ein-/ausschalten</p></td>
-</tr>
-<tr><td class="hb-key-buttons"><p>Haupt-POWER-Taste + DC/USB-Einschalttaste</p></td>
-<td class="hb-key-operation"><p>Beide 3 s lang gedrückt halten</p></td>
-<td class="hb-key-function"><p>WLAN und Bluetooth zurücksetzen</p></td>
-</tr>
-<tr><td class="hb-key-buttons"><p>DC/USB-Einschalttaste + AC-Einschalttaste</p></td>
-<td class="hb-key-operation"><p>Beide 1 s lang gedrückt halten</p></td>
-<td class="hb-key-function"><p>WLAN und Bluetooth ein-/ausschalten</p></td>
-</tr>
-<tr><td class="hb-key-buttons"><p>Haupt-POWER-Taste + LED-Lichttaste</p></td>
-<td class="hb-key-operation"><p>Beide 1 s lang gedrückt halten</p></td>
-<td class="hb-key-function"><p>Notfall-Lademodus ein-/ausschalten</p></td>
-</tr>
-</tbody>
-</table></figure>
+<figure aria-label="Tasten / Bedienung / Funktion" class="hb-key-combination-composition" data-component-id="HB-TABLE-KEY-COMBINATIONS" tabindex="0"><table class="hb-key-combination-table"><colgroup><col class="hb-key-col-buttons"/><col class="hb-key-col-operation"/><col class="hb-key-col-function"/></colgroup><thead><tr><th class="hb-key-buttons" scope="col"><p>Tasten</p></th><th class="hb-key-operation" scope="col"><p>Bedienung</p></th><th class="hb-key-function" scope="col"><p>Funktion</p></th></tr></thead><tbody><tr><td class="hb-key-buttons"><p>Haupt-POWER-Taste + AC-Einschalttaste</p></td><td class="hb-key-operation"><p>Beide 3 s lang gedrückt halten</p></td><td class="hb-key-function"><p>Energiesparmodus ein-/ausschalten</p></td></tr><tr><td class="hb-key-buttons"><p>Haupt-POWER-Taste + DC/USB-Einschalttaste</p></td><td class="hb-key-operation"><p>Beide 3 s lang gedrückt halten</p></td><td class="hb-key-function"><p>WLAN und Bluetooth zurücksetzen</p></td></tr><tr><td class="hb-key-buttons"><p>DC/USB-Einschalttaste + AC-Einschalttaste</p></td><td class="hb-key-operation"><p>Beide 1 s lang gedrückt halten</p></td><td class="hb-key-function"><p>WLAN und Bluetooth ein-/ausschalten</p></td></tr><tr><td class="hb-key-buttons"><p>Haupt-POWER-Taste + LED-Lichttaste</p></td><td class="hb-key-operation"><p>Beide 1 s lang gedrückt halten</p></td><td class="hb-key-function"><p>Notfall-Lademodus ein-/ausschalten</p></td></tr></tbody></table></figure>
 
 
 

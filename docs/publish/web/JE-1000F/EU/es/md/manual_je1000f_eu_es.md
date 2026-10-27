@@ -27,7 +27,7 @@ Durante el ciclo de vida de los productos de almacenamiento de energía, se espe
 
 
 
-<figure aria-label="Símbolo / Significado" class="hb-symbol-signal-composition" data-component-id="HB-TABLE-SYMBOL-SIGNAL"><table class="hb-symbol-signal-table"><colgroup><col class="hb-symbol-signal-col-label"/><col class="hb-symbol-signal-col-meaning"/></colgroup><thead><tr><th class="hb-symbol-signal-label-heading" scope="col"><p>Símbolo</p></th><th class="hb-symbol-signal-meaning-heading" scope="col"><p>Significado</p></th></tr></thead><tbody><tr><td class="hb-symbol-signal-label-cell"><span aria-label="ADVERTENCIA" class="hb-signal-badge"><span aria-hidden="true" class="hb-signal-icon">⚠</span><span class="hb-signal-label">ADVERTENCIA</span></span></td><td class="hb-symbol-signal-meaning-cell"><p>Prácticas peligrosas que pueden resultar en lesiones graves, muerte y/o daños a la propiedad.</p></td></tr><tr><td class="hb-symbol-signal-label-cell"><span aria-label="PRECAUCIÓN" class="hb-signal-badge"><span aria-hidden="true" class="hb-signal-icon">⚠</span><span class="hb-signal-label">PRECAUCIÓN</span></span></td><td class="hb-symbol-signal-meaning-cell"><p>Prácticas peligrosas que pueden resultar en lesiones personales y/o daños a la propiedad.</p></td></tr><tr><td class="hb-symbol-signal-label-cell"><span aria-label="NOTA" class="hb-signal-badge"><span aria-hidden="true" class="hb-signal-icon">⚠</span><span class="hb-signal-label">NOTA</span></span></td><td class="hb-symbol-signal-meaning-cell"><p>Prácticas peligrosas que pueden resultar en daños en el equipo, pérdida de datos, deterioro del rendimiento o resultados inesperados.</p></td></tr><tr><td class="hb-symbol-signal-label-cell"><span aria-label="CONSEJOS" class="hb-signal-badge"><span aria-hidden="true" class="hb-signal-icon">⚠</span><span class="hb-signal-label">CONSEJOS</span></span></td><td class="hb-symbol-signal-meaning-cell"><p>Complementa la información importante o consejos de operación en el texto.</p></td></tr></tbody></table></figure>
+<figure aria-label="Símbolo / Significado" class="hb-symbol-signal-composition" data-component-id="HB-TABLE-SYMBOL-SIGNAL"><table class="hb-symbol-signal-table"><colgroup><col class="hb-symbol-signal-col-label"/><col class="hb-symbol-signal-col-meaning"/></colgroup><thead><tr><th class="hb-symbol-signal-label-heading" scope="col"><p>Símbolo</p></th><th class="hb-symbol-signal-meaning-heading" scope="col"><p>Significado</p></th></tr></thead><tbody><tr><td class="hb-symbol-signal-label-cell"><span aria-label="ADVERTENCIA" class="hb-signal-badge"><span aria-hidden="true" class="hb-signal-icon">⚠</span><span class="hb-signal-label">ADVERTENCIA</span></span></td><td class="hb-symbol-signal-meaning-cell"><p>Prácticas peligrosas que pueden resultar en lesiones graves, muerte y/o daños a la propiedad.</p></td></tr><tr><td class="hb-symbol-signal-label-cell"><span aria-label="PRECAUCIÓN" class="hb-signal-badge"><span aria-hidden="true" class="hb-signal-icon">⚠</span><span class="hb-signal-label">PRECAUCIÓN</span></span></td><td class="hb-symbol-signal-meaning-cell"><p>Prácticas peligrosas que pueden resultar en lesiones personales y/o daños a la propiedad.</p></td></tr><tr><td class="hb-symbol-signal-label-cell"><span aria-label="NOTA" class="hb-signal-badge"><span class="hb-signal-label">NOTA</span></span></td><td class="hb-symbol-signal-meaning-cell"><p>Prácticas peligrosas que pueden resultar en daños en el equipo, pérdida de datos, deterioro del rendimiento o resultados inesperados.</p></td></tr><tr><td class="hb-symbol-signal-label-cell"><span aria-label="CONSEJOS" class="hb-signal-badge"><span class="hb-signal-label">CONSEJOS</span></span></td><td class="hb-symbol-signal-meaning-cell"><p>Complementa la información importante o consejos de operación en el texto.</p></td></tr></tbody></table></figure>
 
 
 
@@ -226,26 +226,7 @@ La función de reanudación de salida de CA/CC está desactivada de forma predet
 
 
 
-<figure aria-label="Condiciones de reanudación automática / Condiciones sin reanudación automática" class="hb-auto-resume-composition"><table class="hb-auto-resume-table"><colgroup><col class="hb-auto-resume-col"/><col class="hb-auto-resume-col"/></colgroup>
-<thead>
-<tr><th class="head hb-auto-resume-left" scope="col"><p>Condiciones de reanudación automática</p></th>
-<th class="head hb-auto-resume-right" scope="col"><p>Condiciones sin reanudación automática</p></th>
-</tr>
-</thead>
-<tbody>
-<tr><td class="hb-auto-resume-left"><p>Encendido/Reiniciar después de apagado o reinicio</p></td>
-<td class="hb-auto-resume-right"><p>Apagado manual de la salida (botón/App)</p></td>
-</tr>
-<tr><td class="hb-auto-resume-left" rowspan="2"><p>SOC de la batería ≥ límite de descarga +10 % tras alcanzar el límite</p></td>
-<td class="hb-auto-resume-right"><p>Apagado de salida en modo de ahorro de energía</p></td>
-</tr>
-<tr><td class="hb-auto-resume-right"><p>Apagado de salida activado por protección</p></td>
-</tr>
-<tr><td class="hb-auto-resume-left"><p>Actualización OTA completada</p></td>
-<td class="hb-auto-resume-right"><p>Apagado de salida activado por temporizador de descarga</p></td>
-</tr>
-</tbody>
-</table></figure>
+<figure aria-label="Condiciones de reanudación automática / Condiciones sin reanudación automática" class="hb-auto-resume-composition" data-component-id="HB-TABLE-AUTO-RESUME" tabindex="0"><table class="hb-auto-resume-table"><colgroup><col class="hb-auto-resume-col"/><col class="hb-auto-resume-col"/></colgroup><thead><tr><th class="hb-auto-resume-left" scope="col">Condiciones de reanudación automática</th><th class="hb-auto-resume-right" scope="col">Condiciones sin reanudación automática</th></tr></thead><tbody><tr><td class="hb-auto-resume-left">Encendido/Reiniciar después de apagado o reinicio</td><td class="hb-auto-resume-right">Apagado manual de la salida (botón/App)</td></tr><tr><td class="hb-auto-resume-left" rowspan="2">SOC de la batería ≥ límite de descarga +10 % tras alcanzar el límite</td><td class="hb-auto-resume-right">Apagado de salida en modo de ahorro de energía</td></tr><tr><td class="hb-auto-resume-right">Apagado de salida activado por protección</td></tr><tr><td class="hb-auto-resume-left">Actualización OTA completada</td><td class="hb-auto-resume-right">Apagado de salida activado por temporizador de descarga</td></tr></tbody></table></figure>
 
 
 
@@ -263,32 +244,7 @@ También puede configurar el modo de visualización de la pantalla en la aplicac
 
 
 
-<figure aria-label="Botones / Operación / Función" class="hb-key-combination-composition" tabindex="0"><table class="hb-key-combination-table"><colgroup><col class="hb-key-col-buttons"/><col class="hb-key-col-operation"/><col class="hb-key-col-function"/></colgroup>
-<thead>
-<tr><th class="head hb-key-buttons" scope="col"><p>Botones</p></th>
-<th class="head hb-key-operation" scope="col"><p>Operación</p></th>
-<th class="head hb-key-function" scope="col"><p>Función</p></th>
-</tr>
-</thead>
-<tbody>
-<tr><td class="hb-key-buttons"><p>Botón POWER principal + Botón CA</p></td>
-<td class="hb-key-operation"><p>Mantenga pulsados ambos botones durante 3 segundos</p></td>
-<td class="hb-key-function"><p>Encender/apagar el modo de ahorro de energía</p></td>
-</tr>
-<tr><td class="hb-key-buttons"><p>Botón POWER principal + botón CC/USB</p></td>
-<td class="hb-key-operation"><p>Mantenga pulsados ambos botones durante 3 segundos</p></td>
-<td class="hb-key-function"><p>Restablecer Wi-Fi y Bluetooth</p></td>
-</tr>
-<tr><td class="hb-key-buttons"><p>Botón CC/USB + Botón CA</p></td>
-<td class="hb-key-operation"><p>Mantenga pulsados ambos botones durante 1 segundo</p></td>
-<td class="hb-key-function"><p>Encender/apagar Wi-Fi y Bluetooth</p></td>
-</tr>
-<tr><td class="hb-key-buttons"><p>Botón POWER principal + botón de luz LED</p></td>
-<td class="hb-key-operation"><p>Mantenga pulsados ambos botones durante 1 segundo</p></td>
-<td class="hb-key-function"><p>Activar/desactivar el modo de carga de emergencia</p></td>
-</tr>
-</tbody>
-</table></figure>
+<figure aria-label="Botones / Operación / Función" class="hb-key-combination-composition" data-component-id="HB-TABLE-KEY-COMBINATIONS" tabindex="0"><table class="hb-key-combination-table"><colgroup><col class="hb-key-col-buttons"/><col class="hb-key-col-operation"/><col class="hb-key-col-function"/></colgroup><thead><tr><th class="hb-key-buttons" scope="col"><p>Botones</p></th><th class="hb-key-operation" scope="col"><p>Operación</p></th><th class="hb-key-function" scope="col"><p>Función</p></th></tr></thead><tbody><tr><td class="hb-key-buttons"><p>Botón POWER principal + Botón CA</p></td><td class="hb-key-operation"><p>Mantenga pulsados ambos botones durante 3 segundos</p></td><td class="hb-key-function"><p>Encender/apagar el modo de ahorro de energía</p></td></tr><tr><td class="hb-key-buttons"><p>Botón POWER principal + botón CC/USB</p></td><td class="hb-key-operation"><p>Mantenga pulsados ambos botones durante 3 segundos</p></td><td class="hb-key-function"><p>Restablecer Wi-Fi y Bluetooth</p></td></tr><tr><td class="hb-key-buttons"><p>Botón CC/USB + Botón CA</p></td><td class="hb-key-operation"><p>Mantenga pulsados ambos botones durante 1 segundo</p></td><td class="hb-key-function"><p>Encender/apagar Wi-Fi y Bluetooth</p></td></tr><tr><td class="hb-key-buttons"><p>Botón POWER principal + botón de luz LED</p></td><td class="hb-key-operation"><p>Mantenga pulsados ambos botones durante 1 segundo</p></td><td class="hb-key-function"><p>Activar/desactivar el modo de carga de emergencia</p></td></tr></tbody></table></figure>
 
 
 
