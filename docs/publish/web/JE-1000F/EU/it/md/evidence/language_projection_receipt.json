@@ -89,7 +89,7 @@
     ],
     "sha256": "f8c5ea1eb0b953cbb2023847365dbcf443a687a0cfe9b3985da13e0f1767e9c2"
   },
-  "git_ref": "138c965413ef8b4a14f536bb2b5672dd9274b131",
+  "git_ref": "cdef4a28cbeb180e83daa0a43b6ad6b1d0c66f02",
   "html": {
     "files": [
       {
@@ -1494,8 +1494,8 @@
       },
       {
         "path": "sphinx-warnings.log",
-        "sha256": "b6942cd3711151660e78e5e809067bf76ecabd7af45b0a3dcb096a2d3655893d",
-        "size": 439
+        "sha256": "3ace32e37d243d5327357d6103f6eb1ffcdf6ca209af26de7f0377700ffa3557",
+        "size": 529
       },
       {
         "path": "warning_lockup.jpg",
@@ -1508,7 +1508,7 @@
         "size": 316221
       }
     ],
-    "sha256": "837aec73b0401ebe7320a0db4c634f5484ae466629cfa6b480a2ae2a031301a5"
+    "sha256": "5e23e072b6f65423ce7a6ddf2d97105b7434929875191a23ea7a140ba3ae2d8a"
   },
   "language": "it",
   "markdown": {
@@ -2084,41 +2084,6 @@
         "size": 1814
       },
       {
-        "path": "assets/operation.ac-output_it_3fae4a706b6f_3fae4a706b6f.png",
-        "sha256": "3fae4a706b6f459b1e95c4237009ed4b6c916d096b8ae33c9c90947d15441b6b",
-        "size": 109318
-      },
-      {
-        "path": "assets/operation.dc-usb-output_it_46e632819072_46e632819072.png",
-        "sha256": "46e63281907266fd50150c7d0d7b85d72b2f848d9b164fe18a0fd1fa269db8d0",
-        "size": 113088
-      },
-      {
-        "path": "assets/operation.energy-saving_it_57a3296be38a_57a3296be38a.png",
-        "sha256": "57a3296be38aa85fc52fdfa0fd563693fd8fc83a99bf796c8f30c7ed90575bd9",
-        "size": 128767
-      },
-      {
-        "path": "assets/operation.led-light_it_cbd02dc0d35e_cbd02dc0d35e.png",
-        "sha256": "cbd02dc0d35ee8d0a481c68dc8c7cb27c94c1a8379164c3ae6c12fe399cbd54e",
-        "size": 106730
-      },
-      {
-        "path": "assets/operation.main-power_it_b6ba22bf8a02_b6ba22bf8a02.png",
-        "sha256": "b6ba22bf8a029b653a15556e33f2015a13a517eaa08721f9b4e37264c7a14329",
-        "size": 102070
-      },
-      {
-        "path": "assets/product-overview.front_it_94e88239416f_94e88239416f.png",
-        "sha256": "94e88239416ffa759355428ec0afc8b5127ca20e6a09ff748fd32fbbe436770b",
-        "size": 121058
-      },
-      {
-        "path": "assets/product-overview.right_it_92b0ed2a03fb_92b0ed2a03fb.png",
-        "sha256": "92b0ed2a03fbce944c2f31abab8046c46fc31f69bf3362c2292027edfd54e838",
-        "size": 58156
-      },
-      {
         "path": "conf.py",
         "sha256": "be55795d46e3fb7943b7ed574c1e23ead5ff73989df578af1fd957b6f41b7382",
         "size": 815
@@ -2129,13 +2094,18 @@
         "size": 92
       },
       {
+        "path": "manual.ir.json",
+        "sha256": "73b21ba4022cdf687e8831da6549bd92e177322046e898c18d779773c1a17a4c",
+        "size": 968572
+      },
+      {
         "path": "manual_je1000f_eu_it.md",
-        "sha256": "5f1bc2dc7faa6f204bde7f30d798c0fcb0adbc94bbc2b4881fe7276d59d6acfc",
-        "size": 91907
+        "sha256": "88c22aa1c07b261f6604423323165c0452e88330528c5112bed7006b5a45f0a2",
+        "size": 92144
       }
     ],
     "manual": "manual_je1000f_eu_it.md",
-    "sha256": "f49bfcd683e2f423a4d6b1b1031b629b97eca9d9ea4958ed01c34d4030658b48"
+    "sha256": "8d067278b5fc810c84916086089fb356e083d8aa872ee5918e45535b0544cb37"
   },
   "model": "JE-1000F",
   "projection_manifest": {
@@ -2144,5 +2114,5 @@
   },
   "region": "EU",
   "schema_version": "auto-manual-web-language-release-evidence/v1",
-  "version": "2.7"
+  "version": "git-20261027-cdef4a28-admission"
 }

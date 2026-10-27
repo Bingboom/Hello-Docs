@@ -27,7 +27,7 @@ Durante il ciclo di vita dei prodotti per l\'accumulo di energia, è previsto un
 
 
 
-<figure aria-label="Simbolo / Significato" class="hb-symbol-signal-composition" data-component-id="HB-TABLE-SYMBOL-SIGNAL"><table class="hb-symbol-signal-table"><colgroup><col class="hb-symbol-signal-col-label"/><col class="hb-symbol-signal-col-meaning"/></colgroup><thead><tr><th class="hb-symbol-signal-label-heading" scope="col"><p>Simbolo</p></th><th class="hb-symbol-signal-meaning-heading" scope="col"><p>Significato</p></th></tr></thead><tbody><tr><td class="hb-symbol-signal-label-cell"><span aria-label="AVVERTENZA" class="hb-signal-badge"><span aria-hidden="true" class="hb-signal-icon">⚠</span><span class="hb-signal-label">AVVERTENZA</span></span></td><td class="hb-symbol-signal-meaning-cell"><p>Pratiche pericolose che possono causare lesioni gravi, morte e/o danni materiali.</p></td></tr><tr><td class="hb-symbol-signal-label-cell"><span aria-label="ATTENZIONE" class="hb-signal-badge"><span aria-hidden="true" class="hb-signal-icon">⚠</span><span class="hb-signal-label">ATTENZIONE</span></span></td><td class="hb-symbol-signal-meaning-cell"><p>Pratiche pericolose che possono causare lesioni personali e/o danni materiali.</p></td></tr><tr><td class="hb-symbol-signal-label-cell"><span aria-label="NOTA" class="hb-signal-badge"><span aria-hidden="true" class="hb-signal-icon">⚠</span><span class="hb-signal-label">NOTA</span></span></td><td class="hb-symbol-signal-meaning-cell"><p>Pratiche che possono causare danni all'apparecchiatura, perdita di dati, deterioramento delle prestazioni o risultati imprevisti.</p></td></tr><tr><td class="hb-symbol-signal-label-cell"><span aria-label="SUGGERIMENTO" class="hb-signal-badge"><span aria-hidden="true" class="hb-signal-icon">⚠</span><span class="hb-signal-label">SUGGERIMENTO</span></span></td><td class="hb-symbol-signal-meaning-cell"><p>Integra le informazioni importanti o i consigli operativi nel testo.</p></td></tr></tbody></table></figure>
+<figure aria-label="Simbolo / Significato" class="hb-symbol-signal-composition" data-component-id="HB-TABLE-SYMBOL-SIGNAL"><table class="hb-symbol-signal-table"><colgroup><col class="hb-symbol-signal-col-label"/><col class="hb-symbol-signal-col-meaning"/></colgroup><thead><tr><th class="hb-symbol-signal-label-heading" scope="col"><p>Simbolo</p></th><th class="hb-symbol-signal-meaning-heading" scope="col"><p>Significato</p></th></tr></thead><tbody><tr><td class="hb-symbol-signal-label-cell"><span aria-label="AVVERTENZA" class="hb-signal-badge"><span aria-hidden="true" class="hb-signal-icon">⚠</span><span class="hb-signal-label">AVVERTENZA</span></span></td><td class="hb-symbol-signal-meaning-cell"><p>Pratiche pericolose che possono causare lesioni gravi, morte e/o danni materiali.</p></td></tr><tr><td class="hb-symbol-signal-label-cell"><span aria-label="ATTENZIONE" class="hb-signal-badge"><span aria-hidden="true" class="hb-signal-icon">⚠</span><span class="hb-signal-label">ATTENZIONE</span></span></td><td class="hb-symbol-signal-meaning-cell"><p>Pratiche pericolose che possono causare lesioni personali e/o danni materiali.</p></td></tr><tr><td class="hb-symbol-signal-label-cell"><span aria-label="NOTA" class="hb-signal-badge"><span class="hb-signal-label">NOTA</span></span></td><td class="hb-symbol-signal-meaning-cell"><p>Pratiche che possono causare danni all'apparecchiatura, perdita di dati, deterioramento delle prestazioni o risultati imprevisti.</p></td></tr><tr><td class="hb-symbol-signal-label-cell"><span aria-label="SUGGERIMENTO" class="hb-signal-badge"><span class="hb-signal-label">SUGGERIMENTO</span></span></td><td class="hb-symbol-signal-meaning-cell"><p>Integra le informazioni importanti o i consigli operativi nel testo.</p></td></tr></tbody></table></figure>
 
 
 
@@ -231,26 +231,7 @@ La funzione di ripristino delle uscite CA e CC è disattivata per impostazione p
 
 
 
-<figure aria-label="Condizioni di ripristino automatico / Condizioni senza ripristino automatico" class="hb-auto-resume-composition"><table class="hb-auto-resume-table"><colgroup><col class="hb-auto-resume-col"/><col class="hb-auto-resume-col"/></colgroup>
-<thead>
-<tr><th class="head hb-auto-resume-left" scope="col"><p>Condizioni di ripristino automatico</p></th>
-<th class="head hb-auto-resume-right" scope="col"><p>Condizioni senza ripristino automatico</p></th>
-</tr>
-</thead>
-<tbody>
-<tr><td class="hb-auto-resume-left"><p>Accensione/Riavvio dopo lo spegnimento o il riavvio</p></td>
-<td class="hb-auto-resume-right"><p>Spegnimento manuale delle uscite (pulsante/App)</p></td>
-</tr>
-<tr><td class="hb-auto-resume-left" rowspan="2"><p>SOC batteria ≥ limite di scarica +10% al raggiungimento del limite</p></td>
-<td class="hb-auto-resume-right"><p>Spegnimento delle uscite in modalità risparmio energetico</p></td>
-</tr>
-<tr><td class="hb-auto-resume-right"><p>Spegnimento delle uscite attivato da protezione</p></td>
-</tr>
-<tr><td class="hb-auto-resume-left"><p>Aggiornamento OTA completato</p></td>
-<td class="hb-auto-resume-right"><p>Spegnimento delle uscite attivato dal timer di scarica</p></td>
-</tr>
-</tbody>
-</table></figure>
+<figure aria-label="Condizioni di ripristino automatico / Condizioni senza ripristino automatico" class="hb-auto-resume-composition" data-component-id="HB-TABLE-AUTO-RESUME" tabindex="0"><table class="hb-auto-resume-table"><colgroup><col class="hb-auto-resume-col"/><col class="hb-auto-resume-col"/></colgroup><thead><tr><th class="hb-auto-resume-left" scope="col">Condizioni di ripristino automatico</th><th class="hb-auto-resume-right" scope="col">Condizioni senza ripristino automatico</th></tr></thead><tbody><tr><td class="hb-auto-resume-left">Accensione/Riavvio dopo lo spegnimento o il riavvio</td><td class="hb-auto-resume-right">Spegnimento manuale delle uscite (pulsante/App)</td></tr><tr><td class="hb-auto-resume-left" rowspan="2">SOC batteria ≥ limite di scarica +10% al raggiungimento del limite</td><td class="hb-auto-resume-right">Spegnimento delle uscite in modalità risparmio energetico</td></tr><tr><td class="hb-auto-resume-right">Spegnimento delle uscite attivato da protezione</td></tr><tr><td class="hb-auto-resume-left">Aggiornamento OTA completato</td><td class="hb-auto-resume-right">Spegnimento delle uscite attivato dal timer di scarica</td></tr></tbody></table></figure>
 
 
 
@@ -268,32 +249,7 @@ Puoi anche impostare la modalità di visualizzazione dello schermo nell\'App Jac
 
 
 
-<figure aria-label="Pulsanti / Operazione / Funzione" class="hb-key-combination-composition" tabindex="0"><table class="hb-key-combination-table"><colgroup><col class="hb-key-col-buttons"/><col class="hb-key-col-operation"/><col class="hb-key-col-function"/></colgroup>
-<thead>
-<tr><th class="head hb-key-buttons" scope="col"><p>Pulsanti</p></th>
-<th class="head hb-key-operation" scope="col"><p>Operazione</p></th>
-<th class="head hb-key-function" scope="col"><p>Funzione</p></th>
-</tr>
-</thead>
-<tbody>
-<tr><td class="hb-key-buttons"><p>Pulsante POWER principale + Pulsante CA</p></td>
-<td class="hb-key-operation"><p>Tieni premuti entrambi per 3 s</p></td>
-<td class="hb-key-function"><p>Attiva/disattiva la Modalità risparmio energetico</p></td>
-</tr>
-<tr><td class="hb-key-buttons"><p>Pulsante POWER principale + Pulsante DC/USB</p></td>
-<td class="hb-key-operation"><p>Tieni premuti entrambi per 3 s</p></td>
-<td class="hb-key-function"><p>Ripristina Wi-Fi e Bluetooth</p></td>
-</tr>
-<tr><td class="hb-key-buttons"><p>Pulsante DC/USB + Pulsante CA</p></td>
-<td class="hb-key-operation"><p>Tieni premuti entrambi per 1 s</p></td>
-<td class="hb-key-function"><p>Attiva/disattiva Wi-Fi e Bluetooth</p></td>
-</tr>
-<tr><td class="hb-key-buttons"><p>Pulsante POWER principale + Pulsante luce LED</p></td>
-<td class="hb-key-operation"><p>Tieni premuti entrambi per 1 s</p></td>
-<td class="hb-key-function"><p>Attiva/disattiva la Modalità di ricarica di emergenza</p></td>
-</tr>
-</tbody>
-</table></figure>
+<figure aria-label="Pulsanti / Operazione / Funzione" class="hb-key-combination-composition" data-component-id="HB-TABLE-KEY-COMBINATIONS" tabindex="0"><table class="hb-key-combination-table"><colgroup><col class="hb-key-col-buttons"/><col class="hb-key-col-operation"/><col class="hb-key-col-function"/></colgroup><thead><tr><th class="hb-key-buttons" scope="col"><p>Pulsanti</p></th><th class="hb-key-operation" scope="col"><p>Operazione</p></th><th class="hb-key-function" scope="col"><p>Funzione</p></th></tr></thead><tbody><tr><td class="hb-key-buttons"><p>Pulsante POWER principale + Pulsante CA</p></td><td class="hb-key-operation"><p>Tieni premuti entrambi per 3 s</p></td><td class="hb-key-function"><p>Attiva/disattiva la Modalità risparmio energetico</p></td></tr><tr><td class="hb-key-buttons"><p>Pulsante POWER principale + Pulsante DC/USB</p></td><td class="hb-key-operation"><p>Tieni premuti entrambi per 3 s</p></td><td class="hb-key-function"><p>Ripristina Wi-Fi e Bluetooth</p></td></tr><tr><td class="hb-key-buttons"><p>Pulsante DC/USB + Pulsante CA</p></td><td class="hb-key-operation"><p>Tieni premuti entrambi per 1 s</p></td><td class="hb-key-function"><p>Attiva/disattiva Wi-Fi e Bluetooth</p></td></tr><tr><td class="hb-key-buttons"><p>Pulsante POWER principale + Pulsante luce LED</p></td><td class="hb-key-operation"><p>Tieni premuti entrambi per 1 s</p></td><td class="hb-key-function"><p>Attiva/disattiva la Modalità di ricarica di emergenza</p></td></tr></tbody></table></figure>
 
 
 
