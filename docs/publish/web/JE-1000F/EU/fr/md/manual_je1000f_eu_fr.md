@@ -27,14 +27,16 @@ Pendant le cycle de vie des produits de stockage d\'énergie, une certaine dégr
 
 
 
-<figure aria-label="Symbole / Signification" class="hb-symbol-signal-composition" data-component-id="HB-TABLE-SYMBOL-SIGNAL"><table class="hb-symbol-signal-table"><colgroup><col class="hb-symbol-signal-col-label"/><col class="hb-symbol-signal-col-meaning"/></colgroup><thead><tr><th class="hb-symbol-signal-label-heading" scope="col"><p>Symbole</p></th><th class="hb-symbol-signal-meaning-heading" scope="col"><p>Signification</p></th></tr></thead><tbody><tr><td class="hb-symbol-signal-label-cell"><span aria-label="AVERTISSEMENT" class="hb-signal-badge"><span aria-hidden="true" class="hb-signal-icon">⚠</span><span class="hb-signal-label">AVERTISSEMENT</span></span></td><td class="hb-symbol-signal-meaning-cell"><p>Pratiques dangereuses pouvant entraîner des blessures graves, la mort et/ou des dommages matériels.</p></td></tr><tr><td class="hb-symbol-signal-label-cell"><span aria-label="ATTENTION" class="hb-signal-badge"><span aria-hidden="true" class="hb-signal-icon">⚠</span><span class="hb-signal-label">ATTENTION</span></span></td><td class="hb-symbol-signal-meaning-cell"><p>Pratiques dangereuses pouvant entraîner des blessures corporelles et/ou des dommages matériels.</p></td></tr><tr><td class="hb-symbol-signal-label-cell"><span aria-label="REMARQUE" class="hb-signal-badge"><span aria-hidden="true" class="hb-signal-icon">⚠</span><span class="hb-signal-label">REMARQUE</span></span></td><td class="hb-symbol-signal-meaning-cell"><p>Pratiques dangereuses pouvant entraîner des dommages à l'équipement, une perte de données, une détérioration des performances ou des résultats inattendus.</p></td></tr><tr><td class="hb-symbol-signal-label-cell"><span aria-label="CONSEIL" class="hb-signal-badge"><span aria-hidden="true" class="hb-signal-icon">⚠</span><span class="hb-signal-label">CONSEIL</span></span></td><td class="hb-symbol-signal-meaning-cell"><p>Complète les informations importantes ou les conseils d'utilisation dans le texte.</p></td></tr></tbody></table></figure>
+<figure aria-label="Symbole / Signification" class="hb-symbol-signal-composition" data-component-id="HB-TABLE-SYMBOL-SIGNAL"><table class="hb-symbol-signal-table"><colgroup><col class="hb-symbol-signal-col-label"/><col class="hb-symbol-signal-col-meaning"/></colgroup><thead><tr><th class="hb-symbol-signal-label-heading" scope="col"><p>Symbole</p></th><th class="hb-symbol-signal-meaning-heading" scope="col"><p>Signification</p></th></tr></thead><tbody><tr><td class="hb-symbol-signal-label-cell"><span aria-label="AVERTISSEMENT" class="hb-signal-badge"><span aria-hidden="true" class="hb-signal-icon">⚠</span><span class="hb-signal-label">AVERTISSEMENT</span></span></td><td class="hb-symbol-signal-meaning-cell"><p>Pratiques dangereuses pouvant entraîner des blessures graves, la mort et/ou des dommages matériels.</p></td></tr><tr><td class="hb-symbol-signal-label-cell"><span aria-label="ATTENTION" class="hb-signal-badge"><span aria-hidden="true" class="hb-signal-icon">⚠</span><span class="hb-signal-label">ATTENTION</span></span></td><td class="hb-symbol-signal-meaning-cell"><p>Pratiques dangereuses pouvant entraîner des blessures corporelles et/ou des dommages matériels.</p></td></tr><tr><td class="hb-symbol-signal-label-cell"><span aria-label="REMARQUE" class="hb-signal-badge"><span class="hb-signal-label">REMARQUE</span></span></td><td class="hb-symbol-signal-meaning-cell"><p>Pratiques dangereuses pouvant entraîner des dommages à l'équipement, une perte de données, une détérioration des performances ou des résultats inattendus.</p></td></tr><tr><td class="hb-symbol-signal-label-cell"><span aria-label="CONSEIL" class="hb-signal-badge"><span class="hb-signal-label">CONSEIL</span></span></td><td class="hb-symbol-signal-meaning-cell"><p>Complète les informations importantes ou les conseils d'utilisation dans le texte.</p></td></tr></tbody></table></figure>
 
 
 
 
 
 <figure aria-label="Symbole / Signification" class="hb-symbol-pair-composition" data-component-id="HB-TABLE-SYMBOL-ICON"><div class="hb-symbol-pair-grid"><div class="hb-symbol-panel hb-symbol-panel-1"><table class="hb-symbol-panel-table"><colgroup><col class="hb-symbol-col-icon"/><col class="hb-symbol-col-meaning"/></colgroup><thead><tr><th class="hb-symbol-icon-heading" scope="col"><p><strong>Symbole</strong></p></th><th class="hb-symbol-meaning-heading" scope="col"><p><strong>Signification</strong></p></th></tr></thead><tbody><tr><td class="hb-symbol-icon"><img alt="warning_triangle" class="hb-symbol-art" src="../../../../_static/manual-assets/_pool/67/6749bd38fdd0b85af591d65d0d81ae591590aa5c35c7b0f72767057a953c5c67.png"/></td><td class="hb-symbol-meaning"><p>Symboles d’avertissement et de mise en garde. Signalent aux personnes des informations qui doivent être lues afin d’éviter les dangers ou risques potentiels.</p></td></tr><tr><td class="hb-symbol-icon"><img alt="read_manual" class="hb-symbol-art" src="../../../../_static/manual-assets/_pool/89/89dae4b809de62e67e42949d33826c6e05b147b57e94b3e9c42f4bfff9af591a.png"/></td><td class="hb-symbol-meaning"><p>Lire le manuel de l'opérateur</p></td></tr><tr><td class="hb-symbol-icon"><img alt="do_not_dismantle" class="hb-symbol-art" src="../../../../_static/manual-assets/_pool/76/76085a1e70083ecdcecb41bf2591353c3bced2b9385662329ab3a76c48446b7b.png"/></td><td class="hb-symbol-meaning"><p>Ne démontez pas le produit.</p></td></tr><tr><td class="hb-symbol-icon"><img alt="no_open_flame" class="hb-symbol-art" src="../../../../_static/manual-assets/_pool/a8/a8a846e9767ac618760e6a9ac65d826fb2c092ad7450014fa30ae0894746450a.png"/></td><td class="hb-symbol-meaning"><p>Ne pas fumer ni utiliser de flamme nue</p></td></tr></tbody></table></div><div class="hb-symbol-panel hb-symbol-panel-2"><table class="hb-symbol-panel-table"><colgroup><col class="hb-symbol-col-icon"/><col class="hb-symbol-col-meaning"/></colgroup><thead><tr><th class="hb-symbol-icon-heading" scope="col"><p><strong>Symbole</strong></p></th><th class="hb-symbol-meaning-heading" scope="col"><p><strong>Signification</strong></p></th></tr></thead><tbody><tr><td class="hb-symbol-icon"><img alt="keep_away_from_children" class="hb-symbol-art" src="../../../../_static/manual-assets/_pool/11/114690be6f4d77ceaebe2ed44641ba2735873d3d6415ae04738dc241392096b7.png"/></td><td class="hb-symbol-meaning"><p>Les enfants ne sont pas admis</p></td></tr><tr><td class="hb-symbol-icon"><img alt="li_ion" class="hb-symbol-art" src="../../../../_static/manual-assets/_pool/2a/2a61fc0919cfeca43a4dd3e9bcf3a4310314d7543f77e6af9c10f1717360eea7.png"/></td><td class="hb-symbol-meaning"><p>Ce symbole indique que le produit contient une batterie lithium-ion (Li-ion), qui doit être éliminée ou recyclée de manière appropriée.</p></td></tr><tr><td class="hb-symbol-icon"><img alt="weee" class="hb-symbol-art" src="../../../../_static/manual-assets/_pool/7e/7e4de290ea13b86bd50fbb209b4510116116d4fb403b7ef4f83cf1c1db873989.png"/></td><td class="hb-symbol-meaning"><p>Ce symbole indique que le produit ne doit pas être jeté avec les ordures ménagères. Il doit être apporté à un point de collecte désigné pour un recyclage approprié.
-Une élimination et un recyclage corrects contribuent à la protection de l’environnement. Pour plus d’informations, veuillez contacter votre autorité locale, le service de gestion des déchets ou le revendeur du produit.</p></td></tr></tbody></table></div></div></figure>
+Une élimination et un recyclage corrects contribuent à la protection de l’environnement. Pour plus d’informations, veuillez contacter votre autorité locale, le service de gestion des déchets ou le revendeur du produit.</p></td></tr><tr><td class="hb-symbol-icon"><img alt="weee2" class="hb-symbol-art" src="../../../../_static/manual-assets/_pool/cf/cf04ff00bdeb8de5971a55e5d8be6ef91e1a4ddad479f817f0c535914a392d45.png"/></td><td class="hb-symbol-meaning"><p>Les piles et accumulateurs ne doivent pas être jetés avec les ordures ménagères.
+En tant que consommateur, vous êtes légalement tenu de déposer toutes les piles et accumulateurs dans des points de collecte désignés, qu'ils contiennent ou non des substances dangereuses.
+Veuillez rapporter les piles et accumulateurs usagés à un point de collecte local, un centre de recyclage ou au détaillant où ils ont été achetés. Une élimination appropriée garantit un recyclage respectueux de l'environnement et prévient les dommages potentiels pour la santé humaine et l'environnement.</p></td></tr></tbody></table></div></div></figure>
 
 
 
@@ -233,26 +235,7 @@ Cette fonction mémorise l'état de la sortie et reprend automatiquement les sor
 
 
 
-<figure aria-label="Conditions de reprise automatique / Conditions sans reprise automatique" class="hb-auto-resume-composition"><table class="hb-auto-resume-table"><colgroup><col class="hb-auto-resume-col"/><col class="hb-auto-resume-col"/></colgroup>
-<thead>
-<tr><th class="head hb-auto-resume-left" scope="col"><p>Conditions de reprise automatique</p></th>
-<th class="head hb-auto-resume-right" scope="col"><p>Conditions sans reprise automatique</p></th>
-</tr>
-</thead>
-<tbody>
-<tr><td class="hb-auto-resume-left"><p>Mise sous tension/redémarrage après arrêt ou redémarrage</p></td>
-<td class="hb-auto-resume-right"><p>Sortie désactivée manuellement (bouton/App)</p></td>
-</tr>
-<tr><td class="hb-auto-resume-left" rowspan="2"><p>SOC de la batterie ≥ limite de décharge +10 % une fois la limite atteinte</p></td>
-<td class="hb-auto-resume-right"><p>Sortie désactivée en mode économie d’énergie</p></td>
-</tr>
-<tr><td class="hb-auto-resume-right"><p>Sortie désactivée suite à un déclenchement de protection</p></td>
-</tr>
-<tr><td class="hb-auto-resume-left"><p>Mise à niveau OTA terminée</p></td>
-<td class="hb-auto-resume-right"><p>Sortie désactivée par le minuteur de décharge</p></td>
-</tr>
-</tbody>
-</table></figure>
+<figure aria-label="Conditions de reprise automatique / Conditions sans reprise automatique" class="hb-auto-resume-composition" data-component-id="HB-TABLE-AUTO-RESUME" tabindex="0"><table class="hb-auto-resume-table"><colgroup><col class="hb-auto-resume-col"/><col class="hb-auto-resume-col"/></colgroup><thead><tr><th class="hb-auto-resume-left" scope="col">Conditions de reprise automatique</th><th class="hb-auto-resume-right" scope="col">Conditions sans reprise automatique</th></tr></thead><tbody><tr><td class="hb-auto-resume-left">Mise sous tension/redémarrage après arrêt ou redémarrage</td><td class="hb-auto-resume-right">Sortie désactivée manuellement (bouton/App)</td></tr><tr><td class="hb-auto-resume-left" rowspan="2">SOC de la batterie ≥ limite de décharge +10 % une fois la limite atteinte</td><td class="hb-auto-resume-right">Sortie désactivée en mode économie d’énergie</td></tr><tr><td class="hb-auto-resume-right">Sortie désactivée suite à un déclenchement de protection</td></tr><tr><td class="hb-auto-resume-left">Mise à niveau OTA terminée</td><td class="hb-auto-resume-right">Sortie désactivée par le minuteur de décharge</td></tr></tbody></table></figure>
 
 
 
@@ -260,32 +243,7 @@ Cette fonction mémorise l'état de la sortie et reprend automatiquement les sor
 
 
 
-<figure aria-label="Boutons / Utilisation / Fonction" class="hb-key-combination-composition" tabindex="0"><table class="hb-key-combination-table"><colgroup><col class="hb-key-col-buttons"/><col class="hb-key-col-operation"/><col class="hb-key-col-function"/></colgroup>
-<thead>
-<tr><th class="head hb-key-buttons" scope="col"><p>Boutons</p></th>
-<th class="head hb-key-operation" scope="col"><p>Utilisation</p></th>
-<th class="head hb-key-function" scope="col"><p>Fonction</p></th>
-</tr>
-</thead>
-<tbody>
-<tr><td class="hb-key-buttons"><p>Bouton POWER principal + Bouton CA</p></td>
-<td class="hb-key-operation"><p>Appuyer 3 secondes sur les deux</p></td>
-<td class="hb-key-function"><p>Activer/désactiver le mode économie d'énergie</p></td>
-</tr>
-<tr><td class="hb-key-buttons"><p>Bouton POWER principal + Bouton <strong>CC/USB</strong></p></td>
-<td class="hb-key-operation"><p>Appuyer 3 secondes sur les deux</p></td>
-<td class="hb-key-function"><p>Réinitialiser le Wi-Fi et le Bluetooth</p></td>
-</tr>
-<tr><td class="hb-key-buttons"><p>Bouton <strong>CC/USB</strong> + Bouton CA</p></td>
-<td class="hb-key-operation"><p>Appuyer 1 seconde sur les deux</p></td>
-<td class="hb-key-function"><p>Activer/désactiver le Wi-Fi et le Bluetooth</p></td>
-</tr>
-<tr><td class="hb-key-buttons"><p>Bouton POWER principal + Bouton d'éclairage LED</p></td>
-<td class="hb-key-operation"><p>Appuyer 1 seconde sur les deux</p></td>
-<td class="hb-key-function"><p>Activer/désactiver le mode de charge d'urgence</p></td>
-</tr>
-</tbody>
-</table></figure>
+<figure aria-label="Boutons / Utilisation / Fonction" class="hb-key-combination-composition" data-component-id="HB-TABLE-KEY-COMBINATIONS" tabindex="0"><table class="hb-key-combination-table"><colgroup><col class="hb-key-col-buttons"/><col class="hb-key-col-operation"/><col class="hb-key-col-function"/></colgroup><thead><tr><th class="hb-key-buttons" scope="col"><p>Boutons</p></th><th class="hb-key-operation" scope="col"><p>Utilisation</p></th><th class="hb-key-function" scope="col"><p>Fonction</p></th></tr></thead><tbody><tr><td class="hb-key-buttons"><p>Bouton POWER principal + Bouton CA</p></td><td class="hb-key-operation"><p>Appuyer 3 secondes sur les deux</p></td><td class="hb-key-function"><p>Activer/désactiver le mode économie d'énergie</p></td></tr><tr><td class="hb-key-buttons"><p>Bouton POWER principal + Bouton <strong>CC/USB</strong></p></td><td class="hb-key-operation"><p>Appuyer 3 secondes sur les deux</p></td><td class="hb-key-function"><p>Réinitialiser le Wi-Fi et le Bluetooth</p></td></tr><tr><td class="hb-key-buttons"><p>Bouton <strong>CC/USB</strong> + Bouton CA</p></td><td class="hb-key-operation"><p>Appuyer 1 seconde sur les deux</p></td><td class="hb-key-function"><p>Activer/désactiver le Wi-Fi et le Bluetooth</p></td></tr><tr><td class="hb-key-buttons"><p>Bouton POWER principal + Bouton d'éclairage LED</p></td><td class="hb-key-operation"><p>Appuyer 1 seconde sur les deux</p></td><td class="hb-key-function"><p>Activer/désactiver le mode de charge d'urgence</p></td></tr></tbody></table></figure>
 
 
 

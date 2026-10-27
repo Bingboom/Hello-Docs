@@ -1,8 +1,8 @@
 {
   "actions": {
-    "check": "428b23c700a3e4913057a443d63b3910e741ad568fedf8535b2cd663e4fb52ad",
-    "html": "428b23c700a3e4913057a443d63b3910e741ad568fedf8535b2cd663e4fb52ad",
-    "md": "428b23c700a3e4913057a443d63b3910e741ad568fedf8535b2cd663e4fb52ad"
+    "check": "e27754ff78b8f0e84ffb5963cf01f3a3a260f44554bc27b3c02460921b1868fe",
+    "html": "e27754ff78b8f0e84ffb5963cf01f3a3a260f44554bc27b3c02460921b1868fe",
+    "md": "e27754ff78b8f0e84ffb5963cf01f3a3a260f44554bc27b3c02460921b1868fe"
   },
   "canonical_source": {
     "files": [
@@ -83,8 +83,8 @@
       },
       {
         "path": "page/symbols_en.rst",
-        "sha256": "55b5139f1031747c69f351b8ac63040c1b22c1ae2da82028d1d19cdf9a6b0164",
-        "size": 6346
+        "sha256": "f358fccc0e2fa074e818f45f35ead3bc859036e498b39c1764d334a577d6b794",
+        "size": 7012
       },
       {
         "path": "page/troubleshooting_en.rst",
@@ -92,9 +92,9 @@
         "size": 1710
       }
     ],
-    "sha256": "4e563f9883d82f9ef59e325847eb003e7d3996321b8fae9960d03b5d33fc9360"
+    "sha256": "cf92764ae9fe12d9a57cf75233ddb66956808df9b6408835d1bbee1ad20e2552"
   },
-  "git_ref": "138c965413ef8b4a14f536bb2b5672dd9274b131",
+  "git_ref": "36f9aa96795412cd11298c2c285974f89742fc21",
   "html": {
     "files": [
       {
@@ -371,6 +371,11 @@
         "path": "_images/solar_direct.png",
         "sha256": "8332edf8c7678e11924ab5efbc3aea63a72516f20f9ae4fde1c9d55983e1e287",
         "size": 188770
+      },
+      {
+        "path": "_images/symbol_battery_weee.png",
+        "sha256": "cf04ff00bdeb8de5971a55e5d8be6ef91e1a4ddad479f817f0c535914a392d45",
+        "size": 19806
       },
       {
         "path": "_sources/index.rst.txt",
@@ -679,8 +684,8 @@
       },
       {
         "path": "index.html",
-        "sha256": "4b532c72d657001934de276b4ea5c2cc5c4015b24ea8f878f35e643e19150226",
-        "size": 79493
+        "sha256": "35cce8d05ba8f5d99f1ca53bda01e57457708659d602a2203bc8c4f6a0cc1071",
+        "size": 80182
       },
       {
         "path": "jbp2000b_ac_charging.pdf",
@@ -1479,8 +1484,8 @@
       },
       {
         "path": "searchindex.js",
-        "sha256": "988090a639c4f99f3b7c7b5aa72251be9727d23108f507e76784c12cd1d06a64",
-        "size": 10326
+        "sha256": "2976ac10ae4f1943c4bbb9d65841c1c45b1669874828e409fdc9f818185fb892",
+        "size": 10448
       },
       {
         "path": "solar_adapter.pdf",
@@ -1494,8 +1499,8 @@
       },
       {
         "path": "sphinx-warnings.log",
-        "sha256": "394efa59aae143096fd6ab6e2fa807af9476a32ef48de654436405a7c8f58571",
-        "size": 113
+        "sha256": "27f4c2e108a0d726922a885ae75d74746ebb92034be15f01c154424eb1bcfb98",
+        "size": 143
       },
       {
         "path": "warning_lockup.jpg",
@@ -1508,7 +1513,7 @@
         "size": 316221
       }
     ],
-    "sha256": "01634d7f9fec535f3b5a0aa907201ae45af55f6d1fac9e68e84aad37ef3f16f7"
+    "sha256": "0f353938d1d87972fb025deb38f1477c3857498466c723f706552f3b7d8282a5"
   },
   "language": "en",
   "markdown": {
@@ -1984,6 +1989,11 @@
         "size": 3966
       },
       {
+        "path": "assets/ir/cf04ff00bdeb8de5971a55e5d8be6ef91e1a4ddad479f817f0c535914a392d45/symbol_battery_weee.png",
+        "sha256": "cf04ff00bdeb8de5971a55e5d8be6ef91e1a4ddad479f817f0c535914a392d45",
+        "size": 19806
+      },
+      {
         "path": "assets/ir/cfb69b1ffc0b30c51216fb6b1e00e35b412dd0148b6999d3d40ac90fbfe108cb/11_Remaining_Charge_Time_SZCibGTutonnswxC2CycfSwmncc.png",
         "sha256": "cfb69b1ffc0b30c51216fb6b1e00e35b412dd0148b6999d3d40ac90fbfe108cb",
         "size": 1974
@@ -2079,41 +2089,6 @@
         "size": 1814
       },
       {
-        "path": "assets/operation.ac-output_en_d775fac753d4_d775fac753d4.png",
-        "sha256": "d775fac753d482ca3a40c0f61f6bfc28c74280d746b9ee220c671a24b444e019",
-        "size": 101220
-      },
-      {
-        "path": "assets/operation.dc-usb-output_en_8d9c9faed173_8d9c9faed173.png",
-        "sha256": "8d9c9faed173010decc8adc7513a284aea7def5bd2f94e51c46a6fccc6b22e8c",
-        "size": 108652
-      },
-      {
-        "path": "assets/operation.energy-saving_en_0172891c9485_0172891c9485.png",
-        "sha256": "0172891c9485e9d554a4f81b2a688af4492834a3a505fd96d3e107089196aa55",
-        "size": 122943
-      },
-      {
-        "path": "assets/operation.led-light_en_ca664bce0375_ca664bce0375.png",
-        "sha256": "ca664bce037561c5ac6e172569be4f2a3248401d4b5189be16b8c07842dd4ed7",
-        "size": 106196
-      },
-      {
-        "path": "assets/operation.main-power_en_d146a09b705b_d146a09b705b.png",
-        "sha256": "d146a09b705bc34e26589e29286c303c529044936772d8621f71865cf4644471",
-        "size": 97081
-      },
-      {
-        "path": "assets/product-overview.front_en_29bdd9e2f9e6_29bdd9e2f9e6.png",
-        "sha256": "29bdd9e2f9e601bf4e508c86279d43697a281fb74622f67f2156f53aacdfd99a",
-        "size": 113774
-      },
-      {
-        "path": "assets/product-overview.right_en_51e55d14c7f2_51e55d14c7f2.png",
-        "sha256": "51e55d14c7f2ff6b7b6b9b87867c15bab685aafd08dbe95c04eb52d33a9b8e1e",
-        "size": 53641
-      },
-      {
         "path": "conf.py",
         "sha256": "92d63e9b40b8d1fb78666e888f37315f4cde4482c590fdb6481c303b6711f942",
         "size": 812
@@ -2124,20 +2099,25 @@
         "size": 89
       },
       {
+        "path": "manual.ir.json",
+        "sha256": "0eb03abb4302e735fd34974c906dd4e106f5bf56c739e52f4e1489d57b2e2952",
+        "size": 959874
+      },
+      {
         "path": "manual_je1000f_eu_en.md",
-        "sha256": "6fa7b1d800e0ce7275b7900c6cb615dc0090c94e7468a0b1af2a2b6c53fbdf4e",
-        "size": 86382
+        "sha256": "683afab2a560f9b7351f083e43569b9c5deaac4e59ff2e9aea7f7f1a668ed079",
+        "size": 87360
       }
     ],
     "manual": "manual_je1000f_eu_en.md",
-    "sha256": "0b973c435c3a20c937f89c765676dd95374f6793398fe94def3d3baf1f61e06d"
+    "sha256": "f562e55f94fd4bfb8a02ce97a94cff9f240a3025d0baf7b4014c0eb98e9372a3"
   },
   "model": "JE-1000F",
   "projection_manifest": {
     "path": "projection_bundle_manifest.json",
-    "sha256": "7c0f2087e296dac8fb65bbd13c263fb3f4254b2c12e19804c971df373f9f9d78"
+    "sha256": "d58f683c1475676699aa9aff86ddea8bceeb5fbb8cfb3347d6926d7bcb53a787"
   },
   "region": "EU",
   "schema_version": "auto-manual-web-language-release-evidence/v1",
-  "version": "2.7"
+  "version": "git-20261027-36f9aa96-battery-symbol"
 }
