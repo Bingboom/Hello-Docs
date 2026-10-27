@@ -1,6 +1,6 @@
 {
   "schema_version": "auto-manual-web-publish-branch/v2",
-  "built_at": "2026-10-27T07:51:19+00:00",
+  "built_at": "2026-10-27T07:55:16+00:00",
   "targets": [
     {
       "schema_version": "auto-manual-web-publish-target/v2",
@@ -2500,13 +2500,13 @@
       "region": "JP",
       "lang": "ja",
       "version": "git-20261027-cc8b3421-spec-table",
-      "built_at": "2026-10-27T07:51:19+00:00",
-      "git_ref": "f85d1dd89da3cab9df456acbc62cd53e460bb450",
+      "built_at": "2026-10-27T07:55:16+00:00",
+      "git_ref": "67473d65124c3d3b3a35483532b8e973009005b1",
       "route": "JS-100I/JP/ja/md",
       "manual": "manual_js100i_jp_ja.md",
       "language_scope": "single",
       "language_projection_evidence_path": "evidence/language_projection_receipt.json",
-      "language_projection_evidence_sha256": "4f79bcdc9ce1755f0090930eb072e1109a8e3cdac634185c4e91b84a16e1f82b",
+      "language_projection_evidence_sha256": "f34edfc20c1b13184ece76ab1614377a45012afbb93a8f9c0b660e00974c8041",
       "legacy_default": true,
       "legacy_route": "JS-100I/JP/md",
       "legacy_aliases": [
@@ -44466,7 +44466,7 @@
     {
       "path": "sources/web/JS-100I/JP/ja/md/evidence/language_projection_receipt.json",
       "size": 17822,
-      "sha256": "4f79bcdc9ce1755f0090930eb072e1109a8e3cdac634185c4e91b84a16e1f82b"
+      "sha256": "f34edfc20c1b13184ece76ab1614377a45012afbb93a8f9c0b660e00974c8041"
     },
     {
       "path": "sources/web/JS-100I/JP/ja/md/index.md",
@@ -44491,7 +44491,7 @@
     {
       "path": "sources/web/JS-100I/JP/ja/md/publish_meta.json",
       "size": 671,
-      "sha256": "f5402c952f5b5e197d3e4486f6fab1975982050317d2cb2ad0a20d3f36a322b5"
+      "sha256": "ea2bc8748e809675dc8f178b0f0eb50145583c9ef8505e9f27a1b339d40fa4bb"
     },
     {
       "path": "sources/web/JS-200E/EU/en/md/_static/web_manual.css",
@@ -49701,7 +49701,7 @@
     {
       "path": "web/JS-100I/JP/ja/md/evidence/language_projection_receipt.json",
       "size": 17822,
-      "sha256": "4f79bcdc9ce1755f0090930eb072e1109a8e3cdac634185c4e91b84a16e1f82b"
+      "sha256": "f34edfc20c1b13184ece76ab1614377a45012afbb93a8f9c0b660e00974c8041"
     },
     {
       "path": "web/JS-100I/JP/ja/md/index.md",
