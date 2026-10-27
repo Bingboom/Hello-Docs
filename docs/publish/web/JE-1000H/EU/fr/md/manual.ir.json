@@ -1,12 +1,12 @@
 {
   "asset_refs": [
-    "assets/ir/24e567ffad0566246aab95bc86be386842af60454f7a4b5f1a5ac77ff37cbb8c/warning_triangle.png",
-    "assets/ir/c7a2c7dc6ddd9bb4724d9607df666243fc3bbeaa20a669d00de8f1d1a8463b47/read_manual_operator.png",
-    "assets/ir/908c33c16c067b87c1b1dc5d6663f159ed88146bbb34b9cdbcfd172a59f9058c/do_not_dismantle.png",
-    "assets/ir/460a4a9a19fd00579281005a860145b2de9ffcc10e22f9c48482bd21b84be3fc/no_open_flame.png",
-    "assets/ir/45d63066ac4dfb875d049fd30fe85c33966b6ba401174c672f582d12722be200/keep_away_from_children.png",
-    "assets/ir/f913a65f077499d5c60979c71003f852f6bff932874962ce2337bc31e8543e48/li_ion.png",
-    "assets/ir/7e4de290ea13b86bd50fbb209b4510116116d4fb403b7ef4f83cf1c1db873989/weee.png",
+    "assets/ir/0f41fe5ea49fb7a830cab90d2a5473587dd8a0c04db775b42953f58dbea3fb0a/symbol_warning_triangle.svg",
+    "assets/ir/1d2087064f92538d3b0762607056ac268f1d1c24e8f446c66626ac35c4e43584/symbol_read_manual.svg",
+    "assets/ir/5ad4fa830a5b4f9bf23af4c09493fc2610f8fda94ea6fcf925288d1cb6491f33/symbol_do_not_dismantle.svg",
+    "assets/ir/4a82cdd8683e595eb3c9f63ecce457ca53cc5ea6c3f5906ecd7e1d8a4b3be01f/symbol_no_open_flame.svg",
+    "assets/ir/a58074f90ef83ab647ae94215dc0e3315cb9d113aaa4e104a6b26dc3b241d899/symbol_keep_away_from_children.svg",
+    "assets/ir/4d202540e27b0d52e806abf8b0e357382d0661d31f07a756b624108e2c0716d9/native-li_ion_gray_jp.svg",
+    "assets/ir/6883f899f43ac0642f43b8f9cf4118a394c1382ee409f4498544f90ba37b56a5/symbol_weee.png",
     "assets/ir/3fd38a3aa92342d9afeb8d674663593e85a884dca9463c7d2e9f5ff7c8d11c34/inbox_unit.png",
     "assets/ir/5659a402e72161244838441af35b02b52f2124ded363c732332af8baf5d013e8/inbox_cable.png",
     "assets/ir/34412c27924ca2770f82649394ce88ba36b4dd692f9e766fd7811d1233a006f9/inbox_documents.png",
@@ -56,9 +56,9 @@
     "assets/ir/b62efe1ac31f26c742c6b2492adb676b880ff7b177fb72cefa5ec3d5ebdbe67d/app_control_panel.png",
     "assets/ir/072945d3757367b5ff82566e159f7883fb71e2e6e3b6f3df60a35b88e86d93db/app_connect_result.png"
   ],
-  "bundle_root": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/je1000h-lcd-release-4e7df369/JE-1000H-fr/docs/_build/JE-1000H/EU/fr/rst",
-  "bundle_sha256": "0e6f6884b83dd5c8f294143f18a4f52f0e4dae8694da7382719a2476b1fa11f1",
-  "content_sha256": "bda1f5f79bbf67909d232d3b8c84d20de123e2b37aef7f1be8f76c7a7568ccee",
+  "bundle_root": "/tmp/claude-0/-home-user-auto-manual/16869846-c487-5ced-ba61-a7f7b02cc0cf/scratchpad/wtrel/docs/_build/JE-1000H/EU/fr/rst",
+  "bundle_sha256": "dab2e3a46c2bc1727395a9fcfc737d14c23dce7aa9014aebba06f8098bfedca0",
+  "content_sha256": "26a2f00f1a6e04022940311e5674ea8c3db834435d0185cb852c4067d07a2aa5",
   "language": "fr",
   "layout_params_sha256": "f5ae099abc1a82ffda3abcc5a13725aca3c201e720a0374d88d1643f9773f279",
   "metadata": {
@@ -66,36 +66,38 @@
       "assets/ir/02e7039d6f9344247697b0dde2b7a8fca80e3407d93caf60287c5932759dd122/charging_car.png": "02e7039d6f9344247697b0dde2b7a8fca80e3407d93caf60287c5932759dd122",
       "assets/ir/04a7ae8d390b0f1bd22c1542c0e00c68c8c7bfdefca7a8c1508ec4874f4c9365/operation_dc.png": "04a7ae8d390b0f1bd22c1542c0e00c68c8c7bfdefca7a8c1508ec4874f4c9365",
       "assets/ir/072945d3757367b5ff82566e159f7883fb71e2e6e3b6f3df60a35b88e86d93db/app_connect_result.png": "072945d3757367b5ff82566e159f7883fb71e2e6e3b6f3df60a35b88e86d93db",
+      "assets/ir/0f41fe5ea49fb7a830cab90d2a5473587dd8a0c04db775b42953f58dbea3fb0a/symbol_warning_triangle.svg": "0f41fe5ea49fb7a830cab90d2a5473587dd8a0c04db775b42953f58dbea3fb0a",
+      "assets/ir/1d2087064f92538d3b0762607056ac268f1d1c24e8f446c66626ac35c4e43584/symbol_read_manual.svg": "1d2087064f92538d3b0762607056ac268f1d1c24e8f446c66626ac35c4e43584",
       "assets/ir/200cd52148a2598f8da520a5b91190506bda5d06bc6c7240daca06e863f8bc78/charging_ac.png": "200cd52148a2598f8da520a5b91190506bda5d06bc6c7240daca06e863f8bc78",
       "assets/ir/21b5f19ca9a6e39d8bd515128297cc1b99e43fd263e39ffba4fdf102d50a4bad/16_charging_power_limit.png": "21b5f19ca9a6e39d8bd515128297cc1b99e43fd263e39ffba4fdf102d50a4bad",
       "assets/ir/22a6c7f1dec79edf795206b7a5b291597246e478a737af39b21eae94f98bf909/operation_ac.png": "22a6c7f1dec79edf795206b7a5b291597246e478a737af39b21eae94f98bf909",
-      "assets/ir/24e567ffad0566246aab95bc86be386842af60454f7a4b5f1a5ac77ff37cbb8c/warning_triangle.png": "24e567ffad0566246aab95bc86be386842af60454f7a4b5f1a5ac77ff37cbb8c",
       "assets/ir/28e7fd4372b1f6ee2b1a37a6db9e0205c452d3de0ee974527f774a228be99248/operation_lcd.png": "28e7fd4372b1f6ee2b1a37a6db9e0205c452d3de0ee974527f774a228be99248",
       "assets/ir/28f3cad42ae32e9e895abfd7cdb16a21b99dfa822c57d542f0e3f59a4b452c6c/12_ac_wall_charging_indicator.png": "28f3cad42ae32e9e895abfd7cdb16a21b99dfa822c57d542f0e3f59a4b452c6c",
       "assets/ir/33989b1bd64546d6744cfeae93b14a524392e0136bcb10796eae57b05444f0e4/operation_energy.png": "33989b1bd64546d6744cfeae93b14a524392e0136bcb10796eae57b05444f0e4",
       "assets/ir/34412c27924ca2770f82649394ce88ba36b4dd692f9e766fd7811d1233a006f9/inbox_documents.png": "34412c27924ca2770f82649394ce88ba36b4dd692f9e766fd7811d1233a006f9",
       "assets/ir/3fd38a3aa92342d9afeb8d674663593e85a884dca9463c7d2e9f5ff7c8d11c34/inbox_unit.png": "3fd38a3aa92342d9afeb8d674663593e85a884dca9463c7d2e9f5ff7c8d11c34",
       "assets/ir/423d369f25f239050ed7d9440fae729ec1c2c295571b69dd20b09c5101fccd6c/app_download.png": "423d369f25f239050ed7d9440fae729ec1c2c295571b69dd20b09c5101fccd6c",
-      "assets/ir/45d63066ac4dfb875d049fd30fe85c33966b6ba401174c672f582d12722be200/keep_away_from_children.png": "45d63066ac4dfb875d049fd30fe85c33966b6ba401174c672f582d12722be200",
-      "assets/ir/460a4a9a19fd00579281005a860145b2de9ffcc10e22f9c48482bd21b84be3fc/no_open_flame.png": "460a4a9a19fd00579281005a860145b2de9ffcc10e22f9c48482bd21b84be3fc",
+      "assets/ir/4a82cdd8683e595eb3c9f63ecce457ca53cc5ea6c3f5906ecd7e1d8a4b3be01f/symbol_no_open_flame.svg": "4a82cdd8683e595eb3c9f63ecce457ca53cc5ea6c3f5906ecd7e1d8a4b3be01f",
+      "assets/ir/4d202540e27b0d52e806abf8b0e357382d0661d31f07a756b624108e2c0716d9/native-li_ion_gray_jp.svg": "4d202540e27b0d52e806abf8b0e357382d0661d31f07a756b624108e2c0716d9",
       "assets/ir/5659a402e72161244838441af35b02b52f2124ded363c732332af8baf5d013e8/inbox_cable.png": "5659a402e72161244838441af35b02b52f2124ded363c732332af8baf5d013e8",
       "assets/ir/58c1d3604ca7b9774b069c6928775a13465ccb9477f477e9e4d4b30e7f75b88d/26_output_power.png": "58c1d3604ca7b9774b069c6928775a13465ccb9477f477e9e4d4b30e7f75b88d",
+      "assets/ir/5ad4fa830a5b4f9bf23af4c09493fc2610f8fda94ea6fcf925288d1cb6491f33/symbol_do_not_dismantle.svg": "5ad4fa830a5b4f9bf23af4c09493fc2610f8fda94ea6fcf925288d1cb6491f33",
       "assets/ir/5f99080df173766cb06015db9c5871f46b859ba21e107f40ac75d7a2b4646f4a/overview_front.png": "5f99080df173766cb06015db9c5871f46b859ba21e107f40ac75d7a2b4646f4a",
+      "assets/ir/6883f899f43ac0642f43b8f9cf4118a394c1382ee409f4498544f90ba37b56a5/symbol_weee.png": "6883f899f43ac0642f43b8f9cf4118a394c1382ee409f4498544f90ba37b56a5",
       "assets/ir/6aab9a14900a08fcd8f8261e6e36fbb9a1220eb931df94ebd149b23930063723/20_discharge_timer.png": "6aab9a14900a08fcd8f8261e6e36fbb9a1220eb931df94ebd149b23930063723",
       "assets/ir/71017f43bab44852d5586d1d4f996f3c52d8451bceaa9249e29864652c2f537d/04_charging_plan.png": "71017f43bab44852d5586d1d4f996f3c52d8451bceaa9249e29864652c2f537d",
       "assets/ir/73225cf9faa868bbe937df298d55a696828a4156f40e90da5c2a7f0011f0b783/05_self_powered_mode.png": "73225cf9faa868bbe937df298d55a696828a4156f40e90da5c2a7f0011f0b783",
       "assets/ir/747147be99d76bb486c858aeca2289d7d05ad3be1f1ea1f0825f54cb29b7fd10/19_remaining_battery_percentage.png": "747147be99d76bb486c858aeca2289d7d05ad3be1f1ea1f0825f54cb29b7fd10",
       "assets/ir/7623ef10e229bcfe66c872f3733d26b86c97d703ed30012188a88bb4a168e6df/09_output_voltage_and_frequency.png": "7623ef10e229bcfe66c872f3733d26b86c97d703ed30012188a88bb4a168e6df",
       "assets/ir/7e1392ba6a45e66a2e7367ae5df737ccc41ad2de46c4ac7d6baf062ff63bb361/02_bluetooth.png": "7e1392ba6a45e66a2e7367ae5df737ccc41ad2de46c4ac7d6baf062ff63bb361",
-      "assets/ir/7e4de290ea13b86bd50fbb209b4510116116d4fb403b7ef4f83cf1c1db873989/weee.png": "7e4de290ea13b86bd50fbb209b4510116116d4fb403b7ef4f83cf1c1db873989",
       "assets/ir/7f743182c0509307793dde001356fff5c3d20dd32b09105b6a1d467af7e7f66d/03_quiet_charging_mode.png": "7f743182c0509307793dde001356fff5c3d20dd32b09105b6a1d467af7e7f66d",
       "assets/ir/85921a9ad7fbfa58f98ee7bb0dc904377f31fe3dbface4083d2493144b05362f/17_battery_power_indicator.png": "85921a9ad7fbfa58f98ee7bb0dc904377f31fe3dbface4083d2493144b05362f",
       "assets/ir/8be87c5a084994e3b4b6ddff46ce0296207a5c49c732f8ed13adfbcb28a36538/08_ac_power_indicator.png": "8be87c5a084994e3b4b6ddff46ce0296207a5c49c732f8ed13adfbcb28a36538",
       "assets/ir/8e8933db821a47ace5843f885838ea393061d04dc7370342f26a5f0929b4ee92/charging_solar_adapter.png": "8e8933db821a47ace5843f885838ea393061d04dc7370342f26a5f0929b4ee92",
-      "assets/ir/908c33c16c067b87c1b1dc5d6663f159ed88146bbb34b9cdbcfd172a59f9058c/do_not_dismantle.png": "908c33c16c067b87c1b1dc5d6663f159ed88146bbb34b9cdbcfd172a59f9058c",
       "assets/ir/91cec82eeaa553477868d38789d68a4937cb11c5c4d794de74db1edddb3aeea4/14_solar_charging_indicator.png": "91cec82eeaa553477868d38789d68a4937cb11c5c4d794de74db1edddb3aeea4",
       "assets/ir/9b148ea95d3a3450591c7220908b0913048f2cdea1e61d200534181c52b47cab/27_remaining_discharge_time.png": "9b148ea95d3a3450591c7220908b0913048f2cdea1e61d200534181c52b47cab",
       "assets/ir/a2ee34cf24353d29dcb5b7dc9413ca7f4363e3761a11adb425f73877e8669d7a/operation_power.png": "a2ee34cf24353d29dcb5b7dc9413ca7f4363e3761a11adb425f73877e8669d7a",
+      "assets/ir/a58074f90ef83ab647ae94215dc0e3315cb9d113aaa4e104a6b26dc3b241d899/symbol_keep_away_from_children.svg": "a58074f90ef83ab647ae94215dc0e3315cb9d113aaa4e104a6b26dc3b241d899",
       "assets/ir/a9d2333f0b735497a1404644e48b550f18275da43f079ebbc96c3902692fba43/overview_side.png": "a9d2333f0b735497a1404644e48b550f18275da43f079ebbc96c3902692fba43",
       "assets/ir/ab273cd8cd37779430c2be5cb2cd889470edea82306f9196e1e8374009b202d1/operation_led.png": "ab273cd8cd37779430c2be5cb2cd889470edea82306f9196e1e8374009b202d1",
       "assets/ir/aed575a6a240eb2a3a59eee26a19e730fd5186c3310dc2cde5e89038029ae47d/battery_pack.png": "aed575a6a240eb2a3a59eee26a19e730fd5186c3310dc2cde5e89038029ae47d",
@@ -106,7 +108,6 @@
       "assets/ir/c4b830c769a3de7f9effaee82466752f5706a0741ba29675cce45633c1cd8222/22_energy_saving_mode.png": "c4b830c769a3de7f9effaee82466752f5706a0741ba29675cce45633c1cd8222",
       "assets/ir/c726afd6e7f80dafa5432c90f4dcba8e864435a818cfb8e6edd721a81105a210/ups.png": "c726afd6e7f80dafa5432c90f4dcba8e864435a818cfb8e6edd721a81105a210",
       "assets/ir/c7862a87e742d6927b4e1d63a8d0ccb09fbcf980ae662ff94b9134e256e56889/18_low_battery_indicator.png": "c7862a87e742d6927b4e1d63a8d0ccb09fbcf980ae662ff94b9134e256e56889",
-      "assets/ir/c7a2c7dc6ddd9bb4724d9607df666243fc3bbeaa20a669d00de8f1d1a8463b47/read_manual_operator.png": "c7a2c7dc6ddd9bb4724d9607df666243fc3bbeaa20a669d00de8f1d1a8463b47",
       "assets/ir/ce913ebfc7750764f4206250f5e21aa09bd1cfc074bdee5b0484d61610f1b579/25_fault_code.png": "ce913ebfc7750764f4206250f5e21aa09bd1cfc074bdee5b0484d61610f1b579",
       "assets/ir/cfb69b1ffc0b30c51216fb6b1e00e35b412dd0148b6999d3d40ac90fbfe108cb/11_remaining_charge_time.png": "cfb69b1ffc0b30c51216fb6b1e00e35b412dd0148b6999d3d40ac90fbfe108cb",
       "assets/ir/d5100a538e964da13e04241a98134e6aeaa36af8991aceeecac3c5d063b6968b/10_input_power.png": "d5100a538e964da13e04241a98134e6aeaa36af8991aceeecac3c5d063b6968b",
@@ -115,7 +116,6 @@
       "assets/ir/eed3299c3f6a15766e433ebbae7a40af8939e6d32489a0aa33a37fe902232a64/13_car_charging_indicator.png": "eed3299c3f6a15766e433ebbae7a40af8939e6d32489a0aa33a37fe902232a64",
       "assets/ir/f4cdcb5511058eaaf1879a69a429317dd3d98325dd5e19f5dd95b06ea2c965af/06_tou_mode.png": "f4cdcb5511058eaaf1879a69a429317dd3d98325dd5e19f5dd95b06ea2c965af",
       "assets/ir/f548c6504f495da4f208cd8e5fe6eac6076daea05e314115abd26b46a9326ba5/23_high_temperature_indicator.png": "f548c6504f495da4f208cd8e5fe6eac6076daea05e314115abd26b46a9326ba5",
-      "assets/ir/f913a65f077499d5c60979c71003f852f6bff932874962ce2337bc31e8543e48/li_ion.png": "f913a65f077499d5c60979c71003f852f6bff932874962ce2337bc31e8543e48",
       "assets/ir/fc4cc02b42efc31a32429ada2b78c4480a2fcbca647406da29b2ce75a8a8c1dc/01_wifi.png": "fc4cc02b42efc31a32429ada2b78c4480a2fcbca647406da29b2ce75a8a8c1dc",
       "assets/ir/fce6a1bc0403bd8b6a980f05c2f5a27bb68e5cdefb24151f09fcb03c6575f35f/charging_solar.png": "fce6a1bc0403bd8b6a980f05c2f5a27bb68e5cdefb24151f09fcb03c6575f35f"
     },
@@ -242,6 +242,12 @@
               ],
               "required": false
             },
+            "interstitial_note": {
+              "content_kinds": [
+                "rich_text"
+              ],
+              "required": false
+            },
             "labels": {
               "content_kinds": [
                 "ordered_labels"
@@ -276,8 +282,29 @@
           "token_roles": [
             "component.special.app"
           ],
+          "variant_adapters": {
+            "download-qr-only": {
+              "idml": {
+                "capability": "not-applicable",
+                "key": "idml_app"
+              },
+              "latex": {
+                "capability": "not-applicable",
+                "key": "hb_latex_app"
+              },
+              "web": {
+                "capability": "rendered",
+                "key": "hb_app"
+              },
+              "word": {
+                "capability": "not-applicable",
+                "key": "word_app"
+              }
+            }
+          },
           "variants": [
             "download",
+            "download-qr-only",
             "inline-control",
             "add-device"
           ]
@@ -827,7 +854,8 @@
             "component.table.lcd-icon"
           ],
           "variants": [
-            "icon-catalog"
+            "icon-catalog",
+            "icon-catalog-unnumbered"
           ]
         },
         "HB-TABLE-LCD-MODE": {
@@ -931,10 +959,12 @@
             "component.table.reference"
           ],
           "variants": [
+            "lcd-descriptions",
             "lcd-legend",
             "lcd-actions",
             "lcd-actions-compact",
-            "symbol-meanings"
+            "symbol-meanings",
+            "plain-inventory"
           ]
         },
         "HB-TABLE-SPEC": {
@@ -1292,7 +1322,7 @@
       "registry_id": "hb-component-registry",
       "schema_version": "component-registry/v1"
     },
-    "component_registry_sha256": "b2952c2d89dbfb87a8ceae7b65a892a63a09f80ccf753bffb65158be2123100e",
+    "component_registry_sha256": "9275f1facc80873cdbf74f4f3c91c29f87ebc26fd6056eb37e69e13f96639a8f",
     "composites": [],
     "declared_languages": [
       "fr"
@@ -2396,7 +2426,8 @@
       "meaning_symbols": {
         "signal_row_count": 4,
         "source_patterns": [
-          "symbols_*"
+          "symbols_*",
+          "symbols"
         ]
       },
       "operations": {
@@ -3073,7 +3104,7 @@
         {
           "asset_refs": [],
           "block_id": "safety_fr.rst:block-0001",
-          "content_sha256": "b4819f8f81710297feacdfd129ee6c8157344972003e40d1b5c0bf44e9b77c12",
+          "content_sha256": "dbebde03b9945bdb4fa756488ce24cc01c1a9c7689c143259477c6e9d6991ee0",
           "kind": "flow",
           "payload": {
             "children": [
@@ -3205,7 +3236,7 @@
                       "role": "body"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/je1000h-lcd-release-4e7df369/JE-1000H-fr/docs/_build/JE-1000H/EU/fr/rst/page/safety_fr.rst#callout-1",
+                  "source_ref": "/tmp/claude-0/-home-user-auto-manual/16869846-c487-5ced-ba61-a7f7b02cc0cf/scratchpad/wtrel/docs/_build/JE-1000H/EU/fr/rst/page/safety_fr.rst#callout-1",
                   "token_roles": [
                     "component.callout"
                   ],
@@ -3402,7 +3433,7 @@
       "language": "fr",
       "page_id": "safety_fr.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/je1000h-lcd-release-4e7df369/JE-1000H-fr/docs/_build/JE-1000H/EU/fr/rst/page/safety_fr.rst",
+      "source_path": "/tmp/claude-0/-home-user-auto-manual/16869846-c487-5ced-ba61-a7f7b02cc0cf/scratchpad/wtrel/docs/_build/JE-1000H/EU/fr/rst/page/safety_fr.rst",
       "source_ref": "safety_fr.rst",
       "source_sha256": "2240ae527ae8955cfb310563a32979c935b3e313905750b577e7ae634ce7b31e"
     },
@@ -3456,7 +3487,7 @@
       "language": "fr",
       "page_id": "01_user_maintenance_instructions.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/je1000h-lcd-release-4e7df369/JE-1000H-fr/docs/_build/JE-1000H/EU/fr/rst/page/01_user_maintenance_instructions.rst",
+      "source_path": "/tmp/claude-0/-home-user-auto-manual/16869846-c487-5ced-ba61-a7f7b02cc0cf/scratchpad/wtrel/docs/_build/JE-1000H/EU/fr/rst/page/01_user_maintenance_instructions.rst",
       "source_ref": "01_user_maintenance_instructions.rst",
       "source_sha256": "49273d4ec089b9a8dea2442af876f32a18146cc7d996baa1fb26a353c66419c3"
     },
@@ -3483,7 +3514,7 @@
         {
           "asset_refs": [],
           "block_id": "symbols_fr.rst:block-0002",
-          "content_sha256": "86d32b3badb0f6bd61f132b0200cea2f89d2fd1b5b36613c4e4d80db8ca7a343",
+          "content_sha256": "06593eaede8dfbebf94de3417187eb4228caa83fc94920d1639d9077f9669db4",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -3985,29 +4016,33 @@
                     {
                       "label": "AVERTISSEMENT",
                       "meaning_html": "<p>Pratiques dangereuses pouvant entraîner des blessures graves, la mort et/ou des dommages matériels.</p>",
-                      "meaning_text": "Pratiques dangereuses pouvant entraîner des blessures graves, la mort et/ou des dommages matériels."
+                      "meaning_text": "Pratiques dangereuses pouvant entraîner des blessures graves, la mort et/ou des dommages matériels.",
+                      "show_icon": true
                     },
                     {
                       "label": "ATTENTION",
                       "meaning_html": "<p>Pratiques dangereuses pouvant entraîner des blessures corporelles et/ou des dommages matériels.</p>",
-                      "meaning_text": "Pratiques dangereuses pouvant entraîner des blessures corporelles et/ou des dommages matériels."
+                      "meaning_text": "Pratiques dangereuses pouvant entraîner des blessures corporelles et/ou des dommages matériels.",
+                      "show_icon": true
                     },
                     {
                       "label": "REMARQUE",
                       "meaning_html": "<p>Pratiques dangereuses pouvant entraîner des dommages à l'équipement, une perte de données, une détérioration des performances ou des résultats inattendus.</p>",
-                      "meaning_text": "Pratiques dangereuses pouvant entraîner des dommages à l'équipement, une perte de données, une détérioration des performances ou des résultats inattendus."
+                      "meaning_text": "Pratiques dangereuses pouvant entraîner des dommages à l'équipement, une perte de données, une détérioration des performances ou des résultats inattendus.",
+                      "show_icon": false
                     },
                     {
                       "label": "CONSEILS",
                       "meaning_html": "<p>Complémente les informations importantes ou les conseils d'utilisation dans le texte.</p>",
-                      "meaning_text": "Complémente les informations importantes ou les conseils d'utilisation dans le texte."
+                      "meaning_text": "Complémente les informations importantes ou les conseils d'utilisation dans le texte.",
+                      "show_icon": false
                     }
                   ],
                   "content_kind": "ordered_rows",
                   "role": "rows"
                 }
               ],
-              "source_ref": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/je1000h-lcd-release-4e7df369/JE-1000H-fr/docs/_build/JE-1000H/EU/fr/rst/page/symbols_fr.rst#symbol-signals",
+              "source_ref": "/tmp/claude-0/-home-user-auto-manual/16869846-c487-5ced-ba61-a7f7b02cc0cf/scratchpad/wtrel/docs/_build/JE-1000H/EU/fr/rst/page/symbols_fr.rst#symbol-signals",
               "token_roles": [
                 "component.table.symbol-signal"
               ],
@@ -4032,16 +4067,16 @@
         },
         {
           "asset_refs": [
-            "assets/ir/24e567ffad0566246aab95bc86be386842af60454f7a4b5f1a5ac77ff37cbb8c/warning_triangle.png",
-            "assets/ir/c7a2c7dc6ddd9bb4724d9607df666243fc3bbeaa20a669d00de8f1d1a8463b47/read_manual_operator.png",
-            "assets/ir/908c33c16c067b87c1b1dc5d6663f159ed88146bbb34b9cdbcfd172a59f9058c/do_not_dismantle.png",
-            "assets/ir/460a4a9a19fd00579281005a860145b2de9ffcc10e22f9c48482bd21b84be3fc/no_open_flame.png",
-            "assets/ir/45d63066ac4dfb875d049fd30fe85c33966b6ba401174c672f582d12722be200/keep_away_from_children.png",
-            "assets/ir/f913a65f077499d5c60979c71003f852f6bff932874962ce2337bc31e8543e48/li_ion.png",
-            "assets/ir/7e4de290ea13b86bd50fbb209b4510116116d4fb403b7ef4f83cf1c1db873989/weee.png"
+            "assets/ir/0f41fe5ea49fb7a830cab90d2a5473587dd8a0c04db775b42953f58dbea3fb0a/symbol_warning_triangle.svg",
+            "assets/ir/1d2087064f92538d3b0762607056ac268f1d1c24e8f446c66626ac35c4e43584/symbol_read_manual.svg",
+            "assets/ir/5ad4fa830a5b4f9bf23af4c09493fc2610f8fda94ea6fcf925288d1cb6491f33/symbol_do_not_dismantle.svg",
+            "assets/ir/4a82cdd8683e595eb3c9f63ecce457ca53cc5ea6c3f5906ecd7e1d8a4b3be01f/symbol_no_open_flame.svg",
+            "assets/ir/a58074f90ef83ab647ae94215dc0e3315cb9d113aaa4e104a6b26dc3b241d899/symbol_keep_away_from_children.svg",
+            "assets/ir/4d202540e27b0d52e806abf8b0e357382d0661d31f07a756b624108e2c0716d9/native-li_ion_gray_jp.svg",
+            "assets/ir/6883f899f43ac0642f43b8f9cf4118a394c1382ee409f4498544f90ba37b56a5/symbol_weee.png"
           ],
           "block_id": "symbols_fr.rst:block-0004",
-          "content_sha256": "53af40ed3a18f7ad58752f13f9f243c89fdc231d1374211ccde0df5ca256d50d",
+          "content_sha256": "d1bc294c066516c83bf7d7cf5518d38694254f495d33e1b495e60f2b685730e2",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -4245,7 +4280,7 @@
                                     }
                                   }
                                 },
-                                "source": "assets/ir/24e567ffad0566246aab95bc86be386842af60454f7a4b5f1a5ac77ff37cbb8c/warning_triangle.png"
+                                "source": "assets/ir/0f41fe5ea49fb7a830cab90d2a5473587dd8a0c04db775b42953f58dbea3fb0a/symbol_warning_triangle.svg"
                               },
                               {
                                 "kind": "text",
@@ -4290,7 +4325,7 @@
                                     }
                                   }
                                 },
-                                "source": "assets/ir/45d63066ac4dfb875d049fd30fe85c33966b6ba401174c672f582d12722be200/keep_away_from_children.png"
+                                "source": "assets/ir/a58074f90ef83ab647ae94215dc0e3315cb9d113aaa4e104a6b26dc3b241d899/symbol_keep_away_from_children.svg"
                               },
                               {
                                 "kind": "text",
@@ -4344,7 +4379,7 @@
                                     }
                                   }
                                 },
-                                "source": "assets/ir/c7a2c7dc6ddd9bb4724d9607df666243fc3bbeaa20a669d00de8f1d1a8463b47/read_manual_operator.png"
+                                "source": "assets/ir/1d2087064f92538d3b0762607056ac268f1d1c24e8f446c66626ac35c4e43584/symbol_read_manual.svg"
                               },
                               {
                                 "kind": "text",
@@ -4389,7 +4424,7 @@
                                     }
                                   }
                                 },
-                                "source": "assets/ir/f913a65f077499d5c60979c71003f852f6bff932874962ce2337bc31e8543e48/li_ion.png"
+                                "source": "assets/ir/4d202540e27b0d52e806abf8b0e357382d0661d31f07a756b624108e2c0716d9/native-li_ion_gray_jp.svg"
                               },
                               {
                                 "kind": "text",
@@ -4443,7 +4478,7 @@
                                     }
                                   }
                                 },
-                                "source": "assets/ir/908c33c16c067b87c1b1dc5d6663f159ed88146bbb34b9cdbcfd172a59f9058c/do_not_dismantle.png"
+                                "source": "assets/ir/5ad4fa830a5b4f9bf23af4c09493fc2610f8fda94ea6fcf925288d1cb6491f33/symbol_do_not_dismantle.svg"
                               },
                               {
                                 "kind": "text",
@@ -4488,7 +4523,7 @@
                                     }
                                   }
                                 },
-                                "source": "assets/ir/7e4de290ea13b86bd50fbb209b4510116116d4fb403b7ef4f83cf1c1db873989/weee.png"
+                                "source": "assets/ir/6883f899f43ac0642f43b8f9cf4118a394c1382ee409f4498544f90ba37b56a5/symbol_weee.png"
                               },
                               {
                                 "kind": "text",
@@ -4542,7 +4577,7 @@
                                     }
                                   }
                                 },
-                                "source": "assets/ir/460a4a9a19fd00579281005a860145b2de9ffcc10e22f9c48482bd21b84be3fc/no_open_flame.png"
+                                "source": "assets/ir/4a82cdd8683e595eb3c9f63ecce457ca53cc5ea6c3f5906ecd7e1d8a4b3be01f/symbol_no_open_flame.svg"
                               },
                               {
                                 "kind": "text",
@@ -4623,37 +4658,37 @@
             "component_spec": {
               "assets": [
                 {
-                  "asset_ref": "assets/ir/24e567ffad0566246aab95bc86be386842af60454f7a4b5f1a5ac77ff37cbb8c/warning_triangle.png",
+                  "asset_ref": "assets/ir/0f41fe5ea49fb7a830cab90d2a5473587dd8a0c04db775b42953f58dbea3fb0a/symbol_warning_triangle.svg",
                   "locale_policy": "shared",
                   "role": "icons"
                 },
                 {
-                  "asset_ref": "assets/ir/c7a2c7dc6ddd9bb4724d9607df666243fc3bbeaa20a669d00de8f1d1a8463b47/read_manual_operator.png",
+                  "asset_ref": "assets/ir/1d2087064f92538d3b0762607056ac268f1d1c24e8f446c66626ac35c4e43584/symbol_read_manual.svg",
                   "locale_policy": "shared",
                   "role": "icons"
                 },
                 {
-                  "asset_ref": "assets/ir/908c33c16c067b87c1b1dc5d6663f159ed88146bbb34b9cdbcfd172a59f9058c/do_not_dismantle.png",
+                  "asset_ref": "assets/ir/5ad4fa830a5b4f9bf23af4c09493fc2610f8fda94ea6fcf925288d1cb6491f33/symbol_do_not_dismantle.svg",
                   "locale_policy": "shared",
                   "role": "icons"
                 },
                 {
-                  "asset_ref": "assets/ir/460a4a9a19fd00579281005a860145b2de9ffcc10e22f9c48482bd21b84be3fc/no_open_flame.png",
+                  "asset_ref": "assets/ir/4a82cdd8683e595eb3c9f63ecce457ca53cc5ea6c3f5906ecd7e1d8a4b3be01f/symbol_no_open_flame.svg",
                   "locale_policy": "shared",
                   "role": "icons"
                 },
                 {
-                  "asset_ref": "assets/ir/45d63066ac4dfb875d049fd30fe85c33966b6ba401174c672f582d12722be200/keep_away_from_children.png",
+                  "asset_ref": "assets/ir/a58074f90ef83ab647ae94215dc0e3315cb9d113aaa4e104a6b26dc3b241d899/symbol_keep_away_from_children.svg",
                   "locale_policy": "shared",
                   "role": "icons"
                 },
                 {
-                  "asset_ref": "assets/ir/f913a65f077499d5c60979c71003f852f6bff932874962ce2337bc31e8543e48/li_ion.png",
+                  "asset_ref": "assets/ir/4d202540e27b0d52e806abf8b0e357382d0661d31f07a756b624108e2c0716d9/native-li_ion_gray_jp.svg",
                   "locale_policy": "shared",
                   "role": "icons"
                 },
                 {
-                  "asset_ref": "assets/ir/7e4de290ea13b86bd50fbb209b4510116116d4fb403b7ef4f83cf1c1db873989/weee.png",
+                  "asset_ref": "assets/ir/6883f899f43ac0642f43b8f9cf4118a394c1382ee409f4498544f90ba37b56a5/symbol_weee.png",
                   "locale_policy": "shared",
                   "role": "icons"
                 }
@@ -4743,7 +4778,7 @@
                   "role": "panels"
                 }
               ],
-              "source_ref": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/je1000h-lcd-release-4e7df369/JE-1000H-fr/docs/_build/JE-1000H/EU/fr/rst/page/symbols_fr.rst#symbol-icons",
+              "source_ref": "/tmp/claude-0/-home-user-auto-manual/16869846-c487-5ced-ba61-a7f7b02cc0cf/scratchpad/wtrel/docs/_build/JE-1000H/EU/fr/rst/page/symbols_fr.rst#symbol-icons",
               "token_roles": [
                 "component.table.symbol-icon"
               ],
@@ -4758,9 +4793,9 @@
       "language": "fr",
       "page_id": "symbols_fr.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/je1000h-lcd-release-4e7df369/JE-1000H-fr/docs/_build/JE-1000H/EU/fr/rst/page/symbols_fr.rst",
+      "source_path": "/tmp/claude-0/-home-user-auto-manual/16869846-c487-5ced-ba61-a7f7b02cc0cf/scratchpad/wtrel/docs/_build/JE-1000H/EU/fr/rst/page/symbols_fr.rst",
       "source_ref": "symbols_fr.rst",
-      "source_sha256": "c13dd9fd3663c946a0f6d983af26efc84894f0b7d78f0d9c6e875dd2acdb46c8"
+      "source_sha256": "a181ee27ade7d07858859cc9fc2d89cd37b0debccdaee237dbf682a499632a1f"
     },
     {
       "blocks": [
@@ -4789,7 +4824,7 @@
             "assets/ir/34412c27924ca2770f82649394ce88ba36b4dd692f9e766fd7811d1233a006f9/inbox_documents.png"
           ],
           "block_id": "02_whats_in_the_box.rst:block-0002",
-          "content_sha256": "7209a30ff290e66c2f3a258ec90d59986a0daeaaccaa59f1032cdc6fdeeb0164",
+          "content_sha256": "dc3e2d61bc8a1fc64343e6618d42bb70bb4c7974fcddc730b823e274b7601f2d",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -5024,56 +5059,7 @@
               {
                 "children": [
                   {
-                    "kind": "text",
-                    "text": "\n"
-                  },
-                  {
                     "children": [
-                      {
-                        "kind": "text",
-                        "text": "\n"
-                      },
-                      {
-                        "kind": "column",
-                        "presentation": {
-                          "html": {
-                            "attributes": {
-                              "style": "width: 12.0%"
-                            }
-                          }
-                        }
-                      },
-                      {
-                        "kind": "text",
-                        "text": "\n"
-                      },
-                      {
-                        "kind": "column",
-                        "presentation": {
-                          "html": {
-                            "attributes": {
-                              "style": "width: 88.0%"
-                            }
-                          }
-                        }
-                      },
-                      {
-                        "kind": "text",
-                        "text": "\n"
-                      }
-                    ],
-                    "kind": "column_group"
-                  },
-                  {
-                    "kind": "text",
-                    "text": "\n"
-                  },
-                  {
-                    "children": [
-                      {
-                        "kind": "text",
-                        "text": "\n"
-                      },
                       {
                         "children": [
                           {
@@ -5094,11 +5080,17 @@
                               }
                             ],
                             "header": false,
-                            "kind": "table_cell"
-                          },
-                          {
-                            "kind": "text",
-                            "text": "\n"
+                            "kind": "table_cell",
+                            "presentation": {
+                              "html": {
+                                "attributes": {
+                                  "class": [
+                                    "manual-callout-label"
+                                  ],
+                                  "style": "width:16%; border:1px solid #000; padding:6px 8px; vertical-align:top;"
+                                }
+                              }
+                            }
                           },
                           {
                             "children": [
@@ -5113,28 +5105,36 @@
                               }
                             ],
                             "header": false,
-                            "kind": "table_cell"
-                          },
-                          {
-                            "kind": "text",
-                            "text": "\n"
+                            "kind": "table_cell",
+                            "presentation": {
+                              "html": {
+                                "attributes": {
+                                  "class": [
+                                    "manual-callout-body"
+                                  ],
+                                  "style": "border:1px solid #000; padding:6px 8px; vertical-align:top;"
+                                }
+                              }
+                            }
                           }
                         ],
                         "kind": "table_row"
-                      },
-                      {
-                        "kind": "text",
-                        "text": "\n"
                       }
                     ],
                     "kind": "table_body"
-                  },
-                  {
-                    "kind": "text",
-                    "text": "\n"
                   }
                 ],
-                "kind": "table"
+                "kind": "table",
+                "presentation": {
+                  "html": {
+                    "attributes": {
+                      "class": [
+                        "manual-callout-table"
+                      ],
+                      "style": "width:100%; border-collapse:collapse; margin:0 0 16px 0;"
+                    }
+                  }
+                }
               }
             ],
             "component_spec": {
@@ -5200,7 +5200,7 @@
                   "role": "tip_body"
                 }
               ],
-              "source_ref": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/je1000h-lcd-release-4e7df369/JE-1000H-fr/docs/_build/JE-1000H/EU/fr/rst/page/02_whats_in_the_box.rst",
+              "source_ref": "/tmp/claude-0/-home-user-auto-manual/16869846-c487-5ced-ba61-a7f7b02cc0cf/scratchpad/wtrel/docs/_build/JE-1000H/EU/fr/rst/page/02_whats_in_the_box.rst",
               "token_roles": [
                 "component.special.inbox"
               ],
@@ -5227,7 +5227,7 @@
       "language": "fr",
       "page_id": "02_whats_in_the_box.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/je1000h-lcd-release-4e7df369/JE-1000H-fr/docs/_build/JE-1000H/EU/fr/rst/page/02_whats_in_the_box.rst",
+      "source_path": "/tmp/claude-0/-home-user-auto-manual/16869846-c487-5ced-ba61-a7f7b02cc0cf/scratchpad/wtrel/docs/_build/JE-1000H/EU/fr/rst/page/02_whats_in_the_box.rst",
       "source_ref": "02_whats_in_the_box.rst",
       "source_sha256": "bee1d0e0a8fd22a5e295106e0ac5364a07554e3b95f833047fa5f0383540085c"
     },
@@ -5377,7 +5377,7 @@
       "language": "fr",
       "page_id": "03_product_overview_placeholder.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/je1000h-lcd-release-4e7df369/JE-1000H-fr/docs/_build/JE-1000H/EU/fr/rst/page/03_product_overview_placeholder.rst",
+      "source_path": "/tmp/claude-0/-home-user-auto-manual/16869846-c487-5ced-ba61-a7f7b02cc0cf/scratchpad/wtrel/docs/_build/JE-1000H/EU/fr/rst/page/03_product_overview_placeholder.rst",
       "source_ref": "03_product_overview_placeholder.rst",
       "source_sha256": "873d772f1f89dac260970c0f0b77c2b8a3569d3879c4d8a5636ff5fca1eefb3e"
     },
@@ -5471,7 +5471,7 @@
             "assets/ir/9b148ea95d3a3450591c7220908b0913048f2cdea1e61d200534181c52b47cab/27_remaining_discharge_time.png"
           ],
           "block_id": "lcd_icons_fr.rst:block-0004",
-          "content_sha256": "0b1177bb527ff6704baa3f887deaeeaed310c6f2b596891d6ae68ac2d16bc968",
+          "content_sha256": "c34f6109d50d4f2814e6552f21aca8c91d41d5b443740cd9e90ad197683cf83b",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -9514,7 +9514,7 @@
                   "role": "rows"
                 }
               ],
-              "source_ref": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/je1000h-lcd-release-4e7df369/JE-1000H-fr/docs/_build/JE-1000H/EU/fr/rst/page/lcd_icons_fr.rst#lcd-icons",
+              "source_ref": "/tmp/claude-0/-home-user-auto-manual/16869846-c487-5ced-ba61-a7f7b02cc0cf/scratchpad/wtrel/docs/_build/JE-1000H/EU/fr/rst/page/lcd_icons_fr.rst#lcd-icons",
               "token_roles": [
                 "component.table.lcd-icon"
               ],
@@ -9529,7 +9529,7 @@
       "language": "fr",
       "page_id": "lcd_icons_fr.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/je1000h-lcd-release-4e7df369/JE-1000H-fr/docs/_build/JE-1000H/EU/fr/rst/page/lcd_icons_fr.rst",
+      "source_path": "/tmp/claude-0/-home-user-auto-manual/16869846-c487-5ced-ba61-a7f7b02cc0cf/scratchpad/wtrel/docs/_build/JE-1000H/EU/fr/rst/page/lcd_icons_fr.rst",
       "source_ref": "lcd_icons_fr.rst",
       "source_sha256": "b676f1280846fb69094924d7587eebdcc943cfb5bfb0229978eb53b367f03463"
     },
@@ -9692,7 +9692,7 @@
             "assets/ir/04a7ae8d390b0f1bd22c1542c0e00c68c8c7bfdefca7a8c1508ec4874f4c9365/operation_dc.png"
           ],
           "block_id": "05_operation_guide_placeholder.rst:block-0006",
-          "content_sha256": "2e4c23305eaf7b4d15243808656735ab23090911364fd75872a4946007f42a56",
+          "content_sha256": "fbc7f1ac726017a6c1eb2a91674fe4646ea714b114b35136449f45cd78112c05",
           "kind": "flow",
           "payload": {
             "anchor": "sortie-cc-12v-usb-marche-arret",
@@ -9923,7 +9923,7 @@
                       "role": "items"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/je1000h-lcd-release-4e7df369/JE-1000H-fr/docs/_build/JE-1000H/EU/fr/rst/page/05_operation_guide_placeholder.rst#callout-1",
+                  "source_ref": "/tmp/claude-0/-home-user-auto-manual/16869846-c487-5ced-ba61-a7f7b02cc0cf/scratchpad/wtrel/docs/_build/JE-1000H/EU/fr/rst/page/05_operation_guide_placeholder.rst#callout-1",
                   "token_roles": [
                     "component.callout"
                   ],
@@ -10155,7 +10155,7 @@
                       "role": "items"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/je1000h-lcd-release-4e7df369/JE-1000H-fr/docs/_build/JE-1000H/EU/fr/rst/page/05_operation_guide_placeholder.rst#callout-2",
+                  "source_ref": "/tmp/claude-0/-home-user-auto-manual/16869846-c487-5ced-ba61-a7f7b02cc0cf/scratchpad/wtrel/docs/_build/JE-1000H/EU/fr/rst/page/05_operation_guide_placeholder.rst#callout-2",
                   "token_roles": [
                     "component.callout"
                   ],
@@ -10186,7 +10186,7 @@
             "assets/ir/33989b1bd64546d6744cfeae93b14a524392e0136bcb10796eae57b05444f0e4/operation_energy.png"
           ],
           "block_id": "05_operation_guide_placeholder.rst:block-0008",
-          "content_sha256": "ed37ff4af52b4efc3801117f169cc146c102ea97fcea759c9a36062294fc53d5",
+          "content_sha256": "28d66494200a7ad5ed75c8c69ba9ad2724c64e1fe1ceec06f1682d70c8acf874",
           "kind": "flow",
           "payload": {
             "anchor": "mode-d-economie-d-energie",
@@ -10357,7 +10357,7 @@
                       "role": "body"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/je1000h-lcd-release-4e7df369/JE-1000H-fr/docs/_build/JE-1000H/EU/fr/rst/page/05_operation_guide_placeholder.rst#callout-3",
+                  "source_ref": "/tmp/claude-0/-home-user-auto-manual/16869846-c487-5ced-ba61-a7f7b02cc0cf/scratchpad/wtrel/docs/_build/JE-1000H/EU/fr/rst/page/05_operation_guide_placeholder.rst#callout-3",
                   "token_roles": [
                     "component.callout"
                   ],
@@ -10950,7 +10950,7 @@
             "assets/ir/28e7fd4372b1f6ee2b1a37a6db9e0205c452d3de0ee974527f774a228be99248/operation_lcd.png"
           ],
           "block_id": "05_operation_guide_placeholder.rst:block-0014",
-          "content_sha256": "1b7f1b14fb80bec955e732187f3dc7f890ffa17b40c3cc335c44b07436494b31",
+          "content_sha256": "3443e2128a132b0de3ad68048f9929623c781baae7f43e6d55da036489173c0d",
           "kind": "flow",
           "payload": {
             "anchor": "affichage-lcd",
@@ -11482,7 +11482,7 @@
                       "role": "groups"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/je1000h-lcd-release-4e7df369/JE-1000H-fr/docs/_build/JE-1000H/EU/fr/rst/page/05_operation_guide_placeholder.rst#lcd-mode",
+                  "source_ref": "/tmp/claude-0/-home-user-auto-manual/16869846-c487-5ced-ba61-a7f7b02cc0cf/scratchpad/wtrel/docs/_build/JE-1000H/EU/fr/rst/page/05_operation_guide_placeholder.rst#lcd-mode",
                   "token_roles": [
                     "component.table.lcd-mode"
                   ],
@@ -12209,7 +12209,7 @@
       "language": "fr",
       "page_id": "05_operation_guide_placeholder.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/je1000h-lcd-release-4e7df369/JE-1000H-fr/docs/_build/JE-1000H/EU/fr/rst/page/05_operation_guide_placeholder.rst",
+      "source_path": "/tmp/claude-0/-home-user-auto-manual/16869846-c487-5ced-ba61-a7f7b02cc0cf/scratchpad/wtrel/docs/_build/JE-1000H/EU/fr/rst/page/05_operation_guide_placeholder.rst",
       "source_ref": "05_operation_guide_placeholder.rst",
       "source_sha256": "8cccc4cac1c3c77d9bd46577d40be55f081d84408971b066917e915af0506496"
     },
@@ -12445,7 +12445,7 @@
         {
           "asset_refs": [],
           "block_id": "06_ups_mode.rst:block-0008",
-          "content_sha256": "0ca70155037267bbef232be6d6e12189bf57aa87e7896384e4cc6b1495de9b04",
+          "content_sha256": "e26a87b60bab775133b18ab05692a1c80794c83bb5430c0df3be2af0d359f4e9",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -12664,7 +12664,7 @@
                   "role": "items"
                 }
               ],
-              "source_ref": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/je1000h-lcd-release-4e7df369/JE-1000H-fr/docs/_build/JE-1000H/EU/fr/rst/page/06_ups_mode.rst#callout-1",
+              "source_ref": "/tmp/claude-0/-home-user-auto-manual/16869846-c487-5ced-ba61-a7f7b02cc0cf/scratchpad/wtrel/docs/_build/JE-1000H/EU/fr/rst/page/06_ups_mode.rst#callout-1",
               "token_roles": [
                 "component.callout"
               ],
@@ -12678,7 +12678,7 @@
         {
           "asset_refs": [],
           "block_id": "06_ups_mode.rst:block-0009",
-          "content_sha256": "c6feebf759d5acfd138c0b5fde488590904a674a85e81321da56a610e0eca0a1",
+          "content_sha256": "af8681c2c55b1dbd325c36ad08ba996ab6632e9c7003af0e5178803a657389d8",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -12877,7 +12877,7 @@
                   "role": "items"
                 }
               ],
-              "source_ref": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/je1000h-lcd-release-4e7df369/JE-1000H-fr/docs/_build/JE-1000H/EU/fr/rst/page/06_ups_mode.rst#callout-2",
+              "source_ref": "/tmp/claude-0/-home-user-auto-manual/16869846-c487-5ced-ba61-a7f7b02cc0cf/scratchpad/wtrel/docs/_build/JE-1000H/EU/fr/rst/page/06_ups_mode.rst#callout-2",
               "token_roles": [
                 "component.callout"
               ],
@@ -12892,7 +12892,7 @@
       "language": "fr",
       "page_id": "06_ups_mode.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/je1000h-lcd-release-4e7df369/JE-1000H-fr/docs/_build/JE-1000H/EU/fr/rst/page/06_ups_mode.rst",
+      "source_path": "/tmp/claude-0/-home-user-auto-manual/16869846-c487-5ced-ba61-a7f7b02cc0cf/scratchpad/wtrel/docs/_build/JE-1000H/EU/fr/rst/page/06_ups_mode.rst",
       "source_ref": "06_ups_mode.rst",
       "source_sha256": "b7bbe55bca556fa21ba53ebee2c5d395aeeac608b32cfe5d351f8174933cea7d"
     },
@@ -12987,7 +12987,7 @@
         {
           "asset_refs": [],
           "block_id": "07_extra_battery_fr.rst:block-0006",
-          "content_sha256": "bcf394a82c90c9bc0cc7cf878b6062e29c53d9e18270b83fc6252547c1f4e0f2",
+          "content_sha256": "70a5acc9b31d57b88a8339f394a82bb8b1cbd0b758e7dfe412408aef19a96b95",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -13186,7 +13186,7 @@
                   "role": "items"
                 }
               ],
-              "source_ref": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/je1000h-lcd-release-4e7df369/JE-1000H-fr/docs/_build/JE-1000H/EU/fr/rst/page/07_extra_battery_fr.rst#callout-1",
+              "source_ref": "/tmp/claude-0/-home-user-auto-manual/16869846-c487-5ced-ba61-a7f7b02cc0cf/scratchpad/wtrel/docs/_build/JE-1000H/EU/fr/rst/page/07_extra_battery_fr.rst#callout-1",
               "token_roles": [
                 "component.callout"
               ],
@@ -13367,7 +13367,7 @@
       "language": "fr",
       "page_id": "07_extra_battery_fr.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/je1000h-lcd-release-4e7df369/JE-1000H-fr/docs/_build/JE-1000H/EU/fr/rst/page/07_extra_battery_fr.rst",
+      "source_path": "/tmp/claude-0/-home-user-auto-manual/16869846-c487-5ced-ba61-a7f7b02cc0cf/scratchpad/wtrel/docs/_build/JE-1000H/EU/fr/rst/page/07_extra_battery_fr.rst",
       "source_ref": "07_extra_battery_fr.rst",
       "source_sha256": "c89445dcbba6d520494e4a34c87bfe380236ce94f6b028bd27920d3df4361b9a"
     },
@@ -13495,7 +13495,7 @@
         {
           "asset_refs": [],
           "block_id": "charging.rst:block-0008",
-          "content_sha256": "91e73f5d7b735853cdd58481343ef39c2cfb0100d027c624f6c6b3bad87c8deb",
+          "content_sha256": "1dcba91e9a210b9ad9f2501e5e2c8d06a05d7082d5abeba6f70cc72acadda260",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -13675,7 +13675,7 @@
                   "role": "items"
                 }
               ],
-              "source_ref": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/je1000h-lcd-release-4e7df369/JE-1000H-fr/docs/_build/JE-1000H/EU/fr/rst/page/charging.rst#callout-1",
+              "source_ref": "/tmp/claude-0/-home-user-auto-manual/16869846-c487-5ced-ba61-a7f7b02cc0cf/scratchpad/wtrel/docs/_build/JE-1000H/EU/fr/rst/page/charging.rst#callout-1",
               "token_roles": [
                 "component.callout"
               ],
@@ -13691,7 +13691,7 @@
             "assets/ir/200cd52148a2598f8da520a5b91190506bda5d06bc6c7240daca06e863f8bc78/charging_ac.png"
           ],
           "block_id": "charging.rst:block-0009",
-          "content_sha256": "22334960d5b0dca0c22cb3a9e8604ec3b926d80d7f2a8f28c604aba4d3fac307",
+          "content_sha256": "04738115c7b36cc28aa8090a8467d299f638fccc8027f5511c2c9b28baf19e27",
           "kind": "flow",
           "payload": {
             "anchor": "chargement-par-prise-murale-ca",
@@ -13836,7 +13836,7 @@
                       "role": "body"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/je1000h-lcd-release-4e7df369/JE-1000H-fr/docs/_build/JE-1000H/EU/fr/rst/page/charging.rst#callout-2",
+                  "source_ref": "/tmp/claude-0/-home-user-auto-manual/16869846-c487-5ced-ba61-a7f7b02cc0cf/scratchpad/wtrel/docs/_build/JE-1000H/EU/fr/rst/page/charging.rst#callout-2",
                   "token_roles": [
                     "component.callout"
                   ],
@@ -13941,7 +13941,7 @@
       "language": "fr",
       "page_id": "charging.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/je1000h-lcd-release-4e7df369/JE-1000H-fr/docs/_build/JE-1000H/EU/fr/rst/page/charging.rst",
+      "source_path": "/tmp/claude-0/-home-user-auto-manual/16869846-c487-5ced-ba61-a7f7b02cc0cf/scratchpad/wtrel/docs/_build/JE-1000H/EU/fr/rst/page/charging.rst",
       "source_ref": "charging.rst",
       "source_sha256": "1c096441d2c2a5a210390ccc56ae9e2f843fd82df6445116b3c8e97c24e00365"
     },
@@ -13953,7 +13953,7 @@
             "assets/ir/8e8933db821a47ace5843f885838ea393061d04dc7370342f26a5f0929b4ee92/charging_solar_adapter.png"
           ],
           "block_id": "08_charging_methods.rst:block-0001",
-          "content_sha256": "69a58cb44468b80d16523298aa9e958004d4cea05a2704e5f69642eb2e27a85a",
+          "content_sha256": "bff5bccd073003b44d41fb93573ab481b9e9c860396e05d1fb49c58fcb858009",
           "kind": "flow",
           "payload": {
             "anchor": "chargement-par-panneaux-solaires-vendu-separement",
@@ -14145,7 +14145,7 @@
                       "role": "body"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/je1000h-lcd-release-4e7df369/JE-1000H-fr/docs/_build/JE-1000H/EU/fr/rst/page/08_charging_methods.rst#callout-1",
+                  "source_ref": "/tmp/claude-0/-home-user-auto-manual/16869846-c487-5ced-ba61-a7f7b02cc0cf/scratchpad/wtrel/docs/_build/JE-1000H/EU/fr/rst/page/08_charging_methods.rst#callout-1",
                   "token_roles": [
                     "component.callout"
                   ],
@@ -14325,7 +14325,7 @@
                       "role": "items"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/je1000h-lcd-release-4e7df369/JE-1000H-fr/docs/_build/JE-1000H/EU/fr/rst/page/08_charging_methods.rst#callout-2",
+                  "source_ref": "/tmp/claude-0/-home-user-auto-manual/16869846-c487-5ced-ba61-a7f7b02cc0cf/scratchpad/wtrel/docs/_build/JE-1000H/EU/fr/rst/page/08_charging_methods.rst#callout-2",
                   "token_roles": [
                     "component.callout"
                   ],
@@ -14382,7 +14382,7 @@
             "assets/ir/02e7039d6f9344247697b0dde2b7a8fca80e3407d93caf60287c5932759dd122/charging_car.png"
           ],
           "block_id": "08_charging_methods.rst:block-0003",
-          "content_sha256": "9f69b9a0ee950f43689e82437d074c3e796af62535e5c90169095a8441c7fd28",
+          "content_sha256": "91cb69b8dc60cf15b21bf32cde30f1511e7e3bd3e6649b3e253e20128e67dcf8",
           "kind": "flow",
           "payload": {
             "anchor": "chargement-par-prise-de-voiture-vendu-separement",
@@ -14617,7 +14617,7 @@
                       "role": "items"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/je1000h-lcd-release-4e7df369/JE-1000H-fr/docs/_build/JE-1000H/EU/fr/rst/page/08_charging_methods.rst#callout-3",
+                  "source_ref": "/tmp/claude-0/-home-user-auto-manual/16869846-c487-5ced-ba61-a7f7b02cc0cf/scratchpad/wtrel/docs/_build/JE-1000H/EU/fr/rst/page/08_charging_methods.rst#callout-3",
                   "token_roles": [
                     "component.callout"
                   ],
@@ -14635,7 +14635,7 @@
       "language": "fr",
       "page_id": "08_charging_methods.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/je1000h-lcd-release-4e7df369/JE-1000H-fr/docs/_build/JE-1000H/EU/fr/rst/page/08_charging_methods.rst",
+      "source_path": "/tmp/claude-0/-home-user-auto-manual/16869846-c487-5ced-ba61-a7f7b02cc0cf/scratchpad/wtrel/docs/_build/JE-1000H/EU/fr/rst/page/08_charging_methods.rst",
       "source_ref": "08_charging_methods.rst",
       "source_sha256": "12371fb3399976007fca73a50e1a74b9286a150d02af646b023e86340d9b5775"
     },
@@ -14868,7 +14868,7 @@
       "language": "fr",
       "page_id": "09_storage_and_maintenance.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/je1000h-lcd-release-4e7df369/JE-1000H-fr/docs/_build/JE-1000H/EU/fr/rst/page/09_storage_and_maintenance.rst",
+      "source_path": "/tmp/claude-0/-home-user-auto-manual/16869846-c487-5ced-ba61-a7f7b02cc0cf/scratchpad/wtrel/docs/_build/JE-1000H/EU/fr/rst/page/09_storage_and_maintenance.rst",
       "source_ref": "09_storage_and_maintenance.rst",
       "source_sha256": "a44a46e17da9747ebb3c5bd1e672a81ae758e2b0e2cfc24cea1a26fef7cee01d"
     },
@@ -14924,7 +14924,7 @@
         {
           "asset_refs": [],
           "block_id": "troubleshooting_fr.rst:block-0004",
-          "content_sha256": "db6af47918bbfcd5e1e886247cfd1439a465f832c0e824deada446a3dcd79276",
+          "content_sha256": "5253649cfd259d7bab7d9f040cf4482ce2498c926d30e457537cc6ac79935b6e",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -16028,7 +16028,7 @@
                   "role": "rows"
                 }
               ],
-              "source_ref": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/je1000h-lcd-release-4e7df369/JE-1000H-fr/docs/_build/JE-1000H/EU/fr/rst/page/troubleshooting_fr.rst#troubleshooting",
+              "source_ref": "/tmp/claude-0/-home-user-auto-manual/16869846-c487-5ced-ba61-a7f7b02cc0cf/scratchpad/wtrel/docs/_build/JE-1000H/EU/fr/rst/page/troubleshooting_fr.rst#troubleshooting",
               "token_roles": [
                 "component.table.troubleshooting"
               ],
@@ -16043,7 +16043,7 @@
       "language": "fr",
       "page_id": "troubleshooting_fr.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/je1000h-lcd-release-4e7df369/JE-1000H-fr/docs/_build/JE-1000H/EU/fr/rst/page/troubleshooting_fr.rst",
+      "source_path": "/tmp/claude-0/-home-user-auto-manual/16869846-c487-5ced-ba61-a7f7b02cc0cf/scratchpad/wtrel/docs/_build/JE-1000H/EU/fr/rst/page/troubleshooting_fr.rst",
       "source_ref": "troubleshooting_fr.rst",
       "source_sha256": "49ba3914a3668292a87690205749f98a31a9f579e7890574d6ee954c91d2dee4"
     },
@@ -16079,7 +16079,7 @@
         {
           "asset_refs": [],
           "block_id": "spec_fr.rst:block-0002",
-          "content_sha256": "eb0a9e89d153e1563aba41d5110dcb33ad4bca21ccef61709f1232a313992849",
+          "content_sha256": "4fdf51c97a3e203490d0fdb11737f2d5e25211d232416300020e7af5b1a61757",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -16683,7 +16683,7 @@
                   "role": "rows"
                 }
               ],
-              "source_ref": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/je1000h-lcd-release-4e7df369/JE-1000H-fr/docs/_build/JE-1000H/EU/fr/rst/page/spec_fr.rst#specification-1",
+              "source_ref": "/tmp/claude-0/-home-user-auto-manual/16869846-c487-5ced-ba61-a7f7b02cc0cf/scratchpad/wtrel/docs/_build/JE-1000H/EU/fr/rst/page/spec_fr.rst#specification-1",
               "token_roles": [
                 "component.table.spec"
               ],
@@ -16709,7 +16709,7 @@
         {
           "asset_refs": [],
           "block_id": "spec_fr.rst:block-0004",
-          "content_sha256": "8db7c1e32f46db9e3abdc1b6a87501fe9588a5f6b32336bc9e83891a080a83ec",
+          "content_sha256": "5bc19c9fcc02967ae23a3af5d75455c9618062deaf5482f214711487a70867e9",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -17045,7 +17045,7 @@
                   "role": "rows"
                 }
               ],
-              "source_ref": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/je1000h-lcd-release-4e7df369/JE-1000H-fr/docs/_build/JE-1000H/EU/fr/rst/page/spec_fr.rst#specification-2",
+              "source_ref": "/tmp/claude-0/-home-user-auto-manual/16869846-c487-5ced-ba61-a7f7b02cc0cf/scratchpad/wtrel/docs/_build/JE-1000H/EU/fr/rst/page/spec_fr.rst#specification-2",
               "token_roles": [
                 "component.table.spec"
               ],
@@ -17071,7 +17071,7 @@
         {
           "asset_refs": [],
           "block_id": "spec_fr.rst:block-0006",
-          "content_sha256": "5c0deb3fd114c3971449dc5e08f8cfa8e009fc9cf28ae7640bcee1260d400058",
+          "content_sha256": "e9d6981c89907662159b50c5ab46dfc11e051cbf63df85765888e84f1eddf455",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -17686,7 +17686,7 @@
                   "role": "rows"
                 }
               ],
-              "source_ref": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/je1000h-lcd-release-4e7df369/JE-1000H-fr/docs/_build/JE-1000H/EU/fr/rst/page/spec_fr.rst#specification-3",
+              "source_ref": "/tmp/claude-0/-home-user-auto-manual/16869846-c487-5ced-ba61-a7f7b02cc0cf/scratchpad/wtrel/docs/_build/JE-1000H/EU/fr/rst/page/spec_fr.rst#specification-3",
               "token_roles": [
                 "component.table.spec"
               ],
@@ -17712,7 +17712,7 @@
         {
           "asset_refs": [],
           "block_id": "spec_fr.rst:block-0008",
-          "content_sha256": "5d0b04dbed5f9a0fb76312fdb94770b106e3d6c2205861038ddd030fffc38614",
+          "content_sha256": "7eec90ce25ae07369d277b8b164ca009a2a5d272ad1b39f99fa3fef70f2fa099",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -17961,7 +17961,7 @@
                   "role": "rows"
                 }
               ],
-              "source_ref": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/je1000h-lcd-release-4e7df369/JE-1000H-fr/docs/_build/JE-1000H/EU/fr/rst/page/spec_fr.rst#specification-4",
+              "source_ref": "/tmp/claude-0/-home-user-auto-manual/16869846-c487-5ced-ba61-a7f7b02cc0cf/scratchpad/wtrel/docs/_build/JE-1000H/EU/fr/rst/page/spec_fr.rst#specification-4",
               "token_roles": [
                 "component.table.spec"
               ],
@@ -18069,7 +18069,7 @@
       "language": "fr",
       "page_id": "spec_fr.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/je1000h-lcd-release-4e7df369/JE-1000H-fr/docs/_build/JE-1000H/EU/fr/rst/page/spec_fr.rst",
+      "source_path": "/tmp/claude-0/-home-user-auto-manual/16869846-c487-5ced-ba61-a7f7b02cc0cf/scratchpad/wtrel/docs/_build/JE-1000H/EU/fr/rst/page/spec_fr.rst",
       "source_ref": "spec_fr.rst",
       "source_sha256": "781cf2de2f597103cd96cf5999d537015208db445bd42c5d20ff81379dc3e8ce"
     },
@@ -18096,7 +18096,7 @@
         {
           "asset_refs": [],
           "block_id": "11_warranty.rst:block-0002",
-          "content_sha256": "df488a2e8d66ffc29d3dc777d8a7d30c08f95429ba41a7a888aba61ec30bc713",
+          "content_sha256": "1bc81cab89e943b60f3a14fb3ad254021d3b13fd32c316e49af5c08d8f77119b",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -18147,7 +18147,7 @@
                   "role": "local_note"
                 }
               ],
-              "source_ref": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/je1000h-lcd-release-4e7df369/JE-1000H-fr/docs/_build/JE-1000H/EU/fr/rst/page/11_warranty.rst#warranty-lead",
+              "source_ref": "/tmp/claude-0/-home-user-auto-manual/16869846-c487-5ced-ba61-a7f7b02cc0cf/scratchpad/wtrel/docs/_build/JE-1000H/EU/fr/rst/page/11_warranty.rst#warranty-lead",
               "token_roles": [
                 "component.warranty.lead"
               ],
@@ -18173,7 +18173,7 @@
         {
           "asset_refs": [],
           "block_id": "11_warranty.rst:block-0004",
-          "content_sha256": "7a365da3028531e86883683f824da19484f77ed010a064d0cd664707ef6e0e71",
+          "content_sha256": "60872f2548b6d7e71bc4f137061a9a161a51660a13f8fc1876fbcb543581ffb6",
           "kind": "flow",
           "payload": {
             "anchor": "garantie-limitee",
@@ -18251,7 +18251,7 @@
                       "role": "blocks"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/je1000h-lcd-release-4e7df369/JE-1000H-fr/docs/_build/JE-1000H/EU/fr/rst/page/11_warranty.rst#warranty-section-1",
+                  "source_ref": "/tmp/claude-0/-home-user-auto-manual/16869846-c487-5ced-ba61-a7f7b02cc0cf/scratchpad/wtrel/docs/_build/JE-1000H/EU/fr/rst/page/11_warranty.rst#warranty-section-1",
                   "token_roles": [
                     "component.warranty.section"
                   ],
@@ -18284,7 +18284,7 @@
         {
           "asset_refs": [],
           "block_id": "11_warranty.rst:block-0006",
-          "content_sha256": "7464fc051676e9cc714d07d2cc15c7ad29ac8397983bec34e4ac19a03f3cecec",
+          "content_sha256": "89dc1592a739c9a27022a3547492dc13712bc57cd8c3d18a4e7b7eef00690fd6",
           "kind": "flow",
           "payload": {
             "anchor": "periode-de-garantie",
@@ -18521,7 +18521,7 @@
                       "role": "periods"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/je1000h-lcd-release-4e7df369/JE-1000H-fr/docs/_build/JE-1000H/EU/fr/rst/page/11_warranty.rst#warranty-years",
+                  "source_ref": "/tmp/claude-0/-home-user-auto-manual/16869846-c487-5ced-ba61-a7f7b02cc0cf/scratchpad/wtrel/docs/_build/JE-1000H/EU/fr/rst/page/11_warranty.rst#warranty-years",
                   "token_roles": [
                     "component.warranty.years"
                   ],
@@ -18554,7 +18554,7 @@
         {
           "asset_refs": [],
           "block_id": "11_warranty.rst:block-0008",
-          "content_sha256": "aa6516ab1506b1b86637dbd5c1f946a3a04b1cd12086ad7eefb67be6b06bdeef",
+          "content_sha256": "5996f07fc59c22719e87c34dd477e0466462277e974286063fcde7aa82d30329",
           "kind": "flow",
           "payload": {
             "anchor": "echanger",
@@ -18618,7 +18618,7 @@
                       "role": "blocks"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/je1000h-lcd-release-4e7df369/JE-1000H-fr/docs/_build/JE-1000H/EU/fr/rst/page/11_warranty.rst#warranty-section-3",
+                  "source_ref": "/tmp/claude-0/-home-user-auto-manual/16869846-c487-5ced-ba61-a7f7b02cc0cf/scratchpad/wtrel/docs/_build/JE-1000H/EU/fr/rst/page/11_warranty.rst#warranty-section-3",
                   "token_roles": [
                     "component.warranty.section"
                   ],
@@ -18651,7 +18651,7 @@
         {
           "asset_refs": [],
           "block_id": "11_warranty.rst:block-0010",
-          "content_sha256": "d0d4aa995b940f63e3cc2b9fad71cdabe51d25cfb2430efdb584d6a1f60bfd5d",
+          "content_sha256": "683163fa711aeb2f0bed2410a4bb5f072d672032ba59496c9ce0d45e8ef46f6e",
           "kind": "flow",
           "payload": {
             "anchor": "limitee-a-l-acheteur-et-consommateur-d-origine",
@@ -18715,7 +18715,7 @@
                       "role": "blocks"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/je1000h-lcd-release-4e7df369/JE-1000H-fr/docs/_build/JE-1000H/EU/fr/rst/page/11_warranty.rst#warranty-section-4",
+                  "source_ref": "/tmp/claude-0/-home-user-auto-manual/16869846-c487-5ced-ba61-a7f7b02cc0cf/scratchpad/wtrel/docs/_build/JE-1000H/EU/fr/rst/page/11_warranty.rst#warranty-section-4",
                   "token_roles": [
                     "component.warranty.section"
                   ],
@@ -18748,7 +18748,7 @@
         {
           "asset_refs": [],
           "block_id": "11_warranty.rst:block-0012",
-          "content_sha256": "e3ee6f5ef62c804dfd93882e6c83cdd1999236d3792bc3d3affbb4a3d8e70997",
+          "content_sha256": "b38a137217647e088b9062990f60c454261761a9accac908773da18ff27d7ba6",
           "kind": "flow",
           "payload": {
             "anchor": "exclusions",
@@ -18913,7 +18913,7 @@
                       "role": "blocks"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/je1000h-lcd-release-4e7df369/JE-1000H-fr/docs/_build/JE-1000H/EU/fr/rst/page/11_warranty.rst#warranty-section-5",
+                  "source_ref": "/tmp/claude-0/-home-user-auto-manual/16869846-c487-5ced-ba61-a7f7b02cc0cf/scratchpad/wtrel/docs/_build/JE-1000H/EU/fr/rst/page/11_warranty.rst#warranty-section-5",
                   "token_roles": [
                     "component.warranty.section"
                   ],
@@ -18946,7 +18946,7 @@
         {
           "asset_refs": [],
           "block_id": "11_warranty.rst:block-0014",
-          "content_sha256": "3eb0fa15a9bbb9ce859bb736d8c594c05b7b6a37777c76c6e91ab52f782e5a73",
+          "content_sha256": "956508402ec94d895973c9e87286a129067577ceeda6a7c0730b9d483c12ed7c",
           "kind": "flow",
           "payload": {
             "anchor": "droits-d-interpretation",
@@ -19010,7 +19010,7 @@
                       "role": "blocks"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/je1000h-lcd-release-4e7df369/JE-1000H-fr/docs/_build/JE-1000H/EU/fr/rst/page/11_warranty.rst#warranty-section-6",
+                  "source_ref": "/tmp/claude-0/-home-user-auto-manual/16869846-c487-5ced-ba61-a7f7b02cc0cf/scratchpad/wtrel/docs/_build/JE-1000H/EU/fr/rst/page/11_warranty.rst#warranty-section-6",
                   "token_roles": [
                     "component.warranty.section"
                   ],
@@ -19032,7 +19032,7 @@
       "language": "fr",
       "page_id": "11_warranty.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/je1000h-lcd-release-4e7df369/JE-1000H-fr/docs/_build/JE-1000H/EU/fr/rst/page/11_warranty.rst",
+      "source_path": "/tmp/claude-0/-home-user-auto-manual/16869846-c487-5ced-ba61-a7f7b02cc0cf/scratchpad/wtrel/docs/_build/JE-1000H/EU/fr/rst/page/11_warranty.rst",
       "source_ref": "11_warranty.rst",
       "source_sha256": "a3e5b63bdd285867da0d30773332c500de59274b0f043fcbcc487c3b4140c2b4"
     },
@@ -19142,7 +19142,7 @@
             "assets/ir/072945d3757367b5ff82566e159f7883fb71e2e6e3b6f3df60a35b88e86d93db/app_connect_result.png"
           ],
           "block_id": "12_app_setup_placeholder.rst:block-0004",
-          "content_sha256": "dca6192864c9d7906074402ae370b9e7e616e19b03c178df670fd78d6b4ab8f6",
+          "content_sha256": "d77b79addd6f1514c25a796d81336313c07db1d75c30d57a4c68e482f8bf950e",
           "kind": "flow",
           "payload": {
             "anchor": "ajouter-un-appareil",
@@ -19444,7 +19444,7 @@
                       "role": "items"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/je1000h-lcd-release-4e7df369/JE-1000H-fr/docs/_build/JE-1000H/EU/fr/rst/page/12_app_setup_placeholder.rst#callout-1",
+                  "source_ref": "/tmp/claude-0/-home-user-auto-manual/16869846-c487-5ced-ba61-a7f7b02cc0cf/scratchpad/wtrel/docs/_build/JE-1000H/EU/fr/rst/page/12_app_setup_placeholder.rst#callout-1",
                   "token_roles": [
                     "component.callout"
                   ],
@@ -19638,7 +19638,7 @@
                       "role": "items"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/je1000h-lcd-release-4e7df369/JE-1000H-fr/docs/_build/JE-1000H/EU/fr/rst/page/12_app_setup_placeholder.rst#callout-2",
+                  "source_ref": "/tmp/claude-0/-home-user-auto-manual/16869846-c487-5ced-ba61-a7f7b02cc0cf/scratchpad/wtrel/docs/_build/JE-1000H/EU/fr/rst/page/12_app_setup_placeholder.rst#callout-2",
                   "token_roles": [
                     "component.callout"
                   ],
@@ -19860,7 +19860,7 @@
                       "role": "body"
                     }
                   ],
-                  "source_ref": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/je1000h-lcd-release-4e7df369/JE-1000H-fr/docs/_build/JE-1000H/EU/fr/rst/page/12_app_setup_placeholder.rst#callout-3",
+                  "source_ref": "/tmp/claude-0/-home-user-auto-manual/16869846-c487-5ced-ba61-a7f7b02cc0cf/scratchpad/wtrel/docs/_build/JE-1000H/EU/fr/rst/page/12_app_setup_placeholder.rst#callout-3",
                   "token_roles": [
                     "component.callout"
                   ],
@@ -20181,7 +20181,7 @@
       "language": "fr",
       "page_id": "12_app_setup_placeholder.rst",
       "skipped_raw": 0,
-      "source_path": "/Users/pika/.codex/worktrees/shared-component-release/auto-manual2/tmp/je1000h-lcd-release-4e7df369/JE-1000H-fr/docs/_build/JE-1000H/EU/fr/rst/page/12_app_setup_placeholder.rst",
+      "source_path": "/tmp/claude-0/-home-user-auto-manual/16869846-c487-5ced-ba61-a7f7b02cc0cf/scratchpad/wtrel/docs/_build/JE-1000H/EU/fr/rst/page/12_app_setup_placeholder.rst",
       "source_ref": "12_app_setup_placeholder.rst",
       "source_sha256": "57320b0a6000b2ab06ee786823614e4ceca8a194bcd5f702f1ae4f05c49b0871"
     }
@@ -20190,5 +20190,5 @@
   "schema_version": "manual-ir/v2",
   "snapshot_sha256": null,
   "source": "prepared-document",
-  "style_contract_sha256": "f9f82aa8add3db4a239f17b952e61d49681207a10bf15ef1c46c062341b7edae"
+  "style_contract_sha256": "56acc9855df13ad31c19b016417fa36cd9146e3a743e75881f1abd3b8bc36626"
 }
