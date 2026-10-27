@@ -155,3 +155,4 @@
 - [JS-100I / EU / uk - Jackery SolarSaga 100 Air User Manual](JS-100I/EU/uk/md/manual_js100i_eu_uk.md)
 - [JS-200E / EU / en - Jackery SolarSaga 200 User Manual](JS-200E/EU/en/md/manual_js200e_eu_en.md)
 - [JS-40C / EU / en - Jackery SolarSaga 40 Air User Manual](JS-40C/EU/en/md/manual_js40c_eu_en.md)
+- [JS-CONNECTION-GUIDE / JP / ja - Jackery Solar Genarator 接続ガイド](JS-CONNECTION-GUIDE/JP/ja/md/manual_jsconnectionguide_jp_ja.md)
