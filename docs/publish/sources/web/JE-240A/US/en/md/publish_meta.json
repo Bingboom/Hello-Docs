@@ -1,0 +1,19 @@
+{
+  "schema_version": "auto-manual-web-publish-target/v2",
+  "model": "JE-240A",
+  "region": "US",
+  "lang": "en",
+  "version": "git-20261027-ae3aea4b",
+  "built_at": "2026-10-28T03:21:52+00:00",
+  "git_ref": "61020ca968447c2ffc04789f48a1fd4a45b1448c",
+  "route": "JE-240A/US/en/md",
+  "manual": "manual_je240a_us_en.md",
+  "language_scope": "single",
+  "language_projection_evidence_path": "evidence/language_projection_receipt.json",
+  "language_projection_evidence_sha256": "a4c33a33eedd303f78217b197f04802d1be7d85eab7a45e61f622f1bad89efd7",
+  "legacy_default": true,
+  "legacy_route": "JE-240A/US/md",
+  "legacy_aliases": [
+    "manual_je240a_us_en"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": "auto-manual-web-publish-target/v2",
+  "model": "JE-300C",
+  "region": "US",
+  "lang": "en",
+  "version": "git-20261027-a1128b25",
+  "built_at": "2026-10-28T03:25:17+00:00",
+  "git_ref": "33d14bccec365a1103438cf56fdce66ad676046a",
+  "route": "JE-300C/US/en/md",
+  "manual": "manual_je300c_us_en.md",
+  "language_scope": "single",
+  "language_projection_evidence_path": "evidence/language_projection_receipt.json",
+  "language_projection_evidence_sha256": "bd3f5643f71aa3c8f347ad211c18c146f597d6840862448072b6b44315cf65ee",
+  "legacy_default": true,
+  "legacy_route": "JE-300C/US/md",
+  "legacy_aliases": [
+    "manual_je300c_us_en"
+  ]
+}

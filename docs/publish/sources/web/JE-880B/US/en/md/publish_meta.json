@@ -1,0 +1,19 @@
+{
+  "schema_version": "auto-manual-web-publish-target/v2",
+  "model": "JE-880B",
+  "region": "US",
+  "lang": "en",
+  "version": "git-20261027-640e83ca",
+  "built_at": "2026-10-28T03:25:17+00:00",
+  "git_ref": "33d14bccec365a1103438cf56fdce66ad676046a",
+  "route": "JE-880B/US/en/md",
+  "manual": "manual_je880b_us_en.md",
+  "language_scope": "single",
+  "language_projection_evidence_path": "evidence/language_projection_receipt.json",
+  "language_projection_evidence_sha256": "420d733131f7eb593562981df5bb452367dbd705f02f9f7897eb0796359e02a1",
+  "legacy_default": true,
+  "legacy_route": "JE-880B/US/md",
+  "legacy_aliases": [
+    "manual_je880b_us_en"
+  ]
+}
