@@ -1,0 +1,19 @@
+{
+  "schema_version": "auto-manual-web-publish-target/v2",
+  "model": "JE-1000D",
+  "region": "US",
+  "lang": "en",
+  "version": "git-20261027-10d15090",
+  "built_at": "2026-10-28T03:53:09+00:00",
+  "git_ref": "4deb6b2b34e5ec4e8afc82a7b5ed0535d6ef2c42",
+  "route": "JE-1000D/US/en/md",
+  "manual": "manual_je1000d_us_en.md",
+  "language_scope": "single",
+  "language_projection_evidence_path": "evidence/language_projection_receipt.json",
+  "language_projection_evidence_sha256": "45470a46a470ebb7b4fb76c50d99783509c6ecbf235fa56f5125670cf69ae2d3",
+  "legacy_default": true,
+  "legacy_route": "JE-1000D/US/md",
+  "legacy_aliases": [
+    "manual_je1000d_us_en"
+  ]
+}
