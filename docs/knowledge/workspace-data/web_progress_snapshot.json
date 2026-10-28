@@ -1,6 +1,6 @@
 {
   "checked": [],
-  "exported_at": "2026-10-26",
+  "exported_at": "2026-10-28",
   "feishu": {
     "reviews": "https://xcn57j1urbe6.feishu.cn/wiki/QKNGwHFwPiY7J7kZ0bzcximKnyb?table=tblQsiDwY2o1xsJr",
     "web": "https://xcn57j1urbe6.feishu.cn/wiki/QKNGwHFwPiY7J7kZ0bzcximKnyb?table=tblY0i9JUElmuuKb"
@@ -160,9 +160,9 @@
     "JS-40C/EU/en": "reczz28JhrDwztQv"
   },
   "refresh": {
-    "checked_at": "2026-10-26T01:09:53.821733+00:00",
-    "content_sha256": "0b62a39ba8339e1ec5a0ea3a220e910abd3527dbd4389e4dfcbdedac68a79be4",
-    "execution": "https://github.com/Bingboom/Hello-Docs/actions/runs/40252642162",
+    "checked_at": "2026-10-28T02:14:30.942913+00:00",
+    "content_sha256": "3d91da9f8a9f83f2dddc7d303d67b4deabfcccf41718be0a0930368f27ccf513",
+    "execution": "https://github.com/Bingboom/Hello-Docs/actions/runs/40619514220",
     "source": {
       "identity_sha256": "4bb050d6bd5084c9f5cbdff7cc3b74624524f64a9a8f4d13c420362d6b36b842"
     },
@@ -170,21 +170,21 @@
   },
   "reviews": [
     {
-      "date": "2026-10-23",
+      "date": "2026-10-27",
       "draft": "https://ht-docs-review-doc-lib.readthedocs-hosted.com/FridgeGuard-2/US/manual.html",
       "language": "en",
       "market": "US",
       "market_label": "美规",
       "model": "FridgeGuard-2",
       "name": "Jackery FridgeGuard 2",
-      "open": 19,
+      "open": 17,
       "page": "https://ht-docs-review-doc-lib.readthedocs-hosted.com/FridgeGuard-2/US.html",
       "record": "reczz28QgFMoqDKd",
       "status": "审核中（参考复用已补齐，含待确认项）",
-      "version": "v0.12"
+      "version": "v0.35"
     },
     {
-      "date": "2026-10-25",
+      "date": "2026-10-26",
       "draft": "https://ht-docs-review-doc-lib.readthedocs-hosted.com/Guardian-2-Battery-Pack/US/index.html",
       "language": "en",
       "market": "US",
@@ -195,10 +195,10 @@
       "page": "https://ht-docs-review-doc-lib.readthedocs-hosted.com/Guardian-2-Battery-Pack/US.html",
       "record": "reczz28QgFMotD1j",
       "status": "审核中（含待确认项）",
-      "version": "v0.27"
+      "version": "v0.29"
     },
     {
-      "date": "2026-10-25",
+      "date": "2026-10-26",
       "draft": "https://ht-docs-review-doc-lib.readthedocs-hosted.com/Guardian-2-Battery-Pack/JP/index.html",
       "language": "ja",
       "market": "JP",
@@ -209,21 +209,21 @@
       "page": "https://ht-docs-review-doc-lib.readthedocs-hosted.com/Guardian-2-Battery-Pack/JP.html",
       "record": "reczz28QouAOKhP9",
       "status": "审核中（含待确认项；新增日文待母语审校）",
-      "version": "v0.08"
+      "version": "v0.09"
     },
     {
-      "date": "2026-10-23",
+      "date": "2026-10-26",
       "draft": "https://ht-docs-review-doc-lib.readthedocs-hosted.com/JHP-3000X/US/index.html",
       "language": "en",
       "market": "US",
       "market_label": "美规",
       "model": "JHP-3000X",
       "name": "Jackery HomePower 3000 V2（暂定）",
-      "open": 20,
+      "open": 19,
       "page": "https://ht-docs-review-doc-lib.readthedocs-hosted.com/JHP-3000X/US.html",
       "record": "reczz28QgFMor9c9",
       "status": "审核中（含待确认项）",
-      "version": "v0.24"
+      "version": "v0.41"
     },
     {
       "date": "2026-10-22",
@@ -669,6 +669,13 @@
       "editions": 47,
       "langs": 155,
       "models": 38
+    },
+    {
+      "added": 3,
+      "date": "2026-10-27",
+      "editions": 50,
+      "langs": 158,
+      "models": 40
     }
   ]
 }
