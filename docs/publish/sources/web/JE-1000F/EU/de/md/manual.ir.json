@@ -7,7 +7,7 @@
     "assets/ir/114690be6f4d77ceaebe2ed44641ba2735873d3d6415ae04738dc241392096b7/9_keep_away_from_children_EkuMbUU1foXNPuxytfLcW9dinFS.png",
     "assets/ir/2a61fc0919cfeca43a4dd3e9bcf3a4310314d7543f77e6af9c10f1717360eea7/10_li_ion_V699bWppsoqekPxvtrccpM9dnDg.png",
     "assets/ir/7e4de290ea13b86bd50fbb209b4510116116d4fb403b7ef4f83cf1c1db873989/11_weee_Ph50b51y0obEXBxibqGczTSbngc.png",
-    "assets/ir/236891c20611070753633c7c9286982284851c6df78137cfc5bc26922c6528b6/12_weee2_EccQbCmImosxoPxWSuOcPinpn9e.png",
+    "assets/ir/cf04ff00bdeb8de5971a55e5d8be6ef91e1a4ddad479f817f0c535914a392d45/symbol_battery_weee.png",
     "assets/ir/69d662ff672f120bf00c12810f3834b258beefd129df6f064fdce8b0546a2279/main_unit1_je1000f_eu.png",
     "assets/ir/287650f3a89ae520e32f0d75df8401151b808004ee50075b96aff70af04ca4ef/ac_charging_cable.png",
     "assets/ir/87ac44e52863324b761a672089e6b0497e40fdf48432f698fccf30508060c60a/manual_icon1.png",
@@ -64,9 +64,9 @@
     "assets/ir/23cde742b3012b96fce07f9efe3475ee2e75230f2b2d39311291a33d4cf51f69/connect_result_je1000f_eu.png",
     "assets/ir/a41b6db31865f5091511b0d8ca830221cf328b45efdb4454fd864dba0132f059/reference.app-connect-result_shared_a41b6db31865.png"
   ],
-  "bundle_root": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst",
-  "bundle_sha256": "d612475fadd2c87193e69e6f847ac1b7aa72fc4ce1d70c424cf7766b46e96e7f",
-  "content_sha256": "15cdc6e5c82077584c409fb7e78aa487729ed4d5083adad60c2f7e5eec3e2d18",
+  "bundle_root": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst",
+  "bundle_sha256": "cb21f8c7455d78d978bdc421c90acd9014f75df4b8d3bd4a402133ed22b80475",
+  "content_sha256": "c69dce75a09ff0a2b36136fd889989fb4f363c88ef571e22122620026fd947c7",
   "language": "de",
   "layout_params_sha256": "f5ae099abc1a82ffda3abcc5a13725aca3c201e720a0374d88d1643f9773f279",
   "metadata": {
@@ -81,7 +81,6 @@
       "assets/ir/11ef39e9a1133dff3b94e994203d796a24250aa5732f153f85a04f11f00ebcae/reference.charging-car_en_11ef39e9a113.png": "11ef39e9a1133dff3b94e994203d796a24250aa5732f153f85a04f11f00ebcae",
       "assets/ir/196db2418826e717a2c32008c46f01abf8fd03ac6f6192eb1904cdba74493cfc/operation.energy-saving_fr_196db2418826.png": "196db2418826e717a2c32008c46f01abf8fd03ac6f6192eb1904cdba74493cfc",
       "assets/ir/21b5f19ca9a6e39d8bd515128297cc1b99e43fd263e39ffba4fdf102d50a4bad/16_Charging_Power_Limit_TNd3bybh5oUGbPxiPZ0cz7Uenae.png": "21b5f19ca9a6e39d8bd515128297cc1b99e43fd263e39ffba4fdf102d50a4bad",
-      "assets/ir/236891c20611070753633c7c9286982284851c6df78137cfc5bc26922c6528b6/12_weee2_EccQbCmImosxoPxWSuOcPinpn9e.png": "236891c20611070753633c7c9286982284851c6df78137cfc5bc26922c6528b6",
       "assets/ir/23cde742b3012b96fce07f9efe3475ee2e75230f2b2d39311291a33d4cf51f69/connect_result_je1000f_eu.png": "23cde742b3012b96fce07f9efe3475ee2e75230f2b2d39311291a33d4cf51f69",
       "assets/ir/287650f3a89ae520e32f0d75df8401151b808004ee50075b96aff70af04ca4ef/ac_charging_cable.png": "287650f3a89ae520e32f0d75df8401151b808004ee50075b96aff70af04ca4ef",
       "assets/ir/28a0fab1fb35bba52bbf384c6e4826dacddb2377acca847809b8630049f1beb6/operation.main-power_fr_28a0fab1fb35.png": "28a0fab1fb35bba52bbf384c6e4826dacddb2377acca847809b8630049f1beb6",
@@ -166,6 +165,7 @@
       "assets/ir/cc7007d5671cf4abfbc552aeed661b5d7cf73e3fdd3f275af5f9183f40134dc0/car_charge.png": "cc7007d5671cf4abfbc552aeed661b5d7cf73e3fdd3f275af5f9183f40134dc0",
       "assets/ir/cca746bf84aab963823421bfff4098f932515ffd55bf0ee85e5feb4fc3ec9b80/operation.dc-usb-output_fr_cca746bf84aa.png": "cca746bf84aab963823421bfff4098f932515ffd55bf0ee85e5feb4fc3ec9b80",
       "assets/ir/ce913ebfc7750764f4206250f5e21aa09bd1cfc074bdee5b0484d61610f1b579/25_Fault_code_JJysbRHGjoMDr1xJT3ncOGDDnRa.png": "ce913ebfc7750764f4206250f5e21aa09bd1cfc074bdee5b0484d61610f1b579",
+      "assets/ir/cf04ff00bdeb8de5971a55e5d8be6ef91e1a4ddad479f817f0c535914a392d45/symbol_battery_weee.png": "cf04ff00bdeb8de5971a55e5d8be6ef91e1a4ddad479f817f0c535914a392d45",
       "assets/ir/cfb69b1ffc0b30c51216fb6b1e00e35b412dd0148b6999d3d40ac90fbfe108cb/11_Remaining_Charge_Time_SZCibGTutonnswxC2CycfSwmncc.png": "cfb69b1ffc0b30c51216fb6b1e00e35b412dd0148b6999d3d40ac90fbfe108cb",
       "assets/ir/d00533ec20fb9f0c929be1bbea28322067cf11617b2c09cdd3ab946f4fd10087/product-overview.right_fr_d00533ec20fb.png": "d00533ec20fb9f0c929be1bbea28322067cf11617b2c09cdd3ab946f4fd10087",
       "assets/ir/d146a09b705bc34e26589e29286c303c529044936772d8621f71865cf4644471/operation.main-power_en_d146a09b705b.png": "d146a09b705bc34e26589e29286c303c529044936772d8621f71865cf4644471",
@@ -4371,7 +4371,7 @@
         {
           "asset_refs": [],
           "block_id": "safety_de.rst:block-0001",
-          "content_sha256": "0ff5a7cdbcb88d1dd82838b3ed3cc05c1776144e155738760375138c097c3a91",
+          "content_sha256": "0ab8de9260f9b224b6d9af5c8f67b823a009e90dfeb5c8167a90b15a258acc08",
           "kind": "flow",
           "payload": {
             "children": [
@@ -4503,7 +4503,7 @@
                       "role": "body"
                     }
                   ],
-                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/safety_de.rst#callout-1",
+                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/safety_de.rst#callout-1",
                   "token_roles": [
                     "component.callout"
                   ],
@@ -4700,7 +4700,7 @@
       "language": "de",
       "page_id": "safety_de.rst",
       "skipped_raw": 0,
-      "source_path": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/safety_de.rst",
+      "source_path": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/safety_de.rst",
       "source_ref": "safety_de.rst",
       "source_sha256": "8eee2962c17dd84a81b0cc8eb5b7c9019896b73f2bdf3ba0a098fb18efa725d3"
     },
@@ -4745,7 +4745,7 @@
       "language": "de",
       "page_id": "p48_01_user_maintenance_instructions.rst",
       "skipped_raw": 0,
-      "source_path": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p48_01_user_maintenance_instructions.rst",
+      "source_path": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p48_01_user_maintenance_instructions.rst",
       "source_ref": "p48_01_user_maintenance_instructions.rst",
       "source_sha256": "d124d238007dc683ce85bc4e6c47ff4ef8344a737b71e795be81e0eccfed5a8a"
     },
@@ -4772,7 +4772,7 @@
         {
           "asset_refs": [],
           "block_id": "symbols_de.rst:block-0002",
-          "content_sha256": "98a00bf3e3d2b7e4835849ff52a3592d7d73ed23866ca36bf566919132eaacc9",
+          "content_sha256": "a206da46d40016e31eff0400ced96f41a4243ab7798cf500984d166ea239f1b5",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -5300,7 +5300,7 @@
                   "role": "rows"
                 }
               ],
-              "source_ref": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/symbols_de.rst#symbol-signals",
+              "source_ref": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/symbols_de.rst#symbol-signals",
               "token_roles": [
                 "component.table.symbol-signal"
               ],
@@ -5332,10 +5332,10 @@
             "assets/ir/114690be6f4d77ceaebe2ed44641ba2735873d3d6415ae04738dc241392096b7/9_keep_away_from_children_EkuMbUU1foXNPuxytfLcW9dinFS.png",
             "assets/ir/2a61fc0919cfeca43a4dd3e9bcf3a4310314d7543f77e6af9c10f1717360eea7/10_li_ion_V699bWppsoqekPxvtrccpM9dnDg.png",
             "assets/ir/7e4de290ea13b86bd50fbb209b4510116116d4fb403b7ef4f83cf1c1db873989/11_weee_Ph50b51y0obEXBxibqGczTSbngc.png",
-            "assets/ir/236891c20611070753633c7c9286982284851c6df78137cfc5bc26922c6528b6/12_weee2_EccQbCmImosxoPxWSuOcPinpn9e.png"
+            "assets/ir/cf04ff00bdeb8de5971a55e5d8be6ef91e1a4ddad479f817f0c535914a392d45/symbol_battery_weee.png"
           ],
           "block_id": "symbols_de.rst:block-0004",
-          "content_sha256": "1894d706f8bd342c1dddd938d1edbe92566252b497fdc3a083eaacbdfe483b51",
+          "content_sha256": "6ce4db678b257ce89ef9aa4e4d1008875b6a2441fdaf6165560ef2f090ee8ca3",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -5881,7 +5881,7 @@
                                     }
                                   }
                                 },
-                                "source": "assets/ir/236891c20611070753633c7c9286982284851c6df78137cfc5bc26922c6528b6/12_weee2_EccQbCmImosxoPxWSuOcPinpn9e.png"
+                                "source": "assets/ir/cf04ff00bdeb8de5971a55e5d8be6ef91e1a4ddad479f817f0c535914a392d45/symbol_battery_weee.png"
                               },
                               {
                                 "kind": "text",
@@ -5979,7 +5979,7 @@
                   "role": "icons"
                 },
                 {
-                  "asset_ref": "assets/ir/236891c20611070753633c7c9286982284851c6df78137cfc5bc26922c6528b6/12_weee2_EccQbCmImosxoPxWSuOcPinpn9e.png",
+                  "asset_ref": "assets/ir/cf04ff00bdeb8de5971a55e5d8be6ef91e1a4ddad479f817f0c535914a392d45/symbol_battery_weee.png",
                   "locale_policy": "shared",
                   "role": "icons"
                 }
@@ -6075,7 +6075,7 @@
                   "role": "panels"
                 }
               ],
-              "source_ref": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/symbols_de.rst#symbol-icons",
+              "source_ref": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/symbols_de.rst#symbol-icons",
               "token_roles": [
                 "component.table.symbol-icon"
               ],
@@ -6090,9 +6090,9 @@
       "language": "de",
       "page_id": "symbols_de.rst",
       "skipped_raw": 0,
-      "source_path": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/symbols_de.rst",
+      "source_path": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/symbols_de.rst",
       "source_ref": "symbols_de.rst",
-      "source_sha256": "dfbf6eb5ec594ebc9259e7beba181754e284e15bb267422804c0b43415fadc32"
+      "source_sha256": "4e1a1a09a5935c3521efd682472d0d3283279a4f128391f2ffe596c03d70a2e8"
     },
     {
       "blocks": [
@@ -6121,7 +6121,7 @@
             "assets/ir/87ac44e52863324b761a672089e6b0497e40fdf48432f698fccf30508060c60a/manual_icon1.png"
           ],
           "block_id": "p50_02_whats_in_the_box.rst:block-0002",
-          "content_sha256": "37744ee4518f99ca43f41830e8a917f27391e299433602e79281245086b4dd30",
+          "content_sha256": "f94245ad9cf85709eb049c3358325663720fce6d7c30331e2994715a36a442c9",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -6482,7 +6482,7 @@
                   "role": "tip_body"
                 }
               ],
-              "source_ref": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p50_02_whats_in_the_box.rst",
+              "source_ref": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p50_02_whats_in_the_box.rst",
               "token_roles": [
                 "component.special.inbox"
               ],
@@ -6509,7 +6509,7 @@
       "language": "de",
       "page_id": "p50_02_whats_in_the_box.rst",
       "skipped_raw": 0,
-      "source_path": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p50_02_whats_in_the_box.rst",
+      "source_path": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p50_02_whats_in_the_box.rst",
       "source_ref": "p50_02_whats_in_the_box.rst",
       "source_sha256": "86a35baa49e9a904cd585fb42eab233ee338907af126b2a1ac299519b7b1bba9"
     },
@@ -6539,7 +6539,7 @@
             "assets/ir/b04dca41b7cc3211a30f3a3fc2b1e904c25330f28104e4338a8ed67a11378011/right_side_ports.png"
           ],
           "block_id": "p51_03_product_overview_placeholder.rst:block-0002",
-          "content_sha256": "9c26007704509ac26b58732d0bce75678598a630fae84157d2e9673d60943151",
+          "content_sha256": "303f85fbd33f2b57f3a389c10d7940bb1e1120b7d19048afb480cc10ebbcb777",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -7566,7 +7566,7 @@
                   "role": "geometry_ref"
                 }
               ],
-              "source_ref": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p51_03_product_overview_placeholder.rst",
+              "source_ref": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p51_03_product_overview_placeholder.rst",
               "token_roles": [
                 "component.special.overview"
               ],
@@ -7581,7 +7581,7 @@
       "language": "de",
       "page_id": "p51_03_product_overview_placeholder.rst",
       "skipped_raw": 0,
-      "source_path": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p51_03_product_overview_placeholder.rst",
+      "source_path": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p51_03_product_overview_placeholder.rst",
       "source_ref": "p51_03_product_overview_placeholder.rst",
       "source_sha256": "ad24bdbe17ec0f08cbf8c19790afd448aec651a24a0a0a2251082ea22cf85306"
     },
@@ -7669,7 +7669,7 @@
             "assets/ir/9b148ea95d3a3450591c7220908b0913048f2cdea1e61d200534181c52b47cab/27_Remaining_Discharge_Time_B74LbigfDo0gfzxcLGccuTVHnhe.png"
           ],
           "block_id": "lcd_icons_de.rst:block-0004",
-          "content_sha256": "35fce1cc7d17b5cbbfa6b0473dfd5d8615c30c84657cc06dbe42a5e06bcda3a6",
+          "content_sha256": "5e7f552dd51fb4fabe246236dc0470dc3236f80e1238050b7e31406e2dd6cada",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -11816,7 +11816,7 @@
                   "role": "rows"
                 }
               ],
-              "source_ref": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/lcd_icons_de.rst#lcd-icons",
+              "source_ref": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/lcd_icons_de.rst#lcd-icons",
               "token_roles": [
                 "component.table.lcd-icon"
               ],
@@ -11831,7 +11831,7 @@
       "language": "de",
       "page_id": "lcd_icons_de.rst",
       "skipped_raw": 0,
-      "source_path": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/lcd_icons_de.rst",
+      "source_path": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/lcd_icons_de.rst",
       "source_ref": "lcd_icons_de.rst",
       "source_sha256": "45035f433ae5d4b79653e9e376c11f14a7a317d1b0bbe7da92a225c537e2ebad"
     },
@@ -11860,7 +11860,7 @@
             "assets/ir/74004806e6c0996fb77b2260c046e055194855a96bed97c519bb58c292e3b5e2/main_power.png"
           ],
           "block_id": "p53_05_operation_guide_placeholder.rst:block-0002",
-          "content_sha256": "f4ce8c9f40347619079e92020662768b7edc8db68c49fd8745bab57147083dd0",
+          "content_sha256": "4532b150d02d1e7f20ab47f19711b714ab8ee40b851f72ae029984d23b42be53",
           "kind": "flow",
           "payload": {
             "anchor": "hauptstromversorgung-ein-aus",
@@ -12022,7 +12022,7 @@
                       "role": "supporting_copy"
                     }
                   ],
-                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p53_05_operation_guide_placeholder.rst#operation-main-power",
+                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p53_05_operation_guide_placeholder.rst#operation-main-power",
                   "token_roles": [
                     "component.special.operation"
                   ],
@@ -12103,7 +12103,7 @@
             "assets/ir/43a46a51a98773dd307ff35dd1ac684790109b2b8c437f87ceacbc3636bc1d75/ac_output.png"
           ],
           "block_id": "p53_05_operation_guide_placeholder.rst:block-0004",
-          "content_sha256": "046e1da80a993c8f7a761efdd8b14d68cf5eebc6ba2e010a8125f3e6b63d7464",
+          "content_sha256": "c15222c0d33bbb4a157024ff7771b575f2b62104d2e518b60ed9aeb0075a53c0",
           "kind": "flow",
           "payload": {
             "anchor": "ac-ausgang-ein-aus",
@@ -12345,7 +12345,7 @@
                       "role": "prerequisite"
                     }
                   ],
-                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p53_05_operation_guide_placeholder.rst#operation-ac-output",
+                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p53_05_operation_guide_placeholder.rst#operation-ac-output",
                   "token_roles": [
                     "component.special.operation"
                   ],
@@ -12380,7 +12380,7 @@
             "assets/ir/c46c92d6ee991a400208635802b5d2682f215cacaa748a3ca73068fdb18cdec3/dc_usb_output.png"
           ],
           "block_id": "p53_05_operation_guide_placeholder.rst:block-0006",
-          "content_sha256": "52ef3d30c594649728c165b6855b0e7c13dda813b4f3b7434133bd498af6f0b5",
+          "content_sha256": "69e1b548347728575eecde503fc0a7f44b2bf9e7dd8bbde4b99392d7d84b6751",
           "kind": "flow",
           "payload": {
             "anchor": "dc-12v-usb-ausgang-ein-aus",
@@ -12622,7 +12622,7 @@
                       "role": "prerequisite"
                     }
                   ],
-                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p53_05_operation_guide_placeholder.rst#operation-dc-usb-output",
+                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p53_05_operation_guide_placeholder.rst#operation-dc-usb-output",
                   "token_roles": [
                     "component.special.operation"
                   ],
@@ -12821,7 +12821,7 @@
                       "role": "items"
                     }
                   ],
-                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p53_05_operation_guide_placeholder.rst#callout-1",
+                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p53_05_operation_guide_placeholder.rst#callout-1",
                   "token_roles": [
                     "component.callout"
                   ],
@@ -13053,7 +13053,7 @@
                       "role": "items"
                     }
                   ],
-                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p53_05_operation_guide_placeholder.rst#callout-2",
+                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p53_05_operation_guide_placeholder.rst#callout-2",
                   "token_roles": [
                     "component.callout"
                   ],
@@ -13084,7 +13084,7 @@
             "assets/ir/9dd943d3063031c0795ff8c4b2b6aac266bfb2bff78e2250e445f27352c23a07/energy_saving.png"
           ],
           "block_id": "p53_05_operation_guide_placeholder.rst:block-0008",
-          "content_sha256": "b64631b6e1c7b8236d2c77c70247f158053d433725ccb41a7c216a113198adf3",
+          "content_sha256": "3fb6e5c1e9bdf4f8c2ab2d388b794c40eb3e5bd2dafeea4f874595f9070fa055",
           "kind": "flow",
           "payload": {
             "anchor": "energiesparmodus",
@@ -13243,7 +13243,7 @@
                       "role": "steps"
                     }
                   ],
-                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p53_05_operation_guide_placeholder.rst#operation-energy-saving",
+                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p53_05_operation_guide_placeholder.rst#operation-energy-saving",
                   "token_roles": [
                     "component.special.operation"
                   ],
@@ -13356,7 +13356,7 @@
                       "role": "body"
                     }
                   ],
-                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p53_05_operation_guide_placeholder.rst#callout-3",
+                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p53_05_operation_guide_placeholder.rst#callout-3",
                   "token_roles": [
                     "component.callout"
                   ],
@@ -13387,7 +13387,7 @@
             "assets/ir/bf4fce34dd33d44a77c7a96dd6aff81ccd76bdc5f6ba34cf59d69f95d021cdd3/led_light.png"
           ],
           "block_id": "p53_05_operation_guide_placeholder.rst:block-0010",
-          "content_sha256": "cdeee4947284b7086544406704f1436bca95f0ff34e8e6112c17bf5c2f21ffe2",
+          "content_sha256": "0c23dc3d751472639db72d5fd8acd0dec6431eab2b0487ffc57e661f65e0aaf8",
           "kind": "flow",
           "payload": {
             "anchor": "led-licht-ein-aus",
@@ -13587,7 +13587,7 @@
                       "role": "prerequisite"
                     }
                   ],
-                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p53_05_operation_guide_placeholder.rst#operation-led-light",
+                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p53_05_operation_guide_placeholder.rst#operation-led-light",
                   "token_roles": [
                     "component.special.operation"
                   ],
@@ -14117,7 +14117,7 @@
             "assets/ir/ca843c0a7850b98fd78f5b0f692ac59c68c59ec1c92b3f1d61681332c746cdad/op_lcd_mode_je1000f_eu.png"
           ],
           "block_id": "p53_05_operation_guide_placeholder.rst:block-0014",
-          "content_sha256": "eb0b3b7dddd3f0a19cd66bf5fcac3447d1883c9349a6c3f0fe54102c312e9de4",
+          "content_sha256": "3dbeac6407ab3ece5b1b1773113c0ca540675e9972c1437d755c585a53212cb0",
           "kind": "flow",
           "payload": {
             "anchor": "lcd-anzeige",
@@ -14644,7 +14644,7 @@
                       "role": "groups"
                     }
                   ],
-                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p53_05_operation_guide_placeholder.rst#lcd-mode",
+                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p53_05_operation_guide_placeholder.rst#lcd-mode",
                   "token_roles": [
                     "component.table.lcd-mode"
                   ],
@@ -15349,7 +15349,7 @@
       "language": "de",
       "page_id": "p53_05_operation_guide_placeholder.rst",
       "skipped_raw": 0,
-      "source_path": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p53_05_operation_guide_placeholder.rst",
+      "source_path": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p53_05_operation_guide_placeholder.rst",
       "source_ref": "p53_05_operation_guide_placeholder.rst",
       "source_sha256": "c56eb48126d9b84619faaa49ac771dd0766c5c06c5b6e23c36376fe2047dd66f"
     },
@@ -15603,7 +15603,7 @@
         {
           "asset_refs": [],
           "block_id": "p54_06_ups_mode.rst:block-0008",
-          "content_sha256": "3e3a0cdf995834345a3de6df1c1f9b8694b05f2bc6af4065b75f5fee25289662",
+          "content_sha256": "b68f3fc3cf3cd5e4597a0f7d558c2a4946acc37463b9c0422053dd1463bac4af",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -15822,7 +15822,7 @@
                   "role": "items"
                 }
               ],
-              "source_ref": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p54_06_ups_mode.rst#callout-1",
+              "source_ref": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p54_06_ups_mode.rst#callout-1",
               "token_roles": [
                 "component.callout"
               ],
@@ -15836,7 +15836,7 @@
         {
           "asset_refs": [],
           "block_id": "p54_06_ups_mode.rst:block-0009",
-          "content_sha256": "82a2d21eda4e09eda6fea78bbae8ecf677c2da7d52cf12ddd506bc5395e906af",
+          "content_sha256": "3323bdf11e5f6b07945e87cb35cbaedf98a7472882957dd30f5f7246d5bef208",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -16035,7 +16035,7 @@
                   "role": "items"
                 }
               ],
-              "source_ref": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p54_06_ups_mode.rst#callout-2",
+              "source_ref": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p54_06_ups_mode.rst#callout-2",
               "token_roles": [
                 "component.callout"
               ],
@@ -16050,7 +16050,7 @@
       "language": "de",
       "page_id": "p54_06_ups_mode.rst",
       "skipped_raw": 0,
-      "source_path": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p54_06_ups_mode.rst",
+      "source_path": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p54_06_ups_mode.rst",
       "source_ref": "p54_06_ups_mode.rst",
       "source_sha256": "60f5c11f1eb545251654e3b93334fcb4872febd976565b2e5ab16f1ab3a469e4"
     },
@@ -16149,7 +16149,7 @@
         {
           "asset_refs": [],
           "block_id": "p55_charging.rst:block-0006",
-          "content_sha256": "56288483665bff336893b6fb8128e9e8f2860aea7ca30b19c5a2661d073bec18",
+          "content_sha256": "991dcd830dc09f0654291c19e2f8247a8c7b9b4bb004fd67788e617b7853d04b",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -16329,7 +16329,7 @@
                   "role": "items"
                 }
               ],
-              "source_ref": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p55_charging.rst#callout-1",
+              "source_ref": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p55_charging.rst#callout-1",
               "token_roles": [
                 "component.callout"
               ],
@@ -16346,7 +16346,7 @@
             "assets/ir/816f5bfb098b3ce45e0a4e4bcd556775773ae7b5bb98712d25b0286481258969/reference.charging-ac-wall_de_816f5bfb098b.png"
           ],
           "block_id": "p55_charging.rst:block-0007",
-          "content_sha256": "c3fd43f3bfb902091983ee2a17129463e6becbf37065c5f63bb3c15c3d5455e5",
+          "content_sha256": "70e97d6effd399a5ab17735bbd9d011423fa4b6824ba17d77d47eddd3d788c09",
           "kind": "flow",
           "payload": {
             "anchor": "aufladen-uber-eine-ac-steckdose",
@@ -16456,7 +16456,7 @@
                       "role": "adjacent_copy"
                     }
                   ],
-                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p55_charging.rst#reference-charging-ac-wall",
+                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p55_charging.rst#reference-charging-ac-wall",
                   "token_roles": [
                     "component.special.reference-figure"
                   ],
@@ -16569,7 +16569,7 @@
                       "role": "body"
                     }
                   ],
-                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p55_charging.rst#callout-2",
+                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p55_charging.rst#callout-2",
                   "token_roles": [
                     "component.callout"
                   ],
@@ -16674,7 +16674,7 @@
       "language": "de",
       "page_id": "p55_charging.rst",
       "skipped_raw": 0,
-      "source_path": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p55_charging.rst",
+      "source_path": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p55_charging.rst",
       "source_ref": "p55_charging.rst",
       "source_sha256": "344f959aa73dd31f0d85c460a30be09044fa212a6ff94ff5317f53f66d9ffd5d"
     },
@@ -16688,7 +16688,7 @@
             "assets/ir/6eb8244df99af302a5d115bad73b941dc29e575e1a945947d31de3afeafff7f8/reference.charging-solar-adapter_de_6eb8244df99a.png"
           ],
           "block_id": "p56_08_charging_methods.rst:block-0001",
-          "content_sha256": "3ea39b4792198c00e062d2592889ea5717dbf3b536e8723438773f9f0fc03764",
+          "content_sha256": "09e272566b7318d4029899bd8a279076d21233531468b9c82d7d49710b9d0659",
           "kind": "flow",
           "payload": {
             "anchor": "aufladen-uber-solarmodule-separat-erhaltlich",
@@ -16793,7 +16793,7 @@
                       "role": "caption_layout"
                     }
                   ],
-                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p56_08_charging_methods.rst#reference-charging-solar-direct",
+                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p56_08_charging_methods.rst#reference-charging-solar-direct",
                   "token_roles": [
                     "component.special.reference-figure"
                   ],
@@ -16887,7 +16887,7 @@
                       "role": "caption_layout"
                     }
                   ],
-                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p56_08_charging_methods.rst#reference-charging-solar-adapter",
+                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p56_08_charging_methods.rst#reference-charging-solar-adapter",
                   "token_roles": [
                     "component.special.reference-figure"
                   ],
@@ -17000,7 +17000,7 @@
                       "role": "body"
                     }
                   ],
-                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p56_08_charging_methods.rst#callout-1",
+                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p56_08_charging_methods.rst#callout-1",
                   "token_roles": [
                     "component.callout"
                   ],
@@ -17186,7 +17186,7 @@
                       "role": "items"
                     }
                   ],
-                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p56_08_charging_methods.rst#callout-2",
+                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p56_08_charging_methods.rst#callout-2",
                   "token_roles": [
                     "component.callout"
                   ],
@@ -17244,7 +17244,7 @@
             "assets/ir/4e3894dbfbe0bbd9fbfa171ab2e00a0c672acf21cc5cd90fd3542a446c5425d2/reference.charging-car_de_4e3894dbfbe0.png"
           ],
           "block_id": "p56_08_charging_methods.rst:block-0003",
-          "content_sha256": "eb58ead89df11badc3f0dce86cc7d3810d6867e99d5feb5f9f5c2259552d6b80",
+          "content_sha256": "4281beb177cb592bd003271cbeab7bb11477827426fd7cb2fa78b1900cf4b3f1",
           "kind": "flow",
           "payload": {
             "anchor": "aufladen-uber-das-autoladegerat-separat-erhaltlich",
@@ -17428,7 +17428,7 @@
                       "role": "captions"
                     }
                   ],
-                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p56_08_charging_methods.rst#reference-charging-car",
+                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p56_08_charging_methods.rst#reference-charging-car",
                   "token_roles": [
                     "component.special.reference-figure"
                   ],
@@ -17618,7 +17618,7 @@
                       "role": "items"
                     }
                   ],
-                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p56_08_charging_methods.rst#callout-3",
+                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p56_08_charging_methods.rst#callout-3",
                   "token_roles": [
                     "component.callout"
                   ],
@@ -17636,7 +17636,7 @@
       "language": "de",
       "page_id": "p56_08_charging_methods.rst",
       "skipped_raw": 0,
-      "source_path": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p56_08_charging_methods.rst",
+      "source_path": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p56_08_charging_methods.rst",
       "source_ref": "p56_08_charging_methods.rst",
       "source_sha256": "851cf90fb12a6348c5e81a983c4d3eb3a59ef72bc4350dddedaa4024d32bc352"
     },
@@ -17869,7 +17869,7 @@
       "language": "de",
       "page_id": "p57_09_storage_and_maintenance.rst",
       "skipped_raw": 0,
-      "source_path": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p57_09_storage_and_maintenance.rst",
+      "source_path": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p57_09_storage_and_maintenance.rst",
       "source_ref": "p57_09_storage_and_maintenance.rst",
       "source_sha256": "306e5fb8e59d9590d2b9062f0fd961d9b2d9824f7cff0521b8adf17776149817"
     },
@@ -17925,7 +17925,7 @@
         {
           "asset_refs": [],
           "block_id": "troubleshooting_de.rst:block-0004",
-          "content_sha256": "8dd76e35ad44476c2ed378ed02d5bcfa39f491b740d494421b864ac8bd280857",
+          "content_sha256": "8fca4405d01532221b085387b818b3a294b1863f9edefec9794620fa29f60e44",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -18916,7 +18916,7 @@
                   "role": "rows"
                 }
               ],
-              "source_ref": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/troubleshooting_de.rst#troubleshooting",
+              "source_ref": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/troubleshooting_de.rst#troubleshooting",
               "token_roles": [
                 "component.table.troubleshooting"
               ],
@@ -18931,7 +18931,7 @@
       "language": "de",
       "page_id": "troubleshooting_de.rst",
       "skipped_raw": 0,
-      "source_path": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/troubleshooting_de.rst",
+      "source_path": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/troubleshooting_de.rst",
       "source_ref": "troubleshooting_de.rst",
       "source_sha256": "39f0d99445ccfee6a2a845a68e5710d4493b72eb1acf642a068e083c71b5a56f"
     },
@@ -18967,7 +18967,7 @@
         {
           "asset_refs": [],
           "block_id": "spec_de.rst:block-0002",
-          "content_sha256": "f3cb67f0bd525481c6612a1d704ae81b6dac91fd2b6bc9e621c629549cf6cc8d",
+          "content_sha256": "139efa20b21bf80dc12e1d201c8042249b4f1cec95e03be19b8c7f306a831062",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -19571,7 +19571,7 @@
                   "role": "rows"
                 }
               ],
-              "source_ref": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/spec_de.rst#specification-1",
+              "source_ref": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/spec_de.rst#specification-1",
               "token_roles": [
                 "component.table.spec"
               ],
@@ -19597,7 +19597,7 @@
         {
           "asset_refs": [],
           "block_id": "spec_de.rst:block-0004",
-          "content_sha256": "c1f3cd9721c1af3add56c3483213af31b889def297a76d51fe7ecfba64586370",
+          "content_sha256": "292f1df370112770daec11fd16a0442b39adb58a919ed9807c0ebfd0c540bfd5",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -19853,7 +19853,7 @@
                   "role": "rows"
                 }
               ],
-              "source_ref": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/spec_de.rst#specification-2",
+              "source_ref": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/spec_de.rst#specification-2",
               "token_roles": [
                 "component.table.spec"
               ],
@@ -19879,7 +19879,7 @@
         {
           "asset_refs": [],
           "block_id": "spec_de.rst:block-0006",
-          "content_sha256": "137c025fb63c81162a9286a9bb961d77436fb8a1070001aa6bfdefb838098c6c",
+          "content_sha256": "70e622aa087ac768af5cd3777ce3a1298adac90065d9b5c553dc60259cb57eb9",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -20414,7 +20414,7 @@
                   "role": "rows"
                 }
               ],
-              "source_ref": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/spec_de.rst#specification-3",
+              "source_ref": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/spec_de.rst#specification-3",
               "token_roles": [
                 "component.table.spec"
               ],
@@ -20440,7 +20440,7 @@
         {
           "asset_refs": [],
           "block_id": "spec_de.rst:block-0008",
-          "content_sha256": "b446d6d19e783aca205e714c7b499f35e8e64ceee3ae5e14222ba3fdd3b731b0",
+          "content_sha256": "12c7f5508f764cf04d6464cbd0d9e0b41eac36e21b1fb7a7599f7e122b719595",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -20689,7 +20689,7 @@
                   "role": "rows"
                 }
               ],
-              "source_ref": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/spec_de.rst#specification-4",
+              "source_ref": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/spec_de.rst#specification-4",
               "token_roles": [
                 "component.table.spec"
               ],
@@ -20770,7 +20770,7 @@
       "language": "de",
       "page_id": "spec_de.rst",
       "skipped_raw": 0,
-      "source_path": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/spec_de.rst",
+      "source_path": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/spec_de.rst",
       "source_ref": "spec_de.rst",
       "source_sha256": "d4527021589e631091324ae0c851f28e707dad5edb20843bbe5aaeab0a5a7648"
     },
@@ -20797,7 +20797,7 @@
         {
           "asset_refs": [],
           "block_id": "p60_11_warranty.rst:block-0002",
-          "content_sha256": "93132b64c2db61259d7ba36084797c427fa6fab2fa5e0fac99391004bca6575e",
+          "content_sha256": "49d1cfd247ce4f0bf2ab3231b5d901ddb2666327ac640d0b68650d010f956b2e",
           "kind": "flow",
           "payload": {
             "carrier_flow": [
@@ -20848,7 +20848,7 @@
                   "role": "local_note"
                 }
               ],
-              "source_ref": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p60_11_warranty.rst#warranty-lead",
+              "source_ref": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p60_11_warranty.rst#warranty-lead",
               "token_roles": [
                 "component.warranty.lead"
               ],
@@ -20874,7 +20874,7 @@
         {
           "asset_refs": [],
           "block_id": "p60_11_warranty.rst:block-0004",
-          "content_sha256": "09f22fc6d9c64755d57364dde2688a73e53791cb1b2467a95f0537dd348899b5",
+          "content_sha256": "a87ea9fc66694551fe39fe5d538ed6cae0d6342fc72fc341382e365cf8393d64",
           "kind": "flow",
           "payload": {
             "anchor": "eingeschrankte-garantie",
@@ -20952,7 +20952,7 @@
                       "role": "blocks"
                     }
                   ],
-                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p60_11_warranty.rst#warranty-section-1",
+                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p60_11_warranty.rst#warranty-section-1",
                   "token_roles": [
                     "component.warranty.section"
                   ],
@@ -20985,7 +20985,7 @@
         {
           "asset_refs": [],
           "block_id": "p60_11_warranty.rst:block-0006",
-          "content_sha256": "a5e1464f72a0e2328e0734ca1d45783b97467d250b462877f603b3298510d637",
+          "content_sha256": "f93fe854d97d87f8334dfc480a27a70635acb15a1d4e5265c0fb5e7827120785",
           "kind": "flow",
           "payload": {
             "anchor": "garantiezeitraum",
@@ -21258,7 +21258,7 @@
                       "role": "periods"
                     }
                   ],
-                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p60_11_warranty.rst#warranty-years",
+                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p60_11_warranty.rst#warranty-years",
                   "token_roles": [
                     "component.warranty.years"
                   ],
@@ -21291,7 +21291,7 @@
         {
           "asset_refs": [],
           "block_id": "p60_11_warranty.rst:block-0008",
-          "content_sha256": "19af4abbdd7915b3d977ff817b55ad9b49a77153ac111615279e9280b487e4df",
+          "content_sha256": "b1f7002a4fae9127aa8997d398e4fb2834c23fbc6e64e7b1fab584f33ead0e6b",
           "kind": "flow",
           "payload": {
             "anchor": "umtausch",
@@ -21355,7 +21355,7 @@
                       "role": "blocks"
                     }
                   ],
-                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p60_11_warranty.rst#warranty-section-3",
+                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p60_11_warranty.rst#warranty-section-3",
                   "token_roles": [
                     "component.warranty.section"
                   ],
@@ -21388,7 +21388,7 @@
         {
           "asset_refs": [],
           "block_id": "p60_11_warranty.rst:block-0010",
-          "content_sha256": "a23c4739e3d9542c8b969d9c92051f91f96ae88921d012f7629c7451a821d3fa",
+          "content_sha256": "c0094d76baee39527351b7e8635706e0538064ea28afc6f2ec0e5e15dadb4b0c",
           "kind": "flow",
           "payload": {
             "anchor": "beschrankt-auf-den-ursprunglichen-kaufer",
@@ -21452,7 +21452,7 @@
                       "role": "blocks"
                     }
                   ],
-                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p60_11_warranty.rst#warranty-section-4",
+                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p60_11_warranty.rst#warranty-section-4",
                   "token_roles": [
                     "component.warranty.section"
                   ],
@@ -21485,7 +21485,7 @@
         {
           "asset_refs": [],
           "block_id": "p60_11_warranty.rst:block-0012",
-          "content_sha256": "f0464552db865702dfc02f803fa8444d54518ef16ef9ba0b24ff2b09724f945c",
+          "content_sha256": "de8b9ef061b492c081718de7c8053d3a40097e5f22b54fa8459fbf06c3c2f391",
           "kind": "flow",
           "payload": {
             "anchor": "ausschlusse",
@@ -21650,7 +21650,7 @@
                       "role": "blocks"
                     }
                   ],
-                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p60_11_warranty.rst#warranty-section-5",
+                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p60_11_warranty.rst#warranty-section-5",
                   "token_roles": [
                     "component.warranty.section"
                   ],
@@ -21683,7 +21683,7 @@
         {
           "asset_refs": [],
           "block_id": "p60_11_warranty.rst:block-0014",
-          "content_sha256": "b6ef19d16f0a4efcafe4aec6057d998d36d9932ca01b919e27cb68ae43412004",
+          "content_sha256": "6becade93b4cbf76e0b770bda4b08d6bdec12a3e62302d3b994c80ca6e1ddb1f",
           "kind": "flow",
           "payload": {
             "anchor": "auslegungsrechte",
@@ -21747,7 +21747,7 @@
                       "role": "blocks"
                     }
                   ],
-                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p60_11_warranty.rst#warranty-section-6",
+                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p60_11_warranty.rst#warranty-section-6",
                   "token_roles": [
                     "component.warranty.section"
                   ],
@@ -21769,7 +21769,7 @@
       "language": "de",
       "page_id": "p60_11_warranty.rst",
       "skipped_raw": 0,
-      "source_path": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p60_11_warranty.rst",
+      "source_path": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p60_11_warranty.rst",
       "source_ref": "p60_11_warranty.rst",
       "source_sha256": "31a62156a9b14d3a467e08da5727956eebfd694814bf835dd47676348f7b11fc"
     },
@@ -21800,7 +21800,7 @@
             "assets/app_download_qr_5f2a58121306.png"
           ],
           "block_id": "p61_12_app_setup_placeholder.rst:block-0002",
-          "content_sha256": "bd90a5ac631b0c599e89d4a938f1cecce9731d048cf52462a96f20e7bdfb7d89",
+          "content_sha256": "fe58da259ffc53a9e019e1ae869aa2c4c2bef31f08be0baef77e7a5b56d7f4e2",
           "kind": "flow",
           "payload": {
             "anchor": "laden-sie-die-app-herunter-und-melden-sie-sich-an",
@@ -21894,7 +21894,7 @@
                       "role": "columns"
                     }
                   ],
-                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p61_12_app_setup_placeholder.rst#app-download",
+                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p61_12_app_setup_placeholder.rst#app-download",
                   "token_roles": [
                     "component.special.app"
                   ],
@@ -21933,7 +21933,7 @@
             "assets/ir/a41b6db31865f5091511b0d8ca830221cf328b45efdb4454fd864dba0132f059/reference.app-connect-result_shared_a41b6db31865.png"
           ],
           "block_id": "p61_12_app_setup_placeholder.rst:block-0004",
-          "content_sha256": "6b4db09f1ec85dda209c840d765c02515f8efca3945716e271adb319eb08ee25",
+          "content_sha256": "d25b0ddd2bc929de99f71c132680412dba4ad8a596c50422b58900934b3db859",
           "kind": "flow",
           "payload": {
             "anchor": "gerat-hinzufugen",
@@ -22004,7 +22004,7 @@
                       "role": "paragraph"
                     }
                   ],
-                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p61_12_app_setup_placeholder.rst#app-inline-control",
+                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p61_12_app_setup_placeholder.rst#app-inline-control",
                   "token_roles": [
                     "component.special.app"
                   ],
@@ -22202,7 +22202,7 @@
                       "role": "labels"
                     }
                   ],
-                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p61_12_app_setup_placeholder.rst#app-add-device",
+                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p61_12_app_setup_placeholder.rst#app-add-device",
                   "token_roles": [
                     "component.special.app"
                   ],
@@ -22432,7 +22432,7 @@
                       "role": "items"
                     }
                   ],
-                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p61_12_app_setup_placeholder.rst#callout-1",
+                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p61_12_app_setup_placeholder.rst#callout-1",
                   "token_roles": [
                     "component.callout"
                   ],
@@ -22639,7 +22639,7 @@
                       "role": "items"
                     }
                   ],
-                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p61_12_app_setup_placeholder.rst#callout-2",
+                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p61_12_app_setup_placeholder.rst#callout-2",
                   "token_roles": [
                     "component.callout"
                   ],
@@ -22762,7 +22762,7 @@
                       "role": "caption_layout"
                     }
                   ],
-                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p61_12_app_setup_placeholder.rst#reference-app-connect-result",
+                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p61_12_app_setup_placeholder.rst#reference-app-connect-result",
                   "token_roles": [
                     "component.special.reference-figure"
                   ],
@@ -22921,7 +22921,7 @@
                       "role": "body"
                     }
                   ],
-                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p61_12_app_setup_placeholder.rst#callout-3",
+                  "source_ref": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p61_12_app_setup_placeholder.rst#callout-3",
                   "token_roles": [
                     "component.callout"
                   ],
@@ -23268,7 +23268,7 @@
       "language": "de",
       "page_id": "p61_12_app_setup_placeholder.rst",
       "skipped_raw": 0,
-      "source_path": "/home/user/auto-manual/.tmp/wt-release-dei/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p61_12_app_setup_placeholder.rst",
+      "source_path": "/home/user/auto-manual/.tmp/wt-release-battery/.tmp/je1000f-release-build/de/docs/_build/JE-1000F/EU/de/rst/page/p61_12_app_setup_placeholder.rst",
       "source_ref": "p61_12_app_setup_placeholder.rst",
       "source_sha256": "04f6dd0f9b77d366998ad0bd3e514e4c324e36e6f7430610e19a3b909b350c24"
     }
