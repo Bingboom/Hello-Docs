@@ -1,16 +1,15 @@
 {
   "attempt": "1",
-  "checked_at": "2026-10-28T02:14:30.942913+00:00",
-  "content_sha256": "3d91da9f8a9f83f2dddc7d303d67b4deabfcccf41718be0a0930368f27ccf513",
-  "execution": "https://github.com/Bingboom/Hello-Docs/actions/runs/40619514220",
+  "checked_at": "2026-10-29T02:25:42.031219+00:00",
+  "content_sha256": "c4716f043da5c5e380a48e74f7d8169a92424626b3bccd3dfc294e0f6dd052fb",
+  "error_type": "RuntimeError",
+  "execution": "https://github.com/Bingboom/Hello-Docs/actions/runs/40806139985",
+  "failure_key": "06132207ff817296057dd351ebecd980770fc7dcc85fe9adc26fb2f4bca930c1",
   "kind": "web_progress",
-  "last_success": "2026-10-28",
+  "last_success": "2026-10-23",
+  "message": "刷新失败，沿用上次有效数据；检查本次来源配置、分页与候选校验。",
   "resume": "python tools/workspace_refresh.py refresh web_progress",
   "schema": "workspace-refresh/v1",
-  "snapshot_date": "2026-10-28",
-  "source": {
-    "identity_sha256": "4bb050d6bd5084c9f5cbdff7cc3b74624524f64a9a8f4d13c420362d6b36b842"
-  },
-  "stage": "snapshot-validated",
-  "status": "changed"
+  "stage": "source-read",
+  "status": "failed"
 }
